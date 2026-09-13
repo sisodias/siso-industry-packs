@@ -1,0 +1,26 @@
+name: YouTube public OSS evidence
+on:
+  push:
+    branches: [research/youtube-creators-20260913]
+    paths: [.github/workflows/youtube-oss-audit.yml, research-tools/youtube-oss-audit.py]
+permissions:
+  contents: read
+jobs:
+  public-oss-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Read public metadata and source documents only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 research-tools/youtube-oss-audit.py
+      - name: Preserve public research evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-public-oss-evidence
+          path: oss-evidence/
+          retention-days: 7
