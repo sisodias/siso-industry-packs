@@ -1,0 +1,150 @@
+name: Gyms fitness public Git source audit
+on:
+  push:
+    branches: [research/gyms-fitness-20260913]
+    paths: [.github/workflows/gyms-fitness-git-audit.yml]
+permissions:
+  contents: read
+concurrency:
+  group: gyms-fitness-public-evidence
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Read public metadata and Git objects without checkout or upstream execution
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,datetime,gzip,hashlib,json,os,pathlib,re,subprocess,tempfile,time,urllib.request,urllib.error,urllib.parse
+          assert os.environ['GITHUB_REPOSITORY']=='sisodias/siso-industry-packs'
+          assert os.environ['GITHUB_REF']=='refs/heads/research/gyms-fitness-20260913'
+          NOW=datetime.datetime.now(datetime.timezone.utc).isoformat(); OUT=pathlib.Path('evidence');OUT.mkdir(exist_ok=True)
+          TOKEN=os.environ['GH_TOKEN']; BANK='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          # Candidate names come from the completed three-round workflow-led discovery receipt.
+          names='''wger-project/wger chatwoot/chatwoot frappe/erpnext Dolibarr/dolibarr Admidio/admidio galette/galette LibreBooking/librebooking alextselegidis/easyappointments docusealco/docuseal knadh/listmonk pretix/pretix calcom/cal.com goauthentik/authentik CodeWithCJ/SparkyFitness DuarteSantos8/openGym the-momentum/open-wearables GoldenCheetah/GoldenCheetah SamR1/FitTrackee frappe/hrms mautic/mautic invoiceninja/invoiceninja getlago/lago killbill/killbill liftosaur/liftosaur goToMain/libosdp openactive/open-booking-api openactive/data-model openactive/booking-system-tests garmin/fit-python-sdk wger-project/docker johndavedecano/laragym mayerbalintdev/GYM-One gymnasticon/gymnasticon joryirving/awesome-fitness awesome-selfhosted/awesome-selfhosted bookatechie/support-inbox wassname/rl-portfolio-management ChurchCRM/CRM classroombookings/classroombookings tecnickcom/tcexam vijay-kartik/gym_checkins_tracker Snouzy/workout-cool radioBros/billy theinventor/documarkr redsaporo/commission_payment_oca abhinavxd/libredesk hitobito/hitobito FantasticLBP/Hotels_Server brightbeanxyz/brightbean-studio rfidtool/ESP-RFID-Tool jovandeginste/workout-tracker documenso/documenso akaunting/akaunting netflie/whatsapp-cloud-api digitorus/pdfsign raphaelm/python-sepaxml openactive/models-php jkbrzt/rrule osdp-dev/libosdp esprfid/esp-rfid tormoder/fit dudanov/hassio-ftms sinan92/fitbod-to-hevy-converter prowide/prowide-iso20022 kewisch/ical.js ygncode/wateaminbox lubusIN/gymie brockallen/BrockAllen.MembershipReboot Dzoukr/Yobo shashirajraja/Train-Ticket-Reservation-System kh3dron/loprinzis_management shadowlzt/ironclaw-ai-vision gexiro-global/ghostbill penpact/penpact taoshihan1991/goflylivechat tramyardg/hotel-mgmt-system automaticmode/active_workflow tourajghaffari/tigerfid OpenSignLabs/OpenSign WhatsApp/WhatsApp-Nodejs-SDK signed-page/pdf AbcAeffchen/Sephpa openactive/models-ruby rlanvin/php-rrule BishopFox/mellon jkramarz/TheTick muktihari/fit dudanov/python-pyftms gossamr/swift-workout-importer sebastienrousseau/bankstatementparser sabre-io/vobject 28Ritu/Classroom-Booking-System anakin87/qwen-scheduler-grpo toekangpeci/gymApps zinedkaloc/ai-workout-planner SohitYadav/SaaSNet-Chargebee.com-clone- GoldenJustin/ERPNext-Electronic-Signature melgarafael/DeskcommCRM prashant333/gym-management easychen/MemberPrism2 OpenReservation/OpenReservation nateherkai/snagtime matthewkayne/flipper-access-audit Devpro-Software/licensify ever-co/ever-gauzy Bindambc/whatsapp-business-java-api digitorus/pdfsigner congressus/sepa-direct-debit openactive/test-interface peek-travel/cocktail bytedreamer/Aporta pvtex/esp32-rfid samsonovss/ESPHome-Treadmill-FTMS chaselord1/lift2strong sebastienrousseau/pain001 jeroendesloovere/vcard MiloTnT/gym-management-system VikasSukhija/Downloads sonnysangha/class-booking-app-nextjs-16-ai-saas-sanity-clerk-billing-mapbox JGSU-open-source-community/go-home pploc/ms-gym-checkin alessioGalatolo/PerfectGymCoach C0RE1312/vibebooks JJQuispillo/SriYa miroslavpejic85/call-me cristianmarint/MotionGym lalithsuresh/rapid CatchTheTornado/open-agents-builder Calnode/calnode sybethiesant/pidoors'''.split()
+          assert len(names)==130 and len(set(n.lower() for n in names))==130
+          assert all(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',n) for n in names)
+          def save(name,value):
+              assert re.fullmatch(r'[A-Za-z0-9_.-]+',name)
+              text=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False,indent=2)+'\n'
+              assert TOKEN not in text
+              (OUT/name).write_text(text,encoding='utf-8')
+          # The search resource has its own published quota. Respect its limits; no core-API retry loop.
+          batches=[]; batch=[]
+          for n in names:
+              if batch and (len(' '.join('repo:'+x for x in batch+[n]))>240 or len(batch)>=6):batches.append(batch);batch=[]
+              batch.append(n)
+          if batch:batches.append(batch)
+          metadata={};search_receipts=[]
+          for batch in batches:
+              q=' '.join('repo:'+n for n in batch)
+              url='https://api.github.com/search/repositories?'+urllib.parse.urlencode({'q':q,'per_page':100})
+              result={}
+              for attempt in range(3):
+                  time.sleep(3.2)
+                  try:
+                      req=urllib.request.Request(url,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-public-git-evidence'})
+                      with urllib.request.urlopen(req,timeout=45) as r:result=json.load(r)
+                      break
+                  except urllib.error.HTTPError as e:
+                      try:message=json.load(e).get('message','')
+                      except Exception:message=''
+                      result={'error':e.code,'message':message}
+                      if e.code not in (403,429) or 'rate limit' not in message.lower():break
+                      reset=int(e.headers.get('x-ratelimit-reset','0'));delay=max(60,reset-int(time.time())+2)
+                      if delay>180:break
+                      time.sleep(delay)
+              hit=[]
+              for m in result.get('items',[]):
+                  if m.get('private') is not False:continue
+                  m['_metadata_source']=url;metadata[m['id']]=m;hit.append(m['full_name'])
+              search_receipts.append({'query':q,'source_url':url,'returned':hit,'error':result.get('error'),'message':result.get('message'),'incomplete_results':result.get('incomplete_results')})
+          save('metadata-search-receipt.json',{'observed_at':NOW,'requests':search_receipts,'requested_names':names,'unique_public_repositories':len(metadata)})
+          wanted={n.lower() for n in names}|{m['full_name'].lower() for m in metadata.values()}; matches={};receipts=[]
+          paths=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','bank/bank_gold.jsonl','bank/repo_category.jsonl.gz']
+          def identity(row):
+              for k in ('full_name','repo_full_name','repository_full_name','repository','repo','name','url','repo_url','repository_url','source_url','github_url'):
+                  v=row.get(k)
+                  if isinstance(v,str):
+                      v=v.removeprefix('https://github.com/').removesuffix('.git').strip('/')
+                      if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v):return v.lower()
+              return None
+          vocabulary=[]
+          for path in paths:
+              url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+BANK+'/'+path
+              rec={'path':path,'source_url':url,'rows':0,'identities_recognized':0,'status':'pending'};digest=hashlib.sha256()
+              try:
+                  with urllib.request.urlopen(url,timeout=90) as response:
+                      lines=gzip.GzipFile(fileobj=response) if path.endswith('.gz') else response
+                      for line in lines:
+                          digest.update(line)
+                          if not line.strip():continue
+                          row=json.loads(line);rec['rows']+=1;n=identity(row)
+                          if n:rec['identities_recognized']+=1
+                          if path.endswith('bank_capability.jsonl'):vocabulary.append(row)
+                          if n in wanted:matches.setdefault(n,{}).setdefault(path,[]).append(row)
+                  rec.update(status='read',sha256_uncompressed=digest.hexdigest())
+              except Exception as e:rec.update(status='failed',error=type(e).__name__)
+              receipts.append(rec)
+          save('bank-receipt.json',{'bank_revision':BANK,'observed_at':NOW,'layers':receipts,'identity_scope':'Published banks only, including full placement table; not unpublished identity DB.'})
+          save('bank-vocabulary.json',vocabulary)
+          order={n.lower():i for i,n in enumerate(names)}
+          metas=sorted(metadata.values(),key=lambda m:order.get(m['full_name'].lower(),999))
+          env={k:v for k,v in os.environ.items() if k not in ('GH_TOKEN','GITHUB_TOKEN')}
+          env.update(GIT_TERMINAL_PROMPT='0',GIT_CONFIG_GLOBAL='/dev/null',GIT_CONFIG_SYSTEM='/dev/null',GIT_LFS_SKIP_SMUDGE='1')
+          def git(directory,*args,timeout=120):
+              p=subprocess.run(['git','-c','core.hooksPath=/dev/null','-c','protocol.file.allow=never','-C',directory,*args],env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout,check=False)
+              if p.returncode:raise RuntimeError(p.stderr.decode('utf-8','replace')[:250])
+              return p.stdout
+          def collect(pair):
+              i,m=pair;n=m['full_name'];r={'audit_id':'R'+str(i).zfill(3),'observed_at':NOW,'metadata_source':m['_metadata_source']}
+              r.update({k:m.get(k) for k in ('id','full_name','html_url','description','stargazers_count','forks_count','default_branch','archived','disabled','pushed_at','size','open_issues_count','topics','license')})
+              r.update(bank_revision=BANK,bank_rows=matches.get(n.lower(),{}))
+              bank_ok=all(x['status']=='read' and (x['identities_recognized']>0 or x['path'].endswith('bank_capability.jsonl')) for x in receipts)
+              r['bank_status']='ALREADY IN THE BANK' if r['bank_rows'] else ('NEW' if bank_ok else 'UNKNOWN')
+              r['adoption_bank_rows']=r['bank_rows'].get('bank/bank_adoption_v2.jsonl',[])
+              r['readme']={};r['license_files']=[];r['dependency_files']=[]
+              try:
+                  with tempfile.TemporaryDirectory(prefix='public-gym-source-') as tmp:
+                      git(tmp,'init','--bare','--quiet')
+                      git(tmp,'fetch','--quiet','--depth=30','--filter=blob:none','--no-tags','--no-recurse-submodules','https://github.com/'+n+'.git','HEAD')
+                      rev=git(tmp,'rev-parse','FETCH_HEAD').decode().strip();r['revision']=rev
+                      r['last_commit']=git(tmp,'show','-s','--format=%cI',rev).decode().strip()
+                      dates=git(tmp,'log','-30','--format=%cI',rev).decode().splitlines();r['commits_six_months_in_latest30_sample']=sum(x[:10]>='2026-03-13' for x in dates);r['commit_sample_capped']=len(dates)==30
+                      r['sample_unique_author_hashes']=len(set(git(tmp,'log','-30','--format=%aE',rev).splitlines()))
+                      files=git(tmp,'ls-tree','--name-only',rev).decode().splitlines()
+                      def read(path):
+                          raw=git(tmp,'show',rev+':'+path,timeout=60)
+                          if len(raw)>1500000:return {'path':path,'error':'size_bound'}
+                          return {'path':path,'blob_sha':git(tmp,'rev-parse',rev+':'+path).decode().strip(),'sha256':hashlib.sha256(raw).hexdigest(),'text':raw.decode('utf-8','replace'),'source_url':'https://github.com/'+n+'/blob/'+rev+'/'+path}
+                      rm=next((f for f in files if re.fullmatch(r'readme(?:\.(?:md|rst|txt|markdown))?',f,re.I)),None)
+                      if rm:r['readme']=read(rm)
+                      for f in files:
+                          if re.fullmatch(r'(?:licen[cs]e(?:_additional_terms)?|copying)(?:\.(?:md|txt|rst))?',f,re.I):r['license_files'].append(read(f))
+                      if not r['license_files'] and n.lower()=='galette/galette':
+                          try:r['license_files'].append(read('galette/docs/COPYING'))
+                          except RuntimeError:pass
+                      if i<=35:
+                          for f in ('package.json','composer.json','pyproject.toml','go.mod','requirements.txt'):
+                              if f in files:r['dependency_files'].append(read(f))
+              except (RuntimeError,subprocess.TimeoutExpired) as e:r['source_error']=str(e)[:300]
+              r['upstream_execution']='none; bare Git object reads only; no checkout, hooks, submodules, install or build'
+              r['maintainer_response_time']=None;r['bus_factor']=None
+              save('repo-'+str(i).zfill(3)+'.json',r);print(r['audit_id'],n,'readme',bool(r['readme'].get('text')),'licenses',len(r['license_files']),flush=True)
+              return r
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:rows=list(pool.map(collect,enumerate(metas,1)))
+          save('repositories.jsonl',''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in rows))
+          save('receipt.json',{'observed_at':NOW,'workflow_revision':os.environ['GITHUB_SHA'],'requested_names':len(names),'unique_public_metadata_records':len(rows),'source_revisions_retrieved':sum(bool(r.get('revision')) for r in rows),'readmes_retrieved':sum(bool(r['readme'].get('text')) for r in rows),'repositories_with_license_text':sum(any(f.get('text') for f in r['license_files']) for r in rows),'already_in_bank':sum(r['bank_status']=='ALREADY IN THE BANK' for r in rows),'new':sum(r['bank_status']=='NEW' for r in rows),'unknown_bank':sum(r['bank_status']=='UNKNOWN' for r in rows),'review_status':'Source evidence collected, not yet examined or scored by researcher.','upstream_code_executed':False,'application_code_written':False})
+          PY
+      - name: Preserve public research evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gyms-fitness-git-evidence
+          path: evidence/
+          retention-days: 3
+          if-no-files-found: error
