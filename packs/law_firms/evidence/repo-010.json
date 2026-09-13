@@ -1,0 +1,213 @@
+{
+  "audit_id": "R010",
+  "requested_full_name": "AnikaLegal/clerk",
+  "observed_at": "2026-09-13T16:10:01.704283+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "AnikaLegal/clerk",
+  "html_url": "https://github.com/AnikaLegal/clerk",
+  "description": "The Anika Legal case management system & website.",
+  "stargazers_count": 42,
+  "forks_count": 14,
+  "default_branch": "develop",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2018-11-21T10:39:32Z",
+  "updated_at": "2026-09-13T06:25:09Z",
+  "pushed_at": "2026-09-13T06:25:05Z",
+  "size": 79241,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": null,
+  "revision": "f8894271a20f0c791a78479e26b86726ee7f1185",
+  "last_commit": "2026-09-12T06:38:06Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/AnikaLegal/clerk",
+    "commit": "https://github.com/AnikaLegal/clerk/commit/f8894271a20f0c791a78479e26b86726ee7f1185"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4e56eeb4d83cd495d0d14bbedecc0a9820801d8925e78fa4bbe9539b549735d9",
+    "text": "# Clerk\n\n[![Test](https://github.com/AnikaLegal/clerk/actions/workflows/test.yml/badge.svg?branch=develop)](https://github.com/AnikaLegal/clerk/actions/workflows/test.yml)\n\nThe Anika Legal case management system & website.\n\n> Depending on the job, office clerks might answer phones, filing, data processing, faxing, envelope stuffing and mailing, message delivery, running errands, sorting incoming mail and much more. ([source](https://www.snagajob.com/job-descriptions/office-clerk/))\n\n## Structure\n\nThis Django project has several apps:\n\n- accounts: User accounts\n- admin: Customization of Admin interface\n- blacklist: List contacts to avoid\n- caller: Call centre\n- case: Case management system website\n- clerk: Project settings\n- core: Core domain models and functionality\n- emails: Sending and receiving emails\n- intake: User intake forms (Housing health check only)\n- microsoft: Microsoft integration (Sharepoint)\n- office: Alternative communications when the office is closed\n- slack: Slack integration\n- web: Public website and blog\n- webhooks: Webhooks from 3rd party services\n\n## Documentation\n\nSee here for documentation:\n\n- [Changelog](docs/changelog.md)\n- [Getting started](docs/setup.md)\n- [Testing](docs/tests.md)\n- [Infra and deployment](docs/infra.md)\n- [Email integration](docs/emails.md)\n- [Twilio integration](docs/twilio.md)\n- [Sharepoint integration](docs/sharepoint.md)\n- [Microsoft Graph integration](docs/msgraph.md)\n",
+    "characters": 1442,
+    "source_url": "https://github.com/AnikaLegal/clerk/blob/f8894271a20f0c791a78479e26b86726ee7f1185/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "luca-vari",
+      "contributions": 722
+    },
+    {
+      "login": "MattSegal",
+      "contributions": 519
+    },
+    {
+      "login": "lpzhang-code",
+      "contributions": 26
+    },
+    {
+      "login": "SirBob01",
+      "contributions": 7
+    },
+    {
+      "login": "anika-tech-team",
+      "contributions": 3
+    },
+    {
+      "login": "pondodev",
+      "contributions": 2
+    },
+    {
+      "login": "ItsMattG",
+      "contributions": 2
+    },
+    {
+      "login": "NickMakeThing",
+      "contributions": 2
+    },
+    {
+      "login": "Oneiriac",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 120,
+      "title": "Possible exposed API Key / Secret",
+      "state": "closed",
+      "created_at": "2026-08-25T18:12:48Z",
+      "updated_at": "2026-09-06T10:35:53Z",
+      "closed_at": "2026-09-06T10:35:53Z",
+      "comments": 1,
+      "html_url": "https://github.com/AnikaLegal/clerk/issues/120",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2858",
+        "repo": "AnikaLegal/clerk",
+        "url": "https://github.com/anikalegal/clerk",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "law_firms"
+        ],
+        "discovery_categories": [
+          "matter_management",
+          "triage_route"
+        ],
+        "discovery_cells": [
+          "cross_industry:matter_management",
+          "cross_industry:triage_route",
+          "law_firms:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0425",
+          "repo": "AnikaLegal/clerk",
+          "url": "https://github.com/AnikaLegal/clerk",
+          "what_it_is": "The Anika Legal case management system & website.",
+          "stars": 40,
+          "pushed_at": "2026-08-28T07:24:53Z",
+          "language": "Python",
+          "license": null,
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/AnikaLegal/clerk/blob/HEAD/README.md",
+            "characters_read": 1442
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=legal%20case%20management&type=repositories",
+              "source_title": "GitHub repository search: legal case management",
+              "detail": "legal case management"
+            }
+          ],
+          "industries": [
+            "law_firms"
+          ],
+          "categories": [
+            "matter_management",
+            "triage_route"
+          ],
+          "cells": [
+            "cross_industry:matter_management",
+            "cross_industry:triage_route",
+            "law_firms:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "legal case management"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:law_firms"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "anikalegal/clerk",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

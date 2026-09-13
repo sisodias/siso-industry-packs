@@ -1,0 +1,153 @@
+{
+  "audit_id": "R008",
+  "requested_full_name": "SuffolkLITLab/docassemble-MACourts",
+  "observed_at": "2026-09-13T16:10:01.704283+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/docassemble-MACourts",
+  "html_url": "https://github.com/SuffolkLITLab/docassemble-MACourts",
+  "description": "List Massachusetts Courts in Docassemble",
+  "stargazers_count": 6,
+  "forks_count": 10,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-02-03T16:40:03Z",
+  "updated_at": "2026-09-03T21:17:04Z",
+  "pushed_at": "2026-09-03T21:15:11Z",
+  "size": 5346,
+  "open_issues_count": 17,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "ee7db61a107a650bfbd5268badaf2f7683c8c41b",
+  "last_commit": "2026-09-03T21:15:11Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/docassemble-MACourts",
+    "commit": "https://github.com/SuffolkLITLab/docassemble-MACourts/commit/ee7db61a107a650bfbd5268badaf2f7683c8c41b"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "6d0a444c69bf2db51800bfa6b4ce9f70b3e0741492bb9846f209563047c61440",
+    "text": "# docassemble.MACourts\r\n\r\nA utility package that includes JSON files representing all of the courts in Massachusetts.\r\n\r\nCourts automatically scraped from Mass.gov and geocoded with Google Maps.\r\n\r\nIf the court has a PO box, the PO box will be available in court.address.orig_address\r\n\r\n## Tests\r\n\r\nMypy:\r\n\r\n```bash\r\nmypy .\r\n```\r\n\r\nUnittests:\r\n\r\n```bash\r\npython3 -m unittest discover docassemble\r\n```\r\n\r\n## How to update `lower_court_code`\r\n\r\nWhen e-filing into appeals cases, Tyler expects a very specific code for the lower court that the case is being appealed from. We got a confirmation from Tyler that these values aren't publicly available, so for now they are stored in the `tyler_lower_court_code` and `tyler_prod_lower_court_code` attributes\r\nfor each object.\r\n\r\nThese values may occasionally change. And again, as we've gotten little information from Tyler about these values, we don't know when these values change. The only indication is if you start receiving `168, Lower court code not found` errors when filing.\r\n\r\nTo update these values:\r\n* visit and login to https://massachusetts-stage.tylertech.cloud/ofsweb/ (or the production site, https://massachusetts.tylertech.cloud/ofsweb/)\r\n* Once logged in, under \"New Filing\", click \"Start a new case\" (or visit https://massachusetts-stage.tylertech.cloud/OfsWeb/FileAndServeModule/Envelope/AddOrEdit).\r\n* Pull up your browser's network tools, refresh the page, and set the location field to be \"Appeals Court (Single Justice)\".\r\n* In your browser's network tools, look for the request to `GetEnvelopeCodeConfigs`. The full URL queried is https://massachusetts-stage.tylertech.cloud/OfsWeb/FileAndServeModule/Envelope/GetEnvelopeCodeConfigs?isLocationChanged=true&locationId=120.\r\n\r\nThe values we need will be in the JSON returned from that endpoint, under `obj[\"DropDownsLocation\"][\"LowerCourtCodes\"]`.\r\n\r\n**Note**: I wasn't able to give Lower Court codes to the \"Metro South Housing Courts\". Tyler's list only includes:\r\n\r\n* Housing Court Central\r\n* Housing Court Eastern\r\n* Housing Court, Northeast\r\n* Housing Court, Southeast\r\n* Housing Court, Western\r\n",
+    "characters": 2120,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/blob/ee7db61a107a650bfbd5268badaf2f7683c8c41b/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "14eb4ba8486834886cd1475938b1085095ca875d6ecbb23922898bcb3a619073",
+    "text": "The MIT License (MIT)\n\nCopyright (c) 2021 Quinten Steenhuis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1084,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/blob/ee7db61a107a650bfbd5268badaf2f7683c8c41b/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 56,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "nonprofittechy",
+      "contributions": 242
+    },
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 40
+    },
+    {
+      "login": "cc271793784",
+      "contributions": 34
+    },
+    {
+      "login": "justalittlelighthouse",
+      "contributions": 9
+    },
+    {
+      "login": "Gabyriveros99",
+      "contributions": 5
+    },
+    {
+      "login": "Tarnold4",
+      "contributions": 5
+    },
+    {
+      "login": "tylershannon",
+      "contributions": 5
+    },
+    {
+      "login": "Copilot",
+      "contributions": 4
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 4
+    },
+    {
+      "login": "colarusso",
+      "contributions": 3
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 130,
+      "title": "Adopt standalone MACourts shared court-lookup core",
+      "state": "open",
+      "created_at": "2026-09-03T19:13:02Z",
+      "updated_at": "2026-09-03T21:16:34Z",
+      "closed_at": null,
+      "comments": 6,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/issues/130",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 120,
+      "title": "Alias .phone_number to same value as .phone",
+      "state": "open",
+      "created_at": "2026-06-25T14:24:40Z",
+      "updated_at": "2026-07-27T13:31:13Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/issues/120",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 127,
+      "title": "Investigate uv.lock and dependabot warnings",
+      "state": "closed",
+      "created_at": "2026-07-11T03:36:40Z",
+      "updated_at": "2026-07-21T20:30:54Z",
+      "closed_at": "2026-07-21T20:30:54Z",
+      "comments": 4,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/issues/127",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 130,
+      "created_at": "2026-09-03T19:13:02Z",
+      "first_affiliated_reply_in_sample": "2026-09-03T19:54:27Z",
+      "source_url": "https://github.com/SuffolkLITLab/docassemble-MACourts/issues/130#issuecomment-5531308944"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

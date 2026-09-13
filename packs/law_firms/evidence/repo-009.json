@@ -1,0 +1,138 @@
+{
+  "audit_id": "R009",
+  "requested_full_name": "SuffolkLITLab/EfileProxyServer",
+  "observed_at": "2026-09-13T16:10:01.704283+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/EfileProxyServer",
+  "html_url": "https://github.com/SuffolkLITLab/EfileProxyServer",
+  "description": "A proxy server that acts as an Efiling Service Provider, connecting guided interviews to Efiling Managers on Tyler Technologies implementation of ECF 4.0",
+  "stargazers_count": 6,
+  "forks_count": 4,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2021-04-02T04:16:53Z",
+  "updated_at": "2026-09-11T14:12:08Z",
+  "pushed_at": "2026-09-11T14:12:00Z",
+  "size": 22317,
+  "open_issues_count": 52,
+  "topics": [
+    "document-assembly-line",
+    "java",
+    "soap-client"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "c83fe33a8468de13c4b56ae59b447b311c543358",
+  "last_commit": "2026-09-11T14:11:56Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/EfileProxyServer",
+    "commit": "https://github.com/SuffolkLITLab/EfileProxyServer/commit/c83fe33a8468de13c4b56ae59b447b311c543358"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "46d76d24cea4bdcb8f54134f4f1cac8ab66816e52ca9af320256c44ff5867db0",
+    "text": "# EfileProxyServer\n\nA separate server that sits between ECF 4.0 EFMs and docassemble, and can create court filings.\n\n[Docassemble-EFSPIntegration](https://github.com/SuffolkLITLab/docassemble-EFSPIntegration/) is an implementation of a client in Python with a reference interface in Docassemble.\n\n## Setup\n\nThis is an abbreviated version of installation. Full details are in [setup](docs/setup.md).\n\nThese instructions are written for Linux (specifically Ubuntu 22.04), steps for other platforms should be similar.\n\n1. [Install docker](https://docs.docker.com/engine/install/) and [docker compose](https://docs.docker.com/compose/install/).\n2. Then:\n    ```bash\n    git clone https://github.com/SuffolkLITLab/EfileProxyServer\n    cd EfileProxyServer\n    docker compose -f dev-compose.yml up --watch # For a development build\n    docker compose build && docker compose up -d # For a production-like build\n    ```\n\n### Env file\n\nDocker env files can't be directly used in `bash`, so if you are running things in your local shell (like when [testing](#testing)), use [direnv](https://direnv.net).\n\n### Making API Tokens\n\nWhen running locally, run `./scripts/local_create_api_key.sh`.\n\nThe API token to add to the docassemble config will be printed out.\n\n## Testing\n\nYou can run tests with `mvn test`. By default, all tests will run, but you can also limit the types of tests that you run with different maven profiles.\n\n* `mvn -PnoDockerTests test` will avoid tests that use docker. The Database tests spin up little docker containers to ensure that the queries work with Postgres. However, when this server is packaged up and run in a docker container, the nested docker enginer isn't available for the tests to run. So we need a way to avoid running those tests when packaging within docker.\n* `mvn -Preproducible test` will avoid tests that changes on Tyler's side might break, i.e. anything that makes a connection to a staging server. Useful for running on PRs, as we don't want to block PRs on unrelated issues.\n* `mvn -PtylerBreakable test` will **only** run tests that make a connection to Tyler staging servers. These are important to run routinely to ensure that we are aware of potentially breaking changes from the Tyler side.\n\nThese testing groups are maintained with [JUnit's Tag](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering) feature; each tag is specified in the profile's `<group>` or `<excludedGroup>` in the [pom.xml](pom.xml).\n\n### Integration Tests\n\nClose any active running instance of the docker compose containers before running `integration_test.py`.\n\nTo run integration tests with coverage, do the following:\n\n```bash\n# download a separate jar for jacoco and extract it\nwget --output-document=jacoco-0.8.10.zip https://search.maven.org/remotecontent?filepath=org/jacoco/jacoco/0.8.10/jacoco-0.8.10.zip\nunzip jacoco-0.8.10.zip\n# Setup the EFSPIntegration python side of things; where the actual tests are\npip install plumbum docassemble.EFSPIntegration\n# Run the integration test\n./integration_test.py\n# change the output jacoco.exec file to be owned by you\nsudo chown $USER target/jacoco.exec\n# run unit tests (without deleting jacoco.exec) and create the report\nmvn jacoco:prepare-agent verify jacoco:report\n# view the report in your browser\nfirefox target/site/jacoco/index.html # or chrome, chromium, etc.\n```\n\n## Making Code Changes\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n\n## Navigating the Code\n\nThis project is written in Java, using Maven as a build system. The Java code is split into several\ndifferent modules for better defined interfaces. Those modules include:\n\n* [TylerEfmClient](TylerEfmClient/README.md)\n* [TylerEcf4](TylerEcf4/README.md)\n* [TylerEcf5](TylerEcf5/README.md)\n* [TrueFilingEcf4](TrueFilingEcf4/README.md)",
+    "characters": 3799,
+    "source_url": "https://github.com/SuffolkLITLab/EfileProxyServer/blob/c83fe33a8468de13c4b56ae59b447b311c543358/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "6121fba462532f1020f016e587f61b0608c1850b2351c6e6c7a17a9816411f21",
+    "text": "MIT License\n\nCopyright (c) 2026 Suffolk Legal Innovation and Technology Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1100,
+    "source_url": "https://github.com/SuffolkLITLab/EfileProxyServer/blob/c83fe33a8468de13c4b56ae59b447b311c543358/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 92,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 732
+    },
+    {
+      "login": "codestronger",
+      "contributions": 24
+    },
+    {
+      "login": "nonprofittechy",
+      "contributions": 20
+    },
+    {
+      "login": "rajeswari1301",
+      "contributions": 10
+    },
+    {
+      "login": "KindBill",
+      "contributions": 4
+    },
+    {
+      "login": "aryy-suffolk",
+      "contributions": 3
+    },
+    {
+      "login": "plocket",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 446,
+      "title": "Maybe need a way to confirm user contact information for TrueFiling (Alaska)?",
+      "state": "open",
+      "created_at": "2026-08-24T17:48:07Z",
+      "updated_at": "2026-08-24T17:54:03Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/EfileProxyServer/issues/446",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 445,
+      "title": "Vermont: investigate missing Complaint filing type for Relief from Abuse initial filings",
+      "state": "open",
+      "created_at": "2026-08-20T21:57:50Z",
+      "updated_at": "2026-08-21T13:42:24Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/SuffolkLITLab/EfileProxyServer/issues/445",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 435,
+      "title": "Deduplicate filing types by unique filing type code, not EFSP code",
+      "state": "open",
+      "created_at": "2026-07-23T22:18:08Z",
+      "updated_at": "2026-08-20T21:58:06Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/SuffolkLITLab/EfileProxyServer/issues/435",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
