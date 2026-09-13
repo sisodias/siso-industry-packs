@@ -1,0 +1,110 @@
+name: Car rental bounded review-depth evidence
+on:
+  push:
+    branches: [research/car-rental-20260913]
+    paths: [.github/workflows/car-rental-review-depth.yml]
+permissions:
+  contents: read
+jobs:
+  review-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Read public sources without executing candidate code
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 -u - <<'PY'
+          import ast,base64,datetime,hashlib,json,os,pathlib,re,time,urllib.request,urllib.parse
+          OUT=pathlib.Path('/tmp/car-rental-review');OUT.mkdir(exist_ok=True)
+          NOW=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          def raw(url):
+              assert url.startswith('https://raw.githubusercontent.com/')
+              with urllib.request.urlopen(url,timeout=90) as r:return r.read().decode('utf-8','replace')
+          def gql(q):
+              req=urllib.request.Request('https://api.github.com/graphql',data=json.dumps({'query':q}).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Content-Type':'application/json','User-Agent':'siso-car-rental-evidence'})
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(req,timeout=90) as r:x=json.load(r)
+                      if x.get('errors'):print('QUERY_ERRORS',json.dumps(x['errors'])[:600],flush=True)
+                      return x.get('data') or {}
+                  except Exception as e:
+                      if attempt==2:raise
+                      time.sleep(3)
+          def save(n,x):(OUT/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+          previous='https://raw.githubusercontent.com/sisodias/siso-industry-packs/75f1b33333d23ccdc63a0a66299ba604fe30014e/packs/car_rental/research-receipts-v2.py'
+          txt=raw(previous)
+          # Extract a literal list only. Never execute imported or candidate code.
+          names=re.search("NAMES='''(.*?)'''",txt,re.S).group(1).split()
+          names+='traccar/traccar-client traccar/traccar-manager enketo/enketo eeghor/acriss c0shea/IdParser winfinit/aamvajs rechner/py-aamva alim-zanibekov/teltonika viafintech/camt_parser maptiler/iso2ofx OpenTravel/OTM-DE OpenTravel/OpenTravel-Specifications mihira/opentravel-xml-api hardbyte/python-can jseutter/ofxparse zxing-cpp/zxing-cpp invoiceninja/invoiceninja Shelf-nu/shelf.nu'.split()
+          names=list(dict.fromkeys(names));rows=[];fail=[]
+          for start in range(0,len(names),6):
+              batch=names[start:start+6];fields=[]
+              for i,n in enumerate(batch):
+                  o,p=n.split('/')
+                  fields.append('r'+str(i)+':repository(owner:'+json.dumps(o)+',name:'+json.dumps(p)+'){nameWithOwner url description stargazerCount isArchived licenseInfo{spdxId} defaultBranchRef{name target{...on Commit{oid committedDate}}}}')
+              data=gql('{'+' '.join(fields)+'}');rootfields=[]
+              for i,n in enumerate(batch):
+                  r=data.get('r'+str(i))
+                  if not r or not r.get('defaultBranchRef'):fail.append(n);continue
+                  o,p=r['nameWithOwner'].split('/');sha=r['defaultBranchRef']['target']['oid'];r['requested_name']=n
+                  rootfields.append('r'+str(i)+':repository(owner:'+json.dumps(o)+',name:'+json.dumps(p)+'){root:object(expression:'+json.dumps(sha+':')+'){...on Tree{entries{name type}}}}')
+              roots=gql('{'+' '.join(rootfields)+'}') if rootfields else {};ff=[];maps={}
+              for i,n in enumerate(batch):
+                  r=data.get('r'+str(i))
+                  if not r or not r.get('defaultBranchRef'):continue
+                  o,p=r['nameWithOwner'].split('/');sha=r['defaultBranchRef']['target']['oid']
+                  ents=((roots.get('r'+str(i)) or {}).get('root') or {}).get('entries',[])
+                  paths=[e['name'] for e in ents if e['type']=='blob' and re.match(r'(?i)^(readme(?:\..*)?|licen[cs]e(?:[-_.].*)?|copying(?:\..*)?|notice(?:\..*)?)$',e['name'])]
+                  paths=paths[:12];maps[i]=paths;r['root_names']=[e['name'] for e in ents]
+                  files=['f'+str(j)+':object(expression:'+json.dumps(sha+':'+p0)+'){...on Blob{oid text byteSize}}' for j,p0 in enumerate(paths)]
+                  if files:ff.append('r'+str(i)+':repository(owner:'+json.dumps(o)+',name:'+json.dumps(p)+'){'+ ' '.join(files)+'}')
+              fs=gql('{'+' '.join(ff)+'}') if ff else {}
+              for i,n in enumerate(batch):
+                  r=data.get('r'+str(i))
+                  if not r or not r.get('defaultBranchRef'):continue
+                  sha=r['defaultBranchRef']['target']['oid'];r['observed_at']=NOW;r['files']=[]
+                  for j,path in enumerate(maps.get(i,[])):
+                      f=(fs.get('r'+str(i)) or {}).get('f'+str(j))
+                      if f and f.get('text') is not None:r['files'].append({'path':path,'sha':f['oid'],'text':f['text'],'url':r['url']+'/blob/'+sha+'/'+path})
+                  rows.append(r)
+              save('deep-source-receipts.json',rows);print('SOURCE_BATCH',start,len(rows),flush=True)
+          # Canonical names AND historical aliases participate in bank membership.
+          wanted={n.lower() for n in names}|{r['nameWithOwner'].lower() for r in rows}
+          b=gql('{repository(owner:"sisodias",name:"siso-repo-bank"){defaultBranchRef{target{...on Commit{oid}}}}}')
+          banksha=b['repository']['defaultBranchRef']['target']['oid'];receipts=[];matches={}
+          paths=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','capability-shelf/source-registry.jsonl']
+          for path in paths:
+              url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+banksha+'/'+path;h=hashlib.sha256();num=0
+              with urllib.request.urlopen(url,timeout=90) as s:
+                  for line in s:
+                      h.update(line)
+                      if not line.strip():continue
+                      num+=1;row=json.loads(line);v=row.get('full_name') or row.get('repo') or row.get('repository')
+                      if isinstance(v,dict):v=v.get('full_name')
+                      if isinstance(v,str):
+                          key=v.lower().removeprefix('https://github.com/').removesuffix('.git').strip('/')
+                          if key in wanted:matches.setdefault(key,[]).append({'path':path,'line':num,'record':row})
+              receipts.append({'path':path,'rows':num,'sha256':h.hexdigest(),'url':url})
+          save('canonical-bank.json',{'revision':banksha,'observed_at':NOW,'files':receipts,'matches':matches})
+          # Three distinct expansion rounds; record actual returned names and error state.
+          queries=[(5,'S01','A','shared inbox rental'),(5,'S02,S03','A','car rental booking engine'),(5,'S04','A','AAMVA driver license'),(5,'S05,S07','A','vehicle condition inspection'),(5,'S06','A','rental fleet telematics'),(5,'S08','A','toll invoice reconciliation'),(5,'S09','A','vehicle maintenance self hosted'),(5,'S10','A','rental accounting payroll'),(6,'S01','B','topic:customer-support'),(6,'S02,S03','B','topic:car-rental'),(6,'S04','B','topic:pdf417'),(6,'S05,S07','B','topic:vehicle-inspection'),(6,'S06','B','topic:telematics'),(6,'S08','B','topic:einvoice'),(6,'S09','B','topic:cmms'),(6,'S10','B','topic:accounting'),(7,'S01','C','WhatsApp webhook rental'),(7,'S02,S03','C','VehAvailRateRQ'),(7,'S02,S03','C','ACRISS'),(7,'S04','C','PAdES'),(7,'S05,S07','C','OpenRosa'),(7,'S06','C','Teltonika codec'),(7,'S08','C','camt.053'),(7,'S09','C','OBD-II J1939'),(7,'S10','C','UBL invoice')]
+          seen=set(wanted);searches=[]
+          for roundno,stages,lane,q in queries:
+              d=gql('{search(query:'+json.dumps(q+' sort:stars-desc')+',type:REPOSITORY,first:5){repositoryCount pageInfo{hasNextPage endCursor} nodes{...on Repository{nameWithOwner url description stargazerCount isArchived}}}}')
+              result=d.get('search');returned=(result or {}).get('nodes',[]);new=[r['nameWithOwner'] for r in returned if r['nameWithOwner'].lower() not in seen];seen.update(r['nameWithOwner'].lower() for r in returned)
+              searches.append({'round':roundno,'stages':stages,'lane':lane,'query':q,'sort':'stars-desc','first':5,'error':result is None,'repository_count':(result or {}).get('repositoryCount'),'page_info':(result or {}).get('pageInfo'),'results':returned,'new_names':new,'observed_at':NOW})
+              save('search-expansions.json',searches);time.sleep(1)
+          canonical={r['nameWithOwner'] for r in rows}
+          save('summary.json',{'observed_at':NOW,'unique_repositories':len(canonical),'lookup_failures':fail,'search_queries':len(searches),'search_errors':sum(x['error'] for x in searches),'new_search_names':len({n for s in searches for n in s['new_names']}),'saturation_claim':False,'scope':'Public source retrieval only; no candidate execution, no application deployment, no automatic assessment verdict.'})
+          print('FINISHED',len(canonical),'repositories',len(searches),'queries',flush=True)
+          PY
+      - name: Preserve review material
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: car-rental-review-depth
+          path: /tmp/car-rental-review/
+          retention-days: 7
+          if-no-files-found: error
