@@ -1,0 +1,1313 @@
+[
+  {
+    "full_name": "pmorissette/bt",
+    "requested_name": "pmorissette/bt",
+    "id": 21006723,
+    "url": "https://github.com/pmorissette/bt",
+    "stars": 2982,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "10e151ab7703642792536a9ef4279fac28e3cb9c",
+    "last_commit_date": "2026-09-12T21:29:12Z",
+    "archived": false,
+    "fork": false,
+    "description": "bt - flexible backtesting for Python",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "The MIT License (MIT)",
+      "Copyright (c) 2015 Philippe Morissette",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# bt \u2014 Flexible Backtesting for Python",
+      "## Install",
+      "## A first backtest",
+      "## Explore the documentation",
+      "## Contribute"
+    ],
+    "recent_commit_count": 139,
+    "recent_authors_sample50": [
+      "Bortlesboat",
+      "JohnDReynolds",
+      "timkpaine"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/pmorissette/bt/issues/529",
+        "createdAt": "2026-08-04T03:18:06Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-07T18:54:11Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/pmorissette/bt/issues/415",
+        "createdAt": "2023-06-16T13:22:02Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-06-16T14:17:46Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-06-18T13:42:33Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-06-18T13:43:37Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-07T17:59:55Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "pmorissette/bt",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Python backtesting framework for financial strategies",
+      "reuse_value": 70,
+      "stars": 2894,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/pmorissette/bt",
+      "rank_score": 70028940
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "pmorissette/bt",
+      "stars": 2894,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "substrate",
+      "reuse_value": 70,
+      "liftability": 25,
+      "fame_gap": 45,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "bt - flexible backtesting for Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".copier-answers.yaml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "benchmarks",
+      "bt",
+      "docs",
+      "examples",
+      "pyproject.toml",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/README.md",
+        "sha256": "1e8b88096250b668d1da109e585e758af2e3013cd79c032fb84a2eb99ef0c2fc",
+        "bytes": 3007
+      },
+      "LICENSE": {
+        "url": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/LICENSE",
+        "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+        "bytes": 1086
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/pyproject.toml",
+        "sha256": "e402af11e720f11da960ae315b4a497918187ec7e7b64088c9a970bf3d67cdde",
+        "bytes": 5467
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/pmorissette/bt/commit/10e151ab7703642792536a9ef4279fac28e3cb9c",
+      "metadata": "https://api.github.com/repos/pmorissette/bt"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# bt \u2014 Flexible Backtesting for Python [![Build Status](https://github.com/pmorissette/bt/workflows/Build%20Status/badge.svg)](https://github.com/pmorissette/bt/actions/) [![PyPI Version](https://img.shields.io/pypi/v/bt)](https://pypi.org/project/bt/) [![PyPI License](https://img.shields.io/pypi/l/bt)](https://pypi.org/project/bt/) Build, test, and compare investment strategies from reusable Python components. bt combines strategy logic with historical price data, tracks portfolio positions and transactions, and provides performance statistics and charts through [ffn](https://github.com/pmorissette/ffn). - **Compose strategy logic:** combine algorithms for scheduling, security selection, weighting, and rebalancing. - **Build portfolios of strategies:** nest strategies and securities in a common tree. - **Model trading costs:** configure commissions and transaction cost models. - **Compare results:** inspect returns, weights, transactions, drawdowns, and other statistics. ## Install ```bash pip install bt ``` See the [installation guide](docs/source/install.md) for additional details. ## A first backtest This example uses synthetic prices, so it runs without downloading market data: ```python import numpy as np import pandas as pd import bt prices = pd.DataFrame( { \"asset_a\": np.linspace(100, 120, 252), \"asset_b\": np.linspace(100, 110, 252), }, index=pd.bdate_range(\"2020-01-01\", periods=252), ) strategy = bt.Strategy( \"equal_weight\", [ bt.algos.RunMonthly(), bt.algos.SelectAll(), bt.algos.WeighEqually(), bt.algos.Rebalance(), ], ) result = bt.run(bt.Backtest(strategy, prices)) result.display() ``` The strategy selects both assets, gives each equal weight, and rebalances monthly. Replace the synthetic",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015 Philippe Morissette Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# bt \u2014 Flexible Backtesting for Python",
+      "[![PyPI License](https://img.shields.io/pypi/l/bt)](https://pypi.org/project/bt/)",
+      "Build, test, and compare investment strategies from reusable Python components.",
+      "```python",
+      "prices = pd.DataFrame(",
+      "bt is released under the [MIT license](LICENSE)."
+    ],
+    "dependency_repos": [
+      "pmorissette/bt",
+      "pmorissette/ffn"
+    ]
+  },
+  {
+    "full_name": "pmorissette/ffn",
+    "requested_name": "pmorissette/ffn",
+    "id": 21006364,
+    "url": "https://github.com/pmorissette/ffn",
+    "stars": 2678,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "866ce1b5d2945795f876280058962b1e6b4f6b2b",
+    "last_commit_date": "2026-09-12T21:29:14Z",
+    "archived": false,
+    "fork": false,
+    "description": "ffn - a financial function library for Python",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "The MIT License (MIT)",
+      "Copyright (c) 2015 Philippe Morissette",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ffn - Financial Functions for Python",
+      "## Overview",
+      "## Installation",
+      "## Documentation",
+      "## Contribute"
+    ],
+    "recent_commit_count": 147,
+    "recent_authors_sample50": [
+      "Bortlesboat",
+      "JohnDReynolds",
+      "timkpaine"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/pmorissette/ffn/issues/85",
+        "createdAt": "2019-11-23T22:49:11Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-11-06T09:02:47Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/pmorissette/ffn/issues/33",
+        "createdAt": "2018-02-15T18:41:56Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_adoption_v2.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "pmorissette/ffn",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Financial function library for Python (analytics/computations)",
+      "reuse_value": 65,
+      "stars": 2607,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/pmorissette/ffn",
+      "rank_score": 65026070
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "pmorissette/ffn",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "ffn",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 67858,
+      "downloads_period": "last-month",
+      "dependent_repos": 125,
+      "dependent_pkgs": 10,
+      "rank_avg": 1.8784964777953785,
+      "reach_percentile": 98.1,
+      "reuse_value": 65,
+      "stars": 2607,
+      "adoption_score": 46.2,
+      "real_value": 46,
+      "verdict": "confirm",
+      "fame_gap": 11.0,
+      "raw_json": "{\"dl\": 67858, \"deprepos\": 125, \"deppkgs\": 10, \"rank_avg\": 1.8784964777953785, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "lift_row": {
+      "full_name": "pmorissette/ffn",
+      "stars": 2607,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 65,
+      "liftability": 90,
+      "fame_gap": -25,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "ffn - a financial function library for Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".copier-answers.yaml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "benchmarks",
+      "docs",
+      "ffn",
+      "pyproject.toml",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/README.md",
+        "sha256": "06c453ab7bd8951cd03096b489c3155bc069a1d7711761d7728f28cbb786e84a",
+        "bytes": 2090
+      },
+      "LICENSE": {
+        "url": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/LICENSE",
+        "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+        "bytes": 1086
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/pyproject.toml",
+        "sha256": "6020bbac0f300b97a2a30f0fb83f56d54e6278b20a630e9c30a10e51ff7fbd2e",
+        "bytes": 3790
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/pmorissette/ffn/commit/866ce1b5d2945795f876280058962b1e6b4f6b2b",
+      "metadata": "https://api.github.com/repos/pmorissette/ffn"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ffn - Financial Functions for Python ![ffn](docs/source/_static/logo.png) [![Build Status](https://github.com/pmorissette/ffn/workflows/Build%20Status/badge.svg)](https://github.com/pmorissette/ffn/actions/) [![PyPI Version](https://img.shields.io/pypi/v/ffn)](https://pypi.org/project/ffn/) [![PyPI License](https://img.shields.io/pypi/l/ffn)](https://pypi.org/project/ffn/) If you are looking for a full backtesting framework, please check out [bt](https://github.com/pmorissette/bt). bt is built atop ffn and makes it easy and fast to backtest quantitative strategies. ## Overview ffn is a library that contains many useful functions for those who work in **quantitative finance**. It stands on the shoulders of giants (Pandas, Numpy, Scipy, etc.) and provides a vast array of utilities, from performance measurement and evaluation to graphing and common data transformations. ```python import ffn returns = ffn.get('aapl,msft,c,gs,ge', start='2010-01-01').to_returns().dropna() print(returns.calc_mean_var_weights().as_format('.2%')) ``` Example output: ```text aapl 62.54% c -0.00% ge 36.19% gs -0.00% msft 1.26% dtype: object ``` ## Installation The easiest way to install `ffn` is from the [Python Package Index](https://pypi.python.org/pypi/ffn/) using `pip`. ```bash pip install ffn ``` Since ffn has many dependencies, we strongly recommend installing the [Anaconda Scientific Python Distribution](https://store.continuum.io/cshop/anaconda/). This distribution comes with many of the required packages pre-installed, including pip. Once Anaconda is installed, the above command should complete the installation. ## Documentation Read the docs at . -",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015 Philippe Morissette Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# ffn - Financial Functions for Python",
+      "[![PyPI License](https://img.shields.io/pypi/l/ffn)](https://pypi.org/project/ffn/)",
+      "If you are looking for a full backtesting framework, please check out [bt](https://github.com/pmorissette/bt).",
+      "```python",
+      "The easiest way to install `ffn` is from the [Python Package Index](https://pypi.python.org/pypi/ffn/)",
+      "Since ffn has many dependencies, we strongly recommend installing the [Anaconda Scientific Python Distribution](https://store.continuum.io/cshop/anaconda/). This distribution comes with many of the required packages pre-installed, including pip. Once Anaconda "
+    ],
+    "dependency_repos": [
+      "pmorissette/bt",
+      "pmorissette/ffn"
+    ]
+  },
+  {
+    "full_name": "stefan-jansen/zipline-reloaded",
+    "requested_name": "stefan-jansen/zipline-reloaded",
+    "id": 342145253,
+    "url": "https://github.com/stefan-jansen/zipline-reloaded",
+    "stars": 1938,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "943010b9da848e317fc520de87edade2b884d329",
+    "last_commit_date": "2025-11-13T15:14:32Z",
+    "archived": false,
+    "fork": true,
+    "description": "Zipline, a Pythonic Algorithmic Trading Library",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Backtest your Trading Strategies",
+      "## Features",
+      "## Installation",
+      "### Using `pip`",
+      "### Using `conda`",
+      "## Quickstart",
+      "## Questions, suggestions, bugs?"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/issues/320",
+        "createdAt": "2026-02-14T11:57:15Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-10T23:05:53Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/issues/322",
+        "createdAt": "2026-02-14T11:57:36Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".coveragerc",
+      ".devcontainer",
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "AUTHORS",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.rst",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "codecov.yml",
+      "conda",
+      "docs",
+      "pyproject.toml",
+      "rebuild-cython.sh",
+      "setup.py",
+      "src",
+      "tests",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/README.md",
+        "sha256": "4b008972fe011fcf5b6b546fe2012e2a3552a67b64b934f796fe8308f5be8a7c",
+        "bytes": 8498
+      },
+      "LICENSE": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/LICENSE",
+        "sha256": "e35c4578f7db4498e62e278978f6c42e0fce6f21f9993a060b08a33549cd3044",
+        "bytes": 11347
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/pyproject.toml",
+        "sha256": "76c2818609ee2c8c4f1f7d6540ffc68407a8601a9837dafc6abcbf0845ab2c3b",
+        "bytes": 8373
+      },
+      "setup.py": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/setup.py",
+        "sha256": "a341ddc4d2df5c2cef4887c4f8e9a6a15328560026d635197471e783488ca0c1",
+        "bytes": 3902
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/stefan-jansen/zipline-reloaded/commit/943010b9da848e317fc520de87edade2b884d329",
+      "metadata": "https://api.github.com/repos/stefan-jansen/zipline-reloaded"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Backtest your Trading Strategies | Version Info | [![Python](https://img.shields.io/pypi/pyversions/zipline-reloaded.svg?cacheSeconds=2592000)](https://pypi.python.org/pypi/zipline-reloaded) [![Anaconda-Server Badge](https://anaconda.org/ml4t/zipline-reloaded/badges/platforms.svg)](https://anaconda.org/ml4t/zipline-reloaded) ![PyPI](https://img.shields.io/pypi/v/zipline-reloaded) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/zipline-reloaded/badges/version.svg)](https://anaconda.org/conda-forge/zipline-reloaded) | | ------------------- | ---------- | | **Test** **Status** | [![CI Tests](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/ci_tests_full.yml/badge.svg)](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/unit_tests.yml) [![PyPI](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/build_wheels.yml) [![codecov](https://codecov.io/gh/stefan-jansen/zipline-reloaded/branch/main/graph/badge.svg)](https://codecov.io/gh/stefan-jansen/zipline-reloaded) | | **Community** | [![Discourse](https://img.shields.io/discourse/topics?server=https%3A%2F%2Fexchange.ml4trading.io%2F)](https://exchange.ml4trading.io) [![ML4T](https://img.shields.io/badge/Powered%20by-ML4Trading-blue)](https://ml4trading.io) [![Twitter](https://img.shields.io/twitter/follow/ml4trading.svg?style=social)](https://twitter.com/ml4trading) | Zipline is a Pythonic event-driven system for backtesting, developed and used as the backtesting and live-trading engine by [crowd-sourced investment fund Quantopian](https://www.bizjournals.com/boston/news/2020/11/10/quantopian-shuts-down-cofounders-head-elsewhere.html). Since it closed late 2020, the domain that had hosted these docs expired. The library is used extensively in the book [Machine Larning for Algorithmic Trading](https://ml4trading.io) by [Stefan Jansen](https://www.linkedin.com/in/applied-ai/) who is trying to keep the library up to date and available to his readers and the wider Python algotrading community. - [Join our Community!](https://exchange.ml4trading.io) - [Documentation](https://zipline.ml4trading.io) ## Features - **Ease of Use:** Zipline tries to get out of your way so that you can focus on algorithm development. See below for a code example. - **Batteries Included:** many common statistics like moving average and linear regression can be readily accessed from within a user-written algorithm. - **PyData Integration:** Input of historical data and output of performance statistics are based on Pandas",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "| Version Info        | [![Python](https://img.shields.io/pypi/pyversions/zipline-reloaded.svg?cacheSeconds=2592000)](https://pypi.python.org/pypi/zipline-reloaded) [![Anaconda-Server Badge](https://anaconda.org/ml4t/zipline-reloaded/badges/platforms.svg)](htt",
+      "Zipline is a Pythonic event-driven system for backtesting, developed and used as the backtesting and live-trading engine by [crowd-sourced investment fund Quantopian](https://www.bizjournals.com/boston/news/2020/11/10/quantopian-shuts-down-cofounders-head-else",
+      "by [Stefan Jansen](https://www.linkedin.com/in/applied-ai/) who is trying to keep the library up to date and available to his readers and the wider Python algotrading community.",
+      "- **PyData Integration:** Input of historical data and output of performance statistics are based on Pandas DataFrames to integrate nicely into the existing PyData ecosystem.",
+      "> **Note:** Release 3.05 makes Zipline compatible with Numpy 2.0, which requires Pandas 2.2.2 or higher. If you are using an older version of Pandas, you will need to upgrade it. Other packages may also still take more time to catch up with the latest Numpy re",
+      "Zipline supports Python >= 3.9 and is compatible with current versions of the relevant [NumFOCUS](https://numfocus.org/sponsored-projects?_sft_project_category=python-interface) libraries, including [pandas](https://pandas.pydata.org/) and [scikit-learn](https",
+      "```python",
+      "# data.history() has to be called with the same params",
+      "# from above and returns a pandas dataframe.",
+      "> This requires an API key, which you can get for free by signing up at [NASDAQ Data Link](https://data.nasdaq.com).",
+      "- save the resulting performance DataFrame as `dma.pickle`, which you can load and analyze from Python using, e.g., [pyfolio-reloaded](https://github.com/stefan-jansen/pyfolio-reloaded)."
+    ],
+    "dependency_repos": [
+      "conda-forge/zipline-reloaded-feedstock",
+      "conda/conda",
+      "gerrymanoim/exchange_calendars",
+      "mamba-org/mamba",
+      "stefan-jansen/pyfolio-reloaded",
+      "stefan-jansen/zipline",
+      "stefan-jansen/zipline-reloaded"
+    ]
+  },
+  {
+    "full_name": "quantopian/zipline",
+    "requested_name": "quantopian/zipline",
+    "id": 6297520,
+    "url": "https://github.com/quantopian/zipline",
+    "stars": 20092,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "014f1fc339dc8b7671d29be2d85ce57d3daec343",
+    "last_commit_date": "2020-10-14T16:36:49Z",
+    "archived": false,
+    "fork": false,
+    "description": "Zipline, a Pythonic Algorithmic Trading Library",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/quantopian/zipline/issues/2670",
+        "createdAt": "2020-03-14T17:58:48Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-05-02T09:17:44Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-05-12T09:55:04Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-10-31T11:59:29Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/quantopian/zipline/issues/2809",
+        "createdAt": "2021-02-16T10:34:20Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-02-22T21:56:03Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-02-23T08:46:51Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-03-06T15:14:43Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-03-06T16:07:42Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-04-02T17:11:28Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-05-25T12:02:11Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_adoption_v2.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "quantopian/zipline",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Algorithmic trading backtesting library",
+      "reuse_value": 75,
+      "stars": 19907,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "url": "https://github.com/quantopian/zipline",
+      "rank_score": 75199070
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "quantopian/zipline",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "zipline",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 1077,
+      "downloads_period": "last-month",
+      "dependent_repos": 268,
+      "dependent_pkgs": 2,
+      "rank_avg": 3.302070651738376,
+      "reach_percentile": 96.7,
+      "reuse_value": 75,
+      "stars": 19907,
+      "adoption_score": 36.4,
+      "real_value": 36,
+      "verdict": "confirm",
+      "fame_gap": -16.4,
+      "raw_json": "{\"dl\": 1077, \"deprepos\": 268, \"deppkgs\": 2, \"rank_avg\": 3.302070651738376, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "lift_row": {
+      "full_name": "quantopian/zipline",
+      "stars": 19907,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Zipline, a Pythonic Algorithmic Trading Library"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".appveyor.yml",
+      ".coveragerc",
+      ".dir-locals.el",
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".travis.yml",
+      "AUTHORS",
+      "CONTRIBUTING.rst",
+      "Dockerfile",
+      "Dockerfile-dev",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "Vagrantfile",
+      "ci",
+      "conda",
+      "docs",
+      "etc",
+      "setup.cfg",
+      "setup.py",
+      "tests",
+      "vagrant_init.sh",
+      "versioneer.py",
+      "zipline"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/quantopian/zipline/blob/014f1fc339dc8b7671d29be2d85ce57d3daec343/README.rst",
+        "sha256": "d03e707f5b3b59b3b7590c756b565b92fee2fb565753e3d6c2b773dfad27cd9a",
+        "bytes": 6464
+      },
+      "LICENSE": {
+        "url": "https://github.com/quantopian/zipline/blob/014f1fc339dc8b7671d29be2d85ce57d3daec343/LICENSE",
+        "sha256": "e35c4578f7db4498e62e278978f6c42e0fce6f21f9993a060b08a33549cd3044",
+        "bytes": 11347
+      },
+      "setup.py": {
+        "url": "https://github.com/quantopian/zipline/blob/014f1fc339dc8b7671d29be2d85ce57d3daec343/setup.py",
+        "sha256": "069480b4ff7f2359ad9aa5136ebb029d242d2311ce28fc3ec8b2fb8eb9f6e8a9",
+        "bytes": 9962
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/quantopian/zipline/commit/014f1fc339dc8b7671d29be2d85ce57d3daec343",
+      "metadata": "https://api.github.com/repos/quantopian/zipline"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": ".. image:: https://media.quantopian.com/logos/open_source/zipline-logo-03_.png :target: https://www.zipline.io :width: 212px :align: center :alt: Zipline ============= |Gitter| |pypi version status| |pypi pyversion status| |travis status| |appveyor status| |Coverage Status| Zipline is a Pythonic algorithmic trading library. It is an event-driven system for backtesting. Zipline is currently used in production as the backtesting and live-trading engine powering `Quantopian `_ -- a free, community-centered, hosted platform for building and executing trading strategies. Quantopian also offers a `fully managed service for professionals `_ that includes Zipline, Alphalens, Pyfolio, FactSet data, and more. - `Join our Community! `_ - `Documentation `_ - Want to Contribute? See our `Development Guidelines `_ Features ======== - **Ease of Use:** Zipline tries to get out of your way so that you can focus on algorithm development. See below for a code example. - **\"Batteries Included\":** many common statistics like moving average and linear regression can be readily accessed from within a user-written algorithm. - **PyData Integration:** Input of historical data and output of performance statistics are based on Pandas DataFrames to integrate nicely into the existing PyData ecosystem. - **Statistics and Machine",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Zipline is a Pythonic algorithmic trading library. It is an event-driven",
+      "based on Pandas DataFrames to integrate nicely into the existing",
+      "Zipline currently supports Python 2.7, 3.5, and 3.6, and may be installed via",
+      "**Note:** Installing Zipline is slightly more involved than the average Python",
+      ".. code:: python",
+      "# data.history() has to be called with the same params",
+      "# from above and returns a pandas dataframe.",
+      "Then, the resulting performance DataFrame is saved in ``dma.pickle``, which you can load and analyze from within Python.",
+      "understand, and we hope that this note might help reduce any frustration or",
+      ":target: https://pypi.python.org/pypi/zipline",
+      ":target: https://pypi.python.org/pypi/zipline"
+    ],
+    "dependency_repos": [
+      "quantopian/zipline"
+    ]
+  },
+  {
+    "full_name": "quantopian/pyfolio",
+    "requested_name": "quantopian/pyfolio",
+    "id": 36670205,
+    "url": "https://github.com/quantopian/pyfolio",
+    "stars": 6421,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa",
+    "last_commit_date": "2020-07-15T13:46:58Z",
+    "archived": false,
+    "fork": false,
+    "description": "Portfolio and risk analytics in Python",
+    "language": "Jupyter Notebook",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# pyfolio",
+      "## Installation",
+      "#### Development",
+      "#### Matplotlib on OSX",
+      "## Usage",
+      "## Questions?",
+      "## Support",
+      "## Contributing"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/quantopian/pyfolio/issues/719",
+        "createdAt": "2025-02-26T13:10:19Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-07-14T02:42:21Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/quantopian/pyfolio/issues/721",
+        "createdAt": "2025-04-13T15:11:23Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "quantopian/pyfolio",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Portfolio and risk analytics in Jupyter notebooks",
+      "reuse_value": 78,
+      "stars": 6341,
+      "license": "Apache-2.0",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/quantopian/pyfolio",
+      "rank_score": 78063410
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "quantopian/pyfolio",
+      "stars": 6341,
+      "license": "Apache-2.0",
+      "language": "Jupyter Notebook",
+      "unit_class": "component",
+      "reuse_value": 78,
+      "liftability": 90,
+      "fame_gap": -12,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Portfolio and risk analytics in Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".travis.yml",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "WHATSNEW.md",
+      "build_and_deploy_docs.sh",
+      "conda",
+      "docs",
+      "mkdocs.yml",
+      "pyfolio",
+      "setup.cfg",
+      "setup.py",
+      "versioneer.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/quantopian/pyfolio/blob/4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa/README.md",
+        "sha256": "e6ed13eac2caa106829e3e0037c8195dcc86b1d744cf25a75e7db725b615c514",
+        "bytes": 3296
+      },
+      "LICENSE": {
+        "url": "https://github.com/quantopian/pyfolio/blob/4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa/LICENSE",
+        "sha256": "3f4281d997a6782e2c5e197a8561c6e2f0fdec0f7e7e0ee8e42016692e3d3b25",
+        "bytes": 11347
+      },
+      "setup.py": {
+        "url": "https://github.com/quantopian/pyfolio/blob/4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa/setup.py",
+        "sha256": "a33d7d7afa341c655ff0d66161e32f641ada7d522873b3183a446a6674f1e1a8",
+        "bytes": 2636
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/quantopian/pyfolio/commit/4b901f6d73aa02ceb6d04b7d83502e5c6f2e81aa",
+      "metadata": "https://api.github.com/repos/quantopian/pyfolio"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![pyfolio](https://media.quantopian.com/logos/open_source/pyfolio-logo-03.png \"pyfolio\") # pyfolio [![Join the chat at https://gitter.im/quantopian/pyfolio](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/quantopian/pyfolio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![build status](https://travis-ci.org/quantopian/pyfolio.png?branch=master)](https://travis-ci.org/quantopian/pyfolio) pyfolio is a Python library for performance and risk analysis of financial portfolios developed by [Quantopian Inc](https://www.quantopian.com). It works well with the [Zipline](https://www.zipline.io/) open source backtesting library. Quantopian also offers a [fully managed service for professionals](https://factset.quantopian.com) that includes Zipline, Alphalens, Pyfolio, FactSet data, and more. At the core of pyfolio is a so-called tear sheet that consists of various individual plots that provide a comprehensive image of the performance of a trading algorithm. Here's an example of a simple tear sheet analyzing a strategy: ![simple tear 0](https://github.com/quantopian/pyfolio/raw/master/docs/simple_tear_0.png \"Example tear sheet created from a Zipline algo\") ![simple tear 1](https://github.com/quantopian/pyfolio/raw/master/docs/simple_tear_1.png \"Example tear sheet created from a Zipline algo\") Also see [slides of a talk about pyfolio](https://nbviewer.jupyter.org/format/slides/github/quantopian/pyfolio/blob/master/pyfolio/examples/pyfolio_talk_slides.ipynb#/). ## Installation To install pyfolio, run: ```bash pip install pyfolio ``` #### Development For development, you may want to use a [virtual environment](https://docs.python-guide.org/en/latest/dev/virtualenvs/) to avoid dependency conflicts between pyfolio and other Python projects you have. To get set up with a virtual env, run: ```bash mkvirtualenv pyfolio ``` Next, clone this git repository and run",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "pyfolio is a Python library for performance and risk analysis of",
+      "For development, you may want to use a [virtual environment](https://docs.python-guide.org/en/latest/dev/virtualenvs/) to avoid dependency conflicts between pyfolio and other Python projects you have. To get set up with a virtual env, run:",
+      "Next, clone this git repository and run `python setup.py develop`",
+      "If you are on OSX and using a non-framework build of Python, you may need to set your backend:"
+    ],
+    "dependency_repos": [
+      "quantopian/pyfolio"
+    ]
+  },
+  {
+    "full_name": "quantopian/alphalens",
+    "requested_name": "quantopian/alphalens",
+    "id": 60379729,
+    "url": "https://github.com/quantopian/alphalens",
+    "stars": 4446,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "77084f1e4c2c0be407e032d444fb19e4be4b0f37",
+    "last_commit_date": "2020-04-27T18:40:41Z",
+    "archived": false,
+    "fork": false,
+    "description": "Performance analysis of predictive (alpha) stock factors",
+    "language": "Jupyter Notebook",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/quantopian/alphalens/issues/400",
+        "createdAt": "2023-09-12T15:49:12Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-09-30T06:31:55Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-10T01:52:52Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/quantopian/alphalens/issues/404",
+        "createdAt": "2024-02-03T03:37:50Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-02-07T07:57:12Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-02-14T07:53:58Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-02-22T09:03:31Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-02-24T03:58:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-03-06T03:09:20Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-03-17T08:20:03Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-04-02T20:19:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-04-02T20:26:41Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-04-11T14:07:47Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-04-11T16:48:29Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "alphalens",
+      "build_and_deploy_docs.sh",
+      "docs",
+      "setup.cfg",
+      "setup.py",
+      "tox.ini",
+      "versioneer.py"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/quantopian/alphalens/blob/77084f1e4c2c0be407e032d444fb19e4be4b0f37/README.rst",
+        "sha256": "03344d294d3a139f2e688f24349b31f35e84a25625cf9bad8b0c958e43172ad6",
+        "bytes": 4669
+      },
+      "LICENSE": {
+        "url": "https://github.com/quantopian/alphalens/blob/77084f1e4c2c0be407e032d444fb19e4be4b0f37/LICENSE",
+        "sha256": "2b651c2d29c644d1c73417cd96e6cfa506d6de102ed96fc3de96d676e089cf29",
+        "bytes": 11346
+      },
+      "setup.py": {
+        "url": "https://github.com/quantopian/alphalens/blob/77084f1e4c2c0be407e032d444fb19e4be4b0f37/setup.py",
+        "sha256": "8cf95ba89d8fb4ff69fb0cc58f9ea845c3a881c4dacf0ef2f6ef317a2edab643",
+        "bytes": 1841
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/quantopian/alphalens/commit/77084f1e4c2c0be407e032d444fb19e4be4b0f37",
+      "metadata": "https://api.github.com/repos/quantopian/alphalens"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": ".. image:: https://media.quantopian.com/logos/open_source/alphalens-logo-03.png :align: center Alphalens ========= .. image:: https://github.com/quantopian/alphalens/workflows/CI/badge.svg :alt: GitHub Actions status :target: https://github.com/quantopian/alphalens/actions?query=workflow%3ACI+branch%3Amaster Alphalens is a Python Library for performance analysis of predictive (alpha) stock factors. Alphalens works great with the `Zipline `__ open source backtesting library, and `Pyfolio `__ which provides performance and risk analysis of financial portfolios. You can try Alphalens at `Quantopian `_ -- a free, community-centered, hosted platform for researching and testing alpha ideas. Quantopian also offers a `fully managed service for professionals `_ that includes Zipline, Alphalens, Pyfolio, FactSet data, and more. The main function of Alphalens is to surface the most relevant statistics and plots about an alpha factor, including: - Returns Analysis - Information Coefficient Analysis - Turnover Analysis - Grouped Analysis Getting started --------------- With a signal and pricing data creating a factor \"tear sheet\" is a two step process: .. code:: python import alphalens # Ingest and format data factor_data = alphalens.utils.get_clean_factor_and_forward_returns(my_factor, pricing, quantiles=5, groupby=ticker_sector, groupby_labels=sector_names) # Run analysis alphalens.tears.create_full_tear_sheet(factor_data) Learn more ---------- Check out the `example notebooks `__ for more on how to read and use the",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Alphalens is a Python Library for performance analysis of predictive",
+      ".. code:: python",
+      "``http://localhost:8888/``), navigate over to the examples directory,"
+    ],
+    "dependency_repos": [
+      "matplotlib/matplotlib",
+      "mwaskom/seaborn",
+      "numpy/numpy",
+      "pandas-dev/pandas",
+      "quantopian/alphalens",
+      "quantopian/pyfolio",
+      "scipy/scipy",
+      "statsmodels/statsmodels"
+    ]
+  },
+  {
+    "full_name": "stefan-jansen/pyfolio-reloaded",
+    "requested_name": "stefan-jansen/pyfolio-reloaded",
+    "id": 341360629,
+    "url": "https://github.com/stefan-jansen/pyfolio-reloaded",
+    "stars": 613,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "6b55da7fce365e325046bb080cb13ced1822de95",
+    "last_commit_date": "2025-06-02T13:08:44Z",
+    "archived": false,
+    "fork": true,
+    "description": "Portfolio and risk analytics in Python",
+    "language": "Jupyter Notebook",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Trading Strategy Analysis with pyfolio",
+      "### Performance Metrics",
+      "### Performance Plots",
+      "## Installation",
+      "#### Development",
+      "## Usage",
+      "## Questions?",
+      "## Support",
+      "## Contributing"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/issues/55",
+        "createdAt": "2025-02-12T13:32:53Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-21T14:29:58Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/issues/56",
+        "createdAt": "2025-04-22T05:01:50Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "WHATSNEW.md",
+      "build_and_deploy_docs.sh",
+      "conda",
+      "docs",
+      "mkdocs.yml",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/README.md",
+        "sha256": "7606b6e56bcddfde2e275a66c8eb9c578a3c589328c32684fdf2bc77069f228d",
+        "bytes": 3820
+      },
+      "LICENSE": {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/LICENSE",
+        "sha256": "2b651c2d29c644d1c73417cd96e6cfa506d6de102ed96fc3de96d676e089cf29",
+        "bytes": 11346
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/pyproject.toml",
+        "sha256": "55f365f01e76f016a452d2e83d0d67a5123ab9cbf487582f132fd6072890a8ea",
+        "bytes": 4016
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/stefan-jansen/pyfolio-reloaded/commit/6b55da7fce365e325046bb080cb13ced1822de95",
+      "metadata": "https://api.github.com/repos/stefan-jansen/pyfolio-reloaded"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![PyPI](https://img.shields.io/pypi/v/pyfolio-reloaded) [![Tests](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/unit_tests.yml) [![conda](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/conda_package.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/conda_package.yml) [![PyPI](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/build_wheels.yml) [![Coverage Status](https://coveralls.io/repos/github/stefan-jansen/pyfolio-reloaded/badge.svg?branch=main)](https://coveralls.io/github/stefan-jansen/pyfolio-reloaded?branch=main) ![GitHub issues](https://img.shields.io/github/issues/stefan-jansen/pyfolio-reloaded) ![Discourse users](https://img.shields.io/discourse/users?server=https%3A%2F%2Fexchange.ml4trading.io%2F) ![Twitter Follow](https://img.shields.io/twitter/follow/ml4trading?style=social) pyfolio is a Python library for performance and risk analysis of financial portfolios that works well with the [Zipline](https://zipline.ml4trading.io/) open source backtesting library. ## Trading Strategy Analysis with pyfolio At the core of pyfolio are various tear sheets that combine various individual plots and summary statistics to provide a comprehensive view of the performance of a trading algorithm. Here's an example of a simple tear sheet analyzing a strategy executed with the Zipline backtesting engine: ### Performance Metrics The tear sheet presents performance and risk metrics for the strategy separately during the backtest and out-of-sample periods: ### Performance Plots In addition, it visualizes how several risk and return metrics behave over time: ## Installation To install pyfolio, run: ```bash pip install pyfolio-reloaded ``` or ```bash conda install -c ml4t pyfolio-reloaded ``` #### Development For development, you may want to use a [virtual environment](https://docs.python-guide.org/en/latest/dev/virtualenvs/) to avoid dependency conflicts between pyfolio and other Python projects you have. To get set up with a virtual env, run: ```bash mkvirtualenv pyfolio ```",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "pyfolio is a Python library for performance and risk analysis of financial portfolios that works well with the [Zipline](https://zipline.ml4trading.io/) open source backtesting library.",
+      "For development, you may want to use a [virtual environment](https://docs.python-guide.org/en/latest/dev/virtualenvs/) to avoid dependency conflicts between pyfolio and other Python projects you have.",
+      "Next, clone this git repository and run `python -m pip install .[all]` and edit the library files directly."
+    ],
+    "dependency_repos": [
+      "stefan-jansen/pyfolio-reloaded"
+    ]
+  },
+  {
+    "full_name": "stefan-jansen/alphalens-reloaded",
+    "requested_name": "stefan-jansen/alphalens-reloaded",
+    "id": 341661949,
+    "url": "https://github.com/stefan-jansen/alphalens-reloaded",
+    "stars": 646,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f0a07c22d554e4b4036983cc80320b432714fe7e",
+    "last_commit_date": "2025-06-02T09:19:47Z",
+    "archived": false,
+    "fork": true,
+    "description": "Performance analysis of predictive (alpha) stock factors",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2018 Quantopian, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Getting started",
+      "# Ingest and format data",
+      "# Run analysis",
+      "# Learn more",
+      "# Installation",
+      "# Usage",
+      "# Questions?",
+      "# Contribute",
+      "# Credits",
+      "# Example Tear Sheets",
+      "## Peformance Metrics Tables",
+      "## Returns Tear Sheet",
+      "## Information Coefficient Tear Sheet",
+      "## Sector Tear Sheet"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/issues/30",
+        "createdAt": "2024-05-27T10:38:24Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-21T15:14:15Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/issues/45",
+        "createdAt": "2026-04-05T16:38:36Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "build_and_deploy_docs.sh",
+      "conda",
+      "docs",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/README.md",
+        "sha256": "1d0b1818e6379ef4294ea58be3e3789ea1e9829e62c7bdf4f0af033be607892e",
+        "bytes": 5113
+      },
+      "LICENSE": {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/LICENSE",
+        "sha256": "2b651c2d29c644d1c73417cd96e6cfa506d6de102ed96fc3de96d676e089cf29",
+        "bytes": 11346
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/pyproject.toml",
+        "sha256": "b9f5970eed974d980e1b2eb32ea9ffcd70462488897682661cb879d2a78e218c",
+        "bytes": 3847
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/stefan-jansen/alphalens-reloaded/commit/f0a07c22d554e4b4036983cc80320b432714fe7e",
+      "metadata": "https://api.github.com/repos/stefan-jansen/alphalens-reloaded"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![PyPI](https://img.shields.io/pypi/v/alphalens-reloaded) [![Anaconda](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/conda_package.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/conda_package.yml) [![Tests](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/unit_tests.yml) [![PyPI](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/build_wheels.yml) [![Coverage Status](https://coveralls.io/repos/github/stefan-jansen/alphalens-reloaded/badge.svg?branch=main)](https://coveralls.io/github/stefan-jansen/alphalens-reloaded?branch=main) ![GitHub issues](https://img.shields.io/github/issues/stefan-jansen/alphalens-reloaded) ![PyPI - License](https://img.shields.io/pypi/l/alphalens-reloaded) ![Discourse users](https://img.shields.io/discourse/users?server=https%3A%2F%2Fexchange.ml4trading.io%2F) ![Twitter Follow](https://img.shields.io/twitter/follow/ml4trading?style=social) Alphalens is a Python library for performance analysis of predictive (alpha) stock factors. Alphalens works great with the [Zipline](https://www.zipline.ml4trading.io/) open source backtesting library, and [Pyfolio](https://github.com/quantopian/pyfolio) which provides performance and risk analysis of financial portfolios. The main function of Alphalens is to surface the most relevant statistics and plots about an alpha factor, including: - Returns Analysis - Information Coefficient Analysis - Turnover Analysis - Grouped Analysis # Getting started With a signal and pricing data creating a factor \\\"tear sheet\\\" is a two step process: ```python import alphalens # Ingest and format data factor_data = alphalens.utils.get_clean_factor_and_forward_returns(my_factor, pricing, quantiles=5, groupby=ticker_sector, groupby_labels=sector_names) # Run analysis alphalens.tears.create_full_tear_sheet(factor_data) ``` # Learn more Check out the [example notebooks](https://github.com/stefan-jansen/alphalens-reloaded/tree/master/alphalens/examples) for more on how to read and use the factor tear sheet. # Installation Install with pip: pip install alphalens-reloaded Install with conda: conda install -c ml4t alphalens-reloaded Install from the master branch of Alphalens repository (development code): pip install git+https://github.com/stefan-jansen/alphalens-reloaded Alphalens depends on: - [matplotlib](https://github.com/matplotlib/matplotlib) - [numpy](https://github.com/numpy/numpy) - [pandas](https://github.com/pandas-dev/pandas) - [scipy](https://github.com/scipy/scipy)",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![PyPI - License](https://img.shields.io/pypi/l/alphalens-reloaded)",
+      "Alphalens is a Python library for performance analysis of predictive",
+      "```python",
+      "> Note that Numpy>=2.0 requires pandas>=2.2.2. If you are using an older version of pandas, you may need to upgrade",
+      "From the notebook list page(usually found at `http://localhost:8888/`), navigate over to the examples directory, and open any file with a .ipynb extension."
+    ],
+    "dependency_repos": [
+      "matplotlib/matplotlib",
+      "mwaskom/seaborn",
+      "numpy/numpy",
+      "pandas-dev/pandas",
+      "quantopian/pyfolio",
+      "scipy/scipy",
+      "statsmodels/statsmodels",
+      "stefan-jansen/alphalens-reloaded"
+    ]
+  }
+]
