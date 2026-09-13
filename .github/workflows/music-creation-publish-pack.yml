@@ -1,0 +1,150 @@
+name: Publish music creation research pack
+on:
+  push:
+    branches: [main]
+    paths: [packs/music_creation/evidence/publication-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: music-creation-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REQUEST_REVISION: ${{ github.sha }}
+    steps:
+      - name: Render reviewed public research and validate quotas
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,collections,concurrent.futures,hashlib,json,os,pathlib,re,time,urllib.request,urllib.error
+          REPO='sisodias/siso-industry-packs'; BASE='packs/music_creation/'; API='https://api.github.com'; TOKEN=os.environ['GH_TOKEN']; REF=os.environ['REQUEST_REVISION']; URL='https://github.com/'+REPO+'/blob/'
+          def api(path,data=None,method=None):
+              req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'music-creation-research-renderer'})
+              try:
+                  with urllib.request.urlopen(req,timeout=45) as response:return json.load(response)
+              except urllib.error.HTTPError as e:return {'_error':e.code}
+          def read(path,ref=REF):
+              result=api('/repos/'+REPO+'/contents/'+path+'?ref='+ref)
+              if 'content' not in result:raise RuntimeError('read failed '+path+' '+str(result.get('_error')))
+              return base64.b64decode(result['content']).decode('utf-8')
+          def js(path,ref=REF):return json.loads(read(path,ref))
+          request=js(BASE+'evidence/publication-request.json'); decisions=js(BASE+'evidence/analyst-decisions.json')
+          source=decisions['source_evidence_commit']; bank=decisions['bank_revision']; pin=URL+source+'/'+BASE+'evidence/'
+          assert re.fullmatch('[0-9a-f]{40}',source) and len(decisions['rows'])==143
+          def getrow(d):
+              number=d[0]; r=js(BASE+f'evidence/repo-{number:03}.json',source); assert r.get('full_name') and r.get('revision')
+              return d,r
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:pairs=list(pool.map(getrow,decisions['rows']))
+          out=[]
+          for d,r in pairs:
+              number,fit,lift,health,adoption,integration,verdict,unit,tag,why=d
+              assert all(isinstance(x,int) and 0<=x<=5 for x in (fit,lift,health,adoption,integration))
+              assert verdict in ('ADOPT','STEAL','STUDY','SKIP') and unit in ('library','service','app','pattern')
+              assert tag in request['allowed_tags']
+              rm=r.get('readme') or {}; lf=r.get('license_file') or {}; meta=r.get('license') or {}; has_lic=bool(lf.get('text')); examined=bool(rm.get('text'))
+              licence=decisions.get('licence_overrides',{}).get(str(number))
+              if not licence:licence=(meta.get('spdx_id') or 'Unclassified') if has_lic else 'Actual licence file not retrieved; API reports '+str(meta.get('spdx_id'))
+              if licence=='NOASSERTION':licence='Custom/unclassified retrieved text; see licence source'
+              resources=decisions.get('resource_notes',{}).get(str(number))
+              if not resources:resources=('Reference/specification only; no standalone deployment floor.' if unit=='pattern' else 'Documented local '+unit+' candidate; OS, dependencies and measured resource floor must be qualified for the selected release and device.')
+              item={'audit_id':f'R{number:03}','full_name':r['full_name'],'url':r['html_url'],'evidence_class':'analysis','capability_evidence_class':'vendor','bank_status':r['bank_status'],'bank_revision_checked':bank,'bank_membership_layers':r.get('bank_membership_layers',[]),'examined':examined,'examination_level':'metadata_commit_readme_licence_when_retrievable' if examined else 'metadata_and_licence_only_readme_unavailable','stars':r['stargazers_count'],'observed_at':r['observed_at'],'last_commit':r['last_commit'],'revision':r['revision'],'archived':r['archived'],'licence':licence,'licence_file_retrieved':has_lic,'licence_api_metadata':meta.get('spdx_id'),'source_available_not_oss':number in decisions.get('source_available_not_oss',[]),'scores':{'fit':fit,'liftability':lift,'health':health,'adoption_evidence':adoption,'integration':integration},'adoption_score_boundary':'0 means absent qualifying evidence, not zero users','adoption_evidence':r.get('adoption_evidence',[]),'issue_response_timing':None,'bus_factor':None,'commits_six_months_sample_count':r.get('commits_six_months_sample_count'),'verdict':verdict,'unit_class':unit,'capability_tag':tag,'why':why,'resource_floor':{'ram_gb':None,'disk_gb':None,'status':'unmeasured_or_not_applicable','note':resources},'candidate_execution':False,'source_evidence':pin+f'repo-{number:03}.json','readme_source':rm.get('source_url'),'readme_sha256':rm.get('sha256'),'licence_source':lf.get('source_url'),'licence_sha256':lf.get('sha256'),'additional_licence_sources':decisions.get('additional_licence_sources',{}).get(str(number),[]),'metadata_source':r.get('metadata_source'),'commit_source':r.get('commit_source')}
+              if verdict=='ADOPT':assert examined and has_lic
+              out.append(item)
+          assert len({r['full_name'].lower() for r in out})==len(out)
+          examined=sum(r['examined'] for r in out); licences=sum(r['licence_file_retrieved'] for r in out); complete_source=sum(r['examined'] and r['licence_file_retrieved'] for r in out)
+          adopted=[r for r in out if r['verdict']=='ADOPT']; new=[r for r in out if r['bank_status']=='NEW']; kept=[r for r in new if r['verdict']!='SKIP' and r['examined']]
+          counts={'repositories_requested':146,'repositories_verified':len(out),'repos_examined':examined,'readmes_retrieved':examined,'licence_files_retrieved':licences,'readme_and_licence_retrieved':complete_source,'already_in_bank':len(out)-len(new),'new_verified':len(new),'new_examined':sum(r['examined'] for r in new),'new_kept':len(kept),'repos_adopted':len(adopted),'tier1_companies':10,'tier2_offerings':10,'practitioner_complaints':8,'workflow_stages':10,'gaps':8,'verdict_counts':dict(collections.Counter(r['verdict'] for r in out))}
+          workflow=js(BASE+'02-workflow.json'); assembly=js(BASE+'05-assembly.json'); discovery=js(BASE+'evidence/discovery-receipt.json')
+          assert len(workflow['stages'])==10 and len(assembly['components'])==8
+          assert examined>=100 and complete_source>=100 and len(adopted)==8
+          byname={r['full_name']:r for r in out}
+          for component in assembly['components']:
+              assert component['repository'] in byname and component['revision']==byname[component['repository']]['revision'] and byname[component['repository']]['verdict']=='ADOPT'
+          existing={f:read(BASE+f) for f in ['01-person.md','02-workflow.md','03-companies.md','05-superapp.md','05-assembly.json','06-value.md','02-workflow.json','README.md']}
+          assert len(re.findall(r'^### P0[1-8] ',existing['01-person.md'],re.M))==8
+          assert discovery['rounds']['5']['new_names']==0 and discovery['rounds']['6']['new_names']==0
+          for f,t in existing.items():
+              if f!='README.md':assert 'Not yet researched' not in t
+          def dump(obj):return json.dumps(obj,ensure_ascii=False,indent=2)+'\n'
+          def cell(value):return str(value).replace('|','/').replace('\n',' ')
+          method=request['method_markdown'].replace('{SOURCE_PIN}',pin).replace('{BANK_REVISION}',bank)
+          md='# Open-source candidates — music creation\n\n'+method+'\n\n## Actual counts\n\n```json\n'+dump(counts)+'```\n\n## Deduplicated candidate table\n\nAll observations are dated in each source record. F/L/H/A/I are the five analyst screening scores. A=0 denotes missing adoption evidence, not no users. Licence text and README links are preserved in JSON. The source column links the complete pinned evidence record. [analysis]\n\n'
+          md+='| ID / repository / source | Bank status | Stars / observed UTC date | Licence readback | Latest commit UTC / SHA | F/L/H/A/I | Verdict / unit / capability | What it gives us and why |\n|---|---|---|---|---|---|---|---|\n'
+          for r in out:
+              vals=list(r['scores'].values()); label=r['audit_id']+(' (source-limited)' if not r['examined'] else '')
+              md+='| '+label+' ['+r['full_name']+']('+r['url']+') · [evidence]('+r['source_evidence']+') | '+r['bank_status']+' | '+str(r['stars'])+' / '+r['observed_at'][:10]+' | '+cell(r['licence'])+' | '+r['last_commit']+' / `'+r['revision'][:12]+'` | '+('/'.join(map(str,vals)))+' | '+r['verdict']+' / '+r['unit_class']+' / '+r['capability_tag']+' | [analysis] '+cell(r['why'])+' |\n'
+          md+='\n## Resource and local-deployment qualification\n\nA self-hostable repository is not proof of a successful laptop installation. No benchmark or installation was performed. Every JSON row contains a resource-floor field; null is unmeasured, not zero. Pattern/specification rows are not executable components. [analysis]\n\n| ID / repository | Local route and resource boundary |\n|---|---|\n'
+          for r in out:md+='| '+r['audit_id']+' / '+r['full_name']+' | [analysis] '+cell(r['resource_floor']['note'])+' [source]('+r['source_evidence']+') |\n'
+          md+='\n## Taxonomy gaps\n\nThe existing 51-tag vocabulary is retained for intake. The following are explicitly nearest-tag mappings, not assertions that OSC is WebSocket or music synthesis is only a codec. [analysis]\n\n'+dump(decisions['taxonomy_gaps'])+'\n## Unresolved discovery identities\n\nThree requested names did not yield repository metadata in the audit and are **not recommendations or examined repos**: audit R128, R134 and R135. Their attempted names and errors are retained only in the [request/source evidence]('+pin+'candidate-audit-receipt.json). R058 has metadata and a licence but no retrieved standard README and is excluded from the conservative examined total. Discovery results retain additional unexamined leads; do not inflate the examined count with search hits. [analysis]\n'
+          data={'schema_version':'1.0','slug':'music_creation','as_of':'2026-09-13','evidence_class':'analysis','status':'research_complete_not_deployed','source_evidence_commit':source,'bank_revision':bank,'counts':counts,'score_boundary':decisions['score_boundary'],'taxonomy_gaps':decisions['taxonomy_gaps'],'candidates':out,'unresolved_audit_ids':['R128','R134','R135'],'discovery_receipt':URL+REF+'/'+BASE+'evidence/discovery-receipt.json'}
+          outputs={BASE+'04-oss-candidates.md':md,BASE+'04-oss-candidates.json':dump(data)}
+          top=[next(r for r in out if r['audit_id']==f'R{n:03}') for n in decisions['top_ten']]
+          summary=request['summary_markdown'].replace('{EXAMINED}',str(examined)).replace('{VERIFIED}',str(len(out))).replace('{LICENCES}',str(licences)).replace('{NEW}',str(len(new))).replace('{NEW_KEPT}',str(len(kept)))
+          summary+='\n## Top ten research choices\n\n| Repository | Verdict | Role |\n|---|---|---|\n'
+          for r in top:summary+='| ['+r['full_name']+']('+r['url']+') | '+r['verdict']+' | '+request['top_ten_roles'][r['audit_id']]+' [evidence]('+r['source_evidence']+') |\n'
+          summary+='\nADOPT is a conditional design choice, not installation or runtime verification. Full comparisons, source dates, licences, all scores and exclusions are in [04-oss-candidates.md](04-oss-candidates.md); machine-readable design and acceptance tests are in [05-assembly.json](05-assembly.json). [analysis]\n'
+          outputs[BASE+'00-SUMMARY.md']=summary
+          submissions=[]
+          for r in new:submissions.append({'industry':'music_creation','date':'2026-09-13','full_name':r['full_name'],'url':r['url'],'capability_tag':r['capability_tag'],'verdict':r['verdict'],'keep':r in kept,'why':r['why'],'bank_status':'NEW','bank_revision_checked':bank,'source_revision':r['revision'],'licence':r['licence'],'source_available_not_oss':r['source_available_not_oss'],'examined':r['examined'],'evidence_class':'analysis','status':'proposed-not-admitted','evidence':r['source_evidence']})
+          outputs[BASE+'evidence/bank-submissions.jsonl']=''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in submissions)
+          corrections=request['corrections']
+          for correction in corrections:
+              if 'audit_id' in correction:
+                  r=next(r for r in out if r['audit_id']==correction['audit_id']);correction['sources']=list(dict.fromkeys(correction.get('sources',[])+[r['source_evidence'],r['readme_source'] or r['url']]))
+          gates={'source_identity_unique':True,'minimum_100_examined':examined>=100,'minimum_100_readme_and_licence':complete_source>=100,'company_tiers_declared':[10,10],'eight_quoted_complaint_sections':True,'ten_workflow_stages':True,'eight_pinned_components_match_source':True,'last_two_targeted_rounds_zero_new':True,'global_search_exhaustion_claim':False,'candidate_execution_performed':False,'product_deployment_performed':False,'private_source_content_included':False}
+          receipt={'as_of':'2026-09-13','request_revision':REF,'source_evidence_commit':source,'counts':counts,'gates':gates,'publication_scope':'Research documents and music_creation registry records only; other industry records preserved byte-for-byte','runtime_status':'not_executed','customer_acceptance':None,'limitations':request['limitations']}
+          outputs[BASE+'evidence/pack-validation.json']=dump(receipt)
+          stage7={'slug':'music_creation','name':'Music creators and recording artists','status':'complete','primary_segment':'Independent beatmaker / self-releasing recording artist (proposed; NM specification unavailable)','person':'NM — beatmaker; detailed operator model is a scenario, not an interview','wedge':'Local exact-revision project/release handoff with provenance and approval evidence','stack_tax_usd_year':1457.87,'workflow_stages':10,'tier1_companies':10,'tier2_offerings':10,'repos_examined':examined,'repos_adopted':len(adopted),'gaps':8,'verdict':'NO broad build now; compare a narrow local handoff workflow against existing tools','date':'2026-09-13'}
+          outputs[BASE+'evidence/stage7-registry-row.json']=dump(stage7)
+          # Publish as a fresh fast-forward: re-read shared registries on every conflict.
+          for attempt in range(5):
+              ref=api('/repos/'+REPO+'/git/ref/heads/main');parent=ref['object']['sha']; current=dict(outputs)
+              original=read('registry/industries.jsonl',parent); lines=original.splitlines(keepends=True); found=0; rendered=[]
+              for line in lines:
+                  if not line.strip():rendered.append(line);continue
+                  row=json.loads(line)
+                  if row.get('slug')!='music_creation':rendered.append(line);continue
+                  found+=1;row.update(stage7);row.update({'stage_reached':7,'kind':'consumer','priority':'low','deployment':'user_machine','repos_verified':len(out),'practitioner_complaints':8,'new_repos_verified':len(new),'new_repos_kept':len(kept),'research_status':'complete_with_explicit_qualification_gaps','runtime_status':'not_executed','customer_acceptance':None,'source':URL+REF+'/'+BASE+'evidence/publication-request.json','note':'Research pack and numeric quotas complete. 143 repositories verified, 142 conservatively examined; no candidate run. Stack tax is an overbuy comparison, not NM spend. Broad build rejected pending actual-task comparison.'});rendered.append(json.dumps(row,ensure_ascii=False)+'\n')
+              assert found==1;current['registry/industries.jsonl']=''.join(rendered)
+              def replace_owned(path,additions,identity):
+                  existing=read(path,parent).splitlines(keepends=True); targetids={r.get(identity) for r in additions}; keptlines=[]
+                  for line in existing:
+                      if not line.strip():keptlines.append(line);continue
+                      obj=json.loads(line)
+                      replace=(obj.get('industry')=='music_creation' and (identity=='full_name' or obj.get(identity) in targetids))
+                      if not replace:keptlines.append(line)
+                  text=''.join(keptlines)
+                  if text and not text.endswith('\n'):text+='\n'
+                  return text+''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in additions)
+              current['registry/bank-submissions.jsonl']=replace_owned('registry/bank-submissions.jsonl',submissions,'full_name')
+              current['registry/corrections.jsonl']=replace_owned('registry/corrections.jsonl',corrections,'id')
+              c=api('/repos/'+REPO+'/git/commits/'+parent)
+              tree=api('/repos/'+REPO+'/git/trees',{'base_tree':c['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in current.items()]},'POST')
+              if 'sha' not in tree:raise RuntimeError('tree write failed '+str(tree.get('_error')))
+              commit=api('/repos/'+REPO+'/git/commits',{'message':'research(music_creation): publish scored 142-repo pack, assembly summary and scoped registries','tree':tree['sha'],'parents':[parent]},'POST')
+              if 'sha' not in commit:raise RuntimeError('commit failed '+str(commit.get('_error')))
+              updated=api('/repos/'+REPO+'/git/refs/heads/main',{'sha':commit['sha'],'force':False},'PATCH')
+              if '_error' not in updated:
+                  publication={'commit':commit['sha'],'parent':parent,'paths':list(current),'counts':counts};print(json.dumps(publication));break
+              if updated['_error'] not in (409,422):raise RuntimeError('publication failed '+str(updated['_error']))
+          else:raise RuntimeError('concurrent write conflict; no force update attempted')
+          root=pathlib.Path('research-pack')
+          for p,t in {**current,**{BASE+k:v for k,v in existing.items()} if False else {}}.items():
+              dest=root/p;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(t)
+          # Export authored public pack, not tokens, raw private context or candidate binaries.
+          for f in ['01-person.md','02-workflow.md','03-companies.md','05-superapp.md','05-assembly.json','06-value.md','02-workflow.json','README.md']:
+              dest=root/BASE/f;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(read(BASE+f))
+          (root/'publication-receipt.json').write_text(dump(publication))
+          PY
+      - name: Retain authored research pack
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: music-creation-complete-research-pack
+          path: research-pack/
+          retention-days: 7
+          if-no-files-found: warn
