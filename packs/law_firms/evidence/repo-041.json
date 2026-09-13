@@ -1,0 +1,78 @@
+{
+  "audit_id": "R041",
+  "requested_full_name": "gojefferson/loadfile",
+  "observed_at": "2026-09-13T16:10:20.162485+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "gojefferson/loadfile",
+  "html_url": "https://github.com/gojefferson/loadfile",
+  "description": "Convert .DAT load files to CSV or JSON",
+  "stargazers_count": 4,
+  "forks_count": 1,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-01-23T19:34:37Z",
+  "updated_at": "2025-10-14T19:50:01Z",
+  "pushed_at": "2020-02-03T16:28:08Z",
+  "size": 7,
+  "open_issues_count": 0,
+  "topics": [
+    "ediscovery"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "7fb75c8c3eb9f00a25dc74c00059582d9b1fd6f7",
+  "last_commit": "2020-02-03T16:28:00Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/gojefferson/loadfile",
+    "commit": "https://github.com/gojefferson/loadfile/commit/7fb75c8c3eb9f00a25dc74c00059582d9b1fd6f7"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4916b697f7b74bfd126a89ffa1059ae73fe9af6178f6658aac0cc91bb3cd1abe",
+    "text": "# loadfile\nConvert .DAT load files to CSV or JSON\n\nUsage: loadfile [OPTIONS] SOURCE DEST\n\n  Converts a .DAT formatted loadfile to CSV or JSON.\n\n  SOURCE: the the file you wish to convert\n\n  DEST: the directory where the converted file will be created.\n\n  The converted file will have the same name as the original file, with\n  either .csv or .json added at the end.\n\nOptions:\n  -j, --json  Whether to convert to JSON, rather than CSV (the default)\n  --help      Show this message and exit.\n  \n",
+    "characters": 493,
+    "source_url": "https://github.com/gojefferson/loadfile/blob/7fb75c8c3eb9f00a25dc74c00059582d9b1fd6f7/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "733ee95bef8ede1563e52e8b9e5550bb35636e29e09a5b55eb1f5edf945ade24",
+    "text": "MIT License\n\nCopyright (c) 2019 Jeff Kerr\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1066,
+    "source_url": "https://github.com/gojefferson/loadfile/blob/7fb75c8c3eb9f00a25dc74c00059582d9b1fd6f7/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "gojefferson",
+      "contributions": 6
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

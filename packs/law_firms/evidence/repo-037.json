@@ -1,0 +1,150 @@
+{
+  "audit_id": "R037",
+  "requested_full_name": "sepinf-inc/IPED",
+  "observed_at": "2026-09-13T16:10:20.162485+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "sepinf-inc/IPED",
+  "html_url": "https://github.com/sepinf-inc/IPED",
+  "description": "IPED Digital Forensic Tool. It is an open source software that can be used to process and analyze digital evidence, often seized at crime scenes by law enforcement or in a corporate investigation by private examiners.",
+  "stargazers_count": 2887,
+  "forks_count": 497,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2015-06-12T11:26:40Z",
+  "updated_at": "2026-09-13T16:08:09Z",
+  "pushed_at": "2026-09-10T22:12:38Z",
+  "size": 246139,
+  "open_issues_count": 385,
+  "topics": [
+    "digital-forensics",
+    "forensic",
+    "recovery"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "ceb8ed90bc482b1bf52af674cc581b8a8e2ba7eb",
+  "last_commit": "2026-08-14T12:41:39Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/sepinf-inc/IPED",
+    "commit": "https://github.com/sepinf-inc/IPED/commit/ceb8ed90bc482b1bf52af674cc581b8a8e2ba7eb"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "0112649eb85a26ecd5c2a9a6e263ffda7d51cedba1e032a228f1bab4ddab667d",
+    "text": "# IPED Digital Forensic Tool\n\nIPED is an open source software that can be used to process and analyze digital evidence, often seized at crime scenes by law enforcement or in a corporate investigation by private examiners.\n\n## History\n\nIPED - Digital Evidence Processor and Indexer (translated from Portuguese) is a tool implemented in java and originally and still developed by digital forensic experts from Brazilian Federal Police since 2012. Although it was always open source, only in 2019 its code was officially published.\n\nSince the beginning, the goal of the tool was efficient data processing and stability. Some key characteristics of the tool are:\n\n- Command line data processing for batch case creation\n- Multiplatform support, tested on Windows and Linux systems\n- Portable cases without installation, you can run them from removable drives\n- Integrated and intuitive analysis interface\n- High multithread performance and support for large cases: up to 400GB/h processing speed using modern hardware and 135 million items in a (multi) case as of 12/12/2019\n\nCurrently IPED uses the [Sleuthkit Library](https://github.com/sleuthkit/sleuthkit) only to decode disk images and file systems, so the same image formats are supported: RAW/DD, E01, ISO9660, AFF, VHD, VMDK. There is also support for EX01, VHDX, UDF(ISO), AD1 (AccessData) and UFDR (Cellebrite) formats.\n\nIf you are new to the tool, please refer to the [Beginner's Start Guide](https://github.com/lfcnassif/IPED/wiki/Beginner's-Start-Guide).\n\n## Building\n\nTo build from source, you need git, maven and Java JDK 11 + JavaFX (e.g. Liberica OpenJDK 11 Full JDK) installed. Set JAVA_HOME environment var to your java 11 installation folder, then run:\n```\ngit clone https://github.com/sepinf-inc/IPED.git\ncd IPED\nmvn clean install\n```\nIt will generate an snapshot version of IPED in target/release folder.\n\n<b>Attention:</b> the default master branch is the development one and is unstable. If you want to build a stable version, checkout some of the release tags after the clone step.\n\nOn Linux you also must build The Sleuthkit and additional dependencies. Please refer to [Linux Section](https://github.com/sepinf-inc/IPED/wiki/Linux)\n\nContributions are very welcome! Before contributing please refer to [Contributing](https://github.com/lfcnassif/IPED/wiki/Contributing)\n\n## Features\n\nSome of IPED several features are listed below:\n\n- Supported hashes: md5, sha-1, sha-256, sha-512 and edonkey. PhotoDNA is also available **for law enforcement** (please contact iped at pf dot gov dot br)\n- Supported hash sets: NIST NSRL, NIST CAID, ProjectVIC, Interpol ICSE, standard CSV format\n- Fast hash deduplication \n- Signature analysis\n- Categorization by file type and properties\n- Recursive container expansion of dozens of file formats\n- Embedded forensic/virtual disks expansion: supports splitted or single segment DD, E01, EX01, VHD, VHDX, VMDK (differential VMDKs are also supported) \n- Image and video gallery for hundreds of formats\n- Georeferencing of GPS data, using Google Maps, Bing or OpenStreetMaps\n- Regex searches with optional script validation for credit cards, emails, urls, ip & mac addresses, money values, bitcoin, ethereum, monero, ripple wallets and more...\n- Embedded hex, unicode text, metadata and native viewers\n- File content and metadata indexing and fast searching, including unknown files and unallocated space\n- Efficient data carving engine (takes < 10% processing time) that scans much more than unallocated, with support for +40 file formats, including videos, extensible by scripting\n- Optical Character Recognition powered by tesseract 5\n- Encryption detection for known formats and using entropy test\n- Processing profiles: forensic, pedo (csam), triage, fastmode (preview) and blind (for automatic data extraction)\n- Detection for +70 languages\n- Named Entity Recognition (needs Stanford CoreNLP models to be downloaded)\n- Customizable filters based on any file metadata\n- Similar document search with configurable threshold\n- Similar image search, using internal or external image\n- Similar face recognition, optimized to run without GPU, with configurable threshold\n- Unified table timeline view and event filtering for timeline analysis\n- Powerful file grouping (clustering) based on ANY metadata\n- Support for multicases up to 135 million items\n- Extensible with javascript and python (including cpython extensions) scripts\n- External command line tools integration for file decoding\n- Browser history for IE, Edge, Firefox, Chrome and Safari\n- Custom parsers for Emule, Shareaza, Ares, WhatsApp, Skype, Telegram, Bittorrent, ActivitiesCache, and more...\n- Fast nudity detection for images and videos using random forests algorithm (thanks to its author @tc-wleite)\n- Nudity detection using Yahoo open-nsfw deeplearning model (needs keras and tensorflow)\n- Audio Transcription, local and remote implementations with Azure and Google Cloud services\n- Graph analysis for communications (calls, emails, instant messages...)\n- Stable processing with out-of-process file system decoding and file parsing\n- Resuming or restarting stopped or aborted processing (--continue/--restart options)\n- Web API for searching remote cases, get file metadata, raw content, decoded text, thumbnails and posting bookmarks\n- Creation of bookmarks/tags for interesting data\n- HTML, CSV reports and portable cases with tagged data\n\n## Screenshots\n\nProcessing:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/bf29b44a-a924-4c65-845c-6282a4b91861)\n\nAnalysis:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/5fca2b65-6763-4bc1-9284-604c8b325d54)\n\nData Carving & Video Thumbnails:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/4d908fe5-6cb1-443b-96fa-d937fa1d2e2d)\n\nRegex Results:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/db34adc7-d7b9-4b56-8a35-99e095380d0b)\n\nMap:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/279b9280-3a72-484a-8aed-e4d015df196f)\n\nCommunication links:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/8b164948-fa36-47b8-a249-f64547a36b28)\n\nFace search:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/d9b37060-afa4-4e9b-ae55-a9d8413ac43a)\n\nAudio Transcription:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/ebded2ad-f88d-43c8-9699-66e498c9939c)\n\nTimeline:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/011657e3-8ff2-4105-b3c2-116980772fc0)\n\nTime chart:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/81df1c18-361d-49f1-b755-36520437803a)\n\nEvents correlation of 2 suspects actions and illegal activities:\n![image](https://github.com/sepinf-inc/IPED/assets/7276994/e1f47b15-ba89-4436-9291-7ec354ef2b57)\n",
+    "characters": 6728,
+    "source_url": "https://github.com/sepinf-inc/IPED/blob/ceb8ed90bc482b1bf52af674cc581b8a8e2ba7eb/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "7af45e0cb69887fea5dd5e4f3c394a007e5b43d29f026a9bcbc6d577dd666078",
+    "text": "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses>.\n\nAdditional permissions under GNU GPL version 3 section 7:\n\nIf you modify this Program, or any covered work, by linking or combining it with \"The Sleuthkit\" and its dependencies (or a modified version of that library), containing parts covered by the terms of IBM Public License or Common Public License, the licensors of this Program grant you additional permission to convey the resulting work.\n\nThe copyright holders of this software give you permission to link or combine it with plugins (extension modules that do NOT change its entry points) regardless of the license terms of these plugin modules.",
+    "characters": 1213,
+    "source_url": "https://github.com/sepinf-inc/IPED/blob/ceb8ed90bc482b1bf52af674cc581b8a8e2ba7eb/LICENSE.txt",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "lfcnassif",
+      "contributions": 6175
+    },
+    {
+      "login": "wladimirleite",
+      "contributions": 1820
+    },
+    {
+      "login": "patrickdalla",
+      "contributions": 667
+    },
+    {
+      "login": "hauck-jvsh",
+      "contributions": 476
+    },
+    {
+      "login": "aberenguel",
+      "contributions": 359
+    },
+    {
+      "login": "FelipeFcosta",
+      "contributions": 205
+    },
+    {
+      "login": "gfd2020",
+      "contributions": 158
+    },
+    {
+      "login": "streeg",
+      "contributions": 132
+    },
+    {
+      "login": "fmpfeifer",
+      "contributions": 114
+    },
+    {
+      "login": "marcosammoura",
+      "contributions": 100
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 2973,
+      "title": "Add official Docker support (multi-stage build + compose)",
+      "state": "open",
+      "created_at": "2026-09-13T03:41:13Z",
+      "updated_at": "2026-09-13T03:43:50Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/sepinf-inc/IPED/issues/2973",
+      "author_association": "NONE"
+    },
+    {
+      "number": 2882,
+      "title": "Prefetch files HTML preview not respecting line breaks",
+      "state": "open",
+      "created_at": "2026-05-07T16:36:07Z",
+      "updated_at": "2026-09-11T20:05:16Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/sepinf-inc/IPED/issues/2882",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 2966,
+      "title": "Support sccainfo 20260527",
+      "state": "open",
+      "created_at": "2026-09-10T21:35:59Z",
+      "updated_at": "2026-09-10T22:10:41Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/sepinf-inc/IPED/issues/2966",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
