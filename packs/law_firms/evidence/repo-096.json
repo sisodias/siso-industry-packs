@@ -1,0 +1,146 @@
+{
+  "audit_id": "R096",
+  "requested_full_name": "jseutter/ofxparse",
+  "observed_at": "2026-09-13T16:11:09.556538+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "jseutter/ofxparse",
+  "html_url": "https://github.com/jseutter/ofxparse",
+  "description": "Ofx file format parser for Python",
+  "stargazers_count": 218,
+  "forks_count": 125,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2009-06-25T00:22:45Z",
+  "updated_at": "2026-04-21T21:06:39Z",
+  "pushed_at": "2024-04-26T13:57:10Z",
+  "size": 427,
+  "open_issues_count": 43,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "25aa80072be71da9f4ea0924ae1d1aaea2d5820c",
+  "last_commit": "2021-05-31T03:54:22Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/jseutter/ofxparse",
+    "commit": "https://github.com/jseutter/ofxparse/commit/25aa80072be71da9f4ea0924ae1d1aaea2d5820c"
+  },
+  "readme": {
+    "path": "README.rst",
+    "sha256": "9ab70c593703bf1082b5db6d1b39b6cc6ffceb7628ee12d3810761276fc70559",
+    "text": "ofxparse\n========\n\nofxparse is a parser for Open Financial Exchange (.ofx) format files.  OFX\nfiles are available from almost any online banking site, so they work well\nif you want to pull together your finances from multiple sources.  Online\ntrading accounts also provide account statements in OFX files.\n\nThere are three different types of OFX files, called BankAccount,\nCreditAccount and InvestmentAccount files.  This library has been tested with\nreal-world samples of all three types.  If you find a file that does not work\nwith this library, please consider contributing the file so ofxparse can be\nimproved.  See the Help! section below for directions on how to do this.\n\nExample Usage\n=============\n\nHere's a sample program\n\n.. code:: python\n\n  from ofxparse import OfxParser\n  with codecs.open('file.ofx') as fileobj:\n      ofx = OfxParser.parse(fileobj)\n  \n  # The OFX object\n  \n  ofx.account               # An Account object\n\n  # AccountType\n  # (Unknown, Bank, CreditCard, Investment)\n\n  # Account\n  \n  account = ofx.account \n  account.account_id        # The account number\n  account.number            # The account number (deprecated -- returns account_id)\n  account.routing_number    # The bank routing number\n  account.branch_id         # Transit ID / branch number\n  account.type              # An AccountType object\n  account.statement         # A Statement object\n  account.institution       # An Institution object\n\n  # InvestmentAccount(Account)\n\n  account.brokerid          # Investment broker ID\n  account.statement         # An InvestmentStatement object\n\n  # Institution\n  \n  institution = account.institution\n  institution.organization\n  institution.fid\n    \n  # Statement\n  \n  statement = account.statement\n  statement.start_date          # The start date of the transactions\n  statement.end_date            # The end date of the transactions\n  statement.balance             # The money in the account as of the statement date\n  statement.available_balance   # The money available from the account as of the statement date\n  statement.transactions        # A list of Transaction objects\n\n  # InvestmentStatement\n\n  statement = account.statement  \n  statement.positions           # A list of Position objects\n  statement.transactions        # A list of InvestmentTransaction objects\n\n  # Transaction\n  \n  for transaction in statement.transactions:\n    transaction.payee\n    transaction.type\n    transaction.date\n    transaction.user_date\n    transaction.amount\n    transaction.id\n    transaction.memo\n    transaction.sic\n    transaction.mcc\n    transaction.checknum\n\n  # InvestmentTransaction\n  \n  for transaction in statement.transactions:\n    transaction.type\n    transaction.tradeDate\n    transaction.settleDate\n    transaction.memo\n    transaction.security      # A Security object\n    transaction.income_type\n    transaction.units\n    transaction.unit_price\n    transaction.comission\n    transaction.fees\n    transaction.total\n    transaction.tferaction\n\n  # Positions\n  \n  for position in statement.positions:\n    position.security       # A Security object\n    position.units\n    position.unit_price\n    position.market_value\n\n  # Security\n  \n  security = transaction.security\n  # or\n  security = position.security\n  security.uniqueid\n  security.name\n  security.ticker\n  security.memo\n  \n\nHelp!\n=====\n\nSample ``.ofx`` and ``.qfx`` files are very useful.  If you want to help us out,\nplease edit all identifying information from the file and then email it to\njseutter dot ofxparse at gmail dot com.\n\nDevelopment\n===========\n\nPrerequisites::\n  # Ubuntu\n  sudo apt-get install python-beautifulsoup python-nose python-coverage-test-runner\n  # Python 3 (pip)\n  pip install BeautifulSoup4 six lxml nose coverage\n  # Python 2 (pip)\n  pip install BeautifulSoup six nose coverage\n\nThe `six` package is required for python 2.X compatibility\n\nTests:\nSimply running the ``nosetests`` command should run the tests.\n\n.. code:: bash\n\n  nosetests\n\nIf you don't have nose installed, the following might also work:\n\n.. code:: bash\n\n  python -m unittest tests.test_parse\n\nTest Coverage Report:\n\n.. code:: bash\n\n  coverage run -m unittest tests.test_parse\n  \n  # text report\n  coverage report\n\n  # html report\n  coverage html\n  firefox htmlcov/index.html\n\n\nHomepage\n========\n| Homepage: https://sites.google.com/site/ofxparse\n| Source: https://github.com/jseutter/ofxparse\n\nLicense\n=======\n\nofxparse is released under an MIT license.  See the LICENSE file for the actual\nlicense text.  The basic idea is that if you can use Python to do what you are\ndoing, you can also use this library.\n\n",
+    "characters": 4603,
+    "source_url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/README.rst"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "25e75507d0e1d9d2487c12fc839780f2905b18553a60ab1895ac9d999db30370",
+    "text": "Copyright (c) 2009 Jerry Seutter\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation\nfiles (the \"Software\"), to deal in the Software without\nrestriction, including without limitation the rights to use,\ncopy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the\nSoftware is furnished to do so, subject to the following\nconditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES\nOF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT\nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nWHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\nOTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1057,
+    "source_url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "jseutter",
+      "contributions": 144
+    },
+    {
+      "login": "jaraco",
+      "contributions": 40
+    },
+    {
+      "login": "rkhwaja",
+      "contributions": 29
+    },
+    {
+      "login": "guyrt",
+      "contributions": 19
+    },
+    {
+      "login": "captin411",
+      "contributions": 6
+    },
+    {
+      "login": "malikoth",
+      "contributions": 5
+    },
+    {
+      "login": "iffy",
+      "contributions": 5
+    },
+    {
+      "login": "mikeivanov",
+      "contributions": 5
+    },
+    {
+      "login": "tonnydourado",
+      "contributions": 5
+    },
+    {
+      "login": "nathangrigg",
+      "contributions": 4
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 182,
+      "title": "Maintenance status of ofxparse",
+      "state": "open",
+      "created_at": "2026-08-05T15:51:07Z",
+      "updated_at": "2026-08-06T19:07:03Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/jseutter/ofxparse/issues/182",
+      "author_association": "NONE"
+    },
+    {
+      "number": 133,
+      "title": "UTF-8 Encoding",
+      "state": "open",
+      "created_at": "2017-11-28T15:05:52Z",
+      "updated_at": "2026-08-06T17:31:13Z",
+      "closed_at": null,
+      "comments": 12,
+      "html_url": "https://github.com/jseutter/ofxparse/issues/133",
+      "author_association": "NONE"
+    },
+    {
+      "number": 170,
+      "title": "XMLParsedAsHTMLWarning",
+      "state": "open",
+      "created_at": "2022-06-09T17:00:56Z",
+      "updated_at": "2026-02-27T10:13:08Z",
+      "closed_at": null,
+      "comments": 5,
+      "html_url": "https://github.com/jseutter/ofxparse/issues/170",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
