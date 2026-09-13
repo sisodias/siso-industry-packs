@@ -1,0 +1,82 @@
+name: Community owners bank joins and discovery
+on:
+  push:
+    branches: [research/community-owners-20260913]
+    paths: [.github/workflows/community-owners-bank-and-discovery.yml]
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Join public bank and search per workflow without running upstream code
+        env:
+          GH_RESEARCH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,concurrent.futures,hashlib,time
+          from pathlib import Path
+          from datetime import datetime,timezone
+          O=Path('evidence');O.mkdir(); token=os.environ['GH_RESEARCH_TOKEN'];pin='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          names='''chatwoot/chatwoot freescout-help-desk/freescout zammad/zammad uvdesk/community-skeleton osTicket/osTicket frappe/helpdesk papercups-io/papercups modmail-dev/Modmail erxes/erxes mautrix/whatsapp strangerstudios/paid-memberships-pro strangerstudios/pmpro-buddypress strangerstudios/pmpro-woocommerce strangerstudios/pmpro-approvals strangerstudios/pmpro-invite-only discourse/discourse-subscriptions civicrm/civicrm-core Admidio/admidio galette/galette killbill/killbill getlago/lago laravel/cashier-stripe stripe/stripe-node woocommerce/woocommerce WordPress/WordPress discourse/discourse flarum/framework NodeBB/NodeBB humhub/humhub Elgg/Elgg buddypress/buddypress buddyboss/buddyboss-platform phpbb/phpbb mybb/mybb SimpleMachines/SMF vanilla/vanilla apache/answer zulip/zulip RocketChat/Rocket.Chat mattermost/mattermost element-hq/synapse formbricks/formbricks LimeSurvey/LimeSurvey formio/formio ohmyform/ohmyform nocodb/nocodb directus/directus activepieces/activepieces keycloak/keycloak discourse/discourse-gamification discourse/discourse-solved discourse/discourse-chat-integration discourse/discourse-openid-connect discourse/discourse-oauth2-basic matrix-org/matrix-spec discord/discord-api-docs discordjs/discord.js jitsi/jitsi-meet jitsi/docker-jitsi-meet bigbluebutton/bigbluebutton bigbluebutton/greenlight livekit/livekit owncast/owncast pretix/pretix pretalx/pretalx HiEventsDev/Hi.Events alfio-event/alf.io calcom/cal.com calcom/cal.diy GetTogetherComm/GetTogether agorakit/agorakit discourse/discourse-calendar sabre-io/vobject icalendar/icalendar TryGhost/Ghost frappe/lms moodle/moodle openedx/edx-platform openedx/openedx-platform chamilo/chamilo-lms BookStackApp/BookStack outline/outline Chocobozzz/PeerTube LearningLocker/learninglocker adlnet/xAPI-Spec RusticiSoftware/TinCanJS h5p/h5p-php-library knadh/listmonk mautic/mautic Mailtrain-org/mailtrain dittofeed/dittofeed useplunk/plunk postalserver/postal plausible/analytics umami-software/umami PostHog/posthog metabase/metabase gitroomhq/postiz-app dubinc/dub shlinkio/shlink strangerstudios/pmpro-affiliates itthinx/affiliates frappe/erpnext Dolibarr/dolibarr akaunting/akaunting InvoicePlane/InvoicePlane invoiceninja/invoiceninja bigcapitalhq/bigcapital firefly-iii/firefly-iii ledger/ledger ofxparse/ofxparse restic/restic caddyserver/caddy awesome-selfhosted/awesome-selfhosted kdeldycke/awesome-billing'''.split()
+          def gql(q):
+              req=urllib.request.Request('https://api.github.com/graphql',headers={'Authorization':'Bearer '+token,'Content-Type':'application/json','User-Agent':'SISO-public-research'},data=json.dumps({'query':'query {'+q+'}'}).encode())
+              try:
+                  with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
+              except Exception as e:return {'error':getattr(e,'code',type(e).__name__)}
+          stages=[['"shared inbox"','topic:customer-support','IMAP helpdesk'],['paid membership wordpress','topic:membership','Stripe membership webhook'],['subscription billing self-hosted','topic:billing','DiscourseConnect'],['member onboarding community','topic:community-platform','vCard membership import'],['forum community','topic:forum','ActivityPub forum'],['event ticketing self-hosted','topic:event-management','iCalendar WebRTC'],['learning management self-hosted','topic:lms','SCORM xAPI'],['email marketing automation','topic:newsletter','RFC8058 unsubscribe'],['affiliate referral tracking','topic:affiliate','UTM attribution'],['accounting self-hosted','topic:accounting','OFX camt.053']]
+          queries=[(1,'W%02d'%(i+1),lane,q) for i,qs in enumerate(stages) for lane,q in zip('ABC',qs)]
+          queries += [(2,s,l,q) for s,l,q in [('W02','A','"open source" "Skool"'),('W02','A','"Circle.so" alternative'),('W03','C','"Stripe" "entitlements"'),('W04','A','"membership" "directory"'),('W05','B','topic:gamification discourse'),('W06','C','"pretix" plugin membership'),('W07','C','"TinCan" "LRS"'),('W08','C','"List-Unsubscribe-Post"'),('W09','A','"affiliate" "self-hosted"'),('W10','C','"camt.053" parser')]]
+          queries += [(3,s,'C',q) for s,q in [('W03','"skool" "export"'),('W03','"circle.so" "migration"'),('W02','"memberful" "import"'),('W08','"community" "paid-through"'),('W09','"membership" "commission" "refund"'),('W10','"membership" "camt.053"')]]
+          seen={n.lower() for n in names};discovery=[]
+          for start in range(0,len(queries),4):
+              q=' '.join('r%d: search(query:%s,type:REPOSITORY,first:8){repositoryCount nodes{... on Repository{nameWithOwner url description stargazerCount isArchived isFork}}}'%(i,json.dumps(t[3]+' sort:stars-desc')) for i,t in enumerate(queries[start:start+4]))
+              d=gql(q)
+              for i,t in enumerate(queries[start:start+4]):
+                  result=d.get('data',{}).get('r%d'%i,{}) or {};items=result.get('nodes',[]);new=[]
+                  for x in items:
+                      n=x.get('nameWithOwner','');k=n.lower()
+                      if k and k not in seen:seen.add(k);new.append(n)
+                  discovery.append({'round':t[0],'stage':t[1],'lane':t[2],'query':t[3],'total_count':result.get('repositoryCount'),'items':items,'new_names':new,'errors':d.get('errors',d.get('error'))})
+              (O/'discovery-graphql.json').write_text(json.dumps(discovery,indent=2));print('Search batch',start,flush=True)
+          # Health is a bounded evidence sample, not bus-factor or adoption measurement.
+          health=[]
+          for start in range(0,len(names),6):
+              q=[]
+              for i,n in enumerate(names[start:start+6]):
+                  owner,name=n.split('/')
+                  q.append('r%d: repository(owner:%s,name:%s){nameWithOwner isPrivate defaultBranchRef{target{... on Commit{history(since:"2026-03-13T00:00:00Z",first:20){totalCount nodes{oid committedDate author{user{login}}}}}}} issues(first:5,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{url createdAt updatedAt closedAt comments(first:3){nodes{createdAt authorAssociation author{login}}}}}}'%(i,json.dumps(owner),json.dumps(name)))
+              d=gql(' '.join(q))
+              for i,n in enumerate(names[start:start+6]):
+                  m=d.get('data',{}).get('r%d'%i)
+                  if m and not m.get('isPrivate'):health.append(m)
+              (O/'health.json').write_text(json.dumps({'records':health,'errors_last_batch':d.get('errors',d.get('error'))},indent=2));print('Health batch',start,flush=True)
+          matches={};stats={};matchnames={n.lower() for n in names}
+          for path in ['bank/bank_best.jsonl','capability-shelf/source-registry.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','bank/bank_capability_top.jsonl','bank/bank_capability.jsonl']:
+              url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+pin+'/'+path;rows=[];count=0;digest=hashlib.sha256()
+              try:
+                  with urllib.request.urlopen(url,timeout=30) as response:
+                      for line in response:
+                          digest.update(line)
+                          if not line.strip():continue
+                          row=json.loads(line);count+=1
+                          keys=[str(row.get(k,'')).lower().removeprefix('https://github.com/').rstrip('/') for k in ['full_name','repo','repo_full_name','repository','url']]
+                          if any(k in matchnames for k in keys) or path.endswith(('bank_capability_top.jsonl','bank_capability.jsonl')):rows.append(row)
+                  matches[path]=rows;stats[path]={'rows_scanned':count,'matches':len(rows),'sha256':digest.hexdigest(),'source_url':url}
+              except Exception as e:stats[path]={'error':type(e).__name__,'rows_scanned':count,'source_url':url}
+              (O/'bank-matches.json').write_text(json.dumps({'pin':pin,'matches':matches,'stats':stats},indent=2));print('Bank',path,count,len(rows),flush=True)
+          for path in ['registry/industries.jsonl','registry/bank-submissions.jsonl','registry/corrections.jsonl']:
+              try:
+                  with urllib.request.urlopen('https://raw.githubusercontent.com/sisodias/siso-industry-packs/main/'+path,timeout=20) as r:(O/('existing-'+path.split('/')[-1])).write_bytes(r.read())
+              except Exception as e:print('Registry read error',path,type(e).__name__,flush=True)
+          PY
+      - name: Preserve public research data
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: community-owners-bank-discovery
+          path: evidence/
+          retention-days: 7
+          if-no-files-found: error
