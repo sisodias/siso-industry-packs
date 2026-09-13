@@ -19,14 +19,16 @@ jobs:
           python3 - <<'PY'
           import concurrent.futures,hashlib,json,pathlib,urllib.request
           root=pathlib.Path('law-firms-evidence-export'); root.mkdir()
-          rev='0b74b47ab1cc38567d0a3d5d91b9624705ca02f6'
-          base='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+rev+'/packs/law_firms/'
-          files=['01-person.md','02-workflow.md','02-workflow.json','03-companies.md','06-value.md']
-          files += ['evidence/repo-%03d.json'%i for i in range(1,139)]
-          files += ['evidence/batch-%02d-review.jsonl'%i for i in range(1,24)]
-          files += ['evidence/batch-%02d-receipt.json'%i for i in range(1,24)]
-          files += ['evidence/search-round-%02d.json'%i for i in range(1,4)]
-          files += ['evidence/bank-receipt.json','evidence/bank-best-law.jsonl','evidence/bank-shelf-law.jsonl']
+          rev='03115c3dbe4d03a211d7be9d4cb8a45c6d8bd560'
+          base='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+rev+'/'
+          pack='packs/law_firms/'
+          files=[pack+p for p in ['01-person.md','02-workflow.md','02-workflow.json','03-companies.md','06-value.md']]
+          files += [pack+'evidence/repo-%03d.json'%i for i in range(1,157)]
+          files += [pack+'evidence/batch-%02d-review.jsonl'%i for i in range(1,27)]
+          files += [pack+'evidence/batch-%02d-receipt.json'%i for i in range(1,27)]
+          files += [pack+'evidence/search-round-%02d.json'%i for i in range(1,6)]
+          files += [pack+'evidence/'+p for p in ['bank-receipt.json','bank-best-law.jsonl','bank-shelf-law.jsonl']]
+          files += ['registry/industries.jsonl','registry/bank-submissions.jsonl','registry/corrections.jsonl']
           def copy(p):
               u=base+p
               with urllib.request.urlopen(u,timeout=45) as r: b=r.read()
@@ -35,17 +37,12 @@ jobs:
           with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
               manifest=list(ex.map(copy,files))
           rows=[]
-          for p in sorted((root/'evidence').glob('batch-*-review.jsonl')):
+          for p in sorted((root/pack/'evidence').glob('batch-*-review.jsonl')):
               rows += [json.loads(s) for s in p.read_text().splitlines() if s.strip()]
-          failures=[r for r in rows if r.get('retrieval_error')]
-          good=[r for r in rows if not r.get('retrieval_error')]
-          summary={'pinned_source_revision':rev,'source_files':len(manifest),'requested':len(rows),'successful_records':len(good),'unique_successful_repositories':len({r['full_name'].lower() for r in good}),'failed':[(r.get('audit_id'),r.get('full_name'),r.get('retrieval_error')) for r in failures],'already_in_bank':sum(r.get('bank_status')=='ALREADY IN THE BANK' for r in good),'new':sum(r.get('bank_status')=='NEW' for r in good),'scope':'Existing public research only. No application code executed, no client data, no deployment, no new examination or admission claimed.'}
+          good=[r for r in rows if r.get('full_name') and r.get('revision') and not r.get('retrieval_error')]
+          summary={'pinned_source_revision':rev,'source_files':len(manifest),'requested':len(rows),'unique_successful_repositories':len({r['full_name'].lower() for r in good}),'already_in_bank':sum(r.get('bank_status')=='ALREADY IN THE BANK' for r in good),'new':sum(r.get('bank_status')=='NEW' for r in good),'scope':'Existing public text evidence only. No application code executed, no client data, no deployment, no production admission.'}
           (root/'EXPORT-MANIFEST.json').write_text(json.dumps({'summary':summary,'files':manifest},indent=2)+'\n')
           print('EXPORT_SUMMARY',json.dumps(summary))
-          print('INVENTORY_COLUMNS: id | repository | stars | last commit | root SPDX | 6-month commit sample | contributor sample | bank | description')
-          for r in rows:
-              cols=[r.get('audit_id'),r.get('full_name'),r.get('stargazers_count'),r.get('last_commit'),(r.get('license') or {}).get('spdx_id'),r.get('commits_six_months_sample_count'),r.get('top_contributor_count'),r.get('bank_status'),r.get('description') or r.get('retrieval_error')]
-              print(' | '.join(str(x).replace('\n',' ') for x in cols))
           PY
       - uses: actions/upload-artifact@v4
         with:
