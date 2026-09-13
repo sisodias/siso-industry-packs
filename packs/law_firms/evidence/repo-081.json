@@ -1,0 +1,84 @@
+{
+  "audit_id": "R081",
+  "requested_full_name": "Vaquill-AI/open-legal-answer-benchmark",
+  "observed_at": "2026-09-13T16:10:57.787708+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Vaquill-AI/open-legal-answer-benchmark",
+  "html_url": "https://github.com/Vaquill-AI/open-legal-answer-benchmark",
+  "description": "Open, reproducible benchmark of US legal-answer quality. Verified questions, a standard-library scorer, and results anyone can rerun.",
+  "stargazers_count": 3,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-07-09T17:33:49Z",
+  "updated_at": "2026-09-12T17:39:28Z",
+  "pushed_at": "2026-09-06T17:37:44Z",
+  "size": 405,
+  "open_issues_count": 0,
+  "topics": [
+    "benchmark",
+    "evaluation",
+    "hallucination",
+    "legal-ai",
+    "legal-tech",
+    "llm",
+    "rag"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "b2d8e70533b2d97a3b93653bf7089cb28d37feb7",
+  "last_commit": "2026-09-06T17:37:44Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/Vaquill-AI/open-legal-answer-benchmark",
+    "commit": "https://github.com/Vaquill-AI/open-legal-answer-benchmark/commit/b2d8e70533b2d97a3b93653bf7089cb28d37feb7"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "b5e62f06e85f53ba760e2579509c6a56c6f7f926289da8f883bebbd86a2ac212",
+    "text": "# Open Legal-Answer Quality Benchmark\n\nA vendor-neutral, reproducible benchmark of United States legal-answer quality.\nA committed question set, a scoring script anyone can run, and metric definitions written before the run.\nSnapshot: July 2026.\n\n**This is a tool, not a testimonial.**\nThe benchmark (the questions and the scorer) is separate from any one system's results.\nAny legal-AI product runs the same questions through the same code and gets a comparable number, and a reader reproduces that number by rerunning the script.\nThe maintainers build a legal-AI product and submit to this benchmark like anyone else, with the same disclosure and the same re-scorable answers (see [Disclosure](#disclosure)).\n\nMost legal-AI accuracy claims are either a slogan with no number or a vendor benchmark whose questions are never released.\nThe independent [Stanford RegLab study](https://reglab.stanford.edu/publications/hallucination-free-assessing-the-reliability-of-leading-ai-legal-research-tools/) found leading legal-research tools still describe the law incorrectly or miscite it 17 to 33 percent of the time, despite marketing that the problem was solved.\nThis repository is the opposite: the exact questions, the exact scoring code, and metrics you can reproduce without trusting anyone.\n\n[![Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white)](https://discord.gg/GQtnwxf8nQ)\n\n## The credibility core: deterministic metrics\n\nThe headline metrics need no model, no API key, and no trust.\nClone the repo, run the script on a committed answers file, and you get the same number every time:\n\n- **must_include_accuracy** the correct key fact (a statute section, a dollar figure, a case name) is present.\n- **citation_support_rate** every `[N]` marker points to a source that actually supports the adjacent claim (`scoring/deterministic_citation.py`).\n- **citation_in_range_rate** every `[N]` resolves to a real source, never a fabricated index.\n- **must_not_clean_rate** no wrong-jurisdiction authority appears.\n- **right_authority_retrieved** the expected primary authority is present in the cited sources.\n\nThese are the ranked leaderboard columns, because \"rerun it and get what we got\" is the whole point.\n\nThe subjective dimensions (faithfulness, coverage) come from an optional LLM judge.\nAn LLM judge is noisy and gameable, so here it is anchored, sampled, and its prompt is published, and it only counts when its agreement with human graders is reported (`scoring/human_validation.py`).\nDeterministic first, judge second, human-validated.\n\n## The result (July 2026 snapshot)\n\n![On recent US law, a grounded engine answered 93 percent of questions correctly versus 33 percent for a general AI model](hero.png)\n\n**On US law that changed in the last two years, a retrieval-grounded legal engine answered correctly 93 percent of the time versus 33 percent for the same model with no sources, and cited the governing authority 97 percent of the time against the model's zero.**\nEvery hard-set answer is verified against a primary source twice, the hard set is screened against a plain model, keeping only questions it gets wrong from memory, and the scorer is public.\nYou do not have to trust the number: the answers, including the retrieved source text, are committed, so you can re-score them yourself and get it.\n\n![Correct answer rate by how settled the law is](charts/01-crossover.svg)\n\nOn famous, settled law the grounded engine matches a strong general model and cites a source the model cannot.\nOn law that changed recently, the model collapses and grounding wins: the grounded engine answered the current law correctly on 93 percent of the hard tranche versus the ungrounded model's 33 percent, and retrieved the correct governing authority 97 percent of the time versus the model's zero.\nThe hard tranche was verified against primary sources by two independent passes and screened against a plain model, keeping only questions it gets wrong from memory, so the win is not a memorization artifact.\nFull numbers, including the cases where the submitted system fell short, are in [RESULTS.md](RESULTS.md).\n\nA plain-language walkthrough of the result and the method is in the companion writeup, [Grounding vs guessing: on US law that changed this year, a general model is wrong most of the time](https://www.vaquill.ai/blog/grounding-vs-guessing-legal-ai).\n\n## What is here\n\n```\ndata/\n  us_chat_golden_hard.jsonl     29 questions on recent/changed or obscure US law (the spine:\n                                verified against primary sources, screened so a plain model gets them wrong from memory)\n  us_chat_golden_control.jsonl  25 famous, settled black-letter questions (the control)\n  us_chat_adversarial.jsonl     8 unanswerable / false-premise traps (judge-scored, directional)\nscoring/\n  score.py                     the scorer, standard library only\n  make_charts.py               regenerates the SVG charts from a results file (no dependency)\n  deterministic_citation.py    the deterministic citation-support metric\n  human_validation.py          worksheet + judge-vs-human agreement\n  judge_prompt.md              the exact optional-judge rubric\nsubmissions/                   raw answers (both arms, both tranches) so you can re-score any submitted run\nresults/                       per-item results (both arms) + the chart inputs\ncharts/                        the rendered SVG charts\nREPRODUCE.md                   exact commands to reproduce the charts and the numbers\nGUIDE.md                       plain-language walkthrough of every term\nSUBMISSION.md                  how any system runs and submits\nLEADERBOARD.md                 results, ranked by the deterministic metrics\nCONTRIBUTING.md                correcting an item, submitting a result\nRESULTS.md                     metric definitions and methodology\n```\n\nEach dataset line carries `must_include` (distinctive substrings a correct answer should contain), `must_not_include` (wrong-jurisdiction tells), and `expected_authorities` (the primary authority a strong answer should rest on).\n\n## Run it on your system\n\nProduce an answers file (one JSON per line: `{id, answer, sources}`), then:\n\n```bash\npython scoring/score.py --golden data/us_chat_golden_hard.jsonl --answers your_answers.jsonl\n```\n\nNew to benchmarks, or want every term explained in plain language? Start with [GUIDE.md](GUIDE.md).\nThe full submission format, the fairness rules, and how to appear on the leaderboard are in [SUBMISSION.md](SUBMISSION.md).\nWant to reproduce the committed numbers and charts exactly? See [REPRODUCE.md](REPRODUCE.md).\n\n## Disclosure\n\nThe maintainers build Vaquill, a US legal-AI product, so they have a stake in the result.\nThe benchmark is built so that stake does not matter: the questions and scorer are here, the headline metrics are reproducible by anyone, [RESULTS.md](RESULTS.md) reports where the submitted system falls short, and its results are submitted under `submissions/` with re-scorable answers, exactly like any other system.\nThis is a self-run benchmark, not a third-party audit.\nThe strongest external check is to run your own system through it, or to compare against an independent grader such as [Vals AI](https://www.vals.ai/) or the open [LegalBench-RAG](https://github.com/zeroentropy-cc/legalbenchrag).\n\n## Correcting the benchmark\n\nA single wrong \"correct answer\" discredits a benchmark, so corrections are the most valuable contribution.\nIf you believe an item's expected answer or authority is wrong, open an issue with the primary source.\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n\n## License\n\nData (the question sets, results, and submitted answers) is licensed under [CC BY 4.0](LICENSE-DATA): reuse it freely, including commercially, with attribution. Code (the scorer and scripts) is licensed under the [MIT License](LICENSE).\n\n## Citation\n\nGitHub shows a \"Cite this repository\" button generated from [CITATION.cff](CITATION.cff). Or cite it directly:\n\n```\nOpen Legal-Answer Quality Benchmark (2026-07 snapshot). CC BY 4.0.\nhttps://github.com/Vaquill-AI/open-legal-answer-benchmark\n```\n\n## Community\n\nQuestions, ideas, or want to contribute? Join the Vaquill community on [Discord](https://discord.gg/GQtnwxf8nQ).\n",
+    "characters": 8283,
+    "source_url": "https://github.com/Vaquill-AI/open-legal-answer-benchmark/blob/b2d8e70533b2d97a3b93653bf7089cb28d37feb7/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "bbff567c754e807c0bab46eccdfd35e74c0caba97bcc1b3f0d7afccca9349c61",
+    "text": "MIT License\n\nCopyright (c) 2026 Vaquill AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1067,
+    "source_url": "https://github.com/Vaquill-AI/open-legal-answer-benchmark/blob/b2d8e70533b2d97a3b93653bf7089cb28d37feb7/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 5,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "zriyansh",
+      "contributions": 5
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
