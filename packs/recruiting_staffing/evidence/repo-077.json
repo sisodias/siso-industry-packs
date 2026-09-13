@@ -1,0 +1,162 @@
+{
+  "audit_id": "R077",
+  "requested_full_name": "Intiqo/bullhorn-go-sdk",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "Intiqo/bullhorn-go-sdk",
+  "html_url": "https://github.com/Intiqo/bullhorn-go-sdk",
+  "description": "Bullhorn SDK (unofficial) for Golang",
+  "stargazers_count": 1,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License"
+  },
+  "default_branch": "main",
+  "revision": "dada5123576a784f02e75c66189cdfa4f94dd1a1",
+  "last_commit": "2025-07-28T04:51:00Z",
+  "recent_commits": [
+    {
+      "sha": "dada5123576a784f02e75c66189cdfa4f94dd1a1",
+      "date": "2025-07-28T04:51:00Z"
+    },
+    {
+      "sha": "2ed095e2fa8c5b5d62e4b15c6708b949ff64b5f3",
+      "date": "2025-07-28T04:42:12Z"
+    },
+    {
+      "sha": "9af99d661ad36dba7fbcbe7f61a908dc3f868a16",
+      "date": "2025-07-23T13:56:42Z"
+    },
+    {
+      "sha": "fb2af9e3c52d3d88d93473174c27822e4dea8e9c",
+      "date": "2025-04-24T05:05:14Z"
+    },
+    {
+      "sha": "e54d42c158a844af32692709d848b0039bfaeeab",
+      "date": "2025-04-24T05:04:26Z"
+    },
+    {
+      "sha": "a5d8d11ed5859bdc74a3a121d49a0b9e9a8bb2d5",
+      "date": "2024-09-25T09:27:59Z"
+    },
+    {
+      "sha": "9f176f481925f67975c92a1b1dbe6c0cf78297c1",
+      "date": "2024-06-16T18:41:35Z"
+    },
+    {
+      "sha": "800b2b85652395465ffe9da516108a148b0ef506",
+      "date": "2024-06-16T18:35:17Z"
+    },
+    {
+      "sha": "640423db53412a8ac1e348ec4959bb01d92b3a2e",
+      "date": "2024-06-16T18:28:22Z"
+    },
+    {
+      "sha": "d3c03516ac0e16abf3bc3e0f54b54e0c6b1f93b4",
+      "date": "2024-06-16T18:27:32Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "9367ce280a4ab48796df49b7dc30f58ecd864a95"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "8e93746b34edebbb4346395312b3aafa94ab829b"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "b25eded363ac336334a683808bf0cb410f7538f7"
+    },
+    {
+      "name": "authentication.go",
+      "type": "blob",
+      "oid": "a87c8facf89c4a6f2e18a90e0148ab65ae909e35"
+    },
+    {
+      "name": "backend.go",
+      "type": "blob",
+      "oid": "45c4370a19489cc5a02982aa4b463b80c80ea498"
+    },
+    {
+      "name": "bullhorn.go",
+      "type": "blob",
+      "oid": "b121bcf6779da6bd9860c7d71098851fee014811"
+    },
+    {
+      "name": "client.go",
+      "type": "blob",
+      "oid": "c2570247e9b58e2c63d925edf40feabf4f5572eb"
+    },
+    {
+      "name": "entity.go",
+      "type": "blob",
+      "oid": "af01f25da8096d7e90145324382e082f84ab5c2d"
+    },
+    {
+      "name": "examples",
+      "type": "tree",
+      "oid": "230777fdff1b4f7c5ac9bc579a024f75304fb9f2"
+    },
+    {
+      "name": "go.mod",
+      "type": "blob",
+      "oid": "092bea4791edeb7842dcf7ac26ece9d1c101e25a"
+    },
+    {
+      "name": "go.sum",
+      "type": "blob",
+      "oid": "c3be1fe39c3f889b2b9708a8042836cce0863ae3"
+    },
+    {
+      "name": "rest_response.go",
+      "type": "blob",
+      "oid": "91e65f2a8ded03a4d03fd24a79aac7326ec9724a"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/Intiqo/bullhorn-go-sdk",
+    "commit": "https://github.com/Intiqo/bullhorn-go-sdk/commit/dada5123576a784f02e75c66189cdfa4f94dd1a1"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "881957d145221f3ad0ab626000c095517917f0c3ba0f15688de764b2286ee06f",
+    "characters_read": 3791,
+    "excerpt": "# Overview This is an unofficial Golang SDK to integrate with the Bullhorn system ## Installation ### Latest Version `go get github.com/Intiqo/bullhorn-go-sdk` ### Specific Version `go get github.com/Intiqo/bullhorn-go-sdk@v0.1.2` ## Authentication / Obtaining a client - Create a new bullhorn client with the below method: ```go ap := &bullhorn.AuthParams{ ClientId: \"\", ClientSecret: \"\", Username: \"\", Password: \"\", AuthenticationUrl: \"\", LoginUrl: \"\", ApiUrl: \"\", RestTokenTTL: 1440, AuthorizationCode: \"\", AccessToken: \"\", RefreshToken: \"\", RestToken: \"\", } c, err := bullhorn.NewClient(ap) ``` ### Mandatory Parameters - It is mandatory to specify the clientId, clientSecret, username, password, authentication url & login url. Api URL is automatically created - Rest Token TTL is optional, in which case, the default is `1440` (i.e. 24 hours) ### Tokens",
+    "source_url": "https://github.com/Intiqo/bullhorn-go-sdk/blob/dada5123576a784f02e75c66189cdfa4f94dd1a1/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "404e1eb388f8913191523fcf6d025115a1b2000b8706fabafaab9319ce82ebb4",
+    "characters_read": 1078,
+    "excerpt": "# MIT License Copyright (c) 2024 Intiqo Technologies Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\",",
+    "source_url": "https://github.com/Intiqo/bullhorn-go-sdk/blob/dada5123576a784f02e75c66189cdfa4f94dd1a1/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

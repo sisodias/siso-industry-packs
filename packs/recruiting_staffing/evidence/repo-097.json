@@ -1,0 +1,156 @@
+{
+  "audit_id": "R097",
+  "requested_full_name": "snsparrish/NachaLibPHP",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "snsparrish/NachaLibPHP",
+  "html_url": "https://github.com/snsparrish/NachaLibPHP",
+  "description": "PHP lib for creating NACHA files",
+  "stargazers_count": 41,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "master",
+  "revision": "1cc9d506eac29c73fe05269b7ff68c05ece7fc98",
+  "last_commit": "2017-10-25T17:09:39Z",
+  "recent_commits": [
+    {
+      "sha": "1cc9d506eac29c73fe05269b7ff68c05ece7fc98",
+      "date": "2017-10-25T17:09:39Z"
+    },
+    {
+      "sha": "1656a73b047873951bcd43d438a51c92e8498c72",
+      "date": "2017-10-25T17:09:04Z"
+    },
+    {
+      "sha": "1f833600cbf1968b28817379cf8b26f028261891",
+      "date": "2017-02-17T09:48:27Z"
+    },
+    {
+      "sha": "181a740e71388ce76ef5994f8b7eafe5c74268c9",
+      "date": "2015-05-15T20:33:47Z"
+    },
+    {
+      "sha": "50c986c94a7c6ec6fc6a96f88b9d05e46496b09c",
+      "date": "2014-06-25T22:15:35Z"
+    },
+    {
+      "sha": "b7c991b02ac8e35f90bd97cdae320890de25c461",
+      "date": "2014-06-25T22:06:29Z"
+    },
+    {
+      "sha": "737c817f741606e68b44918db83da08eb04e0759",
+      "date": "2014-05-20T03:34:40Z"
+    },
+    {
+      "sha": "22317c0fabd3eb4798894af742da1345ffca88e4",
+      "date": "2014-05-20T00:23:44Z"
+    },
+    {
+      "sha": "14968683ed065a4f5eb4aa3dd58d2679fc9102de",
+      "date": "2014-05-19T00:02:03Z"
+    },
+    {
+      "sha": "ce055183de2bade59cb9361c16c25a8feb5df3c0",
+      "date": "2014-05-18T23:34:53Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": "Nacha.php",
+      "type": "blob",
+      "oid": "fc115780ca951a00a7e9b8a5243d2851729ea236"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "d28165aff71e9b3db27598d4bdc3a2e17683fab2"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 9,
+      "title": "Can this be installed using composer?",
+      "createdAt": "2023-09-26T15:41:45Z",
+      "updatedAt": "2023-09-26T15:41:45Z",
+      "closedAt": null,
+      "url": "https://github.com/snsparrish/NachaLibPHP/issues/9",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 8,
+      "title": "setSettlementAccount is not used in building the nacha file",
+      "createdAt": "2018-10-30T18:59:39Z",
+      "updatedAt": "2020-11-28T17:10:06Z",
+      "closedAt": null,
+      "url": "https://github.com/snsparrish/NachaLibPHP/issues/8",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2020-10-23T00:10:24Z",
+            "url": "https://github.com/snsparrish/NachaLibPHP/issues/8#issuecomment-714829536"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2020-11-28T17:06:57Z",
+            "url": "https://github.com/snsparrish/NachaLibPHP/issues/8#issuecomment-735257032"
+          }
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Transcode",
+      "createdAt": "2015-03-31T16:16:39Z",
+      "updatedAt": "2017-10-25T17:09:57Z",
+      "closedAt": "2017-10-25T17:09:57Z",
+      "url": "https://github.com/snsparrish/NachaLibPHP/issues/4",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2017-02-10T15:23:33Z",
+            "url": "https://github.com/snsparrish/NachaLibPHP/issues/4#issuecomment-278973165"
+          },
+          {
+            "authorAssociation": "OWNER",
+            "createdAt": "2017-10-25T17:09:57Z",
+            "url": "https://github.com/snsparrish/NachaLibPHP/issues/4#issuecomment-339401555"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/snsparrish/NachaLibPHP",
+    "commit": "https://github.com/snsparrish/NachaLibPHP/commit/1cc9d506eac29c73fe05269b7ff68c05ece7fc98"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "29808639d6e5b14add882a389093357f1c6b1e44ba34d02a21484c20289a1250",
+    "characters_read": 2805,
+    "excerpt": "## Create NACHA files in PHP Supports debit (collecting money from others) and credit (transferring money to others) transactions. If you need more functionality, I'm available for contract work at sparrish@nodeping.com ## Usage: ```php include 'Nacha.php'; $nacha = new NachaFile(); $nacha->setBankRT('123456789')// Your bank's routing number ->setCompanyId('9876543210')// Usually your company Fed tax id with something the bank tells you to put on the front. ->setSettlementAccount('44444444444') // Your bank account you want the money to go into ->setFileID('9876543210')// Probably the same as your Company ID but your bank will tell you what this should be. ->setOriginatingBank('BANK ON IT')// Text name of your bank ->setFileModifier('A')// Usually just A - for the first file of the day. Change to 'B' for second file of",
+    "source_url": "https://github.com/snsparrish/NachaLibPHP/blob/1cc9d506eac29c73fe05269b7ff68c05ece7fc98/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

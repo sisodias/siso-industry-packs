@@ -1,0 +1,454 @@
+{
+  "audit_id": "R012",
+  "requested_full_name": "frappe/frappe_docker",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "frappe/frappe_docker",
+  "html_url": "https://github.com/frappe/frappe_docker",
+  "description": "Docker environment for developing, deploying, and running Frappe applications (ERPNext and custom apps) in production and development",
+  "stargazers_count": 2559,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License"
+  },
+  "default_branch": "main",
+  "revision": "a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0",
+  "last_commit": "2026-09-08T14:06:23Z",
+  "recent_commits": [
+    {
+      "sha": "a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0",
+      "date": "2026-09-08T14:06:23Z"
+    },
+    {
+      "sha": "9d9b3431b05a7d9bda9dab2863a2a6a9cba13259",
+      "date": "2026-09-08T11:26:31Z"
+    },
+    {
+      "sha": "b9cf18fbc6a0e05484fd5a2c0d31b2775abd7daa",
+      "date": "2026-09-08T11:25:57Z"
+    },
+    {
+      "sha": "9e353542a6b56f17d64a26b5e726aba315b5fd17",
+      "date": "2026-09-08T08:26:59Z"
+    },
+    {
+      "sha": "c75296ed5a82bbfad53984ae058b49734997f5e1",
+      "date": "2026-09-08T08:26:51Z"
+    },
+    {
+      "sha": "380b9d069ab949754fe78331af647b673984dc04",
+      "date": "2026-09-02T13:07:13Z"
+    },
+    {
+      "sha": "af21e062008f81848b0339947d357f2c705efdf9",
+      "date": "2026-09-02T07:54:40Z"
+    },
+    {
+      "sha": "5d971239fb06818e9ec690e4c47e9f33babfa41a",
+      "date": "2026-09-01T10:07:53Z"
+    },
+    {
+      "sha": "b2b32a062a082d0981fe581737671929df8c3558",
+      "date": "2026-09-01T10:07:10Z"
+    },
+    {
+      "sha": "370bdec586d29c5bd642a532f244962b6e1c68e4",
+      "date": "2026-09-01T08:32:28Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".dockerignore",
+      "type": "blob",
+      "oid": "3e68f8ade45f68c46d0f12d492b88d3d9dacd944"
+    },
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "4f050ea6158d848ffc96d7b45f9f7407da86303b"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "cbc43d070fd0330ecadda54b6a1644b56fa23a90"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "591cbaff9142ce2f7602f312a783c76fd28b3cc8"
+    },
+    {
+      "name": ".hadolint.yaml",
+      "type": "blob",
+      "oid": "9f64091af1daa7dc5f81b2ba05d272b649c41aec"
+    },
+    {
+      "name": ".pre-commit-config.yaml",
+      "type": "blob",
+      "oid": "dc770bb45a6e97ac2c83a43af8e026997d8c0186"
+    },
+    {
+      "name": ".shellcheckrc",
+      "type": "blob",
+      "oid": "8226afb6b6cd30b7340c954c470c2da0fdc082a5"
+    },
+    {
+      "name": ".vscode",
+      "type": "tree",
+      "oid": "082cc07e4d99dcf20b92e761d042ccc87f77272b"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "0e01dd85beb691cdf60b86e95b589772b680968e"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "1b1db5c42191d16e88f2d7eb1d27595e44510965"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "c4e7b3dc6f56a3ca6718b9c00abecc073a7cf57a"
+    },
+    {
+      "name": "MAINTAINERS.md",
+      "type": "blob",
+      "oid": "b4afca59465743dcac1b5ed6deacaf079e12e7aa"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "769efef74761a932f4cefbc60342a7daffdb175f"
+    },
+    {
+      "name": "compose.yaml",
+      "type": "blob",
+      "oid": "d69e4d190c5cce53ffc67b124d6a2ac68bf1e284"
+    },
+    {
+      "name": "devcontainer-example",
+      "type": "tree",
+      "oid": "0db029e1403a05446dd0be57a6d74920569e2c8b"
+    },
+    {
+      "name": "development",
+      "type": "tree",
+      "oid": "8387f7f85ef39bc1f96b329c08da61b1618c695d"
+    },
+    {
+      "name": "docker-bake.hcl",
+      "type": "blob",
+      "oid": "357275571a7904dbba27bde43ef58673c209b72d"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "23a52c957bb89852df7eb8f42c7e12eff9d84a80"
+    },
+    {
+      "name": "example.env",
+      "type": "blob",
+      "oid": "24b41b51936d15a4d532332605892b517d2ada43"
+    },
+    {
+      "name": "images",
+      "type": "tree",
+      "oid": "232cd1fd91504a0e10fc6d9f29b518809c4be5b5"
+    },
+    {
+      "name": "install_x11_deps.sh",
+      "type": "blob",
+      "oid": "a66b20426b6472a6415dda108940eb2bd406b25d"
+    },
+    {
+      "name": "overrides",
+      "type": "tree",
+      "oid": "14f2c4eebe47ca1997d7d53bed4ebdf0bdbf7679"
+    },
+    {
+      "name": "pwd.yml",
+      "type": "blob",
+      "oid": "b20717d489304bbdcd39cede0565d7643090ca72"
+    },
+    {
+      "name": "requirements-test.txt",
+      "type": "blob",
+      "oid": "7345f250f23f668c1016f96cf5ba9a21d0869119"
+    },
+    {
+      "name": "resources",
+      "type": "tree",
+      "oid": "99497e889b786ca0d916cf55cb9aa504b91fb2ba"
+    },
+    {
+      "name": "setup.cfg",
+      "type": "blob",
+      "oid": "ae4ce36a192613036d214502848dbcc6d80e00b4"
+    },
+    {
+      "name": "tests",
+      "type": "tree",
+      "oid": "19d766e42fa8d6e4c67ef39b7fc0270014df7716"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 1975,
+      "title": "Frappe Pilot | Bench replacement",
+      "createdAt": "2026-08-24T11:52:26Z",
+      "updatedAt": "2026-09-12T03:11:23Z",
+      "closedAt": null,
+      "url": "https://github.com/frappe/frappe_docker/issues/1975",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-08-25T11:58:32Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1975#issuecomment-5410038399"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-08-25T12:00:24Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1975#issuecomment-5410058282"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-08-25T12:41:36Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1975#issuecomment-5410519519"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-08-26T08:16:03Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1975#issuecomment-5422523005"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-08-26T11:32:31Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1975#issuecomment-5424663206"
+          }
+        ]
+      }
+    },
+    {
+      "number": 1934,
+      "title": "Frappe devcontainer on WSL2: bench start stops after ~6.5 minutes due to Redis connection timeout in worker",
+      "createdAt": "2026-06-30T18:17:10Z",
+      "updatedAt": "2026-09-09T02:27:59Z",
+      "closedAt": "2026-09-09T02:27:59Z",
+      "url": "https://github.com/frappe/frappe_docker/issues/1934",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-07-02T07:35:07Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1934#issuecomment-4863316593"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-07-02T08:29:32Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1934#issuecomment-4863743999"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-07-02T08:54:34Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1934#issuecomment-4863950630"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-07-02T09:07:04Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1934#issuecomment-4864054487"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-07-02T09:26:55Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1934#issuecomment-4864223157"
+          }
+        ]
+      }
+    },
+    {
+      "number": 1986,
+      "title": "Support bind mount via environment variables",
+      "createdAt": "2026-09-05T07:14:54Z",
+      "updatedAt": "2026-09-07T17:59:06Z",
+      "closedAt": null,
+      "url": "https://github.com/frappe/frappe_docker/issues/1986",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-09-07T09:08:30Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1986#issuecomment-5568219246"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-07T14:06:54Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1986#issuecomment-5571818586"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-09-07T14:50:25Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1986#issuecomment-5572371111"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-07T16:37:40Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1986#issuecomment-5573509142"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-09-07T16:45:14Z",
+            "url": "https://github.com/frappe/frappe_docker/issues/1986#issuecomment-5573577967"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/frappe/frappe_docker",
+    "commit": "https://github.com/frappe/frappe_docker/commit/a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4373c71c116554114ede41642147c1e13dc55c384da14de7cca94bb399aaa342",
+    "characters_read": 4790,
+    "excerpt": "<div align=\"center\"> <img src=\"docs/public/frappe-docker.png\" alt=\"Frappe Docker\" width=\"80\" /> <h1>Frappe Docker</h1> <p>Docker images and orchestration for Frappe applications.</p> <p> <a href=\"https://github.com/frappe/frappe_docker/actions/workflows/core-build-stable.yml\"> <img src=\"https://img.shields.io/github/actions/workflow/status/frappe/frappe_docker/core-build-stable.yml?branch=main&label=Build%20Stable\" alt=\"Build Stable\" /> </a> <a href=\"https://github.com/frappe/frappe_docker/actions/workflows/core-build-develop.yml\"> <img src=\"https://img.shields.io/github/actions/workflow/status/frappe/frappe_docker/core-build-develop.yml?branch=main&label=Build%20Develop\" alt=\"Build Develop\" /> </a> <a href=\"https://frappe.github.io/frappe_docker/\"> <img src=\"https://img.shields.io/badge/Docs-Open%20Site-0A7EA4\" alt=\"Docs\" /> </a> </p> </div> ## What is this? This repository is the official container setup for Frappe applications. It provides Docker images, Compose configurations, and documentation for running Frappe applications, including ERPNext, CRM, Helpdesk, and other Frappe apps, in containers. Use it if you want to: - run ERPNext, CRM, Helpdesk, or other Frappe apps with Docker - start from a quick demo setup - use production-ready Docker images and Compose setups - build custom app images - deploy and operate",
+    "source_url": "https://github.com/frappe/frappe_docker/blob/a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0/README.md",
+    "edition_flags": [
+      "non-production",
+      "docker"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "4234a14fb0a788985bf429eb9ea73bfb93139967e8dcee191f7d4f621970c800",
+    "characters_read": 1086,
+    "excerpt": "MIT License Copyright (c) 2017 Frappe Technologies Pvt. Ltd. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS",
+    "source_url": "https://github.com/frappe/frappe_docker/blob/a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0885",
+        "repo": "frappe/frappe_docker",
+        "url": "https://github.com/frappe/frappe_docker",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "frappe/frappe_docker",
+        "capability_tag": "container-runtime",
+        "category_slug": "infra-devops",
+        "summary": "Docker Compose setup for running Frappe/ERPNext apps in containers",
+        "reuse_value": 70,
+        "stars": 2434,
+        "license": "MIT",
+        "language": "Python",
+        "url": "https://github.com/frappe/frappe_docker",
+        "rank_score": 70024340
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [
+      {
+        "full_name": "frappe/frappe_docker",
+        "language": "Python",
+        "registry": "pypi.org",
+        "pkg_name": null,
+        "unit_class": "capability",
+        "resolved": 0,
+        "link_method": "unresolved",
+        "downloads": null,
+        "downloads_period": null,
+        "dependent_repos": null,
+        "dependent_pkgs": null,
+        "rank_avg": null,
+        "reach_percentile": null,
+        "reuse_value": 70,
+        "stars": 2434,
+        "adoption_score": null,
+        "real_value": null,
+        "verdict": "unresolved",
+        "fame_gap": null,
+        "raw_json": "{\"dl\": null, \"deprepos\": null, \"deppkgs\": null, \"rank_avg\": null, \"link\": \"unresolved\"}",
+        "built_at": "2026-06-25T21:03:50.675089"
+      }
+    ],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "frappe/frappe_docker",
+        "stars": 2434,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "capability",
+        "reuse_value": 70,
+        "liftability": 60,
+        "fame_gap": 10,
+        "cat_slug": "infra-devops",
+        "cat_name": "Infrastructure & DevOps",
+        "description": "Docker environment for developing, deploying, and running Frappe applications (ERPNext and custom apps) in production an"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_best.jsonl",
+    "bank/bank_adoption_v2.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": [
+    {
+      "full_name": "frappe/frappe_docker",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": null,
+      "unit_class": "capability",
+      "resolved": 0,
+      "link_method": "unresolved",
+      "downloads": null,
+      "downloads_period": null,
+      "dependent_repos": null,
+      "dependent_pkgs": null,
+      "rank_avg": null,
+      "reach_percentile": null,
+      "reuse_value": 70,
+      "stars": 2434,
+      "adoption_score": null,
+      "real_value": null,
+      "verdict": "unresolved",
+      "fame_gap": null,
+      "raw_json": "{\"dl\": null, \"deprepos\": null, \"deppkgs\": null, \"rank_avg\": null, \"link\": \"unresolved\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    }
+  ]
+}

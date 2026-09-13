@@ -1,0 +1,96 @@
+{
+  "audit_id": "R059",
+  "requested_full_name": "jensjorisdecorte/Skill-Extraction-benchmark",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "jensjorisdecorte/Skill-Extraction-benchmark",
+  "html_url": "https://github.com/jensjorisdecorte/Skill-Extraction-benchmark",
+  "description": "Dataset used to evaluate Skill Extraction systems based on the ESCO skills taxonomy.",
+  "stargazers_count": 17,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "main",
+  "revision": "19305c85e35a74fb2a5128d8ee3798b06470b596",
+  "last_commit": "2024-07-18T17:09:48Z",
+  "recent_commits": [
+    {
+      "sha": "19305c85e35a74fb2a5128d8ee3798b06470b596",
+      "date": "2024-07-18T17:09:48Z"
+    },
+    {
+      "sha": "157da05a24e6ecfee82e4b5d01cba68a2ed0552f",
+      "date": "2024-01-29T15:19:14Z"
+    },
+    {
+      "sha": "1e782e044fe15c901ed358dae1bbcc44c4ff5603",
+      "date": "2022-09-10T19:13:25Z"
+    },
+    {
+      "sha": "7fccacd13ddb49fa3e8214a1e7e883d5f445980f",
+      "date": "2022-09-10T19:10:48Z"
+    },
+    {
+      "sha": "0d2a397ad0f75f2e9f2abd425c899cac5b66c3fa",
+      "date": "2022-09-10T19:09:35Z"
+    },
+    {
+      "sha": "01bd081accd93cfc6e4bf86598b1be36b7443fca",
+      "date": "2022-09-10T19:09:13Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": "data",
+      "type": "tree",
+      "oid": "e73d47e6791659ffbebff48d95ef561a7337bf7e"
+    },
+    {
+      "name": "readme.md",
+      "type": "blob",
+      "oid": "6977b11edfa76fe44a6a62dcc728252368a4c4ef"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 1,
+      "title": "Help with reproducing (ESCO hierarchy)",
+      "createdAt": "2023-01-04T17:47:53Z",
+      "updatedAt": "2023-01-29T14:07:34Z",
+      "closedAt": "2023-01-29T14:06:13Z",
+      "url": "https://github.com/jensjorisdecorte/Skill-Extraction-benchmark/issues/1",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/jensjorisdecorte/Skill-Extraction-benchmark",
+    "commit": "https://github.com/jensjorisdecorte/Skill-Extraction-benchmark/commit/19305c85e35a74fb2a5128d8ee3798b06470b596"
+  },
+  "readme": {
+    "path": "readme.md",
+    "sha256": "2bb4711e72d8ac1fb6da01e4fe2d65003dd467e237cd92665b42464be5fa0a51",
+    "characters_read": 3583,
+    "excerpt": "# Skill Extraction: benchmarks This is the official repository containing three skill extraction datasets, from the following papers: 1. [Design of Negative Sampling Strategies for Distantly Supervised Skill Extraction](https://arxiv.org/abs/2209.05987) 2. [Extreme Multi-Label Skill Extraction Training using Large Language Models](https://arxiv.org/abs/2307.10778) ## Dataset description The `TECH` and `HOUSE` subsets form an extention of the SkillSpan [[1]](#1) dataset, in which spans of skill mentions in sentences have been labeled with corresponding ESCO [[2]](#2) skills. The `TECHWOLF` subset, although smaller, represents a more generic distribution of job descriptions and skill spans. ESCO skills are directly annotated on the full sentence level, thus omitting the intermediate span identification step. The ESCO skills in the dataset are referenced by their preferred label, in the 1.1.0 ESCO",
+    "source_url": "https://github.com/jensjorisdecorte/Skill-Extraction-benchmark/blob/19305c85e35a74fb2a5128d8ee3798b06470b596/readme.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

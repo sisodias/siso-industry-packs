@@ -1,0 +1,342 @@
+{
+  "audit_id": "R055",
+  "requested_full_name": "OmkarPathak/ResumeParser",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "OmkarPathak/ResumeParser",
+  "html_url": "https://github.com/OmkarPathak/ResumeParser",
+  "description": "A simple resume parser used for extracting information from resumes",
+  "stargazers_count": 339,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License"
+  },
+  "default_branch": "master",
+  "revision": "d03a90f200513e61de4c239c42c24723a2a72c1b",
+  "last_commit": "2026-02-04T11:39:39Z",
+  "recent_commits": [
+    {
+      "sha": "d03a90f200513e61de4c239c42c24723a2a72c1b",
+      "date": "2026-02-04T11:39:39Z"
+    },
+    {
+      "sha": "ed29bf7fb57068aa26280ff299571f01840bc0e4",
+      "date": "2026-02-04T08:49:06Z"
+    },
+    {
+      "sha": "82d1da590160b767cbd738bfb6514cdd7720ae6d",
+      "date": "2026-02-01T15:58:18Z"
+    },
+    {
+      "sha": "8a5bf28b97ff3af1637d5d684c988aeffa676e06",
+      "date": "2026-01-31T14:29:41Z"
+    },
+    {
+      "sha": "5029107fdd9b402216065c04a4a3457a056298fc",
+      "date": "2026-01-31T13:52:27Z"
+    },
+    {
+      "sha": "558eace7c14605d5b6eb8d2ae4c25b18d779f7d8",
+      "date": "2026-01-30T13:07:31Z"
+    },
+    {
+      "sha": "f959d6e6f094d7434e7c7b0f8cd58a5e70c60249",
+      "date": "2026-01-26T16:02:09Z"
+    },
+    {
+      "sha": "62d9c32bee4a86714ef608b2dc8456f37a3e5ae1",
+      "date": "2026-01-26T03:44:52Z"
+    },
+    {
+      "sha": "a8802132cf2bb18e31a5077cc9fa646849bba745",
+      "date": "2026-01-25T18:05:47Z"
+    },
+    {
+      "sha": "10af37799d0efff0e32503b9dc64cdf87d1bc599",
+      "date": "2026-01-25T16:55:14Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".dockerignore",
+      "type": "blob",
+      "oid": "dade33fb46e60e50cb1608ec9dd73bcac4f1d9a2"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "19f47da4f6a94db547781b85ff62eebbe9893687"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "b4967e8050d0d007bd1391ae89fc530c68c1f53e"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "blob",
+      "oid": "b4be2ce29748a11179b1dadccbc74bedee11d1c6"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "0d61c0d18002ccc61651c5717eb010e60af65615"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "0789ea554b22602f4cf4ee025ae043b9be16d73d"
+    },
+    {
+      "name": "ResumeParser.code-workspace",
+      "type": "blob",
+      "oid": "876a1499c09dc083612f43c53c0ae71b9c30c5b1"
+    },
+    {
+      "name": "USER_GUIDE.md",
+      "type": "blob",
+      "oid": "1a456a6b2a2f484c0d3b54c1776042aa1e96d386"
+    },
+    {
+      "name": "build.sh",
+      "type": "blob",
+      "oid": "6fdc10ed64c2fc2de73d4211e6abd077b2c447b0"
+    },
+    {
+      "name": "build_mac.sh",
+      "type": "blob",
+      "oid": "8024c3c45b33e8122b24d508ea83a8ea2be689a8"
+    },
+    {
+      "name": "build_win.bat",
+      "type": "blob",
+      "oid": "2108cd948c109803eadb6925d0a3f6025bd7b2dd"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "93b6fe4de0579bb2cc17e2aae873fd392a4c8334"
+    },
+    {
+      "name": "download_model.py",
+      "type": "blob",
+      "oid": "f44cb1ff26f83d92c2e186370246dc449912b813"
+    },
+    {
+      "name": "nginx",
+      "type": "tree",
+      "oid": "d66fe1bf013aab2cbe373d32ba637be60eba3b2d"
+    },
+    {
+      "name": "results",
+      "type": "tree",
+      "oid": "5cfd7fe23f754427291cbfbff1aff083eb018f14"
+    },
+    {
+      "name": "resume_parser",
+      "type": "tree",
+      "oid": "93104bf4906fd53ffb7e020e0e491befe951eec5"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 56,
+      "title": "OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a Python package or a valid path to a data directory.",
+      "createdAt": "2022-02-15T11:37:21Z",
+      "updatedAt": "2024-05-16T09:16:16Z",
+      "closedAt": null,
+      "url": "https://github.com/OmkarPathak/ResumeParser/issues/56",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2022-04-07T08:55:28Z",
+            "url": "https://github.com/OmkarPathak/ResumeParser/issues/56#issuecomment-1091360953"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2023-10-29T19:11:31Z",
+            "url": "https://github.com/OmkarPathak/ResumeParser/issues/56#issuecomment-1784200431"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2024-05-16T09:16:15Z",
+            "url": "https://github.com/OmkarPathak/ResumeParser/issues/56#issuecomment-2114654251"
+          }
+        ]
+      }
+    },
+    {
+      "number": 59,
+      "title": "nltk error",
+      "createdAt": "2022-12-14T07:21:17Z",
+      "updatedAt": "2022-12-14T07:21:17Z",
+      "closedAt": null,
+      "url": "https://github.com/OmkarPathak/ResumeParser/issues/59",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 57,
+      "title": "How to permanently store the data from this website into a sqlite3 database?",
+      "createdAt": "2022-03-25T05:32:18Z",
+      "updatedAt": "2022-03-25T05:32:18Z",
+      "closedAt": null,
+      "url": "https://github.com/OmkarPathak/ResumeParser/issues/57",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/OmkarPathak/ResumeParser",
+    "commit": "https://github.com/OmkarPathak/ResumeParser/commit/d03a90f200513e61de4c239c42c24723a2a72c1b"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4c85ebd9314ca226b8179ceef68da008c8b7ce127b0bc8f070d0d422d8b61f39",
+    "characters_read": 3350,
+    "excerpt": "# ResumeParser with Local Agentic AI A powerful, privacy-focused Resume Parser that uses **Local LLMs (Large Language Models)** to extract information and generate insights from Resumes/CVs. > **New:** Now fully migrated from `pyresparser` to **Agentic AI** using `Qwen2.5-1.5B`! ## 🚀 Features - **AI Power**: Uses `Qwen2.5-1.5B-Instruct` (GGUF) for high-speed, accurate extraction. - **Smart Extraction**: Extracts Name, Email, Mobile, Skills, Education, Experience, Companies, and more. - **Intelligent Insights**: Automatically generates a **Professional Summary** and identifies **Key Strengths** for each candidate. - **Structured Data**: Outputs strict JSON format for easy integration. - **Zero API Cost**: Runs 100% locally. No OpenAI/Anthropic/Gemini keys required. - **Cross-Platform**: Windows, macOS (Intel/Silicon), Linux. - **Portable**: Can be built into a standalone executable. ## 🛠️ Technical Details -",
+    "source_url": "https://github.com/OmkarPathak/ResumeParser/blob/d03a90f200513e61de4c239c42c24723a2a72c1b/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9d9b8370934c88b8ba65144526927eff45b479a33a03cdd3be39732823552c94",
+    "characters_read": 1069,
+    "excerpt": "MIT License Copyright (c) 2018 Omkar Pathak Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT",
+    "source_url": "https://github.com/OmkarPathak/ResumeParser/blob/d03a90f200513e61de4c239c42c24723a2a72c1b/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2603",
+        "repo": "OmkarPathak/ResumeParser",
+        "url": "https://github.com/omkarpathak/resumeparser",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "recruiting_staffing"
+        ],
+        "discovery_categories": [
+          "ats",
+          "extract_structure"
+        ],
+        "discovery_cells": [
+          "cross_industry:ats",
+          "cross_industry:extract_structure",
+          "recruiting_staffing:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0170",
+          "repo": "OmkarPathak/ResumeParser",
+          "url": "https://github.com/OmkarPathak/ResumeParser",
+          "what_it_is": "A powerful, privacy focused Resume Parser that uses Local LLMs (Large Language Models) to extract information and generate insights from Resumes/CVs.",
+          "stars": 338,
+          "pushed_at": "2026-02-04T11:39:43Z",
+          "language": "HTML",
+          "license": "mit",
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/OmkarPathak/ResumeParser/blob/HEAD/README.md",
+            "characters_read": 3357
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=resume%20parser&type=repositories",
+              "source_title": "GitHub repository search: resume parser",
+              "detail": "resume parser"
+            }
+          ],
+          "industries": [
+            "recruiting_staffing"
+          ],
+          "categories": [
+            "ats",
+            "extract_structure"
+          ],
+          "cells": [
+            "cross_industry:ats",
+            "cross_industry:extract_structure",
+            "recruiting_staffing:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "resume parser"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:recruiting_staffing"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "omkarpathak/resumeparser",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,234 @@
+{
+  "audit_id": "R089",
+  "requested_full_name": "intuit/quickbooks-online-mcp-server",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "intuit/quickbooks-online-mcp-server",
+  "html_url": "https://github.com/intuit/quickbooks-online-mcp-server",
+  "description": "The QuickBooks MCP Server lets AI assistants access QuickBooks data via a standard interface. It uses the Model Context Protocol to expose QBO features as callable tools, enabling developers to build AI apps that fetch",
+  "stargazers_count": 385,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "main",
+  "revision": "c351dc011d9cb14b211857457085f7994d8b1e15",
+  "last_commit": "2026-08-10T21:14:42Z",
+  "recent_commits": [
+    {
+      "sha": "c351dc011d9cb14b211857457085f7994d8b1e15",
+      "date": "2026-08-10T21:14:42Z"
+    },
+    {
+      "sha": "52d97a440a831b287282d8fe8472583a472e050e",
+      "date": "2026-08-10T21:14:38Z"
+    },
+    {
+      "sha": "3900f879940922197ade18279dbe6b1cdb80ab8e",
+      "date": "2026-08-10T21:13:06Z"
+    },
+    {
+      "sha": "d39c2f96945fa2da06bcd8b1c079670494eb1751",
+      "date": "2026-08-10T21:04:50Z"
+    },
+    {
+      "sha": "ce670708df0e6059f269c153cd04d4ff98069914",
+      "date": "2026-08-10T21:02:59Z"
+    },
+    {
+      "sha": "c3be668505b03eab60996725966762e2f6541a23",
+      "date": "2026-08-10T20:54:19Z"
+    },
+    {
+      "sha": "0323d0b2b5416d93e86e3f226c0baa2e338c62e7",
+      "date": "2026-08-10T20:54:16Z"
+    },
+    {
+      "sha": "bc7fd96f5819076993b33cf48a6a603be6dfabb7",
+      "date": "2026-08-10T20:54:12Z"
+    },
+    {
+      "sha": "acccbb15fef9ee39cd4ddb0c415d27d515e78584",
+      "date": "2026-08-10T20:54:09Z"
+    },
+    {
+      "sha": "65d71d5834f56d3dcd71f917e0d66df40a67745c",
+      "date": "2026-08-09T11:20:40Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".env.example",
+      "type": "blob",
+      "oid": "6b5f74458efe8da9c83e83f5d5bb77e196e00006"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "91885a026de9d86e0b25bbbab26816dbe9b69de9"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "34c96132a7ecd0b485c0947097d23180028459e4"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "cd24036801c6339329349a40c575c1b884cd0ddd"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "e4d8e39a1bb378966ac8041b79b87987e71c770e"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "65b614bafb569bcadd0f25cc76a00765f2112b31"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "8aad0a2c468c6524cd7f55cc0d38f3b3077bfdc3"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "a5eea9b3bf28772c602d1b158186e60db71db979"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "58403aa840bd51090f5eaa92f8015e8bfd4a7dbe"
+    },
+    {
+      "name": "jest.config.js",
+      "type": "blob",
+      "oid": "7d9149e6b6b4279db0fe4e5105ad8ac561fd7004"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "blob",
+      "oid": "1a2ff49a0b65dd7a4fa7486d1fc8334ec42d0888"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "19691ac156c4fb3c9af6bb07c60d332abc205c72"
+    },
+    {
+      "name": "scripts",
+      "type": "tree",
+      "oid": "20282e55db7d65f15abafa293e8777d4ae0b5567"
+    },
+    {
+      "name": "src",
+      "type": "tree",
+      "oid": "5afd5fc713d078165be6de853f324933fb97538e"
+    },
+    {
+      "name": "tests",
+      "type": "tree",
+      "oid": "520f1c1edac52654a578bba1e2127896897bc860"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "blob",
+      "oid": "be5ef37a4a02b944226d98617650a0f8944787b0"
+    },
+    {
+      "name": "tsconfig.test.json",
+      "type": "blob",
+      "oid": "b0d0e00ddd8a004a3e9438cc0afa0e1ec1b55c82"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 133,
+      "title": "count: true returns HTTP 400 — the criteria array form never triggers node-quickbooks' count detection",
+      "createdAt": "2026-09-02T20:46:05Z",
+      "updatedAt": "2026-09-02T20:46:05Z",
+      "closedAt": null,
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server/issues/133",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 132,
+      "title": "search_bill_payments and search_journal_entries still return the raw SDK envelope (same class as #14/#15)",
+      "createdAt": "2026-09-02T20:45:47Z",
+      "updatedAt": "2026-09-02T20:45:47Z",
+      "closedAt": null,
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server/issues/132",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 115,
+      "title": "15 production-dependency vulnerabilities (3 critical) at HEAD, mostly via node-quickbooks -> request",
+      "createdAt": "2026-07-28T16:06:57Z",
+      "updatedAt": "2026-08-17T16:24:45Z",
+      "closedAt": null,
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server/issues/115",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-08T13:00:46Z",
+            "url": "https://github.com/intuit/quickbooks-online-mcp-server/issues/115#issuecomment-5226213187"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-17T16:24:45Z",
+            "url": "https://github.com/intuit/quickbooks-online-mcp-server/issues/115#issuecomment-5317650670"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/intuit/quickbooks-online-mcp-server",
+    "commit": "https://github.com/intuit/quickbooks-online-mcp-server/commit/c351dc011d9cb14b211857457085f7994d8b1e15"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "1b9164e29332ceebe12e7f1852946dead0d74508f07ccb2f820fb793328b9f30",
+    "characters_read": 18775,
+    "excerpt": "# QuickBooks Online MCP Server <div align=\"center\"> **A comprehensive Model Context Protocol (MCP) server for QuickBooks Online** [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Tools](https://img.shields.io/badge/Tools-145-green.svg)](#available-tools) [![Entities](https://img.shields.io/badge/Entities-29-orange.svg)](#entities) [![Reports](https://img.shields.io/badge/Reports-11-purple.svg)](#reports) [![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg)](#testing) [![Tests](https://img.shields.io/badge/Tests-396-blue.svg)](#testing) [Quick Start](#quick-start) | [Available Tools](#available-tools) | [Authentication](#authentication) | [Documentation](#documentation) </div> --- ## Overview This MCP server provides complete QuickBooks Online API integration for Claude Code and other MCP-compatible clients. It includes full CRUD operations for 29 entity types and 11 financial reports, giving you comprehensive access to QuickBooks Online functionality. ### Key Features - **145 Total Tools** - Complete coverage of QuickBooks Online API - **29 Entity Types** - Full CRUD operations (Create, Read, Update, Delete, Search) - **11 Financial Reports** - Balance Sheet, P&L, Cash Flow, and more - **OAuth 2.0 Authentication** - Secure token-based",
+    "source_url": "https://github.com/intuit/quickbooks-online-mcp-server/blob/c351dc011d9cb14b211857457085f7994d8b1e15/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "01668910a21c98711aef80c660ca3ac22a437ade84b51ba4969aa718f0b6969c",
+    "characters_read": 11310,
+    "excerpt": "Apache License Version 2.0, January 2025 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/intuit/quickbooks-online-mcp-server/blob/c351dc011d9cb14b211857457085f7994d8b1e15/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

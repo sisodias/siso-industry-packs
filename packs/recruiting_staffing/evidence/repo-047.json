@@ -1,0 +1,389 @@
+{
+  "audit_id": "R047",
+  "requested_full_name": "nextcloud/calendar",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "nextcloud/calendar",
+  "html_url": "https://github.com/nextcloud/calendar",
+  "description": "📆 Calendar app for Nextcloud",
+  "stargazers_count": 1184,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "main",
+  "revision": "fc377507709c0745398beede6296d11742c7bad4",
+  "last_commit": "2026-09-13T00:40:52Z",
+  "recent_commits": [
+    {
+      "sha": "fc377507709c0745398beede6296d11742c7bad4",
+      "date": "2026-09-13T00:40:52Z"
+    },
+    {
+      "sha": "fc24e99333801b959166a9a725944ce146dfe42a",
+      "date": "2026-09-12T00:41:19Z"
+    },
+    {
+      "sha": "bcb2b91e69ca2366c4d6b97f9a3073918297c564",
+      "date": "2026-09-11T08:00:15Z"
+    },
+    {
+      "sha": "8b3c64e8119b7b7fc9493b0bdfa9e44e1de5fff9",
+      "date": "2026-09-11T01:28:31Z"
+    },
+    {
+      "sha": "1b022ba147bcd765d212fcd0fb45851140d87c7e",
+      "date": "2026-09-11T00:44:21Z"
+    },
+    {
+      "sha": "3d5f6086c95efeac7dbb5d75afb849ca8ea769d1",
+      "date": "2026-09-10T06:57:46Z"
+    },
+    {
+      "sha": "2a56783156a6cf6df04912fbb0260c6890c0abb8",
+      "date": "2026-09-10T00:49:42Z"
+    },
+    {
+      "sha": "e0d8aafb6934360a3cfb008b3bc902f65698e017",
+      "date": "2026-09-09T16:18:55Z"
+    },
+    {
+      "sha": "d83ce1dc9fb40aa4693af3080d90b9e7e6816e8b",
+      "date": "2026-09-09T15:13:17Z"
+    },
+    {
+      "sha": "841429c255d342d603b87fab668987f2426e23e3",
+      "date": "2026-09-09T15:10:32Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "982857caa297f7c53337bdb25ef01171fe053c0e"
+    },
+    {
+      "name": ".git-blame-ignore-revs",
+      "type": "blob",
+      "oid": "3f72ab81352da94c3fd8542e617d7a931fb43375"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "313b1ccd47b27c6feb3d618fb6340edd94623e36"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "961a69d2041fe7f7f54a64ff8240bc73b31110ff"
+    },
+    {
+      "name": ".nextcloudignore",
+      "type": "blob",
+      "oid": "ec873eb7bd9011cff723ec5946dd800e36a72bcf"
+    },
+    {
+      "name": ".php-cs-fixer.dist.php",
+      "type": "blob",
+      "oid": "69afba9e3275de7e9731291c2a72a3450dc1587a"
+    },
+    {
+      "name": ".scrutinizer.yml",
+      "type": "blob",
+      "oid": "61f2be1e0fb5ed8e6b09de3985e2f09b64a7eab4"
+    },
+    {
+      "name": ".tx",
+      "type": "tree",
+      "oid": "c07da35a334874a9999099a15c68fa5342fc9bb2"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "blob",
+      "oid": "2c01098565b1ad0e092462ffda48f9cfc93423bc"
+    },
+    {
+      "name": "AUTHORS.md",
+      "type": "blob",
+      "oid": "4fb177f43d9af71d299e268f51d61c9c75cba79e"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "bed4337bc5f593616c5a0273ebdf080d17e0d739"
+    },
+    {
+      "name": "CHANGELOG.md.license",
+      "type": "blob",
+      "oid": "0707742139cf66e7ddf2093327bb47fd1874e02e"
+    },
+    {
+      "name": "COPYING",
+      "type": "blob",
+      "oid": "dbbe3558157f5861bff35dcb37b328b679b0ccfd"
+    },
+    {
+      "name": "LICENSES",
+      "type": "tree",
+      "oid": "b4258b048387fa09d58321d6d39532b8032329cc"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "29234debc2eaa8813229d4c9df89864f76fcd2a6"
+    },
+    {
+      "name": "REUSE.toml",
+      "type": "blob",
+      "oid": "92b9539e0c33f80ab03b44216966fdb703a94384"
+    },
+    {
+      "name": "__mocks__",
+      "type": "tree",
+      "oid": "0f1d2285f03b57f301c53462b1d061df4c9bbf30"
+    },
+    {
+      "name": "appinfo",
+      "type": "tree",
+      "oid": "dc3a16b017ce61129080a60248de33a8d66b7d0c"
+    },
+    {
+      "name": "babel.config.js",
+      "type": "blob",
+      "oid": "cebc52c521292e1139e8eb63807fad77d957a8d4"
+    },
+    {
+      "name": "build",
+      "type": "tree",
+      "oid": "4d1808ed4f97557b5ff9764bb699f1f8c05e1580"
+    },
+    {
+      "name": "composer.json",
+      "type": "blob",
+      "oid": "1410abc56e741e298eed705270951b1eb60ced53"
+    },
+    {
+      "name": "composer.lock",
+      "type": "blob",
+      "oid": "15236f81bb947c81bc9f17acbb1ead49bf2ec738"
+    },
+    {
+      "name": "composer",
+      "type": "tree",
+      "oid": "986d7a62c69cf2144fcc8ed37ddc1193de5b5038"
+    },
+    {
+      "name": "eslint.config.mjs",
+      "type": "blob",
+      "oid": "beb0d0214d403bab8a03ae6372a2f1ab84fbb933"
+    },
+    {
+      "name": "img",
+      "type": "tree",
+      "oid": "4a1125ecfc2791183177e7277126b1ec0aadfc35"
+    },
+    {
+      "name": "krankerl.toml",
+      "type": "blob",
+      "oid": "69cd4830e7b403d8809ce4648b1d9fe0ed210d34"
+    },
+    {
+      "name": "l10n",
+      "type": "tree",
+      "oid": "62e3f9085ab01875ad49a417107a846fbc81ca92"
+    },
+    {
+      "name": "lib",
+      "type": "tree",
+      "oid": "c48bd0cf532955342aae4d82ea55acc036c5e54a"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "blob",
+      "oid": "0d9e81ff9ec7b57799bbd31b983d378cc9fba130"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "3750fb1ff1a54300891b8f2a93033e2630e09784"
+    },
+    {
+      "name": "phpunit.integration.xml",
+      "type": "blob",
+      "oid": "e07a1155948237394d8639d292b23954e98005c9"
+    },
+    {
+      "name": "phpunit.unit.xml",
+      "type": "blob",
+      "oid": "e3365c4f1c16af7dc66701cb879acdb153323a5e"
+    },
+    {
+      "name": "playwright.config.js",
+      "type": "blob",
+      "oid": "302ae4358b413a215d6469bc79d021ef94633917"
+    },
+    {
+      "name": "psalm.xml",
+      "type": "blob",
+      "oid": "723676d84faebae7df1d8cbe11656fe0d7841860"
+    },
+    {
+      "name": "rector.php",
+      "type": "blob",
+      "oid": "672aaf2c2f82b321e46d396d549c9bb05f5bbf96"
+    },
+    {
+      "name": "renovate.json",
+      "type": "blob",
+      "oid": "fc157f7a429a4820806f1e2190fcb74a630a77d2"
+    },
+    {
+      "name": "rspack.config.js",
+      "type": "blob",
+      "oid": "e8b178de20bb82540644516b8493d89a5ab38a90"
+    },
+    {
+      "name": "screenshots",
+      "type": "tree",
+      "oid": "f187ca76ebd8f149a01bf2070b81a2c5519f8ee2"
+    },
+    {
+      "name": "src",
+      "type": "tree",
+      "oid": "8ab05b8396bbe49285752f9e343bbb003a749834"
+    },
+    {
+      "name": "stylelint.config.mjs",
+      "type": "blob",
+      "oid": "b467fe2c27148a8380648b7ce065048c6ddc5473"
+    },
+    {
+      "name": "templates",
+      "type": "tree",
+      "oid": "dee663724082b4234c1973bf4dfd228689a36af7"
+    },
+    {
+      "name": "tests",
+      "type": "tree",
+      "oid": "b6725311727caf20a62fb99213100a9540c3401f"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "blob",
+      "oid": "b8202576ed6ac94cb9e1af41799b1e52d1bfc3f5"
+    },
+    {
+      "name": "vendor-bin",
+      "type": "tree",
+      "oid": "8d14fe0f698f0e865e6cec2a3b7cfaf089fd7d2a"
+    },
+    {
+      "name": "vitest.config.js",
+      "type": "blob",
+      "oid": "c12164d3e0aac7a1d6ca65f77bb5c19a50301eba"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 6568,
+      "title": "Mail invitation - There was an error updating your attendance status.",
+      "createdAt": "2019-05-05T20:51:03Z",
+      "updatedAt": "2026-09-13T14:51:30Z",
+      "closedAt": null,
+      "url": "https://github.com/nextcloud/calendar/issues/6568",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2019-05-05T21:58:33Z",
+            "url": "https://github.com/nextcloud/calendar/issues/6568#issuecomment-2541398727"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2019-05-06T04:49:38Z",
+            "url": "https://github.com/nextcloud/calendar/issues/6568#issuecomment-2541398737"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2019-05-29T15:39:43Z",
+            "url": "https://github.com/nextcloud/calendar/issues/6568#issuecomment-2541398740"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2019-06-03T06:39:42Z",
+            "url": "https://github.com/nextcloud/calendar/issues/6568#issuecomment-2541398747"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2019-06-13T13:50:21Z",
+            "url": "https://github.com/nextcloud/calendar/issues/6568#issuecomment-2541398753"
+          }
+        ]
+      }
+    },
+    {
+      "number": 5283,
+      "title": "Dependency Dashboard",
+      "createdAt": "2023-06-02T12:29:55Z",
+      "updatedAt": "2026-09-12T16:23:31Z",
+      "closedAt": null,
+      "url": "https://github.com/nextcloud/calendar/issues/5283",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 8929,
+      "title": "Changes to phpunit.unit.xml do not trigger backend CI workflows",
+      "createdAt": "2026-09-12T10:39:24Z",
+      "updatedAt": "2026-09-12T10:39:24Z",
+      "closedAt": null,
+      "url": "https://github.com/nextcloud/calendar/issues/8929",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/nextcloud/calendar",
+    "commit": "https://github.com/nextcloud/calendar/commit/fc377507709c0745398beede6296d11742c7bad4"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "31655746e08bb32a7ba273d255cfdb2043d9f6916a90ac0319671bb87d44a720",
+    "characters_read": 4492,
+    "excerpt": "<!-- - SPDX-FileCopyrightText: 2016-2024 Nextcloud GmbH and Nextcloud contributors - SPDX-FileCopyrightText: 2015-2015 ownCloud, Inc. - SPDX-License-Identifier: AGPL-3.0-or-later --> # Nextcloud Calendar [![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/calendar)](https://api.reuse.software/info/github.com/nextcloud/calendar) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nextcloud/calendar/Build) ![Codecov](https://img.shields.io/codecov/c/github/nextcloud/calendar) **A calendar app for [Nextcloud](http://nextcloud.com). Easily sync events from various devices with your Nextcloud and edit them online.** ![](https://raw.githubusercontent.com/nextcloud/documentation/master/user_manual/groupware/images/calendar_application.png) ## :blue_heart: :tada: Why is this so awesome? * :rocket: **Integration with other Nextcloud apps!** Like Contacts, Talk, Tasks, Deck and Circles * :globe_with_meridians: **WebCal Support!** Want to see your favorite team's matchdays in your calendar? No problem! * :raising_hand: **Attendees!** Invite people to your events * :watch: **Free/Busy!** See when your attendees are available to meet * :alarm_clock: **Reminders!** Get alarms for events inside your browser and via email * :mag: **Search!** Find",
+    "source_url": "https://github.com/nextcloud/calendar/blob/fc377507709c0745398beede6296d11742c7bad4/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "COPYING",
+    "sha256": "76a97c878c9c7a8321bb395c2b44d3fe2f8d81314d219b20138ed0e2dddd5182",
+    "characters_read": 34520,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/nextcloud/calendar/blob/fc377507709c0745398beede6296d11742c7bad4/COPYING",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "COPYING"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

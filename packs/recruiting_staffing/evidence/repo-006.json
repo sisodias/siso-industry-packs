@@ -1,0 +1,144 @@
+{
+  "audit_id": "R006",
+  "requested_full_name": "job-hax/ats",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "job-hax/ats",
+  "html_url": "https://github.com/job-hax/ats",
+  "description": "Applicant Tracking System",
+  "stargazers_count": 18,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "413c0084fa21d13eccc1397d26f7a05ab6479181",
+  "last_commit": "2020-01-02T13:56:45Z",
+  "recent_commits": [
+    {
+      "sha": "413c0084fa21d13eccc1397d26f7a05ab6479181",
+      "date": "2020-01-02T13:56:45Z"
+    },
+    {
+      "sha": "af49039aa37fd8e39b2c42aa8835a0090e88388e",
+      "date": "2020-01-02T13:37:43Z"
+    },
+    {
+      "sha": "fc21594c44d668a760fab37546e6fef61671e056",
+      "date": "2019-12-28T02:44:47Z"
+    },
+    {
+      "sha": "e775efb298711d3c9eff99c7af2a1ca4fdf3a410",
+      "date": "2019-12-28T02:43:45Z"
+    },
+    {
+      "sha": "5b24e7dda244b70d9405ec715bcf0780fec41ea8",
+      "date": "2019-12-28T00:57:25Z"
+    },
+    {
+      "sha": "967534907b34a63f33025c8e54d60603ab12fa67",
+      "date": "2019-12-28T00:40:43Z"
+    },
+    {
+      "sha": "a24161389bf23794f36b3a02f078477bd4f85ef3",
+      "date": "2019-12-27T17:23:29Z"
+    },
+    {
+      "sha": "71ede8caa0f4a60e18e65b0fd8aafa0866c3b274",
+      "date": "2019-12-27T05:01:31Z"
+    },
+    {
+      "sha": "10e719cfdfbabb5d44c8f9378d3b4c6e1b8901d1",
+      "date": "2019-12-27T04:55:33Z"
+    },
+    {
+      "sha": "8088550e6173f13dc9c02a7f6e0664f1f7573a03",
+      "date": "2019-12-27T04:51:45Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "479a18af7da653493e19117c342c493c9de45795"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "10187372118df7e19c2a3c30284ca244c6fbe6ed"
+    },
+    {
+      "name": "backend",
+      "type": "tree",
+      "oid": "6d266733301012be6990426beb6ccdb1cd38621a"
+    },
+    {
+      "name": "frontend",
+      "type": "tree",
+      "oid": "40a401af972ffab3e23f9f0aef22c833bdabd550"
+    },
+    {
+      "name": "infrastructure",
+      "type": "tree",
+      "oid": "2329f520a9d43c9191469eefbcac90aac4c4df1c"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 48,
+      "title": ":warning: Clearbit’s Free Logo API (logo.clearbit.com) is Being Discontinued – Update Required",
+      "createdAt": "2025-04-02T15:55:35Z",
+      "updatedAt": "2025-04-02T15:55:35Z",
+      "closedAt": null,
+      "url": "https://github.com/job-hax/ats/issues/48",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/job-hax/ats",
+    "commit": "https://github.com/job-hax/ats/commit/413c0084fa21d13eccc1397d26f7a05ab6479181"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "31a8ed68880a7c10203f496190481ad09a6fb9be63418d2762cf7e010c838751",
+    "characters_read": 1540,
+    "excerpt": "# ats Applicant Tracking System 1. Install Postgres and PIP3 for Python package management and NPM for Node and NGINX: ``` sudo apt-get update sudo apt install -y postgresql postgresql-contrib python3-pip npm nginx ``` 2. Connect to PostgreSQL: ``` sudo su - postgres psql ``` 3. Check login info: ``` postgres-# \\conninfo ``` 4. Disconnect from PostgreSQL server: ``` postgres-# \\q ``` Install backend: 1. sudo su - postgres 2. Create : ``` psql postgres -c \"CREATE USER jobhaxdbuser WITH PASSWORD '123456';\" psql postgres -c \"CREATE DATABASE jobhaxdb WITH OWNER 'jobhaxdbuser';\" psql postgres -c \"ALTER USER jobhaxdbuser CREATEDB;\" ``` 3. Export Envs in ~/.bashrc file: export JOBHAX_CLEARBIT_KEY='' export EMAIL_HOST_USER=jobhaxuser@gmail.com export EMAIL_HOST_PASSWORD='' export JOBHAX_RECAPTCHA_SECRET='' export reCaptchaV3SiteKey='' export JOBHAX_LINKEDIN_CLIENT_KEY='' export JOBHAX_LINKEDIN_CLIENT_SECRET='' 4.",
+    "source_url": "https://github.com/job-hax/ats/blob/413c0084fa21d13eccc1397d26f7a05ab6479181/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "characters_read": 11357,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/job-hax/ats/blob/413c0084fa21d13eccc1397d26f7a05ab6479181/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

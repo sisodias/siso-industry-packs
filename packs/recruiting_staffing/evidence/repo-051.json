@@ -1,0 +1,214 @@
+{
+  "audit_id": "R051",
+  "requested_full_name": "niccokunzmann/python-recurring-ical-events",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "niccokunzmann/python-recurring-ical-events",
+  "html_url": "https://github.com/niccokunzmann/python-recurring-ical-events",
+  "description": "Python library to calculate recurrence times of events, todos, alarms and journals based on icalendar RFC5545",
+  "stargazers_count": 121,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "LGPL-3.0",
+    "name": "GNU Lesser General Public License v3.0"
+  },
+  "default_branch": "main",
+  "revision": "2ba2510ea0cbd4dd956f6923e1fcf330d6b82b96",
+  "last_commit": "2026-07-12T08:05:35Z",
+  "recent_commits": [
+    {
+      "sha": "2ba2510ea0cbd4dd956f6923e1fcf330d6b82b96",
+      "date": "2026-07-12T08:05:35Z"
+    },
+    {
+      "sha": "8654286600f771a14d41ae86eab2057591354d26",
+      "date": "2026-07-12T08:02:05Z"
+    },
+    {
+      "sha": "106bbaced14b28dabe289b9fb3c0c4c627b8e252",
+      "date": "2026-07-12T07:59:01Z"
+    },
+    {
+      "sha": "b8f66255e98ba036d9fd185dac25452bf746dd22",
+      "date": "2026-07-12T07:54:07Z"
+    },
+    {
+      "sha": "45dbcd746af764f0332e6446fbf4fe859b276910",
+      "date": "2026-07-12T07:51:05Z"
+    },
+    {
+      "sha": "b818d25071da2db1b05210b5b92a92f864aa8060",
+      "date": "2026-07-12T07:49:37Z"
+    },
+    {
+      "sha": "2c61222c5bed9f21b483803c020b330f37a946ca",
+      "date": "2026-07-12T07:25:55Z"
+    },
+    {
+      "sha": "4c37b4902d70ba59814127c0f52ff80c24d46577",
+      "date": "2026-07-12T07:25:16Z"
+    },
+    {
+      "sha": "a4e04059ef1866c64c94e6a8247f9262bb261b67",
+      "date": "2026-07-10T20:49:21Z"
+    },
+    {
+      "sha": "681230fdfc89e5f492cb22022b90ef5b3621045b",
+      "date": "2026-06-29T06:21:45Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".cleanup-branches.sh",
+      "type": "blob",
+      "oid": "7b3af489418cbb6e8295a8235b6d9f5f042293c5"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "d57f5f6c6e5ef906288c2c1690b44810f7b6d632"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "ec0b0598fd5a7a9df53b2220081d84bdaf197b08"
+    },
+    {
+      "name": ".gitlab-ci.yml",
+      "type": "blob",
+      "oid": "74508f5c78ec6ac1e6714b3bd7cd1039f112d9d4"
+    },
+    {
+      "name": ".pre-commit-config.yaml",
+      "type": "blob",
+      "oid": "4e35f43847150a2d8d9b2de894ef901c3dea52b3"
+    },
+    {
+      "name": ".readthedocs.yml",
+      "type": "blob",
+      "oid": "5f436611e5f8319e741ef9711d268d6ce6a13636"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "0a041280bd00a9d068f503b8ee7ce35214bd24a1"
+    },
+    {
+      "name": "README.rst",
+      "type": "blob",
+      "oid": "e568ab33f84f35b1c2180cb60bef2a382d9a1669"
+    },
+    {
+      "name": "SECURITY.md",
+      "type": "blob",
+      "oid": "87b651f1d6ff775ca9d2835141c4d2d2dfc39673"
+    },
+    {
+      "name": "benchmark",
+      "type": "tree",
+      "oid": "6cde7414dbc20ab795bf2c32ecb64f12c8503dc6"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "86fcf4dc5b2f83f57c148766056bc8bdbde8c45c"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "blob",
+      "oid": "6e4c160a700be2a8fcc159ffaacdd9b333c0ae58"
+    },
+    {
+      "name": "recurring_ical_events",
+      "type": "tree",
+      "oid": "b2ee1652ad340b06714ebf4fb59a69dc3f2290ba"
+    },
+    {
+      "name": "rfc5545.html",
+      "type": "blob",
+      "oid": "be5916520228bb0675e44c3a2ba43b6768cd9891"
+    },
+    {
+      "name": "rfc9074.html",
+      "type": "blob",
+      "oid": "b9ebd776ebc5795f70e9b3452d2f0df4a82368e6"
+    },
+    {
+      "name": "tox.ini",
+      "type": "blob",
+      "oid": "49215efcc69e064a3a9243c1a6c799faca5160d0"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 239,
+      "title": "document which RFCs are not influencing computing",
+      "createdAt": "2025-05-21T11:10:16Z",
+      "updatedAt": "2026-07-12T08:05:36Z",
+      "closedAt": "2026-07-12T08:05:36Z",
+      "url": "https://github.com/niccokunzmann/python-recurring-ical-events/issues/239",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 240,
+      "title": "Add table of content to each section + general improvements",
+      "createdAt": "2025-05-21T11:30:42Z",
+      "updatedAt": "2026-07-12T08:02:07Z",
+      "closedAt": "2026-07-12T08:02:07Z",
+      "url": "https://github.com/niccokunzmann/python-recurring-ical-events/issues/240",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 241,
+      "title": "Move libraries used into related projects",
+      "createdAt": "2025-05-21T11:33:00Z",
+      "updatedAt": "2026-07-12T07:59:02Z",
+      "closedAt": "2026-07-12T07:59:02Z",
+      "url": "https://github.com/niccokunzmann/python-recurring-ical-events/issues/241",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/niccokunzmann/python-recurring-ical-events",
+    "commit": "https://github.com/niccokunzmann/python-recurring-ical-events/commit/2ba2510ea0cbd4dd956f6923e1fcf330d6b82b96"
+  },
+  "readme": {
+    "path": "README.rst",
+    "sha256": "7618b50df49aa0c8ec78a1fde612b40c6c95f55b4b3939879d2d93d9528563d1",
+    "characters_read": 1740,
+    "excerpt": "Recurring ICal events for Python ================================ .. image:: https://github.com/niccokunzmann/python-recurring-ical-events/actions/workflows/tests.yml/badge.svg :target: https://github.com/niccokunzmann/python-recurring-ical-events/actions/workflows/tests.yml :alt: GitHub CI build and test status .. image:: https://badge.fury.io/py/recurring-ical-events.svg :target: https://pypi.python.org/pypi/recurring-ical-events :alt: Python Package Version on Pypi .. image:: https://img.shields.io/pypi/dm/recurring-ical-events.svg :target: https://pypi.org/project/recurring-ical-events/#files :alt: Downloads from Pypi .. image:: https://img.shields.io/opencollective/all/open-web-calendar?label=support%20on%20open%20collective :target: https://opencollective.com/open-web-calendar/ :alt: Support on Open Collective .. image:: https://img.shields.io/github/issues/niccokunzmann/python-recurring-ical-events?logo=github&label=issues%20seek%20funding&color=%230062ff :target: https://polar.sh/niccokunzmann/python-recurring-ical-events :alt: issues seek funding ICal has some complexity to it: Events, TODOs, Journal entries and Alarms can be repeated, removed from the feed and edited later on. This tool takes care of these complexities. NLNet has supported the development of this library. Please have a look here: - `Documentation`_ - `Changelog`_ - `PyPI package`_ - `GitHub repository`_ .. _Documentation: https://recurring-ical-events.readthedocs.io/ .. _Changelog: https://recurring-ical-events.readthedocs.io/en/latest/changelog.html .. _PyPI package: https://pypi.org/project/recurring-ical-events/",
+    "source_url": "https://github.com/niccokunzmann/python-recurring-ical-events/blob/2ba2510ea0cbd4dd956f6923e1fcf330d6b82b96/README.rst",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+    "characters_read": 7652,
+    "excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below. 0. Additional Definitions. As used herein, \"this License\" refers to version 3 of the GNU Lesser General Public License, and the \"GNU GPL\" refers to version 3 of the GNU General Public License.",
+    "source_url": "https://github.com/niccokunzmann/python-recurring-ical-events/blob/2ba2510ea0cbd4dd956f6923e1fcf330d6b82b96/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

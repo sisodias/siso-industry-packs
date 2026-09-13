@@ -1,0 +1,94 @@
+{
+  "audit_id": "R075",
+  "requested_full_name": "bullhorn/oauth-example-python",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "bullhorn/oauth-example-python",
+  "html_url": "https://github.com/bullhorn/oauth-example-python",
+  "description": "Sample that shows how to obtain a Bullhorn OAuth access token without having a browser and user in the loop.",
+  "stargazers_count": 16,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "2a437250a1c6639e509053ae7645e9e1d224df38",
+  "last_commit": "2013-11-04T16:44:02Z",
+  "recent_commits": [
+    {
+      "sha": "2a437250a1c6639e509053ae7645e9e1d224df38",
+      "date": "2013-11-04T16:44:02Z"
+    },
+    {
+      "sha": "53543a9d0c905a6b2c12c16cb672b66508e24a22",
+      "date": "2013-11-04T16:14:57Z"
+    },
+    {
+      "sha": "69568bce7cb80b0baffeb637c884dd85aa7b1135",
+      "date": "2013-11-04T15:50:21Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "ded606788041fc9cd4d017e2dfe5a6e9bdeefbae"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "e06d2081865a766a8668acc12878f98b27fc9ea0"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "4fe826282042fb515b1afc727a9f9ad4b9ddc447"
+    },
+    {
+      "name": "oauth_example.py",
+      "type": "blob",
+      "oid": "fe0a9e8763578e1cc32dffd413f96f726a91a80e"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/bullhorn/oauth-example-python",
+    "commit": "https://github.com/bullhorn/oauth-example-python/commit/2a437250a1c6639e509053ae7645e9e1d224df38"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "639f8a48f993ac5cf4dfcc8882c5423abf4737c9cdf50c77301284492fe6b78d",
+    "characters_read": 1308,
+    "excerpt": "oauth-example-python ==================== This sample shows how to obtain a Bullhorn OAuth access token without having a browser and user in the loop. Normally, A third-party application using Bullhorn OAuth would detect an un-authorized user and redirect the user's browser to Bullhorn's OAuth servers where the user would log in, then be redirected back to the third-party app. Sometimes this flow is not possible, for example when the application is a scheduled job or anything else that either does not have a Web UI or needs to log in on behalf of a special user unattended. The general strategy here is similar to the standard OAuth flow: obtain an access token, and from that obtain an authorization code. Here, however, instead",
+    "source_url": "https://github.com/bullhorn/oauth-example-python/blob/2a437250a1c6639e509053ae7645e9e1d224df38/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "characters_read": 11325,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/bullhorn/oauth-example-python/blob/2a437250a1c6639e509053ae7645e9e1d224df38/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

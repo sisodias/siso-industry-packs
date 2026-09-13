@@ -1,0 +1,131 @@
+{
+  "audit_id": "R060",
+  "requested_full_name": "Jaza/onet-neighbors",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "Jaza/onet-neighbors",
+  "html_url": "https://github.com/Jaza/onet-neighbors",
+  "description": "Visualization of O*NET occupations as a network graph.",
+  "stargazers_count": 6,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "b0e96ede1cf6686f68c92a7f745d853be544c05a",
+  "last_commit": "2015-12-09T00:54:15Z",
+  "recent_commits": [
+    {
+      "sha": "b0e96ede1cf6686f68c92a7f745d853be544c05a",
+      "date": "2015-12-09T00:54:15Z"
+    },
+    {
+      "sha": "eb28aba376d15ad8b46db1b6910da186f0004924",
+      "date": "2015-11-06T01:09:36Z"
+    },
+    {
+      "sha": "eff6e8675cefdb4effe78fb99ec2e2002aa640d2",
+      "date": "2015-11-06T01:05:32Z"
+    },
+    {
+      "sha": "6af3f354993d9e6fe3d6557162a6fa192d4e7e55",
+      "date": "2015-11-05T23:55:05Z"
+    },
+    {
+      "sha": "0c7e279c2d13812a5ab783c9f5e4c9ef6d815dc7",
+      "date": "2015-11-05T23:53:14Z"
+    },
+    {
+      "sha": "0465579d61681508fcaf86f8558531e1037a0829",
+      "date": "2015-11-05T04:49:58Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "15d390564f1ceb51575496504b308b7e0af641ae"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "430d42bbea592e3c130eda0a07a7e1082b96ba73"
+    },
+    {
+      "name": "README.rst",
+      "type": "blob",
+      "oid": "11dce9acab1c2939c1a882b84d66d2ab009a6f71"
+    },
+    {
+      "name": "css",
+      "type": "tree",
+      "oid": "98fcbb3460b7f77a313f21bbba0b63c374cf9c59"
+    },
+    {
+      "name": "favicon.ico",
+      "type": "blob",
+      "oid": "a311eaddfb13f382005c5b3b8cae2ecaf035a7d2"
+    },
+    {
+      "name": "index.html",
+      "type": "blob",
+      "oid": "bc58a239b984877e3264b46993ca9ba84b4fb324"
+    },
+    {
+      "name": "js",
+      "type": "tree",
+      "oid": "29740f2db0982910ac7ed5cb0b3108feda64837b"
+    },
+    {
+      "name": "requirements.txt",
+      "type": "blob",
+      "oid": "ae787270dfe02132547992defb3b68b4fe13a8e0"
+    },
+    {
+      "name": "scripts",
+      "type": "tree",
+      "oid": "6cfcb9113c29d4d9b46ea4d1117e96b4858795dc"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/Jaza/onet-neighbors",
+    "commit": "https://github.com/Jaza/onet-neighbors/commit/b0e96ede1cf6686f68c92a7f745d853be544c05a"
+  },
+  "readme": {
+    "path": "README.rst",
+    "sha256": "4594139ee6fecdb797e42f2ecbc7dca7f7c1559ee53e5f8e44da7635af9f7634",
+    "characters_read": 3541,
+    "excerpt": "O*NET Neighbors =============== Visualization of `O*NET <https://www.onetonline.org/>`_ occupations as a network graph. `See the O*NET Neighbors graph here <https://jaza.github.io/onet-neighbors/>`_. **Note:** this is still a work in progress. Don't expect a terribly pretty or usable graph just yet. Many thanks to the blog post: `R vs Python: head to head data analysis <https://www.dataquest.io/blog/python-vs-r/>`_, particularly for guidance with `PCA <http://setosa.io/ev/principal-component-analysis/>`_ and scatter plots. Also thanks to the `Cotrino Language Network <http://languagenetwork.cotrino.com/>`_ prototype, upon which the front-end of this prototype is heavily based. Much like the Language Network, this visualization is powered by a `Force-Directed Network Graph <http://bl.ocks.org/mbostock/4062045>`_ in `D3.js <http://d3js.org/>`_. The data processing done for this prototype is quite rudimentary at the moment. It's treating all O*NET knowledge, skills, and abilities scores",
+    "source_url": "https://github.com/Jaza/onet-neighbors/blob/b0e96ede1cf6686f68c92a7f745d853be544c05a/README.rst",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "39445b459f86621683f9731fb6a7d070819dc379840e8ef52f62bb1c68942291",
+    "characters_read": 9724,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/Jaza/onet-neighbors/blob/b0e96ede1cf6686f68c92a7f745d853be544c05a/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

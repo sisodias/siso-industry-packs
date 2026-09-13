@@ -1,0 +1,403 @@
+{
+  "audit_id": "R019",
+  "requested_full_name": "OCA/hr",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "OCA/hr",
+  "html_url": "https://github.com/OCA/hr",
+  "description": "Odoo Human Resources Addons",
+  "stargazers_count": 285,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "18.0",
+  "revision": "483b1b8fac6b7c068abfdd4e95318fe4bde1f008",
+  "last_commit": "2026-09-12T07:22:10Z",
+  "recent_commits": [
+    {
+      "sha": "483b1b8fac6b7c068abfdd4e95318fe4bde1f008",
+      "date": "2026-09-12T07:22:10Z"
+    },
+    {
+      "sha": "536e0f8612fd8f2af3828080c9d59dc557d8a518",
+      "date": "2026-09-09T11:10:19Z"
+    },
+    {
+      "sha": "400c396a594f85ba7f80818777f575e2a8ea6f9e",
+      "date": "2026-09-09T11:06:29Z"
+    },
+    {
+      "sha": "795669882265c457c06903f6253fb099b4efb6ee",
+      "date": "2026-09-08T15:57:44Z"
+    },
+    {
+      "sha": "25b4661adb08606fbd6f6e8b0bab6ae053ea02fc",
+      "date": "2026-09-07T14:53:01Z"
+    },
+    {
+      "sha": "0a1549d1c71352a3e581644db1387de8f51311ae",
+      "date": "2026-09-07T14:49:23Z"
+    },
+    {
+      "sha": "e9f1a5c104060130f15e049073f5d871b0d1e1c5",
+      "date": "2026-09-02T09:37:26Z"
+    },
+    {
+      "sha": "f4a2a86dc950a4ecae91a5046b8217d77da3b951",
+      "date": "2026-08-31T15:45:48Z"
+    },
+    {
+      "sha": "2e4639f00c99e20dc5f9525ff43f5071bedcd042",
+      "date": "2026-08-31T15:42:15Z"
+    },
+    {
+      "sha": "a67510fae29248549f816a2820ea85e5f4bf369c",
+      "date": "2026-08-31T14:53:36Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".copier-answers.yml",
+      "type": "blob",
+      "oid": "8e9f8f26d1dd5eae45a802a06fbaf50972c65807"
+    },
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "bfd7ac53df9f103f6dc8853738c63fd364445fde"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "c6fa22c56e098f3197487359cd5ed3bce8060e46"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "6ec07a054bd2e00d7fd312c10ab6c06bd58c7b51"
+    },
+    {
+      "name": ".pre-commit-config.yaml",
+      "type": "blob",
+      "oid": "1da0e62ad4aadb97feb24240095dd735e46011bf"
+    },
+    {
+      "name": ".pylintrc",
+      "type": "blob",
+      "oid": "7c62b6d2eddedf5751abf9669d80976875f978e6"
+    },
+    {
+      "name": ".pylintrc-mandatory",
+      "type": "blob",
+      "oid": "018fd61cdd70f3fad50e74406595059d01c6b8a8"
+    },
+    {
+      "name": ".ruff.toml",
+      "type": "blob",
+      "oid": "5e63128201e64f4d1d6a2b1b582a555579b1298b"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "03d72fc20348276983dfa94e1a5cd008985358c1"
+    },
+    {
+      "name": "checklog-odoo.cfg",
+      "type": "blob",
+      "oid": "0b55b7bf6638efb87cab9b163a5533e2ef667759"
+    },
+    {
+      "name": "eslint.config.cjs",
+      "type": "blob",
+      "oid": "0d5731f89a8bc2073894c17dfe41e410db0e4cfe"
+    },
+    {
+      "name": "hr_appraisal_oca",
+      "type": "tree",
+      "oid": "a4fe8862b63d01d7f269be04bccb3f2014ff024c"
+    },
+    {
+      "name": "hr_collective_agreement",
+      "type": "tree",
+      "oid": "7cbd32fa60723f693f834a2be49bcdadf1c9634d"
+    },
+    {
+      "name": "hr_collective_agreement_partner",
+      "type": "tree",
+      "oid": "5ba726eabe211bec660e076307bef9b1e6f4ac4c"
+    },
+    {
+      "name": "hr_contract_document",
+      "type": "tree",
+      "oid": "2a3b3d21dfea1486d847d6f3868d5656c014ea0d"
+    },
+    {
+      "name": "hr_contract_employee_calendar_planning",
+      "type": "tree",
+      "oid": "ef7241c2cc4bbf7c8cfbeda3de791764fd06fe48"
+    },
+    {
+      "name": "hr_contract_reference",
+      "type": "tree",
+      "oid": "73106148ae8761ca0185ee9c77e90a4ca145774a"
+    },
+    {
+      "name": "hr_contract_renew",
+      "type": "tree",
+      "oid": "2a2b62956c510e9664a51e1cecebd365a765a391"
+    },
+    {
+      "name": "hr_course",
+      "type": "tree",
+      "oid": "0eea44dc917cfc48827496112b1fbf3e312d9805"
+    },
+    {
+      "name": "hr_department_code",
+      "type": "tree",
+      "oid": "89867d34b7177aa7de9029834c0c86a102105e03"
+    },
+    {
+      "name": "hr_department_deputy",
+      "type": "tree",
+      "oid": "c6ae73e98680a37064e38dfd9d5f7dcf183a5178"
+    },
+    {
+      "name": "hr_employee_age",
+      "type": "tree",
+      "oid": "5ef689a21c7e27fdd35d35df176d837ce3299503"
+    },
+    {
+      "name": "hr_employee_bank_restrict",
+      "type": "tree",
+      "oid": "cd19aed7783ec690681f0cc183d861987c7439fb"
+    },
+    {
+      "name": "hr_employee_birthday_mail",
+      "type": "tree",
+      "oid": "9859350d5c1048422e59760d56657b8ed360d342"
+    },
+    {
+      "name": "hr_employee_calendar_planning",
+      "type": "tree",
+      "oid": "e35756efab16ae25dd3c395d98e1da659a2cfaa7"
+    },
+    {
+      "name": "hr_employee_document",
+      "type": "tree",
+      "oid": "f2044ca31a2981df030d141c824945c59b0690fc"
+    },
+    {
+      "name": "hr_employee_firstname",
+      "type": "tree",
+      "oid": "38eeb1f6ad7d6803964a94fd963ed4a6fcd965d2"
+    },
+    {
+      "name": "hr_employee_id",
+      "type": "tree",
+      "oid": "31759131af306ab3c120a9f894b2485deaba44ff"
+    },
+    {
+      "name": "hr_employee_language",
+      "type": "tree",
+      "oid": "4d004713f15af95aec2550d2018815dcf924563b"
+    },
+    {
+      "name": "hr_employee_medical_examination",
+      "type": "tree",
+      "oid": "56592c56fbfc0b1d18dc019125f6615d356b421d"
+    },
+    {
+      "name": "hr_employee_partner_external",
+      "type": "tree",
+      "oid": "350e4a67586910c5d5c02b7f9757d9dd9cb7191c"
+    },
+    {
+      "name": "hr_employee_phone_extension",
+      "type": "tree",
+      "oid": "e5c207d005d6d638f0b6fb49eb2e9aa3640d56ec"
+    },
+    {
+      "name": "hr_employee_ppe",
+      "type": "tree",
+      "oid": "93f3b85c39ad345fa114bbf28e1fc263e4f7c7e4"
+    },
+    {
+      "name": "hr_employee_relative",
+      "type": "tree",
+      "oid": "bb6fcd90ce8450295a5d5f8c19eebe8657d012f4"
+    },
+    {
+      "name": "hr_employee_second_lastname",
+      "type": "tree",
+      "oid": "80852168ae7988026f164759ee2ca5a99546b18d"
+    },
+    {
+      "name": "hr_employee_service",
+      "type": "tree",
+      "oid": "6f2b2ff35fbd342f4388b22f5816240e7eef0dd9"
+    },
+    {
+      "name": "hr_employee_service_contract",
+      "type": "tree",
+      "oid": "b6e0743104e568aacddda3e715f857e94a66a748"
+    },
+    {
+      "name": "hr_employee_ssn",
+      "type": "tree",
+      "oid": "d1c9e9466e2f59f3e3a371ea5c6744787b27dab4"
+    },
+    {
+      "name": "hr_job_category",
+      "type": "tree",
+      "oid": "e43c24349aa64cbcfc3fd49ce67f410bee44d72a"
+    },
+    {
+      "name": "hr_personal_equipment_request",
+      "type": "tree",
+      "oid": "2a49b273aca7d697b7129dad1162f18d90e9c49d"
+    },
+    {
+      "name": "hr_personal_equipment_stock",
+      "type": "tree",
+      "oid": "712cb60d5fbdc9e8f23b1ab470611a825d0a9e1c"
+    },
+    {
+      "name": "hr_professional_category",
+      "type": "tree",
+      "oid": "1361b5788e73e3b665e14c13107183f6bb334fac"
+    },
+    {
+      "name": "prettier.config.cjs",
+      "type": "blob",
+      "oid": "e66cd82cc1e4dfeded9749598144f820c8491fab"
+    },
+    {
+      "name": "requirements.txt",
+      "type": "blob",
+      "oid": "7d41f1be0f9f1dfc7ae8c3c2f63585797ab15dfd"
+    },
+    {
+      "name": "setup",
+      "type": "tree",
+      "oid": "90777ff23c15661dbe10fc11b0d2fc910ed8270a"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 1551,
+      "title": "address_home_id doesn't exist anymore on odoo18",
+      "createdAt": "2026-03-09T09:36:27Z",
+      "updatedAt": "2026-09-09T03:32:43Z",
+      "closedAt": "2026-09-09T03:32:43Z",
+      "url": "https://github.com/OCA/hr/issues/1551",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-06T14:30:43Z",
+            "url": "https://github.com/OCA/hr/issues/1551#issuecomment-5559898507"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2026-09-09T03:32:43Z",
+            "url": "https://github.com/OCA/hr/issues/1551#issuecomment-5595367824"
+          }
+        ]
+      }
+    },
+    {
+      "number": 1502,
+      "title": "Migration to version 19.0",
+      "createdAt": "2025-09-29T13:59:07Z",
+      "updatedAt": "2026-08-31T16:03:19Z",
+      "closedAt": null,
+      "url": "https://github.com/OCA/hr/issues/1502",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2025-12-19T08:38:46Z",
+            "url": "https://github.com/OCA/hr/issues/1502#issuecomment-3674114943"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-03-22T23:12:39Z",
+            "url": "https://github.com/OCA/hr/issues/1502#issuecomment-4107178747"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-03-27T10:28:51Z",
+            "url": "https://github.com/OCA/hr/issues/1502#issuecomment-4141643947"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-05-26T10:09:50Z",
+            "url": "https://github.com/OCA/hr/issues/1502#issuecomment-4543219373"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-07-24T15:38:04Z",
+            "url": "https://github.com/OCA/hr/issues/1502#issuecomment-5071622882"
+          }
+        ]
+      }
+    },
+    {
+      "number": 1605,
+      "title": "[16.0] hr_employee_id: hr.employee identification_id redefinition",
+      "createdAt": "2026-08-23T10:43:13Z",
+      "updatedAt": "2026-08-23T11:06:53Z",
+      "closedAt": null,
+      "url": "https://github.com/OCA/hr/issues/1605",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/OCA/hr",
+    "commit": "https://github.com/OCA/hr/commit/483b1b8fac6b7c068abfdd4e95318fe4bde1f008"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "9ff7a38d801f962a0ed42eeea4f0045265ddf19b73c3214992590c2ec1767119",
+    "characters_read": 7078,
+    "excerpt": "[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/hr&target_branch=18.0) [![Pre-commit Status](https://github.com/OCA/hr/actions/workflows/pre-commit.yml/badge.svg?branch=18.0)](https://github.com/OCA/hr/actions/workflows/pre-commit.yml?query=branch%3A18.0) [![Build Status](https://github.com/OCA/hr/actions/workflows/test.yml/badge.svg?branch=18.0)](https://github.com/OCA/hr/actions/workflows/test.yml?query=branch%3A18.0) [![codecov](https://codecov.io/gh/OCA/hr/branch/18.0/graph/badge.svg)](https://codecov.io/gh/OCA/hr) [![Translation Status](https://translation.odoo-community.org/widgets/hr-18-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/hr-18-0/?utm_source=widget) <!-- /!\\ do not modify above this line --> # hr hr <!-- /!\\ do not modify below this line --> <!-- prettier-ignore-start --> [//]: # (addons) Available addons ---------------- addon | version | maintainers | summary --- | --- | --- | --- [hr_appraisal_oca](hr_appraisal_oca/) | 18.0.1.2.0 | <a href='https://github.com/ebauza'><img src='https://github.com/ebauza.png' width='32' height='32' style='border-radius:50%;' alt='ebauza'/></a> <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Module for managing employee appraisals [hr_collective_agreement](hr_collective_agreement/) | 18.0.1.0.0 | | Create and manage collective agreements [hr_collective_agreement_partner](hr_collective_agreement_partner/) | 18.0.1.0.0 | | Partner integration for collective agreements [hr_contract_document](hr_contract_document/) | 18.0.1.0.1 | | Documents attached to the contract [hr_contract_employee_calendar_planning](hr_contract_employee_calendar_planning/) | 18.0.1.0.2 | | Hr Contract Employee Calendar Planning [hr_contract_reference](hr_contract_reference/) | 18.0.1.0.0 |",
+    "source_url": "https://github.com/OCA/hr/blob/483b1b8fac6b7c068abfdd4e95318fe4bde1f008/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "characters_read": 34523,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/OCA/hr/blob/483b1b8fac6b7c068abfdd4e95318fe4bde1f008/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

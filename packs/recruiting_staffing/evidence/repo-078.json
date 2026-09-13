@@ -1,0 +1,143 @@
+{
+  "audit_id": "R078",
+  "requested_full_name": "keyvanakbary/greensync",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "keyvanakbary/greensync",
+  "html_url": "https://github.com/keyvanakbary/greensync",
+  "description": "Tool for syncing Greenhouse Harvest API into MySQL",
+  "stargazers_count": 7,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "master",
+  "revision": "f86f5b228dcce7ff36b1b4e0bec34d9a961c25b0",
+  "last_commit": "2019-11-16T14:42:44Z",
+  "recent_commits": [
+    {
+      "sha": "f86f5b228dcce7ff36b1b4e0bec34d9a961c25b0",
+      "date": "2019-11-16T14:42:44Z"
+    },
+    {
+      "sha": "af1dee237fb4c0c81a39531cea3e7cb927cbc188",
+      "date": "2019-11-16T14:40:29Z"
+    },
+    {
+      "sha": "099d4b9e7db4aecf0eb5f247dd6b18d41dc1763d",
+      "date": "2019-10-27T12:34:49Z"
+    },
+    {
+      "sha": "d1d63906193e20644425e69f30e531789bbadf25",
+      "date": "2019-10-27T12:03:05Z"
+    },
+    {
+      "sha": "defbd93558203c7e3903cc3da04c60bc927014fd",
+      "date": "2019-10-27T11:26:28Z"
+    },
+    {
+      "sha": "7b8e081a7ccdeefc204b21f3a7c1ab76be224465",
+      "date": "2019-10-27T10:44:02Z"
+    },
+    {
+      "sha": "fedab749ebd332f1981267d1c9bcd3cbdea7bb21",
+      "date": "2019-10-27T10:29:47Z"
+    },
+    {
+      "sha": "bef3de992e78b187799cdf7ccf9f877cb01ff315",
+      "date": "2019-10-27T10:28:43Z"
+    },
+    {
+      "sha": "7103660f25ade6925cbd5b48133024d00daa81a4",
+      "date": "2019-10-26T23:44:17Z"
+    },
+    {
+      "sha": "c667bd73f362f8719294d9dcf9949d3bd25d9d37",
+      "date": "2019-10-26T23:21:39Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".formatter.exs",
+      "type": "blob",
+      "oid": "d2cda26eddc9110057ce9e8002585682217542cc"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "fcf208a45a75dad7b57fd7d9f4f70b4404c41182"
+    },
+    {
+      "name": ".tool-versions",
+      "type": "blob",
+      "oid": "3bf580bbe777c47ce3ef37dc1e5fad5f1e03625a"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "blob",
+      "oid": "6f3dc413a4a541bb733d70a520006694e8db7ee8"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "bc643a90dbf3c6a351d2b43d07daf2ae29c23aee"
+    },
+    {
+      "name": "apps",
+      "type": "tree",
+      "oid": "4f2913c68c1f75232f922903b969b035d7677951"
+    },
+    {
+      "name": "config",
+      "type": "tree",
+      "oid": "a336d570f61fa57a6e62dde47787d8fa28a146c3"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "f024f3f9bc82744ffb6725a4aa84bd4c30ca5786"
+    },
+    {
+      "name": "mix.exs",
+      "type": "blob",
+      "oid": "6cd455cfe481786129537db45ddba2f267dbd91a"
+    },
+    {
+      "name": "mix.lock",
+      "type": "blob",
+      "oid": "fa7a525bb1aa22f34ce2ef69432443c5adb83c8b"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/keyvanakbary/greensync",
+    "commit": "https://github.com/keyvanakbary/greensync/commit/f86f5b228dcce7ff36b1b4e0bec34d9a961c25b0"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "7431cfe99d5498c6205a74537cd8972b89d3a7cb020917938e8cf12d12cde445",
+    "characters_read": 1331,
+    "excerpt": "# Greensync Tool for syncing [Greenhouse Harvest API](https://developers.greenhouse.io/harvest.html) and a MySQL database of your choice. It pulls new data every 15 minutes by default. ## Motivation [Greenhouse](https://www.greenhouse.io/) allows you to access all your organisation data via their API. Unfortunately, for complex queries you'll have to chain multiple requests to relate entities, and take care of throttling and pagination by yourself. By syncing Greenhouse data into a relational database, you won't have to worry about the details, just query your database for the information you need. ## Run Run the image docker run \\ -e DB_NAME=\"greensync\" \\ -e DB_USER=\"greensync\" \\ -e DB_PASS=\"pass\" \\ -e DB_HOST=\"localhost\" \\ -e GREENHOUSE_API_TOKEN=\"YOUR_TOKEN\" \\ keyvanakbary/greensync Additionally, you can pass the following environment variables * `DB_PORT`, defaults",
+    "source_url": "https://github.com/keyvanakbary/greensync/blob/f86f5b228dcce7ff36b1b4e0bec34d9a961c25b0/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

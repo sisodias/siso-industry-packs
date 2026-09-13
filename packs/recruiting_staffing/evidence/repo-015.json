@@ -1,0 +1,253 @@
+{
+  "audit_id": "R015",
+  "requested_full_name": "minthcm/minthcm",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "minthcm/minthcm",
+  "html_url": "https://github.com/minthcm/minthcm",
+  "description": "Open-source HCM system for managing HR processes with AI agents. Full data ownership, MCP/A2A-native, no vendor lock-in.",
+  "stargazers_count": 436,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "master",
+  "revision": "d8d4d29475d72e4846b50d5527c9721819f9e977",
+  "last_commit": "2026-08-20T13:40:24Z",
+  "recent_commits": [
+    {
+      "sha": "d8d4d29475d72e4846b50d5527c9721819f9e977",
+      "date": "2026-08-20T13:40:24Z"
+    },
+    {
+      "sha": "2aa0675def04421e3b4378472d94166e47ecf23a",
+      "date": "2026-08-20T13:39:59Z"
+    },
+    {
+      "sha": "75a5d76b7b6de07c375074b110b47a973fa1b248",
+      "date": "2026-07-28T12:32:49Z"
+    },
+    {
+      "sha": "dbfd4b87c4d6bbf071d4f0553e087523a62f3d3b",
+      "date": "2026-07-28T12:31:29Z"
+    },
+    {
+      "sha": "74fc33346f80411dcc69da27aaabd36cb9cd10c4",
+      "date": "2026-07-28T12:31:08Z"
+    },
+    {
+      "sha": "7f2cce481e88be6737f3de4229dcfa5d47061922",
+      "date": "2026-07-15T09:43:38Z"
+    },
+    {
+      "sha": "78e4381609802c100f52f66c9f69e4ec1a44e934",
+      "date": "2026-07-15T09:42:21Z"
+    },
+    {
+      "sha": "abc999c4d541f896782bf654dcf84dc9b684aaf4",
+      "date": "2026-07-15T07:01:28Z"
+    },
+    {
+      "sha": "b096eba42fdacbf22d9e7eb72e10df742305575c",
+      "date": "2026-05-26T14:30:04Z"
+    },
+    {
+      "sha": "6574cdc16c4354743bdb1e799978b2353442d303",
+      "date": "2026-05-26T14:23:20Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "0e11aa6199fba1c54a545f818fd89e6d9b516af4"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "0d0686822fad31afeba508200b6ff8f6aaf2e456"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "a324e50618bcb28465b9ea3ed900dba6d265c41b"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "04db5637ccac393d6dc524149e481c25ff001d23"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "1f84167c839a07a64918d86c0724be27c0399ace"
+    },
+    {
+      "name": "MintCLI",
+      "type": "blob",
+      "oid": "977f19150df2dd23d0f4e5bd8c37d79868ce7b2e"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "d969e91c462037f0eefe45e4a8fc44ef5d288bfd"
+    },
+    {
+      "name": "SECURITY.md",
+      "type": "blob",
+      "oid": "ad73854e3b88b2fc5e2daebcebb8536e4c72cb27"
+    },
+    {
+      "name": "api",
+      "type": "tree",
+      "oid": "00cb285d73629539c426294f90f79da5b7e2bedf"
+    },
+    {
+      "name": "docker",
+      "type": "tree",
+      "oid": "0a3e2decbcbc165ae559965b27691580dbc807fa"
+    },
+    {
+      "name": "index.php",
+      "type": "blob",
+      "oid": "4eeb343b9a713cd4a86abba8a1a8e88e99d29663"
+    },
+    {
+      "name": "install",
+      "type": "tree",
+      "oid": "04ab04637050184d112ec5e4d7238283b1670397"
+    },
+    {
+      "name": "kanban",
+      "type": "tree",
+      "oid": "6c53fbb2b1c7efc0e9bbe73f3a137b50e47309a2"
+    },
+    {
+      "name": "legacy",
+      "type": "tree",
+      "oid": "0e09fd9c158bb46818cd3d04d45677da27d058c6"
+    },
+    {
+      "name": "mcp",
+      "type": "tree",
+      "oid": "fe35e50653d17a9b92bcd8cc9db22db4f9594bd0"
+    },
+    {
+      "name": "upgrade",
+      "type": "tree",
+      "oid": "655cd656ca992c0ad5c1d68b19d332ce75f05e90"
+    },
+    {
+      "name": "vue",
+      "type": "tree",
+      "oid": "433331ca8ad2fdf227ac95a1d4ca8c546b4b2891"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 94,
+      "title": "[Bug]: SMTP test email (and outbound email) fails auth for non-OAuth providers — mail_authtype never set to 'basic'",
+      "createdAt": "2026-09-11T19:16:28Z",
+      "updatedAt": "2026-09-11T19:16:28Z",
+      "closedAt": null,
+      "url": "https://github.com/minthcm/minthcm/issues/94",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 93,
+      "title": "[Bug]: MintHCM 4.3.2 shipped frontend bundle leaves #app empty",
+      "createdAt": "2026-07-17T12:18:44Z",
+      "updatedAt": "2026-08-20T15:01:50Z",
+      "closedAt": "2026-08-20T14:58:51Z",
+      "url": "https://github.com/minthcm/minthcm/issues/93",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-07-17T12:50:04Z",
+            "url": "https://github.com/minthcm/minthcm/issues/93#issuecomment-5003457548"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-09T12:17:10Z",
+            "url": "https://github.com/minthcm/minthcm/issues/93#issuecomment-5231472902"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-08-20T15:01:50Z",
+            "url": "https://github.com/minthcm/minthcm/issues/93#issuecomment-5357708392"
+          }
+        ]
+      }
+    },
+    {
+      "number": 90,
+      "title": "Upgrade Wizard SQL Version Detection Issue",
+      "createdAt": "2025-10-03T02:18:45Z",
+      "updatedAt": "2025-11-20T10:17:18Z",
+      "closedAt": "2025-11-20T10:17:18Z",
+      "url": "https://github.com/minthcm/minthcm/issues/90",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2025-10-07T07:32:43Z",
+            "url": "https://github.com/minthcm/minthcm/issues/90#issuecomment-3375567401"
+          },
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2025-11-20T10:16:47Z",
+            "url": "https://github.com/minthcm/minthcm/issues/90#issuecomment-3557070561"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/minthcm/minthcm",
+    "commit": "https://github.com/minthcm/minthcm/commit/d8d4d29475d72e4846b50d5527c9721819f9e977"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "a557d669c7359a55d6af4542de0a76188196a038cd962a238855fb46597332d6",
+    "characters_read": 7339,
+    "excerpt": "<p align=\"center\"> <a href=\"https://minthcm.org/\" target=\"_blank\"> <img width=\"25%\" src=\"https://minthcm.org/minthcm-logo.svg\" alt=\"MintHCM logo\"> </a> </p> <br/> <p align=\"center\"> <a href=\"https://github.com/minthcm/minthcm/blob/master/LICENSE\" target=\"_blank\"> <img src=\"https://img.shields.io/github/license/minthcm/minthcm.svg\" alt=\"GitHub license\"> </a> <a href=\"https://github.com/minthcm/minthcm/releases\" target=\"_blank\"> <img src=\"https://img.shields.io/github/tag/minthcm/minthcm.svg\" alt=\"GitHub tag (latest SemVer)\"> </a> <a href=\"https://hub.docker.com/r/minthcm/minthcm\" target=\"_blank\"> <img src=\"https://img.shields.io/docker/pulls/minthcm/minthcm?logo=docker&color=2496ED\" alt=\"Docker Pulls\"> </a> <a href=\"https://discord.gg/zHu8AfCEVb\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"> </a> </p> [minthcm.org](https://minthcm.org/) is an **open-source, AI-native HCM platform** designed for **Agentic Engineering**. Build, customize, and deploy HR systems powered by AI agents — with full control over your data, architecture, and infrastructure. <img width=\"2880\" height=\"1800\" alt=\"Mint4 - Dashboard\" src=\"https://github.com/user-attachments/assets/6c07a2d4-041c-44c8-b4e4-a04235b7223e\" /> --- ### 🚀 Why MintHCM? MintHCM is not just another HR system. It's a **platform for building AI-driven workforce solutions** - with full ownership of your data, code, and infrastructure. The problem",
+    "source_url": "https://github.com/minthcm/minthcm/blob/d8d4d29475d72e4846b50d5527c9721819f9e977/README.md",
+    "edition_flags": [
+      "enterprise",
+      "docker",
+      "recruit",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "13fb48a6c31a72e0e2b69650b1cebe8954f7b73449848492dcfd22b25bd91afa",
+    "characters_read": 35182,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/minthcm/minthcm/blob/d8d4d29475d72e4846b50d5527c9721819f9e977/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

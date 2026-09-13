@@ -1,0 +1,351 @@
+{
+  "audit_id": "R094",
+  "requested_full_name": "moov-io/fed",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "moov-io/fed",
+  "html_url": "https://github.com/moov-io/fed",
+  "description": "Fuzzy FedACH and FedWire ABA Routing Number and Bank Name Lookup.",
+  "stargazers_count": 127,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "35dec7d35ddee4a27b118912700431a37ecc0ecf",
+  "last_commit": "2026-09-09T18:31:51Z",
+  "recent_commits": [
+    {
+      "sha": "35dec7d35ddee4a27b118912700431a37ecc0ecf",
+      "date": "2026-09-09T18:31:51Z"
+    },
+    {
+      "sha": "59497376fe43126a4ffeb4287b1239a24c24b906",
+      "date": "2026-09-08T18:40:11Z"
+    },
+    {
+      "sha": "55e177132999e1be6a35b60e2830dd68aa16a010",
+      "date": "2026-09-08T15:42:49Z"
+    },
+    {
+      "sha": "eccc3bc6417176baaf5e2e472fdd2d1489d4cff8",
+      "date": "2026-09-02T18:26:51Z"
+    },
+    {
+      "sha": "ee804b4f34ed5b9e25325aecb6e6f089361e81e7",
+      "date": "2026-09-01T20:44:30Z"
+    },
+    {
+      "sha": "df4d5ac2afc30c3c7a57d426d4fb792064f47992",
+      "date": "2026-08-27T15:22:25Z"
+    },
+    {
+      "sha": "e871fff5d804fab84084c65256cad492c3b8de62",
+      "date": "2026-08-27T15:09:01Z"
+    },
+    {
+      "sha": "962bf3eabc7b9c050bb1b8964eaab112e1376f73",
+      "date": "2026-08-27T02:58:34Z"
+    },
+    {
+      "sha": "80e4a93db8489b2d018a2bfac4f3c8aa56e3821a",
+      "date": "2026-08-26T14:28:18Z"
+    },
+    {
+      "sha": "6e185ec68a1f7728cbe9b612549a1fef6ad32dfb",
+      "date": "2026-08-26T14:26:32Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "333f4ee83ec0b70d64d4f67fb581baeafa2398f8"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "687d3bd69b19e085f4da5664f0ffcc8dcaec03dd"
+    },
+    {
+      "name": "ACHDictionary.go",
+      "type": "blob",
+      "oid": "746bc2404c166f891cb6567c2c0cef4d0fef2e74"
+    },
+    {
+      "name": "ACHDictionary_test.go",
+      "type": "blob",
+      "oid": "60653ae0e120f79269dfd715a361b42d66001362"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "blob",
+      "oid": "3b9a221e7129d60872ca607652a33a216c8725dc"
+    },
+    {
+      "name": "AUTHORS",
+      "type": "blob",
+      "oid": "0fcb11e4d305ddd43765ecaa056226555c32b3b7"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "71cb57e9f1f90c16d02340f57310118cb889d910"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "3f089c7991cd752970b5fae57c1751a611a5a0d7"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "blob",
+      "oid": "e27d96890b7714fe36dd4e50a80ec732ebc99a81"
+    },
+    {
+      "name": "Dockerfile-fedtest",
+      "type": "blob",
+      "oid": "780d28aa1183ddfee50d2ba60e829fdcaaed5373"
+    },
+    {
+      "name": "Dockerfile-openshift",
+      "type": "blob",
+      "oid": "3b770985bdf8a03ca71db878e00bf62984fa6170"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "458f03429790573669bab97e528959d7e8aab618"
+    },
+    {
+      "name": "WIREDictionary.go",
+      "type": "blob",
+      "oid": "795250d267d2b22d040aaaa3d14a3c1fea9262d5"
+    },
+    {
+      "name": "WIREDictionary_test.go",
+      "type": "blob",
+      "oid": "2d7285eab5084f0cb6cb11c91eea9012ef9de4e5"
+    },
+    {
+      "name": "api",
+      "type": "tree",
+      "oid": "f19a32f0ee391a9e49dccdbc335e95ca4c4ecd66"
+    },
+    {
+      "name": "client",
+      "type": "tree",
+      "oid": "f8d2934645de3838bf76c1631c5f5b13150dd1a1"
+    },
+    {
+      "name": "cmd",
+      "type": "tree",
+      "oid": "02605ac1c957858e2f6c2b671d3a9a9363b55951"
+    },
+    {
+      "name": "const.go",
+      "type": "blob",
+      "oid": "8e392b154e17731bcb0142c92a0a1fb5232ead8a"
+    },
+    {
+      "name": "data",
+      "type": "tree",
+      "oid": "32a9493b87567e1802971e2c492ed82323fa901e"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "ebf3a6122a8fef3b91e9a526406b8813a3bb549a"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "21dad4cd1c2c4073dbe78eca360b551bcbd4ba49"
+    },
+    {
+      "name": "fileErrors.go",
+      "type": "blob",
+      "oid": "255e6c857b8d6ca8a11d415b11bf70f7eeca4352"
+    },
+    {
+      "name": "fuzz_test.go",
+      "type": "blob",
+      "oid": "d08a7aa26bfb5e7190179abe4656ff63eefe504c"
+    },
+    {
+      "name": "go.mod",
+      "type": "blob",
+      "oid": "e6306be153b4386f626ef9b3f456d3cf7d37df99"
+    },
+    {
+      "name": "go.sum",
+      "type": "blob",
+      "oid": "e2607654d0ce307975dd0c4d5dc5af80002a25e1"
+    },
+    {
+      "name": "makefile",
+      "type": "blob",
+      "oid": "9da5bd4ec25386f4beec827d2ffb337f2fad47aa"
+    },
+    {
+      "name": "normalize.go",
+      "type": "blob",
+      "oid": "f95663a5aded145223a25ecc6e0cba50a701b2ff"
+    },
+    {
+      "name": "normalize_test.go",
+      "type": "blob",
+      "oid": "fc252c7c73f61810211479b971fd1509718087ab"
+    },
+    {
+      "name": "openapi-generator",
+      "type": "blob",
+      "oid": "77c5887ac3360cdd7745c4786968f049b3bb66ad"
+    },
+    {
+      "name": "openapi.yaml",
+      "type": "blob",
+      "oid": "eb62f94c42a76d31fd3e098c640d32ce23d39581"
+    },
+    {
+      "name": "pkg",
+      "type": "tree",
+      "oid": "3b29fee5689f523a324d6b016ed32d2bcedf1477"
+    },
+    {
+      "name": "renovate.json",
+      "type": "blob",
+      "oid": "6c5fcd6b2ab6029d844b8ff53d4104b52901616f"
+    },
+    {
+      "name": "validators.go",
+      "type": "blob",
+      "oid": "d4ffacab4ab933f6a09a4eab8f0b8f908b24c49e"
+    },
+    {
+      "name": "version.go",
+      "type": "blob",
+      "oid": "3137bc73c1709e740463495c4a900a967d6f5969"
+    },
+    {
+      "name": "webui",
+      "type": "tree",
+      "oid": "c8787cf783461f97c454cd7ab5c2ba3dc5645e2e"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 147,
+      "title": "Dependency Dashboard",
+      "createdAt": "2021-08-25T04:39:50Z",
+      "updatedAt": "2026-09-10T02:41:16Z",
+      "closedAt": null,
+      "url": "https://github.com/moov-io/fed/issues/147",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 420,
+      "title": "moov/fed:v0.14.0 — vulnerable dependencies (1 critical / 15 high / 16 medium, NVD scan)",
+      "createdAt": "2026-06-02T14:25:34Z",
+      "updatedAt": "2026-06-02T17:25:06Z",
+      "closedAt": "2026-06-02T17:25:06Z",
+      "url": "https://github.com/moov-io/fed/issues/420",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2026-06-02T17:25:06Z",
+            "url": "https://github.com/moov-io/fed/issues/420#issuecomment-4605109567"
+          }
+        ]
+      }
+    },
+    {
+      "number": 146,
+      "title": "Create a web interface for searching",
+      "createdAt": "2021-08-24T23:32:16Z",
+      "updatedAt": "2025-08-08T14:50:05Z",
+      "closedAt": "2025-08-08T13:46:39Z",
+      "url": "https://github.com/moov-io/fed/issues/146",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2023-11-14T15:38:51Z",
+            "url": "https://github.com/moov-io/fed/issues/146#issuecomment-1810477563"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2023-11-14T15:43:45Z",
+            "url": "https://github.com/moov-io/fed/issues/146#issuecomment-1810486678"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2025-07-30T13:01:16Z",
+            "url": "https://github.com/moov-io/fed/issues/146#issuecomment-3136245512"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2025-07-30T14:02:37Z",
+            "url": "https://github.com/moov-io/fed/issues/146#issuecomment-3136497635"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2025-07-30T14:07:03Z",
+            "url": "https://github.com/moov-io/fed/issues/146#issuecomment-3136517977"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/moov-io/fed",
+    "commit": "https://github.com/moov-io/fed/commit/35dec7d35ddee4a27b118912700431a37ecc0ecf"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "cbf63f0fa9656ac60c01190d5ca48f96be9bd0d32b09150d5ee8501b190433a2",
+    "characters_read": 17005,
+    "excerpt": "[![Moov Banner Logo](https://user-images.githubusercontent.com/20115216/104214617-885b3c80-53ec-11eb-8ce0-9fc745fb5bfc.png)](https://github.com/moov-io) <p align=\"center\"> <a href=\"https://moov-io.github.io/fed/\">Project Documentation</a> · <a href=\"https://moov-io.github.io/fed/api/#overview\">API Endpoints</a> · <a href=\"https://moov.io/blog/education/fed-api-guide/\">API Guide</a> · <a href=\"https://slack.moov.io/\">Community</a> · <a href=\"https://moov.io/blog/\">Blog</a> <br> <br> </p> [![GoDoc](https://godoc.org/github.com/moov-io/fed?status.svg)](https://godoc.org/github.com/moov-io/fed) [![Build Status](https://github.com/moov-io/fed/workflows/Go/badge.svg)](https://github.com/moov-io/fed/actions) [![Go Report Card](https://goreportcard.com/badge/github.com/moov-io/fed)](https://goreportcard.com/report/github.com/moov-io/fed) [![Repo Size](https://img.shields.io/github/languages/code-size/moov-io/fed?label=project%20size)](https://github.com/moov-io/fed) [![Apache 2 License](https://img.shields.io/badge/license-Apache2-blue.svg)](https://raw.githubusercontent.com/moov-io/ach/master/LICENSE) [![Slack Channel](https://slack.moov.io/badge.svg?bg=e01563&fgColor=fffff)](https://slack.moov.io/) [![Docker Pulls](https://img.shields.io/docker/pulls/moov/fed)](https://hub.docker.com/r/moov/fed) [![GitHub Stars](https://img.shields.io/github/stars/moov-io/fed)](https://github.com/moov-io/fed) [![Twitter](https://img.shields.io/twitter/follow/moov?style=social)](https://twitter.com/moov?lang=en) # moov-io/fed Moov's mission is to give developers an easy way to create and integrate bank processing into their own software products. Our open source projects are each focused on solving a single responsibility in financial services and designed around performance, scalability, and ease of use. Fed implements utility services for searching the United States Federal Reserve System such as [ABA routing numbers](https://en.wikipedia.org/wiki/ABA_routing_transit_number), financial institution name lookup, and [Fedwire](https://en.wikipedia.org/wiki/Fedwire) and [FedACH](https://en.wikipedia.org/wiki/FedACH) routing information. The HTTP server is",
+    "source_url": "https://github.com/moov-io/fed/blob/35dec7d35ddee4a27b118912700431a37ecc0ecf/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "characters_read": 11357,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/moov-io/fed/blob/35dec7d35ddee4a27b118912700431a37ecc0ecf/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

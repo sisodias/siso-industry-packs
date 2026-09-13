@@ -1,0 +1,162 @@
+{
+  "audit_id": "R081",
+  "requested_full_name": "vtex/lever-sdk",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "vtex/lever-sdk",
+  "html_url": "https://github.com/vtex/lever-sdk",
+  "description": "VTEX IO compliant Typescript clients to connect with Lever API",
+  "stargazers_count": 0,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "main",
+  "revision": "edd39578008ead418ed74ed354a945ad26cb8932",
+  "last_commit": "2021-08-20T17:06:15Z",
+  "recent_commits": [
+    {
+      "sha": "edd39578008ead418ed74ed354a945ad26cb8932",
+      "date": "2021-08-20T17:06:15Z"
+    },
+    {
+      "sha": "ee08c54ba289b8106c57fa01c03d5f321af5894f",
+      "date": "2021-08-20T17:05:53Z"
+    },
+    {
+      "sha": "df25fe8f2611eeb6d1b8d9ddc390b7bf8c9daa62",
+      "date": "2021-08-20T16:07:31Z"
+    },
+    {
+      "sha": "cacb2fac9fdfcc7c7bc9ea9d5ef74ed097bd2b64",
+      "date": "2021-08-20T14:44:51Z"
+    },
+    {
+      "sha": "fdf4073813da3880f1aa70cf9f617ae26ec79050",
+      "date": "2021-08-20T14:44:35Z"
+    },
+    {
+      "sha": "b93fc1a2be7074ce99ceedd8c6d7ba96f2eab5ef",
+      "date": "2021-08-20T14:38:48Z"
+    },
+    {
+      "sha": "12f2eb8c8f22b190dde9d8f462b260bfc11d1e21",
+      "date": "2021-08-20T14:29:11Z"
+    },
+    {
+      "sha": "97620e858e22a213257ae82fe64096e9878f2971",
+      "date": "2021-08-20T13:32:36Z"
+    },
+    {
+      "sha": "435adcc198ba746ba3cedc8e6b6bc413cb5b3690",
+      "date": "2021-08-20T13:31:02Z"
+    },
+    {
+      "sha": "1a6bcf54276e04a2ab1ba71877dd36bd52dc31d0",
+      "date": "2021-08-20T13:26:53Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".eslintignore",
+      "type": "blob",
+      "oid": "ae35366c0a29727d870d8b257373d2ff62ecc670"
+    },
+    {
+      "name": ".eslintrc",
+      "type": "blob",
+      "oid": "fd8cc1610c13de84944c72beb92fcab675d4f601"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "02f27b2be1ce5e8150140b50cf3b09da70ec8ddb"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "503949f8450f5baeb4374cb9f4dd136944ddd860"
+    },
+    {
+      "name": ".prettierignore",
+      "type": "blob",
+      "oid": "42afabfd2abebf31384ca7797186a27a4b7dbee8"
+    },
+    {
+      "name": ".prettierrc",
+      "type": "blob",
+      "oid": "491624682e23a48725d188bc156667ed8682db52"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "1f037a04805312b26b9260f3360f738cdbb0a02c"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "0ca2c8faa2add6e91b5e82452b6da00f9be0dd4f"
+    },
+    {
+      "name": "jest.config.js",
+      "type": "blob",
+      "oid": "9689a210876768df5defc4088e3b9b784e0942d8"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "e0e78fd8f6c1179b8ea962a8707c5a3a4044b599"
+    },
+    {
+      "name": "scripts",
+      "type": "tree",
+      "oid": "9844dabfe9d02ae3f7dbd4aa3c186192c17f0eb8"
+    },
+    {
+      "name": "src",
+      "type": "tree",
+      "oid": "a9985686b53778ce6ed54214cb7dfdc6afcb5e8a"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "blob",
+      "oid": "4f6cbc71c61447357ef4b3bdc0c6001ec7d9d133"
+    },
+    {
+      "name": "yarn.lock",
+      "type": "blob",
+      "oid": "f32f0ab8cba4ff805ca4ac36a211a811b5435b02"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/vtex/lever-sdk",
+    "commit": "https://github.com/vtex/lever-sdk/commit/edd39578008ead418ed74ed354a945ad26cb8932"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "7744c98ff6b08ec4964abd27545769cf53c79f824e4baff473bcc5cef5b50995",
+    "characters_read": 1094,
+    "excerpt": "<h1 align=\"center\"> Lever SDK for Typescript </h1> <h5 align=\"center\">Collection of <i>ready-to-use</i> VTEX IO Clients to access Lever API</h5> This exports **Clients**, and Typescript **typings** to help you connecting a VTEX IO application with Lever's API using Node.js ## Installing ``` yarn add @vtex/lever-sdk ``` ## Client Work in progress. ## API Reference To discover and learn more about Lever APIs, read [Lever Documentation](https://hire.lever.co/developer/documentation). ## Contributing Feel free to **add new methods** to our code. ## Releasing We have a Github Action configured to **release the package on NPM for every Release tag** pushed into the repository. So, in order to have this project published: 1. Merge the Pull Request on the main branch, after having your changes approved. 2. Run",
+    "source_url": "https://github.com/vtex/lever-sdk/blob/edd39578008ead418ed74ed354a945ad26cb8932/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

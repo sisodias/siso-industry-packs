@@ -1,0 +1,150 @@
+{
+  "audit_id": "R073",
+  "requested_full_name": "bullhorn/starter-kit-spring-maven",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "bullhorn/starter-kit-spring-maven",
+  "html_url": "https://github.com/bullhorn/starter-kit-spring-maven",
+  "description": "A Bullhorn Platform SDK library. Quickly build Java-based applications, services and CRM extensions that consume the Bullhorn REST API.",
+  "stargazers_count": 30,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License"
+  },
+  "default_branch": "master",
+  "revision": "9cdc76a65bc85045cc08d0adfa946ce73c2103c0",
+  "last_commit": "2026-03-23T10:03:23Z",
+  "recent_commits": [
+    {
+      "sha": "9cdc76a65bc85045cc08d0adfa946ce73c2103c0",
+      "date": "2026-03-23T10:03:23Z"
+    },
+    {
+      "sha": "ffa25feb423ec8322686bf6e6f34d0795865f975",
+      "date": "2026-03-20T17:53:20Z"
+    },
+    {
+      "sha": "ab395c263a11e501c777261b141a1384096b6d1d",
+      "date": "2026-03-20T17:28:51Z"
+    },
+    {
+      "sha": "c884c55242ec955047a9e47a75412039d5776c56",
+      "date": "2024-05-23T18:59:29Z"
+    },
+    {
+      "sha": "3565409f5dcca3a77d5ac0923077e35aec8d4f4f",
+      "date": "2023-12-19T21:25:14Z"
+    },
+    {
+      "sha": "7aed3e318eff91a0bed2d05a22c7464e720fcd8a",
+      "date": "2023-12-19T21:24:14Z"
+    },
+    {
+      "sha": "5492e13203c2fdab4489504ec26728e725021ed7",
+      "date": "2023-08-31T19:05:18Z"
+    },
+    {
+      "sha": "047edcf8fa82b365bed18e3b9396643f21f66f75",
+      "date": "2023-08-31T14:20:45Z"
+    },
+    {
+      "sha": "e5e7c0969b5755ac736da89eebd95af994bb0d1f",
+      "date": "2023-06-09T19:11:24Z"
+    },
+    {
+      "sha": "1ffcc4efd686caac63770c4943ccc2cabeb0c603",
+      "date": "2023-06-09T16:26:34Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "6ac1464ae5e3cf0da207dd96b434674d0e8ad144"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "a304acf83e0ca81007f2bd7b3b321b24edfc35c5"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "2e9606642e1664a5fa3b111b83cac7b5f28eb42e"
+    },
+    {
+      "name": "pom.xml",
+      "type": "blob",
+      "oid": "9cbcb63131cd030afcc79ec3885647148cf083a8"
+    },
+    {
+      "name": "src",
+      "type": "tree",
+      "oid": "717349b629245683f23b274ea7da5926a67d5b12"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 209,
+      "title": "Safer - Compatible Updates to Fix Vulnerable Dependencies",
+      "createdAt": "2025-07-16T11:21:02Z",
+      "updatedAt": "2025-07-16T11:21:02Z",
+      "closedAt": null,
+      "url": "https://github.com/bullhorn/starter-kit-spring-maven/issues/209",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 1,
+      "title": "Support Maven Central badge on GitHub readme",
+      "createdAt": "2015-11-11T02:42:27Z",
+      "updatedAt": "2015-11-11T02:42:38Z",
+      "closedAt": null,
+      "url": "https://github.com/bullhorn/starter-kit-spring-maven/issues/1",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/bullhorn/starter-kit-spring-maven",
+    "commit": "https://github.com/bullhorn/starter-kit-spring-maven/commit/9cdc76a65bc85045cc08d0adfa946ce73c2103c0"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "7bff6071079d9da937f057ce58aa18247a8c06e7c97d61203a40e8a024a9ee15",
+    "characters_read": 31032,
+    "excerpt": "# Bullhorn Starter Kit (Spring Boot/Maven) The Bullhorn Starter Kit is a collection of Java code that lets you integrate custom business logic with the Bullhorn CRM application. The code itself is 100% boilerplate and should require no modification, but rather is designed for plugging in your own classes or extending existing ones. The following technologies are required: 1. [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) 2. [Maven 3](https://maven.apache.org/download.cgi) Run ``mvn clean install`` to generate a deployable WAR file in the target folder. You can also deploy to a local Tomcat 7 container provided by Maven by running ``mvn clean tomcat7:run -P${mavenProfile}``, effectively running your application locally. If you want to skip unit tests, pass the flag ``-DskipTests``. See the [javadoc](http://bullhorn.github.io/starter-kit-spring-maven/) for class and method-level",
+    "source_url": "https://github.com/bullhorn/starter-kit-spring-maven/blob/9cdc76a65bc85045cc08d0adfa946ce73c2103c0/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "a525bcef58c6b584a50477818f469270f7a870b1b07ab07c16ea72bbf8471b20",
+    "characters_read": 1076,
+    "excerpt": "The MIT License (MIT) Copyright (c) 2015 Bullhorn Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\",",
+    "source_url": "https://github.com/bullhorn/starter-kit-spring-maven/blob/9cdc76a65bc85045cc08d0adfa946ce73c2103c0/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

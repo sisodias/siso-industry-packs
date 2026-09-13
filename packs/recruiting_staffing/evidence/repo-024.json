@@ -1,0 +1,457 @@
+{
+  "audit_id": "R024",
+  "requested_full_name": "espocrm/espocrm",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "espocrm/espocrm",
+  "html_url": "https://github.com/espocrm/espocrm",
+  "description": "EspoCRM – Open Source CRM Application",
+  "stargazers_count": 3346,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "master",
+  "revision": "1effd3d0b3495ea7377d785d195d2c7f8fce9023",
+  "last_commit": "2026-09-11T09:06:22Z",
+  "recent_commits": [
+    {
+      "sha": "1effd3d0b3495ea7377d785d195d2c7f8fce9023",
+      "date": "2026-09-11T09:06:22Z"
+    },
+    {
+      "sha": "f9c0654f35f00ebe28749d5c51500c7e5a01dbee",
+      "date": "2026-09-10T07:58:39Z"
+    },
+    {
+      "sha": "1c0f9aab85e7c3bb926b4dceb6298b09720e5ba1",
+      "date": "2026-09-10T07:49:29Z"
+    },
+    {
+      "sha": "631e7ea707d7ea75818499871260680721bb3201",
+      "date": "2026-09-10T07:31:34Z"
+    },
+    {
+      "sha": "17948724f22fe316a0414c0682b641bb25624d0b",
+      "date": "2026-09-10T06:34:35Z"
+    },
+    {
+      "sha": "e955003f569bfb7c709637828503635a07d77ef8",
+      "date": "2026-09-09T10:51:52Z"
+    },
+    {
+      "sha": "c8dea5ea30915014cc051c27e02c0b431eeff45b",
+      "date": "2026-09-09T10:05:28Z"
+    },
+    {
+      "sha": "29649862324b23b8282b638290552623ac9c7180",
+      "date": "2026-09-08T12:09:06Z"
+    },
+    {
+      "sha": "863109b2a8649b7724e0e6eb7039fcc3afdbe26c",
+      "date": "2026-09-08T12:01:55Z"
+    },
+    {
+      "sha": "b67616401da31567bbf3f4e007b91a55223febae",
+      "date": "2026-09-08T08:07:17Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "4447198f244f7824317138e2f3e0cf78bff40ded"
+    },
+    {
+      "name": ".gitattributes",
+      "type": "blob",
+      "oid": "a214b04574fb9f1c80425235057451f60c56dd8e"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "c73b9050f2fb8123271542058ebc320e48935acb"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "8dc78dd4155a84cbbe3cd20c8444b0deed187be5"
+    },
+    {
+      "name": ".htaccess",
+      "type": "blob",
+      "oid": "d7d9e860f9b1c22a5432e7f756648c6053aaab72"
+    },
+    {
+      "name": ".idea",
+      "type": "tree",
+      "oid": "c8b6a951d69202af6ada1fa8517c487f90d2f0c8"
+    },
+    {
+      "name": ".npmrc",
+      "type": "blob",
+      "oid": "d7f749eba0c685a044e483f65c982bfb4364bda6"
+    },
+    {
+      "name": ".vscode",
+      "type": "tree",
+      "oid": "5e0a46bd671d7fbe5dfff206af203663cd27ac4a"
+    },
+    {
+      "name": "Gruntfile.js",
+      "type": "blob",
+      "oid": "e9d3ed78b7dbb07aa5b40f94a8e5c28fa5db2f63"
+    },
+    {
+      "name": "LICENSE.txt",
+      "type": "blob",
+      "oid": "bae94e189e62df1b8d5bd11435d954b25bee9d7b"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "8db5d5758ae6255544833f3fd9354522cf318a5a"
+    },
+    {
+      "name": "application",
+      "type": "tree",
+      "oid": "f16633516fa4956c52cb7808dda9408d4f2d3669"
+    },
+    {
+      "name": "bin",
+      "type": "tree",
+      "oid": "951e58848468acdc9fa07a459e0a401d67dc4d9a"
+    },
+    {
+      "name": "bootstrap.php",
+      "type": "blob",
+      "oid": "08da78d485abd7ae3cc11922e5c6729e1a0f1395"
+    },
+    {
+      "name": "clear_cache.php",
+      "type": "blob",
+      "oid": "21cce5dc3885554d30658083c2a23584b1d57d4a"
+    },
+    {
+      "name": "client",
+      "type": "tree",
+      "oid": "ec721debb4ca6972db6649a7510967ca18b274d2"
+    },
+    {
+      "name": "command.php",
+      "type": "blob",
+      "oid": "232555bd9194eee1bbacaf81ec25e4d78ec4e282"
+    },
+    {
+      "name": "composer.json",
+      "type": "blob",
+      "oid": "4e7b0f0db45f5878e7af3f6510e6bc7844fdbb33"
+    },
+    {
+      "name": "composer.lock",
+      "type": "blob",
+      "oid": "c146d8b6f5d87b6933e853580a66ed04fcaab685"
+    },
+    {
+      "name": "cron.php",
+      "type": "blob",
+      "oid": "64b9f134241a44b9c908727db365d0b22e660712"
+    },
+    {
+      "name": "custom",
+      "type": "tree",
+      "oid": "0b4a3b68f4d14bd1c190246783b2115395d5e5df"
+    },
+    {
+      "name": "daemon.php",
+      "type": "blob",
+      "oid": "5b85cd35fb933a16e5ff4896596134c04c58ea29"
+    },
+    {
+      "name": "data",
+      "type": "tree",
+      "oid": "4ac80fd282b2f84c17999ee87f69a69dbfc05d8a"
+    },
+    {
+      "name": "dev",
+      "type": "tree",
+      "oid": "a605098f82a63b809f05cf77d1f6405566791f9b"
+    },
+    {
+      "name": "diff.js",
+      "type": "blob",
+      "oid": "10c3fe8d07aa14c34b07d4c9efb5fa8594c4dd77"
+    },
+    {
+      "name": "extension.php",
+      "type": "blob",
+      "oid": "4af2a42be141da41e440b15a23165ac885f4f866"
+    },
+    {
+      "name": "frontend",
+      "type": "tree",
+      "oid": "ef2941edfbcd1b1e969f03ca73f8cf4eba5301ce"
+    },
+    {
+      "name": "html",
+      "type": "tree",
+      "oid": "7f5887bad0d60e0ffbbd47285a13bd6dfff21023"
+    },
+    {
+      "name": "index.php",
+      "type": "blob",
+      "oid": "8d3ac852a5ff655b5a5e3654188af9c2047df0d6"
+    },
+    {
+      "name": "install",
+      "type": "tree",
+      "oid": "45ea63edfa0d5820f45b7636e996a7e38e305b7a"
+    },
+    {
+      "name": "js",
+      "type": "tree",
+      "oid": "5c19a462ad25ce757cc9d1fc5f7932a4fb38b22a"
+    },
+    {
+      "name": "jsconfig.json",
+      "type": "blob",
+      "oid": "32edb4553bf0a29ee9298a6b735ab9f47e315107"
+    },
+    {
+      "name": "lang.js",
+      "type": "blob",
+      "oid": "c39f410d44ca693c05a89cc3ee624cd8e2f5647b"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "blob",
+      "oid": "f29ec8dc9061d4afc01e7f98bdd6aa374cda3717"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "5f04c62d05cc766056cbca29aaca19630781eb01"
+    },
+    {
+      "name": "phpstan.neon",
+      "type": "blob",
+      "oid": "433beac9e8374b99bf17612b9d8bac4e283ab7e6"
+    },
+    {
+      "name": "phpunit.xml",
+      "type": "blob",
+      "oid": "eac334b19a2c762c74f57ac25eb17addee7a0a25"
+    },
+    {
+      "name": "po.js",
+      "type": "blob",
+      "oid": "26b660dd45f76076dd32c930a1b50ae0b6dc59a9"
+    },
+    {
+      "name": "preload.php",
+      "type": "blob",
+      "oid": "090ff2fc240fa1ea906718e1c265a3bb51e5772f"
+    },
+    {
+      "name": "public",
+      "type": "tree",
+      "oid": "a83251538ee35f375ca67caf4ead60979ab0d1a0"
+    },
+    {
+      "name": "rebuild.php",
+      "type": "blob",
+      "oid": "82ad3bf07ac257ffde9394b8e6898a15c8bd3b17"
+    },
+    {
+      "name": "schema",
+      "type": "tree",
+      "oid": "b0b5f64fd1f67ea7246b86322a1395ba6b84034b"
+    },
+    {
+      "name": "tests",
+      "type": "tree",
+      "oid": "408582a18e6adfcbf0a1a002c733a42d27294440"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "blob",
+      "oid": "d4c28a1ba2bb55e90a43f2c11280febd2ec16017"
+    },
+    {
+      "name": "upgrade.php",
+      "type": "blob",
+      "oid": "981a82b9aa7502e6a003f674cb2cda23feba5d67"
+    },
+    {
+      "name": "upgrades",
+      "type": "tree",
+      "oid": "3249384367a323fff96a1dbff38427195ff1f66a"
+    },
+    {
+      "name": "websocket.php",
+      "type": "blob",
+      "oid": "1f5cad24790250b7610a98bba514c278a2ee2c66"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 3782,
+      "title": "OAuth 2.0 server",
+      "createdAt": "2026-09-08T14:38:10Z",
+      "updatedAt": "2026-09-13T10:19:02Z",
+      "closedAt": null,
+      "url": "https://github.com/espocrm/espocrm/issues/3782",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 3786,
+      "title": "Assign notification does not display the related record name correctly",
+      "createdAt": "2026-09-10T16:10:46Z",
+      "updatedAt": "2026-09-10T17:43:08Z",
+      "closedAt": "2026-09-10T16:41:12Z",
+      "url": "https://github.com/espocrm/espocrm/issues/3786",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-10T16:25:55Z",
+            "url": "https://github.com/espocrm/espocrm/issues/3786#issuecomment-5621972842"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-10T16:41:12Z",
+            "url": "https://github.com/espocrm/espocrm/issues/3786#issuecomment-5622164832"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-10T17:42:16Z",
+            "url": "https://github.com/espocrm/espocrm/issues/3786#issuecomment-5622927381"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-10T17:43:08Z",
+            "url": "https://github.com/espocrm/espocrm/issues/3786#issuecomment-5622938289"
+          }
+        ]
+      }
+    },
+    {
+      "number": 3787,
+      "title": "Assignment notifications not displaying name",
+      "createdAt": "2026-09-10T16:41:01Z",
+      "updatedAt": "2026-09-10T16:42:21Z",
+      "closedAt": "2026-09-10T16:41:38Z",
+      "url": "https://github.com/espocrm/espocrm/issues/3787",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-10T16:41:38Z",
+            "url": "https://github.com/espocrm/espocrm/issues/3787#issuecomment-5622170179"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/espocrm/espocrm",
+    "commit": "https://github.com/espocrm/espocrm/commit/1effd3d0b3495ea7377d785d195d2c7f8fce9023"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "683559b6dae3768eaa9c66612250e3c6bdcb4276ab1b0fb3f15d060be6040dda",
+    "characters_read": 5293,
+    "excerpt": "## EspoCRM [![PHPStan level 8](https://img.shields.io/badge/PHPStan-level%208-brightgreen)](#espocrm) [EspoCRM](https://www.espocrm.com) is a free, open-source CRM platform designed to help organizations build and maintain strong customer relationships. It provides a wide range of tools to store, organize, and manage leads, contacts, sales opportunities, marketing campaigns, support cases, and more – all business information in a simple and intuitive interface. ![Screenshot](https://github.com/user-attachments/assets/d0806394-3691-43a1-83a5-16ad2e7314e2) ### Architecture EspoCRM is a web application with a frontend designed as a single-page application and a REST API backend written in PHP. ### Demo You can try the CRM on an online [demo](https://www.espocrm.com/demo/). ### Requirements * PHP 8.3 - 8.5; * MySQL 8.0 (and later), or MariaDB 10.3 (and later); * PostgreSQL 15 (and later). For more information about server configuration, see [this article](https://docs.espocrm.com/administration/server-configuration/).",
+    "source_url": "https://github.com/espocrm/espocrm/blob/1effd3d0b3495ea7377d785d195d2c7f8fce9023/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b",
+    "characters_read": 34522,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/espocrm/espocrm/blob/1effd3d0b3495ea7377d785d195d2c7f8fce9023/LICENSE.txt",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE.txt"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0820",
+        "repo": "espocrm/espocrm",
+        "url": "https://github.com/espocrm/espocrm",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [
+          {
+            "industry_id": "saas",
+            "industry_label": "SaaS",
+            "observed_slots": 6,
+            "dimensions_observed": [
+              "data_model",
+              "demand_atom_fit",
+              "economics_maintenance",
+              "provenance_rights",
+              "runtime_deployment",
+              "workflow_behavior"
+            ],
+            "capability_families_observed": [
+              "builder"
+            ],
+            "atom_ids_observed": [
+              "intake_normalize",
+              "report_digest",
+              "sync_handoff"
+            ],
+            "evidence_refs": [
+              "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+            ],
+            "example_slot_ids": [
+              "saas:demand_atom_fit:003",
+              "saas:workflow_behavior:003",
+              "saas:data_model:003"
+            ]
+          }
+        ],
+        "industry_demand_status": "observed_join"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,388 @@
+{
+  "audit_id": "R105",
+  "requested_full_name": "digitorus/pdfsign",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "digitorus/pdfsign",
+  "html_url": "https://github.com/digitorus/pdfsign",
+  "description": "Add/verify Advanced Electronic Signature (AES) and Qualified Electronic Signature (QES) in PDF (using pure Go)",
+  "stargazers_count": 167,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "BSD-2-Clause",
+    "name": "BSD 2-Clause \"Simplified\" License"
+  },
+  "default_branch": "main",
+  "revision": "d20dc30e008d41efb423279c7ad20d4729ceb933",
+  "last_commit": "2026-09-08T10:14:28Z",
+  "recent_commits": [
+    {
+      "sha": "d20dc30e008d41efb423279c7ad20d4729ceb933",
+      "date": "2026-09-08T10:14:28Z"
+    },
+    {
+      "sha": "833be07824f050bb16cb5e40abc6938bfbe7e393",
+      "date": "2026-09-08T09:31:28Z"
+    },
+    {
+      "sha": "dfaec6bd6431c1a26da44da4a3200e0ef5c804b9",
+      "date": "2026-09-08T09:29:40Z"
+    },
+    {
+      "sha": "b2dd3f879df7dbbc06aea85f069ec2958210c0a5",
+      "date": "2026-09-07T18:42:43Z"
+    },
+    {
+      "sha": "39f87fec7e33af3e3daa77f6fa86820b813036d5",
+      "date": "2026-08-25T16:12:38Z"
+    },
+    {
+      "sha": "eecb2cb5b292ef0039a48bdcddb382117e5252de",
+      "date": "2026-08-25T16:12:14Z"
+    },
+    {
+      "sha": "0ef311cc2cf5ce5005c1b61b37ddf681b1b170b1",
+      "date": "2026-08-24T20:45:42Z"
+    },
+    {
+      "sha": "59290b4bad3fc2bfce81359a901bae142c9c21f4",
+      "date": "2026-08-23T18:15:52Z"
+    },
+    {
+      "sha": "0ef8ec2aca5935d6c7f766a38530118f6c797b0b",
+      "date": "2026-08-23T18:14:52Z"
+    },
+    {
+      "sha": "48d69686de1b02da90fbebe2c9de1e012a7be35c",
+      "date": "2026-08-23T18:13:50Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".devcontainer",
+      "type": "tree",
+      "oid": "f0e9e4ba4d7f5d5aba222fd13308dcc8c2bf897c"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "f5a7eaf82753f48cfb91691db13920717511b5d4"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "f85b1021561c531ffe40a8d6251c0de665adfb72"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "467b56d024b57fb9f4256edf5777a8aa514c456e"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "de720d72f5367cee9e7504f45154690788b82fbe"
+    },
+    {
+      "name": "appearance.go",
+      "type": "blob",
+      "oid": "32ec71d134f4b4c5d6eaba5f75eaf8073549a4f5"
+    },
+    {
+      "name": "appearance_example_test.go",
+      "type": "blob",
+      "oid": "44466f0f0e3a5e1b6afe86da372b57e627c6c897"
+    },
+    {
+      "name": "appearance_test.go",
+      "type": "blob",
+      "oid": "12c9d43a219c7784bd461713d2ef112ad239774c"
+    },
+    {
+      "name": "benchmark_test.go",
+      "type": "blob",
+      "oid": "8941ae90c57266ddb48f02a4ba6190229fefaea3"
+    },
+    {
+      "name": "cli",
+      "type": "tree",
+      "oid": "ffb8525bb2e5edb63ce2db3d4d9ff11f15e0c956"
+    },
+    {
+      "name": "crypto_test.go",
+      "type": "blob",
+      "oid": "3e7c6b90545065b33ad2f763de971d18ef66d24b"
+    },
+    {
+      "name": "document.go",
+      "type": "blob",
+      "oid": "00f141a11f43a0e8af578593c525c4c696a6ce0f"
+    },
+    {
+      "name": "document_example_test.go",
+      "type": "blob",
+      "oid": "5bd134ef8cc0162bbf88550d6446bae3df4d19c1"
+    },
+    {
+      "name": "document_test.go",
+      "type": "blob",
+      "oid": "7e637347999ae7fa720536fe271446abf930ff6f"
+    },
+    {
+      "name": "dss_test.go",
+      "type": "blob",
+      "oid": "cca2463f984c70f1291bbee517411759a8d197bc"
+    },
+    {
+      "name": "execute.go",
+      "type": "blob",
+      "oid": "532b53f7d1c7d475a490734dfec8ad90a55b44cc"
+    },
+    {
+      "name": "extract.go",
+      "type": "blob",
+      "oid": "b330893896839d77db11abca9c04317e4a6b6abe"
+    },
+    {
+      "name": "extract",
+      "type": "tree",
+      "oid": "a8d35f17f40f2026893d074dfe13de130143a22a"
+    },
+    {
+      "name": "fonts",
+      "type": "tree",
+      "oid": "ab6282879cde929bac58e43fefdd44a645a20215"
+    },
+    {
+      "name": "form_test.go",
+      "type": "blob",
+      "oid": "04b7ffa206c35a9ff166bffb40b203819d36adad"
+    },
+    {
+      "name": "format_test.go",
+      "type": "blob",
+      "oid": "a9234afe7e6b00b0f8d9b64f74eb186f1432dc05"
+    },
+    {
+      "name": "forms.go",
+      "type": "blob",
+      "oid": "2019f406cec37f65dcbaaef2649c186c86a25519"
+    },
+    {
+      "name": "forms",
+      "type": "tree",
+      "oid": "a362df47f27a67a7fba5743e642c01d220a6776d"
+    },
+    {
+      "name": "go.mod",
+      "type": "blob",
+      "oid": "77163d7d13e74cf11a6d80b0be7554a2a3ec8383"
+    },
+    {
+      "name": "go.sum",
+      "type": "blob",
+      "oid": "b3991cfba5c071b68c4e3fb93b73d997fde9d447"
+    },
+    {
+      "name": "images",
+      "type": "tree",
+      "oid": "825edbe59ac36c647b2a8a4b6107633841b8381b"
+    },
+    {
+      "name": "initials.go",
+      "type": "blob",
+      "oid": "6f7b462711b782afe93af9c4b274779d4f84c302"
+    },
+    {
+      "name": "initials",
+      "type": "tree",
+      "oid": "2366b680da9d3261669c0e2d5dc3d2419d07b3ad"
+    },
+    {
+      "name": "integration_test.go",
+      "type": "blob",
+      "oid": "c6c2872ddc7f5c1ce74b661ec5e25b6acb55b961"
+    },
+    {
+      "name": "internal",
+      "type": "tree",
+      "oid": "55c7fbda2a2071bddd961336c5d2f8c2ede73c2b"
+    },
+    {
+      "name": "pdf_test.go",
+      "type": "blob",
+      "oid": "adb077a77af6ced6d046048d9ed2e1a4a39c55d4"
+    },
+    {
+      "name": "pqc_example_test.go",
+      "type": "blob",
+      "oid": "36ebd7cd1fd3338d18c80d319ef3d81b6f82a072"
+    },
+    {
+      "name": "pqc_test.go",
+      "type": "blob",
+      "oid": "32f269d1ae60dcc8105db82e8a3e32d37bbd8376"
+    },
+    {
+      "name": "resources.go",
+      "type": "blob",
+      "oid": "b9106b04bb3711370a00d2b3b099153d04537bde"
+    },
+    {
+      "name": "resources_test.go",
+      "type": "blob",
+      "oid": "ecf3553b1a70fd5abe63896295af06f18208bada"
+    },
+    {
+      "name": "revocation",
+      "type": "tree",
+      "oid": "da6f10fc119534391d49a277ab150a8a397f30e1"
+    },
+    {
+      "name": "scripts",
+      "type": "tree",
+      "oid": "70707474c6b52a4280a248f572d56b7e6abc2df2"
+    },
+    {
+      "name": "sign",
+      "type": "tree",
+      "oid": "17263a29b78c79971b1ae34dab759c040a4f83d0"
+    },
+    {
+      "name": "signers",
+      "type": "tree",
+      "oid": "f4092609be4feab996919aaa7d62abe83717f68b"
+    },
+    {
+      "name": "testfiles",
+      "type": "tree",
+      "oid": "5e8914610d559653f47827e914b49f4ee3129bee"
+    },
+    {
+      "name": "types.go",
+      "type": "blob",
+      "oid": "a27d998a0f9f8db6db4b6da09e0f4dbbc3b91a79"
+    },
+    {
+      "name": "verify.go",
+      "type": "blob",
+      "oid": "81397fb34feb927bc9a92bd63737bf8f314b5896"
+    },
+    {
+      "name": "verify",
+      "type": "tree",
+      "oid": "a86e84f7575e2f4cf9841c610b5fdd3ce18494ea"
+    },
+    {
+      "name": "verify_example_test.go",
+      "type": "blob",
+      "oid": "3084058587d0ad4caacd420e253740eb65277841"
+    },
+    {
+      "name": "verify_test.go",
+      "type": "blob",
+      "oid": "8a2e7299bb11e2a69bf5d8fb2a551458083de998"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 157,
+      "title": "Implement PAdES B-LT and B-LTA augmentation",
+      "createdAt": "2026-08-23T12:44:58Z",
+      "updatedAt": "2026-08-23T12:44:58Z",
+      "closedAt": null,
+      "url": "https://github.com/digitorus/pdfsign/issues/157",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 156,
+      "title": "Add versioned ETSI cryptographic-policy enforcement",
+      "createdAt": "2026-08-23T12:44:57Z",
+      "updatedAt": "2026-08-23T12:44:57Z",
+      "closedAt": null,
+      "url": "https://github.com/digitorus/pdfsign/issues/156",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 155,
+      "title": "Add profile-aware PAdES validation and a structured conformance report",
+      "createdAt": "2026-08-23T12:44:34Z",
+      "updatedAt": "2026-08-23T12:44:34Z",
+      "closedAt": null,
+      "url": "https://github.com/digitorus/pdfsign/issues/155",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/digitorus/pdfsign",
+    "commit": "https://github.com/digitorus/pdfsign/commit/d20dc30e008d41efb423279c7ad20d4729ceb933"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "26f19a32e32df7f221d62bbd2d76c886ac0660085a67b90776829c687219d01c",
+    "characters_read": 19323,
+    "excerpt": "# Signing PDF files with Go [![Build & Test](https://github.com/digitorus/pdfsign/workflows/Build%20&%20Test/badge.svg)](https://github.com/digitorus/pdfsign/actions?query=workflow%3Abuild-and-test) [![golangci-lint](https://github.com/digitorus/pdfsign/workflows/golangci-lint/badge.svg)](https://github.com/digitorus/pdfsign/actions?query=workflow%3Agolangci-lint) [![Go Report Card](https://goreportcard.com/badge/github.com/digitorus/pdfsign)](https://goreportcard.com/report/github.com/digitorus/pdfsign) [![Coverage Status](https://codecov.io/gh/digitorus/pdfsign/branch/main/graph/badge.svg)](https://codecov.io/gh/) [![Go Reference](https://pkg.go.dev/badge/github.com/digitorus/pdfsign.svg)](https://pkg.go.dev/github.com/digitorus/pdfsign) A PDF signing and verification library written in [Go](https://go.dev). This library provides both command-line tools and Go APIs for digitally signing and verifying PDF documents. **See also our [PDFSigner](https://github.com/digitorus/pdfsigner/), a more advanced digital signature server that is using this project.** ## Quick Start ```bash # Sign a PDF ./pdfsign sign -name \"John Doe\" input.pdf output.pdf certificate.crt private_key.key # Verify a PDF signature ./pdfsign verify document.pdf ``` ## Package Architecture The library is organized into specialized subpackages, though most users will primarily interact with the root `pdfsign` package. | Package | Purpose | |:--- |:--- | | **`pdfsign`** | **Primary entry point**. Provides the",
+    "source_url": "https://github.com/digitorus/pdfsign/blob/d20dc30e008d41efb423279c7ad20d4729ceb933/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9bdf6d2a1149312c1bc9e1693383e8374622797833759243572f982e2da2263e",
+    "characters_read": 1319,
+    "excerpt": "BSD 2-Clause License Copyright (c) 2018, Digitorus All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT",
+    "source_url": "https://github.com/digitorus/pdfsign/blob/d20dc30e008d41efb423279c7ad20d4729ceb933/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0715",
+        "repo": "digitorus/pdfsign",
+        "url": "https://github.com/digitorus/pdfsign",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

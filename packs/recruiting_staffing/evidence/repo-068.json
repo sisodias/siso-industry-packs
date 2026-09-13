@@ -1,0 +1,143 @@
+{
+  "audit_id": "R068",
+  "requested_full_name": "russellmyers/hrxmlpy-package",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "russellmyers/hrxmlpy-package",
+  "html_url": "https://github.com/russellmyers/hrxmlpy-package",
+  "description": "hrxmlpy package",
+  "stargazers_count": 0,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "main",
+  "revision": "82049a434927786e2b2c7a2b0bfe716946c5ea57",
+  "last_commit": "2021-08-22T04:42:51Z",
+  "recent_commits": [
+    {
+      "sha": "82049a434927786e2b2c7a2b0bfe716946c5ea57",
+      "date": "2021-08-22T04:42:51Z"
+    },
+    {
+      "sha": "ee6f1d24ce6c9416c5c6621b1aa8060b5e317fbc",
+      "date": "2021-08-17T06:59:01Z"
+    },
+    {
+      "sha": "a1feae36aa5f1c406147a513aa77e954a967d23d",
+      "date": "2021-08-17T06:03:16Z"
+    },
+    {
+      "sha": "80d030bbd6c0eccbc5701147cc1103dce71002db",
+      "date": "2021-08-17T05:55:42Z"
+    },
+    {
+      "sha": "8eb61816e9e03a3c31beff454cfd53c1bc2de51e",
+      "date": "2021-08-17T04:45:26Z"
+    },
+    {
+      "sha": "f442afbbc8b04692e971dd8c8477944896a2d578",
+      "date": "2021-08-16T06:54:16Z"
+    },
+    {
+      "sha": "08f0ea9af5f72d17fec97692239df23dfaeddf4b",
+      "date": "2021-08-13T02:41:51Z"
+    },
+    {
+      "sha": "fda1c9fded7b215b724c342530fe2166241a125a",
+      "date": "2021-08-13T02:32:43Z"
+    },
+    {
+      "sha": "5de9030332ff816c805f68a8a6869b747dcb59c9",
+      "date": "2021-08-12T05:56:03Z"
+    },
+    {
+      "sha": "03e47dd650ee81ce162bdf26424fcda667ef59c3",
+      "date": "2021-08-12T01:35:20Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitattributes",
+      "type": "blob",
+      "oid": "dfe0770424b2a19faf507a501ebfc23be8f54e7b"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "510c73d0fdb6d9daed973138442e011bd8682815"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "f24791489c4f34551e32dd6e85a0af4210d444b2"
+    },
+    {
+      "name": "_config.yml",
+      "type": "blob",
+      "oid": "c4192631f25b34d77a7f159aa0da0e3ae99c4ef4"
+    },
+    {
+      "name": "hrxmlpy",
+      "type": "tree",
+      "oid": "9bdbbc1f84fd3c453adb8b4fe0e0cc5b341e8293"
+    },
+    {
+      "name": "img_predn_flow.PNG",
+      "type": "blob",
+      "oid": "d171f0032eda6f768429b3a57227bd22593dc8ca"
+    },
+    {
+      "name": "img_train_flow.PNG",
+      "type": "blob",
+      "oid": "f8484eb11d345ca0832098a240f596d7864a00ca"
+    },
+    {
+      "name": "poetry.lock",
+      "type": "blob",
+      "oid": "c5be2760fa056a564ffefc9264a755fcb1b6f52f"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "blob",
+      "oid": "1c620f807fff05db3222eba3d0bb1571532d59f8"
+    },
+    {
+      "name": "tests",
+      "type": "tree",
+      "oid": "be1972e8fac66719df2f6ef05dbe09332c759fcc"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/russellmyers/hrxmlpy-package",
+    "commit": "https://github.com/russellmyers/hrxmlpy-package/commit/82049a434927786e2b2c7a2b0bfe716946c5ea57"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "7ad5edf20c136b0512eef8e627d554c736548722e2ec9cde0d828a19e90524ff",
+    "characters_read": 14880,
+    "excerpt": "# hrxmlpy The hrxmlpy package provides core functionality to perform data transforms, ML training and ML predictions for models configured in the MLConfig API. Main classes provided in the package are: - **DataTransformer** - **Trainer** - **Predicter** - **MLConfig** Training of customer models is performed using one of the following learning algorithms, based on the \"learningAlgorithm\" parameter specified when defining the ml_service used by the customer model in the ml config api (see Trainer class for more information): | ml_service learningAlgorithm selected in ML Config API | class used | type | example use case | |---|---|---|---| | \"scikit_neural_network_regressor\" |Use scikit-learn's ```sklearn.neural_network.MLPRegressor``` class | Supervised, regression |eg use for TWV | |\"scikit_isolation_forest\" |Use scikit-learn's standard Isolation Forest class (```sklearn.ensemble.IsolationForest```) |",
+    "source_url": "https://github.com/russellmyers/hrxmlpy-package/blob/82049a434927786e2b2c7a2b0bfe716946c5ea57/README.md",
+    "edition_flags": [
+      "payroll",
+      "api"
+    ]
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

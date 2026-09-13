@@ -1,0 +1,143 @@
+{
+  "audit_id": "R076",
+  "requested_full_name": "bullhorn/passport-bullhorn",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "bullhorn/passport-bullhorn",
+  "html_url": "https://github.com/bullhorn/passport-bullhorn",
+  "description": "Bullhorn (OAuth) authentication strategy for Passport",
+  "stargazers_count": 15,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "master",
+  "revision": "01fc052b929c8fc1cfca65c2bc062a4030e81aaf",
+  "last_commit": "2015-09-03T18:12:25Z",
+  "recent_commits": [
+    {
+      "sha": "01fc052b929c8fc1cfca65c2bc062a4030e81aaf",
+      "date": "2015-09-03T18:12:25Z"
+    },
+    {
+      "sha": "0b3e6572e0e48b3ee98429226160169234a93a8c",
+      "date": "2015-09-03T18:11:47Z"
+    },
+    {
+      "sha": "c73d60531102cb946c4a43ed32f16ddc64b53e12",
+      "date": "2015-09-03T18:10:30Z"
+    },
+    {
+      "sha": "56bb1310ae1a20e0308b9e232137b7c5c5eeecb5",
+      "date": "2015-09-03T18:04:26Z"
+    },
+    {
+      "sha": "2c2f12d89beb61c6f2d2c806391a0dae21bf4c3b",
+      "date": "2015-09-03T18:04:20Z"
+    },
+    {
+      "sha": "ac069481aaa3a5385168f2097f6f12636242c60d",
+      "date": "2015-09-03T18:03:50Z"
+    },
+    {
+      "sha": "420ddead9ddeaf3d989168ac8af7adbd7c17e32e",
+      "date": "2015-09-03T18:02:36Z"
+    },
+    {
+      "sha": "00ea5bf65268896d8dd81cf7b3840f76f6bf45a9",
+      "date": "2015-09-03T17:55:44Z"
+    },
+    {
+      "sha": "7bc2bb8a34cbe2ca4f8ee30c8450f1ed25d0c50b",
+      "date": "2015-09-03T17:55:16Z"
+    },
+    {
+      "sha": "e6a6d6f6619ef4d45e87429b07802059c47343ed",
+      "date": "2015-09-03T17:54:51Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "4bfecc54249af833bf98186bb34d0e84907fdd99"
+    },
+    {
+      "name": ".npmignore",
+      "type": "blob",
+      "oid": "496ee2ca6a2f08396a4076fe43dedf3dc0da8b6d"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "5d8c5993bbc04d086a2e8208b91081f6173202ed"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "c6aeff541b5e8f416dfb2aa6c3ee34681aed666c"
+    },
+    {
+      "name": "src",
+      "type": "tree",
+      "oid": "7b970dcdeebbcdeb8e01cda33b8d3a1e0e3c6fc0"
+    },
+    {
+      "name": "test",
+      "type": "tree",
+      "oid": "4cc89d18f574c7f31f0cb64272990a656265494c"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 2,
+      "title": "HTTP Status 500 when authenticating",
+      "createdAt": "2018-06-15T10:04:53Z",
+      "updatedAt": "2018-06-15T10:05:09Z",
+      "closedAt": null,
+      "url": "https://github.com/bullhorn/passport-bullhorn/issues/2",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 1,
+      "title": "InternalOAuthError: failed to fetch user profile",
+      "createdAt": "2018-05-02T10:43:08Z",
+      "updatedAt": "2018-05-02T11:07:41Z",
+      "closedAt": null,
+      "url": "https://github.com/bullhorn/passport-bullhorn/issues/1",
+      "comments": {
+        "nodes": []
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/bullhorn/passport-bullhorn",
+    "commit": "https://github.com/bullhorn/passport-bullhorn/commit/01fc052b929c8fc1cfca65c2bc062a4030e81aaf"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "41c93c37739253d89707951b5109b8bd7e4c3aed353a6ad94d05cec6febec770",
+    "characters_read": 2145,
+    "excerpt": "# Passport-Bullhorn [Passport](http://passportjs.org/) strategies for authenticating with [Bullhorn](http://www.bullhorn.com/) using OAuth 2.0. This module lets you authenticate using Bullhorn in your Node.js applications. By plugging into Passport, Bullhorn authentication can be easily and unobtrusively integrated into any application or framework that supports [Connect](http://www.senchalabs.org/connect/)-style middleware, including [Express](http://expressjs.com/). The client id and client secret needed to authenticate with Bullhorn can be set up from the developer's console [Bullhorn Developer's Console](https://console.bullhorn.io). ## Install $ npm install passport-bullhorn ## Usage of OAuth 2.0 #### Configure Strategy The Bullhorn OAuth 2.0 authentication strategy authenticates users using a Bullhorn account and OAuth 2.0 tokens. The strategy requires a `verify` callback, which accepts these credentials and calls `done` providing a user, as well as `options` specifying a client",
+    "source_url": "https://github.com/bullhorn/passport-bullhorn/blob/01fc052b929c8fc1cfca65c2bc062a4030e81aaf/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

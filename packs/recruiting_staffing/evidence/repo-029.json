@@ -1,0 +1,814 @@
+{
+  "audit_id": "R029",
+  "requested_full_name": "anuko/timetracker",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "anuko/timetracker",
+  "html_url": "https://github.com/anuko/timetracker",
+  "description": "Simple, easy to use, open source time tracking system.",
+  "stargazers_count": 208,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "NOASSERTION",
+    "name": "Other"
+  },
+  "default_branch": "master",
+  "revision": "b6711df7ae7c0c0034d6673365d26a0933faac5c",
+  "last_commit": "2023-12-28T18:07:21Z",
+  "recent_commits": [
+    {
+      "sha": "b6711df7ae7c0c0034d6673365d26a0933faac5c",
+      "date": "2023-12-28T18:07:21Z"
+    },
+    {
+      "sha": "f92e6ce6d58669ea735767b55e18bcaa7a7935b8",
+      "date": "2023-12-27T23:41:06Z"
+    },
+    {
+      "sha": "2deafba72d62471a2b1e29f2d625a3dbb4702200",
+      "date": "2023-11-11T16:42:19Z"
+    },
+    {
+      "sha": "d123e4534038691c66c342008d464efbe8824a5d",
+      "date": "2023-07-08T16:48:07Z"
+    },
+    {
+      "sha": "3c21de2155eec74d2a16c4ccae867df6963388fc",
+      "date": "2023-07-06T18:46:39Z"
+    },
+    {
+      "sha": "26e77cce18bd060221894ebf66f8b2eefd5a9c8a",
+      "date": "2023-07-06T15:49:54Z"
+    },
+    {
+      "sha": "a7c5d3a4e7802cba95a2ef0af0c7dd6e8c19e04a",
+      "date": "2023-07-05T16:17:36Z"
+    },
+    {
+      "sha": "11864b22e641930f2bde8bd903bcb0d54b4f2f29",
+      "date": "2023-07-04T06:49:18Z"
+    },
+    {
+      "sha": "007080955c2c2f64a9e33b13c9777c33ab52b8f1",
+      "date": "2023-07-02T15:24:55Z"
+    },
+    {
+      "sha": "40ca86fed5c361d0723973985aade2d279fc096c",
+      "date": "2023-07-02T14:29:49Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "697c76fe8213b167d4b5a94f0660248b9d51b52b"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "d81178e1196db987a01d4fdbe2c71c762351d9cd"
+    },
+    {
+      "name": ".htaccess",
+      "type": "blob",
+      "oid": "3b6168c7503df6f222b7970c54d059f07f7c825d"
+    },
+    {
+      "name": "2fa.php",
+      "type": "blob",
+      "oid": "a7e3dbb297e56c8fcea3a80e6f59f6b8fb66dcdb"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "58c97180116737bb0af2d074c583ac3c3780b730"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "022c0c03006b0a03c12bcb1379a1b05a8059089b"
+    },
+    {
+      "name": "WEB-INF",
+      "type": "tree",
+      "oid": "3e6d5b78a2c0076fdfe23d6eb69c0412634cdb43"
+    },
+    {
+      "name": "access_denied.php",
+      "type": "blob",
+      "oid": "80900d570c196d9aa3af6c61808826cd3af9df97"
+    },
+    {
+      "name": "admin_group_add.php",
+      "type": "blob",
+      "oid": "9aeff1831acb5a9522b7e4ad84921c906b1e3821"
+    },
+    {
+      "name": "admin_group_delete.php",
+      "type": "blob",
+      "oid": "909b2347ad8c7b93d8337f6f0f71a7d44082b816"
+    },
+    {
+      "name": "admin_group_edit.php",
+      "type": "blob",
+      "oid": "496c7b8fbe3b151daa67956a373e795ba1d02744"
+    },
+    {
+      "name": "admin_groups.php",
+      "type": "blob",
+      "oid": "8dffd39313d01bc9fd197a820edcf3cc5e94888b"
+    },
+    {
+      "name": "admin_options.php",
+      "type": "blob",
+      "oid": "aed85232086ff7b7cf5bb951eb015251701842da"
+    },
+    {
+      "name": "cf_custom_field_add.php",
+      "type": "blob",
+      "oid": "87d46bcd5cd7b292f047932eec508e899a75d8f7"
+    },
+    {
+      "name": "cf_custom_field_delete.php",
+      "type": "blob",
+      "oid": "ba222c6579b16658a2b41173ceede69fa2a7c929"
+    },
+    {
+      "name": "cf_custom_field_edit.php",
+      "type": "blob",
+      "oid": "3f959ee22b8166c62dfc7980b2f0a9cadecd5fba"
+    },
+    {
+      "name": "cf_custom_fields.php",
+      "type": "blob",
+      "oid": "6552bb7f612593207a42e2c94b04dd18fe47c036"
+    },
+    {
+      "name": "cf_dropdown_option_add.php",
+      "type": "blob",
+      "oid": "582794ae5643d147a9dd585a97a630a939a3aed0"
+    },
+    {
+      "name": "cf_dropdown_option_delete.php",
+      "type": "blob",
+      "oid": "50c6850145bf6694de1e989a3f34d73890d0aaaa"
+    },
+    {
+      "name": "cf_dropdown_option_edit.php",
+      "type": "blob",
+      "oid": "2477b057c37fa01a5b8e66997c49a0da3018b1a7"
+    },
+    {
+      "name": "cf_dropdown_options.php",
+      "type": "blob",
+      "oid": "06f53a7d8da6585605e571656718736f5928cedf"
+    },
+    {
+      "name": "charts.php",
+      "type": "blob",
+      "oid": "9dbb95c70217b76dfc34151311bbfa718c51086c"
+    },
+    {
+      "name": "client_add.php",
+      "type": "blob",
+      "oid": "f1f45333e099639b50600fcef13ed066830e4d4d"
+    },
+    {
+      "name": "client_delete.php",
+      "type": "blob",
+      "oid": "e832c6bcb4db1d44e7aa9f7575674fca6e74c429"
+    },
+    {
+      "name": "client_edit.php",
+      "type": "blob",
+      "oid": "665fda15e1b3f3a30ff9a6397518b27847ab5bd1"
+    },
+    {
+      "name": "clients.php",
+      "type": "blob",
+      "oid": "309eb155ac3631424674d23d8f1ad5ae571ee0a8"
+    },
+    {
+      "name": "cron.php",
+      "type": "blob",
+      "oid": "5adced71e685e03c2868ffedb2a2c9e9e92bf8c0"
+    },
+    {
+      "name": "custom_css.php",
+      "type": "blob",
+      "oid": "9aa287321ba13badf0c6bf78edf632a2143f6d3a"
+    },
+    {
+      "name": "dbinstall.php",
+      "type": "blob",
+      "oid": "44fede0cd466cc24655658e8c743d4b607b29874"
+    },
+    {
+      "name": "default.css",
+      "type": "blob",
+      "oid": "d1a77ebd82926e0bc729a90cdfd0aba449a088fb"
+    },
+    {
+      "name": "display_options.php",
+      "type": "blob",
+      "oid": "e0b7bc987feeab552c3592ef45673a1b7295d44e"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "e621c4105997d014b4ffe56031f13758f5d22400"
+    },
+    {
+      "name": "dockerfile-db",
+      "type": "blob",
+      "oid": "757aa0b30045a025ac1193e511a00a5ab5262a70"
+    },
+    {
+      "name": "dockerfile-tt",
+      "type": "blob",
+      "oid": "9c79f478696e4ef1fc63cfb59bb5718e9a9eb2f2"
+    },
+    {
+      "name": "expense_delete.php",
+      "type": "blob",
+      "oid": "6dbf421a9406eb8df32846da697de8b0b621d30e"
+    },
+    {
+      "name": "expense_edit.php",
+      "type": "blob",
+      "oid": "98098a19fd4f29e72fc49d76da6ac18f56244534"
+    },
+    {
+      "name": "expense_files.php",
+      "type": "blob",
+      "oid": "7fe2a5d1a2e63dc094a6d29291229814d5d25a37"
+    },
+    {
+      "name": "expenses.php",
+      "type": "blob",
+      "oid": "3cbbd8bec15702302fde5e00c62167c979ff0c06"
+    },
+    {
+      "name": "export.php",
+      "type": "blob",
+      "oid": "2bcba2dce17ca1475876baa26f06ec7dcd4bb122"
+    },
+    {
+      "name": "favicon.ico",
+      "type": "blob",
+      "oid": "56e40077ef472a6c9a1d73153ab5aa3f36c2917e"
+    },
+    {
+      "name": "feature_disabled.php",
+      "type": "blob",
+      "oid": "d154135413ec1f870962272b180d1841aeced546"
+    },
+    {
+      "name": "file_delete.php",
+      "type": "blob",
+      "oid": "e6cb5337845c314d1f16ad26315c114bcf4a27a7"
+    },
+    {
+      "name": "file_download.php",
+      "type": "blob",
+      "oid": "2fb52f79bd3e49ed943e30d25741eea59bef81b1"
+    },
+    {
+      "name": "file_edit.php",
+      "type": "blob",
+      "oid": "aeb8f70c727046c3ad80ddb80e4d6b8b1c1746ef"
+    },
+    {
+      "name": "group_add.php",
+      "type": "blob",
+      "oid": "6f88af2059666c50d21c1dd068812512695233c4"
+    },
+    {
+      "name": "group_advanced_edit.php",
+      "type": "blob",
+      "oid": "26134c789e9b138324bab7369c6df2d29a048ea5"
+    },
+    {
+      "name": "group_delete.php",
+      "type": "blob",
+      "oid": "377bb80e905c183d8785493b5dfdf494b5c66331"
+    },
+    {
+      "name": "group_edit.php",
+      "type": "blob",
+      "oid": "dbfca56bb675e0fcad7316a6a0087a9d9b9841b8"
+    },
+    {
+      "name": "groups.php",
+      "type": "blob",
+      "oid": "ca01a5f7c746139f6bc11e8cb3f2325c871f9303"
+    },
+    {
+      "name": "img",
+      "type": "tree",
+      "oid": "c1a6618cc8abc0eff1325757f954079aa0fb1ef0"
+    },
+    {
+      "name": "import.php",
+      "type": "blob",
+      "oid": "b743b3f5adbe1f95681abbba9e87862f5dc7802c"
+    },
+    {
+      "name": "index.php",
+      "type": "blob",
+      "oid": "c74f2688bc57004927aa41848aa8adbea7f57dea"
+    },
+    {
+      "name": "initialize.php",
+      "type": "blob",
+      "oid": "18946798c8e8cb9999ac1a99503684bd9e6d4efe"
+    },
+    {
+      "name": "invoice_add.php",
+      "type": "blob",
+      "oid": "e7018f009b904a370c4cbce4cbbf66e6034c3deb"
+    },
+    {
+      "name": "invoice_delete.php",
+      "type": "blob",
+      "oid": "5b473dfa0a62f14fcaf04ddd4942c524bb0be94e"
+    },
+    {
+      "name": "invoice_send.php",
+      "type": "blob",
+      "oid": "5483a09b14ee87e1f9044f511574a73a88fc5f72"
+    },
+    {
+      "name": "invoice_view.php",
+      "type": "blob",
+      "oid": "b1fcf91f97ab5b6f5762bad783506984b0dc3124"
+    },
+    {
+      "name": "invoices.php",
+      "type": "blob",
+      "oid": "d34e1220e5bb197cf2a7b5d7768d738d2ac540ce"
+    },
+    {
+      "name": "js",
+      "type": "tree",
+      "oid": "746e8224af9c9bc4d6c46158c1ce0ddc22190f94"
+    },
+    {
+      "name": "license.txt",
+      "type": "blob",
+      "oid": "5c63aca6f0b177b5e7c11ffeeb66ce7a39bcc3cc"
+    },
+    {
+      "name": "locking.php",
+      "type": "blob",
+      "oid": "04c8d9419045a6b4e07605660c28367c1add07c0"
+    },
+    {
+      "name": "login.php",
+      "type": "blob",
+      "oid": "2d9dde044c09140b653ce4b0fb746122be2d7602"
+    },
+    {
+      "name": "logout.php",
+      "type": "blob",
+      "oid": "116bbe4289efabd1c3b6be7ef18a2b0380fde055"
+    },
+    {
+      "name": "mysql.sql",
+      "type": "blob",
+      "oid": "f614d0ac8f9d97e892c9d24381cd63923cfa97b9"
+    },
+    {
+      "name": "notification_add.php",
+      "type": "blob",
+      "oid": "99602fe5d0af78cd05dc37185b18be8013d73566"
+    },
+    {
+      "name": "notification_delete.php",
+      "type": "blob",
+      "oid": "93820427c6afd4cd062632175c06b2d3f94cec4b"
+    },
+    {
+      "name": "notification_edit.php",
+      "type": "blob",
+      "oid": "164127e93f3a908f1675c4b729336d071122eb80"
+    },
+    {
+      "name": "notifications.php",
+      "type": "blob",
+      "oid": "5945320ef0d186ae8820b46b926db31b595c5492"
+    },
+    {
+      "name": "password_change.php",
+      "type": "blob",
+      "oid": "d395b6396ae81fc727f527359d2e822e43f8b7c4"
+    },
+    {
+      "name": "password_reset.php",
+      "type": "blob",
+      "oid": "9645139e4a4b9ca8ae42b4295d25e54c9fb96a30"
+    },
+    {
+      "name": "plugins.php",
+      "type": "blob",
+      "oid": "a4372694ae0a3df6e7be9bde6d0e526045d0cff4"
+    },
+    {
+      "name": "plugins",
+      "type": "tree",
+      "oid": "f9fba8a7854e656f8989ba7437f1ab07a57c9515"
+    },
+    {
+      "name": "predefined_expense_add.php",
+      "type": "blob",
+      "oid": "08e395ce29ef19ceccae91fb655cd1ca4c8d0666"
+    },
+    {
+      "name": "predefined_expense_delete.php",
+      "type": "blob",
+      "oid": "e965b0be2c556079fe96a1ba50546513b690ee24"
+    },
+    {
+      "name": "predefined_expense_edit.php",
+      "type": "blob",
+      "oid": "8f47502452654c4d905efa0d692e55c42c6becde"
+    },
+    {
+      "name": "predefined_expenses.php",
+      "type": "blob",
+      "oid": "9f94bd1cc5ad3034044477aca650185390c77f04"
+    },
+    {
+      "name": "profile_edit.php",
+      "type": "blob",
+      "oid": "3958a40180a203647a6c180cb82118a99a0fa96a"
+    },
+    {
+      "name": "project_add.php",
+      "type": "blob",
+      "oid": "859fdc2596fcfa8fc12cb159ecc556fbc3475f37"
+    },
+    {
+      "name": "project_delete.php",
+      "type": "blob",
+      "oid": "4f4353b879dc9db97410bc87bcacbba7dc41c2f5"
+    },
+    {
+      "name": "project_edit.php",
+      "type": "blob",
+      "oid": "a0190ff83b899d6968665527c08d87cb03f3bcd2"
+    },
+    {
+      "name": "project_files.php",
+      "type": "blob",
+      "oid": "8b38a8ce67785a606fc40f31e8576b878e701d6f"
+    },
+    {
+      "name": "projects.php",
+      "type": "blob",
+      "oid": "ed4d371df3564f3a03105d2181d81aa095839bb9"
+    },
+    {
+      "name": "puncher.php",
+      "type": "blob",
+      "oid": "26b371fcdcdbf37ad4bb67e2c9eeb43752c48459"
+    },
+    {
+      "name": "puncher_conf.php",
+      "type": "blob",
+      "oid": "51610f693ee65a94df0c93c3cdd913e049f6b756"
+    },
+    {
+      "name": "quotas.php",
+      "type": "blob",
+      "oid": "55214093f0db24e1ee509090adf017357c80cbf9"
+    },
+    {
+      "name": "readme.txt",
+      "type": "blob",
+      "oid": "90cdc970d898718c902dad7c01c9523c0431b4c4"
+    },
+    {
+      "name": "register.php",
+      "type": "blob",
+      "oid": "6f54ccf5b8406eca738cbbd8599eb74a5271ba54"
+    },
+    {
+      "name": "report.php",
+      "type": "blob",
+      "oid": "b8a549b69174d1e3586b3d5adf2afbaabd920cd1"
+    },
+    {
+      "name": "report_send.php",
+      "type": "blob",
+      "oid": "b20dd6dfe8fc246ae186f2d926c4591196c2c2d3"
+    },
+    {
+      "name": "reports.php",
+      "type": "blob",
+      "oid": "aabeec08f1351f8b780cb58346ff632807d85a61"
+    },
+    {
+      "name": "role_add.php",
+      "type": "blob",
+      "oid": "b4e05f9034cdaeb6c1b9f9c7e9032d20e17a7781"
+    },
+    {
+      "name": "role_delete.php",
+      "type": "blob",
+      "oid": "e2f0805ebdb93850d560122877302f5138fa7ebb"
+    },
+    {
+      "name": "role_edit.php",
+      "type": "blob",
+      "oid": "f2aecadeed4a5cae9efe42f00aa4a3a2ced3ebb7"
+    },
+    {
+      "name": "roles.php",
+      "type": "blob",
+      "oid": "569f2649a740250df3f12ed831aa71f610a096fc"
+    },
+    {
+      "name": "rtl.css",
+      "type": "blob",
+      "oid": "890cdd75cb310022ecd81f6c29d093e2803197f3"
+    },
+    {
+      "name": "site_map.php",
+      "type": "blob",
+      "oid": "f769edd760d5f24d7d665e75f008a02e264cff05"
+    },
+    {
+      "name": "success.php",
+      "type": "blob",
+      "oid": "6fbf8ad2ab23fe06dc16e1b40d2af651671a1cba"
+    },
+    {
+      "name": "swap_roles.php",
+      "type": "blob",
+      "oid": "7a036a7775a7e2d005eea1db4d0a270ea4e7a2b4"
+    },
+    {
+      "name": "task_add.php",
+      "type": "blob",
+      "oid": "4a33537034de691e3a301daf7cfb6da285f25597"
+    },
+    {
+      "name": "task_delete.php",
+      "type": "blob",
+      "oid": "04008010f0adf8febb699ac6e93ea8b8f4600d0f"
+    },
+    {
+      "name": "task_edit.php",
+      "type": "blob",
+      "oid": "1eb8c7f5b3db746c5f5199cfd7cb9c55e6c1b10a"
+    },
+    {
+      "name": "tasks.php",
+      "type": "blob",
+      "oid": "13787a8ab6424f1a36cb4c9385ac1881709de72e"
+    },
+    {
+      "name": "template_add.php",
+      "type": "blob",
+      "oid": "8eef424efad063b98719fbd6e3cb826b08b2204b"
+    },
+    {
+      "name": "template_delete.php",
+      "type": "blob",
+      "oid": "a4996e05bcf4c8b7f71499a2b985a326d8567ccb"
+    },
+    {
+      "name": "template_edit.php",
+      "type": "blob",
+      "oid": "2ff87b7211606b20cfb873671f51981ecc7b5f87"
+    },
+    {
+      "name": "templates.php",
+      "type": "blob",
+      "oid": "636d4bc107f1ab328dabe6b379398deeabe66f57"
+    },
+    {
+      "name": "time.php",
+      "type": "blob",
+      "oid": "ee90770b8a67118ad1a383ffdf1900c2b4185777"
+    },
+    {
+      "name": "time_delete.php",
+      "type": "blob",
+      "oid": "cd0af11abf4eae816680378bc0d41a948a6ff4ba"
+    },
+    {
+      "name": "time_edit.php",
+      "type": "blob",
+      "oid": "35037dcaf48f02b893aee4f4c57ef38093d5e67a"
+    },
+    {
+      "name": "time_files.php",
+      "type": "blob",
+      "oid": "c5dce5baabc7ece4aed0c44b04ffde1e9dba6276"
+    },
+    {
+      "name": "timesheet_add.php",
+      "type": "blob",
+      "oid": "b52775f2fc681716d18ec17da38f604e5202e331"
+    },
+    {
+      "name": "timesheet_delete.php",
+      "type": "blob",
+      "oid": "ff1e4e180ea9594a4b5e255155f5934056ad1329"
+    },
+    {
+      "name": "timesheet_edit.php",
+      "type": "blob",
+      "oid": "3e46733aed827b8d71475acd728c1b277aa22968"
+    },
+    {
+      "name": "timesheet_files.php",
+      "type": "blob",
+      "oid": "bec4e29d8624c5b672812fcad6245970a771c0ef"
+    },
+    {
+      "name": "timesheet_view.php",
+      "type": "blob",
+      "oid": "b4eda31f7ec10b3a9525e92106cb11ebdb7a2909"
+    },
+    {
+      "name": "timesheets.php",
+      "type": "blob",
+      "oid": "7dbbb78df3dbf6d8dce0ceae75e144a561290455"
+    },
+    {
+      "name": "tofile.php",
+      "type": "blob",
+      "oid": "0134885f8f99fbc917baa44f4d8a96d2b2460681"
+    },
+    {
+      "name": "topdf.php",
+      "type": "blob",
+      "oid": "6393d5f55b25b951c2214f1cc38a24b2d1cc1c25"
+    },
+    {
+      "name": "user_add.php",
+      "type": "blob",
+      "oid": "e75e0901d8c5b63e976d9adfe01649b241aef9e3"
+    },
+    {
+      "name": "user_delete.php",
+      "type": "blob",
+      "oid": "e6ec7365e0cc624d76ed2f039e4da43f1ae866f4"
+    },
+    {
+      "name": "user_edit.php",
+      "type": "blob",
+      "oid": "0633e8a1f107df7ffb6eca27ab8e86ce547eda56"
+    },
+    {
+      "name": "users.php",
+      "type": "blob",
+      "oid": "38d4e1bc32916969c6844a8378d01366030655b2"
+    },
+    {
+      "name": "week.php",
+      "type": "blob",
+      "oid": "3c2384b91818d656f17b3b26d1732d580c5e3966"
+    },
+    {
+      "name": "week_view.php",
+      "type": "blob",
+      "oid": "7db10226a69af21498ff94c5b19ba856972bebb4"
+    },
+    {
+      "name": "work_units.php",
+      "type": "blob",
+      "oid": "b8a4a747eeab6d29ccd99e2e502de0eee89f0bf8"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 153,
+      "title": "Vulnerability findings",
+      "createdAt": "2026-08-01T18:55:37Z",
+      "updatedAt": "2026-09-08T08:52:30Z",
+      "closedAt": "2026-09-08T08:52:29Z",
+      "url": "https://github.com/anuko/timetracker/issues/153",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-01T20:11:33Z",
+            "url": "https://github.com/anuko/timetracker/issues/153#issuecomment-5153217623"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-18T11:29:53Z",
+            "url": "https://github.com/anuko/timetracker/issues/153#issuecomment-5327520199"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-25T19:27:51Z",
+            "url": "https://github.com/anuko/timetracker/issues/153#issuecomment-5415605718"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-26T14:32:50Z",
+            "url": "https://github.com/anuko/timetracker/issues/153#issuecomment-5426869828"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-27T12:53:02Z",
+            "url": "https://github.com/anuko/timetracker/issues/153#issuecomment-5439412582"
+          }
+        ]
+      }
+    },
+    {
+      "number": 152,
+      "title": "docker support ",
+      "createdAt": "2026-04-27T05:23:38Z",
+      "updatedAt": "2026-04-28T17:16:30Z",
+      "closedAt": null,
+      "url": "https://github.com/anuko/timetracker/issues/152",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-04-27T14:45:32Z",
+            "url": "https://github.com/anuko/timetracker/issues/152#issuecomment-4327918249"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-04-27T15:08:36Z",
+            "url": "https://github.com/anuko/timetracker/issues/152#issuecomment-4328107636"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-04-28T16:57:20Z",
+            "url": "https://github.com/anuko/timetracker/issues/152#issuecomment-4337405507"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-04-28T17:16:30Z",
+            "url": "https://github.com/anuko/timetracker/issues/152#issuecomment-4337596718"
+          }
+        ]
+      }
+    },
+    {
+      "number": 151,
+      "title": "Future of this project",
+      "createdAt": "2025-09-25T06:46:04Z",
+      "updatedAt": "2025-09-25T17:08:43Z",
+      "closedAt": null,
+      "url": "https://github.com/anuko/timetracker/issues/151",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2025-09-25T17:07:38Z",
+            "url": "https://github.com/anuko/timetracker/issues/151#issuecomment-3335114845"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/anuko/timetracker",
+    "commit": "https://github.com/anuko/timetracker/commit/b6711df7ae7c0c0034d6673365d26a0933faac5c"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "da20631ef40404f0b38be78edfab91b6abba3d91634273caca62ba2d7bde64dc",
+    "characters_read": 1163,
+    "excerpt": "# Anuko Time Tracker ## About Anuko [Time Tracker](https://www.anuko.com/time-tracker/index.htm) is an open source, web-based time tracking application written in PHP. It allows you to track the time that employees or colleagues spend working on projects and tasks. It needs a web server such as Apache, IIS, etc. to run on, and a database to keep the data in, such as MySQL. ## Terminal Illness of the Owner December 28, 2023: Nik Okuntseff, the owner and lead software developer at Anuko, developed a terminal illness. Anuko, the company behind Time Tracker, will cease to exist at soon. ## Free Hosting [Anuko](https://www.anuko.com) provides [free hosting](https://www.anuko.com/time-tracker/free-hosting/index.htm) of Time Tracker to individuals and small groups up to 5 users. To start using Time Tracker",
+    "source_url": "https://github.com/anuko/timetracker/blob/b6711df7ae7c0c0034d6673365d26a0933faac5c/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "license.txt",
+    "sha256": "ed1b59996c37a44aeb3753a292b2e8d66860022f2e88f327aa954508cb0d922b",
+    "characters_read": 29294,
+    "excerpt": "Server Side Public License VERSION 1, OCTOBER 16, 2018 Copyright © 2018 MongoDB, Inc. Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. TERMS AND CONDITIONS 0. Definitions. “This License” refers to Server Side Public License. “Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks. “The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations. To “modify” a work means to copy from or adapt all or part",
+    "source_url": "https://github.com/anuko/timetracker/blob/b6711df7ae7c0c0034d6673365d26a0933faac5c/license.txt",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "license.txt"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

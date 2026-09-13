@@ -1,0 +1,172 @@
+{
+  "audit_id": "R080",
+  "requested_full_name": "Gusto/greenhouse_api",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "Gusto/greenhouse_api",
+  "html_url": "https://github.com/Gusto/greenhouse_api",
+  "description": "An api client for working with the Greenhouse Harvest API",
+  "stargazers_count": 2,
+  "archived": true,
+  "disabled": false,
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License"
+  },
+  "default_branch": "main",
+  "revision": "ff04a915c61b033285923ed87bce52182a6f98b8",
+  "last_commit": "2021-03-11T14:31:53Z",
+  "recent_commits": [
+    {
+      "sha": "ff04a915c61b033285923ed87bce52182a6f98b8",
+      "date": "2021-03-11T14:31:53Z"
+    },
+    {
+      "sha": "d9dc7e871ff798756643f95f1284dacb0a5320ff",
+      "date": "2021-03-11T00:52:43Z"
+    },
+    {
+      "sha": "88a02110d653098e8925bbe735746485089640a9",
+      "date": "2021-03-11T00:27:52Z"
+    },
+    {
+      "sha": "d98a6650abae2e6d841809dd76855aeb530109c6",
+      "date": "2021-03-03T21:00:57Z"
+    },
+    {
+      "sha": "023ae744e04316b947ff4cb9b414c0b19afcfba8",
+      "date": "2021-02-26T16:06:55Z"
+    },
+    {
+      "sha": "1fb1f5021b7be6f0998ee347572b4f9e8be68856",
+      "date": "2021-02-05T16:40:43Z"
+    },
+    {
+      "sha": "1318743d3670f3658eb1c67e31ef0132531da560",
+      "date": "2021-02-02T19:33:06Z"
+    },
+    {
+      "sha": "f4d8705bea8beb5009bdcf7406de33bf0a151d66",
+      "date": "2021-02-02T18:15:44Z"
+    },
+    {
+      "sha": "5a2fe38dcac977048bab451f2350ea6c56fd2162",
+      "date": "2020-12-02T22:03:05Z"
+    },
+    {
+      "sha": "d8beacf6133cf8813089cb85839a1f3e8170ab44",
+      "date": "2020-11-30T20:28:23Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "719ee62366432e75a95f8d7b5c2cc74935ca1c5e"
+    },
+    {
+      "name": ".rspec",
+      "type": "blob",
+      "oid": "34c5164d9b56c7d528f061c97f2d2fe02c834bdd"
+    },
+    {
+      "name": ".travis.yml",
+      "type": "blob",
+      "oid": "a12ad5e13401dbd33c3aafe5d44f4aad5780306a"
+    },
+    {
+      "name": "Gemfile",
+      "type": "blob",
+      "oid": "2aba9a4103d3c1b07a9994d6042aa5bf0173f2eb"
+    },
+    {
+      "name": "Gemfile.lock",
+      "type": "blob",
+      "oid": "1535ca6ec095ad2bce155d2c03437d51b5fdb0af"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "088413dd93ba1937ea14d68299fabadc5db45ce6"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "6b216f31db4df56ba1622014ab833c6a98654979"
+    },
+    {
+      "name": "Rakefile",
+      "type": "blob",
+      "oid": "b7e9ed549be37412bd2f7e90f0b33165e3052ceb"
+    },
+    {
+      "name": "bin",
+      "type": "tree",
+      "oid": "36d5ab23c1f2d18fdf2a06f00a40701f620d3d5b"
+    },
+    {
+      "name": "greenhouse_api-0.3.1.gem",
+      "type": "blob",
+      "oid": "838af72335c19932b6041a408b17d22f89413ed5"
+    },
+    {
+      "name": "greenhouse_api.gemspec",
+      "type": "blob",
+      "oid": "12607dad4a82fd7258bacb8d94b5ce113e9caba6"
+    },
+    {
+      "name": "lib",
+      "type": "tree",
+      "oid": "94efb10ffc9ddf9c1d2bbbc9a1521f2f943a952a"
+    },
+    {
+      "name": "sorbet",
+      "type": "tree",
+      "oid": "f57bf3a542ae570fcafb88850f35e37fd71b3024"
+    },
+    {
+      "name": "spec",
+      "type": "tree",
+      "oid": "bfb083f49506be9d3c462e592fc20af3cf402d14"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/Gusto/greenhouse_api",
+    "commit": "https://github.com/Gusto/greenhouse_api/commit/ff04a915c61b033285923ed87bce52182a6f98b8"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "f8695915bc18206a81cb6e55d83bb07b410bac39b177f8c397576ed9e6397ca3",
+    "characters_read": 1460,
+    "excerpt": "# GreenhouseApi This is an API Client for working with the [Greenhouse Harvest API](https://developers.greenhouse.io/harvest.html). It's lightweight and supports fetching all pages by default. ```ruby client = GreenhouseApi::Client.new(api_key) # Get all candidates client.list_candidates # Get other resources type client.list_many('departments', limit: 5) # Get current offer for application client.get_current_offer_for_application(12345) ``` ## Installation Add this line to your application's Gemfile: ```ruby gem 'greenhouse_api' ``` And then execute: $ bundle install Or install it yourself as: $ gem install greenhouse_api ## Development After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. To install this gem onto your local machine, run",
+    "source_url": "https://github.com/Gusto/greenhouse_api/blob/ff04a915c61b033285923ed87bce52182a6f98b8/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "3f16d54eea4852692b67dc4d9c088f01a0533a7c30fa91f9cd164b88a799f787",
+    "characters_read": 1062,
+    "excerpt": "MIT License Copyright (c) 2020 Gusto Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY",
+    "source_url": "https://github.com/Gusto/greenhouse_api/blob/ff04a915c61b033285923ed87bce52182a6f98b8/LICENSE",
+    "edition_flags": []
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

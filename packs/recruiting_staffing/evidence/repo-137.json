@@ -1,0 +1,134 @@
+{
+  "audit_id": "R137",
+  "requested_full_name": "searchblox/hr-xml-indexer",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "searchblox/hr-xml-indexer",
+  "html_url": "https://github.com/searchblox/hr-xml-indexer",
+  "description": "Utility to index HR-XML compliant xml files into SearchBlox for Faceted Search",
+  "stargazers_count": 0,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "b0e5755cfa1a8b1883b034b185e99761f3a4536a",
+  "last_commit": "2014-12-16T15:57:49Z",
+  "recent_commits": [
+    {
+      "sha": "b0e5755cfa1a8b1883b034b185e99761f3a4536a",
+      "date": "2014-12-16T15:57:49Z"
+    },
+    {
+      "sha": "071db04039feb14fd814fe86e2b715a7e45aa528",
+      "date": "2014-12-16T15:56:56Z"
+    },
+    {
+      "sha": "704816eca7f6fe5a331babbce3b286936337402a",
+      "date": "2014-12-16T11:40:39Z"
+    },
+    {
+      "sha": "3edc5535cf13517085b670dfbdcf180d1b57fd7a",
+      "date": "2014-12-16T11:40:02Z"
+    },
+    {
+      "sha": "3d1b54f0794c8a14367b5da84dc750dedc06063e",
+      "date": "2014-12-16T10:50:18Z"
+    },
+    {
+      "sha": "ae2ca27c7a168ebefbfafb112ee2af8af74c55fc",
+      "date": "2014-12-16T10:47:14Z"
+    },
+    {
+      "sha": "824c4eeeaacc80df1fab49a989cbbf434762fce7",
+      "date": "2014-12-15T18:36:09Z"
+    },
+    {
+      "sha": "1e295227829ebc384eee34e200aa29694fce9458",
+      "date": "2014-12-15T18:35:14Z"
+    },
+    {
+      "sha": "e610960458d42156aabb6c9c4c29547b4c0d0a32",
+      "date": "2014-12-15T18:34:36Z"
+    },
+    {
+      "sha": "ff70d150ea2207f984bbeb7734b21b29c35a76ab",
+      "date": "2014-12-15T18:33:56Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".bowerrc",
+      "type": "blob",
+      "oid": "ee1d0b63de70f14fe69f25e25a5d5cd926ef963c"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "4c7df9872c3851db90bdfb985252d242ab048417"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "ad410e11302107da9aa47ce3d46bd5ad011c4c43"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "1c6b71f87f4b93ba5f417564a226bef1a569f21e"
+    },
+    {
+      "name": "bower.json",
+      "type": "blob",
+      "oid": "27f6d890d249eef41bd632a0fd935b46d3c7094f"
+    },
+    {
+      "name": "plugin",
+      "type": "tree",
+      "oid": "e85dc07227d151bb4a766bf49fd88c61a98be210"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/searchblox/hr-xml-indexer",
+    "commit": "https://github.com/searchblox/hr-xml-indexer/commit/b0e5755cfa1a8b1883b034b185e99761f3a4536a"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "ca23b34868edcd7afea4e60929be34568dc87fb104709c16ede669db53b73e16",
+    "characters_read": 4794,
+    "excerpt": "hr-xml-indexer ============== #### Utility to index HR-XML compliant xml files into SearchBlox for Faceted Search - Download the plugin folder into the SearchBlox installation under /searchblox to use the package. - Access the angularJS based search page at http://localhost:8080/searchblox/plugin/index.html - Edit the /plugin/data/facet.json file to add/modify/remove term, number range and date range filters. - Add sorting options and faceted search options on the facet.json file. - The XML files should be placed on this current plugin `/plugin/data/results/` directory Facet.json configuration file options that can be configured. \"licenseKey\": \"F7F522D18E3D1F47947D31D1E3C32093\", // API Key used for indexing. REQUIRED \"colName\": \"Resume-Collection\", // Collection name to index. REQUIRED // list down all the xml files without (`.xml`) their extension // and place all the xml",
+    "source_url": "https://github.com/searchblox/hr-xml-indexer/blob/b0e5755cfa1a8b1883b034b185e99761f3a4536a/README.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a",
+    "characters_read": 11323,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/searchblox/hr-xml-indexer/blob/b0e5755cfa1a8b1883b034b185e99761f3a4536a/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

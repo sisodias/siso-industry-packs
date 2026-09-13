@@ -1,0 +1,454 @@
+{
+  "audit_id": "R044",
+  "requested_full_name": "Tymeslot/tymeslot",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "Tymeslot/tymeslot",
+  "html_url": "https://github.com/Tymeslot/tymeslot",
+  "description": "Open-source meeting scheduling platform built with Elixir/Phoenix LiveView. Self-host or use the managed cloud at tymeslot.app.",
+  "stargazers_count": 194,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "main",
+  "revision": "297c09542ae07d1823c80f5358c001d0611d38d9",
+  "last_commit": "2026-09-10T19:46:10Z",
+  "recent_commits": [
+    {
+      "sha": "297c09542ae07d1823c80f5358c001d0611d38d9",
+      "date": "2026-09-10T19:46:10Z"
+    },
+    {
+      "sha": "812ce074e9d8fa31cbd9917a0409c89f3fcdfaea",
+      "date": "2026-09-10T17:03:19Z"
+    },
+    {
+      "sha": "afea3b196bcc121f91e8c28ecf4b4bffee9d74b6",
+      "date": "2026-09-10T17:03:18Z"
+    },
+    {
+      "sha": "571611ec0633c5d1fbdef3b4102869d4eed09199",
+      "date": "2026-09-10T16:51:03Z"
+    },
+    {
+      "sha": "707cae7bffcc3e90efb445d8dd6f3225717f18d8",
+      "date": "2026-09-10T16:45:43Z"
+    },
+    {
+      "sha": "fff826613d15b2aa6ed3557dda4d84f0efc02d90",
+      "date": "2026-09-10T16:45:43Z"
+    },
+    {
+      "sha": "0bee5d252337572c26d80502ee1bf77601eac4bc",
+      "date": "2026-09-10T16:45:43Z"
+    },
+    {
+      "sha": "c4a9517e752daf26920a4b3063f77a159d97e548",
+      "date": "2026-09-10T16:45:43Z"
+    },
+    {
+      "sha": "dad028b7c07bbe00618cc8851c97a67082d18e55",
+      "date": "2026-09-10T16:45:43Z"
+    },
+    {
+      "sha": "47393ce31ea191ceb2afe482e9cfe69ae613f9c7",
+      "date": "2026-09-10T16:45:43Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".credo.exs",
+      "type": "blob",
+      "oid": "eb4e879f82702a89400658ebe8a9ea6d77a7fce0"
+    },
+    {
+      "name": ".dialyzer_ignore.exs",
+      "type": "blob",
+      "oid": "8ba3468ac89fcfc66711d692d362085511b366dd"
+    },
+    {
+      "name": ".dockerignore",
+      "type": "blob",
+      "oid": "6a0eedb06383a705262ac3bfb1df2256ebcd63e3"
+    },
+    {
+      "name": ".env.example",
+      "type": "blob",
+      "oid": "157b0531c77922185d6f85050d88f92ae200c750"
+    },
+    {
+      "name": ".formatter.exs",
+      "type": "blob",
+      "oid": "578c15f9c66e0adaa59ee52ba2c8eeadc2c63420"
+    },
+    {
+      "name": ".githooks",
+      "type": "tree",
+      "oid": "deec0e2422cd2b53782c491a05fe43604e0b890f"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "ab063304dec84a601fee380166da96c2702ec12a"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "d1305bde8c9b80e78d6c92f38c7f98cb3c7e88f3"
+    },
+    {
+      "name": ".gitleaks.toml",
+      "type": "blob",
+      "oid": "2cacf5ed0f873da89c88e12eb0f39d4c1b6229bf"
+    },
+    {
+      "name": ".sobelow-conf",
+      "type": "blob",
+      "oid": "9584beeaf02cdd1706ec6ee9f1b5c76cebd31387"
+    },
+    {
+      "name": ".sobelow-skips",
+      "type": "blob",
+      "oid": "a955846c1de3c036da9d4a340a94b14baacb9f65"
+    },
+    {
+      "name": ".tool-versions",
+      "type": "blob",
+      "oid": "5ab80c905059e90fe9205e64770e0086ddb63d76"
+    },
+    {
+      "name": "CHANGELOG",
+      "type": "blob",
+      "oid": "6f8d1f3ca7157ef9fdd481fcfa3e7a61057b320a"
+    },
+    {
+      "name": "CLA.md",
+      "type": "blob",
+      "oid": "e036a6d4f0001b44cc8fe43d600e4367fce4e7bc"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "fc84140aa5cbe2e27275271cfd20a315212730c0"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "2fdad2f741efd493eb2c87c6679a40888802be05"
+    },
+    {
+      "name": "CONTRIBUTORS.md",
+      "type": "blob",
+      "oid": "20c860aa6e5776a6764cbe7a89bf5d932b19e83a"
+    },
+    {
+      "name": "COPYRIGHT",
+      "type": "blob",
+      "oid": "e47b409c54596b421ac1302587a17e3a24a69313"
+    },
+    {
+      "name": "CloudronManifest.json",
+      "type": "blob",
+      "oid": "221e2fa91808eebee167af564a2e157b4ffc31d8"
+    },
+    {
+      "name": "CloudronVersions.json",
+      "type": "blob",
+      "oid": "f55e257a4bda23470152f92c79f0a91c3ecb6890"
+    },
+    {
+      "name": "DCO",
+      "type": "blob",
+      "oid": "8201f992154a14a7fcd95a5937d5c40c610990c9"
+    },
+    {
+      "name": "Dockerfile.cloudron",
+      "type": "blob",
+      "oid": "bedc61633caeecfc01cb0a72cfc18901d6706697"
+    },
+    {
+      "name": "Dockerfile.docker",
+      "type": "blob",
+      "oid": "62db8ce98f68e3ad4a95b7fbf9f47c18fa923e75"
+    },
+    {
+      "name": "Dockerfile.railway",
+      "type": "blob",
+      "oid": "dc85cbece1b15cd615be12fa33112ba1d1b22e1c"
+    },
+    {
+      "name": "HANDOVER.md",
+      "type": "blob",
+      "oid": "cb0f97efcf094c83e3288f6a9297ac2cf7b6bc75"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e"
+    },
+    {
+      "name": "README-Cloudron.md",
+      "type": "blob",
+      "oid": "2e2b34f9d71101bbd85ed0e27c187b33a00227a6"
+    },
+    {
+      "name": "README-Docker.md",
+      "type": "blob",
+      "oid": "b6d26ae26a651177080776be47f3af7c6a0f2fa2"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "5519b1ec32e9d254668aba5c3307b21e72395a40"
+    },
+    {
+      "name": "SECURITY.md",
+      "type": "blob",
+      "oid": "0120f4606acad97cf4540ae63701bacf597050ea"
+    },
+    {
+      "name": "TRADEMARK.md",
+      "type": "blob",
+      "oid": "8409ddba7db66839b4f00bd26f0e7bc5ba3cbf48"
+    },
+    {
+      "name": "assets",
+      "type": "tree",
+      "oid": "5dcfe353800567e7f5585de59494e4e4b938d12a"
+    },
+    {
+      "name": "build-docker.sh",
+      "type": "blob",
+      "oid": "52315df8a19a71cd0ced495f70c14eb36755720b"
+    },
+    {
+      "name": "cliff-cloudron.toml",
+      "type": "blob",
+      "oid": "71de1b6839ac4584cffade1bd0228f7f26d0c4b1"
+    },
+    {
+      "name": "cliff.toml",
+      "type": "blob",
+      "oid": "2c8f1187db4ae2d4f06031a7d0bb89105fad82b3"
+    },
+    {
+      "name": "config",
+      "type": "tree",
+      "oid": "e319433bb190e532805ea32f652f297c55e5c233"
+    },
+    {
+      "name": "coveralls.json",
+      "type": "blob",
+      "oid": "8c69cdb10e5d1600cd77d86a38a7950f3c9e87d4"
+    },
+    {
+      "name": "dev",
+      "type": "tree",
+      "oid": "e46058d91c3c163495f78f6b7697299d4b0ddcca"
+    },
+    {
+      "name": "dev_support",
+      "type": "tree",
+      "oid": "8d236a36dc50140dc3326d579928defb00716344"
+    },
+    {
+      "name": "docker-compose.build.yml",
+      "type": "blob",
+      "oid": "f824bba9b645aaf8a37a28265e694bb1efb7dc34"
+    },
+    {
+      "name": "docker-compose.with-postgres.yml",
+      "type": "blob",
+      "oid": "3a01b1ccee65831cc20bc8fb807c896c27db39f3"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "dcc2401575c5c8e3b1b8cbbabd120fdd7ba46a06"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "37ef4cd2f7da05b8222ecff9de7f0f713c9bac72"
+    },
+    {
+      "name": "lib",
+      "type": "tree",
+      "oid": "9c10dfbae4049045d1bb5ca347248fc655c3ea1b"
+    },
+    {
+      "name": "mix.exs",
+      "type": "blob",
+      "oid": "202f3adbc97bc46ac4f51b436bb4bf55119e9bf9"
+    },
+    {
+      "name": "mix.lock",
+      "type": "blob",
+      "oid": "971715d1316065d2f8669d2a99f08a69dc9af67f"
+    },
+    {
+      "name": "priv",
+      "type": "tree",
+      "oid": "7dcc5a2b445ee3252babcf0cdf72dd3d26d215cd"
+    },
+    {
+      "name": "railpack.json",
+      "type": "blob",
+      "oid": "b7b9dbc2ec79dd52723a8bb34952b35200f398c3"
+    },
+    {
+      "name": "scripts",
+      "type": "tree",
+      "oid": "8815a43814a1d088d77b17ebc467602d8e1769b3"
+    },
+    {
+      "name": "start-docker.sh",
+      "type": "blob",
+      "oid": "5af71a1d89a4f4bfc973f8ab281cb047f47b6f39"
+    },
+    {
+      "name": "start.sh",
+      "type": "blob",
+      "oid": "34a4189580f35ade4421d7bc76ed3096084b9426"
+    },
+    {
+      "name": "test",
+      "type": "tree",
+      "oid": "def90c3a6d3b049d895cc11cdbdfb2d222daa303"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 98,
+      "title": "[Bug]: Host avatar in transactional emails breaks in Gmail due to unsupported `data:image/svg+xml` data URI",
+      "createdAt": "2026-09-13T12:44:39Z",
+      "updatedAt": "2026-09-13T14:10:01Z",
+      "closedAt": null,
+      "url": "https://github.com/Tymeslot/tymeslot/issues/98",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-13T14:08:35Z",
+            "url": "https://github.com/Tymeslot/tymeslot/issues/98#issuecomment-5653774595"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-13T14:10:01Z",
+            "url": "https://github.com/Tymeslot/tymeslot/issues/98#issuecomment-5653781610"
+          }
+        ]
+      }
+    },
+    {
+      "number": 97,
+      "title": "HTTP timeout since 1.15.3",
+      "createdAt": "2026-09-10T20:26:54Z",
+      "updatedAt": "2026-09-11T11:57:57Z",
+      "closedAt": null,
+      "url": "https://github.com/Tymeslot/tymeslot/issues/97",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-09-11T11:57:57Z",
+            "url": "https://github.com/Tymeslot/tymeslot/issues/97#issuecomment-5634083408"
+          }
+        ]
+      }
+    },
+    {
+      "number": 96,
+      "title": "Session reset on live preview",
+      "createdAt": "2026-09-09T22:13:32Z",
+      "updatedAt": "2026-09-10T13:32:09Z",
+      "closedAt": "2026-09-10T13:32:09Z",
+      "url": "https://github.com/Tymeslot/tymeslot/issues/96",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "COLLABORATOR",
+            "createdAt": "2026-09-10T13:32:09Z",
+            "url": "https://github.com/Tymeslot/tymeslot/issues/96#issuecomment-5619509795"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/Tymeslot/tymeslot",
+    "commit": "https://github.com/Tymeslot/tymeslot/commit/297c09542ae07d1823c80f5358c001d0611d38d9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "d9b42369f7dc1cfed9717d59651e49a0ebd38be96f3f89a82a70bf1e54b73bd7",
+    "characters_read": 14908,
+    "excerpt": "<div align=\"center\"> <img src=\"./priv/static/images/brand/logo-with-text.svg\" alt=\"Tymeslot\" height=\"76\" /> <h3>Scheduling software that stays yours.</h3> <p> Booking pages, calendar sync, video rooms and automated emails — running on <b>your</b> server, under your control.<br /> Built on Elixir/OTP, so it keeps running while you sleep. </p> <p> <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\"><img src=\"https://img.shields.io/badge/Licence-AGPL--3.0-1F6FEB.svg\" alt=\"Licence: AGPL-3.0\" /></a> <a href=\"https://elixir-lang.org\"><img src=\"https://img.shields.io/badge/Elixir-1.20-4B275F.svg?logo=elixir&logoColor=white\" alt=\"Elixir\" /></a> <a href=\"https://phoenixframework.org\"><img src=\"https://img.shields.io/badge/Phoenix-1.8-FD4F00.svg?logo=phoenixframework&logoColor=white\" alt=\"Phoenix\" /></a> <a href=\"https://github.com/phoenixframework/phoenix_live_view\"><img src=\"https://img.shields.io/badge/LiveView-1.1-E34F26.svg\" alt=\"LiveView\" /></a> <a href=\"https://github.com/tymeslot/tymeslot/releases\"><img src=\"https://img.shields.io/github/v/release/tymeslot/tymeslot?label=release&color=2ea043\" alt=\"Latest release\" /></a> <a href=\"https://github.com/tymeslot/tymeslot/commits\"><img src=\"https://img.shields.io/github/last-commit/tymeslot/tymeslot?label=last%20commit&color=2ea043\" alt=\"Last commit\" /></a> <a href=\"https://github.com/tymeslot/tymeslot/stargazers\"><img src=\"https://img.shields.io/github/stars/tymeslot/tymeslot?style=social\" alt=\"GitHub stars\" /></a> </p> <p> <b><a href=\"#quick-start\">Self-host with Docker →</a></b> &nbsp;·&nbsp; <b><a href=\"https://tymeslot.app\">Try the Cloud →</a></b> &nbsp;·&nbsp; <b><a href=\"https://tymeslot.app/demo-theme-1\">Live demo →</a></b> &nbsp;·&nbsp; <b><a href=\"https://tymeslot.app/docs\">Docs →</a></b> &nbsp;·&nbsp; <b><a href=\"https://github.com/tymeslot/tymeslot/issues\">Issues →</a></b> </p> <br /> <img src=\"./priv/static/images/demo/quill.gif\" alt=\"Booking a meeting on a Tymeslot page",
+    "source_url": "https://github.com/Tymeslot/tymeslot/blob/297c09542ae07d1823c80f5358c001d0611d38d9/README.md",
+    "edition_flags": [
+      "self-host",
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "characters_read": 34523,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/Tymeslot/tymeslot/blob/297c09542ae07d1823c80f5358c001d0611d38d9/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0116",
+        "repo": "Tymeslot/tymeslot",
+        "url": "https://github.com/Tymeslot/tymeslot",
+        "labels": [
+          "product_base",
+          "product"
+        ],
+        "family_ids": [
+          "B07"
+        ],
+        "family_names": [],
+        "evidence_classes": [
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "Tymeslot/tymeslot supplies calendar_scheduling, portal at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 21,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

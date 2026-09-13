@@ -1,0 +1,147 @@
+{
+  "audit_id": "R139",
+  "requested_full_name": "oscarhibbert/email-parser",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "oscarhibbert/email-parser",
+  "html_url": "https://github.com/oscarhibbert/email-parser",
+  "description": "A python application that decodes & extracts MIME raw email messages via IMAP into cleanly formatted Airtable records which include separate fields.",
+  "stargazers_count": 1,
+  "archived": false,
+  "disabled": false,
+  "license": null,
+  "default_branch": "master",
+  "revision": "c79e068d49e0b5a56b2948a6efba8b31c49fbf4d",
+  "last_commit": "2020-11-26T19:59:38Z",
+  "recent_commits": [
+    {
+      "sha": "c79e068d49e0b5a56b2948a6efba8b31c49fbf4d",
+      "date": "2020-11-26T19:59:38Z"
+    },
+    {
+      "sha": "16d15f27e84c457450020286c446d20102e620e6",
+      "date": "2020-11-11T01:28:56Z"
+    },
+    {
+      "sha": "9b201d4a3b9336c5c4d0766fda2b91a72a271cbd",
+      "date": "2020-11-11T01:12:54Z"
+    },
+    {
+      "sha": "7ccc8d17f78366fd44b7243f2c08aba5f7a0c1e6",
+      "date": "2020-11-11T01:08:03Z"
+    },
+    {
+      "sha": "aab485135e8fd5495ebaf698d95eafae0550c2ee",
+      "date": "2020-11-11T00:38:25Z"
+    },
+    {
+      "sha": "de6103429484c4ce5a61c4794b71edaf5f401af4",
+      "date": "2020-11-11T00:37:14Z"
+    },
+    {
+      "sha": "bf1c13a41c5df1a117a033a8bcb2f797c1810800",
+      "date": "2020-11-11T00:01:14Z"
+    },
+    {
+      "sha": "cf0c393d40c5e0ab1a2142f086c4f6b1181b47ea",
+      "date": "2020-11-10T23:43:01Z"
+    },
+    {
+      "sha": "f7fbd7125558dbd50c86b52148710804710ca488",
+      "date": "2020-11-10T23:33:37Z"
+    },
+    {
+      "sha": "b2d2c7ce08f46f13d2067665c0dbd468cf563ce2",
+      "date": "2020-11-10T23:18:44Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "30ad251fb05700b29802be795c3c03308eca24f4"
+    },
+    {
+      "name": "Pipfile",
+      "type": "blob",
+      "oid": "05226928b6888dce70e2ef8fd76b8859f402eb6e"
+    },
+    {
+      "name": "Pipfile.lock",
+      "type": "blob",
+      "oid": "5e33838d3e9a4afbf490d2c0d9c2fbb64c7d6046"
+    },
+    {
+      "name": "airtableapi",
+      "type": "tree",
+      "oid": "2e07657dd3e2547320ed9189090555a8e6d625da"
+    },
+    {
+      "name": "chrome",
+      "type": "tree",
+      "oid": "1a0b24fdcc08a011ab08e184a4aba5da17c09820"
+    },
+    {
+      "name": "config.py",
+      "type": "blob",
+      "oid": "f63d573eb6776cfb80930008f20a4dc16f3fd283"
+    },
+    {
+      "name": "dataextractor",
+      "type": "tree",
+      "oid": "cdc21e3e5299884c706651fde627a1c59dc5157c"
+    },
+    {
+      "name": "emailmonitor",
+      "type": "tree",
+      "oid": "0023b384dd5b7a55b1f2f106c06ce4799ef424b0"
+    },
+    {
+      "name": "emailparser.py",
+      "type": "blob",
+      "oid": "a1a5303aa19211203e2b1b7db296c016fe325ff1"
+    },
+    {
+      "name": "readme.md",
+      "type": "blob",
+      "oid": "4b228438b8bc2e06e75392aaf93c67a6cf96f88a"
+    },
+    {
+      "name": "tempdata",
+      "type": "tree",
+      "oid": "29a422c19251aeaeb907175e9b3219a9bed6c616"
+    }
+  ],
+  "issue_sample": [],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/oscarhibbert/email-parser",
+    "commit": "https://github.com/oscarhibbert/email-parser/commit/c79e068d49e0b5a56b2948a6efba8b31c49fbf4d"
+  },
+  "readme": {
+    "path": "readme.md",
+    "sha256": "607379170b501621f5c31679ead829eb9ae999cae3681ee6a9ba271c473749b5",
+    "characters_read": 2160,
+    "excerpt": "# Email Parser A python application that decodes & extracts MIME raw email messages via IMAP into cleanly formatted Airtable records which include separate data points. ![Email Parser in action](https://images.squarespace-cdn.com/content/v1/5f68900ab0847f6b53d3b288/1605056165374-178PDTE0PK5Y4TKGVIQ1/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/email-parser.jpg) ## Installation This application is tested with Python 3.7. 1. Using git ``` $ git clone https://github.com/oscarhibbert/email-parser``` 2. Navigate to the app directory ```$ cd email-parser``` 3. Install all dependencies using pipenv ```$ pipenv install``` ## Configuration 1. Create a free Airtable account [here](https://airtable.com/signup). 2. Create a new Airtable base & table. See [here](https://support.airtable.com/hc/en-us/articles/360021518753-Getting-started-starting-with-the-base-ics). 3. Add your Airtable fields in ```config.py```. **This is limited to the fields given in ```config.py```** 4. Add your xpath locator for selecting each email section you want to extract in ```config.py```. 5. Add your logic",
+    "source_url": "https://github.com/oscarhibbert/email-parser/blob/c79e068d49e0b5a56b2948a6efba8b31c49fbf4d/readme.md",
+    "edition_flags": [
+      "api"
+    ]
+  },
+  "license_file": {
+    "error": "No matching root filename; not an assertion that no nested license exists."
+  },
+  "root_license_files": [],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

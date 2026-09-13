@@ -1,0 +1,315 @@
+{
+  "audit_id": "R095",
+  "requested_full_name": "moov-io/achgateway",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "moov-io/achgateway",
+  "html_url": "https://github.com/moov-io/achgateway",
+  "description": "Payment gateway enabling automated ACH operations in a distributed and fault tolerant way.",
+  "stargazers_count": 85,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "010937ea4488fcb0926c2b25bf19901304e70877",
+  "last_commit": "2026-09-10T20:58:38Z",
+  "recent_commits": [
+    {
+      "sha": "010937ea4488fcb0926c2b25bf19901304e70877",
+      "date": "2026-09-10T20:58:38Z"
+    },
+    {
+      "sha": "ba7ad7d680ee63175ae44ef1adaccbc4719a603b",
+      "date": "2026-09-09T16:33:46Z"
+    },
+    {
+      "sha": "b2f9a133d96bde639191159e83bc8523b8cedc79",
+      "date": "2026-09-08T21:22:17Z"
+    },
+    {
+      "sha": "3264229c75058e3ba874f2358ee624c53223e3df",
+      "date": "2026-09-08T16:33:03Z"
+    },
+    {
+      "sha": "b5badb4333aea3fb3f16b5badd2080bac38ebef0",
+      "date": "2026-09-05T16:42:00Z"
+    },
+    {
+      "sha": "529c76e124a3b230f8411cfa8fae50e5d58d2433",
+      "date": "2026-09-04T01:40:37Z"
+    },
+    {
+      "sha": "6c5e40f993c56289f89ef2dc0c36bb4d08a6a43a",
+      "date": "2026-09-02T22:49:09Z"
+    },
+    {
+      "sha": "f1a131b5ca31b24214f074f78650d8cf84fd7417",
+      "date": "2026-09-02T18:26:47Z"
+    },
+    {
+      "sha": "9f1b2461f57096220dc918c07fc28935453001b1",
+      "date": "2026-09-02T06:50:43Z"
+    },
+    {
+      "sha": "7241e4aef879ff5aa661d954dacb1241e27f3c04",
+      "date": "2026-09-01T20:07:23Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "92f6a0f95b461f0e90a811d8cd672a8501832735"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "81a7d5a6567f6d9389d6349eede416541c504911"
+    },
+    {
+      "name": ".gitleaksignore",
+      "type": "blob",
+      "oid": "f9277dd223761308f386982cdc3e0f45963c4237"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "blob",
+      "oid": "3b9a221e7129d60872ca607652a33a216c8725dc"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "e240bb4788be66c9d8fb59bca592d78fe68b5b69"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "ab30a738e7ed3ce9895c49cbd5715cc1de9f2816"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "blob",
+      "oid": "f9c2f0fff4e149e57e4b11b054f0013af9456b06"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "bca30400f049878d950946726c5d7e005b2cc96a"
+    },
+    {
+      "name": "Makefile",
+      "type": "blob",
+      "oid": "e273af40d738b92da659f603ac70c89db1984637"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "6b86fd224e6f8a08408b7c1a8d854232e225303a"
+    },
+    {
+      "name": "achgateway.moov.yml",
+      "type": "blob",
+      "oid": "430ee045e0a31ba10b1abdbc9d7c6b473c9f59d7"
+    },
+    {
+      "name": "assets.go",
+      "type": "blob",
+      "oid": "576daf155c4972106725ec9188a5bb7107d49de7"
+    },
+    {
+      "name": "cmd",
+      "type": "tree",
+      "oid": "178f7ed57915f84cb7e4deb6b302dac947bc2d6c"
+    },
+    {
+      "name": "configs",
+      "type": "tree",
+      "oid": "dc6c47c967cecbfde7807c5d78894183a506dd10"
+    },
+    {
+      "name": "data",
+      "type": "tree",
+      "oid": "51b2dc5940768252e352db6f15744e48c85caefb"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "fcacdb8bf91c9991479f31cb5496b45c2db44803"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "b18acb2b74a2e1ad019a6ddf3463c61722c1f440"
+    },
+    {
+      "name": "examples",
+      "type": "tree",
+      "oid": "947051654956a0000e1a3239eb14519b2492728f"
+    },
+    {
+      "name": "go.mod",
+      "type": "blob",
+      "oid": "8a466c64b538dd1d9f632d036203d35561751ab7"
+    },
+    {
+      "name": "go.sum",
+      "type": "blob",
+      "oid": "4974bee4fd1b99bdd8790623aea8286891829ebf"
+    },
+    {
+      "name": "internal",
+      "type": "tree",
+      "oid": "75825b4066269bfbe22f37185d0904a1709bc7d2"
+    },
+    {
+      "name": "migrations",
+      "type": "tree",
+      "oid": "6c8ff7955f8249f020f182b3991506a6354d4c6e"
+    },
+    {
+      "name": "openapi.yaml",
+      "type": "blob",
+      "oid": "2c45db6ccbae118d594d61d3cbec5129df55d95d"
+    },
+    {
+      "name": "pkg",
+      "type": "tree",
+      "oid": "4af64c579e54c78ce3d8536757cfc91323c7d1d8"
+    },
+    {
+      "name": "renovate.json",
+      "type": "blob",
+      "oid": "24b21a448ac742ff78b60d2c2eac8ae1f9c9e528"
+    },
+    {
+      "name": "testdata",
+      "type": "tree",
+      "oid": "bdda18f03f931d0d89a86cf53fd8df812c30bdda"
+    },
+    {
+      "name": "version.go",
+      "type": "blob",
+      "oid": "e7ec14f7f1eba4cda8eb916c0a7603f786cda82f"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 245,
+      "title": "Dependency Dashboard",
+      "createdAt": "2025-01-23T20:29:02Z",
+      "updatedAt": "2026-09-11T04:00:19Z",
+      "closedAt": null,
+      "url": "https://github.com/moov-io/achgateway/issues/245",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 159,
+      "title": "Publish releases and Docker images for arm64",
+      "createdAt": "2022-12-14T17:49:19Z",
+      "updatedAt": "2026-08-13T19:49:04Z",
+      "closedAt": "2026-08-13T19:49:04Z",
+      "url": "https://github.com/moov-io/achgateway/issues/159",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2022-12-14T18:42:01Z",
+            "url": "https://github.com/moov-io/achgateway/issues/159#issuecomment-1351950261"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2024-01-31T22:32:18Z",
+            "url": "https://github.com/moov-io/achgateway/issues/159#issuecomment-1920095868"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-04-02T13:29:51Z",
+            "url": "https://github.com/moov-io/achgateway/issues/159#issuecomment-4177877253"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2026-04-02T15:43:22Z",
+            "url": "https://github.com/moov-io/achgateway/issues/159#issuecomment-4178776529"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-04-29T10:45:42Z",
+            "url": "https://github.com/moov-io/achgateway/issues/159#issuecomment-4342975633"
+          }
+        ]
+      }
+    },
+    {
+      "number": 42,
+      "title": "audittrail: store files on the filesystem",
+      "createdAt": "2021-08-04T16:58:27Z",
+      "updatedAt": "2026-05-05T21:47:43Z",
+      "closedAt": "2026-05-05T21:47:43Z",
+      "url": "https://github.com/moov-io/achgateway/issues/42",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-05-05T10:25:17Z",
+            "url": "https://github.com/moov-io/achgateway/issues/42#issuecomment-4378402009"
+          },
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2026-05-05T13:33:52Z",
+            "url": "https://github.com/moov-io/achgateway/issues/42#issuecomment-4379752476"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-05-05T17:38:16Z",
+            "url": "https://github.com/moov-io/achgateway/issues/42#issuecomment-4381607126"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/moov-io/achgateway",
+    "commit": "https://github.com/moov-io/achgateway/commit/010937ea4488fcb0926c2b25bf19901304e70877"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "07c4246e932101246ef175b805dd23063ed82ebe12e8914609180d8e25ec6c64",
+    "characters_read": 10805,
+    "excerpt": "<!--generated-from:11badeae7f5171e6ec312a610718a7a4ac276e18df06d4d715e771702f50aba8 DO NOT REMOVE, DO UPDATE --> [![Moov Banner Logo](https://user-images.githubusercontent.com/20115216/104214617-885b3c80-53ec-11eb-8ce0-9fc745fb5bfc.png)](https://github.com/moov-io) <p align=\"center\"> <a href=\"https://moov-io.github.io/achgateway/\">Project Documentation</a> · <a href=\"https://moov.io/blog/education/ach-gateway-guide/\">Quickstart Guide</a> · <a href=\"https://slack.moov.io/\">Community</a> · <a href=\"https://moov.io/blog/\">Blog</a> <br> <br> </p> [![GoDoc](https://godoc.org/github.com/moov-io/achgateway?status.svg)](https://godoc.org/github.com/moov-io/achgateway) [![Build Status](https://github.com/moov-io/achgateway/workflows/Go/badge.svg)](https://github.com/moov-io/achgateway/actions) [![Coverage Status](https://codecov.io/gh/moov-io/achgateway/branch/master/graph/badge.svg)](https://codecov.io/gh/moov-io/achgateway) [![Go Report Card](https://goreportcard.com/badge/github.com/moov-io/achgateway)](https://goreportcard.com/report/github.com/moov-io/achgateway) [![Apache 2 licensed](https://img.shields.io/badge/license-Apache2-blue.svg)](https://raw.githubusercontent.com/moov-io/achgateway/master/LICENSE) # moov-io/achgateway An extensible, highly-available, distributed, and fault-tolerant ACH uploader and downloader. ACH Gateway creates events for outside services and transforms files prior to upload to fit real-world requirements of production systems. If you believe you have identified a security vulnerability please responsibly report the issue as via email to security@moov.io. Please do not post it to a public issue tracker. ## Getting started Read through the [project docs](https://moov-io.github.io/achgateway/) to gain an understanding of this project's purpose and how to run",
+    "source_url": "https://github.com/moov-io/achgateway/blob/010937ea4488fcb0926c2b25bf19901304e70877/README.md",
+    "edition_flags": [
+      "docker"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "32b3db6e6b3a6fb5a315b1fc84ca2c15e2e4eae0a46482a6111b3b5eb3984b59",
+    "characters_read": 11444,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/moov-io/achgateway/blob/010937ea4488fcb0926c2b25bf19901304e70877/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

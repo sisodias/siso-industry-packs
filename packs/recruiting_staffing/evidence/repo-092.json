@@ -1,0 +1,1022 @@
+{
+  "audit_id": "R092",
+  "requested_full_name": "moov-io/ach",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "moov-io/ach",
+  "html_url": "https://github.com/moov-io/ach",
+  "description": "ACH implements a reader, writer, and validator for Automated Clearing House (ACH) files. The HTTP server is available in a Docker image and the Go package is available.",
+  "stargazers_count": 563,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0"
+  },
+  "default_branch": "master",
+  "revision": "9306958a9e5dbf122d4b5ad723982b971b1a5d9e",
+  "last_commit": "2026-09-09T18:33:06Z",
+  "recent_commits": [
+    {
+      "sha": "9306958a9e5dbf122d4b5ad723982b971b1a5d9e",
+      "date": "2026-09-09T18:33:06Z"
+    },
+    {
+      "sha": "fe42031d0fe3db46bf8e303c3a7d9c3e4e5bb6c9",
+      "date": "2026-09-08T21:45:43Z"
+    },
+    {
+      "sha": "067b235008cd3012605bf8dc415b8bf16973703c",
+      "date": "2026-09-08T18:54:32Z"
+    },
+    {
+      "sha": "5d14cc9b2025f1ca4e7fbc9341743c00ffda5993",
+      "date": "2026-09-08T16:02:42Z"
+    },
+    {
+      "sha": "b0612f1464f8fd086b1f9cbe7c6b78e484c71e59",
+      "date": "2026-09-02T18:27:17Z"
+    },
+    {
+      "sha": "24d989dcba07e30d930e8414236541c939c1f731",
+      "date": "2026-09-01T22:16:15Z"
+    },
+    {
+      "sha": "60e4c399f6cda98d1dee9c2d46918e6b424f39ac",
+      "date": "2026-08-28T00:08:55Z"
+    },
+    {
+      "sha": "94c016a56198655af13716d209c57be88feb7e72",
+      "date": "2026-08-27T15:21:03Z"
+    },
+    {
+      "sha": "965a2c47eda6d652d19916160074ad9be0c47d3d",
+      "date": "2026-08-27T15:07:25Z"
+    },
+    {
+      "sha": "53858e728ad84151cd06b74f3dbd4ccbc37c1ff9",
+      "date": "2026-08-27T02:28:05Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "0b3aabcad205eccdc98b8a98860949fbb31c01cd"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "31fc62204154b3845816b363c1a7c0d5114ef680"
+    },
+    {
+      "name": ".goreleaser.yaml",
+      "type": "blob",
+      "oid": "aa256e6d8d7d801e75233f0e0bd25f770362f9a9"
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "blob",
+      "oid": "3b9a221e7129d60872ca607652a33a216c8725dc"
+    },
+    {
+      "name": "AUTHORS",
+      "type": "blob",
+      "oid": "89ce3233f6c2b6016bf9fd9119869bdc1a5e2110"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "type": "blob",
+      "oid": "d223fed358920340b5aeef0520f6339e700e9c70"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "3f089c7991cd752970b5fae57c1751a611a5a0d7"
+    },
+    {
+      "name": "CONTRIBUTING.md",
+      "type": "blob",
+      "oid": "9d8e0511c41c60a58d37a2bc2e9efbd2d26e4975"
+    },
+    {
+      "name": "Dockerfile",
+      "type": "blob",
+      "oid": "58753f7f8f6465c1a55fa5eed259df9dc8a74ac9"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "1dd853549010a0438a89840a9ce64492ac2c3cd3"
+    },
+    {
+      "name": "NOTICE",
+      "type": "blob",
+      "oid": "5a30a7f3c67e3b16e8f75da118da4912373618b6"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "0a4a81befc58881b9f905ca58812da6a6b3a0647"
+    },
+    {
+      "name": "addenda",
+      "type": "tree",
+      "oid": "04d1e23fd8c6d3ea604d7c2ed80876df4b9008ab"
+    },
+    {
+      "name": "addenda02.go",
+      "type": "blob",
+      "oid": "7d7f7c218e582da56f0c064714cde13a0b215b38"
+    },
+    {
+      "name": "addenda02_test.go",
+      "type": "blob",
+      "oid": "ac839e2d75026c4554445e5627b47dd9b394b5c8"
+    },
+    {
+      "name": "addenda05.go",
+      "type": "blob",
+      "oid": "71b2f0edf117d7a343ba70fee6a29da535992949"
+    },
+    {
+      "name": "addenda05_test.go",
+      "type": "blob",
+      "oid": "792372ede6938d57a6d7a9f4aab5df9276fc1fa3"
+    },
+    {
+      "name": "addenda10.go",
+      "type": "blob",
+      "oid": "21a8abd78edf3a0b459b981382ba4f6595b35674"
+    },
+    {
+      "name": "addenda10_test.go",
+      "type": "blob",
+      "oid": "bd5ef1bf563a15459b8ada4a1a7c0e79a4c8c5d2"
+    },
+    {
+      "name": "addenda11.go",
+      "type": "blob",
+      "oid": "4835b662b8c5befe134c0cf09e6767a5a542077c"
+    },
+    {
+      "name": "addenda11_test.go",
+      "type": "blob",
+      "oid": "279776234e80ec96afd8a812580308ba68739a5e"
+    },
+    {
+      "name": "addenda12.go",
+      "type": "blob",
+      "oid": "c75f070787dd37e3391a5e23f3db5a5af902843f"
+    },
+    {
+      "name": "addenda12_test.go",
+      "type": "blob",
+      "oid": "818705a8658b2bc86a8ace24ce3f191a315c154a"
+    },
+    {
+      "name": "addenda13.go",
+      "type": "blob",
+      "oid": "4c05ca342cbfadead6dcd6d02b656dbc152638df"
+    },
+    {
+      "name": "addenda13_test.go",
+      "type": "blob",
+      "oid": "73898e209a6323e4e7ff5cc7ad9e89d99eba0dad"
+    },
+    {
+      "name": "addenda14.go",
+      "type": "blob",
+      "oid": "53988a0e56e98d39a29dae1bd78ca2e31d706e01"
+    },
+    {
+      "name": "addenda14_test.go",
+      "type": "blob",
+      "oid": "d96a3ed6176d799ab033c38551870ddad6732e68"
+    },
+    {
+      "name": "addenda15.go",
+      "type": "blob",
+      "oid": "3bc5035a44dd1a1704a9150e4d8d7a53f36b813c"
+    },
+    {
+      "name": "addenda15_test.go",
+      "type": "blob",
+      "oid": "cac142e1d3c1cfc77bd35bc2d820a6118620eaaa"
+    },
+    {
+      "name": "addenda16.go",
+      "type": "blob",
+      "oid": "cc6a50d1017daf852275cdac4778886fd3d3c063"
+    },
+    {
+      "name": "addenda16_test.go",
+      "type": "blob",
+      "oid": "1787e10e566c8df79b178b547b0bb3add61875b3"
+    },
+    {
+      "name": "addenda17.go",
+      "type": "blob",
+      "oid": "652435baf06a3b19925fc34cb77c78c712ad5c22"
+    },
+    {
+      "name": "addenda17_test.go",
+      "type": "blob",
+      "oid": "dfb8561dae4520248f5a74c54de2e5187643bd78"
+    },
+    {
+      "name": "addenda18.go",
+      "type": "blob",
+      "oid": "b3771220ad82388cc2c327175619c30c873621a7"
+    },
+    {
+      "name": "addenda18_test.go",
+      "type": "blob",
+      "oid": "a3c2a7b67efe175b0bd756e3b64784036d036603"
+    },
+    {
+      "name": "addenda98.go",
+      "type": "blob",
+      "oid": "1a8d54cb806c7e78d7f5c19208276646920b8d37"
+    },
+    {
+      "name": "addenda98_refused.go",
+      "type": "blob",
+      "oid": "7c67e81ba9a8ede8458069ddaba292cdc4e90475"
+    },
+    {
+      "name": "addenda98_refused_test.go",
+      "type": "blob",
+      "oid": "520afe6b2f79f6681466729b53641e8a0e9569c5"
+    },
+    {
+      "name": "addenda98_test.go",
+      "type": "blob",
+      "oid": "49717c95a40f5a3f2e85fe13f50e203d27bf4fd1"
+    },
+    {
+      "name": "addenda99.go",
+      "type": "blob",
+      "oid": "5c15595ce34f4f15532820627bd45072be682a89"
+    },
+    {
+      "name": "addenda99_contested_return.go",
+      "type": "blob",
+      "oid": "25b6937a3f7e035ecb0492fcd5af7815d28f4972"
+    },
+    {
+      "name": "addenda99_contested_return_test.go",
+      "type": "blob",
+      "oid": "e60eed66b3b3c65cbaeb16dd410b976628fbe9bd"
+    },
+    {
+      "name": "addenda99_dishonored_return.go",
+      "type": "blob",
+      "oid": "e286109cba9462e117875466fdd34458c488b7f0"
+    },
+    {
+      "name": "addenda99_dishonored_return_test.go",
+      "type": "blob",
+      "oid": "5fe39075ed931fd887fa203174b902f17d99de93"
+    },
+    {
+      "name": "addenda99_test.go",
+      "type": "blob",
+      "oid": "1e0d39e8401bacd8632870bd43ad2d795a15647e"
+    },
+    {
+      "name": "advBatchControl.go",
+      "type": "blob",
+      "oid": "2ed2b1fc25bf90cb5f029bf7f4caee3a58f0a48a"
+    },
+    {
+      "name": "advBatchControl_test.go",
+      "type": "blob",
+      "oid": "30b79fd88b898bee482eecc30902aeebe55620e2"
+    },
+    {
+      "name": "advEntryDetail.go",
+      "type": "blob",
+      "oid": "f223b8b83d96d7d907503bb96c77992a55a12f6e"
+    },
+    {
+      "name": "advEntryDetail_test.go",
+      "type": "blob",
+      "oid": "f7151656230990446be1d3d465a6089f3a66064a"
+    },
+    {
+      "name": "advFileControl.go",
+      "type": "blob",
+      "oid": "d86183f0ec0606b69ee538a6a228ddb7e9615efe"
+    },
+    {
+      "name": "advFileControl_test.go",
+      "type": "blob",
+      "oid": "4b602c2c3cceed28d3bdb919549aa40415ed4c6f"
+    },
+    {
+      "name": "ascii.go",
+      "type": "blob",
+      "oid": "9413f9af1e55336ef6372276fa8c52143b5c295c"
+    },
+    {
+      "name": "ascii_test.go",
+      "type": "blob",
+      "oid": "c2bd0914cc1f72185cd11dc697c76dc4a65b6d8b"
+    },
+    {
+      "name": "batch.go",
+      "type": "blob",
+      "oid": "5519ddec058d49a484fe45dc0b99383bb8abeb92"
+    },
+    {
+      "name": "batchACK.go",
+      "type": "blob",
+      "oid": "51001f5616d7158a59d24317923c9bfca7b49980"
+    },
+    {
+      "name": "batchACK_test.go",
+      "type": "blob",
+      "oid": "ea3b8bbe9b0dd46313f00d69c1c188935b3aa4ba"
+    },
+    {
+      "name": "batchADV.go",
+      "type": "blob",
+      "oid": "cfda6ce67912b72b9d0731303b45ba062318981e"
+    },
+    {
+      "name": "batchADV_test.go",
+      "type": "blob",
+      "oid": "729ac4e9f800ad0d14b916985e0ffda3dd06a09b"
+    },
+    {
+      "name": "batchARC.go",
+      "type": "blob",
+      "oid": "4c596287e8bfb39a97f20ff4caf8e64e7176ea7f"
+    },
+    {
+      "name": "batchARC_test.go",
+      "type": "blob",
+      "oid": "c99dc52aaa7872f01ce2e4d1a5934468f5d7d84a"
+    },
+    {
+      "name": "batchATX.go",
+      "type": "blob",
+      "oid": "a70b5296bc8097a8d38c7296cc1f62ca7100602f"
+    },
+    {
+      "name": "batchATX_test.go",
+      "type": "blob",
+      "oid": "674248b8880325cf2266de43f7efc66c624494a8"
+    },
+    {
+      "name": "batchBOC.go",
+      "type": "blob",
+      "oid": "3471498cb03c8da064a1ae893cbcdaae1b0855a6"
+    },
+    {
+      "name": "batchBOC_test.go",
+      "type": "blob",
+      "oid": "d57d6ed4aff27a9a0fa98b7cad55e27dfc3039e7"
+    },
+    {
+      "name": "batchCCD.go",
+      "type": "blob",
+      "oid": "3236af54efeb3223d05aa3f7c27922a5057b1244"
+    },
+    {
+      "name": "batchCCD_test.go",
+      "type": "blob",
+      "oid": "cc59513c230eb12982e56f408663a852f9263827"
+    },
+    {
+      "name": "batchCIE.go",
+      "type": "blob",
+      "oid": "c0213eb6f0c0062535c2d7fcde7206ee48bfdd41"
+    },
+    {
+      "name": "batchCIE_test.go",
+      "type": "blob",
+      "oid": "59472e9edc317ab19544f26225ff3f27d736ba20"
+    },
+    {
+      "name": "batchCOR.go",
+      "type": "blob",
+      "oid": "c0ffc0fdf2b04bc209561826f4c07b5dab6d2d39"
+    },
+    {
+      "name": "batchCOR_test.go",
+      "type": "blob",
+      "oid": "3d75c5aa96b8dde213091cbd23b9feea90e0af4f"
+    },
+    {
+      "name": "batchCTX.go",
+      "type": "blob",
+      "oid": "3283f566b3ce339448cd8e86c0c3de8b0ba60d5b"
+    },
+    {
+      "name": "batchCTX_test.go",
+      "type": "blob",
+      "oid": "b786cbbe5a03a1b812318329015066bdf31c6865"
+    },
+    {
+      "name": "batchControl.go",
+      "type": "blob",
+      "oid": "d9a6f5a8f8f9bbf1f3b5b837719f2dcf1b37edb6"
+    },
+    {
+      "name": "batchControl_test.go",
+      "type": "blob",
+      "oid": "2c1faab4abdf52aa55209d8c44b15bbfde2d028d"
+    },
+    {
+      "name": "batchDNE.go",
+      "type": "blob",
+      "oid": "f6a75db78697ee0b7f06d3994c017c396169af95"
+    },
+    {
+      "name": "batchDNE_test.go",
+      "type": "blob",
+      "oid": "bab249d73a51db1628febc45ac9205f4c3d41241"
+    },
+    {
+      "name": "batchENR.go",
+      "type": "blob",
+      "oid": "43d949a4394b17d8912140b31d3c93e9d6cc3626"
+    },
+    {
+      "name": "batchENR_test.go",
+      "type": "blob",
+      "oid": "038330b778a7469f3f8c99b4c0a53a1d6ad8bf91"
+    },
+    {
+      "name": "batchErrors.go",
+      "type": "blob",
+      "oid": "4bcedda21030ea3df0fdd4b8b8c3d8248358c777"
+    },
+    {
+      "name": "batchHeader.go",
+      "type": "blob",
+      "oid": "e6b7e00b912fc8d9b19662bf13cd3b2890a9ab6a"
+    },
+    {
+      "name": "batchHeader_test.go",
+      "type": "blob",
+      "oid": "1e0be8925ca606524873bbb716c1e4374fc0b3e2"
+    },
+    {
+      "name": "batchMTE.go",
+      "type": "blob",
+      "oid": "b9fdca486752328ff91904780c46cbc9ac464c00"
+    },
+    {
+      "name": "batchMTE_test.go",
+      "type": "blob",
+      "oid": "6ae490b3096cbcb78a326acc5d07b6e556b3025d"
+    },
+    {
+      "name": "batchPOP.go",
+      "type": "blob",
+      "oid": "d4b9e50299926858fbc1004518bffec4f052d78a"
+    },
+    {
+      "name": "batchPOP_test.go",
+      "type": "blob",
+      "oid": "19ad346712a6caf4c6ac1a8fc3aa52121b4060cb"
+    },
+    {
+      "name": "batchPOS.go",
+      "type": "blob",
+      "oid": "3b5ecc5f5628e645910885b02abb1d924682cbe2"
+    },
+    {
+      "name": "batchPOS_test.go",
+      "type": "blob",
+      "oid": "d4e5cc28069a1dee6d599e498b9a03f4ed30723c"
+    },
+    {
+      "name": "batchPPD.go",
+      "type": "blob",
+      "oid": "6f3d74fa97dc77cb9ec4c39cda157949a2bc617c"
+    },
+    {
+      "name": "batchPPD_test.go",
+      "type": "blob",
+      "oid": "1c9287cd10fc7ccbfe0c8fdaf71356c2384d3e0a"
+    },
+    {
+      "name": "batchRCK.go",
+      "type": "blob",
+      "oid": "5c03fb2428345b6c5fdfd5c83d2f00065e223964"
+    },
+    {
+      "name": "batchRCK_test.go",
+      "type": "blob",
+      "oid": "58bc1fd8eceeeca7358eca4add9bdc1b1ca044f3"
+    },
+    {
+      "name": "batchSHR.go",
+      "type": "blob",
+      "oid": "da3ceebdc260daf8fc163fd692957dd5e7a97e2d"
+    },
+    {
+      "name": "batchSHR_test.go",
+      "type": "blob",
+      "oid": "ab077e6dd2f796694947a1ae1c4865864911ea65"
+    },
+    {
+      "name": "batchTEL.go",
+      "type": "blob",
+      "oid": "569668eded86bfc3cdfa6b2c29b6fb09157606f0"
+    },
+    {
+      "name": "batchTEL_test.go",
+      "type": "blob",
+      "oid": "063fea4ee4d6d123c06b9445b1bb5aaa24c79c84"
+    },
+    {
+      "name": "batchTRC.go",
+      "type": "blob",
+      "oid": "fb3f361cb5330617af3c22c895eb98e570f4313b"
+    },
+    {
+      "name": "batchTRC_test.go",
+      "type": "blob",
+      "oid": "4aab01a0bbc6b78a032c53acfe9f1f29bac9977a"
+    },
+    {
+      "name": "batchTRX.go",
+      "type": "blob",
+      "oid": "0cf9ac2b0da2e2c42a90d1456f5433b4755a3775"
+    },
+    {
+      "name": "batchTRX_test.go",
+      "type": "blob",
+      "oid": "9f6f5922ebee6654f88e4275b1e6543471c9cc67"
+    },
+    {
+      "name": "batchWEB_test.go",
+      "type": "blob",
+      "oid": "04c1c79ac18952ec7986dfee9e799cfb56bab1af"
+    },
+    {
+      "name": "batchWeb.go",
+      "type": "blob",
+      "oid": "46e1ce16dbd60c8267470b6bede0fecb2c33dee4"
+    },
+    {
+      "name": "batchXCK.go",
+      "type": "blob",
+      "oid": "960c9991f97c327595b719df5e3cfd4407f2cda3"
+    },
+    {
+      "name": "batchXCK_test.go",
+      "type": "blob",
+      "oid": "7d9c339028f75c4795edc43e2c0ba38b23cdc9fb"
+    },
+    {
+      "name": "batch_test.go",
+      "type": "blob",
+      "oid": "df0582f372c9b602e00870ee1edd02b71bdf29b2"
+    },
+    {
+      "name": "batcher.go",
+      "type": "blob",
+      "oid": "63026f181ffa17986f32d7d5dc6ef3c8d2086dba"
+    },
+    {
+      "name": "batcher_test.go",
+      "type": "blob",
+      "oid": "2068b20586bc75f717217d23e86a0cf51715f09d"
+    },
+    {
+      "name": "cmd",
+      "type": "tree",
+      "oid": "3df09b8be8f0bbf095e751b325f62cd6b2c84ef2"
+    },
+    {
+      "name": "converters.go",
+      "type": "blob",
+      "oid": "6f2ccaaa6e2ed5475863f0d0cf5057038382cda6"
+    },
+    {
+      "name": "converters_test.go",
+      "type": "blob",
+      "oid": "94513a64bbe984be3b015fe33359fc40dc7e2985"
+    },
+    {
+      "name": "dir.go",
+      "type": "blob",
+      "oid": "ed62c4abc2bafa0fde7df4b24ed14a258763ba45"
+    },
+    {
+      "name": "dir_test.go",
+      "type": "blob",
+      "oid": "e8f497563f8ec282a50b9ad7e886699b02b4befd"
+    },
+    {
+      "name": "doc.go",
+      "type": "blob",
+      "oid": "f16c9199827835e9c81febc827e2bb4677c764b8"
+    },
+    {
+      "name": "docker-compose.yml",
+      "type": "blob",
+      "oid": "646bf79ea2ef31b6b72ec19f5668fb5f2b8a5378"
+    },
+    {
+      "name": "docs",
+      "type": "tree",
+      "oid": "20a32f5adad83ee7e76c0938d3d7638f5e5c1d69"
+    },
+    {
+      "name": "encoding_test.go",
+      "type": "blob",
+      "oid": "0d2b0c7708d729ab8a280e37e648bf2906f2d094"
+    },
+    {
+      "name": "entryDetail.go",
+      "type": "blob",
+      "oid": "c5b777fd71b9313cb8020733023cca0f216bcfe1"
+    },
+    {
+      "name": "entryDetail_test.go",
+      "type": "blob",
+      "oid": "22f7425c44fbef35c563c190a1567b4b0df509e2"
+    },
+    {
+      "name": "entryErrors.go",
+      "type": "blob",
+      "oid": "5c05e738d842b35b6753f776fa330903f8903536"
+    },
+    {
+      "name": "examples",
+      "type": "tree",
+      "oid": "4189ad5c34873b2588543923f672da07f7bb194e"
+    },
+    {
+      "name": "fieldErrors.go",
+      "type": "blob",
+      "oid": "a5f8df3e528fb1f5d694dc6e5f6d63d5ccb40d17"
+    },
+    {
+      "name": "file.go",
+      "type": "blob",
+      "oid": "b82aefe5fc55172a3dbdb45c0910a360ff58262b"
+    },
+    {
+      "name": "fileControl.go",
+      "type": "blob",
+      "oid": "c619ee320ee35fb0458d7a57cea68adfabc5436b"
+    },
+    {
+      "name": "fileControl_test.go",
+      "type": "blob",
+      "oid": "62bd4dc1453a886481a9c94a1593b99034a80f12"
+    },
+    {
+      "name": "fileErrors.go",
+      "type": "blob",
+      "oid": "513a8d08943e3f6b2518612d13c9e60dd639f3f9"
+    },
+    {
+      "name": "fileHeader.go",
+      "type": "blob",
+      "oid": "76687cdccb919ac45fcc955b9bf12ca83b9f768a"
+    },
+    {
+      "name": "fileHeader_test.go",
+      "type": "blob",
+      "oid": "837c8156fd85004648391b1cbdd1e7e218e785c6"
+    },
+    {
+      "name": "file_flattener.go",
+      "type": "blob",
+      "oid": "d9bbd10001fc6b824185d26936d7baff1e2785a9"
+    },
+    {
+      "name": "file_flattener_test.go",
+      "type": "blob",
+      "oid": "3785700a561922cced040af0d9975a4ed4e4e75f"
+    },
+    {
+      "name": "file_test.go",
+      "type": "blob",
+      "oid": "dce2ee99aec45115fad602d35f88f8cd1a77e82e"
+    },
+    {
+      "name": "go.mod",
+      "type": "blob",
+      "oid": "23a26cccdcd518082ea3eadbed53b5c3985519e5"
+    },
+    {
+      "name": "go.sum",
+      "type": "blob",
+      "oid": "ad08225cc7134bbe9c269a33c1a633aaf6b64375"
+    },
+    {
+      "name": "iatBatch.go",
+      "type": "blob",
+      "oid": "1ca897b205ed8913aed1c4e0a8fd99d731790af2"
+    },
+    {
+      "name": "iatBatchHeader.go",
+      "type": "blob",
+      "oid": "f8e22239262fcd5e918be12c4f830a6dcab7e3b0"
+    },
+    {
+      "name": "iatBatchHeader_test.go",
+      "type": "blob",
+      "oid": "8722b7e3b6ad169fb8710c1913e569b582d39aa4"
+    },
+    {
+      "name": "iatBatch_test.go",
+      "type": "blob",
+      "oid": "43ac9a95871382fa801ab52359352fe20e88b22c"
+    },
+    {
+      "name": "iatEntryDetail.go",
+      "type": "blob",
+      "oid": "59f9dd2e64d214078bc41135847e2e687304197e"
+    },
+    {
+      "name": "iatEntryDetail_test.go",
+      "type": "blob",
+      "oid": "ff19ddbb0f31ad3269f9ada92886de6bdee96784"
+    },
+    {
+      "name": "internal",
+      "type": "tree",
+      "oid": "fb177ec34bcfa6d039bc8dda830517bcbdda2945"
+    },
+    {
+      "name": "iterator.go",
+      "type": "blob",
+      "oid": "891d3329d03b0f6cd32c2250e318a6c85d8e6592"
+    },
+    {
+      "name": "iterator_test.go",
+      "type": "blob",
+      "oid": "0b842ced9abb9ad0580d3a1279391e4f85e18924"
+    },
+    {
+      "name": "makefile",
+      "type": "blob",
+      "oid": "8723fde85bed75d9a85c024b1c4d4d3b3ed6326c"
+    },
+    {
+      "name": "malformed_test.go",
+      "type": "blob",
+      "oid": "d35635b902e0a9ea1890f9715d7f7bb8ec66fa92"
+    },
+    {
+      "name": "merge.go",
+      "type": "blob",
+      "oid": "6731756baad04d74ba616149c84fe832e50b4d06"
+    },
+    {
+      "name": "merge_bench_test.go",
+      "type": "blob",
+      "oid": "a44a44319bf1811278891f6f4dabba32be656790"
+    },
+    {
+      "name": "merge_dir_test.go",
+      "type": "blob",
+      "oid": "7f23dedd4e32efae8e3dbac810b27acdf29d3f68"
+    },
+    {
+      "name": "merge_iat_test.go",
+      "type": "blob",
+      "oid": "f09019eae6444bd565cbff77b1452fb0d94e6ded"
+    },
+    {
+      "name": "merge_internal_test.go",
+      "type": "blob",
+      "oid": "1fce6ce64657b866117dc3e0a627e4c83fff7fc3"
+    },
+    {
+      "name": "merge_test.go",
+      "type": "blob",
+      "oid": "2d63e967d75c973e2f6f2eb05e087ac981671c03"
+    },
+    {
+      "name": "openapi-generator",
+      "type": "blob",
+      "oid": "77c5887ac3360cdd7745c4786968f049b3bb66ad"
+    },
+    {
+      "name": "openapi.yaml",
+      "type": "blob",
+      "oid": "64f35ff34cf063d86d4adbbe7a2ef8e2baff7eff"
+    },
+    {
+      "name": "oss.go",
+      "type": "blob",
+      "oid": "af12418dce101f280e5d3bbb38e8e86ca18773e6"
+    },
+    {
+      "name": "oss_test.go",
+      "type": "blob",
+      "oid": "64bdbceb28ebf692e3fb9ea28b9939320983c06c"
+    },
+    {
+      "name": "perf.go",
+      "type": "blob",
+      "oid": "6dc7f48e493a4112acb7720dbdc3921e37c677cd"
+    },
+    {
+      "name": "reader.go",
+      "type": "blob",
+      "oid": "49fa49d9e416601ea82879522f27c7b3231a75ce"
+    },
+    {
+      "name": "reader_bench_test.go",
+      "type": "blob",
+      "oid": "3d10aecfaea24c38a42c875ac9cf24df59e8d2b0"
+    },
+    {
+      "name": "reader_test.go",
+      "type": "blob",
+      "oid": "f593422ccf70599ef093b099f0833ef46f2e3e9f"
+    },
+    {
+      "name": "record_test.go",
+      "type": "blob",
+      "oid": "2c72a946a373fa474d1e2c462f161c868bb397b5"
+    },
+    {
+      "name": "renovate.json",
+      "type": "blob",
+      "oid": "79efed27b8240253e85d7eee0e7d27f3cf905887"
+    },
+    {
+      "name": "reversal.go",
+      "type": "blob",
+      "oid": "9d2fe871f172ac61a3d2dfa68d193a324ce402dc"
+    },
+    {
+      "name": "reversal_test.go",
+      "type": "blob",
+      "oid": "23e3cdfba60e263e46a51c59482178b6fada01ea"
+    },
+    {
+      "name": "segmentFileConfiguration.go",
+      "type": "blob",
+      "oid": "40f63af8b7ae87dcdce02a8b4ed7b28921bcb10a"
+    },
+    {
+      "name": "segmentFileConfiguration_test.go",
+      "type": "blob",
+      "oid": "12985b264bdc80d644076bb154e36fe3e29fa545"
+    },
+    {
+      "name": "server",
+      "type": "tree",
+      "oid": "005d5c65208d9a66451014c9cb6b498c7931896a"
+    },
+    {
+      "name": "test",
+      "type": "tree",
+      "oid": "141be4417f67e6b0d3d3e7440f096ff02829b12d"
+    },
+    {
+      "name": "validators.go",
+      "type": "blob",
+      "oid": "f87e9c4ddcb2e5ca456ab717b9c3e2a4a8acc0e5"
+    },
+    {
+      "name": "validators_bench_test.go",
+      "type": "blob",
+      "oid": "088e63a0310107d694ff892c7b5ce31c7ba7b270"
+    },
+    {
+      "name": "validators_test.go",
+      "type": "blob",
+      "oid": "1de0f4320eff326691d104e30a2699f17e432a6c"
+    },
+    {
+      "name": "version.go",
+      "type": "blob",
+      "oid": "25dc2ec0fbfb40ad7d1d37188bb9814e346e6c36"
+    },
+    {
+      "name": "writer.go",
+      "type": "blob",
+      "oid": "34aaa2bd53f57c2911d71e8389370558c761cf8a"
+    },
+    {
+      "name": "writer_test.go",
+      "type": "blob",
+      "oid": "323fc0d0557e68279e07ca8f1ec1efaa3f6ada8f"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 979,
+      "title": "Dependency Dashboard",
+      "createdAt": "2021-08-30T09:17:57Z",
+      "updatedAt": "2026-09-10T01:31:37Z",
+      "closedAt": null,
+      "url": "https://github.com/moov-io/ach/issues/979",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 1832,
+      "title": "server: oversized upload bodies are silently truncated and stored as a valid file instead of rejected",
+      "createdAt": "2026-08-10T21:26:42Z",
+      "updatedAt": "2026-08-13T04:11:48Z",
+      "closedAt": "2026-08-11T16:21:48Z",
+      "url": "https://github.com/moov-io/ach/issues/1832",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-08-13T04:11:48Z",
+            "url": "https://github.com/moov-io/ach/issues/1832#issuecomment-5275860615"
+          }
+        ]
+      }
+    },
+    {
+      "number": 1820,
+      "title": "Request body hardcoded to 10MB limit?",
+      "createdAt": "2026-07-30T20:49:51Z",
+      "updatedAt": "2026-07-30T21:44:53Z",
+      "closedAt": "2026-07-30T21:44:53Z",
+      "url": "https://github.com/moov-io/ach/issues/1820",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "MEMBER",
+            "createdAt": "2026-07-30T21:35:51Z",
+            "url": "https://github.com/moov-io/ach/issues/1820#issuecomment-5136510430"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-07-30T21:44:25Z",
+            "url": "https://github.com/moov-io/ach/issues/1820#issuecomment-5136579374"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/moov-io/ach",
+    "commit": "https://github.com/moov-io/ach/commit/9306958a9e5dbf122d4b5ad723982b971b1a5d9e"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "49290d46ae0e19e56a9c4f408bc465f099ec3d2d1fc8fa776bbf8c1d38e28988",
+    "characters_read": 26221,
+    "excerpt": "[![Moov Banner Logo](https://user-images.githubusercontent.com/20115216/104214617-885b3c80-53ec-11eb-8ce0-9fc745fb5bfc.png)](https://github.com/moov-io) <p align=\"center\"> <a href=\"https://moov-io.github.io/ach/\">Project Documentation</a> · <a href=\"https://moov-io.github.io/ach/api/#get-/files\">API Endpoints</a> · <a href=\"https://moov.io/blog/education/ach-api-guide/\">API Guide</a> · <a href=\"https://slack.moov.io/\">Community</a> · <a href=\"https://moov.io/blog/\">Blog</a> <br> <br> </p> [![GoDoc](https://godoc.org/github.com/moov-io/ach?status.svg)](https://godoc.org/github.com/moov-io/ach) [![Build Status](https://github.com/moov-io/ach/workflows/Go/badge.svg)](https://github.com/moov-io/ach/actions) [![Go Report Card](https://goreportcard.com/badge/github.com/moov-io/ach)](https://goreportcard.com/report/github.com/moov-io/ach) [![Repo Size](https://img.shields.io/github/languages/code-size/moov-io/ach?label=project%20size)](https://github.com/moov-io/ach) [![Apache 2 License](https://img.shields.io/badge/license-Apache2-blue.svg)](https://raw.githubusercontent.com/moov-io/ach/master/LICENSE) [![Slack Channel](https://slack.moov.io/badge.svg?bg=e01563&fgColor=fffff)](https://slack.moov.io/) [![Docker Pulls](https://img.shields.io/docker/pulls/moov/ach)](https://hub.docker.com/r/moov/ach) [![GitHub Stars](https://img.shields.io/github/stars/moov-io/ach)](https://github.com/moov-io/ach) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/moov-io/ach) # moov-io/ach Moov's mission is to give developers an easy way to create and integrate bank processing into their own software products. Our open source projects are each focused on solving a single responsibility in financial services and designed around performance, scalability, and ease of use. ACH implements a reader, writer, and validator for Automated Clearing House ([ACH](https://en.wikipedia.org/wiki/Automated_Clearing_House)) files following the Nacha standards. ACH is the primary method of electronic money movement throughout the United States.",
+    "source_url": "https://github.com/moov-io/ach/blob/9306958a9e5dbf122d4b5ad723982b971b1a5d9e/README.md",
+    "edition_flags": [
+      "docker",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "3c96c0da3de9587c2062f25bc7efccba795f81dbf1b08dc71652c856e88b01a8",
+    "characters_read": 10243,
+    "excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause",
+    "source_url": "https://github.com/moov-io/ach/blob/9306958a9e5dbf122d4b5ad723982b971b1a5d9e/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "moov-io/ach",
+        "stars": 550,
+        "license": "Apache-2.0",
+        "language": "Go",
+        "unit_class": "component",
+        "reuse_value": 85,
+        "liftability": 90,
+        "fame_gap": -5,
+        "cat_slug": "client-library-sdk",
+        "cat_name": "Client Library / SDK",
+        "description": "ACH implements a reader, writer, and validator for Automated Clearing House (ACH) files. The HTTP server is available in"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,429 @@
+{
+  "audit_id": "R021",
+  "requested_full_name": "OCA/timesheet",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "OCA/timesheet",
+  "html_url": "https://github.com/OCA/timesheet",
+  "description": "Odoo Timesheet Management Addons",
+  "stargazers_count": 166,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0"
+  },
+  "default_branch": "18.0",
+  "revision": "8910c516c9482737b0ad65faf98cd7f445b39fb9",
+  "last_commit": "2026-07-17T13:55:32Z",
+  "recent_commits": [
+    {
+      "sha": "8910c516c9482737b0ad65faf98cd7f445b39fb9",
+      "date": "2026-07-17T13:55:32Z"
+    },
+    {
+      "sha": "9baae0861ac152bc7fafb8dbff0467efdb799271",
+      "date": "2026-06-30T07:58:31Z"
+    },
+    {
+      "sha": "8ccf7c2034b18372ca1425cb24fea1ffe905e016",
+      "date": "2026-06-30T07:04:16Z"
+    },
+    {
+      "sha": "3d8513556b84c15756e62072760aa8ee33809730",
+      "date": "2026-06-27T13:49:57Z"
+    },
+    {
+      "sha": "4a856ab6a177c1bc6f34a259f6e26a1518480ce2",
+      "date": "2026-06-25T15:05:06Z"
+    },
+    {
+      "sha": "c5870d2ad557d423c538f21a027e3f06d12fe213",
+      "date": "2026-06-25T14:59:05Z"
+    },
+    {
+      "sha": "2830f730f0ef3c26be0b6d50590719b5cb409955",
+      "date": "2026-06-25T14:54:35Z"
+    },
+    {
+      "sha": "4e6151e70a7796232695e791dc84a0f6c4647175",
+      "date": "2026-06-25T09:21:16Z"
+    },
+    {
+      "sha": "6c974424b11daf4b433021f546cc90fc8f9218ee",
+      "date": "2026-06-25T08:04:30Z"
+    },
+    {
+      "sha": "7d534d543d9399a3b37dc3d5788963d50428f432",
+      "date": "2026-06-15T09:58:21Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".copier-answers.yml",
+      "type": "blob",
+      "oid": "dee7aa10af5807e4cb467bf0479af090d463d0a9"
+    },
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "bfd7ac53df9f103f6dc8853738c63fd364445fde"
+    },
+    {
+      "name": ".gitattributes",
+      "type": "blob",
+      "oid": "e0d56685a95450123314c5e87f316ab7b806f02f"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "6c9be51ce9a9160c5d7ced92cdd7d8fdac76e2a3"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "6ec07a054bd2e00d7fd312c10ab6c06bd58c7b51"
+    },
+    {
+      "name": ".pre-commit-config.yaml",
+      "type": "blob",
+      "oid": "fade06f38e1a1814ecf62364839c4fd2fcd7be77"
+    },
+    {
+      "name": ".pylintrc",
+      "type": "blob",
+      "oid": "197cb673705b08e6c2595e606d03a7366a218d7b"
+    },
+    {
+      "name": ".pylintrc-mandatory",
+      "type": "blob",
+      "oid": "73674c04d426b857dd6998719acb8ceec557233c"
+    },
+    {
+      "name": ".ruff.toml",
+      "type": "blob",
+      "oid": "5e63128201e64f4d1d6a2b1b582a555579b1298b"
+    },
+    {
+      "name": "LICENSE",
+      "type": "blob",
+      "oid": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "276e6aff90215b45f6b5a205668bcb97a68fd9b2"
+    },
+    {
+      "name": "checklog-odoo.cfg",
+      "type": "blob",
+      "oid": "9cc94b30dd84bb842569dc7e2535c261a21d4e9e"
+    },
+    {
+      "name": "crm_timesheet",
+      "type": "tree",
+      "oid": "0c1c5990073597da645de3e676f4f6ff35b06dbc"
+    },
+    {
+      "name": "eslint.config.cjs",
+      "type": "blob",
+      "oid": "dd0cbe0aef0174a97548137ca887c51060fbbb5d"
+    },
+    {
+      "name": "hr_employee_cost_history",
+      "type": "tree",
+      "oid": "e1f971f8fe0b71aee3fa1e530933059ff6a7d782"
+    },
+    {
+      "name": "hr_timesheet_amount_security",
+      "type": "tree",
+      "oid": "41799aeeb9e57c5414cb32b128fbf35f51b19e40"
+    },
+    {
+      "name": "hr_timesheet_autofill_project_off",
+      "type": "tree",
+      "oid": "2fa99f61b48833d4e17f38b11a80b35de3310ed0"
+    },
+    {
+      "name": "hr_timesheet_begin_end",
+      "type": "tree",
+      "oid": "83696f75a3658e505e9d85dfdca7a277aae59c3f"
+    },
+    {
+      "name": "hr_timesheet_calendar",
+      "type": "tree",
+      "oid": "00e538b59b701e8e982cb4ee1247b29ab96fd229"
+    },
+    {
+      "name": "hr_timesheet_date_order_desc",
+      "type": "tree",
+      "oid": "0fe8010e66818acc708250b9ffc68c8250d064fd"
+    },
+    {
+      "name": "hr_timesheet_day_week",
+      "type": "tree",
+      "oid": "0d0dc6c06a4b1ea438e12d3a2c624cf663813ca9"
+    },
+    {
+      "name": "hr_timesheet_editable_top",
+      "type": "tree",
+      "oid": "f9d5c9f55119bd3e85b5366c6fa66220eaf58ccb"
+    },
+    {
+      "name": "hr_timesheet_employee_analytic_tag",
+      "type": "tree",
+      "oid": "b3b6efc381fc4de8c31cbf209620c51ee16b8f0d"
+    },
+    {
+      "name": "hr_timesheet_name_customer",
+      "type": "tree",
+      "oid": "6a51c3ed1790a07e0756923f886f20b578450cdb"
+    },
+    {
+      "name": "hr_timesheet_portal",
+      "type": "tree",
+      "oid": "fbe6b48989bed69476a48015b7d1855d6d3424b1"
+    },
+    {
+      "name": "hr_timesheet_report",
+      "type": "tree",
+      "oid": "f85c6686d1da8324fbf998034fc66d4c47c49e69"
+    },
+    {
+      "name": "hr_timesheet_sheet",
+      "type": "tree",
+      "oid": "47d408945b461a969cbb8d51974700d74381947c"
+    },
+    {
+      "name": "hr_timesheet_sheet_attendance",
+      "type": "tree",
+      "oid": "eddb6548687f6160a8ce03cea1ef5885b99dff45"
+    },
+    {
+      "name": "hr_timesheet_sheet_autodraft",
+      "type": "tree",
+      "oid": "5160f263b880f80fc5bc83ee2c1f7351c686d8ed"
+    },
+    {
+      "name": "hr_timesheet_sheet_policy_project_manager",
+      "type": "tree",
+      "oid": "4ff5d1c6359d5806b60fed9bfadb4d5a5e36be91"
+    },
+    {
+      "name": "hr_timesheet_sheet_warning",
+      "type": "tree",
+      "oid": "2cf33e78a1be71bfb799b60fda7cf6037c8ebd50"
+    },
+    {
+      "name": "hr_timesheet_task_domain",
+      "type": "tree",
+      "oid": "453c2bbe26fb1a7dcbaf1dde8f6d901c68338b79"
+    },
+    {
+      "name": "hr_timesheet_task_required",
+      "type": "tree",
+      "oid": "6396fa765adad6b2e984f3b6f788e887d20a20f9"
+    },
+    {
+      "name": "hr_timesheet_task_stage",
+      "type": "tree",
+      "oid": "f03c2a16318daa2c0c655a1c64feb9af9fecd21e"
+    },
+    {
+      "name": "hr_timesheet_time_control_begin_end",
+      "type": "tree",
+      "oid": "4bfa681ae0d410e35e75608b031e101c54ae1c47"
+    },
+    {
+      "name": "hr_timesheet_time_type",
+      "type": "tree",
+      "oid": "7ef49600830c7fe75f2b1eda5a1d9c3dfee7c378"
+    },
+    {
+      "name": "hr_timesheet_type_non_billable",
+      "type": "tree",
+      "oid": "4a151d982e71afdffa6bcc757e461a65c2614cb3"
+    },
+    {
+      "name": "hr_timesheet_unusual_days",
+      "type": "tree",
+      "oid": "783edd8f3021d68edd67a45e4bdfa7880ff6ff9b"
+    },
+    {
+      "name": "prettier.config.cjs",
+      "type": "blob",
+      "oid": "e66cd82cc1e4dfeded9749598144f820c8491fab"
+    },
+    {
+      "name": "project_task_analytic_propagation",
+      "type": "tree",
+      "oid": "d2048a9ea34b04125e3132627d7f245802e6d43c"
+    },
+    {
+      "name": "project_timesheet_holidays_dynamic_description",
+      "type": "tree",
+      "oid": "f0e7c907d5fe14449710838af8a48f7fb984a5f1"
+    },
+    {
+      "name": "project_timesheet_holidays_editable",
+      "type": "tree",
+      "oid": "62213e35209cebf72a5940fe501c0292e5269b33"
+    },
+    {
+      "name": "requirements.txt",
+      "type": "blob",
+      "oid": "832da4f8823d399c33a05ba405c249cb688807e3"
+    },
+    {
+      "name": "sale_timesheet_budget",
+      "type": "tree",
+      "oid": "84122018db9de017a6949bf40126b109cc88cc84"
+    },
+    {
+      "name": "sale_timesheet_invoice_link",
+      "type": "tree",
+      "oid": "939cebd361aa1a79d440e7e2114616a638bed8ef"
+    },
+    {
+      "name": "sale_timesheet_line_exclude",
+      "type": "tree",
+      "oid": "555bff9e0c1a17cbb3c8a12169a045d2cb104c1d"
+    },
+    {
+      "name": "sale_timesheet_rounded",
+      "type": "tree",
+      "oid": "537e88a83f2305f72efe5ab0d8506eaf731f3c17"
+    },
+    {
+      "name": "sale_timesheet_timeline",
+      "type": "tree",
+      "oid": "4dca3f3a6a5604f01ef9a8f86e2e9ae77b64f10b"
+    },
+    {
+      "name": "setup",
+      "type": "tree",
+      "oid": "2490664883aa2583ec49e4e620a1764f5d78b545"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 822,
+      "title": "Migration to version 19.0",
+      "createdAt": "2025-09-29T14:10:59Z",
+      "updatedAt": "2026-08-10T14:07:16Z",
+      "closedAt": null,
+      "url": "https://github.com/OCA/timesheet/issues/822",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2025-10-02T17:32:11Z",
+            "url": "https://github.com/OCA/timesheet/issues/822#issuecomment-3362291095"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-02-10T10:04:06Z",
+            "url": "https://github.com/OCA/timesheet/issues/822#issuecomment-3876611006"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-03-30T08:10:06Z",
+            "url": "https://github.com/OCA/timesheet/issues/822#issuecomment-4153096039"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-03-31T14:43:25Z",
+            "url": "https://github.com/OCA/timesheet/issues/822#issuecomment-4163176205"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-05-14T10:11:40Z",
+            "url": "https://github.com/OCA/timesheet/issues/822#issuecomment-4449734933"
+          }
+        ]
+      }
+    },
+    {
+      "number": 851,
+      "title": "Add break/pause tracking to hr_timesheet_begin_end",
+      "createdAt": "2025-12-13T17:18:32Z",
+      "updatedAt": "2026-07-19T13:19:19Z",
+      "closedAt": "2026-07-19T13:19:19Z",
+      "url": "https://github.com/OCA/timesheet/issues/851",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-06-14T14:05:34Z",
+            "url": "https://github.com/OCA/timesheet/issues/851#issuecomment-4701984041"
+          }
+        ]
+      }
+    },
+    {
+      "number": 794,
+      "title": "Installing hr_timesheet_sheet add-on throws error for Odoo v17",
+      "createdAt": "2025-06-26T13:32:23Z",
+      "updatedAt": "2026-07-05T13:41:43Z",
+      "closedAt": "2026-07-05T13:41:43Z",
+      "url": "https://github.com/OCA/timesheet/issues/794",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2025-07-12T11:41:29Z",
+            "url": "https://github.com/OCA/timesheet/issues/794#issuecomment-3065114503"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2025-11-29T06:15:12Z",
+            "url": "https://github.com/OCA/timesheet/issues/794#issuecomment-3591036083"
+          },
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-05-31T13:46:57Z",
+            "url": "https://github.com/OCA/timesheet/issues/794#issuecomment-4586883835"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/OCA/timesheet",
+    "commit": "https://github.com/OCA/timesheet/commit/8910c516c9482737b0ad65faf98cd7f445b39fb9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "91ee802bff75ddc0b0cafcc25f094f3ece8ef8f22b13300211c9b2d8ad776c6b",
+    "characters_read": 8423,
+    "excerpt": "[![Support the OCA](https://odoo-community.org/readme-banner-image)](https://odoo-community.org/get-involved?utm_source=repo-readme) # timesheet [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/timesheet&target_branch=18.0) [![Pre-commit Status](https://github.com/OCA/timesheet/actions/workflows/pre-commit.yml/badge.svg?branch=18.0)](https://github.com/OCA/timesheet/actions/workflows/pre-commit.yml?query=branch%3A18.0) [![Build Status](https://github.com/OCA/timesheet/actions/workflows/test.yml/badge.svg?branch=18.0)](https://github.com/OCA/timesheet/actions/workflows/test.yml?query=branch%3A18.0) [![codecov](https://codecov.io/gh/OCA/timesheet/branch/18.0/graph/badge.svg)](https://codecov.io/gh/OCA/timesheet) [![Translation Status](https://translation.odoo-community.org/widgets/timesheet-18-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/timesheet-18-0/?utm_source=widget) <!-- /!\\ do not modify above this line --> timesheet <!-- /!\\ do not modify below this line --> <!-- prettier-ignore-start --> [//]: # (addons) Available addons ---------------- addon | version | maintainers | summary --- | --- | --- | --- [crm_timesheet](crm_timesheet/) | 18.0.1.0.1 | | CRM Timesheet [hr_employee_cost_history](hr_employee_cost_history/) | 18.0.1.1.0 | <a href='https://github.com/SabrinaRMArtin'><img src='https://github.com/SabrinaRMArtin.png' width='32' height='32' style='border-radius:50%;' alt='SabrinaRMArtin'/></a> <a href='https://github.com/rafaelbn'><img src='https://github.com/rafaelbn.png' width='32' height='32' style='border-radius:50%;' alt='rafaelbn'/></a> | Adds an history to employee's costs. [hr_timesheet_amount_security](hr_timesheet_amount_security/) | 18.0.1.0.0 | <a href='https://github.com/EmilioPascual'><img src='https://github.com/EmilioPascual.png' width='32' height='32' style='border-radius:50%;' alt='EmilioPascual'/></a> <a href='https://github.com/rafaelbn'><img src='https://github.com/rafaelbn.png' width='32' height='32' style='border-radius:50%;' alt='rafaelbn'/></a> | Add security restrictions to timesheet amount fields [hr_timesheet_autofill_project_off](hr_timesheet_autofill_project_off/) | 18.0.1.0.0 | | Timesheet -",
+    "source_url": "https://github.com/OCA/timesheet/blob/8910c516c9482737b0ad65faf98cd7f445b39fb9/README.md",
+    "edition_flags": []
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "characters_read": 34523,
+    "excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, our General Public Licenses are",
+    "source_url": "https://github.com/OCA/timesheet/blob/8910c516c9482737b0ad65faf98cd7f445b39fb9/LICENSE",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "LICENSE"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

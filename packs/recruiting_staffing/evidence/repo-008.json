@@ -1,0 +1,332 @@
+{
+  "audit_id": "R008",
+  "requested_full_name": "frappe/hrms",
+  "observed_at": "2026-09-13T16:14:34.575331+00:00",
+  "full_name": "frappe/hrms",
+  "html_url": "https://github.com/frappe/hrms",
+  "description": "Open Source HR and Payroll Software",
+  "stargazers_count": 8785,
+  "archived": false,
+  "disabled": false,
+  "license": {
+    "spdxId": "GPL-3.0",
+    "name": "GNU General Public License v3.0"
+  },
+  "default_branch": "develop",
+  "revision": "307f07d9eb8fc814bdcb065785b614ed3589c337",
+  "last_commit": "2026-09-11T07:11:43Z",
+  "recent_commits": [
+    {
+      "sha": "307f07d9eb8fc814bdcb065785b614ed3589c337",
+      "date": "2026-09-11T07:11:43Z"
+    },
+    {
+      "sha": "171065b803cb4e41140eed330d3b96fd79474191",
+      "date": "2026-09-11T06:45:08Z"
+    },
+    {
+      "sha": "3f00f2df0bd6a51952aab40150696dc87192640a",
+      "date": "2026-09-10T14:17:54Z"
+    },
+    {
+      "sha": "fad7c18345bd103e93ad2aee92b0d3458355b195",
+      "date": "2026-09-10T13:19:36Z"
+    },
+    {
+      "sha": "e1fcc363b68e586db026026a0502520095801365",
+      "date": "2026-09-10T11:31:18Z"
+    },
+    {
+      "sha": "76bbbee95801ecb239c1edeadd5bf526cbeadeed",
+      "date": "2026-09-10T11:12:04Z"
+    },
+    {
+      "sha": "929dd2f90777b806bde445444bbe58631d5773f2",
+      "date": "2026-09-10T11:08:11Z"
+    },
+    {
+      "sha": "1098264f37cf0653e595cf4d0dce51a9ddfe5a38",
+      "date": "2026-09-10T10:37:16Z"
+    },
+    {
+      "sha": "4e4438b604ef44df9576aafbc6726b4c36b282cd",
+      "date": "2026-09-10T10:03:13Z"
+    },
+    {
+      "sha": "1905177bc7a9c2da38cee16f9a2dec93630830cc",
+      "date": "2026-09-10T09:59:13Z"
+    }
+  ],
+  "root_entries": [
+    {
+      "name": ".editorconfig",
+      "type": "blob",
+      "oid": "58e30f790fa019da7e3c5027d912ee5ff5aee2a6"
+    },
+    {
+      "name": ".git-blame-ignore-revs",
+      "type": "blob",
+      "oid": "691de8586f0842d00160547d03c5ef704fcfb242"
+    },
+    {
+      "name": ".github",
+      "type": "tree",
+      "oid": "301c4878761cff5ecdc7c3758f259ef2d705159e"
+    },
+    {
+      "name": ".gitignore",
+      "type": "blob",
+      "oid": "05b33386e67aacaca98afed4f7e7d7c0e5f1d495"
+    },
+    {
+      "name": ".gitmodules",
+      "type": "blob",
+      "oid": "aac084b17c380107e642fc6c8da76d93bb0ada8f"
+    },
+    {
+      "name": ".mergify.yml",
+      "type": "blob",
+      "oid": "eeb0655f18336081b565aac5054fc72146edf451"
+    },
+    {
+      "name": ".pre-commit-config.yaml",
+      "type": "blob",
+      "oid": "271d596c0a22942ff293a47b10654e5d275e8a17"
+    },
+    {
+      "name": ".releaserc",
+      "type": "blob",
+      "oid": "a374bf500f4e8cacba7858d5194e1ea657537ebf"
+    },
+    {
+      "name": ".semgrepignore",
+      "type": "blob",
+      "oid": "5f067190e27c6a224bfae76054c267ed9ad2776a"
+    },
+    {
+      "name": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "oid": "4a97d8bf976ff1c8cbbc223d4524a35632e59430"
+    },
+    {
+      "name": "MANIFEST.in",
+      "type": "blob",
+      "oid": "404db123c48f9fe128ec8ffbdcb07c23812290de"
+    },
+    {
+      "name": "README.md",
+      "type": "blob",
+      "oid": "2c4c1024f899ff9865bba1eac0591e23705416bd"
+    },
+    {
+      "name": "SECURITY.md",
+      "type": "blob",
+      "oid": "0ae886b6df4a7ca135f91bfde90c562162f207be"
+    },
+    {
+      "name": "codecov.yml",
+      "type": "blob",
+      "oid": "7dfcec9f364b78e060332e8dafcc107f2e77b597"
+    },
+    {
+      "name": "commitlint.config.js",
+      "type": "blob",
+      "oid": "1971c4d5c1115636e37299e3a93415170c26e154"
+    },
+    {
+      "name": "crowdin.yml",
+      "type": "blob",
+      "oid": "49178a202080c7a7606afb7cba55e044aeda05f3"
+    },
+    {
+      "name": "docker",
+      "type": "tree",
+      "oid": "35c9a22d5e078be662f21439e2fac77c11fc02ad"
+    },
+    {
+      "name": "frappe-ui",
+      "type": "commit",
+      "oid": "863eaae9ada2edb287fc09fb21d05212bb5eebe9"
+    },
+    {
+      "name": "frontend",
+      "type": "tree",
+      "oid": "27cb27b31e8378a358d8b4fee1ef46ce194d2b2d"
+    },
+    {
+      "name": "hrms.png",
+      "type": "blob",
+      "oid": "5564fe66a33ae1de9738c7cf8c7e0ea0cda21e22"
+    },
+    {
+      "name": "hrms",
+      "type": "tree",
+      "oid": "0d3a7fe9b6c1392bc2b6621cabe399ef4c94838d"
+    },
+    {
+      "name": "license.txt",
+      "type": "blob",
+      "oid": "a238a97b060d8bf487880f88de6114e795f9fba4"
+    },
+    {
+      "name": "package.json",
+      "type": "blob",
+      "oid": "6477a5211711c5620029f9e23686d4adb8f730a1"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "blob",
+      "oid": "b5902b5a7da185cbadf303a29a1ddf9a3b080e2f"
+    },
+    {
+      "name": "roster",
+      "type": "tree",
+      "oid": "7eb938ef1b23026628217c97839ae8b46872b51f"
+    },
+    {
+      "name": "semgrep",
+      "type": "tree",
+      "oid": "b6b405789481d2c57d6c64ad0f212e2427ac6143"
+    },
+    {
+      "name": "yarn.lock",
+      "type": "blob",
+      "oid": "91f2a557fe626668257a43fcca5bc57d51a95ec4"
+    }
+  ],
+  "issue_sample": [
+    {
+      "number": 5264,
+      "title": "Feature Request: Create Accounting Entries for Employer Contributions in Journal Entry",
+      "createdAt": "2026-09-13T15:03:29Z",
+      "updatedAt": "2026-09-13T15:05:35Z",
+      "closedAt": null,
+      "url": "https://github.com/frappe/hrms/issues/5264",
+      "comments": {
+        "nodes": []
+      }
+    },
+    {
+      "number": 5215,
+      "title": "Attendance Dashboard shows attendance data for all employees",
+      "createdAt": "2026-09-05T12:01:24Z",
+      "updatedAt": "2026-09-12T08:54:49Z",
+      "closedAt": null,
+      "url": "https://github.com/frappe/hrms/issues/5215",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-11T05:25:23Z",
+            "url": "https://github.com/frappe/hrms/issues/5215#issuecomment-5629911217"
+          },
+          {
+            "authorAssociation": "CONTRIBUTOR",
+            "createdAt": "2026-09-12T08:54:49Z",
+            "url": "https://github.com/frappe/hrms/issues/5215#issuecomment-5644861967"
+          }
+        ]
+      }
+    },
+    {
+      "number": 4193,
+      "title": "Leave Allocation was skipped due to max leave allocation limit set in leave type",
+      "createdAt": "2026-03-02T14:05:09Z",
+      "updatedAt": "2026-09-11T18:25:49Z",
+      "closedAt": null,
+      "url": "https://github.com/frappe/hrms/issues/4193",
+      "comments": {
+        "nodes": [
+          {
+            "authorAssociation": "NONE",
+            "createdAt": "2026-09-11T18:25:49Z",
+            "url": "https://github.com/frappe/hrms/issues/4193#issuecomment-5638934235"
+          }
+        ]
+      }
+    }
+  ],
+  "bus_factor": "Not measured; issue participation is not maintainership redundancy.",
+  "sources": {
+    "repository": "https://github.com/frappe/hrms",
+    "commit": "https://github.com/frappe/hrms/commit/307f07d9eb8fc814bdcb065785b614ed3589c337"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "ae77ad8aba2eb33fab75d40dac3326069ee0087953fa3d7eab406a60fddb5fa1",
+    "characters_read": 6499,
+    "excerpt": "<div align=\"center\"> <a href=\"https://frappe.io/hr\"> <img src=\".github/frappe-hr-logo.png\" height=\"80px\" width=\"80px\" alt=\"Frappe HR Logo\"> </a> <h2>Frappe HR</h2> <p align=\"center\"> <p>Open Source, modern, and easy-to-use HR and Payroll Software</p> </p> [![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/frappe/hrms/branch/develop/graph/badge.svg?token=0TwvyUg3I5)](https://codecov.io/gh/frappe/hrms) <a href=\"https://trendshift.io/repositories/10972\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/10972\" alt=\"frappe%2Fhrms | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> </div> <div align=\"center\"> <img src=\".github/hrms-hero.png\"/> </div> <div align=\"center\"> <a href=\"https://frappe.io/hr\">Website</a> - <a href=\"https://docs.frappe.io/hr/introduction\">Documentation</a> </div> ## Frappe HR Frappe HR has everything you need to drive excellence within the company. It's a complete HRMS solution with over 13 different modules right from Employee Management, Onboarding, Leaves, to Payroll, Taxation, and more! ## Motivation When Frappe team started growing in terms of size, we needed an open-source HR and Payroll software. We didn't find any \"true\" open-source HR software out there",
+    "source_url": "https://github.com/frappe/hrms/blob/307f07d9eb8fc814bdcb065785b614ed3589c337/README.md",
+    "edition_flags": [
+      "docker",
+      "payroll",
+      "api"
+    ]
+  },
+  "license_file": {
+    "path": "license.txt",
+    "sha256": "f333043685c88280b1a0a41b4f8e2eacb02079f0bfca4d467e52c8834c658cea",
+    "characters_read": 34916,
+    "excerpt": "### GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. ### Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to",
+    "source_url": "https://github.com/frappe/hrms/blob/307f07d9eb8fc814bdcb065785b614ed3589c337/license.txt",
+    "edition_flags": [
+      "commercial"
+    ]
+  },
+  "root_license_files": [
+    "license.txt"
+  ],
+  "edition_review": "Root only; final selected edition and subdirectory rights require separate audit.",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0035",
+        "repo": "frappe/hrms",
+        "url": "https://github.com/frappe/hrms",
+        "labels": [
+          "product_base",
+          "product"
+        ],
+        "family_ids": [
+          "U22",
+          "U23",
+          "U24",
+          "B02",
+          "B09"
+        ],
+        "family_names": [
+          "HRIS and people operations",
+          "Applicant tracking and recruiting",
+          "Employee onboarding and offboarding"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "frappe/hrms supplies case_workflow, field_ops at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 25,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
