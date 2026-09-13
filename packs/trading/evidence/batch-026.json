@@ -1,0 +1,1164 @@
+[
+  {
+    "full_name": "convexfi/riskparity.py",
+    "requested_name": "convexfi/riskparity.py",
+    "id": 196768103,
+    "url": "https://github.com/convexfi/riskparity.py",
+    "stars": 326,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "eed1bb3ee92c06bdfa65c9536ec148f9e38c9221",
+    "last_commit_date": "2026-08-31T13:51:53Z",
+    "archived": false,
+    "fork": false,
+    "description": "Fast and scalable construction of risk parity portfolios",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2021 The Authors",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# riskparity.py",
+      "## Installation",
+      "### Windows requirements",
+      "## References",
+      "## License",
+      "## Disclaimer"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "mirca"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/convexfi/riskparity.py/issues/33",
+        "createdAt": "2024-10-19T00:56:28Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/convexfi/riskparity.py/issues/24",
+        "createdAt": "2023-07-12T01:40:52Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-10-28T09:25:58Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2024-03-01T15:10:02Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "docs",
+      "pyproject.toml",
+      "setup.py",
+      "src",
+      "third-party"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/README.md",
+        "sha256": "1fb820bbd3385440de30d83bdbb2b486e943592a541a6d8c028b32f9215be12e",
+        "bytes": 3854
+      },
+      "LICENSE": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/LICENSE",
+        "sha256": "d3690684474b62fa161d49401702d5b8ee350c4e06f9663daef6da377c1ee7c8",
+        "bytes": 1068
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/pyproject.toml",
+        "sha256": "18c96b9ca3a7b2ce1af339d9c50ca65769cd0bd810c4adec4d54415519088397",
+        "bytes": 371
+      },
+      "setup.py": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/setup.py",
+        "sha256": "e8006844988d4d4357314528d0cac02bd490ea2c97af4d0b473b05283423ad74",
+        "bytes": 4806
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/convexfi/riskparity.py/commit/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221",
+      "metadata": "https://api.github.com/repos/convexfi/riskparity.py"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# riskparity.py [![PyPI version](https://badge.fury.io/py/riskparityportfolio.svg)](https://badge.fury.io/py/riskparityportfolio) [![Downloads](https://pepy.tech/badge/riskparityportfolio)](https://pepy.tech/project/riskparityportfolio) [![codecov](https://codecov.io/gh/mirca/riskparity.py/branch/master/graph/badge.svg)](https://codecov.io/gh/mirca/riskparity.py) **riskparityportfolio** provides solvers to design risk parity portfolios. In its simplest form, we consider the convex formulation with a unique solution proposed by [Spinu (2013)](https://dx.doi.org/10.2139/ssrn.2297383) and use cyclical methods inspired by [Griveau-Billion et al. (2013)](https://arxiv.org/pdf/1311.4057.pdf) and [Choi & Chen (2022)](https://www.emerald.com/insight/content/doi/10.1108/JDQS-12-2021-0031/full/pdf). For more general formulations, which are usually nonconvex, we implement the successive convex approximation method proposed by [Feng & Palomar (2015)](https://doi.org/10.1109/TSP.2015.2452219). **Documentation:** [**https://mirca.github.io/riskparity.py**](https://mirca.github.io/riskparity.py) **R version:** [**https://mirca.github.io/riskParityPortfolio**](https://mirca.github.io/riskParityPortfolio) **Rust version:** [**https://github.com/mirca/riskparity.rs**](https://github.com/mirca/riskparity.rs) **Talks**: [**slides HKML meetup 2020**](https://speakerdeck.com/mirca/breaking-down-risk-parity-portfolios-a-practical-open-source-implementation), [**tutorial - Data-driven Portfolio Optimization Course (HKUST)**](https://www.youtube.com/watch?v=xb1Xxf5LQks) ## Installation * **development version** ``` $ git clone https://github.com/dppalomar/riskparity.py.git $ cd riskparity.py $ pip install -e . ``` * **stable version** ``` $ pip install riskparityportfolio ``` ### Windows requirements Make sure to install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) prior to ``riskparityportfolio``. ``riskparityportfolio`` depends on ``jaxlib`` which can be installed following these [instructions](https://github.com/cloudhan/jax-windows-builder). ## References * Spinu, Florin. An Algorithm for Computing Risk Parity Weights (July 30, 2013). Available at SSRN: [https://ssrn.com/abstract=2297383](https://ssrn.com/abstract=2297383). * Griveau-Billion, The\u0301ophile et al. A Fast Algorithm for Computing High-dimensional Risk Parity Portfolios. [https://arxiv.org/abs/1311.4057](https://arxiv.org/abs/1311.4057) * Feng, Yiyong et al. SCRIP:",
+    "license_excerpt": "MIT License Copyright (c) 2021 The Authors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Rust version:** [**https://github.com/mirca/riskparity.rs**](https://github.com/mirca/riskparity.rs)",
+      "## License",
+      "This project is licensed under the terms of the MIT License."
+    ],
+    "dependency_repos": [
+      "cloudhan/jax-windows-builder",
+      "dppalomar/riskParityPortfolio",
+      "dppalomar/riskparity.py.git",
+      "mirca/riskparity.rs"
+    ]
+  },
+  {
+    "full_name": "chibui191/bitcoin_volatility_forecasting",
+    "requested_name": "chibui191/bitcoin_volatility_forecasting",
+    "id": 387236715,
+    "url": "https://github.com/chibui191/bitcoin_volatility_forecasting",
+    "stars": 313,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d901586ed6d54c34bb6e4961d27e899eccfed19f",
+    "last_commit_date": "2021-09-10T20:25:41Z",
+    "archived": false,
+    "fork": false,
+    "description": "GARCH and Multivariate LSTM forecasting models for Bitcoin realized volatility with potential applications in crypto options trading, hedging, portfolio management, and risk management",
+    "language": "Jupyter Notebook",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Bitcoin Realized Volatility Forecasting with GARCH and Multivariate LSTM",
+      "## This Repository",
+      "### Repository Directory",
+      "### Quick Links",
+      "### Remarks",
+      "## Overview",
+      "## Business Problem",
+      "## Dataset",
+      "### Dataset Structure",
+      "## Volatility Measuring ",
+      "### Forecasting Target",
+      "## Exploratory Data Analysis",
+      "### Daily Volatility Grouped by Month",
+      "### Daily Volatility Grouped by Year",
+      "### Volatility Distribution",
+      "## **Train-Validation-Test Splits**",
+      "# Modeling",
+      "## Performance Metrics",
+      "## Baseline Models",
+      "## GARCH Models",
+      "## Neural Networks",
+      "### Univariate Bidirectional LSTM",
+      "## Final Model",
+      "### Multivariate LSTM",
+      "### Feature Engineering",
+      "### Final Model Architecture",
+      "# Conclusion",
+      "# **Next Steps**",
+      "# References:"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/chibui191/bitcoin_volatility_forecasting/issues/6",
+        "createdAt": "2024-05-13T03:34:12Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/chibui191/bitcoin_volatility_forecasting/issues/5",
+        "createdAt": "2024-03-18T21:28:51Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "root_entries": [
+      "Notebooks",
+      "README.md",
+      "Report",
+      "images",
+      "performance_df"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/chibui191/bitcoin_volatility_forecasting/blob/d901586ed6d54c34bb6e4961d27e899eccfed19f/README.md",
+        "sha256": "22d112a7bc11b85793532f4936cd552f8ae8bd0913352625b901f16270692531",
+        "bytes": 26281
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/chibui191/bitcoin_volatility_forecasting/commit/d901586ed6d54c34bb6e4961d27e899eccfed19f",
+      "metadata": "https://api.github.com/repos/chibui191/bitcoin_volatility_forecasting"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![Bitcoin Forbes](./images/forbes_bitcoin.jpg) # Bitcoin Realized Volatility Forecasting with GARCH and Multivariate LSTM Author: **Chi Bui** ## This Repository ### Repository Directory ``` \u251c\u2500\u2500 README.md in",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "The second part of the notebook utilizes LSTM, which uses an optimized implementation when running on a GPU. It's therefore highly recommended to run the notebooks on [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true).",
+      "Volatility attempts to measure magnitude of price movements that a financial instrument experiences over a certain period of time. The more dramatic the price swings are in that instrument, the higher the level of volatility, and vice versa.",
+      "Usually with financial time series, if we just shift through the historic data trying different methods, parameters and timescales, it's almost certain to find to some strategy with in-sample profitability at some point. However the whole purpose of \"forecasti"
+    ],
+    "dependency_repos": [
+      "philipperemy/keras-tcn",
+      "ritvikmath/Time-Series-Analysis"
+    ]
+  },
+  {
+    "full_name": "fortitudo-tech/fortitudo.tech",
+    "requested_name": "fortitudo-tech/fortitudo.tech",
+    "id": 417058394,
+    "url": "https://github.com/fortitudo-tech/fortitudo.tech",
+    "stars": 308,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d01eb355b07c38e0d1bf56231e19a742c2568035",
+    "last_commit_date": "2026-08-20T07:58:03Z",
+    "archived": false,
+    "fork": false,
+    "description": "Entropy Pooling views and stress testing combined with Conditional Value-at-Risk (CVaR) portfolio optimization in Python.",
+    "language": "Python",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 5,
+    "recent_authors_sample50": [
+      "antonvorobets"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/fortitudo-tech/fortitudo.tech/issues/102",
+        "createdAt": "2024-07-07T00:39:50Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-07-08T04:30:02Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".vscode",
+      "CODE_OF_CONDUCT.rst",
+      "CONTRIBUTING.rst",
+      "LICENSE",
+      "README.rst",
+      "docs",
+      "environment.yml",
+      "examples",
+      "fortitudo",
+      "poetry.lock",
+      "pyproject.toml",
+      "requirements.yml",
+      "tests"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/fortitudo-tech/fortitudo.tech/blob/d01eb355b07c38e0d1bf56231e19a742c2568035/README.rst",
+        "sha256": "1d0e884fb653fda99240186d56d4491295c8066841d949e9eec4fd56dded7bce",
+        "bytes": 4121
+      },
+      "LICENSE": {
+        "url": "https://github.com/fortitudo-tech/fortitudo.tech/blob/d01eb355b07c38e0d1bf56231e19a742c2568035/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/fortitudo-tech/fortitudo.tech/blob/d01eb355b07c38e0d1bf56231e19a742c2568035/pyproject.toml",
+        "sha256": "8c3cd1acc0d60197ae75f9e349293af8d05074d630d4c14e6bd28201b053475d",
+        "bytes": 1801
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/fortitudo-tech/fortitudo.tech/commit/d01eb355b07c38e0d1bf56231e19a742c2568035",
+      "metadata": "https://api.github.com/repos/fortitudo-tech/fortitudo.tech"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "|Pytest| |Codecov| |Binder| .. |Pytest| image:: https://github.com/fortitudo-tech/fortitudo.tech/actions/workflows/tests.yml/badge.svg :target: https://github.com/fortitudo-tech/fortitudo.tech/actions/workflows/tests.yml .. |Codecov| image:: https://codecov.io/gh/fortitudo-tech/fortitudo.tech/graph/badge.svg?token=Z16XK92Gkl :target: https://codecov.io/gh/fortitudo-tech/fortitudo.tech .. |Binder| image:: https://mybinder.org/badge_logo.svg :target: https://mybinder.org/v2/gh/fortitudo-tech/fortitudo.tech/main?labpath=examples Fortitudo Technologies Open Source ================================== This package allows you to explore open-source implementations of some of our fundamental methods, for example, Sequential Entropy Pooling (SeqEP), Conditional Value-at-Risk (CVaR) as well as Conditional Maximum Loss (CML) optimization, and Fully Flexible Resampling (FFR) in Python. You can watch this `YouTube playlist `_ for a walkthrough of the package's functionality and examples. For a high-level introduction to the investment framework, watch this `YouTube video `_ and `Substack post `_. For a pedagogical and deep presentation of the investment framework and its methods, see the `Portfolio Construction and Risk Management Book `_. To build the deepest understanding of all the theories and methods, you can complete the `Applied Quantitative Investment Management Course `_. Audience -------- The package is intended for advanced users who are comfortable specifying portfolio constraints and Entropy Pooling views using matrices and vectors. This gives full flexibility in relation to working with these technologies. Hence, input checking is intentionally kept",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "and Fully Flexible Resampling (FFR) in Python.",
+      "For a high-level introduction to the investment framework, watch this `YouTube video <https://youtu.be/4ESigySdGf8>`_",
+      "and `Substack post <https://antonvorobets.substack.com/p/fully-general-investment-framework>`_.",
+      "For a pedagogical and deep presentation of the investment framework and its methods,",
+      "Hence, input checking is intentionally kept to a minimum.",
+      "conda create -n fortitudo.tech -c conda-forge python scipy pandas matplotlib cvxopt",
+      "You can also explore the examples in the cloud without any local installations using"
+    ],
+    "dependency_repos": [
+      "fortitudo-tech/cvar-optimization-benchmarks",
+      "fortitudo-tech/fortitudo.tech"
+    ]
+  },
+  {
+    "full_name": "hudson-and-thames/mlfinlab",
+    "requested_name": "hudson-and-thames/mlfinlab",
+    "id": 170544934,
+    "url": "https://github.com/hudson-and-thames/mlfinlab",
+    "stars": 4923,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "79dcc7120ec84110578f75b025a75850eb72fc73",
+    "last_commit_date": "2021-12-01T08:04:50Z",
+    "archived": false,
+    "fork": false,
+    "description": "MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. ",
+    "language": "Python",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "Copyright 2019, Hudson and Thames Quantitative Research",
+      "Copyright Protection Notice and Licensing Agreement"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Welcome to Machine Learning Financial Laboratory! ",
+      "## What is MlFinLab?",
+      "## Documentation, Example Notebooks and Lecture Videos",
+      "### Included modules:",
+      "## Licensing options",
+      "## Community",
+      "## Who is Hudson & Thames?",
+      "### What was only possible with the help of huge R&D teams is now at your disposal, anywhere, anytime."
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/issues/551",
+        "createdAt": "2026-04-30T22:34:30Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-30T04:50:58Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/issues/184",
+        "createdAt": "2020-02-05T14:57:41Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-02-16T14:09:43Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-08T16:16:32Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yml",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "README.md",
+      "docs",
+      "mlfinlab",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/blob/79dcc7120ec84110578f75b025a75850eb72fc73/README.md",
+        "sha256": "22bf05e1c98e4f0d518708c79d3316626e581a3c0dfb4e69ba1d4e3788ad36bb",
+        "bytes": 3705
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/blob/79dcc7120ec84110578f75b025a75850eb72fc73/LICENSE.txt",
+        "sha256": "12db2e63dc8b23b2fb90a54d6330fdc0425af0c8d0cd3f7c52a5580dd8aaf8eb",
+        "bytes": 23122
+      },
+      "requirements.txt": {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/blob/79dcc7120ec84110578f75b025a75850eb72fc73/requirements.txt",
+        "sha256": "3c668d4f061bdf6abb8ed7ee6bfa37cf7e7d0a757a50e861f6cff57c86e323ca",
+        "bytes": 524
+      },
+      "setup.py": {
+        "url": "https://github.com/hudson-and-thames/mlfinlab/blob/79dcc7120ec84110578f75b025a75850eb72fc73/setup.py",
+        "sha256": "303ac7bcb60069196ea19ff4920cbd64a5edfb33d9427d2cf7014983e12e233f",
+        "bytes": 280
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/hudson-and-thames/mlfinlab/commit/79dcc7120ec84110578f75b025a75850eb72fc73",
+      "metadata": "https://api.github.com/repos/hudson-and-thames/mlfinlab"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Welcome to Machine Learning Financial Laboratory! >This repo is public facing and exists for the sole purpose of providing users with an easy way",
+    "license_excerpt": "Copyright 2019, Hudson and Thames Quantitative Research Copyright Protection Notice and Licensing Agreement LAST UPDATED November 2021 IMPORTANT NOTICE! THE USER OF THIS CODEBASE IS",
+    "license_warnings": [],
+    "runtime_clues": [
+      "MlFinlab python library is a perfect toolbox that every financial machine learning researcher needs.",
+      "- Hyper-Parameter Tuning",
+      "This project is licensed under an all rights reserved [licence](https://github.com/hudson-and-thames/mlfinlab/blob/master/LICENSE.txt).",
+      "quantitative finance and its practical application. We have created three premium python libraries so you can effortlessly access the"
+    ],
+    "dependency_repos": [
+      "hudson-and-thames/mlfinlab"
+    ]
+  },
+  {
+    "full_name": "tradytics/eiten",
+    "requested_name": "tradytics/eiten",
+    "id": 293687812,
+    "url": "https://github.com/tradytics/eiten",
+    "stars": 3297,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "44536c58887833b7b9bbcb30f2a270db2c712ea6",
+    "last_commit_date": "2020-09-21T04:31:05Z",
+    "archived": false,
+    "fork": false,
+    "description": "Statistical and Algorithmic Investing Strategies for Everyone",
+    "language": "Python",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Eiten - Algorithmic Investing Strategies for Everyone",
+      "### Files Description",
+      "## Required Packages ",
+      "## Build your portfolios",
+      "### Some Portfolio Building Examples",
+      "## Portfolio Strategies",
+      "## Resulting Portfolios",
+      "### Portfolio Weights",
+      "### Backtest Results",
+      "### Forward Test Results",
+      "## Conclusion and Discussion",
+      "#### Special Thanks",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/tradytics/eiten/issues/36",
+        "createdAt": "2025-10-18T14:59:17Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/tradytics/eiten/issues/35",
+        "createdAt": "2025-08-23T03:36:13Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "argchecker.py",
+      "backtester.py",
+      "commands.json",
+      "data_loader.py",
+      "eiten.py",
+      "figures",
+      "portfolio_manager.py",
+      "requirements.txt",
+      "simulator.py",
+      "stocks",
+      "strategies",
+      "strategy_manager.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/README.md",
+        "sha256": "16fc1f542a5de63a0b0928e16949868cf8cef36bb955c63eb7982a197ecbc925",
+        "bytes": 12567
+      },
+      "LICENSE": {
+        "url": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "requirements.txt": {
+        "url": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/requirements.txt",
+        "sha256": "bd77533598966eea65d3c137527b115def80dea68ea86889a0579c597c3a1e62",
+        "bytes": 377
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/tradytics/eiten/commit/44536c58887833b7b9bbcb30f2a270db2c712ea6",
+      "metadata": "https://api.github.com/repos/tradytics/eiten"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Eiten - Algorithmic Investing Strategies for Everyone Eiten is an open source toolkit by [Tradytics](https://www.tradytics.com/) that implements various statistical and algorithmic investing strategies such as **Eigen Portfolios**, **Minimum Variance Portfolios**, **Maximum Sharpe Ratio Portfolios**, and **Genetic Algorithms** based Portfolios. It allows you to build your own portfolios with your own set of stocks that can beat the market. The rigorous testing framework included in Eiten enables you to have confidence in your portfolios. If you are looking to discuss these tools in depth and talk about more tools that we are working on, please feel free to join our [Discord](https://discord.gg/QuvE2Z8) channel where we have a bunch of more tools too. ### Files Description | Path | Description | :--- | :---------- | eiten | Main folder. | &boxur;&nbsp; figures | Figures for this github repositories. | &boxur;&nbsp; stocks | Folder to keep your stock lists that you want to use to create your portfolios. | &boxur;&nbsp; strategies | A bunch of strategies implemented in python. | backtester.py | Backtesting module that both backtests and forward tests all portfolios. |",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Eiten is an open source toolkit by [Tradytics](https://www.tradytics.com/) that implements various statistical and algorithmic investing strategies such as **Eigen Portfolios**, **Minimum Variance Portfolios**, **Maximum Sharpe Ratio Portfolios**, and **Geneti",
+      "| &boxur;&nbsp; strategies | A bunch of strategies implemented in python.",
+      "You can install all packages using the following command. Please note that the script was written using python3.",
+      "python portfolio_manager.py --is_test 1 --future_bars 90 --data_granularity_minutes 3600 --history_to_use all --apply_noise_filtering 1 --market_index QQQ --only_long 1 --eigen_portfolio_number 3 --stocks_file_path stocks/stocks.txt",
+      "This command will use last 5 years of daily data excluding the last 90 days and build several portfolios for you. Based on those portfolios, it will then test them on the out of sample data of 90 days and show you the performance of each portfolio. Finally, it",
+      "- **is_test**: The value determined if the program is going to keep some separate data for future testing. When this is enabled, the value of **future_bars** should be larger than 5.",
+      "python portfolio_manager.py --is_test 1 --future_bars 30 --data_granularity_minutes 3600 --history_to_use 90 --apply_noise_filtering 1 --market_index QQQ --only_long 0 --eigen_portfolio_number 3 --stocks_file_path stocks/stocks.txt",
+      "python portfolio_manager.py --is_test 0 --future_bars 0 --data_granularity_minutes 60 --history_to_use all --apply_noise_filtering 1 --market_index SPY --only_long 1 --eigen_portfolio_number 3 --stocks_file_path stocks/stocks.txt",
+      "python portfolio_manager.py --is_test 1 --future_bars 90 --data_granularity_minutes 3600 --history_to_use all --apply_noise_filtering 0 --market_index SQQQ --only_long 1 --eigen_portfolio_number 1 --stocks_file_path stocks/stocks.txt",
+      "2. **Minimum Variance Portfolio (MVP)**",
+      "python portfolio_manager.py --is_test 1 --future_bars 90 --data_granularity_minutes 3600 --history_to_use all --apply_noise_filtering 1 --market_index QQQ --only_long 1 --eigen_portfolio_number 3 --stocks_file_path stocks/stocks.txt",
+      "The backtests look pretty encouraging. The black dotted line is the market index i.e **QQQ**. Other lines are the strategies. Our custom genetic algorithm implementation seems to have the best backtest results because it's an advanced version of other strategi",
+      "Special thanks to [Scott Rome's](https://srome.github.io/) blog. The eigen portfolios and minimum variance portfolio concepts came from his blog posts. The code for filtering eigen values of the covariance matrix was also mostly obtained from one of his posts.",
+      "## License",
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    ],
+    "dependency_repos": [
+      "ranaroussi/yfinance",
+      "tqdm/tqdm"
+    ]
+  },
+  {
+    "full_name": "osqp/osqp",
+    "requested_name": "osqp/osqp",
+    "id": 69313892,
+    "url": "https://github.com/osqp/osqp",
+    "stars": 2192,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "1572ae068e9ce9ca723cf8223548ade1ff7acc29",
+    "last_commit_date": "2025-11-10T12:54:10Z",
+    "archived": false,
+    "fork": false,
+    "description": "The Operator Splitting QP Solver",
+    "language": "C",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2021 Bartolomeo Stellato, Goran Banjac, Paul Goulart, Stephen Boyd"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# The Operator Splitting QP Solver",
+      "## Citing OSQP",
+      "## Bug reports and support",
+      "## Numerical benchmarks"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/osqp/osqp/issues/790",
+        "createdAt": "2026-08-21T19:14:30Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/osqp/osqp/issues/788",
+        "createdAt": "2026-07-13T15:12:50Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-13T15:52:28Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-07-13T15:56:22Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-13T16:07:15Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-07-13T16:17:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-13T16:33:47Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-07-14T08:38:04Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "osqp/osqp",
+      "capability_tag": "none",
+      "category_slug": "numeric-dataframe-library",
+      "summary": "C library implementing the OSQP convex QP solver for optimization",
+      "reuse_value": 85,
+      "stars": 2147,
+      "license": "Apache-2.0",
+      "language": "C",
+      "url": "https://github.com/osqp/osqp",
+      "rank_score": 85021470
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "osqp/osqp",
+      "stars": 2147,
+      "license": "Apache-2.0",
+      "language": "C",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "numeric-dataframe-library",
+      "cat_name": "Numeric / DataFrame Library",
+      "description": "The Operator Splitting QP Solver"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".valgrind-suppress.supp",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "algebra",
+      "configure",
+      "docs",
+      "examples",
+      "include",
+      "site",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/osqp/osqp/blob/1572ae068e9ce9ca723cf8223548ade1ff7acc29/README.md",
+        "sha256": "a72d2fc2aa69744724db815874628c4971f9eee7af77fc9cc5a21d889890b4e2",
+        "bytes": 1980
+      },
+      "LICENSE": {
+        "url": "https://github.com/osqp/osqp/blob/1572ae068e9ce9ca723cf8223548ade1ff7acc29/LICENSE",
+        "sha256": "ae5e69b1fea4c316b80e4bc2cb49ac82c0e9b34785415e128e00c975bd10f687",
+        "bytes": 11391
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/osqp/osqp/commit/1572ae068e9ce9ca723cf8223548ade1ff7acc29",
+      "metadata": "https://api.github.com/repos/osqp/osqp"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# The Operator Splitting QP Solver [![Algebra: Built-in](https://github.com/osqp/osqp/actions/workflows/algebra-builtin.yml/badge.svg)](https://github.com/osqp/osqp/actions/workflows/algebra-builtin.yml) [![Code coverage](https://coveralls.io/repos/github/osqp/osqp/badge.svg?branch=master)](https://coveralls.io/github/osqp/osqp?branch=master) ![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg) ![PyPI - downloads](https://img.shields.io/pypi/dm/osqp.svg?label=Pypi%20downloads) ![Conda - downloads](https://img.shields.io/conda/dn/conda-forge/osqp.svg?label=Conda%20downloads) [**Visit our GitHub Discussions page**](https://github.com/orgs/osqp/discussions) for any questions related to the solver! **The documentation** is available at [**osqp.org**](https://osqp.org/) The OSQP (Operator Splitting Quadratic Program) solver is a numerical optimization package for solving problems in the form ``` minimize 0.5 x' P x + q' x subject to l <= A x <= u ``` where `x in R^n` is the optimization variable. The objective function is defined by a positive semidefinite matrix `P in S^n_+` and vector `q in R^n`. The linear constraints are defined by matrix `A in R^{m x n}` and vectors `l` and `u` so that `l_i in R U {-inf}` and `u_i in R U {+inf}` for all `i in 1,...,m`. ## Citing OSQP If you are using OSQP for your work, we encourage you to * [Cite the related papers](https://osqp.org/citing/), * Put a star on this repository. **We are looking forward to hearing your success stories with OSQP!** Please [share them with us](mailto:bartolomeo.stellato@gmail.com). ## Bug reports and support",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)",
+      "The OSQP (Operator Splitting Quadratic Program) solver is a numerical optimization package for solving problems in the form"
+    ],
+    "dependency_repos": [
+      "orgs/osqp",
+      "osqp/osqp",
+      "osqp/osqp_benchmarks"
+    ]
+  },
+  {
+    "full_name": "firmai/machine-learning-asset-management",
+    "requested_name": "firmai/machine-learning-asset-management",
+    "id": 196379842,
+    "url": "https://github.com/firmai/machine-learning-asset-management",
+    "stars": 1750,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "4cad3100819528718f3fca84a3e87107dc7bd911",
+    "last_commit_date": "2021-12-17T07:17:49Z",
+    "archived": false,
+    "fork": false,
+    "description": "Machine Learning in Asset Management (by @firmai)",
+    "language": "Jupyter Notebook",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Machine Learning in Asset Management",
+      "## Part One",
+      "### Trading Strategies",
+      "## Part Two: ",
+      "### Weight Optimisation (JFDS)",
+      "### Weight Optimisation (SSRN)",
+      "## Other (SSRN)",
+      "#### Other Projects"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/firmai/machine-learning-asset-management/issues/6",
+        "createdAt": "2020-05-17T12:15:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-05-30T23:31:31Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/firmai/machine-learning-asset-management/issues/5",
+        "createdAt": "2019-09-07T13:47:34Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2019-09-27T11:43:49Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "root_entries": [
+      "README.md",
+      "assets"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/firmai/machine-learning-asset-management/blob/4cad3100819528718f3fca84a3e87107dc7bd911/README.md",
+        "sha256": "e1ab78934a2f4a6edf3d75d099962a6e736e7c425ed81d27b1f9e808c98055b8",
+        "bytes": 10075
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/firmai/machine-learning-asset-management/commit/4cad3100819528718f3fca84a3e87107dc7bd911",
+      "metadata": "https://api.github.com/repos/firmai/machine-learning-asset-management"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Machine Learning in Asset Management If you like this type of content then visit [ML Quant](https://www.ml-quant.com/) site below: ---------- > https://www.ml-quant.com/ ![](https://user-images.githubusercontent.com/26666267/145840123-bc077dd0-0980-439a-824b-9c09a5f779de.png) --------- ##",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "This paper investigates various machine learning trading and portfolio optimisation models and techniques. The notebooks to this paper are Python based. By last count there are about 15 distinct trading varieties and around 100 trading strategies. Code and dat",
+      "> This is the second in a series of articles dealing with machine learning in asset management. This article focuses on portfolio weighting using machine learning. Following from the previous article (Snow 2020), which looked at trading strategies, this articl",
+      "Other FirmAI projects include **[AtsPy](https://github.com/firmai/atspy)** automating Python's best time series models,",
+      "**[PandaPy](https://github.com/firmai/pandapy)** a data structure solutions that has the speed of NumPy and the usability of Pandas (10x to 50x faster), **[FairPut](https://github.com/firmai/fairput)** a holistic approach to implement fair machine learning out"
+    ],
+    "dependency_repos": [
+      "firmai/atspy",
+      "firmai/fairput",
+      "firmai/interactive-corporate-report",
+      "firmai/pandapy",
+      "firmai/pandasvault",
+      "huseinzol05/Stock-Prediction-Models"
+    ]
+  },
+  {
+    "full_name": "ManojKumarPatnaik/Major-project-list",
+    "requested_name": "ManojKumarPatnaik/Major-project-list",
+    "id": 403036914,
+    "url": "https://github.com/ManojKumarPatnaik/Major-project-list",
+    "stars": 250,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "1bc6f5724b21b57c98318f662003b68e2ab091f3",
+    "last_commit_date": "2025-07-29T10:22:11Z",
+    "archived": false,
+    "fork": false,
+    "description": "A list of practical projects that anyone can solve in any programming language (See solutions). These projects are divided into multiple categories, and each category has its own folder.  To get started, simply fork this repo.  CONTRIBUTING See ways of contributing to this repo. You can contribute solutions (will be published in this repo) to existing problems, add new projects, or remove existing ones. Make sure you follow all instructions properly.  Solutions You can find implementations of these projects in many other languages by other users in this repo.  Credits  Problems are motivated by the ones shared at:  Martyr2\u2019s Mega Project List Rosetta Code Table of Contents Numbers Classic Algorithms Graph Data Structures Text Networking Classes Threading Web Files Databases Graphics and Multimedia Security Numbers Find PI to the Nth Digit - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.  Find e to the Nth Digit - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go.  Fibonacci Sequence - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.  Prime Factorization - Have the user enter a number and find all Prime Factors (if there are any) and display them.  Next Prime Number - Have the program find prime numbers until the user chooses to stop asking for the next one.  Find Cost of Tile to Cover W x H Floor - Calculate the total cost of the tile it would take to cover a floor plan of width and height, using a cost entered by the user.  Mortgage Calculator - Calculate the monthly payments of a fixed-term mortgage over given Nth terms at a given interest rate. Also, figure out how long it will take the user to pay back the loan. For added complexity, add an option for users to select the compounding interval (Monthly, Weekly, Daily, Continually).  Change Return Program - The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.  Binary to Decimal and Back Converter - Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.  Calculator - A simple calculator to do basic operators. Make it a scientific calculator for added complexity.  Unit Converter (temp, currency, volume, mass, and more) - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to, and then the value. The program will then make the conversion.  Alarm Clock - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.  Distance Between Two Cities - Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates for the cities like latitude and longitude.  Credit Card Validator - Takes in a credit card number from a common credit card vendor (Visa, MasterCard, American Express, Discoverer) and validates it to make sure that it is a valid number (look into how credit cards use a checksum).  Tax Calculator - Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.  Factorial Finder - The Factorial of a positive integer, n, is defined as the product of the sequence n, n-1, n-2, ...1, and the factorial of zero, 0, is defined as being 1. Solve this using both loops and recursion.  Complex Number Algebra - Show addition, multiplication, negation, and inversion of complex numbers in separate functions. (Subtraction and division operations can be made with pairs of these operations.) Print the results for each operation tested.  Happy Numbers - A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers. Display an example of your output here. Find the first 8 happy numbers.  Number Names - Show how to spell out a number in English. You can use a preexisting implementation or roll your own, but you should support inputs up to at least one million (or the maximum value of your language's default bounded integer type if that's less). Optional: Support for inputs other than positive integers (like zero, negative integers, and floating-point numbers).  Coin Flip Simulation - Write some code that simulates flipping a single coin however many times the user decides. The code should record the outcomes and count the number of tails and heads.  Limit Calculator - Ask the user to enter f(x) and the limit value, then return the value of the limit statement Optional: Make the calculator capable of supporting infinite limits.  Fast Exponentiation - Ask the user to enter 2 integers a and b and output a^b (i.e. pow(a,b)) in O(LG n) time complexity.  Classic Algorithms Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.  Sorting - Implement two types of sorting algorithms: Merge sort and bubble sort.  Closest pair problem - The closest pair of points problem or closest pair problem is a problem of computational geometry: given n points in metric space, find a pair of points with the smallest distance between them.  Sieve of Eratosthenes - The sieve of Eratosthenes is one of the most efficient ways to find all of the smaller primes (below 10 million or so).  Graph Graph from links - Create a program that will create a graph or network from a series of links.  Eulerian Path - Create a program that will take as an input a graph and output either an Eulerian path or an Eulerian cycle, or state that it is not possible. An Eulerian path starts at one node and traverses every edge of a graph through every node and finishes at another node. An Eulerian cycle is an eulerian Path that starts and finishes at the same node.  Connected Graph - Create a program that takes a graph as an input and outputs whether every node is connected or not.  Dijkstra\u2019s Algorithm - Create a program that finds the shortest path through a graph using its edges.  Minimum Spanning Tree - Create a program that takes a connected, undirected graph with weights and outputs the minimum spanning tree of the graph i.e., a subgraph that is a tree, contains all the vertices, and the sum of its weights is the least possible.  Data Structures Inverted index - An Inverted Index is a data structure used to create full-text search. Given a set of text files, implement a program to create an inverted index. Also, create a user interface to do a search using that inverted index which returns a list of files that contain the query term/terms. The search index can be in memory.  Text Fizz Buzz - Write a program that prints the numbers from 1 to 100. But for multiples of three print \u201cFizz\u201d instead of the number and for the multiples of five print \u201cBuzz\u201d. For numbers which are multiples of both three and five print \u201cFizzBuzz\u201d.  Reverse a String - Enter a string and the program will reverse it and print it out.  Pig Latin - Pig Latin is a game of alterations played in the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: \"banana\" would yield anana-bay). Read Wikipedia for more information on rules.  Count Vowels - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.  Check if Palindrome - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backward like \u201cracecar\u201d  Count Words in a String - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.  Text Editor - Notepad-style application that can open, edit, and save text documents. Optional: Add syntax highlighting and other features.  RSS Feed Creator - Given a link to RSS/Atom Feed, get all posts and display them.  Quote Tracker (market symbols etc) - A program that can go out and check the current value of stocks for a list of symbols entered by the user. The user can set how often the stocks are checked. For CLI, show whether the stock has moved up or down. Optional: If GUI, the program can show green up and red down arrows to show which direction the stock value has moved.  Guestbook / Journal - A simple application that allows people to add comments or write journal entries. It can allow comments or not and timestamps for all entries. Could also be made into a shoutbox. Optional: Deploy it on Google App Engine or Heroku or any other PaaS (if possible, of course).  Vigenere / Vernam / Ceasar Ciphers - Functions for encrypting and decrypting data messages. Then send them to a friend.  Regex Query Tool - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.  Networking FTP Program - A file transfer program that can transfer files back and forth from a remote web sever.  Bandwidth Monitor - A small utility program that tracks how much data you have uploaded and downloaded from the net during the course of your current online session. See if you can find out what periods of the day you use more and less and generate a report or graph that shows it.  Port Scanner - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.  Mail Checker (POP3 / IMAP) - The user enters various account information include web server and IP, protocol type (POP3 or IMAP), and the application will check for email at a given interval.  Country from IP Lookup - Enter an IP address and find the country that IP is registered in. Optional: Find the Ip automatically.  Whois Search Tool - Enter an IP or host address and have it look it up through whois and return the results to you.  Site Checker with Time Scheduling - An application that attempts to connect to a website or server every so many minute or a given time and check if it is up. If it is down, it will notify you by email or by posting a notice on the screen.  Classes Product Inventory Project - Create an application that manages an inventory of products. Create a product class that has a price, id, and quantity on hand. Then create an inventory class that keeps track of various products and can sum up the inventory value.  Airline / Hotel Reservation System - Create a reservation system that books airline seats or hotel rooms. It charges various rates for particular sections of the plane or hotel. For example, first class is going to cost more than a coach. Hotel rooms have penthouse suites which cost more. Keep track of when rooms will be available and can be scheduled.  Company Manager - Create a hierarchy of classes - abstract class Employee and subclasses HourlyEmployee, SalariedEmployee, Manager, and Executive. Everyone's pay is calculated differently, research a bit about it. After you've established an employee hierarchy, create a Company class that allows you to manage the employees. You should be able to hire, fire, and raise employees.  Bank Account Manager - Create a class called Account which will be an abstract class for three other classes called CheckingAccount, SavingsAccount, and BusinessAccount. Manage credits and debits from these accounts through an ATM-style program.  Patient / Doctor Scheduler - Create a patient class and a doctor class. Have a doctor that can handle multiple patients and set up a scheduling program where a doctor can only handle 16 patients during an 8 hr workday.  Recipe Creator and Manager - Create a recipe class with ingredients and put them in a recipe manager program that organizes them into categories like desserts, main courses, or by ingredients like chicken, beef, soups, pies, etc.  Image Gallery - Create an image abstract class and then a class that inherits from it for each image type. Put them in a program that displays them in a gallery-style format for viewing.  Shape Area and Perimeter Classes - Create an abstract class called Shape and then inherit from it other shapes like diamond, rectangle, circle, triangle, etc. Then have each class override the area and perimeter functionality to handle each shape type.  Flower Shop Ordering To Go - Create a flower shop application that deals in flower objects and use those flower objects in a bouquet object which can then be sold. Keep track of the number of objects and when you may need to order more.  Family Tree Creator - Create a class called Person which will have a name, when they were born, and when (and if) they died. Allow the user to create these Person classes and put them into a family tree structure. Print out the tree to the screen.  Threading Create A Progress Bar for Downloads - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.  Bulk Thumbnail Creator - Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program that can take hundreds of images and converts them to a specified size in the background thread while you do other things. For added complexity, have one thread handling re-sizing, have another bulk renaming of thumbnails, etc.  Web Page Scraper - Create an application that connects to a site and pulls out all links, or images, and saves them to a list. Optional: Organize the indexed content and don\u2019t allow duplicates. Have it put the results into an easily searchable index file.  Online White Board - Create an application that allows you to draw pictures, write notes and use various colors to flesh out ideas for projects. Optional: Add a feature to invite friends to collaborate on a whiteboard online.  Get Atomic Time from Internet Clock - This program will get the true atomic time from an atomic time clock on the Internet. Use any one of the atomic clocks returned by a simple Google search.  Fetch Current Weather - Get the current weather for a given zip/postal code. Optional: Try locating the user automatically.  Scheduled Auto Login and Action - Make an application that logs into a given site on a schedule and invokes a certain action and then logs out. This can be useful for checking webmail, posting regular content, or getting info for other applications and saving it to your computer.  E-Card Generator - Make a site that allows people to generate their own little e-cards and send them to other people. Do not use Flash. Use a picture library and perhaps insightful mottos or quotes.  Content Management System - Create a content management system (CMS) like Joomla, Drupal, PHP Nuke, etc. Start small. Optional: Allow for the addition of modules/addons.  Web Board (Forum) - Create a forum for you and your buddies to post, administer and share thoughts and ideas.  CAPTCHA Maker - Ever see those images with letters numbers when you signup for a service and then ask you to enter what you see? It keeps web bots from automatically signing up and spamming. Try creating one yourself for online forms.  Files Quiz Maker - Make an application that takes various questions from a file, picked randomly, and puts together a quiz for students. Each quiz can be different and then reads a key to grade the quizzes.  Sort Excel/CSV File Utility - Reads a file of records, sorts them, and then writes them back to the file. Allow the user to choose various sort style and sorting based on a particular field.  Create Zip File Maker - The user enters various files from different directories and the program zips them up into a zip file. Optional: Apply actual compression to the files. Start with Huffman Algorithm.  PDF Generator - An application that can read in a text file, HTML file, or some other file and generates a PDF file out of it. Great for a web-based service where the user uploads the file and the program returns a PDF of the file. Optional: Deploy on GAE or Heroku if possible.  Mp3 Tagger - Modify and add ID3v1 tags to MP3 files. See if you can also add in the album art into the MP3 file\u2019s header as well as other ID3v2 tags.  Code Snippet Manager - Another utility program that allows coders to put in functions, classes, or other tidbits to save for use later. Organized by the type of snippet or language the coder can quickly lookup code. Optional: For extra practice try adding syntax highlighting based on the language.  Databases SQL Query Analyzer - A utility application in which a user can enter a query and have it run against a local database and look for ways to make it more efficient.  Remote SQL Tool - A utility that can execute queries on remote servers from your local computer across the Internet. It should take in a remote host, user name, and password, run the query and return the results.  Report Generator - Create a utility that generates a report based on some tables in a database. Generates sales reports based on the order/order details tables or sums up the day's current database activity.  Event Scheduler and Calendar - Make an application that allows the user to enter a date and time of an event, event notes, and then schedule those events on a calendar. The user can then browse the calendar or search the calendar for specific events. Optional: Allow the application to create re-occurrence events that reoccur every day, week, month, year, etc.  Budget Tracker - Write an application that keeps track of a household\u2019s budget. The user can add expenses, income, and recurring costs to find out how much they are saving or losing over a period of time. Optional: Allow the user to specify a date range and see the net flow of money in and out of the house budget for that time period.  TV Show Tracker - Got a favorite show you don\u2019t want to miss? Don\u2019t have a PVR or want to be able to find the show to then PVR it later? Make an application that can search various online TV Guide sites, locate the shows/times/channels and add them to a database application. The database/website then can send you email reminders that a show is about to start and which channel it will be on.  Travel Planner System - Make a system that allows users to put together their own little travel itinerary and keep track of the airline/hotel arrangements, points of interest, budget, and schedule.  Graphics and Multimedia Slide Show - Make an application that shows various pictures in a slide show format. Optional: Try adding various effects like fade in/out, star wipe, and window blinds transitions.  Stream Video from Online - Try to create your own online streaming video player.  Mp3 Player - A simple program for playing your favorite music files. Add features you think are missing from your favorite music player.  Watermarking Application - Have some pictures you want copyright protected? Add your own logo or text lightly across the background so that no one can simply steal your graphics off your site. Make a program that will add this watermark to the picture. Optional: Use threading to process multiple images simultaneously.  Turtle Graphics - This is a common project where you create a floor of 20 x 20 squares. Using various commands you tell a turtle to draw a line on the floor. You have moved forward, left or right, lift or drop the pen, etc. Do a search online for \"Turtle Graphics\" for more information. Optional: Allow the program to read in the list of commands from a file.  GIF Creator A program that puts together multiple images (PNGs, JPGs, TIFFs) to make a smooth GIF that can be exported. Optional: Make the program convert small video files to GIFs as well.  Security Caesar cipher - Implement a Caesar cipher, both encoding, and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts \"HI\" to \"JK\", but key 20 encrypts \"HI\" to \"BC\". This simple \"monoalphabetic substitution cipher\" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.",
+    "language": null,
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022 MAJOR PROJECT",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Major-project-list"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list/issues/13",
+        "createdAt": "2025-12-02T18:00:51Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list/issues/12",
+        "createdAt": "2025-08-11T22:31:32Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "capability-shelf/source-registry.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": {
+      "source_id": "SRC-2645",
+      "repo": "ManojKumarPatnaik/Major-project-list",
+      "url": "https://github.com/manojkumarpatnaik/major-project-list",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "hospitality"
+      ],
+      "discovery_categories": [
+        "reservation",
+        "schedule_coordinate"
+      ],
+      "discovery_cells": [
+        "cross_industry:reservation",
+        "cross_industry:schedule_coordinate",
+        "hospitality:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0212",
+        "repo": "ManojKumarPatnaik/Major-project-list",
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list",
+        "what_it_is": "Find PI to the Nth Digit Enter a number and have the program generate PI up to that many decimal places.",
+        "stars": 247,
+        "pushed_at": "2025-07-29T10:22:11Z",
+        "language": null,
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/HEAD/README.md",
+          "characters_read": 19257
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=hotel%20reservation%20system&type=repositories",
+            "source_title": "GitHub repository search: hotel reservation system",
+            "detail": "hotel reservation system"
+          }
+        ],
+        "industries": [
+          "hospitality"
+        ],
+        "categories": [
+          "reservation",
+          "schedule_coordinate"
+        ],
+        "cells": [
+          "cross_industry:reservation",
+          "cross_industry:schedule_coordinate",
+          "hospitality:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "hotel reservation system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:hospitality"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "manojkumarpatnaik/major-project-list",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "C",
+        "query": "options symbol"
+      }
+    ],
+    "root_entries": [
+      ".devcontainer",
+      ".github",
+      ".vscode",
+      "Add$9999999",
+      "LICENSE",
+      "Projects-master.zip",
+      "README.md",
+      "ff"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/1bc6f5724b21b57c98318f662003b68e2ab091f3/README.md",
+        "sha256": "d34d528559ff130c3b3ee91adb6a739549ae52bb3bc70f002b000285cd3376d0",
+        "bytes": 19285
+      },
+      "LICENSE": {
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/1bc6f5724b21b57c98318f662003b68e2ab091f3/LICENSE",
+        "sha256": "e37281a4a826aa8b8049cb81edd860e2cf6ad94566e69e8abb995c84be2d975e",
+        "bytes": 1070
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ManojKumarPatnaik/Major-project-list/commit/1bc6f5724b21b57c98318f662003b68e2ab091f3",
+      "metadata": "https://api.github.com/repos/ManojKumarPatnaik/Major-project-list"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Major-project-list - **Find PI to the Nth Digit** - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go. - **Find e to the Nth Digit** - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go. - **Fibonacci Sequence** - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number. - **Prime Factorization** - Have the user enter a number and find all Prime Factors (if there are any) and display them. - **Next Prime Number** - Have the program find prime numbers until the user chooses to stop asking for the next one. - **Find Cost of Tile to Cover W x H Floor** - Calculate the total cost of the tile it would take to cover a floor plan of width and height, using a cost",
+    "license_excerpt": "MIT License Copyright (c) 2022 MAJOR PROJECT Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **Find PI to the Nth Digit** - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.",
+      "- **Find e to the Nth Digit** - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go.",
+      "- **Fibonacci Sequence** - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.",
+      "- **Next Prime Number** - Have the program find prime numbers until the user chooses to stop asking for the next one.",
+      "- **Change Return Program** - The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.",
+      "- **Unit Converter** (temp, currency, volume, mass, and more) - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to, and then the value. The program will then make the conversion.",
+      "- **Distance Between Two Cities** - Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates for the cities like latitude and longitude.",
+      "- **Graph from links** - Create a program that will create a graph or network from a series of links.",
+      "- **Eulerian Path** - Create a program that will take as an input a graph and output either an Eulerian path or an Eulerian cycle, or state that it is not possible. An Eulerian path starts at one node and traverses every edge of a graph through every node and ",
+      "- **Connected Graph** - Create a program that takes a graph as an input and outputs whether every node is connected or not.",
+      "- **Dijkstra\u2019s Algorithm** - Create a program that finds the shortest path through a graph using its edges.",
+      "- **Minimum Spanning Tree** - Create a program that takes a connected, undirected graph with weights and outputs the minimum spanning tree of the graph i.e., a subgraph that is a tree, contains all the vertices, and the sum of its weights is the least possible",
+      "- **Inverted index** - An Inverted Index is a data structure used to create full-text search. Given a set of text files, implement a program to create an inverted index. Also, create a user interface to do a search using that inverted index which returns a lis",
+      "- **Fizz Buzz** - Write a program that prints the numbers from 1 to 100. But for multiples of three print \u201cFizz\u201d instead of the number and for the multiples of five print \u201cBuzz\u201d. For numbers which are multiples of both three and five print \u201cFizzBuzz\u201d.",
+      "- **Reverse a String** - Enter a string and the program will reverse it and print it out.",
+      "- **Count Vowels** - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.",
+      "- **Quote Tracker** (market symbols etc) - A program that can go out and check the current value of stocks for a list of symbols entered by the user. The user can set how often the stocks are checked. For CLI, show whether the stock has moved up or down. Optio",
+      "- **FTP Program** - A file transfer program that can transfer files back and forth from a remote web sever."
+    ],
+    "dependency_repos": []
+  }
+]
