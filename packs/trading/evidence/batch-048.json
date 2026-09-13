@@ -1,0 +1,1021 @@
+[
+  {
+    "full_name": "volodymyr-kovtun/Pitly",
+    "requested_name": "volodymyr-kovtun/Pitly",
+    "id": 1181149420,
+    "url": "https://github.com/volodymyr-kovtun/Pitly",
+    "stars": 45,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca",
+    "last_commit_date": "2026-05-04T15:55:20Z",
+    "archived": false,
+    "fork": false,
+    "description": "Polish PIT-38 tax calculator for Interactive Brokers \u2014 converts trades & dividends to PLN,   calculates FIFO capital gains, and generates ready-to-file PIT-38 values",
+    "language": "C#",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 Volodymyr Kovtun",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Why this exists",
+      "## Features",
+      "## Screenshots",
+      "## Quick start with Docker",
+      "## Manual setup",
+      "# Terminal 1 \u2014 Backend API",
+      "# https://localhost:7001",
+      "# Terminal 2 \u2014 Frontend",
+      "# http://localhost:5173",
+      "## How to export your broker statement",
+      "### Interactive Brokers",
+      "### Trading 212",
+      "## How it works",
+      "## API",
+      "## Tech stack",
+      "## Limitations",
+      "## Support",
+      "## License"
+    ],
+    "recent_commit_count": 40,
+    "recent_authors_sample50": [
+      "Michalaq",
+      "hatedabamboo",
+      "rademax",
+      "volodymyr-kovtun"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/volodymyr-kovtun/Pitly/issues/19",
+        "createdAt": "2026-04-25T21:48:47Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-25T22:10:00Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-04-27T16:25:20Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-04-30T14:50:19Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/volodymyr-kovtun/Pitly/issues/23",
+        "createdAt": "2026-04-25T22:45:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-28T20:29:02Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.production.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "backend",
+      "compose.ghcr.yml",
+      "compose.production.yml",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "frontend",
+      "ops",
+      "samples",
+      "social-preview.png"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/volodymyr-kovtun/Pitly/blob/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca/README.md",
+        "sha256": "c91a461c256d107c9ed7f8e0f01602801fb340415f9b98d22f68e4e74c1a7398",
+        "bytes": 7235
+      },
+      "LICENSE": {
+        "url": "https://github.com/volodymyr-kovtun/Pitly/blob/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca/LICENSE",
+        "sha256": "f9c750b5670162a0cd7f6121c17302bcbfe1a677fbc25d6b1dbebcdd7fb1cedd",
+        "bytes": 1073
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/volodymyr-kovtun/Pitly/commit/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca",
+      "metadata": "https://api.github.com/repos/volodymyr-kovtun/Pitly"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Pitly PIT-38 tax calculator for foreign stock investors in Poland. Upload your broker statement CSV and get exact PIT-38 field values in seconds. pitly.xyz --- ## Why this exists If you invest through a foreign broker from Poland, every year by **April 30** you must file a **PIT-38** tax declaration. This means manually converting dozens (or hundreds) of transactions to PLN using the correct NBP exchange rate, calculating capital gains with FIFO, figuring out dividend tax with foreign withholding credits, and filling in the right fields on the form. Doing this by hand is tedious, time-consuming, and error-prone. **Pitly automates the entire process.** Upload your broker statement CSV and get the exact values to enter in your PIT-38 \u2014 in seconds, not hours. > Supported brokers: **Interactive Brokers** and **Trading 212**. ## Features - **One-click CSV import** \u2014 drag & drop one or more broker statements, the app merges prior years when FIFO history is needed - **Automatic PLN conversion** \u2014 fetches official [NBP mid exchange rates](https://api.nbp.pl/) for every transaction date (last business day before, per Polish tax law) -",
+    "license_excerpt": "MIT License Copyright (c) 2025 Volodymyr Kovtun Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"MIT License\">",
+      "## Quick start with Docker",
+      "If you don't have Docker installed, download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS. Make sure it's running before proceeding.",
+      "docker-compose up --build",
+      "Open [http://localhost:3000](http://localhost:3000) in your browser. That's it.",
+      "docker-compose down",
+      "# https://localhost:7001",
+      "# http://localhost:5173",
+      "- **NBP exchange rates** \u2014 for each transaction, the app currently fetches the official mid rate from the last business day before the **trade** date. Rates are cached in memory.",
+      "## License",
+      "[MIT](LICENSE)"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "stadlmax/pyFIFOtax",
+    "requested_name": "stadlmax/pyFIFOtax",
+    "id": 595093265,
+    "url": "https://github.com/stadlmax/pyFIFOtax",
+    "stars": 27,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "1458a870191793360678829fa78b17ee570c037f",
+    "last_commit_date": "2026-03-03T19:47:51Z",
+    "archived": false,
+    "fork": false,
+    "description": "Simple Tax Reporting Tool for share transactions on foreign exchanges",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# pyFIFOtax",
+      "# Data Sources",
+      "# Stock Splits",
+      "# ESPP and RSUs",
+      "# Currencies, FOREX, and Deposits",
+      "## Money Transfers",
+      "## Currency Conversions",
+      "# Known Limitations",
+      "# Report Generation",
+      "## AWV Reports",
+      "# Conversion from broker export",
+      "## DEGIRO",
+      "## Interactive Brokers",
+      "## Schwab",
+      "## Concatenate multiple transactions spreadsheets",
+      "# Further Use",
+      "# Requirements",
+      "# Testing",
+      "# Disclaimer"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/stadlmax/pyFIFOtax/issues/9",
+        "createdAt": "2024-06-05T12:32:55Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-07-29T04:51:13Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "concatenate.py",
+      "convert.py",
+      "converters",
+      "create_report.py",
+      "example",
+      "notebook_example.ipynb",
+      "personal",
+      "pyfifotax",
+      "test"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/stadlmax/pyFIFOtax/blob/1458a870191793360678829fa78b17ee570c037f/README.md",
+        "sha256": "1ae2e1efbb5b8559780aea1091cb06dac8b4dec92aea26c701552e26b6097498",
+        "bytes": 14330
+      },
+      "LICENSE": {
+        "url": "https://github.com/stadlmax/pyFIFOtax/blob/1458a870191793360678829fa78b17ee570c037f/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/stadlmax/pyFIFOtax/commit/1458a870191793360678829fa78b17ee570c037f",
+      "metadata": "https://api.github.com/repos/stadlmax/pyFIFOtax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# pyFIFOtax Simple Tax Reporting Tool for share transactions on foreign exchanges # Data Sources A tax report is generated in an automated fashion based on two sources of inputs - a history of transactions including deposits and sales of shares, dividend payments, currency conversions to EUR, and all relevant fees in the process (see `example/transactions.xlsx` for details) - a history of all relevant exchange rates (`eurofxref-hist.csv`, based on official reference rates from [EZB](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.de.html)), in an updated version of this code, the latest rates are automatically downloaded For the history of transactions, you don't have to bother about converting to EUR or matching the sell prices to the buy prices, for instance. This is part of the automated reporting. Simply list the raw data. For the reference rates, you might have to download a newer version depending on your report year, depending on the version of your code. While it would be possible to have a variety of different foreign currencies based on this data, it is currently mainly intended in combination with USD. NOTE: an update extends the functionality",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Parameters:",
+      "Export two CSV files from the German version of DEGIRO. Other localisations are not supported currently.",
+      "1. Inbox > Transactions > Select the desired timeframe > Export > CSV",
+      "2. Inbox > Account statement > Select the desired timeframe > Export > CSV",
+      "Parameters:",
+      "Since all the reporting is done in a naive Python implementation, one could easily use it to augment the data in other ways. `notebook_example.ipynb` for instance shows you how to retrieve certain results as `pd.DataFrame`.",
+      "- python >= 3.9",
+      "PYTHONPATH=. pytest"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "jbatalle/queds",
+    "requested_name": "jbatalle/queds",
+    "id": 477860600,
+    "url": "https://github.com/jbatalle/queds",
+    "stars": 27,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "3383c019750cbbf0b66ea439834ac6c7718aec85",
+    "last_commit_date": "2025-12-12T23:34:08Z",
+    "archived": false,
+    "fork": false,
+    "description": "Finance portfolio to track and manage all your financial assets: stock transactions, crypto transactions, and tax calculation",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Queds Finance",
+      "## Demo",
+      "## Features",
+      "## In progress",
+      "## Table of Contents",
+      "## Getting Started",
+      "### Docker compose",
+      "#### Sqlite environment",
+      "## Initial steps",
+      "## Development",
+      "### Configuration",
+      "### Database",
+      "#### With docker-compose",
+      "### API",
+      "### Backend",
+      "### Frontend",
+      "### Database management",
+      "# Screenshots"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jbatalle/queds/issues/3",
+        "createdAt": "2025-05-13T18:04:15Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-05-14T19:12:51Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "VERSION",
+      "app",
+      "docker-compose.yml",
+      "docs",
+      "frontend",
+      "nginx_template.conf"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jbatalle/queds/blob/3383c019750cbbf0b66ea439834ac6c7718aec85/README.md",
+        "sha256": "5eeab77f7105f45a9a7df1afce1cf03ee1b73e34236e324274951cb4aa396b02",
+        "bytes": 4872
+      },
+      "LICENSE": {
+        "url": "https://github.com/jbatalle/queds/blob/3383c019750cbbf0b66ea439834ac6c7718aec85/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jbatalle/queds/commit/3383c019750cbbf0b66ea439834ac6c7718aec85",
+      "metadata": "https://api.github.com/repos/jbatalle/queds"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Queds Finance Queds Finance is a finance portfolio management tool that allows you to track your finance assets, including stock transactions, crypto transactions, and bank statements. It automatically reads data from various brokers abd crypto exchanges, making it easier for you to manage your investments. ## Demo Check out the demo at http://queds.alwaysdata.net/overview ## Features * Stock and crypto portfolio tracking * Wallet tracking with Session/Pre/Post market prices * Wallet movement tracking with tax basis explanation per transaction * Tax calculation with FIFO * Profit/Loss dashboard with realized and unrealized gain tracking * Watchlist for monitoring assets * Automatic data import from Degiro, Clicktrade and InteractiveBrokers * Automatic data import from exchanges: Bitstamp, Kraken, Bittrex, Binance and KuCoin * TradingView graphs for visualizing asset performance * CSV import for broker and crypto data ## In progress * Dividends tracking * Price alerts via Telegram * Default portfolio currency setting * Create a Trading Log with all the movements and relations between orders ## Table of Contents 1. [Getting Started](#getting-started) 2. [Initial steps](#initial-steps) 3. [Development](#development) ## Getting Started To get",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "* Price alerts via Telegram",
+      "To get started with Queds Finance, you can deploy the tool using docker-compose or install each component individually.",
+      "### Docker compose",
+      "Deploy everything with docker-compose:",
+      "docker-compose build --parallel",
+      "docker-compose up",
+      "Check the VUE_APP_BACKEND_URL environment variable in docker-compose.yml.",
+      "docker-compose run migrate",
+      "Queds Finance is built using Python, Vue, Redis, and Timescaledb. Here's an overview of the directory structure:",
+      "\u251c\u2500\u2500 docker-compose.full.yml",
+      "\u251c\u2500\u2500 docker-compose.yml",
+      "Edit the configuration file `app/config/local.py` and set the parameters according to your local environment.",
+      "'host': 'localhost',",
+      "'database': 'queds_local'",
+      "'host': 'localhost',",
+      "BACKEND_SETTINGS=config.local alembic upgrade head",
+      "BACKEND_SETTINGS=conf.local alembic revision --autogenerate",
+      "#### With docker-compose"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "jaantaponen/verotunkki",
+    "requested_name": "jaantaponen/verotunkki",
+    "id": 436745090,
+    "url": "https://github.com/jaantaponen/verotunkki",
+    "stars": 20,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "15029f3387f711f2db223928d19032c09832c6ff",
+    "last_commit_date": "2023-04-12T12:11:28Z",
+    "archived": false,
+    "fork": false,
+    "description": "FIFO based tax calculator with support for Coinbase, Coinbase Pro, Degiro & Nordnet",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Verotunkki",
+      "# Example files",
+      "### Need more examples?",
+      "## Development instructions",
+      "## FAQ"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jaantaponen/verotunkki/issues/53",
+        "createdAt": "2023-04-16T20:30:22Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-01-07T17:51:52Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/jaantaponen/verotunkki/issues/52",
+        "createdAt": "2023-01-08T11:22:08Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".eslintignore",
+      ".eslintrc",
+      ".github",
+      ".gitignore",
+      "EXAMPLES.md",
+      "README.md",
+      "babel.config.js",
+      "cypress.json",
+      "cypress",
+      "jest.config.ts",
+      "package-lock.json",
+      "package.json",
+      "public",
+      "src",
+      "tests",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jaantaponen/verotunkki/blob/15029f3387f711f2db223928d19032c09832c6ff/README.md",
+        "sha256": "e2c3b66d4a499d4c1afc7fa967f58e566e062e2e74ce6991ba30fe2395dd4b37",
+        "bytes": 2676
+      },
+      "package.json": {
+        "url": "https://github.com/jaantaponen/verotunkki/blob/15029f3387f711f2db223928d19032c09832c6ff/package.json",
+        "sha256": "5555dc5712e9f3a85b372f3fff0a70cd24f3d7b4b6b255862cc3153b1a13f6bb",
+        "bytes": 2494
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jaantaponen/verotunkki/commit/15029f3387f711f2db223928d19032c09832c6ff",
+      "metadata": "https://api.github.com/repos/jaantaponen/verotunkki"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Verotunkki ![Build and deploy](https://github.com/jaantaponen/verotunkki/actions/workflows/build-deploy.yml/badge.svg) This project initiated from the need to inform the Finnish Tax Administration (Verottaja) with transactions (wheter security or crypto) with",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": [
+      "jaantaponen/verotunkki"
+    ]
+  },
+  {
+    "full_name": "SkeLLLa/klopit",
+    "requested_name": "SkeLLLa/klopit",
+    "id": 1208528657,
+    "url": "https://github.com/SkeLLLa/klopit",
+    "stars": 12,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "660fefd6df4d82211e5177f049ab092ab522c03c",
+    "last_commit_date": "2026-08-06T12:43:23Z",
+    "archived": false,
+    "fork": false,
+    "description": "Polish PIT-38 tax calculator for foreign brokerage income. Auto-imports from activity statements, fetches NBP exchange rates, applies FIFO cost basis, and fills PIT-38 & PIT/ZG fields. Runs entirely in your browser - no server, no accounts, no data leaves your device.",
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# kloPIT",
+      "## What It Does",
+      "## Key Features",
+      "## Tech Stack",
+      "## Getting Started",
+      "## Documentation",
+      "## Adding a Broker Parser",
+      "## Contributing",
+      "## License"
+    ],
+    "recent_commit_count": 249,
+    "recent_authors_sample50": [
+      "SkeLLLa",
+      "dependabot[bot]",
+      "puneetdixit200",
+      "semantic-release-bot"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/SkeLLLa/klopit/issues/28",
+        "createdAt": "2026-05-16T13:59:02Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/SkeLLLa/klopit/issues/19",
+        "createdAt": "2026-04-28T19:25:22Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-28T20:19:10Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-04-28T20:32:08Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-05-01T18:50:34Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-05-01T20:02:34Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".mcp.json",
+      ".mise.toml",
+      ".npmignore",
+      ".prettierignore",
+      ".prettierrc.mjs",
+      ".release",
+      ".releaserc.cjs",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "THIRD_PARTY_NOTICES.md",
+      "commitlint.config.cjs",
+      "commitlint.config.js",
+      "docs",
+      "eslint.config.mjs",
+      "examples",
+      "messages",
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "project.inlang",
+      "scripts",
+      "src",
+      "static",
+      "svelte-sitemap.config.js",
+      "svelte.config.js",
+      "test",
+      "tsconfig.json",
+      "tsdoc.json",
+      "vite.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/SkeLLLa/klopit/blob/660fefd6df4d82211e5177f049ab092ab522c03c/README.md",
+        "sha256": "1edb33c6a5ed5eaa3c4ed1d12f95473eb62bdc73f6e10af245abcf91e33e11d5",
+        "bytes": 7919
+      },
+      "LICENSE": {
+        "url": "https://github.com/SkeLLLa/klopit/blob/660fefd6df4d82211e5177f049ab092ab522c03c/LICENSE",
+        "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed",
+        "bytes": 34524
+      },
+      "package.json": {
+        "url": "https://github.com/SkeLLLa/klopit/blob/660fefd6df4d82211e5177f049ab092ab522c03c/package.json",
+        "sha256": "ceb50286554a50f6adbef5a98d8b5daca26305147f9959b7cf55c0bd50e817d3",
+        "bytes": 3783
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/SkeLLLa/klopit/commit/660fefd6df4d82211e5177f049ab092ab522c03c",
+      "metadata": "https://api.github.com/repos/SkeLLLa/klopit"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# kloPIT [![CI](https://github.com/SkeLLLa/klopit/actions/workflows/verify.yml/badge.svg)](https://github.com/SkeLLLa/klopit/actions/workflows/verify.yml) [![CodeQL](https://github.com/SkeLLLa/klopit/actions/workflows/codeql.yml/badge.svg)](https://github.com/SkeLLLa/klopit/actions/workflows/codeql.yml) [![OSV](https://github.com/SkeLLLa/klopit/actions/workflows/osv.yml/badge.svg)](https://github.com/SkeLLLa/klopit/actions/workflows/osv.yml) [![Release](https://github.com/SkeLLLa/klopit/actions/workflows/release.yml/badge.svg)](https://github.com/SkeLLLa/klopit/actions/workflows/release.yml) [![Latest release](https://img.shields.io/github/v/release/SkeLLLa/klopit)](https://github.com/SkeLLLa/klopit/releases/latest) [![License: AGPL-3.0](https://img.shields.io/github/license/SkeLLLa/klopit)](LICENSE) [![SvelteKit](https://img.shields.io/badge/svelte-5-orange)](https://svelte.dev) [![inlang status](https://badge.inlang.com/?url=github.com/SkeLLLa/klopit&project=%2Fproject.inlang)](https://fink.inlang.com/github.com/SkeLLLa/klopit?project=%2Fproject.inlang) **Polish PIT-38 tax calculator for brokerage income** \u2014 runs entirely in your browser, no server, no accounts, no data leaves your machine. > **The only external call the app makes is to the [NBP public API](https://api.nbp.pl/) to fetch PLN exchange rates.** All other processing \u2014 CSV parsing, FIFO calculations, tax math, storage \u2014 happens locally in your browser. **Live app: [klopit.co.pl](https://klopit.co.pl)** | Found a mistake in translations? [Fix it on Fink](https://fink.inlang.com/github.com/SkeLLLa/klopit?project=%2Fproject.inlang) (if Fink will fix all their issues :) > **kloPIT** \u2014 from Ukrainian \"\u043a\u043b\u043e\u043f\u0456\u0442\" and Polish \"k\u0142opot\" (worry, hassle, trouble). Filing taxes is a hassle \u2014 this tool handles it for you. ## What It Does kloPIT automates the most tedious parts of filing **PIT-38** (capital gains & dividends): 1. **Import** \u2014 parse your broker's statement (Interactive Brokers CSV and IBI Capital PDF ship today; more brokers on the roadmap) 2. **Convert** \u2014 fetch NBP exchange rates and convert foreign-currency amounts to PLN automatically; rates are cached locally 3. **Calculate** \u2014 apply the legally-required FIFO method",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License: AGPL-3.0](https://img.shields.io/github/license/SkeLLLa/klopit)](LICENSE)",
+      "> **The only external call the app makes is to the [NBP public API](https://api.nbp.pl/) to fetch PLN exchange rates.** All other processing \u2014 CSV parsing, FIFO calculations, tax math, storage \u2014 happens locally in your browser.",
+      "2. **Convert** \u2014 fetch NBP exchange rates and convert foreign-currency amounts to PLN automatically; rates are cached locally",
+      "- **NBP rate lookup** \u2014 automatic mid-rate fetch (Table A) for the last business day before each transaction, with an optional estimated T+2 settlement-date mode for trade rates and local caching",
+      "- **Localised UI** \u2014 English, Polish, Ukrainian (Paraglide JS compile-time i18n)",
+      "| Framework       | SvelteKit + Svelte 5 (runes)          |",
+      "The `src/core/` directory is framework-agnostic pure TypeScript \u2014 tax logic, parsers, and NBP fetcher have no Svelte dependency and can be used independently.",
+      "pnpm dev   # dev server at http://localhost:5173",
+      "## License",
+      "[AGPL-3.0-only](LICENSE). Additional notices are in"
+    ],
+    "dependency_repos": [
+      "SkeLLLa/klopit"
+    ]
+  },
+  {
+    "full_name": "dTaxLab/dtax",
+    "requested_name": "dTaxLab/dtax",
+    "id": 1179407258,
+    "url": "https://github.com/dTaxLab/dtax",
+    "stars": 9,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8c7a9af89befef6de8ee699124c9f15fedba2bde",
+    "last_commit_date": "2026-07-29T00:07:00Z",
+    "archived": false,
+    "fork": false,
+    "description": "The only complete TypeScript crypto tax engine on npm \u2014 23 exchange parsers, FIFO/LIFO/HIFO/Specific ID, Form 8949, wash sale detection, DeFi support",
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE",
+      "LICENSE-COMMERCIAL"
+    ],
+    "license_headings": [
+      " Copyright (C) 2026 DTax Contributors",
+      " GNU Affero General Public License for more details.",
+      "Copyright (C) 2026 DTax"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Install",
+      "## Quick Example",
+      "## CLI",
+      "## Supported Exchanges (29 Parsers)",
+      "## Features",
+      "## Comparison with Alternatives",
+      "## Packages",
+      "## API Highlights",
+      "## Contributing",
+      "# Prerequisites: Node.js >= 20, pnpm >= 9",
+      "## License",
+      "## Links"
+    ],
+    "recent_commit_count": 182,
+    "recent_authors_sample50": [
+      "Phosmax",
+      "namjar",
+      "powerpook"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/dTaxLab/dtax/issues/28",
+        "createdAt": "2026-08-26T13:22:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/dTaxLab/dtax/issues/27",
+        "createdAt": "2026-07-13T10:57:34Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".env.production.example",
+      ".github",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "LICENSE-COMMERCIAL",
+      "README.es.md",
+      "README.ja.md",
+      "README.ko.md",
+      "README.md",
+      "README.pt.md",
+      "README.zh-Hant.md",
+      "README.zh.md",
+      "SECURITY.md",
+      "apps",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "tsconfig.base.json",
+      "tsconfig.json",
+      "turbo.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/README.md",
+        "sha256": "a94a75ff3e6f62a92af808d7f8d258d07b0218716bf9df671f8092a735586526",
+        "bytes": 7412
+      },
+      "LICENSE": {
+        "url": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/LICENSE",
+        "sha256": "0bef2ffe991f747efa452ba54c7ae6f6208e20d48b635d3baec59c45d38ac6a9",
+        "bytes": 1105
+      },
+      "LICENSE-COMMERCIAL": {
+        "url": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/LICENSE-COMMERCIAL",
+        "sha256": "7d80f68d5fd9ffa7012ecdf409d43b2bffb40ec91283b6530b0ce61159eb9e0c",
+        "bytes": 426
+      },
+      "package.json": {
+        "url": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/package.json",
+        "sha256": "1fb54a52dd676e7a6956409fbac9610e4931404933b24bd03a95cdd7cadae53f",
+        "bytes": 1147
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/dTaxLab/dtax/commit/8c7a9af89befef6de8ee699124c9f15fedba2bde",
+      "metadata": "https://api.github.com/repos/dTaxLab/dtax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "dTax The only complete TypeScript crypto tax engine on npm English \u00b7 \u7b80\u4f53\u4e2d\u6587 \u00b7 \u7e41\u9ad4\u4e2d\u6587 \u00b7 Espa\u00f1ol \u00b7 \u65e5\u672c\u8a9e \u00b7 \ud55c\uad6d\uc5b4 \u00b7 Portugu\u00eas --- **29",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2026 DTax Contributors This program is free software: you can redistribute it and/or",
+    "license_warnings": [
+      "commercial license"
+    ],
+    "runtime_clues": [
+      "<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"License\"></a>",
+      "| Language               | TypeScript | Python  |  Python  |",
+      "## License",
+      "All packages in this repository are licensed under [AGPL-3.0](LICENSE)."
+    ],
+    "dependency_repos": [
+      "dTaxLab/dtax",
+      "dTaxLab/dtax.git"
+    ]
+  },
+  {
+    "full_name": "Lastoneparis/awesome-bloomberg-alternatives",
+    "requested_name": "Lastoneparis/awesome-bloomberg-alternatives",
+    "id": 1213649878,
+    "url": "https://github.com/Lastoneparis/awesome-bloomberg-alternatives",
+    "stars": 10,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "6a3ffa978ba2cea2e33d053c827d32596b1488aa",
+    "last_commit_date": "2026-04-17T15:58:32Z",
+    "archived": false,
+    "fork": false,
+    "description": "A curated list of free and affordable alternatives to the Bloomberg Terminal.",
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Awesome Bloomberg Alternatives [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
+      "## Contents",
+      "## Full Terminals",
+      "## Market Data APIs",
+      "## Screeners & Scanners",
+      "## Economic Data",
+      "## SEC Filings & Insider Tracking",
+      "## On-Chain & Crypto Analytics",
+      "## News & Sentiment",
+      "## Forecasting & AI",
+      "## Open Source Libraries",
+      "## Contributing",
+      "## License"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "Lastoneparis"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W03",
+        "lane": "application",
+        "query": "Bloomberg terminal alternative"
+      }
+    ],
+    "root_entries": [
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Lastoneparis/awesome-bloomberg-alternatives/blob/6a3ffa978ba2cea2e33d053c827d32596b1488aa/README.md",
+        "sha256": "2abc33d7a195cb57de4dd6e2c606111c4dd14711e7d58f11caa9f01d0d468e09",
+        "bytes": 6496
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Lastoneparis/awesome-bloomberg-alternatives/commit/6a3ffa978ba2cea2e33d053c827d32596b1488aa",
+      "metadata": "https://api.github.com/repos/Lastoneparis/awesome-bloomberg-alternatives"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Awesome Bloomberg Alternatives [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) > A curated list of free and affordable alternatives to the Bloomberg Terminal \u2014 for independent traders, quants, researchers, and",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **[Yahoo Finance API](https://github.com/ranaroussi/yfinance)** (unofficial) \u2014 Python library, widely used.",
+      "- **[QuantLib](https://www.quantlib.org)** \u2014 Quant finance library in C++/Python.",
+      "- **[Backtrader](https://www.backtrader.com)** \u2014 Python backtesting framework.",
+      "- **[yfinance](https://github.com/ranaroussi/yfinance)** \u2014 Yahoo Finance Python API.",
+      "## License",
+      "[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)"
+    ],
+    "dependency_repos": [
+      "Nixtla/neuralforecast",
+      "OpenBB-finance/OpenBBTerminal",
+      "ccxt/ccxt",
+      "quantopian/zipline",
+      "ranaroussi/yfinance"
+    ]
+  },
+  {
+    "full_name": "patl4588/bloomberg-terminal-alternative",
+    "requested_name": "patl4588/bloomberg-terminal-alternative",
+    "id": 1214100066,
+    "url": "https://github.com/patl4588/bloomberg-terminal-alternative",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f",
+    "last_commit_date": "2026-04-18T05:51:30Z",
+    "archived": false,
+    "fork": false,
+    "description": "Bloomberg Terminal alternative: MeterCall pay-per-call replacement. See metercall.ai/alternatives/bloomberg-terminal.html",
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Bloomberg Terminal alternative (2026): MeterCall pay-per-call",
+      "## Short version",
+      "## The math",
+      "## Why this matters",
+      "## When to stay on Bloomberg Terminal",
+      "## When to switch to MeterCall",
+      "## How migration works",
+      "## Links",
+      "## License",
+      "## Disclaimer"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "patl4588"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W03",
+        "lane": "application",
+        "query": "Bloomberg terminal alternative"
+      }
+    ],
+    "root_entries": [
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/patl4588/bloomberg-terminal-alternative/blob/fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f/README.md",
+        "sha256": "899132512ca7a88de2b63f1c489891ea0349c34dd6e9d80f7220f07c836ddede",
+        "bytes": 2464
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/patl4588/bloomberg-terminal-alternative/commit/fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f",
+      "metadata": "https://api.github.com/repos/patl4588/bloomberg-terminal-alternative"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Bloomberg Terminal alternative (2026): MeterCall pay-per-call > Bloomberg Terminal runs ~$24,000/yr. MeterCall replaces the finance data workflow with pay-per-call economics \u2014 ~98% less at",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Bloomberg Terminal** is the incumbent finance data tool. Seat-licensed. Annual commit. Pro tier around $24,000/yr.",
+      "**MeterCall** is a module marketplace with pay-per-call pricing. You buy the exact finance data module, you pay per call, no seat fee, no minimum.",
+      "| Minimum commit | annual | none |",
+      "## License"
+    ],
+    "dependency_repos": [
+      "patl4588/awesome-saas-replacements"
+    ]
+  }
+]
