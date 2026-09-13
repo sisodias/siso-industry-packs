@@ -1,0 +1,933 @@
+[
+  {
+    "full_name": "HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+    "requested_name": "HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+    "id": 1066504944,
+    "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+    "stars": 438,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b8a31fbedfa03554475e794691f72dea53f91dd9",
+    "last_commit_date": "2026-09-07T11:44:38Z",
+    "archived": false,
+    "fork": false,
+    "description": "Rust trading bots for prediction markets \u2014 Polymarket, Kalshi, Limitless. Copy Trading is production-ready; nine more strategies in development on the same execution core. Dry-run by default, self-custody, MIT.",
+    "language": "Rust",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 HarrierOnChain",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Prediction Market Toolkits",
+      "### Venue-agnostic prediction-market trading infrastructure \u2014 any market with an order book",
+      "## \ud83d\ude80 Quick Start",
+      "### \ud83d\udee0\ufe0f Run the bots yourself",
+      "# 1. Clone the engine (the trading code lives here)",
+      "# 2. Configure \u2014 credentials from the example",
+      "# 3. Dry-run first (no real orders)",
+      "### \ud83d\udcac Talk it through first",
+      "## By the numbers",
+      "## Strategies",
+      "## \ud83d\udcbc Managed & Copy-Trading \u2014 Currently Closed",
+      "## Venue Coverage",
+      "### Traditional / Regulated",
+      "### Crypto / Decentralized",
+      "## Engine",
+      "### Performance",
+      "## Safety",
+      "## Contact",
+      "## Disclaimer"
+    ],
+    "recent_commit_count": 71,
+    "recent_authors_sample50": [
+      "HarrierOnChain"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/issues/78",
+        "createdAt": "2026-08-18T04:07:31Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/issues/60",
+        "createdAt": "2026-06-18T16:51:02Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".prettierignore",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "README.ru.md",
+      "README.zh-CN.md",
+      "SECURITY.md",
+      "SUPPORT.md",
+      "config.json",
+      "config.yaml.example",
+      "pages",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/blob/b8a31fbedfa03554475e794691f72dea53f91dd9/README.md",
+        "sha256": "e89ab1077dc25754ddb31b48ce1c4ac68dc91722c2707eb068769f7e4f8d2927",
+        "bytes": 16293
+      },
+      "LICENSE": {
+        "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/blob/b8a31fbedfa03554475e794691f72dea53f91dd9/LICENSE",
+        "sha256": "fea44166356535602c3bbf889f844c3be6f2cfaaa4462b7c8318103722c4f794",
+        "bytes": 1070
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/blob/b8a31fbedfa03554475e794691f72dea53f91dd9/Cargo.toml",
+        "sha256": "dad7be41233ec669bc62315fda51accc8353d17b58dd04b716f5b772cf6f2423",
+        "bytes": 1494
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/commit/b8a31fbedfa03554475e794691f72dea53f91dd9",
+      "metadata": "https://api.github.com/repos/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Prediction Market Toolkits ### Venue-agnostic prediction-market trading infrastructure \u2014 any market with an order book [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org/) [![Rust CI](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/actions/workflows/rust.yml/badge.svg)](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/actions/workflows/rust.yml) [![Stars](https://img.shields.io/github/stars/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits?style=flat-square&color=6e40c9)](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/stargazers) [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE) [![Tokio](https://img.shields.io/badge/async-tokio-blue.svg?style=flat-square)](https://tokio.rs/) [![Venues](https://img.shields.io/badge/venues-20_repos-6e40c9.svg?style=flat-square)](#venue-coverage) > **One execution core. One risk layer. Every venue.** > Ten strategy bots share a single engine and a venue-agnostic adapter stack \u2014 adding a market means writing **one adapter**, not rebuilding a bot. Twenty venues are mapped to that interface, each with its own repo. [![Chat on Telegram](https://img.shields.io/badge/\ud83d\udcac_Chat_on_Telegram-@HarrierOnChain-229ED9?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HarrierOnChain) &nbsp; [![PnL Profit \u2014 live](https://img.shields.io/badge/\ud83d\ude80_PnL_Profit-Live_at_pnlpro.fit-16a34a?style=for-the-badge)](https://pnlpro.fit) **[Quick Start](#-quick-start) \u2022 [Strategies](#strategies) \u2022 [Managed Service](#-managed--copy-trading--currently-closed) \u2022 [Venue Coverage](#venue-coverage) \u2022 [Engine](#engine) \u2022 [Safety](#safety) \u2022 [Contact](#contact)** **\ud83c\udf10 Language / \u8bed\u8a00 / \u042f\u0437\u044b\u043a:** [English](#prediction-market-toolkits) \u2022 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md) \u2022 [\u0420\u0443\u0441\u0441\u043a\u0438\u0439](README.ru.md) --- ## \ud83d\ude80 Quick Start **No Rust toolchain needed.** Grab a prebuilt binary from the [latest release](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/releases/latest) \u2014 Linux (x86_64 / aarch64), macOS (Intel / Apple Silicon), Windows \u2014 verify the SHA256, and you're running in about a minute: ```bash tar -xzf polymarket-toolkits- - .tar.gz cd polymarket-toolkits- - cp config.yaml.example config.yaml # credentials; config.json ships with the archive ./polymarket-toolkits run copy-trading # dry-run: enable_trading is false by default ``` The archive ships `config.json` (public settings) alongside",
+    "license_excerpt": "MIT License Copyright (c) 2025 HarrierOnChain Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org/)",
+      "[![Rust CI](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/actions/workflows/rust.yml/badge.svg)](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/actions/workflows/rust.yml)",
+      "[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)",
+      "[![Chat on Telegram](https://img.shields.io/badge/\ud83d\udcac_Chat_on_Telegram-@HarrierOnChain-229ED9?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HarrierOnChain)",
+      "**No Rust toolchain needed.** Grab a prebuilt binary from the [latest release](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/releases/latest) \u2014 Linux (x86_64 / aarch64), macOS (Intel / Apple Silicon), Windows \u2014 verify the SHA256, an",
+      "**[\u2192 Message on Telegram](https://t.me/HarrierOnChain)**",
+      "[![CI](https://img.shields.io/github/actions/workflow/status/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/rust.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=Build)](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-T",
+      "[![License](https://img.shields.io/github/license/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits?style=for-the-badge&color=1f6feb)](LICENSE)",
+      "| **10** | **Rust** | **Every path** |",
+      "If you want to talk about a managed setup when it reopens \u2014 or about running the engine at size yourself \u2014 that conversation happens on Telegram:",
+      "[![Talk on Telegram](https://img.shields.io/badge/Discuss_the_bots-Telegram-229ED9?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HarrierOnChain)",
+      "> platform you'd like wired up next, [reach out on Telegram](https://t.me/HarrierOnChain)",
+      "Rust, async on Tokio, one execution core behind every strategy and venue. The adapter stack means a new market is one adapter \u2014 not a new bot.",
+      "| **Memory** | ~50MB baseline |",
+      "| **Trade Floor** | Minimum size enforcement against negative-EV micro-trades |",
+      "The circuit breaker fires when consecutive large trades exceed the configured threshold, or when orderbook depth falls below the minimum. Once tripped, execution is blocked for the cooldown duration. Trip state and cooldown are logged and visible in the TUI.",
+      "| First real trades | Keep `copy_percentage` at 5\u201310% until you trust the signal |",
+      "[![Chat on Telegram](https://img.shields.io/badge/\ud83d\udcac_Telegram-@HarrierOnChain-229ED9?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HarrierOnChain)"
+    ],
+    "dependency_repos": [
+      "HarrierOnChain/Augur",
+      "HarrierOnChain/Azuro",
+      "HarrierOnChain/Better-Fan",
+      "HarrierOnChain/Crypto.com-Predictions",
+      "HarrierOnChain/DraftKings-Predictions",
+      "HarrierOnChain/Drift-BET",
+      "HarrierOnChain/FanDuel-Predicts",
+      "HarrierOnChain/Fanatics-Markets",
+      "HarrierOnChain/Hedgehog-Markets",
+      "HarrierOnChain/Interactive-Brokers-ForecastTrader",
+      "HarrierOnChain/Kalshi",
+      "HarrierOnChain/Limitless-Exchange",
+      "HarrierOnChain/Manifold-Markets",
+      "HarrierOnChain/Myriad-Markets",
+      "HarrierOnChain/OG.com",
+      "HarrierOnChain/Polymarket",
+      "HarrierOnChain/PredictIt",
+      "HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+      "HarrierOnChain/Projection-Finance",
+      "HarrierOnChain/Robinhood-Predictions",
+      "HarrierOnChain/Zeitgeist",
+      "user-attachments/assets"
+    ]
+  },
+  {
+    "full_name": "YichengYang-Ethan/oracle3",
+    "requested_name": "YichengYang-Ethan/oracle3",
+    "id": 1169524736,
+    "url": "https://github.com/YichengYang-Ethan/oracle3",
+    "stars": 255,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "86c2518a981e8c7d4738a54dd9eff1b1468bb527",
+    "last_commit_date": "2026-05-07T22:45:16Z",
+    "archived": false,
+    "fork": false,
+    "description": "Prediction-market trading engine \u2014 Wang Transform pricing on 291K+ contracts; paper-traded across Kalshi \u00b7 Polymarket \u00b7 Solana DFlow (Jito bundles) \u00b7 633 tests",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2025 Yicheng Yang"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Oracle3",
+      "## Why this exists",
+      "## How oracle3 differs from existing prediction-market tools",
+      "## Architecture",
+      "## Strategies",
+      "## Pricing Engine",
+      "## Quick Start",
+      "## Key Technical Choices",
+      "## Star History",
+      "## Contributors",
+      "## License"
+    ],
+    "recent_commit_count": 31,
+    "recent_authors_sample50": [
+      "YichengYang-Ethan",
+      "dependabot[bot]"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/YichengYang-Ethan/oracle3/issues/57",
+        "createdAt": "2026-08-18T04:07:36Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/YichengYang-Ethan/oracle3/issues/34",
+        "createdAt": "2026-05-07T04:52:29Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-29T12:44:30Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-29T12:46:57Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "root_entries": [
+      ".agent",
+      ".claude",
+      ".codecov.yml",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".zenodo.json",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "PYPI-SETUP.md",
+      "README.md",
+      "SECURITY.md",
+      "arxiv",
+      "assets",
+      "coinjure",
+      "data",
+      "demo.sh",
+      "demo_server.py",
+      "docs",
+      "examples",
+      "mkdocs.yml",
+      "oracle3",
+      "paper.bib",
+      "paper.md",
+      "poetry.lock",
+      "preview_dashboard.py",
+      "pyproject.toml",
+      "run_dflow_backtest.py",
+      "run_full_simulation.py",
+      "scripts",
+      "skills",
+      "tests",
+      "track_session.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/YichengYang-Ethan/oracle3/blob/86c2518a981e8c7d4738a54dd9eff1b1468bb527/README.md",
+        "sha256": "b0091b14d0330e104adaf460e782796cc7b0a6102c63fcb05ea7259f51cc4edf",
+        "bytes": 6115
+      },
+      "LICENSE": {
+        "url": "https://github.com/YichengYang-Ethan/oracle3/blob/86c2518a981e8c7d4738a54dd9eff1b1468bb527/LICENSE",
+        "sha256": "31dffbcaddcbbb803efa61864b60fef417820b5c320b8afb416b9ec37e26792b",
+        "bytes": 10763
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/YichengYang-Ethan/oracle3/blob/86c2518a981e8c7d4738a54dd9eff1b1468bb527/pyproject.toml",
+        "sha256": "0b12e01b43e9b4e5c1e046569752fa22dd1e9ad560ffbe4f75c829deb1b98d01",
+        "bytes": 6635
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/YichengYang-Ethan/oracle3/commit/86c2518a981e8c7d4738a54dd9eff1b1468bb527",
+      "metadata": "https://api.github.com/repos/YichengYang-Ethan/oracle3"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Oracle3 **Autonomous prediction market trading agent across Kalshi, Polymarket, and Solana.** [![Tests](https://github.com/YichengYang-Ethan/oracle3/actions/workflows/pytest.yml/badge.svg)](https://github.com/YichengYang-Ethan/oracle3/actions) [![Lint](https://github.com/YichengYang-Ethan/oracle3/actions/workflows/ruff.yml/badge.svg)](https://github.com/YichengYang-Ethan/oracle3/actions) [![Type Check](https://github.com/YichengYang-Ethan/oracle3/actions/workflows/mypy.yml/badge.svg)](https://github.com/YichengYang-Ethan/oracle3/actions) [![codecov](https://codecov.io/gh/YichengYang-Ethan/oracle3/branch/main/graph/badge.svg)](https://codecov.io/gh/YichengYang-Ethan/oracle3) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue) [![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE) [![Discussions](https://img.shields.io/github/discussions/YichengYang-Ethan/oracle3)](https://github.com/YichengYang-Ethan/oracle3/discussions) [![Last Commit](https://img.shields.io/github/last-commit/YichengYang-Ethan/oracle3)](https://github.com/YichengYang-Ethan/oracle3/commits/main) [![Docs](https://img.shields.io/badge/docs-mkdocs-blue)](https://yichengyang-ethan.github.io/oracle3/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20062548.svg)](https://doi.org/10.5281/zenodo.20062548) ## Why this exists Prediction markets price binary contracts at systematically biased levels \u2014 a true 50/50 contract typically trades around **0.57** (favorite-longshot bias, $\\hat{\\lambda} \\approx 0.183$). Most trading bots ignore this distortion entirely. Oracle3 operationalizes a peer-reviewed pricing model, calibrated on **291,309 resolved contracts** across six venues, to systematically harvest the bias through arbitrage detection and Kelly-sized model trades. This system deploys the exact $\\lambda$ estimates and covariate model from [prediction-market-pricing](https://github.com/YichengYang-Ethan/prediction-market-pricing) (Yang, 2026) as its real-time pricing engine. ## How oracle3 differs from existing prediction-market tools | | Oracle3 | polymarket-whales | prediction-market-maker | py-clob-client | |---|---------|-------------------|-------------------------|----------------| | Pricing model | Wang Transform (calibrated MLE) | None | Bid-ask MM | None | | Constraint-based arbitrage | 8 strategies | None | None | N/A | | Multi-venue | Kalshi + Polymarket + Solana | Polymarket only | Polymarket only | Polymarket only | | On-chain execution | Solana via DFlow + Jito |",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)",
+      "[![License](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)",
+      "| License | Apache 2.0 | MIT | MIT | MIT |",
+      "> Yang, Y. (2026). *Pricing Prediction Markets: Risk Premiums, Incomplete Markets, and a Decomposition Framework.* Working Paper, UIUC. [[Replication package]](https://github.com/YichengYang-Ethan/prediction-market-pricing)",
+      "- **Dual-layer risk**: local position/drawdown/exposure limits + Solana `simulateTransaction` pre-flight",
+      "- **On-chain audit trail** via Solana Memo program; Jito bundle submission for MEV protection",
+      "## License",
+      "Apache 2.0 \u2014 see [LICENSE](LICENSE) for details."
+    ],
+    "dependency_repos": [
+      "YichengYang-Ethan/oracle3",
+      "YichengYang-Ethan/oracle3.git",
+      "YichengYang-Ethan/prediction-market-pricing"
+    ]
+  },
+  {
+    "full_name": "brucify/revolutax",
+    "requested_name": "brucify/revolutax",
+    "id": 487241948,
+    "url": "https://github.com/brucify/revolutax",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6",
+    "last_commit_date": "2023-05-02T16:51:14Z",
+    "archived": false,
+    "fork": false,
+    "description": "Cryptocurrency Tax Calculator for Revolut CSV Statements - Rust CLI",
+    "language": "Rust",
+    "license": "MPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# revolutax",
+      "## Installation",
+      "## Usage",
+      "#### Current vs. Savings",
+      "### Swedish Tax Agency",
+      "### Available Options",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "example",
+      "scripts",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/README.md",
+        "sha256": "4e31c69ff48d97f37cdf830c7d1cab95d539454e76d5645925a621ab17dcb405",
+        "bytes": 6390
+      },
+      "LICENSE": {
+        "url": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/LICENSE",
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "bytes": 16725
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/Cargo.toml",
+        "sha256": "92626e8904096ba6cee34a9c4f36e460d0af6828e1c8f380e35e863b423e41df",
+        "bytes": 476
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/brucify/revolutax/commit/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6",
+      "metadata": "https://api.github.com/repos/brucify/revolutax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# revolutax A Rust CLI tool for calculating taxes on cryptocurrencies traded on Revolut. It reads the account statement CSV file from Revolut and generates a new CSV file summarizing the taxable trades. This tools can also generate an [SRU file](https://www.skatteverket.se/privat/deklaration/lamnaenbilagatilldeklarationen.4.515a6be615c637b9aa46366.html?q=sru+fil) that can be uploaded to Swedish Tax Agency ([K4-bilagan - F\u00f6rs\u00e4ljning - V\u00e4rdepapper m.m.](https://skatteverket.se/privat/skatter/vardepapper/deklareraaktierochovrigavardepapper/deklareravardepapperexempel.4.7afdf8a313d3421e9a9519.html)) Although this program is specifically designed for reporting Swedish taxes, it can also be used for general tax reporting purposes in other countries. ## Installation To install Rust, follow the official installation guide available at [rustup.rs](https://rustup.rs/). After Rust is installed, clone the repository and build the project: $ cargo build ## Usage The program reads the transactions of type `EXCHANGE` and `CARD_PAYMENT` and generates a new csv file tax.csv. For example: $ cargo run -- account_statement.csv > tax.csv Here is an example input CSV file `account_statement.csv`: ```csv Type,Product,Started Date,Completed Date,Description,Amount,Currency,Fiat amount,Fiat amount (inc. fees),Fee,Base currency,State,Balance EXCHANGE,Current,2023-01-01 10:00:00,2023-01-01 10:00:00,Exchanged to EOS,100.0000,EOS,600.00,609.15,9.15,SEK,COMPLETED,100.0000 EXCHANGE,Savings,2023-01-01 11:00:00,2023-01-01 11:00:00,Exchanged to EOS,50.0000,EOS,300.00,304.15,4.15,SEK,COMPLETED,50.0000 EXCHANGE,Current,2023-01-02 10:00:00,2023-01-02 10:00:00,Exchanged to SEK,-30.0000,EOS,-400.00,-394.86,5.14,SEK,COMPLETED,70.0000 CARD_PAYMENT,Current,2023-05-06 10:00:00,2023-05-06 10:00:00,Payment to Amazon,-25.0000,EOS,-500.00,-495.75,4.25,SEK,COMPLETED,45.0000 ``` The program generates a tax report `tax.csv` that looks",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or",
+    "license_warnings": [],
+    "runtime_clues": [
+      "A Rust CLI tool for calculating taxes on cryptocurrencies traded on Revolut. It reads the",
+      "Although this program is specifically designed for reporting Swedish taxes, it can also be used",
+      "To install Rust, follow the official installation guide available at [rustup.rs](https://rustup.rs/).",
+      "After Rust is installed, clone the repository and build the project:",
+      "The program reads the transactions of type `EXCHANGE` and `CARD_PAYMENT` and generates a new csv file tax.csv. For example:",
+      "The program generates a tax report `tax.csv` that looks like this:",
+      "The program algorithm  takes into account the two types of `Product` of transactions: `Savings` and `Current`.",
+      "Specifically, when calculating the tax for a trade where you sold cryptocurrency, the program will first try to",
+      "not enough available costs to deduct on the `Current` transactions will the program deduct from the `Savings`",
+      "With `--sru-file` flag, the program generates an SRU file `BLANKETTER.sru`:",
+      "the tax reporting process for the taxpayer. If the `--sru-file` flag is not used, the program",
+      "## License",
+      "License, v. 2.0. If a copy of the MPL was not distributed with this"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "z4dri05/bitpanda_tax",
+    "requested_name": "z4dri05/bitpanda_tax",
+    "id": 1243489031,
+    "url": "https://github.com/z4dri05/bitpanda_tax",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "55fba4c9e9e4461ad3cd815cb03374d409505d8d",
+    "last_commit_date": "2026-05-20T16:43:51Z",
+    "archived": false,
+    "fork": false,
+    "description": null,
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# BitpandaTax \ud83d\udc3c\ud83c\uddea\ud83c\uddf8",
+      "## \u00bfQu\u00e9 calcula?",
+      "## Instalaci\u00f3n",
+      "## C\u00f3mo usarlo",
+      "### Interfaz gr\u00e1fica (lo normal)",
+      "### Terminal (avanzado)",
+      "## El archivo FIFO: no lo pierdas",
+      "## Aviso legal"
+    ],
+    "recent_commit_count": 7,
+    "recent_authors_sample50": [
+      "z4dri05"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "bitpanda_tax",
+      "bitpanda_tax_logo.png"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/z4dri05/bitpanda_tax/blob/55fba4c9e9e4461ad3cd815cb03374d409505d8d/README.md",
+        "sha256": "ee199520f6377015495e32f89464af0575729e784af8a92032579053614390e5",
+        "bytes": 2252
+      },
+      "LICENSE": {
+        "url": "https://github.com/z4dri05/bitpanda_tax/blob/55fba4c9e9e4461ad3cd815cb03374d409505d8d/LICENSE",
+        "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685",
+        "bytes": 1056
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/z4dri05/bitpanda_tax/commit/55fba4c9e9e4461ad3cd815cb03374d409505d8d",
+      "metadata": "https://api.github.com/repos/z4dri05/bitpanda_tax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# BitpandaTax \ud83d\udc3c\ud83c\uddea\ud83c\uddf8 Calcula lo que le debes a Hacienda por tus cripto en Bitpanda y te escupe un informe PDF listo para copiar en la declaraci\u00f3n de la renta. --- ## \u00bfQu\u00e9 calcula? | Casilla | Qu\u00e9 es | C\u00f3mo lo detecta | |---|---|---| | **1800\u20131814** | Ganancias/P\u00e9rdidas Patrimoniales | M\u00e9todo FIFO (obligatorio por Hacienda) | | **0033** | Rendimientos de Capital Mobiliario | Detecta autom\u00e1ticamente el staking | | **0304** | Ganancias No Derivadas | Detecta airdrops y promociones | Las comisiones se deducen del coste de adquisici\u00f3n y transmisi\u00f3n. --- ## Instalaci\u00f3n Necesitas Python instalado. ```bash git clone https://github.com/tu-usuario/bitpanda_tax.git cd bitpanda_tax pip install -r bitpanda_tax/requirements.txt ``` --- ## C\u00f3mo usarlo ### Interfaz gr\u00e1fica (lo normal) ```bash python bitpanda_tax/main.py ``` 1. **Seleccionar CSV** \u2192 el historial de transacciones que descargaste de Bitpanda 2. Elige el **a\u00f1o fiscal** a declarar 3. Si tienes un `fifo_state` del a\u00f1o anterior, c\u00e1rgalo en **\"Cargar FIFO previo\"** (ver abajo) 4. **Generar Informe** \u2192 listo, sale un `informe_fiscal_XXXX.pdf` ### Terminal (avanzado) ```bash python bitpanda_tax/main.py --csv tu_archivo.csv --year 2025 --fifo-prev fifo_state_2024.json --output informe_2025.pdf ``` Para",
+    "license_excerpt": "MIT License Copyright (c) 2026 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Necesitas Python instalado.",
+      "python bitpanda_tax/main.py",
+      "python bitpanda_tax/main.py --csv tu_archivo.csv --year 2025 --fifo-prev fifo_state_2024.json --output informe_2025.pdf",
+      "Hacienda obliga a usar FIFO: cuando vendes, asumes que vendes lo m\u00e1s antiguo que compraste. Para que el programa recuerde compras de hace 3 a\u00f1os, guarda el estado en un archivo.",
+      "\u2192 El programa genera fifo_state_2024.json   \u2190 GU\u00c1RDALO",
+      "\u2192 El programa recuerda todos tus precios de compra anteriores",
+      "Herramienta experimental para uso personal. El autor no se hace responsable de errores ni problemas con la AEAT. Revisa siempre los n\u00fameros y consulta a un asesor fiscal si tienes dudas. MIT License."
+    ],
+    "dependency_repos": [
+      "tu-usuario/bitpanda_tax.git"
+    ]
+  },
+  {
+    "full_name": "wetfish/eztaxes",
+    "requested_name": "wetfish/eztaxes",
+    "id": 1183637900,
+    "url": "https://github.com/wetfish/eztaxes",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "75edbf35d605a69b69852524c683ff9d53e44b44",
+    "last_commit_date": "2026-03-20T08:44:12Z",
+    "archived": false,
+    "fork": false,
+    "description": "Making filing your taxes Ez-ier than ever! ",
+    "language": "PHP",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# EzTaxes",
+      "## Screenshots",
+      "### Tax Year Dashboard",
+      "### Transaction Categorization",
+      "### Payroll with 1120-S Tax Lines",
+      "### Crypto Cost Basis Tracking",
+      "### Corporate Balance Sheet",
+      "## Integrations",
+      "## Smart CSV Upload",
+      "## Features",
+      "### Payroll Management",
+      "### Transaction Import & Categorization",
+      "### Cryptocurrency Cost Basis",
+      "### Corporate Balance Sheet",
+      "### Artisan Commands",
+      "## Tech Stack",
+      "## Quick Start (Docker \u2014 Development)",
+      "## Demo Deployment (Bare Metal \u2014 Production)",
+      "## Setup",
+      "### Environment configuration",
+      "### Seeded Data",
+      "### PHP dependencies",
+      "### Composer",
+      "### Tailwind CSS",
+      "## Docker Environment",
+      "## Documentation",
+      "## Disclaimer"
+    ],
+    "recent_commit_count": 30,
+    "recent_authors_sample50": [
+      "itsrachelfish"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "laravel",
+      "legacy"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/wetfish/eztaxes/blob/75edbf35d605a69b69852524c683ff9d53e44b44/README.md",
+        "sha256": "eaf79f2fb9dae8305c9bd24a375d327d9f93c30e7ce27a9a8a74bcd10d364ca6",
+        "bytes": 13014
+      },
+      "LICENSE": {
+        "url": "https://github.com/wetfish/eztaxes/blob/75edbf35d605a69b69852524c683ff9d53e44b44/LICENSE",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+        "bytes": 34523
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/wetfish/eztaxes/commit/75edbf35d605a69b69852524c683ff9d53e44b44",
+      "metadata": "https://api.github.com/repos/wetfish/eztaxes"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# EzTaxes S-Corp tax management dashboard with built-in integrations for **Gusto**, **Coinbase**, **CashApp**, and automatic price lookups via **CryptoCompare** and **Alpha Vantage**. Track your corporate crypto treasury and stock assets. Features an auto-detecting CSV upload page with built-in templates for six supported formats from Gusto, Coinbase, and CashApp - PLUS the ability to upload your own banking records and categorize transactions with regex pattern matching. **[Live Demo](https://eztaxes.wetfish.net)** \u2014 try it with fictional data (read-only) ## Screenshots ### Tax Year Dashboard Track multiple tax years with income, expenses, and net totals at a glance. Filed years are marked green, drafts in yellow. ![Tax Years Dashboard](docs/screenshots/01-tax-years.png) ### Transaction Categorization Upload bank CSVs and categorize transactions using regex pattern matching. Bucket groups organize categories by type \u2014 Client Income, Operating Expenses, and Ignored transactions are tracked separately. ![Tax Year Detail with Bucket Breakdown](docs/screenshots/02-tax-year-detail.png) ### Payroll with 1120-S Tax Lines Import Gusto payroll data with automatic officer/employee splitting for IRS form lines. Summary cards map directly to 1120-S Lines 7, 8, 12, and 19. ![Payroll Summary](docs/screenshots/03-payroll-summary.png) Track US and international contractors with import history",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **Framework:** Laravel 12.12.1 (released March 10, 2026; Laravel 12 initially released February 24, 2025)",
+      "- **PHP:** 8.5 (Laravel 12 requires 8.2+; PHP 8.5 compatibility added in Laravel 12.8+)",
+      "- **Environment:** Docker (development) or bare metal with Nginx + PHP-FPM (production)",
+      "## Quick Start (Docker \u2014 Development)",
+      "Start the Docker environment:",
+      "docker compose up -d",
+      "docker compose exec app php artisan migrate --seed",
+      "Access the app at `http://localhost:8010`.",
+      "sudo apt install certbot python3-certbot-nginx -y",
+      "Update `laravel/.env` to match the Docker container names:",
+      "Laravel 12 requires the following PHP extensions: Ctype, cURL, DOM, Fileinfo, Filter, Hash, Mbstring, OpenSSL, PCRE, PDO, Session, Tokenizer, and XML. Several of these are bundled with `php8.5-common`.",
+      "## Docker Environment",
+      "| `docker/nginx/default.conf` | Nginx server block pointing to `laravel/public` |",
+      "| `docker/php/custom.ini` | PHP overrides (memory_limit = 512M) |"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "YizhouFan/CryCal",
+    "requested_name": "YizhouFan/CryCal",
+    "id": 886141842,
+    "url": "https://github.com/YizhouFan/CryCal",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b2cf6262dec1c2439f4cad37086bbd6ad7573c03",
+    "last_commit_date": "2024-11-20T10:46:07Z",
+    "archived": false,
+    "fork": false,
+    "description": "Cryptocurrency Calculator \u30af\u30ea\u30ab\u30eb",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2024 Yizhou Fan, Florent Ferreri"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# CryCal - Supports the latest bitFlyer version!",
+      "# \u30af\u30ea\u30ab\u30eb - \u6700\u65b0\u7248\u30d3\u30c3\u30c8\u30d5\u30e9\u30a4\u30e4\u30fc\u3092\u5bfe\u5fdc\uff01",
+      "## Disclaimer \u514d\u8cac\u4e8b\u9805",
+      "## Installation \u30a4\u30f3\u30b9\u30c8\u30fc\u30eb",
+      "## Usage \u4f7f\u7528\u65b9\u6cd5",
+      "## Contributing"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".python-version",
+      "LICENSE",
+      "README.md",
+      "format.sh",
+      "pyproject.toml",
+      "src",
+      "tests",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/YizhouFan/CryCal/blob/b2cf6262dec1c2439f4cad37086bbd6ad7573c03/README.md",
+        "sha256": "ae864ff0aeb7fb002dd3cec9cf420dcf95e3f431ab87ad4795410933db4d26ef",
+        "bytes": 3988
+      },
+      "LICENSE": {
+        "url": "https://github.com/YizhouFan/CryCal/blob/b2cf6262dec1c2439f4cad37086bbd6ad7573c03/LICENSE",
+        "sha256": "107f544cc173ef1614e45daa2f1a8f59604fe6320b87e725e15bad01d1d8c776",
+        "bytes": 11357
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/YizhouFan/CryCal/blob/b2cf6262dec1c2439f4cad37086bbd6ad7573c03/pyproject.toml",
+        "sha256": "eff255464ab5702b3e4c7c2b30f7c2adb9a5c7032088b1313dc9808187283f21",
+        "bytes": 477
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/YizhouFan/CryCal/commit/b2cf6262dec1c2439f4cad37086bbd6ad7573c03",
+      "metadata": "https://api.github.com/repos/YizhouFan/CryCal"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# CryCal - Supports the latest bitFlyer version! # \u30af\u30ea\u30ab\u30eb - \u6700\u65b0\u7248\u30d3\u30c3\u30c8\u30d5\u30e9\u30a4\u30e4\u30fc\u3092\u5bfe\u5fdc\uff01 Cryptocurrency Calculator \u6697\u53f7\u8cc7\u7523\u306e\u305f\u3081\u306e\u96fb\u5353 ![ci badge](https://github.com/YizhouFan/CryCal/actions/workflows/ci.yml/badge.svg) ## Disclaimer \u514d\u8cac\u4e8b\u9805 This repository is not intended to offer legal, financial, or tax advice. By using this software, you acknowledge that the calculations are based on the inputs provided and may not reflect the most current laws or regulations. The creators of this repository make no representations or warranties regarding the accuracy, completeness, or reliability of the results generated. Users are encouraged to consult with a qualified tax professional or legal advisor to ensure compliance with all applicable laws and regulations. The creators are not liable for any errors, omissions, or consequences arising from the use of this software. Use at your own risk. \u3053\u306e\u30ea\u30dd\u30b8\u30c8\u30ea\u306f\u3001\u6cd5\u7684\u3001\u8ca1\u52d9\u7684\u3001\u307e\u305f\u306f\u7a0e\u52d9\u7684\u306a\u30a2\u30c9\u30d0\u30a4\u30b9\u3092\u63d0\u4f9b\u3059\u308b\u3053\u3068\u3092\u76ee\u7684\u3068\u3057\u3066\u3044\u307e\u305b\u3093\u3002\u3053\u306e\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u3092\u4f7f\u7528\u3059\u308b\u3053\u3068\u306b\u3088\u308a\u3001\u63d0\u4f9b\u3055\u308c\u305f\u5165\u529b\u306b\u57fa\u3065\u3044\u3066\u8a08\u7b97\u304c\u884c\u308f\u308c\u3001\u6700\u65b0\u306e\u6cd5\u5f8b\u3084\u898f\u5236\u3092\u53cd\u6620\u3057\u3066\u3044\u306a\u3044\u53ef\u80fd\u6027\u304c\u3042\u308b\u3053\u3068\u3092\u8a8d\u8b58\u3059\u308b\u3082\u306e\u3068\u3057\u307e\u3059\u3002\u3053\u306e\u30ea\u30dd\u30b8\u30c8\u30ea\u306e\u4f5c\u6210\u8005\u306f\u3001\u751f\u6210\u3055\u308c\u305f\u7d50\u679c\u306e\u6b63\u78ba\u6027\u3001\u5b8c\u5168\u6027\u3001\u307e\u305f\u306f\u4fe1\u983c\u6027\u306b\u3064\u3044\u3066\u3001\u3044\u304b\u306a\u308b\u8868\u660e\u3084\u4fdd\u8a3c\u3082\u884c\u3044\u307e\u305b\u3093\u3002\u30e6\u30fc\u30b6\u30fc\u306f\u3001\u9069\u7528\u3055\u308c\u308b\u3059\u3079\u3066\u306e\u6cd5\u5f8b\u304a\u3088\u3073\u898f\u5236\u3092\u9075\u5b88\u3059\u308b\u305f\u3081\u306b\u3001\u8cc7\u683c\u3092\u6301\u3064\u7a0e\u52d9\u5c02\u9580\u5bb6\u307e\u305f\u306f\u6cd5\u7684\u30a2\u30c9\u30d0\u30a4\u30b6\u30fc\u306b\u76f8\u8ac7\u3059\u308b\u3053\u3068\u3092\u63a8\u5968\u3057\u307e\u3059\u3002\u4f5c\u6210\u8005\u306f\u3001\u3053\u306e\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u306e\u4f7f\u7528\u306b\u8d77\u56e0\u3059\u308b\u3044\u304b\u306a\u308b\u30a8\u30e9\u30fc\u3001\u8131\u6f0f\u3001\u307e\u305f\u306f\u7d50\u679c\u306b\u3064\u3044\u3066\u3082\u8cac\u4efb\u3092\u8ca0\u3044\u307e\u305b\u3093\u3002\u4f7f\u7528\u306f\u81ea\u5df1\u8cac\u4efb\u3067\u884c\u3063\u3066\u304f\u3060\u3055\u3044\u3002 This repository is an endeavor to implement what is described in the following documents from the [National Tax Agency of Japan](https://www.nta.go.jp/). \u3053\u306e\u30ea\u30dd\u30b8\u30c8\u30ea\u306f\u3001[\u65e5\u672c\u56fd\u7a0e\u5e81](https://www.nta.go.jp/)\u306e\u4ee5\u4e0b\u306e\u6587\u66f8\u306b\u8a18\u8f09\u3055\u308c\u3066\u3044\u308b\u5185\u5bb9\u3092\u5b9f\u88c5\u3059\u308b\u8a66\u307f\u3067\u3059\u3002 - https://www.nta.go.jp/publication/pamph/pdf/virtual_currency_faq_03.pdf ## Installation \u30a4\u30f3\u30b9\u30c8\u30fc\u30eb 1. Install [uv](https://github.com/astral-sh/uv), the package and project manager \u30d1\u30c3\u30b1\u30fc\u30b8\u304a\u3088\u3073\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u30fc\u306e[uv](https://github.com/astral-sh/uv)\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3057\u307e\u3059\u3002 2. Set up the repo by `uv` `uv`\u3092\u4f7f\u3063\u3066\u30ea\u30dd\u30b8\u30c8\u30ea\u3092\u30bb\u30c3\u30c8\u30a2\u30c3\u30d7\u3057\u307e\u3059\u3002 ``` uv sync ``` 3. Verify that the Python version is pinned to",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "3. Verify that the Python version is pinned to `3.12`.",
+      "Python\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u304c3.12\u306b\u56fa\u5b9a\u3055\u308c\u3066\u3044\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002",
+      "uv run python --version"
+    ],
+    "dependency_repos": [
+      "YizhouFan/CryCal",
+      "astral-sh/uv"
+    ]
+  },
+  {
+    "full_name": "umutto/crypto-tax",
+    "requested_name": "umutto/crypto-tax",
+    "id": 396335432,
+    "url": "https://github.com/umutto/crypto-tax",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8c8147dfd17537a3b59e72e6673ed4fc066ab0a1",
+    "last_commit_date": "2022-02-20T10:11:02Z",
+    "archived": false,
+    "fork": false,
+    "description": "Personal cryptocurrency tax calculator for Japan's miscellaneous income. ",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2021 Umut Karakulak",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# crypto-tax"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".eslintrc.json",
+      ".gitignore",
+      ".nvmrc",
+      ".vscode",
+      "@types",
+      "LICENSE",
+      "README.md",
+      "check_version.js",
+      "components",
+      "ecosystem.config.js",
+      "layouts",
+      "lib",
+      "model",
+      "next-env.d.ts",
+      "next.config.js",
+      "package-lock.json",
+      "package.json",
+      "pages",
+      "postcss.config.js",
+      "public",
+      "styles",
+      "tailwind.config.js",
+      "tsconfig.json",
+      "utils"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/README.md",
+        "sha256": "8a753fb0f3e4f38b8388fc421837a29593c1fe6214c81261159972d2ad7f4af4",
+        "bytes": 392
+      },
+      "LICENSE": {
+        "url": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/LICENSE",
+        "sha256": "b3db731e474cd2326680170c83c6d77bb7fedf694e7f601091a9873baa705018",
+        "bytes": 1071
+      },
+      "package.json": {
+        "url": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/package.json",
+        "sha256": "0c8b60d958fd3e25177cd3fe5dd22edf70362e6733474114d62e8c7131645c17",
+        "bytes": 1434
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/umutto/crypto-tax/commit/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1",
+      "metadata": "https://api.github.com/repos/umutto/crypto-tax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# crypto-tax Personal cryptocurrency tax calculator for Japan's miscellaneous income. This is a rough project that I've did for myself while studying react/nextjs and nosql for the first time, so it may not work correctly... --- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+    "license_excerpt": "MIT License Copyright (c) 2021 Umut Karakulak Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": [
+      "vercel/next.js"
+    ]
+  },
+  {
+    "full_name": "asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "requested_name": "asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "id": 1009832539,
+    "url": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f127d674e03d5d17d7049b10f1e37208e76c537a",
+    "last_commit_date": "2025-06-27T19:45:03Z",
+    "archived": false,
+    "fork": false,
+    "description": null,
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# \ud83e\uddfe Crypto Portfolio & Tax Tracker",
+      "## \u2728 Features",
+      "## \u2699\ufe0f Tech Stack",
+      "## \ud83d\udce6 Getting Started"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/blob/f127d674e03d5d17d7049b10f1e37208e76c537a/README.md",
+        "sha256": "c0a57d4eb7e299a78508068bfa9e37e346c454bfa7df8e9eefb167f82c895d6a",
+        "bytes": 1131
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/commit/f127d674e03d5d17d7049b10f1e37208e76c537a",
+      "metadata": "https://api.github.com/repos/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# \ud83e\uddfe Crypto Portfolio & Tax Tracker A powerful, privacy-respecting tool to track your crypto assets across exchanges and wallets \u2014 with automatic tax reporting.",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Supports Binance, KuCoin, Bybit, MetaMask, Trust Wallet, CSV, and Etherscan import.",
+      "Runs locally. No data is uploaded or shared unless explicitly exported.",
+      "- Backend: Node.js / Python (Flask or FastAPI)"
+    ],
+    "dependency_repos": []
+  }
+]
