@@ -1,4 +1,4 @@
-name: Marketing agency research receipts (one bounded run)
+name: Marketing agency research receipts (bounded batch)
 on:
   push:
     branches: [research/marketing-agencies-20260913]
@@ -6,15 +6,15 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: marketing-agencies-research-20260913
+  group: marketing-agencies-batched-research-20260913
   cancel-in-progress: false
 jobs:
   collect-public-research:
     if: github.repository == 'sisodias/siso-industry-packs' && github.ref_name == 'research/marketing-agencies-20260913'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     steps:
-      - name: Fetch pinned research collector and record public-source evidence
+      - name: Read pinned public-source collector and record evidence
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -22,8 +22,8 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           import urllib.request
-          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/8e35abe47830314d333a3a8a16cf2f8e347c2287/packs/marketing_social_media_agencies/research/collect_receipts.py'
+          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/cfd0bc31ea895d3fededdbed37f32e2771bd747a/packs/marketing_social_media_agencies/research/collect_batched.py'
           with urllib.request.urlopen(url, timeout=60) as response:
               source = response.read()
-          exec(compile(source, 'collect_receipts.py', 'exec'), {'__name__': '__main__'})
+          exec(compile(source, 'collect_batched.py', 'exec'), {'__name__': '__main__'})
           PY
