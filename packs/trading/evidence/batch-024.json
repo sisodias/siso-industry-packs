@@ -1,0 +1,1201 @@
+[
+  {
+    "full_name": "josephchenhk/qtrader",
+    "requested_name": "josephchenhk/qtrader",
+    "id": 295894890,
+    "url": "https://github.com/josephchenhk/qtrader",
+    "stars": 548,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "209f96b8122e7a7fc18de611c821ef4d7f64ba56",
+    "last_commit_date": "2026-09-07T07:47:04Z",
+    "archived": false,
+    "fork": false,
+    "description": "A Light Event-Driven Algorithmic Trading Engine",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# QTrader: A Light Event-Driven Algorithmic Trading Engine",
+      "## Key modifications",
+      "## Introduction",
+      "## Key Features",
+      "## Quick Install",
+      "# Virtual environment is recommended (python 3.8 or above is supported)",
+      "# Install stable version from pip (currently version 0.0.4)",
+      "# Alternatively, install latest version from github ",
+      "## Create a Configuration File",
+      "## Prepare the Data",
+      "## Implement a Strategy",
+      "## Record Variables",
+      "## Run a Backtest",
+      "# Security ",
+      "# Gateway",
+      "# Core engine",
+      "# Strategy initialization",
+      "# Recorder",
+      "# Event engine",
+      "# Start event engine",
+      "# Program terminates normally",
+      "## Simulation / Live trading",
+      "# Currently you can use \"Futu\", \"Ib\", and \"Cqg\" ",
+      "# Use FutuGateway, IbGateway, or CqgGateway accordingly",
+      "# End time should be set to a future time stamp when you expect the program terminates",
+      "# Choose either TradeMode.SIMULATE or TradeMode.LIVETRADE",
+      "## Live Monitoring",
+      "## Contributing"
+    ],
+    "recent_commit_count": 3,
+    "recent_authors_sample50": [
+      "emt-Q",
+      "josephchenhk"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/josephchenhk/qtrader/issues/31",
+        "createdAt": "2024-05-14T03:25:35Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/josephchenhk/qtrader/issues/30",
+        "createdAt": "2023-09-21T08:11:30Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-09-21T13:27:46Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2023-09-21T16:23:32Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "MANIFEST.in",
+      "README.md",
+      "__init__.py",
+      "contents",
+      "examples",
+      "qtrader",
+      "qtrader_config_sample.py",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/README.md",
+        "sha256": "4122f696ee61208343e211300ed1ae3144bec0f8fe8dd368a2881397fd191ed1",
+        "bytes": 8848
+      },
+      "requirements.txt": {
+        "url": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/requirements.txt",
+        "sha256": "cead0858a13ee18a480b15cecd75227650dd46f012fc26e7c04f0b120b012214",
+        "bytes": 734
+      },
+      "setup.py": {
+        "url": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/setup.py",
+        "sha256": "2da114b15eb4d1c7e713c77eb82e390937ef2073b1cae39f6095832357cfc7ba",
+        "bytes": 1755
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/josephchenhk/qtrader/commit/209f96b8122e7a7fc18de611c821ef4d7f64ba56",
+      "metadata": "https://api.github.com/repos/josephchenhk/qtrader"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# QTrader: A Light Event-Driven Algorithmic Trading Engine **Latest update on 2026-09-07** `qtrader` has been fully upgraded to Systematic Investment Research Intelligence (Atabet Quant Intelligence),",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<img src =\"https://img.shields.io/badge/python-3.8|3.9|3.10-blue.svg\" />",
+      "<img src =\"https://img.shields.io/github/workflow/status/vnpy/vnpy/Python%20application/master\"/>",
+      "<img src =\"https://img.shields.io/badge/license-JXW-orange\"/>",
+      "```python",
+      "# Virtual environment is recommended (python 3.8 or above is supported)",
+      ">> conda create -n qtrader python=3.8",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "# Program terminates normally",
+      "engine.log.info(\"Program shutdown normally.\")",
+      "```python",
+      "# End time should be set to a future time stamp when you expect the program terminates",
+      "```python",
+      "QTrader is also equipped with a **Telegram Bot**, which allows you get instant",
+      "information from your trading program. To enable this function, you can add your"
+    ],
+    "dependency_repos": [
+      "josephchenhk/qtrader"
+    ]
+  },
+  {
+    "full_name": "fbertram/TuringTrader",
+    "requested_name": "fbertram/TuringTrader",
+    "id": 195689135,
+    "url": "https://github.com/fbertram/TuringTrader",
+    "stars": 536,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "0a7dc60ed9df6f94920b13b6233cd0d0926f2528",
+    "last_commit_date": "2023-04-17T15:58:00Z",
+    "archived": false,
+    "fork": false,
+    "description": "The Open-Source Backtesting Engine/ Trading Simulator by Bertram Enterprises.",
+    "language": "C#",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "COPYING.txt"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# TuringTrader",
+      "## Installing",
+      "## Documentation",
+      "## Building from Source",
+      "### Prerequisites",
+      "### Build Steps"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/fbertram/TuringTrader/issues/24",
+        "createdAt": "2025-08-07T07:58:22Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-08-07T16:22:10Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/fbertram/TuringTrader/issues/23",
+        "createdAt": "2024-05-09T04:55:26Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-05-09T15:58:28Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "Algorithms",
+      "BooksAndPubs",
+      "BooksAndPubsV2",
+      "COPYING.txt",
+      "Data",
+      "DocFX",
+      "More",
+      "README.md",
+      "SINGLE_CLICK_BUILD.bat",
+      "Templates",
+      "TuringTrader.Setup",
+      "TuringTrader.Simulator",
+      "TuringTrader.Tests",
+      "TuringTrader.sln",
+      "TuringTrader",
+      "default-files.lnk",
+      "packages"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/fbertram/TuringTrader/blob/0a7dc60ed9df6f94920b13b6233cd0d0926f2528/README.md",
+        "sha256": "0d75a3ba87a9dd7c6547987a1a8e8b3a76f2a5dcee7a3a377e4062f2d8ba161d",
+        "bytes": 1504
+      },
+      "COPYING.txt": {
+        "url": "https://github.com/fbertram/TuringTrader/blob/0a7dc60ed9df6f94920b13b6233cd0d0926f2528/COPYING.txt",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+        "bytes": 34523
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/fbertram/TuringTrader/commit/0a7dc60ed9df6f94920b13b6233cd0d0926f2528",
+      "metadata": "https://api.github.com/repos/fbertram/TuringTrader"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# TuringTrader ![GNU Affero General Public License](https://www.gnu.org/graphics/agplv3-155x51.png) An open-source backtesting engine/ trading simulator, licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0). For news, updates, and more information about the project, please visit our website at https://www.turingtrader.org/. ## Installing To install TuringTrader, download the setup file from https://www.turingtrader.org/download/. ## Documentation Find the TuringTrader documentation at https://www.turingtrader.org/documentation/. ## Building from Source ### Prerequisites - Microsoft Visual Studio Community 2022 - installation must include Workloads for .NET desktop development and Universal Windows Platform development - .NET 6.0 SDK - DocFX toolset version 2.62.2 - WiX Toolset v4 (FireGiant's HeatWave Community Edition) ### Build Steps Here are the individual steps to build TuringTrader from source: - Install TuringTrader from binary distribution - Open TuringTrader solution in Visual Studio - Build release version of TuringTrader project - Publish TuringTrader application - Build BooksAndPubs project (linked against the binary version installed) - Build setup project - Build documentation The project also contains a script for a single-click build of the installer. See [SINGLE_CLICK_BUILD.bat](https://github.com/fbertram/TuringTrader/blob/develop/SINGLE_CLICK_BUILD.bat) at the repository root! Happy coding! Felix Bertram info@TuringTrader.org",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![GNU Affero General Public License](https://www.gnu.org/graphics/agplv3-155x51.png)",
+      "An open-source backtesting engine/ trading simulator, licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0).",
+      "The project also contains a script for a single-click build of the installer. See [SINGLE_CLICK_BUILD.bat](https://github.com/fbertram/TuringTrader/blob/develop/SINGLE_CLICK_BUILD.bat) at the repository root!",
+      "Felix Bertram"
+    ],
+    "dependency_repos": [
+      "fbertram/TuringTrader"
+    ]
+  },
+  {
+    "full_name": "lukstei/trading-backtest",
+    "requested_name": "lukstei/trading-backtest",
+    "id": 49152041,
+    "url": "https://github.com/lukstei/trading-backtest",
+    "stars": 351,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86",
+    "last_commit_date": "2021-07-20T08:38:23Z",
+    "archived": false,
+    "fork": false,
+    "description": "A stock backtesting engine written in Java. And a pairs trading (cointegration) strategy implementation using a bayesian kalman filter model",
+    "language": "Java",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "The MIT License (MIT)",
+      "Copyright (c) 2016 lukstei",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## What?",
+      "### Cointegration/Pairs trading",
+      "## How?",
+      "### Running a backtest",
+      "### Creating a new strategy",
+      "## Interesting classes to look at",
+      "### Example run of the cointegration strategy",
+      "## Why?",
+      "## Who?",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "build.gradle",
+      "gradle",
+      "gradlew",
+      "gradlew.bat",
+      "img",
+      "settings.gradle",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/lukstei/trading-backtest/blob/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86/README.md",
+        "sha256": "fa8b2f32ecfde88d64c3866dd146a6ce0a9742655659cee093e2ccea6912ca2e",
+        "bytes": 8937
+      },
+      "LICENSE": {
+        "url": "https://github.com/lukstei/trading-backtest/blob/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86/LICENSE",
+        "sha256": "92058bd5f8799a4c2836b69340cda868cc914ff67890d2252afdecc54af3ae4b",
+        "bytes": 1075
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/lukstei/trading-backtest/commit/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86",
+      "metadata": "https://api.github.com/repos/lukstei/trading-backtest"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "## What? This is a general purpose lightweight backtesting engine for stocks, written in Java. Some advantages compared to other backtesting implementations are: * It uses a callback model and since it is implemented in java it should be pretty performant when running many backtests * Easily extensible * Strategies are easily debuggable using a Java IDE * Lightweight and therefore the backtesting engine is easily verifiable * Backtesting results are further analyzable in R or Excel since it uses a CSV output format ### Cointegration/Pairs trading I've written this library primarily to try out this particular strategy. The cointegration strategy, or also known as pairs trading strategy, tries to take two stocks and create a linear model to find a optimal hedge ratio between them in order create a stationary process. Assume stocks A and B with prices `Pa` and `Pb` respectively, we set `Pa = alpha + beta*Pb` and try to find optimal `alpha` and `beta`. One method to find `alpha` and `beta` is using a so called Kalman Filter which is a dynamic bayesian model and we",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2016 lukstei Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "System.out.println(format(Locale.US, \"P/L = %.2f, Final value = %.2f, Result = %.2f%%, Annualized = %.2f%%, Sharpe (rf=0%%) = %.2f\", result.getPl(), result.getFinalValue(), result.getReturn() * 100, result.getReturn() / (days / 251.) * 100, result.getSharpe())",
+      "* [DoubleSeries](https://github.com/lukstei/trading-backtest/blob/master/src/main/java/org/lst/trading/lib/series/DoubleSeries.java): A time series class which has doubles as values. (corresponds to a pandas.Series (python))",
+      "* [MultipleDoubleSeries](https://github.com/lukstei/trading-backtest/blob/master/src/main/java/org/lst/trading/lib/series/MultipleDoubleSeries.java): A time series class which has multiple doubles as values. (corresponds to a pandas.DataFrame or a R Dataframe)",
+      "in a \"full blown\" programming language where I have a mature IDE, good debugging tools and less 'magic' where I know exactly what is going on under the hood.",
+      "## License"
+    ],
+    "dependency_repos": [
+      "lukstei/trading-backtest"
+    ]
+  },
+  {
+    "full_name": "ryantcullen/stock-bot",
+    "requested_name": "ryantcullen/stock-bot",
+    "id": 320710006,
+    "url": "https://github.com/ryantcullen/stock-bot",
+    "stars": 313,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ac1a7d7c7d2bcc0e73c8c56775113afd56cd15fb",
+    "last_commit_date": "2026-02-25T20:26:08Z",
+    "archived": false,
+    "fork": false,
+    "description": "An open-source Python backtesting engine for designing and evaluating daily stock trading algorithms against real historical market data.",
+    "language": "Python",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# StockBot",
+      "## Features",
+      "## Installation",
+      "## Usage",
+      "### Example Output",
+      "## Designing Your Own Algorithm",
+      "## Architecture",
+      "## Contributing",
+      "## License",
+      "## Author"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/ryantcullen/stock-bot/issues/14",
+        "createdAt": "2023-09-11T20:44:59Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-03-05T00:51:06Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/ryantcullen/stock-bot/issues/9",
+        "createdAt": "2020-12-25T16:55:28Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-12-25T17:00:49Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-01-25T00:51:04Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-01-25T19:17:29Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-01-25T21:23:02Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-02-01T19:06:48Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-02-02T00:38:03Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "root_entries": [
+      "Example Pictures",
+      "LICENSE",
+      "README.md",
+      "requirements.txt",
+      "stockbot.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ryantcullen/stock-bot/blob/ac1a7d7c7d2bcc0e73c8c56775113afd56cd15fb/README.md",
+        "sha256": "c5f37413e4a115d5e510edc50443cc200356d3fc7339130bca835457400d4e79",
+        "bytes": 3014
+      },
+      "LICENSE": {
+        "url": "https://github.com/ryantcullen/stock-bot/blob/ac1a7d7c7d2bcc0e73c8c56775113afd56cd15fb/LICENSE",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+        "bytes": 34523
+      },
+      "requirements.txt": {
+        "url": "https://github.com/ryantcullen/stock-bot/blob/ac1a7d7c7d2bcc0e73c8c56775113afd56cd15fb/requirements.txt",
+        "sha256": "e3da97d051f205c26d1698a37c466e0027ee09b46076aa12b8031ec4d04d7297",
+        "bytes": 20
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ryantcullen/stock-bot/commit/ac1a7d7c7d2bcc0e73c8c56775113afd56cd15fb",
+      "metadata": "https://api.github.com/repos/ryantcullen/stock-bot"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# StockBot An open-source Python backtesting engine for designing and evaluating daily stock trading algorithms against real historical market data. ## Features - Fetches up to 10 years of historical price data via the Yahoo Finance API - Computes 10, 50, 100, and 200-day moving averages with derived indicators (slope, concavity, crossover detection) - Position sizing via the [Kelly Criterion](https://en.wikipedia.org/wiki/Kelly_criterion) - Compares algorithm performance against a buy-and-hold baseline - Visualizes results with matplotlib (price chart, moving average overlays, buy/sell markers) ## Installation ```bash git clone https://github.com/ryantcullen/stock-bot.git cd stock-bot pip install -r requirements.txt ``` ## Usage ```bash python stockbot.py ``` Enter any stock ticker (e.g. `AAPL`, `TSLA`, `IBM`) to run the backtest. Type `exit` or `Ctrl+C` to quit. ### Example Output ``` Capital: $1,247.83 Shares: 42 Buy and Hold portfolio value: $15,230.00 Buy and Hold returns: $5,230.00 Algorithm portfolio value: $16,012.49 Algorithm returns: $6,012.49 ``` ![PEN](https://github.com/ryantcullen/stock-bot/blob/master/Example%20Pictures/B4myQ0t.png?raw=true) ![BABA](https://github.com/ryantcullen/stock-bot/blob/master/Example%20Pictures/TwOShiK.png?raw=true) ![IBM](https://github.com/ryantcullen/stock-bot/blob/master/Example%20Pictures/lhWY5yX.png?raw=true) ## Designing Your Own Algorithm All trading logic lives in the `Decide()` method of the `Portfolio` class. To implement your own strategy, modify three parameters based on the moving average data: ```python prob_profit",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "An open-source Python backtesting engine for designing and evaluating daily stock trading algorithms against real historical market data.",
+      "python stockbot.py",
+      "All trading logic lives in the `Decide()` method of the `Portfolio` class. To implement your own strategy, modify three parameters based on the moving average data:",
+      "```python",
+      "## License",
+      "[MIT](LICENSE)"
+    ],
+    "dependency_repos": [
+      "ryantcullen/stock-bot",
+      "ryantcullen/stock-bot.git"
+    ]
+  },
+  {
+    "full_name": "myhhub/stock",
+    "requested_name": "myhhub/stock",
+    "id": 616738094,
+    "url": "https://github.com/myhhub/stock",
+    "stars": 14353,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b6e0ca2268cfbadd02f5ed052159c187b6670231",
+    "last_commit_date": "2026-04-02T02:25:44Z",
+    "archived": false,
+    "fork": false,
+    "description": "stock\u80a1\u7968.\u83b7\u53d6\u80a1\u7968\u6570\u636e,\u8ba1\u7b97\u80a1\u7968\u6307\u6807,\u7b79\u7801\u5206\u5e03,\u8bc6\u522b\u80a1\u7968\u5f62\u6001,\u7efc\u5408\u9009\u80a1,\u9009\u80a1\u7b56\u7565,\u80a1\u7968\u9a8c\u8bc1\u56de\u6d4b,\u80a1\u7968\u81ea\u52a8\u4ea4\u6613,\u652f\u6301PC\u53ca\u79fb\u52a8\u8bbe\u5907\u3002",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright {yyyy} {name of copyright owner}"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# \u529f\u80fd\u4ecb\u7ecd",
+      "##  \u4e00\uff1a\u7efc\u5408\u9009\u80a1",
+      "##  \u4e8c\uff1a\u80a1\u7968\u6bcf\u65e5\u6570\u636e",
+      "## \u4e09\uff1a\u80a1\u7968\u6307\u6807\u8ba1\u7b97",
+      "## \u56db\uff1a\u5224\u65ad\u4e70\u5165\u5356\u51fa\u7684\u80a1\u7968",
+      "## \u4e94\uff1aK\u7ebf\u5f62\u6001\u8bc6\u522b",
+      "## \u516d\uff1a\u7b79\u7801\u5206\u5e03",
+      "## \u4e03\uff1a\u7b56\u7565\u9009\u80a1",
+      "## \u516b\uff1a\u9009\u80a1\u9a8c\u8bc1",
+      "## \u4e5d\uff1a\u81ea\u52a8\u4ea4\u6613",
+      "## \u5341\uff1a\u5173\u6ce8\u529f\u80fd",
+      "## \u5341\u4e00\uff1a\u652f\u6301\u6279\u91cf",
+      "## \u5341\u4e8c\uff1a\u652f\u6301\u4ee3\u7406\u53caCookie",
+      "## \u5341\u4e09\uff1a\u5b58\u50a8\u91c7\u7528\u6570\u636e\u5e93\u8bbe\u8ba1",
+      "## \u5341\u56db\uff1a\u5c55\u793a\u91c7\u7528web\u8bbe\u8ba1",
+      "## \u5341\u4e94\uff1a\u8fd0\u884c\u9ad8\u6548",
+      "## \u5341\u516d\uff1a\u65b9\u4fbf\u8c03\u8bd5",
+      "# \u5b89\u88c5\u8bf4\u660e",
+      "## \u4e00\uff1a\u5e38\u89c4\u5b89\u88c5\u65b9\u5f0f",
+      "### 1.\u5b89\u88c5python",
+      "# \u5982\u679c\u4f60\u53ea\u60f3\u4e3a\u5f53\u524d\u7528\u6237\u8bbe\u7f6e\uff0c\u4f60\u4e5f\u53ef\u4ee5\u53bb\u6389\u4e0b\u9762\u7684\"--global\"\u9009\u9879",
+      "### 2.\u5b89\u88c5mysql",
+      "### 3.\u5b89\u88c5 TA-Lib \u5171\u4eab\u9759\u6001\u5e93\u548c\u5934\u6587\u4ef6",
+      "### 4.\u5b89\u88c5\u4f9d\u8d56\u5e93",
+      "# \u5b89\u88c5pipreqs\uff0c\u82e5\u6709\u5b89\u88c5\u53ef\u8df3\u8fc7",
+      "# \u672c\u9879\u76ee\u662futf-8\u7f16\u7801",
+      "### 5.\u5b89\u88c5 Navicat\uff08\u53ef\u9009\uff09",
+      "### 6.\u914d\u7f6e\u6570\u636e\u5e93",
+      "### 7.\u914d\u7f6e\u4ee3\u7406",
+      "### 8.\u8bbe\u7f6e\u4e1c\u65b9\u8d22\u5bcc\u7f51Cookie"
+    ],
+    "recent_commit_count": 3,
+    "recent_authors_sample50": [
+      "myhhub"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/myhhub/stock/issues/536",
+        "createdAt": "2026-09-08T14:37:47Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/myhhub/stock/issues/535",
+        "createdAt": "2026-07-28T14:37:44Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "myhhub/stock",
+      "stars": 13066,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "reference",
+      "reuse_value": 78,
+      "liftability": 8,
+      "fame_gap": 70,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "stock\u80a1\u7968.\u83b7\u53d6\u80a1\u7968\u6570\u636e,\u8ba1\u7b97\u80a1\u7968\u6307\u6807,\u7b79\u7801\u5206\u5e03,\u8bc6\u522b\u80a1\u7968\u5f62\u6001,\u7efc\u5408\u9009\u80a1,\u9009\u80a1\u7b56\u7565,\u80a1\u7968\u9a8c\u8bc1\u56de\u6d4b,\u80a1\u7968\u81ea\u52a8\u4ea4\u6613,\u652f\u6301PC\u53ca\u79fb\u52a8\u8bbe\u5907\u3002"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "cron",
+      "docker",
+      "img",
+      "instock",
+      "requirements.txt",
+      "supervisor"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/README.md",
+        "sha256": "4e0307b72ca8975bbd602f84a9e6cbdb493e8c05d8cee34d6bfe5dd42fddeb19",
+        "bytes": 25846
+      },
+      "LICENSE": {
+        "url": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/LICENSE",
+        "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+        "bytes": 11357
+      },
+      "requirements.txt": {
+        "url": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/requirements.txt",
+        "sha256": "cb1c54d2224376be60308aae9e295efc35cb3237e78174100485cd8a44766bec",
+        "bytes": 307
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/myhhub/stock/commit/b6e0ca2268cfbadd02f5ed052159c187b6670231",
+      "metadata": "https://api.github.com/repos/myhhub/stock"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[\u5bf9\u5e94IMA\u77e5\u8bc6\u5e93](https://ima.qq.com/wiki/?shareId=8b0da768c77bc863f1cad8eb9482e37a6eeb26ad7171523b687d48c1a67c8e2c)\uff1a\u80a1\u7968\u91cf\u5316\u56e0\u5b50 AI \u51b3\u7b56\u5f15\u64ce\uff0c2200 + \u7ef4\u4e13\u4e1a\u56e0\u5b50\u6c60\uff0cAI \u6df1\u5ea6\u89e3\u6790\u591a\u7ef4\u6570\u636e\uff0c\u7cbe\u51c6\u6316\u6398\u9ad8\u786e\u5b9a\u6027\u4e2a\u80a1\uff0c\u8d4b\u80fd\u4e13\u4e1a\u6295\u8d44\u9ad8\u6548\u7a33\u5065\u51b3\u7b56\u3002 https://ima.qq.com/wiki/?shareId=8b0da768c77bc863f1cad8eb9482e37a6eeb26ad7171523b687d48c1a67c8e2c \u3002 **InStock\u80a1\u7968\u7cfb\u7edf** InStock\u80a1\u7968\u7cfb\u7edf\uff0c\u6293\u53d6\u6bcf\u65e5\u80a1\u7968\u3001ETF\u5173\u952e\u6570\u636e\uff0c\u8ba1\u7b97\u80a1\u7968\u6280\u672f\u6307\u6807\u3001\u7b79\u7801\u5206\u5e03\uff0c\u8bc6\u522bK\u7ebf\u5404\u79cd\u5f62\u6001\uff0c\u7efc\u5408\u9009\u80a1\uff0c\u5185\u7f6e\u591a\u79cd\u9009\u80a1\u7b56\u7565\uff0c\u652f\u6301\u9009\u80a1\u9a8c\u8bc1\u56de\u6d4b\uff0c\u652f\u6301\u81ea\u52a8\u4ea4\u6613\uff0c\u652f\u6301\u6279\u91cf\u65f6\u95f4\uff0c\u8fd0\u884c\u9ad8\u6548\uff0c\u652f\u6301PC\u3001\u5e73\u677f\u3001\u624b\u673a\u79fb\u52a8\u8bbe\u5907\u663e\u793a\uff0c\u540c\u65f6\u63d0\u4f9bDocker\u955c\u50cf\u65b9\u4fbf\u5b89\u88c5\uff0c\u662f\u91cf\u5316\u6295\u8d44\u7684\u597d\u5e2e\u624b\u3002 The stock system,Capture key data on daily stocks and ETFs, calculate stock technical indicators, chip distribution, Position Cost Distribution(CYQ), identify various K-line forms, comprehensive stock selection, built-in multiple stock selection strategies, support stock selection verification and backtesting, support automatic trading, and support batch time , runs efficiently, supports display on PCs, tablets, and mobile phones, and provides Docker images for easy installation, making it a good helper for quantitative investment. Docker\u955c\u50cf\uff1ahttps://hub.docker.com/r/mayanghua/instock \u3002 # \u529f\u80fd\u4ecb\u7ecd ## \u4e00\uff1a\u7efc\u5408\u9009\u80a1 \u7efc\u5408\u9009\u80a1\u652f\u6301\u80a1\u7968\u8303\u56f4\u3001\u57fa\u672c\u9762\u3001\u6280\u672f\u9762\u3001\u6d88\u606f\u9762\u3001\u4eba\u6c14\u6307\u6807\u3001\u884c\u60c5\u6570\u636e\u7b49\u65b9\u9762\u5171200\u591a\u4e2a\u4fe1\u606f\u680f\u76ee\u8fdb\u884c\u81ea\u7531\u7ec4\u5408\u9009\u80a1\u3002\u9009\u80a1\u6761\u4ef6\u5206\u4e3a\u4ee5\u4e0b\u5927\u7c7b\uff1a ``` 1.\u80a1\u7968\u8303\u56f4 \u5e02\u573a\u3001 \u884c\u4e1a\u3001\u5730\u533a\u3001 \u6982\u5ff5\u3001 \u98ce\u683c\u3001\u6307\u6570\u6210\u4efd\u3001 \u4e0a\u5e02\u65f6\u95f4\u3002 2.\u57fa\u672c\u9762 \u4f30\u503c\u6307\u6807\u3001\u6bcf\u80a1\u6307\u6807\u3001\u76c8\u5229\u80fd\u529b\u3001\u6210\u957f\u80fd\u529b\u3001\u8d44\u672c\u7ed3\u6784\u4e0e\u507f\u503a\u80fd\u529b\u3001\u80a1\u672c\u80a1\u4e1c\u3002 3.\u6280\u672f\u9762 MACD\u91d1\u53c9\u3001KDJ\u91d1\u53c9\u3001\u653e\u91cf\u7a81\u7834\u3001\u4f4e\u4f4d\u8d44\u91d1\u51c0\u6d41\u5165\u3001\u9ad8\u4f4d\u8d44\u91d1\u51c0\u6d41\u51fa\u3001\u5411\u4e0a\u7a81\u7834\u5747\u7ebf\u3001\u5747\u7ebf\u591a\u5934\u6392\u5217\u3001\u5747\u7ebf\u7a7a\u5934\u6392\u5217\u3001\u8fde\u6da8\u653e\u91cf\u3001\u4e0b\u8dcc\u65e0\u91cf\u3001\u4e00\u6839\u5927\u9633\u7ebf\u3001\u4e24\u6839\u5927\u9633\u7ebf\u3001\u65ed\u65e5\u4e1c\u5347\u3001\u5f3a\u52bf\u591a\u65b9\u3001\u70ae\u62e8\u4e91\u89c1\u65e5\u3001\u4e03\u4ed9\u5973\u4e0b\u51e1(\u4e03\u8fde\u9634)\u3001\u516b\u4ed9\u8fc7\u6d77(\u516b\u8fde\u9633)\u3001\u4e5d\u9633\u795e\u529f(\u4e5d\u8fde\u9633)\u3001\u56db\u4e32\u9633\u3001\u5929\u91cf\u6cd5\u5219\u3001\u653e\u91cf\u4e0a\u653b\u3001\u7a7f\u5934\u7834\u811a\u3001\u5012\u8f6c\u9524\u5934\u3001\u5c04\u51fb\u4e4b\u661f\u3001\u9ec4\u660f\u4e4b\u661f\u3001\u66d9\u5149\u521d\u73b0\u3001\u8eab\u6000\u516d\u7532\u3001\u4e4c\u4e91\u76d6\u9876\u3001\u65e9\u6668\u4e4b\u661f\u3001\u7a84\u5e45\u6574\u7406\u3002 4.\u6d88\u606f\u9762 \u516c\u544a\u5927\u4e8b\u3001\u673a\u6784\u5173\u6ce8\u60c5\u51b5\u3001\u673a\u6784\u6301\u80a1\u5bb6\u6570\u3001\u673a\u6784\u6301\u80a1\u6bd4\u4f8b\u3002 5.\u4eba\u6c14\u6307\u6807 \u80a1\u5427\u4eba\u6c14\u6392\u540d\u3001\u4eba\u6c14\u6392\u540d\u53d8\u5316\u3001\u4eba\u6c14\u6392\u540d\u8fde\u6da8\u3001\u4eba\u6c14\u6392\u540d\u8fde\u8dcc\u3001\u4eba\u6c14\u6392\u540d\u521b\u65b0\u9ad8\u3001\u4eba\u6c14\u6392\u540d\u521b\u65b0\u4f4e\u3001\u65b0\u664b\u7c89\u4e1d\u5360\u6bd4\u3001\u94c1\u6746\u7c89\u4e1d\u5360\u6bd4\u30017\u65e5\u5173\u6ce8\u6392\u540d\u3001\u4eca\u65e5\u6d4f\u89c8\u6392\u540d\u3002 6.\u884c\u60c5\u6570\u636e \u80a1\u4ef7\u8868\u73b0\u3001\u6210\u4ea4\u60c5\u51b5\u3001\u8d44\u91d1\u6d41\u5411\u3001\u884c\u60c5\u7edf\u8ba1\u3001\u6caa\u6df1\u80a1\u901a\u3002 ``` ![](img/a3.jpg) ![](img/a1.jpg) ## \u4e8c\uff1a\u80a1\u7968\u6bcf\u65e5\u6570\u636e \u5305\u62ec\u6bcf\u65e5\u80a1\u7968\u6570\u636e\u3001\u80a1\u7968\u8d44\u91d1\u6d41\u5411\u3001\u80a1\u7968\u5206\u7ea2\u914d\u9001\u3001\u80a1\u7968\u9f99\u864e\u699c\u3001\u80a1\u7968\u5927\u5b97\u4ea4\u6613\u3001\u80a1\u7968\u57fa\u672c\u9762\u6570\u636e\u3001\u884c\u4e1a\u8d44\u91d1\u6d41\u5411\u3001\u6982\u5ff5\u8d44\u91d1\u6d41\u5411\u3001\u65e9\u76d8\u62a2\u7b79\u6570\u636e\u3001\u5c3e\u76d8\u62a2\u7b79\u6570\u636e\u3001\u6da8\u505c\u539f\u56e0\u63ed\u5bc6\u3001\u6bcf\u65e5ETF\u6570\u636e\u3002 \u6293\u53d6A\u80a1\u7968\u6bcf\u65e5\u6570\u636e\uff0c\u4e3b\u8981\u4e3a\u4e00\u4e9b\u5173\u952e\u6570\u636e\uff0c\u540c\u65f6\u5c01\u88c5\u6293\u53d6\u65b9\u6cd5\uff0c\u65b9\u4fbf\u6269\u5c55\u7cfb\u7edf\u83b7\u53d6\u4e2a\u4eba\u5173\u6ce8\u7684\u6570\u636e\u3002 ![](img/00.jpg) ![](img/12.jpg) ## \u4e09\uff1a\u80a1\u7968\u6307\u6807\u8ba1\u7b97 \u57fa\u4e8etalib\u3001pandas \u8ba1\u7b97\u6307\u6807\uff0c\u8ba1\u7b97\u9ad8\u6548\u51c6\u786e\u3002\u8c03\u6574\u4e2a\u522b\u6307\u6807\u516c\u5f0f\uff0c\u786e\u4fdd\u7ed3\u679c\u548c\u540c\u82b1\u987a\u3001\u901a\u4fe1\u8fbe\u7ed3\u679c\u4e00\u81f4\u3002 \u6307\u6807\uff1a ``` 1\u3001MACD 2\u3001KDJ 3\u3001BOLL 4\u3001TRIX\uff0cTRMA 5\u3001CR 6\u3001SMA 7\u3001RSI 8\u3001VR\uff0cMAVR 9\u3001ROC 10\u3001DMI\uff0c+DI\uff0c-DI\uff0cDX\uff0cADX\uff0cADXR 11\u3001W&R 12\u3001CCI 13\u3001TR\u3001ATR 14\u3001DMA\u3001AMA 15\u3001OBV 16\u3001SAR 17\u3001PSY 18\u3001BRAR 19\u3001EMV 20\u3001BIAS 21\u3001TEMA 22\u3001MFI 23\u3001VWMA 24\u3001PPO 25\u3001WT 26\u3001Supertrend 27\u3001DPO 28\u3001VHF 29\u3001RVI 30\u3001FI 31\u3001ENE 32\u3001STOCHRSI ``` ![](img/01.jpg) ![](img/06.jpg) ## \u56db\uff1a\u5224\u65ad\u4e70\u5165\u5356\u51fa\u7684\u80a1\u7968 \u6839\u636e\u6307\u6807\u5224\u5b9a\u53ef\u80fd\u4e70\u5165\u5356\u51fa\u7684\u80a1\u7968\uff0c\u5177\u4f53\u7b5b\u9009\u6761\u4ef6\u5982\u4e0b\uff1a ``` KDJ: 1\u3001\u8d85\u4e70\u533a\uff1aK\u503c\u572880\u4ee5\u4e0a\uff0cD\u503c\u572870\u4ee5\u4e0a\uff0cJ\u503c\u5927\u4e8e90\u65f6\u4e3a\u8d85\u4e70\u3002\u4e00\u822c\u60c5\u51b5\u4e0b\uff0c\u80a1\u4ef7\u6709\u53ef\u80fd\u4e0b\u8dcc\u3002\u6295\u8d44\u8005\u5e94\u8c28\u614e\u884c\u4e8b\uff0c\u5c40\u5916\u4eba\u4e0d\u5e94\u518d\u8ffd\u6da8\uff0c\u5c40\u5185\u4eba\u5e94\u9002\u65f6\u5356\u51fa\u3002 2\u3001\u8d85\u5356\u533a\uff1aK\u503c\u572820\u4ee5\u4e0b\uff0cD\u503c\u572830\u4ee5\u4e0b\u4e3a\u8d85\u5356\u533a\u3002\u4e00\u822c\u60c5\u51b5\u4e0b\uff0c\u80a1\u4ef7\u6709\u53ef\u80fd\u4e0a\u6da8\uff0c\u53cd\u5f39\u7684\u53ef\u80fd\u6027\u589e\u5927\u3002\u5c40\u5185\u4eba\u4e0d\u5e94\u8f7b\u6613\u629b\u51fa\u80a1\u7968\uff0c\u5c40\u5916\u4eba\u53ef\u5bfb\u673a\u5165\u573a\u3002 RSI: 1\u3001\u5f53\u516d\u65e5\u6307\u6807\u4e0a\u5347\u5230\u8fbe80\u65f6\uff0c\u8868\u793a\u80a1\u5e02\u5df2\u6709\u8d85\u4e70\u73b0\u8c61\uff0c\u5982\u679c\u4e00\u65e6\u7ee7\u7eed\u4e0a\u5347\uff0c\u8d85\u8fc790\u4ee5\u4e0a\u65f6\uff0c\u5219\u8868\u793a\u5df2\u5230\u4e25\u91cd\u8d85\u4e70\u7684\u8b66\u6212\u533a\uff0c\u80a1\u4ef7\u5df2\u5f62\u6210\u5934\u90e8\uff0c\u6781\u53ef\u80fd\u5728\u77ed\u671f\u5185\u53cd\u8f6c\u56de\u8f6c\u3002 2\u3001\u5f53\u516d\u65e5\u5f3a\u5f31\u6307\u6807\u4e0b\u964d\u81f320\u65f6\uff0c\u8868\u793a\u80a1\u5e02\u6709\u8d85\u5356\u73b0\u8c61\uff0c\u5982\u679c\u4e00\u65e6\u7ee7\u7eed\u4e0b\u964d\u81f310\u4ee5\u4e0b\u65f6\u5219\u8868\u793a\u5df2\u5230\u4e25\u91cd\u8d85\u5356\u533a\u57df\uff0c\u80a1\u4ef7\u6781\u53ef\u80fd\u6709\u6b62\u8dcc\u56de\u5347\u7684\u673a\u4f1a\u3002 CCI: 1\u3001\u5f53CCI\uff1e\ufe62100\u65f6\uff0c\u8868\u660e\u80a1\u4ef7\u5df2\u7ecf\u8fdb\u5165\u975e\u5e38\u6001\u533a\u95f4\u2014\u2014\u8d85\u4e70\u533a\u95f4\uff0c\u80a1\u4ef7\u7684\u5f02\u52a8\u73b0\u8c61\u5e94\u591a\u52a0\u5173\u6ce8\u3002 2\u3001\u5f53CCI\uff1c\ufe63100\u65f6\uff0c\u8868\u660e\u80a1\u4ef7\u5df2\u7ecf\u8fdb\u5165\u53e6\u4e00\u4e2a\u975e\u5e38\u6001\u533a\u95f4\u2014\u2014\u8d85\u5356\u533a\u95f4\uff0c\u6295\u8d44\u8005\u53ef\u4ee5\u9022\u4f4e\u5438\u7eb3\u80a1\u7968\u3002 CR: 1\u3001\u8dcc\u7a7fa\u3001b\u3001c\u3001d\u56db\u6761\u7ebf\uff0c\u518d\u7531\u4f4e\u70b9\u5411\u4e0a\u722c\u5347160\u65f6\uff0c\u4e3a\u77ed\u7ebf\u83b7\u5229\u7684\u4e00\u4e2a\u826f\u673a\uff0c\u5e94\u9002\u5f53\u5356\u51fa\u80a1\u7968\u3002 2\u3001CR\u8dcc\u81f340\u4ee5\u4e0b\u65f6\uff0c\u662f\u5efa\u4ed3\u826f\u673a\u3002 WR: 1\u3001\u5f53\uff05R\u7ebf\u8fbe\u523020\u65f6\uff0c\u5e02\u573a\u5904\u4e8e\u8d85\u4e70\u72b6\u51b5\uff0c\u8d70\u52bf\u53ef\u80fd\u5373\u5c06\u89c1\u9876\u3002 2\u3001\u5f53\uff05R\u7ebf\u8fbe\u523080\u65f6\uff0c\u5e02\u573a\u5904\u4e8e\u8d85\u5356\u72b6\u51b5\uff0c\u80a1\u4ef7\u8d70\u52bf\u968f\u65f6\u53ef\u80fd\u89c1\u5e95\u3002 VR: 1\u3001\u83b7\u5229\u533a\u57df160\uff0d450\u6839\u636e\u60c5\u51b5\u83b7\u5229\u4e86\u7ed3\u3002 2\u3001\u4f4e\u4ef7\u533a\u57df40\uff0d70\u53ef\u4ee5\u4e70\u8fdb\u3002 ``` ![](img/05.jpg) ## \u4e94\uff1aK\u7ebf\u5f62\u6001\u8bc6\u522b",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "InStock\u80a1\u7968\u7cfb\u7edf\uff0c\u6293\u53d6\u6bcf\u65e5\u80a1\u7968\u3001ETF\u5173\u952e\u6570\u636e\uff0c\u8ba1\u7b97\u80a1\u7968\u6280\u672f\u6307\u6807\u3001\u7b79\u7801\u5206\u5e03\uff0c\u8bc6\u522bK\u7ebf\u5404\u79cd\u5f62\u6001\uff0c\u7efc\u5408\u9009\u80a1\uff0c\u5185\u7f6e\u591a\u79cd\u9009\u80a1\u7b56\u7565\uff0c\u652f\u6301\u9009\u80a1\u9a8c\u8bc1\u56de\u6d4b\uff0c\u652f\u6301\u81ea\u52a8\u4ea4\u6613\uff0c\u652f\u6301\u6279\u91cf\u65f6\u95f4\uff0c\u8fd0\u884c\u9ad8\u6548\uff0c\u652f\u6301PC\u3001\u5e73\u677f\u3001\u624b\u673a\u79fb\u52a8\u8bbe\u5907\u663e\u793a\uff0c\u540c\u65f6\u63d0\u4f9bDocker\u955c\u50cf\u65b9\u4fbf\u5b89\u88c5\uff0c\u662f\u91cf\u5316\u6295\u8d44\u7684\u597d\u5e2e\u624b\u3002",
+      "The stock system,Capture key data on daily stocks and ETFs, calculate stock technical indicators, chip distribution, Position Cost Distribution(CYQ), identify various K-line forms, comprehensive stock selection, built-in multiple stock selection strategies, su",
+      "Docker\u955c\u50cf\uff1ahttps://hub.docker.com/r/mayanghua/instock \u3002",
+      "\u5f53\u524d\u65f6\u95f4\u4f5c\u4e1a python execute_daily_job.py",
+      "\u5355\u4e2a\u65f6\u95f4\u4f5c\u4e1a python execute_daily_job.py 2022-03-01",
+      "\u679a\u4e3e\u65f6\u95f4\u4f5c\u4e1a python execute_daily_job.py 2022-01-01,2021-02-08,2022-03-12",
+      "\u533a\u95f4\u65f6\u95f4\u4f5c\u4e1a python execute_daily_job.py 2022-01-01 2022-03-01",
+      "\u57fa\u7840\u6570\u636e\u5b9e\u65f6\u4f5c\u4e1a python basic_data_daily_job.py",
+      "\u57fa\u7840\u6570\u636e\u975e\u5b9e\u65f6\u4f5c\u4e1a python basic_data_other_daily_job.py",
+      "\u6307\u6807\u6570\u636e\u4f5c\u4e1a python indicators_data_daily_job.py",
+      "\u7b56\u7565\u6570\u636e\u4f5c\u4e1a python strategy_data_daily_job.py",
+      "\u56de\u6d4b\u6570\u636e python backtest_data_daily_job.py",
+      "\u672c\u7cfb\u7edf\u652f\u6301Windows\u3001Linux\u3001MacOS\uff0c\u540c\u65f6\u672c\u7cfb\u7edf\u521b\u5efa\u4e86Docker\u955c\u50cf\uff0c\u6309\u81ea\u5df1\u9700\u8981\u9009\u62e9\u5b89\u88c5\u65b9\u5f0f\u3002",
+      "\u4e0b\u9762\u6309\u5206\u5e38\u89c4\u5b89\u88c5\u65b9\u5f0f\u3001docker\u955c\u50cf\u5b89\u88c5\u65b9\u5f0f\u8fdb\u884c\u4e00\u4e00\u8bf4\u660e\u3002",
+      "### 1.\u5b89\u88c5python",
+      "\u9879\u76ee\u5f00\u53d1\u4f7f\u7528python 3.11\uff0c\u5efa\u8bae\u6700\u65b0\u7248\u3002",
+      "\uff081\uff09\u5728\u5b98\u7f51 https://www.python.org/downloads/ \u4e0b\u8f7d\u5b89\u88c5\u5305\uff0c\u4e00\u952e\u5b89\u88c5\u5373\u53ef\uff0c\u5b89\u88c5\u5207\u8bb0\u52fe\u9009\u81ea\u52a8\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf\u3002",
+      "python pip config --global set  global.index-url https://mirrors.aliyun.com/pypi/simple/"
+    ],
+    "dependency_repos": [
+      "tesseract-ocr/tesseract"
+    ]
+  },
+  {
+    "full_name": "OpenByteInc/QuantDinger",
+    "requested_name": "OpenByteInc/QuantDinger",
+    "id": 1124295269,
+    "url": "https://github.com/OpenByteInc/QuantDinger",
+    "stars": 11591,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0",
+    "last_commit_date": "2026-09-13T11:46:28Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open-source AI Trading OS and commercial-ready multi-tenant SaaS platform \u2014 research markets, build Python strategies, backtest, paper/live trade, and monitor crypto, stocks, and forex, with built-in user management, billing, payments, and settlement to launch and operate your own trading service.",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [quantdinger.com] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Watch QuantDinger in action",
+      "## What QuantDinger is",
+      "## What changed in v5",
+      "## Architecture",
+      "## Quick start",
+      "### Option A: prebuilt images",
+      "### Docker administrator and settings notes",
+      "### Option B: source checkout",
+      "## Production deployment",
+      "## Local endpoints",
+      "## Observability",
+      "## Security model",
+      "## Strategy and integration surfaces",
+      "## AI agents and MCP",
+      "## Development",
+      "## Repository layout",
+      "### Main execution paths",
+      "### Where changes belong",
+      "## Documentation",
+      "## Contributing",
+      "## Exchange partner links",
+      "## License and commercial terms",
+      "## Legal notice and compliance",
+      "## Community and support",
+      "## Sponsors",
+      "## Support the project",
+      "## Acknowledgements",
+      "## P.S. \u2014 A note on the name"
+    ],
+    "recent_commit_count": 376,
+    "recent_authors_sample50": [
+      "Dev-next-gen",
+      "Henry",
+      "tianhe"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/OpenByteInc/QuantDinger/issues/130",
+        "createdAt": "2026-06-01T07:59:45Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-11T09:30:11Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-09-13T04:37:03Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/OpenByteInc/QuantDinger/issues/134",
+        "createdAt": "2026-06-02T07:02:08Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-06T16:36:36Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-13T02:02:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T04:36:59Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "root_entries": [
+      ".cursor",
+      ".dockerignore",
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitleaksignore",
+      ".spectral.agent.yaml",
+      ".spectral.yaml",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "CONTRIBUTORS.md",
+      "DEVELOPMENT.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARKS.md",
+      "VERSION",
+      "backend_api_python",
+      "docker-compose.build.yml",
+      "docker-compose.ghcr.yml",
+      "docker-compose.observability.yml",
+      "docker-compose.production.yml",
+      "docker-compose.yml",
+      "docs",
+      "install.ps1",
+      "install.sh",
+      "mcp_server",
+      "ops",
+      "scripts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/OpenByteInc/QuantDinger/blob/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0/README.md",
+        "sha256": "54304dcdb903040152d7a535b38fb79b3381549e720fda49c4aed15e1c593ce4",
+        "bytes": 32719
+      },
+      "LICENSE": {
+        "url": "https://github.com/OpenByteInc/QuantDinger/blob/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0/LICENSE",
+        "sha256": "c0a1e0a8cd6a160d060858b2eff80befc9f2cf42db1433d34c1af0f92d6489b0",
+        "bytes": 11370
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/OpenByteInc/QuantDinger/commit/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0",
+      "metadata": "https://api.github.com/repos/OpenByteInc/QuantDinger"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "QuantDinger Open-source AI Trading OS Turn trading ideas into Python strategies, backtests, paper trading, live execution, and monitoring \u2014 all in one self-hosted stack. QuantDinger is a product of Open Byte Inc. AI research \u2192 Strategy code \u2192 Backtest \u2192 Paper/Live execution \u2192 Monitoring English \u00b7 \u7b80\u4f53\u4e2d\u6587 \u00b7 API \u00b7 AI Agents & MCP Live App \u00b7 Website \u00b7 Video Demo \u00b7 Official Support Email SUPPORTED BY &nbsp;&nbsp;&nbsp;&nbsp; > QuantDinger can submit real orders when live trading is explicitly enabled. > Start with paper trading, use restricted API keys, and review the risk and > compliance requirements for your jurisdiction. This project does not provide > investment advice. ## Watch QuantDinger in action ## What QuantDinger is QuantDinger is an **open-source AI Trading OS** for independent traders, Python strategy authors, and small teams. Its local-first, self-hosted design keeps market data, strategy code, broker credentials, and deployment under the operator's control. The project combines: - multi-provider AI market research and analysis; - Python indicators and Strategy API V2 development; - server-side backtesting and experiment workflows; - paper and live execution across",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<p>Turn trading ideas into Python strategies, backtests, paper trading, live execution, and monitoring \u2014 all in one self-hosted stack.</p>",
+      "<a href=\"https://t.me/quantdinger\"><img src=\"https://img.shields.io/badge/Telegram-Join-26A5E4?style=flat-square&logo=telegram&logoColor=white\" alt=\"Telegram\"></a>",
+      "<a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square\" alt=\"Apache 2.0\"></a>",
+      "<img src=\"docs/badges/python-3.12.svg\" alt=\"Python 3.12\">",
+      "<img src=\"docs/badges/docker-compose.svg\" alt=\"Docker Compose\">",
+      "QuantDinger is an **open-source AI Trading OS** for independent traders, Python",
+      "strategy authors, and small teams. Its local-first, self-hosted design keeps",
+      "- Python indicators and Strategy API V2 development;",
+      "The diagram above shows the complete product and process architecture. The",
+      "Prerequisites: Docker with Compose v2. Node.js and a local Python environment are",
+      "### Docker administrator and settings notes",
+      "Manual Docker deployments retain `quantdinger` / `123456` only for backward",
+      "`backend_api_python/.env`. Current backend images automatically give runtime UID",
+      "docker compose exec -u 10001:10001 -T backend \\",
+      "When using `docker-compose.production.yml`, manage configuration on the host and",
+      "cp backend_api_python/env.example backend_api_python/.env",
+      "| `backend_api_python/.env` | `SECRET_KEY`, `CREDENTIAL_ENCRYPTION_KEY`, `ADMIN_USER`, `ADMIN_PASSWORD` |",
+      "python -c \"import secrets; print(secrets.token_hex(32))\""
+    ],
+    "dependency_repos": [
+      "OpenByteInc/QuantDinger",
+      "OpenByteInc/QuantDinger-Mobile",
+      "OpenByteInc/QuantDinger-Vue",
+      "OpenByteInc/QuantDinger.git",
+      "akfamily/akshare",
+      "ccxt/ccxt",
+      "ebellocchia/bip_utils",
+      "klinecharts/KLineChart",
+      "ranaroussi/yfinance"
+    ]
+  },
+  {
+    "full_name": "Koukyosyumei/h5i-db",
+    "requested_name": "Koukyosyumei/h5i-db",
+    "id": 1308323775,
+    "url": "https://github.com/Koukyosyumei/h5i-db",
+    "stars": 32,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8a39685ed5a00fb797133959fcb70b6152de676e",
+    "last_commit_date": "2026-08-14T19:21:55Z",
+    "archived": false,
+    "fork": false,
+    "description": "An agent-native workspace for quantitative research: an in-terminal notebook, a high-performance time-series database, and a high-throughput backtesting engine. Written in Rust.",
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# h5i-db",
+      "## Quickstart",
+      "# df = db.table(\"trades\").group_by(\"symbol\").agg(px=col(\"price\").mean()).to_pandas()",
+      "## Why it's fast",
+      "## Why for agents",
+      "## Data sources",
+      "## When *not* to use h5i-db",
+      "## Benchmark",
+      "## Development",
+      "# One package at a time with capped threads: several suites start DataFusion",
+      "# sessions and tokio runtimes, so running the whole workspace at once can",
+      "# exhaust memory on a small machine.",
+      "## License"
+    ],
+    "recent_commit_count": 448,
+    "recent_authors_sample50": [
+      "Koukyosyumei"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Koukyosyumei/h5i-db/issues/77",
+        "createdAt": "2026-08-02T18:20:02Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/Koukyosyumei/h5i-db/issues/82",
+        "createdAt": "2026-08-02T18:20:07Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "C",
+        "query": "Parquet backtest"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".codex",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "DESIGN.md",
+      "LICENSE",
+      "README.es.md",
+      "README.fr.md",
+      "README.ja.md",
+      "README.md",
+      "README.zh-CN.md",
+      "ROADMAP.md",
+      "ROADMAP_NOTEBOOK.md",
+      "ROADMAP_QUANT.md",
+      "benchmarks",
+      "compat",
+      "crates",
+      "deny.toml",
+      "docs-src",
+      "docs",
+      "examples",
+      "fuzz",
+      "skills",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Koukyosyumei/h5i-db/blob/8a39685ed5a00fb797133959fcb70b6152de676e/README.md",
+        "sha256": "434e1aa9ef218ee3a7a0b5e28c8b1fa6132c8cc789e1b354d5b75cd24603d105",
+        "bytes": 15763
+      },
+      "LICENSE": {
+        "url": "https://github.com/Koukyosyumei/h5i-db/blob/8a39685ed5a00fb797133959fcb70b6152de676e/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/Koukyosyumei/h5i-db/blob/8a39685ed5a00fb797133959fcb70b6152de676e/Cargo.toml",
+        "sha256": "0234b32187860616df0ae8b137fbc6cbcb9cf2049eabea3036f6c5b8fa31d0f8",
+        "bytes": 5746
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Koukyosyumei/h5i-db/commit/8a39685ed5a00fb797133959fcb70b6152de676e",
+      "metadata": "https://api.github.com/repos/Koukyosyumei/h5i-db"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# h5i-db **English** \u00b7 [Espa\u00f1ol](README.es.md) \u00b7 [Fran\u00e7ais](README.fr.md) \u00b7 [\u7b80\u4f53\u4e2d\u6587](README.zh-CN.md) \u00b7 [\u65e5\u672c\u8a9e](README.ja.md) **A fast, agent-native time-series *d*atabase and *b*acktesting engine for quant research. Embedded, written in Rust.** - **Fast for time-series shape:** over 4.5\u00d7 faster than DuckDB and Polars on OHLCV+VWAP rollups over 20M rows. - **Native time-series SQL:** ASOF join, timezone-aware `time_bucket`, gapfill/resample, rolling windows, `vwap`, `ewma`. - **Point-in-time reads:** pin a decision time and the frame that reaches pandas cannot contain rows from after it. No lookahead bias, by construction. - **Efficient event-driven backtester:** 3.05M events/s through the replay kernel, 11.7\u00d7 NautilusTrader and 31\u00d7 LEAN on a shared top-of-book workload. - **Native venue support:** [Kalshi](#data-sources), [Polymarket](#data-sources), [Hyperliquid](#data-sources), [Binance](#data-sources) and more. - **Professional statistical analysis:** factor and performance metrics at `alphalens` and `empyrical` parity, plus deflated Sharpe and overfitting-probability detection. - **In-terminal notebooks:** agents and humans explore data without leaving the shell. `h5i-db nb view` runs ordinary `.ipynb` files on a real Jupyter kernel and draws matplotlib plots inline. - **Fork a database in milliseconds:** forks share data instead of copying it. Agents can run wide trial-and-error loops (fork, mutate,",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<a href=\"https://github.com/h5i-dev/h5i-db/blob/main/LICENSE\"><img alt=\"Apache-2.0\" src=\"https://img.shields.io/github/license/h5i-dev/h5i-db?color=blue\"></a>",
+      "Embedded, written in Rust.**",
+      "- **Point-in-time reads:** pin a decision time and the frame that reaches",
+      "\ud83d\udcd6 **[Documentation](https://db.h5i.dev/manual/)** \u00b7 [Backtesting](https://db.h5i.dev/manual/backtest/) \u00b7 [Quant](https://db.h5i.dev/manual/quant/) \u00b7 [Python API](https://db.h5i.dev/api/) \u00b7",
+      "h5i-db nb new research.ipynb --kernel python3 --db market.db   # the database SQL cells query",
+      "It writes a real `.ipynb`, so JupyterLab opens the same file. A Python kernel",
+      "**Python Library for DataFrames and SQL**",
+      "```python",
+      "**Python Library for Backtesting** (same install, no server)",
+      "```python",
+      "A parameter grid becomes one fork per trial, and the winner is ranked without",
+      "```python",
+      "parameters={\"execution.fee_rate\": [0.0, 0.02, 0.07]},",
+      "python examples/backtest_report_demo.py",
+      "materializing a window, so memory stays flat whether a run replays a day or a",
+      "table function (SQL and Python).",
+      "| **h5i-db** | same kernel, strategy as a Python callback per event | 278 ms\u2076 | 719 k events/s\u2076 |",
+      "| NautilusTrader 1.230.0 | in-memory objects through `BacktestEngine.run()` | 767 ms | 261 k events/s |"
+    ],
+    "dependency_repos": [
+      "h5i-dev/h5i-db",
+      "h5i-dev/h5i-db-cookbook"
+    ]
+  },
+  {
+    "full_name": "rajmaurya0904/bhav",
+    "requested_name": "rajmaurya0904/bhav",
+    "id": 1288919575,
+    "url": "https://github.com/rajmaurya0904/bhav",
+    "stars": 26,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "562dc214416fd974eb41082b05e131c523e49023",
+    "last_commit_date": "2026-07-19T10:25:00Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open-source NSE options backtesting engine, built for Upstox historical data. Realistic Indian cost model, deterministic Parquet outputs, Next.js dashboard.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Bhav contributors",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Bhav ( `bhav` )",
+      "## Status",
+      "### New in v0.2",
+      "## Requirements",
+      "## Install",
+      "# backend",
+      "# frontend (optional, only if you want the web UI)",
+      "## Quickstart \u2014 CLI",
+      "## Quickstart \u2014 Web UI",
+      "# terminal 1: API server",
+      "# terminal 2: frontend",
+      "## Offline sample dataset",
+      "## Write your own strategy",
+      "### Generate with Claude (no API key)",
+      "### Reference strategies",
+      "## Lot sizes (Jan 2026 revision)",
+      "## How it works",
+      "## License"
+    ],
+    "recent_commit_count": 23,
+    "recent_authors_sample50": [
+      "rajmaurya0904"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "C",
+        "query": "Parquet backtest"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "bhav",
+      "create-bhav",
+      "docs",
+      "examples",
+      "frontend",
+      "pyproject.toml",
+      "sample_data",
+      "scripts",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/rajmaurya0904/bhav/blob/562dc214416fd974eb41082b05e131c523e49023/README.md",
+        "sha256": "8ccd5b8ab936734136d920880bb579a83d38c495cec078aed1f6b741fdcd95cf",
+        "bytes": 14084
+      },
+      "LICENSE": {
+        "url": "https://github.com/rajmaurya0904/bhav/blob/562dc214416fd974eb41082b05e131c523e49023/LICENSE",
+        "sha256": "b3bd9cdd2edbf69ef0332fdd85af4f6c75623695c93ccc96e4e97179d7b60759",
+        "bytes": 1074
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/rajmaurya0904/bhav/blob/562dc214416fd974eb41082b05e131c523e49023/pyproject.toml",
+        "sha256": "0f199cc9a9be150a3120bea53d00aae231e953e333eca3ab4a9b444016bd1b50",
+        "bytes": 863
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/rajmaurya0904/bhav/commit/562dc214416fd974eb41082b05e131c523e49023",
+      "metadata": "https://api.github.com/repos/rajmaurya0904/bhav"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Bhav ( `bhav` ) **Open-source options backtesting engine for NSE (India).** Write a strategy in Python, run it against real 1-minute spot + option data, and get a deterministic Parquet result with a full metrics dashboard. [Install](#install) \u00b7 [Quickstart](#quickstart--cli) \u00b7 [Generate with Claude](#generate-with-claude-no-api-key) \u00b7 [Writing strategies](docs/writing-strategies.md) \u00b7 [How it works](#how-it-works) \u00b7 [License](#license) The bhav CLI \u2014 one command, deterministic Parquet output with a full metrics + Monte&nbsp;Carlo summary. The web UI \u2014 KPI grid, equity curve, drawdown, P&amp;L distribution, and the full trade log. Hindi / Marathi / Gujarati for \u201cmarket rate\u201d \u2014 what every Indian trader means by \u201caaj ka bhav kya hai?\u201d Open-source and built specifically around Upstox's historical-data endpoints \u2014 expired option chains included, so you can backtest premiums for contracts that expired months or years ago, not just currently-listed ones. - Bar-by-bar simulation on 1-minute NIFTY/BANKNIFTY/SENSEX (and other index) spot + option chain data - Strategy API modeled on lifecycle hooks (`on_bar`, `on_day_start`, `on_day_end`, ...) \u2014 write plain Python, get deterministic Parquet output - Pulls expired option contracts directly from Upstox's `expired-instruments` endpoints, so you",
+    "license_excerpt": "MIT License Copyright (c) 2026 Bhav contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Open-source options backtesting engine for NSE (India).** Write a strategy in Python, run it against real 1-minute spot + option data, and get a deterministic Parquet result with a full metrics dashboard.",
+      "[Install](#install) \u00b7 [Quickstart](#quickstart--cli) \u00b7 [Generate with Claude](#generate-with-claude-no-api-key) \u00b7 [Writing strategies](docs/writing-strategies.md) \u00b7 [How it works](#how-it-works) \u00b7 [License](#license)",
+      "- Strategy API modeled on lifecycle hooks (`on_bar`, `on_day_start`, `on_day_end`, ...) \u2014 write plain Python, get deterministic Parquet output",
+      "- Local Parquet cache \u2014 every Upstox candle is fetched once, then reused across runs",
+      "- **Generate strategies with Claude, no API key** \u2014 `bhav generate \"your idea\"` (or the \"Generate with Claude\" panel on `/new`) drives the locally installed `claude` CLI to turn plain English into a contract-compliant strategy file",
+      "- **Generate strategies from plain English** with the local Claude CLI \u2014 no API key \u2014 gated by an AST validator that rejects unsafe code before it runs.",
+      "- Python 3.11+",
+      "One command (clones the repo, installs the Python package, installs frontend deps):",
+      "Open `http://localhost:3000`. Go to `/new`, upload a strategy `.py` file, pick a data source (Upstox live, or the bundled sample data \u2014 no token needed), set dates/underlying/capital/lot size/warmup days, and run. The results page polls until the run completes",
+      "A strategy is one Python file that exposes a `strategy` variable. Minimum viable example:",
+      "```python",
+      "Don't want to write the Python yourself? [docs/ai-prompt.md](docs/ai-prompt.md) has a copy-pasteable prompt block that gets ChatGPT/Claude/Gemini to generate a strategy following Bhav's contract \u2014 the `/new` page in the frontend has the same prompt with a one-",
+      "If you have [Claude Code](https://claude.com/claude-code) installed and signed in, Bhav can drive it for you \u2014 no `ANTHROPIC_API_KEY` needed. It shells out to the local `claude` CLI, feeds it the strategy contract plus your description, and writes back a valid",
+      "Whether written by hand, generated, or uploaded, every strategy passes through an AST validator before it runs \u2014 a hallucinated `import os` or a stray `eval()` is rejected with a clear error rather than silently executed. It raises the bar; it is not a full sa",
+      "## License"
+    ],
+    "dependency_repos": [
+      "rajmaurya0904/bhav.git"
+    ]
+  }
+]
