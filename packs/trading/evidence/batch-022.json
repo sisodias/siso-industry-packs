@@ -1,0 +1,1263 @@
+[
+  {
+    "full_name": "simonlin1212/TradingAgents-astock",
+    "requested_name": "simonlin1212/TradingAgents-astock",
+    "id": 1237174940,
+    "url": "https://github.com/simonlin1212/TradingAgents-astock",
+    "stars": 3299,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f1bd10f94628cd66a82550c62d8748005dbd87e2",
+    "last_commit_date": "2026-09-05T02:02:23Z",
+    "archived": false,
+    "fork": false,
+    "description": "A\u80a1\u591aAgent\u6295\u7814\u6846\u67b6 \u2014 \u9002\u914dA\u80a1\u6570\u636e\u6e90(\u9f99\u864e\u699c/\u6e38\u8d44/\u89e3\u7981\u7b49)\uff0c7\u4f4d\u5206\u6790\u5e08\u57fa\u4e8eA\u80a1\u89c4\u5219\u7684\u8fa9\u8bba\u51b3\u7b56\uff0c\u57fa\u4e8eTradingAgents\u6df1\u5ea6\u6539\u9020\uff0c\u9002\u914d\u5927A\u3002A-share multi-agent investment research framework \u2014 7 AI analysts, bull/bear debate, risk assessment\u3002",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## \u5bfb\u627e\u6df1\u5733\u7684 AI \u5de5\u4f5c\u673a\u4f1a",
+      "## \u4e3a\u4ec0\u4e48\u505a\u8fd9\u4e2a Fork",
+      "### \u6838\u5fc3\u6539\u9020",
+      "## \u4e0e\u4e0a\u6e38\u5bf9\u6bd4",
+      "## \u67b6\u6784\u6982\u89c8",
+      "## 7 \u4e2a Analyst \u89d2\u8272",
+      "### \u539f\u7248 4 \u89d2\u8272\uff08A \u80a1\u9002\u914d\uff09",
+      "### A \u80a1\u7279\u5316 3 \u89d2\u8272\uff08\u65b0\u589e\uff09",
+      "## \u6570\u636e\u6e90",
+      "## \u5feb\u901f\u5f00\u59cb",
+      "### 1. \u73af\u5883\u51c6\u5907",
+      "# Python >= 3.10",
+      "# \u5982\u9700\u4f7f\u7528 Google Gemini \u6a21\u578b\uff08\u65e0 [google] extra\uff0c\u9700\u663e\u5f0f\u88c5\uff0c\u89c1\u4e0b\u65b9 FAQ\uff09\uff1a",
+      "# \u5982\u9700\u8ba9\u8282\u70b9\u8d70\u4f60\u4e2a\u4eba Claude Pro/Max \u8ba2\u9605\u989d\u5ea6\u800c\u975e API \u8ba1\u8d39\uff08\u53ef\u9009\uff09\uff1a",
+      "### 2. \u914d\u7f6e LLM",
+      "# \u2500\u2500 \u65b9\u6848 A\uff1aMiniMax\uff08\u63a8\u8350\uff0c\u56fd\u5185\u76f4\u8fde\uff0c\u6027\u4ef7\u6bd4\u9ad8\uff09\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u7533\u8bf7\u5730\u5740\uff1ahttps://platform.minimaxi.com/",
+      "# \u2500\u2500 \u65b9\u6848 B\uff1aDeepSeek \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u7533\u8bf7\u5730\u5740\uff1ahttps://platform.deepseek.com/",
+      "# \u2500\u2500 \u65b9\u6848 C\uff1a\u667a\u8c31 GLM \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u7533\u8bf7\u5730\u5740\uff1ahttps://open.bigmodel.cn/",
+      "# \u2500\u2500 \u65b9\u6848 D\uff1a\u901a\u4e49\u5343\u95ee Qwen \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u7533\u8bf7\u5730\u5740\uff1ahttps://dashscope.console.aliyun.com/",
+      "# \u2500\u2500 \u65b9\u6848 E\uff1aOpenAI \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u2500\u2500 \u65b9\u6848 F\uff1aAnthropic \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u2500\u2500 \u65b9\u6848 G\uff1aKimi\uff08Anthropic \u517c\u5bb9 API\uff09\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+      "# \u26a0\ufe0f \u4e24\u4e2a\u90fd\u8981\u8bbe\u3002\u53ea\u7ed9 key \u4e0d\u7ed9\u7aef\u70b9\uff0c\u8bf7\u6c42\u4f1a\u53d1\u5230 Anthropic \u5b98\u65b9\u5e76\u62a5",
+      "#    \u300c401 invalid x-api-key\u300d\u3002\u7aef\u70b9\u4e5f\u53ef\u4ee5\u5199\u5728 config \u7684 backend_url \u91cc\uff08\u89c1\u4e0b\uff09\u3002",
+      "# \u26a0\ufe0f \u522b\u7528 ANTHROPIC_AUTH_TOKEN\u2014\u2014\u90a3\u662f Claude Code CLI \u7684\u5199\u6cd5\uff0c\u672c\u9879\u76ee\u8d70 langchain\uff0c",
+      "#    \u53ea\u8ba4 ANTHROPIC_API_KEY\u3002"
+    ],
+    "recent_commit_count": 97,
+    "recent_authors_sample50": [
+      "Simon Lin",
+      "WenhuaXia",
+      "k176060444-lgtm",
+      "simonlin1212",
+      "wangyuxun6699",
+      "whxyw4"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/issues/108",
+        "createdAt": "2026-09-04T01:08:24Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-05T01:55:53Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/issues/104",
+        "createdAt": "2026-08-28T14:27:36Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-02T00:06:50Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-09-02T14:28:00Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.enterprise.example",
+      ".env.example",
+      ".gitignore",
+      ".streamlit",
+      "CHANGELOG.md",
+      "CHANGES_FROM_UPSTREAM.md",
+      "CLAUDE.md",
+      "DEV_LOG.md",
+      "Dockerfile",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "README_en.md",
+      "assets",
+      "cli",
+      "docker-compose.yml",
+      "examples",
+      "issues",
+      "main.py",
+      "pyproject.toml",
+      "requirements.txt",
+      "scripts",
+      "test.py",
+      "test_astock.py",
+      "test_data_quality.py",
+      "tests",
+      "tradingagents",
+      "web"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/blob/f1bd10f94628cd66a82550c62d8748005dbd87e2/README.md",
+        "sha256": "77087dde87e163b99ecda9b135f40268b6d5564f74c10bf7705564e268fe2327",
+        "bytes": 36891
+      },
+      "LICENSE": {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/blob/f1bd10f94628cd66a82550c62d8748005dbd87e2/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/blob/f1bd10f94628cd66a82550c62d8748005dbd87e2/pyproject.toml",
+        "sha256": "f3514715755ee97cb26918d2cde300fe38ea69c7be7adaa3c02ea57ce8850eb1",
+        "bytes": 3353
+      },
+      "requirements.txt": {
+        "url": "https://github.com/simonlin1212/TradingAgents-astock/blob/f1bd10f94628cd66a82550c62d8748005dbd87e2/requirements.txt",
+        "sha256": "eb4bd64f7014f7d42e9d358035802242741b974e8dfcd37c59f9c21ce29d781e",
+        "bytes": 2
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/simonlin1212/TradingAgents-astock/commit/f1bd10f94628cd66a82550c62d8748005dbd87e2",
+      "metadata": "https://api.github.com/repos/simonlin1212/TradingAgents-astock"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "\u7b80\u4f53\u4e2d\u6587 | English TradingAgents-Astock \u57fa\u4e8e TauricResearch/TradingAgents \uff0865K \u2b50\uff09\u7684 A \u80a1\u6df1\u5ea6\u7279\u5316 fork \u5168 Apache 2.0 \u5f00\u6e90 \u00b7 pip install \u5373\u8dd1 \u00b7 \u96f6\u5916\u90e8\u670d\u52a1\u4f9d\u8d56 \u26a0\ufe0f \u672c\u9879\u76ee\u662f TradingAgents \u8bba\u6587 \u6846\u67b6\u7684\u5de5\u7a0b\u5b9e\u73b0\u4e0e\u7814\u7a76\u590d\u73b0\uff0c\u9762\u5411\u7814\u7a76\u4e0e\u6559\u5b66\u3002 \u4e0d\u6784\u6210\u4efb\u4f55\u6295\u8d44\u5efa\u8bae\uff0c\u4e5f\u4e0d\u63d0\u4f9b\u4efb\u4f55\u6295\u8d44\u670d\u52a1\u3002 \u4e3a\u4ec0\u4e48\u505a\u8fd9\u4e2a Fork \u00b7 \u4e0e\u4e0a\u6e38\u5bf9\u6bd4 \u00b7 \u67b6\u6784\u6982\u89c8 \u00b7 Analyst \u89d2\u8272 \u00b7 \u6570\u636e\u6e90 \u00b7 \u5feb\u901f\u5f00\u59cb \u00b7 Web UI \u00b7 \u6392\u9519 --- ## \u5bfb\u627e\u6df1\u5733\u7684 AI \u5de5\u4f5c\u673a\u4f1a \u4f5c\u8005\u76ee\u524d\u6b63\u5728\u5bfb\u627e\u6df1\u5733\u7684 AI \u76f8\u5173\u5de5\u4f5c\u673a\u4f1a\uff0c\u91cd\u70b9\u5173\u6ce8\u817e\u8baf\u7b49\u5927\u578b\u79d1\u6280\u4f01\u4e1a\u53ca\u91d1\u878d\u673a\u6784\u7684 **AI \u6295\u7814\u4ea7\u54c1\u3001FDE \u4e0e AI \u54a8\u8be2 / \u89e3\u51b3\u65b9\u6848\u5c97\u4f4d**\u3002 \u517c\u5177\u91d1\u878d\u673a\u6784\u4ece\u4e1a\u7ecf\u5386\u4e0e AI \u4ea7\u54c1\u5b9e\u6218\uff0c\u6301\u7eed\u6784\u5efa\u91d1\u878d\u5e02\u573a\u6570\u636e\u5de5\u5177\u548c\u591a\u667a\u80fd\u4f53\u7cfb\u7edf\uff0c\u5f00\u6e90\u9879\u76ee\u7d2f\u8ba1\u83b7\u5f97 **17K+ GitHub Stars**\u3002 \u8054\u7cfb\uff1a[simonlin0423@gmail.com](mailto:simonlin0423@gmail.com) --- ## \u4e3a\u4ec0\u4e48\u505a\u8fd9\u4e2a Fork \u539f\u7248 TradingAgents \u662f\u4e00\u4e2a\u51fa\u8272\u7684\u591a Agent \u6295\u7814\u6846\u67b6\uff0c\u4f46\u5b83\u9488\u5bf9\u7f8e\u80a1\u8bbe\u8ba1\uff1a\u6570\u636e\u8d70 Yahoo Finance / Alpha Vantage\uff0c\u5206\u6790\u5e08\u4e0d\u61c2 A \u80a1\u5236\u5ea6\uff0c\u8fa9\u8bba\u548c\u51b3\u7b56\u5b8c\u5168\u9762\u5411\u7f8e\u80a1\u5e02\u573a\u3002 **\u672c Fork \u7684\u76ee\u6807**\uff1a\u628a TradingAgents \u7684\u591a Agent \u8fa9\u8bba\u67b6\u6784\u771f\u6b63\u843d\u5730\u5230 A \u80a1\uff0c\u4e0d\u662f\u7b80\u5355\u7ffb\u8bd1\uff0c\u800c\u662f\u4ece\u6570\u636e\u5c42\u3001Agent \u89d2\u8272\u3001\u4ea4\u6613\u89c4\u5219\u4e09\u4e2a\u7ef4\u5ea6\u505a\u6df1\u5ea6\u7279\u5316\u3002 ### \u6838\u5fc3\u6539\u9020 | \u7ef4\u5ea6 | \u539f\u7248 | \u672c Fork | |------|------|---------| | **\u6570\u636e\u6e90** | Yahoo Finance / Alpha Vantage | mootdx + \u4e1c\u8d22 + \u65b0\u6d6a + \u540c\u82b1\u987a\uff08\u5168\u514d\u8d39\u76f4\u8fde\uff09 | | **Analyst \u89d2\u8272** | 4 \u4e2a\uff08\u5e02\u573a/\u60c5\u7eea/\u65b0\u95fb/\u57fa\u672c\u9762\uff09 | **7 \u4e2a**\uff08+\u653f\u7b56\u5206\u6790\u5e08/\u6e38\u8d44\u8ffd\u8e2a/\u89e3\u7981\u76d1\u63a7\uff09 | | **\u4ea4\u6613\u89c4\u5219** | \u7f8e\u80a1\uff08T+0\u3001\u65e0\u6da8\u8dcc\u505c\uff09 | A \u80a1\uff08T+1\u3001\u6da8\u8dcc\u505c\u3001\u6700\u5c0f\u624b\u6570\u3001\u4ea4\u6613\u65f6\u6bb5\uff09 | | **\u8f93\u51fa\u8bed\u8a00** | \u82f1\u6587 | \u4e2d\u6587\u62a5\u544a\uff08\u5185\u90e8\u8fa9\u8bba\u4fdd\u6301\u82f1\u6587\u4ee5\u4fdd\u8bc1\u63a8\u7406\u8d28\u91cf\uff09 | | **Alpha \u57fa\u51c6** | SPY | \u6caa\u6df1 300\uff08CSI 300\uff09 | --- ## \u4e0e\u4e0a\u6e38\u5bf9\u6bd4 | \u7279\u6027 | \u539f\u7248 TradingAgents | **\u672c Fork** | |------|-------------------|-------------| | \u8bb8\u53ef\u8bc1 | Apache 2.0 | **\u5168 Apache 2.0** | |",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<a href=\"./LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/badge/License-Apache_2.0-blue\"/></a>",
+      "# Python >= 3.10",
+      "> **\u88c5\u5b8c\u5373\u53ef\u7528\uff0c\u65e0\u9700 Docker\u3002** \u5b89\u88c5\u540e\u76f4\u63a5\u8dd1 `streamlit run web/app.py`\uff08Web UI\uff09\u6216 `tradingagents`\uff08CLI\uff09\u5373\u53ef\uff0c\u8be6\u89c1\u4e0b\u65b9\u300cWeb UI\u300d\u300cCLI \u65b9\u5f0f\u300d\u4e24\u8282\u3002Docker \u4ec5\u662f\u53ef\u9009\u7684\u90e8\u7f72\u65b9\u5f0f\uff0c\u672c\u5730\u5f00\u53d1\u4e0d\u9700\u8981\u3002",
+      "\u65b0\u5efa\u4e00\u4e2a Python \u6587\u4ef6\uff08\u6bd4\u5982\u9879\u76ee\u6839\u76ee\u5f55\u4e0b\u7684 `run.py`\uff09\uff0c\u628a\u4e0b\u9762\u8fd9\u6bb5\u7c98\u8fdb\u53bb\uff0c\u6309\u4f60\u9009\u7684\u4f9b\u5e94\u5546\u6539 `config` \u540e\u8fd0\u884c `uv run python run.py`\u3002\u6839\u76ee\u5f55\u81ea\u5e26\u7684 `main.py` \u5c31\u662f\u8fd9\u4e2a\u793a\u4f8b\u7684\u53ef\u8fd0\u884c\u7248\u672c\uff0c\u76f4\u63a5 `uv run python main.py` \u4e5f\u884c\u3002",
+      "```python",
+      "\u6253\u5f00\u6d4f\u89c8\u5668\u8bbf\u95ee `http://localhost:8501`\u3002",
+      "| `memory_log_max_entries` | `None` | \u4ea4\u6613\u8bb0\u5fc6\u6700\u5927\u6761\u76ee\u6570 |",
+      "```python",
+      "**Q: \u660e\u660e\u88c5\u4e86 Python 3.12/3.14\uff0c`pip install -e .` \u5374\u62a5 `requires a different Python: 3.9.6 not in '>=3.10'`\uff1f**",
+      "pip3 -V                    # \u672b\u5c3e\u62ec\u53f7\u91cc\u5c31\u662f\u5b83\u7ed1\u5b9a\u7684 Python",
+      "python3.12 -m pip -V       # \u6362\u6210\u4f60\u60f3\u7528\u7684\u7248\u672c\u518d\u770b",
+      "\u7528 `python -m pip` \u7684\u5199\u6cd5\u5c31\u4e0d\u4f1a\u8ba4\u9519\u4eba\uff0c\u63a8\u8350\u914d\u5408\u865a\u62df\u73af\u5883\uff1a",
+      "python3.12 -m venv .venv && source .venv/bin/activate",
+      "python -m pip install -e .",
+      "**Q: Docker \u91cc\u600e\u4e48\u8dd1 Web UI\uff1f\u5bb9\u5668\u542f\u52a8\u62a5 `Invalid value: File does not exist: web/app.py`\uff1f**",
+      "\u7528 compose \u91cc\u7684 `web` \u670d\u52a1\uff1a`docker compose up web`\uff0c\u7136\u540e\u5f00 http://localhost:8501 \u3002",
+      "**Q: Docker \u91cc\u5bfc\u51fa PDF \u62a5\u300c\u672a\u627e\u5230\u4e2d\u6587\u5b57\u4f53\u300d\uff1f**",
+      "v0.2.12 \u8d77 Dockerfile \u5df2\u5185\u7f6e `fonts-noto-cjk`\uff0c\u91cd\u65b0 `docker build` \u5373\u53ef\u3002\u65e7\u955c\u50cf\u53ef\u4e34\u65f6 `apt install fonts-noto-cjk`\uff0c\u6216\u6539\u7528 Markdown \u5bfc\u51fa\u3002"
+    ],
+    "dependency_repos": [
+      "TauricResearch/TradingAgents",
+      "simonlin1212/TradingAgents-astock",
+      "simonlin1212/tradingagents-astock",
+      "simonlin1212/tradingagents-astock.git"
+    ]
+  },
+  {
+    "full_name": "virattt/ai-financial-agent",
+    "requested_name": "virattt/ai-financial-agent",
+    "id": 906406820,
+    "url": "https://github.com/virattt/ai-financial-agent",
+    "stars": 2031,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1",
+    "last_commit_date": "2025-08-19T16:32:53Z",
+    "archived": false,
+    "fork": false,
+    "description": "A financial agent for investment research",
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright 2024 Vercel, Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# AI Financial Agent \ud83e\udd16",
+      "## Disclaimer",
+      "## Table of Contents \ud83d\udcd6",
+      "## Features",
+      "## Setup",
+      "# Create .env file for your API keys",
+      "# Get your OpenAI API key from https://platform.openai.com/",
+      "# Get your Financial Datasets API key from https://financialdatasets.ai/",
+      "# Get your LangSmith API key from https://smith.langchain.com/",
+      "## Run the Agent",
+      "## Financial Data API",
+      "## Deploy Your Own Agent"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/virattt/ai-financial-agent/issues/8",
+        "createdAt": "2026-03-24T04:56:16Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/virattt/ai-financial-agent/issues/7",
+        "createdAt": "2025-10-15T23:10:31Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".eslintrc.json",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "app",
+      "biome.jsonc",
+      "components.json",
+      "components",
+      "drizzle.config.ts",
+      "hooks",
+      "instrumentation.ts",
+      "lib",
+      "middleware.ts",
+      "next-env.d.ts",
+      "next.config.ts",
+      "package.json",
+      "pnpm-lock.yaml",
+      "postcss.config.mjs",
+      "public",
+      "tailwind.config.ts",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/README.md",
+        "sha256": "3d96a3ee19f4378bf5f14b7985c0066993da6e724c19e284405135ba62fc65e0",
+        "bytes": 4859
+      },
+      "LICENSE": {
+        "url": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/LICENSE",
+        "sha256": "5809eb2eab284b24fc53b21484398fd264c6f929d3b32ecdc7108a89f037e943",
+        "bytes": 552
+      },
+      "package.json": {
+        "url": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/package.json",
+        "sha256": "11503ce1444882cd70c40c0f3a2d0e201ae67850886d70cb323ee4830456db3e",
+        "bytes": 3727
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/virattt/ai-financial-agent/commit/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1",
+      "metadata": "https://api.github.com/repos/virattt/ai-financial-agent"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# AI Financial Agent \ud83e\udd16 This is a proof of conncept AI financial agent. The goal of this project is to explore the use of",
+    "license_excerpt": "Copyright 2024 Vercel, Inc. Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License.",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Your app template should now be running on [localhost:3000](http://localhost:3000/).",
+      "If you want to deploy your own version of the AI Financial Agent in production, you need to link your local instance with your Vercel and GitHub accounts.",
+      "2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`"
+    ],
+    "dependency_repos": [
+      "user-attachments/assets",
+      "virattt/ai-financial-agent.git"
+    ]
+  },
+  {
+    "full_name": "Hvass-Labs/Finance-Research",
+    "requested_name": "Hvass-Labs/Finance-Research",
+    "id": 141877897,
+    "url": "https://github.com/Hvass-Labs/Finance-Research",
+    "stars": 1132,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "50debc6a8ce4811daeefafa2b618fc0d21bd5440",
+    "last_commit_date": "2026-07-03T09:11:31Z",
+    "archived": false,
+    "fork": false,
+    "description": "Research in investment finance with Python Notebooks",
+    "language": "Jupyter Notebook",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "The MIT License (MIT)",
+      "Copyright (c) 2015-2018 by Magnus Erik Hvass Pedersen",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Finance Research",
+      "## Introduction",
+      "## Quick Start",
+      "## Python Package",
+      "## Papers",
+      "## Other Research",
+      "## Videos",
+      "## Downloading",
+      "### Git",
+      "### Zip-File",
+      "## Installation",
+      "## How To Run",
+      "### Run in Google Colab",
+      "### Run in Docker",
+      "## Data Sources",
+      "## License (MIT)"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "Hvass-Labs"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/issues/4",
+        "createdAt": "2021-04-30T05:10:47Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-05-08T10:16:34Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-05-08T21:26:43Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-05-10T08:42:30Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-05-14T13:18:14Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-05-14T13:34:39Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/issues/2",
+        "createdAt": "2020-12-07T02:31:54Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-12-15T09:35:59Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "01B_Better_Long-Term_Stock_Forecasts.ipynb",
+      "01C_Theory_of_Long-Term_Stock_Forecasting.ipynb",
+      "01D_Testing_the_Stock_Forecasting_Model.ipynb",
+      "01E_Forecasting_US_Stock_Indices.ipynb",
+      "01F_Forecasting_Int_Stock_Indices.ipynb",
+      "01G_Forecasting_House_Price_Index.ipynb",
+      "01_Forecasting_Long-Term_Stock_Returns.ipynb",
+      "02_Comparing_Stock_Indices.ipynb",
+      "03_Portfolio_Optimization_Using_Signals.ipynb",
+      "04_Multi-Objective_Portfolio_Optimization.ipynb",
+      "05_Forecasting_PSales_Ratio.ipynb",
+      "06_Forecasting_Sales_Growth.ipynb",
+      "07_Forecasting_Dividends.ipynb",
+      "Forecasting_Stock_Indices.xlsx",
+      "LICENSE",
+      "Paper_Fast_Portfolio_Diversification.ipynb",
+      "Paper_Long-Term_Stock_Forecasting.ipynb",
+      "Paper_Portfolio_Group_Constraints.ipynb",
+      "Paper_Simple_Portfolio_Optimization.ipynb",
+      "Paper_Volatility_Harvesting.ipynb",
+      "README.md",
+      "curve_fit.py",
+      "data.py",
+      "data",
+      "data_keys.py",
+      "diversify.py",
+      "images",
+      "portfolio.py",
+      "portfolio_multi.py",
+      "portfolio_utils.py",
+      "recovery.py",
+      "requirements.txt",
+      "returns.py",
+      "stats.py",
+      "utils.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/README.md",
+        "sha256": "68cdb6ee1adf49dc5ee346dda5ec5daa6bf3e89cdf8c23f11b258ade7bec50a8",
+        "bytes": 12114
+      },
+      "LICENSE": {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/LICENSE",
+        "sha256": "0332c8edee4ae3a5006e82a9c7dc8cce124616be6fca65c2b07bd241433c5b6a",
+        "bytes": 1101
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/requirements.txt",
+        "sha256": "22b462fffca3dc32534e8d8fceb100a0d7af2027bb4986e16b50629337ed2e04",
+        "bytes": 1052
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Hvass-Labs/Finance-Research/commit/50debc6a8ce4811daeefafa2b618fc0d21bd5440",
+      "metadata": "https://api.github.com/repos/Hvass-Labs/Finance-Research"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Finance Research [Original repository on GitHub](https://github.com/Hvass-Labs/Finance-Research) Original author is [Magnus Erik Hvass Pedersen](http://www.hvass-labs.org) ## Introduction This is a collection of research papers on long-term investing, portfolio optimization, etc. They are written as Python Notebooks so they can easily be modified and run again. ## Quick Start This research on stock valuation has been made into a web-site that everyone can easily use. Portfolio optimization will be available later. [Give it a try!](https://SimSim.Run?refcode=github-finance-research) ## Python Package The [InvestOps](https://github.com/Hvass-Labs/InvestOps) Python package contains the main results and algorithms from this research, making it very easy to use in your own Python projects. ## Papers The following Python Notebooks produce the plots and statistics for some of my \"normal\" research papers which can be downloaded from [SSRN](http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1993051) and [GitHub](https://github.com/Hvass-Labs/Finance-Papers). - Long-Term Stock Forecasting ([PDF](https://ssrn.com/abstract=3750775)) ([Video](https://www.youtube.com/watch?v=L8OtWNCQAAs)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Long-Term_Stock_Forecasting.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/blob/master/Paper_Long-Term_Stock_Forecasting.ipynb)) - Simple Portfolio Optimization That Works! ([PDF](https://ssrn.com/abstract=3942552)) ([Video](https://www.youtube.com/watch?v=5--5Ydtbu1Y)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Simple_Portfolio_Optimization.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/blob/master/Paper_Simple_Portfolio_Optimization.ipynb)) - Fast Portfolio Diversification ([PDF](https://ssrn.com/abstract=4009041)) ([Video](https://www.youtube.com/watch?v=5--5Ydtbu1Y)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Fast_Portfolio_Diversification.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/blob/master/Paper_Fast_Portfolio_Diversification.ipynb)) - Portfolio Group Constraints ([PDF](https://ssrn.com/abstract=4033243)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Portfolio_Group_Constraints.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/blob/master/Paper_Portfolio_Group_Constraints.ipynb)) - Does Volatility Harvesting Really Work? ([PDF](https://ssrn.com/abstract=3847692)) ([Video](https://www.youtube.com/watch?v=t0AxhyQRRvM)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Volatility_Harvesting.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/blob/master/Paper_Volatility_Harvesting.ipynb)) ## Other Research The following Python",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015-2018 by Magnus Erik Hvass Pedersen Permission is hereby granted, free of charge, to any person obtaining a copy",
+    "license_warnings": [],
+    "runtime_clues": [
+      "optimization, etc. They are written as Python Notebooks so they can easily be",
+      "## Python Package",
+      "The [InvestOps](https://github.com/Hvass-Labs/InvestOps) Python package",
+      "very easy to use in your own Python projects.",
+      "The following Python Notebooks produce the plots and statistics for some of my",
+      "The following Python Notebooks contain stand-alone research without \"normal\" papers.",
+      "The Python Notebooks use source-code located in different files to allow for easy re-use",
+      "repository from GitHub, instead of just downloading the individual Python Notebooks.",
+      "conda create --name finres python=3",
+      "Once you have installed the required Python packages in a virtual environment,",
+      "required Python packages:",
+      "# Install the required Python packages.",
+      "### Run in Docker",
+      "Because many of these Notebooks and some of the Python packages also read/write",
+      "data on the local disk, you would need to create so-called Docker volumes to",
+      "enable persistent data-storage on your local disk. The instructions for setting",
+      "## License (MIT)",
+      "These Python Notebooks and source-code are published under the [MIT License](https://github.com/Hvass-Labs/Finance-Research/blob/master/LICENSE)"
+    ],
+    "dependency_repos": [
+      "Hvass-Labs/Finance-Papers",
+      "Hvass-Labs/Finance-Research",
+      "Hvass-Labs/Finance-Research.git",
+      "Hvass-Labs/InvestOps",
+      "SimFin/simfin"
+    ]
+  },
+  {
+    "full_name": "cn-vhql/FactorHub",
+    "requested_name": "cn-vhql/FactorHub",
+    "id": 1069816384,
+    "url": "https://github.com/cn-vhql/FactorHub",
+    "stars": 412,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8d0af3f6a8e4593c9bdaee746ad645548e09bbb9",
+    "last_commit_date": "2026-07-12T07:30:34Z",
+    "archived": false,
+    "fork": false,
+    "description": "FactorHub is an open-source modern quantitative factor analysis platform designed specifically for the Chinese A-share market.  FactorHub = Factor + Hub  A full-stack quantitative investment research system integrating factor management, analysis, mining, portfolio optimization, and strategy backtesting.",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# FactorHub",
+      "## Language Options",
+      "## Core Value Proposition",
+      "## Core Features",
+      "### 1. Factor Management",
+      "### 2. Factor Analysis",
+      "### 3. Factor Mining",
+      "### 4. Portfolio Analysis",
+      "### 5. Strategy Backtesting",
+      "### 6. AI Capabilities",
+      "## Technical Architecture",
+      "### Tech Stack",
+      "## Project Structure",
+      "## Quick Start",
+      "### Prerequisites",
+      "### Installation",
+      "# Install pnpm",
+      "# Install Python dependencies (using uv)",
+      "# Install frontend dependencies",
+      "### One-click Startup",
+      "### Manual Startup",
+      "#### Backend",
+      "# API available at http://localhost:8000",
+      "# API docs at http://localhost:8000/docs",
+      "#### Frontend",
+      "# Frontend available at http://localhost:5173",
+      "### Docker Deployment",
+      "# View logs",
+      "# Stop services",
+      "## License"
+    ],
+    "recent_commit_count": 20,
+    "recent_authors_sample50": [
+      "cn-vhql",
+      "defoliation1",
+      "renxia"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/cn-vhql/FactorHub/issues/12",
+        "createdAt": "2026-09-02T07:53:28Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/cn-vhql/FactorHub/issues/11",
+        "createdAt": "2026-08-14T07:29:18Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".dockerignore",
+      ".github",
+      ".gitignore",
+      "README.md",
+      "README_JP.md",
+      "README_ZH.md",
+      "backend",
+      "config",
+      "data",
+      "docker",
+      "frontend",
+      "image",
+      "pyproject.toml",
+      "scripts",
+      "start_all.py",
+      "start_api.py",
+      "tests",
+      "utils",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/cn-vhql/FactorHub/blob/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9/README.md",
+        "sha256": "abbb48e14ef727feb8eaff12dd201747ee799859fe4fa05a18a32401b1ecb0c7",
+        "bytes": 9433
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/cn-vhql/FactorHub/blob/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9/pyproject.toml",
+        "sha256": "71c9b5c921223b11cc9defa5fb6b8caf5e2ac4090de72d89ff6f2688633c787a",
+        "bytes": 827
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/cn-vhql/FactorHub/commit/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9",
+      "metadata": "https://api.github.com/repos/cn-vhql/FactorHub"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# FactorHub **FactorHub** is an open-source modern quantitative factor analysis platform designed specifically for the Chinese A-share market. > FactorHub = Factor + Hub A",
+    "license_excerpt": "",
+    "license_warnings": [
+      "non-commercial"
+    ],
+    "runtime_clues": [
+      "- FastAPI 0.135+ - High-performance web framework",
+      "- DEAP 1.3+ - Genetic algorithm framework",
+      "- React 19 - UI framework",
+      "- **Python 3.11+**",
+      "# Install Python dependencies (using uv)",
+      "python start_all.py",
+      "3. Start backend service (http://localhost:8000)",
+      "4. Start frontend development server (http://localhost:5173)",
+      "uv run python start_api.py",
+      "# API available at http://localhost:8000",
+      "# API docs at http://localhost:8000/docs",
+      "# Frontend available at http://localhost:5173",
+      "### Docker Deployment",
+      "If you prefer to deploy the full application with Docker, use the built-in Docker configuration:",
+      "cd docker",
+      "docker compose build",
+      "docker compose up -d",
+      "| Frontend | http://localhost:8000 |"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "stefan-jansen/machine-learning-for-trading",
+    "requested_name": "stefan-jansen/machine-learning-for-trading",
+    "id": 132754148,
+    "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+    "stars": 20885,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "defadcc81b6373eed26d8cfc996c5cdb04e7104d",
+    "last_commit_date": "2026-09-13T15:32:02Z",
+    "archived": false,
+    "fork": false,
+    "description": "Code for Machine Learning for Trading, 3rd edition \u2014 from data sourcing to live execution.",
+    "language": "Jupyter Notebook",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2024-2026 Stefan Jansen",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Machine Learning for Trading \u2014 3rd Edition",
+      "## What's New in the Third Edition",
+      "### Nine Case Studies",
+      "### Companion Resources",
+      "## The ML4T Libraries",
+      "## Courses, Workshops, and Free Lessons",
+      "## The Book, Chapter by Chapter",
+      "### Introduction",
+      "### Part I - Financial Data (Chapters 2-5)",
+      "### Part II - Research Design and Feature Engineering (Chapters 6-10)",
+      "### Part III - Model Development (Chapters 11-15)",
+      "### Part IV - Strategy Implementation (Chapters 16-20)",
+      "### Part V - Advanced AI (Chapters 21-24)",
+      "### Part VI - Production (Chapters 25-26)",
+      "### Conclusion",
+      "## Quick Start",
+      "### 1. Clone and install",
+      "### 2. Download data",
+      "### 3. Run notebooks",
+      "# Option B, local uv. Open the tokenized URL it prints, in full.",
+      "# Option A, Docker. Then open http://localhost:8888 in your browser \u2014 no token.",
+      "### Docker images",
+      "## Repository Layout",
+      "## Contributing and Feedback",
+      "## License"
+    ],
+    "recent_commit_count": 659,
+    "recent_authors_sample50": [
+      "stefan-jansen"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/issues/558",
+        "createdAt": "2026-08-17T06:25:12Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-17T10:59:42Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-18T23:25:46Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-08-19T19:06:17Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-02T04:41:08Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-09-02T05:29:09Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-09-08T15:36:10Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T13:18:58Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/issues/726",
+        "createdAt": "2026-09-02T17:25:34Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-03T20:18:33Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "B",
+        "query": "topic:quantitative-finance"
+      },
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".jupyter",
+      ".pre-commit-config.yaml",
+      ".verified-notebooks.tsv",
+      ".workspace",
+      "01_process_is_edge",
+      "02_financial_data_universe",
+      "03_market_microstructure",
+      "04_fundamental_alternative_data",
+      "05_synthetic_data",
+      "06_strategy_definition",
+      "07_defining_the_learning_task",
+      "08_financial_features",
+      "09_model_based_features",
+      "10_text_feature_engineering",
+      "11_ml_pipeline",
+      "12_gradient_boosting",
+      "13_dl_time_series",
+      "14_latent_factors",
+      "15_causal_estimation",
+      "16_strategy_simulation",
+      "17_portfolio_construction",
+      "18_transaction_costs",
+      "19_risk_management",
+      "20_strategy_synthesis",
+      "21_rl_execution_hedging",
+      "22_rag_financial_research",
+      "23_knowledge_graphs",
+      "24_autonomous_agents",
+      "25_live_trading",
+      "26_mlops_governance",
+      "27_systematic_edge",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "case_studies",
+      "data",
+      "docker-compose.yml",
+      "docs",
+      "envs",
+      "matplotlibrc",
+      "pyproject.toml",
+      "scripts",
+      "sitecustomize.py",
+      "tests",
+      "utils",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/README.md",
+        "sha256": "a2c85d221802bb0889b6003f05cdc527f9a85412cf7c0c6d3e69c04ffb1d92c1",
+        "bytes": 29251
+      },
+      "LICENSE": {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/LICENSE",
+        "sha256": "0094a98ecda4424d88af9ab717659aaee3d721c2653ff638aaf8bafbc58ce8c3",
+        "bytes": 1075
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/pyproject.toml",
+        "sha256": "a439b60c2aa8b1725efa9e5b0e39abf113a0b0669397c8757ce1f16aca3b7321",
+        "bytes": 12689
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/stefan-jansen/machine-learning-for-trading/commit/defadcc81b6373eed26d8cfc996c5cdb04e7104d",
+      "metadata": "https://api.github.com/repos/stefan-jansen/machine-learning-for-trading"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Machine Learning for Trading \u2014 3rd Edition **Build, test, and deploy ML-driven trading strategies \u2014 from data sourcing to live execution.** This repository hosts the code for [*Machine Learning for Trading, 3rd Edition*](https://amzn.to/4eigy2F) by [Stefan Jansen](https://www.linkedin.com/in/applied-ai/) \u2014 a ground-up rebuild, organized around one end-to-end workflow: how you define a research idea and develop it iteratively into a strategy you can actually run, and keep running, in a live market. - [Nine case studies](https://www.ml4trading.io/case-studies/) illustrate the workflow throughout the 27 chapters of the book, from raw data through features, models, backtests, costs, and risk to deployment. - **Generative AI** and **autonomous agents** are new to this edition and cut across that workflow, bringing retrieval-augmented generation, knowledge graphs, and multi-agent systems to financial research. - The [companion website](https://ml4trading.io) features [112 primers](https://ml4trading.io/primer/), [61 agent skills](https://ml4trading.io/skills/), and [six production Python libraries](https://ml4trading.io/libraries/) that facilitate substantial parts of the workflow. **Start here: [Installation](docs/installation.md)** walks a blank Linux, Windows or macOS machine to a running notebook, prerequisites included. The short version is under [Quick Start](#quick-start) below. > **Next free session:** [How to Be Productive with Coding",
+    "license_excerpt": "MIT License Copyright (c) 2024-2026 Stefan Jansen Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "and [six production Python libraries](https://ml4trading.io/libraries/)",
+      "Docker environments** so results repeat across machines; PyTorch, LightGBM, Optuna, and Plotly round out the modeling",
+      "detail requires a website account.",
+      "- **[Six Python libraries](https://ml4trading.io/libraries/)** carry the pipeline",
+      "The notebooks are built on six production Python packages, each documented and usable on its own \u2014 one per stage of",
+      "| **[2. The Financial Data Universe](02_financial_data_universe/)** | Eight asset classes surveyed, survivorship bias quantified, storage formats benchmarked (Parquet, DuckDB, kdb+, TimescaleDB), and the data-quality framework used throughout the book. |",
+      "| **[5. Synthetic Financial Data](05_synthetic_data/)** | TimeGAN, Tail-GAN, Sig-CWGAN, Diffusion-TS, and LLM-based tabular generation, each evaluated through a fidelity, utility, and privacy framework. |",
+      "| **[6. Strategy Research Framework](06_strategy_definition/)** | Universe rules, decision schedule, cost model, evaluation protocol, and run logging. Introduces the nine case studies and the walk-forward cross-validation discipline that anchors Chapters 7 to ",
+      "| **[13. Deep Learning for Time Series](13_dl_time_series/)** | LSTM, N-BEATS, PatchTST, iTransformer, TFT, TSMixer, TCN, and Mamba set against the LTSF-Linear debate, with a selection framework and cross-dataset evidence on when depth helps. |",
+      "| **[24. Autonomous Agents](24_autonomous_agents/)** | ReAct, Tree of Thoughts, and Reflexion architectures, memory systems, tool contracts, the engineering stack (LangGraph, Claude SDK), a stateful equity-research agent, multi-agent forecasting with adversari",
+      "| **[25. Live Trading Systems](25_live_trading/)** | A framework bridging research and production: Interactive Brokers and Alpaca integration, managed platforms (QuantConnect), order-lifecycle management, pipeline verification, and operational readiness. |",
+      "one command, what a configuration change buys you, what needs real compute or licensed data,",
+      "2. **[Installation](docs/installation.md)** - Linux, Windows WSL2, macOS, Docker, and GPU, in full.",
+      "Then pick one environment. **Option A, Docker**, carries every dependency and needs no compiler:",
+      "docker compose pull ml4t",
+      "**Option B, a local `uv` environment**, on macOS, Linux, or inside WSL2. Install `uv` with its own",
+      "source $HOME/.local/bin/env   # the installer's own line; puts uv on PATH here and now",
+      "compiler and the Python headers: `sudo apt install build-essential python3-dev` on Ubuntu, Debian"
+    ],
+    "dependency_repos": [
+      "stefan-jansen/machine-learning-for-trading",
+      "stefan-jansen/machine-learning-for-trading.git"
+    ]
+  },
+  {
+    "full_name": "rsvp/fecon235",
+    "requested_name": "rsvp/fecon235",
+    "id": 26385494,
+    "url": "https://github.com/rsvp/fecon235",
+    "stars": 1278,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "1c04a9abb68254752353cfcf5ea4eace089676c7",
+    "last_commit_date": "2018-12-03T16:30:28Z",
+    "archived": false,
+    "fork": false,
+    "description": "Notebooks for financial economics. Keywords:  Jupyter notebook pandas Federal Reserve FRED Ferbus GDP CPI PCE inflation unemployment wage income debt Case-Shiller housing asset portfolio equities SPX bonds TIPS rates currency FX euro EUR USD JPY yen XAU gold Brent WTI oil Holt-Winters time-series forecasting statistics econometrics",
+    "language": "Jupyter Notebook",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "## BSD-License",
+      "Copyright (c) 2014-2017, Adriano, http://rsvp.github.com. *All rights reserved.*",
+      "### BSD-License APPROVALS"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## fecon235 :: Notebooks for financial economics",
+      "### What is this repository for?",
+      "### How does one get started?",
+      "### Examples of code",
+      "### Development and contacts ###",
+      "### Partial contents of nb directory ###"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/rsvp/fecon235/issues/7",
+        "createdAt": "2017-09-07T23:20:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2017-09-16T16:48:59Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-09-17T12:45:29Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2017-09-17T15:38:45Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-09-22T04:59:37Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-09-27T16:07:37Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-10-08T19:10:09Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-10-10T09:48:56Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2017-10-10T18:19:51Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-10-16T05:13:59Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-10-22T19:44:36Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/rsvp/fecon235/issues/2",
+        "createdAt": "2015-12-30T23:01:32Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2016-01-06T18:21:31Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-08-13T03:18:47Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2017-11-14T08:32:04Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2018-03-07T19:32:09Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2018-06-25T17:23:41Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "LICENSE.md",
+      "README.md",
+      "VERSION",
+      "__init__.py",
+      "bin",
+      "docs",
+      "fecon235.py",
+      "lib",
+      "nb",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/rsvp/fecon235/blob/1c04a9abb68254752353cfcf5ea4eace089676c7/README.md",
+        "sha256": "f5c9a3f98c12eb0f3a1fd25c8242b6e35139f3be651755e4e3c1c22b1f024363",
+        "bytes": 22212
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/rsvp/fecon235/blob/1c04a9abb68254752353cfcf5ea4eace089676c7/LICENSE.md",
+        "sha256": "40e87ef20131919d24967a35a88ee747bfe3b49647c77d1db854c5d6308c20ca",
+        "bytes": 5193
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/rsvp/fecon235/commit/1c04a9abb68254752353cfcf5ea4eace089676c7",
+      "metadata": "https://api.github.com/repos/rsvp/fecon235"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "## fecon235 :: Notebooks for financial economics [![Join the chat at https://gitter.im/rsvp/fecon235](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rsvp/fecon235?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) / [CHANGELOG] / [BSD License and TOS][235li] **Spin-off Notice:** ***the modules and functions",
+    "license_excerpt": "## BSD-License Copyright (c) 2014-2017, Adriano, http://rsvp.github.com. *All rights reserved.* Redistribution and use in source and binary forms, with or without modification, are permitted provided",
+    "license_warnings": [],
+    "runtime_clues": [
+      "/ [CHANGELOG] / [BSD License and TOS][235li]",
+      "**fecon235** provides an interface for ***financial economics*** to the Python",
+      "our code can employed with any Python IDE interactive development",
+      "environment, IPython console, or with a Jupyter notebook.",
+      "The code has been tested against both python27 and python3 since 2014,",
+      "* Good introductory lectures for economists to Python and its ecosystem:",
+      "* Docker container (optional): instantly run fully-configured programs and",
+      "interactive notebooks; start by: `docker pull rsvp/fecon235` # see our",
+      "[Docker] image for details.",
+      "If you had executed that notebook locally, it would",
+      "Markowitz portfolios, designed in the arithmetic mean-variance framework",
+      "model parameters analytically. We demonstrate how a GM(2) model can",
+      "We develop an alternative to the Markowitz framework",
+      "Markowitz portfolios are designed in the arithmetic mean-variance framework",
+      "and John Paulson's dramatic liquidation.",
+      "baseline expectation since 1939, Holt-Winters method, visual selection of local range,",
+      "[BSD License and TOS][235li] / This page, last update : 2018-12-03",
+      "[Anaconda]:     https://www.anaconda.com/download \"Anaconda Python distribution\""
+    ],
+    "dependency_repos": [
+      "MathSci/fecon236",
+      "rsvp/fecon235"
+    ]
+  },
+  {
+    "full_name": "z4ir3/finance-courses",
+    "requested_name": "z4ir3/finance-courses",
+    "id": 214157519,
+    "url": "https://github.com/z4ir3/finance-courses",
+    "stars": 209,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "1466799ecf3ac3d32bd7119de74eb61d5150192b",
+    "last_commit_date": "2023-12-11T23:09:10Z",
+    "archived": false,
+    "fork": false,
+    "description": "Notes and examples about Portfolio Construction and Analysis with Python (Jupyter notebooks)",
+    "language": "Jupyter Notebook",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# finance-courses",
+      "### First course: Introduction to Portfolio Construction and Analysis with Python, ",
+      "### Second course: Advanced Portfolio Construction and Analysis with Python, ",
+      "### Third course: Python and Machine Learning for Asset Management "
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "README.md",
+      "course_1_intro_to_portfolio_construction_and_analysis_with_python",
+      "course_2_advanced_portfolio_construction_and_analysis_with_python",
+      "course_3_python_and_machine_learning_for_asset_management",
+      "data",
+      "edhec_risk_kit.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/z4ir3/finance-courses/blob/1466799ecf3ac3d32bd7119de74eb61d5150192b/README.md",
+        "sha256": "14a8224371b72ec173d61147bdf68ad631b6e0ec0472182d3ff38bce3a2d241c",
+        "bytes": 1486
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/z4ir3/finance-courses/commit/1466799ecf3ac3d32bd7119de74eb61d5150192b",
+      "metadata": "https://api.github.com/repos/z4ir3/finance-courses"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# finance-courses Notes and examples of the financial courses from the **EDHEC Business School** on portfolio construction with python on **Coursera**. The courses are part",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Notes and examples of the financial courses from the **EDHEC Business School** on portfolio construction with python",
+      "The courses are part of the **Investment Management with Python and Machine Learning Specialization**: https://www.coursera.org/specializations/investment-management-python-machine-learning",
+      "### First course: Introduction to Portfolio Construction and Analysis with Python,",
+      "Link: https://www.coursera.org/learn/introduction-portfolio-construction-python.",
+      "### Second course: Advanced Portfolio Construction and Analysis with Python,",
+      "Link: https://www.coursera.org/learn/advanced-portfolio-construction-python.",
+      "### Third course: Python and Machine Learning for Asset Management",
+      "Link: https://www.coursera.org/learn/python-machine-learning-for-investment-management"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-",
+    "requested_name": "JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-",
+    "id": 200508401,
+    "url": "https://github.com/JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-",
+    "stars": 184,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "99b634408ab07418ae9425779da9a66dc144ae8e",
+    "last_commit_date": "2019-08-06T14:39:14Z",
+    "archived": false,
+    "fork": false,
+    "description": "The Python Mega Course is one of the top online Python courses with over 100,000 enrolled students and is targeted toward people with little or no previous programming experience. The course follows a modern-teaching approach where students learn by doing. You will start Python from scratch by first creating simple programs. Once you learn the basics you will then be guided on how to create 10 real-world complex applications in Python 3 through easy video explanations and support by the course instructor. Some of the applications you will build during the course are database web apps, desktop apps, web scraping scripts, webcam object detectors, web maps, and more. These programs are not only great examples to master Python, you can also use any of them as a portfolio once you have built them.  By buying the course you will gain lifetime access to all its videos, coding exercises, quizzes, code notebooks, and the Q&A inside the course where you can ask your questions and get an answer the same day. On top of that you are covered by the Udemy 30-day money back guarantee, so you can easily return the course if you don't like it.  If you don't know anything about Python, do not worry! In the first two sections, you will learn Python basics such as functions, loops, and conditionals. If you already know the basics, then the first two sections can serve as a refresher. The other 22 sections focus entirely on building real-world applications. The applications you will build cover a wide range of interesting topics:  Web applications   Desktop applications   Database applications   Web scraping   Web mapping   Data analysis  Data visualization  Computer vision  Object-Oriented Programming  Specifically, the 10 Python applications you will build are:  A program that returns English-word definitions  A program that blocks access to distracting websites   A web map visualizing volcanoes and population data  A portfolio website  A desktop-graphical program with a database backend  A webcam motion detector  A web scraper of real estate data  An interactive web graph  A database web application  A web service that converts addresses to geographic coordinates  To consider yourself a professional programmer you need to know how to make professional programs and there's no other course that teaches you that, so join thousands of other students who have successfully applied their Python skills in the real world. Sign up and start learning Python today!  What you\u2019ll learn Go from a total beginner to an advanced-Python programmer Create 10 real-world Python programs (no useless programs) Solidify your skills with bonus practice activities throughout the course Create an app that translates English words Create a web-mapping app Create a portfolio website Create a desktop app for storing book information Create a webcam video app that detects objects Create a web scraper Create a data visualization app Create a database app Create a geocoding web app Create a website blocker Send automated emails Analyze and visualize data Use Python to schedule programs based on computer events. Learn OOP (Object-Oriented Programming) Learn GUIs (Graphical-User Interfaces) Are there any course requirements or prerequisites? A computer (Windows, Mac, or Linux). No prior knowledge of Python is required. No previous programming experience needed. Who this course is for: Those with no prior knowledge of Python. Those who know Python basics and want to master Python",
+    "language": "Jupyter Notebook",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# The-Python-Mega-Course-Build-10-Real-World-Applications-"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "root_entries": [
+      ".idea",
+      "01 Interactive Dictionary",
+      "02 Webmap using Python & Folium",
+      "03 Website blocker",
+      "04 Portfolio website using Python & Flask",
+      "05 Desktop Database application",
+      "06 Webcam motion detector",
+      "07 Scraping real estate property data",
+      "08 Web based financial graph",
+      "09 Data collector Webapp using PostGreSQL & Flask",
+      "10 Geocoder web service",
+      "README.md",
+      "venv"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-/blob/99b634408ab07418ae9425779da9a66dc144ae8e/README.md",
+        "sha256": "052bbaa85e8b71732dc183d79be37c61f9ae950924ca9a63cc73d54a306eac76",
+        "bytes": 58
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-/commit/99b634408ab07418ae9425779da9a66dc144ae8e",
+      "metadata": "https://api.github.com/repos/JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# The-Python-Mega-Course-Build-10-Real-World-Applications-",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# The-Python-Mega-Course-Build-10-Real-World-Applications-"
+    ],
+    "dependency_repos": []
+  }
+]
