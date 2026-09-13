@@ -17,154 +17,23 @@ jobs:
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
     steps:
-      - name: Retrieve public text and assemble research only
+      - name: Run pinned public-research collector, with safe diagnostics
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64, concurrent.futures, datetime, hashlib, json, os, re, time, urllib.request, urllib.error, urllib.parse
-          REPO='sisodias/siso-industry-packs'; API='https://api.github.com'; ROOT='packs/law_firms/evidence/'; PACK='packs/law_firms/'
-          assert os.environ['GH_REPOSITORY']==REPO
-          NOW=datetime.datetime.now(datetime.timezone.utc).isoformat(); TOKEN=os.environ['GH_TOKEN']; outputs={}
-          def api(path,data=None,method=None):
-              assert path.startswith('/') and not path.startswith('//')
-              for attempt in range(5):
-                  req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-law-firms-public-research','X-GitHub-Api-Version':'2022-11-28'})
-                  try:
-                      with urllib.request.urlopen(req,timeout=120) as r:return json.load(r)
-                  except urllib.error.HTTPError as e:
-                      if e.code in (403,429,500,502,503,504) and attempt<4:time.sleep(8*(attempt+1));continue
-                      return {'_error':e.code}
-              return {'_error':'retries'}
-          def raw(repo,ref,path):
-              url='https://raw.githubusercontent.com/'+repo+'/'+ref+'/'+urllib.parse.quote(path,safe='/')
-              try:
-                  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'siso-law-firms-public-research'}),timeout=120) as r:return r.read()
-              except urllib.error.HTTPError:return None
-          def output(name,value):
-              assert re.fullmatch(r'[A-Za-z0-9_.-]+',name)
-              outputs[ROOT+name]=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False,indent=2)+'\n'
-          request=api('/repos/'+REPO+'/contents/'+ROOT+'audit-request.json?ref='+os.environ['REQUEST_REVISION'])
-          cfg=json.loads(base64.b64decode(request['content'])); assert cfg['mode'] in ('search','candidates','render')
-          if cfg['mode']=='search':
-              queries=cfg['queries']; assert 1<=len(queries)<=60
-              records=[];known=set(x.lower() for x in cfg.get('previously_seen',[]));added=set();prior=[]
-              for num in range(1,int(cfg['round'])):
-                  b=raw(REPO,'main',ROOT+'search-round-'+str(num).zfill(2)+'.json')
-                  if b:
-                      old=json.loads(b);prior.append(num)
-                      for q in old['queries']:
-                          known.update(r['full_name'].lower() for r in q.get('results',[]))
-              for q in queries:
-                  assert 1<=q.get('per_page',8)<=30
-                  path='/search/repositories?'+urllib.parse.urlencode({'q':q['query'],'sort':'stars','order':'desc','per_page':q.get('per_page',8),'page':q.get('page',1)})
-                  result=api(path);items=result.get('items',[])
-                  row={**q,'observed_at':NOW,'source_url':API+path,'total_count':result.get('total_count'),'incomplete_results':result.get('incomplete_results'),'error':result.get('_error'),'results':[],'new_names':[]}
-                  for r in items:
-                      n=r['full_name'];row['results'].append({k:r.get(k) for k in ('full_name','description','html_url','stargazers_count','archived','pushed_at','license','topics')})
-                      if n.lower() not in known:known.add(n.lower());added.add(n);row['new_names'].append(n)
-                  records.append(row);time.sleep(2.2)
-              rnd=str(cfg['round']).zfill(2)
-              output('search-round-'+rnd+'.json',{'round':cfg['round'],'observed_at':NOW,'prior_rounds_read':prior,'queries':records,'unique_new_count':len(added),'new_names':sorted(added),'sort':'stars descending; bounded pages, not exhaustive GitHub enumeration'})
-              output('search-round-'+rnd+'-brief.jsonl',''.join(json.dumps({k:v for k,v in r.items() if k!='results'}|{'hits':[(x['full_name'],x['stargazers_count'],(x['description'] or '')[:300]) for x in r['results']]},ensure_ascii=False)+'\n' for r in records))
-          elif cfg['mode']=='candidates':
-              bankrepo='sisodias/siso-repo-bank';head=api('/repos/'+bankrepo+'/commits/main')['sha'];files=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']
-              bank={};receipt={'observed_at':NOW,'bank_repository':bankrepo,'bank_revision':head,'files':[],'upstream_execution':'none; public text/data retrieval only'}
-              def fullname(row):
-                  for key in ('full_name','repo_full_name','repository_full_name','repository','repo','name','url','repo_url','repository_url','source_url'):
-                      v=row.get(key)
-                      if isinstance(v,str):
-                          v=v.removeprefix('https://github.com/').removesuffix('.git').strip('/')
-                          if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v):return v.lower()
-                  return None
-              for path in files:
-                  b=raw(bankrepo,head,path)
-                  if b is None:raise RuntimeError('bank source unavailable: '+path)
-                  rows=[json.loads(x) for x in b.splitlines() if x.strip()];idx={}
-                  for row in rows:
-                      n=fullname(row)
-                      if n:idx.setdefault(n,[]).append(row)
-                  bank[path]=idx;receipt['files'].append({'path':path,'rows':len(rows),'sha256':hashlib.sha256(b).hexdigest(),'source_url':'https://github.com/'+bankrepo+'/blob/'+head+'/'+path})
-              names=list(dict.fromkeys(cfg['repositories']));assert 1<=len(names)<=220
-              assert all(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',n) for n in names)
-              def decode_file(obj,canonical,rev):
-                  if not obj.get('content'):return {'error':obj.get('_error','empty')}
-                  b=base64.b64decode(obj['content']);t=b.decode('utf-8','replace')
-                  return {'path':obj['path'],'sha256':hashlib.sha256(b).hexdigest(),'text':t,'characters':len(t),'source_url':'https://github.com/'+canonical+'/blob/'+str(rev)+'/'+obj['path']}
-              def collect(pair):
-                  number,name=pair;out={'audit_id':'R'+str(number).zfill(3),'requested_full_name':name,'observed_at':NOW,'bank_revision':head};m=api('/repos/'+name)
-                  if '_error' in m:return out|{'retrieval_error':m['_error']}
-                  n=m['full_name'];base='/repos/'+n
-                  out.update({k:m.get(k) for k in ('full_name','html_url','description','stargazers_count','forks_count','default_branch','archived','disabled','created_at','updated_at','pushed_at','size','open_issues_count','topics','license')})
-                  cs=api(base+'/commits?per_page=1');rev=cs[0]['sha'] if isinstance(cs,list) and cs else None
-                  out['revision']=rev;out['last_commit']=cs[0]['commit']['committer']['date'] if rev else None;out['sources']={'repository':API+base,'commit':cs[0]['html_url'] if rev else None}
-                  suffix='?ref='+rev if rev else ''
-                  out['readme']=decode_file(api(base+'/readme'+suffix),n,rev)
-                  lic=api(base+'/license'+suffix);out['license_file']=decode_file(lic,n,rev);out['license_file']['detected']=lic.get('license')
-                  recent=api(base+'/commits?since=2026-03-13T00:00:00Z&per_page=100');out['commits_six_months_sample_count']=len(recent) if isinstance(recent,list) else None;out['commits_six_months_capped']=isinstance(recent,list) and len(recent)==100
-                  people=api(base+'/contributors?per_page=10');out['contributors_top10']=[{'login':p.get('login'),'contributions':p.get('contributions')} for p in people] if isinstance(people,list) else None;out['bus_factor']='not_measured; contributors are not maintainership redundancy'
-                  issues=api(base+'/issues?state=all&sort=updated&direction=desc&per_page=10');out['issues_sample']=[{k:i.get(k) for k in ('number','title','state','created_at','updated_at','closed_at','comments','html_url','author_association')} for i in issues if 'pull_request' not in i][:3] if isinstance(issues,list) else None
-                  replies=[]
-                  for issue in (out.get('issues_sample') or [])[:1]:
-                      if issue['comments']:
-                          comments=api(base+'/issues/'+str(issue['number'])+'/comments?per_page=20')
-                          if isinstance(comments,list):
-                              owned=[c for c in comments if c.get('author_association') in ('OWNER','MEMBER','COLLABORATOR')]
-                              if owned:replies.append({'issue':issue['number'],'created_at':issue['created_at'],'first_affiliated_reply_in_sample':owned[0]['created_at'],'source_url':owned[0]['html_url']})
-                  out['issue_response_sample']=replies;aliases={name.lower(),n.lower()};out['bank_rows']={p:[r for a in aliases for r in idx.get(a,[])] for p,idx in bank.items() if p!='bank/bank_capability.jsonl'};out['bank_membership_layers']=[p for p,rows in out['bank_rows'].items() if rows];out['bank_status']='ALREADY IN THE BANK' if out['bank_membership_layers'] else 'NEW';out['adoption_evidence']=out['bank_rows'].get('bank/bank_adoption_v2.jsonl',[])
-                  return out
-              with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(collect,enumerate(names,1)))
-              review=[]
-              for i,r in enumerate(rows,1):
-                  output('repo-'+str(i).zfill(3)+'.json',r)
-                  small={k:r.get(k) for k in ('audit_id','full_name','description','stargazers_count','archived','last_commit','revision','license','commits_six_months_sample_count','commits_six_months_capped','bank_status','bank_membership_layers','adoption_evidence','retrieval_error')};small['description']=(small.get('description') or '')[:350]
-                  readme=r.get('readme',{});lic=r.get('license_file',{});small['readme_excerpt']=readme.get('text','')[:2800];small['readme_characters']=readme.get('characters');small['readme_source']=readme.get('source_url');small['license_excerpt']=lic.get('text','')[:650];small['license_source']=lic.get('source_url');small['license_error']=lic.get('error');small['issue_response_sample']=r.get('issue_response_sample');small['top_contributor_count']=len(r.get('contributors_top10') or []);review.append(small)
-              for start in range(0,len(review),4):output('review-'+str(start//4+1).zfill(2)+'.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in review[start:start+4]))
-              receipt.update({'requested':len(names),'repositories_retrieved':sum(bool(r.get('full_name')) for r in rows),'readmes_retrieved':sum(bool(r.get('readme',{}).get('text')) for r in rows),'license_files_retrieved':sum(bool(r.get('license_file',{}).get('text')) for r in rows),'current_commit_retrieved':sum(bool(r.get('revision')) for r in rows),'already_in_bank':sum(r.get('bank_status')=='ALREADY IN THE BANK' for r in rows),'new':sum(r.get('bank_status')=='NEW' for r in rows),'membership_definition':'Any match in the six indexed repo-bank layers; shelf candidates are already held but not admitted'})
-              output('candidate-audit-receipt.json',receipt)
-          else:
-              # Join human-written judgements to immutable retrieved metadata; do not invent scores or facts.
-              assessments=json.loads(raw(REPO,os.environ['REQUEST_REVISION'],ROOT+'assessments.json'));final=[]
-              for note in assessments['candidates']:
-                  assert re.fullmatch(r'R[0-9]{3}',note['audit_id'])
-                  r=json.loads(raw(REPO,os.environ['REQUEST_REVISION'],ROOT+'repo-'+note['audit_id'][1:]+'.json'))
-                  assert r.get('full_name') and r.get('revision') and r.get('readme',{}).get('text')
-                  assert note['verdict'] in ('ADOPT','STEAL','STUDY','SKIP')
-                  scores=note['scores'];assert set(scores)=={'fit','liftability','health','adoption','integration'} and all(isinstance(v,int) and 0<=v<=5 for v in scores.values())
-                  lic=r.get('license_file',{});rootlabel=(lic.get('detected') or {}).get('spdx_id') or (r.get('license') or {}).get('spdx_id') or 'NOASSERTION'
-                  final.append({**note,'full_name':r['full_name'],'url':r['html_url'],'stars':r['stargazers_count'],'observed_at':r['observed_at'],'last_commit':r['last_commit'],'revision':r['revision'],'archived':r['archived'],'license_detected':rootlabel,'license_file_verified':bool(lic.get('text')),'license_file_url':lic.get('source_url'),'license_file_sha256':lic.get('sha256'),'bank_status':r['bank_status'],'bank_revision':r['bank_revision'],'bank_membership_layers':r['bank_membership_layers'],'adoption_evidence':r.get('adoption_evidence',[]),'commits_six_months_sample_count':r.get('commits_six_months_sample_count'),'commits_six_months_capped':r.get('commits_six_months_capped'),'issue_response_sample':r.get('issue_response_sample'),'bus_factor':r.get('bus_factor'),'readme_source':r['readme']['source_url'],'evidence_url':'https://github.com/'+REPO+'/blob/'+os.environ['REQUEST_REVISION']+'/'+ROOT+'repo-'+note['audit_id'][1:]+'.json','evidence_class':'vendor: upstream self-description and GitHub metadata; analysis: scores, fit, reuse and verdict'})
-              assert len({r['full_name'].lower() for r in final})==len(final)
-              counts={'repos_examined':len(final),'repos_adopted':sum(r['verdict']=='ADOPT' for r in final),'verdicts':{v:sum(r['verdict']==v for r in final) for v in ('ADOPT','STEAL','STUDY','SKIP')},'already_in_bank':sum(r['bank_status']=='ALREADY IN THE BANK' for r in final),'new':sum(r['bank_status']=='NEW' for r in final),'license_files_verified':sum(r['license_file_verified'] for r in final),'observed_at':NOW,'research_only':True,'application_code_written':False,'deployments_tested':0}
-              rounds=[];seen=set()
-              for number in range(1,16):
-                  b=raw(REPO,os.environ['REQUEST_REVISION'],ROOT+'search-round-'+str(number).zfill(2)+'.json')
-                  if not b:break
-                  obj=json.loads(b);names={x['full_name'].lower() for q in obj['queries'] for x in q.get('results',[])};new=names-seen;seen.update(names)
-                  rounds.append({'round':number,'queries':len(obj['queries']),'new_unique_repositories':len(new),'returned_unique':len(names),'errors':sum(q.get('error') is not None for q in obj['queries']),'source':'evidence/search-round-'+str(number).zfill(2)+'.json'})
-              counts['search_rounds']=rounds;counts['discovered_unique']=len(seen);counts['two_final_zero_new_rounds']=len(rounds)>=3 and all(x['new_unique_repositories']==0 and x['errors']==0 for x in rounds[-2:]);output('research-counts.json',counts)
-              doc=assessments['preamble_markdown']+'\n\n## Actual funnel\n\n[analysis] '+str(len(final))+' distinct repositories examined; '+str(counts['already_in_bank'])+' ALREADY IN THE BANK; '+str(counts['new'])+' NEW. Verdicts: '+', '.join(str(counts['verdicts'][v])+' '+v for v in counts['verdicts'])+'. Actual LICENSE text retrieved for '+str(counts['license_files_verified'])+'; absence/undetected or scoped licences are explicitly noted. No upstream code was executed.\n\n| Round | Queries | New unique names | Returned unique names | Errors | Receipt |\n|---|---:|---:|---:|---:|---|\n'
-              for x in rounds:doc+='| '+str(x['round'])+' | '+str(x['queries'])+' | '+str(x['new_unique_repositories'])+' | '+str(x['returned_unique'])+' | '+str(x['errors'])+' | [source]('+x['source']+') |\n'
-              doc+='\n[analysis] Discovery is bounded to the logged queries/pages, not proof of exhaustive GitHub coverage. Irrelevant keyword hits were not padded into the examined list. The final two zero-new-round condition is **'+str(counts['two_final_zero_new_rounds'])+'**.\n\n## Deduplicated candidate table\n\n[analysis] Scores are **F/L/H/A/I**, each 0–5: fit / liftability / health evidence / adoption evidence / spine integration. Zero adoption evidence means unknown, not no users. “ADOPT” means selected for a gated pilot, never production admission. Every row links the pinned upstream evidence; mutable metadata is dated per record.\n\n| ID / repository | Bank status / capability | Stars / observed UTC | Root licence / last commit UTC | F/L/H/A/I | Verdict / what it gives us |\n|---|---|---|---|---|---|\n'
-              def esc(s):return str(s).replace('|','\\|').replace('\n',' ')
-              for r in final:
-                  label=r.get('license_note') or r['license_detected'];source=r['license_file_url'] or r['evidence_url'];score='/'.join(str(r['scores'][k]) for k in ('fit','liftability','health','adoption','integration'))
-                  doc+='| '+r['audit_id']+' ['+r['full_name']+']('+r['url']+') | '+r['bank_status']+'<br>'+esc(r['capability'])+' | '+str(r['stars'])+'<br>'+r['observed_at'][:10]+' | ['+esc(label)+']('+source+')<br>['+r['last_commit']+']('+r['evidence_url']+') | '+score+' | **'+r['verdict']+'** — '+esc(r['what'])+' |\n'
-              doc+='\n## Per-repository reuse, self-hosting and rejection notes\n\n[analysis] Resource figures below are planning hypotheses unless a pinned upstream source is explicitly identified; no load or restore test was run. All ADOPT items still require scoped rights, security, statement/workflow fidelity and export tests.\n'
-              for r in final:
-                  doc+='\n### '+r['audit_id']+' — '+r['full_name']+'\n\n[analysis] **'+r['verdict']+'; '+r['unit_class']+'; stages '+', '.join(r['stages'])+'.** '+r['rationale']+'\n\n[analysis] Self-hosting: '+r['self_hosting']+' Resource floor: '+r['resource_floor']+'\n\n[vendor] [Pinned README]('+r['readme_source']+') · [Actual licence/source receipt]('+(r['license_file_url'] or r['evidence_url'])+') · [Metadata, commit, sampled maintenance and bank/adoption evidence]('+r['evidence_url']+').\n'
-              doc+='\n'+assessments.get('closing_markdown','')+'\n'
-              outputs[PACK+'04-oss-candidates.md']=doc;outputs[PACK+'04-oss-candidates.json']=json.dumps({'schema_version':'1.0','counts':counts,'scoring_method':assessments.get('scoring_method'),'repositories':final},ensure_ascii=False,indent=2)+'\n'
-              subs=[{'industry':'law_firms','full_name':r['full_name'],'capability_tag':r['capability'],'verdict':r['verdict'],'why':r['what'],'url':r['url'],'observed_at':r['observed_at'],'license':r.get('license_note') or r['license_detected'],'evidence_url':r['evidence_url'],'bank_revision_checked':r['bank_revision'],'proposed_tag':r.get('proposed_tag')} for r in final if r['bank_status']=='NEW' and r['verdict']!='SKIP'];output('bank-submissions-law-firms.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in subs))
-          # Safe fast-forward, evidence/report paths only; unrelated files remain untouched.
-          for path in outputs:assert path.startswith(ROOT) or (cfg['mode']=='render' and path in (PACK+'04-oss-candidates.md',PACK+'04-oss-candidates.json'))
-          for attempt in range(5):
-              ref=api('/repos/'+REPO+'/git/ref/heads/main');parent=ref['object']['sha'];commit=api('/repos/'+REPO+'/git/commits/'+parent)
-              tree=api('/repos/'+REPO+'/git/trees',{'base_tree':commit['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in outputs.items()]},'POST')
-              if '_error' in tree:raise RuntimeError('tree write failed '+str(tree['_error']))
-              c=api('/repos/'+REPO+'/git/commits',{'message':'research(law_firms): publish '+cfg['mode']+' research artefacts','tree':tree['sha'],'parents':[parent]},'POST')
-              if '_error' in c:raise RuntimeError('commit failed')
-              result=api('/repos/'+REPO+'/git/refs/heads/main',{'sha':c['sha'],'force':False},'PATCH')
-              if '_error' not in result:print('Published',len(outputs),'research files; commit',c['sha']);break
-              if result['_error'] not in (409,422):raise RuntimeError('ref update failed '+str(result['_error']))
-          else:raise RuntimeError('concurrent changes prevented safe publication')
-          print('Completed. No upstream code executed. No application built or deployed.')
+          import urllib.request, urllib.error, json, os, textwrap
+          assert os.environ['GH_REPOSITORY']=='sisodias/siso-industry-packs'
+          # This is our own previously published research collector, not candidate application code.
+          source='https://raw.githubusercontent.com/sisodias/siso-industry-packs/d4c6202396dc4230a080831a326f0623e2f05061/.github/workflows/law-firms-evidence-audit.yml'
+          with urllib.request.urlopen(source,timeout=60) as response: text=response.read().decode()
+          script=textwrap.dedent(text.split("          python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
+          needle="except urllib.error.HTTPError as e:\n            if e.code"
+          replacement="except urllib.error.HTTPError as e:\n            print('PUBLIC_RESEARCH_HTTP_ERROR', e.code, path.split('?')[0], 'remaining', e.headers.get('X-RateLimit-Remaining'), 'reset', e.headers.get('X-RateLimit-Reset'))\n            if e.code"
+          assert needle in script
+          script=script.replace(needle,replacement,1)
+          # Preserve generated evidence in logs before publication, so a write failure cannot masquerade as an empty search.
+          needle2='# Safe fast-forward, evidence/report paths only; unrelated files remain untouched.'
+          assert needle2 in script
+          script=script.replace(needle2,"for p,t in outputs.items():\n    if p.endswith('-brief.jsonl') or p.endswith('receipt.json'):\n        print('EVIDENCE_RECEIPT',p,t)\n"+needle2,1)
+          exec(compile(script,source,'exec'),{'__name__':'__main__'})
           PY
