@@ -1,0 +1,907 @@
+[
+  {
+    "full_name": "jorgedihe/calfifo",
+    "requested_name": "jorgedihe/calfifo",
+    "id": 1253209334,
+    "url": "https://github.com/jorgedihe/calfifo",
+    "stars": 0,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "0f0fa1c0362b6a840fbd673e33e449ee59bc75ca",
+    "last_commit_date": "2026-05-29T08:14:45Z",
+    "archived": false,
+    "fork": false,
+    "description": "C\u00e1lculo FIFO de operaciones spot de Kraken para la declaraci\u00f3n de IRPF en Espa\u00f1a. App nativa de macOS con UI dark premium.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Jorge D\u00edaz Hern\u00e1ndez",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# calfifo",
+      "## \u00bfQu\u00e9 hace?",
+      "## Capturas",
+      "### Detalle FIFO operaci\u00f3n a operaci\u00f3n",
+      "### Resumen por cripto",
+      "### Posiciones abiertas (no tributan hasta venderse)",
+      "## Instalaci\u00f3n",
+      "### Requisitos",
+      "### Instalar la app",
+      "# (Opcional, solo si quieres regenerar el icono) requiere Pillow",
+      "# Construir el bundle .app",
+      "# Instalar en /Applications",
+      "### Modo CLI / desarrollo",
+      "## C\u00f3mo se usa",
+      "## Reglas fiscales aplicadas",
+      "## Limitaciones conocidas",
+      "## \u26a0\ufe0f Aviso importante",
+      "## Estructura del proyecto",
+      "## Contribuir",
+      "## Licencia"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "jorgedihe"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "B",
+        "query": "topic:cryptocurrency-tax"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "calfifo.command",
+      "calfifo",
+      "docs",
+      "requirements.txt",
+      "sample_data",
+      "scripts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jorgedihe/calfifo/blob/0f0fa1c0362b6a840fbd673e33e449ee59bc75ca/README.md",
+        "sha256": "841520cc7b6561d7d1f2f65384e15718f1073c7c14b9c19ec02c7d8d898550da",
+        "bytes": 6195
+      },
+      "LICENSE": {
+        "url": "https://github.com/jorgedihe/calfifo/blob/0f0fa1c0362b6a840fbd673e33e449ee59bc75ca/LICENSE",
+        "sha256": "3c14715ada9ac4602bcb0205989551264ec6aba5b0cd21c380173988f6c9a093",
+        "bytes": 1079
+      },
+      "requirements.txt": {
+        "url": "https://github.com/jorgedihe/calfifo/blob/0f0fa1c0362b6a840fbd673e33e449ee59bc75ca/requirements.txt",
+        "sha256": "1e72db476d4fe57de4c58ed5f5929d6fe11b0c2d1f8d1975dfe3b03bebdbd447",
+        "bytes": 12
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jorgedihe/calfifo/commit/0f0fa1c0362b6a840fbd673e33e449ee59bc75ca",
+      "metadata": "https://api.github.com/repos/jorgedihe/calfifo"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# calfifo **C\u00e1lculo FIFO de operaciones spot de Kraken para la declaraci\u00f3n de IRPF en Espa\u00f1a.** App nativa de escritorio para macOS. Arrastras el CSV de Kraken y ves al instante tu ganancia o p\u00e9rdida patrimonial, listado operaci\u00f3n a operaci\u00f3n seg\u00fan el m\u00e9todo FIFO que exige Hacienda. [![macOS](https://img.shields.io/badge/macOS-11%2B-black?logo=apple)](https://www.apple.com/macos/) [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/) [![PyQt5](https://img.shields.io/badge/PyQt5-5.15-41cd52)](https://pypi.org/project/PyQt5/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) --- ## \u00bfQu\u00e9 hace? Hacienda exige calcular las ganancias y p\u00e9rdidas de cripto en EUR usando el m\u00e9todo **FIFO** (First In, First Out): cuando vendes, se considera que vendes primero las monedas que compraste antes. `calfifo` automatiza ese c\u00e1lculo a partir del export de **Spot Trades** que descargas desde tu cuenta de Kraken. - \u2705 Lee directamente el CSV de Kraken sin tocarlo - \u2705 Aplica FIFO estricto por activo - \u2705 Suma fees de compra al coste y resta fees de venta del ingreso (regla de Hacienda) - \u2705 Distingue ganancias, p\u00e9rdidas y resultado neto en tiempo real - \u2705 Muestra las posiciones abiertas a fin de a\u00f1o con su coste base, para arrastrarlas al ejercicio siguiente - \u2705 Exporta los resultados a CSV para tu gestor",
+    "license_excerpt": "MIT License Copyright (c) 2026 Jorge D\u00edaz Hern\u00e1ndez Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)",
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)",
+      "- Python 3.10+ con [PyQt5](https://pypi.org/project/PyQt5/) instalado",
+      "python3 scripts/make_icon.py",
+      "> **Nota:** el bundle no embebe Python. El launcher dentro de la app llama a tu `python3` (preferencia: shim de pyenv) y ejecuta `python -m calfifo` desde el repo clonado. Eso significa que si actualizas el c\u00f3digo, no hace falta reinstalar nada \u2014 basta con `gi",
+      "python3 -m calfifo",
+      "> Esta herramienta **no es asesoramiento fiscal**. Es un c\u00e1lculo automatizado siguiendo las reglas FIFO conocidas, pero **la normativa fiscal puede cambiar y cada situaci\u00f3n personal es distinta**. Antes de presentar la declaraci\u00f3n, **valida los resultados con ",
+      "[MIT](LICENSE) \u2014 \u00a9 2026 Jorge D\u00edaz Hern\u00e1ndez"
+    ],
+    "dependency_repos": [
+      "jorgedihe/calfifo.git"
+    ]
+  },
+  {
+    "full_name": "ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "requested_name": "ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "id": 1226123009,
+    "url": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "stars": 0,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d91508e93f4bada26075a3e1ec8c23275155d0b8",
+    "last_commit_date": "2026-08-05T22:25:53Z",
+    "archived": false,
+    "fork": false,
+    "description": "Automate crypto tax calculations & portfolio reporting",
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Cryptocurrency Tax Calculator and Portfolio Reporting Workflow",
+      "## Free vs Pro",
+      "### Upgrade to Pro"
+    ],
+    "recent_commit_count": 47,
+    "recent_authors_sample50": [
+      "ncreighton"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "B",
+        "query": "topic:cryptocurrency-tax"
+      }
+    ],
+    "root_entries": [
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-/blob/d91508e93f4bada26075a3e1ec8c23275155d0b8/README.md",
+        "sha256": "76f4d50d1fa925f639e0adf13c383cb83864cd39fed840c9303c863a56391b35",
+        "bytes": 769
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-/commit/d91508e93f4bada26075a3e1ec8c23275155d0b8",
+      "metadata": "https://api.github.com/repos/ncreighton/02642164-cryptocurrency-tax-calculator-"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Cryptocurrency Tax Calculator and Portfolio Reporting Workflow --- ## Free vs Pro | Feature | Free | Pro | |---------|:----:|:---:| | Basic triggers |",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "jseutter/ofxparse",
+    "requested_name": "jseutter/ofxparse",
+    "id": 235672,
+    "url": "https://github.com/jseutter/ofxparse",
+    "stars": 218,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "25aa80072be71da9f4ea0924ae1d1aaea2d5820c",
+    "last_commit_date": "2021-05-31T03:54:22Z",
+    "archived": false,
+    "fork": false,
+    "description": "Ofx file format parser for Python",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) 2009 Jerry Seutter",
+      "The above copyright notice and this permission notice shall be"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jseutter/ofxparse/issues/182",
+        "createdAt": "2026-08-05T15:51:07Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-06T17:30:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-06T19:07:03Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/jseutter/ofxparse/issues/133",
+        "createdAt": "2017-11-28T15:05:52Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2017-11-29T02:55:22Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-05-17T21:52:37Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-05-17T22:12:35Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-05-17T23:22:39Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-05-31T02:53:08Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2021-05-31T16:39:01Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-07-06T21:47:34Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-07-06T22:23:56Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-07-08T16:16:52Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-08-23T13:22:36Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".coverage",
+      ".coveragerc",
+      ".gitignore",
+      ".travis.yml",
+      "AUTHORS",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "mcc_codes.csv",
+      "ofxparse",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "tests",
+      "todo.txt",
+      "utils"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/README.rst",
+        "sha256": "9ab70c593703bf1082b5db6d1b39b6cc6ffceb7628ee12d3810761276fc70559",
+        "bytes": 4603
+      },
+      "LICENSE": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/LICENSE",
+        "sha256": "25e75507d0e1d9d2487c12fc839780f2905b18553a60ab1895ac9d999db30370",
+        "bytes": 1057
+      },
+      "requirements.txt": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/requirements.txt",
+        "sha256": "5cfd10dc2dadcf9001dbf13001fa60d66a40bfb313b23f53785ccf6bf469474a",
+        "bytes": 32
+      },
+      "setup.py": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/setup.py",
+        "sha256": "37012c87020f2ea7027feb44e5831ff5c91c7f0c012a26d32a8c293560cc4558",
+        "bytes": 1931
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jseutter/ofxparse/commit/25aa80072be71da9f4ea0924ae1d1aaea2d5820c",
+      "metadata": "https://api.github.com/repos/jseutter/ofxparse"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "ofxparse ======== ofxparse is a parser for Open Financial Exchange (.ofx) format files. OFX files are available from almost any online banking site, so they work well if you want to pull together your finances from multiple sources. Online trading accounts also provide account statements in OFX files. There are three different types of OFX files, called BankAccount, CreditAccount and InvestmentAccount files. This library has been tested with real-world samples of all three types. If you find a file that does not work with this library, please consider contributing the file so ofxparse can be improved. See the Help! section below for directions on how to do this. Example Usage ============= Here's a sample program .. code:: python from ofxparse import OfxParser with codecs.open('file.ofx') as fileobj: ofx = OfxParser.parse(fileobj) # The OFX object ofx.account # An Account object # AccountType # (Unknown, Bank, CreditCard, Investment) # Account account = ofx.account account.account_id # The account number account.number # The account number (deprecated -- returns account_id) account.routing_number # The bank routing number account.branch_id # Transit ID / branch number account.type # An",
+    "license_excerpt": "Copyright (c) 2009 Jerry Seutter Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Here's a sample program",
+      ".. code:: python",
+      "account.number            # The account number (deprecated -- returns account_id)",
+      "sudo apt-get install python-beautifulsoup python-nose python-coverage-test-runner",
+      "# Python 3 (pip)",
+      "# Python 2 (pip)",
+      "The `six` package is required for python 2.X compatibility",
+      "python -m unittest tests.test_parse",
+      "License",
+      "ofxparse is released under an MIT license.  See the LICENSE file for the actual",
+      "license text.  The basic idea is that if you can use Python to do what you are"
+    ],
+    "dependency_repos": [
+      "jseutter/ofxparse"
+    ]
+  },
+  {
+    "full_name": "aclindsa/ofxgo",
+    "requested_name": "aclindsa/ofxgo",
+    "id": 45782564,
+    "url": "https://github.com/aclindsa/ofxgo",
+    "stars": 152,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b2d1132f5987d6a150ccbf4152048cf0bf1ca625",
+    "last_commit_date": "2026-02-09T11:33:07Z",
+    "archived": false,
+    "fork": false,
+    "description": "Golang library for querying and parsing OFX",
+    "language": "Go",
+    "license": "GPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 1989, 1991 Free Software Foundation, Inc.,",
+      "the GNU Lesser General Public License instead.)  You can apply it to",
+      "copyright notice and disclaimer of warranty; keep intact all the",
+      "original copyright holder who places the Program under this License",
+      "WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# OFXGo",
+      "## Goals",
+      "## Library documentation",
+      "## Example Usage",
+      "## Requirements",
+      "## Using the command-line client"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/aclindsa/ofxgo/issues/60",
+        "createdAt": "2026-06-21T06:57:27Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/aclindsa/ofxgo/issues/57",
+        "createdAt": "2025-10-25T21:16:15Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-10-27T15:46:08Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      "LICENSE",
+      "README.md",
+      "bank.go",
+      "bank_test.go",
+      "basic_client.go",
+      "basic_client_test.go",
+      "client.go",
+      "cmd",
+      "common.go",
+      "common_test.go",
+      "constants.go",
+      "constants_test.go",
+      "creditcard.go",
+      "creditcard_test.go",
+      "discovercard_client.go",
+      "doc.go",
+      "generate_constants.py",
+      "go.mod",
+      "go.sum",
+      "invstmt.go",
+      "invstmt_test.go",
+      "leaf_elements.go",
+      "profile.go",
+      "profile_test.go",
+      "request.go",
+      "request_test.go",
+      "response.go",
+      "response_test.go",
+      "samples",
+      "seclist.go",
+      "signon.go",
+      "signon_test.go",
+      "signup.go",
+      "signup_test.go",
+      "types.go",
+      "types_test.go",
+      "util.go",
+      "vanguard_client.go"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/aclindsa/ofxgo/blob/b2d1132f5987d6a150ccbf4152048cf0bf1ca625/README.md",
+        "sha256": "6271b8c0cfdcf31a98b104c829729a902632e5aa5b906674e8bee45174d4e60a",
+        "bytes": 5281
+      },
+      "LICENSE": {
+        "url": "https://github.com/aclindsa/ofxgo/blob/b2d1132f5987d6a150ccbf4152048cf0bf1ca625/LICENSE",
+        "sha256": "d8c320ffc0030d1b096ae4732b50d2b811cf95e9a9b7377c1127b2563e0a0388",
+        "bytes": 15220
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/aclindsa/ofxgo/commit/b2d1132f5987d6a150ccbf4152048cf0bf1ca625",
+      "metadata": "https://api.github.com/repos/aclindsa/ofxgo"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# OFXGo [![Go Report Card](https://goreportcard.com/badge/github.com/aclindsa/ofxgo)](https://goreportcard.com/report/github.com/aclindsa/ofxgo) [![Build Status](https://github.com/aclindsa/ofxgo/workflows/ofxgo%20CI%20Test/badge.svg?branch=master)](https://github.com/aclindsa/ofxgo/actions?query=workflow%3A%22ofxgo+CI+Test%22+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/github/aclindsa/ofxgo/badge.svg?branch=master)](https://coveralls.io/github/aclindsa/ofxgo?branch=master) [![PkgGoDev](https://pkg.go.dev/badge/github.com/aclindsa?ofxgo)](https://pkg.go.dev/github.com/aclindsa/ofxgo) **OFXGo** is a library for querying OFX servers and/or parsing the responses. It also provides an example command-line client to demonstrate the use of the library. ## Goals The main purpose of this project is to provide a library to make it easier to query financial information with OFX from the comfort of Golang, without having to marshal/unmarshal to SGML or XML. The library does _not_ intend to abstract away all of the details of the OFX specification, which would be difficult to do well. Instead, it exposes the OFX SGML/XML hierarchy as structs which mostly resemble it. Its primary goal is to enable the creation of other personal finance software in Go (as it was created to allow me to fetch OFX transactions for my own project, [MoneyGo](https://github.com/aclindsa/moneygo)). Because the OFX specification is rather... 'comprehensive,' it can be difficult for those unfamiliar with it to figure out where to start. To that end, I have created a sample command-line client which uses the library to do simple tasks (currently",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Similarly, if you have an OFX file available locally, you can parse it directly:",
+      "OFXGo requires go >= 1.12"
+    ],
+    "dependency_repos": [
+      "aclindsa/moneygo",
+      "aclindsa/ofxgo"
+    ]
+  },
+  {
+    "full_name": "annacruz/ofx",
+    "requested_name": "annacruz/ofx",
+    "id": 368790,
+    "url": "https://github.com/annacruz/ofx",
+    "stars": 140,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f409fb53c3de475d1a7dc4950e263726491bcef3",
+    "last_commit_date": "2026-09-02T19:09:01Z",
+    "archived": false,
+    "fork": false,
+    "description": "A simple OFX (Open Financial Exchange) parser built on top of Nokogiri. Currently supports OFX 1.0.2 and 1.0.3.",
+    "language": "Ruby",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": null,
+    "readme_read": false,
+    "readme_headings": [],
+    "recent_commit_count": 8,
+    "recent_authors_sample50": [
+      "annacruz",
+      "caonUlisses",
+      "marcosdemelo"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/annacruz/ofx/issues/126",
+        "createdAt": "2026-03-21T03:04:56Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-03-23T10:38:02Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/annacruz/ofx/issues/142",
+        "createdAt": "2026-04-09T01:20:31Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".rspec",
+      ".rubocop.yml",
+      ".travis.yml",
+      "Gemfile",
+      "Gemfile.lock",
+      "Guardfile",
+      "README.rdoc",
+      "Rakefile",
+      "lib",
+      "ofx.gemspec",
+      "spec"
+    ],
+    "source_files": {},
+    "upstream_urls": {
+      "commit": "https://github.com/annacruz/ofx/commit/f409fb53c3de475d1a7dc4950e263726491bcef3",
+      "metadata": "https://api.github.com/repos/annacruz/ofx"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "asgrim/ofxparser",
+    "requested_name": "asgrim/ofxparser",
+    "id": 10301821,
+    "url": "https://github.com/asgrim/ofxparser",
+    "stars": 108,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ef7ca52b5c951a71c37c466925e526950a52b292",
+    "last_commit_date": "2020-03-30T07:37:53Z",
+    "archived": true,
+    "fork": false,
+    "description": ":moneybag: OFX File Parser",
+    "language": "PHP",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) 2017 James Titcumb",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Installation",
+      "## Usage",
+      "## Investments Support",
+      "## Fork & Credits"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/asgrim/ofxparser/issues/62",
+        "createdAt": "2020-08-25T13:05:36Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-08-25T13:24:12Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-09-08T08:18:22Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/asgrim/ofxparser/issues/36",
+        "createdAt": "2017-01-16T20:10:36Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2017-01-16T20:19:01Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitignore",
+      ".scrutinizer.yml",
+      ".travis.yml",
+      "LICENSE",
+      "README.md",
+      "composer.json",
+      "lib",
+      "phpcs.xml.dist",
+      "phpunit.xml.dist",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/asgrim/ofxparser/blob/ef7ca52b5c951a71c37c466925e526950a52b292/README.md",
+        "sha256": "6aed1c0c4d6d69cd31748f497780fa237faedaa1d67b428a036964009f795703",
+        "bytes": 3928
+      },
+      "LICENSE": {
+        "url": "https://github.com/asgrim/ofxparser/blob/ef7ca52b5c951a71c37c466925e526950a52b292/LICENSE",
+        "sha256": "12e9a8e2954bc4c78a79c185a906ab6d46588fe923b615cb715ae44ce9459fe8",
+        "bytes": 1057
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/asgrim/ofxparser/commit/ef7ca52b5c951a71c37c466925e526950a52b292",
+      "metadata": "https://api.github.com/repos/asgrim/ofxparser"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "OFX Parser ================= [![Build Status](https://travis-ci.org/asgrim/ofxparser.svg?branch=master)](https://travis-ci.org/asgrim/ofxparser) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/asgrim/ofxparser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/asgrim/ofxparser/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/asgrim/ofxparser/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/asgrim/ofxparser/?branch=master) [![Latest Stable Version](https://poser.pugx.org/asgrim/ofxparser/v/stable)](https://packagist.org/packages/asgrim/ofxparser) [![License](https://poser.pugx.org/asgrim/ofxparser/license)](https://packagist.org/packages/asgrim/ofxparser) OFX Parser is a PHP library designed to parse an OFX file downloaded from a financial institution into simple PHP objects. It supports multiple Bank Accounts, the required \"Sign On\" response, and recognises OFX timestamps. ## Installation Simply require the package using [Composer](https://getcomposer.org/): ```bash $ composer require asgrim/ofxparser ``` ## Usage You can access the nodes in your OFX file as follows: ```php $ofxParser = new \\OfxParser\\Parser(); $ofx = $ofxParser->loadFromFile('/path/to/your/bankstatement.ofx'); $bankAccount = reset($ofx->bankAccounts); // Get the statement start and end dates $startDate = $bankAccount->statement->startDate; $endDate = $bankAccount->statement->endDate; // Get the statement transactions for the account $transactions = $bankAccount->statement->transactions; ``` Most common nodes are support. If you come across an inaccessible node in your OFX file, please submit a pull request! ## Investments Support Investments look much different than bank / credit card transactions. This version supports a subset of the nodes in the OFX 2.0.3 spec, per the immediate needs of the author(s). You may want to reference the OFX documentation if you choose to implement",
+    "license_excerpt": "Copyright (c) 2017 James Titcumb Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Build Status](https://travis-ci.org/asgrim/ofxparser.svg?branch=master)](https://travis-ci.org/asgrim/ofxparser) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/asgrim/ofxparser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/asgr",
+      "This is not a pure pass-through of fields, such as this implementation in python: [csingley/ofxtools](https://github.com/csingley/ofxtools). This package contains fields that have been \"translated\" on occasion to make it more friendly to those less-familiar wi",
+      "This is a fork of [grimfor/ofxparser](https://github.com/Grimfor/ofxparser) made to be framework independent. The source repo was designed for Symfony 2 framework, so credit should be given where credit due!"
+    ],
+    "dependency_repos": [
+      "Grimfor/ofxparser",
+      "aasmith/ofx-parser",
+      "csingley/ofxtools"
+    ]
+  },
+  {
+    "full_name": "chilts/node-ofx",
+    "requested_name": "chilts/node-ofx",
+    "id": 6088199,
+    "url": "https://github.com/chilts/node-ofx",
+    "stars": 73,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a4db63ccfd273392ec41ea1eafb80089b8dc0085",
+    "last_commit_date": "2020-02-13T21:46:14Z",
+    "archived": false,
+    "fork": false,
+    "description": "Parse OFX files into a usable data structure for Node.js.",
+    "language": "JavaScript",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright 2012 Apps Attic Ltd.  All rights reserved.",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# OFX #",
+      "## Install ##",
+      "## Parsing ##",
+      "## Serializing ##",
+      "## Data ##",
+      "## caveats ##",
+      "## Credits ##",
+      "## Author ##",
+      "## License ##"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/chilts/node-ofx/issues/11",
+        "createdAt": "2021-03-30T18:20:19Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/chilts/node-ofx/issues/9",
+        "createdAt": "2021-03-30T12:27:30Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".travis.yml",
+      "LICENSE",
+      "README.md",
+      "ofx.js",
+      "package.json",
+      "test"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/chilts/node-ofx/blob/a4db63ccfd273392ec41ea1eafb80089b8dc0085/README.md",
+        "sha256": "74516765c061d77839096fa724b54174bc2485472462539e2e988d39419f708c",
+        "bytes": 3969
+      },
+      "LICENSE": {
+        "url": "https://github.com/chilts/node-ofx/blob/a4db63ccfd273392ec41ea1eafb80089b8dc0085/LICENSE",
+        "sha256": "3c801b74ce3f3a4559c6b16643acc351385af2cfe29420db45f8cacb68fa5a6d",
+        "bytes": 1431
+      },
+      "package.json": {
+        "url": "https://github.com/chilts/node-ofx/blob/a4db63ccfd273392ec41ea1eafb80089b8dc0085/package.json",
+        "sha256": "7ca875d011ef767daabc197efd98551921e6ff639b15779dad43b2f89a64f445",
+        "bytes": 1123
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/chilts/node-ofx/commit/a4db63ccfd273392ec41ea1eafb80089b8dc0085",
+      "metadata": "https://api.github.com/repos/chilts/node-ofx"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# OFX # Parse Open Financial Exchange (OFX) files into a usable data structure. Serialize objects into OFX file format. ## Install ## ``` $",
+    "license_excerpt": "------------------------------------------------------------------------------- This software is published under the MIT license as published here: * http://appsattic.mit-license.org/2012/ ------------------------------------------------------------------------------- Copyright 2012 Apps Attic Ltd. All rights reserved. Permission is",
+    "license_warnings": [],
+    "runtime_clues": [
+      "## License ##",
+      "The MIT License : http://appsattic.mit-license.org/2012/"
+    ],
+    "dependency_repos": [
+      "euforic/banking.js"
+    ]
+  },
+  {
+    "full_name": "aasmith/ofx-parser",
+    "requested_name": "aasmith/ofx-parser",
+    "id": 47769,
+    "url": "https://github.com/aasmith/ofx-parser",
+    "stars": 59,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fa26c9360ed81b80617a2ed5edd3966dff84ba4b",
+    "last_commit_date": "2015-04-06T20:55:27Z",
+    "archived": false,
+    "fork": false,
+    "description": "Parses OFX",
+    "language": "Ruby",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": null,
+    "readme_read": false,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/aasmith/ofx-parser/issues/21",
+        "createdAt": "2025-07-08T08:26:41Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/aasmith/ofx-parser/issues/19",
+        "createdAt": "2017-02-24T15:02:23Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "History.txt",
+      "Manifest.txt",
+      "README.txt",
+      "Rakefile",
+      "lib",
+      "ofx-parser.gemspec",
+      "test"
+    ],
+    "source_files": {},
+    "upstream_urls": {
+      "commit": "https://github.com/aasmith/ofx-parser/commit/fa26c9360ed81b80617a2ed5edd3966dff84ba4b",
+      "metadata": "https://api.github.com/repos/aasmith/ofx-parser"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  }
+]
