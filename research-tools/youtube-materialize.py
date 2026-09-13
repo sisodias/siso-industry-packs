@@ -227,9 +227,12 @@ main=api('/repos/'+REPO+'/git/ref/heads/main')['object']['sha']
 comparison=api('/repos/'+REPO+'/compare/'+main+'...'+head)
 branchfiles=comparison.get('files',[]); assert len(branchfiles)<300,'truncated comparison not safe'
 mergebase=comparison['merge_base_commit']['sha']
-mainchanges=api('/repos/'+REPO+'/compare/'+mergebase+'...'+main).get('files',[])
-assert len(mainchanges)<300,'main comparison may be truncated'
-assert not any(x['filename'].startswith(PACK) for x in mainchanges),'main changed this pack: human reconciliation required'
+def pack_identity(ref):
+    entries=api('/repos/'+REPO+'/contents/'+PACK.rstrip('/')+'?ref='+ref)
+    assert isinstance(entries,list),'pack directory read failed'
+    return sorted((x['name'],x['type'],x['sha']) for x in entries)
+main_pack_changed = pack_identity(mergebase)!=pack_identity(main)
+put(PACK+'evidence/concurrent-main.json',dump({'main_revision_read':main,'main_pack_changed':main_pack_changed,'main_file_identities':pack_identity(main),'action':'Preserve main unchanged. Publish this source-reviewed continuation only on its existing branch; reconcile competing hypotheses before merge.','main_merged':False}))
 allowed=lambda p:p.startswith((PACK,'research-tools/youtube-','.github/workflows/youtube-')) or p in ('registry/industries.jsonl','registry/bank-submissions.jsonl','registry/corrections.jsonl')
 assert all(allowed(x['filename']) for x in branchfiles),'unrelated branch changes must be preserved explicitly'
 def main_text(path):
@@ -301,6 +304,7 @@ summary='''# YouTube creators — research decision
 **Verdict [analysis]: YES to a bounded editor-handoff pilot; NO to a proven autonomous creator super-app or subscription-savings offer.** The numerical quotas are met, but the required two consecutive dry discovery rounds are not, several prices/entitlements are unresolved, and an observed operator baseline and deployment/rights/quality tests are still missing. Therefore the registry remains `partial`, not falsely `complete`. No application code was written, no client account was operated, and no application was deployed. [Evidence receipt](evidence/research-receipt.json).
 '''
 summary=summary.replace('TOPTEXT',toptext).replace('STUDYCOUNT',str(counts['STUDY'])).replace('SKIPCOUNT',str(counts['SKIP'])).replace('NEWCOUNT',str(bank_counts['NEW'])).replace('OLDCOUNT',str(bank_counts['ALREADY IN THE BANK'])).replace('SUBCOUNT',str(len(submissions))).replace('CORCOUNT',str(len(corrections)))
+summary += '\n## Concurrent-main reconciliation\n\n[analysis] Parallel research appeared on main during this continuation in 00-SUMMARY.md, 01-person.md and 05-superapp.md. It remains unchanged. Its local-first/BYO-key hypothesis and self-reported 131-repository sweep are separate from this branch’s versioned-handoff hypothesis and 129 source-reviewed repositories; the counts must not be added without deduplication. The client-VPS requirement remains this assignment’s deployment boundary. Bring-your-own-key changes billing/custody but does not itself make upstream calls free. Resolve the competing baselines, prices, component choices and private-source publication boundaries before merging. [Pinned main research](https://github.com/'+REPO+'/tree/'+main+'/packs/youtube_creators).\n'
 put(PACK+'00-SUMMARY.md',summary)
 put(PACK+'07-registry-line.json',dump(industry_line))
 # Validate all deliverables before any branch update.
@@ -316,8 +320,8 @@ for i,x in enumerate(rows): assert x['examined'] and x['readme_url'].startswith(
 assert round(96*1.2*12,2)==1382.4 and 720+360+720+174+144+220+456==2794
 validation={'status':'PASS research-structure checks only','date':DATE,'required_files':required,'repos':129,'adopt':14,'workflow_stages':12,'complaints':10,'tier1_profiles':10,'tier2_profiles':10,'new_bank_proposals':len(submissions),'corrections':len(corrections),'saturation':'NOT MET','operator_baseline':'UNMEASURED','runtime':'NOT TESTED','bank_status_counts':dict(bank_counts),'verdict_counts':dict(counts),'application_deployment':False}
 put(PACK+'evidence/validation.json',dump(validation))
-# Merge current-main tree with ONLY this branch's scoped research files and the generated outputs.
-main_commit=api('/repos/'+REPO+'/git/commits/'+main)
+# Publish only this branch. Concurrent main work is preserved for explicit PR reconciliation.
+main_commit=api('/repos/'+REPO+'/git/commits/'+head)
 elements={}
 for f in branchfiles:
     p=f['filename']; assert allowed(p)
@@ -328,10 +332,10 @@ for p,text in outputs.items(): elements[p]={'path':p,'mode':'100644','type':'blo
 assert len(elements)<60 and all(allowed(p) for p in elements)
 assert api(branch_ref)['object']['sha']==head,'concurrent branch update; no commit/ref mutation'
 tree=api('/repos/'+REPO+'/git/trees','POST',{'base_tree':main_commit['tree']['sha'],'tree':list(elements.values())})
-commit=api('/repos/'+REPO+'/git/commits','POST',{'message':'research(youtube): publish 129-repository blueprint, preserve current main, keep honest partial status','tree':tree['sha'],'parents':[head,main] if main!=head else [head]})
+commit=api('/repos/'+REPO+'/git/commits','POST',{'message':'research(youtube): publish 129-repository blueprint, preserve current main, keep honest partial status','tree':tree['sha'],'parents':[head]})
 assert api(branch_ref)['object']['sha']==head,'concurrent branch update; ref not moved'
 api('/repos/'+REPO+'/git/refs/heads/'+BRANCH,'PATCH',{'sha':commit['sha'],'force':False})
-publication={'commit':commit['sha'],'branch':BRANCH,'base_main':main,'changed_paths':sorted(elements),'validation':validation,'main_updated':False,'force_push':False}
+publication={'commit':commit['sha'],'branch':BRANCH,'base_main':main,'changed_paths':sorted(elements),'validation':validation,'main_updated':False,'main_merged':False,'concurrent_main_review_required':main_pack_changed,'force_push':False}
 (ROOT/'youtube-publication-receipt.json').write_text(dump(publication))
 print(json.dumps(publication,ensure_ascii=False,indent=2))
 # Export the research pack and its per-pack registry proposals; do not archive unrelated client rows.

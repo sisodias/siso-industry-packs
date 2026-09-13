@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-13",
+  "status": "blueprint_not_deployed",
+  "evidence_class": "analysis",
+  "primary_segment": "Original faceless educational/documentary producer-owner",
+  "wedge": "Version-bound approved-script to editor handoff and release approval",
+  "spine": [
+    {
+      "name": "WorkOrder",
+      "purpose": "Human-confirmed accepted demand and source conversation"
+    },
+    {
+      "name": "Production",
+      "purpose": "Editorial unit with canonical task-system mapping"
+    },
+    {
+      "name": "AssetVersion",
+      "purpose": "Immutable media/script/caption version, lineage and rational timebase"
+    },
+    {
+      "name": "RightsGrant",
+      "purpose": "Source permission/consent evidence and conditions, not legal adjudication"
+    },
+    {
+      "name": "Release",
+      "purpose": "Approval of exact versions plus authorised publication receipt"
+    },
+    {
+      "name": "Deal",
+      "purpose": "Contracted deliverables and references to existing financial authority"
+    }
+  ],
+  "core_top_10": [
+    "cgwire/kitsu",
+    "cgwire/zou",
+    "FFmpeg/FFmpeg",
+    "AcademySoftwareFoundation/OpenTimelineIO",
+    "ggml-org/whisper.cpp",
+    "tkarabela/pysubs2",
+    "lovell/sharp",
+    "rclone/rclone",
+    "googleapis/google-api-nodejs-client",
+    "seaweedfs/seaweedfs"
+  ],
+  "optional_components": [
+    "chatwoot/chatwoot",
+    "miniflux/v2",
+    "remsky/Kokoro-FastAPI",
+    "Breakthrough/PySceneDetect"
+  ],
+  "components": [
+    {
+      "repository": "AcademySoftwareFoundation/OpenTimelineIO",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S06"
+      ],
+      "source_commit": "b3ebf106f3e5785ad5b271a9f8630a56228e4b5a",
+      "source_url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO/blob/b3ebf106f3e5785ad5b271a9f8630a56228e4b5a/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_library",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "Breakthrough/PySceneDetect",
+      "verdict": "ADOPT",
+      "optional": true,
+      "stages": [
+        "S10"
+      ],
+      "source_commit": "2fa8290de0353d371eaae92a8a6efb69d16a1e0c",
+      "source_url": "https://github.com/Breakthrough/PySceneDetect/blob/2fa8290de0353d371eaae92a8a6efb69d16a1e0c/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "optional_cpu_worker",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "cgwire/kitsu",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S08"
+      ],
+      "source_commit": "a74ffeab5737eb75b93ece11cc96a8de880e46e3",
+      "source_url": "https://github.com/cgwire/kitsu/blob/a74ffeab5737eb75b93ece11cc96a8de880e46e3/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_service",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "cgwire/zou",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S08"
+      ],
+      "source_commit": "c394a234466c22242a94c9486701e21a1f680fbf",
+      "source_url": "https://github.com/cgwire/zou/blob/c394a234466c22242a94c9486701e21a1f680fbf/README.rst",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_service",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "chatwoot/chatwoot",
+      "verdict": "ADOPT",
+      "optional": true,
+      "stages": [
+        "S01"
+      ],
+      "source_commit": "2f1ed80f894ed9a3eba636ebab90ca61deec110a",
+      "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "optional_cpu_service",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "FFmpeg/FFmpeg",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S06"
+      ],
+      "source_commit": "7523428c26bdb0b2302303534be591fe73178ab6",
+      "source_url": "https://github.com/FFmpeg/FFmpeg/blob/7523428c26bdb0b2302303534be591fe73178ab6/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_worker",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "ggml-org/whisper.cpp",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S07"
+      ],
+      "source_commit": "1da4dc82fa7996d4edda05890dca65aeceaafd6d",
+      "source_url": "https://github.com/ggml-org/whisper.cpp/blob/1da4dc82fa7996d4edda05890dca65aeceaafd6d/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_worker",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "googleapis/google-api-nodejs-client",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S09"
+      ],
+      "source_commit": "68a542d2bf1af5908ab881bb91dec71a3f17840f",
+      "source_url": "https://github.com/googleapis/google-api-nodejs-client/blob/68a542d2bf1af5908ab881bb91dec71a3f17840f/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "cpu_library",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "lovell/sharp",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S07"
+      ],
+      "source_commit": "0d19d4a8c1fea04c71c9a413bd67e59114da80a5",
+      "source_url": "https://github.com/lovell/sharp/blob/0d19d4a8c1fea04c71c9a413bd67e59114da80a5/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_library",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "miniflux/v2",
+      "verdict": "ADOPT",
+      "optional": true,
+      "stages": [
+        "S02"
+      ],
+      "source_commit": "76889f08b12c2577b37e524e645afa5dd46ff050",
+      "source_url": "https://github.com/miniflux/v2/blob/76889f08b12c2577b37e524e645afa5dd46ff050/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "optional_cpu_service",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "rclone/rclone",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S05"
+      ],
+      "source_commit": "812e693fd787d324981d423e9a73c873716c1046",
+      "source_url": "https://github.com/rclone/rclone/blob/812e693fd787d324981d423e9a73c873716c1046/README.md",
+      "bank_status": "NEW",
+      "deployment_class": "cpu_cli",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "remsky/Kokoro-FastAPI",
+      "verdict": "ADOPT",
+      "optional": true,
+      "stages": [
+        "S04"
+      ],
+      "source_commit": "b4ef64b1ce60682debda4fe0a066259e284eb1b4",
+      "source_url": "https://github.com/remsky/Kokoro-FastAPI/blob/b4ef64b1ce60682debda4fe0a066259e284eb1b4/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "optional_cpu_worker",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "seaweedfs/seaweedfs",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S05"
+      ],
+      "source_commit": "99d2479528b1a61706368c060e74e39ea0756ec5",
+      "source_url": "https://github.com/seaweedfs/seaweedfs/blob/99d2479528b1a61706368c060e74e39ea0756ec5/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "cpu_service",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    },
+    {
+      "repository": "tkarabela/pysubs2",
+      "verdict": "ADOPT",
+      "optional": false,
+      "stages": [
+        "S07"
+      ],
+      "source_commit": "34d6ca5534ffd46cfa460d73aff79521eded2055",
+      "source_url": "https://github.com/tkarabela/pysubs2/blob/34d6ca5534ffd46cfa460d73aff79521eded2055/README.md",
+      "bank_status": "ALREADY IN THE BANK",
+      "deployment_class": "cpu_library",
+      "acceptance": "Route rights, integration and workload tests required; not installed."
+    }
+  ],
+  "deployment": {
+    "owner": "client",
+    "target": "one client-owned VPS; no SISO servers",
+    "os": "Linux planning assumption",
+    "ram_gib_test_allocation": 16,
+    "verified_ram_floor_gib": null,
+    "heavy_jobs_parallel": 1,
+    "gpu_required_for_selected_baseline": false,
+    "gpu_claim_scope": "CPU-capable route proposed, not benchmarked",
+    "external_boundaries": [
+      "platform endpoints",
+      "payment/financial authority",
+      "licensed media",
+      "editor workstation",
+      "approved existing script export"
+    ],
+    "application_code_written": false,
+    "deployed": false
+  },
+  "gaps": [
+    {
+      "id": "G01",
+      "finding": "Observed operator fit and authorised private-asset reuse",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G02",
+      "finding": "Local script/voice quality, model rights and speaker consent",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G03",
+      "finding": "Licensed stock/music and copyright-claim adjudication",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G04",
+      "finding": "Native NLE project/effect/font round-trip fidelity",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G05",
+      "finding": "Platform OAuth/audit eligibility and TikTok private-utility restriction",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G06",
+      "finding": "Native experiments and owner-only analytics",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G07",
+      "finding": "Payment settlement and statutory accounting/payroll authority",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G08",
+      "finding": "Single-box resource, security, upgrade and restore verification",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G09",
+      "finding": "Selected-module/build/enterprise/model licence boundaries",
+      "status": "unverified_or_external_boundary"
+    },
+    {
+      "id": "G10",
+      "finding": "Actual invoices, eligible population and two dry discovery rounds",
+      "status": "unverified_or_external_boundary"
+    }
+  ],
+  "go_no_go": "YES bounded handoff pilot; no complete autonomous-stack or verified-savings claim"
+}

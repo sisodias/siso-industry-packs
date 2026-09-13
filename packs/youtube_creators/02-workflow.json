@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-13",
+  "evidence_class": "analysis",
+  "frequency_status": "unmeasured planning case, not observed operator volumes",
+  "source": "02-workflow.md",
+  "stages": [
+    {
+      "id": "S01",
+      "stage": "Inquiry and commissioned work",
+      "trigger": "An owner or counterparty proposes a deliverable",
+      "inputs": "Authorised email/message, requested channel/date, scope, commercial conditions",
+      "outputs": "Explicitly accepted brief, owner and due date",
+      "pain": "No directly observed intake complaint; actual inbox-to-order example is missing",
+      "frequency": "Inbox checked daily; accepted-order volume unknown",
+      "handoff": "Producer ↔ sponsor/client; only the producer confirms work",
+      "data_object": "WorkOrder"
+    },
+    {
+      "id": "S02",
+      "stage": "Research and brief",
+      "trigger": "An accepted WorkOrder or owner-approved channel idea",
+      "inputs": "Source links, native channel observations, audience hypothesis",
+      "outputs": "Sourced outline and claims-to-check list",
+      "pain": "C04: “It’s OK, but pretty much just that.” [User report](https://www.reddit.com/r/NewTubers/comments/1gi7fpw/is_vidiq_worth_the_subscription/)",
+      "frequency": "One research package per original: eight/month assumed",
+      "handoff": "Researcher → producer",
+      "data_object": "Production; source AssetVersion"
+    },
+    {
+      "id": "S03",
+      "stage": "Script and hook approval",
+      "trigger": "Producer accepts the outline",
+      "inputs": "Existing script workflow, source evidence, sponsor wording",
+      "outputs": "One identified approved script revision",
+      "pain": "Direct script-writing complaint not verified; do not transfer a clip-editing complaint into this row",
+      "frequency": "At least one approval per original; revision count unknown",
+      "handoff": "Writer → producer → editor",
+      "data_object": "Production; script AssetVersion"
+    },
+    {
+      "id": "S04",
+      "stage": "Narration and transcript",
+      "trigger": "An exact script revision is approved",
+      "inputs": "Script, pronunciation guide, voice/performer permission",
+      "outputs": "Accepted audio plus timed transcript",
+      "pain": "Direct voice-quality complaint not verified; pronunciation and correction burden must be measured",
+      "frequency": "Eight long-form narrations/month assumed; retakes unknown",
+      "handoff": "Narrator or local worker → human listener",
+      "data_object": "AssetVersion; RightsGrant"
+    },
+    {
+      "id": "S05",
+      "stage": "Stock, music and rights",
+      "trigger": "The edit needs supporting media",
+      "inputs": "Owned footage, stock, music, fonts, source and permission receipts",
+      "outputs": "Source inventory and release-specific rights status",
+      "pain": "C08: “submit an appeal every single time?” [User report, with inactive-subscription context](https://www.reddit.com/r/PartneredYoutube/comments/1eaonf2/epidemic_sound_songs_getting_copyright_claimed/)",
+      "frequency": "Once per asset and once per release-scope check; counts unknown",
+      "handoff": "Researcher/editor → producer or rights reviewer",
+      "data_object": "AssetVersion; RightsGrant"
+    },
+    {
+      "id": "S06",
+      "stage": "Assemble and edit",
+      "trigger": "Editor accepts a versioned handoff",
+      "inputs": "Script, audio, media, source timebases, brand rules, due date",
+      "outputs": "Editable project and review proxy",
+      "pain": "C03: “the timecodes listed are nowhere near what's in the actual file.” [User report](https://www.reddit.com/r/opusclip/comments/1uavudm/tired_of_getting_30_clips_from_opus_clip_and_only/)",
+      "frequency": "Eight original edits/month assumed; rework unknown",
+      "handoff": "Editor → producer",
+      "data_object": "Production; AssetVersion"
+    },
+    {
+      "id": "S07",
+      "stage": "Thumbnail, title and captions",
+      "trigger": "A reviewable cut exists",
+      "inputs": "Cut, brand assets, transcript and source claims",
+      "outputs": "Version-bound packaging and accessibility checks",
+      "pain": "C09: “absolutely nothing to do with the subject matter of my video.” [User report](https://www.reddit.com/r/NewTubers/comments/1gi7fpw/is_vidiq_worth_the_subscription/)",
+      "frequency": "Each original and derivative; alternative count unknown",
+      "handoff": "Designer/editor → producer",
+      "data_object": "AssetVersion; Release"
+    },
+    {
+      "id": "S08",
+      "stage": "Review and accept",
+      "trigger": "An editor submits a specific render",
+      "inputs": "Review proxy/hash, frame rate, previous comments, requirements",
+      "outputs": "Resolved comments and approval of exact bytes, or a new revision request",
+      "pain": "C01: “very disjoint from our file organization and project structure” [User report](https://www.reddit.com/r/editors/comments/1ft40e4/in_need_of_frameio_alternatives_and_is_v4_ever/); C06: “Timeline markers don't ripple correctly” [User report](https://www.reddit.com/r/premiere/comments/1oe48u3/hows_frameio_v4_working_for_you_with_adobe/)",
+      "frequency": "Each review round; actual rounds and wait time unknown",
+      "handoff": "Editor ↔ producer; sponsor approval only when contract requires it",
+      "data_object": "Production; AssetVersion; Release"
+    },
+    {
+      "id": "S09",
+      "stage": "Schedule and release",
+      "trigger": "All content, rights and account checks pass",
+      "inputs": "Approved bytes, metadata, captions, destination and explicit release authority",
+      "outputs": "Upload receipt, scheduled/public state or visible exception",
+      "pain": "No directly verified publishing-tool failure counted. C05 review-notification history motivates an observable outbox, not a claim about scheduler reliability. [Context](https://www.reddit.com/r/editors/comments/1n10yh6/what_does_everyone_think_of_the_new_frame_io_v4/)",
+      "frequency": "Forty content items/month assumed; destination-post count varies",
+      "handoff": "Named channel owner → authorised adapter or native uploader",
+      "data_object": "Release"
+    },
+    {
+      "id": "S10",
+      "stage": "Repurpose for short destinations",
+      "trigger": "A source production is approved for derivatives",
+      "inputs": "Source time ranges, context/handles, transcript, rights scope",
+      "outputs": "Human-selected short edits, captions and destination-specific packages",
+      "pain": "C02: “At this point it feels like I’m not really saving time.” [User report](https://www.reddit.com/r/opusclip/comments/1uavudm/tired_of_getting_30_clips_from_opus_clip_and_only/)",
+      "frequency": "32 accepted derivatives/month assumed; generated candidates are not accepted outputs",
+      "handoff": "Editor/worker → producer",
+      "data_object": "Child Production; AssetVersion; Release"
+    },
+    {
+      "id": "S11",
+      "stage": "Analytics and community",
+      "trigger": "Platform observations or audience messages arrive",
+      "inputs": "Owner-authorised reports, comment IDs, experiment results",
+      "outputs": "Provenance-linked observations, human decisions and escalations",
+      "pain": "C04 describes marginal research-tool value, not an absence of native analytics. [Report and contrary experiences](https://www.reddit.com/r/NewTubers/comments/1gi7fpw/is_vidiq_worth_the_subscription/)",
+      "frequency": "Daily exceptions; weekly review assumed",
+      "handoff": "Producer/analyst/community operator",
+      "data_object": "Release observations; WorkOrder where new work is explicitly accepted"
+    },
+    {
+      "id": "S12",
+      "stage": "Commercial reconciliation and rights exceptions",
+      "trigger": "A contracted release, payout, invoice or claim changes state",
+      "inputs": "Deal terms, release receipts, provider invoice/payment IDs, licence evidence",
+      "outputs": "Reconciled deliverables, exception packet and accountant-reviewed status",
+      "pain": "C07: “it’s just frustrating that the monetisation ad revenue goes to a third party” [Unadjudicated user report](https://www.reddit.com/r/PartneredYoutube/comments/1hnyavb/using_epidemic_sound_and_still_got_a_copyright/)",
+      "frequency": "Each deal/claim plus month-end review; actual volume unknown",
+      "handoff": "Producer ↔ sponsor/accountant/platform or rights provider",
+      "data_object": "Deal; Release; RightsGrant"
+    }
+  ]
+}

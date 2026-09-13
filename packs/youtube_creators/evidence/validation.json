@@ -1,0 +1,37 @@
+{
+  "status": "PASS research-structure checks only",
+  "date": "2026-09-13",
+  "required_files": [
+    "00-SUMMARY.md",
+    "01-person.md",
+    "02-workflow.md",
+    "02-workflow.json",
+    "03-companies.md",
+    "04-oss-candidates.md",
+    "04-oss-candidates.json",
+    "05-superapp.md",
+    "05-assembly.json",
+    "06-value.md"
+  ],
+  "repos": 129,
+  "adopt": 14,
+  "workflow_stages": 12,
+  "complaints": 10,
+  "tier1_profiles": 10,
+  "tier2_profiles": 10,
+  "new_bank_proposals": 52,
+  "corrections": 3,
+  "saturation": "NOT MET",
+  "operator_baseline": "UNMEASURED",
+  "runtime": "NOT TESTED",
+  "bank_status_counts": {
+    "ALREADY IN THE BANK": 62,
+    "NEW": 67
+  },
+  "verdict_counts": {
+    "STUDY": 92,
+    "ADOPT": 14,
+    "SKIP": 23
+  },
+  "application_deployment": false
+}
