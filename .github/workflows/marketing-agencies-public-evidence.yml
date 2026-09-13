@@ -1,0 +1,38 @@
+name: Marketing agencies public-source research audit
+on:
+  push:
+    branches: [research/marketing-agencies-20260913-blueprint]
+    paths:
+      - .github/workflows/marketing-agencies-public-evidence.yml
+      - research/marketing_social_media_agencies/collect_public_evidence.py
+permissions:
+  contents: read
+concurrency:
+  group: marketing-agencies-public-evidence-20260913
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RESEARCH_OUTPUT: agency-evidence
+    steps:
+      - name: Collect public evidence with pinned authored research script
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/26bec4050143bcb53b76f15db3159bbdc31eba55/research/marketing_social_media_agencies/collect_public_evidence.py'
+          with urllib.request.urlopen(url, timeout=60) as response:
+              source = response.read().decode('utf-8')
+          exec(compile(source, 'pinned-agency-public-research.py', 'exec'), {'__name__': '__main__'})
+          PY
+      - name: Save research receipts for review, not deployment
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: agency-public-evidence-20260913
+          path: agency-evidence/
+          if-no-files-found: error
+          retention-days: 3
