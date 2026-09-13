@@ -1,0 +1,8 @@
+{
+  "mode": "bank",
+  "industry": "law_firms",
+  "requested_as_of": "2026-09-13",
+  "commercial_stage_completed_commit": "a61e0335a9927b1082b79d841d865b54ccc8a95c",
+  "scope": "Read public SISO bank text only; no application code execution, build, deployment, private data or credential output",
+  "reason": "GitHub contents connector returned empty content for the large shelf file; raw connector fetch rejected it as too large. Extract bounded matching records server-side instead of loading the entire bank into conversation context."
+}
