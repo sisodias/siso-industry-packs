@@ -17,20 +17,13 @@ jobs:
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
     steps:
-      - name: Run pinned SISO metadata collector with large-file retrieval correction
+      - name: Run pinned SISO public research collector
         shell: bash
         run: |
           python3 - <<'PY'
-          import textwrap, urllib.request
-          # This is our own public research collector, pinned before this compatibility fix.
-          # No candidate application or third-party repository code is executed.
-          revision='859dd0f0729b7c45f46c04b68261d8b0a36a4be4'
-          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/.github/workflows/recruiting-staffing-evidence-audit.yml'
-          with urllib.request.urlopen(url,timeout=60) as stream:source=stream.read().decode()
-          program=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY\n',1)[0])
-          old="o=api('/repos/'+REPO+'/contents/'+path+'?ref='+ref)\n    return json.loads(base64.b64decode(o['content']))"
-          new="url='https://raw.githubusercontent.com/'+REPO+'/'+ref+'/'+path\n    with urllib.request.urlopen(url,timeout=90) as stream:return json.load(stream)"
-          assert program.count(old)==1
-          program=program.replace(old,new)
-          exec(compile(program,'pinned-public-research-collector.py','exec'))
+          import urllib.request
+          revision='02a98b3aac0c1b5379f797bd422c716c02b03cf0'
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/scripts/recruiting-staffing-research.py'
+          with urllib.request.urlopen(url,timeout=90) as stream:source=stream.read().decode()
+          exec(compile(source,'pinned-siso-recruiting-research.py','exec'))
           PY
