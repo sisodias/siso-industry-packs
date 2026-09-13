@@ -4,7 +4,7 @@ on:
     branches: [research/restaurants-20260913]
     paths: [packs/restaurants/evidence/audit-request.json]
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: restaurants-evidence-audit-20260913
   cancel-in-progress: false
@@ -17,33 +17,29 @@ jobs:
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
     steps:
-      - name: Run pinned SISO research collector, never upstream application code
+      - name: Collect public research evidence only
         shell: bash
         run: |
           python3 - <<'BOOT'
-          import base64, hashlib, json, os, pathlib, textwrap, urllib.request
+          import base64,json,os,pathlib,textwrap,urllib.request
           url='https://api.github.com/repos/sisodias/siso-industry-packs/contents/.github/workflows/restaurants-evidence-audit.yml?ref=f76e6d00d592cd4583ddc4ab0123aed6593711cb'
           req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-restaurants-public-research'})
           with urllib.request.urlopen(req,timeout=60) as r: obj=json.load(r)
           assert obj['sha']=='79031b7c7863b39a14a2ca97df15642a65401447'
           source=base64.b64decode(obj['content']).decode()
           code=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
-          before="ref=api('/repos/'+REPO+'/git/ref/heads/'+BRANCH);parent=ref['object']['sha'];commit=api('/repos/'+REPO+'/git/commits/'+parent)"
-          assert before in code
-          code=code.replace(before,"parent=os.environ['REQUEST_REVISION'];commit=api('/repos/'+REPO+'/git/commits/'+parent)")
-          code=code.replace("'/git/refs/heads/'+BRANCH","'/git/refs/heads/'+urllib.parse.quote(BRANCH,safe='')")
-          code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:400],'path':path}")
           marker='for attempt in range(5):\n'
           assert marker in code
-          save="from pathlib import Path\nfor path,text in outputs.items():\n    dst=Path('artifact')/path\n    dst.parent.mkdir(parents=True,exist_ok=True)\n    dst.write_text(text)\n"
-          code=code.replace(marker,save+marker,1)
+          code=code.split(marker,1)[0]
+          code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:400],'path':path}")
+          code+="\nfrom pathlib import Path\nfor path,text in outputs.items():\n    dst=Path('artifact')/path\n    dst.parent.mkdir(parents=True,exist_ok=True)\n    dst.write_text(text)\nprint('Public research evidence files:',len(outputs),'mode:',cfg['mode'])\n"
           exec(compile(code,'pinned-restaurants-research-collector','exec'))
           BOOT
-      - name: Preserve public evidence even if safe branch update is refused
+      - name: Preserve immutable public evidence for connector review
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: restaurants-public-evidence-${{ github.run_number }}
           path: artifact/
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 7
