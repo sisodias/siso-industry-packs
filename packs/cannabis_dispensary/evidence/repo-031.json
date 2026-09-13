@@ -1,0 +1,80 @@
+{
+  "audit_id": "R031",
+  "full_name": "cannlytics/cannabis_results",
+  "html_url": "https://github.com/cannlytics/cannabis_results",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Cannabis lab test results - 995K+ COAs from 14+ states",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-03-12T04:10:44Z",
+  "license": {
+    "key": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://api.github.com/licenses/cc-by-4.0",
+    "node_id": "MDc6TGljZW5zZTI1"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Acannlytics&sort=stars&order=desc&per_page=30&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "a4e05a9f7367ac0b1637bd84773875b3bd1453ec",
+  "last_commit": "2026-02-01T20:53:20-08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "readme.md",
+    "requirements.txt",
+    "results_base.py"
+  ],
+  "readme": {
+    "path": "readme.md",
+    "sha256": "60c38fa4f1d68047492ab9457f30870d08442d5cba769f4b927aaf2faa3a4432",
+    "characters": 5771,
+    "excerpt": "# Cannabis Results\n\n[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)\n[![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-yellow.svg)](https://huggingface.co/datasets/cannlytics/cannabis_results)\n[![GitHub](https://img.shields.io/badge/GitHub-Repository-black.svg)](https://github.com/cannlytics/cannabis_results)\n\nA comprehensive, open-source collection of cannabis Certificates of Analysis (COAs) and raw lab results for consumer information, research, and regulatory transparency.\n\n## 🎯 Purpose\n\nProvide transparent access to cannabis laboratory test data so consumers can verify they are consuming clean, quality cannabis, and empower researchers, regulators, businesses, and consumers with accurate cannabis analytics.\n\n## 🔗 Links\n\n- **Code**: [GitHub Repository](https://github.com/cannlytics/cannabis_results)\n- **Data**: [HuggingFace Dataset](https://huggingface.co/datasets/cannlytics/cannabis_results)\n\n## 📊 Data Overview\n\n| Metric | Value |\n|--------|-------|\n| Total Results | 995,000+ |\n| States Covered | 14+ |\n| Data Sources | 26+ |\n| Update Frequency | Weekly |\n\n### Coverage by State\n\n| State | Records | Sources | Status |\n|-------|---------|---------|--------|\n| AZ | 74,000+ | Curaleaf, Flow, Sticky Saguaro | ✅ Active |\n| CA | 50,000+ | Flower Co, SC Labs, Glass House | ✅ Active |\n| CT | 15,000+ | State Portal | ✅ Active |\n| FL | 25,000+ | Flowery, Jungle Boys, Kaycha | ✅ Active |\n| MA | 30,000+ | MCR Labs, PRR | ✅ Active |\n| MI | 100,000+ | State Portal | ✅ Active |\n| NV | 80,000+ | State Portal | ✅ Active |\n| NY | 5,000+ | Cannabis Realm, PRR | ✅ Active |\n| OR | 200,000+ | PRR | ✅ Active |\n| WA | 300,000+ | State Portal | ✅ Active |\n| *Others* | Various | PRR, Web | ✅ Active |\n\n## 🚀 Quick Start\n\n### Using HuggingFace Datasets\n\n```python\nfrom datasets import load_dataset\n\n# Load all results\ndataset = load_dataset(\"cannlytics/cannabis_results\")\n\n# Load specific state\nca_results = load_dataset(\n    \"cannlytics/cannabis_results\",\n    data_files=\"data/ca/ca-results-latest.csv\"\n)\n```\n\n### Using Pandas\n\n```python\nimport pandas as pd\n\n# Direct download from HuggingFace\nurl = \"https://huggingface.co/datasets/cannlytics/cannabis_results/resolve/main/data/all/all-results-latest.csv\"\ndf = pd.read_csv(url)\nprint(f\"Loaded {len(df):,} results\")\n```\n\n## 📁 Repository Structure\n\n```\ncannabis_results/\n├── algorithms/           # Data collection scripts\n│   ├── base.py          # Base collector class\n│   ├── get_results_az.py\n│   ├── get_results_ca_flower_co.py\n│   └── ...\n├── config/               # Configuration and schema\n│   ├── results_config.py\n│   └── results_schema.py\n├── data/                 # Final datasets (HuggingFace LFS)\n│   ├── all/\n│   │   └── all-results-latest.csv\n│   ├── ca/\n│   │   └── ca-results-latest.csv\n│   └── ...\n├── raw/                  # Raw public records data\n├── analysis/             # Analysis scripts\n├── .gitignore\n├── .gitattributes\n├── LICENSE\n├── readme.md\n└── requirements.txt\n```\n\n## 🔧 Development\n\n### Prerequisites\n\n- Python 3.9+\n- Git LFS (for HuggingFace data)\n- Ghostscript (for PDF parsing)\n\n### Installation\n\n```bash\n# Clone the repository\ngit clone https://github.com/cannlytics/cannabis_results.git\ncd cannabis_results\n\n# Install dependencies\npip install -r requirements.txt\n\n# Install Ghostscript (Windows)\n# Download from: https://ghostscript.com/releases/gsdnld.html\n# Add to PATH: C:\\Program Files\\gs\\gsX.XX.X\\bin\n```\n\n### Running Collectors\n\n```python\nfrom algorithms.get_results_ca_flower_co import FlowerCompanyCollector\n\ncollector = FlowerCompanyCollector(\n    data_dir='D:/data/california/results',\n    pdf_dir='D:/data/california/results/pdfs/flower-company',\n)\nresults = collector.get_results()\n```\n\n## 📋 Data Schema\n\nEach result contains standardized fields:\n\n| Field | Type | Description |\n|-------|------|-------------|\n| `id` | str | Unique identifier |\n| `product_name` | str | Product name |\n| `product_type` | str | flower, concentrate, vape, etc. |\n| `producer` | str | Producer/cultivator name |\n| `batch_number` | str | Batch identifier |\n| `date_tested` | date | Test date |\n| `total_thc` | float | Total THC (%) |\n| `total_cbd` | float | Total CBD (%) |\n| `total_terpenes` | float | Total terpenes (%) |\n| `pesticides_status` | str | pass/fail/nt |\n| `heavy_metals_status` | str | pass/fail/nt |\n| `microbials_status` | str | pass/fail/nt |\n| `coa_url` | str | Link to COA |\n| `state` | str | State code |\n| `source` | str | Data source |\n\nSee `config/results_schema.py` for the complete schema definition.\n\n## 🤝 Contributing\n\nWe welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details.\n\n### Adding a New Data Source\n\n1. Create a collector in `algorithms/get_results_{state}_{source}.py`\n2. Inherit from `COACollector` base class\n3. Implement the `get_results()` method\n4. Add source configuration to `config/results_config.py`\n5. Submit a pull request\n\n## 📬 Contact\n\n- **Email**: dev@cannlytics.com\n- **GitHub**: [@cannlytics](https://github.com/cannlytics)\n\n## 📄 License\n\n[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)\n\nYou are free to:\n- **Share** — copy and redistribute the data in any medium or format\n- **Adapt** — remix, transform, and build upon the data for any purpose, even commercially\n\nUnder the following terms:\n- **Attribution** — You must give appropriate credit to Cannlytics, provide a link to the license, and indicate if changes were made.\n\n**Suggested citation:**\n```\nCannlytics. (2026). Cannabis Results Dataset. \nhttps://huggingface.co/datasets/cannlytics/cannabis_results\n```\n\nData is sourced from public records and publicly available sources.\n\n---\n\n© 2024-2026 Cannlytics — Simple Cannabis Analytics\n",
+    "tail": "",
+    "source_url": "https://github.com/cannlytics/cannabis_results/blob/a4e05a9f7367ac0b1637bd84773875b3bd1453ec/readme.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9969c7ffc037d2404a0824c10fdc41f1b80b7bbd65c9b23155eceeef7fba1733",
+    "characters": 18645,
+    "excerpt": "Attribution 4.0 International\n\n=======================================================================\n\nCreative Commons Corporation (\"Creative Commons\") is not a law firm and\ndoes not provide legal services or legal advice. Distribution of\nCreative Commons public licenses does not create a lawyer-client or\nother relationship. Creative Commons makes its licenses and related\ninformation available on an \"as-is\" basis. Creative Commons gives no\nwarranties regarding its licenses, any material licensed under their\nterms and conditions, or any related information. Creative Commons\ndisclaims all liability for damages resulting from their use to the\nfullest extent possible.\n\nUsing Creative Commons Public Licenses\n\nCreative Commons public licenses provide a standard set of terms and\nconditions that creators and other rights holders may use to share\noriginal works of authorship and other material subject to copyright\nand certain other rights specified in the public license below. The\nfollowing considerations are for informational purposes only, are not\nexhaustive, and do not form part of our licenses.\n\n     Considerations for licensors: Our public licenses are\n     intended for use by those authorized to give the public\n     permission to use material in ways otherwise restricted by\n     copyright and certain other rights. Our licenses are\n     irrevocable. Licensors should read and understand the terms\n     and conditions of the license they choose before applying it.\n     Licensors should also secure all rights necessary before\n     applying our licenses so that the public can reuse the\n     material as expected. Licensors should clearly mark any\n     material not subject to the license. This includes other CC-\n     licensed material, or material used under an exception or\n     limitation to copyright. More considerations for licensors:\n    wiki.creativecommons.org/Considerations_for_licensors\n\n     Considerations for the public: By using one of our public\n     licenses, a licensor grants the public permission to use the\n     licensed material under specified terms and conditions. If\n     the licensor's permission is not necessary for any reason--for\n     example, because of any applicable exception or limitation to\n     copyright--then that use is not regulated by the license. Our\n     licenses grant only permissions under copyright and certain\n     other rights that a licensor has authority to grant. Use of\n     the licensed material may still be restricted for other\n     reasons, including because others have copyright or other\n     rights in the material. A licensor may make special requests,\n     such as asking that all changes be marked or described.\n     Although not required by our licenses, you are encouraged to\n     respect those requests where reasonable. More considerations\n     for the public:\n    wiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Att",
+    "tail": "pose of indicating that\nmaterial is shared under a Creative Commons public license or as\notherwise permitted by the Creative Commons policies published at\ncreativecommons.org/policies, Creative Commons does not authorize the\nuse of the trademark \"Creative Commons\" or any other trademark or logo\nof Creative Commons without its prior written consent including,\nwithout limitation, in connection with any unauthorized modifications\nto any of its public licenses or any other arrangements,\nunderstandings, or agreements concerning use of licensed material. For\nthe avoidance of doubt, this paragraph does not form part of the\npublic licenses.\n\nCreative Commons may be contacted at creativecommons.org.\n",
+    "source_url": "https://github.com/cannlytics/cannabis_results/blob/a4e05a9f7367ac0b1637bd84773875b3bd1453ec/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "ac367beaa676e3341dca601cfafd135cdcc00bab598852625fb486575a0735fe",
+      "characters": 224,
+      "excerpt": "# Python Requirements | Cannabis Results\n# Authors: Keegan Skeate <https://github.com/keeganskeate>\n# Created 8/16/2024\n# Updated: 8/16/2024\n# License: MIT License <https://github.com/cannlytics/cannlytics/blob/main/LICENSE>",
+      "tail": "# Python Requirements | Cannabis Results\n# Authors: Keegan Skeate <https://github.com/keeganskeate>\n# Created 8/16/2024\n# Updated: 8/16/2024\n# License: MIT License <https://github.com/cannlytics/cannlytics/blob/main/LICENSE>",
+      "source_url": "https://github.com/cannlytics/cannabis_results/blob/a4e05a9f7367ac0b1637bd84773875b3bd1453ec/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/cannlytics/cannabis_results",
+    "commit": "https://github.com/cannlytics/cannabis_results/commit/a4e05a9f7367ac0b1637bd84773875b3bd1453ec"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

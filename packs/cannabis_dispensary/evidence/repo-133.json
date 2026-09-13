@@ -1,0 +1,179 @@
+{
+  "audit_id": "R133",
+  "full_name": "Project-OSRM/osrm-backend",
+  "html_url": "https://github.com/Project-OSRM/osrm-backend",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Open Source Routing Machine - C++ backend",
+  "stargazers_count": 8069,
+  "forks_count": 3970,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-12T18:33:03Z",
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "topics": [
+    "c-plus-plus",
+    "cpp",
+    "cpp17",
+    "isochrones",
+    "map-matching",
+    "openstreetmap",
+    "osm",
+    "osrm",
+    "routing",
+    "routing-engine",
+    "traveling-salesman"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=osrm-backend+in%3Aname&sort=stars&order=desc&per_page=5&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "f0a7a2ff0877c534316a2a0a16830228fe45178f",
+  "last_commit": "2026-09-10T06:51:10+02:00",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 11,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".babelrc",
+    ".clang-format",
+    ".clang-tidy",
+    ".dockerignore",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".gitmodules",
+    ".npmignore",
+    ".pre-commit-config.yaml",
+    ".prettierrc",
+    "AGENTS.md",
+    "CMakeLists.txt",
+    "CMakePresets.json",
+    "CODE-OF-CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Doxyfile.in",
+    "LICENSE.TXT",
+    "README.md",
+    "codecov.yml",
+    "cucumber.mjs",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "pyproject.toml",
+    "taginfo.json",
+    "vcpkg-configuration.json",
+    "vcpkg.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "36ffbc34505ed337343619f1498f73c487e2774d0d389655652550d19dfbf8bd",
+    "characters": 10567,
+    "excerpt": "## Open Source Routing Machine\n\n[![osrm-backend CI](https://github.com/Project-OSRM/osrm-backend/actions/workflows/osrm-backend.yml/badge.svg)](https://github.com/Project-OSRM/osrm-backend/actions/workflows/osrm-backend.yml) [![Discord](https://img.shields.io/discord/1034487840219860992)](https://discord.gg/CpWzBC9G7Z)\n\nHigh performance routing engine written in C++ designed to run on OpenStreetMap data.\n\nThe following services are available via HTTP API, C++ library interface and NodeJs wrapper:\n\n- Nearest - Snaps coordinates to the street network and returns the nearest matches\n- Route - Finds the fastest route between coordinates\n- Table - Computes the duration or distances of the fastest route between all pairs of supplied coordinates\n- Match - Snaps noisy GPS traces to the road network in the most plausible way\n- Trip - Solves the Traveling Salesman Problem using a greedy heuristic\n- Tile - Generates Mapbox Vector Tiles with internal routing metadata\n\nTo quickly try OSRM use our [demo server](http://map.project-osrm.org) which comes with both the backend and a frontend on top.\n\nFor a quick introduction about how the road network is represented in OpenStreetMap and how to map specific road network features have a look at [the OSM wiki on routing](https://wiki.openstreetmap.org/wiki/Routing) or [this guide about mapping for navigation](https://web.archive.org/web/20221206013651/https://labs.mapbox.com/mapping/mapping-for-navigation/).\n\nRelated [Project-OSRM](https://github.com/Project-OSRM) repositories:\n\n- [osrm-frontend](https://github.com/Project-OSRM/osrm-frontend) - User-facing frontend with map. The demo server runs this on top of the backend\n- [osrm-text-instructions](https://github.com/Project-OSRM/osrm-text-instructions) - Text instructions from OSRM route response\n- [osrm-backend-docker](https://github.com/project-osrm/osrm-backend/pkgs/container/osrm-backend) - Ready to use Docker images\n\n## Documentation\n\n### Full documentation\n\n- [Hosted documentation](http://project-osrm.org)\n- [osrm-routed HTTP API documentation](docs/http.md)\n\n## Contact\n\n- Discord: [join](https://discord.gg/CpWzBC9G7Z)\n- BlueSky: [profile](https://bsky.app/profile/osrm.bsky.social)\n\n## Support the Project\n\nOSRM is built and maintained through a community effort. The most impactful way to support the project is to contribute your time and expertise.\n\nThe primary ways to help are to:\n\n- contribute patches and improvements\n- participate in discussions, issue triage, and code reviews\n\nIf you would also like to support the project financially, you can do so via [GitHub Sponsors](https://github.com/sponsors/Project-OSRM) or [PayPal](https://www.paypal.me/DennisLuxen).\n\n## Quick Start\n\nThe easiest and quickest way to setup your own routing engine is to use Docker images we provide.\n\nThere are two pre-processing pipelines available:\n\n- Contraction Hierarchies (CH)\n- Multi-Level Dijkstra (MLD)\n\nWe recommend using MLD by default except for special use cases such as very large distance matrices where CH is still a better fit for the time being.\nIn the following we explain the MLD pipeline.\nIf you want to use the CH pipeline instead replace `osrm-partition` and `osrm-customize` with a single `osrm-contract` and change the algorithm option for `osrm-routed` to `--algorithm ch`.\n\n### Using Docker\n\nWe base our Docker images ([backend](https://github.com/Project-OSRM/osrm-backend/pkgs/container/osrm-backend), [frontend](https://hub.docker.com/r/osrm/osrm-frontend/)) on Debian Linux and make sure they are as lightweight as possible. Older backend versions can be found on [Docker Hub](https://hub.docker.com/r/osrm/osrm-backend/).\n\nDownload OpenStreetMap extracts for example from [Geofabrik](http://download.geofabrik.de/)\n\n    wget http://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf\n\nPre-process the extract with the car profile and start a routing engine HTTP server on port 5000\n\n    docker run -t -v \"${PWD}:/data\" ghcr.io/project-osrm/osrm-backend osrm-extract -p /opt/car.lua /data/berlin-latest.osm.pbf || echo \"osrm-extract failed\"\n\nThe flag `-v \"${PWD}:/data\"` creates the directory `/data` inside the docker container and makes the current working directory `\"${PWD}\"` available there. The file `/data/berlin-latest.osm.pbf` inside the container is referring to `\"${PWD}/berlin-latest.osm.pbf\"` on the host. Noting that this process can take a long time to complete with little changes on the terminal output, for example, a Mexico's OSM file of 550.7MB took around 30 minutes to finish extraction and generate edge-expanded graph representation.\n\n    docker run -t -v \"${PWD}:/data\" ghcr.io/project-osrm/osrm-backend osrm-partition /data/berlin-latest.osrm || echo \"osrm-partition failed\"\n    docker run -t -v \"${PWD}:/data\" ghcr.io/project-osrm/osrm-backend osrm-customize /data/berlin-latest.osrm || echo \"osrm-customize failed\"\n\nNote there is no `berlin-latest.osrm` file, but multiple `berlin-latest.osrm.*` files, i.e. `berlin-latest.osrm` is not a file path, but a \"base\" path referring to a set of files and there is an option to omit this `.osrm` suffix completely (e.g. `osrm-partition /data/berlin-latest`).\n\n    docker run -t -i -p 5000:5000 -v \"${PWD}:/data\" ghcr.io/project-osrm/osrm-backend osrm-routed --algorithm mld /data/berlin-latest.osrm\n\nMake requests against the HTTP server\n\n    curl \"http://127.0.0.1:5000/route/v1/driving/13.388860,52.517037;13.385983,52.496891?steps=true\"\n\nOptionally start a user-friendly frontend on port 9966, and open it up in your browser\n\n    docker run -p 9966:9966 osrm/osrm-frontend\n    xdg-open 'http://127.0.0.1:9966'\n\nIn case Docker complains about not being able to connect to the Docker daemon make sure you are in the `docker` group.\n\n    sudo usermod -aG docker $USER\n\nAfter adding yourself to the `docker` group make sure to log out and back in again with your terminal.\n\nWe support the following images in the Container Registry:\n\n| Name                | Description                                                                    |\n| ------------------- | ------------------------------------------------------------------------------ |\n| `latest`            | `master` compiled with release flag                                            |\n| `latest-assertions` | `master` compiled with with release flag, assertions enabled and debug symbols |\n| `latest-debug`      | `master` compiled with debug flag                                              |\n| `<tag>`             | specific tag compiled with release flag                                        |\n| `<tag>-debug`       | specific tag compiled with debug flag                                          |\n\n### Building from Source\n\nDependencies are managed with [vcpkg](https://vcpkg.io/) in manifest mode.\nThe required tooling on Linux is minimal — only a C++20 compiler, CMake ≥ 3.29,\nNinja, and a handful of autotools packages that some vcpkg ports need to\nbootstrap themselves:\n\n```bash\nsudo apt install build-essential git cmake ninja-build pkg-config \\\n  autoconf automake libtool curl zip unzip tar\n```\n\nBootstrap vcpkg once (anywhere on your machine) and point `VCPKG_ROOT` at it:\n\n```bash\ngit clone https://github.com/microsoft/vcpkg.git ~/vcpkg\n~/vcpkg/bootstrap-vcpkg.sh\nexport VCPKG_ROOT=~/vcpkg\n```\n\nCompile and install OSRM binaries:\n\n```bash\ncmake --preset ci-linux\ncmake --build --preset ci-linux\nsudo cmake --install build\n```\n\nThe first configure will build every dependency (boost, tbb, expat, bzip2,\nlua, libosmium, …) from source. Subsequent configures reuse vcpkg's\nbinary cache.\n\n### Request Against the Demo Server\n\nRead the [API usage policy](https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server).\n\nSimple query with instructions and alternatives on Berlin:\n\n```\ncurl \"https://router.project-osrm.org/route/v1/driving/13.388860,52.517037;13.385983,52.496891?steps=true&alternatives=true\"\n```\n\n### Using the Node.js Bindings\n\nThe Node.js bindings provide read-only access to the routing engine.\nWe provide API documentation and examples [here](docs/nodejs/api.md).\n\nYou will need a modern `libstdc++` toolchain (`>= GLIBCXX_3.4.26`) for binary compatibility if you want to use the pre-built binaries.\nFor older Ubuntu systems you can upgrade your standard library for example with:\n\n```\nsudo add-apt-repository ppa:ubuntu-toolchain-r/test\nsudo apt-get update -y\nsudo apt-get install -y libstdc++-9-dev\n```\n\nYou can install the Node.js bindings via `npm install @project-osrm/osrm` or from this repository either via\n\n    npm install\n\nwhich will check and use pre-built binaries if they're available for this release and your Node version, or via\n\n    npm install --build-from-source\n\nto always force building the Node.js bindings from source.\n\n#### Unscoped packages\n\nPrior to v5.27.0, the `osrm` Node package was unscoped. If you are upgrading from an old package, you will need to do the following:\n\n```\nnpm uninstall osrm --save\nnpm install @project-osrm/osrm --save\n```\n\n#### Pac",
+    "tail": "",
+    "source_url": "https://github.com/Project-OSRM/osrm-backend/blob/f0a7a2ff0877c534316a2a0a16830228fe45178f/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.TXT",
+    "sha256": "df207517bc08c688bac5cfe5d4f3576546efd3e7827275efcb3550f43f88b7f5",
+    "characters": 1297,
+    "excerpt": "Copyright (c) 2017, Project OSRM contributors\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list\nof conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this\nlist of conditions and the following disclaimer in the documentation and/or\nother materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "tail": "ONTRIBUTORS \"AS IS\" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "source_url": "https://github.com/Project-OSRM/osrm-backend/blob/f0a7a2ff0877c534316a2a0a16830228fe45178f/LICENSE.TXT"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "513d04c2c11f4bbb6350ffb9d6ee413b185bfd628048121955887bc2a8dca9c7",
+      "characters": 3016,
+      "excerpt": "{\n  \"name\": \"@project-osrm/osrm\",\n  \"version\": \"26.9.0\",\n  \"private\": false,\n  \"type\": \"module\",\n  \"description\": \"The Open Source Routing Machine is a high performance routing engine written in C++ designed to run on OpenStreetMap data.\",\n  \"dependencies\": {\n    \"@mapbox/node-pre-gyp\": \"^2.0.3\",\n    \"seedrandom\": \"^3.0.5\"\n  },\n  \"scripts\": {\n    \"lint\": \"npx eslint features/\",\n    \"test\": \"./scripts/cucumber_test_matrix.sh\",\n    \"clean\": \"rm -rf test/cache\",\n    \"docs\": \"./scripts/build_api_docs.sh\",\n    \"docs:dev\": \"vitepress dev docs\",\n    \"regenerate-fbresult\": \"./scripts/regenerate_fbresult_js.sh\",\n    \"install\": \"node-pre-gyp install --fallback-to-build=false || ./scripts/node_install.sh\",\n    \"nodejs-tests\": \"make -C test/data && ./lib/binding_napi_v8/osrm-datastore test/data/ch/monaco.osrm && node test/nodejs/index.js | tap-spec\",\n    \"prepare\": \"husky\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/Project-OSRM/osrm-backend.git\"\n  },\n  \"author\": \"Project OSRM Team\",\n  \"license\": \"BSD-2-Clause\",\n  \"bugs\": {\n    \"url\": \"https://github.com/Project-OSRM/osrm-backend/issues\"\n  },\n  \"homepage\": \"https://github.com/Project-OSRM/osrm-backend\",\n  \"engines\": {\n    \"node\": \"^20.17.0 || >=22.9.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"^8.0.1\",\n    \"@babel/preset-env\": \"^8.0.2\",\n    \"@babel/preset-react\": \"^8.0.1\",\n    \"@cucumber/cucumber\": \"^13.0.0\",\n    \"@mapbox/polyline\": \"1.2.1\",\n    \"@turf/turf\": \"^7.3.4\",\n    \"ansi-escape-sequences\": \"6.2.4\",\n    \"chalk\": \"^5.6.2\",\n    \"cheap-ruler\": \"^4.0.0\",\n    \"cmake-js\": \"^8.0.0\",\n    \"command-line-args\": \"^6.0.2\",\n    \"command-line-usage\": \"^7.0.4\",\n    \"csv-stringify\": \"^6.6.0\",\n    \"eslint\": \"^10.0.0\",\n    \"express\": \"^5.2.1\",\n    \"fast-xml-parser\": \"^5.5.11\",\n    \"flatbuffers\": \"^25.9.23\",\n    \"husky\": \"^9.1.7\",\n    \"jsonpath-plus\": \"^10.4.0\",\n    \"lint-staged\": \"^17.0.7\",\n    \"node-addon-api\": \"^8.5.0\",\n    \"strip-ansi\": \"^7.1.0\",\n    \"tap-spec\": \"^2.2.2\",\n    \"tape\": \"5.10.2\",\n    \"vitepress\": \"^1.6.4\",\n    \"wait-on\": \"^9.0.4\",\n    \"xml2js\": \"^0.6.0\",\n    \"xmlbuilder\": \"15.1.1\"\n  },\n  \"main\": \"lib/index.js\",\n  \"binary\": {\n    \"napi_versions\": [\n      8\n    ],\n    \"module_name\": \"node_osrm\",\n    \"module_path\": \"./lib/binding_napi_v{napi_build_version}/\",\n    \"host\": \"https://github.com\",\n    \"remote_path\": \"./Project-OSRM/osrm-backend/releases/download/v{version}/\",\n    \"package_name\": \"{module_name}-v{version}-{napi_build_version}-{platform}-{arch}-{configuration}.tar.gz\"\n  },\n  \"lint-staged\": {\n    \"features/**/*.js\": [\n      \"node --check\",\n      \"eslint --fix\"\n    ]\n  },\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"overrides\": {\n    \"vitepress\": {\n      \"vite\": \"6.4.3\"\n    },\n    \"tap-spec\": {\n      \"pretty-ms\": \"3.2.0\"\n    },\n    \"esbuild\": \"0.27.2\",\n    \"eslint\": {\n      \"ajv\": \"^6\"\n    },\n    \"glob\": \"^13.0.0\",\n    \"ajv\": \">=6.14.0\",\n    \"minimatch\": \">=10.2.1\",\n    \"tar\": \">=7.5.10\"\n  },\n  \"allowScripts\": {\n    \"esbuild@0.27.2\": true,\n    \"fsevents@2.3.3\": true\n  }\n}\n",
+      "tail": "ote_path\": \"./Project-OSRM/osrm-backend/releases/download/v{version}/\",\n    \"package_name\": \"{module_name}-v{version}-{napi_build_version}-{platform}-{arch}-{configuration}.tar.gz\"\n  },\n  \"lint-staged\": {\n    \"features/**/*.js\": [\n      \"node --check\",\n      \"eslint --fix\"\n    ]\n  },\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"overrides\": {\n    \"vitepress\": {\n      \"vite\": \"6.4.3\"\n    },\n    \"tap-spec\": {\n      \"pretty-ms\": \"3.2.0\"\n    },\n    \"esbuild\": \"0.27.2\",\n    \"eslint\": {\n      \"ajv\": \"^6\"\n    },\n    \"glob\": \"^13.0.0\",\n    \"ajv\": \">=6.14.0\",\n    \"minimatch\": \">=10.2.1\",\n    \"tar\": \">=7.5.10\"\n  },\n  \"allowScripts\": {\n    \"esbuild@0.27.2\": true,\n    \"fsevents@2.3.3\": true\n  }\n}\n",
+      "source_url": "https://github.com/Project-OSRM/osrm-backend/blob/f0a7a2ff0877c534316a2a0a16830228fe45178f/package.json"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "45e7da44095df14ebf1dd6c85ecaecbaa62ad15feaafce3e542bd4fceb023f0d",
+      "characters": 5817,
+      "excerpt": "[build-system]\nrequires = [\n  \"scikit-build-core >=0.12.0\",\n  \"nanobind >=2.12.0\",\n  \"setuptools-scm >=10\",\n  \"cmake\",\n  \"ninja; sys_platform != 'win32'\",\n]\nbuild-backend = \"scikit_build_core.build\"\n\n[project]\nname = \"osrm-bindings\"\ndynamic = [\"version\"]\ndescription = \"Python bindings for the osrm-backend project\"\nreadme = \"src/python/README.md\"\nrequires-python = \">=3.10\"\nauthors = [{name = \"Doo Woong Chung\"}, { name = \"Nils Nolde\" }]\nlicense = { file = \"LICENSE.TXT\" }\n\n[project.optional-dependencies]\ndev = [\"pytest\", \"pre-commit\", \"ruff\"]\n\n[project.urls]\nrepository = \"https://github.com/Project-OSRM/osrm-backend\"\n\n[tool.ruff]\nexclude = [\".venv\", \"build\"]\nextend-exclude = [\n    \"dist\",\n    \"wheelhouse\",\n    \"*build*\",\n    \"*.egg-info\",\n]\nline-length = 105\nlint.ignore = [\"E731\", \"F811\", \"E741\"]\n\n[tool.scikit-build.metadata]\nversion.provider = \"scikit_build_core.metadata.setuptools_scm\"\n\n[tool.setuptools_scm]\nversion_scheme = \"no-guess-dev\"\nlocal_scheme = \"no-local-version\"\n\n[tool.scikit-build]\nminimum-version = \"0.4\"\nbuild-dir = \"build/{wheel_tag}\"\ncmake.build-type = \"Release\"\nwheel.py-api = \"cp312\"\nwheel.packages = [\"src/python/osrm\"]\nwheel.exclude = [\"include/**\", \"lib/**\", \"bin/**\", \"share/**\"]\nsdist.include = [\"pyproject.toml\"]\nsdist.exclude = [\"dist\", \"wheelhouse\", \"build\", \"build-*\", \".venv\", \"**/.venv\"]\n\n[tool.scikit-build.cmake.define]\nENABLE_PYTHON_BINDINGS = \"ON\"\nCMAKE_BUILD_TYPE = \"Release\"\nCMAKE_CXX_SCAN_FOR_MODULES = \"OFF\"\n\n[tool.cibuildwheel]\narchs = [\"native\"]\nbuild = \"cp312-*\"\nbuild-verbosity = 1\nskip = \"*musllinux*\"\n# TODO(nils): should we leave it here or push to osrm org?\nmanylinux-x86_64-image = \"ghcr.io/nilsnolde/manylinux:2_28_osrm_python\"\nmanylinux-aarch64-image = \"ghcr.io/nilsnolde/manylinux:2_28_osrm_python\"\ntest-requires = \"pytest\"\ntest-command = [\n  \"cd {project}/test/data && python -m osrm extract -p {project}/profiles/car.lua monaco.osm.pbf\",\n  \"mkdir -p {project}/test/data/ch && cp {project}/test/data/monaco.osrm* {project}/test/data/ch/\",\n  \"python -m osrm contract {project}/test/data/ch/monaco.osrm\",\n  \"mkdir -p {project}/test/data/mld && cp {project}/test/data/monaco.osrm* {project}/test/data/mld/\",\n  \"python -m osrm partition {project}/test/data/mld/monaco.osrm\",\n  \"python -m osrm customize {project}/test/data/mld/monaco.osrm\",\n  \"python -m osrm datastore {project}/test/data/ch/monaco\",\n  \"pytest {project}/test/python\"\n]\n\n[tool.cibuildwheel.linux]\n# The custom manylinux image ships vcpkg + a pre-warmed binary cache built\n# against this exact vcpkg.json, exposing VCPKG_ROOT=/opt/vcpkg and\n# VCPKG_DEFAULT_BINARY_CACHE=/opt/vcpkg-bincache as ENV. CMAKE_ARGS routes\n# the cmake configure through the vcpkg toolchain so `vcpkg install` reads\n# from that bincache instead of rebuilding boost/tbb/etc. from source.\n# The `-release` triplet matches what the image's prewarm used; vcpkg's ABI\n# hash includes the triplet name, so x64-linux ≠ x64-linux-release in the\n# cache.\nenvironment = \"\"\"\\\nLD_LIBRARY_PATH=/usr/local/lib64:${LD_LIBRARY_PATH} \\\nCCACHE_DIR=/ccache \\\nCMAKE_ARGS=\"-DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-linux-release\"\\\n\"\"\"\n\nbefore-build = \"ccache -s && ccache -M 500M\"\nrepair-wheel-command = \"auditwheel repair -w {dest_dir} {wheel}\"\n\n# Override the triplet for aarch64 — the base environment hard-codes\n# x64-linux-release which only works on x86_64.  The override appends a\n# second CMAKE_ARGS whose value shadows the base one.\n[[tool.cibuildwheel.overrides]]\nselect = \"*-manylinux_aarch64\"\nenvironment = 'CMAKE_ARGS=\"-DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=arm64-linux-release\"'\n\n[tool.cibuildwheel.macos]\n# Build deps come from vcpkg (same pattern as Windows). VCPKG_ROOT is\n# exported on the runner by lukka/run-vcpkg in the workflow and inherited\n# by cibuildwheel; CMAKE_ARGS routes the cmake configure through the vcpkg\n# toolchain. No triplet override — vcpkg's autodetect picks arm64-osx on\n# th",
+      "tail": "el_tag} and the abi3 cp312 wheel\n# tag on Windows x64 is cp312-abi3-win_amd64, so the vcpkg-built tbb12.dll\n# (TBB is shared even under static-md — vcpkg's port forces it) lives at the\n# path below. --add-path makes delvewheel discover it. --no-mangle preserves\n# the DLL name so anything that hard-codes \"tbb12.dll\" still loads it.\nrepair-wheel-command = 'delvewheel repair --analyze-existing-exes --add-path build\\cp312-abi3-win_amd64\\vcpkg_installed\\x64-windows-static-md\\bin --no-mangle tbb12.dll -w {dest_dir} {wheel}'\ntest-command = [\n  \"cd /d {project}/test/data\",\n  \"windows-build-test-data.bat\",\n  \"python -m osrm datastore {project}/test/data/ch/monaco\",\n  \"pytest {project}/test/python\"\n]\n",
+      "source_url": "https://github.com/Project-OSRM/osrm-backend/blob/f0a7a2ff0877c534316a2a0a16830228fe45178f/pyproject.toml"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/Project-OSRM/osrm-backend",
+    "commit": "https://github.com/Project-OSRM/osrm-backend/commit/f0a7a2ff0877c534316a2a0a16830228fe45178f"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0177",
+        "repo": "project-osrm/osrm-backend",
+        "url": "https://github.com/project-osrm/osrm-backend",
+        "labels": [],
+        "family_ids": [
+          "U51"
+        ],
+        "family_names": [
+          "Maps, geospatial and routing"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 1,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "Project-OSRM/osrm-backend",
+        "capability_tag": "geospatial",
+        "category_slug": "backend-data-platform",
+        "summary": "High-performance routing engine for OpenStreetMap road networks",
+        "reuse_value": 78,
+        "stars": 7821,
+        "license": "BSD-2-Clause",
+        "language": "C++",
+        "url": "https://github.com/Project-OSRM/osrm-backend",
+        "rank_score": 78078210
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "Project-OSRM/osrm-backend",
+        "stars": 7821,
+        "license": "BSD-2-Clause",
+        "language": "C++",
+        "unit_class": "capability",
+        "reuse_value": 78,
+        "liftability": 60,
+        "fame_gap": 18,
+        "cat_slug": "backend-data-platform",
+        "cat_name": "Backend & Data Platform",
+        "description": "Open Source Routing Machine - C++ backend"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

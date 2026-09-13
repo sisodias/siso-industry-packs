@@ -1,0 +1,81 @@
+{
+  "audit_id": "R117",
+  "full_name": "OattyDev/cii-th",
+  "html_url": "https://github.com/OattyDev/cii-th",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "TypeScript builder/validator for Thailand ETDA Rec. 3-2560 CII e-tax XML",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-08-27T17:45:38Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=Thai+e-tax&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "836254411e6a8a52979b42a8a6f124e16b7f70be",
+  "last_commit": "2026-08-27T17:45:37Z",
+  "commits_six_months_sample_count": 1,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "cef5a08428f7bdff078e79da9d95f3c300a82e109317fdf86ac2d2bb6fbcc5b9",
+    "characters": 5491,
+    "excerpt": "# CII-TH: Thailand e-Tax Invoice Library\n\nGenerate and validate Thailand e-Tax Invoice XML documents per **ETDA ICT Recommendation No. 3-2560** (English V03, 2025-05-15) using the **UN/CEFACT Cross-Industry Invoice** (CII) format.\n\n> ⚠️ **Legal Disclaimer**: This library is NOT certified by the Revenue Department of Thailand. It is provided for educational and development purposes only. Consult a licensed tax professional for official tax filings. This is NOT Peppol, NOT EN 16931, NOT ZATCA/UBL.\n\n## Packages\n\n| Package | Description |\n|---------|-------------|\n| `@cii-th/core` | Core library for building and validating XML |\n| `@cii-th/cli` | Command-line interface |\n\n## Supported Document Types\n\n- **Tax Invoice** (ใบกำกับภาษี) - Code: 380\n- **Receipt** (ใบรับ) - Code: T02\n- **Debit Note** (ใบเพิ่มหนี้) - Code: 81\n- **Credit Note** (ใบลดหนี้) - Code: 83\n- **Abbreviated Tax Invoice** (ใบกำกับภาษีอย่างย่อ) - Code: 388\n\n## Installation\n\n```bash\nnpm install @cii-th/core\n# or\npnpm add @cii-th/core\n\n# For CLI\nnpm install -g @cii-th/cli\n```\n\n## Quick Start\n\n```typescript\nimport {\n  buildTaxInvoice,\n  validateXml,\n  signXml,\n  TestSigner,\n} from '@cii-th/core';\n\n// Build a Tax Invoice\nconst result = buildTaxInvoice({\n  documentId: 'INV-2024-0001',\n  issueDate: '2024-01-15', // Or Buddhist Era: '2567-01-15'\n  seller: {\n    name: 'บริษัท ผู้ขาย จำกัด',\n    taxId: '0105556123456', // 13 digits\n    address: {\n      line1: '123 ถนนสุขุมวิท',\n      district: 'คลองเตย',\n      province: 'กรุงเทพมหานคร',\n      postalCode: '10110',\n    },\n  },\n  buyer: {\n    name: 'บริษัท ผู้ซื้อ จำกัด',\n    taxId: '0105557654321',\n    address: {\n      line1: '456 ถนนพหลโยธิน',\n      district: 'จตุจักร',\n      province: 'กรุงเทพมหานคร',\n      postalCode: '10900',\n    },\n  },\n  lines: [\n    {\n      description: 'สินค้าตัวอย่าง',\n      quantity: 10,\n      unit: 'ชิ้น',\n      unitPrice: 100.0,\n      vatRate: 7, // 0 or 7\n    },\n  ],\n});\n\nconsole.log(result.xml);\nconsole.log(`Total: ${result.totals.grandTotal} THB`);\n\n// Validate XML\nconst validation = await validateXml(result.xml);\nif (!validation.ok) {\n  console.error('Validation errors:', validation.errors);\n}\n\n// Sign XML (test signer for development)\nconst signer = new TestSigner();\nconst signedXml = await signXml(result.xml, signer);\n```\n\n## CLI Usage\n\n```bash\n# Build XML from JSON\ncii-th build invoice.json > invoice.xml\ncii-th build invoice.json -o invoice.xml\n\n# Validate XML\ncii-th validate invoice.xml\n\n# Explain fields (Thai/English table)\ncii-th explain invoice.xml\n\n# Show library info\ncii-th info\n```\n\n## Features\n\n### Building Documents\n\n- `buildTaxInvoice(input)` - Tax Invoice (380)\n- `buildReceipt(input)` - Receipt (T02)\n- `buildDebitNote(input)` - Debit Note (81)\n- `buildCreditNote(input)` - Credit Note (83)\n- `buildAbbreviatedTaxInvoice(input)` - Abbreviated Tax Invoice (388)\n\n### Validation\n\n- XSD validation against official ETDA schemas (when available)\n- Structural validation for business rules\n- Tax ID validation (13-digit checksum)\n- VAT calculation verification (tolerance: ±0.01 THB)\n\n### Cancel and Replace\n\n```typescript\nimport { cancelAndReplace } from '@cii-th/core';\n\nconst { cancelled, replacement } = cancelAndReplace({\n  original: originalXml,\n  reason: 'ข้อมูลไม่ถูกต้อง / Incorrect data',\n});\n// cancelled: Original marked as cancelled (ยกเลิก)\n// replacement: New document with SAME issue date\n```\n\n### XML Signing\n\n```typescript\nimport { signXml, TestSigner, type XmlDsigSigner } from '@cii-th/core';\n\n// Test signer (HMAC - for development only)\nconst testSigner = new TestSigner();\n\n// Production: Implement XmlDsigSigner interface with NRCA certificate\nconst signedXml = await signXml(xml, signer);\n```\n\n### Date Handling\n\nAccepts both Gregorian and Buddhist Era dates:\n\n```typescript\n// Gregorian\n{ issueDate: '2024-01-15' }\n\n// Buddhist Era (automatically converted)\n{ issueDate: '2567-01-15' }\n{ issueDate: '15/01/2567' }\n```\n\n### Utilities\n\n```typescript\nimport { utils } from '@cii-th/core';\n\n// Date utilities\nutils.parseDate('2567-01-15');       // Parse BE/CE date\nutils.formatCiiDate(date);           // YYYYMMDD format\nutils.formatBuddhistDate(date);      // BE format\n\n// Money utilities\nutils.roundMoney(100.125);           // 100.13\nutils.calculateVat(1000, 7);         // 70\nutils.calculateDocumentTotals(lines);\n\n// Tax ID utilities\nutils.isValidThaiTaxId('0105556123456');  // true\nutils.formatTaxIdDisplay('0105556123456'); // 0-1055-56123-45-6\n```\n\n## Withholding Tax\n\n```typescript\nbuildTaxInvoice({\n  // ... other fields\n  withholding: {\n    rate: 3,           // 3%\n    amount: 3000,      // Pre-calculated amount\n    typeCode: '1',     // WHT type code\n  },\n});\n```\n\n## Test Fixtures\n\nThe `testdata/fixtures/` directory contains 12 example scenarios:\n\n1. B2B VAT 7%\n2. B2C Receipt\n3. Export (VAT 0%)\n4. Withholding Tax 3%\n5. Credit Note\n6. Debit Note\n7. Abbreviated Tax Invoice\n8. Mixed VAT Rates\n9. Line Discounts\n10. Buddhist Era Date\n11. Receipt/Tax Invoice\n12. Cancel and Replace\n\n## Development\n\n```bash\n# Install dependencies\npnpm install\n\n# Build all packages\npnpm build\n\n# Run tests\npnpm test\n\n# Type check\npnpm typecheck\n```\n\n## License\n\nMIT\n\n## References\n\n- [ETDA e-Tax Invoice Schema](https://gitlab.com/etdath-teda-schema/teda-objects/common/e-tax-invoice-receipt)\n- [ETDA ICT Recommendation No. 3-2560](https://www.etda.or.th/th/Our-Service/Standard/e-tax-invoice.aspx)\n- [UN/CEFACT Cross-Industry Invoice](https://unece.org/trade/uncefact/xml-schemas)",
+    "tail": "",
+    "source_url": "https://github.com/OattyDev/cii-th/blob/836254411e6a8a52979b42a8a6f124e16b7f70be/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "28d0000d8857280206c926237c256ae8fe190e121415f1f17991586b7fb7d9e7",
+    "characters": 1055,
+    "excerpt": "MIT License\n\nCopyright (c) 2024\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "tail": "ftware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "source_url": "https://github.com/OattyDev/cii-th/blob/836254411e6a8a52979b42a8a6f124e16b7f70be/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "e7d2a4cd8e42397ad949e99cf63f0726d4e743a6b51f94af858f6110b69eb793",
+      "characters": 465,
+      "excerpt": "{\n  \"name\": \"cii-th-monorepo\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"packageManager\": \"pnpm@9.1.0\",\n  \"scripts\": {\n    \"build\": \"pnpm -r build\",\n    \"test\": \"vitest run\",\n    \"test:watch\": \"vitest\",\n    \"lint\": \"eslint packages/*/src --ext .ts\",\n    \"typecheck\": \"pnpm -r typecheck\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"^20.14.0\",\n    \"eslint\": \"^9.4.0\",\n    \"typescript\": \"^5.4.5\",\n    \"vitest\": \"^1.6.0\"\n  }\n}",
+      "tail": "{\n  \"name\": \"cii-th-monorepo\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"packageManager\": \"pnpm@9.1.0\",\n  \"scripts\": {\n    \"build\": \"pnpm -r build\",\n    \"test\": \"vitest run\",\n    \"test:watch\": \"vitest\",\n    \"lint\": \"eslint packages/*/src --ext .ts\",\n    \"typecheck\": \"pnpm -r typecheck\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"^20.14.0\",\n    \"eslint\": \"^9.4.0\",\n    \"typescript\": \"^5.4.5\",\n    \"vitest\": \"^1.6.0\"\n  }\n}",
+      "source_url": "https://github.com/OattyDev/cii-th/blob/836254411e6a8a52979b42a8a6f124e16b7f70be/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/OattyDev/cii-th",
+    "commit": "https://github.com/OattyDev/cii-th/commit/836254411e6a8a52979b42a8a6f124e16b7f70be"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

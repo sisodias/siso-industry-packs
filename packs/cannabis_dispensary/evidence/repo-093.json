@@ -1,0 +1,69 @@
+{
+  "audit_id": "R093",
+  "full_name": "HealthSamurai/keycloak-auditevent-plugin",
+  "html_url": "https://github.com/HealthSamurai/keycloak-auditevent-plugin",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "A Keycloak SPI plugin that converts user and admin events to FHIR R4 AuditEvents and sends them to any FHIR server.",
+  "stargazers_count": 2,
+  "forks_count": 4,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-03-06T23:13:32Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=FHIR+AuditEvent+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "5fe544c48de236e0a6dd7ec4cf7a123d369cbfa7",
+  "last_commit": "2026-01-15T13:25:58+04:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "pom.xml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "b0ea502694f74aa361b5fcf8dcae10f480d46af7eaeaa1850c2d0bd194334b54",
+    "characters": 4637,
+    "excerpt": "# Keycloak FHIR AuditEvent Plugin\n\nA Keycloak SPI plugin that converts user and admin events to FHIR R4 AuditEvents and sends them to any FHIR server.\n\n## Features\n\n- ✅ Converts Keycloak authentication events (LOGIN, LOGOUT, LOGIN_ERROR, etc.) to FHIR R4 AuditEvents\n- ✅ Supports admin events (CREATE, UPDATE, DELETE, ACTION operations)\n- ✅ Configurable via environment variables or system properties\n- ✅ Multiple authentication methods: none, Basic Auth, Bearer Token, **Keycloak Internal**\n- ✅ Asynchronous event sending (configurable)\n- ✅ Debug mode for troubleshooting\n- ✅ Standards-compliant FHIR R4 AuditEvent resources\n- ✅ Native Keycloak 26 token generation (no HTTP, no reflection)\n\n## Requirements\n\n- Java 17+\n- Keycloak 26.0.0+\n- Maven 3.6+ (for building)\n\n## Building\n\n```bash\nmvn clean package\n```\n\nThe plugin JAR will be created at `target/keycloak-fhir-auditevent-plugin-0.2.0.jar`\n\n## Installation\n\n1. Copy the JAR file to your Keycloak `providers` directory:\n   ```bash\n   cp target/keycloak-fhir-auditevent-plugin-0.2.0.jar $KEYCLOAK_HOME/providers/\n   ```\n\n2. Restart Keycloak\n\n3. Enable the event listener in Keycloak Admin Console:\n   - Go to **Realm Settings** → **Events**\n   - Add `fhir-auditevent` to **Event Listeners**\n   - (Optional) Enable **Admin Events** if you want to track admin operations\n\n## Configuration\n\nConfigure the plugin using environment variables or system properties:\n\n| Variable | Description | Default |\n|----------|-------------|---------|\n| `FHIR_SERVER_URL` | FHIR server endpoint URL | `http://fhir-server/AuditEvent` |\n| `FHIR_AUTH_TYPE` | Authentication type: `none`, `basic`, `bearer`, `keycloak` | `none` |\n| `FHIR_AUTH_USERNAME` | Username for Basic Auth | - |\n| `FHIR_AUTH_PASSWORD` | Password for Basic Auth | - |\n| `FHIR_AUTH_TOKEN` | Bearer token for Bearer Auth | - |\n| `KEYCLOAK_CLIENT_ID` | Client ID for Keycloak internal auth (service account) | - |\n| `KEYCLOAK_REALM` | Realm name for Keycloak internal auth | `master` |\n| `FHIR_ADMIN_EVENTS_ENABLED` | Enable admin events processing | `false` |\n| `FHIR_ASYNC_ENABLED` | Enable asynchronous sending | `true` |\n| `FHIR_DEBUG_ENABLED` | Enable debug logging | `false` |\n\n### Authentication Methods\n\n#### 1. No Authentication\n```bash\nexport FHIR_AUTH_TYPE=\"none\"\n```\n\n#### 2. Basic Authentication\n```bash\nexport FHIR_AUTH_TYPE=\"basic\"\nexport FHIR_AUTH_USERNAME=\"your-username\"\nexport FHIR_AUTH_PASSWORD=\"your-password\"\n```\n\n#### 3. Bearer Token (Static)\n```bash\nexport FHIR_AUTH_TYPE=\"bearer\"\nexport FHIR_AUTH_TOKEN=\"your-static-token\"\n```\n\n#### 4. Keycloak Internal Authentication (Recommended)\n\nThis method uses Keycloak's native API to generate JWT tokens internally **without HTTP requests**. Perfect for FHIR servers protected by the same Keycloak instance.\n\n**Setup Requirements:**\n1. Create a client in Keycloak with:\n   - **Service Account Enabled** = ON\n   - **Client Authentication** = ON\n   - Assign required roles to the service account user\n\n2. Configure environment variables:\n```bash\nexport FHIR_AUTH_TYPE=\"keycloak\"\nexport KEYCLOAK_CLIENT_ID=\"your-service-account-client\"\nexport KEYCLOAK_REALM=\"your-realm\"  # Optional, defaults to \"master\"\n```\n\n**How it works:**\n- Plugin creates JWT tokens using Keycloak's internal session API\n- Tokens are signed with the realm's RSA private key\n- No HTTP requests or client secrets needed\n- Tokens are generated on-demand for each FHIR request\n- Uses native Keycloak 26 API (no reflection, no external calls)\n\n**Example:**\n```bash\nexport FHIR_SERVER_URL=\"http://fhir-server:8080/fhir/AuditEvent\"\nexport FHIR_AUTH_TYPE=\"keycloak\"\nexport KEYCLOAK_CLIENT_ID=\"fhir-audit-client\"\nexport KEYCLOAK_REALM=\"healthcare\"\nexport FHIR_ADMIN_EVENTS_ENABLED=\"true\"\nexport FHIR_DEBUG_ENABLED=\"false\"\n```\n\n## Supported Events\n\nThe plugin supports the following Keycloak event types (configured via `event-mappings.yaml`):\n\n- **Authentication Events**: LOGIN, LOGOUT, LOGIN_ERROR, REGISTER, REGISTER_ERROR, UPDATE_PASSWORD, UPDATE_PASSWORD_ERROR, etc.\n- **Admin Events**: CREATE, UPDATE, DELETE, ACTION operations on users, clients, realms, and other resources\n\n## FHIR R4 Compliance\n\nThe plugin generates FHIR R4 compliant AuditEvent resources with:\n- Proper type codes (DICOM and HL7 code systems)\n- Action codes (Create, Read, Update, Delete, Execute)\n- Outcome codes (success/failure)\n- Agent information (user, system)\n- Source information (Keycloak realm)\n- Entity information (for admin events)\n\n## Testing\n\nRun the test suite:\n\n```bash\nmvn test\n```\n\nCode coverage reports are generated in `target/site/jacoco/`\n\n## License\n\nMIT License - see [LICENSE](LICENSE) file for details.\n",
+    "tail": "",
+    "source_url": "https://github.com/HealthSamurai/keycloak-auditevent-plugin/blob/5fe544c48de236e0a6dd7ec4cf7a123d369cbfa7/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "572da8c5fe02391aa9e86e3d06f0cec5812bdcbe7b937041719d658867278e2c",
+    "characters": 1072,
+    "excerpt": "MIT License\n\nCopyright (c) 2024 Health Samurai\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+    "tail": "ware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
+    "source_url": "https://github.com/HealthSamurai/keycloak-auditevent-plugin/blob/5fe544c48de236e0a6dd7ec4cf7a123d369cbfa7/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/HealthSamurai/keycloak-auditevent-plugin",
+    "commit": "https://github.com/HealthSamurai/keycloak-auditevent-plugin/commit/5fe544c48de236e0a6dd7ec4cf7a123d369cbfa7"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

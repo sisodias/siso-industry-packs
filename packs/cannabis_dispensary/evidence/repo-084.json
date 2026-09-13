@@ -1,0 +1,82 @@
+{
+  "audit_id": "R084",
+  "full_name": "AF111/loyverse-node-api-wrapper",
+  "html_url": "https://github.com/AF111/loyverse-node-api-wrapper",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Loyverse Node.js API wrapper",
+  "stargazers_count": 2,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2022-11-28T11:06:28Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=Loyverse+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=15&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "18bf32e1855ae122c67c1a13d15dcc6cf89c3f5d",
+  "last_commit": "2022-11-28T12:06:28+01:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".babelrc",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierrc",
+    "LICENSE",
+    "package.json",
+    "readme.md",
+    "tsconfig.json"
+  ],
+  "readme": {
+    "path": "readme.md",
+    "sha256": "cee8a1827355bd1213923abe271825a9776babe62d7f1283ce7eb0efb6d04c15",
+    "characters": 4883,
+    "excerpt": "# Loyverse Node.js API Wrapper\n\n# Deprecated: Package no longer supported.\n\n🚧🚧🚧 **WARNING: Work in progress (WIP)** 🚧🚧🚧\n\nThis is still WIP and not many of the API features are implemented yet.\n\nThe API resources are also not testsed.\n\n| Resource      | implemented? | tests |\n| ------------- | ------------ | ----- |\n| Categories    | ✔️           | ❌    |\n| Customers     | ❌           | ❌    |\n| Discounts     | ❌           | ❌    |\n| Employees     | ❌           | ❌    |\n| Inventory     | ✔️           | ❌    |\n| Items         | ✔️           | ❌    |\n| Merchant      | ❌           | ❌    |\n| Modifiers     | ❌           | ❌    |\n| Payment types | ❌           | ❌    |\n| POS devices   | ❌           | ❌    |\n| Receipts      | ❌           | ❌    |\n| Shifts        | ❌           | ❌    |\n| Stores        | ✔️           | ❌    |\n| Suppliers     | ❌           | ❌    |\n| Taxes         | ❌           | ❌    |\n| Webhooks      | ❌           | ❌    |\n| Variants      | ❌           | ❌    |\n\n# Install\n\n```bash\nnpm install loyverse-api-wrapper\n```\n\n# Authentication/Authorization\n\nLoyverse supports two Authorization methods.\n\n## 1. Personal Access tokens\n\n---\n\nEnables you to create an access token that is unrestricted in scope to make authenticated requests against their API.\n\n> The token is unrestricted in scope.\n\n## 2. OAuth 2.0\n\n---\n\nThis follows the OAuth 2.0 Authorization Code Flow. There are helper methods to simplify the process.\n\n### Refresh tokens\n\nThe client will automatically refresh the access token when it expires.\n\n# Examples\n\n### ES6 import syntax\n\n```js\nimport { PersonalAccessTokenAuth, Client } from 'loyverse-api-wrapper';\n```\n\n### Authentication using Personal Access Tokens\n\nExample explicitly instantiating the PersonalAccessTokenAuth Provider.\n\n```js\nconst { PersonalAccessTokenAuth, Client } = require('loyverse-api-wrapper\"');\n\nconst auth = new PersonalAccessTokenAuth('YOUR_ACCESS_TOKEN');\nconst client = new Client(auth);\n```\n\nLet the client instantiate the Auth provider\n\n```js\nconst { Client } = require('loyverse-api-wrapper\"');\n\n// sets up the (PersonalAccessTokenAuth) authorization Provider\nconst client = new Client('YOUR_ACCESS_TOKEN');\n```\n\n---\n\n### Authentication/Authorization using OAuth 2.0\n\nFor OAuth2.0 you must explicity instantiate the OAuth2 provider.\n\n```js\nconst { OAuth2, Client } = require('loyverse-api-wrapper');\n\nconst auth = new OAuth2(\n  {\n    clientID: 'YOUR_CLIENT_ID',\n    clientSecret: 'YOUR_CLIENT_SECRET',\n    loyverseAPIbaseURL: 'https://api.loyverse.com', // optional\n    redirectURL: 'https://www.yoursite.com/api/auth/redirects/loyverse',\n    scope: [OAuth2.Scope.ITEMS_READ, OAuth2.Scope.STORES_READ],\n  },\n  // you can also instantiate with an access token, (optional)\n  {\n    access_token: 'string',\n    expires_in: 'seconds(number)',\n    refresh_token: 'string',\n    token_type: 'Bearer',\n  },\n);\n\n// you may update credentials on the fly using auth.setCredentials\n// providing the options obj above\n// with required fields clientID, clientSecret, redirectURL and scope\n\nconst client = new Client(auth);\n// At this point, client might not be ready to start interacting with\n// loyvers API as you might still need to authenticate the user through loyverse first\n```\n\n### Redirecting user to loyverse for authentication\n\n```js\n// this method generates the redirect url you need to send the user\n// to for authentication.\n// You may specificy a unique state value that you can validate\n// when the user gets redirected back to your site.\n\n// auth.getAuthURL('SomeUniqueState');\nauth.getAuthURL();\n```\n\n### Exchanging the authorization code for an access token\n\n```js\n// provide the authorization code sent back to your site\n// to exchange it for an access token\n// this method returns a promise\n// and resolves with the scoped access token if successful\nauth.authorize('authorization_code');\n\n// if you provided state to the auth.getAuthURL method\n// you might want to validate the state to make sure things are in order\n```\n\n### Setting the accessToken on the fly\n\n```js\n// with OAuth2.0 Provider\nauth.setAccessToken({\n  access_token: 'xaccess_token',\n  expires_in: 1,\n  scope: [],\n  refresh_token: 'refresh_token',\n  expires_at: 33,\n  token_type: 'bearer',\n});\n\n// with PersonalAccessTokenAuth Provider\n// auth.setAccessToken('PersonalAccessToken');\n```\n\n---\n\n## Calling the API resources/Enpoints to get data\n\n```js\n// client contains all available resources\n// client.items.getItem('itemID') // get single item\n// client.categories.getCategory('categoryID') // get single Category\n```\n\n## Example using OAuth with Express JS\n\nPlease have a look in this repo ./examples/express.js\n\n### API documentation: [Loyverse API documentation](https://developer.loyverse.com/docs/)\n\n### For a full list of all available scopes see: [Loyverse OAuth 2.0](https://developer.loyverse.com/docs/#section/Authorization/OAuth-2.0)\n",
+    "tail": "",
+    "source_url": "https://github.com/AF111/loyverse-node-api-wrapper/blob/18bf32e1855ae122c67c1a13d15dcc6cf89c3f5d/readme.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c13b3a0bd86ee68cbd5a5b3907176f4a2ac240acff8dccc95ed48bdc921e3eda",
+    "characters": 1062,
+    "excerpt": "MIT License\n\nCopyright (c) 2021 AF111\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/AF111/loyverse-node-api-wrapper/blob/18bf32e1855ae122c67c1a13d15dcc6cf89c3f5d/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "dc2ffc76a4c8ea65ea179febdcacc765eff69e4be282f4827bd173dd318d4792",
+      "characters": 1975,
+      "excerpt": "{\r\n  \"name\": \"loyverse-api-wrapper\",\r\n  \"version\": \"1.0.4\",\r\n  \"description\": \"app.js\",\r\n  \"files\": [\r\n    \"dist/**/*\"\r\n  ],\r\n  \"main\": \"dist/index.js\",\r\n  \"types\": \"dist/index.d.ts\",\r\n  \"scripts\": {\r\n    \"build\": \"tsc\",\r\n    \"watch\": \"tsc --watch\",\r\n    \"version\": \"git add -A\",\r\n    \"prepare\": \"npm run build\",\r\n    \"prepublish\": \"npm run test && npm run build\",\r\n    \"postversion\": \"git push origin main && git push origin main --tags\",\r\n    \"test\": \"jest\"\r\n  },\r\n  \"keywords\": [\r\n    \"loyverse\",\r\n    \"api\",\r\n    \"wrapper\",\r\n    \"node\",\r\n    \"js\"\r\n  ],\r\n  \"jest\": {\r\n    \"collectCoverage\": true,\r\n    \"collectCoverageFrom\": [\r\n      \"src/**/*.ts\"\r\n    ],\r\n    \"coveragePathIgnorePatterns\": [\r\n      \"<rootDir>/node_modules/\",\r\n      \"<rootDir>/src/typings/\",\r\n      \"<rootDir>/src/lib/Resources/\",\r\n      \"<rootDir>/src/Errors.ts\"\r\n    ],\r\n    \"coverageDirectory\": \"<rootDir>/coverage/\",\r\n    \"testPathIgnorePatterns\": [\r\n      \"<rootDir>/node_modules/\",\r\n      \"<rootDir>/src/typings/\",\r\n      \"<rootDir>/src/lib/Resources/\",\r\n      \"<rootDir>/src/Errors.ts\"\r\n    ],\r\n    \"testMatch\": [\r\n      \"**/*.test.(ts)\"\r\n    ],\r\n    \"verbose\": false\r\n  },\r\n  \"author\": \"AF111\",\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"https://github.com/AF111/loyverse-node-api-wrapper\"\r\n  },\r\n  \"license\": \"MIT\",\r\n  \"dependencies\": {\r\n    \"got\": \"^11.5.2\",\r\n    \"tslib\": \"^1.14.1\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@babel/preset-env\": \"^7.12.16\",\r\n    \"@babel/preset-typescript\": \"^7.12.16\",\r\n    \"@types/jest\": \"^26.0.20\",\r\n    \"@typescript-eslint/eslint-plugin\": \"^4.15.1\",\r\n    \"@typescript-eslint/parser\": \"^4.15.1\",\r\n    \"cookie-parser\": \"^1.4.5\",\r\n    \"dotenv\": \"^8.2.0\",\r\n    \"ejs\": \"^3.1.5\",\r\n    \"eslint\": \"^7.20.0\",\r\n    \"eslint-config-airbnb-base\": \"^14.2.1\",\r\n    \"eslint-plugin-import\": \"^2.22.1\",\r\n    \"express\": \"^4.17.1\",\r\n    \"jest\": \"^26.6.3\",\r\n    \"lowdb\": \"^1.0.0\",\r\n    \"morgan\": \"^1.10.0\",\r\n    \"parcel\": \"^2.0.0-beta.1\",\r\n    \"typescript\": \"^4.0.2\"\r\n  }\r\n}\r\n",
+      "tail": "r\"\r\n  },\r\n  \"license\": \"MIT\",\r\n  \"dependencies\": {\r\n    \"got\": \"^11.5.2\",\r\n    \"tslib\": \"^1.14.1\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@babel/preset-env\": \"^7.12.16\",\r\n    \"@babel/preset-typescript\": \"^7.12.16\",\r\n    \"@types/jest\": \"^26.0.20\",\r\n    \"@typescript-eslint/eslint-plugin\": \"^4.15.1\",\r\n    \"@typescript-eslint/parser\": \"^4.15.1\",\r\n    \"cookie-parser\": \"^1.4.5\",\r\n    \"dotenv\": \"^8.2.0\",\r\n    \"ejs\": \"^3.1.5\",\r\n    \"eslint\": \"^7.20.0\",\r\n    \"eslint-config-airbnb-base\": \"^14.2.1\",\r\n    \"eslint-plugin-import\": \"^2.22.1\",\r\n    \"express\": \"^4.17.1\",\r\n    \"jest\": \"^26.6.3\",\r\n    \"lowdb\": \"^1.0.0\",\r\n    \"morgan\": \"^1.10.0\",\r\n    \"parcel\": \"^2.0.0-beta.1\",\r\n    \"typescript\": \"^4.0.2\"\r\n  }\r\n}\r\n",
+      "source_url": "https://github.com/AF111/loyverse-node-api-wrapper/blob/18bf32e1855ae122c67c1a13d15dcc6cf89c3f5d/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/AF111/loyverse-node-api-wrapper",
+    "commit": "https://github.com/AF111/loyverse-node-api-wrapper/commit/18bf32e1855ae122c67c1a13d15dcc6cf89c3f5d"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

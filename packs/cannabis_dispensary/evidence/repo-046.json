@@ -1,0 +1,69 @@
+{
+  "audit_id": "R046",
+  "full_name": "ripnyt-ripnyt/CCRS-Data-Extraction-Python",
+  "html_url": "https://github.com/ripnyt-ripnyt/CCRS-Data-Extraction-Python",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Reconstruction of WA's Cannabis Data",
+  "stargazers_count": 4,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2023-02-22T18:04:36Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=CCRS+cannabis&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "f5c04995892213c1e7cc25b29a2973cba6937ad8",
+  "last_commit": "2023-02-22T10:04:36-08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "LICENSE",
+    "README.md",
+    "columnStandardization.py",
+    "inflate.py"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "83a77d9c77ff49a67fd3f0f28e0970452c6eea403abaaba05bb70d9f7f3bb90c",
+    "characters": 1598,
+    "excerpt": "# CCRS-Python-MySQL\n<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-nc/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons Attribution-NonCommercial 4.0 International License</a>.\n\nReconstruction of WA's Cannabis Data\n---\n\nCCRS-Python-MySQL is a few python scripts which takes the raw [CCRS](https://lcb.wa.gov/ccrs) .zip download from a public records request and converts it from a rather dirty dataset to a somewhat usable set of csv with up to 1,000,000 lines each.\n\nI'm using this learn python, mysql, and methods to handle 150M+ lines of raw, TSV data with challenging encoding and types. As I'm learning the code has been refactored to several times but here's my best shot so far.\n\n## How to use\n\nThere are two scripts one which inflates the zip and removes the folder hierarchy `inflate.py` and the other standardizes the row width `columnStandardization.py`.\n\nBoth read files from one directory and then writes to a new directory without compression. The CCRS data in csv form is 23 gb at this time, so be careful with disk space.\n\n## Known Issues with the scripts and output data\n\nNo Compression, slow, and could possibly be changed to write to compression. Data will have issues too, the size of the dataset means that I haven't been able to confirm that my column standardization method is perfect.\n\n`InventoryAdjustment_0.csv` seems to have particular encoding issues.\n",
+    "tail": "",
+    "source_url": "https://github.com/ripnyt-ripnyt/CCRS-Data-Extraction-Python/blob/f5c04995892213c1e7cc25b29a2973cba6937ad8/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "ae731890ec97fc1e7eb582d23ab81e3dfa01a2097417d00d47dd48339542a4ac",
+    "characters": 13301,
+    "excerpt": "Creative Commons Attribution-NonCommercial 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial 4.0 International Public License (\"Public License\"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter's License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nNonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or",
+    "tail": "possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n",
+    "source_url": "https://github.com/ripnyt-ripnyt/CCRS-Data-Extraction-Python/blob/f5c04995892213c1e7cc25b29a2973cba6937ad8/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/ripnyt-ripnyt/CCRS-Data-Extraction-Python",
+    "commit": "https://github.com/ripnyt-ripnyt/CCRS-Data-Extraction-Python/commit/f5c04995892213c1e7cc25b29a2973cba6937ad8"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

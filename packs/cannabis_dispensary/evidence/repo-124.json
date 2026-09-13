@@ -1,0 +1,82 @@
+{
+  "audit_id": "R124",
+  "full_name": "bradenmacdonald/ofx-js",
+  "html_url": "https://github.com/bradenmacdonald/ofx-js",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Pure JavaScript parser for Open Financial Exchange (OFX) files",
+  "stargazers_count": 34,
+  "forks_count": 5,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-05-21T00:24:55Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=OFX+parser+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "a0271be35a0f3f3dde18fd00d336ce1d880fb83c",
+  "last_commit": "2026-05-20T17:24:50-07:00",
+  "commits_six_months_sample_count": 17,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 8,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "ofx-types.d.ts",
+    "ofx.ts",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "47eca9fba0fb1f33c5865a7d1344994c21efe20eb61aa6c429e569a5d5195721",
+    "characters": 1779,
+    "excerpt": "# OFX JS\n\nParse Open Financial Exchange (OFX) files into a usable data structure. Also supports Quicken/QFX files.\n\n✨ Now includes fairly comprehensive TypeScript types and documentation of the\nvarious OLX data fields in the parsed data structure.\n\nFor details on the OFX file format, download the latest specification from\nhttps://financialdataexchange.org/about-fdx/ofx-work-group/\n\n[![NPM Version](https://img.shields.io/npm/v/ofx-js)](https://www.npmjs.com/package/ofx-js)\n![NPM Downloads](https://img.shields.io/npm/dm/ofx-js)\n\n# Goals\n\n* Work in any JS environment (no dependencies at all)\n* Have as small a footprint as possible\n* Parse only, no serialization\n* Full TypeScript types (opt-in using `parseStrict` instead of `parseSync`)\n\n# History\n\nThis was originally based on [node-ofx](https://github.com/chilts/node-ofx), but has since been modified extensively.\n\n# Usage\n\nInstallation:\n\n```sh\nnpm install ofx-js\n```\n\nExample usage:\n\n```typescript\nimport { parseStrict as parseOFX } from 'ofx-js';\n\nconst ofxString = readFile(\"bank-statement.ofx\");\n\nconst ofxData = parseOFX(ofxString);\n\n// Check that this file includes the expected response data:\nif (!ofxData.OFX.BANKMSGSRSV1?.STMTTRNRS || Array.isArray(ofxData.OFX.BANKMSGSRSV1.STMTTRNRS)) {\n    throw Error('Expected a single statement transaction response.');\n}\n\nconst statementResponse = ofxData.OFX.BANKMSGSRSV1.STMTTRNRS.STMTRS;\nif (!statementResponse) {\n    throw Error('Missing statement response payload.');\n}\n\nconst accountId = statementResponse.BANKACCTFROM.ACCTID;\nconst currencyCode = statementResponse.CURDEF;\n// Bank account transactions: may be an array of transactions, a single transaction, or undefined.\nconst transactionStatement = statementResponse.BANKTRANLIST?.STMTTRN;\n// do something...\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/bradenmacdonald/ofx-js/blob/a0271be35a0f3f3dde18fd00d336ce1d880fb83c/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "b0c970e6de8dd246b5e3e2de1bfddf8e6e37839ebeaef7b2dc63eba9fc5cb39a",
+    "characters": 1077,
+    "excerpt": "The MIT License\n\nCopyright 2012-2017 Apps Attic Ltd.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/bradenmacdonald/ofx-js/blob/a0271be35a0f3f3dde18fd00d336ce1d880fb83c/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "f4bad3aca345437f37e917b7bd53a5c1600aa74f8619cd5f812a58609dda2f76",
+      "characters": 1061,
+      "excerpt": "{\n  \"name\": \"ofx-js\",\n  \"description\": \"Parse OFX files using pure JavaScript.\",\n  \"version\": \"1.1.1\",\n  \"homepage\": \"https://github.com/bradenmacdonald/ofx-js\",\n  \"contributors\": [\n    {\n      \"name\": \"Braden MacDonald\",\n      \"url\": \"http://bradenmacdonald.com/\"\n    },\n    {\n      \"name\": \"Christian Sullivan\",\n      \"url\": \"http://euforic.co/\"\n    },\n    {\n      \"name\": \"Eric Webb\",\n      \"url\": \"https://webb.codes\"\n    }\n  ],\n  \"files\": [\n    \"ofx.js\",\n    \"ofx.ts\",\n    \"ofx.d.ts\",\n    \"ofx-types.d.ts\"\n  ],\n  \"type\": \"module\",\n  \"devDependencies\": {\n    \"@types/node\": \"^25.9.1\",\n    \"typescript\": \"^6.0.3\"\n  },\n  \"main\": \"./ofx.js\",\n  \"types\": \"./ofx.d.ts\",\n  \"directories\": {},\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git://github.com/bradenmacdonald/ofx-js.git\"\n  },\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"ofx\",\n    \"open financial exchange\",\n    \"bank\",\n    \"banking\",\n    \"export\"\n  ],\n  \"scripts\": {\n    \"build\": \"tsc\",\n    \"prepare\": \"tsc\",\n    \"test\": \"node --test test/*.ts\",\n    \"types\": \"tsc --noEmit && tsc --project test\"\n  }\n}\n",
+      "tail": "      \"name\": \"Eric Webb\",\n      \"url\": \"https://webb.codes\"\n    }\n  ],\n  \"files\": [\n    \"ofx.js\",\n    \"ofx.ts\",\n    \"ofx.d.ts\",\n    \"ofx-types.d.ts\"\n  ],\n  \"type\": \"module\",\n  \"devDependencies\": {\n    \"@types/node\": \"^25.9.1\",\n    \"typescript\": \"^6.0.3\"\n  },\n  \"main\": \"./ofx.js\",\n  \"types\": \"./ofx.d.ts\",\n  \"directories\": {},\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git://github.com/bradenmacdonald/ofx-js.git\"\n  },\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"ofx\",\n    \"open financial exchange\",\n    \"bank\",\n    \"banking\",\n    \"export\"\n  ],\n  \"scripts\": {\n    \"build\": \"tsc\",\n    \"prepare\": \"tsc\",\n    \"test\": \"node --test test/*.ts\",\n    \"types\": \"tsc --noEmit && tsc --project test\"\n  }\n}\n",
+      "source_url": "https://github.com/bradenmacdonald/ofx-js/blob/a0271be35a0f3f3dde18fd00d336ce1d880fb83c/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/bradenmacdonald/ofx-js",
+    "commit": "https://github.com/bradenmacdonald/ofx-js/commit/a0271be35a0f3f3dde18fd00d336ce1d880fb83c"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

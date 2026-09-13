@@ -1,0 +1,82 @@
+{
+  "audit_id": "R121",
+  "full_name": "moomdate/CYD-PromptPay-Terminal",
+  "html_url": "https://github.com/moomdate/CYD-PromptPay-Terminal",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": " A $6 PromptPay payment terminal — ESP32 + 2.8\" touch screen, powered by Stripe. Enter amount, show QR, beep when paid. Thai/English UI. #board ตัวนี้>>https://s.shopee.co.th/1LfV4iFZtU",
+  "stargazers_count": 87,
+  "forks_count": 24,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-08-05T03:19:40Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "arduino",
+    "cyd",
+    "esp32",
+    "payment-terminal",
+    "platformio",
+    "promptpay",
+    "qr-code",
+    "stripe",
+    "tft-espi",
+    "tft-espi-library",
+    "thailand"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=PromptPay+QR+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "b9c8e9ba45f7664ffdaf3c5c28fd57e80569c131",
+  "last_commit": "2026-08-05T10:19:40+07:00",
+  "commits_six_months_sample_count": 5,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "README.th.md",
+    "platformio.ini"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "88b0c60a9cca93be026f18afbca197254b6d177c825adc4e24879878003f4f8e",
+    "characters": 5395,
+    "excerpt": "# 💸 CYD PromptPay Terminal (Stripe)\n\n**English** · [ภาษาไทย](README.th.md)\n\nA tiny self-contained payment terminal: an ESP32 with a 2.8\" touch screen that displays a **Thai PromptPay QR** generated through **Stripe**, then flips to a green success screen (with a beep!) the moment the customer's payment lands.\n\n![PlatformIO](https://img.shields.io/badge/PlatformIO-ESP32-orange)\n![License](https://img.shields.io/badge/license-MIT-green)\n\n<!-- Screenshots: drop photos into images/ with these names -->\n![QR screen](images/qr.jpg)\n\n## How it works\n\n```\nboot ─▶ WiFi ─▶ enter amount on touch keypad ─▶ create QR via Stripe ─▶ show QR\n                     ▲                                                  │ poll every 3 s\n                     │              tap screen                          ▼\n                     ◀────────────────────────────────────  PAYMENT RECEIVED ✓\n```\n\n1. Enter the amount on the on-screen keypad (minimum 10 THB — Stripe's floor for PromptPay)\n2. The board creates a **PaymentIntent** (`amount`, `currency=thb`, `payment_method_types[]=promptpay`, `confirm=true`) — one call to the fully **documented** Stripe API, and the response already contains the **EMVCo QR payload**\n3. The QR renders on the white card; the board polls the PaymentIntent every 3 seconds\n4. `succeeded` → full-screen green check + beep. Tap to return to the keypad.\n\nNo Payment Link needed — a single secret key is enough to take payments.\n\n> The library also keeps a legacy `createQr()` that derives the QR from a **Payment Link** via Stripe's undocumented checkout endpoints. It breaks with `payment_method_types_mismatch` when the link doesn't offer PromptPay — prefer `createQrDirect()`.\n\n## Getting your Stripe keys\n\nAll three values come from the [Stripe Dashboard](https://dashboard.stripe.com):\n\n| Value | Where |\n|---|---|\n| `pk_live_...` publishable key | **Developers → API keys** (only needed for the legacy Payment Link path) |\n| `sk_live_...` secret key | **Developers → API keys** (click *Reveal*) |\n| `plink_...` payment link id | *(optional, legacy path only)* **Payment Links → create one** — the id is in its details |\n\nPromptPay must be enabled in **Settings → Payment methods** (Thai Stripe accounts).\n\n## 🔐 Security — read before you commit anything\n\n- Keys live in `include/secrets.h`, which is **gitignored**. Copy the template and fill it in:\n\n  ```bash\n  cp include/secrets.h.example include/secrets.h\n  ```\n\n- The secret key can move money-related state on your account. If it ever leaks — a screenshot, a pastebin, a committed file — **roll it immediately**: Dashboard → Developers → API keys → ⋯ → *Roll key*.\n- Better: instead of `sk_live_...`, create a **restricted key** (Developers → API keys → Create restricted key) with only PaymentIntents read/write — that's all this project needs.\n- TLS note: the firmware uses `setInsecure()` (no certificate pinning), standard practice on ESP32 hobby projects but worth knowing.\n\n## Hardware\n\nRuns on a 2.8\" ESP32 display board of the **CYD family** (pinout-compatible with the well-documented `ESP32-2432S028R`). Everything is on the board — screen, touch, speaker for the payment beep. No wiring.\n\n**👉 The exact board used: [Shopee listing](https://s.shopee.co.th/30mqperiSK)**\n\n> If colors look inverted remove `-D TFT_INVERSION_ON=1` from `platformio.ini`; if touch is offset adjust `touch.setCal(...)` in `src/main.cpp`.\n\n## Getting started\n\n```bash\ngit clone https://github.com/moomdate/CYD-PromptPay-Terminal.git\ncd CYD-PromptPay-Terminal\ncp include/secrets.h.example include/secrets.h   # fill in WiFi + Stripe values\npio run -t upload\n```\n\nThe screen walks through: connecting WiFi → amount keypad → QR screen with the amount → success screen. Errors show Stripe's message with a tap-to-retry.\n\nConfiguration in `include/secrets.h`:\n\n| Setting | Meaning |\n|---|---|\n| `UI_LANGUAGE` | on-screen language: `LANG_TH` or `LANG_EN` (Thai Sarabun font is embedded in the firmware) |\n| `AMOUNT_SATANG` | default amount when nothing is typed, in satang (`1000` = 10.00 THB) |\n\n## The `StripePromptPay` library\n\nThe Stripe logic is a standalone library published on the [PlatformIO Registry](https://registry.platformio.org/libraries/moomdate/StripePromptPay) ([source](https://github.com/moomdate/StripePromptPay)) — use it in any project:\n\n```ini\nlib_deps = moomdate/StripePromptPay @ ^1.0.0\n```\n\n```cpp\n#include <StripePromptPay.h>\n\nStripePromptPay stripe;\nstripe.begin(STRIPE_PK, STRIPE_SK);\n\nif (stripe.createQrDirect(1000, \"you@example.com\")) {  // 10.00 THB\n  render(stripe.qrData());                 // EMVCo payload for any QR lib\n  String st = stripe.paymentStatus();      // \"requires_action\" → \"succeeded\"\n}\nSerial.println(stripe.lastError());        // populated on failure\n```\n\nIt has no display dependencies — just WiFi + ArduinoJson — so it works on any ESP32.\n\n## Project structure\n\n```\ninclude/\n├── secrets.h.example  # template — copy to secrets.h (gitignored)\nsrc/\n├── main.cpp           # UI: amount keypad, QR card, polling, success screens\n├── lang.h             # EN/TH string tables (UI_LANGUAGE)\n├── fonts/             # Sarabun (OFL) smooth fonts with Thai glyphs\ntools/gen_vlw.py       # regenerate the fonts from any OFL TTF\n```\n\nStripe logic comes from the [StripePromptPay](https://registry.platformio.org/libraries/moomdate/StripePromptPay) registry package.\n\n## License\n\n[MIT](LICENSE)\n",
+    "tail": "",
+    "source_url": "https://github.com/moomdate/CYD-PromptPay-Terminal/blob/b9c8e9ba45f7664ffdaf3c5c28fd57e80569c131/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "88cc3022c01fd1b108872a4f1cfb20632e88bab2637d834c09920b703296583f",
+    "characters": 1065,
+    "excerpt": "MIT License\n\nCopyright (c) 2026 moomdate\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/moomdate/CYD-PromptPay-Terminal/blob/b9c8e9ba45f7664ffdaf3c5c28fd57e80569c131/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/moomdate/CYD-PromptPay-Terminal",
+    "commit": "https://github.com/moomdate/CYD-PromptPay-Terminal/commit/b9c8e9ba45f7664ffdaf3c5c28fd57e80569c131"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

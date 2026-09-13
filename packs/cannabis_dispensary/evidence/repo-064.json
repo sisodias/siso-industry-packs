@@ -1,0 +1,147 @@
+{
+  "audit_id": "R064",
+  "full_name": "Blair2004/NexoPOS",
+  "html_url": "https://github.com/Blair2004/NexoPOS",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Laravel-based web POS system with Vue.js, Tailwind CSS, inventory management, sales processing, customer records, reports, and modular extension support.",
+  "stargazers_count": 1258,
+  "forks_count": 558,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-10T08:46:14Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "laravel",
+    "php",
+    "point-of-sale",
+    "pos",
+    "possystem",
+    "rxjs6",
+    "tailwindcss",
+    "vuejs"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Apoint-of-sale&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "6061a93cf2d3fa0e0fb2896873315485fccc4ba1",
+  "last_commit": "2026-08-25T11:39:57Z",
+  "commits_six_months_sample_count": 143,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 11,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".babelrc",
+    ".env.example",
+    ".gitignore",
+    ".php-version",
+    ".prettierrc",
+    "AGENTS.md",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "artisan",
+    "babel.config.js",
+    "boost.json",
+    "composer.json",
+    "composer.lock",
+    "documentation.html",
+    "package-lock.json",
+    "package.json",
+    "phpunit.xml",
+    "pint.json",
+    "playwright.config.ts",
+    "railpack.json",
+    "rental.md",
+    "tailwind.config.js",
+    "tsconfig.json",
+    "vercel.json",
+    "vite.config.js",
+    "vue-shims.d.ts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "4e97c45c9533b2652336acae364435a9f555fb6ff983191e70b855387b8a7d05",
+    "characters": 7608,
+    "excerpt": "[![Latest Stable Version](https://poser.pugx.org/blair2004/nexopos/v)](//packagist.org/packages/blair2004/nexopos) [![Total Downloads](https://poser.pugx.org/blair2004/nexopos/downloads)](//packagist.org/packages/blair2004/nexopos) [![Latest Unstable Version](https://poser.pugx.org/blair2004/nexopos/v/unstable)](//packagist.org/packages/blair2004/nexopos) [![License](https://poser.pugx.org/blair2004/nexopos/license)](//packagist.org/packages/blair2004/nexopos)\n\n\n<p align=\"center\">\n  <img src=\"https://user-images.githubusercontent.com/5265663/162700085-40ed00ca-9154-42cb-850a-ccf1c2db2d5d.png\" alt=\"NexoPOS\"/>\n</p>\n\nNexoPOS is more than a standalone Point of Sale application. It is part of a growing ecosystem designed to help businesses install, extend, and operate their POS system across different environments.\n\nThe ecosystem includes the free NexoPOS core, official modules, mobile companion applications, desktop utilities, developer tools, documentation, and services available through [My NexoPOS](https://my.nexopos.com/en?utm_source=github.com&utm_campaign=readme&utm_campaign=nexosaas-ads-reame).\n\n<p align=\"center\">\n  <a href=\"https://my.nexopos.com/en/marketplace/item/nexo-saas-build-and-manage-a-nexopos-hosting-business?utm_source=github.com&utm_campaign=readme\"><img src=\"https://my.nexopos.com/storage/2026/07/chatgpt-image-jul-28-2026-11-09-29-am.png\" alt=\"nexosaas\"/>\n  </a>\n</p>\n\n### Core Application\n\nThis repository contains the base version of NexoPOS. It provides the main POS foundation, including:\n\n* Product and category management\n* Customer management\n* Accounting\n* Scale Barcode Support\n* Order and sales processing\n* Inventory tracking\n* Taxes, payments, and receipts\n* Dashboard and reporting foundations\n* User roles and permissions\n* Module support for extending the application\n\nDevelopers can use this repository to install NexoPOS, customize workflows, build modules, integrate third-party services, and adapt the POS to specific business needs.\n\nTry a demo right now in our [Demo Instance](https://demo.nexopos.com).\n\n<p align=\"center\">\n  <img width=\"1477\" height=\"1025\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8397ce11-ee03-4bb0-911c-57d6295cb096\" />\n</p>\n\n### Deployment\nNexoPOS is partnering with InstaPods to offer you a smooth deployment experience with NexoPOS.\n\n[![Deploy On Nexo Cloud](https://my.nexopos.com/deploy-on-nexo-cloud-button-light.svg)](https://nexopos.cloud?utm_channel=github.com&utm_campaign=readme)\n[![Deploy On InstaPods](https://instapods.com/deploy-button.svg)](https://app.instapods.com/dashboard/pods/create?app=nexopos&ref=nexopos) \n\n### Recommended Modules\n\nNexoPOS can be extended with official modules available on [My NexoPOS](https://my.nexopos.com/en?utm_source=github.com&utm_campaign=readme). These modules add advanced features for restaurants, warehouses, multi-store businesses, inventory control, printing, reporting, and more.\n\nSome recommended modules include:\n\n* **[Gastro - Restaurant Extension for NexoPOS](https://my.nexopos.com/en/marketplace/item/gastro-restaurant-extension-for-nexopos?utm_source=github.com&utm_campaign=readme)** — Adds restaurant management features to NexoPOS, including food-service workflows and restaurant-focused operations.\n* **[Raw Material Tracker](https://my.nexopos.com/en/marketplace/item/raw-material-tracker?utm_source=github.com&utm_campaign=readme)** — Helps restaurants and food businesses monitor ingredient usage by linking ingredients to products and recipes.\n* **[Multistore for NexoPOS](https://my.nexopos.com/en/marketplace/item/multistore-for-nexopos?utm_source=github.com&utm_campaign=readme)** — Enables businesses to manage multiple stores from a single NexoPOS installation.\n* **[Stock Transfers](https://my.nexopos.com/en/marketplace/item/stock-transfers?utm_source=github.com&utm_campaign=readme)** — Allows multiple stores to send, request, approve, and track inventory transfers.\n* **[Racks Manager](https://my.nexopos.com/en/marketplace/item/racks-manager?utm_source=github.com&utm_campaign=readme)** — Adds structured warehouse storage to NexoPOS using racks, shelves, and storage locations.\n* **[Bulk Importer](https://my.nexopos.com/en/marketplace/item/bulk-importer?utm_source=github.com&utm_campaign=readme)** — Helps import products, customers, categories, and other resources using CSV files.\n* **[Sales Commissions](https://my.nexopos.com/en/marketplace/item/sales-commissions?utm_source=github.com&utm_campaign=readme)** — Allows businesses to reward sales staff by calculating commissions on completed sales.\n* **[WhatsApp Notification](https://my.nexopos.com/en/marketplace/item/whatsapp-notification?utm_source=github.com&utm_campaign=readme)** — Forwards system and module notifications from NexoPOS to WhatsApp-supported workflows.\n\n\nYou can browse available modules from the [NexoPOS Marketplace](https://my.nexopos.com).\n\n### Mobile Applications\n\nNexoPOS also provides mobile companion applications designed to improve daily store operations.\n\nRecommended mobile apps include:\n\n* **[Barcode Utility for NexoPOS](https://play.google.com/store/apps/details?id=com.nexopos.barcodeutility?utm_source=github.com&utm_campaign=readme)** — Turns a phone or tablet into a wireless barcode scanner connected to the POS.\n* **[NexoPOS Authorizer](https://my.nexopos.com/en/marketplace/item/nexopos-authorizer?utm_source=github.com&utm_campaign=readme)** — Secure sensitive features such as discounts, order modifications, and more behind a unique QR code that can only be granted by admin staff.\n\nThese mobile tools are useful for stores that want a flexible scanning experience without relying only on traditional barcode scanners.\n\n### Desktop Utilities\n\nFor businesses that prefer running NexoPOS locally or need better hardware integration, NexoPOS also provides desktop utilities.\n\nAvailable desktop tools include:\n\n* **[NexoPOS For Windows](https://my.nexopos.com/en/marketplace/item/nexopos-for-windows?utm_source=github.com&utm_campaign=readme)** — A companion tool that improves thermal printer connectivity between NexoPOS and local printers.\n\nThese tools are especially useful for local stores, restaurants, and businesses that need reliable access to printers and local network devices.\n\n### My NexoPOS Platform\n\n[My NexoPOS](https://my.nexopos.com/en?utm_source=github.com&utm_campaign=readme) is the official platform for the NexoPOS ecosystem. It provides access to:\n\n* Official documentation\n* Module downloads\n* Marketplace access\n* Account and license management\n* Developer resources\n* Premium support options\n* Updates and announcements\n\nIf you are using NexoPOS in production, My NexoPOS is the recommended place to manage official extensions and access the latest ecosystem resources.\n\n### For Developers\n\nNexoPOS is built with Laravel, Vue.js, Tailwind CSS, and Vite. Developers can extend it by creating modules, registering routes, adding menus, integrating APIs, customizing workflows, and building business-specific features.\n\nUseful developer resources:\n* [Creating a module](https://my.nexopos.com/en/documentation/developers-guide/module-creation/creating-module)\n* [Creating a menu for a module](https://my.nexopos.com/en/documentation/developers-guide/module-creation/dashboard-menus)\n* [Registering routes for modules](https://my.nexopos.com/en/documentation/developers-guide/module-creation/module-routing)\n* [NexoPOS REST API](https://docs.api.nexopos.com)\n\nWhether you want to contribute to the core, build private extensions, or create modules for distribution, NexoPOS is designed to be extended.\n",
+    "tail": "",
+    "source_url": "https://github.com/Blair2004/NexoPOS/blob/6061a93cf2d3fa0e0fb2896873315485fccc4ba1/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "characters": 35149,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": "ou would use an \"about box\".\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU GPL, see\n<https://www.gnu.org/licenses/>.\n\n  The GNU General Public License does not permit incorporating your program\ninto proprietary programs.  If your program is a subroutine library, you\nmay consider it more useful to permit linking proprietary applications with\nthe library.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.  But first, please read\n<https://www.gnu.org/licenses/why-not-lgpl.html>.\n",
+    "source_url": "https://github.com/Blair2004/NexoPOS/blob/6061a93cf2d3fa0e0fb2896873315485fccc4ba1/LICENSE"
+  },
+  "nested_license_paths": [
+    "resources/scss/line-awesome/1.3.0/LICENSE.txt"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "c6a2e100ccedd81019cbfc8fba8b8379ce0b1e7b0194850cff40814748bdbc85",
+      "characters": 3611,
+      "excerpt": "{\n    \"name\": \"blair2004/nexopos\",\n    \"type\": \"project\",\n    \"description\": \"The Free Modern Point Of Sale System build with Laravel, TailwindCSS and Vue.js.\",\n    \"keywords\": [\n        \"nexopos\",\n        \"point of sale\",\n        \"pos\",\n        \"pos system\"\n    ],\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^8.2.0\",\n        \"brianium/paratest\": \"^7.1\",\n        \"brick/math\": \"^0.14.1\",\n        \"dekor/php-array-table\": \"^2.0\",\n        \"doctrine/dbal\": \"^3.0\",\n        \"dompdf/dompdf\": \"^3.1\",\n        \"fakerphp/faker\": \"^1.12\",\n        \"gumlet/php-image-resize\": \"^2.0\",\n        \"guzzlehttp/guzzle\": \"^7.0.1\",\n        \"laravel/framework\": \"^12.0\",\n        \"laravel/mcp\": \"^0.7.2\",\n        \"laravel/reverb\": \"@beta\",\n        \"laravel/sanctum\": \"^4.0\",\n        \"laravel/telescope\": \"^5.0\",\n        \"laravel/tinker\": \"^2.0\",\n        \"nikic/php-parser\": \"^5.0\",\n        \"phpoffice/phpspreadsheet\": \"^5.4\",\n        \"picqer/php-barcode-generator\": \"^3.2\",\n        \"predis/predis\": \"^3.2\",\n        \"pusher/pusher-php-server\": \"^7.0\",\n        \"simplesoftwareio/simple-qrcode\": \"^4.2\",\n        \"spatie/laravel-db-snapshots\": \"^2.2\",\n        \"symfony/http-client\": \"^7.0\",\n        \"symfony/mailgun-mailer\": \"^7.0\",\n        \"tormjens/eventy\": \"^0.8\",\n        \"vlucas/phpdotenv\": \"^5.6\",\n        \"ext-curl\": \"*\",\n        \"ext-gd\": \"*\",\n        \"ext-mbstring\": \"*\",\n        \"ext-intl\": \"*\",\n        \"ext-zip\": \"*\"\n    },\n    \"require-dev\": {\n        \"laravel/boost\": \"^2.4\",\n        \"laravel/pint\": \"^1.1.1\",\n        \"mockery/mockery\": \"^1.3.1\",\n        \"nunomaduro/collision\": \"^8.6\",\n        \"phpunit/phpunit\": \"^11.5.3\",\n        \"spatie/laravel-ignition\": \"^2.0\"\n    },\n    \"config\": {\n        \"optimize-autoloader\": true,\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"pestphp/pest-plugin\": true\n        }\n    },\n    \"extra\": {\n        \"laravel\": {\n            \"dont-discover\": []\n        }\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"Database\\\\Factories\\\\\": \"database/factories/\",\n            \"Database\\\\Seeders\\\\\": \"database/seeders/\",\n            \"Modules\\\\\": \"modules/\"\n        },\n        \"exclude-from-classmap\": [\n            \"/modules/*/vendor/\",\n            \"modules/*/Tests/\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"minimum-stability\": \"stable\",\n    \"prefer-stable\": true,\n    \"scripts\": {\n        \"post-autoload-dump\": [\n            \"Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump\",\n            \"@php artisan package:discover --ansi\"\n        ],\n        \"post-install-cmd\": [\n            \"@php -r \\\"file_exists('.env') || copy('.env.example', '.env');\\\"\",\n            \"@php artisan key:generate --ansi\",\n            \"@php -r \\\"file_exists('public/storage');\\\" || artisan storage:link --ansi\",\n            \"@php artisan ns:translate --symlink --force\",\n            \"@php artisan modules:symlink\"\n        ],\n        \"post-update-cmd\": [\n            \"@php artisan vendor:publish --tag=laravel-assets --ansi --force\"\n        ],\n        \"post-root-package-install\": [\n            \"@php -r \\\"file_exists('.env') || copy('.env.example', '.env');\\\"\"\n        ],\n        \"post-create-project-cmd\": [\n            \"@php artisan key:generate --ansi\",\n            \"@php artisan storage:link --ansi\",\n            \"@php -r \\\"file_exists('database/database.sqlite') || touch('database/database.sqlite');\\\"\",\n            \"@php artisan ns:translate --symlink --force\",\n            \"@php artisan modules:symlink\"\n        ]\n    }\n}\n",
+      "tail": "artisan ns:translate --symlink --force\",\n            \"@php artisan modules:symlink\"\n        ],\n        \"post-update-cmd\": [\n            \"@php artisan vendor:publish --tag=laravel-assets --ansi --force\"\n        ],\n        \"post-root-package-install\": [\n            \"@php -r \\\"file_exists('.env') || copy('.env.example', '.env');\\\"\"\n        ],\n        \"post-create-project-cmd\": [\n            \"@php artisan key:generate --ansi\",\n            \"@php artisan storage:link --ansi\",\n            \"@php -r \\\"file_exists('database/database.sqlite') || touch('database/database.sqlite');\\\"\",\n            \"@php artisan ns:translate --symlink --force\",\n            \"@php artisan modules:symlink\"\n        ]\n    }\n}\n",
+      "source_url": "https://github.com/Blair2004/NexoPOS/blob/6061a93cf2d3fa0e0fb2896873315485fccc4ba1/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "3296faf9134b1a82d3f60012951dcff1761099c142e0c6756412bba7559c56df",
+      "characters": 1710,
+      "excerpt": "{\n  \"private\": true,\n  \"engines\": {\n    \"node\": \"24.x\"\n  },\n  \"type\": \"module\",\n  \"scripts\": {\n    \"build\": \"vite build\",\n    \"dev\": \"vite\",\n    \"watch\": \"vite build --watch\",\n    \"test\": \"jest\",\n    \"test:e2e\": \"playwright test\",\n    \"test:e2e:ui\": \"playwright test --ui --ui-host=0.0.0.0 --ui-port=3333\",\n    \"test:e2e:headed\": \"playwright test --headed\",\n    \"test:e2e:debug\": \"playwright test --debug\",\n    \"test:e2e:report\": \"playwright show-report playwright-report --host 0.0.0.0\",\n    \"test:e2e:codegen\": \"playwright/codegen.sh\"\n  },\n  \"devDependencies\": {\n    \"@playwright/test\": \"^1.58.2\",\n    \"@tailwindcss/postcss\": \"^4.1.18\",\n    \"@tailwindcss/vite\": \"^4.2.1\",\n    \"@types/dompurify\": \"^3.0.5\",\n    \"@types/node\": \"^25.3.3\",\n    \"@vitejs/plugin-vue\": \"^6.0.4\",\n    \"dotenv\": \"^17.3.1\",\n    \"laravel-echo\": \"^2.3.0\",\n    \"laravel-vite-plugin\": \"^2.1.0\",\n    \"prettier\": \"^3.9.6\",\n    \"pusher-js\": \"^8.4.0\",\n    \"sass\": \"^1.97.3\",\n    \"tailwindcss\": \"^4.1.13\",\n    \"vite\": \"^7.3.1\",\n    \"vite-plugin-mkcert\": \"^1.17.9\"\n  },\n  \"name\": \"nexopos\",\n  \"dependencies\": {\n    \"@ckeditor/ckeditor5-vue\": \"^5.1.0\",\n    \"@dicebear/avataaars\": \"^9.3.1\",\n    \"@dicebear/core\": \"^9.4.1\",\n    \"@wordpress/hooks\": \"^4.38.0\",\n    \"chart.js\": \"^4.5.1\",\n    \"ckeditor5\": \"^47.6.0\",\n    \"currency.js\": \"^2.0.4\",\n    \"dompurify\": \"^3.3.1\",\n    \"driver.js\": \"^1.8.0\",\n    \"lodash\": \"^4.17.23\",\n    \"mathjs\": \"^15.2.0\",\n    \"moment\": \"^2.30.1\",\n    \"numeral\": \"^2.0.6\",\n    \"qrcode\": \"^1.5.4\",\n    \"qrcode-vue\": \"^1.2.0\",\n    \"rxjs\": \"^7.8.1\",\n    \"socket.io-client\": \"^4.8.3\",\n    \"sortablejs\": \"^1.15.3\",\n    \"vue\": \"^3.5.28\",\n    \"vue-chartjs\": \"^5.3.3\",\n    \"vue-router\": \"^4.4.3\",\n    \"vuedraggable\": \"^4.1.0\"\n  }\n}\n",
+      "tail": "-mkcert\": \"^1.17.9\"\n  },\n  \"name\": \"nexopos\",\n  \"dependencies\": {\n    \"@ckeditor/ckeditor5-vue\": \"^5.1.0\",\n    \"@dicebear/avataaars\": \"^9.3.1\",\n    \"@dicebear/core\": \"^9.4.1\",\n    \"@wordpress/hooks\": \"^4.38.0\",\n    \"chart.js\": \"^4.5.1\",\n    \"ckeditor5\": \"^47.6.0\",\n    \"currency.js\": \"^2.0.4\",\n    \"dompurify\": \"^3.3.1\",\n    \"driver.js\": \"^1.8.0\",\n    \"lodash\": \"^4.17.23\",\n    \"mathjs\": \"^15.2.0\",\n    \"moment\": \"^2.30.1\",\n    \"numeral\": \"^2.0.6\",\n    \"qrcode\": \"^1.5.4\",\n    \"qrcode-vue\": \"^1.2.0\",\n    \"rxjs\": \"^7.8.1\",\n    \"socket.io-client\": \"^4.8.3\",\n    \"sortablejs\": \"^1.15.3\",\n    \"vue\": \"^3.5.28\",\n    \"vue-chartjs\": \"^5.3.3\",\n    \"vue-router\": \"^4.4.3\",\n    \"vuedraggable\": \"^4.1.0\"\n  }\n}\n",
+      "source_url": "https://github.com/Blair2004/NexoPOS/blob/6061a93cf2d3fa0e0fb2896873315485fccc4ba1/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/Blair2004/NexoPOS",
+    "commit": "https://github.com/Blair2004/NexoPOS/commit/6061a93cf2d3fa0e0fb2896873315485fccc4ba1"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0477",
+        "repo": "Blair2004/NexoPOS",
+        "url": "https://github.com/blair2004/nexopos",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

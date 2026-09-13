@@ -1,0 +1,79 @@
+{
+  "audit_id": "R091",
+  "full_name": "IHE/ITI.BasicAudit",
+  "html_url": "https://github.com/IHE/ITI.BasicAudit",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "The Basic Audit Log Patterns (BALP) Implementation Guide is a Content Profile that defines some basic and reusable AuditEvent patterns. This includes basic audit log profiles for FHIR RESTful operations to be used when there is not a more specific audit event defined. A focus is enabling Privacy centric AuditEvent logs.",
+  "stargazers_count": 4,
+  "forks_count": 4,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-11-03T18:55:27Z",
+  "license": {
+    "key": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://api.github.com/licenses/cc-by-4.0",
+    "node_id": "MDc6TGljZW5zZTI1"
+  },
+  "topics": [
+    "iti",
+    "privacy",
+    "security"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=FHIR+AuditEvent+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "09fe729351676ffe440f7b522d902eac2ea2b95e",
+  "last_commit": "2025-11-03T12:55:22-06:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 6,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "_build.bat",
+    "_build.sh",
+    "_updatePublisher.bat",
+    "_updatePublisher.sh",
+    "ig.ini",
+    "publication-request.json",
+    "sushi-config.yaml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "71e620d40f0d7aa8d78bb236b2301ad8c23be2e15528f40064fa7e9e14f7f4a0",
+    "characters": 1376,
+    "excerpt": "<!--badges-->\n### IG Status\n\n![issues](https://img.shields.io/github/issues/IHE/ITI.BasicAudit)\n\n<!--/badges-->\n\n### Implementation Guide for basic AuditEvent \n\nThis Implementation Guide provides AuditEvent profiles and examples for some common and reusable patterns. This Implementation Guide depends on IHE-ATNA infrastructure for logging and providing access to the Audit Record Repository. \n* logging of RESTful interactions. \n  * Create / Read / Update / Delete / Search\n* logging of A known Disclosure (e.g. USA Accounting of Disclosures)\n* Additional details to be recorded when grouped with IUA or XUA\n* some communities would like more comprehensive data in the AuditEvent than the minimal (identifier centric)\n* some communities would like to record specific Query/Search types with full search results in the auditEvent\n* a major contribution will be a huge number of examples that align with these guidelines. \n* an auditEvent pattern for an Authorization Service Decision\n* Now a proper Content Profile\n\ncontinuous build http://build.fhir.org/ig/IHE/ITI.BasicAudit/branches/main/index.html\n\nreleased https://profiles.ihe.net/ITI/BALP\n\n### Platform Implementations of BALP\n\n- HAPI FHIR Server - https://hapifhir.io/hapi-fhir/docs/security/balp_interceptor.html \n- Firefly FHIR Server - https://docs.fire.ly/projects/Firely-Server/en/latest/security/auditing.html \n",
+    "tail": "",
+    "source_url": "https://github.com/IHE/ITI.BasicAudit/blob/09fe729351676ffe440f7b522d902eac2ea2b95e/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+    "characters": 18652,
+    "excerpt": "Attribution 4.0 International\n\n=======================================================================\n\nCreative Commons Corporation (\"Creative Commons\") is not a law firm and\ndoes not provide legal services or legal advice. Distribution of\nCreative Commons public licenses does not create a lawyer-client or\nother relationship. Creative Commons makes its licenses and related\ninformation available on an \"as-is\" basis. Creative Commons gives no\nwarranties regarding its licenses, any material licensed under their\nterms and conditions, or any related information. Creative Commons\ndisclaims all liability for damages resulting from their use to the\nfullest extent possible.\n\nUsing Creative Commons Public Licenses\n\nCreative Commons public licenses provide a standard set of terms and\nconditions that creators and other rights holders may use to share\noriginal works of authorship and other material subject to copyright\nand certain other rights specified in the public license below. The\nfollowing considerations are for informational purposes only, are not\nexhaustive, and do not form part of our licenses.\n\n     Considerations for licensors: Our public licenses are\n     intended for use by those authorized to give the public\n     permission to use material in ways otherwise restricted by\n     copyright and certain other rights. Our licenses are\n     irrevocable. Licensors should read and understand the terms\n     and conditions of the license they choose before applying it.\n     Licensors should also secure all rights necessary before\n     applying our licenses so that the public can reuse the\n     material as expected. Licensors should clearly mark any\n     material not subject to the license. This includes other CC-\n     licensed material, or material used under an exception or\n     limitation to copyright. More considerations for licensors:\n    wiki.creativecommons.org/Considerations_for_licensors\n\n     Considerations for the public: By using one of our public\n     licenses, a licensor grants the public permission to use the\n     licensed material under specified terms and conditions. If\n     the licensor's permission is not necessary for any reason--for\n     example, because of any applicable exception or limitation to\n     copyright--then that use is not regulated by the license. Our\n     licenses grant only permissions under copyright and certain\n     other rights that a licensor has authority to grant. Use of\n     the licensed material may still be restricted for other\n     reasons, including because others have copyright or other\n     rights in the material. A licensor may make special requests,\n     such as asking that all changes be marked or described.\n     Although not required by our licenses, you are encouraged to\n     respect those requests where reasonable. More considerations\n     for the public:\n    wiki.creativecommons.org/Considerations_for_licensees\n\n=======================================================================\n\nCreative Commons A",
+    "tail": "pose of indicating that\nmaterial is shared under a Creative Commons public license or as\notherwise permitted by the Creative Commons policies published at\ncreativecommons.org/policies, Creative Commons does not authorize the\nuse of the trademark \"Creative Commons\" or any other trademark or logo\nof Creative Commons without its prior written consent including,\nwithout limitation, in connection with any unauthorized modifications\nto any of its public licenses or any other arrangements,\nunderstandings, or agreements concerning use of licensed material. For\nthe avoidance of doubt, this paragraph does not form part of the\npublic licenses.\n\nCreative Commons may be contacted at creativecommons.org.\n",
+    "source_url": "https://github.com/IHE/ITI.BasicAudit/blob/09fe729351676ffe440f7b522d902eac2ea2b95e/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/IHE/ITI.BasicAudit",
+    "commit": "https://github.com/IHE/ITI.BasicAudit/commit/09fe729351676ffe440f7b522d902eac2ea2b95e"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

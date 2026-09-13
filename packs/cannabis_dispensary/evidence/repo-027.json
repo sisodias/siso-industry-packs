@@ -1,0 +1,99 @@
+{
+  "audit_id": "R027",
+  "full_name": "cannlytics/cannlytics",
+  "html_url": "https://github.com/cannlytics/cannlytics",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "🔥 Cannlytics = cannabis + analytics. Data pipelines, user interfaces, and the best statistics in the game. Made with ❤️",
+  "stargazers_count": 82,
+  "forks_count": 20,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-10-27T04:10:05Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "cannabis",
+    "cannabis-api",
+    "cannabis-app",
+    "cannabis-data",
+    "cannabis-scripts",
+    "cannabis-strains",
+    "cannabis-variety",
+    "cannabisapp",
+    "data-mining",
+    "data-science",
+    "django",
+    "firebase",
+    "machine-learning",
+    "metrc",
+    "nlp",
+    "python",
+    "strain-data",
+    "terpene-profile",
+    "terpenes"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Acannlytics&sort=stars&order=desc&per_page=30&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "3dc831a977e04dfd2ac25a16d4e3082648d7c354",
+  "last_commit": "2025-10-26T21:10:05-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 5,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "requirements.txt",
+    "setup.py"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "c12975a4f1808f65956192c77a67886007fd0ac950690b013c30b56425208f50",
+    "characters": 4293,
+    "excerpt": "# 🔥Cannlytics\n\n[Cannlytics](https://cannlytics.com) is a set of tools to wrangle, augment, archive, and analyze cannabis data. From seed to sale to the effects, Cannlytics can help you access, organize, analyze, and generally benefit from available cannabis data. You are welcome to use any and all of the tools that you find useful.\n\n## Installation <a name=\"installation\"></a>\n\nYou can install the `cannlytics` Python package from [PyPI](https://pypi.org/project/cannlytics/).\n\n```shell\npip install cannlytics\n```\n\nYou can clone the repository to get your hands on the Cannlytics source code.\n\n```shell\ngit clone https://github.com/cannlytics/cannlytics.git\n```\n\n## Data <a name=\"data\"></a>\n\nThe `cannlytics.data` module is a toolbox for accessing, collecting, cleaning, augmenting, standardizing, saving, and analyzing cannabis data. See [the `cannlytics.data` documentation](./data/readme.md) for nifty tools to get, standardize, and archive your cannabis data.\n\n### COAs <a name=\"coas\"></a>\n\nCertificates of analysis (COAs) are abundant for cultivators, processors, retailers, and consumers too, but the data is often locked away. Rich, valuable laboratory data so close, yet so far away! `CoADoc` puts these vital data points in your hands by parsing PDFs and URLs, finding **all the data**, standardizing the data, and cleanly returning the data to you. You can read more about using CoADoc in [the `cannlytics.data.coas` documentation](./data/coas/readme.md).\n\n## Metrc <a name=\"metrc\"></a>\n\nYou can use the `cannlytics.metrc` module to securely interface with the Metrc API and perform all operations needed for compliance. Simply plug in your vendor and user API keys, specify your state of operations, and you're off to the races.\n\n```py\nfrom cannlytics import metrc\n\n# Initialize a Metrc API client.\ntrack = metrc.authorize(\n    'your-vendor-api-key',\n    'your-user-api-key',\n    primary_license='your-user-license-number',\n    state='ok',\n)\n```\n\nProducer / processor workflow:\n\n```py\n# Get a plant by it's ID.\nplant = track.get_plants(uid='123')\n\n# Change the growth phase from vegetative to flowering.\nplant.flower(tag='your-plant-tag')\n\n# Move the flowering plant to a new room.\nplant.move(location_name='The Flower Room')\n\n# Manicure useable cannabis from the flowering plant.\nplant.manicure(harvest_name='Old-Time Moonshine', weight=4.20)\n\n# Harvest the flowering plant.\nplant.harvest(harvest_name='Old-Time Moonshine', weight=420)\n```\n\nLab workflow:\n\n```py\n# Post lab results.\ntrack.post_lab_results([{...}, {...}])\n\n# Get a tested package.\ntest_package = track.get_packages(label='abc')\n\n# Get the tested package's lab result.\nlab_results = track.get_lab_results(uid=test_package.id)\n```\n\nRetail workflow:\n\n```py\n# Get a retail package.\npackage = track.get_packages(label='abc')\n\n# Create a sales receipts.\ntrack.create_receipts([{...}, {...}])\n\n# Get recent receipts.\nsales = track.get_receipts(action='active', start='2021-04-20')\n\n# Update the sales receipt.\nsale = track.get_receipts(uid='420')\nsale.total_price = 25\nsale.update()\n```\n\nSee [the `cannlytics.metrc` documentation](./cannlytics/metrc/readme.md) for more information and examples on how you can interface with the Metrc API.\n\n\n## License\n\n```\nCopyright (c) 2020-2025 Cannlytics\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/cannlytics/cannlytics/blob/3dc831a977e04dfd2ac25a16d4e3082648d7c354/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "aa9e8242c19c1ea118404425aca810aa8a3f9817d8de11867b1f82e6c15de808",
+    "characters": 1059,
+    "excerpt": "Copyright (c) 2020-2025 Cannlytics\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "tail": "tware, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "source_url": "https://github.com/cannlytics/cannlytics/blob/3dc831a977e04dfd2ac25a16d4e3082648d7c354/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "3f1a6afc927bf0600c89aaaa2293ff1a3f42e97d6e6f5118a4b7a2713bd5de4a",
+      "characters": 406,
+      "excerpt": "# Python Requirements | Cannlytics\n# Created 3/14/2022\n# Updated: 1/22/2024\nanthropic\nbeautifulsoup4\ndatasets\nfirebase-admin\nfredapi\ngoogle-cloud-secret-manager\ngoogle-cloud-firestore\ngooglemaps\nmatplotlib\nnumpy\nopenai\nopenpyxl\nopencv-python\npandas\npdfplumber\nPillow\npyarrow\npypdf\npytesseract\npython-dateutil\npython-dotenv\npyzbar\nscikit-image\nscikit-learn\nselenium\nstatsmodels\nWand\nulid-py\nxxhash\nzipcodes\n",
+      "tail": "# Python Requirements | Cannlytics\n# Created 3/14/2022\n# Updated: 1/22/2024\nanthropic\nbeautifulsoup4\ndatasets\nfirebase-admin\nfredapi\ngoogle-cloud-secret-manager\ngoogle-cloud-firestore\ngooglemaps\nmatplotlib\nnumpy\nopenai\nopenpyxl\nopencv-python\npandas\npdfplumber\nPillow\npyarrow\npypdf\npytesseract\npython-dateutil\npython-dotenv\npyzbar\nscikit-image\nscikit-learn\nselenium\nstatsmodels\nWand\nulid-py\nxxhash\nzipcodes\n",
+      "source_url": "https://github.com/cannlytics/cannlytics/blob/3dc831a977e04dfd2ac25a16d4e3082648d7c354/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/cannlytics/cannlytics",
+    "commit": "https://github.com/cannlytics/cannlytics/commit/3dc831a977e04dfd2ac25a16d4e3082648d7c354"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

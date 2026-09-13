@@ -1,0 +1,93 @@
+{
+  "audit_id": "R038",
+  "full_name": "Daniel-cultivera/wcia-data-exchange",
+  "html_url": "https://github.com/Daniel-cultivera/wcia-data-exchange",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "WCIA Data Exchange solves critical data interoperability challenges in the cannabis industry by replacing manual, error-prone JSON file exchange processes with secure, automated API-based data transfers.",
+  "stargazers_count": 0,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-08-22T21:29:09Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=WCIA+cannabis+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3",
+  "last_commit": "2025-08-22T17:28:52-04:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".env.example",
+    ".gitignore",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "SPECIFICATION.md",
+    "docker-compose.yml",
+    "package.json",
+    "server.js",
+    "setup-wizard.js"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "4ab35f8f464baca10b5827da1410d3ce1929a616d01516633976748297409d3c",
+    "characters": 13080,
+    "excerpt": "# WCIA Data Exchange\n\n🌿 **Open-source Node.js HTTP API server for cannabis industry data interoperability**\n\n## Introduction\n\nWCIA Data Exchange solves critical data interoperability challenges in the cannabis industry by replacing manual, error-prone JSON file exchange processes with secure, automated API-based data transfers.\n\n### The Problem with Current Manual Processes\n\nThe current method of JSON file exchange in the cannabis industry is **tedious and prone to data loss** with multiple points of failure:\n\n1. **Manual File Distribution**: While WCIA documents are generated automatically by systems, licensees must manually distribute these files to intended recipients through email attachments or shared download links\n2. **Email/URL Sharing**: Files are shared via email attachments or download URLs, creating security vulnerabilities and delivery failures\n3. **Multiple Failure Points**: Each step in the manual distribution process introduces potential for data loss, corruption, or delivery to wrong recipients\n4. **No Central Authority**: Without a centralized system for license custody verification, protecting customer data becomes a significant risk\n5. **Verification Challenges**: Integrators struggle to verify license custody at the time of transfer\n\n### The WCIA Data Exchange Solution\n\nWCIA Data Exchange addresses these challenges through a **decentralized yet standardized approach**:\n\n**How It Works:**\n\n**For Integrators (Participation Requirements):**\n1. **Each integrator that wishes to participate** must host or implement the WCIA Data Exchange specification - using this Node.js implementation or integrating the specification into their existing systems\n2. **Bilateral API Key Exchange**: Integrators create API keys for ALL other integrators they wish to exchange data with\n3. **Private Key Sharing**: Each integrator privately shares their API keys and host addresses with their partner integrators\n4. **No Central Directory Required**: Integrators don't need to know which integrator serves which licensee\n\n**For Data Exchange:**\n1. **Licensee-Driven Selection**: The integrator provides their licensees with options to push transfer data to other integrators, but the **licensee chooses** where to send the data\n2. **Optional Association Building**: Integrators can optionally create associations between receivers and integrators for future convenience, but this is not required\n3. **Secure Data Push**: Instead of sending emails, licensees push transfer schemas directly to the chosen integrator via API\n4. **License Custody Verification**: The receiving integrator validates that the receiver license in the WCIA document is under their custody before importing data\n5. **Automated Import**: Upon successful validation, data is automatically imported into the licensee's system or presented as an import option\n6. **Optional Acknowledgment**: Receivers can send ACK responses back to the sender's WCIA Data Exchange host for confirmation\n\n**Key Benefits:**\n- ✅ **No Central Directory Required**: Integrators don't need to maintain databases of which licensees use which integrators\n- ✅ **Licensee-Controlled Routing**: Licensees choose where their data goes, eliminating integrator guesswork\n- ✅ **Eliminates email-based file sharing** and associated security risks\n- ✅ **Reduces data loss** through automated, validated transfers\n- ✅ **Maintains decentralization** while ensuring standardization\n- ✅ **Preserves license custody control** at the integrator level\n- ✅ **Provides audit trails** for compliance and troubleshooting\n- ✅ **Enables real-time data exchange** between cannabis businesses\n\nWCIA Data Exchange enables cannabis tracking systems to exchange transfer manifests and lab results directly via secure API calls, replacing manual JSON export/import processes with automated, reliable data transfers.\n\n## Features\n\n- ✅ **HTTP/HTTPS server** with SSL support\n- 🔐 **API key authentication** using Bearer tokens\n- 📦 **Transfer manifest handling** with organized file storage\n- 🧪 **Lab results processing** with validation\n- ⚠️ **Custody gap notifications** for compliance issues\n- 🏥 **Health check endpoints** for monitoring\n- 🐳 **Docker support** for easy deployment\n- 🎯 **Rate limiting** and security hardening\n- 📝 **Comprehensive audit logging**\n\n## Quick Start\n\n### 1. Installation\n\n```bash\ngit clone https://github.com/cultivera/wcia-data-exchange.git\ncd wcia-data-exchange\nnpm install\n```\n\n### 2. Setup\n\nRun the interactive setup wizard:\n\n```bash\nnpm run setup\n```\n\nThis will guide you through:\n- Server configuration (port, host)\n- Data storage path setup\n- SSL certificate configuration\n- API key generation\n\n### 3. Start the Server\n\n```bash\nnpm start\n```\n\n## API Endpoints\n\n### Health Checks\n\n- `GET /ping` - Basic connectivity test\n- `GET /health` - Public health status\n- `GET /api/v1/health` - Authenticated health check with detailed info\n\n### Data Exchange\n\n- `POST /api/v1/transfers/manifest` - Submit cannabis transfer manifest (JSON body)\n- `POST /api/v1/transfers/manifest-url` - Submit cannabis transfer manifest (URL reference)\n- `POST /api/v1/lab-results` - Submit lab testing results (JSON body)\n- `POST /api/v1/lab-results-url` - Submit lab testing results (URL reference)\n- `POST /api/v1/compliance/custody-gap` - Submit custody gap notification for missing CCRS items\n- `POST /api/v1/ack` - Send acknowledgment of successful/failed document import\n\nAll data endpoints require authentication via Bearer token.\n\n**URL-Based Submission**: For large documents, submit a publicly accessible URL instead of the JSON payload. The server will fetch and validate the document from the provided URL.\n\n## Authentication\n\nInclude your API key in the Authorization header:\n\n```bash\ncurl -H \"Authorization: Bearer your-api-key-here\" \\\n     -H \"Content-Type: application/json\" \\\n     -X POST \\\n     http://localhost:3000/api/v1/transfers/manifest \\\n     -d @examples/transfer-manifest.json\n```\n\n## File Organization\n\nData is automatically organized using WCIA standard schemas with integrator identification:\n\n```\ndata/\n├── transfers/\n│   └── {date}/\n│       └── 20240101_143022_sender-integrator_transfer_0001_wcia.json\n├── lab-results/\n│   └── {date}/\n│       └── 20240101_143022_sender-integrator_lab_result_0001_wcia.json\n├── custody-gaps/\n│   └── {date}/\n│       └── gap-{messageId}.json\n├── acks/\n│   └── {date}/\n│       └── 20240101_153000_receiver-integrator_ack_0001_wcia.json\n└── logs/\n    └── {date}.log\n```\n\n**File Naming Convention:**\n`yyyyMMDD_HHMMSS_<sender_integrator_name>_<data_type>_<sequence>_wcia.json`\n\n- **Date/Time**: Precise timestamp of receipt\n- **Sender Integrator**: Name from API key mapping for traceability\n- **Data Type**: \"transfer\", \"lab_result\", or \"ack\"\n- **Sequence**: Random 4-digit identifier for uniqueness\n- **WCIA Extension**: Standard cannabis industry file extension\n\n**Schema Compliance:**\n- **Transfer Manifests**: [WCIA v2.1.0 Transfer Data Schema](https://github.com/conflabs/wcia-transfer-data-schema/tree/main/v2.1.0)\n- **Lab Results**: [WCIA v2.2.0 Lab Result Schema](https://github.com/conflabs/wcia-lab-result-schema/tree/main/v2.2.0)\n\n**Enhanced Data Fields:**\nEach saved file includes additional metadata:\n- `receivedAt`: ISO timestamp of receipt\n- `receivedFrom`: API key name (sender integrator)\n- `integrator_name`: Sender integrator identifier\n- `id`: Unique UUID for this transaction\n\n## Implementation Workflow\n\n### For Integrators\n\n1. **Deploy WCIA Data Exchange**:\n   - Use this Node.js implementation or integrate the specification into your existing system\n   - Configure SSL certificates for production deployment\n   - Set up file monitoring for automated data processing\n\n2. **Establish Bilateral API Key Exchange**:\n   - Generate API keys for ALL other integrators you wish to exchange data with\n   - Share keys and host addresses privately with each partner integrator\n   - Set appropriate permissions (transfers, lab-results)\n\n3. **Configure Data Processing**:\n   - Set up file watchers to monitor incoming data files\n   - Implement license custody validation for incoming transfers\n   - Create import workflows for your licensees\n\n4. **Provide Licensee Options**:\n   - Create interface options for licensees to push data to other integrators\n   - **Important**: Don't maintain central directory of licensee-to-integrator mappings\n   - Optionally allow licensees to create associations for future convenience\n\n### For Licensees and Labs\n\n1. **Choose Destination Integrator**:\n   - **You decide** which integrator to send your data to (not your integrator)\n   - Work with your integrator to identify available destination options\n   - No need to manually research integrator-licensee relationships\n\n2. **Submit Data via Your Integrator**:\n   - Use your integrator's interface to select destination integrator\n   - Create WCIA-compliant transfer manifests or lab results\n   - Data is pushed directly to chosen integrator's API endpoint\n   - Receive confirmation and t",
+    "tail": "",
+    "source_url": "https://github.com/Daniel-cultivera/wcia-data-exchange/blob/74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "e46b1cb89e91f2d21826aa5df2b0d8f288f15bc5ea10fdfd4fbb192aa03aa22d",
+    "characters": 1073,
+    "excerpt": "MIT License\n\nCopyright (c) 2025 Daniel-cultivera\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/Daniel-cultivera/wcia-data-exchange/blob/74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "docker-compose.yml",
+      "sha256": "047e1106bd36269b99fc2108ec48093eef00b6cee3f1c63ffcc0252bbcdddaf8",
+      "characters": 922,
+      "excerpt": "version: '3.8'\n\nservices:\n  wcia-data-exchange:\n    build: .\n    ports:\n      - \"3000:3000\"\n    volumes:\n      - ./data:/app/data\n      - ./config.json:/app/config.json:ro\n      - ./api-keys.json:/app/api-keys.json:ro\n    environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n    healthcheck:\n      test: [\"CMD\", \"wget\", \"--no-verbose\", \"--tries=1\", \"--spider\", \"http://localhost:3000/ping\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3\n      start_period: 40s\n    networks:\n      - wcia-network\n\n  # Optional: Add SSL termination proxy\n  nginx:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./nginx.conf:/etc/nginx/nginx.conf:ro\n      - ./ssl:/etc/nginx/ssl:ro\n    depends_on:\n      - wcia-data-exchange\n    networks:\n      - wcia-network\n    profiles:\n      - ssl\n\nnetworks:\n  wcia-network:\n    driver: bridge\n\nvolumes:\n  wcia-data:\n    driver: local",
+      "tail": "environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n    healthcheck:\n      test: [\"CMD\", \"wget\", \"--no-verbose\", \"--tries=1\", \"--spider\", \"http://localhost:3000/ping\"]\n      interval: 30s\n      timeout: 10s\n      retries: 3\n      start_period: 40s\n    networks:\n      - wcia-network\n\n  # Optional: Add SSL termination proxy\n  nginx:\n    image: nginx:alpine\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./nginx.conf:/etc/nginx/nginx.conf:ro\n      - ./ssl:/etc/nginx/ssl:ro\n    depends_on:\n      - wcia-data-exchange\n    networks:\n      - wcia-network\n    profiles:\n      - ssl\n\nnetworks:\n  wcia-network:\n    driver: bridge\n\nvolumes:\n  wcia-data:\n    driver: local",
+      "source_url": "https://github.com/Daniel-cultivera/wcia-data-exchange/blob/74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3/docker-compose.yml"
+    },
+    {
+      "path": "package.json",
+      "sha256": "a1045ca1137d0b6f1de2ff5b2ca8c7625667d72620beac21e904a036abdbe6a5",
+      "characters": 1246,
+      "excerpt": "{\n  \"name\": \"wcia-data-exchange\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Open-source Node.js HTTP API server for cannabis industry data interoperability\",\n  \"main\": \"server.js\",\n  \"scripts\": {\n    \"start\": \"node server.js\",\n    \"setup\": \"node setup-wizard.js\",\n    \"dev\": \"node server.js\",\n    \"test-connectivity\": \"bash tools/test-connectivity.sh\",\n    \"generate-key\": \"node tools/generate-api-key.js\",\n    \"validate\": \"node tools/validate-json.js\",\n    \"submit\": \"node tools/submit-data.js\",\n    \"docker:build\": \"docker build -t wcia-data-exchange .\",\n    \"docker:run\": \"docker run -p 3000:3000 -v ./data:/app/data wcia-data-exchange\",\n    \"docker:up\": \"docker-compose up -d\",\n    \"docker:down\": \"docker-compose down\",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [\n    \"cannabis\",\n    \"api\",\n    \"data-exchange\",\n    \"interoperability\",\n    \"tracking\",\n    \"manifest\",\n    \"lab-results\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"express\": \"^4.18.2\",\n    \"helmet\": \"^7.1.0\",\n    \"express-rate-limit\": \"^7.1.5\",\n    \"uuid\": \"^9.0.1\"\n  },\n  \"engines\": {\n    \"node\": \">=16.0.0\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/cultivera/wcia-data-exchange.git\"\n  }\n}",
+      "tail": "ange .\",\n    \"docker:run\": \"docker run -p 3000:3000 -v ./data:/app/data wcia-data-exchange\",\n    \"docker:up\": \"docker-compose up -d\",\n    \"docker:down\": \"docker-compose down\",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [\n    \"cannabis\",\n    \"api\",\n    \"data-exchange\",\n    \"interoperability\",\n    \"tracking\",\n    \"manifest\",\n    \"lab-results\"\n  ],\n  \"author\": \"\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"express\": \"^4.18.2\",\n    \"helmet\": \"^7.1.0\",\n    \"express-rate-limit\": \"^7.1.5\",\n    \"uuid\": \"^9.0.1\"\n  },\n  \"engines\": {\n    \"node\": \">=16.0.0\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/cultivera/wcia-data-exchange.git\"\n  }\n}",
+      "source_url": "https://github.com/Daniel-cultivera/wcia-data-exchange/blob/74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/Daniel-cultivera/wcia-data-exchange",
+    "commit": "https://github.com/Daniel-cultivera/wcia-data-exchange/commit/74fd9d278c3e6fbaa446bc4edc3ab060b8a2c5c3"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

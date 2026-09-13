@@ -1,0 +1,129 @@
+{
+  "audit_id": "R099",
+  "full_name": "DIGI-UW/OpenELIS-Global-2",
+  "html_url": "https://github.com/DIGI-UW/OpenELIS-Global-2",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "OpenELIS Global — open-source Laboratory Information System (LIS/LIMS) for clinical and public-health labs in 25+ countries. Java/Spring + React (Carbon), FHIR R4 native, Docker.",
+  "stargazers_count": 253,
+  "forks_count": 624,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-13T07:19:40Z",
+  "license": {
+    "key": "mpl-2.0",
+    "name": "Mozilla Public License 2.0",
+    "spdx_id": "MPL-2.0",
+    "url": "https://api.github.com/licenses/mpl-2.0",
+    "node_id": "MDc6TGljZW5zZTE0"
+  },
+  "topics": [
+    "carbon-design-system",
+    "clinical-laboratory",
+    "digital-public-goods",
+    "fhir",
+    "global-health",
+    "health-informatics",
+    "hl7",
+    "java",
+    "laboratory-information-system",
+    "lims",
+    "lis",
+    "react",
+    "spring"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Alims&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "e57a53399c2134fe3ff58009119cc05906c61e5e",
+  "last_commit": "2026-09-12T22:53:11Z",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 11,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".env.example",
+    ".gitignore",
+    ".gitmodules",
+    ".gitpod.yml",
+    ".python-version",
+    ".sdkmanrc",
+    ".trivyignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "Dockerfile.dev",
+    "IMPORT_INSTRUCTIONS.md",
+    "LICENSE",
+    "PULL_REQUEST_TIPS.md",
+    "README.md",
+    "SECURITY.md",
+    "build.docker-compose.yml",
+    "build.sh",
+    "dataexport",
+    "dev.docker-compose.yml",
+    "docker-compose.letsencrypt.yml",
+    "docker-compose.yml",
+    "mkdocs.yml",
+    "plugins",
+    "pom.xml",
+    "readthedocs.yml",
+    "requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "8f846c1399f764638c9af44d694b03ff07128cf29c5c6a71ea2b197e0b176d08",
+    "characters": 13853,
+    "excerpt": "# OpenELIS Global 2\n\nOpenELIS Global is open enterprise-level laboratory information system software\ntailored for public health laboratories. OpenELIS is used at a national scale in\na variety of settings, from small general hospital labs, all the way up to\nnational reference labs, and all sizes in between.\n\nThousands of users use OpenELIS daily to make their laboratory jobs easier by\nautomating work plans, importing results from clinical analyzers, and supporting\ncomplex workflows like pathology and cytology, reducing turnaround times, and\nincreasing result accuracy for better patient care.\n\nOpenELIS Global meets all relevant ISO and SLIPTA requirements for the\naccreditation of labs.\n\nOpenELIS adheres to the strictest of security standards to keep your data safe\nand supports fully featured, standards-based interoperability to make it easy to\nreceive lab orders and send results to other systems\n\nPlease vist our [website](http://www.openelis-global.org/) for more information.\n\nYou can find more information on how to set up OpenELIS at our\n[docs page](http://docs.openelis-global.org/)\n\n### CI Status\n\nAll badges report the status of the latest **merge to `develop`**\n(`event=push`), not per-PR runs.\n\n[![01 - Backend Status](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/backend.yml/badge.svg?branch=develop&event=push)](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/backend.yml?query=branch%3Adevelop+event%3Apush)\n![Coverage](https://raw.githubusercontent.com/DIGI-UW/OpenELIS-Global-2/refs/heads/gh-pages/badges/jacoco.svg)\n\n[![02 - Frontend Status](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/frontend.yml/badge.svg?branch=develop&event=push)](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/frontend.yml?query=branch%3Adevelop+event%3Apush)\n\n[![03 - E2E Status](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/e2e-playwright.yml/badge.svg?branch=develop&event=push)](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/e2e-playwright.yml?query=branch%3Adevelop+event%3Apush)\n\n[![Dev Images - Backend](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/publish-dev-backend-images.yml/badge.svg?branch=develop&event=push)](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/publish-dev-backend-images.yml?query=branch%3Adevelop+event%3Apush)\n\n[![Dev Images - Frontend](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/publish-dev-frontend-images.yml/badge.svg?branch=develop&event=push)](https://github.com/DIGI-UW/OpenELIS-Global-2/actions/workflows/publish-dev-frontend-images.yml?query=branch%3Adevelop+event%3Apush)\n\n### CI Architecture\n\nFor the current fork/non-fork E2E validation design, artifact contracts, and\ncheckpoint/status model, see\n[`specs/plans/ci-e2e-architecture-spec.md`](specs/plans/ci-e2e-architecture-spec.md).\n\nFor operational troubleshooting of the E2E wrapper and downstream execution, see\n[`specs/plans/e2e-ci-operator-model.md`](specs/plans/e2e-ci-operator-model.md).\n\n### Contributing\n\nWe welcome community contributions to help improve OpenELIS Global!\n\n1. Read our\n   [Dev Environment Setup Instructions](https://uwdigi.atlassian.net/wiki/spaces/OG/pages/240844805/Dev+Environment+Setup+Instructions)\n   on the project wiki.\n2. Check out our [CONTRIBUTING guide](./CONTRIBUTING.md) for detailed\n   contribution practices and [pull request tips](PULL_REQUEST_TIPS.md).\n3. To report a **security vulnerability**, follow [SECURITY.md](./SECURITY.md)\n   (private reporting — not public issues).\n\n### Requirements\n\n1. You need to install [Docker](https://docs.docker.com/engine/install/) and\n   [Docker compose](https://docs.docker.com/compose/install/)\n\n1. For development , you need to install [Java](https://openjdk.org/install/) 21\n\n### For Offline Installation Using the OpenELIS Global2 Installer\n\nDownload the OpenELIS Global Installer for each Release from the\n[Release Assets](https://github.com/DIGI-UW/OpenELIS-Global-2/releases)\n\nsee full\n[installation instructions](https://uwdigi.atlassian.net/wiki/x/EoBIDg#Downloaded-Installer-Offline-Setup)\nfor Offline Installation\n\n### For running OpenELIS Global2 in Docker with default Settings out of the Box\n\nsee [OpenELIS-Docker setup](https://github.com/DIGI-UW/openelis-docker)\n\n### For Running OpenELIS Global2 from Source Code\n\nDevelopment has one supported startup path. From the root of any clone or Git\nworktree, run:\n\n```bash\nscripts/dev-stack up\n```\n\nThe command initializes the required submodules, uses Java 21, builds the local\nWAR and analyzer components, and starts the complete OpenELIS + analyzer\nharness. Its Compose project, containers, images, networks, ports, and volumes\nare derived from the worktree path, so multiple worktrees can run concurrently.\nThe harness analyzer scenarios are created idempotently through authenticated\napplication services after login readiness; startup never seeds the database\ndirectly. Use `--no-scenarios` only when testing an intentionally empty system.\n\nUseful commands:\n\n```bash\nscripts/dev-stack status\nscripts/dev-stack url\nscripts/dev-stack playwright playwright/tests/foundational/core/example.spec.ts\nscripts/dev-stack playwright --project=setup  # verify authentication only\nscripts/dev-stack logs -f oe.openelis.org\nscripts/dev-stack down\nscripts/dev-stack down --volumes --yes  # explicit data reset\n```\n\nThe `playwright` command discovers this worktree's URL, loads credentials from\nthe existing environment or `.env`, and runs the shared authentication setup\nautomatically. To exercise a deployed environment with the identical path, set\nonly its URL:\n\n```bash\nBASE_URL=https://amr.openelis-global.org \\\n  scripts/dev-stack playwright playwright/tests/foundational/core/microbiology-whonet-export.spec.ts\n```\n\nLocal development needs no configuration: `.env` is created from `.env.example`,\nthe proxy binds random loopback ports, and `scripts/dev-stack url` prints the\nbrowser URL. Frontend source remains hot-reloaded. Re-run `scripts/dev-stack up`\nafter backend or analyzer component changes.\n\nThe published development frontend dependency image is reused when\n`package.json`, `package-lock.json`, and `frontend/Dockerfile` match `develop`;\nworktree source is still mounted for hot reload. If any of those inputs differ,\nthe command automatically builds an isolated frontend image. Set\n`DEV_STACK_BUILD_FRONTEND=true` only to force that rebuild.\n\nFor a domain-enabled development server, set a real `LETSENCRYPT_DOMAIN` and\n`LETSENCRYPT_EMAIL` in `.env`, then run the same `scripts/dev-stack up` command.\nIt binds ports 80/443, renders the named nginx hosts, and uses the existing\nLet's Encrypt HTTP-01 flow. DNS for both the primary domain and\n`bridge.<domain>` must resolve to the server. Port and bind overrides are listed\nin `.env.example` for hosts that already have an external router; those hosts\nshould terminate TLS at that router and set `DEV_STACK_TLS=self-signed` for the\nprivate upstream.\n\nDo not invoke the development Compose layers directly. CI, release, and packaged\ninstallation commands remain separate operational interfaces.\n\n#### The Instances can be accessed at\n\n| Instance     |                      URL                       | credentials (user : password) |\n| ------------ | :--------------------------------------------: | ----------------------------: |\n| Legacy UI    | `<scripts/dev-stack url>/api/OpenELIS-Global/` |            admin: adminADMIN! |\n| New React UI |       output of `scripts/dev-stack url`        |            admin: adminADMIN! |\n\n**Note:** If your browser indicates that the website is not secure after\naccessing any of these links, simply follow these steps:\n\n1. Scroll down on the warning page.\n2. Click on the \"Advanced\" button.\n3. Finally, click on \"Proceed to https://localhost\" to access the development\n   environment.\n\n#### Formating the Source code after making changes\n\n1.  After making UI changes to the [frontend](./frontend/) directory , run the\n    formatter to properly format the Frontend code\n\n        cd frontend\n        npm run format\n\n2.  After making changes to the [backend](./src/) directory, run the formatter\n    to properly format the Java code\n\n        mvn spotless:apply\n\n#### To ensure your code passes the same checks as the CI pipeline\n\n**Recommended: Use the CI check scripts** (replicates exact CI workflow):\n\n```bash\n# Run backend CI checks (formatting + build + tests)\n./scripts/run-ci-checks.sh\n\n# Run frontend CI checks (formatting + unit tests + E2E tests)\n./scripts/run-frontend-ci-checks.sh\n\n# Run both (full CI simulation)\n./scripts/run-ci-checks.sh && ./scripts/run-frontend-ci-checks.sh\n```\n\n**Options:**\n\n- `--skip-submodules`: Skip submodule build (faster, for quick checks)\n- `--skip-tests`: Skip tests (formatting only)\n- `--skip-e2e`: Skip E2E tests (frontend only)\n\n**Manual commands** (if you prefer to run steps individually):\n\n1.  Run Code Formatting Check (Backend). This command checks code formatt",
+    "tail": "",
+    "source_url": "https://github.com/DIGI-UW/OpenELIS-Global-2/blob/e57a53399c2134fe3ff58009119cc05906c61e5e/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "d8d2562a7cb68ffdfe91fc66af1ed4a8a4e272aa4ab59bea7451ba34b9aba3d4",
+    "characters": 16727,
+    "excerpt": "Mozilla Public License Version 2.0\n==================================\n\n1. Definitions\n--------------\n\n1.1. \"Contributor\"\n    means each individual or legal entity that creates, contributes to\n    the creation of, or owns Covered Software.\n\n1.2. \"Contributor Version\"\n    means the combination of the Contributions of others (if any) used\n    by a Contributor and that particular Contributor's Contribution.\n\n1.3. \"Contribution\"\n    means Covered Software of a particular Contributor.\n\n1.4. \"Covered Software\"\n    means Source Code Form to which the initial Contributor has attached\n    the notice in Exhibit A, the Executable Form of such Source Code\n    Form, and Modifications of such Source Code Form, in each case\n    including portions thereof.\n\n1.5. \"Incompatible With Secondary Licenses\"\n    means\n\n    (a) that the initial Contributor has attached the notice described\n        in Exhibit B to the Covered Software; or\n\n    (b) that the Covered Software was made available under the terms of\n        version 1.1 or earlier of the License, but not also under the\n        terms of a Secondary License.\n\n1.6. \"Executable Form\"\n    means any form of the work other than Source Code Form.\n\n1.7. \"Larger Work\"\n    means a work that combines Covered Software with other material, in\n    a separate file or files, that is not Covered Software.\n\n1.8. \"License\"\n    means this document.\n\n1.9. \"Licensable\"\n    means having the right to grant, to the maximum extent possible,\n    whether at the time of the initial grant or subsequently, any and\n    all of the rights conveyed by this License.\n\n1.10. \"Modifications\"\n    means any of the following:\n\n    (a) any file in Source Code Form that results from an addition to,\n        deletion from, or modification of the contents of Covered\n        Software; or\n\n    (b) any new file in Source Code Form that contains any Covered\n        Software.\n\n1.11. \"Patent Claims\" of a Contributor\n    means any patent claim(s), including without limitation, method,\n    process, and apparatus claims, in any patent Licensable by such\n    Contributor that would be infringed, but for the grant of the\n    License, by the making, using, selling, offering for sale, having\n    made, import, or transfer of either its Contributions or its\n    Contributor Version.\n\n1.12. \"Secondary License\"\n    means either the GNU General Public License, Version 2.0, the GNU\n    Lesser General Public License, Version 2.1, the GNU Affero General\n    Public License, Version 3.0, or any later versions of those\n    licenses.\n\n1.13. \"Source Code Form\"\n    means the form of the work preferred for making modifications.\n\n1.14. \"You\" (or \"Your\")\n    means an individual or a legal entity exercising rights under this\n    License. For legal entities, \"You\" includes any entity that\n    controls, is controlled by, or is under common control with You. For\n    purposes of this definition, \"control\" means (a) the power, direct\n    or indirect, to cause the direction or management of such en",
+    "tail": "to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at https://mozilla.org/MPL/2.0/.\n\nIf it is not possible or desirable to put the notice in a particular\nfile, then You may include the notice in a location (such as a LICENSE\nfile in a relevant directory) where a recipient would be likely to look\nfor such a notice.\n\nYou may add additional accurate notices of copyright ownership.\n\nExhibit B - \"Incompatible With Secondary Licenses\" Notice\n---------------------------------------------------------\n\n  This Source Code Form is \"Incompatible With Secondary Licenses\", as\n  defined by the Mozilla Public License, v. 2.0.\n\n",
+    "source_url": "https://github.com/DIGI-UW/OpenELIS-Global-2/blob/e57a53399c2134fe3ff58009119cc05906c61e5e/LICENSE"
+  },
+  "nested_license_paths": [
+    "src/main/webapp/static/fontawesome-free-5.13.1-web/LICENSE.txt"
+  ],
+  "dependency_documents": [
+    {
+      "path": "docker-compose.yml",
+      "sha256": "ad843ac91c817d6a8ea57aaae1124b96c5a78f8ee725d478e16e0438509d607d",
+      "characters": 5737,
+      "excerpt": "version: '3.3'\nservices:\n    certs:\n        container_name: oe-certs\n        image: itechuw/certgen:main\n        platform: linux/amd64\n        restart: \"no\"\n        environment:\n            - KEYSTORE_PW=\"kspass\"\n            - TRUSTSTORE_PW=\"tspass\"\n        networks:\n            - default\n        volumes:\n            -  key_trust-store-volume:/etc/openelis-global\n            -  keys-vol:/etc/ssl/private/\n            -  certs-vol:/etc/ssl/certs/\n\n    db.openelis.org:\n        container_name: openelisglobal-database \n        image: itechuw/openelis-global-2-database:develop\n        platform: linux/amd64\n        ports:\n            - \"15432:5432\"\n        restart: always\n        env_file:\n            - ./volume/database/database.env\n        environment:\n            - DB_PASSWORD=${OE_DB_PASSWORD:-clinlims}\n            - DB_SUPERUSER_PASSWORD=${ADMIN_PASSWORD:-superuser}\n        volumes:\n              # preserves the database between containers\n             - db-data:/var/lib/postgresql/data                \n        networks:\n            - default\n        healthcheck:\n            test: [ \"CMD\", \"pg_isready\", \"-q\", \"-d\", \"clinlims\", \"-U\", \"clinlims\" ]\n            timeout: 45s\n            interval: 10s\n            retries: 10 \n            \n    oe.openelis.org:\n        container_name: openelisglobal-webapp \n        image: itechuw/openelis-global-2:develop   \n        platform: linux/amd64 \n        depends_on:\n            - db.openelis.org\n            - certs\n        ports:\n            - \"8080:8080\"\n            - \"8443:8443\"\n        restart: always\n        networks:\n          default:\n              ipv4_address: 172.20.1.121\n\n        environment:\n            - DEFAULT_PW=adminADMIN! \n            - TZ=${TZ:-UTC}\n              # context.xml doesn't seem to be able to pick up environment variables directly, so we are passing them in as CATALINA_OPTS\n            - CATALINA_OPTS=-Ddatasource.url=jdbc:postgresql://db.openelis.org:5432/clinlims -Ddatasource.username=clinlims -Ddatasource.password=${OE_DB_PASSWORD:-clinlims} -Doe.ssl.truststorepath=${SSL_TRUSTSTORE_PATH:-/etc/openelis-global/truststore} -Doe.ssl.truststorepassword=${SSL_TRUSTSTORE_PASSWORD:-tspass} -Doe.ssl.keystorepath=${SSL_KEYSTORE_PATH:-/etc/openelis-global/keystore} -Doe.ssl.keystorepassword=${SSL_KEYSTORE_PASSWORD:-kspass}\n        volumes:\n            -  key_trust-store-volume:/etc/openelis-global\n            - ./volume/lucene:/var/lib/lucene_index\n            - ./volume/analyzer/analyzer-test-map.csv:/var/lib/openelis-global/analyzer/analyzer-test-map.csv\n            - ./volume/properties/SystemConfiguration.properties:/var/lib/openelis-global/properties/SystemConfiguration.properties\n            - ./volume/odoo/odoo-test-product-mapping.csv:/var/lib/openelis-global/odoo/odoo-test-product-mapping.csv\n            - ./configuration:/var/lib/openelis-global/configuration\n            #Runing OpenELIS with the locally compiled war file\n            #- ./target/OpenELIS-Global.war:/usr/local/tomcat/webapps/OpenELIS-Global.war\n        secrets:\n            - source: common.properties\n            \n    fhir.openelis.org:\n        container_name: external-fhir-api\n        image: itechuw/openelis-global-2-fhir:develop\n        platform: linux/amd64\n        depends_on:\n            - db.openelis.org\n            - certs\n        ports:\n            - \"8081:8080\"\n            - \"8444:8443\"\n        networks:\n            - default\n        restart: always\n        environment:\n          TZ: ${TZ:-UTC}\n          \n          JAVA_OPTS: \"-Djavax.net.ssl.trustStore=${SSL_TRUSTSTORE_PATH:-/etc/openelis-global/truststore}\n                      -Djavax.net.ssl.trustStorePassword=${SSL_TRUSTSTORE_PASSWORD:-tspass}\n                      -Djavax.net.ssl.trustStoreType=pkcs12\n                      -Djavax.net.ssl.keyStore=${SSL_KEYSTORE_PATH:-/etc/openelis-global/keystore}\n                      -Djavax.net.ssl.keyStorePassword=${SSL_KEYSTORE_PASSWORD:-kspass}\n                      -Djavax.net.ssl.keyStoreType=p",
+      "tail": "evelop\n        container_name: openelisglobal-proxy\n        platform: linux/amd64\n        ports:\n            - 80:80\n            - 443:443\n        volumes:\n            - certs-vol:/etc/nginx/certs/\n            - keys-vol:/etc/nginx/keys/\n            - ./volume/nginx/nginx-prod.conf:/etc/nginx/nginx.conf:ro\n        networks:\n            - default\n        restart: unless-stopped\n        depends_on:\n        - certs        \n            \nsecrets:\n  common.properties:\n    file:  ./volume/properties/common.properties     \n\nnetworks:\n  default:\n    driver: bridge\n    ipam:\n      config:\n        - subnet: 172.20.1.0/24  \n        \nvolumes:\n  db-data:\n  key_trust-store-volume:\n  certs-vol:\n  keys-vol:\n",
+      "source_url": "https://github.com/DIGI-UW/OpenELIS-Global-2/blob/e57a53399c2134fe3ff58009119cc05906c61e5e/docker-compose.yml"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "c624113406a1fa5ca27fe73eb58deebacb725ee8d284f4bfd9c4dbc527fec2d1",
+      "characters": 49,
+      "excerpt": "mkdocs-versioning==0.4.0\nmkdocs-material==8.1.11\n",
+      "tail": "mkdocs-versioning==0.4.0\nmkdocs-material==8.1.11\n",
+      "source_url": "https://github.com/DIGI-UW/OpenELIS-Global-2/blob/e57a53399c2134fe3ff58009119cc05906c61e5e/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/DIGI-UW/OpenELIS-Global-2",
+    "commit": "https://github.com/DIGI-UW/OpenELIS-Global-2/commit/e57a53399c2134fe3ff58009119cc05906c61e5e"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

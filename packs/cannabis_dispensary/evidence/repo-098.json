@@ -1,0 +1,103 @@
+{
+  "audit_id": "R098",
+  "full_name": "senaite/senaite.core",
+  "html_url": "https://github.com/senaite/senaite.core",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Enterprise Open Source Laboratory System (LIMS)",
+  "stargazers_count": 385,
+  "forks_count": 211,
+  "default_branch": "2.x",
+  "archived": false,
+  "pushed_at": "2026-09-10T21:05:57Z",
+  "license": {
+    "key": "gpl-2.0",
+    "name": "GNU General Public License v2.0",
+    "spdx_id": "GPL-2.0",
+    "url": "https://api.github.com/licenses/gpl-2.0",
+    "node_id": "MDc6TGljZW5zZTg="
+  },
+  "topics": [
+    "lims",
+    "plone",
+    "senaite",
+    "zodb",
+    "zope"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Alims&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "993f721e6d8494d94a4001cd3d73409504b67a49",
+  "last_commit": "2026-09-10T22:03:32+02:00",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 7,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    ".scrutinizer.yml",
+    "CHANGES.rst",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTORS.rst",
+    "Installation.md",
+    "LICENSE",
+    "MANIFEST.in",
+    "P8_UPGRADE_GUIDE.md",
+    "README.rst",
+    "RELEASE_NOTES.rst",
+    "buildout.base.cfg",
+    "buildout.cfg",
+    "ci_flake8.cfg",
+    "requirements.txt",
+    "setup.cfg",
+    "setup.py"
+  ],
+  "readme": {
+    "path": "README.rst",
+    "sha256": "f712675228a9c2866118ccdd5e3689154391ceb689f0ec72b9a592029b869bd6",
+    "characters": 3672,
+    "excerpt": ".. image:: https://raw.githubusercontent.com/senaite/senaite.core/master/static/logo_pypi.png\n   :target: https://github.com/senaite/senaite.core\n   :alt: senaite.core\n   :height: 128px\n\n*Open Source LIMS Core based on the CMS Plone*\n==============================================\n\n.. image:: https://img.shields.io/pypi/v/senaite.core.svg?style=flat-square\n    :target: https://pypi.python.org/pypi/senaite.core\n\n.. image:: https://img.shields.io/github/actions/workflow/status/senaite/senaite.core/build-and-test.yml?branch=2.x\n    :target: https://github.com/senaite/senaite.core/actions/workflows/build-and-test.yml?query=branch:2.x\n\n.. image:: https://img.shields.io/scrutinizer/g/senaite/senaite.core/2.x.svg?style=flat-square\n    :target: https://scrutinizer-ci.com/g/senaite/senaite.core/?branch=2.x\n\n.. image:: https://img.shields.io/github/issues-pr/senaite/senaite.core.svg?style=flat-square\n    :target: https://github.com/senaite/senaite.core/pulls\n\n.. image:: https://img.shields.io/github/issues/senaite/senaite.core.svg?style=flat-square\n    :target: https://github.com/senaite/senaite.core/issues\n\n.. image:: https://img.shields.io/github/contributors/senaite/senaite.core.svg?style=flat-square\n    :target: https://github.com/senaite/senaite.core/blob/master/CONTRIBUTORS.rst\n\n.. image:: https://img.shields.io/badge/Built%20with-%E2%9D%A4-red.svg\n   :target: https://github.com/senaite/senaite.core\n\n.. image:: https://img.shields.io/badge/Made%20for%20SENAITE-%E2%AC%A1-lightgrey.svg\n   :target: https://www.senaite.com\n\n\nIntroduction\n============\n\nSENAITE.CORE is an Open Source Laboratory Information Management System (LIMS)\nfor enterprise environments, especially focused to behave with excellent\nperformance and stability.\n\n\nInstallation\n============\n\nSENAITE.CORE provides the core functionalities and entities used by\n`SENAITE.LIMS <https://github.com/senaite/senaite.lims>`_.\n\nIt is intended to be imported automatically as a dependency of SENAITE.LIMS and\nother SENAITE products, and it should **not** be installed without the\nSENAITE.LIMS UI.\n\n\nContribute\n==========\n\nWe want contributing to SENAITE.CORE to be fun, enjoyable, and educational for\nanyone, and everyone. This project adheres to the `Contributor Covenant\n<https://github.com/senaite/senaite.core/blob/master/CODE_OF_CONDUCT.md>`_.\n\nBy participating, you are expected to uphold this code. Please report\nunacceptable behavior.\n\nContributions go far beyond pull requests and commits. Although we love giving\nyou the opportunity to put your stamp on SENAITE.CORE, we also are thrilled to\nreceive a variety of other contributions.\n\nPlease, read `Contributing to senaite.core document\n<https://github.com/senaite/senaite.core/blob/master/CONTRIBUTING.md>`_.\n\n\nFeedback and support\n====================\n\n* `Community site <https://community.senaite.org/>`_\n* `Gitter channel <https://gitter.im/senaite/Lobby>`_\n* `Users list <https://sourceforge.net/projects/senaite/lists/senaite-users>`_\n\n\nLicense\n=======\n\n**SENAITE.CORE** Copyright (C) 2018-2025 RIDING BYTES & NARALABS\n\nThis software, henceforth \"SENAITE.CORE\" is an add-on for the\n`Plone CMS <https://plone.org/>`_ and a derivative work of BIKA LIMS.\n\nThis program is free software; you can redistribute it and/or modify it under\nthe terms of the `GNU General Public License version 2\n<https://github.com/senaite/senaite.core/blob/master/LICENSE>`_ as published by\nthe Free Software Foundation.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\nGNU General Public License for more details.\n",
+    "tail": "",
+    "source_url": "https://github.com/senaite/senaite.core/blob/993f721e6d8494d94a4001cd3d73409504b67a49/README.rst"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "characters": 18092,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 2, June 1991\n\n Copyright (C) 1989, 1991 Free Software Foundation, Inc.,\n 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The licenses for most software are designed to take away your\nfreedom to share and change it.  By contrast, the GNU General Public\nLicense is intended to guarantee your freedom to share and change free\nsoftware--to make sure the software is free for all its users.  This\nGeneral Public License applies to most of the Free Software\nFoundation's software and to any other program whose authors commit to\nusing it.  (Some other Free Software Foundation software is covered by\nthe GNU Lesser General Public License instead.)  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthis service if you wish), that you receive source code or can get it\nif you want it, that you can change the software or use pieces of it\nin new free programs; and that you know you can do these things.\n\n  To protect your rights, we need to make restrictions that forbid\nanyone to deny you these rights or to ask you to surrender the rights.\nThese restrictions translate to certain responsibilities for you if you\ndistribute copies of the software, or if you modify it.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must give the recipients all the rights that\nyou have.  You must make sure that they, too, receive or can get the\nsource code.  And you must show them these terms so they know their\nrights.\n\n  We protect your rights with two steps: (1) copyright the software, and\n(2) offer you this license which gives you legal permission to copy,\ndistribute and/or modify the software.\n\n  Also, for each author's protection and ours, we want to make certain\nthat everyone understands that there is no warranty for this free\nsoftware.  If the software is modified by someone else and passed on, we\nwant its recipients to know that what they have is not the original, so\nthat any problems introduced by others will not reflect on the original\nauthors' reputations.\n\n  Finally, any free program is threatened constantly by software\npatents.  We wish to avoid the danger that redistributors of a free\nprogram will individually obtain patent licenses, in effect making the\nprogram proprietary.  To prevent this, we have made it clear that any\npatent must be licensed for everyone's free use or not licensed at all.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                    GNU GENERAL PUBLIC LICENSE\n   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFIC",
+    "tail": "u work as a programmer) or your\nschool, if any, to sign a \"copyright disclaimer\" for the program, if\nnecessary.  Here is a sample; alter the names:\n\n  Yoyodyne, Inc., hereby disclaims all copyright interest in the program\n  `Gnomovision' (which makes passes at compilers) written by James Hacker.\n\n  <signature of Ty Coon>, 1 April 1989\n  Ty Coon, President of Vice\n\nThis General Public License does not permit incorporating your program into\nproprietary programs.  If your program is a subroutine library, you may\nconsider it more useful to permit linking proprietary applications with the\nlibrary.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.\n",
+    "source_url": "https://github.com/senaite/senaite.core/blob/993f721e6d8494d94a4001cd3d73409504b67a49/LICENSE"
+  },
+  "nested_license_paths": [
+    "docs/license.rst",
+    "src/senaite/core/browser/static/modules/tinymce/license.md",
+    "src/senaite/core/browser/static/modules/tinymce/license.txt"
+  ],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "d234e5d1e3e573fe1750b050fbbd3f4ee939ad837497567606caa49c47aef269",
+      "characters": 45,
+      "excerpt": "setuptools==44.1.1\nzc.buildout==2.13.3\nwheel\n",
+      "tail": "setuptools==44.1.1\nzc.buildout==2.13.3\nwheel\n",
+      "source_url": "https://github.com/senaite/senaite.core/blob/993f721e6d8494d94a4001cd3d73409504b67a49/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/senaite/senaite.core",
+    "commit": "https://github.com/senaite/senaite.core/commit/993f721e6d8494d94a4001cd3d73409504b67a49"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,92 @@
+{
+  "audit_id": "R083",
+  "full_name": "siarheipashkevich/loyverse-sdk",
+  "html_url": "https://github.com/siarheipashkevich/loyverse-sdk",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "A simple to use PHP class to work with the Loyverse API.",
+  "stargazers_count": 24,
+  "forks_count": 10,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2025-12-17T06:09:57Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "loyverse",
+    "loyverse-php",
+    "loyverse-php-sdk",
+    "loyverse-sdk",
+    "loyverse-sdk-php",
+    "php",
+    "sdk-php"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=Loyverse+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=15&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "eb2359570328d47b83e2b67575a438c661d45ad0",
+  "last_commit": "2025-12-17T09:09:50+03:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".styleci.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "composer.json",
+    "phpunit.xml.dist"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "eb1cd6f6890fd66b89037a8a1dc23540d7f54e54fc476d6afe50d8d38b1e1170",
+    "characters": 7814,
+    "excerpt": "# Loyverse SDK\n\n<a href=\"https://github.com/siarheipashkevich/loyverse-sdk/actions\"><img src=\"https://github.com/siarheipashkevich/loyverse-sdk/workflows/tests/badge.svg\" alt=\"Build Status\"></a>\n<a href=\"https://packagist.org/packages/pashkevich/loyverse-sdk\"><img src=\"https://img.shields.io/packagist/dt/pashkevich/loyverse-sdk\" alt=\"Total Downloads\"></a>\n<a href=\"https://packagist.org/packages/pashkevich/loyverse-sdk\"><img src=\"https://img.shields.io/packagist/v/pashkevich/loyverse-sdk\" alt=\"Latest Stable Version\"></a>\n<a href=\"https://packagist.org/packages/pashkevich/loyverse-sdk\"><img src=\"https://img.shields.io/packagist/l/pashkevich/loyverse-sdk\" alt=\"License\"></a>\n\nTo work with this package, firstly you **must** have a [Loyverse](https://loyverse.com) account, and secondly you must\ncreate an API token through [Loyverse](https://loyverse.com) itself.\n\n- [Documentation](#documentation)\n    - [Installation](#installation)\n    - [Basic Usage](#basic-usage)\n    - [Managing Categories](#managing-categories)\n    - [Managing Customers](#managing-customers)\n    - [Managing Discounts](#managing-discounts)\n    - [Managing Employees](#managing-employees)\n    - [Managing Inventory](#managing-inventory)\n    - [Managing Items](#managing-items)\n    - [Managing Merchants](#managing-merchants)\n    - [Managing Modifiers](#managing-modifiers)\n    - [Managing Payment Types](#managing-payment-types)\n    - [Managing Pos Devices](#managing-pos-devices)\n    - [Managing Receipts](#managing-receipts)\n    - [Managing Shifts](#managing-shifts)\n    - [Managing Stores](#managing-stores)\n    - [Managing Suppliers](#managing-suppliers)\n    - [Managing Taxes](#managing-taxes)\n    - [Managing Variants](#managing-variants)\n    - [Managing Webhooks](#managing-webhooks)\n- [Testing](#testing)\n- [Contributing](#contributing)\n- [Security Vulnerabilities](#security)\n- [Credits](#credits)\n- [License](#license)\n\n## Documentation\n\n### Installation\n\nTo install the SDK in your project you need to require the package via composer:\n\n```bash\ncomposer require pashkevich/loyverse-sdk\n```\n\n### Basic Usage\n\nYou can create an instance of the SDK like so:\n\n``` php\n$loyverse = new Pashkevich\\Loyverse\\Loyverse(PERSONAL_ACCESS_TOKEN_HERE);\n```\n\nUsing the `Loyverse` instance you may perform multiple actions as well as retrieve the different resources Loyverse's\nAPI provides:\n\n``` php\n$categories = $loyverse->categories();\n```\n\nThis will give you an array of categories that you have access to, where each category is represented by an instance\nof `Pashkevich\\Loyverse\\Resources\\Category`, this instance has multiple public properties like `$id`, `$name`, `$color`\n, and others.\n\nYou may also retrieve a single category using:\n\n``` php\n$category = $loyverse->category(CATEGORY_ID_HERE);\n```\n\nOn multiple actions supported by this SDK you may need to pass some parameters, for example when creating a new\ncategory:\n\n``` php\n$category = $loyverse->createCategory([\n    'name' => 'Fruits',\n    'color' => 'ORANGE',\n]);\n```\n\nThese parameters will be used in the POST request sent to Loyverse servers, you can find more information about the\nparameters needed for each action on\n[Loyverse's official API documentation](https://developer.loyverse.com/docs).\n\nYou can also set the desired timeout value:\n\n``` php\n$loyverse->setTimeout(120)->createCategory(array $data);\n```\n\n### Managing Categories\n\n``` php\n$loyverse->categories(array $parameters);\n$loyverse->category(string $categoryId);\n$loyverse->createCategory(array $data);\n$loyverse->deleteCategory(string $categoryId);\n```\n\nOn a `Category` instance you may also call:\n\n``` php\n$category->update(array $data);\n$category->delete();\n```\n\n### Managing Customers\n\n``` php\n$loyverse->customers(array $parameters);\n$loyverse->customer(string $customerId);\n$loyverse->createCustomer(array $data);\n$loyverse->deleteCustomer(string $customerId);\n```\n\nOn a `Customer` instance you may also call:\n\n``` php\n$customer->update(array $data);\n$customer->delete();\n```\n\n### Managing Discounts\n\n``` php\n$loyverse->discounts(array $parameters);\n$loyverse->discount(string $discountId);\n$loyverse->createDiscount(array $data);\n$loyverse->deleteDiscount(string $discountId);\n```\n\nOn a `Discount` instance you may also call:\n\n``` php\n$discount->update(array $data);\n$discount->delete();\n```\n\n### Managing Employees\n\n``` php\n$loyverse->employees(array $parameters);\n$loyverse->employee(string $employeeId);\n```\n\n### Managing Inventory\n\n``` php\n$loyverse->inventory(array $parameters);\n$loyverse->updateInventory(array $data);\n```\n\n### Managing Items\n\n``` php\n$loyverse->items(array $parameters);\n$loyverse->item(string $itemId);\n$loyverse->createItem(array $data);\n$loyverse->deleteItem(string $itemId);\n```\n\nOn a `Item` instance you may also call:\n\n``` php\n$item->update(array $data);\n$item->delete();\n```\n\n### Managing Merchants\n\n``` php\n$loyverse->merchant();\n```\n\n### Managing Modifiers\n\n``` php\n$loyverse->modifiers(array $parameters);\n$loyverse->modifier(string $modifierId);\n$loyverse->createModifier(array $data);\n$loyverse->deleteModifier(string $modifierId);\n```\n\nOn a `Modifier` instance you may also call:\n\n``` php\n$modifier->update(array $data);\n$modifier->delete();\n```\n\n### Managing Payment Types\n\n``` php\n$loyverse->paymentTypes(array $parameters);\n$loyverse->paymentType(string $paymentTypeId);\n```\n\n### Managing Pos Devices\n\n``` php\n$loyverse->posDevices(array $parameters);\n$loyverse->posDevice(string $posDeviceId);\n$loyverse->createPosDevice(array $data);\n$loyverse->deletePosDevice(string $posDeviceId);\n```\n\nOn a `PosDevice` instance you may also call:\n\n``` php\n$posDevice->update(array $data);\n$posDevice->delete();\n```\n\n### Managing Receipts\n\n``` php\n$loyverse->receipts(array $parameters);\n$loyverse->receipt(string $receiptNumber);\n$loyverse->createReceipt(array $data);\n$loyverse->createReceiptRefund(string $receiptNumber, array $data);\n```\n\nOn a `Receipt` instance you may also call:\n\n``` php\n$receipt->refund(array $data);\n```\n\n### Managing Shifts\n\n``` php\n$loyverse->shifts(array $parameters);\n$loyverse->shift(string $shiftId);\n```\n\n### Managing Stores\n\n``` php\n$loyverse->stores(array $parameters);\n$loyverse->store(string $storeId);\n```\n\n### Managing Suppliers\n\n``` php\n$loyverse->suppliers(array $parameters);\n$loyverse->supplier(string $supplierId);\n$loyverse->createSupplier(array $data);\n$loyverse->deleteSupplier(string $supplierId);\n```\n\nOn a `Supplier` instance you may also call:\n\n``` php\n$supplier->update(array $data);\n$supplier->delete();\n```\n\n### Managing Taxes\n\n``` php\n$loyverse->taxes(array $parameters);\n$loyverse->tax(string $taxId);\n$loyverse->createTax(array $data);\n$loyverse->deleteTax(string $taxId);\n```\n\nOn a `Tax` instance you may also call:\n\n``` php\n$tax->update(array $data);\n$tax->delete();\n```\n\n### Managing Variants\n\n``` php\n$loyverse->variants(array $parameters);\n$loyverse->variant(string $variantId);\n$loyverse->createVariant(array $data);\n$loyverse->deleteVariant(string $variantId);\n```\n\nOn a `Variant` instance you may also call:\n\n``` php\n$variant->update(array $data);\n$variant->delete();\n```\n\n### Managing Webhooks\n\n``` php\n$loyverse->webhooks(array $parameters);\n$loyverse->webhook(string $webhookId);\n$loyverse->createWebhook(array $data);\n$loyverse->deleteWebhook(string $webhookId);\n```\n\nOn a `Webhook` instance you may also call:\n\n``` php\n$webhook->update(array $data);\n$webhook->delete();\n```\n\n### Testing\n\n``` bash\ncomposer test\n```\n\n### Contributing\n\nPlease see [CONTRIBUTING](CONTRIBUTING.md) for details.\n\n### Security\n\nIf you discover any security related issues, please email siarheipashkveich@gmail.com instead of using the issue\ntracker.\n\n### Credits\n\n- [Sergey Pashkevich](https://github.com/siarheipashkevich)\n\n## License\n\nLoyverse SDK is open-sourced software licensed under the [MIT license](LICENSE.md).\n",
+    "tail": "",
+    "source_url": "https://github.com/siarheipashkevich/loyverse-sdk/blob/eb2359570328d47b83e2b67575a438c661d45ad0/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "3c571457a8ec8d2fb6c9f72e8a069134711f3eb00097b5d5e23952f843d5adfb",
+    "characters": 1068,
+    "excerpt": "MIT License\n\nCopyright (c) Sergey Pashkevich\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "tail": "ftware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "source_url": "https://github.com/siarheipashkevich/loyverse-sdk/blob/eb2359570328d47b83e2b67575a438c661d45ad0/LICENSE.md"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "44b9fadd00aa743e1758cea8faef32658f67a1eed44c3e718f95df10edaa7504",
+      "characters": 1092,
+      "excerpt": "{\n    \"name\": \"pashkevich/loyverse-sdk\",\n    \"description\": \"A simple to use PHP class to work with the Loyverse API\",\n    \"keywords\": [\n        \"loyverse\",\n        \"loyverse-api\",\n        \"loyverse-sdk\",\n        \"loyverse-php\"\n    ],\n    \"homepage\": \"https://github.com/siarheipashkevich/loyverse-sdk\",\n    \"license\": \"MIT\",\n    \"type\": \"library\",\n    \"authors\": [\n        {\n            \"name\": \"Sergey Pashkevich\",\n            \"email\": \"siarheipashkveich@gmail.com\"\n        }\n    ],\n    \"require\": {\n        \"php\": \"^7.4|^8.0\",\n        \"ext-json\": \"*\",\n        \"guzzlehttp/guzzle\": \"^7.2\"\n    },\n    \"require-dev\": {\n        \"mockery/mockery\": \"^1.4\",\n        \"phpunit/phpunit\": \"^9.0\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"Pashkevich\\\\Loyverse\\\\\": \"src\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Pashkevich\\\\Loyverse\\\\Tests\\\\\": \"tests\"\n        }\n    },\n    \"scripts\": {\n        \"test\": \"vendor/bin/phpunit\",\n        \"test-coverage\": \"vendor/bin/phpunit --coverage-html coverage\"\n\n    },\n    \"config\": {\n        \"sort-packages\": true\n    }\n}\n",
+      "tail": "e\": \"Sergey Pashkevich\",\n            \"email\": \"siarheipashkveich@gmail.com\"\n        }\n    ],\n    \"require\": {\n        \"php\": \"^7.4|^8.0\",\n        \"ext-json\": \"*\",\n        \"guzzlehttp/guzzle\": \"^7.2\"\n    },\n    \"require-dev\": {\n        \"mockery/mockery\": \"^1.4\",\n        \"phpunit/phpunit\": \"^9.0\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"Pashkevich\\\\Loyverse\\\\\": \"src\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Pashkevich\\\\Loyverse\\\\Tests\\\\\": \"tests\"\n        }\n    },\n    \"scripts\": {\n        \"test\": \"vendor/bin/phpunit\",\n        \"test-coverage\": \"vendor/bin/phpunit --coverage-html coverage\"\n\n    },\n    \"config\": {\n        \"sort-packages\": true\n    }\n}\n",
+      "source_url": "https://github.com/siarheipashkevich/loyverse-sdk/blob/eb2359570328d47b83e2b67575a438c661d45ad0/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/siarheipashkevich/loyverse-sdk",
+    "commit": "https://github.com/siarheipashkevich/loyverse-sdk/commit/eb2359570328d47b83e2b67575a438c661d45ad0"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

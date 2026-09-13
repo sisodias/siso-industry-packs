@@ -1,0 +1,105 @@
+{
+  "audit_id": "R067",
+  "full_name": "bailabs/tailpos",
+  "html_url": "https://github.com/bailabs/tailpos",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "TailPOS  an Offline First Open Source POS for ERPNext",
+  "stargazers_count": 666,
+  "forks_count": 246,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2022-10-12T03:00:22Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "android",
+    "erpnext",
+    "mobile-app",
+    "mobx-react",
+    "offline-first",
+    "point-of-sale",
+    "pos",
+    "react",
+    "react-native"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Apoint-of-sale&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "ea4b2eb691289bd0949726e2f8a14927827eab6a",
+  "last_commit": "2020-06-17T13:21:25+08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 8,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".babelrc",
+    ".buckconfig",
+    ".eslintignore",
+    ".eslintrc",
+    ".flowconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".watchmanconfig",
+    "AUTHORS",
+    "App.js",
+    "ChangeLog.md",
+    "LICENSE",
+    "README.md",
+    "app.json",
+    "index.js",
+    "jsconfig.json",
+    "package-lock.json",
+    "package.json",
+    "showcase.gif",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "9019d319bb400b008c8e580987d34e3816db0ad506d650fae088194e915c1a68",
+    "characters": 7151,
+    "excerpt": "<div align=\"center\">\n <h2>TailPOS</h2>\n <p align=\"center\">\n  <p>TailPOS  an Offline First Open Source POS for ERPNext</p>\n  <a href='https://play.google.com/store/apps/details?id=com.tailpos&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='25%' /></a>\n </p>\n</div>\n\n### Showcase\n\n![Showcase](showcase.gif)\n\n### Features\n\n<b> o Two-way Sync to ERPNext </b>\n  Two-way syncing to an ERPNext instance for a full suite of back-office functionalities.\n\n<b> o Offline-first Approach </b>\n  Continue to make sales and keep running the business even no  internet or unstable.\n\n<b> o Mobile POS </b>\n  Uses the tablet for a lightweight setup. Built-in rear camera of the tablet can be used as a barcode scanner. Any bluetooth barcode scanner is compatible with `tailpos`\n\n<b> o Print receipts </b>\n  Print sales receipts for customers using any ESC/POS receipt printer.\n\n<b> o Multiple payment modes </b>\n  Can process credit card,mobile payments and cash.\n\n<b> o Discounts Program </b>\n  Can apply discount to an invoice or on specific items.\n\n<b> o Inventory Management </b>\n  Keep track of stock levels easily. Easy-to-use menu for item maintenance such as creating and updating item information.\n\n<b> o Sales Reports </b>\n  Can generate X and Z readings and attendant shift sales totals.\n\n### License\nThis project is released under the GPLv3 license, for more details, take a look at the LICENSE file in the source.\n\n---\n\n### Quick Start\nA quick demo of syncing the `tailpos` to a Frappe/Erpnext server\n\nhttps://docs.tailpos.com/tailpos/syncing-to-frappe-erpnext\n\n##### Login to demo server\n```\nserver: https://demo.tailerp.com\nusername: demo@example.com\npassword: @Bailabs\n```\n\n##### **Making a new item.** <br/>\n* Go To `Item` List.\n* Make a new `Item`.\n* Select your new `Item `to see its properties.\n\n![alt text](https://github.com/bailabs/tailpos/blob/master/pics/item%20created.png)\n\n* Select `Item Price` under `Pricing`.\nMake sure the `In TailPOS` checkbox is checked.\n\n![alt text](https://github.com/bailabs/tailpos/blob/master/pics/checkbox.png)\n\n* Don't forget to save your Item.\n\n##### **Setup TailPOS Sync Settings**\n* Go to `Settings` > Sync\n* Fill the following\n```\nERPNext Server: demo.tailerp.com\nUsername: demo@example.com\nPassword: @Bailabs\nDevice ID: <>\n```\n#### **Setting up device ID**\n* Go to `Device` list.\n* Create a new `Device`\n* Input the `Device Name` and `POS Profile`\n* Fill out information need in the `POS profile`\n```\nName: <>\nSeries: ACC-SINV-.YYYY.-\n\nAccounting\nWrite Off Accounting: Write Off – D\nWrite Off Cost Center: Main – D\n```\n\n![alt text](https://github.com/bailabs/tailpos/blob/master/pics/pos%20profile.png)\n\n![alt text](https://github.com/bailabs/tailpos/blob/master/pics/write%20off.png)\n\n* Select your new `Device`.\n* `Device ID` is displayed at the top-right corner near the `Save` button. <br/>\n\n![alt text](https://github.com/bailabs/tailpos/blob/master/pics/device%20name.png)\n\n##### **Syncing**\n* Once your done, save your `Sync Settings`. \n* Press `Force Sync`.\n* Once `Force Sync` is successful, go to your `Sales` tab and fill up a sample transaction.\n* Confirm the transaction by looking at your `Receipts` tab.\n* Now go back to your `Settings` > `Sync` and `Force Sync` the receipt data to the server.\n* Verify by going to `Receipts` List in ERPNext and check the receipts if they are generated.\n\n### How To Compile TailPOS in your local machine\n\nIf you are interested contributing the `tailpos`, the following guide will give you instructions in compiling the `tailpos`.\n\n\nFirst, you'll need `nodejs` and `npm`:\n\n```terminal\nsudo apt install curl\ncurl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -\nsudo apt-get install -y nodejs\nnodejs -v\nv8.4.0\n```\n\nInstall development tools to build native addons:\n```terminal\nsudo apt-get install gcc g++ make\n```\nInstall the `yarn` package manager, run:\n```terminal\ncurl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -\necho \"deb https://dl.yarnpkg.com/debian/ stable main\" | sudo tee /etc/apt/sources.list.d/yarn.list\nsudo apt-get update && sudo apt-get install yarn\n```\n\nThen you can install `react-native-cli` using `npm`\n\n```terminal\nsudo npm install -g react-native-cli\n```\n\nNow you need to install Java and Android\n\n```terminal\nsudo apt-get install default-jre\nsudo apt-get install default-jdk\n\nsudo add-apt-repository ppa:webupd8team/java\nsudo apt-get update\nsudo apt-get install oracle-java8-installer\n```\n\n* Install Android\n* Install Android SDK requirements\n\n```terminal\ncd ~\nmkdir android-sdk\ncd android-sdk\nwget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip\nsudo apt-get install unzip\nunzip sdk-tools-linux-3859397.zip\n```\n\nWe add the path of our Android SDK tools to `.bashrc` so that we have access to the Android tools.\n```\ncd ~\nnano .bashrc\n\n# Add these lines to the top of the file\nexport ANDROID_HOME=$HOME/android-sdk\nexport PATH=$PATH:$ANDROID_HOME/tools\nexport PATH=$PATH:$ANDROID_HOME/tools/bin\nexport PATH=$PATH:$ANDROID_HOME/platform-tools\n\n# CTRL+O (uppcase o) to save\n# CTRL+X to exit\n\nsource ~/.bashrc\n```\n\n```terminal\nandroid update sdk --no-ui\n# Answer 'y' to all prompts\n\nsdkmanager \"platforms;android-23\" \"build-tools;23.0.1\" \"add-ons;addon-google_apis-google-23\"\n```\n\nInstalling TailPOS\n```terminal\ncd ~\nmkdir Projects\ncd Projects\ngit clone https://github.com/bailabs/tailpos.git\ncd tailpos\nyarn\n```\n\nUpdating `react-native-camera` modules\n  * remove `buildscript` section\n\n```terminal\n  buildscript {\n  repositories {\n    jcenter()\n    maven {\n      url 'https://maven.google.com'\n    }\n  }\n\n  dependencies {\n    classpath 'com.android.tools.build:gradle:3.0.0'\n  }\n}\n```\n\n  * `compileOnly` to `provided`\n  * `implementation` to `compile`\n\n```terminal\ncd ~\nnano Projects/tailpos/node_modules/react-native-camera/android/build.gradle\n```\n\nUpdating `react-native-maps` modules\n  * `compileOnly` to `provided`\n  * `implementation` to `compile`\n\n```terminal\ncd ~\nnano Projects/tailpos/node_modules/react-native-maps/lib/android/build.gradle\n```\n\n\nUpdating `react-native-bluetooth-serial` modules\n  * remove `@Override` in line 23 (the second `@Override`)\n\n```terminal\ncd ~\nnano Projects/tailpos/node_modules/react-native-bluetooth-serial/android/src/main/java/com/rusel/RCTBluetoothSerial/RCTBluetoothSerialPackage.java\n```\n\nUpdating `react-native-device-info` with `support-v4` fix\n```\nERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:fontVariationSettings\nERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:ttcIndex\n```\nSet the following under `build.gradle` under `react-native-device-info`\n```terminal\nandroid {\n  compileSdkVersion 26\n  buildToolsVersion \"26.0.2\"\n  ...\n}\n\ndependencies {\n  ...\n  compile \"com.google.android.gms:play-services-gcm:12.0.1\"\n  compile \"com.android.support:support-v4:27.1.0\"\n}\n```\n\nUpdate `react-native-localization`\n* `implementation` to `compile`\n\nBuilding `TailPOS`\n\n```terminal\ncd ~\ncd Projects/tailpos\nreact-native run-android\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/bailabs/tailpos/blob/ea4b2eb691289bd0949726e2f8a14927827eab6a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c126478de0198a9e9fa2ab47ebab9ae53c8f0825e7365eca3a81cf5ceb8e77c3",
+    "characters": 35140,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2019 Bai Web and Mobile Lab <https://bai.ph/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, we\nstand ",
+    "tail": "ou would use an \"about box\".\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU GPL, see\n<https://www.gnu.org/licenses/>.\n\n  The GNU General Public License does not permit incorporating your program\ninto proprietary programs.  If your program is a subroutine library, you\nmay consider it more useful to permit linking proprietary applications with\nthe library.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.  But first, please read\n<https://www.gnu.org/licenses/why-not-lgpl.html>.\n",
+    "source_url": "https://github.com/bailabs/tailpos/blob/ea4b2eb691289bd0949726e2f8a14927827eab6a/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "94acb941c1ff80d72e74a62872079f9fe6ba4d77eefad4b404129aa1877c81c7",
+      "characters": 4656,
+      "excerpt": "{\n  \"name\": \"tailpos\",\n  \"version\": \"1.4.0\",\n  \"private\": true,\n  \"devDependencies\": {\n    \"babel-eslint\": \"8.1.0\",\n    \"babel-jest\": \"22.4.3\",\n    \"babel-plugin-transform-decorators\": \"^6.24.1\",\n    \"babel-plugin-transform-decorators-legacy\": \"^1.3.4\",\n    \"babel-preset-react-native-stage-0\": \"^1.0.1\",\n    \"eslint\": \"4.19.1\",\n    \"eslint-plugin-flowtype\": \"2.46.2\",\n    \"eslint-plugin-import\": \"2.11.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.2\",\n    \"eslint-plugin-prettier\": \"2.6.0\",\n    \"eslint-plugin-react\": \"7.7.0\",\n    \"eslint-plugin-react-native\": \"3.2.1\",\n    \"jest\": \"^22.4.3\",\n    \"react-test-renderer\": \"16.3.1\",\n    \"remote-redux-devtools\": \"^0.5.12\"\n  },\n  \"scripts\": {\n    \"postinstall\": \"remotedev-debugger\",\n    \"start\": \"react-native start\",\n    \"android\": \"yarn change && react-native run-android\",\n    \"ios\": \"react-native run-ios\",\n    \"jest\": \"node node_modules/jest/bin/jest.js --no-cache --maxWorkers=2\",\n    \"test\": \"yarn run prettier && eslint src/**\",\n    \"lint\": \"eslint src/**\",\n    \"fixcode\": \"eslint --fix src/**\",\n    \"prettier\": \"prettier --trailing-comma all --write \\\"src/**/*.js\\\"\",\n    \"clean\": \"rm -rf $TMPDIR/react-* && rm -rf node_modules/\",\n    \"apk\": \"cd android && ./gradlew assembleRelease && cd ..\",\n    \"change\": \"cp changes/nfc-manager-build.gradle node_modules/react-native-nfc-manager/android/build.gradle && cp changes/localization-build.gradle node_modules/react-native-localization/android/build.gradle && cp changes/deviceinfo-build.gradle node_modules/react-native-device-info/android/build.gradle && cp changes/camera-build.gradle node_modules/react-native-camera/android/build.gradle && cp changes/maps-build.gradle node_modules/react-native-maps/lib/android/build.gradle && cp changes/RCTBluetoothSerialPackage.java node_modules/react-native-bluetooth-serial/android/src/main/java/com/rusel/RCTBluetoothSerial/\"\n  },\n  \"jest\": {\n    \"preset\": \"react-native\",\n    \"transformIgnorePatterns\": [\n      \"node_modules/(?!react-native|expo|fbjs|react-navigation|pouchdb-react-native|pouchdb-adapter-asyncstorage|native-base-shoutem-theme|@shoutem/theme|@shoutem/animation|@shoutem/ui|tcomb-form-native)\"\n    ],\n    \"collectCoverageFrom\": [\n      \"!/node_modules/*\"\n    ]\n  },\n  \"dependencies\": {\n    \"accounting-js\": \"^1.1.1\",\n    \"babel-core\": \"^6.0.0\",\n    \"buffer\": \"^5.1.0\",\n    \"cryptiles\": \"^4.1.2\",\n    \"currencies-symbol\": \"^1.0.1\",\n    \"deep-extend\": \"^0.5.1\",\n    \"email-validator\": \"^2.0.3\",\n    \"es6-symbol\": \"^3.1.1\",\n    \"extend\": \"^3.0.2\",\n    \"fstream\": \"^1.0.12\",\n    \"handlebars\": \"^4.3.0\",\n    \"husky\": \"^1.0.0-rc.2\",\n    \"i\": \"^0.3.6\",\n    \"install\": \"^0.11.0\",\n    \"is-float\": \"^1.0.0\",\n    \"js-yaml\": \"^3.13.1\",\n    \"lodash\": \"^4.17.13\",\n    \"lodash.template\": \"^4.5.0\",\n    \"mem\": \"^4.0.0\",\n    \"merge\": \"^1.2.1\",\n    \"mobx\": \"^4.2.0\",\n    \"mobx-react\": \"5.0.0\",\n    \"mobx-state-tree\": \"2.0.4\",\n    \"money-currencies\": \"^2015.3.31\",\n    \"morgan\": \"^1.9.1\",\n    \"native-base\": \"^2.4.2\",\n    \"pouchdb-adapter-react-native-sqlite\": \"^1.0.3\",\n    \"pouchdb-find\": \"^6.4.3\",\n    \"pouchdb-react-native\": \"^6.4.1\",\n    \"pouchdb-upsert\": \"^2.2.0\",\n    \"prettier\": \"^1.12.1\",\n    \"randomatic\": \"^3.0.0\",\n    \"react\": \"16.3.1\",\n    \"react-native\": \"^0.55.3\",\n    \"react-native-background-job\": \"^2.2.0\",\n    \"react-native-barcode-scanner-google\": \"git+https://github.com/ekreutz/react-native-barcode-scanner-google.git#v1.3.0\",\n    \"react-native-ble-manager\": \"^6.3.3\",\n    \"react-native-bluetooth-serial\": \"^1.0.0-rc1\",\n    \"react-native-bluetooth-status\": \"^1.1.3\",\n    \"react-native-camera\": \"^1.1.4\",\n    \"react-native-confirmation-code-input\": \"^1.0.4\",\n    \"react-native-datepicker\": \"^1.7.2\",\n    \"react-native-device-info\": \"^0.21.5\",\n    \"react-native-frappe-fetch\": \"^0.9.1\",\n    \"react-native-key-event\": \"^1.0.0\",\n    \"react-native-localization\": \"^2.1.2\",\n    \"react-native-maps\": \"^0.21.0\",\n    \"react-native-modal\": \"^6.0.0\",\n    \"react-native-nfc-manager\": \"^1.2.2\",\n    \"react-native-orientation\": \"^3.1.3\",\n    \"react-na",
+      "tail": "native-orientation\": \"^3.1.3\",\n    \"react-native-searchable-dropdown\": \"^1.0.4\",\n    \"react-native-simple-dialogs\": \"^0.3.1\",\n    \"react-native-sound\": \"^0.10.9\",\n    \"react-native-splash-screen\": \"^3.0.9\",\n    \"react-native-sqlite-2\": \"^1.6.0\",\n    \"react-native-sqlite-storage\": \"^3.3.4\",\n    \"react-native-swipe-list-view\": \"^1.3.0\",\n    \"react-native-vector-icons\": \"^4.6.0\",\n    \"react-navigation\": \"^1.5.11\",\n    \"remote-redux-devtools\": \"^0.5.12\",\n    \"remotedev-rn-debugger\": \"^0.8.3\",\n    \"stringstream\": \"^0.0.6\",\n    \"tar\": \"^2.2.2\",\n    \"tiny-esc-pos\": \"^0.1.7\",\n    \"uuid\": \"^3.2.1\",\n    \"valid-url\": \"^1.0.9\"\n  },\n  \"husky\": {\n    \"hooks\": {\n      \"pre-commit\": \"yarn test\"\n    }\n  }\n}\n",
+      "source_url": "https://github.com/bailabs/tailpos/blob/ea4b2eb691289bd0949726e2f8a14927827eab6a/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/bailabs/tailpos",
+    "commit": "https://github.com/bailabs/tailpos/commit/ea4b2eb691289bd0949726e2f8a14927827eab6a"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

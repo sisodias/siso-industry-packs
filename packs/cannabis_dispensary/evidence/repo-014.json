@@ -1,0 +1,87 @@
+{
+  "audit_id": "R014",
+  "full_name": "openthc/common",
+  "html_url": "https://github.com/openthc/common",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Common Library - PHP",
+  "stargazers_count": 2,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-07-28T03:54:43Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "middleware",
+    "php"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "ce39a84aaeb221860d0025f57bfd7b3310228198",
+  "last_commit": "2026-07-28T03:54:41Z",
+  "commits_six_months_sample_count": 11,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "94444ad07eda130a9eb636f89c5b841f3a5e607094b4b50585180c49b45628a2",
+    "characters": 662,
+    "excerpt": "# Common Library\n\nThis package includes a number of common configuration files, PHP classes and functions, Slim components and Twig templates.\n\n## Lib\n\nThis directory is autoloaded, all the classes are in the **OpenTHC** namespace.\n\n\n## Slim\n\nThere are some Slim components included as well\n\n * OpenTHC\\App - a Slim App\n * OpenTHC\\Middleware\\Base\n * OpenTHC\\Middleware\\CORS\n * OpenTHC\\Middleware\\Log\n * OpenTHC\\Middleware\\RateLimit\n * OpenTHC\\Middleware\\Session\n * OpenTHC\\Controller\\Base\n * OpenTHC\\Controller\\OAuth2\n\n\n## Twig\n\nAdds the `./vendor/openthc/twig` path to the Twig loader.\nWe also provide some wrapper templates for `home.html` and `page-app.html`\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/common/blob/ce39a84aaeb221860d0025f57bfd7b3310228198/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "60e76ce68fda66b6182f6d59df21866c7f1ca898c3b8efd084d777b4c179221c",
+    "characters": 1075,
+    "excerpt": "MIT License\n\nCopyright (c) 2015-2022 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/common/blob/ce39a84aaeb221860d0025f57bfd7b3310228198/LICENSE"
+  },
+  "nested_license_paths": [
+    "lib/License.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "23a7b19e627e1e1de1addc4adac19689d2a126d3f4d7d8003d2e2d9f3df13d35",
+      "characters": 930,
+      "excerpt": "{\n\t\"name\": \"openthc/common\",\n\t\"description\": \"OpenTHC Common Library\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"files\": [\n\t\t\t\"lib/err.php\",\n\t\t\t\"lib/php.php\",\n\t\t\t\"lib/stat.php\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"php\": \">=7.3.0\",\n\t\t\"ext-curl\": \"*\",\n\t\t\"ext-date\": \"*\",\n\t\t\"ext-json\": \"*\",\n\t\t\"ext-session\": \"*\",\n\t\t\"ext-sockets\": \"*\",\n\t\t\"ext-PDO\": \"*\",\n\t\t\"docopt/docopt\": \"1.0.6\",\n\t\t\"edoceo/lowline\": \"v2024.0.309\",\n\t\t\"edoceo/radix\": \"dev-main\",\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"firebase/php-jwt\": \"6.4.0\",\n\t\t\"giggsey/libphonenumber-for-php\": \"8.13.45\",\n\t\t\"guzzlehttp/guzzle\": \"7.9.2\",\n\t\t\"league/commonmark\": \"2.8.2\",\n\t\t\"league/oauth2-client\": \"2.7.0\",\n\t\t\"slim/slim\": \"3.12.5\",\n\t\t\"swaggest/json-schema\": \"0.12.42\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.16.0\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.54\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "tail": "enTHC\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"php\": \">=7.3.0\",\n\t\t\"ext-curl\": \"*\",\n\t\t\"ext-date\": \"*\",\n\t\t\"ext-json\": \"*\",\n\t\t\"ext-session\": \"*\",\n\t\t\"ext-sockets\": \"*\",\n\t\t\"ext-PDO\": \"*\",\n\t\t\"docopt/docopt\": \"1.0.6\",\n\t\t\"edoceo/lowline\": \"v2024.0.309\",\n\t\t\"edoceo/radix\": \"dev-main\",\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"firebase/php-jwt\": \"6.4.0\",\n\t\t\"giggsey/libphonenumber-for-php\": \"8.13.45\",\n\t\t\"guzzlehttp/guzzle\": \"7.9.2\",\n\t\t\"league/commonmark\": \"2.8.2\",\n\t\t\"league/oauth2-client\": \"2.7.0\",\n\t\t\"slim/slim\": \"3.12.5\",\n\t\t\"swaggest/json-schema\": \"0.12.42\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.16.0\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.54\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/common/blob/ce39a84aaeb221860d0025f57bfd7b3310228198/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/common",
+    "commit": "https://github.com/openthc/common/commit/ce39a84aaeb221860d0025f57bfd7b3310228198"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

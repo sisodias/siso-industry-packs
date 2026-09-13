@@ -1,0 +1,128 @@
+{
+  "audit_id": "R082",
+  "full_name": "line/line-bot-sdk-php",
+  "html_url": "https://github.com/line/line-bot-sdk-php",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "LINE Messaging API SDK for PHP",
+  "stargazers_count": 734,
+  "forks_count": 645,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-08T21:48:16Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "bot",
+    "line",
+    "linebot",
+    "php",
+    "sdk"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=line-bot-sdk+in%3Aname+user%3Aline&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "84255ddb2a77810de5be0b2d851f82b219b45bbf",
+  "last_commit": "2026-09-08T21:45:17Z",
+  "commits_six_months_sample_count": 74,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 8,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    ".gitmodules",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "composer.json",
+    "generate-code.py",
+    "line-openapi",
+    "phpcs.xml",
+    "phpdoc.dist.xml",
+    "phpmd.xml",
+    "phpstan.neon.dist",
+    "phpunit.xml",
+    "renovate.json5"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "dcf642be35c389071d269f1f0b8cab3766a957fecef16ba19013df1847b35daa",
+    "characters": 7430,
+    "excerpt": "# LINE Messaging API SDK for PHP\n\n[![Build Status](https://github.com/line/line-bot-sdk-php/actions/workflows/php-checks.yml/badge.svg?branch=master)](https://github.com/line/line-bot-sdk-php/actions)\n[![Packagist Version](https://img.shields.io/packagist/v/linecorp/line-bot-sdk)](https://packagist.org/packages/linecorp/line-bot-sdk)\n\n\n## Introduction\n\nThe LINE Messaging API SDK for PHP makes it easy to develop bots using LINE Messaging API, and you can create a sample bot within minutes.\n\n\n## Documentation\n\nSee the official API documentation for more information.\n\n- English: https://developers.line.biz/en/docs/messaging-api/overview/\n- Japanese: https://developers.line.biz/ja/docs/messaging-api/overview/\n\nPHPDoc\n- https://line.github.io/line-bot-sdk-php/\n\n## Requirements\n\n- PHP 8.2 or later\n\n\n## Installation\n\nInstall the LINE Messaging API SDK using [Composer](https://getcomposer.org/).\n\n```\n$ composer require linecorp/line-bot-sdk\n```\n\n## Getting started\n\n### Create the bot client instance\n\nThe bot client instance is a handler of the Messaging API.\n\n```php\n$client = new \\GuzzleHttp\\Client();\n$config = new \\LINE\\Clients\\MessagingApi\\Configuration();\n$config->setAccessToken('<channel access token>');\n$messagingApi = new \\LINE\\Clients\\MessagingApi\\Api\\MessagingApiApi(\n  client: $client,\n  config: $config,\n);\n```\n\nYou must use the Client with `GuzzleHttp\\ClientInterface` implementation.\n\n### Call API\n\nYou can call an API through the messagingApi instance.\n\nA very simple example:\n\n```php\n$message = new TextMessage(['text' => 'hello!']);\n$request = new ReplyMessageRequest([\n    'replyToken' => '<reply token>',\n    'messages' => [$message],\n]);\n$response = $messagingApi->replyMessage($request);\n```\n\nThis procedure sends a message to the destination that is associated with `<reply token>`.\n\nWe also support setter style.\n\n```php\n$message = (new TextMessage())\n  ->setText('hello!');\n$request = (new ReplyMessageRequest)\n  ->setReplyToken('<reply token>')\n  ->setMessages([$message]);\ntry {\n  $messagingApi->replyMessage($request);\n  // Success\n} catch (\\LINE\\Clients\\MessagingApi\\ApiException $e) {\n  // Failed\n  echo $e->getCode() . ' ' . $e->getResponseBody();\n}\n```\n\n## How to get x-line-request-id header and error message\n\nYou may need to store the `x-line-request-id` header obtained as a response from several APIs. In this case, please use `~WithHttpInfo` functions. You can get headers and status codes. The `x-line-accepted-request-id` or `content-type` header can also be obtained in the same way.\n\n```php\n$request = new ReplyMessageRequest([\n    'replyToken' => $replyToken,\n    'messages' => [$textMessage = (new TextMessage(['text' => 'reply with http info']))],\n]);\n$response = $messagingApi->replyMessageWithHttpInfo($request);\n$this->logger->info('body:' . $response[0]);\n$this->logger->info('http status code:' . $response[1]);\n$this->logger->info('headers(x-line-request-id):' . $response[2]['x-line-request-id'][0]);\n```\n\nYou can get error messages from `\\LINE\\Clients\\MessagingApi\\ApiException` when you use `MessagingApiApi`. Each client defines its own exception class.\n\n```php\ntry {\n    $profile = $messagingApi->getProfile(\"invalid-userId\");\n} catch (\\LINE\\Clients\\MessagingApi\\ApiException $e) {\n    $headers = $e->getResponseHeaders();\n    $lineRequestId = isset($headers['x-line-request-id']) ? $headers['x-line-request-id'][0] : 'Not Available';\n    $httpStatusCode = $e->getCode();\n    $errorMessage = $e->getResponseBody();\n\n    $this->logger->info(\"x-line-request-id: $lineRequestId\");\n    $this->logger->info(\"http status code: $httpStatusCode\");\n    $this->logger->info(\"error response: $errorMessage\");\n}\n```\n\nWhen you need to get `x-line-accepted-request-id` header from error response, you can get it: `$headers['x-line-accepted-request-id'][0]`.\n\n\n\n## Components\n\n### Webhook\n\nLINE's server sends user actions (such as a message, image, or location) to your bot server.\nRequest of that contains event(s); event is action of the user.\n\nThe following shows how the webhook is handled:\n\n1. Receive webhook from LINE's server.\n2. Parse request payload by `EventRequestParser#parseEventRequest($body, $channelSecret, $signature)`.\n3. Iterate parsed events and some react as you like.\n\nThe following examples show how webhooks are handled:\n\n- [EchoBot: Route.php](/examples/EchoBot/src/LINEBot/EchoBot/Route.php)\n- [KitchenSink: Route.php](/examples/KitchenSink/src/LINEBot/KitchenSink/Route.php)\n\nMore information\n--\n\nFor more information, see the [official API documents](#documentation) and PHPDoc.\nIf it's your first time using this library, we recommend taking a look at `examples` and the PHPDoc of `\\LINE` .\n\nHints\n--\n\n### Examples\n\nThis repository contains two examples of how to use the LINE Messaging API.\n\n#### [EchoBot](/examples/EchoBot)\n\nA simple sample implementation. This application reacts to text messages that are sent from users.\n\n#### [KitchenSink](/examples/KitchenSink)\n\nA full-stack (and slightly complex) sample implementation. This application demonstrates a practical use of the LINE Messaging API.\n\n### PHPDoc\nhttps://line.github.io/line-bot-sdk-php/\n\nThis library provides PHPDoc to describe how to use the methods. You can generate the documentation locally:\n\n```bash\ncomposer docs\nphp -S 127.0.0.1:8000 -t build/site\n```\n\n### Official API documentation\n\n[Official API documents](#documentation) shows the detail of  Messaging API and fundamental usage of SDK.\n\nSee also\n--\n\n### Laravel Support\nEasy to use from Laravel.\nAfter installed, add `LINE_BOT_CHANNEL_ACCESS_TOKEN` to `.env`\n\n```\nLINE_BOT_CHANNEL_ACCESS_TOKEN=<Channel Access Token>\n```\n\nthen you can use facades like following.\n\n```\n$profile = \\LINEMessagingApi::pushMessage(....);\n```\n\nFacade uses `\\GuzzleHttp\\Client` by default. If you want to change the config, run\n\n```bash\n$ php artisan vendor:publish --provider=\"LINE\\Laravel\\LINEBotServiceProvider\" --tag=config\n```\n\nThen `line-bot.php` will be published to `config/` dir.\nIf you want to configure a custom header, do the following.\n\n```php\nreturn [\n    'channel_access_token' => env('LINE_BOT_CHANNEL_ACCESS_TOKEN'),\n    'channel_id' => env('LINE_BOT_CHANNEL_ID'),\n    'channel_secret' => env('LINE_BOT_CHANNEL_SECRET'),\n    'client' => [\n        'config' => [\n          'headers' => ['X-Foo' => 'Bar'],\n        ],\n    ],\n];\n```\n\n\n## Help and media\n\nFAQ: https://developers.line.biz/en/faq/\n\nNews: https://developers.line.biz/en/news/\n\n\n## Versioning\n\nThis project respects semantic versioning.\n- See https://semver.org/\n\nHowever, if a feature that was publicly released is discontinued for business reasons and becomes completely unusable, we will release changes as a patch release.\n\n## Contributing\n\nPlease check [CONTRIBUTING](CONTRIBUTING.md) before making a contribution.\n\nFor hacking instructions, please refer [HACKING.md](/HACKING.md).\n\n\n## License\n\n```\nCopyright 2016 LINE Corporation\n\nLicensed under the Apache License, version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n  https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/line/line-bot-sdk-php/blob/84255ddb2a77810de5be0b2d851f82b219b45bbf/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c6d7bdd62d73e2d874fe4f2ee48042bf8330acb65c69ecf8175fa1b4889e5bb9",
+    "characters": 11346,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        https://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control s",
+    "tail": "e\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright (C) 2016 LINE Corp.\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       https://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/line/line-bot-sdk-php/blob/84255ddb2a77810de5be0b2d851f82b219b45bbf/LICENSE"
+  },
+  "nested_license_paths": [
+    "examples/EchoBot/LICENSE",
+    "examples/KitchenSink/LICENSE"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "e7bc9cc8f7db103215166a00e49248c8aa1863933d155c02120cf35e8281f3a8",
+      "characters": 3001,
+      "excerpt": "{\n  \"name\": \"linecorp/line-bot-sdk\",\n  \"description\": \"SDK of the LINE BOT API for PHP\",\n  \"keywords\": [\n    \"LINE\",\n    \"bot\",\n    \"sdk\"\n  ],\n  \"type\": \"library\",\n  \"homepage\": \"https://github.com/line/line-bot-sdk-php\",\n  \"license\": \"Apache-2.0\",\n  \"support\": {\n    \"issues\": \"https://github.com/line/line-bot-sdk-php/issues\",\n    \"source\": \"https://github.com/line/line-bot-sdk-php\",\n    \"docs\": \"https://line.github.io/line-bot-sdk-php/\"\n  },\n  \"require\": {\n    \"php\": \"^8.2\",\n    \"composer-runtime-api\": \"^2.0\",\n    \"guzzlehttp/guzzle\": \"^7.3\",\n    \"guzzlehttp/psr7\": \"^1.7 || ^2.0 || ^3.0\"\n  },\n  \"require-dev\": {\n    \"phpmd/phpmd\": \"2.15.0\",\n    \"squizlabs/php_codesniffer\": \"4.0.4\",\n    \"orchestra/testbench\": \"*\",\n    \"phpstan/phpstan\": \"^2.0\",\n    \"phpdocumentor/shim\": \"3.10.0\",\n    \"phpunit/phpunit\": \"^11.0\"\n  },\n  \"autoload\": {\n    \"psr-4\": {\n      \"LINE\\\\Clients\\\\ChannelAccessToken\\\\\": \"src/clients/channel-access-token/lib/\",\n      \"LINE\\\\Clients\\\\Insight\\\\\": \"src/clients/insight/lib/\",\n      \"LINE\\\\Clients\\\\Liff\\\\\": \"src/clients/liff/lib/\",\n      \"LINE\\\\Clients\\\\ManageAudience\\\\\": \"src/clients/manage-audience/lib/\",\n      \"LINE\\\\Clients\\\\MessagingApi\\\\\": \"src/clients/messaging-api/lib/\",\n      \"LINE\\\\Constants\\\\\": \"src/constants/\",\n      \"LINE\\\\Laravel\\\\\": \"src/laravel/lib/\",\n      \"LINE\\\\Parser\\\\\": \"src/parser/lib/\",\n      \"LINE\\\\Webhook\\\\\": \"src/webhook/lib/\"\n    }\n  },\n  \"autoload-dev\": {\n    \"psr-4\": {\n      \"LINE\\\\Laravel\\\\Tests\\\\\": \"src/laravel/test/\",\n      \"LINE\\\\Parser\\\\Tests\\\\\": \"src/parser/test/\",\n      \"LINE\\\\Webhook\\\\Tests\\\\\": \"src/webhook/test/\"\n    }\n  },\n  \"scripts\": {\n    \"test\": \"phpunit --test-suffix=Test.php --testdox\",\n    \"cs\": \"phpcs\",\n    \"md\": \"tools/phpmd.sh\",\n    \"stan\": \"phpstan analyse\",\n    \"lint\": \"tools/lint.sh\",\n    \"copyright\": \"tools/check_copyright.sh\",\n    \"docs\": \"tools/docs.sh\",\n    \"check\": [\n      \"echo '\\\\n==== Test ===='\",\n      \"@test\",\n      \"echo '\\\\n==== Code Style (phpcs) ===='\",\n      \"@cs\",\n      \"echo '\\\\n==== Mess Detector (phpmd) ===='\",\n      \"@md\",\n      \"echo '\\\\n==== Static Analysis (phpstan) ===='\",\n      \"@stan\",\n      \"echo '\\\\n==== Copyright ===='\",\n      \"@copyright\",\n      \"echo '\\\\n==== Lint ===='\",\n      \"@lint\"\n    ]\n  },\n  \"extra\": {\n    \"laravel\": {\n      \"providers\": [\n        \"LINE\\\\Laravel\\\\LINEBotServiceProvider\"\n      ],\n      \"aliases\": {\n        \"LINEChannelAccessTokenApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEChannelAccessTokenApi\",\n        \"LINEInsightApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEInsightApi\",\n        \"LINELiffApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINELiffApi\",\n        \"LINEManageAudienceApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEManageAudienceApi\",\n        \"LINEManageAudienceBlobApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEManageAudienceBlobApi\",\n        \"LINEMessagingApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEMessagingApi\",\n        \"LINEMessagingBlobApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEMessagingBlobApi\"\n      }\n    }\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"phpdocumentor/shim\": true\n    }\n  }\n}\n",
+      "tail": "el\\\\LINEBotServiceProvider\"\n      ],\n      \"aliases\": {\n        \"LINEChannelAccessTokenApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEChannelAccessTokenApi\",\n        \"LINEInsightApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEInsightApi\",\n        \"LINELiffApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINELiffApi\",\n        \"LINEManageAudienceApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEManageAudienceApi\",\n        \"LINEManageAudienceBlobApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEManageAudienceBlobApi\",\n        \"LINEMessagingApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEMessagingApi\",\n        \"LINEMessagingBlobApi\": \"LINE\\\\Laravel\\\\Facades\\\\LINEMessagingBlobApi\"\n      }\n    }\n  },\n  \"config\": {\n    \"allow-plugins\": {\n      \"phpdocumentor/shim\": true\n    }\n  }\n}\n",
+      "source_url": "https://github.com/line/line-bot-sdk-php/blob/84255ddb2a77810de5be0b2d851f82b219b45bbf/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/line/line-bot-sdk-php",
+    "commit": "https://github.com/line/line-bot-sdk-php/commit/84255ddb2a77810de5be0b2d851f82b219b45bbf"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-php",
+        "capability_tag": "webhook",
+        "category_slug": "client-library-sdk",
+        "summary": "PHP SDK for building LINE Messaging API bots and webhooks",
+        "reuse_value": 70,
+        "stars": 733,
+        "license": "Apache-2.0",
+        "language": "PHP",
+        "url": "https://github.com/line/line-bot-sdk-php",
+        "rank_score": 70007330
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-php",
+        "stars": 733,
+        "license": "Apache-2.0",
+        "language": "PHP",
+        "unit_class": "component",
+        "reuse_value": 70,
+        "liftability": 90,
+        "fame_gap": -20,
+        "cat_slug": "client-library-sdk",
+        "cat_name": "Client Library / SDK",
+        "description": "LINE Messaging API SDK for PHP"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,93 @@
+{
+  "audit_id": "R013",
+  "full_name": "openthc/cre-adapter",
+  "html_url": "https://github.com/openthc/cre-adapter",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "API Adapter for BioTrackTHC, LeafDat, METRC, WCIA, and CCRS",
+  "stargazers_count": 2,
+  "forks_count": 4,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-05-04T03:24:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "api-adapter",
+    "biotrack",
+    "ccrs",
+    "leafdata",
+    "metrc",
+    "seed-to-sale",
+    "traceability",
+    "wcia"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "0b10c4a137a4f9b6ca3c8d9d9e69a8b007f8a602",
+  "last_commit": "2026-05-04T03:24:34Z",
+  "commits_six_months_sample_count": 7,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "b2cb8d7d211cfaea4a353f98c60b8445c2b8cc5c4e512f95089a8982507ddb4d",
+    "characters": 1542,
+    "excerpt": "# Cannabis Reporting Engine Adapters\n\nAPI Adapters for BioTrack, METRC and other Cannabis Regulatory Engines.\nThese scripts expose a common interface for these different API interfaces.\n\n\n## Examples\n\nThere is a convenience factory method to use with the proper configuration (loaded from `etc/cre.yaml`).\n\n\n```php\n$cfg = \\OpenTHC\\CRE::getConfig('usa-wa');\n$cre = \\OpenTHC\\CRE::factory($cfg);\n$res = $cre->license()->search();\n$res = $cre->crop()->search();\nforeach ($res as $rec) {\n\techo $rec['variety']['name'] . \"\\n\";\n}\n\n$res = $cre->inventory()->search();\nforeach ($res as $rec) {\n\techo $rec['id'] . ' ' . $rec['product_id'] . \"\\n\";\n}\n```\n\n\n## Supported Cannabis Reporting Engines\n\n* BioTrack: Hawai'i, Illinois, New Mexico, Puerto Rico\n* METRC: Alaska, California, Colorado, Maine, Massachusetts, Michigan, Montana, Nevada, Oklahoma, Oregon, etc\n\nOther engines will be added, of course :)\nSome of the engine specific adapters are very thin layers, they really only exist for consistency.\n\n\n## Connect\n\n```php\n$cre = \\OpenTHC\\CRE::factory($cfg);\n$cre->ping();\n```\n\n\n## Reading Objects\n\nA low level, GET and POST/PUT interface exists.\n\n\n```php\n$res = $cre->get('/object?page=0&sort=created_at');\n$res = $cre->post('/object', $arg);\n$res = $cre->put('/object/id', $arg);\n```\n\n\n## High Level API\n\nIt's also possible to interface with the objects at a higher level.\n\n\n```php\n$obj_list = $cre->license()->search($arg);\n$obj = $cre->license()->single($oid);\n$res = $cre->license()->create($obj);\n$res = $cre->license()->update($oid, $obj);\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/cre-adapter/blob/0b10c4a137a4f9b6ca3c8d9d9e69a8b007f8a602/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "940163ff2fe9f4997e95c7265b386ef4d34da1e9085b2cc89fe066ba14680a26",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2019 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/cre-adapter/blob/0b10c4a137a4f9b6ca3c8d9d9e69a8b007f8a602/LICENSE"
+  },
+  "nested_license_paths": [
+    "lib/BioTrack/License.php",
+    "lib/Metrc2023/License.php",
+    "lib/OpenTHC/License.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "36bcc103f4972c9ec4d5e67efcbe9f0c9fb61dff330cc00fe809d49dcb6af43c",
+      "characters": 495,
+      "excerpt": "{\n\t\"name\": \"openthc/cre-adapter\",\n\t\"description\": \"OpenTHC Cannabis Reporting Engine API Adapters\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"files\": [\n\t\t\t\"lib/CRE.php\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CRE\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CRE\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"chrome-php/chrome\": \"1.14.0\",\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/cre-adapter\",\n\t\"description\": \"OpenTHC Cannabis Reporting Engine API Adapters\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"files\": [\n\t\t\t\"lib/CRE.php\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CRE\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CRE\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"chrome-php/chrome\": \"1.14.0\",\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/cre-adapter/blob/0b10c4a137a4f9b6ca3c8d9d9e69a8b007f8a602/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/cre-adapter",
+    "commit": "https://github.com/openthc/cre-adapter/commit/0b10c4a137a4f9b6ca3c8d9d9e69a8b007f8a602"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,93 @@
+{
+  "audit_id": "R015",
+  "full_name": "openthc/pub",
+  "html_url": "https://github.com/openthc/pub",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Public Data Sharing Portal",
+  "stargazers_count": 2,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-11-03T19:16:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d",
+  "last_commit": "2025-11-03T19:16:35Z",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "init.php",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "cbd04764aac8c17f9af6017cbc12f17417bef001c36ff14eeb26146acebbbebe",
+    "characters": 4761,
+    "excerpt": "# OpenTHC Pub\n\nThis is a public server for registered users to publish and receive messages.\n\nEndpoints are paths composed of a Public Keys and a Message Filename.\nThe Public Key is a URL Safe Base64 Encoded X25519 Public Key.\n\nTo send a Message use POST or PUT operation to a message endpoint like `$SERVER/ExW6uaFy79hvkndrGBtbuNvLuf0ztEGSM221bqr6yU0/MESSAGE.FILE`.\n\nTo register a Profile use POST or PUT operation to a profile endpoint like `$SERVER/qo-Kg2JWOQXosJvmJFmI2fFb_6rI8rz7fRLWz2OKuTY`.\n\n----\n\n## Message Operations\n\n### Create Message\n\nTo create a message, from an authorized service, POST or PUT the message contents to an endpoint.\nThe contents may or may not be encrypted; that is a choice for the parties involved.\n\n```\ncurl \\\n\t-X POST \\\n\t--header 'authorization: OpenTHC $MESSAGE_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '$MESSAGE_DATA' \\\n\t$SERVER/$MESSAGE_PK/MESSAGE.FILE\n```\n\nOther files can be added into this message location.\n\n```\ncurl \\\n\t-X POST \\\n\t--header 'authorization: OpenTHC $MESSAGE_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '$MESSAGE_DATA' \\\n\t$SERVER/$MESSAGE_PK/MESSAGE2.FILE\n```\n\n### Update Message\n\nYou can update the message by posting an authorized update same path.\n\n```\ncurl \\\n\t-X POST \\\n\t--header 'authorization: OpenTHC $MESSAGE_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '$MESSAGE_DATA' \\\n\t$SERVER/$MESSAGE_PK/MESSAGE.FILE\n```\n\n----\n\n## Profile Operations\n\nA Profile is just a specially registered Public Key.\nRegister this endpoint by posting to the service key with the desired **profile-public-key**.\nIf you register with some Profile data, that will be saved.\nRegister your public key and perhaps provide some information.\nOther users can then publish to your inbox.\n\n\n```\ncurl \\\n\t-X POST \\\n\t--header 'authorization: OpenTHC $PROFILE_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '$PROFILE_JSON' \\\n\t$SERVER/$PROFILE_PK\n```\n\n\nA profile is simply a public-key that is registered in the system.\nSend a POST/PUT to your public-key with your profile information encrypted to the service public-key\n\n```\ncurl $SERVER/$PK \\\n\t-X POST \\\n\t--header 'content-type: application/octet-stream' \\\n\t--data '$JSON_BOX'\n```\n\n\n## Update A Profile\n\nCreate the *input.txt* file as encrypted data using your profile-secret-key and the service-public-key.\nThe contents of input.txt should be one large binary string.\n\n```\nsodium-encrypt $SECRET $PUBLIC $SOURCE > input.txt\ncurl -X POST $SERVER/$PROFILE_PK --data @input.txt\n```\n\n\n## Send a Message to a Profile\n\nJust POST a message to a public key.\nThe message may or may not be encrypted.\nThe body is saved AS-IS and the indicated content-type is (mostly) trusted.\nThese end-points are write-once.\nOnly the public-key owner may fetch these documents.\n\n\nEncrypt the data then POST from your PUBLIC_KEY to their PUBLIC_KEY/\nThe input data can be either a) text/plain or b) application/json or c) application/x-www-form-urlencoded.\n\nThe **profile-public-key**, if registered on this endpoint, will have the message stored in their incoming queue.\n\nMessage expire after 360 hours.\n\n\n```\ncurl -X POST $SERVER/$PROFILE_PK/$MESSAGE_PK/$MESSAGE.FILE \\\n\t--header 'content-type: application/json' \\\n\t--data @input.txt\n```\n\n```\ncurl \\\n\t-X POST \\\n\t--header 'authorization: OpenTHC $SERVICE_AUTH_BOX' \\\n\t--header 'content-type: $MESSAGE_TYPE' \\\n\t--data '$MESSAGE_BODY' \\\n\t$SERVER/$PROFILE_PK/$MESSAGE_PK/$MESSAGE.FILE\n```\n\n## Get Messages for a Public Key\n\n<p>Simply call a `GET` request to your endpoint for a list of messages.</p>\n\n\n```\ncurl\n\t--header 'authorization: OpenTHC $PROFILE_AUTH_BOX' \\\n\t$SERVER/$PROFILE_PK\ncurl $SERVER/$PROFILE_PK\n\n[\n\t\"$SERVER/PUBLIC_KEY/MESSAGE_ID_91F5B6NVQ6D0CPH\n\t\"$SERVER/PUBLIC_KEY/MESSAGE_ID_WMWG18E14WCQSG5\n]\n```\n\n<p>Fetching a Single Message; which may need to be decrypted.</p>\n<pre>curl $SERVER/$PROFILE_PK/$MESSAGE_PK/$MESSAGE.FILE</pre>\n\n\n## Create Message\n\nCreate a new message-public-key (and keep the secret somewhere).\nThen publish to this endpoint.\n\n```\ncurl /$MESSAGE_PK/$MESSAGE.FILE \\\n\t-X POST \\\n\t--header 'authorization: $CLIENT_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '@file'\n```\n\n## Update Message\n\nUpdate a message-public-key by writing and authorized request.\nThe CLIENT_AUTH_BOX should be extended to\n\n```\nSERVICE_ID.CONTACT_ID.COMPANY_ID.LICENSE_ID.MESSAGE_PK\n```\n\n\n```\ncurl /$MESSAGE-PK/$MESSAGE-ID \\\n\t-X POST \\\n\t--header 'authorization: $CLIENT_AUTH_BOX' \\\n\t--header 'openthc-message-authorization: $MESSAGE_AUTH_BOX' \\\n\t--header 'content-type: application/json' \\\n\t--data '@file'\n```\n\n----\n\n## Formats\n\nUploading messages supported in these formats.\n\n- application/json\n- application/octet-stream\n- application/pdf\n- text/plain\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/pub/blob/61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "12ea5945f5c6b3c17e9c1f78cd9a759398704141dba97419bf8bf045bbc4ffe8",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2018 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/pub/blob/61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "5d2023a556b41d2a115ced48d6675a152dec081c74457c28abf341a643b8e3a1",
+      "characters": 422,
+      "excerpt": "{\n\t\"name\": \"openthc/pub\",\n\t\"description\": \"OpenTHC Data Publisher\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Pub\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Pub\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/pub\",\n\t\"description\": \"OpenTHC Data Publisher\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Pub\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Pub\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/pub/blob/61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "3400890bfdc4bc8a8af907c18af11130080a8790439fac299af9ed2b6fe8f759",
+      "characters": 591,
+      "excerpt": "{\n\t\"name\": \"@openthc/pub\",\n\t\"version\": \"420.24.351\",\n\t\"description\": \"OpenTHC Publisher\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"htmx.org\": \"2.0.4\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://gitlab.com/openthc/pub.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://gitlab.com/openthc/pub/issues\"\n\t},\n\t\"homepage\": \"https://gitlab.com/openthc/pub#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"@openthc/pub\",\n\t\"version\": \"420.24.351\",\n\t\"description\": \"OpenTHC Publisher\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"htmx.org\": \"2.0.4\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://gitlab.com/openthc/pub.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://gitlab.com/openthc/pub/issues\"\n\t},\n\t\"homepage\": \"https://gitlab.com/openthc/pub#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/pub/blob/61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/pub",
+    "commit": "https://github.com/openthc/pub/commit/61f17cebc1144a8c8cb44105b47bb81b1d0a6d8d"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,103 @@
+{
+  "audit_id": "R001",
+  "full_name": "openthc/pos",
+  "html_url": "https://github.com/openthc/pos",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Software Solutions for Retail - POS, CRM, Delivery, Ordering",
+  "stargazers_count": 164,
+  "forks_count": 39,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-08-26T22:20:04Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "b2c",
+    "cannabis",
+    "customer-relationship-management",
+    "delivery",
+    "dispensary",
+    "point-of-sale",
+    "seed-to-sale",
+    "traceability"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Atraceability+topic%3Acannabis&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "bff54e7d6da9eb40b5d930a956bf46292712528b",
+  "last_commit": "2026-08-26T18:20:01-04:00",
+  "commits_six_months_sample_count": 59,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".dockerignore",
+    ".editorconfig",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "125fa0ecf88fa21e5430e748b8c05d076f1d4fec787f5795c132e5b64a894bb5",
+    "characters": 2258,
+    "excerpt": "# Cannabis Retail Software\n\nIt's a pretty simple web-based point-of-sale, customer loyalty, online-menu system.\nIT can be used stand-alone or integrated with BioTrack, CCRS or Metrc.\n\n## Installation\n\n    git clone {this repo}\n    ./make.sh install\n    [ update apache config ]\n    certbot ...\n    [ update apache config for ssl ]\n\nOnce the system is installed you'll have to configure it for your environment.\nThat is, connect to the government CRE if you have one - configure license information, etc.\n\n\n## Features\n\n * Point of Sale (POS)\n * Instore Signage (ChromeCast, Tablet)\n * Online Ordering, In-Store Kiosk\n * Customer Loyalty Program (CRM)\n\n\n## Point of Sale\n\n * Auto-Print Pick Ticket\n * Save/Transfer Sale in Progress (Cart)\n * Customizable Receipt\n * Android and iOS Compatible (coming soon)\n\n\n## Loyalty Program\n\n * SMS Campaigns\n * Email Loyalty Campaign\n * Participant Facets: Revenue, Specials, Concentrate, Edible, Flower, etc\n\n\n## Vendor Management System\n\nAllows a Retail business to create their own Vendor Portal\n\nVendor can visit and see when their Sample Day is / could be, sees instructions, request a time to stop by.\nVendor can be rejected with a simple button press.\n\n\n## Vendor Database\n\nJust supplemental data on the main dir.openthc.com\n\n\n## Relationships\n\nCalendar, Terms, Vendor Notes\n\n\n## Sample Processing\n\nSample Calendar, Vendors Feedback\n\n\n## Joint Inventory\n\nShared Inventory between Retailer and Supplier\n\n\n## Alternatives\n\nIn case free & open-source software is not to your taste,\nor maybe you're just looking for more information,\nhere are other offerings.\n\n\n### Point of Sale\n\n* BioTrackTHC - https://www.biotrack.com/\n* Cova - https://www.covasoftware.com/pos\n* GreenBits - https://www.greenbits.com/\n* KlickTrack - https://getklicktrack.io\n\n\n### Loyalty Offering\n\n* 420 Solutions - https://www.4twentysolutions.com/\n* CannaReward - http://www.cannareward.com/\n* SpringBig - https://www.springbig.com/\n* SproutCannabis - http://www.sprout.online\n* TokeIn - https://tokein.com/\n\n\n### Online Ordering\n\n* Eaze - https://www.eaze.com/\n* WoahStork - https://www.woahstork.com/\n\n\n### Hardware\n\n* [ELO Touch](https://www.elotouch.com/pos-terminals-paypoint-plus-for-windows.html)\n* [Heckler](https://hecklerdesign.com/)\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/pos/blob/bff54e7d6da9eb40b5d930a956bf46292712528b/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "12ea5945f5c6b3c17e9c1f78cd9a759398704141dba97419bf8bf045bbc4ffe8",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2018 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/pos/blob/bff54e7d6da9eb40b5d930a956bf46292712528b/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "7bdc7b52659fce4a3a595aec2d5fca2a7e64e08b219a3c6fdda1fbc119c336f6",
+      "characters": 557,
+      "excerpt": "{\n\t\"name\": \"openthc/pos\",\n\t\"description\": \"Cannabis Retail Point of Sale\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.26.160\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\POS\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\POS\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"pear/net_smtp\": \"1.10.0\",\n\t\t\"tuupola/base32\": \"2.0.1\",\n\t\t\"tecnickcom/tcpdf\": \"6.11.3\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.16.0\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.54\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/pos\",\n\t\"description\": \"Cannabis Retail Point of Sale\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.26.160\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\POS\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\POS\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"pear/net_smtp\": \"1.10.0\",\n\t\t\"tuupola/base32\": \"2.0.1\",\n\t\t\"tecnickcom/tcpdf\": \"6.11.3\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.16.0\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.54\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/pos/blob/bff54e7d6da9eb40b5d930a956bf46292712528b/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "9e715556527a1d491bb9c9ff89ccd95944f24c308db9f29b0bbf973455fff474",
+      "characters": 783,
+      "excerpt": "{\n\t\"name\": \"pos\",\n\t\"version\": \"420.26.160\",\n\t\"description\": \"Retail Point of Sale\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.2.0\",\n\t\t\"@zxing/browser\": \"0.2.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"echarts\": \"6.1.0\",\n\t\t\"htmx.org\": \"2.0.10\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"lodash\": \"4.18.1\",\n\t\t\"qrcodejs\": \"1.0.0\",\n\t\t\"sass\": \"1.100.0\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/pos.git\"\n\t},\n\t\"keywords\": [\n\t\t\"cannabis\",\n\t\t\"pos\"\n\t],\n\t\"author\": \"openthc\",\n\t\"license\": \"GPL-3.0\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/pos/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/pos#readme\"\n}\n",
+      "tail": "\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.2.0\",\n\t\t\"@zxing/browser\": \"0.2.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"echarts\": \"6.1.0\",\n\t\t\"htmx.org\": \"2.0.10\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"lodash\": \"4.18.1\",\n\t\t\"qrcodejs\": \"1.0.0\",\n\t\t\"sass\": \"1.100.0\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/pos.git\"\n\t},\n\t\"keywords\": [\n\t\t\"cannabis\",\n\t\t\"pos\"\n\t],\n\t\"author\": \"openthc\",\n\t\"license\": \"GPL-3.0\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/pos/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/pos#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/pos/blob/bff54e7d6da9eb40b5d930a956bf46292712528b/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/pos",
+    "commit": "https://github.com/openthc/pos/commit/bff54e7d6da9eb40b5d930a956bf46292712528b"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

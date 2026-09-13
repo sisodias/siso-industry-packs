@@ -1,0 +1,90 @@
+{
+  "audit_id": "R096",
+  "full_name": "royashcenazi/parsigs",
+  "html_url": "https://github.com/royashcenazi/parsigs",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Parsigs is an open-source project that aims to extract the relevant dosage information from prescriptions text without compromising the patient׳s privacy.",
+  "stargazers_count": 30,
+  "forks_count": 11,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2024-08-22T12:20:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=patient+prescription+open+source&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "0c4c4374937c59447be6a70ceb6399e3111607e6",
+  "last_commit": "2024-08-22T15:20:37+03:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 8,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "contributing.md",
+    "parsigs.png",
+    "playground.py",
+    "pyproject.toml",
+    "requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "2cd0a7df91cca06900b5e346d5d12f82ba3112c60f9109e61502b0c6059c34c0",
+    "characters": 5837,
+    "excerpt": "# Parsigs - Private, Smart, and Easy Sig (Dosage Instructions) Text Parser\n\n[![GitHub stars](https://img.shields.io/github/stars/royashcenazi/parsigs)](https://github.com/royashcenazi/parsigs/stargazers)\n[![GitHub license](https://img.shields.io/github/license/royashcenazi/parsigs)](https://github.com/royashcenazi/parsigs/blob/main/LICENSE)\n[![GitHub issues](https://img.shields.io/github/issues/royashcenazi/parsigs)](https://github.com/royashcenazi/parsigs/issues)\n[![GitHub last commit](https://img.shields.io/github/last-commit/royashcenazi/parsigs)](https://github.com/royashcenazi/parsigs/commits/main)\n\nParsigs is an open-source project that aims to extract relevant information from doctors' signature text without compromising privacy and PHI (Protected Health Information) using Natural Language Processing.\n\n## Table of Contents\n- [Introduction](#introduction)\n- [Call for Contributors](#call-for-contributors)\n- [Features](#features)\n- [Installation](#installation)\n- [Usage](#usage)\n- [Known Issues](#known-issues)\n- [Contributing](#contributing)\n- [Credits](#credits)\n\n## Introduction\nParsigs is a powerful and privacy-conscious text-parser designed to extract essential information such as dosage, frequency, and drug names from doctors' prescription-sig text. The primary objective of Parsigs is to facilitate the extraction of structured dosage instructions while ensuring patient privacy by not extracting any patient-related information or using external APIs. By utilizing advanced Natural Language Processing techniques, Parsigs accurately extracts vital details from unstructured text, enabling healthcare professionals to interpret prescription information more efficiently.\n\n## Call for Contributors\nWe welcome contributions from developers and researchers interested in enhancing Parsigs. Whether it's fixing bugs, adding new features, or improving documentation, your input is valuable to us. If you'd like to participate in the development and maintenance of this project, please feel free to open a pull request or an issue. Thank you to all the contributors who have already contributed to the project!\n\n## Features\n- Extracts relevant structured information such as dosage, frequency, and drug names from doctors' prescription-sig text.\n- Protects patient privacy by not extracting any patient-related information or utilizing any external APIs.\n- Utilizes NLP techniques to accurately extract information from unstructured text.\n\n## Installation\nFor optimal usage, you will need to install the `parsigs` package and the underlying model. We recommend using the pre-trained model for parsing dosage instructions from Sigs.\n\n```bash\npip install parsigs\npip install https://huggingface.co/royashcenazi/en_parsigs/resolve/main/en_parsigs-any-py3-none-any.whl\n```\n\n## Usage\nUsing Parsigs is straightforward. Here are some examples of how to use the `parse_sig` method:\n\n```python\nfrom parsigs.parse_sig_api import StructuredSig, SigParser\n\nsig_parser = SigParser()\n\nsig = \"Take 1 tablet of ibuprofen 200mg 3 times every day for 3 weeks\"\nparsed_sig = sig_parser.parse(sig)\n\nexpected = StructuredSig(drug=\"ibuprofen\", form=\"tablet\", strength=\"200mg\", frequencyType=\"Day\", times=3, interval=1, singleDosageAmount=1.0, periodType='Week', periodAmount=3, takeAsNeeded=False)\n\nsig2 = \"Take 2 tablets every 2 weeks\"\nparsed_sig = sig_parser.parse(sig2)\n\nexpected = StructuredSig(drug=None, form='tablets', strength=None, frequencyType='Week', interval=2, singleDosageAmount=2.0, times=None, periodType=None, periodAmount=None, takeAsNeeded=False)\n```\n\nThe `StructuredSig` object has the following attributes:\n- `drug`: the name of the drug\n- `form`: the form of the medication (e.g. tablet, solution, pill)\n- `strength`: the strength of the medication (e.g. 200mg, 500mg)\n- `singleDosageAmount`: the amount of the medication to take at each interval\n- `frequencyType`: the time-unit of the frequency (e.g. Day, Week, Month)\n- `times`: how many times a single dosage amount should be taken in a time unit\n- `interval`: if the instruction is every X days/hours/weeks/months - the X value is the interval\n- `periodType`: the unit-type of the period which indicates for how long medication should be taken (e.g. Day, Week, Month)\n- `periodAmount`: the number of units per `periodType`\n- `takeAsNeeded`: a flag indicating if the instructed dosage should be taken only when the patient needs it\n\n## Known Issues\nThe parse-sig project is developed using the Named Entity Recognition (NER) model for tagging different parts in a dosage instruction (Sig) sentence, including Duration, Frequency, Dosage, Drug, Form, and Strength. These tags are then processed using static rules. Due to the limited availability of private dosage data, some errors may be expected in the extracted information. The project is constantly evolving, and we plan to add a Dev set in the future along with more examples to improve accuracy.\n\nWhile Parsigs aims to identify and structure dosage instructions effectively, it's worth noting that the identification of brand names as part of the definition may not be as complete as the extraction of frequency, dosage, and period information (as this data is often not explicitly provided in the Sig, e.g., \"Take 1 tablet every day\").\n\n## Contributing\nWe encourage contributions to improve Parsigs. If you encounter any issues or have any questions, please don't hesitate to reach out to us by email or file an issue on our GitHub repository.\n\n## Credits\nThis project builds upon the work of several resources, including:\n- [Training a Medication Named Entity Recognition Model from Scratch with SpaCy](https://odsc.medium.com/training-a-medication-named-entity-recognition-model-from-scratch-with-spacy-e94fdff56022)\n- [GitHub - bpben/spacy_ner_tutorial](https://github.com/bpben/spacy_ner_tutorial)\n",
+    "tail": "",
+    "source_url": "https://github.com/royashcenazi/parsigs/blob/0c4c4374937c59447be6a70ceb6399e3111607e6/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c5bf004ad6534ebb8849541de42c76fecf05f49bdeef584bb710e95c2cee2b0a",
+    "characters": 1069,
+    "excerpt": "MIT License\n\nCopyright (c) 2023 royashcenazi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/royashcenazi/parsigs/blob/0c4c4374937c59447be6a70ceb6399e3111607e6/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "e33cbb1c6cb2daa0bc58d6e4f2c932f24e147ae74323a872e8c72c3931a9233c",
+      "characters": 782,
+      "excerpt": "[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[project]\nname = \"parsigs\"\nversion = \"1.1.0_beta\"\nauthors = [\n    { name = \"Roy Ashcenazi\", email = \"royashcenazi@gmail.com\" },\n]\ndescription = \"The private, smart and easy Sig (Dosage Instructions) text-parser\"\nreadme = \"README.md\"\n\ndependencies = [\n    \"spacy>=3.0,<4.0\",\n    \"word2number\",\n    \"inflect\",\n    \"pyspellchecker<= 0.5.5\",\n]\n\n[tool.hatch.metadata]\n#allow-direct-references = true\n\nrequires-python = \">=3.7\"\nclassifiers = [\n    \"Programming Language :: Python :: 3\",\n    \"License :: OSI Approved :: MIT License\",\n    \"Operating System :: OS Independent\",\n]\n\n[project.urls]\n\"Homepage\" = \"https://github.com/royashcenazi/parsigs\"\n\"Bug Tracker\" = \"https://github.com/royashcenazi/parsigs/issues\"\n",
+      "tail": "t]\nname = \"parsigs\"\nversion = \"1.1.0_beta\"\nauthors = [\n    { name = \"Roy Ashcenazi\", email = \"royashcenazi@gmail.com\" },\n]\ndescription = \"The private, smart and easy Sig (Dosage Instructions) text-parser\"\nreadme = \"README.md\"\n\ndependencies = [\n    \"spacy>=3.0,<4.0\",\n    \"word2number\",\n    \"inflect\",\n    \"pyspellchecker<= 0.5.5\",\n]\n\n[tool.hatch.metadata]\n#allow-direct-references = true\n\nrequires-python = \">=3.7\"\nclassifiers = [\n    \"Programming Language :: Python :: 3\",\n    \"License :: OSI Approved :: MIT License\",\n    \"Operating System :: OS Independent\",\n]\n\n[project.urls]\n\"Homepage\" = \"https://github.com/royashcenazi/parsigs\"\n\"Bug Tracker\" = \"https://github.com/royashcenazi/parsigs/issues\"\n",
+      "source_url": "https://github.com/royashcenazi/parsigs/blob/0c4c4374937c59447be6a70ceb6399e3111607e6/pyproject.toml"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "b10591cd2049dfacd45e3f5f6da92fdb324f8da51d17be1ee7a71555fb11b1d2",
+      "characters": 91,
+      "excerpt": "spacy>=3.0,<4.0\nword2number\npyspellchecker<= 0.5.5\ninflect\nhypothesis\npip==24.0\ndataclasses",
+      "tail": "spacy>=3.0,<4.0\nword2number\npyspellchecker<= 0.5.5\ninflect\nhypothesis\npip==24.0\ndataclasses",
+      "source_url": "https://github.com/royashcenazi/parsigs/blob/0c4c4374937c59447be6a70ceb6399e3111607e6/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/royashcenazi/parsigs",
+    "commit": "https://github.com/royashcenazi/parsigs/commit/0c4c4374937c59447be6a70ceb6399e3111607e6"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,85 @@
+{
+  "audit_id": "R065",
+  "full_name": "tngoman/Store-POS",
+  "html_url": "https://github.com/tngoman/Store-POS",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Modern Electron Point of Sale — React till, Express + SQLite API, LAN multi-terminal, catalog/photos, and Windows installer.",
+  "stargazers_count": 1032,
+  "forks_count": 463,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-11T02:01:22Z",
+  "license": null,
+  "topics": [
+    "cash",
+    "desktop-app",
+    "electron",
+    "express",
+    "lan",
+    "point-of-sale",
+    "pos",
+    "react",
+    "register",
+    "retail",
+    "sqlite",
+    "typescript",
+    "vite"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Apoint-of-sale&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "947c18b6e561cbe362b88d7d9922f6e0632d2008",
+  "last_commit": "2026-07-20T17:56:04+02:00",
+  "commits_six_months_sample_count": 1,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 10,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "README.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "936d9de9b367922465058eeae927183f9e66124617f99f81e920459370d5246b",
+    "characters": 5848,
+    "excerpt": "# Store POS\n\nModern desktop Point of Sale for a single register or a LAN of networked tills. Version **2.0** rebuilds the original Electron app on a secure, maintainable stack.\n\n## Features\n\n### Till\n- Barcode scan / search (Enter to add)\n- Category filter chips\n- Product tiles with photos, price, and stock status\n- Cart with quantity controls, discount, and tax\n- Customer picker with quick-add\n- Hold / resume sales\n- Cash payment pad with South African note shortcuts (R10–R200) plus Exact\n- Card payment (exact tender)\n- Change / still-due display\n- Printable receipt\n\n### Catalog\n- Products and categories\n- Inventory tracking\n- Photo picker (local upload + Pexels download to a local media library)\n- **Seed demo** sample catalog (SA-style products & customers)\n- Multi-select **bulk delete**\n\n### Sales\n- Transaction history filtered by date range, cashier, till, and status (paid / held)\n\n### Customers & Team\n- Customer records\n- Staff accounts with permission flags (products, categories, sales, users, settings)\n\n### Settings\n- Store identity (name, address, contact, logo, receipt footer)\n- Currency symbol and optional tax\n- Operating mode (Standalone / Network Server / Network Terminal)\n- Till number\n- Pexels API key for catalog photos\n- Demo data seed / full catalog & sales wipe\n\n## Tech stack\n\n| Layer | Technology |\n|--------|------------|\n| Desktop shell | Electron 33 (contextIsolation, preload bridge — no `nodeIntegration`) |\n| UI | React 18 + TypeScript + Vite 6 |\n| API | Express |\n| Auth | JWT + bcrypt |\n| Database | SQLite via **sql.js** (no native build toolchain required) |\n| Installer | electron-builder (Windows NSIS) |\n\n## Requirements\n\n- Node.js 18+ (20 LTS recommended)\n- Windows for the packaged installer (`npm run dist`); `npm run dev` works wherever Electron runs\n\n## Quick start\n\n```bash\nnpm install\nnpm run dev\n```\n\nDefault login:\n\n| Username | Password |\n|----------|----------|\n| `admin`  | `admin`  |\n\nChange the admin password after first login in a production deployment.\n\n### Till shortcuts\n\n| Key | Action |\n|-----|--------|\n| **Enter** | Add scanned / searched item |\n| **F2** | Open payment (charge) |\n| **F4** | Held sales |\n| **Esc** | Close payment modal |\n\n## Operating modes\n\nConfigure under **Settings → Register**. Restart the app after changing mode.\n\n| Mode | Behavior |\n|------|----------|\n| **Standalone** | Local API + SQLite on this PC (`127.0.0.1:8001`) |\n| **Network Server** | Same database, API bound to `0.0.0.0:8001` so other tills can connect |\n| **Network Terminal** | No local DB; connects to the server IP you enter |\n\nTypical LAN setup:\n\n1. On the back-office / main PC → **Network Server**, note the LAN IP shown in Settings.\n2. On each till PC → **Network Terminal**, set **Server IP** to that address, assign a unique **Till number**.\n3. Restart both apps.\n\n## Scripts\n\n| Command | Description |\n|---------|-------------|\n| `npm run dev` | Vite + Electron (development) |\n| `npm run build` | Production UI build into `dist/` |\n| `npm start` | Electron against an existing build / config |\n| `npm run smoke` | API + LAN smoke tests |\n| `npm run dist` | Build UI and create Windows installer |\n\nInstaller output:\n\n```text\nrelease/Store POS Setup 2.0.0.exe\n```\n\n## Project layout\n\n```text\nelectron/          Main process + secure preload (window.pos)\nserver/            Express API, sql.js database, route modules\n  routes/          inventory, categories, customers, users, settings,\n                   transactions, media, demo\nsrc/               React UI\n  pages/           Till, Catalog, Sales, Settings, Login\n  components/      Payment pad, photo picker, customer select, …\n  layout/          App shell / sidebar\n  api/client.ts    HTTP client\nscripts/           Smoke tests\nbuild/             App icons for the installer\npublic/favicon.ico Packaged favicon\n```\n\nData and uploads live under Electron **userData** (not in the repo), so uninstalling may leave a database folder depending on OS settings.\n\n## Demo data\n\nFrom **Catalog** or **Settings → Demo data**:\n\n- **Seed demo** — adds sample categories, products, and customers if those names do not already exist\n- **Bulk delete** (Catalog) — delete selected products\n- **Bulk delete catalog & sales** (Settings) — removes products, categories, sales history, and customers except Walk-in; keeps staff and settings\n\n## API overview\n\nLocal API base (standalone): `http://127.0.0.1:8001/api`\n\n| Area | Examples |\n|------|----------|\n| Auth | `POST /users/login` |\n| Catalog | `/inventory/products`, `/categories/all` |\n| Sales | `POST /new`, `GET /by-date`, `GET /on-hold` |\n| Media | `/media/library`, `/media/pexels/search` |\n| Demo | `POST /demo/seed`, `POST /demo/clear` |\n\nAuthenticated routes expect `Authorization: Bearer <token>`.\n\n## Security notes\n\n- Renderer has no Node integration; privileged actions go through the preload bridge.\n- Change default `admin` credentials before real use.\n- Prefer Network Server only on a trusted LAN; put a firewall in front for wider exposure.\n- Pexels key is stored in settings on the server machine — treat it like a secret.\n\n## Troubleshooting\n\n| Issue | What to try |\n|-------|-------------|\n| Blank window / `window.pos` missing | Use Electron via `npm run dev`, not a plain browser tab |\n| Terminal cannot reach server | Same LAN, correct server IP, mode = Network Server, port **8001** open |\n| Sales history empty | Date filters use local time; default range is month start → end of today |\n| Media library 404 after code changes | Restart Electron so the API process reloads new routes |\n| Native module / SSL build errors | This project uses **sql.js** deliberately to avoid `better-sqlite3` compile issues |\n\n## License / authorship\n\nDesktop POS application maintained for store use. See repository history for contributors to the original and 2.0 rewrite.\n",
+    "tail": "",
+    "source_url": "https://github.com/tngoman/Store-POS/blob/947c18b6e561cbe362b88d7d9922f6e0632d2008/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "f5c5438b7d7d66692dfd9251ff1e1760bbcfe542cb25cd50e6fd1e54b15cb83e",
+      "characters": 2065,
+      "excerpt": "{\n  \"name\": \"store-pos\",\n  \"version\": \"2.0.0\",\n  \"description\": \"Modern desktop Point of Sale with LAN multi-terminal support\",\n  \"author\": \"Hosting Domain\",\n  \"private\": true,\n  \"main\": \"electron/main.js\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"concurrently -k \\\"vite\\\" \\\"wait-on http://127.0.0.1:5173 && electron .\\\"\",\n    \"build\": \"vite build\",\n    \"start\": \"electron .\",\n    \"preview\": \"vite preview\",\n    \"smoke\": \"node scripts/smoke-api.mjs && node scripts/smoke-lan.mjs\",\n    \"dist\": \"vite build && electron-builder --win\"\n  },\n  \"build\": {\n    \"appId\": \"com.storepos.app\",\n    \"productName\": \"Store POS\",\n    \"copyright\": \"Copyright © Hosting Domain\",\n    \"directories\": {\n      \"output\": \"release\",\n      \"buildResources\": \"build\"\n    },\n    \"files\": [\n      \"dist/**/*\",\n      \"electron/**/*\",\n      \"server/**/*\",\n      \"build/icon.ico\",\n      \"public/favicon.ico\",\n      \"package.json\"\n    ],\n    \"asarUnpack\": [\n      \"**/node_modules/sql.js/**\"\n    ],\n    \"win\": {\n      \"target\": [\n        {\n          \"target\": \"nsis\",\n          \"arch\": [\n            \"x64\"\n          ]\n        }\n      ],\n      \"icon\": \"build/icon.ico\",\n      \"signAndEditExecutable\": false\n    },\n    \"nsis\": {\n      \"oneClick\": false,\n      \"allowToChangeInstallationDirectory\": true,\n      \"createDesktopShortcut\": true,\n      \"createStartMenuShortcut\": true,\n      \"shortcutName\": \"Store POS\",\n      \"installerIcon\": \"build/icon.ico\",\n      \"uninstallerIcon\": \"build/icon.ico\",\n      \"installerHeaderIcon\": \"build/icon.ico\"\n    }\n  },\n  \"dependencies\": {\n    \"bcryptjs\": \"^2.4.3\",\n    \"cors\": \"^2.8.5\",\n    \"express\": \"^4.21.2\",\n    \"jsonwebtoken\": \"^9.0.2\",\n    \"multer\": \"^1.4.5-lts.1\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"sql.js\": \"^1.12.0\"\n  },\n  \"devDependencies\": {\n    \"@types/react\": \"^18.3.18\",\n    \"@types/react-dom\": \"^18.3.5\",\n    \"@vitejs/plugin-react\": \"^4.3.4\",\n    \"concurrently\": \"^9.1.2\",\n    \"electron\": \"^33.4.11\",\n    \"electron-builder\": \"^25.1.8\",\n    \"typescript\": \"^5.7.3\",\n    \"vite\": \"^6.0.7\",\n    \"wait-on\": \"^8.0.2\"\n  }\n}\n",
+      "tail": "cutName\": \"Store POS\",\n      \"installerIcon\": \"build/icon.ico\",\n      \"uninstallerIcon\": \"build/icon.ico\",\n      \"installerHeaderIcon\": \"build/icon.ico\"\n    }\n  },\n  \"dependencies\": {\n    \"bcryptjs\": \"^2.4.3\",\n    \"cors\": \"^2.8.5\",\n    \"express\": \"^4.21.2\",\n    \"jsonwebtoken\": \"^9.0.2\",\n    \"multer\": \"^1.4.5-lts.1\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"sql.js\": \"^1.12.0\"\n  },\n  \"devDependencies\": {\n    \"@types/react\": \"^18.3.18\",\n    \"@types/react-dom\": \"^18.3.5\",\n    \"@vitejs/plugin-react\": \"^4.3.4\",\n    \"concurrently\": \"^9.1.2\",\n    \"electron\": \"^33.4.11\",\n    \"electron-builder\": \"^25.1.8\",\n    \"typescript\": \"^5.7.3\",\n    \"vite\": \"^6.0.7\",\n    \"wait-on\": \"^8.0.2\"\n  }\n}\n",
+      "source_url": "https://github.com/tngoman/Store-POS/blob/947c18b6e561cbe362b88d7d9922f6e0632d2008/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/tngoman/Store-POS",
+    "commit": "https://github.com/tngoman/Store-POS/commit/947c18b6e561cbe362b88d7d9922f6e0632d2008"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

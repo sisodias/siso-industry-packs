@@ -1,0 +1,96 @@
+{
+  "audit_id": "R010",
+  "full_name": "openthc/sso",
+  "html_url": "https://github.com/openthc/sso",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Authentication System (supporting oAuth2)",
+  "stargazers_count": 4,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-10T19:39:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "authentication"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "c49546ecd22fef202600daf26144f736a574cf4d",
+  "last_commit": "2026-09-10T12:39:33-07:00",
+  "commits_six_months_sample_count": 4,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 4,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".dockerignore",
+    ".gitignore",
+    "INSTALL.md",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "9ed55b71e2380964ed338c5d196cdde92cc67f8314a6d191b3dacc3e04f491fa",
+    "characters": 2219,
+    "excerpt": "# Authentication Server\n\nThe SSO service provides an oAuth2 enabled single sign-on point for all of the OpenTHC services.\nAccount Creation and Authentication methods are managed through this service.\n\nBusiness or Government implementers deploy and extend this SSO to integrate with their own environment through Middlware or custom Controllers.\n\n\n## Installation\n\n1. Clone this Repo onto your system `git clone ... /opt/openthc/sso`\n1. Copy the example configurations in `./etc` to configure Apache and the Service.\n1. Configure the SSL then visit your site https://sso.openthc.example.com/\n\n\n### Database\n\nSSO expects to connect to a database following the OpenTHC data models as described in the API.\nAn example schema is provided in `etc/sql/` and could/should be executed directly in a new environment.\n\n\n\n## Configuration\n\n* Database\n* Communications Service\n* oAuth2\n* U2F / FIDO\n\n\n\n\n### Communications\n\nThe SSO system doesn't support sending emails or text messages directly.\nAn external service must be provided to respond to some simple POST messages, similar to web-hooks.\nThis is called \"CIC\", and is configured in from Environment, etc-local or etcd, an empty setting disabled this service.\n\n\n### oAuth2\n\nThe oAuth2 interface requires all oAuth2 service requestors to have a Service Client ID.\nThese are registered in the *auth_service* table.\n\n\n### API\n\nAn API exists to query Company and Contact information as well.\nThe API calls and data structures follow those outlined in the OpenTHC API.\n\n\n## Profiles\n\nAn API exists to query Company and Contact information as well the directory of Licenses.\nSee the [OpenTHC API Documentation](https://api.openthc.org/) for more information.\n\n\n### SMS-2FA\n\nIf you want to use SMS for two-factor authentication you will need to configure the necessary service integrations CIC.\n\n\n### U2F\n\nThe service is enabled for use with U2F such as RSA Secure ID and Solokeys.\n\n* https://webauthn.me/introduction\n\n\n## Flow Diagram\n\n\n```mermaid\nflowchart TD\n    Service[Service?] -->|Auth| SSO{SSO}\n    SSO -->Sign_In\n    SSO -->Sign_Up\n    Sign_In --> /Notify\n    /Notify --> |All Told| SSO\n    Sign_Up --> /Verify\n    /Verify --> /Notify\n    SSO --> |Back/Profile| Service\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/sso/blob/c49546ecd22fef202600daf26144f736a574cf4d/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "50d73fa7c52c225387fc03a45153a4a6fd967258cbec1f6d060aedba1fd005b3",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2015 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/sso/blob/c49546ecd22fef202600daf26144f736a574cf4d/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "34858294efbcd193640639250f168dfb08e7a61659063ad5db0188ca074bb3b8",
+      "characters": 584,
+      "excerpt": "{\n\t\"name\": \"openthc/sso\",\n\t\"description\": \"OpenTHC Single Sign On Server\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.25.084\",\n\t\"minimum-stability\": \"dev\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\SSO\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\SSO\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"fakerphp/faker\": \"1.24.1\",\n\t\t\"php-webdriver/webdriver\": \"1.15.2\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.11\",\n\t\t\"phpunit/phpunit\": \"9.6.22\",\n\t\t\"phpunit/phpunit-selenium\": \"9.0.1\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/sso\",\n\t\"description\": \"OpenTHC Single Sign On Server\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.25.084\",\n\t\"minimum-stability\": \"dev\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\SSO\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\SSO\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"fakerphp/faker\": \"1.24.1\",\n\t\t\"php-webdriver/webdriver\": \"1.15.2\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.11\",\n\t\t\"phpunit/phpunit\": \"9.6.22\",\n\t\t\"phpunit/phpunit-selenium\": \"9.0.1\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/sso/blob/c49546ecd22fef202600daf26144f736a574cf4d/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0611d6972a9265c9937dc21a05b141a37d4497b77ae01661ff65f9eeb6971fe3",
+      "characters": 614,
+      "excerpt": "{\n\t\"name\": \"@openthc/sso\",\n\t\"version\": \"420.25.084\",\n\t\"description\": \"OpenTHC SSO Module\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"jscpd\": \"4.0.5\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/sso.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/sso/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/sso#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"@openthc/sso\",\n\t\"version\": \"420.25.084\",\n\t\"description\": \"OpenTHC SSO Module\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"jscpd\": \"4.0.5\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/sso.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/sso/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/sso#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/sso/blob/c49546ecd22fef202600daf26144f736a574cf4d/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/sso",
+    "commit": "https://github.com/openthc/sso/commit/c49546ecd22fef202600daf26144f736a574cf4d"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

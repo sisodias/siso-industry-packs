@@ -1,0 +1,79 @@
+{
+  "audit_id": "R114",
+  "full_name": "OCA/l10n-thailand",
+  "html_url": "https://github.com/OCA/l10n-thailand",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Thai localization",
+  "stargazers_count": 70,
+  "forks_count": 81,
+  "default_branch": "18.0",
+  "archived": false,
+  "pushed_at": "2026-08-31T02:29:50Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=l10n-thailand+in%3Aname&sort=stars&order=desc&per_page=20&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "90d4a7fcb1148d5d65c84ebf40f1b1d3127e5d44",
+  "last_commit": "2026-07-16T09:07:53Z",
+  "commits_six_months_sample_count": 131,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 29,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".copier-answers.yml",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    ".pylintrc",
+    ".pylintrc-mandatory",
+    ".ruff.toml",
+    "LICENSE",
+    "README.md",
+    "checklog-odoo.cfg",
+    "eslint.config.cjs",
+    "prettier.config.cjs",
+    "test-requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "0e428b9fcc4c66f2f0c42dd3918adc3be192b88f92ffcdc191e76017d4d7d729",
+    "characters": 6229,
+    "excerpt": "\n[![Support the OCA](https://odoo-community.org/readme-banner-image)](https://odoo-community.org/get-involved?utm_source=repo-readme)\n\n# l10n-thailand\n[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/l10n-thailand&target_branch=18.0)\n[![Pre-commit Status](https://github.com/OCA/l10n-thailand/actions/workflows/pre-commit.yml/badge.svg?branch=18.0)](https://github.com/OCA/l10n-thailand/actions/workflows/pre-commit.yml?query=branch%3A18.0)\n[![Build Status](https://github.com/OCA/l10n-thailand/actions/workflows/test.yml/badge.svg?branch=18.0)](https://github.com/OCA/l10n-thailand/actions/workflows/test.yml?query=branch%3A18.0)\n[![codecov](https://codecov.io/gh/OCA/l10n-thailand/branch/18.0/graph/badge.svg)](https://codecov.io/gh/OCA/l10n-thailand)\n[![Translation Status](https://translation.odoo-community.org/widgets/l10n-thailand-18-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/l10n-thailand-18-0/?utm_source=widget)\n\n<!-- /!\\ do not modify above this line -->\n\nl10n-thailand\n\n<!-- /!\\ do not modify below this line -->\n\n<!-- prettier-ignore-start -->\n\n[//]: # (addons)\n\nAvailable addons\n----------------\naddon | version | maintainers | summary\n--- | --- | --- | ---\n[currency_rate_update_TH_BOT](currency_rate_update_TH_BOT/) | 18.0.1.0.0 | <a href='https://github.com/ps-tubtim'><img src='https://github.com/ps-tubtim.png' width='32' height='32' style='border-radius:50%;' alt='ps-tubtim'/></a> | Currency Rate Update - BOT\n[l10n_th_account_asset_management](l10n_th_account_asset_management/) | 18.0.1.0.0 | <a href='https://github.com/ps-tubtim'><img src='https://github.com/ps-tubtim.png' width='32' height='32' style='border-radius:50%;' alt='ps-tubtim'/></a> | Thai Localization - Assets Management\n[l10n_th_account_tax](l10n_th_account_tax/) | 18.0.1.6.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Thai Localization - VAT and Withholding Tax\n[l10n_th_account_tax_expense](l10n_th_account_tax_expense/) | 18.0.1.1.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Thai Localization - Expense Tax\n[l10n_th_account_tax_multi](l10n_th_account_tax_multi/) | 18.0.1.0.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Thai Localization - Tax with Payment Multi Deduction\n[l10n_th_account_tax_report](l10n_th_account_tax_report/) | 18.0.1.0.2 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Thai Localization - VAT and Withholding Tax Reports\n[l10n_th_account_wht_cert_form](l10n_th_account_wht_cert_form/) | 18.0.1.0.1 | <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Thai Localization - Withholding Tax Certificate Form\n[l10n_th_amount_to_text](l10n_th_amount_to_text/) | 18.0.2.0.0 | <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Convert Amount Text to Thai\n[l10n_th_base_sequence](l10n_th_base_sequence/) | 18.0.1.0.0 | <a href='https://github.com/sansirit'><img src='https://github.com/sansirit.png' width='32' height='32' style='border-radius:50%;' alt='sansirit'/></a> <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Thai Localization - Base Sequence\n[l10n_th_base_utils](l10n_th_base_utils/) | 18.0.3.0.0 | <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Collection of all Thai fonts, Convert month/year/number to thai\n[l10n_th_gov_purchase_request](l10n_th_gov_purchase_request/) | 18.0.1.0.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> <a href='https://github.com/Saran440'><img src='https://github.com/Saran440.png' width='32' height='32' style='border-radius:50%;' alt='Saran440'/></a> | Thai Localization - Government Purchase Request\n[l10n_th_mis_report](l10n_th_mis_report/) | 18.0.1.0.0 | <a href='https://github.com/ps-tubtim'><img src='https://github.com/ps-tubtim.png' width='32' height='32' style='border-radius:50%;' alt='ps-tubtim'/></a> | Thai Localization - MIS Report\n[l10n_th_partner](l10n_th_partner/) | 18.0.2.0.1 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Thai Localization - Partner\n[l10n_th_tier_department](l10n_th_tier_department/) | 18.0.1.0.1 | <a href='https://github.com/ps-tubtim'><img src='https://github.com/ps-tubtim.png' width='32' height='32' style='border-radius:50%;' alt='ps-tubtim'/></a> | Thai Localization - Tier Department Level\n[l10n_th_tier_department_demo](l10n_th_tier_department_demo/) | 18.0.1.0.0 | <a href='https://github.com/ps-tubtim'><img src='https://github.com/ps-tubtim.png' width='32' height='32' style='border-radius:50%;' alt='ps-tubtim'/></a> | Thai Localization - Tier Department Level Demo\n\n[//]: # (end addons)\n\n<!-- prettier-ignore-end -->\n\n## Licenses\n\nThis repository is licensed under [AGPL-3.0](LICENSE).\n\nHowever, each module can have a totally different license, as long as they adhere to Odoo Community Association (OCA)\npolicy. Consult each module's `__manifest__.py` file, which contains a `license` key\nthat explains its license.\n\n----\nOCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit\norganization whose mission is to support the collaborative development of Odoo features\nand promote its widespread use.\n",
+    "tail": "",
+    "source_url": "https://github.com/OCA/l10n-thailand/blob/90d4a7fcb1148d5d65c84ebf40f1b1d3127e5d44/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "characters": 34523,
+    "excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  Developers that use our General Public Licenses protect your rights\nwith two steps: (1) assert copyright on the software, and (2) offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\n  A secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate.  Many developers of free software are heartened and\nencouraged by the resulting cooperation.  However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\n  The GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community.  It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server.  Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\n  An older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals.  This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU ",
+    "tail": "oftware can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source.  For example, if your program is a web application, its\ninterface could display a \"Source\" link that leads users to an archive\nof the code.  There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n<https://www.gnu.org/licenses/>.\n",
+    "source_url": "https://github.com/OCA/l10n-thailand/blob/90d4a7fcb1148d5d65c84ebf40f1b1d3127e5d44/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/OCA/l10n-thailand",
+    "commit": "https://github.com/OCA/l10n-thailand/commit/90d4a7fcb1148d5d65c84ebf40f1b1d3127e5d44"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

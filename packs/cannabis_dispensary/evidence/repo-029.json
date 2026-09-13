@@ -1,0 +1,89 @@
+{
+  "audit_id": "R029",
+  "full_name": "cannlytics/cannlytics-engine",
+  "html_url": "https://github.com/cannlytics/cannlytics-engine",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "A Python 🐍 package that implements the logic of 🔥 Cannlytics.",
+  "stargazers_count": 7,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2022-03-27T01:58:14Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "api",
+    "cannabis",
+    "cannabis-api",
+    "cannabis-app",
+    "cannabis-data",
+    "cannabis-scripts",
+    "cannabisapp",
+    "metrc",
+    "python"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Acannlytics&sort=stars&order=desc&per_page=30&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "bd7f4c4a2b7fabf517bac63f94b40a006a55a1c9",
+  "last_commit": "2022-01-10T13:31:34-06:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "requirements.txt",
+    "setup.py"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "527e945dbc9465677fe7f1689f56573fa77e37321b6b7e3bb5f464b5e23fbfc5",
+    "characters": 5780,
+    "excerpt": "<div align=\"center\" style=\"text-align:center; margin-top:1rem; margin-bottom: 1rem;\">\n  <img style=\"height:180px\" alt=\"\" src=\"https://firebasestorage.googleapis.com/v0/b/cannlytics.appspot.com/o/public%2Fimages%2Flogos%2Fcannlytics-engine-logo.png?alt=media&token=85e11a96-ac74-479d-a69b-e61a3a47b4d2\">\n  <div style=\"margin-top:0.5rem;\">\n    <h3>Simple, easy, cannabis analytics.</h3>\n  </div>\n\n<https://cannlytics.com>\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-darkgreen.svg)](https://opensource.org/licenses/MIT)\n[![Version](https://img.shields.io/pypi/v/cannlytics.svg)](https://pypi.org/project/cannlytics)\n\n</div>\n\n🔥 Cannlytics is simple, easy-to-use, **end-to-end** cannabis analytics software designed to make your data and information accessible. We believe that everyone in the cannabis industry should be able to access their rich, valuable data quickly and easily and that everyone will be better off for it. The Cannlytics Engine comes with **batteries included**, but you are always welcome to supercharge your setup with modifications and custom components.\n\n- [🚀 Installation](#installation)\n- [👩‍🏫 Documentation](#documentation)\n- [🗝️ Authentication, Data, and File Management](#development)\n- [🧐 Traceability](#automation)\n- [👩‍🔬 Testing](#testing)\n- [🤝 Contributing](#contributing)\n- [❤️ Support](#support)\n- [🏛️ License](#license)\n\n## 🚀 Installation <a name=\"installation\"></a>\n\nYou can install the Cannlytics engine from [PyPI](https://pypi.org/project/cannlytics/).\n\n```shell\npip install cannlytics\n```\n\nYou can also simply clone the repository to get your hands on the Cannlytics source code.\n\n```shell\ngit clone https://github.com/cannlytics/cannlytics-engine.git\n```\n\n## 👩‍🏫 Documentation <a name=\"documentation\"></a>\n\nPlease refer to the [Cannlytics developer documentation](https://docs.cannlytics.com/developers/development/) for detailed information about the module and various use cases.\n\n## 🗝️ Authentication, Data, and File Management\n\nCannlytics leverages [Firebase](https://console.firebase.google.com/) by default for a database, file storage, and authentication. You can [refer to the documentation](https://docs.cannlytics.com/cannlytics/firebase/firebase/) for instructions on how to setup your Firebase project for use with Cannlytics.\n\n## 🧐 Traceability <a name=\"traceability\"></a>\n\nCannlytics supports [Metrc](https://api-ca.metrc.com/Documentation) out-of-the-box. Simply plug in your API keys and you're off to the races.\n\n```py\nfrom cannlytics import metrc\n\n# Initialize a Metrc API client.\ntrack = metrc.authorize(\n    'your-vendor-api-key',\n    'your-user-api-key',\n    primary_license='your-user-license-number',\n    state='ma',\n)\n```\n\nProducer / processor workflow:\n\n```py\n# Get a plant by it's ID.\nplant = track.get_plants(uid='123')\n\n# Change the growth phase from vegetative to flowering.\nplant.flower(tag='your-plant-tag')\n\n# Move the flowering plant to a new room.\nplant.move(location_name='The Flower Room')\n\n# Manicure useable cannabis from the flowering plant.\nplant.manicure(harvest_name='Old-Time Moonshine', weight=4.20)\n\n# Harvest the flowering plant.\nplant.harvest(harvest_name='Old-Time Moonshine', weight=420)\n```\n\nLab workflow:\n\n```py\n# Post lab results.\ntrack.post_lab_results([{...}, {...}])\n\n# Get a tested package.\ntest_package = track.get_packages(label='abc')\n\n# Get the tested package's lab result.\nlab_results = track.get_lab_results(uid=test_package.id)\n```\n\nRetail workflow:\n\n```py\n# Get a retail package.\npackage = track.get_packages(label='abc')\n\n# Create a sales receipts.\ntrack.create_receipts([{...}, {...}])\n\n# Get recent receipts.\nsales = track.get_receipts(action='active', start='2021-04-20')\n\n# Update the sales receipt using.\nsale = track.get_receipts(uid='420')\nsale.total_price = 25\nsale.update()\n```\n\n## 👩‍🔬 Testing <a name=\"testing\"></a>\n\nYou can run tests with code coverage with `pytest`.\n\n```\npytest --cov=cannlytics tests/\n```\n\n## 🤝 Contributing <a name=\"contributing\"></a>\n\nContributions are always welcome! You are encouraged to submit issues, functionality, and features that you want to be addressed. You can also develop your own new features, fix known issues, and add documentation, tests, and examples. Anyone is welcome to contribute anything. Please see the [contributing guide](https://docs.cannlytics.com/developers/contributing) for more information.\n\n## ❤️ Support <a name=\"support\"></a>\n\nCannlytics is made available with ❤️ and <a href=\"https://opencollective.com/cannlytics-company\">your good will</a>. Please consider making a contribution to keep the good work coming. Thank you 🙏\n\n🥞 Bitcoin donation address: 34CoUcAFprRnLnDTHt6FKMjZyvKvQHb6c6\n\n## 🏛️ License <a name=\"license\"></a>\n\n```\nCopyright (c) 2021-2022 Cannlytics\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/cannlytics/cannlytics-engine/blob/bd7f4c4a2b7fabf517bac63f94b40a006a55a1c9/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8e6c2d19ccfc43166bedeed39304d157f4261dc9c3b682d91fa3aef741256d13",
+    "characters": 1059,
+    "excerpt": "Copyright (c) 2021-2022 Cannlytics\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "tail": "tware, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "source_url": "https://github.com/cannlytics/cannlytics-engine/blob/bd7f4c4a2b7fabf517bac63f94b40a006a55a1c9/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "2d413c25daefa1a3a3b2eb4dbccaff73d49de1e35185f6735cd2ff525887f9df",
+      "characters": 281,
+      "excerpt": "beautifulsoup4\nfirebase_admin\ngoogle-cloud-secret-manager\ngoogle-cloud-firestore\ngooglemaps\nmatplotlib\nnumpy\nopenpyxl\npandas\npython-dotenv\nstatsmodels\nulid-py\n\n# FIXME:\n# ocean-lib # Breaks App Engine deployments.\n\n# Optional dependency:\n# xlwings # Breaks App Engine deployments.\n",
+      "tail": "beautifulsoup4\nfirebase_admin\ngoogle-cloud-secret-manager\ngoogle-cloud-firestore\ngooglemaps\nmatplotlib\nnumpy\nopenpyxl\npandas\npython-dotenv\nstatsmodels\nulid-py\n\n# FIXME:\n# ocean-lib # Breaks App Engine deployments.\n\n# Optional dependency:\n# xlwings # Breaks App Engine deployments.\n",
+      "source_url": "https://github.com/cannlytics/cannlytics-engine/blob/bd7f4c4a2b7fabf517bac63f94b40a006a55a1c9/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/cannlytics/cannlytics-engine",
+    "commit": "https://github.com/cannlytics/cannlytics-engine/commit/bd7f4c4a2b7fabf517bac63f94b40a006a55a1c9"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

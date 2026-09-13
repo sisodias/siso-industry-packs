@@ -1,0 +1,82 @@
+{
+  "audit_id": "R118",
+  "full_name": "frevation/leceipt-api-example-code",
+  "html_url": "https://github.com/frevation/leceipt-api-example-code",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Leceipt API create e-Tax Invoice & e-Receipt for use with Revenue Department of Thailand.",
+  "stargazers_count": 1,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2022-10-03T06:54:22Z",
+  "license": null,
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=Thai+e-tax&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "9060d8a1f2d73e595f05e46f79d5a5ac607aa676",
+  "last_commit": "2022-10-03T13:54:22+07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "README.md",
+    "check.js",
+    "create-billing-notes.js",
+    "create-credit-notes.js",
+    "create-debit-notes.js",
+    "create-deliveryorders-taxinvoice.js",
+    "create-invoice-taxinvoice.js",
+    "create-invoices.js",
+    "create-quotations.js",
+    "create-receipt-taxinvoice-abb.js",
+    "create-receipt-taxinvoice.js",
+    "create-receipt.js",
+    "create-taxinvoice.js",
+    "download.js",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "0976182cbf6e971c6b2b4d52b5bed28887fdb7b1cf90e00495ef906a26f1bee2",
+    "characters": 682,
+    "excerpt": "# ตัวอย่าง Code สำหรับสร้างเอกสาร e-Tax Invoice & e-Receipt ผ่าน Leceipt API (Leceipt API Example Code)\n## Leceipt API create e-Tax Invoice &amp; e-Receipt for use with Revenue Department of Thailand.\n<br/><br/>\n** โปรแกรม Leceipt สำหรับสร้างเอกสาร e-Tax Invoice & e-Receipt\n\nhttps://www.leceipt.com\n\n<br/><br/>\n** ทดลองใช้งาน สร้าง API Key\n\nhttps://my.leceipt.com\n\n<br/><br/>\n** วิธีสร้าง API Key\n\nhttps://www.leceipt.com/docs/etax/api-key\n\n<br/><br/>\n** คู่มือการใช้งานแบบละเอียด\n\nhttps://www.leceipt.com/docs/etax\n\n<br/><br/>\n** API Documents for Developers\n\nhttps://developers.leceipt.com/etax/#create-a-receipt-tax-invoice\n\n<br/><br/>\n** สอบถามการใช้งาน API\n\nLine Id: @leceipt\n",
+    "tail": "",
+    "source_url": "https://github.com/frevation/leceipt-api-example-code/blob/9060d8a1f2d73e595f05e46f79d5a5ac607aa676/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [
+    "node_modules/axios/LICENSE",
+    "node_modules/follow-redirects/LICENSE"
+  ],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "7e7adc0131b5807929b0d49cee6ca8d3e28e3449beb2e1de471808657d947b8a",
+      "characters": 71,
+      "excerpt": "{\n  \"dependencies\": {\n    \"axios\": \"^0.25.0\"\n  },\n  \"type\": \"module\"\n}\n",
+      "tail": "{\n  \"dependencies\": {\n    \"axios\": \"^0.25.0\"\n  },\n  \"type\": \"module\"\n}\n",
+      "source_url": "https://github.com/frevation/leceipt-api-example-code/blob/9060d8a1f2d73e595f05e46f79d5a5ac607aa676/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/frevation/leceipt-api-example-code",
+    "commit": "https://github.com/frevation/leceipt-api-example-code/commit/9060d8a1f2d73e595f05e46f79d5a5ac607aa676"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

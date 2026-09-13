@@ -1,0 +1,68 @@
+{
+  "audit_id": "R007",
+  "full_name": "openthc/docker",
+  "html_url": "https://github.com/openthc/docker",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": null,
+  "stargazers_count": 9,
+  "forks_count": 3,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-02-10T04:12:16Z",
+  "license": null,
+  "topics": [
+    "docker"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "6e9f0485365072c284c32306d50de2f1f3f1cf41",
+  "last_commit": "2026-02-09T20:12:13-08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "INSTALL.md",
+    "README.md",
+    "compose.yaml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "298f7572f96634ad754aabb6db4237891404a3cc5efb973099368f36f1b4e75a",
+    "characters": 2575,
+    "excerpt": "<p align=\"center\">\n\t<img src=\"https://openthc.com/img/logo.png\" height=\"128\" alt=\"OpenTHC Greenhouse\">\n</p>\n\nOpenTHC is an environment of web-baed applications focused on helping Cannabis/Hemp and Organic Horticulture industry participants meet their regulatory requirements.\nThis repository contains the tools to start the suite of services from docker images.\n\n---\n\nThese images are available from our [Docker Hub Profile](https://hub.docker.com/u/openthc)\n\n[![Docker Pulls openthc/app](https://img.shields.io/docker/pulls/openthc/app.svg?label=openthc%2Fapp&style=for-the-badge)](https://hub.docker.com/r/openthc/app)\n[![Docker Pulls openthc/cre](https://img.shields.io/docker/pulls/openthc/cre.svg?label=openthc%2Fcre&style=for-the-badge)](https://hub.docker.com/r/openthc/cre)\n[![Docker Pulls openthc/pos](https://img.shields.io/docker/pulls/openthc/pos.svg?label=openthc%2Fpos&style=for-the-badge)](https://hub.docker.com/r/openthc/pos)\n[![Docker Pulls openthc/sql](https://img.shields.io/docker/pulls/openthc/sql.svg?label=openthc%2Fsql&style=for-the-badge)](https://hub.docker.com/r/openthc/sql)\n\n\n## Quick Start\n\nThis docker-compose will create the OpenTHC Suite which is all the services needed to operate a farm or retail operation.\nOut of the box it's configured to create a local-subnet for the containers.\n\n```bash\ngit clone https://github.com/openthc/docker.git /opt/openthc/docker\ncd /opt/openthc/docker\ndocker compose up -d\n```\n\nThen visit http://sso.openthc.me/ and sign in with `root@openthc.me` and `passweed`\n\nSee [INSTALL.md](./INSTALL.md) for more information and configuration options.\n\n\n## Services\n\nThese are the services run by the OpenTHC Docker suite.\n\n- [SQL](https://hub.docker.com/r/openthc/sql): PostgreSQL Database\n- RAM: Redis\n- [SSO](https://github.com/openthc/sso): Single Sign On / oAuth / Account services\n- [CRE](https://github.com/openthc/cre): Compliance Reporting Engine\n- [App](https://github.com/openthc/app)\n  - Track and Trace (T&T/TnT)\n  - Enterprise resource planning (ERP)\n  - Regulatory compliance features for your region\n- [Lab Portal](https://github.com/openthc/lab)\n  - Regulatory compliance reporting\n  - Laboratory Information Management Systems (LIMS)\n- [Point of Sale](https://github.com/openthc/pos)\n  - Front end for Retail staff\n  - Business-to-Consumer regulatory compliance reporting\n\n\n## Contributing\n\n- Report Bugs\n- Suggest Enhancements / Feature Requests\n- Code Contributions\n\n\n## Getting Support\n\n- [GitHub Issues](https://github.com/openthc/docker/issues)\n- [Enterprise Support](https://openthc.com/help)\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/docker/blob/6e9f0485365072c284c32306d50de2f1f3f1cf41/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "compose.yaml",
+      "sha256": "8a444dfdd6293b67896c87adef52d8711fe7344d9b6e96efa03333b7afc1354f",
+      "characters": 3298,
+      "excerpt": "#\n# OpenTHC Full Docker Environment\n#\n# SPDX-License-Identifier: GPL-3.0-only\n#\n\nname: openthc\n\nservices:\n\n  hub:\n    container_name: hub.openthc.me\n    image: openthc/web\n    ports:\n      - \"80:80\"\n      - \"443:443\"\n    volumes:\n      - ./etc/Caddyfile:/etc/caddy/Caddyfile\n      - ./volumes/hub/data:/data\n\n\n  # The SQL Database Service\n  sql:\n    container_name: sql.openthc.me\n    image: openthc/sql\n    environment:\n      POSTGRES_PASSWORD: \"passweed\"\n\n\n  # The Redis System\n  # @see https://github.com/nextcloud/all-in-one/discussions/1731\n  rdb:\n    container_name: rdb.openthc.me\n    image: redis\n\n\n  # Open Policy Agent (ACL)\n  # opa:\n  #   container_name: opa.openthc.me\n  #   image: opa\n\n\n  # Single Sign On Services\n  sso:\n    container_name: sso.openthc.me\n    image: openthc/sso\n    depends_on:\n      - hub\n      - sql\n      - rdb\n    environment:\n      OPENTHC_SERVER_NAME: \"sso.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - sso.openthc.me\n    expose:\n      - \"80\"\n\n\n  # Compliance Reporting Engine\n  cre:\n    container_name: cre.openthc.me\n    image: openthc/cre\n    depends_on:\n      - sso\n    environment:\n      # OPENTHC_DEBUG: \"true\"\n      OPENTHC_SERVER_NAME: \"cre.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - cre.openthc.me\n    expose:\n      - \"80\"\n\n\n  # PIPE\n  # pipe:\n  #   container_name: pipe.openthc.me\n  #   image: openthc/pipe\n  #   depends_on:\n  #     - sso\n  #   environment:\n  #     OPENTHC_SERVER_NAME: \"pipe.openthc.me\"\n  #   env_file:\n  #     - path: \"./etc/demo.env\"\n  #       required: true\n  #     - path: \"./etc/live.env\"\n  #       required: false\n  #   networks:\n  #     default:\n  #       aliases:\n  #         - pipe.openthc.me\n  #   expose:\n  #     - \"80\"\n\n\n  # BONG\n  # bong:\n  #   container_name: bong.openthc.me\n  #   image: openthc/bong\n  #   depends_on:\n  #     - sso\n  #   environment:\n  #     OPENTHC_SERVER_NAME: \"bong.openthc.me\"\n  #   env_file:\n  #     - path: \"./etc/demo.env\"\n  #       required: true\n  #     - path: \"./etc/live.env\"\n  #       required: false\n  #   networks:\n  #     default:\n  #       aliases:\n  #         - bong.openthc.me\n  #   expose:\n  #     - \"80\"\n\n\n  # Main Application / S2S / TNT\n  app:\n    container_name: app.openthc.me\n    image: openthc/app\n    depends_on:\n      - sso\n    environment:\n      # OPENTHC_DEBUG: \"true\"\n      OPENTHC_SERVER_NAME: \"app.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - app.openthc.me\n    expose:\n      - \"80\"\n\n\n  # Point of Sale\n  pos:\n    container_name: pos.openthc.me\n    image: openthc/pos\n    depends_on:\n      - sso\n    environment:\n      OPENTHC_SERVER_NAME: \"pos.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - pos.openthc.me\n    expose:\n      - \"80\"\n\n\nvolumes:\n  gfs:\n    name: gfs.openthc.me\n",
+      "tail": "   OPENTHC_SERVER_NAME: \"app.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - app.openthc.me\n    expose:\n      - \"80\"\n\n\n  # Point of Sale\n  pos:\n    container_name: pos.openthc.me\n    image: openthc/pos\n    depends_on:\n      - sso\n    environment:\n      OPENTHC_SERVER_NAME: \"pos.openthc.me\"\n    env_file:\n      - path: \"./etc/demo.env\"\n        required: true\n      - path: \"./etc/live.env\"\n        required: false\n    networks:\n      default:\n        aliases:\n          - pos.openthc.me\n    expose:\n      - \"80\"\n\n\nvolumes:\n  gfs:\n    name: gfs.openthc.me\n",
+      "source_url": "https://github.com/openthc/docker/blob/6e9f0485365072c284c32306d50de2f1f3f1cf41/compose.yaml"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/docker",
+    "commit": "https://github.com/openthc/docker/commit/6e9f0485365072c284c32306d50de2f1f3f1cf41"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

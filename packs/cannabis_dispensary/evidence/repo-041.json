@@ -1,0 +1,69 @@
+{
+  "audit_id": "R041",
+  "full_name": "kushyapp/kushy-metrc-php-sdk",
+  "html_url": "https://github.com/kushyapp/kushy-metrc-php-sdk",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "An easy to use PHP API for the METRC state licensed seed to sale cannabis API using the Guzzle library",
+  "stargazers_count": 15,
+  "forks_count": 7,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2018-06-22T23:17:12Z",
+  "license": null,
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=METRC+SDK+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "c16af069cfbcf2daf650366f5558be9b904c024e",
+  "last_commit": "2018-06-22T16:17:05-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".DS_Store",
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "composer.json",
+    "composer.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "f6e7bb46bc144afaf18c1e439435e9677e208e23d3eae5a06bbc251151a404dd",
+    "characters": 2578,
+    "excerpt": "# Metrc API SDK\n\n## Dependencies\n\n* [Guzzle](http://docs.guzzlephp.org/en/stable/quickstart.html)\n\n## Development\n\n### Quick Start Guide + API Keys\n\n1. Install the METRC package with Composer: `composer require 'kushy/metrc-php-sdk'`\n2. Require whichever route class you need in your application - in this case we want to access the `/harvests/` endpoint (*assuming you're using PSR-4*):\n```php\nrequire_once '../../../vendor/autoload.php';\n\nuse Kushy\\Metrc\\Routes\\Harvests;\n```\n3. Create a new instance of the route class (`Harvests`) and pass through your state's abbreviated name (in this case `ca` for California) and Vendor + User API keys:\n```php\n$harvests = new Harvests('ca', $vendorApiKey, $userApiKey);\n```\n4. Use one of the class methods to query the API - this example grabs the active harvests:\n```php\n$harvests = $metrc->getActive($licenseNumber, $startDate, $endDate);\n```\n\n### Tips\n\n**General**\n* [General API Tips](https://api-ca.metrc.com/Documentation/#getting_started_working_with_the_api)\n* All API requests (POST/PUT) must be sent in JSON format ([see Guzzle on JSON](http://docs.guzzlephp.org/en/stable/request-options.html#json))\n* All dates are ISO 8601 format. See below for time conversion snippets.\n\n**Dates are ISO format**\nSending dates to API? Use ISO 8601 formatted date: `0001-01-01T00:00:00+00:00`\n\n```php\n$lastModifiedStart = date('c', strtotime($startDate));\n```\n\n**Quickly get object keys**\nCopy API response/sample data and do this:\n\n```php\n/**\n * REGEX for\n * ([\"'])(?:(?=(\\\\?))\\2.)*?\\1:\n * ALT+ENTER to select all found objects\n * Paste\n * Find and replace \": with nothing\n * Find and replace \" with $sample->\n**/\n\n  \"Id\": 1,\n  \"Name\": \"2014-11-19-Harvest Room-M\",\n  \"HarvestType\": \"Product\",\n  \"DryingRoomId\": 1,\n  \"DryingRoomName\": \"Harvest Room\",\n  \"CurrentWeight\": 0.0,\n  \"TotalWasteWeight\": 0.0,\n  \"PlantCount\": 70,\n  \"TotalWetWeight\": 40.0,\n  \"PackageCount\": 5,\n  \"TotalPackagedWeight\": 0.0,\n  \"UnitOfWeightName\": \"Ounces\",\n  \"LabTestingState\": null,\n  \"LabTestingStateDate\": null,\n  \"IsOnHold\": false,\n  \"HarvestStartDate\": \"2014-11-19\",\n  \"FinishedDate\": null,\n  \"ArchivedDate\": null,\n  \"LastModified\": \"0001-01-01T00:00:00+00:00\",\n  \"Strains\": []\n```\n\n## Testing\n\nExample files are provided in the package for each endpoint and method (GET, POST, PUT, DELETE) to easily test each endpoint manually with properly formed sample data. \n\n> For example, to see a list of all active harvests, copy the code from `test/example/harvests/get-active-harvest.php`.\n\n*I'm looking to implement unit testing soon to ensure package integrity.*\n\n",
+    "tail": "",
+    "source_url": "https://github.com/kushyapp/kushy-metrc-php-sdk/blob/c16af069cfbcf2daf650366f5558be9b904c024e/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "8d7f25093853356e364d0e7d45019abec56bfbfc69289539343ead430042ebe7",
+      "characters": 749,
+      "excerpt": "{\n    \"name\": \"kushy/metrc-php-sdk\",\n    \"description\": \"An easy to use PHP API for the METRC state licensed seed to sale cannabis API using the Guzzle library. Require, create new instance with API keys, and query any endpoint (GET, POST, PUT, DELETE)\",\n    \"type\": \"library\",\n    \"keywords\": [\"metrc\", \"api\", \"sdk\", \"cannabis\", \"marijuana\"],\n    \"homepage\": \"https://kushy.net/developers\",\n    \"license\": \"MIT\",\n    \"authors\": [{\n        \"name\": \"Ryosuke Hana\",\n        \"email\": \"ryosuke.san.hana@gmail.com\",\n        \"homepage\": \"http://whoisryosuke.com\",\n        \"role\": \"Developer\"\n    }],\n    \"require\": {\n        \"guzzlehttp/guzzle\": \"^6.3\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"Kushy\\\\\": \"app/lib/Kushy/\"\n        }\n    }\n}\n",
+      "tail": "tion\": \"An easy to use PHP API for the METRC state licensed seed to sale cannabis API using the Guzzle library. Require, create new instance with API keys, and query any endpoint (GET, POST, PUT, DELETE)\",\n    \"type\": \"library\",\n    \"keywords\": [\"metrc\", \"api\", \"sdk\", \"cannabis\", \"marijuana\"],\n    \"homepage\": \"https://kushy.net/developers\",\n    \"license\": \"MIT\",\n    \"authors\": [{\n        \"name\": \"Ryosuke Hana\",\n        \"email\": \"ryosuke.san.hana@gmail.com\",\n        \"homepage\": \"http://whoisryosuke.com\",\n        \"role\": \"Developer\"\n    }],\n    \"require\": {\n        \"guzzlehttp/guzzle\": \"^6.3\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"Kushy\\\\\": \"app/lib/Kushy/\"\n        }\n    }\n}\n",
+      "source_url": "https://github.com/kushyapp/kushy-metrc-php-sdk/blob/c16af069cfbcf2daf650366f5558be9b904c024e/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/kushyapp/kushy-metrc-php-sdk",
+    "commit": "https://github.com/kushyapp/kushy-metrc-php-sdk/commit/c16af069cfbcf2daf650366f5558be9b904c024e"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

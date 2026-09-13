@@ -1,0 +1,77 @@
+{
+  "audit_id": "R127",
+  "full_name": "viafintech/camt_parser",
+  "html_url": "https://github.com/viafintech/camt_parser",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "A basic parser for camt.052, camt.053 and camt.054 files",
+  "stargazers_count": 23,
+  "forks_count": 25,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-06-22T06:56:40Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "camt",
+    "parsing"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=CAMT+parser+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "447d729ea4d23d517437bc888f8f1b97c1af8db8",
+  "last_commit": "2026-06-22T08:56:38+02:00",
+  "commits_six_months_sample_count": 4,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 14,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".gitignore",
+    ".rspec",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE",
+    "Rakefile",
+    "camt_parser.gemspec",
+    "readme.md"
+  ],
+  "readme": {
+    "path": "readme.md",
+    "sha256": "2b37db2997a837802a330ba9e03904648e7b06cbc8bbc60700e75c466aefbfa3",
+    "characters": 2073,
+    "excerpt": "# CamtParser\n\n[![Ruby CI](https://github.com/viafintech/camt_parser/actions/workflows/test.yml/badge.svg)](https://github.com/viafintech/camt_parser/actions/workflows/test.yml)\n\nCamtParser is a Ruby Gem which does some basic parsing of camt052, camt053, and camt054 files into an object\nstructure for easier usability instead of having to use an XML parser all the time.\nKeep in mind that this might not include a complete parsing of camt specification.\nFields that we did not need for our use-cases are simply ignored for now.\n\n**PLEASE CONSIDER SWITCHING TO [sepa_file_parser](https://github.com/viafintech/sepa_file_parser)**\n\n`sepa_file_parser` is the followup project with broader support for other SEPA/iso20022 related file formats.\n\n## Getting started\n\n1. add the Gem to the Gemfile\n\n```ruby\ngem 'camt_parser'\n```\n\n2. Require the Gem at any point before using it\n3. Use it!\n\n## Example for camt053\n```ruby\ncamt = CamtParser::File.parse path_to_file\nputs camt.group_header.creation_date_time\ncamt.statements.each do |statement|\n  puts statement.account.iban\n  statement.entries.each do |entry|\n    # Access individual entries/bank transfers\n    puts entry.amount\n    entry.transactions.each do |transaction|\n      puts transaction.debitor\n    end\n  end\nend\n```\n\nPlease check the code for fields not mentioned here.\nAlso check the code for camt052 and camt054.\n\n## Registering new namespaces\nIn case you have to parse a namespace which is generally compatible with any of the camt parsers, it is possible to register additional namespaces, without requiring a change to this gem.\n```ruby\n# Registering a new camt052 namespace\nCamtParser::Xml.register('<your namespace>', :camt052)\n# Registering a new camt053 namespace\nCamtParser::Xml.register('<your namespace>', :camt053)\n# Registering a new camt054 namespace\nCamtParser::Xml.register('<your namespace>', :camt054)\n```\n\n## Bugs and Contribution\nFor bugs and feature requests open an issue on Github. For code contributions fork the repo, make your changes and create a pull request.\n\n### License\n[LICENSE](LICENSE)\n",
+    "tail": "",
+    "source_url": "https://github.com/viafintech/camt_parser/blob/447d729ea4d23d517437bc888f8f1b97c1af8db8/readme.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c6bc0ed9ebd5bebb264180d5a7d3c7a68b3c5e8deb8ab9d04e383dfe561193fe",
+    "characters": 1082,
+    "excerpt": "The MIT License (MIT)\n\nCopyright (c) 2023 viafintech GmbH\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/viafintech/camt_parser/blob/447d729ea4d23d517437bc888f8f1b97c1af8db8/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/viafintech/camt_parser",
+    "commit": "https://github.com/viafintech/camt_parser/commit/447d729ea4d23d517437bc888f8f1b97c1af8db8"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

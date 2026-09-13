@@ -1,0 +1,69 @@
+{
+  "audit_id": "R110",
+  "full_name": "lucapinello/pyacaia",
+  "html_url": "https://github.com/lucapinello/pyacaia",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Python module to interact with Acaia scales via Bluetooth (BLE)",
+  "stargazers_count": 68,
+  "forks_count": 15,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2023-06-18T11:07:39Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=Acaia+scale+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "ffe76bdca84dfe7e16456ab01fa48bb1b951d4e3",
+  "last_commit": "2022-01-05T00:31:23-05:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 5,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "setup.py"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "889ccec16c8f7f6bf817530d13cc62c9243985a6921ed266aa47b0ef1e2e3c7e",
+    "characters": 2821,
+    "excerpt": "# pyacaia\n\nPython module to interact with Acaia scales (https://acaia.co/collections/coffee-scales) via Bluetooth (BLE). \n\nNote: If you are using the Acaia Lunar 2021 edition, make sure to update the firmware, otherwise the commands will not work (e.g. tare, start timer etc).\n\nThis code was inspired by the javascript version available here https://github.com/bpowers/btscale\n\n## 0. Requirements\nLinux, Python (>=2.7 or >=3.5) and  bluepy (https://github.com/lucapinello/bluepy)\n(pygatt >=4.0.3 is also partially supported https://github.com/peplin/pygatt;\n Pyxis not supported under pygatt)\n\nThis package has been tested on a RasperryPI ZeroW with Raspbian GNU/Linux 9 (stretch) and on Ubuntu Linux 20.04, and with the Lunar and Pyxis scales.\n\n## 1. Install with:\n\n`pip install pyacaia`\n\n## 2. Short example\n```\n    from pyacaia import AcaiaScale\n    \n    scale=AcaiaScale(mac='00:1C:97:17:FD:97')\n    \n    scale.auto_connect() #to pick the first available\n    \n    # Or if you know the address use:\n    # scale.connect()\n    \n    # battery value in percent\n    print(scale.battery)\n\n    # scale units is 'grams' or 'ounces'\n    print(scale.units)\n\n    # minutes of idle before auto-off\n    print(scale.auto_off)\n\n    # will the scale beep when a button is pressed?\n    if scale.beep_on:\n\tprint('It beeps!')\n    else:\n\tprint('It is silent!')\n\n    # is the timer running?\n    if scale.timer_running:\n\tprint('timer is running')\n\t# elapsed time is in seconds, if timer is paused\n\t# the value will be the displayed time\n\t# Due to bluetooth transit time, the value\n\t# may be slightly different than displayed\n        print('elapsed time:',scale.get_elapsed_time())\n\n    # Tare the scale\n    scale.tare()\n\n    # Control the timer\n    scale.startTimer()\n    time.sleep(2)\n    scale.stopTimer()\n    scale.resetTimer()\n\n    #read and print the weight every 0.5 sec for 5 sec \n    for i in range(10):\n        print scale.weight # this is the property we can use to read the weigth in realtime\n        time.sleep(0.5)\n\t# check if the scale is still connected, perhaps it was turned off?\n\tif not scale.connected:\n\t    break\n\n    scale.disconnect()\n\n``` \n\nPyacaia now calls bluepy's Peripheral.waitForNotifications() internally.  If your application uses waitForNotications() directly with 0.3.0 or earlier, that call should be removed.\n\nBy default the backend used is bluepy, but also pygatt is supported. In that case use:\n\n   scale=AcaiaScale(mac='00:1C:97:17:FD:97',backend='pygatt')\n   \n## 3. Other functions that may be helpful\nFind and list all the acaia scales that are on and in range\n\n`addresses=find_acaia_devices()`\n\nPrint BLE charachteristic of the first available acaia in the list of addresses\n\n```\nif addresses:\n        print_acaia_characteristics(addresses[0])\n    else:\n        print 'No Acaia devices found'\n```\n\n",
+    "tail": "",
+    "source_url": "https://github.com/lucapinello/pyacaia/blob/ffe76bdca84dfe7e16456ab01fa48bb1b951d4e3/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "characters": 34523,
+    "excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  Developers that use our General Public Licenses protect your rights\nwith two steps: (1) assert copyright on the software, and (2) offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\n  A secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate.  Many developers of free software are heartened and\nencouraged by the resulting cooperation.  However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\n  The GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community.  It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server.  Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\n  An older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals.  This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU ",
+    "tail": "oftware can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source.  For example, if your program is a web application, its\ninterface could display a \"Source\" link that leads users to an archive\nof the code.  There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n<https://www.gnu.org/licenses/>.\n",
+    "source_url": "https://github.com/lucapinello/pyacaia/blob/ffe76bdca84dfe7e16456ab01fa48bb1b951d4e3/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/lucapinello/pyacaia",
+    "commit": "https://github.com/lucapinello/pyacaia/commit/ffe76bdca84dfe7e16456ab01fa48bb1b951d4e3"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

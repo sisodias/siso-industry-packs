@@ -1,0 +1,55 @@
+{
+  "audit_id": "R053",
+  "full_name": "BuildWithNQS/cannabis-workflow-automation-sandbox",
+  "html_url": "https://github.com/BuildWithNQS/cannabis-workflow-automation-sandbox",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "End-to-end workflow automation sandbox for cannabis operations.  Demonstrates integration of HubSpot (sales), QuickBooks (finance), Metrc (compliance),  and OneDrive (storage) using Python, APIs, and automation tools (Zapier/n8n).",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-09-18T00:22:46Z",
+  "license": null,
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=cannabis+compliance&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "e360b618e972e386b26b9c581d85488667a6273f",
+  "last_commit": "2025-09-17T19:22:46-05:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "README.md"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "5f1af4389a01231296deaade579d2f7e01a250df2d811d87cb12f747fa9377d2",
+    "characters": 2764,
+    "excerpt": "# Cannabis Workflow Automation Sandbox\n\n![Python](https://img.shields.io/badge/python-3.9%2B-blue)\n![License](https://img.shields.io/badge/license-MIT-green)\n![Status](https://img.shields.io/badge/status-experimental-orange)\n\n\nThis repository demonstrates an **end-to-end workflow automation** for cannabis operations.  \nThe workflow integrates:\n\n- **HubSpot (Sales CRM)**\n- **QuickBooks (Finance)**\n- **Metrc (Compliance)**\n- **OneDrive (Document Storage)**\n\nusing **Python, APIs, and automation tools (Zapier/n8n).**\n\n---\n\n## Project Workflow\n1. Sales order created in **HubSpot**\n2. Invoice auto-generated in **QuickBooks**\n3. Invoice PDF stored in **OneDrive**\n4. Compliance update logged in **Metrc**\n\n## Workflow Diagram\nThe diagram below shows the end-to-end automation workflow for cannabis operations, connecting Sales → Finance → Storage → Compliance with observability and optional analytics.\n```mermaid\nflowchart LR\n  %% Cannabis workflow automation: Sales -> Finance -> Storage -> Compliance\n\n  subgraph Sales\n    A[HubSpot: New Deal / Closed-Won]\n  end\n\n  A --> B[Zapier / n8n Trigger: Webhook listens for event]\n  B --> C[\"Transform & Validate Payload: map fields, sanitize, check data\"]\n\n  subgraph Finance\n    D[QuickBooks API: Create Customer & Invoice]\n    E[Generate Invoice PDF]\n  end\n\n  C --> D --> E\n\n  subgraph Storage\n    F[OneDrive / Graph API: Upload PDF to /Invoices/YYYY-MM/]\n  end\n\n  E --> F\n\n  subgraph Compliance\n    G[Metrc API: Record Sales / Adjust Inventory]\n  end\n\n  C --> G\n\n  %% Observability / Ops\n  B --> H{Any Errors?}\n  H -- Yes --> I[Log error & context → /outputs/logs.json]\n  I --> J[Alert: Email/Slack]\n  H -- No --> K[Write success audit log → /outputs/run_log.csv]\n  K --> L[Dashboard status: OK]\n\n  %% Optional data store for analytics\n  K -.-> M[(SQLite / Sheet: Metrics & KPIs)]\n```\n---\n\n## Repository Structure\n/src  \n  hubspot_demo.py        # Pull HubSpot deals/contacts\n  \n  quickbooks_demo.py     # Create invoice (sandbox or mock)  \n  \n  onedrive_demo.py       # Upload invoice file  \n  \n  metrc_demo.py          # Compliance update (mock or sandbox) \n  \n  workflow_pipeline.py   # Master script chaining the full workflow\n\n\n\n\n## Features: Master Workflow (`workflow_pipeline.py`)\n\nThe `workflow_pipeline.py` script ties everything together:\n1. Pulls a new sales order from **HubSpot**\n2. Creates an invoice in **QuickBooks**\n3. Uploads the invoice PDF to **OneDrive**\n4. Records a compliance update in **Metrc**\n\nExample console output:\nHubSpot order pulled\nInvoice created in QuickBooks\nFile stored in OneDrive\nCompliance update sent to Metrc\n\n\nThis demonstrates how cannabis operations can achieve a  \n**single automated flow** from Sales → Finance → Storage → Compliance  \nwith minimal manual effort.\n\n",
+    "tail": "",
+    "source_url": "https://github.com/BuildWithNQS/cannabis-workflow-automation-sandbox/blob/e360b618e972e386b26b9c581d85488667a6273f/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/BuildWithNQS/cannabis-workflow-automation-sandbox",
+    "commit": "https://github.com/BuildWithNQS/cannabis-workflow-automation-sandbox/commit/e360b618e972e386b26b9c581d85488667a6273f"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

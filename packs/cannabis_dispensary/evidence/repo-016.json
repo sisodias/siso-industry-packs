@@ -1,0 +1,73 @@
+{
+  "audit_id": "R016",
+  "full_name": "openthc/license-applicant-portal",
+  "html_url": "https://github.com/openthc/license-applicant-portal",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "LAP",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2024-05-21T23:45:06Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "045bcafd520cc77f5250d22de42104768991e310",
+  "last_commit": "2024-05-21T16:44:25-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "LICENSE",
+    "boot.php",
+    "composer.json",
+    "test.sh"
+  ],
+  "readme": {
+    "error": "not_found"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "72ff989184aeed705243b5f7f8c34918d5d78b2818d5c2d3c1a68a6384758274",
+    "characters": 1064,
+    "excerpt": "MIT License\n\nCopyright (c) 2023 OpenTHC\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/license-applicant-portal/blob/045bcafd520cc77f5250d22de42104768991e310/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "078c925439027842dbb106f1d31fa5423df7e71f07829534eca9fcd6726a76de",
+      "characters": 579,
+      "excerpt": "{\n\t\"name\": \"openthc/vt-ccb-product-backlog\",\n\t\"description\": \"OpenTHC License Applicant Portal\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\LAP\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\LAP\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"edoceo/lowline\": \"2022.0.280\",\n\t\t\"openthc/common\": \"dev-master\"\n\t},\n\t\"require-dev\": {\n\t\t\"behat/behat\": \"3.12.0\",\n\t\t\"php-webdriver/webdriver\": \"1.14.0\",\n\t\t\"phpmd/phpmd\": \"2.13.0\",\n\t\t\"phpstan/phpstan\": \"1.10.5\",\n\t\t\"phpunit/phpunit\": \"9.6.4\"\n\t}\n}",
+      "tail": "{\n\t\"name\": \"openthc/vt-ccb-product-backlog\",\n\t\"description\": \"OpenTHC License Applicant Portal\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\LAP\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\LAP\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"edoceo/lowline\": \"2022.0.280\",\n\t\t\"openthc/common\": \"dev-master\"\n\t},\n\t\"require-dev\": {\n\t\t\"behat/behat\": \"3.12.0\",\n\t\t\"php-webdriver/webdriver\": \"1.14.0\",\n\t\t\"phpmd/phpmd\": \"2.13.0\",\n\t\t\"phpstan/phpstan\": \"1.10.5\",\n\t\t\"phpunit/phpunit\": \"9.6.4\"\n\t}\n}",
+      "source_url": "https://github.com/openthc/license-applicant-portal/blob/045bcafd520cc77f5250d22de42104768991e310/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/license-applicant-portal",
+    "commit": "https://github.com/openthc/license-applicant-portal/commit/045bcafd520cc77f5250d22de42104768991e310"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

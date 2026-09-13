@@ -1,0 +1,104 @@
+{
+  "audit_id": "R002",
+  "full_name": "openthc/api",
+  "html_url": "https://github.com/openthc/api",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Proposal for Common Data Models and APIs for Cannabis Software",
+  "stargazers_count": 82,
+  "forks_count": 16,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-06-04T16:52:58Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "api",
+    "cannabis",
+    "seed-to-sale",
+    "traceability"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Atraceability+topic%3Acannabis&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "2fe04debbf80ac463dbac21c56106cfb469d7b1a",
+  "last_commit": "2026-06-04T16:52:56Z",
+  "commits_six_months_sample_count": 4,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json",
+    "redocly.yaml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "254ed27ff1623fd6e744097d39bdcbf639b6bbad14c8c28c353d704f39c778dd",
+    "characters": 4283,
+    "excerpt": "# OpenTHC Common API\n\nProvides a common reference and API end-point specification for implementing Cannabis Data Systems.\n\nThe world of cannabis regulatory compliance is complex and large.\nThere are hundreds of vendors, each with a common goal but without an API, partial API, or have implemented a unique flavor.\nThe goal of this interface is to provide a basis for data interoperability.\n\nIt's our hope that others in the cannabis industry could adopt, in whole or in part, some of the concepts and designs published here.\nOpen Issues, submit PRs, etc and we can build the future we all want to see.\n\n\n## A Common Data Model\n\nAn important first step for bringing the industry together is to start talking in with common terms, a second is a common interface.\n\nThe OpenTHC API Specification aims to define core parts of this data model and suggested interfaces.\nThe API and [data-models](./openapi/components/schema) are defined in the [openapi](./openapi) directory.\nThere are definitions of base-data (ie: [lab-metric](./etc/lab-metric), [product-type](./etc/product-type) in [etc](./etc).\nBoth are defined with [YAML](https://yaml.org/spec/1.2.2/).\n\n\nSome scripts for processing that YAML into other flavours (JSON, CSV, SQL) are in [bin](./bin).\nBut, YAML is so easy, one can quickly process with their preferred tools.\n\n\n## A Common Interface\n\nThe OpenTHC API Module provides a method for reading/writing to a compatible system.\nA set of standard base data models for objects in the cannabis industry.\n\nThis API was heavily influenced by the [Open API Initiative](https://openapis.org/)\nand the [Data Transfer Project](https://opensource.googleblog.com/2018/07/introducing-data-transfer-project.html)\n\n* Use [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) for weight and volume values.\n* Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) for date and time values.\n\nWe provide some base data examples and JSON schema.\n\n\n## Documentation\n\nThe documentation has been created using a combination of [Asciidoc](http://asciidoc.org) and [OpenAPI](https://swagger.io).\n\nAsciidoc is in [doc](./doc) and the OpenAPI sources are in [openapi](./openapi)\n\n\t./make.sh docs\n\n\n## JSON Schema\n\nA JSON Schema is published for all the objects in this system, they are located in ./webroot/pub/json-schema\nThese files are constructed from the YAML documentation in ./swagger\nSample objects are provided in ./json-example\n\n\t./make.sh docs-openapi\n\n\n## Data Models\n\nThere is a bunch of \"base\" data for this industry, Company, Company_Type, License, License_Type, Product_Type, Variety and Laboratory Metrics.\nIncluded in the ./etc directory are pre-populated yaml files describing these common objects.\nUsage of common, unique identifiers for data-fields we all care about will improve interoperablity.\n\n\n### License Configuration Data\n\nThese objects are defined and specific to each Company or License in the system.\nIncludes: Product, Variety, Section, Vehicle (although, Section and Vehicle only exist for backwards compatibility)\n\n\n### License Operational Data\n\n* Crop / Plant\n* Inventory Lot\n* Lab Sample / Lab Result\n* B2B Transaction and B2B Transaction Items\n* B2C Transaction and B2C Transaction Items\n\n\n## Testing\n\nRun the unit tests in ./test\n\n\t./make.sh test\n\nYou could also use [Prism](https://github.com/stoplightio/prism) for running a mock interface.\n\n\n## Dependencies\n\nThis thing depends on Asciidoc/Asciidoctor (Python, Ruby) and some build scripts (JS, PHP, Ruby).\nJust review the `make.sh` script for the latest information.\n\n\n## See Also\n\n * https://openapis.org/\n * https://asciidoctor.org/\n * https://redoc.ly/redoc/\n * https://jsonschema.net/#/\n * https://www.jsonschemavalidator.net/\n * https://github.com/epoberezkin/ajv\n * https://github.com/zircote/swagger-php\n * https://github.com/jensoleg/swagger-ui\n * https://github.com/E96/swagger2slate\n * [How to Design the APIs of Tomorrow](https://news.ycombinator.com/item?id=24332418)\n * [Ask HN: What is your go-to example for a good REST API?](https://news.ycombinator.com/item?id=11971491)\n * [Ask HN: What are good reads for designing APIs?](https://news.ycombinator.com/item?id=12262586)\n * [Microsoft REST API Guidelines](https://news.ycombinator.com/item?id=12122828)\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/api/blob/2fe04debbf80ac463dbac21c56106cfb469d7b1a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "12ea5945f5c6b3c17e9c1f78cd9a759398704141dba97419bf8bf045bbc4ffe8",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2018 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/api/blob/2fe04debbf80ac463dbac21c56106cfb469d7b1a/LICENSE"
+  },
+  "nested_license_paths": [
+    "doc/core/license.ad",
+    "json-example/openthc/license.json",
+    "openapi/components/schema/License.yaml",
+    "openapi/paths/license.yaml"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "373277b64408177002f14ca96a324f21511142c3dbda2920fb1b90f8dda1e126",
+      "characters": 431,
+      "excerpt": "{\n\t\"name\": \"openthc/api\",\n\t\"description\": \"OpenTHC API\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\API\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\API\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"ext-yaml\": \"*\",\n\t\t\"justinrainbow/json-schema\": \"5.2.12\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"zircote/swagger-php\": \"5.7.6\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/api\",\n\t\"description\": \"OpenTHC API\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\API\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\API\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"ext-yaml\": \"*\",\n\t\t\"justinrainbow/json-schema\": \"5.2.12\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"zircote/swagger-php\": \"5.7.6\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.33\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/api/blob/2fe04debbf80ac463dbac21c56106cfb469d7b1a/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6c85f4295d729fbfa01bd00202a73e1beb366735175ce6f06f0a3ac12dc47f50",
+      "characters": 613,
+      "excerpt": "{\n\t\"name\": \"openthc-api\",\n\t\"version\": \"1.0.0\",\n\t\"description\": \"OpenTHC API\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"@highlightjs/cdn-assets\": \"11.11.1\",\n\t\t\"@redocly/cli\": \"^1.34.12\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/api.git\"\n\t},\n\t\"author\": \"\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/api/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/api#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"openthc-api\",\n\t\"version\": \"1.0.0\",\n\t\"description\": \"OpenTHC API\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"@highlightjs/cdn-assets\": \"11.11.1\",\n\t\t\"@redocly/cli\": \"^1.34.12\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/api.git\"\n\t},\n\t\"author\": \"\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/api/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/api#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/api/blob/2fe04debbf80ac463dbac21c56106cfb469d7b1a/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/api",
+    "commit": "https://github.com/openthc/api/commit/2fe04debbf80ac463dbac21c56106cfb469d7b1a"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

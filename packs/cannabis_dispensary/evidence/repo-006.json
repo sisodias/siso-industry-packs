@@ -1,0 +1,99 @@
+{
+  "audit_id": "R006",
+  "full_name": "openthc/pipe",
+  "html_url": "https://github.com/openthc/pipe",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Common interface/API Wrapper for different cannabis compliance reporting engines (\"CRE\")",
+  "stargazers_count": 12,
+  "forks_count": 5,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-02-11T19:16:22Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "biotrack",
+    "cannabis",
+    "leafdata",
+    "metrc",
+    "mjfreeway"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a",
+  "last_commit": "2026-02-11T19:16:21Z",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".dockerignore",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "7520dde9bab86e4486343fe078ca692d2a78c6f8d6e9bcb921ea034ffa573ca7",
+    "characters": 2302,
+    "excerpt": "# OpenTHC PIPE\n\nThe PIPE is a logging proxy for multiple cannabis regulatory compliance engines.\nIt's basically an intentional MITM for these upstream proxy.\n\nBuilt before we learned about [krakend.io](https://www.krakend.io/).\nAlso checkout [openapi-cop](https://github.com/EXXETA/openapi-cop).\n\n\n## Installation\n\n* Clone this Repo\n* Run `composer install`\n* Copy ./vendor/openthc/cre-adapter/etc/cre.yaml to ./etc/cre.yaml and configure it.\n* Change owner and permissions on `./var` and `webroot/output` so the web-server can read/write\n\n\n## Authentication\n\nAuthentication must take place with the backend compliance reporting engine (\"CRE\").\nThe authentication for pipe itself is via some SSO/oAuth.\nPIPE then maintains a session state via headers or cookie.\nThe authentication parameters are determined by the `cre` selection.\n\n## Supported Compliance Engines\n\n * BioTrackTHC (\"BT\") - Delaware*, Hawaii, Maine, New Mexico, North Dakota, Illinois, Puerto Rico\n * Metrc (\"FM\") - Alaska, California, Colorado, Massachusetts, Nevada, Oregon\n\n\n### BioTrack\n\nThese systems authenticate with a company, username and password\n\n```\ncurl \\\n\t--data 'company=123456789' \\\n\t--data 'username=user@example.com' \\\n\t--data 'password=DoNotTe11!'\n```\n\n### Metrc\n\nThese system require a program key and contact key.\nThe program key is given to the software provider by Metrc and is configured in cre.ini.\nThe contact key is from the licensee, its permissions will be determined by the user which acquires it.\nFor best results, use a key from an administrator / super-user type role.\n\n```\ncurl \\\n\t--data 'program-key=ABC123' \\\n\t--data 'license-key=ZYX987'\n```\n\n## Supported Objects\n\n * Plants - (BT, FM)\n * Inventory Lots (BT, FM)\n * Laboratory Result (BT, FM)\n * Products (LD, FM)\n * Zones (aka: Areas, Rooms) - (BT, FM)\n * Vehicles - BT\n\n\n### See Also\n\n* https://news.ycombinator.com/item?id=22482031\n\n## Little SOCAT wrapper to watch the wire\n\n```shell\n#!/bin/bash\n#\n# socat wrapper\n#\n# To Use, collect the IP of desired HOST\n# Then update /etc/hosts to have the HOST point to 127.0.0.1\n# Then adjust port number in Metrc library to that\n\nHOST=\"sandbox-api-or.metrc.com\"\nHOST=\"api-or.metrc.com\"\n\nsocat \\\n\t-v \\\n\tTCP-LISTEN:8443,bind=localhost,fork \\\n\tOPENSSL:$HOST:443,verify=0 \\\n\t2>&1 \\\n\t| tee -a oregon-api.log\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/pipe/blob/a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "60e76ce68fda66b6182f6d59df21866c7f1ca898c3b8efd084d777b4c179221c",
+    "characters": 1075,
+    "excerpt": "MIT License\n\nCopyright (c) 2015-2022 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/pipe/blob/a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "b35aa37fe285a3b61c9550a420528734a6fb902d883aeb20f889956b2f0036ab",
+      "characters": 495,
+      "excerpt": "{\n\t\"name\": \"openthc/pipe\",\n\t\"description\": \"OpenTHC CRE API Proxy Service\",\n\t\"version\": \"420.24.276\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Pipe\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Pipe\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/pipe\",\n\t\"description\": \"OpenTHC CRE API Proxy Service\",\n\t\"version\": \"420.24.276\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Pipe\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Pipe\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/pipe/blob/a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "46ca78adb82e0b15a8fed3f4f694f1eaa3dce3646ec0648bb203eaae7a113d19",
+      "characters": 553,
+      "excerpt": "{\n\t\"name\": \"@openthc/pipe\",\n\t\"description\": \"OpenTHC PIPE\",\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"version\": \"420.24.276\",\n\t\"homepage\": \"https://openthc.org/pipe\",\n\t\"license\": \"MIT\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://gitlab.com/openthc/pipe.git\"\n\t},\n\t\"bugs\": {\n\t\t\"url\": \"https://gitlab.com/openthc/pipe/issues\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"@openthc/pipe\",\n\t\"description\": \"OpenTHC PIPE\",\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"version\": \"420.24.276\",\n\t\"homepage\": \"https://openthc.org/pipe\",\n\t\"license\": \"MIT\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"7.1.0\",\n\t\t\"bootstrap\": \"5.3.8\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://gitlab.com/openthc/pipe.git\"\n\t},\n\t\"bugs\": {\n\t\t\"url\": \"https://gitlab.com/openthc/pipe/issues\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/pipe/blob/a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/pipe",
+    "commit": "https://github.com/openthc/pipe/commit/a1f86a47942c0de7ad038b9fe6d6fee7a6c47c6a"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

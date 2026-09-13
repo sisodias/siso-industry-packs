@@ -1,0 +1,185 @@
+{
+  "audit_id": "R070",
+  "full_name": "akaunting/akaunting",
+  "html_url": "https://github.com/akaunting/akaunting",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Online Accounting Software",
+  "stargazers_count": 10123,
+  "forks_count": 2983,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-13T08:59:24Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "topics": [
+    "accounting",
+    "akaunting",
+    "balance",
+    "billing",
+    "bookkeeping",
+    "budget",
+    "crm",
+    "erp",
+    "expenses",
+    "finance",
+    "fintech",
+    "invoices",
+    "invoicing",
+    "laravel",
+    "laravel-application",
+    "money",
+    "payments",
+    "payroll",
+    "php"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aaccounting&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "5fe7969452307a481a7363a3c158bb6983545446",
+  "last_commit": "2026-09-13T09:58:49+01:00",
+  "commits_six_months_sample_count": 385,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 12,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".env.example",
+    ".env.testing",
+    ".gitattributes",
+    ".gitignore",
+    ".htaccess",
+    "LICENSE.txt",
+    "LocalValetDriver.php",
+    "README.md",
+    "SECURITY.md",
+    "artisan",
+    "composer.json",
+    "composer.lock",
+    "index.php",
+    "manifest.json",
+    "nginx.example.com.conf",
+    "package-lock.json",
+    "package.json",
+    "phpunit.xml",
+    "presets.js",
+    "safelist.txt",
+    "serviceworker.js",
+    "tailwind.config.js",
+    "web.config",
+    "webpack.mix.js"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "acf073b2864a6eeb51328cdf7ef5d8268ea641f8080be63c40ba4408a6737d19",
+    "characters": 2754,
+    "excerpt": "﻿# Akaunting™\n\n[![Release](https://img.shields.io/github/v/release/akaunting/akaunting?label=release)](https://github.com/akaunting/akaunting/releases)\n![Downloads](https://img.shields.io/github/downloads/akaunting/akaunting/total?label=downloads)\n[![Tests](https://img.shields.io/github/actions/workflow/status/akaunting/akaunting/tests.yml?label=tests)](https://github.com/akaunting/akaunting/actions)\n\nOnline accounting software designed for small businesses and freelancers. Akaunting is built with modern technologies such as Laravel, VueJS, Tailwind, RESTful API etc. Thanks to its modular structure, Akaunting provides an awesome App Store for users and developers.\n\n* [Home](https://akaunting.com) - The house of Akaunting\n* [Forum](https://akaunting.com/forum) - Ask for support\n* [Documentation](https://akaunting.com/hc/docs) - Learn how to use\n* [Developer Portal](https://developer.akaunting.com) - Generate passive income\n* [App Store](https://akaunting.com/apps) - Extend your Akaunting\n\n## Requirements\n\n* PHP 8.1 or higher\n* Database (e.g.: MariaDB, MySQL, PostgreSQL, SQLite)\n* Web Server (eg: Apache, Nginx, IIS)\n* [Other libraries](https://akaunting.com/hc/docs/on-premise/requirements/)\n\n## Framework\n\nAkaunting uses [Laravel](http://laravel.com), the best existing PHP framework, as the foundation framework and [Module](https://github.com/akaunting/module) package for Apps.\n\n## Installation\n\n* Clone the repository: `git clone https://github.com/akaunting/akaunting.git`\n* Install dependencies: `composer install ; npm install ; npm run dev`\n* Install Akaunting:\n\n```bash\nphp artisan install --db-name=\"akaunting\" --db-username=\"root\" --db-password=\"pass\" --admin-email=\"admin@company.com\" --admin-password=\"123456\"\n```\n\n* Create sample data (optional): `php artisan sample-data:seed`\n\n## Contributing\n\nPlease, be very clear on your commit messages and Pull Requests, empty Pull Request messages may be rejected without reason.\n\nWhen contributing code to Akaunting, you must follow the PSR coding standards. The golden rule is: Imitate the existing Akaunting code.\n\nPlease note that this project is released with a [Contributor Code of Conduct](https://akaunting.com/conduct). *By participating in this project you agree to abide by its terms*.\n\n## Changelog\n\nPlease see [Releases](../../releases) for more information about what has changed recently.\n\n## Security\n\nPlease review [our security policy](https://github.com/akaunting/akaunting/security/policy) on how to report security vulnerabilities.\n\n## Credits\n\n* [Denis Duliçi](https://github.com/denisdulici)\n* [Cüneyt Şentürk](https://github.com/cuneytsenturk)\n* [All Contributors](../../contributors)\n\n## License\n\nAkaunting is released under the [BSL license](LICENSE.txt).\n",
+    "tail": "",
+    "source_url": "https://github.com/akaunting/akaunting/blob/5fe7969452307a481a7363a3c158bb6983545446/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "ba2f38de6dcf808a8434a7ad5c6515f9cd1c1886cf4b3e8ba3a64038c9cd7cb6",
+    "characters": 3646,
+    "excerpt": "License text copyright (c) 2020 MariaDB Corporation Ab, All Rights Reserved.\n“Business Source License” is a trademark of MariaDB Corporation Ab.\n\nParameters\n\nLicensor:             Akaunting, Inc.\n\nLicensed Work:        Akaunting\n\nAdditional Use Grant: You may make production use of the Licensed Work, provided\n                      you do not use it in any of the following ways:\n\n                      (1) Use the Licensed Work with a total of more than two users or\n                      one company or one thousand invoices.\n\n                      (2) Remove the name, logo, copyright, or other branding material\n                      from the Licensed Work to create a \"rebranded\" or \"white labeled\"\n                      version to distribute as part of any commercial or non-profit\n                      product or service.\n\n                      (3) Use the Licensed Work for an Accounting Service. An\n                      \"Accounting Service\" is a commercial offering that allows third\n                      parties (other than your employees and contractors) to access\n                      the functionality of the Licensed Work so that such third\n                      parties directly benefit from the accounting or invoicing\n                      features of the Licensed Work.\n\nChange Date:          Four years from the date the Licensed Work is published.\n\nChange License:       GPLv3\n\nFor information about alternative licensing arrangements for the Licensed Work,\nplease visit: https://akaunting.com/plans-on-premise\n\nNotice\n\nBusiness Source License 1.1\n\nTerms\n\nThe Licensor hereby grants you the right to copy, modify, create derivative\nworks, redistribute, and make non-production use of the Licensed Work. The\nLicensor may make an Additional Use Grant, above, permitting limited production use.\n\nEffective on the Change Date, or the fourth anniversary of the first publicly\navailable distribution of a specific version of the Licensed Work under this\nLicense, whichever comes first, the Licensor hereby grants you rights under\nthe terms of the Change License, and the rights granted in the paragraph\nabove terminate.\n\nIf your use of the Licensed Work does not comply with the requirements\ncurrently in effect as described in this License, you must purchase a\ncommercial license from the Licensor, its affiliated entities, or authorized\nresellers, or you must refrain from using the Licensed Work.\n\nAll copies of the original and modified Licensed Work, and derivative works\nof the Licensed Work, are subject to this License. This License applies\nseparately for each version of the Licensed Work and the Change Date may vary\nfor each version of the Licensed Work released by Licensor.\n\nYou must conspicuously display this License on each original or modified copy\nof the Licensed Work. If you receive the Licensed Work in original or\nmodified form from a third party, the terms and conditions set forth in this\nLicense apply to your use of that work.\n\nAny use of the Licensed Wor",
+    "tail": "to your use of that work.\n\nAny use of the Licensed Work in violation of this License will automatically\nterminate your rights under this License for the current and all other\nversions of the Licensed Work.\n\nThis License does not grant you any right in any trademark or logo of\nLicensor or its affiliates (provided that you may use a trademark or logo of\nLicensor as expressly required by this License).\n\nTO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED WORK IS PROVIDED ON\nAN “AS IS” BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS,\nEXPRESS OR IMPLIED, INCLUDING (WITHOUT LIMITATION) WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND\nTITLE.\n",
+    "source_url": "https://github.com/akaunting/akaunting/blob/5fe7969452307a481a7363a3c158bb6983545446/LICENSE.txt"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "0ef5bb514c5990fe828357e36065f2c2d628ba95cfd2305cdd2a21505859c0e0",
+      "characters": 8265,
+      "excerpt": "{\n    \"name\": \"akaunting/akaunting\",\n    \"description\": \"Online accounting software built with Laravel\",\n    \"homepage\": \"https://akaunting.com\",\n    \"keywords\": [\n        \"laravel\",\n        \"accounting\",\n        \"invoice\",\n        \"expenses\",\n        \"software\",\n        \"online\"\n    ],\n    \"license\": \"BUSL-1.1\",\n    \"type\": \"project\",\n    \"require\": {\n        \"php\": \"^8.1\",\n        \"ext-bcmath\": \"*\",\n        \"ext-ctype\": \"*\",\n        \"ext-curl\": \"*\",\n        \"ext-dom\": \"*\",\n        \"ext-fileinfo\": \"*\",\n        \"ext-gd\": \"*\",\n        \"ext-intl\": \"*\",\n        \"ext-json\": \"*\",\n        \"ext-mbstring\": \"*\",\n        \"ext-openssl\": \"*\",\n        \"ext-tokenizer\": \"*\",\n        \"ext-xml\": \"*\",\n        \"ext-zip\": \"*\",\n        \"akaunting/laravel-apexcharts\": \"^3.0\",\n        \"akaunting/laravel-debugbar-collector\": \"^2.0\",\n        \"akaunting/laravel-firewall\": \"^2.0\",\n        \"akaunting/laravel-language\": \"^1.0\",\n        \"akaunting/laravel-menu\": \"^3.0\",\n        \"akaunting/laravel-module\": \"^4.0\",\n        \"akaunting/laravel-money\": \"^5.0\",\n        \"akaunting/laravel-mutable-observer\": \"^2.0\",\n        \"akaunting/laravel-setting\": \"^1.2\",\n        \"akaunting/laravel-sortable\": \"^2.0\",\n        \"akaunting/laravel-version\": \"^1.0\",\n        \"akaunting/module-offline-payments\": \"^3.0\",\n        \"akaunting/module-paypal-standard\": \"^3.0\",\n        \"barryvdh/laravel-debugbar\": \"^3.6\",\n        \"barryvdh/laravel-dompdf\": \"^2.0\",\n        \"barryvdh/laravel-ide-helper\": \"^2.9\",\n        \"bkwld/cloner\": \"^3.10\",\n        \"bugsnag/bugsnag-laravel\": \"^2.24\",\n        \"doctrine/dbal\": \"^3.1\",\n        \"genealabs/laravel-model-caching\": \"^0.13\",\n        \"graham-campbell/markdown\": \"^15.0\",\n        \"guzzlehttp/guzzle\": \"^7.4\",\n        \"intervention/image\": \"^2.5\",\n        \"intervention/imagecache\": \"^2.5\",\n        \"laracasts/flash\": \"3.2.*\",\n        \"laravel/framework\": \"^10.0\",\n        \"laravel/sanctum\": \"^3.2\",\n        \"laravel/slack-notification-channel\": \"^2.3\",\n        \"laravel/tinker\": \"^2.10\",\n        \"laravel/ui\": \"^4.2\",\n        \"league/flysystem-aws-s3-v3\": \"^3.0\",\n        \"league/oauth2-client\": \"^2.6\",\n        \"league/omnipay\": \"^3.2\",\n        \"livewire/livewire\": \"^3.0\",\n        \"lorisleiva/laravel-search-string\": \"^1.2\",\n        \"maatwebsite/excel\": \"3.1.*\",\n        \"mnsami/composer-custom-directory-installer\": \"2.0.*\",\n        \"plank/laravel-mediable\": \"^5.4\",\n        \"riverskies/laravel-mobile-detect\": \"^1.3\",\n        \"santigarcor/laratrust\": \"^7.0\",\n        \"sentry/sentry-laravel\": \"^4.0\",\n        \"simple-icons/simple-icons\": \"^9.0\",\n        \"simshaun/recurr\": \"^5.0\",\n        \"staudenmeir/belongs-to-through\": \"^2.12\",\n        \"staudenmeir/eloquent-has-many-deep\": \"^1.15\",\n        \"symfony/http-client\": \"^6.0\",\n        \"symfony/mailgun-mailer\": \"^6.0\",\n        \"symfony/postmark-mailer\": \"^6.0\",\n        \"symfony/sendgrid-mailer\": \"^6.0\"\n    },\n    \"require-dev\": {\n        \"beyondcode/laravel-dump-server\": \"^1.9\",\n        \"brianium/paratest\": \"^7.3.2\",\n        \"fakerphp/faker\": \"^1.9.1\",\n        \"mockery/mockery\": \"^1.4.4\",\n        \"nunomaduro/collision\": \"^7.0\",\n        \"phpunit/phpunit\": \"^10.5.63\",\n        \"spatie/laravel-ignition\": \"^2.0\",\n        \"wnx/laravel-stats\": \"^2.11\"\n    },\n    \"extra\": {\n        \"laravel\": {\n            \"dont-discover\": []\n        },\n        \"installer-paths\": {\n            \"modules/OfflinePayments\": [\"akaunting/module-offline-payments\"],\n            \"modules/PaypalStandard\": [\"akaunting/module-paypal-standard\"]\n        }\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": [\"app/\"],\n            \"Akaunting\\\\Module\\\\Commands\\\\\": \"overrides/akaunting/laravel-module/Commands/\",\n            \"Database\\\\Factories\\\\\": \"database/factories/\",\n            \"Database\\\\Seeds\\\\\": \"database/seeds/\",\n            \"Illuminate\\\\Translation\\\\\": \"overrides/Illuminate/Translation/\",\n            \"Illuminate\\\\View\\\\Concerns\\\\\": \"overrides/Illuminate/View/Concerns/\",\n            \"Livewire\\\\\": \"overrides/livewire/livewire/\",\n           ",
+      "tail": "zjr4\",\n                \"PKSA-qzrn-rnz3-85w1\",\n                \"PKSA-dpt9-7cmv-dk65\",\n                \"PKSA-3qhw-gzjt-j63j\",\n                \"PKSA-17kp-jm2n-vxzz\",\n                \"PKSA-p3rx-dfwp-73ny\",\n                \"PKSA-7ywf-hktb-jkn9\",\n                \"PKSA-ckwp-rt7t-c46m\",\n                \"PKSA-4npr-btr6-zhny\",\n                \"PKSA-njrm-6dtg-m2pc\",\n                \"PKSA-vhvj-tvg4-96jj\",\n                \"PKSA-nrj3-r2wg-yt8b\",\n                \"PKSA-rvky-x3cg-y3qd\",\n                \"PKSA-985r-hryy-555b\",\n                \"PKSA-mhj3-vthf-h41n\",\n                \"PKSA-cn77-7mny-v9zg\",\n                \"PKSA-xf4x-p5c1-z9xq\",\n                \"PKSA-fwj1-r2kg-bmxd\"\n            ]\n        }\n    }\n}",
+      "source_url": "https://github.com/akaunting/akaunting/blob/5fe7969452307a481a7363a3c158bb6983545446/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e92d79f7554ed64724b0b34bb3cdb1f908c8142cf742deb3f37fd88bd2dce659",
+      "characters": 3373,
+      "excerpt": "{\n    \"name\": \"akaunting\",\n    \"version\": \"3.1.15\",\n    \"private\": true,\n    \"scripts\": {\n        \"dev\": \"npm run development\",\n        \"development\": \"mix\",\n        \"watch\": \"mix watch\",\n        \"watch-poll\": \"mix watch -- --watch-options-poll=1000\",\n        \"hot\": \"mix watch --hot\",\n        \"prod\": \"npm run production\",\n        \"production\": \"mix --production\"\n    },\n    \"dependencies\": {\n        \"@babel/plugin-syntax-dynamic-import\": \"^7.8.3\",\n        \"@fullcalendar/core\": \"^6.1.5\",\n        \"@fullcalendar/daygrid\": \"^6.1.5\",\n        \"@fullcalendar/interaction\": \"^6.1.5\",\n        \"@fullcalendar/timegrid\": \"^6.1.5\",\n        \"@fullcalendar/vue\": \"^6.1.5\",\n        \"@popperjs/core\": \"^2.11.7\",\n        \"@sentry/tracing\": \"^7.47.0\",\n        \"@sentry/vue\": \"^7.47.0\",\n        \"@tailwindcss/forms\": \"^0.5.3\",\n        \"@themesberg/flowbite\": \"^1.2.0\",\n        \"axios\": \"^1.3.5\",\n        \"body-parser\": \"^1.20.3\",\n        \"date-fns\": \"^2.29.3\",\n        \"dropzone\": \"^5.9.3\",\n        \"element-ui\": \"^2.15.13\",\n        \"es6-promise\": \"^4.2.8\",\n        \"express\": \"^4.19.2\",\n        \"flatpickr\": \"^4.6.13\",\n        \"fuse.js\": \"^6.6.2\",\n        \"glightbox\": \"^3.2.0\",\n        \"json-schema\": \">=0.4.0\",\n        \"jsonwebtoken\": \"^9.0.2\",\n        \"laravel-mix-tailwind\": \"^0.1.2\",\n        \"lodash\": \"^4.17.21\",\n        \"mathjs\": \"^14.0.1\",\n        \"moment\": \">=2.29.4\",\n        \"nprogress\": \"^0.2.0\",\n        \"popper.js\": \"^1.16.1\",\n        \"qs\": \"^6.11.1\",\n        \"swiper\": \"^9.2.0\",\n        \"tailwind\": \"^4.0.0\",\n        \"tailwindcss\": \"^3.3.6\",\n        \"v-money\": \"^0.8.1\",\n        \"vee-validate\": \"^2.2.15\",\n        \"vue\": \"^2.7.14\",\n        \"vue-clipboard2\": \"^0.3.3\",\n        \"vue-flatpickr-component\": \"^8.1.8\",\n        \"vue-router\": \"^3.6.5\",\n        \"vue2-editor\": \"^2.10.3\",\n        \"vue2-transitions\": \"^0.3.0\",\n        \"vuedraggable\": \"^2.24.3\",\n        \"ws\": \"^8.14.2\"\n    },\n    \"devDependencies\": {\n        \"@babel/core\": \"^7.23.5\",\n        \"@babel/preset-env\": \"^7.23.5\",\n        \"@vue/cli-plugin-babel\": \"^5.0.8\",\n        \"@vue/cli-plugin-eslint\": \"^5.0.8\",\n        \"@vue/cli-service\": \"^5.0.8\",\n        \"@vue/eslint-config-prettier\": \"^7.0.1\",\n        \"autoprefixer\": \"10.4.5\",\n        \"babel-plugin-component\": \"^1.1.1\",\n        \"cross-env\": \"^7.0.3\",\n        \"css-loader\": \"^6.7.3\",\n        \"laravel-mix\": \"^6.0.49\",\n        \"mini-css-extract-plugin\": \"^2.7.5\",\n        \"node-sass\": \"^9.0.0\",\n        \"postcss\": \"^8.4.32\",\n        \"postcss-import\": \"^15.1.0\",\n        \"postcss-loader\": \"^7.2.4\",\n        \"postcss-nesting\": \"^11.2.2\",\n        \"postcss-preset-env\": \"^8.3.1\",\n        \"sass-loader\": \"^13.2.2\",\n        \"style-loader\": \"^3.3.2\",\n        \"tailwindcss-dir\": \"^4.0.0\",\n        \"url-loader\": \"^4.1.1\",\n        \"vue-loader\": \"^15.10.1\",\n        \"vue-style-loader\": \"^4.1.3\",\n        \"vue-template-compiler\": \"^2.7.14\",\n        \"webpack\": \"5.88.2\",\n        \"webpack-cli\": \"^5.0.1\"\n    },\n    \"overrides\": {\n        \"webpack\": \"5.88.2\",\n        \"lodash\": \"^4.17.21\",\n        \"moment\": \">=2.29.4\",\n        \"jsonwebtoken\": \"^9.0.2\",\n        \"ws\": \"^8.14.2\",\n        \"postcss\": \"^8.4.32\",\n        \"express\": \"^4.19.2\",\n        \"body-parser\": \"^1.20.3\"\n    },\n    \"browserslist\": [\n        \"> 1%\",\n        \"last 2 versions\",\n        \"not ie <= 10\"\n    ],\n    \"author\": \"Akaunting Inc <info@akaunting.com>\",\n    \"description\": \"Free Accounting Software\"\n}\n",
+      "tail": "ndcss-dir\": \"^4.0.0\",\n        \"url-loader\": \"^4.1.1\",\n        \"vue-loader\": \"^15.10.1\",\n        \"vue-style-loader\": \"^4.1.3\",\n        \"vue-template-compiler\": \"^2.7.14\",\n        \"webpack\": \"5.88.2\",\n        \"webpack-cli\": \"^5.0.1\"\n    },\n    \"overrides\": {\n        \"webpack\": \"5.88.2\",\n        \"lodash\": \"^4.17.21\",\n        \"moment\": \">=2.29.4\",\n        \"jsonwebtoken\": \"^9.0.2\",\n        \"ws\": \"^8.14.2\",\n        \"postcss\": \"^8.4.32\",\n        \"express\": \"^4.19.2\",\n        \"body-parser\": \"^1.20.3\"\n    },\n    \"browserslist\": [\n        \"> 1%\",\n        \"last 2 versions\",\n        \"not ie <= 10\"\n    ],\n    \"author\": \"Akaunting Inc <info@akaunting.com>\",\n    \"description\": \"Free Accounting Software\"\n}\n",
+      "source_url": "https://github.com/akaunting/akaunting/blob/5fe7969452307a481a7363a3c158bb6983545446/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/akaunting/akaunting",
+    "commit": "https://github.com/akaunting/akaunting/commit/5fe7969452307a481a7363a3c158bb6983545446"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0124",
+        "repo": "akaunting/akaunting",
+        "url": "https://github.com/akaunting/akaunting",
+        "labels": [],
+        "family_ids": [
+          "U17"
+        ],
+        "family_names": [
+          "Accounting and general ledger"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 1,
+        "industry_demand": [
+          {
+            "industry_id": "accounting_firms",
+            "industry_label": "Accounting Firms",
+            "observed_slots": 6,
+            "dimensions_observed": [
+              "data_model",
+              "demand_atom_fit",
+              "economics_maintenance",
+              "provenance_rights",
+              "ui_assembly",
+              "workflow_behavior"
+            ],
+            "capability_families_observed": [
+              "data"
+            ],
+            "atom_ids_observed": [
+              "extract_structure",
+              "follow_up_chase",
+              "reconcile_audit"
+            ],
+            "evidence_refs": [
+              "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+            ],
+            "example_slot_ids": [
+              "accounting_firms:demand_atom_fit:001",
+              "accounting_firms:workflow_behavior:001",
+              "accounting_firms:data_model:001"
+            ]
+          }
+        ],
+        "industry_demand_status": "observed_join"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

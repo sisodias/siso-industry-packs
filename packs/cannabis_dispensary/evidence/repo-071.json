@@ -1,0 +1,154 @@
+{
+  "audit_id": "R071",
+  "full_name": "GreaterWMS/GreaterWMS",
+  "html_url": "https://github.com/GreaterWMS/GreaterWMS",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "This Inventory management system is the currently Ford Asia Pacific after-sales logistics warehousing supply chain process . After I leave Ford , I start this project . You can share your vacant warehouse space, use it for those in need, and generate income",
+  "stargazers_count": 4375,
+  "forks_count": 1164,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2025-09-26T00:50:31Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "inventory",
+    "inventory-management",
+    "inventory-management-system",
+    "scm",
+    "warehouse-management",
+    "warehouse-management-system",
+    "wms"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Ainventory-management&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "f8b931d02e2afcfa933c549d58a86ab581490de2",
+  "last_commit": "2025-09-26T08:50:31+08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 5,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".env",
+    ".gitattributes",
+    ".gitignore",
+    "02-github-actions-ci.txt",
+    "10-security-best-practices.txt",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "Dockerfile.ci",
+    "LICENSE",
+    "README.en.md",
+    "README.md",
+    "README.zh-CN.md",
+    "README_CN.md",
+    "backend_start.sh",
+    "ci-test.md",
+    "docker-compose.ci.yml",
+    "docker-compose.yml",
+    "manage.py",
+    "nginx.conf",
+    "requirements.txt",
+    "supervisord.conf",
+    "web_start.sh"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "d9a900437e15f16f0499f4415db09b81450daefdbe4e86ea0a05a8e239c74201",
+    "characters": 6790,
+    "excerpt": "<div align=\"center\">\n  <img src=\"static/img/logo.png\" alt=\"GreaterWMS logo\" width=\"200\" height=\"auto\" />\n  <h1>GreaterWMS</h1>\n  <p>Fully Open Source Warehouse Management System</p>\n  \n  <!-- CI/CD Status Badges -->\n  <p>\n    <img src=\"https://github.com/dev00amk/GreaterWMS-amk/workflows/CI%20Pipeline/badge.svg\" alt=\"CI Pipeline\" />\n    <img src=\"https://github.com/dev00amk/GreaterWMS-amk/workflows/Security%20Scan/badge.svg\" alt=\"Security Scan\" />\n    <img src=\"https://github.com/dev00amk/GreaterWMS-amk/workflows/Release%20Drafter/badge.svg\" alt=\"Release Drafter\" />\n  </p>\n  \n  <!-- Quality Badges -->\n  <p>\n    <img src=\"https://img.shields.io/badge/Python-3.9+-blue.svg\" alt=\"Python Version\" />\n    <img src=\"https://img.shields.io/badge/Django-4.1.2-green.svg\" alt=\"Django Version\" />\n    <img src=\"https://img.shields.io/badge/Node.js-16+-brightgreen.svg\" alt=\"Node.js Version\" />\n    <img src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" alt=\"License\" />\n  </p>\n</div></div>\n\nThe original vision for this software was to make it a framework that would facilitate warehouse management software development for everyone. However, we later discovered that we had written it as a complete software system, which was not what we intended.\n\nTherefore, we have rewritten the underlying layer using Rust and Python as the carrier, creating a new CLI underlying framework called [Bomiot](https://github.com/Bomiot/Bomiot). It offers high performance and more convenient development, fully leveraging Python's inherent language advantages.\n\nThe old version of GreaterWMS files can be found here:\n[GreaterWMS v2.1.49](https://github.com/GreaterWMS/GreaterWMS/tree/V2.1.49)\n\nGreaterWMS will also use [Bomiot](https://github.com/Bomiot/Bomiot) for its 3.0 reconstruction.\n\n## 🚀 Quick Start\n\n### Prerequisites\n\n- Python 3.9+\n- Node.js 16+\n- PostgreSQL 13+ (for production)\n- Docker & Docker Compose (optional)\n\n### Local Development Setup\n\n1. **Clone the repository**\n   ```bash\n   git clone https://github.com/dev00amk/GreaterWMS-amk.git\n   cd GreaterWMS-amk\n   ```\n\n2. **Backend Setup**\n   ```bash\n   # Create virtual environment\n   python -m venv venv\n   source venv/bin/activate  # On Windows: venv\\Scripts\\activate\n\n   # Install dependencies\n   pip install -r requirements.txt\n\n   # Run migrations\n   python manage.py migrate\n\n   # Create superuser\n   python manage.py createsuperuser\n\n   # Start development server\n   python manage.py runserver\n   ```\n\n3. **Frontend Setup**\n   ```bash\n   cd templates\n   npm install\n   npm run dev  # or quasar dev\n   ```\n\n4. **Docker Setup (Alternative)**\n   ```bash\n   # Start all services\n   docker-compose up -d\n\n   # View logs\n   docker-compose logs -f\n   ```\n\n## 🧪 Testing & Quality Assurance\n\n### Running Tests Locally\n\n**Backend Tests:**\n```bash\n# Run all Django tests\npython manage.py test\n\n# Run with coverage\ncoverage run --source='.' manage.py test\ncoverage report\ncoverage html\n\n# Run specific app tests\npython manage.py test asn.tests\n```\n\n**Frontend Tests:**\n```bash\ncd templates\nnpm test\nnpm run lint\n```\n\n**Security Scanning:**\n```bash\n# Python security checks\npip install safety bandit\nsafety check -r requirements.txt\nbandit -r . --exclude=./venv,./migrations\n\n# Frontend security audit\ncd templates\nnpm audit\n```\n\n### CI/CD Pipeline\n\nOur CI/CD pipeline automatically runs on every pull request and includes:\n\n#### 🔍 **Quality Gates**\n- ✅ Python code linting (flake8)\n- ✅ Frontend code linting (ESLint)\n- ✅ Django system checks\n- ✅ Migration checks\n- ✅ Unit tests (Django + Frontend)\n- ✅ Integration tests\n- ✅ Security vulnerability scanning\n- ✅ Docker build tests\n\n#### 🔒 **Security Scanning**\n- **Dependency Scanning**: Safety, pip-audit, npm audit\n- **Code Security**: Bandit, Semgrep\n- **Secrets Detection**: TruffleHog\n- **Docker Security**: Trivy (when applicable)\n\n#### 📦 **Build Verification**\n- Docker image builds\n- Docker Compose configuration validation\n- Static file collection\n- Frontend build process\n\n### Running CI Locally\n\n**Using Docker Compose for CI:**\n```bash\n# Test the CI pipeline locally\ndocker-compose -f docker-compose.ci.yml up --build\n\n# Run specific CI tests\ndocker-compose -f docker-compose.ci.yml run backend-test python manage.py test\ndocker-compose -f docker-compose.ci.yml run frontend-test npm test\n```\n\n**Manual CI Steps:**\n```bash\n# Backend CI steps\npython manage.py check --deploy\npython manage.py makemigrations --check --dry-run\nflake8 . --max-line-length=100 --exclude=migrations\npython manage.py test\n\n# Frontend CI steps\ncd templates\nnpm ci\nnpm run lint\nnpm test\nnpm run build  # if build script exists\n```\n\n## 📋 Development Workflow\n\n1. **Create a feature branch**: `git checkout -b feature/your-feature-name`\n2. **Make your changes** following our [coding guidelines](docs/PR_GUIDELINES.md)\n3. **Run tests locally**: Ensure all tests pass before pushing\n4. **Commit changes**: Use [Conventional Commits](https://www.conventionalcommits.org/) format\n5. **Push and create PR**: Use our [PR template](.github/PULL_REQUEST_TEMPLATE.md)\n6. **Code review**: Address feedback and ensure CI passes\n7. **Merge**: Once approved, PR will be merged using squash and merge\n\n### Helper Scripts\n\nUse our PR helper script to automate testing and PR creation:\n```bash\n# Run tests and create PR\n./scripts/make_pr.sh\n\n# With specific target branch\n./scripts/make_pr.sh develop \"feat: add new inventory feature\"\n```\n\n## 🛠️ Development Tools\n\n### Recommended IDE Setup\n- **VS Code** with Python, Django, and Vue.js extensions\n- **PyCharm Professional** for Django development\n- **WebStorm** for frontend development\n\n### Code Quality Tools\n```bash\n# Install development tools\npip install flake8 black isort pre-commit\nnpm install -g eslint prettier\n\n# Set up pre-commit hooks\npre-commit install\n```\n\n## 📖 Documentation\n\n- **[Contributing Guidelines](docs/PR_GUIDELINES.md)** - How to contribute to the project\n- **[Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md)** - PR template and checklist\n- **[Security Policy](SECURITY.md)** - Security reporting and best practices\n- **[Changelog](CHANGELOG.md)** - Version history and release notes\n\n## 🐛 Troubleshooting\n\n### Common Issues\n\n**Database Connection Issues:**\n```bash\n# Reset database\npython manage.py flush\npython manage.py migrate\n```\n\n**Frontend Build Issues:**\n```bash\ncd templates\nrm -rf node_modules package-lock.json\nnpm install\n```\n\n**Docker Issues:**\n```bash\n# Reset Docker environment\ndocker-compose down -v\ndocker system prune -f\ndocker-compose up --build\n```\n\n### Getting Help\n\n- 📖 Check our [documentation](docs/)\n- 🐛 [Report bugs](https://github.com/dev00amk/GreaterWMS-amk/issues)\n- 💬 [Discussions](https://github.com/dev00amk/GreaterWMS-amk/discussions)\n- 📧 Contact: [maintainer@example.com](mailto:maintainer@example.com)",
+    "tail": "",
+    "source_url": "https://github.com/GreaterWMS/GreaterWMS/blob/f8b931d02e2afcfa933c549d58a86ab581490de2/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "characters": 11357,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control sy",
+    "tail": " \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/GreaterWMS/GreaterWMS/blob/f8b931d02e2afcfa933c549d58a86ab581490de2/LICENSE"
+  },
+  "nested_license_paths": [
+    "app/LICENSE",
+    "app/src-cordova/plugins/com-darryncampbell-cordova-plugin-intent/LICENSE",
+    "app/src-cordova/plugins/cordova-plugin-battery-status/LICENSE",
+    "app/src-cordova/plugins/cordova-plugin-device/LICENSE",
+    "app/src-cordova/plugins/cordova-plugin-dialogs/LICENSE",
+    "app/src-cordova/plugins/cordova-plugin-splashscreen/LICENSE",
+    "app/src-cordova/plugins/cordova-plugin-vibration/LICENSE",
+    "app/src-cordova/plugins/ionic-plugin-keyboard/LICENSE",
+    "app/src-cordova/plugins/phonegap-plugin-barcodescanner/LICENSE.txt",
+    "static_new/admin/fonts/LICENSE.txt",
+    "static_new/admin/img/LICENSE",
+    "static_new/admin/js/vendor/jquery/LICENSE.txt",
+    "static_new/admin/js/vendor/select2/LICENSE.md",
+    "static_new/admin/js/vendor/xregexp/LICENSE.txt"
+  ],
+  "dependency_documents": [
+    {
+      "path": "docker-compose.yml",
+      "sha256": "036b7d67fcf5dcda27c9cecaee7fe0ccc6aa4da6aa0b208a09725cb947050183",
+      "characters": 885,
+      "excerpt": "version: '3.9'\nnetworks:\n  basic:\nservices:\n  front:\n    # build:\n    #   context: ./\n    #   dockerfile: Dockerfile\n    #   target: front\n    container_name: greaterwms_front\n    image: greaterwms/greaterwms:front\n    restart: always\n    privileged: true\n    ports:\n      - '8080:8080'\n    depends_on:\n      - backend\n    volumes:\n      - ./templates:/GreaterWMS/templates:rw\n      - ./web_start.sh:/GreaterWMS/templates/web_start.sh\n    networks:\n      - basic\n  backend:\n    # build:\n    #   context: ./\n    #   dockerfile: Dockerfile\n    #   target: backend\n    container_name: greaterwms_backend\n    image: greaterwms/greaterwms:backend\n    restart: always\n    privileged: true\n    volumes:\n      - ./:/GreaterWMS/:rw\n      - ./supervisord.conf:/etc/supervisor/supervisord.conf\n    ports:\n      - '8008:8008'\n    environment:\n      PYTHONUNBUFFERED: 1\n    networks:\n      - basic\n",
+      "tail": ": greaterwms/greaterwms:front\n    restart: always\n    privileged: true\n    ports:\n      - '8080:8080'\n    depends_on:\n      - backend\n    volumes:\n      - ./templates:/GreaterWMS/templates:rw\n      - ./web_start.sh:/GreaterWMS/templates/web_start.sh\n    networks:\n      - basic\n  backend:\n    # build:\n    #   context: ./\n    #   dockerfile: Dockerfile\n    #   target: backend\n    container_name: greaterwms_backend\n    image: greaterwms/greaterwms:backend\n    restart: always\n    privileged: true\n    volumes:\n      - ./:/GreaterWMS/:rw\n      - ./supervisord.conf:/etc/supervisor/supervisord.conf\n    ports:\n      - '8008:8008'\n    environment:\n      PYTHONUNBUFFERED: 1\n    networks:\n      - basic\n",
+      "source_url": "https://github.com/GreaterWMS/GreaterWMS/blob/f8b931d02e2afcfa933c549d58a86ab581490de2/docker-compose.yml"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "5991582bbb679e1967c0109ee5fb46c9e07254babb93bfe2e24b261f6f093edb",
+      "characters": 946,
+      "excerpt": "asgihandler==0.5.9\nasgiref==3.5.2\nattrs==23.1.0\nautobahn==23.1.2\nAutomat==22.10.0\ncertifi==2022.9.24\ncffi==1.15.1\ncharset-normalizer==2.1.1\nconstantly==15.1.0\ncryptography==40.0.2\ndaphne==4.0.0\nDjango==4.1.2\ndjango-cors-headers==3.13.0\ndjango-filter==2.4.0\ndjangorestframework==3.14.0\ndjangorestframework-csv==2.1.1\ndrf-spectacular==0.26.2\ndrf-spectacular-sidecar==2023.6.1\net-xmlfile==1.1.0\nh2==4.1.0\nhpack==4.0.0\nhyperframe==6.0.1\nhyperlink==21.0.0\nidna==3.4\nincremental==22.10.0\ninflection==0.5.1\njsonschema==4.17.3\nnumpy==1.23.4\nopenpyxl==3.0.10\npandas==1.5.1\npriority==1.3.0\npyasn1==0.5.0\npyasn1-modules==0.3.0\npycparser==2.21\nPyJWT==2.8.0\npyOpenSSL==23.1.1\npyrsistent==0.19.3\npython-dateutil==2.8.2\npytz==2022.5\nPyYAML==6.0\nrequests==2.28.1\nservice-identity==21.1.0\nsix==1.16.0\nsqlparse==0.4.3\nTwisted==22.10.0\ntxaio==23.1.1\ntyping_extensions==4.6.2\ntzdata==2022.5\nunicodecsv==0.14.1\nuritemplate==4.1.1\nurllib3==1.26.12\nzope.interface==6.0\n",
+      "tail": "ter==2.4.0\ndjangorestframework==3.14.0\ndjangorestframework-csv==2.1.1\ndrf-spectacular==0.26.2\ndrf-spectacular-sidecar==2023.6.1\net-xmlfile==1.1.0\nh2==4.1.0\nhpack==4.0.0\nhyperframe==6.0.1\nhyperlink==21.0.0\nidna==3.4\nincremental==22.10.0\ninflection==0.5.1\njsonschema==4.17.3\nnumpy==1.23.4\nopenpyxl==3.0.10\npandas==1.5.1\npriority==1.3.0\npyasn1==0.5.0\npyasn1-modules==0.3.0\npycparser==2.21\nPyJWT==2.8.0\npyOpenSSL==23.1.1\npyrsistent==0.19.3\npython-dateutil==2.8.2\npytz==2022.5\nPyYAML==6.0\nrequests==2.28.1\nservice-identity==21.1.0\nsix==1.16.0\nsqlparse==0.4.3\nTwisted==22.10.0\ntxaio==23.1.1\ntyping_extensions==4.6.2\ntzdata==2022.5\nunicodecsv==0.14.1\nuritemplate==4.1.1\nurllib3==1.26.12\nzope.interface==6.0\n",
+      "source_url": "https://github.com/GreaterWMS/GreaterWMS/blob/f8b931d02e2afcfa933c549d58a86ab581490de2/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/GreaterWMS/GreaterWMS",
+    "commit": "https://github.com/GreaterWMS/GreaterWMS/commit/f8b931d02e2afcfa933c549d58a86ab581490de2"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0945",
+        "repo": "GreaterWMS/GreaterWMS",
+        "url": "https://github.com/greaterwms/greaterwms",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,56 @@
+{
+  "audit_id": "R052",
+  "full_name": "CDTProcurement/trackandtrace",
+  "html_url": "https://github.com/CDTProcurement/trackandtrace",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Business Needs and User Stories for Cannabis Track and Trace",
+  "stargazers_count": 0,
+  "forks_count": 1,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2017-02-01T12:47:18Z",
+  "license": null,
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=cannabis+traceability&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "23a2c7d779a66787008c50ba8adff56d61a25ec4",
+  "last_commit": "2017-01-03T16:29:37-08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "README.md",
+    "_config.yml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "c2834512c68014aa0c529f429b24bfebf6d7652aadcd511a37c04670830ad558",
+    "characters": 19269,
+    "excerpt": "# California Track and Trace System Procurement\n\nIn partnership with the California Department of Food and Agriculture and other state agency partners, the California Department of Technology will be conducting a procurement to acquire a system to \"Track and Trace\" cannabis products within California. \n\nIf you have comments or questions please [submit a Github Issue](https://github.com/CDTProcurement/trackandtrace/issues) by noon on 12/23/2016. \n\n# Administrative Requirements\n* [Standard Contract Terms & Conditions - Information Technology General Provisions](http://www.documents.dgs.ca.gov/pd/poliproc/GSPD401IT14_0905.pdf)\n* [Cloud Computing Special Provisions for Software-as-a-Service (SaaS)](http://www.documents.dgs.ca.gov/pd/poliproc/CLOUDCOMPUTINGSERVICESSPECIALPROVISIONS_14_0903.docx)\n* [Payee Data Record](http://www.documents.dgs.ca.gov/dgs/fmc/pdf/std204.pdf)\n* [Bidder Declaration](http://www.documents.dgs.ca.gov/pd/delegations/GSPD105.pdf)\n* [SB/DVBE Certifications](https://caleprocure.ca.gov/pages/PublicSearch/supplier-search.aspx) - you only need to submit an SB or DVBE certification if you are a State of California certified Small Business (SB) or Disabled Veteran Business Enterprise (DVBE) or will be utilizing an SB or DVBE as a subcontractor.\n* [DVBE Declaration](https://www.documents.dgs.ca.gov/pd/poliproc/STD-843FillPrintFields.pdf) - you only needs to submit a DVBE Declaration if you are a certified DVBE or is utilizing a DVBE as a subcontractor.\n* [Security of State Registration](https://businesssearch.sos.ca.gov) - Proof of current registration with California Secretary of State.\n* Compliance with the Iran Contracting Act of 2010.\n\n# Business Needs and User Stories for Cannabis Track and Trace System\n\nBelow, the State has defined preliminary business needs and user stories for the Cannabis Track and Trace System.\n\n###Licensee\nAs a,\n###1.\tI would like to be notified of recalls.\n###2.\tI would like to obtain / create unique Identifier & Tags (Tag ID)\n###3.\tI would like to document these events;\n###a.\tTagging, labeling, processing, manufacturing, packaging and repackaging events\n###2.\tI would like to ship product.\n###3.\tI would like to label shipments of products.\n###4.\tI would like to create, update, print & receive shipping manifest.\n###5.\tI would like to report cultivation details (plant and batch)\n###6.\tI would like to report product information\n###7.\tI would like to report cannabis plants by type, strain and name. \n###8.\tI would like to track and report cloned, germinating and mother cannabis plants by count, type, strain\n###9.\tI would like to enter lab test report\n###10.\tI would like to report losses and product changes\n###11.\tI would like to report irregularities\n###12.\tI would like to grandfather plants through lifecycle stages\n###13.\tI would like to track and report on cloned and germinating plants sold to licensed dispensaries\n###14.\tI would like to handle multiple drivers on transport\n###15.\tI would like to track and report inventory, purchases, sales and ending inventory on a real-time or daily basis \n###16.\tI would like to track and report inventory loss from plant death, failure to grow, theft, etc.)\n###17.\tI would like to track and report all disposal of cannabis and cannabis products.\n###18.\tI would like to track cannabis plants through the entire cultivation lifecycle.\n###19.\tI would like to track all materials and ingredients used during the cultivation lifecycle (e.g., soil, growth regulators, pesticides, etc.)\n###20.\tI would like to track accountability for all aspects of the cannabis plant including trim, leaves, flowers, stems, stalks, etc.\n###21.\tI would like record transfers of small amounts of cannabis and cannabis products to a laboratory for testing.\n###22.\tI would like a secure web service API for integrating my 3rd party information system.\n###23.\tI would like to upload data into the system from my 3rd party information system\n###24.\tI would like the ability to verify and correct uploaded data before it is posted to the system.\n###25.\tI would like the correct/amend/supplement posted data and information.\n###26.\tI would like a training and testing program to ensure I / my staff know how to correctly use the system.\n###27.\tI would like to document receipt of a shipment from another licensee.\n###28.  I would like to integrate, in real-time, with hardware / equipment used to weigh cannabis and cannabis products, scanners, printers.\n\n###Law Enforcement Officer\nAs a,\n###1.\tI would like to retrieve shipping manifest.\n###2.\tI would like to verify shipment and associated licensee information.\n###3.\tI would like to notify Licensor of infraction\n###4.\tI would like to search Track & Trace data.\n###5.\tI would like to handle destruction of products and tags/ids upon arrests / confiscations.\n###6.\tI would like to verify transporter has:\n###a.\tManifest, cannabis license, company security badge identifying the employee works for the licensee, driver’s license Cannabis License Expiration Date, Cannabis License Issue Date.\n\n###Regulator\nAs a,\n###1.\tI would like unique identifiers to be created and issued for each cannabis plant.\n###2.\tI would like unique identifiers that can be attached to the base of each cannabis plant. \n###3.\tI would like unique identifiers to be created and issued for lots of cannabis plants \n###4.\tI would like to perform analytics, program & management reporting.\n###5.\tI would like ad-hoc reporting capabilities for all tables and all data within the system.\n###6.\tI would like to export/display any report in multiple formats (MS Excel, PDF, CSV, HTML, text files, etc.)\n###7.\tI would like to download datasets and reports.\n###8.\tI would like the ability to configure the system in response to any address any changes to regulations or statutes or to address enforcement needs that arise.\n###9.\tI would like to have to the information necessary to assess, levy, collect and track cultivation and excise taxes:\n###a.\t In a way that minimizes manual labor.\n###b.\tTag or mark to identify when/if, by licensee taxes paid. \n###c.\tIdentify when tagged or marked product changes possession (i.e., sale from cultivator to distributor, or sale from distributor to manufacturer)\n###d.\tSubsequently tag or mark previously tagged or marked product when it changes composition, i.e. leaves turned into extract, or extract turned into edible.\n###e.\t  Subsequently tag or mark previously tagged or marked product when it changes packaging or size, i.e. 1 lb bag broken down into 16 one ounce bags. \n###f.\tTraceable back to origin of harvest.\n###10.\tI would like track if product is returned, and be able to show the adjustment in the track and trace system. \n###11.\tI would like to easily verify (i.e. via physical inspection; perhaps via visual inspection) that taxes have been paid/levied on a product.\n###12.\tI would like an audit log for historical purposes, data analysis and/or data restoration.\n###13.\tI would like the system to track all changes in the system including adds, updates, and deletes by any registered system user and the associated date/time stamps.\n###14.\tI would like to suspend access to the system for a licensee and all associated users when the applicable license status is not active.\n###15.\tI would like the ability to configure system user access to functions, data and reports appropriate to the individual and their user group.\n###16.\tI would like to prevent the creation of a shipping manifest when a destination address is outside of California.\n###17.\t I would like a means to determine the validity of a hardcopy shipping manifest produced by the system.   \n###18.\tI would like to send specified data elements on demand or as a scheduled job in a specified timeframe, to an external system in a defined format(s).\n###19.\t I would like the capability to grant security access to the system / data elements in a granular manner.\n###20.\tI would like to track and monitor inventory discrepancies for any transfer of inventory between licensees.\n###21.\tI would like to maintain a record of all electronic shipping manifests.\n###22.\tI would like to access to all electronic shipping manifests. \n\n###Inspector/Investigator\nAs an,\n###1.\tI would like to differentiate function and purpose for an inspection versus an investigation\n###2.\tI would like to enter data associated with a site inspection while in the field/working remotely.\n###3.\tI would like a secure, web-based application which inspectors may use to access and record data.\n###4.\tI would like to retrieve data for site inspection.\n###5.\tI would like to receive automated alerts on track and trace irregularities (reuse of unique identifiers, identifiers don’t match product/packaging, product designated as recalled, destroyed or stolen). \n###6.\tI would like to perform site inspection.\n###7.\tI would like to record data and information associated with a site inspection\n###8.\tI would like to track, monitor and report irregularities in reported data based upon defined busi",
+    "tail": "",
+    "source_url": "https://github.com/CDTProcurement/trackandtrace/blob/23a2c7d779a66787008c50ba8adff56d61a25ec4/README.md"
+  },
+  "license_file": {
+    "error": "not_found"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/CDTProcurement/trackandtrace",
+    "commit": "https://github.com/CDTProcurement/trackandtrace/commit/23a2c7d779a66787008c50ba8adff56d61a25ec4"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

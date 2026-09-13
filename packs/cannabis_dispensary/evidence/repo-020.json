@@ -1,0 +1,90 @@
+{
+  "audit_id": "R020",
+  "full_name": "openthc/dir",
+  "html_url": "https://github.com/openthc/dir",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Company, Contact and License Directory Services for OpenTHC Environments",
+  "stargazers_count": 0,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-11-10T18:38:42Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "catalog"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "5686e54c842bdddcd42eff3a4754271354c05588",
+  "last_commit": "2025-11-10T18:38:40Z",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "error": "not_found"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "d1bfc7a749950924bd5d27dee610ac8933f96badc14a774be796e986b9dcd3aa",
+    "characters": 32423,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": "(INCLUDING BUT NOT LIMITED TO LOSS OF\nDATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGES.\n\n  17. Interpretation of Sections 15 and 16.\n\n  If the disclaimer of warranty and limitation of liability provided\nabove cannot be given local legal effect according to their terms,\nreviewing courts shall apply local law that most closely approximates\nan absolute waiver of all civil liability in connection with the\nProgram, unless a warranty or assumption of liability accompanies a\ncopy of the Program in return for a fee.\n",
+    "source_url": "https://github.com/openthc/dir/blob/5686e54c842bdddcd42eff3a4754271354c05588/LICENSE"
+  },
+  "nested_license_paths": [
+    "lib/License.php",
+    "lib/Module/License.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "6c79c2612879ffa4ceba6d77aff905e5e71957e4b0c284f28b3458654e2e1b1c",
+      "characters": 615,
+      "excerpt": "{\n\t\"name\": \"openthc/dir\",\n\t\"description\": \"OpenTHC Directory\",\n\t\"license\": \"proprietary\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Directory\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Directory\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"phpoffice/phpspreadsheet\": \"1.28.0\",\n\t\t\"smalot/pdfparser\": \"2.2.1\",\n\t\t\"tuupola/base32\": \"2.0.0\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\",\n\t\t\"php-webdriver/webdriver\": \"1.15.2\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/dir\",\n\t\"description\": \"OpenTHC Directory\",\n\t\"license\": \"proprietary\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Directory\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Directory\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"geoip2/geoip2\": \"2.13.0\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"phpoffice/phpspreadsheet\": \"1.28.0\",\n\t\t\"smalot/pdfparser\": \"2.2.1\",\n\t\t\"tuupola/base32\": \"2.0.0\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\",\n\t\t\"php-webdriver/webdriver\": \"1.15.2\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/dir/blob/5686e54c842bdddcd42eff3a4754271354c05588/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "8df3559037fc27f29e0f581b4d642e60df8a29c96966c06a37f5e657fa5f6028",
+      "characters": 625,
+      "excerpt": "{\n\t\"name\": \"directory\",\n\t\"version\": \"420.19.119\",\n\t\"description\": \"Cannabis Industry Directory\",\n\t\"main\": \"test.js\",\n\t\"directories\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"jscpd\": \"4.0.5\",\n\t\t\"jsonschema\": \"^1.5.0\",\n\t\t\"sqlite\": \"^4.2.1\",\n\t\t\"sqlite3\": \"^5.1.7\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"keywords\": [\n\t\t\"cannabis\"\n\t],\n\t\"author\": \"OpenTHC\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/directory/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/directory#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"directory\",\n\t\"version\": \"420.19.119\",\n\t\"description\": \"Cannabis Industry Directory\",\n\t\"main\": \"test.js\",\n\t\"directories\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"jscpd\": \"4.0.5\",\n\t\t\"jsonschema\": \"^1.5.0\",\n\t\t\"sqlite\": \"^4.2.1\",\n\t\t\"sqlite3\": \"^5.1.7\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"keywords\": [\n\t\t\"cannabis\"\n\t],\n\t\"author\": \"OpenTHC\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/directory/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/directory#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/dir/blob/5686e54c842bdddcd42eff3a4754271354c05588/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/dir",
+    "commit": "https://github.com/openthc/dir/commit/5686e54c842bdddcd42eff3a4754271354c05588"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

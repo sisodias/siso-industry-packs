@@ -1,0 +1,100 @@
+{
+  "audit_id": "R008",
+  "full_name": "openthc/bong",
+  "html_url": "https://github.com/openthc/bong",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Basic Object Normalization Gateway",
+  "stargazers_count": 5,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-06-30T03:44:36Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "seed-to-sale",
+    "traceability"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8",
+  "last_commit": "2026-06-30T03:44:32Z",
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 2,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".dockerignore",
+    ".editorconfig",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "a2310ec874a06b02baeb94c69debe8784532709d4ca5d8bbb0849e75dd040a91",
+    "characters": 1896,
+    "excerpt": "# Basic Object Normalization Gateway\n\nInterfaces with multiple Cannabis APIs (BioTrack, CCRS, Metrc).\nNormalizes to the OpenTHC API interfaces and data-models.\n\n```mermaid\nsequenceDiagram\n    App->>+Bong: Create Object (100)\n    Bong->>+CRE: Upload Object (102)\n    CRE-->>-Bong: Success (201)\n    Bong-->>-App: Success (201)\n```\n\n\n## Install\n\n1. Clone this Repository to somewhere clever `git clone $REPO /opt/openthc/bong`\n1. Update the Apache Config (use `etc/apache2-example.conf` as a template)\n1. Create the Base Database from `etc/sql/*.sql` and add the triggers.\n1. Configure in `etc/config.php` from `etc/config-example.php`\n\n\n## Connect\n\nYou can use BONG through it's normal web-interface to view objects in real time or view logs.\n\nBONG also provides an API -- so that other services can consume the data from the different back-ends easier.\n\n\n### With JWT\n\n```\ncurl --header \"Bearer: jwt/$JWT\" $BONG/auth/open\n```\n\n\n### With Session\n\n```php\ncurl --cookie=cookie-file.dat $BONG/auth/open\n```\n\n\n## Sync & Cache\n\nThe APIs that BONG interfaces with don't all agree on how to do pages of data, or sorting, or filtering.\nBONG has tools that work in the background to pull and cache data.\n\n```\nGET $BONG/status\nGET $BONG/inventory/status\n```\n\n\n## Reading Objects\n\nA low level, GET and POST/PUT interface exists.\n\n\n```\nGET https://$BONG/license\nGET https://$BONG/license/current/status\nGET https://$BONG/license/$ID/status\n```\n\n\n## Reading Crop\n\n```\nGET /crop\nGET /crop?filter=(active|wet-collect|dry-collect|done|dead)\nGET /crop?filter=and&f-[n0]=[v0]&f-[n1]=[v1]\nGET /crop?filter=or&f-[n0]=[v0]&f-[n1]=[v1]\n```\n\n## Reading Inventory\n\n```\nGET /inventory\nGET /inventory?filter=(active)\nGET /inventory?filter=and\nGET /inventory?filter=or\n```\n\n## Reading Transfer Data\n\n```\nGET /b2b\nGET /b2b/outgoing?filter=(active)\nGET /b2b/incoming?filter=(active)\nGET /b2b?filter=and\nGET /b2b?filter=or\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/bong/blob/6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "12ea5945f5c6b3c17e9c1f78cd9a759398704141dba97419bf8bf045bbc4ffe8",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2018 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/bong/blob/6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8/LICENSE"
+  },
+  "nested_license_paths": [
+    "lib/License.php",
+    "lib/Module/License.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "1e970bd4cbf4123cfa17be817a20f6a5b9214e7fa19591f1270d94226cc9ba37",
+      "characters": 592,
+      "excerpt": "{\n\t\"name\": \"openthc/bong\",\n\t\"description\": \"OpenTHC CRE Basic Object Normalization Service\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Bong\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Bong\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"opis/json-schema\": \"2.3.0\",\n\t\t\"google/cloud-pubsub\": \"^1.46\",\n\t\t\"google/apiclient\": \"2.12.5\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/bong\",\n\t\"description\": \"OpenTHC CRE Basic Object Normalization Service\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Bong\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Bong\\\\Test\\\\\": \"./test\",\n\t\t\t\"Custom\\\\\": \"./custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"opis/json-schema\": \"2.3.0\",\n\t\t\"google/cloud-pubsub\": \"^1.46\",\n\t\t\"google/apiclient\": \"2.12.5\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/bong/blob/6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "7d263ff781e821306541d3d104efe8c8fdfc051698f182f1c7795c48e91003e6",
+      "characters": 639,
+      "excerpt": "{\n\t\"name\": \"@openthc/bong\",\n\t\"version\": \"420.22.207\",\n\t\"description\": \"OpenTHC BONG\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"htmx.org\": \"2.0.4\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"lodash\": \"^4.17.21\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/bong.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/bong/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/bong#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"@openthc/bong\",\n\t\"version\": \"420.22.207\",\n\t\"description\": \"OpenTHC BONG\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"htmx.org\": \"2.0.4\",\n\t\t\"jquery\": \"3.7.1\",\n\t\t\"jquery-ui\": \"1.14.1\",\n\t\t\"lodash\": \"^4.17.21\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/bong.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/bong/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/bong#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/bong/blob/6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/bong",
+    "commit": "https://github.com/openthc/bong/commit/6cf9ec7d1e2d05d3d3bd39fea37d1678d075bce8"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

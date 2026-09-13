@@ -1,0 +1,182 @@
+{
+  "audit_id": "R059",
+  "full_name": "frappe/erpnext",
+  "html_url": "https://github.com/frappe/erpnext",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Free and Open Source Enterprise Resource Planning (ERP)",
+  "stargazers_count": 39178,
+  "forks_count": 12779,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-13T12:23:54Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "accounting",
+    "asset-management",
+    "crm",
+    "distribution",
+    "erp",
+    "erpnext",
+    "frappe",
+    "healthcare",
+    "hrms",
+    "manufacturing",
+    "point-of-sale",
+    "procurement",
+    "project-management",
+    "python",
+    "retail",
+    "support"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aaccounting&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "fe25746febc8731bbbc0880dcb18d528dcf08a63",
+  "last_commit": "2026-09-13T11:58:56+05:30",
+  "commits_six_months_sample_count": 3694,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 213,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".coderabbit.yml",
+    ".editorconfig",
+    ".eslintrc",
+    ".flake8",
+    ".git-blame-ignore-revs",
+    ".gitignore",
+    ".mergify.yml",
+    ".pre-commit-config.yaml",
+    ".releaserc",
+    ".semgrepignore",
+    "CODEOWNERS",
+    "CODE_OF_CONDUCT.md",
+    "README.md",
+    "SECURITY.md",
+    "TRADEMARK_POLICY.md",
+    "attributions.md",
+    "babel_extractors.csv",
+    "codecov.yml",
+    "commitlint.config.js",
+    "crowdin.yml",
+    "license.txt",
+    "package.json",
+    "pyproject.toml",
+    "sider.yml",
+    "sponsors.md",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "c7d12496fddc6771a44d9c84dcaa6868eea52ef32aca5a6a68d5b59d88a7022b",
+    "characters": 7438,
+    "excerpt": "\n<div align=\"center\">\n    <a href=\"https://frappe.io/erpnext\">\n\t<img src=\"./erpnext/public/images/v16/erpnext.svg\" alt=\"ERPNext Logo\" height=\"80px\" width=\"80px\"/>\n    </a>\n    <h2>ERPNext</h2>\n    <div align=\"center\">\n        <p>Powerful, Intuitive and Open-Source ERP</p>\n    </div>\n\n[![Learn on Frappe School](https://img.shields.io/badge/Frappe%20School-Learn%20ERPNext-blue?style=flat-square)](https://frappe.school)<br><br>\n[![CI](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml/badge.svg?event=schedule)](https://github.com/frappe/erpnext/actions/workflows/server-tests-mariadb.yml)\n[![docker pulls](https://img.shields.io/docker/pulls/frappe/erpnext.svg)](https://hub.docker.com/r/frappe/erpnext)\n\n</div>\n\n<div align=\"center\">\n\t<img src=\"./erpnext/public/images/v16/hero_image.png\" alt=\"ERPNext Hero Image\"/>\n</div>\n\n<div align=\"center\">\n\t<a href=\"https://erpnext-demo.frappe.cloud/api/method/erpnext_demo.erpnext_demo.auth.login_demo\">Live Demo</a>\n\t-\n\t<a href=\"https://frappe.io/erpnext\">Website</a>\n\t-\n\t<a href=\"https://docs.frappe.io/erpnext/\">Documentation</a>\n</div>\n\n## ERPNext\n\n100% Open-Source ERP System to help you run your business.\n\n### Motivation\n\nRunning a business is a complex task - handling invoices, tracking stock, managing personnel, and other daily operations. In a market where software is sold separately to manage each of these tasks, ERPNext does all of the above and more, for free.\n\n### Key Features\n\n- **Accounting**: All the tools you need to manage cash flow in one place, right from recording transactions to summarizing and analyzing financial reports.\n- **Order Management**: Track inventory levels, replenish stock, and manage sales orders, customers, suppliers, shipments, deliverables, and order fulfillment.\n- **Manufacturing**: Simplifies the production cycle, helps track material consumption, exhibits capacity planning, handles subcontracting, and more!\n- **Asset Management**: From purchase to disposal, IT infrastructure to equipment. Covers every branch of your organization, all in one centralized system.\n- **Projects**: Deliver both internal and external projects on time, budget and profitability. Track tasks, timesheets, and issues by project.\n\n<details open>\n\n<summary>More</summary>\n\t<img src=\"https://erpnext.com/files/v16_bom.png\"/>\n\t<img src=\"https://erpnext.com/files/v16_stock_summary.png\"/>\n\t<img src=\"https://erpnext.com/files/v16_job_card.png\"/>\n\t<img src=\"https://erpnext.com/files/v16_tasks.png\"/>\n</details>\n\n### Under the Hood\n\n- [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and JavaScript. The framework provides a robust foundation for building web applications, including a database abstraction layer, user authentication, and a REST API.\n\n- [**Frappe UI**](https://github.com/frappe/frappe-ui): A Vue-based UI library, to provide a modern user interface. The Frappe UI library provides a variety of components that can be used to build single-page applications on top of the Frappe Framework.\n\n## Production Setup\n\n### Managed Hosting\n\nYou can try [Frappe Cloud](https://frappecloud.com), a simple, user-friendly, and sophisticated [open-source](https://github.com/frappe/press) platform to host Frappe applications reliably and securely.\n\nIt handles installation, setup, upgrades, monitoring, maintenance, and support of your Frappe deployments. It is a fully featured developer platform with an ability to manage and control multiple Frappe deployments.\n\n<div>\n\t<a href=\"https://erpnext-demo.frappe.cloud/app/home\" target=\"_blank\" rel=\"noopener noreferrer\">\n\t\t<picture>\n\t\t\t<source media=\"(prefers-color-scheme: dark)\" srcset=\"https://frappe.io/files/try-on-fc-white.png\">\n\t\t\t<img src=\"https://frappe.io/files/try-on-fc-black.png\" alt=\"Try on Frappe Cloud\" height=\"28\" />\n\t\t</picture>\n\t</a>\n</div>\n\n\n### Self-Hosted\n#### Docker\n\nSee [Frappe Docker Documentation](https://github.com/frappe/frappe_docker) for full documentation & FAQ on Docker setup\n\n#### Prerequisites\n\n- [Docker](https://docs.docker.com/get-docker/)\n- [Docker Compose v2](https://docs.docker.com/compose/)\n- [git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)\n\n> For Docker basics and best practices refer to Docker's [documentation](https://docs.docker.com)\n\n### Try on your environment\n\n> **⚠️ Disposable demo only**\n>\n> **This setup is intended for quick evaluation. Expect to throw the environment away.** You will not be able to install custom apps to this setup. For production deployments, custom configurations, and detailed explanations, see the full documentation.\n\nFirst clone the repo:\n\n```sh\ngit clone https://github.com/frappe/frappe_docker\ncd frappe_docker\n```\n\nThen run:\n\n```sh\ndocker compose -f pwd.yml up -d\n```\nWait for a couple of minutes for ERPNext site to be created or check the `create-site` container logs before opening browser on port `8080`. (username: `Administrator`, password: `admin`)\n\nSee [Frappe Docker](https://github.com/frappe/frappe_docker/blob/main/docs/01-getting-started/03-arm64.md) for ARM based docker setup\n\n\n## Development Setup\n### Manual Install\n\nThe Easy Way: our install script for bench will install all dependencies (e.g. MariaDB). See https://github.com/frappe/bench for more details.\n\nNew passwords will be created for the ERPNext \"Administrator\" user, the MariaDB root user, and the Frappe user (the script displays the passwords and saves them to ~/frappe_passwords.txt).\n\n\n### Local\n\nTo setup the repository locally follow the steps mentioned below:\n\n1. Setup bench by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation) and start the server\n   ```\n   bench start\n   ```\n\n2. In a separate terminal window, run the following commands:\n   ```\n   # Create a new site\n   bench new-site erpnext.localhost\n   ```\n\n3. Get the ERPNext app and install it\n   ```\n   # Get the ERPNext app\n   bench get-app https://github.com/frappe/erpnext\n\n   # Install the app\n   bench --site erpnext.localhost install-app erpnext\n   ```\n\n4. Open the URL `http://erpnext.localhost:8000/app` in your browser, you should see the app running\n\n## Learning and Community\n\n1. [Frappe School](https://school.frappe.io) - Learn Frappe Framework and ERPNext from the various courses by the maintainers or from the community.\n2. [Official documentation](https://docs.erpnext.com/) - Extensive documentation for ERPNext.\n3. [Discussion Forum](https://discuss.frappe.io/c/erpnext/6) - Engage with the community of ERPNext users and service providers.\n4. [Telegram Group](https://erpnext_public.t.me) - Get instant help from huge community of users.\n\n\n## Contributing\n\n1. [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)\n2. [Report Security Vulnerabilities](https://erpnext.com/security)\n3. [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)\n4. [Translations](https://crowdin.com/project/frappe)\n\n\n## Logo and Trademark Policy\n\nPlease read our [Logo and Trademark Policy](TRADEMARK_POLICY.md).\n\n<br />\n<br />\n<div align=\"center\" style=\"padding-top: 0.75rem;\">\n\t<a href=\"https://frappe.io\" target=\"_blank\">\n\t\t<picture>\n\t\t\t<source media=\"(prefers-color-scheme: dark)\" srcset=\"https://frappe.io/files/Frappe-white.png\">\n\t\t\t<img src=\"https://frappe.io/files/Frappe-black.png\" alt=\"Frappe Technologies\" height=\"28\"/>\n\t\t</picture>\n\t</a>\n</div>\n",
+    "tail": "",
+    "source_url": "https://github.com/frappe/erpnext/blob/fe25746febc8731bbbc0880dcb18d528dcf08a63/README.md"
+  },
+  "license_file": {
+    "path": "license.txt",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "characters": 35149,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": "ou would use an \"about box\".\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU GPL, see\n<https://www.gnu.org/licenses/>.\n\n  The GNU General Public License does not permit incorporating your program\ninto proprietary programs.  If your program is a subroutine library, you\nmay consider it more useful to permit linking proprietary applications with\nthe library.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.  But first, please read\n<https://www.gnu.org/licenses/why-not-lgpl.html>.\n",
+    "source_url": "https://github.com/frappe/erpnext/blob/fe25746febc8731bbbc0880dcb18d528dcf08a63/license.txt"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "15104ce6d422c8c079b5014b3b46d1e89a40d201338d4d89a50748b735587d8c",
+      "characters": 600,
+      "excerpt": "{\n  \"name\": \"erpnext\",\n  \"description\": \"Open Source ERP System powered by the Frappe Framework\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/frappe/erpnext.git\"\n  },\n  \"homepage\": \"https://frappe.io/erpnext\",\n  \"author\": \"Frappe Technologies Pvt. Ltd.\",\n  \"license\": \"GPL-3.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/frappe/erpnext/issues\"\n  },\n  \"scripts\": {\n    \"postinstall\": \"cd banking && yarn install\",\n    \"dev\": \"cd banking && yarn dev\",\n    \"build\": \"cd banking && yarn build\"\n  },\n  \"devDependencies\": {},\n  \"dependencies\": {\n    \"onscan.js\": \"^1.5.2\"\n  }\n}",
+      "tail": "{\n  \"name\": \"erpnext\",\n  \"description\": \"Open Source ERP System powered by the Frappe Framework\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/frappe/erpnext.git\"\n  },\n  \"homepage\": \"https://frappe.io/erpnext\",\n  \"author\": \"Frappe Technologies Pvt. Ltd.\",\n  \"license\": \"GPL-3.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/frappe/erpnext/issues\"\n  },\n  \"scripts\": {\n    \"postinstall\": \"cd banking && yarn install\",\n    \"dev\": \"cd banking && yarn dev\",\n    \"build\": \"cd banking && yarn build\"\n  },\n  \"devDependencies\": {},\n  \"dependencies\": {\n    \"onscan.js\": \"^1.5.2\"\n  }\n}",
+      "source_url": "https://github.com/frappe/erpnext/blob/fe25746febc8731bbbc0880dcb18d528dcf08a63/package.json"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "82a593e847a9726607aff13dbb80072bf8088b7edbf9e0f59e945c29ccebf592",
+      "characters": 2530,
+      "excerpt": "[project]\nname = \"erpnext\"\nauthors = [\n    { name = \"Frappe Technologies Pvt Ltd\", email = \"developers@frappe.io\"}\n]\ndescription = \"Open Source ERP\"\nrequires-python = \">=3.14\"\nreadme = \"README.md\"\ndynamic = [\"version\"]\ndependencies = [\n    # Core dependencies\n    \"Unidecode~=1.4.0\",\n    \"barcodenumber~=0.5.0\",\n    \"rapidfuzz~=3.14.3\",\n    \"holidays~=0.87\",\n\n    # integration dependencies\n    \"googlemaps~=4.10.0\",\n    \"plaid-python~=7.2.1\",\n    \"python-youtube~=0.9.9\",\n\n    # Not used directly - required by PyQRCode for PNG generation\n    \"pypng~=0.20220715.0\",\n\n    # MT940 parser for bank statements\n    \"mt-940>=4.26.0\",\n\n    # PDF bank statement table extraction + page rasterization.\n    # Pulls pdfminer.six (parsing), Pillow, and pypdfium2 (render backend for\n    # Page.to_image) - all pure-Python wheels, no system binaries required.\n    \"pdfplumber>=0.11.0\",\n]\n\n[build-system]\nrequires = [\"flit_core >=3.4,<4\"]\nbuild-backend = \"flit_core.buildapi\"\n\n[tool.frappe.testing.function_type_validation]\nmax_module_depth = 1\nskip_namespaces = [\n    \"erpnext.deprecation_dumpster\",\n]\n\n[tool.bench.frappe-dependencies]\nfrappe = \">=17.0.0-dev,<18.0.0\"\n\n[tool.bench.assets]\nbuild_dir = \"./banking\"\nout_dir = \"../erpnext/public/banking\"\nindex_html_path = \"../erpnext/www/banking.html\"\n\n[tool.ruff]\nline-length = 110\ntarget-version = \"py310\"\n\n[tool.ruff.lint]\nselect = [\n    \"F\",\n    \"E\",\n    \"W\",\n    \"I\",\n    \"UP\",\n    \"B\",\n    \"RUF\",\n]\nignore = [\n    \"B017\", # assertRaises(Exception) - should be more specific\n    \"B018\", # useless expression, not assigned to anything\n    \"B023\", # function doesn't bind loop variable - will have last iteration's value\n    \"B904\", # raise inside except without from\n    \"E101\", # indentation contains mixed spaces and tabs\n    \"E402\", # module level import not at top of file\n    \"E501\", # line too long\n    \"E741\", # ambiguous variable name\n    \"F401\", # \"unused\" imports\n    \"F403\", # can't detect undefined names from * import\n    \"F405\", # can't detect undefined names from * import\n    \"F722\", # syntax error in forward type annotation\n    \"W191\", # indentation contains tabs\n    \"RUF001\", # string contains ambiguous unicode character\n]\ntyping-modules = [\"frappe.types.DF\"]\n\n[tool.ruff.format]\nquote-style = \"double\"\nindent-style = \"tab\"\ndocstring-code-format = true\n\n\n[project.urls]\nHomepage = \"https://frappe.io/erpnext\"\nRepository = \"https://github.com/frappe/erpnext.git\"\nDocumentation = \"https://docs.frappe.io/erpnext\"\n\"Bug Reports\" = \"https://github.com/frappe/erpnext/issues\"\n",
+      "tail": "line too long\n    \"E741\", # ambiguous variable name\n    \"F401\", # \"unused\" imports\n    \"F403\", # can't detect undefined names from * import\n    \"F405\", # can't detect undefined names from * import\n    \"F722\", # syntax error in forward type annotation\n    \"W191\", # indentation contains tabs\n    \"RUF001\", # string contains ambiguous unicode character\n]\ntyping-modules = [\"frappe.types.DF\"]\n\n[tool.ruff.format]\nquote-style = \"double\"\nindent-style = \"tab\"\ndocstring-code-format = true\n\n\n[project.urls]\nHomepage = \"https://frappe.io/erpnext\"\nRepository = \"https://github.com/frappe/erpnext.git\"\nDocumentation = \"https://docs.frappe.io/erpnext\"\n\"Bug Reports\" = \"https://github.com/frappe/erpnext/issues\"\n",
+      "source_url": "https://github.com/frappe/erpnext/blob/fe25746febc8731bbbc0880dcb18d528dcf08a63/pyproject.toml"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/frappe/erpnext",
+    "commit": "https://github.com/frappe/erpnext/commit/fe25746febc8731bbbc0880dcb18d528dcf08a63"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0008",
+        "repo": "frappe/erpnext",
+        "url": "https://github.com/frappe/erpnext",
+        "labels": [
+          "product_base",
+          "product",
+          "ERPNext"
+        ],
+        "family_ids": [
+          "U15",
+          "U17",
+          "U19",
+          "U21",
+          "U54",
+          "U66",
+          "B01",
+          "B04",
+          "B05",
+          "B20"
+        ],
+        "family_names": [
+          "Proposal, quote and CPQ",
+          "Accounting and general ledger",
+          "Inventory and warehouse management",
+          "Procurement and vendor management",
+          "Accounting practice operations",
+          "Field service management"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified",
+          "historical_operator_nomination"
+        ],
+        "operator_signals": [
+          {
+            "nomination_id": "ON-028",
+            "origin": "foundry_value_matrix_specialist",
+            "observed_at": "2026-08-03",
+            "note": "Composite ERP specialist candidate."
+          }
+        ],
+        "observed_facts": [
+          "frappe/erpnext supplies inventory, billing, crm at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "priority_deeper_evidence_candidate",
+        "foundry_stage": "specialist_candidate",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 60,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

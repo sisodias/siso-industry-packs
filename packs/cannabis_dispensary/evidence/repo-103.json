@@ -1,0 +1,91 @@
+{
+  "audit_id": "R103",
+  "full_name": "openepcis/openepcis-event-hash-generator",
+  "html_url": "https://github.com/openepcis/openepcis-event-hash-generator",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Generates the EPCIS 2.0 event hash (hash ID) for EPCIS documents and events in XML or JSON/JSON-LD, following the GS1 CBV 2.0 and 2.1 canonical pre-hash rules. The same event in either format produces the same hash, so duplicates are easy to detect. Java library, CLI, REST API and Quarkus extension.",
+  "stargazers_count": 11,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-07T08:04:23Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "cbv",
+    "cli",
+    "deduplication",
+    "event-hash",
+    "event-hash-generator",
+    "graalvm",
+    "gs1-epcis",
+    "hash-generator",
+    "java",
+    "json-ld",
+    "openepcis",
+    "quarkus",
+    "sha-256",
+    "supply-chain",
+    "traceability",
+    "xml"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=EPCIS&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "bcfcb169e03bb2c60c4e86abfd76b1d626b3c9c3",
+  "last_commit": "2026-09-07T10:04:21+02:00",
+  "commits_six_months_sample_count": 27,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 5,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "pom.xml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "2beb3dd346a517ca7e3592c08d0bfc4f9b39c1f7d92ffb427b169f3ac4671c3c",
+    "characters": 14866,
+    "excerpt": "<p align=\"center\">\n  <img src=\"https://openepcis.io/img/openepcis-logo.svg\" alt=\"OpenEPCIS\" width=\"30%\">\n</p>\n\n[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)\n[![Maven Central](https://img.shields.io/maven-central/v/io.openepcis/openepcis-event-hash-generator)](https://central.sonatype.com/artifact/io.openepcis/openepcis-event-hash-generator)\n[![Java CI](https://github.com/openepcis/openepcis-event-hash-generator/actions/workflows/maven-cli.yml/badge.svg)](https://github.com/openepcis/openepcis-event-hash-generator/actions/workflows/maven-cli.yml)\n[![Stars](https://img.shields.io/github/stars/openepcis/openepcis-event-hash-generator?style=social)](https://github.com/openepcis/openepcis-event-hash-generator)\n\n<h1 align=\"center\">OpenEPCIS Event Hash Generator</h1>\n\nGenerates a stable hash id for every event in an [EPCIS](https://www.gs1.org/standards/epcis) document, so you can\ntell if you have seen that event before. EPCIS is the GS1 standard for sharing supply chain event data between\ntrading partners, also published as ISO/IEC 19987.\n\nComes as a Java library, a command line tool, a REST service and ready to run native binaries.\n\n## Why\n\nThe same event often arrives twice. A gateway retries, someone uploads a file again, or two systems report the\nsame movement. The event id does not help, because it is optional and every sender formats the document a little\ndifferently.\n\nThis tool puts the event fields into the canonical order defined by the GS1 CBV standard, builds a pre-hash\nstring and hashes it. Two events with the same content give the same hash, even if one is XML and the other JSON.\nStore the hash and duplicates are easy to find.\n\n## Table of Contents\n\n1. [Features](#features)\n2. [Quick start](#quick-start)\n3. [Use as a Java library](#use-as-a-java-library)\n4. [REST API](#rest-api)\n5. [Running with Docker and Podman](#running-with-docker-and-podman)\n6. [Running native binaries](#running-native-binaries)\n7. [Build from source](#build-from-source)\n8. [Releases](#releases)\n9. [Contributing](#contributing)\n10. [Related](#related)\n11. [References](#references)\n12. [License](#license)\n\n## Features\n\n- **Reactive streams**: handles millions of events without loading the whole document into memory.\n- **Hash algorithms**: `sha-1`, `sha-224`, `sha-256`, `sha-384`, `sha-512`, `sha3-224`, `sha3-256`, `sha3-384`,\n  `sha3-512`, `md2` and `md5`. Default is `sha-256`.\n- **Same hash for XML and JSON**: one event gives one hash id, whichever format it arrives in.\n- **CBV 2.0 and CBV 2.1**: 2.0 stays the default, so hashes you already stored do not change.\n- **Pre-hash output**: ask for `prehash` and you get the exact string that was hashed. Quickest way to see why\n  two hashes differ.\n- **GraalVM native builds**: start in milliseconds, use little memory, and need no Java runtime.\n\n## Quick start\n\nRun the service:\n\n```bash\ndocker run --rm -p 9000:9000 \\\n  ghcr.io/openepcis/event-hash-generator-service:latest\n```\n\nHash a document:\n\n```bash\ncurl -X POST \"http://localhost:9000/api/generate/event-hash/document\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\" \\\n  --data-binary @my-epcis-document.json\n```\n\nYou get one hash id per event:\n\n```json\n[\"ni:///sha-256;9b7d47...?ver=CBV2.0\"]\n```\n\nOr try it in the browser at `http://localhost:9000/q/swagger-ui/index.html`.\n\n## Use as a Java library\n\nAdd the dependency. The Maven Central badge above shows the newest version:\n\n```xml\n<dependency>\n    <groupId>io.openepcis</groupId>\n    <artifactId>openepcis-event-hash-generator</artifactId>\n    <version>0.9.3</version>\n</dependency>\n```\n\n`EventHashGenerator` is the entry point. `fromXml` and `fromJson` return a Mutiny `Multi`, so you can collect all\nhashes into a list or take each one as it arrives.\n\n### XML documents\n\n```java\n// Default constructor uses CBV 2.0\nEventHashGenerator generator = new EventHashGenerator();\n\n// Pass a version if you need CBV 2.1\nEventHashGenerator generator21 = new EventHashGenerator(CBVVersion.VERSION_2_1_0);\n\ntry (InputStream xmlStream = getClass().getResourceAsStream(\"/XmlEpcisDocument.xml\")) {\n    List<String> hashIds = generator.fromXml(xmlStream, \"sha-256\")\n            .subscribe().asStream().toList();\n}\n```\n\n### JSON and JSON-LD documents\n\n```java\nEventHashGenerator generator = new EventHashGenerator();\n\ntry (InputStream jsonStream = getClass().getResourceAsStream(\"/JsonEpcisDocument.json\")) {\n    List<String> hashIds = generator.fromJson(jsonStream, \"sha-256\")\n            .subscribe().asStream().toList();\n}\n```\n\n### Take each hash as it is generated\n\nSubscribe instead of collecting and nothing piles up in memory. Ask for `prehash` next to the algorithm and you\nget both values for every event, which helps when two systems report a different hash for the same event.\n\n```java\nEventHashGenerator generator = new EventHashGenerator();\n\nMulti<Map<String, String>> events = generator.fromXml(xmlStream, \"prehash\", \"sha-256\");\n\nevents.subscribe().with(\n        event -> System.out.println(event.get(\"sha-256\") + \"\\n\" + event.get(\"prehash\")),\n        failure -> System.err.println(\"Hash generation failed: \" + failure));\n```\n\nA long pre-hash string is easier to read with a separator between the fields, set by\n`generator.prehashJoin(\"\\n\")`. This changes only what you see. The bytes that get hashed never contain newlines,\nas the standard requires.\n\n## REST API\n\nThe service listens on port 9000. Both endpoints take a `POST` with the document or event as the body, and read\nthe format from the `Content-Type` header (`application/json`, `application/xml` or `text/xml`).\n\n| Endpoint                            | Body                               |\n|-------------------------------------|------------------------------------|\n| `/api/generate/event-hash/document` | A full EPCIS document              |\n| `/api/generate/event-hash/events`   | A single event or a list of events |\n\nUse `Accept: application/json` for a JSON array of hash ids, or `Accept: text/plain` for one hash per line.\n\n| Query parameter   | Default   | What it does                                            |\n|-------------------|-----------|---------------------------------------------------------|\n| `hashAlgorithm`   | `sha-256` | Which algorithm to use, from the list under Features.   |\n| `prehash`         | `false`   | Also return the pre-hash string that was hashed.        |\n| `beautifyPreHash` | `false`   | Put each field of the pre-hash string on its own line.  |\n| `cbvVersion`      | `2.0.0`   | CBV rules to apply, `2.0.0` or `2.1.0`.                 |\n\nExample with CBV 2.1 and the pre-hash string included:\n\n```bash\ncurl -X POST \\\n  \"http://localhost:9000/api/generate/event-hash/document?cbvVersion=2.1.0&prehash=true\" \\\n  -H \"Content-Type: application/xml\" \\\n  -H \"Accept: application/json\" \\\n  --data-binary @my-epcis-document.xml\n```\n\n## Running with Docker and Podman\n\n### JVM variant\n\nRuns on the Java Virtual Machine, so it behaves the same everywhere.\n\n**Package:** [Event Hash Generator Service - JVM](https://github.com/openepcis/openepcis-event-hash-generator/pkgs/container/event-hash-generator-service)\n\n```bash\ndocker pull ghcr.io/openepcis/event-hash-generator-service:latest\ndocker run --rm -p 9000:9000 \\\n  --name event-hash-generator-jvm \\\n  ghcr.io/openepcis/event-hash-generator-service:latest\n```\n\n### Native binary variant\n\nCompiled ahead of time with GraalVM. Starts almost instantly and uses much less memory, which helps on small\ncontainers and short lived jobs.\n\n**Package:** [Event Hash Generator Service - Native](https://github.com/openepcis/openepcis-event-hash-generator/pkgs/container/event-hash-generator-service-native)\n\n```bash\ndocker pull ghcr.io/openepcis/event-hash-generator-service-native:latest\ndocker run --rm -p 9000:9000 \\\n  --name event-hash-generator-native \\\n  ghcr.io/openepcis/event-hash-generator-service-native:latest\n```\n\nPodman takes the same commands, just replace `docker` with `podman`.\n\n### Configuration\n\nTwo runtime properties are meant for operators. Each one accepts a JVM `-D` flag or an environment variable,\nwhich Quarkus converts automatically:\n\n| Property (JVM `-D`)                    | Environment variable                   | Default | Purpose                                                                                                                                                                                            |\n|----------------------------------------|----------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n| `openepcis.event-hash.cbv-version`     | `OPENEPCIS_EVENT_HASH_CBV_VERSION`     | `2.0.0` | Default CBV version used when a request does not include a `cbvVersion` query parameter.                                                                                         ",
+    "tail": "",
+    "source_url": "https://github.com/openepcis/openepcis-event-hash-generator/blob/bcfcb169e03bb2c60c4e86abfd76b1d626b3c9c3/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "cc4d4de0920b0d3912203b5d9aa76728ac4a11087f55da9ea00576db7d1e34e2",
+    "characters": 10141,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control sy",
+    "tail": ". Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n",
+    "source_url": "https://github.com/openepcis/openepcis-event-hash-generator/blob/bcfcb169e03bb2c60c4e86abfd76b1d626b3c9c3/LICENSE"
+  },
+  "nested_license_paths": [
+    "cli/LICENSE",
+    "core/LICENSE",
+    "rest-api/LICENSE",
+    "servlet-api/LICENSE"
+  ],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/openepcis/openepcis-event-hash-generator",
+    "commit": "https://github.com/openepcis/openepcis-event-hash-generator/commit/bcfcb169e03bb2c60c4e86abfd76b1d626b3c9c3"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

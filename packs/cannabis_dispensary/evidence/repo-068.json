@@ -1,0 +1,188 @@
+{
+  "audit_id": "R068",
+  "full_name": "Dolibarr/dolibarr",
+  "html_url": "https://github.com/Dolibarr/dolibarr",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity (contacts, suppliers, invoices, orders, stocks, agenda, accounting, ...). it's an open source Web application (written in PHP) designed for businesses of any sizes, foundations and freelancers.",
+  "stargazers_count": 7603,
+  "forks_count": 3519,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-13T11:32:07Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "accounting",
+    "agenda",
+    "crm",
+    "erp",
+    "hacktoberfest",
+    "human-resource-managment",
+    "invoice",
+    "invoices",
+    "invoicing",
+    "mysql",
+    "orders",
+    "php",
+    "postgresql",
+    "proposal",
+    "purchase",
+    "quotations",
+    "sales",
+    "stock",
+    "stocks",
+    "suppliers"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aaccounting&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "1f3f0b9fe2327b829e8cc8aa9adc167c77e7754f",
+  "last_commit": "2026-09-13T18:15:30+02:00",
+  "commits_six_months_sample_count": 1801,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 192,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".agentsignore",
+    ".codeclimate.yml",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".mailmap",
+    ".pre-commit-config.yaml",
+    ".travis.yml",
+    "COPYING",
+    "COPYRIGHT",
+    "ChangeLog",
+    "DCO",
+    "README.md",
+    "SECURITY.md",
+    "composer.json.disabled",
+    "phpstan.neon.dist",
+    "pyproject.toml",
+    "robots.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "a586c549f4d58fa6339b5a136a869dce00f942524e6598e555f876dd625777a4",
+    "characters": 11327,
+    "excerpt": "# DOLIBARR ERP & CRM\n\n![Downloads per day](https://img.shields.io/sourceforge/dw/dolibarr.svg)\n![Docker hub pulls](https://img.shields.io/docker/pulls/dolibarr/dolibarr.svg)\n[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg?style=flat-square)](https://php.net/)\n[![GitHub release](https://img.shields.io/github/v/release/Dolibarr/dolibarr)](https://github.com/Dolibarr/dolibarr)\n[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5521/badge)](https://bestpractices.coreinfrastructure.org/projects/5521)\n\nDolibarr ERP & CRM is a modern software package that helps manage your organization's activities (contacts, quotes, invoices, orders, stocks, agenda, human resources, ecm, manufacturing…).\n\nIt's an Open-Source Software suite (written in PHP with JavaScript enhancements) designed for small, medium or large companies, foundations and freelancers.\n\nYou can freely use, study, modify or distribute it according to its license.\n\nYou can use it as a standalone application or as a web application to access it from the Internet or from a LAN.\n\nDolibarr has a large community ready to help you, free forums and [preferred partners ready to offer commercial support should you need it](https://partners.dolibarr.org)\n\n![ScreenShot](https://www.dolibarr.org/medias/dolibarr_screenshot1_1920x1080.jpg)\n\n\n## LICENSE\n\nDolibarr is released under the terms of the GNU General Public License as published by the Free Software Foundation; either Version 3 of the License, or (at your option) any later version (GPL-3+).\n\nSee the [COPYING](https://github.com/Dolibarr/dolibarr/blob/develop/COPYING) file for a full copy of the license.\n\nOther licenses apply for some included dependencies. See [COPYRIGHT](https://github.com/Dolibarr/dolibarr/blob/develop/COPYRIGHT) for a full list.\n\n\n## INSTALLING\n\nThere is a lot of different solutions to install Dolibarr.\n\n### Using packages \n\nIf you have low technical skills and you're looking to install Dolibarr ERP/CRM with just a few clicks, you can use one of the packaged versions (see next chapter if you have IT knowledge):\n\n- [DoliWamp for Windows](https://wiki.dolibarr.org/index.php/Dolibarr_for_Windows_(DoliWamp))\n- [DoliDeb for Debian, Ubuntu](https://wiki.dolibarr.org/index.php/Dolibarr_for_Ubuntu_or_Debian)\n- DoliRpm for Red Hat, Fedora, openSUSE, Mandriva or Mageia\n- The Docker image (see chapter \"Using Docker\")\n\nReleases can be downloaded from [official website](https://www.dolibarr.org/).\n\n### Using the generic step by step setup (recommended for IT users)\n\nYou can use any web server supporting PHP (Apache, Nginx, ...) and a supported database (MariaDB, MySQL or PostgreSQL) to install the standard version:\n\n- Verify that your installed PHP version is supported [see PHP support](https://wiki.dolibarr.org/index.php/Releases).\n\n- Uncompress the downloaded .zip archive to copy the `dolibarr/htdocs` directory and all its files inside your web server root or get the files directly from GitHub (recommended if you know git as it makes it easier if you want to upgrade later):\n\n  `git clone https://github.com/dolibarr/dolibarr -b x.y`     (where x.y is the main version like 9.0, 19.0, ...)\n\n- Set up your web server to use `dolibarr/htdocs` as root if your web server does not already define a directory to point to.\n\n- Create an empty `htdocs/conf/conf.php` file and set *write* permissions for your web server user (*write* permission will be removed once install is finished)\n\n- From your browser, go to the dolibarr \"install/\" page\n\n  The URL will depend on how your web configuration directs to your dolibarr installation. It may look like:\n\n  `http://localhost/dolibarr/htdocs/install/`\n\n  or\n\n  `http://localhost/dolibarr/install/`\n\n  or\n\n  `http://yourdolibarrvirtualhost/install/`\n\n- Follow the installer instructions\n\n### Using Docker images\n\nDolibarr is also available as a [Docker image](https://hub.docker.com/r/dolibarr/dolibarr). Installation instructions are available [here](https://github.com/Dolibarr/dolibarr-docker).\n\n### Using ready to use SaaS/Cloud offers\n\nIf you lack the time to install it yourself, consider exploring commercial 'ready-to-use' Cloud offerings (refer to https://saas.dolibarr.org). Keep in mind that this third option comes with associated costs.\n\n\n## UPGRADING\n\nDolibarr supports upgrading, usually without the need for any (commercial) support (depending on if you use any commercial extensions). It supports upgrading all the way from any version after 2.8 without breakage. This is unique in the ERP ecosystem and a benefit our users highly appreciate!\n\nFollow these step-by-step instructions to seamlessly upgrade Dolibarr to the latest version:\n\n- First, make a backup of your Dolibarr files, then see [the upgrade guide](https://wiki.dolibarr.org/index.php/Installation_-_Upgrade#Upgrade_Dolibarr)\n- Verify that your installed PHP version is supported by the new version [see PHP support](https://wiki.dolibarr.org/index.php/Releases).\n- Overwrite all old files from the 'dolibarr' directory with files provided in the new version's package.\n- On your next access, Dolibarr will redirect you to the \"install/\" page to follow the upgrade process.\n  If an `install.lock` file exists (which locks any other upgrade process), the application will ask you to remove the file manually (you should find the `install.lock` file in the directory used to store generated and uploaded documents; in most cases, this is the directory called \"*documents*\").\n\n\n## WHAT'S NEW\n\nSee the [ChangeLog](https://github.com/Dolibarr/dolibarr/blob/develop/ChangeLog) file.\n\n\n## FEATURES\n\n### Main application/modules (all optional)\n\n- Third-Parties Management: Customers, Prospects (Leads) and/or Suppliers + Contacts\n- Members/Membership/Foundation management\n\n Product Management\n\n- Products and/or Services catalogue\n- Stock / Warehouse management + Inventory\n- Barcodes\n- Batches / Lots / Serials\n- Product Variants\n- Bill of Materials (BOM)\n- Manufacturing Orders (MO)\n- Workstations / Workplaces\n\n Customer/Sales Management\n\n- Customers/Prospects + Contacts management\n- Opportunities or Leads management\n- Commercial proposals management (online signing)\n- Customer Orders management\n- Contracts/Subscription management\n- Interventions management\n- Ticket System (+ Knowledge management)\n- Partnership management\n- Shipping management\n- Customer Invoices/Credit notes and payment management\n- Point of Sale (POS)\n\n Supplier/Purchase Management\n\n- Suppliers/Vendors + Contacts\n- Supplier (pricing) requests\n- Purchase Orders management\n- Delivery/Reception\n- Supplier Invoices/Credit notes and payment management\n- INCOTERMS\n\n Finance/Accounting\n\n- Invoices/Payments\n- Bank accounts management\n- Direct debit and Credit transfer management (European SEPA)\n- Accounting management\n- Donations management\n- Loan management\n- Margins\n- Reports\n\n Collaboration\n\n- Shared calendar/agenda (with `ical` and `vcal` import/export for third-party tools integration)\n- Projects & Tasks management\n- Event organization\n- Ticket System\n- Surveys\n\n HR - Human Resources Management\n\n- Employee leave management\n- Expense reports\n- Recruitment management\n- Employee/staff management\n- Timesheets\n\n### Other application/modules\n\n- Electronic Document Management (EDM)\n- Bookmarks\n- Reporting\n- Data export/import\n- Barcodes\n- LDAP connectivity\n- Click-To-Dial integration\n- Mass emailing\n- RSS integration\n- Social platforms linking\n- Payment platforms integration (PayPal, Stripe, Paybox...)\n- Email-Collector\n- AI support via API\n\n(around 100 modules available by default, 1000+ addons at the official marketplace Dolistore.com)\n\n### Other general features\n\n- Multi-Language Support (Localization in most major languages)\n- Multi-users and groups with finely-grained rights\n- Multi-Currency\n- Multi-Company (by adding an external module)\n- Very user-friendly and easy to use\n- Customizable dashboards\n- Highly customizable: enable only the modules you need, add user personalized fields, choose your skin, several menu managers (can be used by internal users as a back-office with a particular menu, or by external users as a front-office with another one)\n- APIs (REST, SOAP)\n- Code that is easy to understand, maintain and develop (PHP with no heavy framework; trigger and hook architecture)\n- Support a lot of country-specific features:\n  - Spanish Tax RE and IRPF\n  - French NPR VAT rate (VAT called \"Non Perçue Récupérable\" for DOM-TOM)\n  - Canadian double taxes (federal/province) and other countries using cumulative VAT\n  - Tunisian tax stamp\n  - Argentina invoice numbering using A,B,C...\n  - Greece fetch customer vat details from AADE, all invoice types, MyData(external free module)\n  - ZATCA e-invoicing QR-Code\n  - Compatible with [European directives](https://commission.europa.eu/topics/taxation_en) (2006/112/CE ... 2010/45/UE)\n  - Compatible with data privacy rules (Europe's GDPR, ...)\n  - ...\n- Flexible PDF & ODT generation for invoices, proposals,",
+    "tail": "",
+    "source_url": "https://github.com/Dolibarr/dolibarr/blob/1f3f0b9fe2327b829e8cc8aa9adc167c77e7754f/README.md"
+  },
+  "license_file": {
+    "path": "COPYING",
+    "sha256": "e79e9c8a0c85d735ff98185918ec94ed7d175efc377012787aebcf3b80f0d90b",
+    "characters": 35151,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": " would use an \"about box\".\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU GPL, see\n<https://www.gnu.org/licenses/>.\n\n  The GNU General Public License does not permit incorporating your program\ninto proprietary programs.  If your program is a subroutine library, you\nmay consider it more useful to permit linking proprietary applications with\nthe library.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.  But first, please read\n<https://www.gnu.org/philosophy/why-not-lgpl.html>.\n",
+    "source_url": "https://github.com/Dolibarr/dolibarr/blob/1f3f0b9fe2327b829e8cc8aa9adc167c77e7754f/COPYING"
+  },
+  "nested_license_paths": [
+    "htdocs/includes/Psr/simple-cache/LICENSE.md",
+    "htdocs/includes/ace/LICENSE",
+    "htdocs/includes/geoPHP/LICENSE",
+    "htdocs/includes/jquery/plugins/select2/LICENSE.md",
+    "htdocs/includes/jsgantt/LICENSE",
+    "htdocs/includes/markrogoyski/math-php/LICENSE.txt",
+    "htdocs/includes/maximebf/debugbar/LICENSE",
+    "htdocs/includes/mike42/escpos-php/LICENSE.md",
+    "htdocs/includes/mobiledetect/mobiledetectlib/LICENSE",
+    "htdocs/includes/odtphp/zip/pclzip/LICENSE",
+    "htdocs/includes/parsedown/LICENSE.txt",
+    "htdocs/includes/php-iban/LICENSE",
+    "htdocs/includes/phpoffice/phpspreadsheet/LICENSE",
+    "htdocs/includes/sabre/composer/LICENSE",
+    "htdocs/includes/sabre/psr/log/LICENSE",
+    "htdocs/includes/sabre/sabre/dav/LICENSE",
+    "htdocs/includes/sabre/sabre/event/LICENSE",
+    "htdocs/includes/sabre/sabre/http/LICENSE",
+    "htdocs/includes/sabre/sabre/uri/LICENSE",
+    "htdocs/includes/sabre/sabre/vobject/LICENSE",
+    "htdocs/includes/sabre/sabre/xml/LICENSE",
+    "htdocs/includes/stripe/stripe-php/LICENSE",
+    "htdocs/includes/swiftmailer/egulias/email-validator/LICENSE",
+    "htdocs/includes/swiftmailer/lexer/LICENSE",
+    "htdocs/includes/symfony/var-dumper/LICENSE",
+    "htdocs/includes/tecnickcom/tcpdf/LICENSE.TXT",
+    "htdocs/includes/tecnickcom/tcpdf/fonts/ae_fonts_2.0/COPYING",
+    "htdocs/includes/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.33/LICENSE",
+    "htdocs/includes/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/LICENSE",
+    "htdocs/includes/tecnickcom/tcpdf/fonts/freefont-20100919/COPYING",
+    "htdocs/includes/tecnickcom/tcpdf/fonts/freefont-20120503/COPYING",
+    "htdocs/includes/webklex/php-imap/LICENSE",
+    "htdocs/includes/webklex/php-imap/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/composer/LICENSE",
+    "htdocs/includes/webklex/php-imap/vendor/illuminate/collections/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/illuminate/contracts/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/illuminate/macroable/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/illuminate/pagination/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/illuminate/support/LICENSE.md",
+    "htdocs/includes/webklex/php-imap/vendor/nesbot/carbon/LICENSE"
+  ],
+  "dependency_documents": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "84f4ed8a9f97f9837b9f2694897e10d17703e2686b2a889e7598013524cfa84f",
+      "characters": 2686,
+      "excerpt": "[build-system]\nrequires = [\"setuptools>=61.2\"]\nbuild-backend = \"setuptools.build_meta\"\n\n[tool.codespell]\n# The configuration must be kept here to ensure that\n# `codespell` can be run as a standalone program from the CLI\n# with the appropriate default options.\n\nskip = \"*/.*/*,*/langs/*,*/dev/build/exe/*,**.log,*.pdf,*.PDF,*dev/resources/*,*.phar,*.z,*.gz,*.sql,*.svg,*htdocs/includes/*,*/textiso.txt,*.js,*README-*,*build/rpm/*spec,*build/pad/*ml,*htdocs/includes/phpoffice/*,*htdocs/includes/tecnickcom/*,*dev/initdemo/removeconfdemo.sh,*dev/tools/codespell/*,*dev/trans*/ignore_translation_keys.lst,*pyproject.toml,*build/exe/*,*fontawe*,*htdocs/theme/*/flags-sprite.inc.php,*dev/setup/codetemplates/codetemplates.xml,*/php.ini,*/html_cerfafr.*,*/lessc.class.php,*.asciidoc,*.xml,*opensurvey/css/style.css,*dev/tools/phan/stubs/*,*/documents,phpstan.*,*dev/initdemo/documents_demo/blockedlog/archives/*\"\n\ncheck-hidden = true\nquiet-level=2\nignore-regex = '\\\\[fnrstv]'\nbuiltin = \"clear,rare,informal,usage,code,names\"\n\nignore-words = \"dev/tools/codespell/codespell-ignore.txt\"\nexclude-file = \"dev/tools/codespell/codespell-lines-ignore.txt\"\nuri-ignore-words-list=\"ned\"\n\n# For future reference: it is not currently possible to specify\n# the standard dictionnary and the custom dictionnary in the configuration\n# file\n#  D = \"-\"\n#  dictionary = \"dev/tools/codespell/codespell-dict.txt\"\n\n\n[tool.setuptools]\ninclude-package-data = false\n\n# pyproject.toml\n\n[tool.yamlfix]\n# allow_duplicate_keys = true\nline_length = 80\n# none_representation = \"null\"\n# comments_min_spaces_from_content = 2\n# comments_require_starting_space = true\n# whitelines = 0\n# comment_whitelines = 0\n# section_whitelines = 0\n# explicit_start = true\n# sequence_style = keep_style   # flow_style, block_style, keep_style\n# indent_mapping = 2\n# indent_offset = 2\n# indent_sequence = 4\n# none_representation = \"\"\n# quote_basic_values = false\n# YAMLFIX_quote_keys_and_basic_values = false\n# uote_representation = false\n# preserve_quotes = false\n\n[tool.sqlfluff.core]\n# Documentation: https://docs.sqlfluff.com/en/stable/configuration.html#default-configuration\n# (Note: the examples given are for a .ini file and need slight adaptions for pyproject.toml\n\nignore_comment_lines = true\nsql_file_exts = \".sql\"\nencoding = \"utf-8\"\nprocesses = -1\n#verbose = 1\n#exclude_rules = \"LT01,CP01,RF04\"\n# RF04 | Keywords should not be used as identifiers. (rowid, login, position, ...)\nexclude_rules = \"LT01,LT02,LT05,LT12,LT13,LT14,LT15,CP01,CP02,CP04,CP05,RF04\"\ndialect = \"mysql\"\n# Default byte limit is 20000, must set limit - some files are too big.\nlarge_file_skip_byte_limit = 100000\n\n[tool.sqlfluff.indentation]\nindent_unit = \"tab\"\n",
+      "tail": "eserve_quotes = false\n\n[tool.sqlfluff.core]\n# Documentation: https://docs.sqlfluff.com/en/stable/configuration.html#default-configuration\n# (Note: the examples given are for a .ini file and need slight adaptions for pyproject.toml\n\nignore_comment_lines = true\nsql_file_exts = \".sql\"\nencoding = \"utf-8\"\nprocesses = -1\n#verbose = 1\n#exclude_rules = \"LT01,CP01,RF04\"\n# RF04 | Keywords should not be used as identifiers. (rowid, login, position, ...)\nexclude_rules = \"LT01,LT02,LT05,LT12,LT13,LT14,LT15,CP01,CP02,CP04,CP05,RF04\"\ndialect = \"mysql\"\n# Default byte limit is 20000, must set limit - some files are too big.\nlarge_file_skip_byte_limit = 100000\n\n[tool.sqlfluff.indentation]\nindent_unit = \"tab\"\n",
+      "source_url": "https://github.com/Dolibarr/dolibarr/blob/1f3f0b9fe2327b829e8cc8aa9adc167c77e7754f/pyproject.toml"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/Dolibarr/dolibarr",
+    "commit": "https://github.com/Dolibarr/dolibarr/commit/1f3f0b9fe2327b829e8cc8aa9adc167c77e7754f"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0044",
+        "repo": "Dolibarr/dolibarr",
+        "url": "https://github.com/Dolibarr/dolibarr",
+        "labels": [
+          "product_base",
+          "product"
+        ],
+        "family_ids": [
+          "B01",
+          "B04",
+          "B05",
+          "B20"
+        ],
+        "family_names": [],
+        "evidence_classes": [
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "Dolibarr/dolibarr supplies crm, inventory, billing at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 24,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

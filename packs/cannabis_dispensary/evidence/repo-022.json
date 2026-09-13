@@ -1,0 +1,99 @@
+{
+  "audit_id": "R022",
+  "full_name": "OpenCannabis/Specification",
+  "html_url": "https://github.com/OpenCannabis/Specification",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "OpenCannabis specification and docs",
+  "stargazers_count": 3,
+  "forks_count": 5,
+  "default_branch": "dev",
+  "archived": true,
+  "pushed_at": "2026-06-21T15:34:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopencannabis&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "8dd13aef21b2c2d09642af7f99ad5e8bae5be378",
+  "last_commit": "2022-10-14T20:53:10-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 4,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".bazelproject",
+    ".bazelrc",
+    ".bazelversion",
+    ".gitattributes",
+    ".gitignore",
+    "BUILD.bazel",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "Makefile",
+    "OpenCannabis.buf.bin",
+    "OpenCannabis.buf.json",
+    "OpenCannabis.buf.son",
+    "README.md",
+    "WORKSPACE",
+    "buf.lock",
+    "buf.yaml",
+    "copy.bara.sky",
+    "maven_install.json",
+    "package.json",
+    "repository_rules.bzl",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "aa74a2fcd2c5575e5db28aab5c8e9de62a0455e760c70c11f230e75846a4bce6",
+    "characters": 4296,
+    "excerpt": "\n![](https://static.cookies.co/static/ocp/branding/logotype-v1.png)\n\n[![CI](https://github.com/OpenCannabis/Specification/actions/workflows/buf.yml/badge.svg)](https://github.com/OpenCannabis/Specification/actions/workflows/buf.yml) ![Latest release](https://img.shields.io/github/v/release/OpenCannabis/Protocol?include_prereleases) ![Contributors](https://img.shields.io/github/contributors/OpenCannabis/RFC) ![Licensing](https://img.shields.io/github/license/OpenCannabis/Protocol)\n\n## Introduction\n\nOpenCannabis is a multilateral industrial effort to bring order to cannabis data, via the power of collaborative spec\ndesign. The project covers expression of cannabis-related data in myriad supply chain circumstances, including\ncultivation, distribution, distillation (manufacturing), retail, and consumer-facing software.\n\nThis specification has been designed over time principally in the California cannabis market, which is one of the most\ncompetitive retail and wholesale cannabis markets in the world. Contributors and adopters include some of the best and\nbrightest cannabis operators, who have condensed much of their knowledge into this model, and leveraged it for concrete\noperational gains.\n\n### Editors, Adopters, and Contributors\n\nNASCAR wall coming soon.\n\n### What's this repo?\n\nThis repository is the _main spec repo_, and it is a _monorepo_. All other OpenCannabis documentation, RFC content, and\nsource code material flows from this central repository (that's where the _mono_ comes from in monorepo). Changes are\nproposed at this level only by invited specification _Editors_ and _Contributors_.\n\n## Workflow\n\nThis central repository is meant only for spec _Editors_ and _Contributors_. However, contributions can be made on\npublic leaf repositories as outlined below (and these repositories also eventually get the latest changes from\nupstream).\n\n#### How are changes proposed, reviewed, and ratified?\n\nGovernance for the project itself also occurs through RFCs! Project change processes/policies, contribution guidelines\nand agreements, and other policies are mutable and meant to evolve. Changes to these can simply be proposed like any\nother change to the specification.\n\n#### How do ratified changes flow downstream?\n\nOnce a PR is proposed, reviewed, and merged into `master`, a CD bot kicks in that migrates those changes to each public\nleaf repository using [Copybara](https://github.com/google/copybara). So, changes here are sufficient to see changes in\npublic, post-merge.\n\nLeaf repositories include raw sources (for instance, the\n_[Protocol Definitions](https://github.com/OpenCannabis/Protocol)_), and language-specific SDKs / facades (for example,\n_[OpenCannabis SDK for Python](https://github.com/OpenCannabis/Python)_).\n\n#### How do change proposals flow upstream?\n\nWhen a PR is proposed in a leaf repository, it _also_ kicks in a CI bot that proposes a PR in the upstream repository.\nThis allows easy collaborative development without the need to (1) duplicate PRs, or (2) risk public access to the\nprivate spec workspace.\n\n## Development & Tooling\n\nTooling for this repo, and downstream repos, is mainly provided by Google (including\n[Copybara](https://github.com/google/copybara), [Protocol Buffers](https://github.com/protocolbuffers/protobuf), and\n[Bazel](https://github.com/bazelbuild/bazel)). There is usually also a `Makefile` which can be invoked, that delegates\nto repo-specific tools. It's usually advisable to use `make`.\n\nEach repository's `Makefile` can be queried with `make help`, which lists commands at the developer's disposal (access\npermitting). Here is a preview of that help for this repo:\n\n```text\nOpenCannabis v1.9.5-alpha1:\nall                            Build and test the specification.\nbuild                          Build all specification targets.\nclean                          Clean built targets (safe).\ndistclean                      Clean built targets and dependencies.\nenv                            Bootstrap the local environment.\nforceclean                     Clean everything, then sanitize changes (DANGEROUS).\nhelp                           Show this help text.\nmigrate                        Perform a migration via Copybara.\ntest                           Run all spec and SDK tests.\n```\n\n## Legal\n\nComing soon.\n\n",
+    "tail": "",
+    "source_url": "https://github.com/OpenCannabis/Specification/blob/8dd13aef21b2c2d09642af7f99ad5e8bae5be378/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9483f04a3e4a5b7fc3837bc7373d0553bf0e4e3619bba297e395a72969c67df9",
+    "characters": 1064,
+    "excerpt": "Copyright 2021 (c) OpenCannabis Authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "source_url": "https://github.com/OpenCannabis/Specification/blob/8dd13aef21b2c2d09642af7f99ad5e8bae5be378/LICENSE"
+  },
+  "nested_license_paths": [
+    "rfc/archive/3/LICENSE.md"
+  ],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "1cbb693c00849d0025c97ae325fbe4d506ab3c9d022dae58e3ac3a13da1de332",
+      "characters": 2243,
+      "excerpt": "{\n  \"name\": \"@opencannabis/specification\",\n  \"version\": \"1.9.5-alpha4\",\n  \"description\": \"Central specification for the OpenCannabis Protocol.\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/OpenCannabis/Specification.git\"\n  },\n  \"keywords\": [\n    \"opencannabis\",\n    \"protocol\",\n    \"specification\",\n    \"protobuf\",\n    \"cannabis\"\n  ],\n  \"author\": \"Sam Gammon <sg@cookies.co>\",\n  \"bugs\": {\n    \"url\": \"https://github.com/OpenCannabis/Specification/issues\"\n  },\n  \"devDependencies\": {\n    \"@bazel/bazelisk\": \"1.10.1\",\n    \"@bazel/jasmine\": \"4.6.2\",\n    \"@bazel/labs\": \"4.6.2\",\n    \"@bazel/rollup\": \"4.6.2\",\n    \"@bazel/source-map-support\": \"latest\",\n    \"@bazel/terser\": \"4.6.2\",\n    \"@bazel/typescript\": \"4.6.2\",\n    \"@bazel/worker\": \"4.6.2\",\n    \"jasmine\": \"3.9.0\",\n    \"jasmine-core\": \"3.9.0\",\n    \"rollup\": \"2.56.3\",\n    \"terser\": \"4.8.0\",\n    \"typescript\": \"4.2.4\"\n  },\n  \"homepage\": \"https://github.com/OpenCannabis/Specification#readme\",\n  \"renovate\": {\n    \"extends\": [\n      \"config:base\"\n    ],\n    \"enabled\": true,\n    \"pinDigests\": true,\n    \"cloneSubmodules\": false,\n    \"fetchReleaseNotes\": true,\n    \"stabilityDays\": 3,\n    \"baseBranches\": [\n      \"dev\"\n    ],\n    \"rebaseWhen\": \"auto\",\n    \"assigneesFromCodeOwners\": true,\n    \"branchConcurrentLimit\": 10,\n    \"prConcurrentLimit\": 10,\n    \"postUpdateOptions\": [\n      \"yarnDedupeHighest\"\n    ],\n    \"labels\": [\n      \"dependencies\"\n    ],\n    \"masterIssue\": true,\n    \"dependencyDashboard\": true,\n    \"dependencyDashboardAutoclose\": false,\n    \"ignoreDeps\": [\n      \"io_grpc_java\",\n      \"com_google_protobuf\",\n      \"io_bazel_rules_kotlin\",\n      \"com_github_grpc_grpc_web\"\n    ],\n    \"enabledManagers\": [\n      \"dockerfile\",\n      \"github-actions\",\n      \"npm\",\n      \"swift\",\n      \"cocoapods\",\n      \"bazel\",\n      \"buildkite\",\n      \"pip_requirements\"\n    ],\n    \"packageRules\": [\n      {\n        \"packageNames\": [\n          \"typescript\"\n        ],\n        \"allowedVersions\": \"<4.3\"\n      },\n      {\n        \"packageNames\": [\n          \"google-protobuf\"\n        ],\n        \"rangeStrategy\": \"pin\"\n      }\n    ],\n    \"vulnerabilityAlerts\": {\n      \"labels\": [\n        \"security\"\n      ],\n      \"assignees\": [\n        \"@sgammon\"\n      ]\n    }\n  }\n}\n",
+      "tail": "Deps\": [\n      \"io_grpc_java\",\n      \"com_google_protobuf\",\n      \"io_bazel_rules_kotlin\",\n      \"com_github_grpc_grpc_web\"\n    ],\n    \"enabledManagers\": [\n      \"dockerfile\",\n      \"github-actions\",\n      \"npm\",\n      \"swift\",\n      \"cocoapods\",\n      \"bazel\",\n      \"buildkite\",\n      \"pip_requirements\"\n    ],\n    \"packageRules\": [\n      {\n        \"packageNames\": [\n          \"typescript\"\n        ],\n        \"allowedVersions\": \"<4.3\"\n      },\n      {\n        \"packageNames\": [\n          \"google-protobuf\"\n        ],\n        \"rangeStrategy\": \"pin\"\n      }\n    ],\n    \"vulnerabilityAlerts\": {\n      \"labels\": [\n        \"security\"\n      ],\n      \"assignees\": [\n        \"@sgammon\"\n      ]\n    }\n  }\n}\n",
+      "source_url": "https://github.com/OpenCannabis/Specification/blob/8dd13aef21b2c2d09642af7f99ad5e8bae5be378/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/OpenCannabis/Specification",
+    "commit": "https://github.com/OpenCannabis/Specification/commit/8dd13aef21b2c2d09642af7f99ad5e8bae5be378"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

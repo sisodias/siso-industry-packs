@@ -1,0 +1,97 @@
+{
+  "audit_id": "R087",
+  "full_name": "HookFreight/hookfreight",
+  "html_url": "https://github.com/HookFreight/hookfreight",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Open-source webhook inbox and replay engine. Capture, store, forward, and replay webhooks with retries and full visibility.",
+  "stargazers_count": 8,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-02-27T23:56:28Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "hookfreight",
+    "replay",
+    "webhook",
+    "webhooks"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=webhook+inbox&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "5be8d4b5a3434d11bd9652a535799172075db6b1",
+  "last_commit": "2026-02-28T00:56:24+01:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".gitignore",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "docker-compose.yml",
+    "env.example",
+    "package.json",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "227205dc4215c85cc20884e4716e2bceb39589a0580d79175a76c9c0a848626a",
+    "characters": 2112,
+    "excerpt": "# Hookfreight\n\nOpen-source webhook inbox and replay engine. Capture, store, forward, and replay webhooks with retries and full visibility.\n\n## What it does\n\nHookfreight sits between webhook providers (Stripe, GitHub, Shopify, etc.) and your app:\n\n1. Receives webhooks at a unique URL (`/{hook_token}`)\n2. Stores the full request (headers, body, metadata)\n3. Forwards to your destination (`forward_url`)\n4. Retries automatically when delivery fails\n5. Lets you inspect and replay any event\n\n## Features\n\n- Webhook capture (headers, body, query params, metadata)\n- Reliable forwarding with automatic retries (queue-based)\n- Replay any event on demand\n- Delivery visibility (request/response, timing, errors, status)\n- Multi-app organization (dev/staging/prod)\n- Custom auth headers when forwarding\n- Self-hosted\n\n## Quick Start\n\n### Prerequisites\n\n- Docker + Docker Compose\n\n### 1. Clone and configure\n\n```bash\ngit clone https://github.com/YOUR_ORG/hookfreight.git\ncd hookfreight\ncp env.example .env\n```\n\nEdit `.env` as needed (the defaults work for local Docker).\n\n### 2. Run\n\n```bash\ndocker compose up --build\n```\n\nHookfreight will be available at **http://localhost:3030**\n\n> **Next steps:** See the [Quickstart Guide](https://docs.hookfreight.com/quickstart) for creating your first app and endpoint.\n\n## Basic Usage\n\n### Inbound URL\n\nWhen you create an Endpoint, Hookfreight returns a `hook_token`. Point your webhook provider to:\n\n```\nhttp://<your-host>/{hook_token}\n```\n\n### Send a test webhook\n\n```bash\ncurl -X POST http://localhost:3030/YOUR_HOOK_TOKEN \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"event\":\"test\",\"data\":{\"message\":\"Hello!\"}}'\n```\n\n## Development\n\n```bash\nyarn install\nyarn dev          # Start with hot reload\nyarn build        # Compile TypeScript\nyarn start        # Run production build\n```\n\n## Documentation\n\nFull API reference and guides at **[docs.hookfreight.com](https://docs.hookfreight.com)**\n\n- [Quickstart](https://docs.hookfreight.com/quickstart)\n- [API Reference](https://docs.hookfreight.com/api-reference/introduction)\n\n## License\n\nApache 2.0. See [LICENSE](LICENSE).\n",
+    "tail": "",
+    "source_url": "https://github.com/HookFreight/hookfreight/blob/5be8d4b5a3434d11bd9652a535799172075db6b1/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "2a4143c3a12e9a110af2b704ebb2f630171dcf5a0763e9620cc534be6b19437d",
+    "characters": 10760,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to the Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code contro",
+    "tail": "ributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   Copyright 2026 Hookfreight\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/HookFreight/hookfreight/blob/5be8d4b5a3434d11bd9652a535799172075db6b1/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "docker-compose.yml",
+      "sha256": "682655bb50e69b8b1d6d7538d0ee8c4cb8c08cfce86ed5b45f1e3d0c046d12fc",
+      "characters": 870,
+      "excerpt": "services:\n  hookfreight:\n    build: .\n    ports:\n      - \"3030:3030\"\n    environment:\n      - HOOKFREIGHT_PORT=3030\n      - HOOKFREIGHT_HOST=0.0.0.0\n      - HOOKFREIGHT_BASE_URL=http://localhost:3030\n      - HOOKFREIGHT_MONGO_URI=mongodb://mongo:27017\n      - HOOKFREIGHT_MONGO_DB_NAME=hookfreight\n      - HOOKFREIGHT_REDIS_URL=redis://redis:6379\n      - HOOKFREIGHT_QUEUE_CONCURRENCY=5\n      - HOOKFREIGHT_QUEUE_MAX_RETRIES=5\n    depends_on:\n      mongo:\n        condition: service_started\n      redis:\n        condition: service_started\n    restart: unless-stopped\n\n  mongo:\n    image: mongo:7\n    ports:\n      - \"27017:27017\"\n    volumes:\n      - mongo_data:/data/db\n    restart: unless-stopped\n\n  redis:\n    image: redis:7-alpine\n    ports:\n      - \"6379:6379\"\n    volumes:\n      - redis_data:/data\n    restart: unless-stopped\n\nvolumes:\n  mongo_data:\n  redis_data:\n\n",
+      "tail": "ASE_URL=http://localhost:3030\n      - HOOKFREIGHT_MONGO_URI=mongodb://mongo:27017\n      - HOOKFREIGHT_MONGO_DB_NAME=hookfreight\n      - HOOKFREIGHT_REDIS_URL=redis://redis:6379\n      - HOOKFREIGHT_QUEUE_CONCURRENCY=5\n      - HOOKFREIGHT_QUEUE_MAX_RETRIES=5\n    depends_on:\n      mongo:\n        condition: service_started\n      redis:\n        condition: service_started\n    restart: unless-stopped\n\n  mongo:\n    image: mongo:7\n    ports:\n      - \"27017:27017\"\n    volumes:\n      - mongo_data:/data/db\n    restart: unless-stopped\n\n  redis:\n    image: redis:7-alpine\n    ports:\n      - \"6379:6379\"\n    volumes:\n      - redis_data:/data\n    restart: unless-stopped\n\nvolumes:\n  mongo_data:\n  redis_data:\n\n",
+      "source_url": "https://github.com/HookFreight/hookfreight/blob/5be8d4b5a3434d11bd9652a535799172075db6b1/docker-compose.yml"
+    },
+    {
+      "path": "package.json",
+      "sha256": "9c045bc96c585b49bbf1c188803cd2a99d78705b6e6fa25cd32858b0ab001bf0",
+      "characters": 641,
+      "excerpt": "{\n  \"name\": \"hookfreight\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"description\": \"Hookfreight - Open-source webhook inbox and replay engine.\",\n  \"type\": \"commonjs\",\n  \"main\": \"dist/server.js\",\n  \"scripts\": {\n    \"dev\": \"tsx watch src/server.ts\",\n    \"build\": \"tsc -p tsconfig.json\",\n    \"start\": \"node dist/server.js\"\n  },\n  \"dependencies\": {\n    \"bullmq\": \"^5.66.5\",\n    \"dotenv\": \"^16.4.5\",\n    \"express\": \"^5.0.1\",\n    \"mongoose\": \"^8.10.0\",\n    \"undici\": \"^6.21.0\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@types/express\": \"^5.0.0\",\n    \"@types/node\": \"^22.10.2\",\n    \"tsx\": \"^4.19.2\",\n    \"typescript\": \"^5.7.2\"\n  }\n}\n",
+      "tail": "{\n  \"name\": \"hookfreight\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"description\": \"Hookfreight - Open-source webhook inbox and replay engine.\",\n  \"type\": \"commonjs\",\n  \"main\": \"dist/server.js\",\n  \"scripts\": {\n    \"dev\": \"tsx watch src/server.ts\",\n    \"build\": \"tsc -p tsconfig.json\",\n    \"start\": \"node dist/server.js\"\n  },\n  \"dependencies\": {\n    \"bullmq\": \"^5.66.5\",\n    \"dotenv\": \"^16.4.5\",\n    \"express\": \"^5.0.1\",\n    \"mongoose\": \"^8.10.0\",\n    \"undici\": \"^6.21.0\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@types/express\": \"^5.0.0\",\n    \"@types/node\": \"^22.10.2\",\n    \"tsx\": \"^4.19.2\",\n    \"typescript\": \"^5.7.2\"\n  }\n}\n",
+      "source_url": "https://github.com/HookFreight/hookfreight/blob/5be8d4b5a3434d11bd9652a535799172075db6b1/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/HookFreight/hookfreight",
+    "commit": "https://github.com/HookFreight/hookfreight/commit/5be8d4b5a3434d11bd9652a535799172075db6b1"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

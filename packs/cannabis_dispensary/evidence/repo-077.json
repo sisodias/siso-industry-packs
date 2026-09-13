@@ -1,0 +1,176 @@
+{
+  "audit_id": "R077",
+  "full_name": "zammad/zammad",
+  "html_url": "https://github.com/zammad/zammad",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Zammad is a web based open source helpdesk/customer support system.",
+  "stargazers_count": 5908,
+  "forks_count": 1056,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-11T20:27:11Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [
+    "coffeescript",
+    "customer-care",
+    "customer-support",
+    "graphql",
+    "helpdesk",
+    "javascript",
+    "rails",
+    "ruby",
+    "support",
+    "ticketing",
+    "typescript",
+    "vite",
+    "vuejs",
+    "zammad"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aticketing&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "d9c5ba05f32067c8dc26d929e6e3ca22b1e86cd9",
+  "last_commit": "2026-09-11T22:07:14+02:00",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 16,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".buildpacks",
+    ".coderabbit.yml",
+    ".dockerignore",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".gitlab-ci.yml",
+    ".gitleaks.toml",
+    ".graphql_code_generator.js",
+    ".graphqlrc.json",
+    ".markdownlint.yml",
+    ".overcommit.yml",
+    ".oxfmtrc.json",
+    ".oxlintrc.json",
+    ".pkgr.yml",
+    ".rspec",
+    ".rubocop.yml",
+    ".ruby-version",
+    ".stylelintrc.json",
+    ".yardopts",
+    "AGENTS.md",
+    "BREAKING_CHANGES.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "Dockerfile",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE",
+    "LICENSE-3RD-PARTY.txt",
+    "LICENSE-ICONS-3RD-PARTY.json",
+    "Procfile",
+    "Procfile.dev",
+    "Procfile.dev-https",
+    "README.md",
+    "Rakefile",
+    "SECURITY.asc",
+    "SECURITY.md",
+    "VERSION",
+    "browserlist",
+    "coffeelint.json",
+    "config.ru",
+    "eslint.config.ts",
+    "logo.svg",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "publiccode.yml",
+    "rake",
+    "security.txt",
+    "tsconfig.base.json",
+    "tsconfig.json",
+    "vite.config.mjs"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "39ead725c070e9f920a1fef95e049d94d06c02a1eebf01c56694e21010a6260a",
+    "characters": 3441,
+    "excerpt": "# Welcome to Zammad\n\nAre you juggling countless customer inquiries across multiple channels?\nStruggling to keep your support team on the same page?\nOr spending more time managing your helpdesk than delivering exceptional support to your customers?\n\nZammad is your Swiss Army knife - a web-based, open-source helpdesk and customer support platform\npacked with features to streamline customer communication across channels like email, chat, telephone and social media.\n\n## The Software\n\nThe Zammad software is and will stay open source. It is licensed under the GNU AGPLv3.\nThe source code is [available on GitHub](https://github.com/zammad/zammad) and owned by\nthe [Zammad Foundation](https://zammad-foundation.org/), which is independent of commercial\nproviders such as Zammad GmbH.\n\n## The Company - Zammad GmbH\n\nThe development of Zammad is carried out by the [amazing team of people](https://zammad.com/en/company)\nat [Zammad GmbH](https://zammad.com/) in collaboration with the community.\nWe love to create open source software for you. If you want to ensure the Zammad software\nhas a bright and sustainable future, consider becoming a Zammad customer!\n\n> Are you tired of complex setup, configuration, backup and update tasks? Let us handle this stuff for you! 🚀\n>\n> The easiest and often most cost-effective way to operate Zammad is [our cloud service](https://zammad.com/en/pricing).\n> Give it a try with a [free trial instance](https://zammad.com/en/getting-started)!\n\n## Status\n\n- Toolchain: [![CI](https://github.com/zammad/zammad/workflows/CI/badge.svg)](https://github.com/zammad/zammad/actions/workflows/ci.yaml)\n  [![docker-release workflow](https://github.com/zammad/zammad/workflows/docker-release/badge.svg)](https://github.com/zammad/zammad/actions/workflows/docker-release.yaml)\n  [![documentation status](https://readthedocs.org/projects/zammad/badge/)](https://docs.zammad.org)\n- Docker container images: [![Docker images for Zammad](https://img.shields.io/badge/version-stable-blue.svg)](https://hub.docker.com/r/zammad/zammad-docker-compose)\n  [![Dockerhub Pulls](https://badgen.net/docker/pulls/zammad/zammad-docker-compose?icon=docker&label=pulls)](https://hub.docker.com/r/zammad/zammad-docker-compose/)\n- Helm chart for Kubernetes: [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/zammad)](https://artifacthub.io/packages/helm/zammad/zammad)\n  [![Release downloads](https://img.shields.io/github/downloads/zammad/zammad-helm/total.svg)](https://github.com/zammad/zammad-helm/releases)\n- Download DEB/RPM: [![binary packages for Zammad stable](https://img.shields.io/badge/Branch-stable-blue.svg)](https://packager.io/gh/zammad/zammad/refs/stable)\n  [![binary packages for Zammad develop](https://img.shields.io/badge/Branch-develop-lightgrey.svg)](https://packager.io/gh/zammad/zammad/refs/develop)\n- License: [![AGPL license](https://img.shields.io/badge/License-AGPL%203.0-brightgreen.svg)](https://github.com/zammad/zammad/blob/develop/LICENSE)\n\n## Further Information\n\n- [Installing & Getting Started](https://docs.zammad.org)\n- [Screenshots](https://zammad.org/screenshots)\n- [Developer Manual](/doc/developer_manual/index.md)\n- [REST API](https://docs.zammad.org/en/latest/api/intro.html)\n- For reporting security vulnerabilities, please see [our security policy](SECURITY.md).\n- [Contributing](https://zammad.org/participate)\n\nThanks! ❤️ ❤️ ❤️\n\n Your Zammad Team\n",
+    "tail": "",
+    "source_url": "https://github.com/zammad/zammad/blob/d9c5ba05f32067c8dc26d929e6e3ca22b1e86cd9/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "characters": 34523,
+    "excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  Developers that use our General Public Licenses protect your rights\nwith two steps: (1) assert copyright on the software, and (2) offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\n  A secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate.  Many developers of free software are heartened and\nencouraged by the resulting cooperation.  However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\n  The GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community.  It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server.  Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\n  An older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals.  This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU ",
+    "tail": "oftware can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source.  For example, if your program is a web application, its\ninterface could display a \"Source\" link that leads users to an archive\nof the code.  There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n<https://www.gnu.org/licenses/>.\n",
+    "source_url": "https://github.com/zammad/zammad/blob/d9c5ba05f32067c8dc26d929e6e3ca22b1e86cd9/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "787ba9afcd350f412bbbb07a680e15d6eb39face4aed6c94feeb9dc7f1fd3a11",
+      "characters": 8493,
+      "excerpt": "{\n  \"private\": true,\n  \"scripts\": {\n    \"generate-graphql-api\": \"bundle exec rails generate zammad:graphql_introspection > tmp/graphql_introspection.json && mv tmp/graphql_introspection.json app/graphql/graphql_introspection.json && pnpm exec graphql-codegen -c .graphql_code_generator.js\",\n    \"generate-setting-types\": \"bundle exec rails generate zammad:setting_types\",\n    \"dev\": \"RAILS_ENV=development forego start -r -f Procfile.dev\",\n    \"dev:https\": \"VITE_RUBY_HOST=0.0.0.0 VITE_RUBY_HTTPS=true RAILS_ENV=development forego start -r -f Procfile.dev-https\",\n    \"i18n\": \"rails generate zammad:translation_catalog\",\n    \"lint\": \"pnpm lint:ts && pnpm lint:js && pnpm lint:css && pnpm lint:md && pnpm format:check\",\n    \"lint:fix\": \"pnpm lint:ts && pnpm lint:js:fix && pnpm lint:css:fix && pnpm lint:md:fix && pnpm format\",\n    \"lint:ts\": \"vue-tsc --noEmit\",\n    \"lint:js\": \"pnpm lint:js:oxlint:cmd app/frontend/ .eslint-plugin-zammad/ && pnpm lint:js:eslint:cmd app/frontend/ .eslint-plugin-zammad/\",\n    \"lint:js:fix\": \"pnpm lint:js:oxlint:cmd --fix app/frontend/ .eslint-plugin-zammad/ && pnpm lint:js:eslint:cmd --fix app/frontend/ .eslint-plugin-zammad/\",\n    \"format\": \"pnpm format:cmd app/frontend/ .eslint-plugin-zammad/\",\n    \"format:check\": \"pnpm format:check:cmd app/frontend/ .eslint-plugin-zammad/\",\n    \"format:cmd\": \"oxfmt\",\n    \"format:check:cmd\": \"oxfmt --check\",\n    \"lint:js:eslint:cmd\": \"eslint --cache --cache-location ./tmp/cache/.eslintcache.js --cache-strategy content\",\n    \"lint:js:oxlint:cmd\": \"oxlint --tsconfig tsconfig.json\",\n    \"lint:css\": \"pnpm lint:css:cmd **/*.{scss,css,vue}\",\n    \"lint:css:cmd\": \"stylelint\",\n    \"lint:css:fix\": \"pnpm lint:css --fix\",\n    \"lint:md\": \"pnpm lint:md:cmd '*.md' '**/*.md' '#.agents' '#.claude' '#node_modules' '#**/node_modules' '#tmp'\",\n    \"lint:md:fix\": \"pnpm lint:md --fix\",\n    \"lint:md:cmd\": \"pnpm exec markdownlint-cli2\",\n    \"test\": \"VTL_SKIP_AUTO_CLEANUP=true TZ=utc vitest\",\n    \"test:ct\": \"cd .dev/cypress; CY_OPEN=true pnpm exec cypress open --component --project ../../ --config-file .dev/cypress/cypress.config.mjs\",\n    \"test:ci:ct\": \"cd .dev/cypress; CI=true pnpm exec cypress run --component --project ../../ --config-file .dev/cypress/cypress.config.mjs --browser electron\",\n    \"cypress:snapshots\": \"sh .dev/cypress/visual-regression/snapshots.sh\",\n    \"cypress:install\": \"pnpm --dir ./.dev/cypress install --frozen-lockfile\",\n    \"playwright:install\": \"playwright install chromium\",\n    \"analyse:vite-bundle\": \"pnpm exec vite-bundle-visualizer\",\n    \"codegraph:install\": \"pnpm exec codegraph install\",\n    \"codegraph:init\": \"pnpm exec codegraph init --yes\",\n    \"codegraph:reindex\": \"pnpm exec codegraph index\",\n    \"codegraph:status\": \"pnpm exec codegraph status\",\n    \"codegraph:uninit\": \"pnpm exec codegraph uninit\",\n    \"codegraph:uninstall\": \"pnpm exec codegraph uninstall\"\n  },\n  \"engines\": {\n    \"node\": \">=24\",\n    \"pnpm\": \">=11\"\n  },\n  \"packageManager\": \"pnpm@11.26.0\",\n  \"devDependencies\": {\n    \"@colbymchenry/codegraph\": \"^1.6.0\",\n    \"@faker-js/faker\": \"^10.6.0\",\n    \"@graphql-codegen/add\": \"^7.1.0\",\n    \"@graphql-codegen/cli\": \"^7.2.0\",\n    \"@graphql-codegen/introspection\": \"^6.1.0\",\n    \"@graphql-codegen/near-operation-file-preset\": \"^5.2.1\",\n    \"@graphql-codegen/typescript\": \"^6.1.0\",\n    \"@graphql-codegen/typescript-operations\": \"^6.1.6\",\n    \"@graphql-codegen/typescript-vue-apollo\": \"^5.0.1\",\n    \"@graphql-codegen/visitor-plugin-common\": \"^7.2.5\",\n    \"@pinia/testing\": \"^2.0.1\",\n    \"@sa11y/preset-rules\": \"^8.0.28\",\n    \"@sa11y/vitest\": \"^8.0.28\",\n    \"@sinonjs/fake-timers\": \"^15.4.0\",\n    \"@tailwindcss/vite\": \"^4.3.3\",\n    \"@testing-library/jest-dom\": \"^7.0.1\",\n    \"@testing-library/user-event\": \"^14.6.7\",\n    \"@testing-library/vue\": \"^8.1.0\",\n    \"@types/lodash-es\": \"^4.17.12\",\n    \"@types/qrcode\": \"^1.5.6\",\n    \"@types/qs\": \"^6.15.1\",\n    \"@types/rails__actioncable\": \"^8.0.3\",\n    \"@types/sinonjs__fake-timers\": \"^15.0.1\",\n    \"@types/ua-parser-js\": \"^0.7.39\",\n    \"@type",
+      "tail": "0.1\",\n    \"pinia\": \"^4.0.3\",\n    \"qrcode\": \"^1.5.4\",\n    \"qs\": \"^6.16.0\",\n    \"spark-md5\": \"^3.0.2\",\n    \"ts-essentials\": \"^10.2.1\",\n    \"tslib\": \"^2.8.1\",\n    \"ua-parser-js\": \"^2.0.10\",\n    \"uuid\": \"^14.0.2\",\n    \"vite-bundle-visualizer\": \"^1.2.1\",\n    \"vue\": \"^3.5.42\",\n    \"vue-advanced-cropper\": \"^2.8.9\",\n    \"vue-easy-lightbox\": \"1.19.0\",\n    \"vue-echarts\": \"^8.3.0\",\n    \"vue-imask\": \"^7.6.1\",\n    \"vue-router\": \"^5.3.1\",\n    \"vue3-draggable-resizable\": \"^1.6.5\",\n    \"workbox-core\": \"^7.4.1\",\n    \"workbox-precaching\": \"^7.4.1\",\n    \"workbox-window\": \"^7.4.1\"\n  },\n  \"resolutions\": {\n    \"loader-utils\": \"^3.3.1\",\n    \"postcss\": \"^8.5.28\",\n    \"stylelint-config-recommended\": \"^18.0.0\"\n  }\n}\n",
+      "source_url": "https://github.com/zammad/zammad/blob/d9c5ba05f32067c8dc26d929e6e3ca22b1e86cd9/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/zammad/zammad",
+    "commit": "https://github.com/zammad/zammad/commit/d9c5ba05f32067c8dc26d929e6e3ca22b1e86cd9"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0099",
+        "repo": "zammad/zammad",
+        "url": "https://github.com/zammad/zammad",
+        "labels": [
+          "product_base",
+          "product"
+        ],
+        "family_ids": [
+          "U07",
+          "B08"
+        ],
+        "family_names": [
+          "Customer support desk"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "zammad/zammad supplies support_desk at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 22,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

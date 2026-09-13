@@ -1,0 +1,89 @@
+{
+  "audit_id": "R005",
+  "full_name": "openthc/p2p",
+  "html_url": "https://github.com/openthc/p2p",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Mesh Communications in Peer-to-Peer Network for Cannabis Software",
+  "stargazers_count": 12,
+  "forks_count": 6,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2022-06-23T00:28:24Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [
+    "cannabis",
+    "p2p"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "fed34f0de0361e85a6c182288379d9df6152681c",
+  "last_commit": "2022-06-23T00:28:10Z",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 6,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "Dockerfile.base",
+    "INSTALL.md",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "boot.php",
+    "composer.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "82bb24106db74ed95e9638f49195c0fcb653bcb5598ce39d165bc3d486cc5fed",
+    "characters": 1885,
+    "excerpt": "# Peer-to-Peer Service for Cannabis Software\n\nA very simple Slim/PHP application to service P2P Communications\n\nThis application is implemented as a service that your cannabis software would operate to communicate with other cannabis software.\nIt provides a method for peer discovery, trust establishment, key exchange and data exchange.\n\n## Installing\n\nIt should be quite simple, PHP is like, everywhere man.\n\n\tgit clone ./\n\tcomposer update\n\tcp ./etc/apache2.conf /etc/apache2/apache2.conf\n\nMore information is in the INSTALL.md file.\n\n## Peering\n\nYou, can peer https://p2p.openthc.org/ or directly with any known peer.\n\nAs a \"Node0\", p2p.openthc.org does some company and service validation before adding you to list of registered providers.\nThe list is published to https://p2p.openthc.org/network and follows the same specification that any of the other peers would.\nPeers are all free to implement their own methods for establishing trust and verifying other peers.\n\nFrom that connection, you can discover the wider network.\n\n## Establishing Trust\n\nExchange your secret key with a Peer you wish to trust, this can be done out of band, we recommend using Keybase.\nOnce the secret is shared a Peer will use it to sign requests.\n\n## Signing Requests\n\nSimply use your hashed key with a hash of a canonical request.\nYou have now joined this peer, and all requests to this peer must be signed with your $SECRET as an HMAC.\nSee (./doc/Signing.md).\n\n## Requesting Information\n\nOnce registered you fetch the providers list to expand your peer group.\nWhen your software or users need to interact with another system, you simply ask them for details through the common API.\n\n## Publishing Information\n\nThis service will repspond to the base Network layer data of the system.\nEach provider would implement their own interfaces in this application to interact with their own APIs or database.\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/p2p/blob/fed34f0de0361e85a6c182288379d9df6152681c/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "d1bfc7a749950924bd5d27dee610ac8933f96badc14a774be796e986b9dcd3aa",
+    "characters": 32423,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": "(INCLUDING BUT NOT LIMITED TO LOSS OF\nDATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGES.\n\n  17. Interpretation of Sections 15 and 16.\n\n  If the disclaimer of warranty and limitation of liability provided\nabove cannot be given local legal effect according to their terms,\nreviewing courts shall apply local law that most closely approximates\nan absolute waiver of all civil liability in connection with the\nProgram, unless a warranty or assumption of liability accompanies a\ncopy of the Program in return for a fee.\n",
+    "source_url": "https://github.com/openthc/p2p/blob/fed34f0de0361e85a6c182288379d9df6152681c/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "b255cd2ffadc3f02f712bddfef5242341db47bafd9d256fefcfe9d051a35b94c",
+      "characters": 518,
+      "excerpt": "{\n\t\"name\": \"openthc/p2p\",\n\t\"description\": \"OpenTHC P2P\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"App\\\\\": \"./lib\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"php\": \">=7.3.0\",\n\t\t\"ext-curl\": \"*\",\n\t\t\"ext-date\": \"*\",\n\t\t\"ext-json\": \"*\",\n\t\t\"ext-PDO\": \"*\",\n\t\t\"ext-session\": \"*\",\n\t\t\"ext-sockets\": \"*\",\n\t\t\"slim/slim\": \"3.12.3\",\n\t\t\"guzzlehttp/guzzle\": \"6.5.8\"\n\t},\n\t\"require-dev\": {\n\t\t\"behat/behat\": \"3.8.1\",\n\t\t\"phpmd/phpmd\": \"2.10.1\",\n\t\t\"phpstan/phpstan\": \"0.12.92\",\n\t\t\"phpunit/phpunit\": \"9.5.6\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/p2p\",\n\t\"description\": \"OpenTHC P2P\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"psr-4\": {\n\t\t\t\"App\\\\\": \"./lib\",\n\t\t\t\"Custom\\\\\": \"./Custom\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"php\": \">=7.3.0\",\n\t\t\"ext-curl\": \"*\",\n\t\t\"ext-date\": \"*\",\n\t\t\"ext-json\": \"*\",\n\t\t\"ext-PDO\": \"*\",\n\t\t\"ext-session\": \"*\",\n\t\t\"ext-sockets\": \"*\",\n\t\t\"slim/slim\": \"3.12.3\",\n\t\t\"guzzlehttp/guzzle\": \"6.5.8\"\n\t},\n\t\"require-dev\": {\n\t\t\"behat/behat\": \"3.8.1\",\n\t\t\"phpmd/phpmd\": \"2.10.1\",\n\t\t\"phpstan/phpstan\": \"0.12.92\",\n\t\t\"phpunit/phpunit\": \"9.5.6\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/p2p/blob/fed34f0de0361e85a6c182288379d9df6152681c/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/p2p",
+    "commit": "https://github.com/openthc/p2p/commit/fed34f0de0361e85a6c182288379d9df6152681c"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

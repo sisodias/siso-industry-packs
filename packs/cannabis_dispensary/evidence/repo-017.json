@@ -1,0 +1,97 @@
+{
+  "audit_id": "R017",
+  "full_name": "openthc/cre",
+  "html_url": "https://github.com/openthc/cre",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": null,
+  "stargazers_count": 1,
+  "forks_count": 3,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-08T21:00:27Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "f6704bc413e90bd3803ff72d2b2b618cdb19102f",
+  "last_commit": "2026-09-08T14:00:25-07:00",
+  "commits_six_months_sample_count": 3,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".dockerignore",
+    ".gitignore",
+    "INSTALL.md",
+    "LICENSE",
+    "README.md",
+    "ULID.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "b960e68543607ccdd5dce1ed9ba3df50296d4b3281c912ec9933e1e535a566a7",
+    "characters": 3062,
+    "excerpt": "# Cannabis/Compliance/Crop Reporting Engine - CRE\n\nThis is a simple software solution for collecting and reporting on crops of cannabis or other tightly tracked, regulated products.\nA simple setup of an event-object-audit-log database, along with the API end-point to collect the necessary details.\n\nThe platform is extendable by the regulatory agency/operating company through middleware.\n\nMore information is available at https://openthc.com/cre\n\n\n## Global Storage\n\n * Company\n * License\n * Contact\n * Variety\n\n\n### License Specific Data\n\n * Section (aka: Area, Room)\n * Inventory Lot\n * Crop\n * B2B Transaction (aka: Manifest, Invoice, Transfer)\n * B2C Transaction (aka: Retail, Dispense)\n\n\n## Actions / Events\n\n * Crop/Create - Create Crops from Inventory Lot (of type: Plant, Clone or Seed)\n * Crop/Collect/Raw - Collect raw materials from the crop\n * Crop/Collect/Net - Account for net materials Dry/Cured/Trimmed state.\n * Crop/Collect/Lot - Creates Production Inventory Lot\n * Inventory/Create\n * Inventory/Convert - One or more Source Lots into one Output Lot\n * Inventory/Combine\n * Inventory/Sample - Remove a Small Portion for Unique Sample (Employee, QA, Vendor, etc)\n * B2B/Create - File the B2B Transaction\n * B2B/Commit - Commit/Send the B2B Transaction\n * B2B/Accept - Accept/Receive the B2B Transaction\n * B2B/Reject - Reject the B2B Transaction\n\n\n## Reporting\n\n * Realtime Object States\n * Realtime Activity Reports\n * Verbose Logging with complete Object delta\n * Easily extendable via Middleware components\n\n\n## APIs\n\n * Simple [API Interface](https://api.openthc.org/)\n * Direct Write/Update of Objects (Crop, Inventory, B2B, B2C)\n * Indirect Update via Actions\n\n\n## Identifiers\n\n * ULID/UUID - https://github.com/ulid/spec\n * No reliance on central authority (*BioTrack*, *METRC*, *LeafData*)\n * No reliance on expensive RFID (*METRC*)\n * No \"Smart\" numbers (*BioTrack*, *LeafData*)\n * Support for billions of billions of tracked items\n   * Usable until 10889 AD\n   * 1.21 Giga-Giga (2^80) unique items per millisecond!\n\n\n## Customizing\n\nIf you want to add new custom Services, Middleware or other code use the `./Custom` directory.\nAll of your custom libraries would be in `./Custom/Service` or `./Custom/Middleware`.\nThen you can use them in the `./webroot/main.php` script.\n\n\n## Authenitication\n\n```mermaid\n\nsequenceDiagram\n    App->>+CRE: Auth Service, Contact, Company, License\n    CRE->>+SSO: Auth Service, Contact, Company\n    SSO->>-CRE: Service, Contact, Company\n    CRE-->DIR: License Verify\n    CRE-->>CRE: License Verify\n    CRE->>-App: Session\n    App->>CRE: Req\n    CRE->>App: Res\n    App-->>CRE: ReqN\n    CRE-->>App: ResN\n```\n\n\n## Docker\n\nBuild it (regular or via compose)\n\n```shell\ndocker build \\\n  --file docker/Dockerfile \\\n  --tag openthc/cre:latest \\\n  ./\n# OR\ndocker compose \\\n  --file docker/compose.yaml \\\n  build\n# OR\ncd docker && docker compose build\n```\n\n\nRun it and test?\n\n```shell\ndocker run --rm -it openthc/cre:latest\n# OR\ndocker compose --file docker/compose.yaml up\n# OR\ncd docker && docker compose up\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/cre/blob/f6704bc413e90bd3803ff72d2b2b618cdb19102f/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "12ea5945f5c6b3c17e9c1f78cd9a759398704141dba97419bf8bf045bbc4ffe8",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2018 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/cre/blob/f6704bc413e90bd3803ff72d2b2b618cdb19102f/LICENSE"
+  },
+  "nested_license_paths": [
+    "lib/Module/License.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "85e1b47eec08d7c89aa118c5225a72b328a9fb0350a0efc5ef1e274d9b847c33",
+      "characters": 535,
+      "excerpt": "{\n\t\"name\": \"openthc/cre\",\n\t\"description\": \"OpenTHC CRE Service\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CRE\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CRE\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"opis/json-schema\": \"2.3.0\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.15.2\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/cre\",\n\t\"description\": \"OpenTHC CRE Service\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CRE\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CRE\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"opis/json-schema\": \"2.3.0\"\n\t},\n\t\"require-dev\": {\n\t\t\"php-webdriver/webdriver\": \"1.15.2\",\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/cre/blob/f6704bc413e90bd3803ff72d2b2b618cdb19102f/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d51a29c46198a97b0aea3abcc10e6e417092faa5ab82fd0ef87c5c05a739c6ae",
+      "characters": 588,
+      "excerpt": "{\n\t\"name\": \"openthc-cre\",\n\t\"version\": \"420.23.343\",\n\t\"description\": \"OpenTHC CRE\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"@highlightjs/cdn-assets\": \"11.11.1\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/cre.git\"\n\t},\n\t\"author\": \"\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/cre/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/cre#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"openthc-cre\",\n\t\"version\": \"420.23.343\",\n\t\"description\": \"OpenTHC CRE\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"doc\": \"doc\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"@highlightjs/cdn-assets\": \"11.11.1\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/cre.git\"\n\t},\n\t\"author\": \"\",\n\t\"license\": \"MIT\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/cre/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/cre#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/cre/blob/f6704bc413e90bd3803ff72d2b2b618cdb19102f/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/cre",
+    "commit": "https://github.com/openthc/cre/commit/f6704bc413e90bd3803ff72d2b2b618cdb19102f"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

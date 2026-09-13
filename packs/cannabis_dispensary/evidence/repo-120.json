@@ -1,0 +1,95 @@
+{
+  "audit_id": "R120",
+  "full_name": "maythiwat/promptparse",
+  "html_url": "https://github.com/maythiwat/promptparse",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "All-in-one JS library for PromptPay & EMVCo QR Codes",
+  "stargazers_count": 219,
+  "forks_count": 32,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-13T06:36:47Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "emvco",
+    "emvco-qr",
+    "promptpay",
+    "promptpay-qr",
+    "qrcode",
+    "thai-qr-payment",
+    "thai-qr-standard",
+    "truemoney"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=PromptPay+QR+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "7487a97dfc3ba1ccc8d9d30e7d939b67df8155fa",
+  "last_commit": "2026-09-13T13:27:52+07:00",
+  "commits_six_months_sample_count": 8,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.cjs",
+    "LICENSE.md",
+    "README.md",
+    "eslint.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "tsup.config.ts",
+    "vitest.config.mts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "5ef4f059aff759715d8ba9002d99481d2d09a918cc844fa00b3ca2f5dcb50156",
+    "characters": 3381,
+    "excerpt": "![PromptParse](https://github.com/maythiwat/promptparse/assets/23092256/889e8f80-b1b3-44b2-ace5-ffbbce6e673b)\n\n# PromptParse [![npm version](https://badge.fury.io/js/promptparse.svg)](https://badge.fury.io/js/promptparse)\n\n\"All-in-one JS library for PromptPay & EMVCo QR Codes\"\n\nNo dependency & Cross-platform. You can use it anywhere (Node.js, Deno, Bun), even in the browser!\n\n## Features\n\n- **Parse** &mdash; PromptPay & EMVCo QR Code data strings into object\n- **Generate** &mdash; QR Code data from pre-made templates (for example: PromptPay AnyID, PromptPay Bill Payment, TrueMoney, etc.)\n- **Manipulate** &mdash; any values from parsed QR Code data (for example: transfer amount, account number) and encodes back into QR Code data\n- **Validate** &mdash; checksum and data structure for known QR Code formats (for example: Slip Verify API Mini QR)\n\n## Usage\n\n### Parsing data and get value from tag\n\n```ts\nimport { parse } from 'promptparse'\n\n// Example data\nconst ppqr = parse('000201010211...')\n\n// Get Value of Tag ID '00'\nppqr.getTagValue('00') // Returns '01'\n```\n\n### Build QR data and append CRC tag\n\n```ts\nimport { encode, tag, withCrcTag } from 'promptparse'\n\n// Example data\nconst data = [\n  tag('00', '01'),\n  tag('01', '11'),\n  // ...\n]\n\n// Set CRC Tag ID '63'\nwithCrcTag(encode(data), '63') // Returns '000201010211...'\n```\n\n### Generate PromptPay Bill Payment QR\n\n```ts\nimport { billPayment } from 'promptparse/generate'\n\nconst payload = billPayment({\n  billerId: '1xxxxxxxxxxxx',\n  amount: 300.0,\n  ref1: 'INV12345',\n})\n\n// TODO: Create QR Code from payload\n```\n\n### Validate & extract data from Slip Verify QR\n\n```ts\nimport { slipVerify } from 'promptparse/validate'\n\nconst data = slipVerify('00550006000001...')\n\nif (!data) {\n  console.error('Invalid Payload')\n}\n\nconst { sendingBank, transRef } = data\n\n// TODO: Inquiry transaction from Bank Open API\n```\n\n### Convert BOT Barcode to PromptPay QR Tag 30 (Bill Payment)\n\n```ts\nimport { parseBarcode } from 'promptparse'\n\nconst botBarcode = parseBarcode('|310109999999901\\r...')\n\nif (!botBarcode) {\n  console.error('Invalid Payload')\n}\n\nconst payload = botBarcode.toQrTag30()\n\n// TODO: Create QR Code from payload\n```\n\n### Use on browser via CDN\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/promptparse\"></script>\n\n<script>\n  ;(function () {\n    // Generate QR code payload (use function from \"promptparse\" global)\n    const payload = promptparse.generate.trueMoney({\n      mobileNo: '08xxxxxxxx',\n      amount: 10.0,\n      message: 'Hello World!',\n    })\n\n    // Quick & dirty way to show QR Code image\n    document.write(\n      `<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${payload}\">`,\n    )\n  })()\n</script>\n```\n\n## References\n\n- [EMV QR Code](https://www.emvco.com/emv-technologies/qrcodes/)\n- [Thai QR Payment Standard](https://www.bot.or.th/content/dam/bot/fipcs/documents/FPG/2562/ThaiPDF/25620084.pdf)\n- [Slip Verify API Mini QR Data](https://developer.scb/assets/documents/documentation/qr-payment/extracting-data-from-mini-qr.pdf)\n- [BOT Barcode Standard](https://www.bot.or.th/content/dam/bot/documents/th/our-roles/payment-systems/about-payment-systems/Std_Barcode.pdf)\n\n## See also\n\n- [phoomin2012/promptparse-php](https://github.com/phoomin2012/promptparse-php) PromptParse port for PHP\n\n## License\n\nThis project is MIT licensed (see [LICENSE.md](LICENSE.md))\n",
+    "tail": "",
+    "source_url": "https://github.com/maythiwat/promptparse/blob/7487a97dfc3ba1ccc8d9d30e7d939b67df8155fa/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "eae308842ff8de2f512f1406b136b54e3200fc53182df42a67328600b8d16d0c",
+    "characters": 1076,
+    "excerpt": "MIT License\n\nCopyright (c) 2023 Maythiwat Chomchuen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/maythiwat/promptparse/blob/7487a97dfc3ba1ccc8d9d30e7d939b67df8155fa/LICENSE.md"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "dda494f2e08567bccd31856d7864b3e72d2bdf87d86df49353c256fcc2b4fe64",
+      "characters": 1872,
+      "excerpt": "{\n  \"name\": \"promptparse\",\n  \"version\": \"1.7.0\",\n  \"description\": \"All-in-one JS library for PromptPay & EMVCo QR Codes\",\n  \"author\": \"Maythiwat Chomchuen <maythiwat.chom@gmail.com>\",\n  \"license\": \"MIT\",\n  \"keywords\": [\n    \"emvco\",\n    \"emvco-qr\",\n    \"promptpay\",\n    \"promptpay-qr\",\n    \"qr\",\n    \"qrcode\",\n    \"thai-qr-payment\",\n    \"thai-qr-standard\",\n    \"truemoney\"\n  ],\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/maythiwat/promptparse.git\"\n  },\n  \"main\": \"dist/index.js\",\n  \"typings\": \"dist/index.d.ts\",\n  \"module\": \"dist/index.mjs\",\n  \"browser\": \"dist/index.global.js\",\n  \"exports\": {\n    \".\": {\n      \"import\": \"./dist/index.mjs\",\n      \"require\": \"./dist/index.js\",\n      \"types\": \"./dist/index.d.ts\"\n    },\n    \"./generate\": {\n      \"import\": \"./dist/generate/index.mjs\",\n      \"require\": \"./dist/generate/index.js\",\n      \"types\": \"./dist/generate/index.d.ts\"\n    },\n    \"./validate\": {\n      \"import\": \"./dist/validate/index.mjs\",\n      \"require\": \"./dist/validate/index.js\",\n      \"types\": \"./dist/validate/index.d.ts\"\n    }\n  },\n  \"files\": [\n    \"dist/**/*\"\n  ],\n  \"scripts\": {\n    \"test\": \"vitest\",\n    \"coverage\": \"vitest run --coverage\",\n    \"lint\": \"prettier --check . && eslint .\",\n    \"format\": \"prettier --write . && eslint --fix .\",\n    \"build\": \"rimraf dist && tsup\"\n  },\n  \"engines\": {\n    \"pnpm\": \">=8\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^10.0.1\",\n    \"@swc/core\": \"^1.16.2\",\n    \"@typescript-eslint/eslint-plugin\": \"^8.70.0\",\n    \"@typescript-eslint/parser\": \"^8.70.0\",\n    \"@vitest/coverage-v8\": \"^5.0.0\",\n    \"eslint\": \"^10.10.0\",\n    \"eslint-config-prettier\": \"^10.1.8\",\n    \"eslint-plugin-prettier\": \"^5.5.6\",\n    \"globals\": \"^17.12.0\",\n    \"prettier\": \"^3.9.6\",\n    \"rimraf\": \"^6.1.3\",\n    \"tsup\": \"^8.5.1\",\n    \"typescript\": \"^5.9.3\",\n    \"vite-tsconfig-paths\": \"^6.1.1\",\n    \"vitest\": \"^5.0.0\"\n  }\n}\n",
+      "tail": "overage\",\n    \"lint\": \"prettier --check . && eslint .\",\n    \"format\": \"prettier --write . && eslint --fix .\",\n    \"build\": \"rimraf dist && tsup\"\n  },\n  \"engines\": {\n    \"pnpm\": \">=8\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^10.0.1\",\n    \"@swc/core\": \"^1.16.2\",\n    \"@typescript-eslint/eslint-plugin\": \"^8.70.0\",\n    \"@typescript-eslint/parser\": \"^8.70.0\",\n    \"@vitest/coverage-v8\": \"^5.0.0\",\n    \"eslint\": \"^10.10.0\",\n    \"eslint-config-prettier\": \"^10.1.8\",\n    \"eslint-plugin-prettier\": \"^5.5.6\",\n    \"globals\": \"^17.12.0\",\n    \"prettier\": \"^3.9.6\",\n    \"rimraf\": \"^6.1.3\",\n    \"tsup\": \"^8.5.1\",\n    \"typescript\": \"^5.9.3\",\n    \"vite-tsconfig-paths\": \"^6.1.1\",\n    \"vitest\": \"^5.0.0\"\n  }\n}\n",
+      "source_url": "https://github.com/maythiwat/promptparse/blob/7487a97dfc3ba1ccc8d9d30e7d939b67df8155fa/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/maythiwat/promptparse",
+    "commit": "https://github.com/maythiwat/promptparse/commit/7487a97dfc3ba1ccc8d9d30e7d939b67df8155fa"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

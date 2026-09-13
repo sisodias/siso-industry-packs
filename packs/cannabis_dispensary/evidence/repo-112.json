@@ -1,0 +1,76 @@
+{
+  "audit_id": "R112",
+  "full_name": "LePat/takeposconnector",
+  "html_url": "https://github.com/LePat/takeposconnector",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Hardware connector for Dolibarr TakePOS: weighing scale (Dialog-06 protocol), ESC/POS receipt printer, customer display and cash drawer, all bridged to the browser via Webapp-Hardware-Bridge. Per-terminal configuration with inheritance, and live hardware connection status in the topnav.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-13T14:59:03Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=ESC+POS+scale&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "b981a1ae9337344267b290444a337d19631858d9",
+  "last_commit": "2026-09-13T16:57:28+02:00",
+  "commits_six_months_sample_count": 70,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    "COPYING",
+    "ChangeLog.md",
+    "README-de_DE.md",
+    "README-es_ES.md",
+    "README-fr_FR.md",
+    "README-it_IT.md",
+    "README.md",
+    "modulebuilder.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "7a66b0a31816b54f3375e3a6d3bee6db26d435e535fa5ec630b73a1e6fa67d47",
+    "characters": 7596,
+    "excerpt": "# TAKEPOSCONNECTOR FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)\n\n## Features\n\nThe TakePOSConnector module's main feature is to allow TakePOS to use the following hardware:\n- weighing scale\n- thermal printer\n- customer display\n- cash drawer\n\nIt supports several transports/protocols to talk to that hardware:\n- **Dialog-06 protocol** for weighing scales that require an explicit request/response exchange (weight + unit price) instead of a continuous weight stream.\n- **Continuous weight transmission** (older/simpler scale protocols).\n- **ESC/POS thermal printers** over the Webapp-Hardware-Bridge (WHB), including raw binary output for tickets.\n\nOther features:\n- **Per-terminal configuration with inheritance**: every parameter (scale/display WebSocket URL, printer connection, receipt width, etc.) has one common value shared by all terminals, and can optionally be overridden per terminal from a tabbed setup page — no need to repeat the same settings on every till.\n- **Hardware connection status indicators** in the TakePOS top bar (scale, customer display, printer, cash drawer), with automatic WebSocket reconnection.\n![State panel](img/state_panel-en_US.png \"Connections' states\")\n- **Configurable receipt width** (characters per line), per terminal, to match narrow thermal printers (e.g. 42 columns) instead of the 48-column default.\n\n## Compatibility\n\n**Dolibarr >= 24.0.1 is required for the weighing scale and customer display over the\nWebapp-Hardware-Bridge (WHB).** Core only gained the WHB routing for these two devices in\n24.0.1 (`TAKEPOS_CONNECTOR_TO_WHB_SCALE` / `TAKEPOS_CONNECTOR_TO_WHB_CUSTOMER_DISPLAY`). On\nany earlier version, TakePOS core has no such routing at all — the scale and customer display\nalways fall back to a plain HTTP call to `TAKEPOS_PRINT_SERVER` regardless of this module's\nconfiguration, with no way to enable the WHB/WebSocket path.\n\nThe thermal printer and cash drawer over WHB do not depend on that core routing and work on\nearlier Dolibarr versions too.\n\n## Requirements\n\n- new TakePOS Connector PHP to use \"$\" weighing scale protocol, thermal printer, cash drawer and customer display\n- Webapp-Hardware-Bridge to use continuous weight transmission or Dialog-06 protocol for weighing scale, ESC-POS thermal printer, customer display and cash drawer\n\n## Module Setup\n\n#### Global\n\n- Install the takeposconnector module from: https://github.com/LePat/takeposconnector\n- Activate the takeposconnector module.\n- Add the parameter TAKEPOS_PRINT_METHOD value = takeposconnector\n- Set the print server by adding the parameter TAKEPOS_PRINT_SERVER, value = http://localhost:12212\n- Activate the Customer Display by adding the TAKEPOS_CUSTOMER_DISPLAY parameter, value = 1\n- Activate the Weighing Scale by adding the TAKEPOS_WEIGHING_SCALE parameter, value = 1\n\n#### Using the New TakePOS Connector PHP\n\nIt listens on HTTP Request on port 12212.\n\nInstall the New TakePOS Connector PHP from: https://github.com/andreubisquerra/TakePOS-connector-PHP\n\nIt should work with the global setup as the takeposconnector module uses the New TakePOS Connector PHP by default:\n- /print/index.php is added to the URL (TAKEPOS_PRINT_SERVER) to connect to the printer\n- /print/drawer.php is added to the URL (TAKEPOS_PRINT_SERVER) to connect to the cash drawer\n- /display/index.php is added to the URL (TAKEPOS_PRINT_SERVER) to connect to the customer display\n- /scale/index.php is added to the URL (TAKEPOS_PRINT_SERVER) to connect to the weighing scale\n\n#### Using the Webapp-Hardware-Bridge\n\nIt opens WebSockets on port 12212.\n\nInstall the Webapp-Hardware-Bridge (WHB) from: https://github.com/LePat/webapp-hardware-bridge\n\nConfigure the takeposconnector to make TakePOS use the WHB:\n- Weighing Scale webservice: ws://127.0.0.1:12212/serial/WEIGH (or ws://127.0.0.1:12212/takepos for tests)\n- Customer Display webservice: ws://127.0.0.1:12212/serial/DISPLAY (to test it in the whb-console, run the socat command and setup it in WHB GUI)\n- Thermal printer for each terminal defined in TakePOS: \n  - use of SSL for WebSockets\n  - host name (DIRECTPRINTWHB_IPADDRESS): 127.0.0.1\n  - tcp port (DIRECTPRINTWHB_PORT): 12212\n  - webservice name (DIRECTPRINTWHB_TPPRINTERID): /print/INVOICE (or /posprinter for tests in the whb-console)\n\n#### Using the TakePOS Connector Java\n\nIt listens on HTTP Request on port 8111.\n\nInstall the TakePOS Connector Java from: https://github.com/andreubisquerra/TakePOS-Connector-Java\n\nIn this case, change the parameter TAKEPOS_PRINT_SERVER value to localhost or 127.0.0.1, the URL is filtered with the FILTER_VALIDATE_URL to determine if the URL is complete or not. If not, the URL will be completed like this: http://<TAKEPOS_PRINT_SERVER>:8111/print. Only printer is managed.\n\n#### Screenshot of TakePOSConnector module setup\n\n![Screenshot takeposconnector](img/setup-en_US.png \"TakeposConnector\")\n\n> Note: this screenshot predates the tabbed per-terminal setup page and needs to be refreshed.\n\n## Credits\n\nThis module is a fork of Andreu Bisquerra's original\n[TakePOS-Connector](https://github.com/andreubisquerra/TakePOS-Connector) Dolibarr module, now\nindependently maintained. The original copyright notices are kept in the relevant source files.\n\n## Misc\n\nTakePOS Connector (this one), TakePOS Connector Java and New TakePOS Connector PHP have different purposes.\n\nOther external modules are available on [Dolistore.com](https://www.dolistore.com).\n\n## Translations\n\nTranslations can be completed manually by editing files into directories *langs*.\n\nThis module contains also a sample configuration for Transifex, under the hidden directory [.tx](.tx), so it is possible to manage translation using this service.\n\nFor more informations, see the [translator's documentation](https://wiki.dolibarr.org/index.php/Translator_documentation).\n\nThere is a [Transifex project](https://transifex.com/projects/p/dolibarr-module-template) for this module.\n\n## Installation\n\n### From the ZIP file and GUI interface\n\n- If you get the module in a zip file (like when downloading it from the market place [Dolistore](https://www.dolistore.com)), go into\nmenu ```Home - Setup - Modules - Deploy external module``` and upload the zip file.\n\nNote: If this screen tell you there is no custom directory, check your setup is correct:\n\n- In your Dolibarr installation directory, edit the ```htdocs/conf/conf.php``` file and check that following lines are not commented:\n\n    ```php\n    //$dolibarr_main_url_root_alt ...\n    //$dolibarr_main_document_root_alt ...\n    ```\n\n- Uncomment them if necessary (delete the leading ```//```) and assign a sensible value according to your Dolibarr installation\n\n    For example :\n\n    - UNIX:\n        ```php\n        $dolibarr_main_url_root_alt = '/custom';\n        $dolibarr_main_document_root_alt = '/var/www/Dolibarr/htdocs/custom';\n        ```\n\n    - Windows:\n        ```php\n        $dolibarr_main_url_root_alt = '/custom';\n        $dolibarr_main_document_root_alt = 'C:/My Web Sites/Dolibarr/htdocs/custom';\n        ```\n\n### From a GIT repository\n\n- Clone the repository in ```$dolibarr_main_document_root_alt/takeposconnector```\n\n```sh\ncd ....../custom\ngit clone git@github.com:gitlogin/takeposconnector.git takeposconnector\n```\n\n### <a name=\"final_steps\"></a>Final steps\n\nFrom your browser:\n\n  - Log into Dolibarr as a super-administrator\n  - Go to \"Setup\" -> \"Modules\"\n  - You should now be able to find and enable the module\n\n\n## Licenses\n\n### Main code\n\nGPLv3 or (at your option) any later version. See file COPYING for more information.\n\n### Documentation\n\nAll texts and readmes are licensed under GFDL.\n",
+    "tail": "",
+    "source_url": "https://github.com/LePat/takeposconnector/blob/b981a1ae9337344267b290444a337d19631858d9/README.md"
+  },
+  "license_file": {
+    "path": "COPYING",
+    "sha256": "c61f12da7cdad526bdcbed47a4c0a603e60dbbfdaf8b66933cd088e9132c303f",
+    "characters": 32472,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, w",
+    "tail": " BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGES.\n\n  17. Interpretation of Sections 15 and 16.\n\n  If the disclaimer of warranty and limitation of liability provided\nabove cannot be given local legal effect according to their terms,\nreviewing courts shall apply local law that most closely approximates\nan absolute waiver of all civil liability in connection with the\nProgram, unless a warranty or assumption of liability accompanies a\ncopy of the Program in return for a fee.\n\n                     END OF TERMS AND CONDITIONS\n",
+    "source_url": "https://github.com/LePat/takeposconnector/blob/b981a1ae9337344267b290444a337d19631858d9/COPYING"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/LePat/takeposconnector",
+    "commit": "https://github.com/LePat/takeposconnector/commit/b981a1ae9337344267b290444a337d19631858d9"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

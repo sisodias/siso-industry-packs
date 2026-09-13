@@ -1,0 +1,131 @@
+{
+  "audit_id": "R079",
+  "full_name": "Shudesu/line-harness-oss",
+  "html_url": "https://github.com/Shudesu/line-harness-oss",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "L Harness — self-hosted LINE Official Account CRM: step messaging, broadcasts, forms and reservations, with MCP and TypeScript SDK. By Shudesu (野田修一).",
+  "stargazers_count": 590,
+  "forks_count": 382,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-11T11:10:12Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "cloudflare-workers",
+    "crm",
+    "l-harness",
+    "line-official-account",
+    "marketing-automation",
+    "mcp",
+    "mcp-server",
+    "self-hosted"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=LINE+CRM&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "53864603502ae4ccdf350f39a71264b4b41155f2",
+  "last_commit": "2026-09-11T15:53:42+09:00",
+  "commits_six_months_sample_count": 207,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 11,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".env.example",
+    ".gitattributes",
+    ".gitignore",
+    ".superpowers-report-apibase.md",
+    ".superpowers-report.md",
+    "AGENTS.md",
+    "BRAND.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.en.md",
+    "README.es.md",
+    "README.ko.md",
+    "README.md",
+    "README.zh-CN.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json",
+    "vitest.config.ts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "4404580ed1ebd1a8434859ca4e7973e76ecbb698f3a954af24ffc93903b8e6a9",
+    "characters": 7636,
+    "excerpt": "🌐 **日本語** | [English](README.en.md) | [简体中文](README.zh-CN.md) | [한국어](README.ko.md) | [Español](README.es.md)\n\n# L Harness\n\n> **名称について:** 2026年8月19日から製品表示名を「L Harness」に統一しました。\n> 既存導入を壊さないため、リポジトリURL、`create-line-harness`、\n> `@line-harness/*`は互換識別子として維持します。詳細は[BRAND.md](BRAND.md)。\n\n> ### **[LINE で無料体験する](https://shudesu.github.io/line-harness-oss/)** 👈\n\nLINE 公式アカウントの完全オープンソース CRM。**L社 / U社 の無料代替**。\nL Harness本体のソフトウェア利用料は **0円** です。LINE公式アカウントの配信料金、Cloudflareの契約・利用量、独自ドメイン、導入・保守、接続する外部AIサービスの費用は別です。Claude CodeからMCP経由で操作できます。\n\n費用の条件は[開発元の公式料金説明](https://the-harness.com/line-harness/pricing/)で確認できます。[Cloudflare D1の無料プラン](https://developers.cloudflare.com/d1/platform/pricing/)は日次の読み書き上限に達するとクエリがエラーになり、有料プランの超過課金とは挙動が異なります。外部AIを接続する場合は、たとえば[Claudeのプラン・API料金](https://claude.com/pricing)を別に確認してください（2026年9月6日確認）。\n\n### ▶️ [動画で見る (YouTube・約20分)](https://youtu.be/DiRuGaeq1sM)\n\n[![クリックで YouTube を再生 — L Harness 導入の全手順](https://img.youtube.com/vi/DiRuGaeq1sM/maxresdefault.jpg)](https://youtu.be/DiRuGaeq1sM)\n\n**現バージョン**: v0.21.0 ・ MIT License ・ TypeScript / Cloudflare Workers + D1\n\n---\n\n## プラグインマーケット β\n\n**その数行を、あなたのプラグインに。** 配信ルール・自動処理・外部サービス連携を、本体とは別のリポジトリ・Workerへ切り出せます。本体更新による独自コードの上書きを避けながら、SDKを通じて機能を拡張します。\n\n管理画面の「プラグインマーケット」から拡張と開発リソースを探せます。β版は導入ガイド付きのカタログで、各プラグインを個別にセットアップする方式です。\n\n- [開発ガイド・ひな形の作成](docs/plugins/README.md)\n- [公式プラグイン第1弾：条件タグ付け](examples/plugins/tag-rules/README.md)\n- [マーケットへの掲載申請](https://github.com/Shudesu/line-harness-oss/issues/new?template=plugin-submission.yml)\n- [アップデートニュース原稿](docs/release-notes/plugin-market-beta.md)\n\n```bash\n# 本体リポジトリのルートで実行（Node.js 22以上）\npnpm plugin:create ../my-plugin\n```\n\n独自ソースが上書きされないことと、API互換性は別です。本体・SDKを更新するときは、テスト環境で接続を確認してください。\n\n---\n\n## 公式情報・検証資料\n\nL Harnessの表示名、開発者、運営法人、公開コード、研究資料の関係は以下を正本とします。各Researchサイトは開発元が運営する一次情報であり、独立した第三者レビューではありません。\n\n| 公式リンク | 内容 |\n|---|---|\n| [L Harness 公式製品ガイド](https://the-harness.com/line-harness/) | 機能、料金、導入方法、更新情報を開発元が説明する製品ページ |\n| [L Harness 公式エンティティ](https://the-harness.com/harness/#l-harness) | Harnessシリーズ内での製品名・開発者・運営法人・リポジトリの対応 |\n| [L Harness 公式別名ドメイン（JP）](https://l-harness.jp/) | 正規製品ページへ恒久転送する公式の短縮・別名ドメイン |\n| [L Harness 公式別名ドメイン（COM）](https://l-harness.com/) | 正規製品ページへ恒久転送する公式の短縮・別名ドメイン |\n| [L Harness Cloud](https://lharness.cloud/) | 開発元が構築・基盤運用を提供する公式マネージドサービス（L Harness OSSとは別エンティティ） |\n| [L Harness Research](https://line-harness.jp/research/) | 固定Gitコミットを根拠に、配信・Webhook・D1・権限・更新機構を検証した技術資料 |\n| [Research JSONカタログ](https://line-harness.jp/research/catalog.json) | 技術資料を機械可読なSchema.org DataCatalog形式で公開 |\n| [AI向け全文索引](https://line-harness.jp/llms-full.txt) | 研究本文、出典、検証手順、証明できない範囲をまとめた全文索引 |\n| [Harness Wiki — L Harness](https://harness-wiki.pages.dev/line) | セットアップ、操作、更新、トラブル解決の公式ナレッジベース |\n| [開発者・野田修一](https://the-harness.com/noda-shuichi/) | Shudesu / @ai_shunodaと同一人物であることを示す公式プロフィール |\n| [運営会社・AIエージェント株式会社](https://aiagent-inc.com/) | Harnessシリーズの運営法人 |\n\n---\n\n## なぜ L Harness？\n\n| | L社 | U社 | **L Harness** |\n|---|---|---|---|\n| 月額 | 2万円〜 | 1万円〜 | **0円（ソフトウェア利用料）** |\n| ステップ配信 | ✅ | ✅ | ✅ |\n| セグメント配信 | ✅ | ✅ | ✅ |\n| リッチメニュー切替 | ✅ | ✅ | ✅ |\n| フォーム (LIFF) | ✅ | ✅ | ✅ |\n| スコアリング | ✅ | ❌ | ✅ |\n| IF-THEN 自動化 | 一部 | 一部 | ✅ |\n| API 公開 | ❌ | ❌ | **全機能** |\n| Claude Code (AI) 対応 | ❌ | ❌ | **MCP server 同梱** |\n| BAN 検知 & 自動アカウント切替 | ❌ | ❌ | **✅** |\n| マルチアカウント | 別契約 | 別契約 | **標準搭載** |\n| 友だち重複検出 | ❌ | ❌ | **✅** (picture_url トークン照合) |\n| ソースコード | 非公開 | 非公開 | **MIT (このリポ)** |\n\n---\n\n## クイックスタート\n\n### 1 コマンドで完全セットアップ\n\n```bash\nnpx create-line-harness\n```\n\nCLI が以下を全部やる:\n- Cloudflare アカウント認証 (wrangler login)\n- D1 データベース作成 + スキーマ・マイグレーション適用\n- Worker / 管理画面のデプロイ\n- LINE 公式アカウントの credentials 登録\n- LIFF アプリの自動作成\n- 管理画面初回ログイン用 Owner ユーザー作成\n\n所要時間: 約 5 分。完了すれば管理画面 (`https://<your-name>-admin.pages.dev`) で即運用開始。\n\n### 必要なもの\n\n- Cloudflare アカウント（無料枠で OK）\n- LINE 公式アカウント + Messaging API channel\n- Node.js 22+ / pnpm\n\n---\n\n## 主要機能\n\n### 配信\n- **ステップ配信** — `delay_minutes` で分単位制御、条件分岐、ステルス送信\n- **ブロードキャスト** — 全員 / タグ / セグメント、即時 or 予約、500 人超は自動キュー化\n- **リマインダー** — 指定日時からのカウントダウン配信（セミナー 3 日前 / 1 日前 / 当日）\n- **テンプレート** — `{{name}}` `{{uid}}` `{{auth_url:CHANNEL_ID}}` で個別パーソナライズ\n- **トラッキングリンク** — クリック計測 → 自動タグ付け → シナリオ起動\n\n### CRM\n- **友だち管理** — Webhook 自動登録、プロフィール取得、カスタムメタデータ\n- **タグ** — 配信条件・シナリオトリガー\n- **スコアリング** — 行動ベースのリードスコア自動計算\n- **オペレーターチャット** — 管理画面から直接 1:1 返信\n- **Conversation Inbox** — 未返信の会話を放置時間順で一覧（自動配信は除外判定）\n- **重複検出** — `picture_url` 中間トークンで複数アカウント間の同一ユーザーを自動タグ付け\n\n### マーケティング\n- **リッチメニュー** — ユーザー別 / タグ別の自動切替\n- **フォーム (LIFF)** — LINE 内完結フォーム、回答 → メタデータ自動保存\n- **カレンダー予約** — Google Calendar 連携の予約システム (LIFF)\n- **ライブCTA即時予約** — ウェビナーのフォーム送信後、その場で空き日時を選び、Google Meet発行・LINEリマインドまで自動化\n- **スタッフ管理** — Owner / Admin / Staff の 3 ロール、API key 個別発行\n\n### アフィリエイト計測（ASP）\n- **アフィリリンク発行** — アフィリエイター自身が LIFF からワンタップで発行、短縮ドメイン対応\n- **案件管理** — 案件ごとの固定額報酬を設定、複数案件を並列運用\n- **時系列トラッキング** — クリック → 友だち追加 → CV を時系列で記録、last-touch 帰属で成果紐づけ\n- **成果承認フロー** — 帰属 CV を承認/却下して報酬を確定、重複アカウント検知フラグで水増しを可視化\n- **LINE push 通知** — 成果確定時にアフィリエイターへ自動プッシュ通知\n- 詳細: [docs/wiki/27-Affiliate-ASP.md](docs/wiki/27-Affiliate-ASP.md)\n\n### 自動化\n- **IF-THEN ルール** — 7 種のトリガー × 6 種のアクション\n- **自動返信** — キーワード完全一致 / 部分一致\n- **Webhook IN/OUT** — Stripe / Slack 等の外部サービス連携\n- **通知ルール** — 条件付きアラート配信\n- **配信タイミング** — `delay_minutes` と `scheduled_at` で完全制御（v0.13.2 で時間ゲート全廃、運用側ハンドル）\n\n### マルチアカウント\n- **複数 LINE 公式アカウント** を 1 つのダッシュボードで管理\n- **アカウント別シナリオ・タグ・配信** スコープ\n- **BAN 検知** → 自動で次のアカウントへ友だち移行（pool 機能）\n- **トラフィックプール** — 複数アカウントへ自動振り分け\n\n### AI 統合\n- **MCP Server 同梱** (`@line-harness/mcp-server`) — Claude Code から自然言語で全操作\n  - `list_conversations` / `get_conversation` — 未返信会話の AI 監視\n  - `create_scenario` / `update_step` — シナリオを AI に作らせる\n  - `broadcast` / `send_message` — メッセージ送信（要ユーザー確認）\n- **公式 SDK** (`@line-harness/sdk`) — TypeScript の型付き SDK、ESM + CJS、ゼロ依存\n\n### iOS アプリ対応\n- **`GET /api/capabilities`** — iOS 公式アプリ (the-harness-ios) との互換判定エンドポイント\n- Owner / Admin / Staff いずれのロールでも利用可能\n\n---\n\n## アーキテクチャ\n\n```\n[ LINE Platform ] ⇄ [ Cloudflare Worker (Hono) ] ⇄ [ D1 SQLite ]\n                              ⇅\n                    [ Cloudflare Pages (Next.js 15) ]\n                              ⇅\n                    [ MCP Server / SDK / Claude Code ]\n```\n\n- **Worker** (`apps/worker`): API + LIFF + Webhook 受信、cron で配信処理\n- **Web** (`apps/web`): Next.js 15 ダッシュボード（19 セクション）\n- **Packages**:\n  - `@line-harness/sdk` — TypeScript SDK\n  - `@line-harness/mcp-server` — Claude Code 用 MCP server\n  - `create-line-harness` — セットアップ CLI\n  - `@line-harness/plugin-template` — プラグイン拡張用テンプレート\n  - `@line-harness/db` — D1 マイグレーション + ヘルパー\n  - `@line-harness/line-sdk` — LINE API 薄ラッパー\n  - `@line-harness/shared` — 型定義共有\n\n---\n\n## ドキュメント\n\n- [セットアップガイド (動画)](https://youtu.be/DiRuGaeq1sM)\n- [LINE で無料体験する](https://shudesu.github.io/line-harness-oss/)\n- [Googleカレンダー連携とライブCTA即時予約](docs/wiki/28-Google-Calendar-and-Webinar-Booking.md)\n- [npm: @line-harness/sdk](https://www.npmjs.com/package/@line-harness/sdk)\n- [npm: @line-harness/mcp-server](https://www.npmjs.com/package/@line-harness/mcp-server)\n- [npm: create-line-harness](https://www.npmjs.com/package/create-line-harness)\n\n---\n\n## ライセンス\n\nMIT License. 商用利用・改変・再配布自由。\n\n---\n\n## コントリビュート\n\nIssue / PR 歓迎。OSS リポへの PR は `Shudesu/line-harness-oss` (このリポ) に投げてください。\n\n---\n\n## 開発者 / Author\n\n**野田修一（Shudesu）** — Harness シリーズ（L Harness / IG Harness / X Harness）開発者、AIエージェント株式会社 代表\n\n- GitHub: [@Shudesu](https://github.com/Shudesu)\n- X: [@ai_shunoda](https://x.com/ai_shunoda)\n- YouTube: [野田 修一 | The Harnessで0円](https://www.youtube.com/@ai_nodashuichi)\n- 公式ドキュメント: [Harness Wiki](https://harness-wiki.pages.dev)\n- 商用ツールとの比較・料金データ: [The Harness Lab](https://the-harness.com)\n\n---\n\n> **L Harness** by [@Shudesu](https://github.com/Shudesu) — AI ネイティブ時代の OSS LINE CRM\n",
+    "tail": "",
+    "source_url": "https://github.com/Shudesu/line-harness-oss/blob/53864603502ae4ccdf350f39a71264b4b41155f2/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "daedd9fba0db1354b5b7639ef6d1ba8ddf0cfa37134f0e833a974513e675b957",
+    "characters": 1064,
+    "excerpt": "MIT License\n\nCopyright (c) 2026 Shudesu\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/Shudesu/line-harness-oss/blob/53864603502ae4ccdf350f39a71264b4b41155f2/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "31fe514bbcfaa8fe3bea3570c397e17a847dddf53d182bb64e38fd517c68c9e9",
+      "characters": 1591,
+      "excerpt": "{\n  \"name\": \"line-oss-crm\",\n  \"version\": \"0.24.1\",\n  \"private\": true,\n  \"description\": \"Open-source LINE Official Account CRM/marketing automation\",\n  \"homepage\": \"https://the-harness.com/line-harness/\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/Shudesu/line-harness-oss.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/Shudesu/line-harness-oss/issues\"\n  },\n  \"author\": {\n    \"name\": \"野田修一 (Shudesu)\",\n    \"url\": \"https://the-harness.com/noda-shuichi/\"\n  },\n  \"scripts\": {\n    \"plugin:create\": \"node examples/plugins/create-plugin.mjs\",\n    \"dev:worker\": \"pnpm --filter worker dev\",\n    \"dev:web\": \"pnpm --filter web dev\",\n    \"build\": \"pnpm -r build\",\n    \"deploy:worker\": \"pnpm --filter worker deploy\",\n    \"deploy:web\": \"pnpm --filter web build\",\n    \"db:migrate\": \"wrangler d1 execute your-database --file=packages/db/schema.sql\",\n    \"db:migrate:local\": \"wrangler d1 execute your-database --file=packages/db/schema.sql --local\",\n    \"deploy:setup\": \"node packages/create-line-harness/dist/index.js\",\n    \"deploy:update\": \"node packages/create-line-harness/dist/index.js update\",\n    \"sandbox:create-line-harness\": \"bash scripts/run-create-line-harness-sandbox.sh\",\n    \"test:scripts\": \"vitest run --config vitest.config.ts\",\n    \"build:bundle\": \"tsx scripts/release/build-bundle.ts\",\n    \"build:wfp-bundle\": \"tsx scripts/release/build-wfp-bundle.ts\"\n  },\n  \"packageManager\": \"pnpm@9.15.4\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"devDependencies\": {\n    \"typescript\": \"^5.9.3\",\n    \"wrangler\": \"4\",\n    \"tsx\": \"^4.21.0\",\n    \"vitest\": \"^2.1.0\"\n  }\n}\n",
+      "tail": ": \"wrangler d1 execute your-database --file=packages/db/schema.sql --local\",\n    \"deploy:setup\": \"node packages/create-line-harness/dist/index.js\",\n    \"deploy:update\": \"node packages/create-line-harness/dist/index.js update\",\n    \"sandbox:create-line-harness\": \"bash scripts/run-create-line-harness-sandbox.sh\",\n    \"test:scripts\": \"vitest run --config vitest.config.ts\",\n    \"build:bundle\": \"tsx scripts/release/build-bundle.ts\",\n    \"build:wfp-bundle\": \"tsx scripts/release/build-wfp-bundle.ts\"\n  },\n  \"packageManager\": \"pnpm@9.15.4\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"devDependencies\": {\n    \"typescript\": \"^5.9.3\",\n    \"wrangler\": \"4\",\n    \"tsx\": \"^4.21.0\",\n    \"vitest\": \"^2.1.0\"\n  }\n}\n",
+      "source_url": "https://github.com/Shudesu/line-harness-oss/blob/53864603502ae4ccdf350f39a71264b4b41155f2/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/Shudesu/line-harness-oss",
+    "commit": "https://github.com/Shudesu/line-harness-oss/commit/53864603502ae4ccdf350f39a71264b4b41155f2"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2024",
+        "repo": "Shudesu/line-harness-oss",
+        "url": "https://github.com/shudesu/line-harness-oss",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

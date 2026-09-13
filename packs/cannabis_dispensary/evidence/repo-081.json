@@ -1,0 +1,128 @@
+{
+  "audit_id": "R081",
+  "full_name": "line/line-bot-sdk-python",
+  "html_url": "https://github.com/line/line-bot-sdk-python",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "LINE Messaging API SDK for Python",
+  "stargazers_count": 2129,
+  "forks_count": 1054,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-08T00:13:44Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "bot",
+    "line",
+    "linebot",
+    "python",
+    "sdk"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=line-bot-sdk+in%3Aname+user%3Aline&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "f72d713e32661f3e9137aec1a79047d17223bfaf",
+  "last_commit": "2026-09-08T00:10:56Z",
+  "commits_six_months_sample_count": 88,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 5,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    ".gitmodules",
+    ".openapi-generator-ignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "MANIFEST.in",
+    "README.rst",
+    "generate-code.py",
+    "import_check.py",
+    "line-openapi",
+    "renovate.json5",
+    "requirements-dev.txt",
+    "requirements-test.txt",
+    "requirements.txt",
+    "setup.cfg",
+    "setup.py",
+    "tox.ini"
+  ],
+  "readme": {
+    "path": "README.rst",
+    "sha256": "105ee0b478e38cffe1c27b236855b73495d9364396d1b26491d72dea773b4026",
+    "characters": 11867,
+    "excerpt": "LINE Messaging API SDK for Python\n=================================\n\n|PyPI version|\n\nSDK of the LINE Messaging API for Python.\n\nIntroduction\n------------\nThe LINE Messaging API SDK for Python makes it easy to develop bots using LINE Messaging API, and you can create a sample bot within minutes.\n\n\nDocumentation\n-------------\n\nSee the official API documentation for more information\n\nEnglish: https://developers.line.biz/en/docs/messaging-api/overview/\n\nJapanese: https://developers.line.biz/ja/docs/messaging-api/overview/\n\nRequirements\n------------\n\n-  Python >= 3.10\n\nInstallation\n------------\n\n::\n\n    $ pip install line-bot-sdk\n\nSynopsis\n--------\n\nUsage:\n\n.. code:: python\n\n    from flask import Flask, request, abort\n\n    from linebot.v3 import (\n        WebhookHandler\n    )\n    from linebot.v3.exceptions import (\n        InvalidSignatureError\n    )\n    from linebot.v3.messaging import (\n        Configuration,\n        ApiClient,\n        MessagingApi,\n        ReplyMessageRequest,\n        TextMessage\n    )\n    from linebot.v3.webhooks import (\n        MessageEvent,\n        TextMessageContent\n    )\n\n    app = Flask(__name__)\n\n    configuration = Configuration(access_token='YOUR_CHANNEL_ACCESS_TOKEN')\n    handler = WebhookHandler('YOUR_CHANNEL_SECRET')\n\n\n    @app.route(\"/callback\", methods=['POST'])\n    def callback():\n        # get X-Line-Signature header value\n        signature = request.headers['X-Line-Signature']\n\n        # get request body as text\n        body = request.get_data(as_text=True)\n        app.logger.info(\"Request body: \" + body)\n\n        # handle webhook body\n        try:\n            handler.handle(body, signature)\n        except InvalidSignatureError:\n            app.logger.info(\"Invalid signature. Please check your channel access token/channel secret.\")\n            abort(400)\n\n        return 'OK'\n\n\n    @handler.add(MessageEvent, message=TextMessageContent)\n    def handle_message(event):\n        with ApiClient(configuration) as api_client:\n            line_bot_api = MessagingApi(api_client)\n            line_bot_api.reply_message_with_http_info(\n                ReplyMessageRequest(\n                    reply_token=event.reply_token,\n                    messages=[TextMessage(text=event.message.text)]\n                )\n            )\n\n    if __name__ == \"__main__\":\n        app.run()\n\nAPI\n---\n\nSee `linebot/v3/messaging/docs <linebot/v3/messaging/docs/MessagingApi.md>`__ . Other docs are in ``linebot/v3/<feature>/docs/*.md``.\n\n\nWebhook\n-------\n\nWebhookParser\n~~~~~~~~~~~~~\n\n※ You can use WebhookParser\n\n\\_\\_init\\_\\_(self, channel\\_secret, skip\\_signature\\_verification=lambda: False)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n.. code:: python\n\n    parser = linebot.v3.WebhookParser('YOUR_CHANNEL_SECRET')\n\n    # or with skip_signature_verification option\n    parser = linebot.v3.WebhookParser(\n        'YOUR_CHANNEL_SECRET',\n        skip_signature_verification=lambda: False\n\nparse(self, body, signature, as_payload=False)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nParses the webhook body, and returns a list of Event objects or a WebhookPayload object (depending on as_payload).\nIf the signature does NOT match, ``InvalidSignatureError`` is raised.\n\n.. code:: python\n\n    events = parser.parse(body, signature)\n\n    for event in events:\n        do_something(event)\n\n.. code:: python\n\n    payload = parser.parse(body, signature, as_payload=True)\n\n    for event in payload.events:\n        do_something(payload.event, payload.destination)\n\nWebhookHandler\n~~~~~~~~~~~~~~\n\n※ You can use WebhookHandler\n\n\\_\\_init\\_\\_(self, channel\\_secret, skip\\_signature\\_verification=lambda: False)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n.. code:: python\n\n    handler = linebot.v3.WebhookHandler('YOUR_CHANNEL_SECRET')\n\n    # or with skip_signature_verification option\n    handler = linebot.v3.WebhookHandler(\n        'YOUR_CHANNEL_SECRET',\n        skip_signature_verification=lambda: False\n\nhandle(self, body, signature)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nHandles webhooks with **handlers** added\nby the decorators `add <#add-self-event-message-none>`__ and `default <#default-self>`__.\nIf the signature does NOT match, ``InvalidSignatureError`` is raised.\n\n.. code:: python\n\n    handler.handle(body, signature)\n\nadd(self, event, message=None)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nAdd a **handler** method by using this decorator.\n\n.. code:: python\n\n    @handler.add(MessageEvent, message=TextMessage)\n    def handle_message(event):\n        line_bot_api.reply_message(\n            ReplyMessageRequest(\n                reply_token=event.reply_token,\n                messages=[TextMessage(text=event.message.text)]\n            )\n        )\n\nWhen the event is an instance of MessageEvent and event.message is an instance of TextMessage,\nthis handler method is called.\n\n.. code:: python\n\n    @handler.add(MessageEvent)\n    def handle_message(event, destination):\n        # do something\n\nIf the arity of the handler method is more than one,\na destination property in a webhook request is passed to it as the second argument.\n\n.. code:: python\n\n    @handler.add(FollowEvent)\n    def handle_follow():\n        # do something\n\nIf the arity of the handler method is zero, the handler method is called with no arguments.\n\ndefault(self)\n^^^^^^^^^^^^^\n\nSet the default **handler** method by using this decorator.\n\n.. code:: python\n\n    @handler.default()\n    def default(event):\n        print(event)\n\nIf there is no handler for an event, this default handler method is called.\n\nWebhookPayload\n~~~~~~~~~~~~~~~\n\nhttps://developers.line.biz/en/reference/messaging-api/#request-body\n\n- WebhookPayload\n    - destination\n    - events: list[`Event`]\n\nWebhook event object\n~~~~~~~~~~~~~~~~~~~~\n\nhttps://developers.line.biz/en/reference/messaging-api/#webhook-event-objects\n\n\nHints\n-----\n\nExamples\n~~~~~~~~\n\n`aiohttp-echo <examples/aiohttp-echo>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSample echo-bot with asynchronous processings.\n\n`fastapi-echo <examples/fastapi-echo>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSample echo-bot using `FastAPI <https://fastapi.tiangolo.com/>`__\n\n\n`flask-echo <examples/flask-echo>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSample echo-bot using `Flask <http://flask.pocoo.org/>`__\n\n`flask-kitchensink <examples/flask-kitchensink>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSample bot using `Flask <http://flask.pocoo.org/>`__\n\n\n`rich-menu <examples/rich-menu>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSwitching richmenu script\n\n`simple-server-echo <examples/simple-server-echo>`__\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nSample echo-bot using\n`wsgiref.simple\\_server <https://docs.python.org/3/library/wsgiref.html>`__\n\n\nHow to deserializes JSON to FlexMessage or RichMenu\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nline-bot-python-sdk provides ``from_json`` method for each model.\nIt deserializes the JSON into the specified model.\nThus, you can send a JSON designed with `Flex Message Simulator <https://developers.line.biz/console/fx/>`__.\n\n.. code:: python\n\n    bubble_string = \"\"\"{ type:\"bubble\", ... }\"\"\"\n    message = FlexMessage(alt_text=\"hello\", contents=FlexContainer.from_json(bubble_string))\n    line_bot_api.reply_message(\n        ReplyMessageRequest(\n            reply_token=event.reply_token,\n            messages=[message]\n        )\n    )\n\nHow to get x-line-request-id header and error message\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\nYou may need to store the ``x-line-request-id`` header obtained as a response from several APIs.\nIn this case, please use ``~_with_http_info`` functions. You can get headers and status codes.\nThe ``x-line-accepted-request-id`` or ``content-type`` header can also be obtained in the same way.\n\n.. code:: python\n\n    response = line_bot_api.reply_message_with_http_info(\n        ReplyMessageRequest(\n            reply_token=event.reply_token,\n            messages=[TextMessage(text='see application log')]\n        )\n    )\n    app.logger.info(\"Got response with http status code: \" + str(response.status_code))\n    app.logger.info(\"Got x-line-request-id: \" + response.headers['x-line-request-id'])\n    app.logger.info(\"Got response with http body: \" + str(response.data))\n\nYou can get error messages from ``ApiException`` when you use ``MessagingApi``. Each client defines its own exception class.\n\n.. code:: python\n\n    from linebot.v3.messaging import ApiException, ErrorResponse\n    try:\n        line_bot_api.reply_message_with_http_info(\n            ReplyMessageRequest(\n                reply_token='invalid-reply-token',\n                messages=[TextMessage(text='see application log')]\n            )\n        )\n    except ApiException as e:\n        app.logger.info(\"Got response with http status code: \" + str(e.status))\n        app.logger.info(\"Got x-line-request-id: \" + e.headers['x-line-request-id'])\n        app.logger.info(\"Got response with http b",
+    "tail": "",
+    "source_url": "https://github.com/line/line-bot-sdk-python/blob/f72d713e32661f3e9137aec1a79047d17223bfaf/README.rst"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "4b3f80512b2bf4e3c940c6d93125464af22b77241a15ed00cdae28d01ba20369",
+    "characters": 11347,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control sy",
+    "tail": "      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright 2016 LINE Corporation.\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/line/line-bot-sdk-python/blob/f72d713e32661f3e9137aec1a79047d17223bfaf/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "d4a5387874c2bce6c69068de5c4ef83118a1525a671430cf66fe8d4b0cd16446",
+      "characters": 164,
+      "excerpt": "requests>=2.32.3,<3\nurllib3>=2.0.5,<3\naiohttp >=3.10.9, <4\nfuture >= 1.0.0\npydantic >=2.0.3, <3\naenum >= 3.1.11, <4\npython_dateutil >= 2.5.3, <3\nDeprecated>=1.2.18\n",
+      "tail": "requests>=2.32.3,<3\nurllib3>=2.0.5,<3\naiohttp >=3.10.9, <4\nfuture >= 1.0.0\npydantic >=2.0.3, <3\naenum >= 3.1.11, <4\npython_dateutil >= 2.5.3, <3\nDeprecated>=1.2.18\n",
+      "source_url": "https://github.com/line/line-bot-sdk-python/blob/f72d713e32661f3e9137aec1a79047d17223bfaf/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/line/line-bot-sdk-python",
+    "commit": "https://github.com/line/line-bot-sdk-python/commit/f72d713e32661f3e9137aec1a79047d17223bfaf"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-python",
+        "capability_tag": "webhook",
+        "category_slug": "client-library-sdk",
+        "summary": "Python SDK for building LINE Messaging API bots and webhooks",
+        "reuse_value": 80,
+        "stars": 2119,
+        "license": "Apache-2.0",
+        "language": "Python",
+        "url": "https://github.com/line/line-bot-sdk-python",
+        "rank_score": 80021190
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-python",
+        "stars": 2119,
+        "license": "Apache-2.0",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 80,
+        "liftability": 90,
+        "fame_gap": -10,
+        "cat_slug": "client-library-sdk",
+        "cat_name": "Client Library / SDK",
+        "description": "LINE Messaging API SDK for Python"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,91 @@
+{
+  "audit_id": "R086",
+  "full_name": "shipsaas/laravel-inbox-process",
+  "html_url": "https://github.com/shipsaas/laravel-inbox-process",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "The Inbox Pattern/Process for Laravel apps. Ensure the ordering, uniqueness, and reliable handling of webhook requests.",
+  "stargazers_count": 13,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2024-05-12T04:34:54Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "design-patterns",
+    "exactly-once",
+    "inbox",
+    "inbox-pattern",
+    "laravel",
+    "library",
+    "microservice",
+    "ordering",
+    "sequential"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=webhook+inbox&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "7b2b183dcf856ce9678e21b33864b6cb339d0b45",
+  "last_commit": "2024-05-12T11:33:38+07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".gitignore",
+    ".php-cs-fixer.php",
+    "LICENSE",
+    "README.md",
+    "composer.json",
+    "phpunit.xml"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "f8c96e30c5ab1e09edff53e64a313b2d742272ff55d7577facc8e2ef9002c2c8",
+    "characters": 2375,
+    "excerpt": "# ShipSaaS - Laravel Inbox Process\n\n[![Build & Test (MySQL & PgSQL)](https://github.com/shipsaas/laravel-inbox-process/actions/workflows/build.yml/badge.svg)](https://github.com/shipsaas/laravel-inbox-process/actions/workflows/build.yml)\n[![codecov](https://codecov.io/gh/shipsaas/laravel-inbox-process/graph/badge.svg?token=3Z1X9S69C4)](https://codecov.io/gh/shipsaas/laravel-inbox-process)\n\n<p align=\"center\">\n<img src=\".github/logo.png\" width=\"200\">\n</p>\n\nTalking about distributed computers & servers, it is quite normal nowadays to communicate between servers.\n\nUnlike a regular conversation though, there's no guarantee the message gets delivered only once, arrives in the right order, or even gets a \"got it!\" reply.\n\nThus, we have **Inbox Pattern** to help us to achieve that.\n\n## What is the Inbox Pattern\n\n**The Inbox Pattern** is a popular design pattern in the microservice architecture that ensures:\n\n- High availability ✅\n- Guaranteed webhook deliverance, no msg lost ✅\n- Guaranteed **exactly-once/unique** webhook requests ✅\n- Execute webhook requests **in ORDER/sequence** ✅\n- (Optional) High visibility & debug all prev requests ✅\n\nAnd with that being said:\n\n**Laravel Inbox Process (powered by ShipSaaS)** ships everything out-of-the-box and \nhelps you to roll out the inbox process in no time 😎🚀.\n\n## Supports\n- Laravel 10 & 11\n- PHP 8.2+\n- MySQL 8, MariaDB, Postgres 13+ and SQLite\n\n## Architecture Diagram\n\n![ShipSaaS - Laravel Inbox Process](./.github/arch.png)\n\n## Installation\n\nInstall the library:\n\n```bash\ncomposer require shipsaas/laravel-inbox-process\n```\n\nExport config & migration files and then run the migration:\n\n```bash\nphp artisan vendor:publish --tag=laravel-inbox-process\nphp artisan migrate\n```\n\n## Documentation & Usage\n\nVisit: [ShipSaaS Inbox Documentation](https://inbox.shipsaas.tech)\n\nBest practices, usage & notes are well documented too 😎!\n\n## Testing\n\nRun `composer test` 😆\n\nAvailable Tests:\n\n- Unit Testing 💪\n- Integration Testing against MySQL & PostgreSQL for the `inbox:work` command 😎\n- Human validation (lol) 🔥\n\nShipSaaS loves tests, we won't ship sh!tty libraries 🌹\n\n## Contributors\n- Seth Phat\n\n## Contributions & Support the Project\n\nFeel free to submit any PR, please follow PSR-1/PSR-12 coding conventions and testing is a must.\n\nIf this package is helpful, please give it a ⭐️⭐️⭐️. Thank you!\n\n## License\nMIT License\n",
+    "tail": "",
+    "source_url": "https://github.com/shipsaas/laravel-inbox-process/blob/7b2b183dcf856ce9678e21b33864b6cb339d0b45/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9ce61550d2f48eb0cd56191442b4d71d6ebf5bac0779ca62e62220aa79e5f1f2",
+    "characters": 1076,
+    "excerpt": "MIT License\n\nCopyright (c) 2023 ShipSaaS x SethPhat\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/shipsaas/laravel-inbox-process/blob/7b2b183dcf856ce9678e21b33864b6cb339d0b45/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "f1a72539dd578a68b6e28597b2a3cf964f055551e81eaed4de26069d3fc90757",
+      "characters": 1741,
+      "excerpt": "{\n    \"name\": \"shipsaas/laravel-inbox-process\",\n    \"type\": \"library\",\n    \"version\": \"1.1.2\",\n    \"description\": \"Inbox pattern process implementation for your Laravel Applications\",\n    \"keywords\": [\n        \"laravel library\",\n        \"laravel inbox process\",\n        \"laravel inbox pattern\",\n        \"inbox pattern\",\n        \"webhook\",\n        \"inbox\",\n        \"inbox process\",\n        \"laravel\"\n    ],\n    \"authors\": [\n        {\n            \"name\": \"Phat Tran (Seth Phat)\",\n            \"email\": \"me@sethphat.com\",\n            \"homepage\": \"https://github.com/sethsandaru\",\n            \"role\": \"Sr.SWE\"\n        }\n    ],\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^8.2\",\n        \"laravel/framework\": \"^10|^11|dev-master\",\n        \"ext-pcntl\": \"*\"\n    },\n    \"require-dev\": {\n        \"fakerphp/faker\": \"^v1.20.0\",\n        \"mockery/mockery\": \"^1.6\",\n        \"phpunit/phpunit\": \"^10\",\n        \"orchestra/testbench\": \"^8|^9\",\n        \"phpunit/php-code-coverage\": \"^10\",\n        \"friendsofphp/php-cs-fixer\": \"^3.10\"\n    },\n    \"extra\": {\n        \"laravel\": {\n            \"providers\": [\n                \"ShipSaasInboxProcess\\\\InboxProcessServiceProvider\"\n            ]\n        }\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"ShipSaasInboxProcess\\\\\": \"src/\"\n        },\n        \"files\": [\n            \"./src/Functions/inbox_functions.php\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"ShipSaasInboxProcess\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"test-coverage\": [\n            \"@php vendor/bin/phpunit --coverage-clover coverage.xml\"\n        ],\n        \"test\": [\n            \"@php vendor/bin/phpunit\"\n        ]\n    },\n    \"minimum-stability\": \"dev\",\n    \"prefer-stable\": true\n}\n",
+      "tail": "\": {\n        \"laravel\": {\n            \"providers\": [\n                \"ShipSaasInboxProcess\\\\InboxProcessServiceProvider\"\n            ]\n        }\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"ShipSaasInboxProcess\\\\\": \"src/\"\n        },\n        \"files\": [\n            \"./src/Functions/inbox_functions.php\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"ShipSaasInboxProcess\\\\Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"test-coverage\": [\n            \"@php vendor/bin/phpunit --coverage-clover coverage.xml\"\n        ],\n        \"test\": [\n            \"@php vendor/bin/phpunit\"\n        ]\n    },\n    \"minimum-stability\": \"dev\",\n    \"prefer-stable\": true\n}\n",
+      "source_url": "https://github.com/shipsaas/laravel-inbox-process/blob/7b2b183dcf856ce9678e21b33864b6cb339d0b45/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/shipsaas/laravel-inbox-process",
+    "commit": "https://github.com/shipsaas/laravel-inbox-process/commit/7b2b183dcf856ce9678e21b33864b6cb339d0b45"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

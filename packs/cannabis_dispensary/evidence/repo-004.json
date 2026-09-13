@@ -1,0 +1,94 @@
+{
+  "audit_id": "R004",
+  "full_name": "openthc/data",
+  "html_url": "https://github.com/openthc/data",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Cannabis Data Analysis Portal",
+  "stargazers_count": 12,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-10-01T15:54:46Z",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "1ce8dd054e29303786eb77577cd84bae02060d8c",
+  "last_commit": "2025-10-01T08:54:44-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".ackrc",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.php",
+    "package-lock.json",
+    "package.json"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "f92108bc1b5b25d766b87cedde03c683991a890a722f84aeb57cdbba047131fc",
+    "characters": 6808,
+    "excerpt": "# Data\n\nAn Open Data Portal for Cannabis and tools for Converting and Importing said data.\n\nThis tool is designed to import data from BioTrack, GrowFlow, LeafData or METRC into a common schema.\nThen you can run reports on this data-set using a front-end tool like [Metabase](https://www.metabase.com/)\n or [Apache Superset](https://superset.apache.org/).\n\n\n## Converting XLS\n\nIf the source data is in XLS, first convert it into CSV.\nThen those files can be processed into JSON.\n\n```shell\n./bin/cli.php convert \\\n\t--source-type XLS \\\n\t--source-file ./path-to-some-file.xls \\\n\t--output-path ./path-to-directory/\n```\n\nIf the XLS files worksheet headers are not conforming to the OpenTHC/CSV specification edit them before conversion.\nIt may also be useful to remove columns that are not significant.\n\nOther data may also need to be cleaned up, setting the proper product weights.\nRemoving rows that duplicate (eg Plants in Inventory and in a Plants worksheet).\n\n\n## Converting CSV\n\nOpenTHC has defined some \"standard\" CSV file Headers to use for data importing.\nTypically, one can use existing software exports, update their header column names and then convert/import.\nThe names are not case sensitive.\n\n```\nSection_GUID\nSection_Name\nSection_Type\nVariety_GUID\nVariety_Name\nVariety_Type\nProduct_GUID\nProduct_Name\nProduct_Type\nPackage_Unit_Weight\nPackage_Unit_Volume\nInventory_GUID\nInventory_Name\nInventory_Unit_Count_Current | Inventory_Unit_Count | Unit_Count\nInventory_Unit_Count_Initial | Unit_Count_Initial\nCrop_GUID\nCrop_Name\nCrop_Unit_Count_Current | Crop_Unit_Count | Unit_Count\nCrop_Unit_Count_Initial | Unit_Count_Initial\nPlant_GUID\nPlant_Name\n```\n\nCrop and Plant are the same thing; we have both names to help thing about their usage uniquely.\nA Crop is an identifier for one or more plants (or a whole field) but Plant explicitly means just a single plant.\n\nThen just convert the objects out of the source document.\n\n```shell\n/bin/cli.php convert \\\n\t--output-path output-data/convert-example/\n\t--source-file=./source-data/Inventory.csv --source-type=product-csv\n\n/bin/cli.php convert \\\n\t--output-path output-data/convert-example/\n\t--source-file=./source-data/Inventory.csv --source-type=section-csv\n\n/bin/cli.php convert \\\n\t--output-path output-data/convert-example/\n\t--source-file=./source-data/Inventory.csv --source-type=variety-csv\n\n/bin/cli.php convert \\\n\t--output-path output-data/convert-example/\n\t--source-file=./source-data/Inventory.csv --source-type=inventory-csv\n```\n\n\n## Loading BioTrack\n\nWe can load BioTrack data from either the API, CSV or SQL data.\n\n```shell\n./bin/import.php \\\n\t--source-type=BioTrack-API \\\n\t--source=$SOURCE_URI\n\t--object=crop \\\n\t--output=OUTPUT_PATH\n```\n\n\n## Loading Akerna/LeafData/MJFreeway/MJPlatform Data\n\nGet the ZIP files or Table Dumps from LeafData.\nPut the LeafData CSV/Zip files in some origin directory (`./source-data/leafdata`).\nExtract and prepare them as necessary.\nSymlink those files into `./source-data/$NAME.csv`, using the name required by the import script.\nThen remove the origin file, leaving an orphan symlink to track what's been completed.\nAnd clean up when all the way done.\n\nSee `./bin/leafdata/extract.sh` for an automated process.\n\n\n## Loading CCRS\n\nGet the ZIP file dumps from the LCB and store them in something like `./source-data-YYYY-MM-DD`.\nUse the `box-download.php` helper.\nThen, from that source-data directory run `../bin/ccrs/import.php [OBJECT] | OUTPUT-[OBJECT].txt`\n\n\n## Loading GrowFlow\n\nThe scripts in lib/Import/GrowFlow can import from the `CSV` exports or from collected `HAR` files.\n\n```shell\n./bin/import.php \\\n\t--source=source-data/More_Vegging_Plants_export.csv  \\\n\t--source-type=GrowFlow-CSV \\\n\t--object=crop \\\n\t--output=OUTPUT_PATH\n```\n\n\n## Loading Cultivera\n\nThe scripts in lib/Import/Cultivera can import from the `HAR` or `XLSX` exports.\n\n```shell\n./bin/import.php \\\n\t--source=source-data/Inventory.xlsx  \\\n\t--source-type=Cultivera-XLSX \\\n\t--object=inventory \\\n\t--output=OUTPUT_PATH\n```\n\n\n### BOM, UTF-16\n\nSometimes the files are like this.\nSome of the files are UTF-16-LE.\nOur pre-processing scripts will normalise them.\n\n* https://www.dave-baker.com/2017/10/03/converting-a-utf-16-csv-to-utf-8-in-php/\n* http://www.craiglotter.co.za/2010/03/07/how-to-convert-an-utf-16-file-to-an-utf-8-file-using-php/\n\n\n### iconv\n\n* Use iconv -f UTF-16LE -t UTF-8\niconv -f UTF-16LE -t UTF-8 <filename> -o <new-filename>\n\n\n### Extracting\n\nThe files may be delivered as `zip`, and internally they are labeled as `csv` files.\nThey may use a comma, they may use a TAB.\n\n\n----\n\n# Data Information\n\nProduct Categories:\n\tAll the Standard Numbers\n\t+Joints, BHO\n\nGroup by Sizes\n\tBut find the Common Sizes/Size Groups First!\n\nFacet: License\nFacet: Product\nFacet: Variety\n\n## Retail Detail\n\n\n# Data!\n\nThe data scripts make TSV files from the SQL.\nEach TSV answers one question built around these \"base facets\"\n\n  * Category: Plants, Wholesale, Retail, QA\n  * An Inventory Type (5, 13, 28, etc)\n  * A Date Delta - Daily, Weekly, Monthly, Q, Y\n\nThe answers are \"business questions\" - like price per gram or volume\nDetails are in the ./data-*.php scripts, the parameter is 'a'\n\nEach Data category is answered by a PHP script ./data-*.php\nThose scripts are called by the wrapper ./data.php, like this:\n\n\t./data.php wholesale d=w t=28 a=ppg-avg\n\nThat will in-turn execute code in the ./data-wholesale.php and pass the parameters in as $_GET values\n\nThose $_GET values are used to control logic that will assemble the SQL in the form of\n\n\tSELECT (value-expression)\n\tFROM (necessary-tables)\n\t\tJOIN (may-need-one-or-more-of-these)\n\tWHERE (desired-constructed-filter)\n\t\tAND (additional-conditions-we-discover-to-remove-crap-data)\n\nAnd then iterate the Date Delta spewing the results into a TSV file\nActually, the PHP scripts output to STDOUT which is redirected to capture the output.\n\n## Shell Wrappers\n\nThe shell wrappers (data-*.sh) are designed to iterate over the \"base facets\"\n\n\tforeach Date\n\t\tforeach Type\n\t\t\tforeach OtherThing\n\t\t\t\t./data.php [category] d=Date t=Type a=ppg-avg \\\n\t\t\t\t\t> ./webroot/pub/data/[predictable-path-here-somehow]\n\n\nWe kind of know these to be the base queries for the data that people want.\nSo we can pre-build these.\n\n## Time to First Harvest\n## Time from Harvest to Cure\n\n##\nStore-level summary by inventory type of what they paid for X and what\nthey charged for X where X is the # of units or grams sold during the\ntime period in question carry level of detail that allows drilldown to\na specific processor or producer\n\nThis should enable a bunch of stuff I'll add to the document later today\n\n## Markup by County\n\nChocolate vs Cookies\nRegions\nStrains on Sales\n\n\n## Business Intelligence Tools\n\n* [eBay TSV Tools](https://github.com/eBay/tsv-utils)\n* [Poli](https://news.ycombinator.com/item?id=20507592)\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/data/blob/1ce8dd054e29303786eb77577cd84bae02060d8c/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "d1bfc7a749950924bd5d27dee610ac8933f96badc14a774be796e986b9dcd3aa",
+    "characters": 32423,
+    "excerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, ",
+    "tail": "(INCLUDING BUT NOT LIMITED TO LOSS OF\nDATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGES.\n\n  17. Interpretation of Sections 15 and 16.\n\n  If the disclaimer of warranty and limitation of liability provided\nabove cannot be given local legal effect according to their terms,\nreviewing courts shall apply local law that most closely approximates\nan absolute waiver of all civil liability in connection with the\nProgram, unless a warranty or assumption of liability accompanies a\ncopy of the Program in return for a fee.\n",
+    "source_url": "https://github.com/openthc/data/blob/1ce8dd054e29303786eb77577cd84bae02060d8c/LICENSE"
+  },
+  "nested_license_paths": [
+    "view/revenue/license.php"
+  ],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "72a7c8ebfe68415d509de119f4d018a288842f763cd076e902d5ba2c6806db71",
+      "characters": 513,
+      "excerpt": "{\n\t\"name\": \"openthc/data\",\n\t\"description\": \"OpenTHC Data\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.24.232\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Data\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Data\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"edoceo/radix\": \"2021.0.0\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"phpoffice/phpspreadsheet\": \"1.29.5\",\n\t\t\"ramsey/uuid\": \"4.2.3\",\n\t\t\"mpyw/uuid-ulid-converter\": \"1.0.0\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/data\",\n\t\"description\": \"OpenTHC Data\",\n\t\"license\": \"GPL-3.0-only\",\n\t\"version\": \"420.24.232\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\Data\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\Data\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"edoceo/radix\": \"2021.0.0\",\n\t\t\"openthc/common\": \"dev-main\",\n\t\t\"openthc/cre-adapter\": \"dev-main\",\n\t\t\"phpoffice/phpspreadsheet\": \"1.29.5\",\n\t\t\"ramsey/uuid\": \"4.2.3\",\n\t\t\"mpyw/uuid-ulid-converter\": \"1.0.0\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/data/blob/1ce8dd054e29303786eb77577cd84bae02060d8c/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "30de70e22e14c9d1cea1d3f2fbb0f402f2ed0bc1a03ab5e28a25c4be553f850e",
+      "characters": 579,
+      "excerpt": "{\n\t\"name\": \"@openthc/data\",\n\t\"version\": \"420.24.232\",\n\t\"description\": \"OpenTHC Data Processing\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/data.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"NONE\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/data/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/data#readme\"\n}\n",
+      "tail": "{\n\t\"name\": \"@openthc/data\",\n\t\"version\": \"420.24.232\",\n\t\"description\": \"OpenTHC Data Processing\",\n\t\"main\": \"main.js\",\n\t\"directories\": {\n\t\t\"lib\": \"lib\",\n\t\t\"test\": \"test\"\n\t},\n\t\"dependencies\": {\n\t\t\"@fortawesome/fontawesome-free\": \"6.7.2\",\n\t\t\"bootstrap\": \"5.3.3\",\n\t\t\"jquery\": \"3.7.1\"\n\t},\n\t\"scripts\": {\n\t\t\"test\": \"test.js\"\n\t},\n\t\"repository\": {\n\t\t\"type\": \"git\",\n\t\t\"url\": \"git+https://github.com/openthc/data.git\"\n\t},\n\t\"author\": \"OpenTHC, Inc.\",\n\t\"license\": \"NONE\",\n\t\"bugs\": {\n\t\t\"url\": \"https://github.com/openthc/data/issues\"\n\t},\n\t\"homepage\": \"https://github.com/openthc/data#readme\"\n}\n",
+      "source_url": "https://github.com/openthc/data/blob/1ce8dd054e29303786eb77577cd84bae02060d8c/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/data",
+    "commit": "https://github.com/openthc/data/commit/1ce8dd054e29303786eb77577cd84bae02060d8c"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

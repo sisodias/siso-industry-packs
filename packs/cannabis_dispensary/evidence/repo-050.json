@@ -1,0 +1,92 @@
+{
+  "audit_id": "R050",
+  "full_name": "saschadaemgen/cannaUNITY",
+  "html_url": "https://github.com/saschadaemgen/cannaUNITY",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Professionelles Open-Source Framework für Cannabis Anbauvereinigungen (Cannabis Social Clubs) gemäß dem gemäß dem Konsumcannabisgesetz (KCanG)  – inkl. Mitgliederverwaltung, Aufgabenplanung, Zutrittskontrolle, Controller, Raumüberwachung & Track & Trace. Voll integrierbar mit UniFi Access und Protect, steuerbar über Touchscreens / Mobile App.",
+  "stargazers_count": 3,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": true,
+  "pushed_at": "2026-05-26T02:02:24Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "anbaugemeinschaften",
+    "anbauvereine",
+    "cannabis",
+    "cannabis-app",
+    "cannabis-data",
+    "cannabis-dispensary",
+    "cannabis-social-club",
+    "cannabis-software",
+    "cannabis-strains",
+    "cannabisgesetz",
+    "csc",
+    "kcang",
+    "konsumcannabisgesetz"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=cannabis+traceability&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "b90b0f6134bbef3b3b110ef70b57dfc695a3a3e4",
+  "last_commit": "2026-02-20T09:18:06+01:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 3,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    "DISCLAIMER.md",
+    "LICENSE",
+    "README.md",
+    "requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "44094437c5b761448eee02634d07abb559906650f30e9d693a51b72c9b8cf925",
+    "characters": 27034,
+    "excerpt": "# 🌿 cannaUNITY v0.6.20 (Pre-Alpha)\n\n![GitHub Repo stars](https://img.shields.io/github/stars/saschadaemgen/cannaUNITY?style=social)\n![GitHub license](https://img.shields.io/github/license/saschadaemgen/cannaUNITY)\n![GitHub last commit](https://img.shields.io/github/last-commit/saschadaemgen/cannaUNITY)\n![Security Badge](https://img.shields.io/badge/Sicherheit-Enterprise%20Grade-green)\n![Encryption Badge](https://img.shields.io/badge/Verschlüsselung-AES--256-blue)\n![GDPR Badge](https://img.shields.io/badge/DSGVO-Konform-brightgreen)\n\n> **Modulares Open-Source-Software Framework für Cannabis Social Clubs und Anbauvereinigungen gemäß dem deutschem Konsumcannabisgesetz § (KCanG)**\n> Mitgliederverwaltung · eVereinsverwaltung · Berichtsverwaltung · Aufgabenplanung ·  Growcontroller · Zutrittskontrolle · eStempelkarte · Track & Trace · Buchhaltung · WaWi · Raumautomation · Sicherheitssystem · IOS & Android APP · Verwaltungs, Administrations und User UI`s,\n\n(Masteransicht für \"festes\" UI Panel 1920x1080p)\n\n<p align=\"center\">\n  <img src=\"screenshots\\WaWi\\sorte_bearbeiten.png\" alt=\"Vorschau\" width=\"1920\">\n</p>\n\n---\n\n## 📦 Was ist cannaUNITY?\n\n**cannaUNITY** ist ein professionelles Open-Source-Framework zur Organisation, Verwaltung und Automatisierung von Cannabis-Anbauvereinigungen gemäß Konsumcannabisgesetz (KCanG).\n\n> **Hinweis:**  \n> Dieses Repository enthält das **Framework** als technischen Baukasten und ist nicht als sofort lauffähiges Komplettsystem vorgesehen. Für die produktive Nutzung muss das Framework von Entwickler:innen in bestehende oder neue Systemlandschaften integriert werden.\n\n---\n\n## 🧩 Konzept und Zielsetzung\n\ncannaUNITY stellt sämtliche Bausteine und Schnittstellen bereit, um die gesetzlichen und organisatorischen Anforderungen moderner Cannabis-Anbauvereinigungen digital, automatisiert und transparent abzubilden.  \nKernpunkte sind u.a.:\n\n- **Zugangskontrolle** (UniFi Access, alters-/THC-gerecht)\n- **KI-gestützte, DSGVO-konforme Protokollierung** (UniFi Protect)\n- **Automatisierte Anlagensteuerung** (SIMATIC S7 Integration)\n- **Warenwirtschaft und Buchhaltung** (GoB-konform, prozessbasiert)\n\n> **ℹ️ Zielgruppe:**  \n> - Entwickler:innen und Tech-Teams, die individuelle oder erweiterbare Lösungen aufsetzen möchten  \n> - Integratoren und Dienstleister, die Vereine technisch unterstützen  \n> - Vereine mit eigenem IT-Know-how\n\n---\n\n## 🚧 Aktueller Status\n\n- Dieses Repository bildet das **Open-Source-Framework** ab und richtet sich vor allem an Entwickler:innen und technische Teams.\n- Eine kostenpflichtige **Professional-Version** (einsatzfertige Komplettlösung, inkl. Konfigurations- und Installationspaketen) befindet sich in Planung.\n- Zusätzlich werden zukünftig **passende Hardware-Komponenten** (Miete oder Kauf im Paket) angeboten, um eine nahtlose End-to-End-Lösung zu ermöglichen.\n\n> **⚠️ Wichtig:**  \n> Das Framework alleine ist nicht als Plug-and-Play-Lösung gedacht!  \n> Eine spätere produktive Nutzung erfordert Integration und ggf. Anpassung an die jeweilige Systemumgebung.\n\n---\n\n## 💡 Highlights\n\n- **Modulares, modernes, erweiterbares Framework**\n- **Rechtssicherheit** (Transparenz, Nachvollziehbarkeit, Datenschutz)\n- **Automatisierung** aller operativen und dokumentationspflichtigen Prozesse\n- **Flexible Hardware-Integration**\n- **10 Schritte UUID Track & Trace**\n- **GoB-konforme Buchhaltung und Warenwirtschaft**\n- **Zukunftssicher**: Roadmap zur Professional-Version mit Hardware-Bundles\n\n---\n\n## 📈 Roadmap\n\n- [ ] Framework-Release als Open Source Final v1.xx\n- [ ] Entwicklung der Professional-Version (einsatzfertige Komplettlösung)\n- [ ] Erweiterung um offizielle Hardware-Angebote (Miete/Kauf)\n- [ ] Unterstützung weiterer Schnittstellen und Technologien\n\n---\n\n**cannaUNITY** steht für ein Höchstmaß an Transparenz, Sicherheit und technischer Zukunftsfähigkeit in Cannabis-Anbauvereinen – heute als Framework, morgen als vollintegrierte Komplettlösung.\n\"Crescit sub pondere virtus.\" – \"Tugend wächst unter Belastung.\"\n\n---\n\n## 🧪 Features\n\n- ✅ Echtzeit UUID-Track & Trace von Pflanzen, Verarbeitung & Produktausgabe\n- ✅ Erzeugung von Batch und Chargenummern inkl. 128 Bit UUID Anbindung\n- ✅ Native Android, IOS & Windows APP\n- ✅ Matrix 2.0 Protocol Integration + Element X Intregration\n- ✅ WordPress oder Joomla CMS Online Anbindung über ZKP/SSH Tunnel\n- ✅ Digitalisierte Produktausgabe mit Limitkontrolle\n- ✅ Verschlüsselte Mitgliederkommunikation - Ende-zu-Ende verschlüsselte Gruppen-Chats\n- ✅ RFID/NFC Arbeitszeiterfassung mit Minijob/Pflichtstunden & Ehrenamt Erkennung\n- ✅ Automatische KI Personenerkennung per UniFi Protect AI Key API / Webhook Anbindung\n- ✅ Dynamische Mitgliederprofile mit UUID RFID Ausweisen inkl. Evolis Kartendruckeranbindung\n- ✅ SIMATIC S7 1200 G2 Integration mit API-gesteuerter Licht-, Klima- und Prozessautomation\n- ✅ Vollständig redundante Raumsteuerungen mit Zentraler UI Anbindung & Alarmserver\n- ✅ Native API Unterstützung für UniFi (Ubiquiti) Access, Protect, AI Key und Network\n- ✅ Raumautomation (Loxone, Honeywell)\n- ✅ Growcontroller mit Anbindung für WYSIWYG Raum Designer\n- ✅ Laborberichtsverwaltung inkl. HPLC & GC (CSV Import)\n- ✅ Vollständige Protokollierung für Behördenzugriff\n- ✅ Touchpanelsteuerung & Custom UI Panels für Raumanzeige\n- ✅ Anonymisierte Produktausgabe mit UUID Verknüpfung über ZKP (Online)\n- ✅ Warenwirtschaftssystem (WaWi) mit Anbindung an Track & Trace / Buchhaltung  \n- ✅ GMP konforme Laborberichte erstellen,verwalten & speichern.\n- ✅ GoB-konforme Buchhaltung mit vollständiger Journaldarstellung\n- ✅ Stornobuchungen mit gegenbuchender Rückabwicklung (SOLL/HABEN)\n- ✅ Einzel- und Mehrfachbuchungen inkl. Subtransaktionen & Kontenwahl\n- ✅ Vollständige Verknüpfung zu Mitgliedskonten & Mitgliedsbeiträgen\n- ✅ Filterbare Journalansicht nach Jahr, Monat, Typ & Stornostatus\n- ✅ Multi-Chain ForeignKey Track&Trace: Lückenlose Rückverfolgung aller Produkte („Chain-of-Custody“) per ForeignKey\n\n---\n\n<p align=\"center\">\n  <img src=\"screenshots/trackandtrace/produktausgabe_step_2.png\" alt=\"Vorschau\" width=\"1920\">\n</p>\n\n---\n\n## 🧠 Architekturüberblick\n\n- **Backend:** Django 5.x (API-only), Django REST Framework, PostgreSQL (P) / SQLite (E)\n- **Frontend:** React + Vite + Material UI (SPA)\n- **Datenmodell:** Multi-Chain ForeignKey-Verknüpfung aller Track&Trace-Objekte (von der Verpackungseinheit bis zur Ur-Saat oder Mutterpflanze), mit dynamischer UI-Filterung und garantiert konsistenter Herkunftskette. Einzigartige Flexibilität, maximale Nachvollziehbarkeit.\n- **Schnittstellen:** UniFi Access/Protect (native), Wordpress, Joomla, Siemens SIMATIC S7 1200 G2, Loxone Mini Server, Agilent 1260 Infinity HPLC, TSC TC200, Evolis Primacy, MQTTS, REST, \n- **Technologien:** TokenAuth, Matrix 2.0, WebSocket, Axios, passkey-auth, Container-kompatibel\n\n```\nflowchart LR\n    PU[Verpackungseinheit] --> PVB[Verarbeitungschargen]\n    PVB --> DRY[Trocknung]\n    DRY --> HRV[Ernte]\n    HRV --> BLF[Blühpflanze]\n    BLF --> SEED[SeedPurchase/Mutterpflanze]\n    SEED --> STR[Genetik / Strain]\n```\n\n---\n\n<p align=\"center\">\n  <img src=\"screenshots/mitglieder/joomla_unifi_integration.png\" alt=\"Vorschau\" width=\"1920\">\n</p>\n\n---\n\n## 🛡️ § KCanG konform, Datenschutz & Anonymisierungskonzept\n\n**cannaUNITY** basiert vollständig auf dem Zero-Knowledge-Prinzip:  \nEs findet eine strikte Trennung zwischen personenbezogenen Daten (lokal) und anonymisierten Online-Daten (UUID-basiert) statt. Der Onlinebereich erhält **niemals** Zugriff auf echte Identitäten oder/und personenbezogene Daten!\n\n### Authentifizierung & Zugriffskontrolle\n\n```\n[Lokal: Root-Server]                              [Online-Server]\n ┌──────────────────────────┐                     ┌────────────────────────────┐\n │ Django Backend           │                     │ Sync-Datenbank/API         │\n │ Lokale PostgreSQL DB     │                     │ Login/API für Mobile App   │\n │ Interne UI (Admin, Web)  │                     │                            │\n └────────────┬─────────────┘                     └────────────┬──────────────┘\n              │    🔄 Pull/Push per API                  🔄 Pull durch App\n              ▼                                           ▼\n     → Einweg-Kommunikation:                   [React Native App (z. B. iOS)]\n     Lokaler Cronjob sendet Daten →            Zugriff **nur auf Online-API**\n\nOptional > Push Gateway: Lokaler Server → Mini-API auf VPS → schiebt Daten an App-API\n```\n\n- **Online-Login:** Joomla/Passkey (biometrisch), alternativ 3-Faktor mit PIN  \n- **Zutritt zur Anlage (Außenbereiche):** UniFi Access mit RFID, Gesichtserkennung, optional PIN  \n- **Innenbereiche (z. B. Blütekammer):** Zugang ausschließlich per NFC/RFID, automatische Arbeitszeiterfassung  \n- **Produktionsschritte:** Track&Trace-Eingaben erfolgen über RFID/NFC-Terminals mit Rollenbindung\n\n---\n\n## 🔁 UUID Track & Trace: Vom Samen bis zur Ausgabe inkl. MMS\n\n<p align=\"center\">\n  <img src=\"screenshots/trackandtrace/samen_verwaltung_aktiv.png\" alt=\"Vorschau\" width=\"1920\">\n</p>\n\nJeder Vera",
+    "tail": "",
+    "source_url": "https://github.com/saschadaemgen/cannaUNITY/blob/b90b0f6134bbef3b3b110ef70b57dfc695a3a3e4/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "84d8f5557a0dddf4f9593865fdff4af22ddf1e3471f0b30db887bd7038d4bb3f",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2025 Sascha Dämgen\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/saschadaemgen/cannaUNITY/blob/b90b0f6134bbef3b3b110ef70b57dfc695a3a3e4/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "requirements.txt",
+      "sha256": "d5834ed6bfe7f1eb51d5c806d1ce127487b443df3f80850df2ce42918f277c21",
+      "characters": 1075,
+      "excerpt": "amqp==5.3.1\nanyio==4.9.0\nasgiref==3.8.1\nattrs==25.3.0\nautobahn==24.4.2\nAutomat==25.4.16\nbilliard==4.2.1\ncelery==5.5.2\ncertifi==2025.1.31\ncffi==1.17.1\ncharset-normalizer==3.4.1\nclick==8.2.1\nclick-didyoumean==0.3.1\nclick-plugins==1.1.1\nclick-repl==0.3.0\ncolorama==0.4.6\nconstantly==23.10.4\ncryptography==45.0.2\ndaphne==4.2.0\nDjango==5.2.9\ndjango-cors-headers==4.7.0\ndjango-filter==25.1\ndjangorestframework==3.16.0\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nhyperlink==21.0.0\nidna==3.10\nincremental==24.7.2\nkombu==5.5.3\nmysqlclient==2.2.7\npaho-mqtt==2.1.0\npasslib==1.7.4\npillow==11.3.0\nprompt_toolkit==3.0.51\npsycopg2==2.9.10\npyasn1==0.6.2\npyasn1_modules==0.4.2\npycparser==2.22\npymodbus==3.9.2\nPyMySQL==1.1.1\npyOpenSSL==25.1.0\npython-dateutil==2.9.0.post0\npython-dotenv==1.1.0\npython-snap7==2.0.2\nrequests==2.32.4\nservice-identity==24.2.0\nsetuptools==80.8.0\nsix==1.17.0\nsniffio==1.3.1\nsqlparse==0.5.3\nTwisted==24.11.0\ntxaio==23.1.1\ntyping_extensions==4.13.2\ntzdata==2025.2\nurllib3==2.6.3\nvine==5.1.0\nwcwidth==0.2.13\nwebsocket-client==1.8.0\nwebsockets==15.0.1\nzope.interface==7.2\n",
+      "tail": "er==25.1\ndjangorestframework==3.16.0\nh11==0.16.0\nhttpcore==1.0.9\nhttpx==0.28.1\nhyperlink==21.0.0\nidna==3.10\nincremental==24.7.2\nkombu==5.5.3\nmysqlclient==2.2.7\npaho-mqtt==2.1.0\npasslib==1.7.4\npillow==11.3.0\nprompt_toolkit==3.0.51\npsycopg2==2.9.10\npyasn1==0.6.2\npyasn1_modules==0.4.2\npycparser==2.22\npymodbus==3.9.2\nPyMySQL==1.1.1\npyOpenSSL==25.1.0\npython-dateutil==2.9.0.post0\npython-dotenv==1.1.0\npython-snap7==2.0.2\nrequests==2.32.4\nservice-identity==24.2.0\nsetuptools==80.8.0\nsix==1.17.0\nsniffio==1.3.1\nsqlparse==0.5.3\nTwisted==24.11.0\ntxaio==23.1.1\ntyping_extensions==4.13.2\ntzdata==2025.2\nurllib3==2.6.3\nvine==5.1.0\nwcwidth==0.2.13\nwebsocket-client==1.8.0\nwebsockets==15.0.1\nzope.interface==7.2\n",
+      "source_url": "https://github.com/saschadaemgen/cannaUNITY/blob/b90b0f6134bbef3b3b110ef70b57dfc695a3a3e4/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/saschadaemgen/cannaUNITY",
+    "commit": "https://github.com/saschadaemgen/cannaUNITY/commit/b90b0f6134bbef3b3b110ef70b57dfc695a3a3e4"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

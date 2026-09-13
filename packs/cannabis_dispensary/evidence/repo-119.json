@@ -1,0 +1,89 @@
+{
+  "audit_id": "R119",
+  "full_name": "dtinth/promptpay-qr",
+  "html_url": "https://github.com/dtinth/promptpay-qr",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "🏦 Mobile web app (https://promptpay2.me), command line app, and JavaScript library to generate QR Code payload for PromptPay.",
+  "stargazers_count": 327,
+  "forks_count": 98,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2023-01-24T22:43:13Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "promptpay-qr"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=PromptPay+QR+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "a9e4f2d13fe188b195630e49b72b1009961f41ac",
+  "last_commit": "2022-08-20T02:52:17+07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 6,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "api-extractor.json",
+    "api.d.ts",
+    "cli.js",
+    "index.d.ts",
+    "index.js",
+    "index.test.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.api.json",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "35e7487cfccb955dc31e4634113d1d497fb28d362c04d6312d32bc6b3a2930e4",
+    "characters": 4410,
+    "excerpt": "# promptpay-qr [![npm version](https://badge.fury.io/js/promptpay-qr.svg)](https://badge.fury.io/js/promptpay-qr)\n\n[Mobile web app](#mobile-web-app), [command line app](#cli), and [JavaScript library](#api) to generate QR Code payload for PromptPay.\n\n\n## Introduction\n\nThe Bank of Thailand [introduced a **PromptPay QRCode Standard**](https://thestandard.co/standardqrcode/) that works with most mobile banking apps in Thailand.\n\nBy generating a QR code, users of mobile banking apps can scan your QR code, and transfer money to your PromptPay account instantly.\n\n**In this repository:**\n\n- [**Mobile app**](#mobile-web-app) — Receive money from your home screen.\n\n- [**Command-line application**](#cli) — Receive money from your terminal.\n\n- [**`promptpay-qr` JavaScript API**](#api) — Generate a PromptPay QR code programmatically.\n\n\n### What’s in a QR code\n\n> ⚠️ Read this section to understand privacy implications of using PromptPay QR code ⚠️\n\n- The PromptPay QR code is based on [EMV QRCPS Merchant Presented Mode](https://www.emvco.com/emv-technologies/qrcodes/) specification.\n\n- **The QR code contains the PromptPay ID.** This means anyone who sees the QR code can find out your PromptPay ID (Phone number, National ID number, e-Wallet ID). Please treat the QR code like your personal information.\n\n- The QR code can optionally contain the transfer amount. Mobile banking apps use this number to pre-fill the amount for convenience.\n\n## Mobile web app\n\n**You can quickly receive money from your home screen.**\n\n<img src=\"images/mobile.png\" width=\"324\" align=\"right\" />\n\nFor example, if you want to collect 80 Baht from each friend, you can open the app, type in 80, and show the QR code.\n[It takes less than 5 seconds](https://www.facebook.com/dtinth/videos/10208543817227100/).\n\nTo use it:\n\n1. Open **Chrome** (on Android) or **Safari** (iOS).\n\n2. Go to **https://promptpay2.me/**.\n\n3. Set your PromptPay ID.\n\n4. “Add to Home Screen.”\n\nFeatures:\n\n- The app remembers your PromptPay ID, so you don’t have to enter the information each time.\n\n- It is a [**Progressive Web App**](https://developers.google.com/web/progressive-web-apps/), so you can add to home screen and it will work offline (Android).\n\n- No personal data is sent to any server. Your PromptPay ID stays in your phone/computer.\n\n\n## CLI\n\n**You can receive money from your terminal.**\n\n<p align=\"center\">\n  <img src=\"images/terminal.png\" width=\"400\" />\n</p>\n\nInstall Node.js and run this command to install `promptpay-qr` in your machine:\n\n```\nnpm install -g promptpay-qr\n```\n\nRun this command to generate a QR code:\n\n```\npromptpay-qr 081-xxx-xxxx\npromptpay-qr 1-xxxx-xxxxx-xx-x --amount 4.22\n```\n\nThen QR code will be printed in the terminal.\n\n\n## API\n\n- **[`promptpay-qr` is available on npm](https://www.npmjs.com/package/promptpay-qr).**\n\n- You can use this library to in your JavaScript app to generate a PromptPay QR code.\n\n- [See code example](https://runkit.com/dtinth/promptpay-qr).\n\n- [API Reference](https://apiref.page/package/promptpay-qr).\n\n\n```\ngeneratePayload(idOrPhoneNo, { amount })\n```\n\nReturns a string which should be rendered as a QR code.\n\n### API reference\n\n<https://apiref.page/package/promptpay-qr>\n\n[![API reference screenshot](https://ss.dt.in.th/api/screenshots/apiref-promptpay-qr.png)](https://apiref.page/package/promptpay-qr)\n\n## References\n\n- https://www.blognone.com/node/95133\n- https://www.emvco.com/emv-technologies/qrcodes/\n\n\n## Implementation in other languages\n\nThese libraries are written by other developers:\n\n- PHP: [kittinan/php-promptpay-qr](https://github.com/kittinan/php-promptpay-qr)\n\n\n## Integrations with other software\n\nThese plugins/integrations are written by other developers:\n\n- WordPress: [woodpeckerr/promptpay](https://github.com/woodpeckerr/promptpay) (supports shortcodes and integration with WooCommerce)\n\n\n## License\n\n[The MIT License](https://github.com/dtinth/promptpay-qr/blob/master/LICENSE)\n\n> THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n> SOFTWARE.\n",
+    "tail": "",
+    "source_url": "https://github.com/dtinth/promptpay-qr/blob/a9e4f2d13fe188b195630e49b72b1009961f41ac/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "e324c29429eed46a6f4e8aafb2ea6611601ee308738a10765c783d20cd7cc89f",
+    "characters": 1077,
+    "excerpt": "MIT License\n\nCopyright (c) 2017 Thai Pangsakulyanont\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/dtinth/promptpay-qr/blob/a9e4f2d13fe188b195630e49b72b1009961f41ac/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "d02aa737709d848e6a8a236700c6bb56c7ba7548611a2919221d7783a9b6c1ea",
+      "characters": 1042,
+      "excerpt": "{\n  \"dependencies\": {\n    \"crc\": \"^3.4.4\",\n    \"minimist\": \"^1.2.0\",\n    \"qrcode\": \"^0.9.0\"\n  },\n  \"files\": [\n    \"index.js\",\n    \"index.d.ts\",\n    \"promptpay-qr.api.json\",\n    \"cli.js\",\n    \"api.d.ts\"\n  ],\n  \"devDependencies\": {\n    \"@microsoft/api-extractor\": \"^7.19.4\",\n    \"jest\": \"^20.0.4\",\n    \"standard\": \"^10.0.3\"\n  },\n  \"name\": \"promptpay-qr\",\n  \"bin\": {\n    \"promptpay-qr\": \"./cli.js\"\n  },\n  \"version\": \"0.5.0\",\n  \"description\": \"Library to generate PromptPay payload and CLI script to generate QR code\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"lint\": \"standard index.js index.test.js\",\n    \"prepare\": \"api-extractor run\"\n  },\n  \"author\": \"Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)\",\n  \"license\": \"MIT\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/dtinth/promptpay-qr.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/dtinth/promptpay-qr/issues\"\n  },\n  \"homepage\": \"https://github.com/dtinth/promptpay-qr#readme\",\n  \"docModel\": \"./promptpay-qr.api.json\"\n}\n",
+      "tail": "ptpay-qr\",\n  \"bin\": {\n    \"promptpay-qr\": \"./cli.js\"\n  },\n  \"version\": \"0.5.0\",\n  \"description\": \"Library to generate PromptPay payload and CLI script to generate QR code\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"lint\": \"standard index.js index.test.js\",\n    \"prepare\": \"api-extractor run\"\n  },\n  \"author\": \"Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)\",\n  \"license\": \"MIT\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/dtinth/promptpay-qr.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/dtinth/promptpay-qr/issues\"\n  },\n  \"homepage\": \"https://github.com/dtinth/promptpay-qr#readme\",\n  \"docModel\": \"./promptpay-qr.api.json\"\n}\n",
+      "source_url": "https://github.com/dtinth/promptpay-qr/blob/a9e4f2d13fe188b195630e49b72b1009961f41ac/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/dtinth/promptpay-qr",
+    "commit": "https://github.com/dtinth/promptpay-qr/commit/a9e4f2d13fe188b195630e49b72b1009961f41ac"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

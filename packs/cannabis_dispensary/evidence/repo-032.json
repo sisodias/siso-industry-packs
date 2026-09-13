@@ -1,0 +1,103 @@
+{
+  "audit_id": "R032",
+  "full_name": "cannlytics/cannlytics-docs",
+  "html_url": "https://github.com/cannlytics/cannlytics-docs",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "🔥 Cannlytics 📚 Documentation",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2024-08-20T06:35:39Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "cannabis",
+    "cannabis-api",
+    "cannabis-app",
+    "cannabis-data",
+    "cannabisapp",
+    "django",
+    "metrc",
+    "python",
+    "statistics"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Acannlytics&sort=stars&order=desc&per_page=30&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "937bff3e840a562cbe43804454133cdf1083d60d",
+  "last_commit": "2024-08-19T23:35:30-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".gitignore",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "firebase.json",
+    "mkdocs.yml",
+    "package.json",
+    "requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "fbf992d04e711173f050e4e2643950580b87abd84b872aacce6d77812526b589",
+    "characters": 2058,
+    "excerpt": "# Documentation <a name=\"documentation\"></a>\n\nYou can read the Cannlytics documentation at [https://docs.cannlytics.com](https://docs.cannlytics.com).\n\n## Writing documentation\n\nDocumentation for Cannlytics is written in [Markdown](https://guides.github.com/features/mastering-markdown/) and lives in the `docs` folder. The configuration for the documentation is contained within `mkdocs.yml`. Building the documentation requires [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and [Docker](https://www.docker.com/get-started).\n\n## Building the documentation\n\nFirst, you will need to pull and build the Material for MKDocs Docker image:\n\n```shell\ndocker pull squidfunk/mkdocs-material\ndocker build -t squidfunk/mkdocs-material docs\n```\n\nor\n\n```shell\nnpm run install\n```\n\nYou will also need to install the Python dependencies for the documentation:\n\n```shell\npip install -r docs/requirements.txt\n```\n\nOnce you have a copy of the Docker image, you can preview the documentation as you write:\n\n```shell\ndocker run --rm -it -p 8000:8000 -v \"%cd%\":/docs squidfunk/mkdocs-material\n```\n\nor\n\n```shell\nnpm run start\n```\n\nYou can preview the documentation at <http://localhost:8000/> while you develop.\n\n!!! note\n\n    There is [a namespace conflict between `django-livereload-server` and `livereload`](https://gist.github.com/hangtwenty/f53b3867db1e33780505ccafd8d2eef0), so you need to be careful when and where you install Python requirements. If you run into a `django-livereload-server` import error, first check that `PRODUCTION=False` in your `.env` file and then follow [these instructions](https://gist.github.com/hangtwenty/f53b3867db1e33780505ccafd8d2eef0) to uninstall `livereload` and reinstall  `django-livereload-server`.\n\n## Publishing documentation\n\nWhen you are ready, you can build the documentation with:\n\n```shell\nnpm run build\n```\n\nFinally, you can publish the documentation with:\n\n```shell\nnpm run publish\n```\n\nCongratulations, you can now read the documentation at [https://docs.cannlytics.com](https://docs.cannlytics.com).\n",
+    "tail": "",
+    "source_url": "https://github.com/cannlytics/cannlytics-docs/blob/937bff3e840a562cbe43804454133cdf1083d60d/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "5de4fc7e9ae5c14c8fde3a76339781408bf117056a8887eb31a3cd382da1e4f3",
+    "characters": 1072,
+    "excerpt": "MIT License\n\nCopyright (c) 2021-2024 Cannlytics\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/cannlytics/cannlytics-docs/blob/937bff3e840a562cbe43804454133cdf1083d60d/LICENSE"
+  },
+  "nested_license_paths": [
+    "docs/about/license.md"
+  ],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "b7f681440ad8779f41b06111fadf86292bf82f63ae65bbba0bddf74f12a9284a",
+      "characters": 790,
+      "excerpt": "{\n  \"name\": \"cannlytics-docs\",\n  \"productName\": \"Cannlytics Documentation\",\n  \"version\": \"1.0.0\",\n  \"license\": \"MIT\",\n  \"private\": true,\n  \"description\": \"Cannlytics documentation.\",\n  \"author\": \"Keegan Skeate <contact@cannlytics.com>\",\n  \"build\": {\n    \"productName\": \"Cannlytics Documentation\"\n  },\n  \"scripts\": {\n    \"start\": \"npm run install && npm run docs\",\n    \"install\": \"docker pull squidfunk/mkdocs-material & docker build -t squidfunk/mkdocs-material .\",\n    \"docs\": \"docker run --rm -it -p 8000:8000 -v \\\"%cd%\\\":/docs squidfunk/mkdocs-material\",\n    \"build\": \"mkdocs build\",\n    \"serve\": \"mkdocs serve\",\n    \"docker\": \"docker run --rm -it -p 8000:8000 -v \\\"%cd%\\\":/docs squidfunk/mkdocs-material\",\n    \"publish\": \"firebase deploy --project cannlytics --only hosting:docs\"\n  }\n}\n",
+      "tail": "1.0.0\",\n  \"license\": \"MIT\",\n  \"private\": true,\n  \"description\": \"Cannlytics documentation.\",\n  \"author\": \"Keegan Skeate <contact@cannlytics.com>\",\n  \"build\": {\n    \"productName\": \"Cannlytics Documentation\"\n  },\n  \"scripts\": {\n    \"start\": \"npm run install && npm run docs\",\n    \"install\": \"docker pull squidfunk/mkdocs-material & docker build -t squidfunk/mkdocs-material .\",\n    \"docs\": \"docker run --rm -it -p 8000:8000 -v \\\"%cd%\\\":/docs squidfunk/mkdocs-material\",\n    \"build\": \"mkdocs build\",\n    \"serve\": \"mkdocs serve\",\n    \"docker\": \"docker run --rm -it -p 8000:8000 -v \\\"%cd%\\\":/docs squidfunk/mkdocs-material\",\n    \"publish\": \"firebase deploy --project cannlytics --only hosting:docs\"\n  }\n}\n",
+      "source_url": "https://github.com/cannlytics/cannlytics-docs/blob/937bff3e840a562cbe43804454133cdf1083d60d/package.json"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "309f041910eda0d2569009ce9a9f8350cc94a70b471332cb647dec0c7f381158",
+      "characters": 337,
+      "excerpt": "# Documentation Requirements | Cannlytics\n# Authors: Keegan Skeate <https://github.com/keeganskeate>\n# Created 6/2/2023\n# Updated: 6/2/2023\n# License: MIT License <https://github.com/cannlytics/cannlytics/blob/main/LICENSE>\nmkdocs-autorefs==0.4.1\nmkdocs-material==9.1.15\nmkdocstrings==0.22.0\nmkdocs-same-dir==0.1.2\nmkdocs-exclude==1.0.2\n",
+      "tail": "# Documentation Requirements | Cannlytics\n# Authors: Keegan Skeate <https://github.com/keeganskeate>\n# Created 6/2/2023\n# Updated: 6/2/2023\n# License: MIT License <https://github.com/cannlytics/cannlytics/blob/main/LICENSE>\nmkdocs-autorefs==0.4.1\nmkdocs-material==9.1.15\nmkdocstrings==0.22.0\nmkdocs-same-dir==0.1.2\nmkdocs-exclude==1.0.2\n",
+      "source_url": "https://github.com/cannlytics/cannlytics-docs/blob/937bff3e840a562cbe43804454133cdf1083d60d/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/cannlytics/cannlytics-docs",
+    "commit": "https://github.com/cannlytics/cannlytics-docs/commit/937bff3e840a562cbe43804454133cdf1083d60d"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,183 @@
+{
+  "audit_id": "R069",
+  "full_name": "aureuserp/aureuserp",
+  "html_url": "https://github.com/aureuserp/aureuserp",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Free and Open Source ERP platform",
+  "stargazers_count": 11907,
+  "forks_count": 558,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-11T08:27:02Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "accounting",
+    "erp",
+    "filamentphp",
+    "hrm",
+    "inventory-management",
+    "invoice",
+    "laravel",
+    "maintenance",
+    "manufacturing",
+    "pms",
+    "purchase-order",
+    "recruitment",
+    "sale-or",
+    "sales",
+    "warehouse-management"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aaccounting&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "9ece7f023e1c5972c21fa6095a2eb54e748a9763",
+  "last_commit": "2026-09-11T13:57:02+05:30",
+  "commits_six_months_sample_count": 1239,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 29,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".codexignore",
+    ".editorconfig",
+    ".env.example",
+    ".env.pgtest",
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "README.md",
+    "artisan",
+    "composer.json",
+    "composer.lock",
+    "docker-compose.yml",
+    "package-lock.json",
+    "package.json",
+    "phpunit.xml",
+    "pint.json",
+    "postcss.config.js",
+    "tailwind.config.js",
+    "vite.config.js"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "18919d6badf341f8c7ac3fe8c62c03687996b54d2b194a62c9b71c2e7423a2aa",
+    "characters": 15246,
+    "excerpt": "<p align=\"center\">\n  <a href=\"https://aureuserp.com\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-dark.png\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-light.png\">\n      <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/aureus-logo-light.png\" alt=\"AureusERP logo\">\n    </picture>\n  </a>  \n</p>\n\n<p align=\"center\">\n<a href=\"https://packagist.org/packages/aureuserp/aureuserp\"><img src=\"https://poser.pugx.org/aureuserp/aureuserp/d/total.svg\" alt=\"Total Downloads\"></a>\n<a href=\"https://packagist.org/packages/aureuserp/aureuserp\"><img src=\"https://poser.pugx.org/aureuserp/aureuserp/v/stable.svg\" alt=\"Latest Stable Version\"></a>\n<a href=\"https://packagist.org/packages/aureuserp/aureuserp\"><img src=\"https://poser.pugx.org/aureuserp/aureuserp/license.svg\" alt=\"License\"></a>\n</p>\n\n<h1 align=\"center\">Aureus ERP</h1>\n\n<p align=\"center\">\n  <strong>Open-Source Enterprise Resource Planning for Modern Businesses</strong>\n</p>\n\n<p align=\"center\">\n  Built with Laravel 13 • Powered by FilamentPHP 5 • PHP 8.3+\n</p>\n\n---\n\n## 📋 Table of Contents\n\n1. [Introduction](#-introduction)\n2. [Key Features](#-key-features)\n3. [Why Choose Aureus ERP?](#-why-choose-aureus-erp)\n4. [Requirements](#-requirements)\n5. [Quick Start](#-quick-start)\n6. [Plugin System](#-plugin-system)\n7. [Plugin Installation & Management](#-plugin-installation--management)\n8. [Customization](#-customization)\n9. [Contributing](#-contributing)\n10. [License](#-license)\n11. [Security](#-security)\n12. [Support & Community](#-support--community)\n\n---\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/introduction.png\" alt=\"AureusERP Introduction\" width=\"100%\">\n</p>\n\n## 🚀 Introduction\n\nAureus ERP is a comprehensive, open-source Enterprise Resource Planning (ERP) solution designed for Small and Medium Enterprises (SMEs) and large-scale organizations. Built on **[Laravel 13](https://laravel.com)**, the most popular PHP framework, and **[FilamentPHP 5](https://filamentphp.com)**, a cutting-edge admin panel framework, Aureus ERP offers an extensible and developer-friendly platform for managing every aspect of your business operations.\n\nWhether you're managing accounting, inventory, HR, CRM, or projects, Aureus ERP provides a modular approach that grows with your business.\n\n---\n\n## ✨ Key Features\n\n  ### 🏗️ Modern Architecture\n  Built with Laravel 13 and FilamentPHP 5 for maximum performance and developer experience.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/mordern-architecture.png\" alt=\"Modern Architecture\" width=\"100%\">\n  </p>\n\n  ### 🧩 Modular Plugin System\n  Install only the features you need - from accounting to project management.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/modular-plugin-system.png\" alt=\"Modular Plugin System\" width=\"100%\">\n  </p>\n\n  ### 🎨 Beautiful UI/UX\n  Responsive design with TailwindCSS 4, optimized for desktop and mobile.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/mordern-ui-responsive-design.png\" alt=\"Beautiful UI/UX\" width=\"100%\">\n  </p>\n\n  ### 🔐 Advanced Security\n  Role-based access control with Filament Shield integration.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/advanced-security.png\" alt=\"Advanced Security\" width=\"100%\">\n  </p>\n\n  ### 📊 Business Intelligence\n  Built-in analytics and reporting tools.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/business-intelligence.png\" alt=\"Business Intelligence\" width=\"100%\">\n  </p>\n\n  ### 🌐 Multi-Language Support\n  Easily translate and localize for global businesses.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/multi-language-support.png\" alt=\"Multi-Language Support\" width=\"100%\">\n  </p>\n\n  ### ⚡ High Performance\n  Optimized database queries and caching strategies.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/high-performance.png\" alt=\"High Performance\" width=\"100%\">\n  </p>\n\n  ### 🔧 Developer-Friendly\n  Clean code, comprehensive documentation, and extensive APIs.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/developer-friendly.png\" alt=\"Developer-Friendly\" width=\"100%\">\n  </p>\n\n  ### 🔄 Real-Time Updates\n  LiveWire 4 integration for dynamic interfaces.\n\n  <p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/real-time-updates.png\" alt=\"Real-Time Updates\" width=\"100%\">\n  </p>\n\n---\n\n## 🎯 Why Choose Aureus ERP?\n\n| Feature | Benefit |\n|---------|---------|\n| **Open Source** | Free to use, modify, and extend. No vendor lock-in |\n| **Modern Stack** | Latest Laravel & FilamentPHP for cutting-edge features |\n| **Scalable** | Handles everything from startups to enterprise operations |\n| **Customizable** | Extend with your own plugins and modifications |\n| **Community-Driven** | Active community support and continuous improvements |\n| **Production-Ready** | Battle-tested with real-world business requirements |\n\n---\n\n## 📦 Requirements\n\nEnsure your development environment meets the following requirements:\n\n### Server Requirements\n-   **PHP**: 8.3 or higher\n-   **Database**: MySQL 8.0+, MariaDB 10.6+, or PostgreSQL 16+\n-   **Web Server**: Apache 2.4+ or Nginx 1.18+\n\n### Development Tools\n-   **Composer**: Latest version (2.0+)\n-   **Node.js**: 18.x or higher\n-   **NPM/Yarn**: Latest stable version\n\n### Framework Versions\n-   **Laravel**: 13.x\n-   **FilamentPHP**: 5.x\n-   **Livewire**: 4.x\n-   **TailwindCSS**: 4.x\n\n---\n\n## ⚡ Quick Start\n\nGet Aureus ERP up and running in just 4 simple steps:\n\n### Step 1: Clone the Repository\n\n```bash\ngit clone https://github.com/aureuserp/aureuserp.git\ncd aureuserp\n```\n\n### Step 2: Install Dependencies\n\n```bash\ncomposer install\n```\n\n### Step 3: Run the Installation\n\n```bash\nphp artisan erp:install\n```\n\n**What happens during installation:**\n\n✅ Database migrations are executed  \n✅ Core seeders populate initial data  \n✅ Roles & permissions are generated (via Filament Shield)  \n✅ Admin account is created  \n✅ Environment configuration is set up\n\n### Step 4: Start the Development Server\n\n```bash\nphp artisan serve\n```\n\nVisit `http://localhost:8000` and log in with your admin credentials!\n\n---\n\n## ☁️ AureusERP Cloud Hosting\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/aureuserp/temp-media/main/cloud-hosting.png\" alt=\"AureusERP Cloud Hosting\" width=\"100%\">\n</p>\n\n[AureusERP Cloud Hosting](https://aureuserp.com/cloud-hosting/) is a fully managed hosting solution where our team sets up, secures, and configures your AureusERP on reliable infrastructure.\n\nGet a ready-to-use ERP on your own domain, without manual installation or infrastructure complexity, and focus on growing your business while we handle the technology.\n\n\n---\n\n## 🧩 Plugin System\n\nAureusERP features a powerful modular plugin system that allows you to customize your ERP installation based on your business needs. Choose only the modules you need to keep your system lean and efficient.\n\n### 📦 Core Plugins (System Plugins)\n\nThese plugins are essential components of the system and are installed by default:\n\n| Module     | Description                                       |\n| ---------- | ------------------------------------------------- |\n| Analytics  | Business intelligence and reporting tools         |\n| Chatter    | Internal communication and collaboration platform |\n| Fields     | Customizable data structure management            |\n| Security   | Role-based access control and authentication      |\n| Support    | Help desk and documentation                       |\n| Table View | Customizable data presentation framework          |\n\n### ⚡ Installable Plugins\n\nThese plugins can be installed as needed to extend system functionality:\n\n#### 💼 Financial Management\n| Module     | Description                           |\n| ---------- | ------------------------------------- |\n| Accounting | Financial accounting and reporting    |\n| Accounts   | Core accounting operations            |\n| Invoices   | Invoice generation and management     |\n| Payments   | Payment processing and tracking       |\n\n#### 📦 Operations\n| Module        | Description                                                                     |\n| ------------- | ------------------------------------------------------------------------------- |\n| Inventories   | Inventory and warehouse management                                              |\n| Manufacturing | Bill of Materials (BOM), Manufacturing Orders, Work Orders, Work Centers & Operations |\n| Products      | Product catalog and management  ",
+    "tail": "",
+    "source_url": "https://github.com/aureuserp/aureuserp/blob/9ece7f023e1c5972c21fa6095a2eb54e748a9763/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c6dca3b0db5b68fd5971277605cf8e50ba151ffba6abdd508d0c42c9cfade7da",
+    "characters": 1077,
+    "excerpt": "MIT License\n\nCopyright 2010-2025, Webkul Software\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\nINCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A \nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT \nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION \nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE \nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "tail": "re, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\nINCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A \nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT \nHOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION \nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE \nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "source_url": "https://github.com/aureuserp/aureuserp/blob/9ece7f023e1c5972c21fa6095a2eb54e748a9763/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "f80ab2da076dc86f6abb68be863416189e1b631ab7579f37404df80d33050ffd",
+      "characters": 3901,
+      "excerpt": "{\n    \"name\": \"aureuserp/aureuserp\",\n    \"type\": \"project\",\n    \"description\": \"Open Source ERP Solution built on Laravel for Small and Medium Enterprises (SMEs) and large-scale enterprises.\",\n    \"keywords\": [\n        \"erp\",\n        \"laravel\",\n        \"framework\"\n    ],\n    \"license\": \"MIT\",\n    \"require\": {\n        \"php\": \"^8.3\",\n        \"aureuserp/nativephp-remote\": \"^0.1.0\",\n        \"barryvdh/laravel-debugbar\": \"^4.0\",\n        \"barryvdh/laravel-dompdf\": \"^3.1\",\n        \"bezhansalleh/filament-language-switch\": \"^4.3\",\n        \"bezhansalleh/filament-shield\": \"4.2.0\",\n        \"filament/filament\": \"^5.0\",\n        \"filament/spatie-laravel-settings-plugin\": \"^5.0\",\n        \"flowframe/laravel-trend\": \"^0.5\",\n        \"guava/filament-icon-picker\": \"^4.0\",\n        \"khaled.alshamaa/ar-php\": \"^7.0\",\n        \"knuckleswtf/scribe\": \"^5.6\",\n        \"lara-zeus/spatie-translatable\": \"^2.0\",\n        \"laravel/framework\": \"^13.0\",\n        \"laravel/sanctum\": \"^4.0\",\n        \"laravel/tinker\": \"^3.0\",\n        \"league/glide\": \"^2.3\",\n        \"livewire/livewire\": \"^4.0\",\n        \"maatwebsite/excel\": \"^3.1\",\n        \"malzariey/filament-daterangepicker-filter\": \"^5.0\",\n        \"milon/barcode\": \"^13.0\",\n        \"nativephp/mobile\": \"^3.3\",\n        \"spatie/eloquent-sortable\": \"^5.0\",\n        \"spatie/laravel-query-builder\": \"^7.0\",\n        \"spatie/laravel-translatable\": \"^6.14\",\n        \"wikimedia/composer-merge-plugin\": \"^2.1\"\n    },\n    \"require-dev\": {\n        \"fakerphp/faker\": \"^1.23\",\n        \"filament/upgrade\": \"^5.0\",\n        \"laravel/boost\": \"^2.1\",\n        \"laravel/pail\": \"^1.2.5\",\n        \"laravel/pint\": \"^1.27\",\n        \"laravel/sail\": \"^1.26\",\n        \"mockery/mockery\": \"^1.6\",\n        \"nunomaduro/collision\": \"^8.1\",\n        \"pestphp/pest\": \"^4.4\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"Database\\\\Factories\\\\\": \"database/factories/\",\n            \"Database\\\\Seeders\\\\\": \"database/seeders/\"\n        }\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"scripts\": {\n        \"post-autoload-dump\": [\n            \"Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump\",\n            \"@php artisan package:discover --ansi\",\n            \"@php artisan filament:upgrade\"\n        ],\n        \"post-update-cmd\": [\n            \"@php artisan vendor:publish --tag=laravel-assets --ansi --force\"\n        ],\n        \"post-root-package-install\": [\n            \"@php -r \\\"file_exists('.env') || copy('.env.example', '.env');\\\"\"\n        ],\n        \"post-create-project-cmd\": [\n            \"@php artisan key:generate --ansi\",\n            \"@php -r \\\"file_exists('database/database.sqlite') || touch('database/database.sqlite');\\\"\",\n            \"@php artisan migrate --graceful --ansi\"\n        ],\n        \"dev\": [\n            \"Composer\\\\Config::disableProcessTimeout\",\n            \"npx concurrently -c \\\"#93c5fd,#c4b5fd,#fb7185,#fdba74\\\" \\\"php artisan serve\\\" \\\"php artisan queue:listen --tries=1\\\" \\\"php artisan pail --timeout=0\\\" \\\"npm run dev\\\" --names=server,queue,logs,vite\"\n        ]\n    },\n    \"extra\": {\n        \"laravel\": {\n            \"dont-discover\": []\n        },\n        \"merge-plugin\": {\n            \"include\": [\n                \"plugins/*/*/composer.json\"\n            ]\n        }\n    },\n    \"config\": {\n        \"optimize-autoloader\": true,\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"pestphp/pest-plugin\": true,\n            \"php-http/discovery\": true,\n            \"wikimedia/composer-merge-plugin\": true\n        }\n    },\n    \"minimum-stability\": \"stable\",\n    \"prefer-stable\": true,\n    \"support\": {\n        \"issues\": \"https://github.com/aureuserp/aureuserp/issues\",\n        \"forum\": \"https://forums.aureuserp.com\",\n        \"source\": \"https://github.com/aureuserp/aureuserp\",\n        \"docs\": \"https://devdocs.aureuserp.com\"\n    }\n}\n",
+      "tail": "   \"include\": [\n                \"plugins/*/*/composer.json\"\n            ]\n        }\n    },\n    \"config\": {\n        \"optimize-autoloader\": true,\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true,\n        \"allow-plugins\": {\n            \"pestphp/pest-plugin\": true,\n            \"php-http/discovery\": true,\n            \"wikimedia/composer-merge-plugin\": true\n        }\n    },\n    \"minimum-stability\": \"stable\",\n    \"prefer-stable\": true,\n    \"support\": {\n        \"issues\": \"https://github.com/aureuserp/aureuserp/issues\",\n        \"forum\": \"https://forums.aureuserp.com\",\n        \"source\": \"https://github.com/aureuserp/aureuserp\",\n        \"docs\": \"https://devdocs.aureuserp.com\"\n    }\n}\n",
+      "source_url": "https://github.com/aureuserp/aureuserp/blob/9ece7f023e1c5972c21fa6095a2eb54e748a9763/composer.json"
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "0b86c514cf448fe1a0756e6dc47fa8f8913791f7b4dafcc542938a99fc644fce",
+      "characters": 1966,
+      "excerpt": "services:\n  laravel.test:\n    build:\n      context: ./vendor/laravel/sail/runtimes/8.4\n      dockerfile: Dockerfile\n      args:\n        WWWGROUP: '${WWWGROUP}'\n\n    image: sail-8.4/app\n\n    extra_hosts:\n      - 'host.docker.internal:host-gateway'\n\n    ports:\n      - '${APP_PORT:-80}:80'\n      - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'\n\n    environment:\n      WWWUSER: '${WWWUSER}'\n      LARAVEL_SAIL: 1\n      XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'\n      XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'\n      IGNITION_LOCAL_SITES_PATH: '${PWD}'\n\n    volumes:\n      - '.:/var/www/html'\n\n    networks:\n      - sail\n\n    depends_on:\n      - mysql\n      - redis\n      - mailpit\n\n  mysql:\n    image: 'mysql/mysql-server:8.0'\n\n    ports:\n      - '${FORWARD_DB_PORT:-3306}:3306'\n\n    environment:\n      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'\n      MYSQL_ROOT_HOST: '%'\n      MYSQL_DATABASE: '${DB_DATABASE}'\n      MYSQL_USER: '${DB_USERNAME}'\n      MYSQL_PASSWORD: '${DB_PASSWORD}'\n      MYSQL_ALLOW_EMPTY_PASSWORD: 1\n\n    volumes:\n      - 'sail-mysql:/var/lib/mysql'\n      - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'\n\n    networks:\n      - sail\n\n    healthcheck:\n      test:\n        - CMD\n        - mysqladmin\n        - ping\n        - '-p${DB_PASSWORD}'\n\n      retries: 3\n      timeout: 5s\n\n  redis:\n    image: 'redis:alpine'\n\n    ports:\n      - '${FORWARD_REDIS_PORT:-6379}:6379'\n\n    volumes:\n      - 'sail-redis:/data'\n\n    networks:\n      - sail\n\n    healthcheck:\n      test:\n        - CMD\n        - redis-cli\n        - ping\n\n      retries: 3\n      timeout: 5s\n\n  mailpit:\n    image: 'axllent/mailpit:latest'\n\n    ports:\n      - '${FORWARD_MAILPIT_PORT:-1025}:1025'\n      - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'\n\n    networks:\n      - sail\n\nnetworks:\n  sail:\n    driver: bridge\n\nvolumes:\n  sail-mysql:\n    driver: local\n\n  sail-redis:\n    driver: local",
+      "tail": "    test:\n        - CMD\n        - mysqladmin\n        - ping\n        - '-p${DB_PASSWORD}'\n\n      retries: 3\n      timeout: 5s\n\n  redis:\n    image: 'redis:alpine'\n\n    ports:\n      - '${FORWARD_REDIS_PORT:-6379}:6379'\n\n    volumes:\n      - 'sail-redis:/data'\n\n    networks:\n      - sail\n\n    healthcheck:\n      test:\n        - CMD\n        - redis-cli\n        - ping\n\n      retries: 3\n      timeout: 5s\n\n  mailpit:\n    image: 'axllent/mailpit:latest'\n\n    ports:\n      - '${FORWARD_MAILPIT_PORT:-1025}:1025'\n      - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'\n\n    networks:\n      - sail\n\nnetworks:\n  sail:\n    driver: bridge\n\nvolumes:\n  sail-mysql:\n    driver: local\n\n  sail-redis:\n    driver: local",
+      "source_url": "https://github.com/aureuserp/aureuserp/blob/9ece7f023e1c5972c21fa6095a2eb54e748a9763/docker-compose.yml"
+    },
+    {
+      "path": "package.json",
+      "sha256": "610dbae76b44e42acb107e87feed426e7ca7febbcef9877f415960cd97ced6e1",
+      "characters": 459,
+      "excerpt": "{\n    \"private\": true,\n    \"type\": \"module\",\n    \"scripts\": {\n        \"build\": \"vite build\",\n        \"dev\": \"vite\"\n    },\n    \"devDependencies\": {\n        \"@tailwindcss/postcss\": \"^4.1.12\",\n        \"@tailwindcss/vite\": \"^4.3.0\",\n        \"autoprefixer\": \"^10.4.20\",\n        \"axios\": \"^1.7.4\",\n        \"concurrently\": \"^9.0.1\",\n        \"laravel-vite-plugin\": \"^1.0\",\n        \"postcss\": \"^8.4.47\",\n        \"tailwindcss\": \"^4.3.0\",\n        \"vite\": \"^5.0\"\n    }\n}\n",
+      "tail": "{\n    \"private\": true,\n    \"type\": \"module\",\n    \"scripts\": {\n        \"build\": \"vite build\",\n        \"dev\": \"vite\"\n    },\n    \"devDependencies\": {\n        \"@tailwindcss/postcss\": \"^4.1.12\",\n        \"@tailwindcss/vite\": \"^4.3.0\",\n        \"autoprefixer\": \"^10.4.20\",\n        \"axios\": \"^1.7.4\",\n        \"concurrently\": \"^9.0.1\",\n        \"laravel-vite-plugin\": \"^1.0\",\n        \"postcss\": \"^8.4.47\",\n        \"tailwindcss\": \"^4.3.0\",\n        \"vite\": \"^5.0\"\n    }\n}\n",
+      "source_url": "https://github.com/aureuserp/aureuserp/blob/9ece7f023e1c5972c21fa6095a2eb54e748a9763/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/aureuserp/aureuserp",
+    "commit": "https://github.com/aureuserp/aureuserp/commit/9ece7f023e1c5972c21fa6095a2eb54e748a9763"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0413",
+        "repo": "aureuserp/aureuserp",
+        "url": "https://github.com/aureuserp/aureuserp",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "aureuserp/aureuserp",
+        "capability_tag": "none",
+        "category_slug": "self-hosted-application",
+        "summary": "Full open-source ERP platform with HRM, inventory, and sales",
+        "reuse_value": 75,
+        "stars": 11146,
+        "license": "MIT",
+        "language": "PHP",
+        "url": "https://github.com/aureuserp/aureuserp",
+        "rank_score": 75111460
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "aureuserp/aureuserp",
+        "stars": 11146,
+        "license": "MIT",
+        "language": "PHP",
+        "unit_class": "capability",
+        "reuse_value": 75,
+        "liftability": 75,
+        "fame_gap": 0,
+        "cat_slug": "self-hosted-application",
+        "cat_name": "Self-Hosted Application",
+        "description": "Free and Open Source ERP platform"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

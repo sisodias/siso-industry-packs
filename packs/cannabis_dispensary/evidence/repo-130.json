@@ -1,0 +1,106 @@
+{
+  "audit_id": "R130",
+  "full_name": "fleetbase/navigator-app",
+  "html_url": "https://github.com/fleetbase/navigator-app",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "GPS and Order Management Mobile App for Drivers built with React Native",
+  "stargazers_count": 90,
+  "forks_count": 135,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-10T04:05:29Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=fleetbase+in%3Aname+user%3Afleetbase&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "37af1ee7dfdcc53052058edd853c66400d3e7e32",
+  "last_commit": "2026-09-09T18:37:04+08:00",
+  "commits_six_months_sample_count": 24,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 7,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".buckconfig",
+    ".editorconfig",
+    ".env.example",
+    ".eslintrc.js",
+    ".flowconfig",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    ".watchmanconfig",
+    ".yarnrc.yml",
+    "App.tsx",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE.md",
+    "README.md",
+    "RELEASE.md",
+    "app.json",
+    "babel.config.js",
+    "index.html",
+    "index.js",
+    "index.native.tsx",
+    "index.web.tsx",
+    "metro.config.js",
+    "navigator.config.ts",
+    "package.json",
+    "react-native.config.js",
+    "tamagui.config.ts",
+    "tsconfig.json",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "25433aee4a42828bdad491a11cf7fa9cabe31f3a0a5ffa88e36dfaf5eeeccd6c",
+    "characters": 4752,
+    "excerpt": "<p align=\"center\">\n  <img src=\"https://flb-assets.s3.ap-southeast-1.amazonaws.com/static/fleetbase-logo-svg.svg\" width=\"380\" height=\"100\" />\n</p>\n<p align=\"center\">\nOpen source order managemenr, geolocation tracking & navigation app for Fleetbase drivers & agents.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://fleetbase.io\">fleetbase.io</a> | <a href=\"https://twitter.com/fleetbase_io\">@fleetbase_io</a> | <a href=\"https://discord.gg/fjP4sReEvH\">Discord</a>\n</p>\n\n<p align=\"center\">\n\t<img src=\"https://github.com/user-attachments/assets/05c81b07-cd52-43e9-b0ac-91e0683ab5f9\" width=\"220\" height=\"416\" />\n\t<img src=\"https://github.com/user-attachments/assets/cfa08ce8-bf13-4bb3-96ef-f73045ee157a\" width=\"220\" height=\"416\" />\n\t<img src=\"https://github.com/user-attachments/assets/893b58f4-b1ce-4ff5-a78e-530a2035c84b\" width=\"220\" height=\"416\" />\n\t<img src=\"https://github.com/user-attachments/assets/770582ef-11c3-4d25-bc68-9df72b41c452\" width=\"220\" height=\"416\" />\n</p>\n<p align=\"center\">\n\t<img src=\"https://github.com/user-attachments/assets/bfe5ca18-07c1-4188-be8e-277e5ebf7abc\" width=\"220\" height=\"416\" />\n\t<img src=\"https://github.com/user-attachments/assets/93e3ee4a-6add-4b82-ae93-ae6f5a217400\" width=\"220\" height=\"416\" />\n\t<img src=\"https://github.com/user-attachments/assets/f21c7514-9cfb-4c3e-bdc4-5254565c1b26\" width=\"220\" height=\"416\" />>\n</p>\n\n## Table of Contents\n\n- [About](#about)\n- [Prerequisites](#prerequisites)\n- [Installation](#installation)\n    - [Configure Environment](#configure-environment)\n- [Running in Simulator](#running-in-simulator)\n    - [Run the app in iOS Simulator](#run-the-app-in-ios-simulator)\n    - [Run the app in Android Simulator](#run-the-app-in-android-simulator)\n- [Navigation using Mapbox](#navigation-using-mapbox)\n- [Documentation](#documentation)\n- [Roadmap](#roadmap)\n\n### About\n\nFleetbase Navigator is an open source navigation and order management app for drivers and agents using Fleetbase. This app is fully customizable and supports QR code scanning, digital signatures, photos, and routing and navigation for agents. Drivers will be able to update activity to orders on the run as they complete job. Navigator app now includes fuel report and issue management and creation. Enable seamless communication with built in chat with operations personnel and customers.\n\n### Prerequisites\n\n- [Yarn](https://yarnpkg.com/) or [NPM](https://nodejs.org/en/)\n- [React Native CLI](https://reactnative.dev/docs/environment-setup)\n- Xcode 12+\n- Android Studio\n\n### Installation\n\nInstallation and setup is fairly quick, all you need is your Fleetbase API Key, and a few commands and your app will be up and running in minutes. Follow the directions below to get started.\n\nRun the commands below; first clone the project, use npm or yarn to install the dependencies, then run `npx pod-install` to install the iOS dependencies. Lastly, create a `.env` file to configure the app.\n\n```\ngit clone git@github.com:fleetbase/navigator-app.git\ncd navigator-app\nyarn\nyarn pod:install\ntouch .env\n```\n\n### Configure Environment\n\nBelow is the steps needed to configure the environment. The first part covers collecting your required API keys.\n\n1.  Get your API Keys;\n2.  **If you don't have a Fleetbase account already** proceed to the [Fleetbase Console](https://console.fleetbase.io/) and click \"Create an account\", complete the registration form and you will be taken to the console.\n3.  Once you're in the Fleetbase console select the \"Developers\" button in the top navigation. Next, select API Keys from the menu in the Developers section, and create a new API key. Copy your secret key generated, you'll need it later.\n4.  Once you have both required API keys open your `.env` file.\n\nIn your `.env` file supply your Fleetbase API secret key, and additionally you will need a Google Maps API Key. Lastly, you'll also need to supply your app/bundle identifier, and an `APP_NAME` key.\n\nYour `.env` file should look something like this once you're done.\n\n```\n# .env\nAPP_NAME=Fleetbase Navigator\nAPP_IDENTIFIER=io.fleetbase.navigator\nAPP_LINK_PREFIX=navigator://\nFLEETBASE_HOST=https://api.fleetbase.io\nFLEETBASE_KEY=\n```\n\n### Running in Simulator\n\nOnce you have completed the installation and environment configuration, you're all set to give your app a test-drive in the simulator so you can play around.\n\n#### Run the App in iOS Simulator\n\n```\nyarn ios\n```\n\n#### Run the App in Android Simulator\n\n```\nyarn android\n```\n\n### Documentation\n\nSee the [documentation webpage](https://fleetbase.io/docs).\n\nIf you would like to make contributions to the Fleetbase Javascript SDK documentation source, here is a [guide](https://github.com/fleetbase/fleetbase-js/blob/master/CONTRIBUTING.md) in doing so.\n\n### Roadmap\n\n- COMING SOON\n",
+    "tail": "",
+    "source_url": "https://github.com/fleetbase/navigator-app/blob/37af1ee7dfdcc53052058edd853c66400d3e7e32/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "5ffb8eaf206c79f334260d6373dc8deda5235901d14e0c34e9b77e4c82cecb87",
+    "characters": 34198,
+    "excerpt": "# GNU Affero General Public License\n\n_Version 3, 19 November 2007_\n_Copyright © 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_\n\nEveryone is permitted to copy and distribute verbatim copies\nof this license document, but changing it is not allowed.\n\n## Preamble\n\nThe GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\nThe licenses for most software and other practical works are designed\nto take away your freedom to share and change the works. By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\nWhen we speak of free software, we are referring to freedom, not\nprice. Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\nDevelopers that use our General Public Licenses protect your rights\nwith two steps: **(1)** assert copyright on the software, and **(2)** offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\nA secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate. Many developers of free software are heartened and\nencouraged by the resulting cooperation. However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\nThe GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community. It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server. Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\nAn older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals. This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\nThe precise terms and conditions for copying, distribution and\nmodification follow.\n\n## TERMS AND CONDITIONS\n\n### 0. Definitions\n\n“This License” refers to version 3 of the GNU Affero General Public License.\n\n“Copyright” also means copyright-like laws that apply to other ",
+    "tail": "ware can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source. For example, if your program is a web application, its\ninterface could display a “Source” link that leads users to an archive\nof the code. There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\nYou should also get your employer (if you work as a programmer) or school,\nif any, to sign a “copyright disclaimer” for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n&lt;<http://www.gnu.org/licenses/>&gt;.\n",
+    "source_url": "https://github.com/fleetbase/navigator-app/blob/37af1ee7dfdcc53052058edd853c66400d3e7e32/LICENSE.md"
+  },
+  "nested_license_paths": [
+    "legacy/LICENSE.md"
+  ],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "d12035dbfe8cea0cf5488b1ba59bad0676fe997de9f24875c4479203afb23ff8",
+      "characters": 7934,
+      "excerpt": "{\n    \"name\": \"@fleetbase/navigator-app\",\n    \"version\": \"2.0.11\",\n    \"license\": \"AGPL-3.0-or-later\",\n    \"author\": \"Fleetbase Pte Ltd <hello@fleetbase.io>\",\n    \"description\": \"Order management, geolocation tracking and navigation for Fleetbase drivers.\",\n    \"private\": true,\n    \"scripts\": {\n        \"android\": \"react-native run-android\",\n        \"ios\": \"react-native run-ios\",\n        \"postinstall\": \"node scripts/patch-react-native-packages.js\",\n        \"start\": \"react-native start\",\n        \"web\": \"webpack serve --config webpack.config.js\",\n        \"pod:install\": \"cd ios && PATH=/opt/homebrew/bin:$HOME/.rbenv/shims:$PATH RCT_NEW_ARCH_ENABLED=1 bundle exec pod install\",\n        \"pod:reset\": \"rm -rf ios/Pods/ ios/Podfile.lock && cd ios && PATH=/opt/homebrew/bin:$HOME/.rbenv/shims:$PATH RCT_NEW_ARCH_ENABLED=1 bundle exec pod install\",\n        \"pod:repo-update\": \"cd ios && PATH=/opt/homebrew/bin:$HOME/.rbenv/shims:$PATH bundle exec pod repo update\",\n        \"pod:deintegrate\": \"cd ios && PATH=/opt/homebrew/bin:$HOME/.rbenv/shims:$PATH RCT_NEW_ARCH_ENABLED=1 bundle exec pod deintegrate && yarn run pod:install\",\n        \"reset\": \"rm -rf node_modules/ yarn.lock && yarn install && yarn run pod:reset\",\n        \"test\": \"jest\",\n        \"lint\": \"eslint .\",\n        \"format\": \"prettier --write .\",\n        \"tamagui:build\": \"./node_modules/.bin/tamagui-build\",\n        \"tamagui:clean\": \"./node_modules/.bin/tamagui-build clean\",\n        \"android:clean\": \"cd android && ./gradlew clean && cd ../\",\n        \"adb:reverse\": \"adb reverse tcp:8081 tcp:8081\",\n        \"adb:devmenu\": \"adb shell input keyevent 82\",\n        \"generate:app-icon\": \"npx app-icon generate -i ./assets/app-icon.png && node scripts/fix-android-app-icons.js --input ./assets/app-icon.png\",\n        \"generate:launch-screen\": \"npx react-native generate-bootsplash ./assets/splash-screen.png --background=#111827 --logo-width=100 --flavor=main && node scripts/fix-android-launch-screen.js --input ./assets/splash-screen.png\"\n    },\n    \"dependencies\": {\n        \"@babel/plugin-proposal-async-generator-functions\": \"^7.20.7\",\n        \"@babel/plugin-proposal-export-namespace-from\": \"^7.18.9\",\n        \"@backpackapp-io/react-native-toast\": \"^0.12.1\",\n        \"@bam.tech/react-native-image-resizer\": \"^3.0.11\",\n        \"@fleetbase/sdk\": \"^1.2.13\",\n        \"@fleetbase/storefront\": \"^1.1.13\",\n        \"@fortawesome/fontawesome-svg-core\": \"^6.5.1\",\n        \"@fortawesome/free-brands-svg-icons\": \"^6.5.1\",\n        \"@fortawesome/free-solid-svg-icons\": \"^6.5.1\",\n        \"@fortawesome/react-native-fontawesome\": \"^0.3.0\",\n        \"@gorhom/bottom-sheet\": \"^5\",\n        \"@gorhom/portal\": \"^1.0.14\",\n        \"@invertase/react-native-apple-authentication\": \"^2.4.0\",\n        \"@react-native-camera-roll/camera-roll\": \"^7.10.0\",\n        \"@react-native-community/blur\": \"^4.4.1\",\n        \"@react-native-community/datetimepicker\": \"^8.2.0\",\n        \"@react-native-google-signin/google-signin\": \"latest\",\n        \"@react-navigation/bottom-tabs\": \"^7.0.1\",\n        \"@react-navigation/elements\": \"^2.0.0\",\n        \"@react-navigation/native\": \"^7.0.0\",\n        \"@react-navigation/native-stack\": \"^7.0.0\",\n        \"@tamagui/babel-plugin\": \"^1.121.5\",\n        \"@tamagui/config\": \"1.125.20\",\n        \"add\": \"^2.0.6\",\n        \"countries-list\": \"^3.0.6\",\n        \"country-locale-map\": \"^1.9.0\",\n        \"date-fns\": \"^4.1.0\",\n        \"inflected\": \"^2.1.0\",\n        \"language-name-map\": \"^0.3.0\",\n        \"locale-emoji\": \"^0.3.0\",\n        \"react\": \"19.2.7\",\n        \"react-dom\": \"19.2.7\",\n        \"react-native\": \"0.86.0\",\n        \"react-native-background-fetch\": \"^4.2.7\",\n        \"react-native-background-geolocation\": \"^4.18.6\",\n        \"react-native-bootsplash\": \"^5.3.0\",\n        \"react-native-calendar-strip\": \"^2.2.6\",\n        \"react-native-collapsible\": \"^1.6.2\",\n        \"react-native-config\": \"^1.5.3\",\n        \"react-native-device-info\": \"^14.0.4\",\n        \"react-native-event-listeners\": \"^1.0.7\",\n        \"react-native-fast-image\": \"^8.6.3\",\n",
+      "tail": "ative-i18n@npm%3A2.0.15#./.yarn/patches/react-native-i18n-npm-2.0.15-7f3cf7cee6.patch\",\n        \"react-native-launch-navigator@^1.0.9\": \"patch:react-native-launch-navigator@npm%3A1.0.9#./.yarn/patches/react-native-launch-navigator-npm-1.0.9-f069a6b5fd.patch\",\n        \"react-native-notifications@^5.1.0\": \"patch:react-native-notifications@npm%3A5.1.0#./.yarn/patches/react-native-notifications-npm-5.1.0-3e3b2ea3f8.patch\"\n    },\n    \"jest\": {\n        \"preset\": \"react-native\",\n        \"setupFiles\": [\n            \"react-native-gesture-handler/jestSetup.js\"\n        ],\n        \"modulePathIgnorePatterns\": [\n            \"<rootDir>/.claude/worktrees/\",\n            \"<rootDir>/legacy/\"\n        ]\n    }\n}\n",
+      "source_url": "https://github.com/fleetbase/navigator-app/blob/37af1ee7dfdcc53052058edd853c66400d3e7e32/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/fleetbase/navigator-app",
+    "commit": "https://github.com/fleetbase/navigator-app/commit/37af1ee7dfdcc53052058edd853c66400d3e7e32"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

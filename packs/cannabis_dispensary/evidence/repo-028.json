@@ -1,0 +1,104 @@
+{
+  "audit_id": "R028",
+  "full_name": "cannlytics/cannlytics-api",
+  "html_url": "https://github.com/cannlytics/cannlytics-api",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "The interface 🌐 to the logic of 🔥 Cannlytics.",
+  "stargazers_count": 10,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2021-08-03T04:11:19Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [
+    "api",
+    "cannabis",
+    "cannabis-api",
+    "cannabis-app",
+    "cannabis-data",
+    "cannabisapp",
+    "django",
+    "metrc",
+    "python"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Acannlytics&sort=stars&order=desc&per_page=30&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8",
+  "last_commit": "2021-03-24T12:05:04-07:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".env.example",
+    ".firebaserc",
+    ".gitignore",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "cloudmigrate.yaml",
+    "firebase.json",
+    "manage.py",
+    "package.json",
+    "requirements.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "fc68d47011b8a744086313b4138c77804c1e908e4de944970bf8d9bb74a33db2",
+    "characters": 2339,
+    "excerpt": "# <img height=\"32\" alt=\"\" src=\"https://cannlytics.com/static/cannlytics_website/images/logos/cannlytics_calyx_detailed.svg\"> Cannlytics API\n\n[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)\n[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/cannlytics/cannlytics-api/fork)\n\n\nThe Cannlytics API provides an interface to quickly receive samples, perform analyses, collect and review results, and publish certificates of analysis (CoAs). There are also logistics, CRM (client relationship management), inventory management, and invoicing tools. The Cannlytics API comes with [**batteries included**](https://cannlytics.com/support/), but you are always welcome to supercharge your setup with custom modifications.\n\n- [Installation](#installation)\n- [Development](#development)\n- [Testing](#testing)\n- [Publishing](#publishing)\n- [License](#license)\n\n## Installation<a name=\"installation\"></a>\n\nInstalling the Cannlytics API is simple.\n\n```shell\ngit clone https://github.com/cannlytics.com/cannlytics-api\n```\n\n## Development<a name=\"development\"></a>\n\nRunning the Cannlytics API locally for development is easy.\n\n```shell\npython manage.py runserver 4200\n```\n\nor\n\n```shell\nnpm run dev\n```\n\n> Note that the API is run on port 4200 to allow for simultaneous development with other pieces of the Cannlytics engine.\n\n## Testing<a name=\"testing\"></a>\n\nTests are performed with [`pytest`](https://docs.pytest.org/en/stable/). You can perform the tests by executing the `pytest` command from the `tests` directory.\n\n```shell\ncd tests\npytest\n```\n\n## Publishing<a name=\"publishing\"></a>\n\nSee [`docs/publishing.md`](docs/publishing.md) for instructions on how to publish the API. Publishing entails containerizing the API, deploying the container to Cloud Run, and directing hosting requests to the containerized app from Firebase Hosting. You can publish using Node.js with one quick command:\n\n```shell\nnpm run publish\n```\n\n## License <a name=\"license\"></a>\n\nThis application is released under the [MIT license](LICENSE.md). You can use the code for any purpose, including commercial projects.\n\n[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)\n\nMade with 💖 by Cannlytics.\n",
+    "tail": "",
+    "source_url": "https://github.com/cannlytics/cannlytics-api/blob/9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "314c1bd7435fd9af5ace35910664789b680647cb822aef11807a5d3aea37a91f",
+    "characters": 1081,
+    "excerpt": "Copyright (c) 2021 Cannlytics and Cannlytics contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "tail": "ftware, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "source_url": "https://github.com/cannlytics/cannlytics-api/blob/9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "826b16aad9d84d64c2d89514e0ef26aa55e34b27647b066ee99568646c483a59",
+      "characters": 808,
+      "excerpt": "{\n  \"name\": \"cannlytics_api\",\n  \"productName\": \"Cannlytics API\",\n  \"version\": \"0.0.1\",\n  \"license\": \"GPLv3\",\n  \"private\": true,\n  \"description\": \"Cannlytics API.\",\n  \"author\": \"Keegan Skeate <contact@cannlytics.com>\",\n  \"build\": {\n    \"productName\": \"Cannlytics API\"\n  },\n  \"scripts\": {\n    \"dev\": \"python manage.py runserver 4200\",\n    \"publish\": \"npm run container && npm run cloud && npm run deploy\",\n    \"lint\": \"python manage.py check\",\n    \"container\": \"gcloud builds submit --tag gcr.io/cannlytics/cannlytics-api\",\n    \"cloud\": \"gcloud run deploy cannlytics-api --image gcr.io/cannlytics/cannlytics-api --region us-central1 --allow-unauthenticated --platform managed\",\n    \"deploy\": \"firebase deploy --project cannlytics --only hosting:production\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {}\n}\n",
+      "tail": "\n  \"private\": true,\n  \"description\": \"Cannlytics API.\",\n  \"author\": \"Keegan Skeate <contact@cannlytics.com>\",\n  \"build\": {\n    \"productName\": \"Cannlytics API\"\n  },\n  \"scripts\": {\n    \"dev\": \"python manage.py runserver 4200\",\n    \"publish\": \"npm run container && npm run cloud && npm run deploy\",\n    \"lint\": \"python manage.py check\",\n    \"container\": \"gcloud builds submit --tag gcr.io/cannlytics/cannlytics-api\",\n    \"cloud\": \"gcloud run deploy cannlytics-api --image gcr.io/cannlytics/cannlytics-api --region us-central1 --allow-unauthenticated --platform managed\",\n    \"deploy\": \"firebase deploy --project cannlytics --only hosting:production\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {}\n}\n",
+      "source_url": "https://github.com/cannlytics/cannlytics-api/blob/9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8/package.json"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "8a3b06ee471aa9f16a7700ef381678cc9ab79471a7525a903667c550dda09164",
+      "characters": 491,
+      "excerpt": "# Python Requirements | Cannlytics API\n# Created 2/1/2021\n\n# To ensure app dependencies are ported from your\n# virtual environment/host machine into your container,\n# run 'pip freeze > requirements.txt' in the terminal to overwrite this file.\n\ndatetime==4.3\ndjango>=3.1.6\ndjango-environ==0.4.5\ndjangorestframework==3.12.2\nfirebase_admin==4.3.0\ngoogle-auth==1.20.1\ngoogle-cloud-secret-manager==1.0.0\ngunicorn==20.0.4\npandas==1.2.1\npython-decouple==3.3\npsycopg2-binary==2.8.5\nscholarly==1.1.0\n",
+      "tail": "# Python Requirements | Cannlytics API\n# Created 2/1/2021\n\n# To ensure app dependencies are ported from your\n# virtual environment/host machine into your container,\n# run 'pip freeze > requirements.txt' in the terminal to overwrite this file.\n\ndatetime==4.3\ndjango>=3.1.6\ndjango-environ==0.4.5\ndjangorestframework==3.12.2\nfirebase_admin==4.3.0\ngoogle-auth==1.20.1\ngoogle-cloud-secret-manager==1.0.0\ngunicorn==20.0.4\npandas==1.2.1\npython-decouple==3.3\npsycopg2-binary==2.8.5\nscholarly==1.1.0\n",
+      "source_url": "https://github.com/cannlytics/cannlytics-api/blob/9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8/requirements.txt"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/cannlytics/cannlytics-api",
+    "commit": "https://github.com/cannlytics/cannlytics-api/commit/9a70f2dfa774685ed6e2cf67aa9c7ba4d18945f8"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

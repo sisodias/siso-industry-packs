@@ -1,0 +1,211 @@
+{
+  "audit_id": "R074",
+  "full_name": "chatwoot/chatwoot",
+  "html_url": "https://github.com/chatwoot/chatwoot",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+  "stargazers_count": 36763,
+  "forks_count": 8903,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-12T15:37:03Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "topics": [
+    "actioncable",
+    "chat-widget",
+    "conversation",
+    "customer-support",
+    "dashboard",
+    "design",
+    "docker",
+    "docker-image",
+    "heroku",
+    "intercom",
+    "javascript",
+    "livechat",
+    "opensource",
+    "rails",
+    "ruby",
+    "sass",
+    "vuejs",
+    "whatsapp",
+    "zendesk"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=chatwoot+in%3Aname+user%3Achatwoot&sort=stars&order=desc&per_page=5&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "2f1ed80f894ed9a3eba636ebab90ca61deec110a",
+  "last_commit": "2026-09-11T14:44:46+05:30",
+  "commits_six_months_sample_count": 101,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 27,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".all-contributorsrc",
+    ".annotaterb.yml",
+    ".browserslistrc",
+    ".bundler-audit.yml",
+    ".dockerignore",
+    ".editorconfig",
+    ".env.example",
+    ".eslintrc.js",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierrc",
+    ".rspec",
+    ".rubocop.yml",
+    ".ruby-version",
+    ".scss-lint.yml",
+    ".slugignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Capfile",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE",
+    "Makefile",
+    "Procfile",
+    "Procfile.dev",
+    "Procfile.test",
+    "Procfile.tunnel",
+    "README.md",
+    "Rakefile",
+    "SECURITY.md",
+    "VERSION_CW",
+    "VERSION_CWCTL",
+    "app.json",
+    "config.ru",
+    "crowdin.yml",
+    "docker-compose.production.yaml",
+    "docker-compose.test.yaml",
+    "docker-compose.yaml",
+    "histoire.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "postcss.config.js",
+    "semantic.yml",
+    "tailwind.config.js",
+    "vite.config.ts",
+    "vite.lib.config.ts",
+    "vite.sdk.analyze.config.mts",
+    "vite.shared.ts",
+    "vite.widget.analyze.config.mts",
+    "vitest.config.ts",
+    "vitest.i18n.js",
+    "vitest.setup.js",
+    "workbox-config.js"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "00b1867b3e486325ff35a8d5194e937974a02cab39cbbc0a0d9846e3c1ff1ac7",
+    "characters": 7598,
+    "excerpt": "<img src=\"./.github/screenshots/header.png#gh-light-mode-only\" width=\"100%\" alt=\"Header light mode\"/>\n<img src=\"./.github/screenshots/header-dark.png#gh-dark-mode-only\" width=\"100%\" alt=\"Header dark mode\"/>\n\n___\n\n# Chatwoot\n\nThe modern customer support platform, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.\n\n<p>\n  <img src=\"https://img.shields.io/circleci/build/github/chatwoot/chatwoot\" alt=\"CircleCI Badge\">\n    <a href=\"https://hub.docker.com/r/chatwoot/chatwoot/\"><img src=\"https://img.shields.io/docker/pulls/chatwoot/chatwoot\" alt=\"Docker Pull Badge\"></a>\n  <a href=\"https://hub.docker.com/r/chatwoot/chatwoot/\"><img src=\"https://img.shields.io/docker/cloud/build/chatwoot/chatwoot\" alt=\"Docker Build Badge\"></a>\n  <img src=\"https://img.shields.io/github/commit-activity/m/chatwoot/chatwoot\" alt=\"Commits-per-month\">\n  <a title=\"Crowdin\" target=\"_self\" href=\"https://chatwoot.crowdin.com/chatwoot\"><img src=\"https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg\"></a>\n  <a href=\"https://discord.gg/cJXdrwS\"><img src=\"https://img.shields.io/discord/647412545203994635\" alt=\"Discord\"></a>\n  <a href=\"https://status.chatwoot.com\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json\" alt=\"uptime\"></a>\n  <a href=\"https://status.chatwoot.com\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json\" alt=\"response time\"></a>\n  <a href=\"https://artifacthub.io/packages/helm/chatwoot/chatwoot\"><img src=\"https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub\" alt=\"Artifact HUB\"></a>\n</p>\n\n\n<p>\n  <a href=\"https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master\" alt=\"Deploy to Heroku\">\n     <img width=\"150\" alt=\"Deploy\" src=\"https://www.herokucdn.com/deploy/button.svg\"/>\n  </a>\n  <a href=\"https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8\" alt=\"Deploy to DigitalOcean\">\n     <img width=\"200\" alt=\"Deploy to DO\" src=\"https://www.deploytodo.com/do-btn-blue.svg\"/>\n  </a>\n</p>\n\n<img src=\"./.github/screenshots/dashboard.png#gh-light-mode-only\" width=\"100%\" alt=\"Chat dashboard dark mode\"/>\n<img src=\"./.github/screenshots/dashboard-dark.png#gh-dark-mode-only\" width=\"100%\" alt=\"Chat dashboard\"/>\n\n---\n\nChatwoot is the modern, open-source, and self-hosted customer support platform designed to help businesses deliver exceptional customer support experience. Built for scale and flexibility, Chatwoot gives you full control over your customer data while providing powerful tools to manage conversations across channels.\n\n### ✨ Captain – AI Agent for Support\n\nSupercharge your support with Captain, Chatwoot’s AI agent. Captain helps automate responses, handle common queries, and reduce agent workload—ensuring customers get instant, accurate answers. With Captain, your team can focus on complex conversations while routine questions are resolved automatically. Read more about Captain [here](https://chwt.app/captain-docs).\n\n### 💬 Omnichannel Support Desk\n\nChatwoot centralizes all customer conversations into one powerful inbox, no matter where your customers reach out from. It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc.\n\n### 📚 Help center portal\n\nPublish help articles, FAQs, and guides through the built-in Help Center Portal. Enable customers to find answers on their own, reduce repetitive queries, and keep your support team focused on more complex issues.\n\n### 🗂️ Other features\n\n#### Collaboration & Productivity\n\n- Private Notes and @mentions for internal team discussions.\n- Labels to organize and categorize conversations.\n- Keyboard Shortcuts and a Command Bar for quick navigation.\n- Canned Responses to reply faster to frequently asked questions.\n- Auto-Assignment to route conversations based on agent availability.\n- Multi-lingual Support to serve customers in multiple languages.\n- Custom Views and Filters for better inbox organization.\n- Business Hours and Auto-Responders to manage response expectations.\n- Teams and Automation tools for scaling support workflows.\n- Agent Capacity Management to balance workload across the team.\n\n#### Customer Data & Segmentation\n- Contact Management with profiles and interaction history.\n- Contact Segments and Notes for targeted communication.\n- Campaigns to proactively engage customers.\n- Custom Attributes for storing additional customer data.\n- Pre-Chat Forms to collect user information before starting conversations.\n\n#### Integrations\n- Slack Integration to manage conversations directly from Slack.\n- Dialogflow Integration for chatbot automation.\n- Dashboard Apps to embed internal tools within Chatwoot.\n- Shopify Integration to view and manage customer orders right within Chatwoot.\n- Use Google Translate to translate messages from your customers in realtime.\n- Create and manage Linear tickets within Chatwoot.\n\n#### Reports & Insights\n- Live View of ongoing conversations for real-time monitoring.\n- Conversation, Agent, Inbox, Label, and Team Reports for operational visibility.\n- CSAT Reports to measure customer satisfaction.\n- Downloadable Reports for offline analysis and reporting.\n\n\n## Documentation\n\nDetailed documentation is available at [chatwoot.com/help-center](https://www.chatwoot.com/help-center).\n\n## Translation process\n\nThe translation process for Chatwoot web and mobile app is managed at [https://translate.chatwoot.com](https://translate.chatwoot.com) using Crowdin. Please read the [translation guide](https://www.chatwoot.com/docs/contributing/translating-chatwoot-to-your-language) for contributing to Chatwoot.\n\n## Branching model\n\nWe use the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. The base branch is `develop`.\nIf you are looking for a stable version, please use the `master` or tags labelled as `v1.x.x`.\n\n## Deployment\n\n### Heroku one-click deploy\n\nDeploying Chatwoot to Heroku is a breeze. It's as simple as clicking this button:\n\n[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master)\n\nFollow this [link](https://www.chatwoot.com/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.\n\n\n### DigitalOcean 1-Click Kubernetes deployment\n\nChatwoot now supports 1-Click deployment to DigitalOcean as a kubernetes app.\n\n<a href=\"https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8\" alt=\"Deploy to DigitalOcean\">\n  <img width=\"200\" alt=\"Deploy to DO\" src=\"https://www.deploytodo.com/do-btn-blue.svg\"/>\n</a>\n\n### Other deployment options\n\nFor other supported options, checkout our [deployment page](https://chatwoot.com/deploy).\n\n## Security\n\nLooking to report a vulnerability? Please refer our [SECURITY.md](./SECURITY.md) file.\n\n## Community\n\nIf you need help or just want to hang out, come, say hi on our [Discord](https://discord.gg/cJXdrwS) server.\n\n## Contributors\n\nThanks goes to all these [wonderful people](https://www.chatwoot.com/docs/contributors):\n\n<a href=\"https://github.com/chatwoot/chatwoot/graphs/contributors\"><img src=\"https://opencollective.com/chatwoot/contributors.svg?width=890&button=false\" /></a>\n\n\n*Chatwoot* &copy; 2017-2026, Chatwoot Inc - Released under the MIT License.\n",
+    "tail": "",
+    "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "602d38a808315f221a5e72e2e90e40cb9300f09aa4b317a6a8f1a0c7a3d2175d",
+    "characters": 1581,
+    "excerpt": "Copyright (c) 2017-2026 Chatwoot Inc.\n\nPortions of this software are licensed as follows:\n\n* All content that resides under the \"enterprise/\" directory of this repository, if that directory exists, is licensed under the license defined in \"enterprise/LICENSE\".\n* All third party components incorporated into the Chatwoot Software are licensed under the original license provided by the owner of the applicable component.\n* Content outside of the above mentioned directories or restrictions above is available under the \"MIT Expat\" license as defined below.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/LICENSE"
+  },
+  "nested_license_paths": [
+    "enterprise/LICENSE"
+  ],
+  "dependency_documents": [
+    {
+      "path": "docker-compose.yaml",
+      "sha256": "41fee1bf5691d14bee114fb97ef6894a4a5130b253715541c7b8ea6353a5db27",
+      "characters": 2643,
+      "excerpt": "version: '3'\n\nservices:\n  base: &base\n    build:\n      context: .\n      dockerfile: ./docker/Dockerfile\n      args:\n        BUNDLE_WITHOUT: ''\n        EXECJS_RUNTIME: 'Node'\n        RAILS_ENV: 'development'\n        RAILS_SERVE_STATIC_FILES: 'false'\n    tty: true\n    stdin_open: true\n    image: chatwoot:development\n    env_file: .env\n\n  rails:\n    <<: *base\n    build:\n      context: .\n      dockerfile: ./docker/dockerfiles/rails.Dockerfile\n    image: chatwoot-rails:development\n    volumes:\n      - ./:/app:delegated\n      - node_modules:/app/node_modules\n      - packs:/app/public/packs\n      - cache:/app/tmp/cache\n      - bundle:/usr/local/bundle\n    depends_on:\n      - postgres\n      - redis\n      - vite\n      - mailhog\n      - sidekiq\n    ports:\n      - 3000:3000\n    env_file: .env\n    environment:\n      - VITE_DEV_SERVER_HOST=vite\n      - NODE_ENV=development\n      - RAILS_ENV=development\n    entrypoint: docker/entrypoints/rails.sh\n    command: [\"bundle\", \"exec\", \"rails\", \"s\", \"-p\", \"3000\", \"-b\", \"0.0.0.0\"]\n\n  sidekiq:\n    <<: *base\n    image: chatwoot-rails:development\n    volumes:\n      - ./:/app:delegated\n      - node_modules:/app/node_modules\n      - packs:/app/public/packs\n      - cache:/app/tmp/cache\n      - bundle:/usr/local/bundle\n    depends_on:\n      - postgres\n      - redis\n      - mailhog\n    environment:\n      - NODE_ENV=development\n      - RAILS_ENV=development\n    command: [\"bundle\", \"exec\", \"sidekiq\", \"-C\", \"config/sidekiq.yml\"]\n\n  vite:\n    <<: *base\n    build:\n      context: .\n      dockerfile: ./docker/dockerfiles/vite.Dockerfile\n    image: chatwoot-vite:development\n    volumes:\n      - ./:/app:delegated\n      - node_modules:/app/node_modules\n      - packs:/app/public/packs\n      - cache:/app/tmp/cache\n      - bundle:/usr/local/bundle\n    ports:\n      - \"3036:3036\" # Vite dev server\n    environment:\n      - VITE_DEV_SERVER_HOST=0.0.0.0\n      - NODE_ENV=development\n      - RAILS_ENV=development\n    entrypoint: docker/entrypoints/vite.sh\n    command: bin/vite dev\n\n  postgres:\n    image: pgvector/pgvector:pg16\n    restart: always\n    ports:\n      - '5432:5432'\n    volumes:\n      - postgres:/data/postgres\n    environment:\n      - POSTGRES_DB=chatwoot\n      - POSTGRES_USER=postgres\n      - POSTGRES_PASSWORD=\n\n  redis:\n    image: redis:alpine\n    restart: always\n    command: [\"sh\", \"-c\", \"redis-server --requirepass \\\"$REDIS_PASSWORD\\\"\"]\n    env_file: .env\n    volumes:\n      - redis:/data/redis\n    ports:\n      - '6379:6379'\n\n  mailhog:\n    image: mailhog/mailhog\n    ports:\n      - 1025:1025\n      - 8025:8025\n\nvolumes:\n  postgres:\n  redis:\n  packs:\n  node_modules:\n  cache:\n  bundle:\n",
+      "tail": "ent\n    entrypoint: docker/entrypoints/vite.sh\n    command: bin/vite dev\n\n  postgres:\n    image: pgvector/pgvector:pg16\n    restart: always\n    ports:\n      - '5432:5432'\n    volumes:\n      - postgres:/data/postgres\n    environment:\n      - POSTGRES_DB=chatwoot\n      - POSTGRES_USER=postgres\n      - POSTGRES_PASSWORD=\n\n  redis:\n    image: redis:alpine\n    restart: always\n    command: [\"sh\", \"-c\", \"redis-server --requirepass \\\"$REDIS_PASSWORD\\\"\"]\n    env_file: .env\n    volumes:\n      - redis:/data/redis\n    ports:\n      - '6379:6379'\n\n  mailhog:\n    image: mailhog/mailhog\n    ports:\n      - 1025:1025\n      - 8025:8025\n\nvolumes:\n  postgres:\n  redis:\n  packs:\n  node_modules:\n  cache:\n  bundle:\n",
+      "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/docker-compose.yaml"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4c5c8a883060a9acfbee302d7f8894bbe08019bb5bd3751ecc3f7ce147ebb97c",
+      "characters": 5756,
+      "excerpt": "{\n  \"name\": \"@chatwoot/chatwoot\",\n  \"version\": \"4.17.1\",\n  \"license\": \"MIT\",\n  \"scripts\": {\n    \"eslint\": \"eslint app/**/*.{js,vue}\",\n    \"eslint:fix\": \"eslint app/**/*.{js,vue} --fix\",\n    \"test\": \"TZ=UTC vitest --no-watch --no-cache --no-coverage --logHeapUsage\",\n    \"test:watch\": \"TZ=UTC vitest --no-cache --no-coverage\",\n    \"test:coverage\": \"TZ=UTC vitest --no-watch --no-cache --coverage\",\n    \"start:dev\": \"foreman start -f ./Procfile.dev\",\n    \"start:test\": \"RAILS_ENV=test foreman start -f ./Procfile.test\",\n    \"dev\": \"overmind start -f ./Procfile.dev\",\n    \"ruby:prettier\": \"bundle exec rubocop -a\",\n    \"build:sdk\": \"vite build --config vite.lib.config.ts\",\n    \"analyze:bundles\": \"pnpm analyze:bundle:sdk && pnpm analyze:bundle:widget\",\n    \"analyze:bundle:sdk\": \"vite build --config vite.sdk.analyze.config.mts\",\n    \"analyze:bundle:widget\": \"vite build --config vite.widget.analyze.config.mts\",\n    \"prepare\": \"husky install\",\n    \"size\": \"size-limit\",\n    \"story:dev\": \"histoire dev\",\n    \"story:build\": \"histoire build\",\n    \"story:preview\": \"histoire preview\",\n    \"sync:i18n\": \"bin/sync_i18n_file_change\"\n  },\n  \"size-limit\": [\n    {\n      \"path\": \"public/vite/assets/widget-*.js\",\n      \"limit\": \"300 KB\"\n    },\n    {\n      \"path\": \"public/packs/js/sdk.js\",\n      \"limit\": \"40 KB\"\n    }\n  ],\n  \"dependencies\": {\n    \"@amplitude/analytics-browser\": \"^2.11.10\",\n    \"@breezystack/lamejs\": \"^1.2.7\",\n    \"@chatwoot/ninja-keys\": \"1.2.3\",\n    \"@chatwoot/prosemirror-schema\": \"1.4.5\",\n    \"@chatwoot/utils\": \"^0.0.57\",\n    \"@chatwoot/viz\": \"^0.1.5\",\n    \"@formkit/core\": \"^1.7.2\",\n    \"@formkit/vue\": \"^1.7.2\",\n    \"@hcaptcha/vue3-hcaptcha\": \"^1.3.0\",\n    \"@highlightjs/vue-plugin\": \"^2.1.0\",\n    \"@hotwired/turbo-rails\": \"^8.0.13\",\n    \"@iconify-json/fluent\": \"^1.2.32\",\n    \"@iconify-json/material-symbols\": \"^1.2.10\",\n    \"@lk77/vue3-color\": \"^3.0.6\",\n    \"@radix-ui/colors\": \"^3.0.0\",\n    \"@rails/actioncable\": \"6.1.3\",\n    \"@rails/ujs\": \"^7.1.400\",\n    \"@chatwoot/pico-search\": \"0.6.2\",\n    \"@sentry/vue\": \"^8.55.0\",\n    \"@sindresorhus/slugify\": \"2.2.1\",\n    \"@tailwindcss/typography\": \"^0.5.19\",\n    \"@tanstack/vue-table\": \"^8.20.5\",\n    \"@twilio/voice-sdk\": \"^2.12.4\",\n    \"@vitejs/plugin-vue\": \"^5.2.4\",\n    \"@vue/compiler-sfc\": \"^3.5.8\",\n    \"@vuelidate/core\": \"^2.0.3\",\n    \"@vuelidate/validators\": \"^2.0.4\",\n    \"@vueuse/components\": \"^12.0.0\",\n    \"@vueuse/core\": \"^12.0.0\",\n    \"activestorage\": \"^5.2.6\",\n    \"axios\": \"^1.15.0\",\n    \"camelcase-keys\": \"^9.1.3\",\n    \"color2k\": \"^2.0.2\",\n    \"company-email-validator\": \"^1.1.0\",\n    \"core-js\": \"3.38.1\",\n    \"countries-and-timezones\": \"^3.6.0\",\n    \"date-fns\": \"2.21.1\",\n    \"date-fns-tz\": \"^1.3.3\",\n    \"dompurify\": \"3.4.13\",\n    \"flag-icons\": \"^7.2.3\",\n    \"floating-vue\": \"^5.2.2\",\n    \"highlight.js\": \"^11.10.0\",\n    \"html-to-image\": \"^1.11.13\",\n    \"html2canvas\": \"^1.4.1\",\n    \"idb\": \"^8.0.0\",\n    \"js-cookie\": \"^3.0.5\",\n    \"json-logic-js\": \"^2.0.5\",\n    \"lettersanitizer\": \"^1.0.8\",\n    \"libphonenumber-js\": \"^1.11.9\",\n    \"markdown-it\": \"^14.1.1\",\n    \"markdown-it-link-attributes\": \"^4.0.1\",\n    \"mitt\": \"^3.0.1\",\n    \"opus-recorder\": \"^8.0.5\",\n    \"pinia\": \"^3.0.4\",\n    \"qrcode\": \"^1.5.4\",\n    \"semver\": \"7.6.3\",\n    \"snakecase-keys\": \"^8.0.1\",\n    \"timezone-phone-codes\": \"^0.0.2\",\n    \"tinykeys\": \"^3.0.0\",\n    \"urlpattern-polyfill\": \"^10.0.0\",\n    \"video.js\": \"7.21.1\",\n    \"videojs-record\": \"4.5.0\",\n    \"videojs-wavesurfer\": \"3.8.0\",\n    \"virtua\": \"^0.48.6\",\n    \"vue\": \"^3.5.12\",\n    \"vue-datepicker-next\": \"^1.0.3\",\n    \"vue-dompurify-html\": \"^5.3.0\",\n    \"vue-i18n\": \"9.14.5\",\n    \"vue-letter\": \"^0.2.2\",\n    \"vue-router\": \"~4.4.5\",\n    \"vue-upload-component\": \"^3.1.17\",\n    \"vue3-click-away\": \"^1.2.4\",\n    \"vuedraggable\": \"^4.1.0\",\n    \"vuex\": \"~4.1.0\",\n    \"vuex-router-sync\": \"6.0.0-rc.1\",\n    \"wavesurfer.js\": \"7.8.6\"\n  },\n  \"devDependencies\": {\n    \"@egoist/tailwindcss-icons\": \"^1.9.2\",\n    \"@histoire/plugin-vue\": \"0.17.15\",\n    \"@iconify-json/logos\": \"^1.2.10\",\n    \"@iconify-json/lucide\": \"^1.",
+      "tail": "\n    \"vite-plugin-ruby\": \"^5.2.1\",\n    \"vitest\": \"3.0.5\"\n  },\n  \"engines\": {\n    \"node\": \"24.x\",\n    \"pnpm\": \"10.x\"\n  },\n  \"husky\": {\n    \"hooks\": {\n      \"pre-push\": \"sh bin/validate_push\"\n    }\n  },\n  \"pnpm\": {\n    \"overrides\": {\n      \"vite\": \"6.4.2\",\n      \"vitest\": \"3.0.5\",\n      \"minimatch@<4\": \"3.1.5\",\n      \"minimatch@>=9.0.0 <9.0.7\": \"9.0.9\",\n      \"rollup\": \">=4.59.0\"\n    }\n  },\n  \"lint-staged\": {\n    \"app/**/*.{js,vue}\": [\n      \"eslint --fix\",\n      \"git add\"\n    ],\n    \"*.scss\": [\n      \"scss-lint\"\n    ]\n  },\n  \"packageManager\": \"pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001\"\n}\n",
+      "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/chatwoot/chatwoot",
+    "commit": "https://github.com/chatwoot/chatwoot/commit/2f1ed80f894ed9a3eba636ebab90ca61deec110a"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0001",
+        "repo": "chatwoot/chatwoot",
+        "url": "https://github.com/chatwoot/chatwoot",
+        "labels": [
+          "product_base",
+          "product",
+          "Chatwoot"
+        ],
+        "family_ids": [
+          "U07",
+          "U08",
+          "B08",
+          "B19"
+        ],
+        "family_names": [
+          "Customer support desk",
+          "Shared inbox and email operations"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified",
+          "historical_operator_nomination",
+          "client_runtime_precedent"
+        ],
+        "operator_signals": [
+          {
+            "nomination_id": "ON-006",
+            "origin": "foundry_recovered_operator_nomination",
+            "observed_at": "2026-08-02",
+            "note": "Customer support and shared inbox candidate."
+          }
+        ],
+        "observed_facts": [
+          "chatwoot/chatwoot supplies support_desk, messaging_notifications at active maintenance under a permissive-open-core rights posture.",
+          "One W1 login reached native Chatwoot Inbox",
+          "Exact-origin SSO exchange passed; wrong origin and replay were denied",
+          "Restart persistence passed",
+          "Required three bounded donor changes for CORS, exchange compatibility and profiler behavior"
+        ],
+        "current_verdict": "runtime_precedent_with_expected_donor_warnings",
+        "foundry_stage": "recovered_operator_nomination",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "LOCAL_PRECEDENT_EXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 154,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

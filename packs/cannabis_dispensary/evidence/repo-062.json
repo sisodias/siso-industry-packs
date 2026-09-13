@@ -1,0 +1,143 @@
+{
+  "audit_id": "R062",
+  "full_name": "frappe/helpdesk",
+  "html_url": "https://github.com/frappe/helpdesk",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Modern, Streamlined, Free and Open Source Customer Service Software",
+  "stargazers_count": 3372,
+  "forks_count": 935,
+  "default_branch": "develop",
+  "archived": false,
+  "pushed_at": "2026-09-13T14:30:55Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [
+    "customer-support",
+    "foss",
+    "frappe",
+    "helpdesk",
+    "helpscout",
+    "issue-tracker",
+    "javascript",
+    "python",
+    "ticketing",
+    "ticketing-system",
+    "typescript",
+    "vue3",
+    "zendesk"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aticketing&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "3ab76d795fcba7ee48d54c4897900df5781ce950",
+  "last_commit": "2026-09-10T02:09:03+05:30",
+  "commits_six_months_sample_count": 1678,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 28,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".eslintrc.js",
+    ".flake8",
+    ".git-blame-ignore-revs",
+    ".gitignore",
+    ".gitmodules",
+    ".lintstagedrc",
+    ".mergify.yml",
+    ".pre-commit-config.yaml",
+    ".prettierrc.json",
+    ".releaserc",
+    "AGENTS.md",
+    "LICENSE",
+    "MANIFEST.in",
+    "README.md",
+    "commitlint.config.mjs",
+    "crowdin.yml",
+    "frappe-ui",
+    "package.json",
+    "pyproject.toml",
+    "screenshot.webp",
+    "yarn.lock"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "a2e364c11caf7fb91d9748135da01b31a3e37879225854b7b984d82994c2ce2d",
+    "characters": 7603,
+    "excerpt": "<div align=\"center\" markdown=\"1\">\n\n<img src=\".github/hd-logo.svg\" alt=\"Frappe Helpdesk logo\" width=\"80\"/>\n<h1>Frappe Helpdesk</h1>\n\n**Customer Service, Made Simple and Effective**\n\n![GitHub release (latest by date)](https://img.shields.io/github/v/release/frappe/helpdesk)\n[![codecov](https://codecov.io/github/frappe/helpdesk/branch/develop/graph/badge.svg?token=8ZXHCY4G9U)](https://codecov.io/github/frappe/helpdesk)\n\n<a href=\"https://trendshift.io/repositories/12764\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/12764\" alt=\"teableio%2Fteable | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n</div>\n\n</div>\n\n\n<div align=\"center\">\n\t<img src=\"./.github/Hero2.png\" alt=\"Hero Image\" width=\"100%\" />\n</div>\n<br />\n<div align=\"center\">\n\t<a href=\"https://frappe.io/helpdesk\">Website</a>\n\t-\n\t<a href=\"https://docs.frappe.io/helpdesk\">Documentation</a>\n</div>\n\n## Frappe Helpdesk\nFrappe Helpdesk is an 100% open-source Ticket Management tool which helps you  streamline your company's support, offers an easy setup, clean user interface, and automation tools to resolve customer queries efficiently.\n\n\n\n### Motivation\nManaging issues from our customers was a big challenge for us. We were using the ERPNext support module which was not very good in UI and the UX was also not good. We wanted to have a tool that can be easily integrated with our existing system and can be customized as per our needs. So we decided to build Frappe Helpdesk.\n\n### Key Features\n\n- **Agent and Customer Portal Views**: Dual portals for agents and customers to simplify issue submission and management.\n\n- **Customizable SLAs**: Discover how you can set and track SLAs for better response times.\n\n- **Assignment Rules**: Custom auto-assignment of tickets based on priority, issue type, or workload.\n\n- **Knowledge Base**: Learn how to create and manage help articles to empower users and reduce tickets.\n\n- **Saved Replies**: Pre-written replies for common queries to ensure quick and consistent communication.\n\n<details open>\n<summary >View Screenshots</summary>\n<h3></h3>\n\n<div align=\"center\">\n\t<sub>\n\t\tAgent List View\n\t</sub>\n</div>\n\n![Agent List View](.github/AgentListView.png)\n\n\n<div align=\"center\">\n\t<sub>\n\t\tUpload articles and let your customer solve their queries through the Knowledge Base.\n\t</sub>\n</div>\n\n![Knowledge Base](.github/KB.png)\n\n<div align=\"center\">\n\t<sub>\n\t\tWith advanced search, your customers will be recommended relevant articles regarding their issue.\n\t</sub>\n</div>\n\n\n![Article Search](.github/Search2.png)\n\n\n\n</details>\n<br>\n\n\n### Under the Hood\n\n- [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and Javascript.\n\n- [**Frappe UI**](https://github.com/frappe/frappe-ui): A Vue-based UI library, to provide a modern user interface. \n\n\n## Production Setup\n\n### Managed Hosting\n\nYou can try [Frappe Cloud](https://frappecloud.com), a simple, user-friendly and sophisticated [open-source](https://github.com/frappe/press) platform to host Frappe applications with peace of mind.\n\nIt takes care of installation, setup, upgrades, monitoring, maintenance and support of your Frappe deployments. It is a fully featured developer platform with an ability to manage and control multiple Frappe deployments.\n\n<div>\n\t<a href=\"https://frappecloud.com/helpdesk/signup\" target=\"_blank\">\n\t\t<picture>\n\t\t\t<source media=\"(prefers-color-scheme: dark)\" srcset=\"https://frappe.io/files/try-on-fc-white.png\">\n\t\t\t<img src=\"https://frappe.io/files/try-on-fc-black.png\" alt=\"Try on Frappe Cloud\" height=\"28\" />\n\t\t</picture>\n\t</a>\n</div>\n\n### Self Hosting\n\nFollow these steps to set up Frappe Helpdesk in production:\n\n**Step 1**: Download the easy install script\n\n```bash\nwget https://frappe.io/easy-install.py\n```\n\n**Step 2**: Run the deployment command\n\n```bash\npython3 ./easy-install.py deploy \\\n    --project=helpdesk_prod_setup \\\n    --email=your_email.example.com \\\n    --image=ghcr.io/frappe/helpdesk \\\n    --version=stable \\\n    --app=helpdesk \\\n    --sitename subdomain.domain.tld\n```\n\nReplace the following parameters with your values:\n- `your_email.example.com`: Your email address\n- `subdomain.domain.tld`: Your domain name where Helpdesk will be hosted\n\nThe script will set up a production-ready instance of Frappe Helpdesk with all the necessary configurations in about 5 minutes.\n\n## Development Setup\n\n### Docker\n\nYou need Docker, docker-compose and git setup on your machine. Refer [Docker documentation](https://docs.docker.com/). After that, follow below steps:\n\n**Step 1**: Setup folder and download the required files\n\n    mkdir frappe-helpdesk\n    cd frappe-helpdesk\n\n    # Download the docker-compose file\n    wget -O docker-compose.yml https://raw.githubusercontent.com/frappe/helpdesk/develop/docker/docker-compose.yml\n\n    # Download the setup script\n    wget -O init.sh https://raw.githubusercontent.com/frappe/helpdesk/develop/docker/init.sh\n\n**Step 2**: Run the container and daemonize it\n\n    docker compose up -d\n\n**Step 3**: The site [http://helpdesk.localhost:8000/helpdesk](http://helpdesk.localhost:8000/helpdesk) should now be available. The default credentials are:\n- Username: Administrator\n- Password: admin\n\n### Local\n\nTo setup the repository locally follow the steps mentioned below:\n\n1. Install bench and setup a `frappe-bench` directory by following the [Installation Steps](https://frappeframework.com/docs/user/en/installation)\n1. Start the server by running `bench start`\n1. In a separate terminal window, create a new site by running `bench new-site helpdesk.test`\n1. Map your site to localhost with the command `bench --site helpdesk.test add-to-hosts`\n1. Get the Telephony app. Run `bench get-app https://github.com/frappe/telephony`\n1. Get the Helpdesk app. Run `bench get-app https://github.com/frappe/helpdesk`\n1. Run `bench --site helpdesk.test install-app helpdesk`.\n1. Run `bench build --app helpdesk`\n1. Now open the URL `http://helpdesk.test:8000/helpdesk` in your browser, you should see the app running\n\n\n**For Frontend Development**\n1. Open a new terminal session and cd into `frappe-bench/apps/helpdesk/desk`, and run the following commands:\n    ```\n    yarn install\n    yarn dev or yarn dev --host helpdesk.test\n    ```\n1. Now, you can access the site on vite dev server at `http://helpdesk.test:8080`\n\n**Note:** You'll find all the code related to Helpdesk's frontend inside `frappe-bench/apps/helpdesk/desk`\n\n\n## Compatibility matrix \n\n| Helpdesk Branch | Compatible Frappe Framework Version |\n|-----------------|-------------------------------------|\n| main            | version-15                          |\n| main            | version-16                          |\n| develop         | develop branch                      |\n\n\n## Learn and connect\n\n- [Telegram Public Group](https://t.me/frappedesk)\n- [Discuss Forum](https://discuss.frappe.io/c/frappehelpdesk/69)\n- [Documentation](https://docs.frappe.io/helpdesk)\n\n## Contributing\n\n1. [Issue Guidelines](https://github.com/frappe/erpnext/wiki/Issue-Guidelines)\n1. [Report Security Vulnerabilities](https://frappe.io/security)\n1. [Pull Request Requirements](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)\n2. [Translations](https://crowdin.com/project/frappe)\n\n<br>\n<br>\n<div align=\"center\">\n\t<a href=\"https://frappe.io\" target=\"_blank\">\n\t\t<picture>\n\t\t\t<source media=\"(prefers-color-scheme: dark)\" srcset=\"https://frappe.io/files/Frappe-white.png\">\n\t\t\t<img src=\"https://frappe.io/files/Frappe-black.png\" alt=\"Frappe Technologies\" height=\"28\"/>\n\t\t</picture>\n\t</a>\n</div>\n",
+    "tail": "",
+    "source_url": "https://github.com/frappe/helpdesk/blob/3ab76d795fcba7ee48d54c4897900df5781ce950/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "characters": 34523,
+    "excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  Developers that use our General Public Licenses protect your rights\nwith two steps: (1) assert copyright on the software, and (2) offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\n  A secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate.  Many developers of free software are heartened and\nencouraged by the resulting cooperation.  However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\n  The GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community.  It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server.  Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\n  An older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals.  This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU ",
+    "tail": "oftware can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source.  For example, if your program is a web application, its\ninterface could display a \"Source\" link that leads users to an archive\nof the code.  There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n<https://www.gnu.org/licenses/>.\n",
+    "source_url": "https://github.com/frappe/helpdesk/blob/3ab76d795fcba7ee48d54c4897900df5781ce950/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "9e73ff68ec653dc0afdef7807b90d6dd28e3a234aa4108b4574d51c571de3263",
+      "characters": 232,
+      "excerpt": "{\n\t\"private\": true,\n\t\"scripts\": {\n\t\t\"postinstall\": \"cd desk && yarn install\",\n\t\t\"dev\": \"cd desk && yarn dev\",\n\t\t\"build\": \"cd desk && yarn build\"\n\t},\n\t\"resolutions\": {\n\t\t\"cheerio\": \"1.0.0-rc.12\",\n\t\t\"prosemirror-model\": \"1.25.4\"\n\t}\n}\n",
+      "tail": "{\n\t\"private\": true,\n\t\"scripts\": {\n\t\t\"postinstall\": \"cd desk && yarn install\",\n\t\t\"dev\": \"cd desk && yarn dev\",\n\t\t\"build\": \"cd desk && yarn build\"\n\t},\n\t\"resolutions\": {\n\t\t\"cheerio\": \"1.0.0-rc.12\",\n\t\t\"prosemirror-model\": \"1.25.4\"\n\t}\n}\n",
+      "source_url": "https://github.com/frappe/helpdesk/blob/3ab76d795fcba7ee48d54c4897900df5781ce950/package.json"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "97cf9763a7a592c1ee7d19304842aadd95a589bc0083fa3372f9356b4e84830e",
+      "characters": 793,
+      "excerpt": "[project]\nname = \"helpdesk\"\nauthors = [\n    { name = \"Frappe Technologies Pvt Ltd\", email = \"hello@frappe.io\"}\n]\ndescription = \"Open Source Customer Service Software\"\nrequires-python = \">=3.14\"\nreadme = \"README.md\"\ndynamic = [\"version\"]\ndependencies = [\n    # Core dependencies\n    \"textblob==0.18.0.post0\",\n]\n[build-system]\nrequires = [\"flit_core >=3.4,<4\"]\nbuild-backend = \"flit_core.buildapi\"\n\n[tool.bench.frappe-dependencies]\nfrappe = \">=16.0.0-dev,<18.0.0\"\ntelephony = \">=0.0.1,<1.0.0\"\n\n[tool.bench.assets]\nbuild_dir = \"./desk\"\nout_dir = \"./helpdesk/public/desk\"\nindex_html_path = \"./helpdesk/www/helpdesk/index.html\"\n\n[project.urls]\nHomepage = \"https://frappe.io/helpdesk\"\nRepository = \"https://github.com/frappe/helpdesk.git\"\n\"Bug Reports\" = \"https://github.com/frappe/helpdesk/issues\"\n",
+      "tail": "hello@frappe.io\"}\n]\ndescription = \"Open Source Customer Service Software\"\nrequires-python = \">=3.14\"\nreadme = \"README.md\"\ndynamic = [\"version\"]\ndependencies = [\n    # Core dependencies\n    \"textblob==0.18.0.post0\",\n]\n[build-system]\nrequires = [\"flit_core >=3.4,<4\"]\nbuild-backend = \"flit_core.buildapi\"\n\n[tool.bench.frappe-dependencies]\nfrappe = \">=16.0.0-dev,<18.0.0\"\ntelephony = \">=0.0.1,<1.0.0\"\n\n[tool.bench.assets]\nbuild_dir = \"./desk\"\nout_dir = \"./helpdesk/public/desk\"\nindex_html_path = \"./helpdesk/www/helpdesk/index.html\"\n\n[project.urls]\nHomepage = \"https://frappe.io/helpdesk\"\nRepository = \"https://github.com/frappe/helpdesk.git\"\n\"Bug Reports\" = \"https://github.com/frappe/helpdesk/issues\"\n",
+      "source_url": "https://github.com/frappe/helpdesk/blob/3ab76d795fcba7ee48d54c4897900df5781ce950/pyproject.toml"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/frappe/helpdesk",
+    "commit": "https://github.com/frappe/helpdesk/commit/3ab76d795fcba7ee48d54c4897900df5781ce950"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0886",
+        "repo": "frappe/helpdesk",
+        "url": "https://github.com/frappe/helpdesk",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

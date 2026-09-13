@@ -1,0 +1,81 @@
+{
+  "audit_id": "R019",
+  "full_name": "openthc/cloudprnt-server",
+  "html_url": "https://github.com/openthc/cloudprnt-server",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Implementation of Star CloudPRNT Server",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2025-11-10T17:42:54Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "topics": [],
+  "metadata_source": "https://api.github.com/search/repositories?q=user%3Aopenthc&sort=stars&order=desc&per_page=100&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "28d3f5a196e1f22a182154d75a8d3bcdfe81a996",
+  "last_commit": "2025-11-10T17:42:53Z",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 1,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "boot.php",
+    "composer.json",
+    "composer.lock",
+    "make.sh"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "9dca2904f2da77cc5b5ded4da2fe8db76ff6daf0c4b1517a9623bb35858762cd",
+    "characters": 820,
+    "excerpt": "# OpenTHC Star CloudPRNT Server\n\nThis is an implementation of a CloudPRNT server in PHP.\n\nSee also: https://github.com/star-micronics/cloudprnt-sdk\n\n## CloudPRNT\n\nThis service from Star has information scattered across the web.\nFor example, [Star Micronics USA](https://starmicronics.com/cloudprnt-web-cloud-online-pos-receipt-printing-sdk-developers/) is pretty thin;\nbut [Star EMEA](https://star-emea.com/products/cloudprnt/) has a nice overview.\nHowever [Star M Japan](https://www.star-m.jp/products/s_print/CloudPRNTSDK/Documentation/en/developerguide/introduction.html) has incredible documentation of the protocol.\nConfusing but, it's all different parts of the same global company.\n\n## Installation\n\n```\ngit clone $REPO /opt/openthc/cloudprnt-server\nsudo make install\n```\n\nThen configure Apache/Nginx as desired.\n",
+    "tail": "",
+    "source_url": "https://github.com/openthc/cloudprnt-server/blob/28d3f5a196e1f22a182154d75a8d3bcdfe81a996/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "7aacd76cd877a19436461483744942f8801e6d42d413a0195fd94cdb71b5f81d",
+    "characters": 1070,
+    "excerpt": "MIT License\n\nCopyright (c) 2022 OpenTHC, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "tail": "tware, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "source_url": "https://github.com/openthc/cloudprnt-server/blob/28d3f5a196e1f22a182154d75a8d3bcdfe81a996/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "db1382efdbf0a639e7b2be298183741d268852665052adde0643c807d0f41f49",
+      "characters": 449,
+      "excerpt": "{\n\t\"name\": \"openthc/cloudprnt-server\",\n\t\"description\": \"OpenTHC CloudPRNT Server\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CloudPRNT\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CloudPRNT\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "tail": "{\n\t\"name\": \"openthc/cloudprnt-server\",\n\t\"description\": \"OpenTHC CloudPRNT Server\",\n\t\"license\": \"MIT\",\n\t\"autoload\": {\n\t\t\"exclude-from-classmap\": [\n\t\t\t\"vendor/erusev/parsedown-extra/test\"\n\t\t],\n\t\t\"psr-4\": {\n\t\t\t\"OpenTHC\\\\CloudPRNT\\\\\": \"./lib\",\n\t\t\t\"OpenTHC\\\\CloudPRNT\\\\Test\\\\\": \"./test\"\n\t\t}\n\t},\n\t\"require\": {\n\t\t\"openthc/common\": \"dev-main\"\n\t},\n\t\"require-dev\": {\n\t\t\"phpmd/phpmd\": \"2.15.0\",\n\t\t\"phpstan/phpstan\": \"2.1.8\",\n\t\t\"phpunit/phpunit\": \"9.6.20\"\n\t}\n}\n",
+      "source_url": "https://github.com/openthc/cloudprnt-server/blob/28d3f5a196e1f22a182154d75a8d3bcdfe81a996/composer.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/openthc/cloudprnt-server",
+    "commit": "https://github.com/openthc/cloudprnt-server/commit/28d3f5a196e1f22a182154d75a8d3bcdfe81a996"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

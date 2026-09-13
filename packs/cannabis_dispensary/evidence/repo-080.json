@@ -1,0 +1,179 @@
+{
+  "audit_id": "R080",
+  "full_name": "line/line-bot-sdk-nodejs",
+  "html_url": "https://github.com/line/line-bot-sdk-nodejs",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "LINE Messaging API SDK for Node.js",
+  "stargazers_count": 1079,
+  "forks_count": 434,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-11T16:23:21Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "bot",
+    "javascript",
+    "line",
+    "linebot",
+    "nodejs",
+    "sdk",
+    "typescript"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=line-bot-sdk+in%3Aname+user%3Aline&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "0297d84608e7ca58d02c9c79ed1e0229890349d6",
+  "last_commit": "2026-09-11T16:17:59Z",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 4,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".gitignore",
+    ".gitmodules",
+    ".npmrc",
+    ".prettierrc.json",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "generate-code.py",
+    "line-openapi",
+    "package-lock.json",
+    "package.json",
+    "renovate.json5",
+    "tsconfig.cjs.json",
+    "tsconfig.esm.json",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "dd3554ec2b98420fcff67835a851d63a51db76da8efdb862309b348d086a8b08",
+    "characters": 2007,
+    "excerpt": "# LINE Messaging API SDK for nodejs\n\n[![Github Action](https://github.com/line/line-bot-sdk-nodejs/actions/workflows/test.yml/badge.svg)](https://github.com/line/line-bot-sdk-nodejs/actions/workflows/test.yml)\n[![npmjs](https://badge.fury.io/js/%40line%2Fbot-sdk.svg)](https://www.npmjs.com/package/@line/bot-sdk)\n\n\n## Introduction\nThe LINE Messaging API SDK for nodejs makes it easy to develop bots using LINE Messaging API, and you can create a sample bot within minutes.\n\n## Documentation\n\nSee the official API documentation for more information\n\n- English: https://developers.line.biz/en/docs/messaging-api/overview/\n- Japanese: https://developers.line.biz/ja/docs/messaging-api/overview/\n\nline-bot-sdk-nodejs documentation\n- https://line.github.io/line-bot-sdk-nodejs/#getting-started\n\n## Requirements\n\n* **Node.js** 22 or higher\n\n## Installation\n\nUsing [npm](https://www.npmjs.com/):\n\n``` bash\n$ npm install @line/bot-sdk\n\n$ yarn add @line/bot-sdk\n\n$ pnpm add @line/bot-sdk\n```\n\n## Help and media\nFAQ: https://developers.line.biz/en/faq/\n\nNews: https://developers.line.biz/en/news/\n\n## Versioning\n\nThis project respects semantic versioning.\n- See https://semver.org/\n\nHowever, if a feature that was publicly released is discontinued for business reasons and becomes completely unusable, we will release changes as a patch release.\n\n## Contributing\n\nPlease check [CONTRIBUTING](CONTRIBUTING.md) before making a contribution.\n\n## License\n```\nCopyright (C) 2016 LINE Corp.\n \nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n \n   http://www.apache.org/licenses/LICENSE-2.0\n \nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n```\n",
+    "tail": "",
+    "source_url": "https://github.com/line/line-bot-sdk-nodejs/blob/0297d84608e7ca58d02c9c79ed1e0229890349d6/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "e5014d6faf0d2ac1a3092d44980fce9db1355955b8220ff91e19d39f7c0099b6",
+    "characters": 11351,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        https://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control s",
+    "tail": "   same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright (C) 2017-2018 LINE Corp.\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       https://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/line/line-bot-sdk-nodejs/blob/0297d84608e7ca58d02c9c79ed1e0229890349d6/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "package.json",
+      "sha256": "b8e8a449922c55cc0e7b2cabb0049803e010ce8d2cbb705d59b32eb8b062ff88",
+      "characters": 2643,
+      "excerpt": "{\n  \"name\": \"@line/bot-sdk\",\n  \"version\": \"1.0.0-test\",\n  \"description\": \"Node.js SDK for LINE Messaging API\",\n  \"type\": \"module\",\n  \"engines\": {\n    \"node\": \">=22\"\n  },\n  \"main\": \"./dist/cjs/index.js\",\n  \"types\": \"./dist/index.d.ts\",\n  \"module\": \"./dist/index.js\",\n  \"exports\": {\n    \".\": {\n      \"import\": {\n        \"types\": \"./dist/index.d.ts\",\n        \"default\": \"./dist/index.js\"\n      },\n      \"require\": {\n        \"types\": \"./dist/cjs/index.d.ts\",\n        \"default\": \"./dist/cjs/index.js\"\n      },\n      \"default\": \"./dist/cjs/index.js\"\n    },\n    \"./package.json\": \"./package.json\"\n  },\n  \"sideEffects\": false,\n  \"files\": [\n    \"dist\",\n    \"lib\",\n    \"!lib/**/tests\",\n    \"!dist/*/tests\",\n    \"!dist/cjs/*/tests\"\n  ],\n  \"scripts\": {\n    \"test\": \"npm run format && npm run typecheck && npm run build && vitest run\",\n    \"typecheck\": \"tsc -p tsconfig.json\",\n    \"covtest\": \"vitest run --coverage\",\n    \"prettier\": \"prettier \\\"{lib,test,scripts,examples}/**/*.{ts,js,cjs,mjs}\\\"\",\n    \"format\": \"npm run prettier -- --write\",\n    \"format:check\": \"npm run prettier -- -l\",\n    \"clean\": \"rm -rf dist/*\",\n    \"build\": \"npm run format:check && npm run clean && tsc -p ./tsconfig.esm.json && tsc -p ./tsconfig.cjs.json && echo \\\"{\\\\\\\"type\\\\\\\": \\\\\\\"commonjs\\\\\\\"}\\\" > dist/cjs/package.json\",\n    \"check:publint\": \"publint\",\n    \"check:attw\": \"attw $(npm pack)\",\n    \"docs\": \"vitepress dev docs\",\n    \"docs:build\": \"vitepress build docs\",\n    \"docs:preview\": \"vitepress preview docs\",\n    \"apidocs\": \"typedoc --tsconfig ./tsconfig.esm.json --excludePrivate --plugin typedoc-plugin-markdown --out docs/apidocs lib/index.ts\",\n    \"checkAll\": \"bash scripts/check-all.sh\",\n    \"release\": \"npm run build && npm publish --provenance --access public\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git@github.com:line/line-bot-sdk-nodejs.git\"\n  },\n  \"keywords\": [\n    \"node\",\n    \"line\",\n    \"sdk\"\n  ],\n  \"homepage\": \"https://github.com/line/line-bot-sdk-nodejs\",\n  \"bugs\": \"https://github.com/line/line-bot-sdk-nodejs/issues\",\n  \"dependencies\": {\n    \"@types/node\": \"^24.0.0\"\n  },\n  \"devDependencies\": {\n    \"@arethetypeswrong/cli\": \"0.18.5\",\n    \"@types/express\": \"5.0.6\",\n    \"@typescript/native\": \"npm:typescript@^7.0.0\",\n    \"@vitest/coverage-v8\": \"^4.1.0\",\n    \"express\": \"5.2.1\",\n    \"msw\": \"2.15.0\",\n    \"oxc-minify\": \"^0.148.0\",\n    \"prettier\": \"3.9.6\",\n    \"publint\": \"0.3.24\",\n    \"typedoc\": \"^0.28.14\",\n    \"typedoc-plugin-markdown\": \"^4.3.0\",\n    \"typescript\": \"npm:@typescript/typescript6@^6.0.2\",\n    \"vitepress\": \"^2.0.0-alpha.17\",\n    \"vitest\": \"^4.1.0\"\n  },\n  \"overrides\": {\n    \"vite\": \"^8.0.0\"\n  },\n  \"license\": \"Apache-2.0\"\n}\n",
+      "tail": "bot-sdk-nodejs\",\n  \"bugs\": \"https://github.com/line/line-bot-sdk-nodejs/issues\",\n  \"dependencies\": {\n    \"@types/node\": \"^24.0.0\"\n  },\n  \"devDependencies\": {\n    \"@arethetypeswrong/cli\": \"0.18.5\",\n    \"@types/express\": \"5.0.6\",\n    \"@typescript/native\": \"npm:typescript@^7.0.0\",\n    \"@vitest/coverage-v8\": \"^4.1.0\",\n    \"express\": \"5.2.1\",\n    \"msw\": \"2.15.0\",\n    \"oxc-minify\": \"^0.148.0\",\n    \"prettier\": \"3.9.6\",\n    \"publint\": \"0.3.24\",\n    \"typedoc\": \"^0.28.14\",\n    \"typedoc-plugin-markdown\": \"^4.3.0\",\n    \"typescript\": \"npm:@typescript/typescript6@^6.0.2\",\n    \"vitepress\": \"^2.0.0-alpha.17\",\n    \"vitest\": \"^4.1.0\"\n  },\n  \"overrides\": {\n    \"vite\": \"^8.0.0\"\n  },\n  \"license\": \"Apache-2.0\"\n}\n",
+      "source_url": "https://github.com/line/line-bot-sdk-nodejs/blob/0297d84608e7ca58d02c9c79ed1e0229890349d6/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/line/line-bot-sdk-nodejs",
+    "commit": "https://github.com/line/line-bot-sdk-nodejs/commit/0297d84608e7ca58d02c9c79ed1e0229890349d6"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-nodejs",
+        "capability_tag": "webhook",
+        "category_slug": "client-library-sdk",
+        "summary": "Node.js SDK for building LINE Messaging API bots and webhooks",
+        "reuse_value": 80,
+        "stars": 1068,
+        "license": "Apache-2.0",
+        "language": "TypeScript",
+        "url": "https://github.com/line/line-bot-sdk-nodejs",
+        "rank_score": 80010680
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-nodejs",
+        "language": "TypeScript",
+        "registry": "npmjs.org",
+        "pkg_name": "@line/bot-sdk",
+        "unit_class": "component",
+        "resolved": 1,
+        "link_method": "repo-lookup+backlink",
+        "downloads": 6115006,
+        "downloads_period": "last-month",
+        "dependent_repos": 1250,
+        "dependent_pkgs": 43,
+        "rank_avg": 1.2412002141405296,
+        "reach_percentile": 98.8,
+        "reuse_value": 80,
+        "stars": 1068,
+        "adoption_score": 65.9,
+        "real_value": 65,
+        "verdict": "confirm",
+        "fame_gap": 3.9,
+        "raw_json": "{\"dl\": 6115006, \"deprepos\": 1250, \"deppkgs\": 43, \"rank_avg\": 1.2412002141405296, \"link\": \"repo-lookup+backlink\"}",
+        "built_at": "2026-06-25T21:03:50.675089"
+      }
+    ],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "line/line-bot-sdk-nodejs",
+        "stars": 1068,
+        "license": "Apache-2.0",
+        "language": "TypeScript",
+        "unit_class": "component",
+        "reuse_value": 80,
+        "liftability": 90,
+        "fame_gap": -10,
+        "cat_slug": "client-library-sdk",
+        "cat_name": "Client Library / SDK",
+        "description": "LINE Messaging API SDK for Node.js"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_adoption_v2.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": [
+    {
+      "full_name": "line/line-bot-sdk-nodejs",
+      "language": "TypeScript",
+      "registry": "npmjs.org",
+      "pkg_name": "@line/bot-sdk",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "repo-lookup+backlink",
+      "downloads": 6115006,
+      "downloads_period": "last-month",
+      "dependent_repos": 1250,
+      "dependent_pkgs": 43,
+      "rank_avg": 1.2412002141405296,
+      "reach_percentile": 98.8,
+      "reuse_value": 80,
+      "stars": 1068,
+      "adoption_score": 65.9,
+      "real_value": 65,
+      "verdict": "confirm",
+      "fame_gap": 3.9,
+      "raw_json": "{\"dl\": 6115006, \"deprepos\": 1250, \"deppkgs\": 43, \"rank_avg\": 1.2412002141405296, \"link\": \"repo-lookup+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    }
+  ]
+}

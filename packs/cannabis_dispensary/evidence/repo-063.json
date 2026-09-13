@@ -1,0 +1,157 @@
+{
+  "audit_id": "R063",
+  "full_name": "opensourcepos/opensourcepos",
+  "html_url": "https://github.com/opensourcepos/opensourcepos",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Open Source Point of Sale is a web based point of sale application written in PHP using CodeIgniter framework. It uses MySQL as the data back end and has a Bootstrap 3 based user interface. If you like this project, please give it a star! Doing so helps maintain Popular OSS status for the project.",
+  "stargazers_count": 4382,
+  "forks_count": 2614,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-09-12T04:40:37Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "topics": [
+    "bootstrap3",
+    "codeigniter3",
+    "inventory-management",
+    "php",
+    "point-of-sale",
+    "reporting"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Ainventory-management&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "b610ae28acfad48728d38c09e1e1e311a2a309d8",
+  "last_commit": "2026-09-10T18:01:12+04:00",
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "authors_sample_count": 14,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".dockerignore",
+    ".editorconfig",
+    ".env.example",
+    ".gitattributes",
+    ".gitignore",
+    ".htaccess",
+    ".php-cs-fixer.no-header.php",
+    "AGENTS.md",
+    "BUILD.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "Dockerfile",
+    "INSTALL.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "UPGRADE.md",
+    "build-package.ps1",
+    "build-steps.ps1",
+    "build.ps1",
+    "composer.json",
+    "composer.lock",
+    "docker-compose.dev.yml",
+    "docker-compose.nginx.yml",
+    "docker-compose.phpmyadmin.yml",
+    "docker-compose.yml",
+    "gulpfile.js",
+    "package-lock.json",
+    "package.json",
+    "phpunit.xml.dist",
+    "preload.php",
+    "spark"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "35b9ba74566a58a1e5e386fa29da11adcae9b6bec3bf4310942642c18219d732",
+    "characters": 10974,
+    "excerpt": "<p align=\"center\"><img src=\"https://raw.githubusercontent.com/opensourcepos/opensourcepos/master/branding/emblem.svg\" alt=\"Open Source Point of Sale Logo\" width=\"auto\" height=\"200\"></p>\n<h3 align=\"center\">Open Source Point of Sale</h3>\n\n<p align=\"center\">\n  <a href=\"#-introduction\">Introduction</a> · <a href=\"#-live-demo\">Demo</a> · <a href=\"#-installation\">Installation</a> · \n  <a href=\"#-contributing\">Contributing</a> · <a href=\"#-reporting-bugs\">Bugs</a> · <a href=\"#-faq\">FAQ</a> · \n  <a href=\"#-keep-the-machine-running\">Donate</a> · <a href=\"#-license\">License</a> · <a href=\"#-credits\">Credits</a>\n</p>\n\n<p align=\"center\">\n<a href=\"https://github.com/opensourcepos/opensourcepos/actions/workflows/build-release.yml\" target=\"_blank\"><img src=\"https://github.com/opensourcepos/opensourcepos/actions/workflows/build-release.yml/badge.svg\" alt=\"Build Status\"></a>\n<a href=\"https://app.gitter.im/#/room/#opensourcepos_Lobby:gitter.im?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge\" target=\"_blank\"><img src=\"https://badges.gitter.im/jekkos/opensourcepos.svg\" alt=\"Join the chat at https://app.gitter.im\"></a>\n<a href=\"https://badge.fury.io/gh/opensourcepos%2Fopensourcepos\" target=\"_blank\"><img src=\"https://badge.fury.io/gh/opensourcepos%2Fopensourcepos.svg\" alt=\"Project Version\"></a>\n<a href=\"https://translate.opensourcepos.org/engage/opensourcepos/?utm_source=widget\" target=\"_blank\"><img src=\"https://translate.opensourcepos.org/widgets/opensourcepos/-/svg-badge.svg\" alt=\"Translation Status\"></a>\n</p>\n\n## 👋 Introduction\n\nOpen Source Point of Sale is a web-based point of sale system. The application is written in PHP, uses MySQL (or MariaDB) as the data storage back-end, and has a simple but intuitive user interface.\n\nThe latest `3.4` version is a complete overhaul of the original software. It uses CodeIgniter 4 as a framework and is based on Bootstrap 3 using Bootswatch themes. Along with improved functionality and security.\n\nThe features include:\n\n- Stock management (items and kits with an extensible list of attributes)\n- VAT, GST, customer, and multi tiers taxation\n- Sale register with transactions logging\n- Quotation and invoicing\n- Expenses logging\n- Cash up function\n- Printing and emailing of receipts, invoices and quotations\n- Barcode generation and printing\n- Database of customers and suppliers\n- Multiuser with permission control\n- Reporting on sales, orders, expenses, inventory status and more\n- Receivings\n- Gift cards\n- Rewards\n- Restaurant tables\n- Messaging (SMS)\n- Multilanguage\n- Selectable Bootstrap based UI theme with Bootswatch\n- MailChimp integration\n- Optional Google reCAPTCHA to protect the login page from brute force attacks\n- GDPR ready\n\n## 🧪 Live Demo\n\nWe've got a live version of our latest master running for you to play around with and test everything out. It's a containerized install that will reinitialize when new functionality is merged into our code repository.\n\nYou can [find the demo here](https://demo.opensourcepos.org/) and log in with these credentials.  \n👤 Username `admin`  \n🔒 Password `pointofsale`\n\nIf you bump into an issue, please check [the status page here](https://status.opensourcepos.org/) to confirm if the server is up and running.\n\n## 🖥️ Development Demo\n\nBesides the demo of the latest master, we also have a development server that builds when there's a new commit to our repository. It's mainly used for testing out new code before merging it into the master. [It can be found here](https://dev.opensourcepos.org/).\n\nThe log in credentials are the same as the regular live demo.\n\n## 💾 Installation\n\nPlease **refrain from creating issues** about installation problems before having read the FAQ and going through existing GitHub issues. We have a build pipeline that checks the sanity of our latest repository commit, and in case the application itself is broken then our build will be as well.\n\nThis application can be set up in _many_ different ways and we only support the ones described in [the INSTALL.md file](INSTALL.md).\n\nFor more information and recommendations on support hardware, like receipt printers and barcode scanners, read [this page](https://github.com/opensourcepos/opensourcepos/wiki/Supported-hardware-datasheet) on our wiki.\n\n## ✨ Contributing\n\nEveryone is more than welcome to help us improve this project. If you think you've got something to help us go forward, feel free to open a [pull request]() or join the conversation on [Element](https://app.gitter.im/#/room/#opensourcepos_Lobby:gitter.im).\n\nWant to help translate Open Source Point of Sale in your language? You can find [our Weblate here](https://translate.opensourcepos.org), sign up, and start translating. You can subscribe to different languages to receive a notification once a new string is added or needs updating. Have a look at our [guidelines](https://github.com/opensourcepos/opensourcepos/wiki/Adding-translations) below to help you get started.\n\nOnly with the help of the community, we can keep language translations up to date. Thanks!\n\n## 🐛 Reporting Bugs\n\nBefore creating a new issue, you'll need copy and include the info under the `System Info` tab in the configuration section in most cases. If that information is not provided in full, your issue might be tagged as pending.\n\nIf you're reporting a potential security issue, please refer to our security policy found in the [SECURITY.md](SECURITY.md) file.\n\nNOTE: If you're running non-release code, please make sure you always run the latest database upgrade script and download the latest master code.\n\n## 📖 FAQ\n\n- If you get the message `system folder missing`, then you have cloned the source using git and you need to run a build first. Check [INSTALL.md](INSTALL.md) for instructions or download latest zip file from [GitHub releases](https://github.com/opensourcepos/opensourcepos/releases) instead.\n\n- If at login time you read `The installation is not correct, check your php.ini file.`, please check the error_log in `public` folder to understand what's wrong and make sure you read the [INSTALL.md](INSTALL.md). To know how to enable `error_log`, please read the comment in [issue #1770](https://github.com/opensourcepos/opensourcepos/issues/1770#issuecomment-355177943).\n\n- If you installed your OSPOS under a web server subdir, please edit `public/.htaccess` and go to the lines with the comments `if in web root` or `if in subdir`, uncomment one and replace `<OSPOS path>` with your path, and follow the instruction on the second comment line. If you face more issues, please read [issue #920](https://github.com/opensourcepos/opensourcepos/issues/920) for more information.\n\n- Apache server configurations are SysAdmin issues and not strictly related to OSPOS. Please make sure you can show a \"Hello world\" HTML page before pointing to OSPOS public directory. Make sure `.htaccess` is correctly configured.\n\n- If the avatar pictures are not shown in items or at item save you get an error, please make sure your `writable` and subdirs are assigned to the correct owner and the access permission is set to `750`.\n\n- If you install OSPOS in Docker behind a proxy that performs `ssloffloading`, you can enable the URL generated to be HTTPS instead of HTTP, by activating the environment variable `FORCE_HTTPS = 1`.\n\n- If you install OSPOS behind a proxy and OSPOS constantly drops your session, consider whitelisting the proxy IP address by setting `public array $proxyIPs = [];` in the [main PHP config file](https://github.com/opensourcepos/opensourcepos/blob/master/app/Config/App.php).\n\n- If you have suhosin installed and face an issue with CSRF, please make sure you read [issue #1492](https://github.com/opensourcepos/opensourcepos/issues/1492).\n\n- PHP `≥ 8.2` is required to run this app.\n\n## 🏃 Keep the Machine Running\n\nIf you like our project, please consider buying us a coffee through the button below so we can keep adding features. Please star the project if you like it!\n\n[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MUN6AEG7NY6H8)\\\nOr refer to the [FUNDING.yml](.github/FUNDING.yml) file.\n\nIf you choose to deploy OSPOS in the cloud, you can contribute to the project by using DigitalOcean and signing up through our referral link. You'll receive a [free $200, 60-day credit](https://m.do.co/c/ac38c262507b) if you run OSPOS in a DigitalOcean droplet through [our referral link](https://m.do.co/c/ac38c262507b).\n\n## 📄 License\n\nOpen Source Point of Sale is licensed under MIT terms with an important addition:\n\nThe footer signature \"© 2010 - _current year_ · opensourcepos.org · 3.x.x - _hash_\" including the version, hash and link to our website MUST BE RETAINED, MUST BE VISIBLE IN EVERY PAGE and CANNOT BE MODIFIED.\n\nAlso worth noting:\n\n_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._\n\nFor more details please read the [LI",
+    "tail": "",
+    "source_url": "https://github.com/opensourcepos/opensourcepos/blob/b610ae28acfad48728d38c09e1e1e311a2a309d8/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "d0feb2cbd116ab741a12374da67e96316da9ef93d34992a3454cac13d5a0a109",
+    "characters": 2534,
+    "excerpt": "MIT License\n\nCopyright (c) 2013-2025 jekkos\nCopyright (c) 2017-2025 objecttothis\nCopyright (c) 2017-2025 odiea\nCopyright (c) 2021-2025 BudsieBuds\nCopyright (c) 2017-2024 Steve Ireland\nCopyright (c) 2018-2024 WebShells\nCopyright (c) 2015-2023 FrancescoUK (aka daN4cat)\nCopyright (c) 2015-2022 Aamir Shahzad (aka asakpke), RoshanTech, eSite.pk\nCopyright (c) 2019-2020 Andriux1990\nCopyright (c) 2018-2019 Erasto Marroquin (aka Erastus)\nCopyright (c) 2019 Loyd Jayme (aka loydjayme25)\nCopyright (c) 2018 Nathan Sas (aka nathanzky)\nCopyright (c) 2018 Emilio Silva (aka emi-silva)\nCopyright (c) 2016-2017 Ramkrishna Mondal (aka RamkrishnaMondal)\nCopyright (c) 2016-2017 Jorge Colmenarez (aka jlctmaster), frontuari.com\nCopyright (c) 2016-2017 Jesus Guerrero Botella (aka i92guboj)\nCopyright (c) 2017 Deep Shah (aka deepshah)\nCopyright (c) 2017 Joshua Fernandez (aka joshua1234511)\nCopyright (c) 2017 asadjaved63\nCopyright (c) 2016 Rinaldy@dbarber (aka rnld26)\nCopyright (c) 2015 Toni Haryanto (aka yllumi)\nCopyright (c) 2012-2014 pappastech\nCopyright (c) 2013 Rob Garrison\nCopyright (c) 2013 Parq\nCopyright (c) 2013 Ramel\nCopyright (c) 2012 Alain\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\nAdditionally, you cannot claim copyright or ownership of the Software.\n\nThe footer signatures with version, hash and URL link to the official website\nof the project MUST BE RETAINED, MUST BE VISIBLE IN EVERY PAGE and CANNOT BE\nMODIFIED.\nFooter signatures are in the format\n\"© 2010 - current year · opensourcepos.org · version - commit\"\nor \"Open Source Point of Sale\".\n",
+    "tail": " MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\nAdditionally, you cannot claim copyright or ownership of the Software.\n\nThe footer signatures with version, hash and URL link to the official website\nof the project MUST BE RETAINED, MUST BE VISIBLE IN EVERY PAGE and CANNOT BE\nMODIFIED.\nFooter signatures are in the format\n\"© 2010 - current year · opensourcepos.org · version - commit\"\nor \"Open Source Point of Sale\".\n",
+    "source_url": "https://github.com/opensourcepos/opensourcepos/blob/b610ae28acfad48728d38c09e1e1e311a2a309d8/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "22fb10934b09f6c7dbed1b8568db0f65514bb78dea8ece31f6a4e39df4cee95b",
+      "characters": 2400,
+      "excerpt": "{\n    \"name\": \"opensourcepos/opensourcepos\",\n    \"description\": \"Open Source Point of Sale is a web based POS system written in the PHP language. It uses MySQL as backend and has a simple user interface\",\n    \"license\": \"MIT\",\n    \"type\": \"project\",\n    \"keywords\": [\n        \"point-of-sale\",\n        \"POS\"\n    ],\n    \"authors\": [\n        {\n            \"name\": \"jekkos\"\n        },\n        {\n            \"name\": \"objecttothis\"\n        }\n    ],\n    \"homepage\": \"https://opensourcepos.org\",\n    \"support\": {\n        \"issues\": \"https://github.com/opensourcepos/opensourcepos/issues\",\n        \"forum\": \"https://github.com/opensourcepos/opensourcepos/discussions\",\n        \"wiki\": \"https://github.com/opensourcepos/opensourcepos/wiki\",\n        \"source\": \"https://github.com/opensourcepos/opensourcepos\",\n        \"docs\": \"https://github.com/opensourcepos/opensourcepos/wiki#documentation\",\n        \"matrix\": \"https://matrix.to/#/#opensourcepos_Lobby:gitter.im\"\n    },\n    \"require\": {\n        \"php\": \"^8.2\",\n        \"ext-intl\": \"*\",\n        \"codeigniter4/framework\": \"4.7.4\",\n        \"dompdf/dompdf\": \"^3.1.6\",\n        \"ezyang/htmlpurifier\": \"^4.17\",\n        \"laminas/laminas-escaper\": \"2.18.0\",\n        \"paragonie/random_compat\": \"^2.0.21\",\n        \"picqer/php-barcode-generator\": \"^2.4.0\",\n        \"tamtamchik/namecase\": \"^3.0.0\"\n    },\n    \"require-dev\": {\n        \"codeigniter/coding-standard\": \"^1.8\",\n        \"fakerphp/faker\": \"^1.23.0\",\n        \"friendsofphp/php-cs-fixer\": \"^3.47.1\",\n        \"kint-php/kint\": \"^5.0.4\",\n        \"mikey179/vfsstream\": \"^1.6\",\n        \"nexusphp/cs-config\": \"^3.6\",\n        \"phpunit/phpunit\": \"^10.5.16 || ^11.2\",\n        \"predis/predis\": \"^1.1 || ^2.0\"\n    },\n    \"replace\": {\n        \"psr/log\": \"*\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"CodeIgniter\\\\\": \"vendor/codeigniter4/framework/system/\"\n        },\n        \"exclude-from-classmap\": [\n            \"**/Database/Migrations/**\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"config\": {\n        \"allow-plugins\": {\n            \"phpstan/extension-installer\": true\n        },\n        \"optimize-autoloader\": true,\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true\n    },\n    \"scripts\": {\n        \"test\": \"phpunit\"\n    },\n    \"scripts-descriptions\": {\n        \"test\": \"Run unit tests\"\n    }\n}\n",
+      "tail": "ace\": {\n        \"psr/log\": \"*\"\n    },\n    \"autoload\": {\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"CodeIgniter\\\\\": \"vendor/codeigniter4/framework/system/\"\n        },\n        \"exclude-from-classmap\": [\n            \"**/Database/Migrations/**\"\n        ]\n    },\n    \"autoload-dev\": {\n        \"psr-4\": {\n            \"Tests\\\\\": \"tests/\"\n        }\n    },\n    \"config\": {\n        \"allow-plugins\": {\n            \"phpstan/extension-installer\": true\n        },\n        \"optimize-autoloader\": true,\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true\n    },\n    \"scripts\": {\n        \"test\": \"phpunit\"\n    },\n    \"scripts-descriptions\": {\n        \"test\": \"Run unit tests\"\n    }\n}\n",
+      "source_url": "https://github.com/opensourcepos/opensourcepos/blob/b610ae28acfad48728d38c09e1e1e311a2a309d8/composer.json"
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "ceaa13976b1c5ca106c163a8b3460b4d46f7370adef58f994eccfe957e3a6c94",
+      "characters": 654,
+      "excerpt": "include:\n    - docker/docker-mysql.yml\n\nservices:\n    ospos:\n        image: jekkos/opensourcepos:master\n        restart: always\n        depends_on:\n            - mysql\n        ports:\n            - \"80:80\"\n        networks:\n            - app_net\n        volumes:\n            - uploads:/app/public/uploads\n            - logs:/app/writable/logs\n        environment:\n            - CI_ENVIRONMENT=production\n            - ALLOWED_HOSTNAMES=localhost\n            - FORCE_HTTPS=false\n            - PHP_TIMEZONE=UTC\n            - MYSQL_USERNAME=admin\n            - MYSQL_PASSWORD=pointofsale\n            - MYSQL_DB_NAME=ospos\n            - MYSQL_HOST_NAME=mysql\n",
+      "tail": "include:\n    - docker/docker-mysql.yml\n\nservices:\n    ospos:\n        image: jekkos/opensourcepos:master\n        restart: always\n        depends_on:\n            - mysql\n        ports:\n            - \"80:80\"\n        networks:\n            - app_net\n        volumes:\n            - uploads:/app/public/uploads\n            - logs:/app/writable/logs\n        environment:\n            - CI_ENVIRONMENT=production\n            - ALLOWED_HOSTNAMES=localhost\n            - FORCE_HTTPS=false\n            - PHP_TIMEZONE=UTC\n            - MYSQL_USERNAME=admin\n            - MYSQL_PASSWORD=pointofsale\n            - MYSQL_DB_NAME=ospos\n            - MYSQL_HOST_NAME=mysql\n",
+      "source_url": "https://github.com/opensourcepos/opensourcepos/blob/b610ae28acfad48728d38c09e1e1e311a2a309d8/docker-compose.yml"
+    },
+    {
+      "path": "package.json",
+      "sha256": "109a5593980a69b7623d886a2c0fd1d068345c85be03805bc3713e4df49daefb",
+      "characters": 3111,
+      "excerpt": "{\n    \"name\": \"@opensourcepos/opensourcepos\",\n    \"version\": \"3.4.2\",\n    \"description\": \"Open Source Point of Sale is a web based point of sale system written in the PHP language. It uses MySQL as the data storage back-end and has a simple user interface.\",\n    \"keywords\": [\n        \"point-of-sale\",\n        \"POS\"\n    ],\n    \"homepage\": \"https://opensourcepos.org\",\n    \"bugs\": {\n        \"url\": \"https://github.com/opensourcepos/opensourcepos/issues\"\n    },\n    \"repository\": {\n        \"type\": \"git\",\n        \"url\": \"git+https://github.com/opensourcepos/opensourcepos.git\"\n    },\n    \"license\": \"MIT\",\n    \"contributors\": [\n        \"jekkos <jekkos - at - opensourcepos.org>\",\n        \"objecttothis <objecttothis - at - gmail.com>\"\n    ],\n    \"files\": [\n        \"dist/opensourcepos.$version.tgz\"\n    ],\n    \"type\": \"module\",\n    \"main\": \"index.php\",\n    \"engines\": {\n        \"node\": \">=20\"\n    },\n    \"scripts\": {\n        \"build\": \"gulp default\",\n        \"gulp\": \"gulp\"\n    },\n    \"dependencies\": {\n        \"bootstrap\": \"^3.4.1\",\n        \"bootstrap-daterangepicker\": \"^2.1.27\",\n        \"bootstrap-datetime-picker\": \"2.4.4\",\n        \"bootstrap-notify\": \"^3.1.3\",\n        \"bootstrap-select\": \"^1.13.18\",\n        \"bootstrap-table\": \"^1.23.5\",\n        \"bootstrap-tagsinput-2021\": \"^0.8.6\",\n        \"bootstrap-toggle\": \"^2.2.2\",\n        \"bootstrap3-dialog\": \"github:nakupanda/bootstrap3-dialog#master\",\n        \"bootstrap5\": \"npm:bootstrap@^5.3.8\",\n        \"bootswatch\": \"^3.4.1\",\n        \"bootswatch5\": \"npm:bootswatch@^5.3.8\",\n        \"chartist\": \"^0.11.4\",\n        \"chartist-plugin-axistitle\": \"^0.0.7\",\n        \"chartist-plugin-barlabels\": \"^0.0.5\",\n        \"chartist-plugin-pointlabels\": \"^0.0.6\",\n        \"chartist-plugin-tooltips\": \"^0.0.17\",\n        \"clipboard\": \"^2.0.11\",\n        \"coffeescript\": \"^2.7.0\",\n        \"dompurify\": \"^3.4.13\",\n        \"elegant-circles\": \"github:opensourcepos/elegant-circles#minified\",\n        \"es6-promise\": \"^4.2.8\",\n        \"file-saver\": \"^2.0.5\",\n        \"html2canvas\": \"^1.4.1\",\n        \"jasny-bootstrap\": \"^3.1.3\",\n        \"jquery\": \"^3.7.1\",\n        \"jquery-form\": \"^4.3.0\",\n        \"jquery-ui-dist\": \"^1.12.1\",\n        \"jquery-validation\": \"^1.19.5\",\n        \"jspdf\": \"^4.2.1\",\n        \"jspdf-autotable\": \"^5.0.7\",\n        \"tableexport.jquery.plugin\": \"^1.33.0\"\n    },\n    \"overrides\": {\n        \"xlsx\": \"https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz\"\n    },\n    \"devDependencies\": {\n        \"gulp\": \"^5.0.1\",\n        \"gulp-clean\": \"^0.4.0\",\n        \"gulp-clean-css\": \"^4.3.0\",\n        \"gulp-concat\": \"^2.6.1\",\n        \"gulp-debug\": \"^5.0.1\",\n        \"gulp-gzip\": \"^1.4.2\",\n        \"gulp-header\": \"^2.0.12\",\n        \"gulp-inject\": \"^5.0.5\",\n        \"gulp-rename\": \"^2.1.0\",\n        \"gulp-rev\": \"^12.0.0\",\n        \"gulp-run\": \"^1.7.1\",\n        \"gulp-tar\": \"^5.0.0\",\n        \"gulp-uglify\": \"^3.0.2\",\n        \"gulp-zip\": \"^6.1.0\",\n        \"license-report\": \"^6.8.2\",\n        \"npm-check-updates\": \"^22.1.1\",\n        \"readable-stream\": \"^4.4.2\",\n        \"stream-series\": \"^0.1.1\"\n    },\n    \"publishConfig\": {\n        \"registry\": \"https://npm.pkg.github.com/\"\n    }\n}\n",
+      "tail": "\"devDependencies\": {\n        \"gulp\": \"^5.0.1\",\n        \"gulp-clean\": \"^0.4.0\",\n        \"gulp-clean-css\": \"^4.3.0\",\n        \"gulp-concat\": \"^2.6.1\",\n        \"gulp-debug\": \"^5.0.1\",\n        \"gulp-gzip\": \"^1.4.2\",\n        \"gulp-header\": \"^2.0.12\",\n        \"gulp-inject\": \"^5.0.5\",\n        \"gulp-rename\": \"^2.1.0\",\n        \"gulp-rev\": \"^12.0.0\",\n        \"gulp-run\": \"^1.7.1\",\n        \"gulp-tar\": \"^5.0.0\",\n        \"gulp-uglify\": \"^3.0.2\",\n        \"gulp-zip\": \"^6.1.0\",\n        \"license-report\": \"^6.8.2\",\n        \"npm-check-updates\": \"^22.1.1\",\n        \"readable-stream\": \"^4.4.2\",\n        \"stream-series\": \"^0.1.1\"\n    },\n    \"publishConfig\": {\n        \"registry\": \"https://npm.pkg.github.com/\"\n    }\n}\n",
+      "source_url": "https://github.com/opensourcepos/opensourcepos/blob/b610ae28acfad48728d38c09e1e1e311a2a309d8/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/opensourcepos/opensourcepos",
+    "commit": "https://github.com/opensourcepos/opensourcepos/commit/b610ae28acfad48728d38c09e1e1e311a2a309d8"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0168",
+        "repo": "opensourcepos/opensourcepos",
+        "url": "https://github.com/opensourcepos/opensourcepos",
+        "labels": [],
+        "family_ids": [
+          "U68"
+        ],
+        "family_names": [
+          "Restaurant, reservation and POS operations"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 1,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

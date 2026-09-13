@@ -1,0 +1,98 @@
+{
+  "audit_id": "R073",
+  "full_name": "ledger/ledger",
+  "html_url": "https://github.com/ledger/ledger",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Double-entry accounting system with a command-line reporting interface",
+  "stargazers_count": 6034,
+  "forks_count": 547,
+  "default_branch": "main",
+  "archived": false,
+  "pushed_at": "2026-09-05T03:31:01Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "topics": [
+    "accounting",
+    "command-line-tool",
+    "ledger",
+    "plaintext-accounting"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aaccounting&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "76b9dc2b225725da3d646515d1c9a3d4d626af29",
+  "last_commit": "2026-09-04T22:47:34Z",
+  "commits_six_months_sample_count": 700,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 8,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".clang-format",
+    ".clang-tidy",
+    ".clangd",
+    ".dir-locals.el",
+    ".format",
+    ".gitignore",
+    ".gitmodules",
+    ".yamllint",
+    "CLAUDE.md",
+    "CMakeLists.txt",
+    "CONTRIBUTING.md",
+    "INSTALL.md",
+    "LICENSE.md",
+    "NEWS.md",
+    "README-snapshot.md",
+    "README.md",
+    "acprep",
+    "default.nix",
+    "flake.lock",
+    "flake.nix",
+    "lean",
+    "lefthook.yml",
+    "lsan-suppressions.txt",
+    "shell.nix",
+    "ubsan-suppressions.txt"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "ef94dd57cd6fb6f2a7a85e2ef9764c06dc8abf7c63ea2e2ec1de88d7d15a528d",
+    "characters": 10156,
+    "excerpt": "[![Join the chat at https://gitter.im/use-package/Lobby](https://badges.gitter.im/use-package/Lobby.svg)](https://gitter.im/use-package/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n![Build Status main](https://github.com/ledger/ledger/actions/workflows/cmake.yml/badge.svg)\n[![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/ledger/ledger/pulse/monthly)\n[![License](https://img.shields.io/badge/license-BSD-blue.svg?style=flat)](https://opensource.org/licenses/BSD-3-Clause)\n[![GitHub release](https://img.shields.io/github/release/ledger/ledger.svg?style=flat)](https://github.com/ledger/ledger/releases)\n\n# Ledger: Command-Line Accounting\n\nLedger is a powerful, double-entry accounting system that is accessed from the\nUNIX command-line.  This may put off some users, since there is no flashy UI,\nbut for those who want unparalleled reporting access to their data there are\nfew alternatives.\n\nLedger uses text files for input.  It reads the files and generates reports;\nthere is no other database or stored state.  To use Ledger, you create a\nfile of your account names and transactions, run from the command line with\nsome options to specify input and requested reports, and get output.\nThe output is generally plain text, though you could generate a graph or\nhtml instead.  Ledger is simple in concept, surprisingly rich in ability,\nand easy to use.\n\n\n## For the Impatient\n\nI know, you just want to build and play.  If you have all the [dependencies](#dependencies)\ninstalled, then simply do this:\n\n    $ git clone git@github.com:ledger/ledger.git\n    $ cd ledger && ./acprep update  # Update to the latest, configure, make\n\nNow try your first ledger command:\n\n    $ ./ledger -f test/input/sample.dat reg\n\nFor help on keeping your journal have a look at the [documentation], the [wiki],\nand the [Resources](#resources) section at the end of this file.\nAn Emacs mode for Ledger files can be found in the\n[ledger/ledger-mode repository] and a vim plugin is located in the\n[ledger/vim-ledger repository].\n\n## Docker version\n\nIf you have Docker installed on your computer or server, you can use a [Docker version](https://hub.docker.com/r/dcycle/ledger/) of this software, without installing any further dependencies:\n\n    $ docker run --rm -v \"$PWD\"/test/input:/data dcycle/ledger:1 -f /data/sample.dat reg\n\n## Dependencies\n\nIf you wish to proceed in this venture, you'll need a few dependencies.\nNote that some features, e.g. `--import` require building Ledger with Python support.\nThe easiest way to get them for your platform is to run this handy Python script:\n\n    $ ./acprep dependencies\n\n\nIf that doesn't completely work, here are the dependencies for building the\ncurrent `main` branch:\n\nDependency  | Version (or greater)\n------------|---------------------\n[CMake]     | 3.16.2\n[Boost]     | 1.72\n[Gmp]       | 6.1.2\n[Mpfr]      | 4.0.2\n[utfcpp]    | 3.2.3\n[ICU]       | 63 _optional_\n[gettext]   | 0.17 _optional_\n[libedit]   | 20090111-3.0 _optional_\n[Python]    | 3.10 _optional_\n[Gpgmepp]   | 1.13.1 _optional_\n[doxygen]   | 1.9.5 _optional_, for `make docs`\n[graphviz]  | 2.20.3 _optional_, for `make docs`\n[texinfo]   | 4.13 _optional_, for `make docs`\n[lcov]      | 1.6 _optional_, for `make report`, used with `./acprep gcov`\n[sloccount] | 2.26 _optional_, for `make sloc`\n\n### macOS\n\nYou can use [Homebrew] or [MacPorts] to install build dependencies for Ledger\neasily on macOS.\n\n#### 1. Homebrew\n\nIf you use Homebrew, to install the dependencies you would run:\n\n    $ brew install cmake boost boost-python3 gmp mpfr\n\n#### 2. MacPorts\n\nIf you build stuff using MacPorts on macOS, as I do, here is what you would\nrun:\n\n    $ sudo port install -f cmake python37 \\\n         libiconv zlib gmp \\\n         mpfr ncurses ncursesw \\\n         gettext libedit boost-jam \\\n         boost +st+python37+icu texlive doxygen graphviz \\\n         texinfo lcov sloccount\n\n### Conda\n\nThe dependencies for building Ledger are available from [conda-forge] on certain\nplatforms (for example, `linux-64`), which can be used with [Conda] or [mamba].\n\nWith Conda you could run:\n\n    $ conda install -c conda-forge python=3 cmake boost gmp mpfr \\\n         gettext libedit texinfo doxygen graphviz\n\n### Ubuntu\n\nIf you're going to build on Ubuntu, `sudo apt-get install ...` the\nfollowing packages (current as of Ubuntu 18.04):\n\n    $ sudo apt-get install build-essential cmake doxygen \\\n         libboost-system-dev libboost-dev python3-dev gettext git \\\n         libboost-date-time-dev libboost-filesystem-dev \\\n         libboost-iostreams-dev libboost-python-dev libboost-regex-dev \\\n         libboost-test-dev libedit-dev libgmp3-dev libmpfr-dev texinfo tzdata\n\n### Debian\n\nDebian 10 (bullseye), Debian 11 (\"bullseye\"), Debian testing and Debian\nunstable (sid) contain all components needed to build ledger.  You can\ninstall all required build dependencies using the following command:\n\n    $ sudo apt-get install build-essential cmake autopoint texinfo python3-dev \\\n         zlib1g-dev libbz2-dev libgmp3-dev gettext libmpfr-dev \\\n         libboost-date-time-dev libboost-filesystem-dev \\\n         libboost-graph-dev libboost-iostreams-dev \\\n         libboost-python-dev libboost-regex-dev libboost-test-dev\n\n### Fedora\n\nYou can install all required build dependencies under Fedora using the\nfollowing command (tested with Fedora 32):\n\n    $ sudo dnf install boost-date-time boost-devel boost-filesystem \\\n        boost-iostreams boost-python3-devel boost-regex boost-system \\\n        boost-test cmake doxygen gettext git gmp-devel libedit-devel \\\n        mpfr-devel python3-devel texinfo tzdata\n\n## Building\n\nThe next step is preparing your environment for building.  While you can use\n`cmake .` and make, I've prepared a script that does a lot more of the\nfootwork for you:\n\n    $ ./acprep update\n    # or, if you want to use the Boost libraries with suffix -mt, install in\n    # $HOME/local and build with 2 processes in parallel\n    $ ./acprep update --boost-suffix=-mt --prefix=$HOME/local -j2\n\nPlease read the contents of `CMakeFiles/CMakeOutput.log` and\n`CMakeFiles/CMakeError.log` if the configure step fails.  Also,\nsee the `help` subcommand to `acprep`, which explains some of its many\noptions.  It's pretty much the only command I run for configuring, building\nand testing Ledger.\n\nYou can run `make check` to confirm the result, and `make install` to install.\n\n## Python Bindings\n\nLedger includes optional Python bindings built with [Boost.Python]. Python\nsupport is **off by default** and must be explicitly enabled.\n\n### Prerequisites\n\nIn addition to the standard [dependencies](#dependencies), you need:\n\n- Python 3.10 or later (with development headers)\n- Boost.Python (matching your Boost and Python versions)\n\nSee the platform-specific dependency sections above for package names (e.g.\n`boost-python3` on Homebrew, `libboost-python-dev` on Ubuntu).\n\n### Building with Python Support\n\nUsing `acprep`:\n\n    $ ./acprep --python update --output=build\n\nOr using CMake directly:\n\n    $ mkdir build && cd build\n    $ cmake -DUSE_PYTHON=ON ..\n    $ make -j$(nproc)\n\n### Installing the Python Module\n\nRunning `make install` (or `cmake --install build`) copies `ledger.so` (or\n`ledger.pyd` on Windows) into your Python installation's `site-packages`\ndirectory. After installing:\n\n    $ python -c \"import ledger; print(ledger)\"\n\n### Using Without Installing\n\nTo use the module directly from the build tree without installing, point\n`PYTHONPATH` at the build directory:\n\n    $ PYTHONPATH=build python -c \"import ledger; print(ledger)\"\n\nOn Linux you may also need to set `LD_LIBRARY_PATH=build`, and on macOS\n`DYLD_LIBRARY_PATH=build`.\n\nA demo script is included at `python/demo.py`:\n\n    $ PYTHONPATH=build python python/demo.py\n\nFor full documentation of the Python API, see the \"Extending with Python\"\nchapter in the [Ledger manual](https://www.ledger-cli.org/3.0/doc/ledger3.html).\n\n[Boost.Python]: https://www.boost.org/doc/libs/release/libs/python/\n\n## Resources\n\nNow that you're up and running, here are a few resources to keep in mind:\n\n - [Homepage]\n - [Documentation]\n - [IRC channel][IRC]: #ledger channel on Libera Chat\n - [Mailing List / Forum][mailing list]\n - [GitHub project page][github]\n - [Code analysis][openhub]\n\nIf you have ideas you'd like to share, the best way is either to e-mail me a\npatch (I prefer attachments over pasted text), or to [get an account on GitHub](https://github.com/signup).\nOnce you do, fork the [Ledger project][github],\nhack as much as you like, then [open a pull request on GitHub](https://github.com/ledger/ledger/pulls).\n\n[Homepage]: https://ledger-cli.org/\n[documentation]: https://www.ledger-cli.org/docs.html\n[mailing list]: https://list.ledger-cli.org/\n[wiki]: https://wiki.ledger-cli.org/\n[IRC]: irc://irc.libera.chat/ledger\n[github]: https://github.com/ledger/ledger\n[ledger/vim-ledger repository]: https://github.com/ledger/vim-ledger\n[ledger/ledger-mode ",
+    "tail": "",
+    "source_url": "https://github.com/ledger/ledger/blob/76b9dc2b225725da3d646515d1c9a3d4d626af29/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "f79a4a9e719561cf9f4046e958e134f9cce908b83c934805b5e25dc6fe5541e9",
+    "characters": 1492,
+    "excerpt": "Copyright (c) 2003-2025, John Wiegley.  All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are\nmet:\n\n- Redistributions of source code must retain the above copyright\n  notice, this list of conditions and the following disclaimer.\n\n- Redistributions in binary form must reproduce the above copyright\n  notice, this list of conditions and the following disclaimer in the\n  documentation and/or other materials provided with the distribution.\n\n- Neither the name of New Artisans LLC nor the names of its\n  contributors may be used to endorse or promote products derived from\n  this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "tail": "CONTRIBUTORS\n\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\nLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\nA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\nOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\nSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\nLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "source_url": "https://github.com/ledger/ledger/blob/76b9dc2b225725da3d646515d1c9a3d4d626af29/LICENSE.md"
+  },
+  "nested_license_paths": [
+    "contrib/non-profit-audit-reports/LICENSE",
+    "lib/utfcpp/v4/LICENSE"
+  ],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/ledger/ledger",
+    "commit": "https://github.com/ledger/ledger/commit/76b9dc2b225725da3d646515d1c9a3d4d626af29"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

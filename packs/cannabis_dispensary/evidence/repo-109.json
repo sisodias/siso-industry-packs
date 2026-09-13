@@ -1,0 +1,76 @@
+{
+  "audit_id": "R109",
+  "full_name": "receipt-print-hq/escpos-printer-db",
+  "html_url": "https://github.com/receipt-print-hq/escpos-printer-db",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "Database of ESC/POS thermal receipt printers",
+  "stargazers_count": 147,
+  "forks_count": 61,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2026-07-27T19:07:55Z",
+  "license": {
+    "key": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0 International",
+    "spdx_id": "CC-BY-4.0",
+    "url": "https://api.github.com/licenses/cc-by-4.0",
+    "node_id": "MDc6TGljZW5zZTI1"
+  },
+  "topics": [
+    "database",
+    "escpos-php",
+    "hacktoberfest",
+    "pos-printers",
+    "printer",
+    "profile",
+    "python-escpos"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=ESC%2FPOS+language%3APython+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:07:40.407560+00:00",
+  "revision": "fe07c81155a6c49912379fdb960dc9155c8dfc89",
+  "last_commit": "2026-07-27T21:07:54+02:00",
+  "commits_six_months_sample_count": 12,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 25,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "df45c7ef3735ce3274018fd94793c274b2bcee893b288d111e32a53ec20a1529",
+    "characters": 1517,
+    "excerpt": "# ESC/POS printer database\n\nThis is a community-maintained database of thermal receipt printer capabilities.\n\nThe capability data is shared by multiple open source receipt printing projects,\nto allow improvements in hardware support, compatibility and localization.\n\nOnly features of ESC/POS printers are tracked at this stage. If you have a ZPL,\nDPL, or ESC/P printer, it is not in-scope for being listed in this database.\n\n## Browse\n\nA browsable version of the printer database is hosted [here](https://mike42.me/escpos-printer-db). The single-page app that hosts this data is [also open to contributions](https://github.com/receipt-print-hq/escpos-printer-db-browser).\n\nThe [data/](https://github.com/receipt-print-hq/escpos-printer-db/tree/master/data) directory in this repository contains the actual printer data, and is where you should send corrections.\n\n## Contribute\n\nThis project is open to any kind of contribution, eg.\n\n- Submitting information about your printer\n- Writing new profiles\n- Typing up legacy code pages\n\n### Add your printer\n\nSee: [How to get your printer included in the database](https://github.com/receipt-print-hq/escpos-printer-db/blob/master/doc/add-your-printer.md)\n\n## License\n\nThis data and documentation is provided under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). See LICENSE.md for details.\n\n## Participating projects\n\n- [python-escpos](https://github.com/python-escpos/python-escpos)\n- [escpos-php](https://github.com/mike42/escpos-php)\n\n",
+    "tail": "",
+    "source_url": "https://github.com/receipt-print-hq/escpos-printer-db/blob/fe07c81155a6c49912379fdb960dc9155c8dfc89/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "fd3a263fe19ed8faa9068b43abaebafc02c77897b0c6fc09abc04bb592e5f16e",
+    "characters": 18647,
+    "excerpt": "Attribution 4.0 International\n\n=======================================================================\n\nCreative Commons Corporation (\"Creative Commons\") is not a law firm and\ndoes not provide legal services or legal advice. Distribution of\nCreative Commons public licenses does not create a lawyer-client or\nother relationship. Creative Commons makes its licenses and related\ninformation available on an \"as-is\" basis. Creative Commons gives no\nwarranties regarding its licenses, any material licensed under their\nterms and conditions, or any related information. Creative Commons\ndisclaims all liability for damages resulting from their use to the\nfullest extent possible.\n\nUsing Creative Commons Public Licenses\n\nCreative Commons public licenses provide a standard set of terms and\nconditions that creators and other rights holders may use to share\noriginal works of authorship and other material subject to copyright\nand certain other rights specified in the public license below. The\nfollowing considerations are for informational purposes only, are not\nexhaustive, and do not form part of our licenses.\n\n     Considerations for licensors: Our public licenses are\n     intended for use by those authorized to give the public\n     permission to use material in ways otherwise restricted by\n     copyright and certain other rights. Our licenses are\n     irrevocable. Licensors should read and understand the terms\n     and conditions of the license they choose before applying it.\n     Licensors should also secure all rights necessary before\n     applying our licenses so that the public can reuse the\n     material as expected. Licensors should clearly mark any\n     material not subject to the license. This includes other CC-\n     licensed material, or material used under an exception or\n     limitation to copyright. More considerations for licensors:\n\twiki.creativecommons.org/Considerations_for_licensors\n\n     Considerations for the public: By using one of our public\n     licenses, a licensor grants the public permission to use the\n     licensed material under specified terms and conditions. If\n     the licensor's permission is not necessary for any reason--for\n     example, because of any applicable exception or limitation to\n     copyright--then that use is not regulated by the license. Our\n     licenses grant only permissions under copyright and certain\n     other rights that a licensor has authority to grant. Use of\n     the licensed material may still be restricted for other\n     reasons, including because others have copyright or other\n     rights in the material. A licensor may make special requests,\n     such as asking that all changes be marked or described.\n     Although not required by our licenses, you are encouraged to\n     respect those requests where reasonable. More_considerations\n     for the public: \n\twiki.creativecommons.org/Considerations_for_licensees\n\n=======================================================================\n\nCreative Commons Attrib",
+    "tail": "pose of indicating that\nmaterial is shared under a Creative Commons public license or as\notherwise permitted by the Creative Commons policies published at\ncreativecommons.org/policies, Creative Commons does not authorize the\nuse of the trademark \"Creative Commons\" or any other trademark or logo\nof Creative Commons without its prior written consent including,\nwithout limitation, in connection with any unauthorized modifications\nto any of its public licenses or any other arrangements,\nunderstandings, or agreements concerning use of licensed material. For\nthe avoidance of doubt, this paragraph does not form part of the\npublic licenses.\n\nCreative Commons may be contacted at creativecommons.org.\n",
+    "source_url": "https://github.com/receipt-print-hq/escpos-printer-db/blob/fe07c81155a6c49912379fdb960dc9155c8dfc89/LICENSE.md"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/receipt-print-hq/escpos-printer-db",
+    "commit": "https://github.com/receipt-print-hq/escpos-printer-db/commit/fe07c81155a6c49912379fdb960dc9155c8dfc89"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

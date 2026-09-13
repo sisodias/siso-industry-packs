@@ -1,0 +1,219 @@
+{
+  "audit_id": "R072",
+  "full_name": "fjykTec/ModernWMS",
+  "html_url": "https://github.com/fjykTec/ModernWMS",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "The open source simple and complete warehouse management system is derived from our many years of experience in implementing erp projects. We stripped the original commercial system wms function and opened it up for free, hoping to help the majority of small and medium-sized enterprises. At present, the system supports cross-platform。",
+  "stargazers_count": 1689,
+  "forks_count": 462,
+  "default_branch": "master",
+  "archived": false,
+  "pushed_at": "2025-06-22T03:36:48Z",
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "topics": [
+    "inventory",
+    "inventory-management",
+    "warehouse-management",
+    "warehouse-management-system",
+    "wms"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Ainventory-management&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "1837e17e6017f3cb6aea93437d2370659ee9392b",
+  "last_commit": "2025-06-22T11:36:48+08:00",
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 9,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "README.zh_CN.md",
+    "alipay.jpg",
+    "image0.png",
+    "image1.png",
+    "image2.png",
+    "logo.png",
+    "wechat.jpg"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "e7909c7561ab322122fb7a67e1218b35ca9e9e273aaf778f38928fd795e936ce",
+    "characters": 10477,
+    "excerpt": "# ModernWMS - Warehouse Management System\n\n<div align=\"center\">\n  <img src=\"logo.png\" alt=\"ModernWMS logo\" width=\"200\" height=\"auto\" />\n  <h1>ModernWMS</h1>\n  <p>A simple, complete and open source warehouse management system</p>\n\n<!-- Badges -->\n[![License: Apache2.0](https://img.shields.io/badge/license-Apache2.0-orange.svg)](https://opensource.org/license/apache-2-0/)\n![Release Version (latest Version)](https://img.shields.io/github/v/release/fjykTec/ModernWMS?color=orange&include_prereleases)\n![QR Code Support](https://img.shields.io/badge/QR--Code-Support-orange.svg)\n![Docker Support](https://img.shields.io/badge/Docker-Support-orange.svg)\n![i18n Support](https://img.shields.io/badge/i18n-Support-orange.svg)\n[![MySQL8](https://img.shields.io/badge/MySQL8.0%2B-Support-orange)](https://www.mysql.com/downloads/)\n[![SQL Server](https://img.shields.io/badge/SQL%20Server2017%2B-Support-orange)](https://www.mysql.com/downloads/)\n[![PostgreSQL](https://img.shields.io/badge/PostgreSQL12-Support-orange)](https://www.mysql.com/downloads/)\n\n![repo size](https://img.shields.io/github/repo-size/fjykTec/ModernWMS)\n![GitHub commit activity](https://img.shields.io/github/commit-activity/m/fjykTec/ModernWMS)\n<!--![Contributors](https://img.shields.io/github/contributors/fjykTec/ModernWMS?color=blue) -->\n\n![GitHub Org's stars](https://img.shields.io/github/stars/fjykTec/ModernWMS?style=social)\n![GitHub Follows](https://img.shields.io/github/followers/ModernWMS?style=social)\n![GitHub Forks](https://img.shields.io/github/forks/fjykTec/ModernWMS?style=social)\n![GitHub Watch](https://img.shields.io/github/watchers/fjykTec/ModernWMS?style=social)\n![Gitee Stars](https://gitee.com/modernwms/ModernWMS/badge/star.svg?theme=social)\n![Gitee Forks](https://gitee.com/modernwms/ModernWMS/badge/fork.svg?theme=social)\n\n![.NET](https://img.shields.io/badge/.NET-7.0.0-green)\n![Vuetify Cli](https://img.shields.io/badge/Vuetify/cli-3.0.4-green)\n![Vue](https://img.shields.io/badge/Vue-3.2.45-green)\n![TypeScript](https://img.shields.io/badge/TypeScript-4.1.2-green)\n![VXE Table](https://img.shields.io/badge/VXETable-4.3.7-green)\n![Vite](https://img.shields.io/badge/Vite-4.0.0-green)\n![NodeJS](https://img.shields.io/badge/NodeJS-16.13.1-green)\n</div>\n<div align=\"center\">\n  <h3>\n  <a href=\"https://gitee.com/modernwms/ModernWMS/blob/master/README.zh_CN.md\">中文文档</a>\n  </h3>\n  <h3>\n  <a href=\"https://modernwms.ikeyly.com\">Home Page</a>\n  </h3>\n</div>\n\n# Contents\n\n- [ModernWMS - Warehouse Management System](#modernwms---warehouse-management-system)\n- [Contents](#contents)\n  - [Introduction](#introduction)\n  - [Requirements](#requirements)\n    - [Linux OS](#linux-os)\n    - [Windows OS](#windows-os)\n  - [Installation](#installation)\n    - [Linux](#linux)\n    - [Windows](#windows)\n    - [Docker(Optional)](#dockeroptional)\n  - [Usage](#usage)\n  - [Contact](#contact)\n  - [License](#license)\n  - [Donate](#donate)\n\n## Introduction \n\n  The inventory management system is a set of small logistics warehousing supply chain processes that we have summarized from years of ERP system research and development. In the process of work, many of our small and medium-sized enterprises, due to limited IT budget, cannot use the right system for them, but there are real needs in warehouse management, that's how we started the project. To help some people who need it.\n\n## Requirements\n\n### Linux OS\n\n+ Ubuntu 18.04(LTS),20.04(LTS),22.04(LTS)\n+ CentOS Stream 8,9\n+ RHEL 8(8.7),9(9.1)\n+ Debian 10,11\n+ openSUSE 15\n\n### Windows OS\n\n+ Windows 10(1607+),11(21H2+)\n+ Windows Server 2012+\n\n## Installation\n\n### Linux\n\n+ download the source code and compile\n  + Step 1, download the source code\n\n  ```bash\n  cd /tmp/ && wget https://gitee.com/modernwms/ModernWMS/repository/archive/master.zip\n  ```  \n\n  + Step 2, Install .NET SDK and NodeJS\n\n  ```bash\n  wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\n  sudo dpkg -i packages-microsoft-prod.deb\n  sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0\n  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -\n  sudo apt install -y nodejs\n  sudo apt-get install gcc g++ make\n  sudo npm install -g yarn\n  ```  \n\n  + Step 3, compile frontend and backend\n\n  ```bash\n  sudo apt install unzip\n  cd /tmp/ && unzip master.zip && cd ./ModernWMS-master\n  mkdir -p /ModernWMS/frontend/ /ModernWMS/backend/\n  cd /tmp/ModernWMS-master/frontend/ \n  sed -i 's#http://127.0.0.1#http://IP address#g' ./.env.production\n  yarn && yarn build && cp -rf /tmp/ModernWMS-master/frontend/dist/* /ModernWMS/frontend/\n  cd /tmp/ModernWMS-master/backend/ && sudo dotnet publish && cp -rf /tmp/ModernWMS-master/backend/ModernWMS/bin/Debug/net7.0/publish/* /ModernWMS/backend/\n  cp -rf /tmp/ModernWMS-master/backend/ModernWMS/wms.db /ModernWMS/backend/\n  ```  \n\n  + Step 4, Install Nginx\n\n  ```bash\n  cd /tmp/ && wget http://nginx.org/download/nginx-1.18.0.tar.gz \n  tar -zxvf nginx-1.18.0.tar.gz && cd nginx-1.18.0\n  ./configure --prefix=/etc/nginx --with-http_secure_link_module --with-http_stub_status_module --with-http_realip_module --without-http_rewrite_module --without-http_gzip_module\n  make && make install\n  cp -rf /ModernWMS/frontend/* /etc/nginx/html/\n  nohup /etc/nginx/sbin/nginx -g 'daemon off;' &\n  cd /ModernWMS/backend/ && dotnet ModernWMS.dll --urls http://0.0.0.0:20011\n  ```  \n  \n### Windows\n\n+ download the source code and compile\n  + Step 1, download the source code\n  ```PowerShell\n  cd C:\\\n  wget -Uri https://gitee.com/modernwms/ModernWMS/repository/archive/master.zip  -OutFile master.zip\n  Expand-Archive -Path C:\\master.zip -DestinationPath C:\\\n  ```\n  + Step 2, Install .NET SDK and NodeJS\n  ```CMD\n  wget -Uri https://download.visualstudio.microsoft.com/download/pr/35660869-0942-4c5d-8692-6e0d4040137a/4921a36b578d8358dac4c27598519832/dotnet-sdk-7.0.101-win-x64.exe  -OutFile dotnet-sdk-7.0.101-win-x64.exe\n  .\\dotnet-sdk-7.0.101-win-x64.exe /install /quiet /norestart\n  wget -Uri https://nodejs.org/dist/v16.13.1/node-v16.13.1-x64.msi  -OutFile node-v16.13.1-x64.msi\n  msiexec /i .\\node-v16.13.1-x64.msi /passive /norestart\n  npm install -g yarn\n  ```\n  + Step 3, compile frontend and backend\n  ```\n  md C:\\ModernWMS\\frontend\\\n  md C:\\ModernWMS\\backend\\\n  cd C:\\ModernWMS-master\\backend\n  dotnet publish \n  copy-item -path \"C:\\ModernWMS-master\\backend\\ModernWMS\\bin\\Debug\\net7.0\\publish\\*\" -destination \"C:\\ModernWMS\\backend\\\" -recurse\n  copy-Item \"C:\\ModernWMS-master\\backend\\ModernWMS\\wms.db\" -Destination \"C:\\ModernWMS\\backend\\\"\n  cd C:\\ModernWMS-master\\frontend  \n  yarn\n  yarn build \n  copy-item -path \"C:\\ModernWMS-master\\frontend\\dist\\*\" -destination \"C:\\ModernWMS\\frontend\\\" -recurse\n  ```\n  + Step 4, Install Nginx\n  ```\n  cd C:\\\n  wget -Uri http://nginx.org/download/nginx-1.16.1.zip -OutFile nginx-1.16.1.zip\n  Expand-Archive -Path C:\\nginx-1.16.1.zip -DestinationPath C:\\\n  copy-item -path \"C:\\ModernWMS\\frontend\\*\" -destination \"C:\\nginx-1.16.1\\html\\\" -recurse\n  cd C:\\nginx-1.16.1\\\n  start nginx.exe\n  cd C:\\ModernWMS\\backend\\\n  dotnet ModernWMS.dll --urls http://0.0.0.0:20011\n  ```\n\n### Docker(Optional)\n\n+ Approach 1, download the image from docker hub\n\n  + Step 1, install docker and download the image\n\n  ```bash\n  sudo apt install docker.io\n  sudo docker pull modernwms/modernwms:1.0\n  ```  \n\n  + Step 2，deploy\n  \n  ```bash\n  sudo docker run -d -p 20011:20011 -p 80:80  modernwms/modernwms:1.0 ./run.sh\n  sudo docker ps -a | awk 'NR>1 && $2==\"modernwms/modernwms:1.0\" {print $1}'\n  sudo docker exec -it <CONTAINER ID> /bin/bash\n  ```\n\n  After entering the Docker container, execute the following command in the container.\n\n  ```bash\n  grep -rl \"http://127.0.0.1:20011\" /frontend | xargs sed -i 's#http://127.0.0.1:20011#http://IP address:20011#g'\n  exit\n  ```\n\n  restart container\n\n  ```bash\n  sudo docker restart <CONTAINER ID>\n  ```\n\n+ Approach 2, Build your own image\n  + Step 1, download the source code\n\n  ```bash\n  cd /tmp/ && wget https://gitee.com/modernwms/ModernWMS/repository/archive/master.zip\n  ```  \n\n  + Step 2，Install .NET SDK and NodeJS\n\n  ```bash\n  wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\n  sudo dpkg -i packages-microsoft-prod.deb\n  sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0\n  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -\n  sudo apt install -y nodejs\n  sudo apt-get install gcc g++ make\n  sudo npm install -g yarn\n  ```  \n\n  + Step 3, compile frontend and backend\n  \n  ```bash\n  sudo apt install unzip\n  cd /tmp/ && unzip master.zip && cd ./ModernWMS-master\n  cd /tmp/ModernWMS-master/frontend/ && sed -i 's#http://127.0.0.1#http://IP address#g' ./.env.production\n  yarn && yarn build && cp -rf /tmp/ModernWMS-master/frontend/dist/* /tmp/ModernWMS-master/docker/frontend/\n  cd /tmp/ModernWMS-master/backend/ && sudo dotnet publish && cp -rf /tmp/ModernWMS-master/backend/ModernWMS/bin/Debug/net7.0/publish/* /tmp/Moder",
+    "tail": "",
+    "source_url": "https://github.com/fjykTec/ModernWMS/blob/1837e17e6017f3cb6aea93437d2370659ee9392b/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "characters": 11357,
+    "excerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control sy",
+    "tail": " \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "source_url": "https://github.com/fjykTec/ModernWMS/blob/1837e17e6017f3cb6aea93437d2370659ee9392b/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [],
+  "sources": {
+    "repository": "https://github.com/fjykTec/ModernWMS",
+    "commit": "https://github.com/fjykTec/ModernWMS/commit/1837e17e6017f3cb6aea93437d2370659ee9392b"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2492",
+        "repo": "fjykTec/ModernWMS",
+        "url": "https://github.com/fjyktec/modernwms",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "logistics_freight"
+        ],
+        "discovery_categories": [
+          "inventory",
+          "warehouse"
+        ],
+        "discovery_cells": [
+          "cross_industry:inventory",
+          "cross_industry:warehouse",
+          "logistics_freight:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0059",
+          "repo": "fjykTec/ModernWMS",
+          "url": "https://github.com/fjykTec/ModernWMS",
+          "what_it_is": "ModernWMS Warehouse Management System The inventory management system is a set of small logistics warehousing supply chain processes that we have summarized from years of ERP system research and development.",
+          "stars": 1689,
+          "pushed_at": "2025-06-22T03:36:48Z",
+          "language": "Vue",
+          "license": "apache-2.0",
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/fjykTec/ModernWMS/blob/HEAD/README.md",
+            "characters_read": 10477
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=warehouse%20management%20system&type=repositories",
+              "source_title": "GitHub repository search: warehouse management system",
+              "detail": "warehouse management system"
+            }
+          ],
+          "industries": [
+            "logistics_freight"
+          ],
+          "categories": [
+            "inventory",
+            "warehouse"
+          ],
+          "cells": [
+            "cross_industry:inventory",
+            "cross_industry:warehouse",
+            "logistics_freight:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "warehouse management system"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:logistics_freight"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "fjyktec/modernwms",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "fjykTec/ModernWMS",
+        "capability_tag": "none",
+        "category_slug": "productivity-business",
+        "summary": "Full open-source warehouse management system application",
+        "reuse_value": 70,
+        "stars": 1542,
+        "license": "Apache-2.0",
+        "language": "Vue",
+        "url": "https://github.com/fjykTec/ModernWMS",
+        "rank_score": 70015420
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "fjykTec/ModernWMS",
+        "stars": 1542,
+        "license": "Apache-2.0",
+        "language": "Vue",
+        "unit_class": "capability",
+        "reuse_value": 70,
+        "liftability": 75,
+        "fame_gap": -5,
+        "cat_slug": "productivity-business",
+        "cat_name": "Productivity & Business",
+        "description": "The open source simple and complete warehouse management system is derived from our many years of experience in implemen"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

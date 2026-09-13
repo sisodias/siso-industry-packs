@@ -1,0 +1,154 @@
+{
+  "audit_id": "R075",
+  "full_name": "freescout-help-desk/freescout",
+  "html_url": "https://github.com/freescout-help-desk/freescout",
+  "observed_at": "2026-09-13T16:15:49.979751+00:00",
+  "description": "FreeScout — Free self-hosted omnichannel AI-powered helpdesk & shared mailbox",
+  "stargazers_count": 4534,
+  "forks_count": 715,
+  "default_branch": "dist",
+  "archived": false,
+  "pushed_at": "2026-09-13T10:48:53Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "topics": [
+    "customer-support",
+    "help-desk",
+    "helpdesk",
+    "helpdesk-ticketing",
+    "helpscout",
+    "laravel",
+    "osticket-alternative",
+    "php",
+    "shared-mailboxes",
+    "support",
+    "ticketing",
+    "ticketing-system",
+    "zendesk",
+    "zendesk-alternative"
+  ],
+  "metadata_source": "https://api.github.com/search/repositories?q=topic%3Aticketing&sort=stars&order=desc&per_page=10&page=1",
+  "metadata_observed_at": "2026-09-13T16:00:56.536084+00:00",
+  "revision": "fe7d4711c03de4f9ed3c557bbf6ea2df63dab517",
+  "last_commit": "2026-09-11T22:58:18-07:00",
+  "commits_six_months_sample_count": 461,
+  "commits_six_months_capped": false,
+  "authors_sample_count": 13,
+  "bus_factor": "unmeasured; distinct commit authors are not maintainer redundancy",
+  "issue_response_sample": "not_measured",
+  "root_files": [
+    ".editorconfig",
+    ".env.example",
+    ".env.travis",
+    ".gitattributes",
+    ".gitcommit",
+    ".gitignore",
+    ".htaccess",
+    ".travis.yml",
+    "DOCUMENTATION.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "artisan",
+    "composer.json",
+    "composer.lock",
+    "package.json",
+    "phpcs.xml",
+    "phpunit.xml",
+    "server.php",
+    "webpack.mix.js"
+  ],
+  "readme": {
+    "path": "README.md",
+    "sha256": "e781c7e3f214aa4aa7b6b260ef9395d8c4c81face18aaee50dfe8b5f5cc7fb32",
+    "characters": 6614,
+    "excerpt": "# Free Self-Hosted Zendesk & Help Scout Alternative\n\n<div align=\"center\">\n\n<img src=\"https://raw.githubusercontent.com/freescout-help-desk/freescout/master/public/img/logo-300.png\" width=\"180\" height=\"180\" />\n\n</div>\n\n**FreeScout** is the super lightweight and powerful free open source help desk and shared inbox built with PHP (Laravel framework). Now you can enjoy free Zendesk & Help Scout without giving up privacy or locking yourself into a service you don't control. FreeScout has been developed from scratch and does not use any copyrighted Help Scout or Zendesk materials.\n\nIf you want to support the project feel free to **star this repository**. It helps to increase the visibility of the project and let people know that it is valuable. Thanks for your support!\n\n![FreeScout](https://freescout-helpdesk.github.io/img/screenshots/screenshot.png)\n\n## Table of Contents\n   * [Demo](#demo)\n   * [Features](#features)\n   * [Mobile Apps](#mobile-apps)\n   * [Requirements](#requirements)\n   * [Installation](#installation)\n   * [Images & One-Click Installs](#images--one-click-installs)\n   * [Modules](#modules)\n   * [Tools & Integrations](#tools--integrations)\n   * [News & Updates](#news--updates)\n   * [Contributing](#contributing)\n   * [Screenshots](#screenshots)\n\n## Demo\n\n**[Live Demo](https://demo.freescout.net)**\n\n## Features\n\n  * Omnichannel — FreeScout centralizes in one place all customer conversations received by email, [WhatsApp](https://freescout.net/whatsapp/), Telegram, Facebook, Slack, Live Chat and more.\n  * [AI-powered](https://github.com/freescout-help-desk/AiIntegration) and super efficient.\n  * Unlimited support agents, tickets, mailboxes, etc.\n  * [Secure](https://freescout.net/security) by design.\n  * Mobile-friendly.\n  * Multilingual (translated into 33 languages).\n  * Seamless email integration (via SMTP, IMAP, POP3, etc).\n  * Modern OAuth authentication for Microsoft Office 365 and Google Workspace.\n  * Fully supports screen readers (for visually impaired).\n  * Web installer & updater.\n  * Starred conversations.\n  * Push notifications.\n  * Following conversations.\n  * Auto replies.\n  * Internal notes.\n  * Forwarding / Merging / Moving conversations.\n  * Phone conversations.\n  * Sending new conversations to multiple recipients at once.\n  * Collision detection – notice is shown when two agents open the same conversation.\n  * Automatic refreshing of the conversations list without the need to reload the page.\n  * Pasting screenshots from the clipboard into the reply area.\n  * Flexible notifications for user agents.\n  * Open tracking.\n  * Powerful search.\n\nA full list of features is available [here](https://freescout.net/#custom_html-3).\n\nNeed anything else? [Suggest features](https://freescout.net/request-feature/).\n\n## Mobile Apps\n\nMobile apps support the same functionality and modules as the web version of your FreeScout installation. Both support agents and administrators can use mobile apps.\n\n<a href=\"https://freescout.net/android-app/\" target=\"_blank\" rel=\"nofollow\"><img alt=\"Android App\" src=\"https://freescout-helpdesk.github.io/img/apps/android.png\" width=\"200px\" /></a> <a href=\"https://freescout.net/ios-app/\" target=\"_blank\" rel=\"nofollow\"><img alt=\"iOS App\" src=\"https://freescout-helpdesk.github.io/img/apps/ios.png?v=1\" width=\"200px\" /></a>\n\n[MacOS Menu Bar App](https://github.com/jonalaniz/scouter)\n\n## Requirements\n\nFreeScout is a pure PHP/MySQL application, so it can be easily deployed even on a [shared hosting](https://github.com/freescout-help-desk/freescout/wiki/Choosing-a-Server).\n\n  * Nginx / Apache / IIS\n  * PHP 7.4 - 8.x\n  * MySQL 5.0+ / MariaDB 5.0+ / PostgreSQL\n\nThere are no minimum system requirements (CPU / RAM) – FreeScout will run on any system.\n\n## Installation\n\n[Installation Guide](https://github.com/freescout-help-desk/freescout/wiki/Installation-Guide)\n\n## Images & One-Click Installs\n\n* [Docker Image](https://freescout.net/docker/)\n* [Pikapods](https://freescout.net/pikapods/) — Open-source apps hosting (Fully managed)\n* [Zenith](https://freescout.net/zenith/) — Open-source apps hosting (Fully managed)\n* [Hostinger](https://freescout.net/hostinger/) — VPS with automatic backups included\n* [Softaculous](http://www.softaculous.com/apps/customersupport/FreeScout) — cPanel, Plesk, ISPmanager, H-Sphere, DirectAdmin, InterWorx\n* [Fantastico](http://ff3.netenberg.com/visitors/scripts/freescout/view) — cPanel, DirectAdmin, ISP Manager, ISP Config\n* [Cloudron](https://cloudron.io/store/net.freescout.cloudronapp.html)\n* [Ubuntu](https://github.com/freescout-help-desk/freescout/wiki/Installation-Guide#interactive-installation-bash-script-ubuntu) — Bash script\n\n[More one-click installs…](https://freescout.net/one-click-installs/)\n\n## Modules\n\n* [Official Modules](https://freescout.net/modules/)\n* [Community Modules](https://freescout.net/community-modules/)\n\n## Tools & Integrations\n  \n  * [API](https://api-docs.freescout.net/)\n  * [Migrate to FreeScout](http://freescout.net/migrate/) (from any help desk)\n  * [Zapier](https://freescout.net/zapier/)\n  * [Make](https://freescout.net/make-integration/) (Integromat)\n\n## News & Updates\n\nDon't miss news, updates and new modules!\n\n[Email Newsletter](https://freescout.net/subscribe/) | [Facebook](https://freescout.net/facebook/) | [Twitter](https://freescout.net/twitter/) | [YouTube](https://freescout.net/youtube/) | [Telegram](https://freescout.net/telegram/) | [RSS](https://freescout.net/feed/)\n\n## Contributing\n\n* [Support the project by leaving a feedback](https://github.com/freescout-help-desk/freescout/issues/288)\n* [Development Guide](https://github.com/freescout-help-desk/freescout/wiki/Development-Guide)\n* [Todo list](https://github.com/freescout-help-desk/freescout/labels/help%20wanted)\n* [Translate](https://github.com/freescout-help-desk/freescout/wiki/Translate)\n\n## Screenshots\n\nDashboard:\n\n![Dashboard](https://freescout-helpdesk.github.io/img/screenshots/dashboard.png)\n\nConversation:\n\n![Conversation](https://freescout-helpdesk.github.io/img/screenshots/conversation.png)\n\nDrafting reply with AI:\n\n![Mailbox connection settings page](https://freescout-helpdesk.github.io/img/screenshots/draft-reply-with-ai.png)\n\nNotifications:\n\n![Notifications](https://freescout-helpdesk.github.io/img/screenshots/notifications.png)\n\nPush notification:\n\n![Push notification](https://freescout-helpdesk.github.io/img/screenshots/push.png)\n\nWeb installer:\n\n![Web installer](https://freescout-helpdesk.github.io/img/screenshots/installer.png)\n\nLogin page:\n\n![Login page](https://freescout-helpdesk.github.io/img/screenshots/freescout-login.png)",
+    "tail": "",
+    "source_url": "https://github.com/freescout-help-desk/freescout/blob/fe7d4711c03de4f9ed3c557bbf6ea2df63dab517/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "ebc66492e4eee1a3c76d6075ab9b8bed643a466ab99070b31e262cefcaf22081",
+    "characters": 34520,
+    "excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE\n                       Version 3, 19 November 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  Developers that use our General Public Licenses protect your rights\nwith two steps: (1) assert copyright on the software, and (2) offer\nyou this License which gives you legal permission to copy, distribute\nand/or modify the software.\n\n  A secondary benefit of defending all users' freedom is that\nimprovements made in alternate versions of the program, if they\nreceive widespread use, become available for other developers to\nincorporate.  Many developers of free software are heartened and\nencouraged by the resulting cooperation.  However, in the case of\nsoftware used on network servers, this result may fail to come about.\nThe GNU General Public License permits making a modified version and\nletting the public access it on a server without ever releasing its\nsource code to the public.\n\n  The GNU Affero General Public License is designed specifically to\nensure that, in such cases, the modified source code becomes available\nto the community.  It requires the operator of a network server to\nprovide the source code of the modified version running there to the\nusers of that server.  Therefore, public use of a modified version, on\na publicly accessible server, gives the public access to the source\ncode of the modified version.\n\n  An older license, called the Affero General Public License and\npublished by Affero, was designed to accomplish similar goals.  This is\na different license, not a version of the Affero GPL, but Affero has\nreleased a new version of the Affero GPL which permits relicensing under\nthis license.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU A",
+    "tail": "software can interact with users remotely through a computer\nnetwork, you should also make sure that it provides a way for users to\nget its source.  For example, if your program is a web application, its\ninterface could display a \"Source\" link that leads users to an archive\nof the code.  There are many ways you could offer source, and different\nsolutions will be better for different programs; see section 13 for the\nspecific requirements.\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU AGPL, see\n<http://www.gnu.org/licenses/>.\n",
+    "source_url": "https://github.com/freescout-help-desk/freescout/blob/fe7d4711c03de4f9ed3c557bbf6ea2df63dab517/LICENSE"
+  },
+  "nested_license_paths": [],
+  "dependency_documents": [
+    {
+      "path": "composer.json",
+      "sha256": "4424162ccb86ec116f83eb9354b8c5fdc4b70035110499dd858340cd77745913",
+      "characters": 39245,
+      "excerpt": "{\n    \"name\": \"freescout-helpdesk/freescout\",\n    \"description\": \"Free self-hosted helpdesk and shared mailbox (Zendesk / Help Scout alternative)\",\n    \"keywords\": [\"helpdesk\", \"help desk\", \"shared mailbox\"],\n    \"license\": \"AGPL-3.0\",\n    \"authors\": [\n        {\n            \"name\": \"The FreeScout Team\",\n            \"email\": \"support@freescout.net\"\n        }\n    ],\n    \"repositories\": [\n        {\n            \"type\": \"vcs\",\n            \"url\": \"https://github.com/freescout-help-desk/laravel-selfupdater\"\n        },\n        {\n            \"type\": \"vcs\",\n            \"url\": \"https://github.com/freescout-help-desk/Purifier\"\n        }\n    ],\n    \"require\": {\n        \"php\": \">=7.1.0\",\n\n        \"symfony/debug\": \"v3.4.18\",\n        \"devfactory/minify\": \"1.0.7\",\n        \"fideloper/proxy\": \"3.3.4\",\n        \"laravel/framework\": \"v5.5.40\",\n        \"laravel/tinker\": \"v1.0.7\",\n        \"mews/purifier\": \"dev-customized\",\n        \"spatie/laravel-activitylog\": \"2.7.0\",\n        \"lord/laroute\": \"2.4.7\",\n        \"axn/laravel-laroute\": \"1.3.0\",\n        \"html2text/html2text\": \"4.1.0\",\n        \"watson/rememberable\": \"2.0.4\",\n        \"nwidart/laravel-modules\": \"2.7.0\",\n        \"tormjens/eventy\": \"0.5.4\",\n        \"barryvdh/laravel-translation-manager\": \"v0.5.0\",\n        \"chumper/zipper\": \"v1.0.2\",\n        \"rachidlaasri/laravel-installer\": \"4.0.2\",\n        \"rap2hpoutre/laravel-log-viewer\": \"v2.0.0\",\n        \"codedge/laravel-selfupdater\": \"dev-customized\",\n        \"doctrine/dbal\": \"2.12.1\",\n        \"egulias/email-validator\": \"2.1.10\",\n        \"symfony/console\": \"v3.4.47\",\n        \"javoscript/laravel-macroable-models\": \"1.0.4\",\n        \"ramsey/uuid\": \"3.9.6\",\n        \"symfony/polyfill-mbstring\": \"v1.24.0\",\n        \"webklex/php-imap\": \"4.1.1\",\n        \"enshrined/svg-sanitize\": \"0.22.0\"\n    },\n    \"require-dev\": {\n        \"barryvdh/laravel-debugbar\": \"v3.2.0\",\n        \"filp/whoops\": \"2.14.5\",\n        \"fzaninotto/faker\": \"v1.9.2\",\n        \"mockery/mockery\": \"1.1.0\",\n        \"phpunit/phpunit\": \"9.5.28\",\n\n        \"symfony/polyfill-ctype\": \"v1.10.*\",\n        \"vlucas/phpdotenv\": \"v2.5.1\",\n        \"symfony/css-selector\": \"v3.4.18\",\n        \"symfony/var-dumper\": \"v3.4.18\",\n        \"symfony/routing\": \"v3.4.18\",\n        \"symfony/process\": \"v3.4.18\",\n        \"symfony/polyfill-php70\": \"v1.10.*\",\n        \"symfony/polyfill-intl-idn\": \"v1.38.1\",\n        \"symfony/http-foundation\": \"v3.4.18\",\n        \"symfony/event-dispatcher\": \"v3.4.18\",\n        \"psr/log\": \"1.0.*\",\n        \"symfony/http-kernel\": \"v3.4.18\",\n        \"symfony/finder\": \"v3.4.18\",\n        \"doctrine/lexer\": \"v1.0.1\",\n        \"swiftmailer/swiftmailer\": \"v6.1.*\",\n        \"symfony/translation\": \"v3.4.18\",\n        \"nesbot/carbon\": \"1.35.*\",\n        \"league/flysystem\": \"1.1.4\",\n        \"erusev/parsedown\": \"1.7.2\",\n        \"doctrine/inflector\": \"v1.2.*\",\n        \"guzzlehttp/guzzle\": \"8.0.1\",\n        \"tedivm/jshrink\": \"1.4.0\",\n        \"nikic/php-parser\": \"^4.1\",\n        \"doctrine/annotations\": \"v1.4.*\",\n        \"doctrine/cache\": \"v1.6.*\",\n        \"doctrine/collections\": \"v1.4.*\",\n        \"doctrine/instantiator\": \"1.3.1\",\n        \"myclabs/deep-copy\": \"1.10.1\",\n        \"webmozart/assert\": \"1.3.0\",\n        \"psr/container\": \"1.0.0\"\n    },\n    \"autoload\": {\n        \"classmap\": [\n            \"database/seeds\",\n            \"database/factories\",\n            \"overrides/natxet/cssmin/src/\",\n            \"overrides/erusev/parsedown/\"\n        ],\n        \"psr-0\": {\n            \"Swift_\": \"overrides/swiftmailer/swiftmailer/lib/classes\"\n        },\n        \"files\": [\n            \"app/Misc/Functions.php\"\n        ],\n        \"fs-comment\": \"Above new lines are listed files containing custom updates. Below - only PHP compatibility updates.\",\n        \"psr-4\": {\n            \"App\\\\\": \"app/\",\n            \"Modules\\\\\": \"Modules/\",\n            \"Axn\\\\Laroute\\\\Routes\\\\\": \"overrides/axn/laravel-laroute/src/Routes/\",\n            \"Webklex\\\\PHPIMAP\\\\\": \"overrides/webklex/php-imap/src/\",\n            \"RachidLaasri\\\\LaravelInstaller\\\\Helpers\\\\\": \"overrides/rachid",
+      "tail": "get_contents('composer.json'), true)['autoload']['exclude-from-classmap']);\\\"\",\n            \"@php -r \\\"file_put_contents('vendor/webklex/php-imap/src/config/imap.php', preg_replace('/, \\\\\\\\'inline\\\\\\\\'],/s', '/*, \\\\\\\\'inline\\\\\\\\'*/],', file_get_contents('vendor/webklex/php-imap/src/config/imap.php')));\\\"\",\n            \"@php -r \\\"copy('vendor/nesbot/carbon/src/Carbon/Lang/pt.php', 'vendor/nesbot/carbon/src/Carbon/Lang/pt_PT.php');\\\"\",\n            \"Illuminate\\\\Foundation\\\\ComposerScripts::postAutoloadDump\",\n            \"@php artisan package:discover\"\n        ]\n    },\n    \"config\": {\n        \"preferred-install\": \"dist\",\n        \"sort-packages\": true,\n        \"optimize-autoloader\": true\n    }\n}\n",
+      "source_url": "https://github.com/freescout-help-desk/freescout/blob/fe7d4711c03de4f9ed3c557bbf6ea2df63dab517/composer.json"
+    },
+    {
+      "path": "package.json",
+      "sha256": "123105b0e46986a8c2746130ff274c6396e2c84058654910fc500db79e1caf42",
+      "characters": 925,
+      "excerpt": "{\n    \"private\": true,\n    \"scripts\": {\n        \"dev\": \"npm run development\",\n        \"development\": \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\",\n        \"watch\": \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\",\n        \"watch-poll\": \"npm run watch -- --watch-poll\",\n        \"hot\": \"cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js\",\n        \"prod\": \"npm run production\",\n        \"production\": \"cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\"\n    },\n    \"devDependencies\": {\n\n    }\n}\n",
+      "tail": "mix/setup/webpack.config.js\",\n        \"watch\": \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\",\n        \"watch-poll\": \"npm run watch -- --watch-poll\",\n        \"hot\": \"cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js\",\n        \"prod\": \"npm run production\",\n        \"production\": \"cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\"\n    },\n    \"devDependencies\": {\n\n    }\n}\n",
+      "source_url": "https://github.com/freescout-help-desk/freescout/blob/fe7d4711c03de4f9ed3c557bbf6ea2df63dab517/package.json"
+    }
+  ],
+  "sources": {
+    "repository": "https://github.com/freescout-help-desk/freescout",
+    "commit": "https://github.com/freescout-help-desk/freescout/commit/fe7d4711c03de4f9ed3c557bbf6ea2df63dab517"
+  },
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0054",
+        "repo": "freescout-help-desk/freescout",
+        "url": "https://github.com/freescout-help-desk/freescout",
+        "labels": [
+          "product_base",
+          "product"
+        ],
+        "family_ids": [
+          "U07",
+          "U08",
+          "B08"
+        ],
+        "family_names": [
+          "Customer support desk",
+          "Shared inbox and email operations"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "freescout-help-desk/freescout supplies support_desk at active maintenance under a strong-copyleft rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 23,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
