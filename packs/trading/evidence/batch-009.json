@@ -1,0 +1,1338 @@
+[
+  {
+    "full_name": "pydata/pandas-datareader",
+    "requested_name": "pydata/pandas-datareader",
+    "id": 29273084,
+    "url": "https://github.com/pydata/pandas-datareader",
+    "stars": 3268,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de",
+    "last_commit_date": "2026-07-21T08:27:57Z",
+    "archived": false,
+    "fork": false,
+    "description": "Extract data from a wide range of Internet sources into a pandas DataFrame.",
+    "language": "Python",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "BSD-compatible licenses, are included. Their licenses follow the pandas",
+      "Copyright (c) 2011-2012, Lambda Foundry, Inc. and PyData Development Team",
+      "Copyright (c) 2008-2011 AQR Capital Management, LLC",
+      "       copyright notice, this list of conditions and the following",
+      "About the Copyright Holders",
+      "Our Copyright Policy",
+      "# Copyright (c) 2012, PyData Development Team"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# pandas-datareader\r",
+      "## Installation\r",
+      "## Usage\r",
+      "## Documentation\r",
+      "### Requirements\r",
+      "### Install latest development version\r"
+    ],
+    "recent_commit_count": 53,
+    "recent_authors_sample50": [
+      "Copilot",
+      "Jaypatel1511",
+      "bashtage",
+      "dependabot[bot]",
+      "\u6c88\u56fd\u6743"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/pydata/pandas-datareader/issues/1032",
+        "createdAt": "2026-08-22T16:59:37Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/pydata/pandas-datareader/issues/1007",
+        "createdAt": "2025-09-23T20:38:17Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".codecov.yml",
+      ".coveragerc",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "LICENSE.md",
+      "MANIFEST.in",
+      "README.md",
+      "conftest.py",
+      "docs",
+      "pandas_datareader",
+      "pyproject.toml",
+      "release-procedure.md",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/README.md",
+        "sha256": "663af3b381e03b2ae58b76cfd4bb6da2218a713729f598516d74c86be5cbf7be",
+        "bytes": 2529
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/LICENSE.md",
+        "sha256": "1114ad27e18866954fd63f8a9c0bc4bf0ef77f17376de066b797d202fd107213",
+        "bytes": 3769
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/pyproject.toml",
+        "sha256": "364f52bcc16d02526378e55282202bf7b60abca414ecca36c31c6c50f6ecddb1",
+        "bytes": 3610
+      },
+      "requirements.txt": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/requirements.txt",
+        "sha256": "db53607468574423029602d821f5ccff8bbcfd6e68651bc55a547ee9c2a1c94b",
+        "bytes": 47
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/pydata/pandas-datareader/commit/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de",
+      "metadata": "https://api.github.com/repos/pydata/pandas-datareader"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# pandas-datareader Macroeconomic and factor-oriented remote data access for pandas. [![CI Testing](https://github.com/pydata/pandas-datareader/actions/workflows/ci.yml/badge.svg)](https://github.com/pydata/pandas-datareader/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/pandas-datareader.svg)](https://pypi.python.org/pypi/pandas-datareader/) [![Codecov](https://codecov.io/gh/pydata/pandas-datareader/branch/master/graph/badge.svg)](https://codecov.io/gh/pydata/pandas-datareader) [![RTD](https://readthedocs.org/projects/pandas-datareader/badge/?version=latest)](https://pandas-datareader.readthedocs.io/en/latest/) [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![License](https://img.shields.io/pypi/l/pandas-datareader)](https://github.com/pydata/pandas-datareader/blob/main/LICENSE.md) ## Installation Install using `pip` ``` shell",
+    "license_excerpt": "======= License ======= pandas is distributed under a 3-clause (\"Simplified\" or \"New\") BSD license. Parts of NumPy, SciPy, numpydoc, bottleneck, which all have BSD-compatible licenses,",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![PyPI](https://img.shields.io/pypi/v/pandas-datareader.svg)](https://pypi.python.org/pypi/pandas-datareader/)",
+      "[![License](https://img.shields.io/pypi/l/pandas-datareader)](https://github.com/pydata/pandas-datareader/blob/main/LICENSE.md)",
+      "``` python",
+      "Using pandas datareader requires the following packages:",
+      "-   distutils (not included in standard library of Python 3.12 and above it, which can be solved by installing `setuptools`)",
+      "Building the documentation additionally requires:",
+      "-   ipython",
+      "Development and testing additionally requires:",
+      "python -m pip install git+https://github.com/pydata/pandas-datareader.git",
+      "python -m pip install -e ."
+    ],
+    "dependency_repos": [
+      "psf/black",
+      "pydata/pandas-datareader",
+      "pydata/pandas-datareader.git"
+    ]
+  },
+  {
+    "full_name": "databento/databento-python",
+    "requested_name": "databento/databento-python",
+    "id": 440757282,
+    "url": "https://github.com/databento/databento-python",
+    "stars": 300,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "e675ef30369f5ee9f68b04606080c519adf3be69",
+    "last_commit_date": "2026-09-01T22:42:48Z",
+    "archived": false,
+    "fork": false,
+    "description": "The official Python client library for Databento",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "   the copyright owner that is granting the License.",
+      "   copyright notice that is included in or attached to the work",
+      "   the copyright owner. For the purposes of this definition, \"submitted\"",
+      "   copyright license to reproduce, prepare Derivative Works of,"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# databento-python",
+      "## Documentation",
+      "## Requirements",
+      "## Installation",
+      "## Usage",
+      "# Pass as parameter",
+      "# Or, pass as `DATABENTO_API_KEY` environment variable",
+      "## License"
+    ],
+    "recent_commit_count": 82,
+    "recent_authors_sample50": [
+      "Dane Rigby",
+      "Siddha Kilaru",
+      "nmacholl",
+      "robertmaierle",
+      "threecgreen",
+      "vinilivramento"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/databento/databento-python/issues/138",
+        "createdAt": "2026-08-04T15:07:28Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-04T16:49:36Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-04T17:37:30Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/databento/databento-python/issues/136",
+        "createdAt": "2026-07-02T01:04:04Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-02T08:07:52Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-07-21T17:05:29Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W02",
+        "lane": "maintainer",
+        "query": "user:databento"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "databento",
+      "examples",
+      "notebooks",
+      "pyproject.toml",
+      "scripts",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/databento/databento-python/blob/e675ef30369f5ee9f68b04606080c519adf3be69/README.md",
+        "sha256": "987d6ddaec6441f32f54e71fa9dd5a7dd566d60bb81b6128d4f494a0adaef144",
+        "bytes": 5011
+      },
+      "LICENSE": {
+        "url": "https://github.com/databento/databento-python/blob/e675ef30369f5ee9f68b04606080c519adf3be69/LICENSE",
+        "sha256": "d3174ad63e721d4c9dccb8ad4320848992d314369bc46319720b5802c9153fe9",
+        "bytes": 9694
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/databento/databento-python/blob/e675ef30369f5ee9f68b04606080c519adf3be69/pyproject.toml",
+        "sha256": "c7dd6081fa0a0cacd64016c704940dddee9ffc5e39651050565350dcc2a2f60c",
+        "bytes": 2131
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/databento/databento-python/commit/e675ef30369f5ee9f68b04606080c519adf3be69",
+      "metadata": "https://api.github.com/repos/databento/databento-python"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# databento-python [![test](https://github.com/databento/databento-python/actions/workflows/test.yml/badge.svg?branch=dev)](https://github.com/databento/databento-python/actions/workflows/test.yml) ![python](https://img.shields.io/pypi/pyversions/databento.svg) [![pypi-version](https://img.shields.io/pypi/v/databento)](https://pypi.org/project/databento) [![license](https://img.shields.io/github/license/databento/databento-python?color=blue)](./LICENSE) [![code-style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![Slack](https://img.shields.io/badge/join_Slack-community-darkblue.svg?logo=slack)](https://to.dbn.to/slack) The official Python client library for [Databento](https://databento.com). Key features include: - Fast, lightweight access to both live and historical data from [multiple markets](https://databento.com/docs/faqs/venues-and-publishers). - [Multiple schemas](https://databento.com/docs/schemas-and-data-formats/whats-a-schema?historical=python&live=python) such as MBO, MBP, top of book, OHLCV, last sale, and more. - [Fully normalized](https://databento.com/docs/standards-and-conventions/normalization?historical=python&live=python), i.e. identical message schemas for both live and historical data, across multiple asset classes. - Provides mappings between different symbology systems, including [smart symbology](https://databento.com/docs/api-reference-historical/basics/symbology?historical=python&live=python) for futures rollovers. - [Point-in-time]() instrument definitions, free of look-ahead bias and retroactive adjustments. - Reads and stores market data in an extremely efficient file format using [Databento Binary Encoding](https://databento.com/docs/standards-and-conventions/databento-binary-encoding?historical=python&live=python). - Event-driven [market replay](https://databento.com/docs/api-reference-historical/helpers/bento-replay?historical=python&live=python), including at high-frequency order book granularity. - Support for [batch download](https://databento.com/docs/faqs/streaming-vs-batch-download?historical=python&live=python) of flat files. - Support for [pandas](https://pandas.pydata.org/docs/), CSV, and JSON. ## Documentation The best place to begin is with our [Getting started](https://databento.com/docs/quickstart?historical=python&live=python) guide. You can find our full client API reference on the [Historical Reference](https://databento.com/docs/api-reference-historical?historical=python&live=python) and [Live Reference](https://databento.com/docs/reference-live?historical=python&live=python) sections of our documentation. See also the [Examples](https://databento.com/docs/examples?historical=python&live=python) section for various tutorials and code samples. ## Requirements The library is fully compatible with",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# databento-python",
+      "[![test](https://github.com/databento/databento-python/actions/workflows/test.yml/badge.svg?branch=dev)](https://github.com/databento/databento-python/actions/workflows/test.yml)",
+      "![python](https://img.shields.io/pypi/pyversions/databento.svg)",
+      "[![license](https://img.shields.io/github/license/databento/databento-python?color=blue)](./LICENSE)",
+      "The official Python client library for [Databento](https://databento.com).",
+      "- [Multiple schemas](https://databento.com/docs/schemas-and-data-formats/whats-a-schema?historical=python&live=python) such as MBO, MBP, top of book, OHLCV, last sale, and more.",
+      "- [Fully normalized](https://databento.com/docs/standards-and-conventions/normalization?historical=python&live=python), i.e. identical message schemas for both live and historical data, across multiple asset classes.",
+      "- Provides mappings between different symbology systems, including [smart symbology](https://databento.com/docs/api-reference-historical/basics/symbology?historical=python&live=python) for futures rollovers.",
+      "- Reads and stores market data in an extremely efficient file format using [Databento Binary Encoding](https://databento.com/docs/standards-and-conventions/databento-binary-encoding?historical=python&live=python).",
+      "- Event-driven [market replay](https://databento.com/docs/api-reference-historical/helpers/bento-replay?historical=python&live=python), including at high-frequency order book granularity.",
+      "- Support for [batch download](https://databento.com/docs/faqs/streaming-vs-batch-download?historical=python&live=python) of flat files.",
+      "The best place to begin is with our [Getting started](https://databento.com/docs/quickstart?historical=python&live=python) guide.",
+      "You can find our full client API reference on the [Historical Reference](https://databento.com/docs/api-reference-historical?historical=python&live=python) and",
+      "[Live Reference](https://databento.com/docs/reference-live?historical=python&live=python) sections of our documentation. See also the",
+      "[Examples](https://databento.com/docs/examples?historical=python&live=python) section for various tutorials and code samples.",
+      "The minimum dependencies as found in the `pyproject.toml` are also listed below:",
+      "- python = \"^3.10\"",
+      "```python"
+    ],
+    "dependency_repos": [
+      "databento/databento-python",
+      "psf/black"
+    ]
+  },
+  {
+    "full_name": "databento/dbn",
+    "requested_name": "databento/dbn",
+    "id": 530577937,
+    "url": "https://github.com/databento/dbn",
+    "stars": 171,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a7d8ee93a5d5d0b7082d0ca15ab85c01e3cce550",
+    "last_commit_date": "2026-09-01T15:47:08Z",
+    "archived": false,
+    "fork": false,
+    "description": "Databento Binary Encoding (DBN) - Fast message encoding and storage format for market data",
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "   the copyright owner that is granting the License.",
+      "   copyright notice that is included in or attached to the work",
+      "   the copyright owner. For the purposes of this definition, \"submitted\"",
+      "   copyright license to reproduce, prepare Derivative Works of,"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# dbn",
+      "## Features",
+      "## Usage",
+      "## License"
+    ],
+    "recent_commit_count": 95,
+    "recent_authors_sample50": [
+      "Dane Rigby",
+      "Siddha Kilaru",
+      "jparkdatabento",
+      "nmacholl",
+      "robertmaierle",
+      "threecgreen",
+      "vinilivramento"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/databento/dbn/issues/133",
+        "createdAt": "2026-09-08T07:33:45Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-08T07:51:40Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/databento/dbn/issues/128",
+        "createdAt": "2026-04-21T19:14:37Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-21T19:25:17Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      },
+      {
+        "round": 3,
+        "stage": "W02",
+        "lane": "maintainer",
+        "query": "user:databento"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "c",
+      "python",
+      "rust",
+      "scripts",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/databento/dbn/blob/a7d8ee93a5d5d0b7082d0ca15ab85c01e3cce550/README.md",
+        "sha256": "a36b805546052e5715f853cfcbda32a722d76495bb7d56bbc14f7328e04875c6",
+        "bytes": 1991
+      },
+      "LICENSE": {
+        "url": "https://github.com/databento/dbn/blob/a7d8ee93a5d5d0b7082d0ca15ab85c01e3cce550/LICENSE",
+        "sha256": "d3174ad63e721d4c9dccb8ad4320848992d314369bc46319720b5802c9153fe9",
+        "bytes": 9694
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/databento/dbn/blob/a7d8ee93a5d5d0b7082d0ca15ab85c01e3cce550/Cargo.toml",
+        "sha256": "5ef450bf960f39980701c77ca935792c55f7f75334a94d047d350a728e402f34",
+        "bytes": 534
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/databento/dbn/commit/a7d8ee93a5d5d0b7082d0ca15ab85c01e3cce550",
+      "metadata": "https://api.github.com/repos/databento/dbn"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# dbn [![build](https://github.com/databento/dbn/actions/workflows/build.yaml/badge.svg)](https://github.com/databento/dbn/actions/workflows/build.yaml) [![Documentation](https://img.shields.io/docsrs/dbn)](https://docs.rs/dbn/latest/dbn/) [![license](https://img.shields.io/github/license/databento/dbn?color=blue)](./LICENSE) [![Current Crates.io Version](https://img.shields.io/crates/v/dbn.svg)](https://crates.io/crates/dbn) [![pypi-version](https://img.shields.io/pypi/v/databento_dbn)](https://pypi.org/project/databento-dbn) [![Slack](https://img.shields.io/badge/join_Slack-community-darkblue.svg?logo=slack)](https://to.dbn.to/slack) **D**atabento **B**inary E**n**coding (DBN) is an extremely fast message encoding and storage format for normalized market data. The DBN specification includes a simple, self-describing metadata header and a fixed set of struct definitions, which enforce a standardized way to normalize market data. All official Databento client libraries use DBN under the hood, both as a data interchange format and for in-memory representation of data. DBN is also the default encoding for all Databento APIs, including live data streaming, historical data streaming, and batch flat files. This repository contains both libraries and a CLI tool for working with DBN files and streams. Python bindings for `dbn` are provided in the `databento_dbn` package. For more details, read our [introduction to DBN](https://databento.com/docs/standards-and-conventions/databento-binary-encoding). ## Features - Performant binary encoding and decoding - Highly compressible with Zstandard - Extendable fixed-width schemas ## Usage See the respective READMEs for usage details: - [`dbn`](rust/dbn/README.md): Rust library crate - [`dbn-cli`](rust/dbn-cli/README.md): CLI crate providing a `dbn` binary - [`databento-dbn`](python/README.md): Python package ## License Distributed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![license](https://img.shields.io/github/license/databento/dbn?color=blue)](./LICENSE)",
+      "All official Databento client libraries use DBN under the hood, both as a data interchange format and for in-memory representation of data.",
+      "Python bindings for `dbn` are provided in the `databento_dbn` package.",
+      "- [`dbn`](rust/dbn/README.md): Rust library crate",
+      "- [`dbn-cli`](rust/dbn-cli/README.md): CLI crate providing a `dbn` binary",
+      "- [`databento-dbn`](python/README.md): Python package",
+      "## License",
+      "Distributed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)."
+    ],
+    "dependency_repos": [
+      "databento/dbn"
+    ]
+  },
+  {
+    "full_name": "massive-com/client-python",
+    "requested_name": "polygon-io/client-python",
+    "id": 216660192,
+    "url": "https://github.com/massive-com/client-python",
+    "stars": 1504,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "481e5c270ea85e8eae5e96f8b9fda34e5e2a674a",
+    "last_commit_date": "2026-07-09T15:25:36Z",
+    "archived": false,
+    "fork": false,
+    "description": "The official Python client library for the Massive.com REST and WebSocket API.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) 2018 The Python Packaging Authority",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Massive (formerly Polygon.io) Python Client - WebSocket & RESTful APIs",
+      "## Prerequisites",
+      "## Install",
+      "## Getting started",
+      "## REST API Client",
+      "### Using the Client",
+      "# List Aggregates (Bars)",
+      "# Get Last Trade",
+      "# List Trades",
+      "# Get Last Quote",
+      "# List Quotes",
+      "### Pagination Behavior",
+      "#### Default (Pagination Enabled)",
+      "#### Disabling Pagination",
+      "### Performance Tip",
+      "### Additional Filter Parameters",
+      "## Debugging with RESTClient",
+      "### How to Enable Debug Mode",
+      "### What Does Debug Mode Do?",
+      "### Example Output",
+      "## WebSocket Client ",
+      "### Using the client",
+      "# Note: Multiple subscriptions can be added to the array ",
+      "# For example, if you want to subscribe to AAPL and META,",
+      "# you can do so by adding \"T.META\" to the subscriptions array. [\"T.AAPL\", \"T.META\"]",
+      "# If you want to subscribe to all tickers, place an asterisk in place of the symbol. [\"T.*\"]",
+      "## Contributing",
+      "### Development",
+      "#### Poetry",
+      "#### Makefile"
+    ],
+    "recent_commit_count": 8,
+    "recent_authors_sample50": [
+      "dependabot[bot]",
+      "justinpolygon"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/massive-com/client-python/issues/1031",
+        "createdAt": "2026-08-15T17:29:35Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/massive-com/client-python/issues/1030",
+        "createdAt": "2026-08-12T23:19:12Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-12T23:20:33Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "massive-com/client-python",
+      "capability_tag": "http-client",
+      "category_slug": "client-library-sdk",
+      "summary": "Official Python client for Massive.com REST and WebSocket stock APIs",
+      "reuse_value": 70,
+      "stars": 1469,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/massive-com/client-python",
+      "rank_score": 70014690
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "massive-com/client-python",
+      "stars": 1469,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 70,
+      "liftability": 90,
+      "fame_gap": -20,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "The official Python client library for the Massive.com REST and WebSocket API."
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".massive",
+      ".readthedocs.yml",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "docs",
+      "examples",
+      "massive",
+      "poetry.lock",
+      "pyproject.toml",
+      "test_rest",
+      "test_websocket"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/massive-com/client-python/blob/481e5c270ea85e8eae5e96f8b9fda34e5e2a674a/README.md",
+        "sha256": "f023ebdcb3e989fa5ad9302e2a11ab2ba7f36b16d6964d1f8bca570064070a2a",
+        "bytes": 10152
+      },
+      "LICENSE": {
+        "url": "https://github.com/massive-com/client-python/blob/481e5c270ea85e8eae5e96f8b9fda34e5e2a674a/LICENSE",
+        "sha256": "ec423cc5506eea1ffbfc9955c3ec8f86139996963d84ff306a5ee41eda8a4ff1",
+        "bytes": 1074
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/massive-com/client-python/blob/481e5c270ea85e8eae5e96f8b9fda34e5e2a674a/pyproject.toml",
+        "sha256": "9f61762be6ca8cdb5172044f51ba3fcded30f20ea627c59bdd022cbfeb571a2a",
+        "bytes": 1030
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/massive-com/client-python/commit/481e5c270ea85e8eae5e96f8b9fda34e5e2a674a",
+      "metadata": "https://api.github.com/repos/massive-com/client-python"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Massive (formerly Polygon.io) Python Client - WebSocket & RESTful APIs Welcome to the official Python client library for the [Massive](https://massive.com/) REST and WebSocket API. To get started, please see the [Getting Started](https://massive.com/docs/stocks/getting-started) section in our documentation, view the [examples](./examples/) directory for code snippets. **Note:** Polygon.io has rebranded as [Massive.com](https://massive.com) on Oct 30, 2025. Existing API keys, accounts, and integrations continue to work exactly as before. The only change in this SDK is that it now defaults to the new API base at `api.massive.com`, while `api.polygon.io` remains supported for an extended period. For details, see our [rebrand announcement blog post](https://massive.com/blog/polygon-is-now-massive/) or open an issue / contact [support@massive.com](mailto:support@massive.com) if you have questions. ## Prerequisites Before installing the Massive Python client, ensure your environment has Python 3.9 or higher. ## Install Please use pip to install or update to the latest stable version. ``` pip install -U massive ``` ## Getting started To get started, please see the [Getting Started](https://massive.com/docs/stocks/getting-started) section in our docs, view the [examples](./examples) directory for code snippets. The free tier of our API comes with usage limitations, potentially",
+    "license_excerpt": "Copyright (c) 2018 The Python Packaging Authority Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# Massive (formerly Polygon.io) Python Client - WebSocket & RESTful APIs",
+      "Welcome to the official Python client library for the [Massive](https://massive.com/) REST and WebSocket API. To get started, please see the [Getting Started](https://massive.com/docs/stocks/getting-started) section in our documentation, view the [examples](./",
+      "Before installing the Massive Python client, ensure your environment has Python 3.9 or higher.",
+      "```python",
+      "```python",
+      "```python",
+      "By default, the client paginates results for endpoints like `list_trades` and `list_quotes` behind the scenes for you. Understanding how pagination interacts with the `limit` parameter is key.",
+      "```python",
+      "```python",
+      "### Additional Filter Parameters",
+      "Many of the APIs in this client library support the use of additional filter parameters to refine your queries. Please refer to the specific API documentation for details on which filter parameters are supported for each endpoint. These filters can be applied ",
+      "Here's a sample code snippet that demonstrates how to use these filter parameters when requesting an Options Chain using the `list_snapshot_options_chain` method. In this example, the filter parameters ensure that the returned options chain data will only incl",
+      "```python",
+      "params={",
+      "```python",
+      "Request Headers: {'Authorization': 'Bearer REDACTED', 'Accept-Encoding': 'gzip', 'User-Agent': 'Massive.com PythonClient/1.12.4'}",
+      "```python",
+      "```python"
+    ],
+    "dependency_repos": [
+      "massive-com/client-python"
+    ]
+  },
+  {
+    "full_name": "Nasdaq/data-link-python",
+    "requested_name": "Nasdaq/data-link-python",
+    "id": 423862002,
+    "url": "https://github.com/Nasdaq/data-link-python",
+    "stars": 624,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "431094f87292c3c566ddbd647296f65957ac2254",
+    "last_commit_date": "2022-08-29T16:26:36Z",
+    "archived": false,
+    "fork": false,
+    "description": "A Python library for Nasdaq Data Link's RESTful API",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "Copyright (c) 2021 Nasdaq Data Link",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Nasdaq Data Link Python Client",
+      "## Installation",
+      "## Configuration",
+      "### Environment Variables",
+      "### Local API Key Environment Variable",
+      "### Local API Key file",
+      "#### Alternative API Key file location",
+      "## Retrieving Data",
+      "### Logging",
+      "# logging.getLogger().setLevel(logging.DEBUG)  # optionally set level for",
+      "### Detailed Usage",
+      "## Local Development",
+      "### Setup",
+      "### Testing",
+      "## Recommended Usage",
+      "## Release the Package",
+      "## Additional Links",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Nasdaq/data-link-python/issues/54",
+        "createdAt": "2026-03-12T09:34:54Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/Nasdaq/data-link-python/issues/51",
+        "createdAt": "2025-01-28T14:53:16Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-01-28T14:54:02Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-01-29T14:39:25Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-02-15T12:52:27Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".circleci",
+      ".gitignore",
+      "CHANGELOG.md",
+      "FOR_ANALYSTS.md",
+      "FOR_DEVELOPERS.md",
+      "LICENSE.txt",
+      "LONG_DESCRIPTION.rst",
+      "MANIFEST.in",
+      "Makefile",
+      "README.md",
+      "nasdaqdatalink",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "test",
+      "tox.ini"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/README.md",
+        "sha256": "f92eefecfbda311909517e783b1b441153c2c20b15a3baed65624497fb718e0f",
+        "bytes": 6999
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/LICENSE.txt",
+        "sha256": "2e8b9c9e1cb70d3200ba8c376c0f6e3969bbf49f254a043775b78883e4b0ec08",
+        "bytes": 1060
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/requirements.txt",
+        "sha256": "cf36168778dae078252b395965148a1eda66a408f6950236c57f48797ba4de02",
+        "bytes": 49
+      },
+      "setup.py": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/setup.py",
+        "sha256": "d102d88c80a712ced5b70e9103fac1f50753d6ae74af1778381a7a87c5b513e2",
+        "bytes": 2407
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Nasdaq/data-link-python/commit/431094f87292c3c566ddbd647296f65957ac2254",
+      "metadata": "https://api.github.com/repos/Nasdaq/data-link-python"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Nasdaq Data Link Python Client This is the official documentation for Nasdaq Data Link's Python Package. The package can be used to interact with the latest version of the [Nasdaq Data Link's RESTful API](https://docs.data.nasdaq.com/docs). This package is compatible with python v3.7+. ## Installation The installation process varies depending on your python version and system used. However in most cases the following should work: ```shell pip install nasdaq-data-link ``` Alternatively on some systems python3 may use a different pip executable and may need to be installed via an alternate pip command. For example: ```shell pip3 install nasdaq-data-link ``` ## Configuration | Option | Explanation | Example | |---|---|---| | api_key | Your access key | `tEsTkEy123456789` | Used to identify who you are and provide full access. | | use_retries | Whether API calls which return statuses in `retry_status_codes` should be automatically retried | True | number_of_retries | Maximum number of retries that should be attempted. Only used if `use_retries` is True | 5 | max_wait_between_retries | Maximum amount of time in seconds that should be waited before attempting a",
+    "license_excerpt": "Copyright (c) 2021 Nasdaq Data Link Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# Nasdaq Data Link Python Client",
+      "This is the official documentation for Nasdaq Data Link's Python Package. The package can be used to interact with the latest version of the [Nasdaq Data Link's RESTful API](https://docs.data.nasdaq.com/docs). This package is compatible with python v3.7+.",
+      "The installation process varies depending on your python version and system used. However in most cases the following should work:",
+      "Alternatively on some systems python3 may use a different pip executable and may need to be installed via an alternate pip command. For example:",
+      "```python",
+      "### Local API Key Environment Variable",
+      "### Local API Key file",
+      "```python",
+      "There are two methods for retrieving data in Python: the Quick method and the Detailed method. The latter is more suitable to application programming. Both methods work with Nasdaq Data Link's two types of data structures: time-series (dataset) data and non-ti",
+      "```python",
+      "This example finds all data points for the dataset `NSE/OIL` and stores them in a pandas dataframe. You can then view the dataframe with data.head().",
+      "```python",
+      "This example retrieves all rows for `ZACKS/FC` where `ticker='AAPL'` and stores them in a pandas dataframe. Similarly you can then view the dataframe with data.head().",
+      "```python",
+      "Our API can provide more than just data. It can also be used to search and provide metadata or to programmatically retrieve data. For these more advanced techniques please follow our [Detailed Method Guide](./FOR_DEVELOPERS.md).",
+      "## Local Development",
+      "If you wish to work on local development please clone/fork the git repo and use `pip install -r requirements.txt` to setup the project.",
+      "* [tox](https://pypi.python.org/pypi/tox) for testing against multiple versions of python."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "dgunning/edgartools",
+    "requested_name": "dgunning/edgartools",
+    "id": 581872397,
+    "url": "https://github.com/dgunning/edgartools",
+    "stars": 2705,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "abe44344c56cf4bfb5443e0debca7e39342f6e7a",
+    "last_commit_date": "2026-09-11T15:33:03Z",
+    "archived": false,
+    "fork": false,
+    "description": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV \u2014 clean API, well-typed, MIT-licensed.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022-present Dwight Gunning <dgunning@gmail.com>",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# EdgarTools \u2014 Python Library for SEC EDGAR Filings",
+      "## Why EdgarTools?",
+      "# Apple's latest income statement \u2014 rendered, standardized, done",
+      "## How It Works",
+      "## Quick Start",
+      "# Standardized financial statements, straight from XBRL",
+      "# The latest insider Form 4 as a structured object",
+      "## Use Cases",
+      "### Financial statements from 10-K and 10-Q filings",
+      "### Insider trading from SEC Form 4",
+      "### 13F institutional holdings & hedge fund portfolios",
+      "### 8-K current reports & corporate events",
+      "### XBRL financial data across companies",
+      "## Key Features",
+      "## Comparison with Alternatives",
+      "## Library or hosted?",
+      "## AI Integration",
+      "### Use EdgarTools with Claude Code & Claude Desktop",
+      "### Option 1: AI Skills (Recommended)",
+      "### Option 2: MCP Server",
+      "## \u2764\ufe0f Support This Project",
+      "### For teams running EdgarTools in production",
+      "## Community & Support",
+      "### Documentation & Resources",
+      "### Get Help & Connect",
+      "### Contributing",
+      "### Professional Services",
+      "## Star History"
+    ],
+    "recent_commit_count": 866,
+    "recent_authors_sample50": [
+      "AmirF194",
+      "JonArnfred",
+      "dgunning",
+      "heykav",
+      "manantlerio"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/dgunning/edgartools/issues/1209",
+        "createdAt": "2026-08-31T15:46:33Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-12T22:32:53Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/dgunning/edgartools/issues/1254",
+        "createdAt": "2026-09-01T02:09:15Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-12T22:32:12Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_adoption_v2.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "dgunning/edgartools",
+      "capability_tag": "none",
+      "category_slug": "data-integration-platform",
+      "summary": "Typed Python library for SEC EDGAR filings analysis",
+      "reuse_value": 85,
+      "stars": 2383,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/dgunning/edgartools",
+      "rank_score": 85023830
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "dgunning/edgartools",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "edgartools",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 496373,
+      "downloads_period": "last-month",
+      "dependent_repos": 0,
+      "dependent_pkgs": 1,
+      "rank_avg": 16.70821824482129,
+      "reach_percentile": 83.3,
+      "reuse_value": 85,
+      "stars": 2383,
+      "adoption_score": 38.0,
+      "real_value": 38,
+      "verdict": "demote",
+      "fame_gap": -31.8,
+      "raw_json": "{\"dl\": 496373, \"deprepos\": 0, \"deppkgs\": 1, \"rank_avg\": 16.70821824482129, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "lift_row": {
+      "full_name": "dgunning/edgartools",
+      "stars": 2383,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "data-integration-platform",
+      "cat_name": "Data Integration / ELT Platform",
+      "description": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV \u2014 clean API, well-typed, "
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".codefactor.yml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".readthedocs.yaml",
+      "CHANGELOG-archive.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "README.md",
+      "changelog.d",
+      "data",
+      "docs",
+      "edgar",
+      "engineering",
+      "examples",
+      "mkdocs.yml",
+      "notebooks",
+      "pyproject.toml",
+      "pyrightconfig.json",
+      "scripts",
+      "tests",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/README.md",
+        "sha256": "943bb25c120e0d4965e44f1baa5f3afb82423e5cf9b41155eae5901ca3877f57",
+        "bytes": 14765
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/LICENSE.txt",
+        "sha256": "249fb5021f07689c5fb17925c4d8bcd04fd9e2cee4b4b789499fb80b1e9dfe0c",
+        "bytes": 1100
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/pyproject.toml",
+        "sha256": "13b6b79634019b55b751c7151e6b182883649f64543760f39d0491a544d00a48",
+        "bytes": 17574
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/dgunning/edgartools/commit/abe44344c56cf4bfb5443e0debca7e39342f6e7a",
+      "metadata": "https://api.github.com/repos/dgunning/edgartools"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# EdgarTools \u2014 Python Library for SEC EDGAR Filings **EdgarTools** is a Python library for accessing SEC EDGAR filings as structured data. Parse financial statements, insider trades, fund holdings, proxy statements, and 20+ other filing types with a consistent Python API \u2014 in a few lines of code. Free and open source. ![EdgarTools SEC filing data extraction demo](https://raw.githubusercontent.com/dgunning/edgartools/main/docs/images/edgartools-demo.gif) ## Why EdgarTools? SEC EDGAR has every filing back to 1994, free \u2014 and almost none of it is ready to use. EdgarTools turns any filing into a typed Python object, so a 10-K's revenue is one line instead of an afternoon of XBRL parsing. ```python # Apple's latest income statement \u2014 rendered, standardized, done from edgar import Company Company(\"AAPL\").get_financials().income_statement() ``` Financial Statements Income, balance sheet, cash flow in one call XBRL-standardized for cross-company comparison Every Filing Type 13F holdings, Form 4 insiders, 8-K events, funds, proxies Typed objects + pandas DataFrames for 20+ forms Built for Pipelines &amp; AI Rate-limit aware, smart caching, enterprise mirrors Built-in MCP server + LLM-ready text for RAG ## How It Works Everything starts with a",
+    "license_excerpt": "MIT License Copyright (c) 2022-present Dwight Gunning <dgunning@gmail.com> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# EdgarTools \u2014 Python Library for SEC EDGAR Filings",
+      "<a href=\"https://github.com/dgunning/edgartools/actions\"><img src=\"https://img.shields.io/github/actions/workflow/status/dgunning/edgartools/python-hatch-workflow.yml\" alt=\"GitHub Workflow Status\"></a>",
+      "<a href=\"https://github.com/dgunning/edgartools/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/dgunning/edgartools\" alt=\"GitHub\"></a>",
+      "**EdgarTools** is a Python library for accessing SEC EDGAR filings as structured data. Parse financial statements, insider trades, fund holdings, proxy statements, and 20+ other filing types with a consistent Python API \u2014 in a few lines of code. Free and open ",
+      "SEC EDGAR has every filing back to 1994, free \u2014 and almost none of it is ready to use. EdgarTools turns any filing into a typed Python object, so a 10-K's revenue is one line instead of an afternoon of XBRL parsing.",
+      "```python",
+      "Typed objects + pandas DataFrames for 20+ forms",
+      "Everything starts with a **`Company`** or a **`Filing`**. Call **`.obj()`** and you get a typed object built for that form \u2014 its data ready as pandas DataFrames and clean text.",
+      "<img src=\"https://raw.githubusercontent.com/dgunning/edgartools/main/docs/images/how-it-works.svg\" alt=\"How EdgarTools turns any SEC filing into a typed Python object\">",
+      "The same typed output that reads cleanly in a notebook drops straight into a pipeline: DataFrames for your warehouse, LLM-ready text and an MCP server for your AI stack, rate-limit and enterprise-mirror aware for scale.",
+      "**2. Identify yourself to the SEC** \u2014 EDGAR requires an email with every request. No key, no signup, no rate-limit tier; set it once:",
+      "```python",
+      "```python",
+      "![Apple SEC Form 4 insider transactions parsed into a structured Python object](https://raw.githubusercontent.com/dgunning/edgartools/main/docs/images/quickstart-form4.gif)",
+      "```python",
+      "```python",
+      "form4.to_dataframe()  # insider buy/sell transactions",
+      "```python"
+    ],
+    "dependency_repos": [
+      "dgunning/edgartools",
+      "sponsors/dgunning"
+    ]
+  },
+  {
+    "full_name": "jadchaar/sec-edgar-downloader",
+    "requested_name": "jadchaar/sec-edgar-downloader",
+    "id": 162630779,
+    "url": "https://github.com/jadchaar/sec-edgar-downloader",
+    "stars": 717,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "185a5548e49fd37afb9871df8aa9485075f21e21",
+    "last_commit_date": "2026-02-02T02:06:03Z",
+    "archived": false,
+    "fork": false,
+    "description": "\ud83d\udcc8 Download filings from the SEC EDGAR database using Python",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2023 Jad Chaar",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jadchaar/sec-edgar-downloader/issues/154",
+        "createdAt": "2025-10-13T14:59:18Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/jadchaar/sec-edgar-downloader/issues/150",
+        "createdAt": "2025-04-03T16:39:57Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".readthedocs.yaml",
+      "CHANGELOG.md",
+      "LICENSE",
+      "Makefile",
+      "README.rst",
+      "docs",
+      "pyproject.toml",
+      "requirements",
+      "sec_edgar_downloader",
+      "tests",
+      "tox.ini"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/jadchaar/sec-edgar-downloader/blob/185a5548e49fd37afb9871df8aa9485075f21e21/README.rst",
+        "sha256": "80d82eae50c9b0ea37e80cb9d554734978993ad61e40408f9bbe67b167166324",
+        "bytes": 9521
+      },
+      "LICENSE": {
+        "url": "https://github.com/jadchaar/sec-edgar-downloader/blob/185a5548e49fd37afb9871df8aa9485075f21e21/LICENSE",
+        "sha256": "4473e5d58a81d85f44fa119b4c96865b13f32024e8dc89e03b4ff015fb76bacc",
+        "bytes": 1066
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/jadchaar/sec-edgar-downloader/blob/185a5548e49fd37afb9871df8aa9485075f21e21/pyproject.toml",
+        "sha256": "8d9b1288268d68944706b580505565b9342d4e032b592a08ea4c36d194266ef3",
+        "bytes": 1896
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jadchaar/sec-edgar-downloader/commit/185a5548e49fd37afb9871df8aa9485075f21e21",
+      "metadata": "https://api.github.com/repos/jadchaar/sec-edgar-downloader"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "sec-edgar-downloader ==================== .. image:: https://github.com/jadchaar/sec-edgar-downloader/actions/workflows/continuous_integration.yml/badge.svg?branch=master :alt: Build Status :target: https://github.com/jadchaar/sec-edgar-downloader/actions/workflows/continuous_integration.yml?query=branch%3Amaster+workflow%3Atests .. image:: https://codecov.io/gh/jadchaar/sec-edgar-downloader/branch/master/graph/badge.svg :alt: Coverage Status :target: https://codecov.io/gh/jadchaar/sec-edgar-downloader .. image:: https://img.shields.io/pypi/v/sec-edgar-downloader.svg :alt: PyPI Version :target: https://python.org/pypi/sec-edgar-downloader .. image:: https://img.shields.io/pypi/pyversions/sec-edgar-downloader.svg :alt: Supported Python Versions :target: https://python.org/pypi/sec-edgar-downloader .. image:: https://img.shields.io/pypi/l/sec-edgar-downloader.svg :alt: License :target: https://python.org/pypi/sec-edgar-downloader .. image:: https://img.shields.io/badge/code%20style-black-000000.svg :alt: Code Style: Black :target: https://github.com/python/black **sec-edgar-downloader** is a Python package for downloading `company filings `_ from the `SEC EDGAR database `_. Searches can be conducted either by `stock ticker `_ or `Central Index Key (CIK) `_. You can use the `SEC CIK lookup tool `_ if you cannot find an appropriate ticker. Quick Start ----------- Installation ^^^^^^^^^^^^ Install and update this package using `pip `_: .. code-block:: console $ pip install -U sec-edgar-downloader Basic Usage ^^^^^^^^^^^ .. code-block:: python from sec_edgar_downloader import Downloader # Initialize a downloader instance. Download filings to the current # working directory. Must declare company name and email address # to form a user-agent string that complies with the SEC Edgar's # programmatic downloading fair access policy. # More info: https://www.sec.gov/os/webmaster-faq#code-support # Company name and email are used to form",
+    "license_excerpt": "MIT License Copyright (c) 2023 Jad Chaar Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      ":target: https://python.org/pypi/sec-edgar-downloader",
+      ":alt: Supported Python Versions",
+      ":target: https://python.org/pypi/sec-edgar-downloader",
+      ":alt: License",
+      ":target: https://python.org/pypi/sec-edgar-downloader",
+      ":target: https://github.com/python/black",
+      "**sec-edgar-downloader** is a Python package for downloading `company filings <https://en.wikipedia.org/wiki/SEC_filing>`_ from the `SEC EDGAR database <https://www.sec.gov/edgar/searchedgar/companysearch.html>`_.",
+      ".. code-block:: python",
+      "# programmatic downloading fair access policy.",
+      ".. code-block:: python",
+      "In order to validate local code changes before creating a pull request, you can run the following commands:",
+      "# Run unit test suite on all locally-installed Python versions",
+      "# Run unit test suite on a single Python version (e.g. Python 3.11)",
+      "3. Ensure all unit and integration tests pass locally and in the GitHub Actions testing workflow."
+    ],
+    "dependency_repos": [
+      "jadchaar/sec-edgar-downloader",
+      "python/black"
+    ]
+  },
+  {
+    "full_name": "sec-edgar/sec-edgar",
+    "requested_name": "sec-edgar/sec-edgar",
+    "id": 14759456,
+    "url": "https://github.com/sec-edgar/sec-edgar",
+    "stars": 1415,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "97db601615ebedd49637fb4ed847b3f714114720",
+    "last_commit_date": "2025-12-09T12:30:42Z",
+    "archived": false,
+    "fork": false,
+    "description": " Download all companies  periodic reports, filings and forms from EDGAR database.",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/sec-edgar/sec-edgar/issues/331",
+        "createdAt": "2025-05-19T20:11:47Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-05-23T13:35:47Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-05-28T09:40:32Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-05-30T22:58:35Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-07-23T21:41:05Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-01-24T09:36:42Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-01-25T09:14:46Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/sec-edgar/sec-edgar/issues/322",
+        "createdAt": "2025-02-10T18:05:47Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-02-12T02:11:25Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-02-12T04:34:51Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-02-22T02:46:54Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-02-22T03:17:28Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-02-22T17:29:39Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-02-22T20:36:40Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-05-08T03:05:38Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-05-11T15:33:22Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "CODE_OF_CONDUCT.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "ci",
+      "docs",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "secedgar",
+      "setup.cfg",
+      "setup.py",
+      "test.sh"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/sec-edgar/sec-edgar/blob/97db601615ebedd49637fb4ed847b3f714114720/README.rst",
+        "sha256": "6eb451c7c3aea9c7193e6df4af64a2103c5d4f6c2102a12274c6c07d6bbb0cdf",
+        "bytes": 2665
+      },
+      "LICENSE": {
+        "url": "https://github.com/sec-edgar/sec-edgar/blob/97db601615ebedd49637fb4ed847b3f714114720/LICENSE",
+        "sha256": "acb51acabf2b00b378445bb88739adfb15c306dd531ba7cc3f102bd4f2ccc9e4",
+        "bytes": 10175
+      },
+      "requirements.txt": {
+        "url": "https://github.com/sec-edgar/sec-edgar/blob/97db601615ebedd49637fb4ed847b3f714114720/requirements.txt",
+        "sha256": "62a342c12ccae4ae922cc342c4c34ebf6ebd4df85583f2c294bf4c6830941b29",
+        "bytes": 49
+      },
+      "setup.py": {
+        "url": "https://github.com/sec-edgar/sec-edgar/blob/97db601615ebedd49637fb4ed847b3f714114720/setup.py",
+        "sha256": "e314f5d3f9dfe894274c6b49c3c1517d9306d651bb8445d4289ad29201bc29c7",
+        "bytes": 3475
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/sec-edgar/sec-edgar/commit/97db601615ebedd49637fb4ed847b3f714114720",
+      "metadata": "https://api.github.com/repos/sec-edgar/sec-edgar"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "sec-edgar ========= |Tests Status| |Docs Status| Getting filings of various companies at once is really a pain, but SEC-Edgar does that for you. You can download all of a company\u2019s periodic reports, filings and forms from the EDGAR database with a single command. Installation ------------ You can install the package using pip: .. code:: bash $ pip install secedgar OR You can clone the project: .. code:: bash $ git clone https://github.com/sec-edgar/sec-edgar.git $ cd sec-edgar $ python setup.py install Running ------- If you are using Jupyter Notebook, you'll need to install and configure nest-asyncio: .. code-block:: bash pip install nest-asyncio Then add the following code at the start of your notebook: .. code-block:: python import nest_asyncio nest_asyncio.apply() Company Filings ~~~~~~~~~~~~~~~ Single Company ^^^^^^^^^^^^^^ .. code:: python from secedgar import filings, FilingType # 10Q filings for Apple (ticker \"aapl\") my_filings = filings(cik_lookup=\"aapl\", filing_type=FilingType.FILING_10Q, user_agent=\"Your name (your.name@example.com)\") my_filings.save('/path/to/dir') Multiple Companies ^^^^^^^^^^^^^^^^^^ .. code:: python from secedgar import filings, FilingType # 10Q filings for Apple and Facebook (tickers \"aapl\" and \"fb\") my_filings = filings(cik_lookup=[\"aapl\", \"fb\"], filing_type=FilingType.FILING_10Q, user_agent=\"Your name (your.name@example.com)\") my_filings.save('/path/to/dir') Daily Filings ~~~~~~~~~~~~~",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "$ python setup.py install",
+      ".. code-block:: python",
+      ".. code:: python",
+      ".. code:: python",
+      ".. code:: python"
+    ],
+    "dependency_repos": [
+      "sec-edgar/sec-edgar",
+      "sec-edgar/sec-edgar.git"
+    ]
+  }
+]
