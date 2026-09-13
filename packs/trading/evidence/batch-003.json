@@ -1,0 +1,1502 @@
+[
+  {
+    "full_name": "ranaroussi/quantstats",
+    "requested_name": "ranaroussi/quantstats",
+    "id": 184420323,
+    "url": "https://github.com/ranaroussi/quantstats",
+    "stars": 7630,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fbd10daed0227aa0d10da6513f1b15e7e98d7fae",
+    "last_commit_date": "2026-01-13T18:15:47Z",
+    "archived": false,
+    "fork": false,
+    "description": "Portfolio analytics for quants, written in Python",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# QuantStats: Portfolio analytics for quants",
+      "### QuantStats is comprised of 3 main modules:",
+      "### **NEW! Monte Carlo Simulations**",
+      "## Quick Start",
+      "# extend pandas functionality with metrics, etc.",
+      "# fetch the daily returns for a stock",
+      "# show sharpe ratio",
+      "# or using extend_pandas() :)",
+      "### Visualize stock performance",
+      "# can also be called via:",
+      "# stock.plot_snapshot(title='Facebook Performance', show=True)",
+      "### Creating a report",
+      "# benchmark can be a pandas Series or ticker",
+      "### Available methods",
+      "### Important: Period-Based vs Trade-Based Metrics",
+      "## Installation",
+      "## Requirements",
+      "## Questions?",
+      "## Known Issues",
+      "## Legal Stuff",
+      "## P.S."
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/ranaroussi/quantstats/issues/547",
+        "createdAt": "2026-09-12T23:53:02Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/ranaroussi/quantstats/issues/546",
+        "createdAt": "2026-09-12T22:19:27Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "ranaroussi/quantstats",
+      "capability_tag": "charting",
+      "category_slug": "quant-trading-platform",
+      "summary": "Portfolio analytics and reporting for quants in Python",
+      "reuse_value": 78,
+      "stars": 7316,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "url": "https://github.com/ranaroussi/quantstats",
+      "rank_score": 78073160
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "ranaroussi/quantstats",
+      "stars": 7316,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 78,
+      "liftability": 85,
+      "fame_gap": -7,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Portfolio analytics for quants, written in Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".deepsource.toml",
+      ".flake8",
+      ".github",
+      ".gitignore",
+      ".travis.yml",
+      "CHANGELOG.md",
+      "CONTRIBUTORS.txt",
+      "LICENSE.txt",
+      "MANIFEST.in",
+      "README.md",
+      "docs",
+      "pyproject.toml",
+      "quantstats",
+      "requirements.txt",
+      "setup.cfg",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ranaroussi/quantstats/blob/fbd10daed0227aa0d10da6513f1b15e7e98d7fae/README.md",
+        "sha256": "87ee991c53cf874b71f5f7940962898eb4ecb6536bc239e2a7b21d852859d704",
+        "bytes": 8156
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/ranaroussi/quantstats/blob/fbd10daed0227aa0d10da6513f1b15e7e98d7fae/LICENSE.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/ranaroussi/quantstats/blob/fbd10daed0227aa0d10da6513f1b15e7e98d7fae/pyproject.toml",
+        "sha256": "50350a863f81f15df2f23bd56f6dc9d616a1155155862756e322fecb6a7d2328",
+        "bytes": 3145
+      },
+      "requirements.txt": {
+        "url": "https://github.com/ranaroussi/quantstats/blob/fbd10daed0227aa0d10da6513f1b15e7e98d7fae/requirements.txt",
+        "sha256": "e4c4addd8756ce399bac89424135a8778aa3145aea3a445295dd417118725879",
+        "bytes": 255
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ranaroussi/quantstats/commit/fbd10daed0227aa0d10da6513f1b15e7e98d7fae",
+      "metadata": "https://api.github.com/repos/ranaroussi/quantstats"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Python version](https://img.shields.io/badge/python-3.10+-blue.svg?style=flat)](https://pypi.python.org/pypi/quantstats) [![PyPi version](https://img.shields.io/pypi/v/quantstats.svg?maxAge=60)](https://pypi.python.org/pypi/quantstats) [![PyPi status](https://img.shields.io/pypi/status/quantstats.svg?maxAge=60)](https://pypi.python.org/pypi/quantstats) [![PyPi downloads](https://img.shields.io/pypi/dm/quantstats.svg?maxAge=2592000&label=installs&color=%2327B1FF)](https://pypi.python.org/pypi/quantstats) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ranaroussi/quantstats) [![Star this repo](https://img.shields.io/github/stars/ranaroussi/quantstats.svg?style=social&label=Star&maxAge=60)](https://github.com/ranaroussi/quantstats) [![Follow me on twitter](https://img.shields.io/twitter/follow/aroussi.svg?style=social&label=Follow&maxAge=60)](https://twitter.com/aroussi) # QuantStats: Portfolio analytics for quants **QuantStats** Python library that performs portfolio profiling, allowing quants and portfolio managers to understand their performance better by providing them with in-depth analytics and risk metrics. [Changelog \u00bb](./CHANGELOG.md) ### QuantStats is comprised of 3 main modules: 1. `quantstats.stats` - for calculating various performance metrics, like Sharpe ratio, Win rate, Volatility, etc. 2. `quantstats.plots` - for visualizing performance, drawdowns, rolling statistics, monthly returns, etc. 3. `quantstats.reports` - for generating metrics reports, batch plotting, and creating tear sheets that can be saved as an HTML file. --- ### **NEW! Monte Carlo Simulations** Run probabilistic risk analysis with built-in Monte Carlo simulations: ```python mc = qs.stats.montecarlo(returns, sims=1000, bust=-0.20, goal=0.50) print(f\"Bust probability: {mc.bust_probability:.1%}\") print(f\"Goal probability: {mc.goal_probability:.1%}\") mc.plot() ``` [Full Monte Carlo documentation \u00bb](./docs/montecarlo.md) --- ## Quick Start ```python %matplotlib inline import quantstats as qs # extend pandas functionality with metrics, etc. qs.extend_pandas() # fetch the daily returns for a stock stock = qs.utils.download_returns('META') # show sharpe ratio qs.stats.sharpe(stock) # or using",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Python version](https://img.shields.io/badge/python-3.10+-blue.svg?style=flat)](https://pypi.python.org/pypi/quantstats)",
+      "[![PyPi version](https://img.shields.io/pypi/v/quantstats.svg?maxAge=60)](https://pypi.python.org/pypi/quantstats)",
+      "[![PyPi status](https://img.shields.io/pypi/status/quantstats.svg?maxAge=60)](https://pypi.python.org/pypi/quantstats)",
+      "[![PyPi downloads](https://img.shields.io/pypi/dm/quantstats.svg?maxAge=2592000&label=installs&color=%2327B1FF)](https://pypi.python.org/pypi/quantstats)",
+      "**QuantStats** Python library that performs portfolio profiling, allowing quants and portfolio managers to understand their performance better by providing them with in-depth analytics and risk metrics.",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "```python",
+      "'histogram',",
+      "In the meantime, you can get insights as to optional parameters for each method, by using Python's `help` method:",
+      "```python",
+      "* [Python](https://www.python.org) >= 3.10",
+      "* [tabulate](https://bitbucket.org/astanin/python-tabulate) >= 0.9.0"
+    ],
+    "dependency_repos": [
+      "pydata/pandas",
+      "ranaroussi/quantstats",
+      "ranaroussi/yfinance"
+    ]
+  },
+  {
+    "full_name": "PyPortfolio/PyPortfolioOpt",
+    "requested_name": "PyPortfolio/PyPortfolioOpt",
+    "id": 135300551,
+    "url": "https://github.com/PyPortfolio/PyPortfolioOpt",
+    "stars": 6022,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+    "last_commit_date": "2026-07-07T21:13:11Z",
+    "archived": false,
+    "fork": false,
+    "description": "Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity",
+    "language": "Jupyter Notebook",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2018 Robert Andrew Martin",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Welcome to PyPortfolioOpt",
+      "## Table of contents",
+      "## \ud83d\ude80 Installation",
+      "### Using pip",
+      "### From source",
+      "## Getting started",
+      "# Read in price data",
+      "# Calculate expected returns and sample covariance",
+      "# Optimize for maximal Sharpe ratio",
+      "## An overview of classical portfolio optimization methods",
+      "## Features",
+      "### Expected returns",
+      "### Risk models (covariance)",
+      "### Objective functions",
+      "### Adding constraints or different objectives",
+      "### Black-Litterman allocation",
+      "### Other optimizers",
+      "## Advantages over existing implementations",
+      "## Project principles and design decisions",
+      "## Testing",
+      "## Citing PyPortfolioOpt",
+      "## Contributing"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "jaydevkalivarapu"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/issues/644",
+        "createdAt": "2025-11-08T19:31:46Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-11-10T22:28:10Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-11-11T01:34:33Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-11-11T08:01:15Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2025-11-14T23:21:12Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-11-14T23:23:40Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-11-16T03:13:21Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2025-11-16T12:43:40Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-25T03:39:42Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-25T04:17:46Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-08-31T06:06:25Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/issues/663",
+        "createdAt": "2025-11-12T06:09:31Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-11-14T23:14:30Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-11-16T03:44:41Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-08-31T05:03:50Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "PyPortfolio/PyPortfolioOpt",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Financial portfolio optimization (efficient frontier, Black-Litterman) in Python",
+      "reuse_value": 85,
+      "stars": 5802,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/PyPortfolio/PyPortfolioOpt",
+      "rank_score": 85058020
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "PyPortfolio/PyPortfolioOpt",
+      "stars": 5802,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk P"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "cookbook",
+      "docs",
+      "example",
+      "media",
+      "pypfopt",
+      "pyproject.toml",
+      "readthedocs.yml",
+      "requirements.txt",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/README.md",
+        "sha256": "aa39aacf964b967b8b23063f91eeb5997136e10e40fb62e7c5a848e348a00123",
+        "bytes": 20042
+      },
+      "LICENSE": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/LICENSE",
+        "sha256": "0e401d63a7b31bde363ca577a2537af1c345fccbf532edc55cb589f568b2a883",
+        "bytes": 1077
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/pyproject.toml",
+        "sha256": "5b31e906acaed67517ecc84797bcd44335be3a0dcf55c605185fe066000b96ac",
+        "bytes": 3230
+      },
+      "requirements.txt": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/requirements.txt",
+        "sha256": "acfd08fda8721e30f91c777e295269f155d55d8ef67d6d4a8aad566cabfaf6b0",
+        "bytes": 93
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/PyPortfolio/PyPortfolioOpt/commit/a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+      "metadata": "https://api.github.com/repos/PyPortfolio/PyPortfolioOpt"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "## Welcome to PyPortfolioOpt PyPortfolioOpt is a library implementing portfolio optimization methods, including classical mean-variance optimization, Black-Litterman allocation, or shrinkage and Hierarchical Risk Parity. PyPortfolioOpt is inspired by scikit-learn; it is **extensive** yet easily **extensible**, for casual investors, or professionals looking for an easy prototyping tool. Whether you are a fundamentals-oriented investor who has identified a handful of undervalued picks, or an algorithmic trader who has a basket of strategies, PyPortfolioOpt can help you combine your alpha sources in a risk-efficient way. | | **[Documentation](https://pyportfolioopt.readthedocs.io/en/latest/)** \u00b7 **[Tutorials](https://github.com/pyportfolio/pyportfolioopt/tree/main/cookbook)** \u00b7 **[Release Notes](https://github.com/PyPortfolio/PyPortfolioOpt/releases)** | |---|---| | **Open&#160;Source** | [![MIT](https://img.shields.io/github/license/pyportfolio/pyportfolioopt)](https://github.com/pyportfolio/pyportfolioopt/blob/main/LICENSE) [![GC.OS Sponsored](https://img.shields.io/badge/GC.OS-Sponsored%20Project-orange.svg?style=flat&colorA=0eac92&colorB=2077b4)](https://gc-os-ai.github.io/) | | | **Community** | [![!discord](https://img.shields.io/static/v1?logo=discord&label=discord&message=chat&color=lightgreen)](https://discord.gg/7uKdHfdcJG) [![!linkedin](https://img.shields.io/static/v1?logo=linkedin&label=LinkedIn&message=news&color=lightblue)](https://www.linkedin.com/company/pyportfolioopt/) | | **CI/CD** | [![github-actions](https://img.shields.io/github/actions/workflow/status/pyportfolio/pyportfolioopt/main.yml?logo=github)](https://github.com/pyportfolio/pyportfolioopt/actions/workflows/main.yml) [![readthedocs](https://img.shields.io/readthedocs/pyportfolioopt?logo=readthedocs)](https://pyportfolioopt.readthedocs.io/en/latest/?badge=latest) | | **Code** | [![!pypi](https://img.shields.io/pypi/v/pyportfolioopt?color=orange)](https://pypi.org/project/pyportfolioopt/) [![!python-versions](https://img.shields.io/pypi/pyversions/pyportfolioopt)](https://www.python.org/) [![!black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) | | **Downloads** | ![PyPI - Downloads](https://img.shields.io/pypi/dw/pyportfolioopt) ![PyPI - Downloads](https://img.shields.io/pypi/dm/pyportfolioopt) [![Downloads](https://static.pepy.tech/badge/pyportfolioopt)](https://pepy.tech/project/pyportfolioopt) | | **Citation** | [JOSS article](https://joss.theoj.org/papers/10.21105/joss.03066) | Head over to the **[documentation on ReadTheDocs](https://pyportfolioopt.readthedocs.io/en/latest/)** to get an in-depth look at the project, or check out the [cookbook](https://github.com/pyportfolio/pyportfolioopt/tree/main/cookbook) to see some examples showing the full process from downloading data to building a portfolio. ## Table of contents - [Table of contents](#table-of-contents) -",
+    "license_excerpt": "MIT License Copyright (c) 2018 Robert Andrew Martin Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "| **Open&#160;Source** | [![MIT](https://img.shields.io/github/license/pyportfolio/pyportfolioopt)](https://github.com/pyportfolio/pyportfolioopt/blob/main/LICENSE) [![GC.OS Sponsored](https://img.shields.io/badge/GC.OS-Sponsored%20Project-orange.svg?style=fla",
+      "| **Code** |  [![!pypi](https://img.shields.io/pypi/v/pyportfolioopt?color=orange)](https://pypi.org/project/pyportfolioopt/) [![!python-versions](https://img.shields.io/pypi/pyversions/pyportfolioopt)](https://www.python.org/) [![!black](https://img.shields.i",
+      "```python",
+      "```python",
+      "```python",
+      "Please refer to the [license](https://github.com/PyPortfolio/PyPortfolioOpt/blob/main/LICENSE.txt) for more information._",
+      "treatment requires knowledge of the expected returns and the future risk-characteristics (covariance) of the assets. Obviously, if we knew the expected returns of a stock life would be much easier, but the whole game is that stock returns are notoriously hard ",
+      "components while still making use of the framework that PyPortfolioOpt provides.",
+      "- Ledoit Wolf shrinkage, which chooses an optimal shrinkage parameter. We offer three shrinkage targets: `constant_variance`, `single_factor`, and `constant_correlation`.",
+      "- Minimum Covariance Determinant:",
+      "- Minimum volatility. This may be useful if you're trying to get an idea of how low the volatility _could_ be, but in practice it makes a lot more sense to me to use the portfolio that maximises the Sharpe ratio.",
+      "```python",
+      "- Market neutrality: for the `efficient_risk` and `efficient_return` methods, PyPortfolioOpt provides an option to form a market-neutral portfolio (i.e weights sum to zero). This is not possible for the max Sharpe portfolio and the min volatility portfolio bec",
+      "```python",
+      "- Minimum/maximum position size: it may be the case that you want no security to form more than 10% of your portfolio. This is easy to encode:",
+      "```python",
+      "objective function that can reduce the number of negligible weights for any of the objective functions. Essentially, it adds a penalty (parameterised by `gamma`) on small weights, with a term that looks just like L2 regularisation in machine learning. It may b",
+      "```python"
+    ],
+    "dependency_repos": [
+      "PyPortfolio/PyPortfolioOpt",
+      "PyPortfolio/PyPortfolioOpt.git",
+      "psf/black",
+      "pyportfolio/pyportfolioopt"
+    ]
+  },
+  {
+    "full_name": "dcajasn/Riskfolio-Lib",
+    "requested_name": "dcajasn/Riskfolio-Lib",
+    "id": 244460835,
+    "url": "https://github.com/dcajasn/Riskfolio-Lib",
+    "stars": 4495,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
+    "last_commit_date": "2026-06-22T00:55:09Z",
+    "archived": false,
+    "fork": false,
+    "description": "Portfolio Optimization in Python",
+    "language": "C++",
+    "license": "BSD-3-Clause",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "Copyright (c) 2020-2026, Dany Cajas"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Riskfolio-Lib",
+      "## Description",
+      "## Documentation",
+      "## Choosing a Solver",
+      "## Dependencies",
+      "## Installation",
+      "## Contributing",
+      "### Financial Support",
+      "### Other Ways to Contribute",
+      "## Citing",
+      "## RoadMap"
+    ],
+    "recent_commit_count": 20,
+    "recent_authors_sample50": [
+      "alexander-schneider",
+      "dcajasn"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/issues/248",
+        "createdAt": "2026-09-01T02:51:28Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-01T03:13:28Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/issues/252",
+        "createdAt": "2026-09-01T02:51:39Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Python library for portfolio optimization and financial analysis",
+      "reuse_value": 85,
+      "stars": 4287,
+      "license": "BSD-3-Clause",
+      "language": "C++",
+      "url": "https://github.com/dcajasn/Riskfolio-Lib",
+      "rank_score": 85042870
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "stars": 4287,
+      "license": "BSD-3-Clause",
+      "language": "C++",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Portfolio Optimization in Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".readthedocs.yaml",
+      "AUTHORS.rst",
+      "CHANGELOG.rst",
+      "LICENSE.txt",
+      "MANIFEST.in",
+      "README.md",
+      "_config.yml",
+      "continuous_integration",
+      "docs",
+      "examples",
+      "lib",
+      "pyproject.toml",
+      "requirements.txt",
+      "riskfolio",
+      "setup.cfg",
+      "setup.py",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/README.md",
+        "sha256": "9f7aa31d90a936fb1b2ac76f6e99ff5dbaaae51b109e3241c3c0512450fffdea",
+        "bytes": 17213
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/LICENSE.txt",
+        "sha256": "7f7a68d261604e432e818993f92b74b636c632e31f207730dd189267044aa5e6",
+        "bytes": 1486
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/pyproject.toml",
+        "sha256": "357eb4dd274070197b62ba42587527300be3ecffcf7f39deeee786e2ca57be84",
+        "bytes": 458
+      },
+      "requirements.txt": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/requirements.txt",
+        "sha256": "abba2938220313c80965a84c578810616af57fbb6ecbc0af71a618325aa0cf06",
+        "bytes": 234
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/dcajasn/Riskfolio-Lib/commit/632a9e48fbaf2b9f8e83864a492332364b6ed32c",
+      "metadata": "https://api.github.com/repos/dcajasn/Riskfolio-Lib"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Riskfolio-Lib **Portfolio Optimization in Python, Easy for Everyone.** [![Star History Chart](https://api.star-history.com/svg?repos=dcajasn/Riskfolio-Lib&type=timeline&legend=top-left)](https://www.star-history.com/#dcajasn/Riskfolio-Lib&type=timeline&legend=top-left) ## Description Riskfolio-Lib is a library for making __Portfolio Optimization in Python__ made in Peru &#x1F1F5;&#x1F1EA;. Its objective is to help students, academics and practitioners to build investment portfolios based on mathematically complex models with low effort. It is built on top of [CVXPY](https://www.cvxpy.org/) and closely integrated with [Pandas](https://pandas.pydata.org/) data structures. Some of key functionalities that Riskfolio-Lib offers: - Mean Risk and Logarithmic Mean Risk (Kelly Criterion) Portfolio Optimization with 4 objective functions: - Minimum Risk. - Maximum Return. - Maximum Utility Function. - Maximum Risk Adjusted Return Ratio. - Mean Risk and Logarithmic Mean Risk (Kelly Criterion) Portfolio Optimization with 26 convex risk measures: **Dispersion Risk Measures:** - Standard Deviation. - Square Root Kurtosis. - p-th Root Even Moment of order 2p. - Mean Absolute Deviation (MAD). - Gini Mean Difference (GMD). - Conditional Value at Risk Range. - Tail Gini Range. - Entropic Value at Risk Range. - Relativistic Value at Risk Range. - Range. &nbsp; **Downside Risk Measures:** - Semi Standard Deviation. - Square Root",
+    "license_excerpt": "Copyright (c) 2020-2026, Dany Cajas All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Portfolio Optimization in Python, Easy for Everyone.**",
+      "<a href=\"https://github.com/dcajasn/Riskfolio-Lib/blob/master/LICENSE.txt\"> <img src=\"https://img.shields.io/github/license/dcajasn/Riskfolio-Lib\" height=\"28\" /></a>",
+      "Riskfolio-Lib is a library for making __Portfolio Optimization in Python__ made in Peru &#x1F1F5;&#x1F1EA;. Its objective is to help students, academics and practitioners to build investment portfolios based on mathematically complex models with low effort. It",
+      "- Minimum Risk.",
+      "- Minimum Risk.",
+      "Due to Riskfolio-Lib is based on CVXPY, Riskfolio-Lib can use the same solvers available for CVXPY. The list of solvers compatible with CVXPY is available in [Choosing a solver](https://www.cvxpy.org/tutorial/advanced/index.html#choosing-a-solver) section of C",
+      "(*) When SDP graph theory constraints or risk contribution constraints are included. In the case integer programming graph theory constraints are included, the model assume the SOCP formulation.",
+      "LP - Linear Programming refers to problems with a linear objective function and linear constraints.",
+      "QP - Quadratic Programming refers to problems with a quadratic objective function and linear constraints.",
+      "SOCP - Second Order Cone Programming refers to problems with second-order cone constraints.",
+      "SDP - Semidefinite Programming refers to problems with positive semidefinite constraints.",
+      "Riskfolio-Lib supports Python 3.10 or higher.",
+      "Installation requires:",
+      "Examples requires:",
+      "- Enroll in my course [Portfolio Optimization with Python](https://www.paypal.com/ncp/payment/GN55W4UQ7VAMN)."
+    ],
+    "dependency_repos": [
+      "dcajasn/Riskfolio-Lib",
+      "sponsors/dcajasn"
+    ]
+  },
+  {
+    "full_name": "skfolio/skfolio",
+    "requested_name": "skfolio/skfolio",
+    "id": 731792488,
+    "url": "https://github.com/skfolio/skfolio",
+    "stars": 2389,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "9cb3a4ae6bf2d588847b02fb38262b46de12b30e",
+    "last_commit_date": "2026-09-13T15:39:19Z",
+    "archived": false,
+    "fork": false,
+    "description": "Python library for portfolio optimization built on top of scikit-learn",
+    "language": "Python",
+    "license": "BSD-3-Clause",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "BSD 3-Clause License",
+      "Copyright (c) 2023-2026 The skfolio developers."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 128,
+    "recent_authors_sample50": [
+      "FarrellDaniel",
+      "HugoDelatte",
+      "JohnDReynolds",
+      "WatchTree-19",
+      "albystack",
+      "dependabot[bot]",
+      "mameikagou",
+      "russlan23",
+      "semantic-release",
+      "tschm"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/skfolio/skfolio/issues/161",
+        "createdAt": "2025-07-24T21:28:57Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-09-03T11:51:14Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2025-09-03T18:40:17Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2025-09-04T03:30:14Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2025-09-04T13:02:09Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-09-05T06:39:38Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2025-09-10T14:04:47Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2025-10-09T12:16:57Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-08-22T22:21:52Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-08-23T13:55:11Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-23T22:34:29Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/skfolio/skfolio/issues/261",
+        "createdAt": "2026-08-26T15:52:38Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-26T17:44:41Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-27T07:32:07Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-27T08:41:19Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-27T11:17:42Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-27T12:36:57Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-08-27T15:09:39Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-08-27T19:44:06Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T08:16:46Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "skfolio/skfolio",
+      "stars": 2032,
+      "license": "BSD-3-Clause",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Python library for portfolio optimization built on top of scikit-learn"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Dockerfile",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "SECURITY.md",
+      "codecov.yml",
+      "conftest.py",
+      "docs",
+      "examples",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/skfolio/skfolio/blob/9cb3a4ae6bf2d588847b02fb38262b46de12b30e/README.rst",
+        "sha256": "fe951f16c4d00a6a623bb86a326292993e19c7e326d8a67ea826569f96ccee6e",
+        "bytes": 28130
+      },
+      "LICENSE": {
+        "url": "https://github.com/skfolio/skfolio/blob/9cb3a4ae6bf2d588847b02fb38262b46de12b30e/LICENSE",
+        "sha256": "07b8dfceb7b319e5145e7b1594d2cdaf94d924d78166d28951d4b360a4dc5844",
+        "bytes": 1526
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/skfolio/skfolio/blob/9cb3a4ae6bf2d588847b02fb38262b46de12b30e/pyproject.toml",
+        "sha256": "f797e4c7078370dee73882690f6fbdf4dbad927060393de0bae34da9766f370b",
+        "bytes": 5877
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/skfolio/skfolio/commit/9cb3a4ae6bf2d588847b02fb38262b46de12b30e",
+      "metadata": "https://api.github.com/repos/skfolio/skfolio"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": ".. -*- mode: rst -*- .. The regions delimited by the `skfolio-shared-*-start` and `skfolio-shared-*-end` comments are included verbatim in `docs/index.rst`. Do not rename or remove them. Content placed outside those regions stays in the README only. |Licence| |Codecov| |PythonVersion| |PyPi| |CI/CD| |Downloads| |Ruff| |Contribution| |Website| |JupyterLite| |Discord| |DOI| .. |Licence| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg :target: https://github.com/skfolio/skfolio/blob/main/LICENSE .. |Codecov| image:: https://codecov.io/gh/skfolio/skfolio/graph/badge.svg?token=KJ0SE4LHPV :target: https://codecov.io/gh/skfolio/skfolio .. |PythonVersion| image:: https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg :target: https://pypi.org/project/skfolio/ .. |PyPi| image:: https://img.shields.io/pypi/v/skfolio :target: https://pypi.org/project/skfolio .. |CI/CD| image:: https://img.shields.io/github/actions/workflow/status/skfolio/skfolio/release.yml.svg?logo=github :target: https://github.com/skfolio/skfolio/actions .. |Downloads| image:: https://static.pepy.tech/badge/skfolio :target: https://pepy.tech/project/skfolio .. |Ruff| image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json :target: https://github.com/astral-sh/ruff .. |Contribution| image:: https://img.shields.io/badge/Contributions-Welcome-blue :target: https://github.com/skfolio/skfolio/blob/main/CONTRIBUTING.md .. |Website| image:: https://img.shields.io/website.svg?down_color=red&down_message=down&up_color=53cc0d&up_message=up&url=https://skfolio.org :target: https://skfolio.org .. |JupyterLite| image:: https://jupyterlite.rtfd.io/en/latest/_static/badge.svg :target: https://skfolio.org/lite .. |Discord| image:: https://img.shields.io/badge/Discord-Join%20Chat-5865F2?logo=discord&logoColor=white :target: https://discord.gg/Bu7EtNYugS .. |DOI| image:: https://zenodo.org/badge/731792488.svg :target: https://doi.org/10.5281/zenodo.16148630 =============== |icon| skfolio =============== .. |icon| image:: https://raw.githubusercontent.com/skfolio/skfolio/main/docs/_static/logo_animate.svg :width: 100 :alt: skfolio documentation .. skfolio-shared-introduction-start **skfolio** is a Python library for portfolio optimization, factor model construction, and risk management built on top of scikit-learn. It offers a unified interface and tools compatible with scikit-learn to build, fine-tune, cross-validate, and stress-test portfolio models. It is distributed under the open-source 3-Clause BSD",
+    "license_excerpt": "BSD 3-Clause License Copyright (c) 2023-2026 The skfolio developers. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are",
+    "license_warnings": [],
+    "runtime_clues": [
+      "|Licence| |Codecov| |PythonVersion| |PyPi| |CI/CD| |Downloads| |Ruff| |Contribution| |Website| |JupyterLite| |Discord| |DOI|",
+      ".. |Licence| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg",
+      ":target: https://github.com/skfolio/skfolio/blob/main/LICENSE",
+      ".. |PythonVersion| image:: https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg",
+      "**skfolio** is a Python library for portfolio optimization, factor model construction,",
+      "It is distributed under the open-source 3-Clause BSD license.",
+      "* `Portfolio Optimization: Theory and Application <https://portfoliooptimizationbook.com/>`_ by Daniel P. Palomar, includes Python code examples using skfolio.",
+      ".. |PythonMinVersion| replace:: 3.10",
+      "`skfolio` requires Python |PythonMinVersion| or later and can be installed with:",
+      "input parameters (expected returns and covariance), weight concentration, high turnover,",
+      "need for a unified framework with a machine-learning approach to perform model",
+      "selection, validation, and parameter tuning while mitigating the risk of data leakage",
+      "This framework is built on scikit-learn's API.",
+      "* Hyper-Parameter Tuning:",
+      ".. code-block:: python",
+      ".. code-block:: python",
+      ".. code-block:: python",
+      "Minimum Variance"
+    ],
+    "dependency_repos": [
+      "astral-sh/ruff",
+      "cvxpy/cvxpy",
+      "scikit-learn/scikit-learn",
+      "skfolio/skfolio"
+    ]
+  },
+  {
+    "full_name": "lballabio/QuantLib",
+    "requested_name": "lballabio/QuantLib",
+    "id": 48185587,
+    "url": "https://github.com/lballabio/QuantLib",
+    "stars": 7610,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ca953b7ebdb400f2839d86f18eeb0d4a2a4a30a4",
+    "last_commit_date": "2026-09-11T07:11:50Z",
+    "archived": false,
+    "fork": false,
+    "description": "The QuantLib C++ library",
+    "language": "C++",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE.TXT"
+    ],
+    "license_headings": [
+      "Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl",
+      "Copyright (C) 2001, 2002, 2003 Nicolas Di C\u00e9sar\u00e9",
+      "Copyright (C) 2001, 2002, 2003 Sadruddin Rejeb",
+      "Copyright (C) 2002, 2003, 2004 Decillion Pty(Ltd)",
+      "Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015 Ferdinando Ametrano",
+      "Copyright (C) 2003 Kawanishi Tomoya",
+      "Copyright (C) 2003 Niels Elken S\u00f8nderby",
+      "Copyright (C) 2003, 2004 Roman Gitlin"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# QuantLib: the free/open-source library for quantitative finance",
+      "## Download and usage",
+      "## Questions and feedback",
+      "## Contributing"
+    ],
+    "recent_commit_count": 806,
+    "recent_authors_sample50": [
+      "Abhayindia",
+      "colalb1",
+      "geographybuff",
+      "kp9991-git",
+      "lballabio",
+      "lballabio-bot",
+      "losterbr",
+      "mkzung",
+      "quantales",
+      "sdacek"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/lballabio/QuantLib/issues/2787",
+        "createdAt": "2026-09-13T05:53:48Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/lballabio/QuantLib/issues/2785",
+        "createdAt": "2026-09-12T17:25:04Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-12T17:25:07Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T02:18:28Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".agents",
+      ".appveyor.yml",
+      ".ci",
+      ".clang-format",
+      ".clang-tidy",
+      ".codecov.yml",
+      ".github",
+      ".gitignore",
+      ".lgtm.yml",
+      ".lsan.txt",
+      ".misspell-fixer.ignore",
+      ".msvc-analysis.ruleset",
+      "AGENTS.md",
+      "CITATION.cff",
+      "CLAUDE.md",
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "CONTRIBUTING.md",
+      "ChangeLog.txt",
+      "Contributors.txt",
+      "Docs",
+      "Examples",
+      "LICENSE.TXT",
+      "Makefile.am",
+      "News.md",
+      "QuantLib.natvis",
+      "QuantLib.props",
+      "QuantLib.sln",
+      "QuantLib.spec.in",
+      "QuantLib.vcxproj",
+      "QuantLib.vcxproj.filters",
+      "README.md",
+      "acinclude.m4",
+      "autogen.sh",
+      "cmake",
+      "configure.ac",
+      "dockerfiles",
+      "fuzz-test-suite",
+      "m4",
+      "man",
+      "ql",
+      "quantlib-config.in",
+      "quantlib.el",
+      "quantlib.m4",
+      "quantlib.pc.in",
+      "test-suite",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/lballabio/QuantLib/blob/ca953b7ebdb400f2839d86f18eeb0d4a2a4a30a4/README.md",
+        "sha256": "2d66889c3ffe14dc4f1029cdece3ea83afe45baf89a761bfe3d48b0f06d97fc9",
+        "bytes": 2968
+      },
+      "LICENSE.TXT": {
+        "url": "https://github.com/lballabio/QuantLib/blob/ca953b7ebdb400f2839d86f18eeb0d4a2a4a30a4/LICENSE.TXT",
+        "sha256": "b0ba466e8fb8baa6d6d6171dc6130efa70a06139a5e6cfc25e08df0d19aed86e",
+        "bytes": 8791
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/lballabio/QuantLib/commit/ca953b7ebdb400f2839d86f18eeb0d4a2a4a30a4",
+      "metadata": "https://api.github.com/repos/lballabio/QuantLib"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# QuantLib: the free/open-source library for quantitative finance [![Download](https://img.shields.io/github/v/release/lballabio/QuantLib?label=Download&sort=semver)](https://github.com/lballabio/QuantLib/releases/latest) [![Licensed under the BSD 3-Clause License](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://github.com/lballabio/QuantLib/blob/master/LICENSE.TXT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1440997.svg)](https://doi.org/10.5281/zenodo.1440997) [![PRs Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg)](https://github.com/lballabio/QuantLib/blob/master/CONTRIBUTING.md) [![Linux build status](https://github.com/lballabio/QuantLib/actions/workflows/linux.yml/badge.svg)](https://github.com/lballabio/QuantLib/actions/workflows/linux.yml) [![Windows build status](https://github.com/lballabio/QuantLib/actions/workflows/msvc.yml/badge.svg)](https://github.com/lballabio/QuantLib/actions/workflows/msvc.yml) [![Mac",
+    "license_excerpt": "Copyright (C) 2000, 2001, 2002, 2003 RiskMap srl Copyright (C) 2001, 2002, 2003 Nicolas Di C\u00e9sar\u00e9 Copyright (C) 2001, 2002, 2003 Sadruddin Rejeb Copyright (C)",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Licensed under the BSD 3-Clause License](https://img.shields.io/badge/License-BSD--3--Clause-blue.svg)](https://github.com/lballabio/QuantLib/blob/master/LICENSE.TXT)",
+      "comprehensive software framework for quantitative finance. QuantLib is"
+    ],
+    "dependency_repos": [
+      "lballabio/QuantLib"
+    ]
+  },
+  {
+    "full_name": "OpenSourceRisk/Engine",
+    "requested_name": "OpenSourceRisk/Engine",
+    "id": 70231960,
+    "url": "https://github.com/OpenSourceRisk/Engine",
+    "stars": 786,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "3d75a69087911a7e2cf1e6882da7bc27135c0762",
+    "last_commit_date": "2026-09-11T17:26:17Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open Source Risk Engine",
+    "language": "C++",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "license.txt"
+    ],
+    "license_headings": [
+      "Copyright (C) 2016-2020 Quaternion Risk Management Ltd.",
+      "Copyright (C) 2021 Acadia Inc."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ORE",
+      "## Documentation",
+      "## API Reference",
+      "## License"
+    ],
+    "recent_commit_count": 2624,
+    "recent_authors_sample50": [
+      "Damien Barker",
+      "Damien.Barker",
+      "Gitlab CI",
+      "farahkhashman",
+      "francis duffy",
+      "francis.duffy@lseg.com",
+      "obrienjoey",
+      "pcaspers",
+      "sebastien.bouvard"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/OpenSourceRisk/Engine/issues/361",
+        "createdAt": "2026-09-10T14:38:41Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/OpenSourceRisk/Engine/issues/359",
+        "createdAt": "2026-09-10T14:27:26Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      "App",
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "Configurations",
+      "Docker",
+      "Docs",
+      "Examples",
+      "FrontEnd",
+      "News.txt",
+      "ORE-SWIG",
+      "OREAnalytics",
+      "OREData",
+      "ORETest",
+      "PythonIntegration",
+      "QuantExt",
+      "QuantLib",
+      "README.md",
+      "ThirdPartyLibs",
+      "Tools",
+      "cmake",
+      "license.txt",
+      "licenseheader.txt",
+      "ore.props",
+      "runCmakeVS.cmd",
+      "tutorials",
+      "tutorials_index.md",
+      "xsd"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/OpenSourceRisk/Engine/blob/3d75a69087911a7e2cf1e6882da7bc27135c0762/README.md",
+        "sha256": "a4c6fbbeed4b0d8bd0f91dd32401d5191fd7de1364a920f34765ce1f35cab362",
+        "bytes": 3404
+      },
+      "license.txt": {
+        "url": "https://github.com/OpenSourceRisk/Engine/blob/3d75a69087911a7e2cf1e6882da7bc27135c0762/license.txt",
+        "sha256": "cae7892665c00e450c6cb87bcc3246986b2597aa4cef6a4771d74cce364e34e5",
+        "bytes": 1628
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/OpenSourceRisk/Engine/commit/3d75a69087911a7e2cf1e6882da7bc27135c0762",
+      "metadata": "https://api.github.com/repos/OpenSourceRisk/Engine"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ORE The [Open Source Risk](http://opensourcerisk.org) project aims at establishing a transparent peer-reviewed framework for pricing and risk analysis that can serve as * a",
+    "license_excerpt": "Open Source Risk Engine (ORE) is Copyright (C) 2016-2020 Quaternion Risk Management Ltd. Copyright (C) 2021 Acadia Inc. All rights reserved. Redistribution and use in",
+    "license_warnings": [],
+    "runtime_clues": [
+      "establishing a transparent peer-reviewed framework for pricing and risk",
+      "* simple application launchers in Excel, LibreOffice, Python, Jupyter",
+      "ORE is free/open software, provided under the Modified BSD License, which permits",
+      "## License"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "OpenGamma/Strata",
+    "requested_name": "OpenGamma/Strata",
+    "id": 20882897,
+    "url": "https://github.com/OpenGamma/Strata",
+    "stars": 962,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "987932ee95bf53e2baaff9a6b8e738a00f558b10",
+    "last_commit_date": "2026-09-07T16:20:26Z",
+    "archived": false,
+    "fork": false,
+    "description": " Open source analytics and market risk library from OpenGamma",
+    "language": "Java",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 25,
+    "recent_authors_sample50": [
+      "Andras1022",
+      "James-OpenGamma",
+      "SaponeRolando",
+      "mergify[bot]",
+      "opengammacibot",
+      "skitini",
+      "vaibhavkrishnakumar",
+      "yukiiwashita"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/OpenGamma/Strata/issues/2396",
+        "createdAt": "2021-12-20T17:37:35Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-12T23:36:01Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/OpenGamma/Strata/issues/2748",
+        "createdAt": "2025-10-18T12:29:36Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-10-18T12:30:51Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "OpenGamma/Strata",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Java analytics and market risk library for derivatives/finance",
+      "reuse_value": 78,
+      "stars": 948,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "url": "https://github.com/OpenGamma/Strata",
+      "rank_score": 78009480
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "OpenGamma/Strata",
+      "stars": 948,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "unit_class": "component",
+      "reuse_value": 78,
+      "liftability": 90,
+      "fame_gap": -12,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Open source analytics and market risk library from OpenGamma"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".circleci",
+      ".github",
+      ".gitignore",
+      "LICENSE.txt",
+      "NOTICE.txt",
+      "README.md",
+      "RELEASE.md",
+      "SECURITY.md",
+      "eclipse",
+      "examples",
+      "modules",
+      "pom.xml",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/OpenGamma/Strata/blob/987932ee95bf53e2baaff9a6b8e738a00f558b10/README.md",
+        "sha256": "32e4fa64965df83b2e527d127a5de74eb65914c9bb5db62c22a1e32898196943",
+        "bytes": 3142
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/OpenGamma/Strata/blob/987932ee95bf53e2baaff9a6b8e738a00f558b10/LICENSE.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/OpenGamma/Strata/commit/987932ee95bf53e2baaff9a6b8e738a00f558b10",
+      "metadata": "https://api.github.com/repos/OpenGamma/Strata"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Strata ====== [![Strata Build Status](https://circleci.com/gh/OpenGamma/Strata.svg?style=shield)](https://strata.opengamma.io) [![License](http://img.shields.io/:license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html) This repository contains the source code of [Strata](https://strata.opengamma.io), the open source analytics and market risk library from [OpenGamma](https://opengamma.com/). Strata is released as Open Source Software under the [Apache v2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html). [![OpenGamma](https://s3-eu-west-1.amazonaws.com/og-public-downloads/og-logo-alpha.png \"OpenGamma\")](https://opengamma.com/) Using Strata ------------ Documentation for Strata can be found at the [Strata home page](https://strata.opengamma.io). To use Strata Java SE 8u40 or later is required. The JAR files are available in [Maven Central](https://search.maven.org/search?q=g:com.opengamma.strata): ``` com.opengamma.strata strata-measure 2.12.0 ``` The JAR files, along with the command line tool and examples, can also be obtained from the [Strata Releases](https://github.com/OpenGamma/Strata/releases) page on GitHub. Building Strata --------------- The source code can be cloned using [git](http://git-scm.com/) from GitHub: ``` git clone https://github.com/OpenGamma/Strata.git ``` The projects use [Apache Maven](https://maven.apache.org/) as the build system. Version 3.5.0 or later is required. Simply run this command to compile and install the source code locally: ``` mvn install ``` Strata is based on Java SE 8. Our continuous integration regularly builds on both Java 8 and Java 11. When using Java 8, version 8u40 or later is required due to bugs in earlier",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Strata Build Status](https://circleci.com/gh/OpenGamma/Strata.svg?style=shield)](https://strata.opengamma.io) [![License](http://img.shields.io/:license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)",
+      "[Apache v2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).",
+      "Simply run this command to compile and install the source code locally:"
+    ],
+    "dependency_repos": [
+      "OpenGamma/Strata",
+      "OpenGamma/Strata.git"
+    ]
+  },
+  {
+    "full_name": "finmath/finmath-lib",
+    "requested_name": "finmath/finmath-lib",
+    "id": 8832601,
+    "url": "https://github.com/finmath/finmath-lib",
+    "stars": 582,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "9bd054ff694026760e46371ef61b96a4dbd7b8b0",
+    "last_commit_date": "2026-08-29T21:40:06Z",
+    "archived": false,
+    "fork": false,
+    "description": "Mathematical Finance Library: Algorithms and methodologies related to mathematical finance.",
+    "language": "Java",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "### Building finmath lib",
+      "#### Maven build"
+    ],
+    "recent_commit_count": 194,
+    "recent_authors_sample50": [
+      "cfries"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/finmath/finmath-lib/issues/54",
+        "createdAt": "2018-06-07T09:05:40Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-17T21:14:46Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/finmath/finmath-lib/issues/85",
+        "createdAt": "2021-03-25T15:28:46Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-09-22T19:34:33Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2021-09-22T20:13:10Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-17T13:57:58Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "finmath/finmath-lib",
+      "capability_tag": "none",
+      "category_slug": "scientific-computing-library",
+      "summary": "Mathematical finance algorithms and Monte Carlo simulation library",
+      "reuse_value": 85,
+      "stars": 574,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "url": "https://github.com/finmath/finmath-lib",
+      "rank_score": 85005740
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "finmath/finmath-lib",
+      "stars": 574,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "scientific-computing-library",
+      "cat_name": "Scientific / Numerical Computing Library",
+      "description": "Mathematical Finance Library: Algorithms and methodologies related to mathematical finance."
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".idea",
+      ".project",
+      ".travis.yml",
+      "LICENSE.txt",
+      "NOTICE.txt",
+      "README.md",
+      "bnd.bnd",
+      "checkstyle",
+      "docs",
+      "finmath lib eclipse code style preferences.epf",
+      "finmath-checkstyle-java-6.xml",
+      "lib",
+      "maven-release-site.sh",
+      "maven-release.sh",
+      "pom.xml",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/finmath/finmath-lib/blob/9bd054ff694026760e46371ef61b96a4dbd7b8b0/README.md",
+        "sha256": "19de40b55974996ebdd11df6f14cbb62ef0cabe10b8b6fd8451118bd1721aa49",
+        "bytes": 11249
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/finmath/finmath-lib/blob/9bd054ff694026760e46371ef61b96a4dbd7b8b0/LICENSE.txt",
+        "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+        "bytes": 10175
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/finmath/finmath-lib/commit/9bd054ff694026760e46371ef61b96a4dbd7b8b0",
+      "metadata": "https://api.github.com/repos/finmath/finmath-lib"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "About finmath lib ========== **************************************** **Mathematical Finance Library: Algorithms and methodologies related to mathematical finance.** **************************************** [![Twitter](https://img.shields.io/twitter/url/https/github.com/finmath/finmath-lib.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ffinmath%2Ffinmath-lib) [![GitHub license](https://img.shields.io/github/license/finmath/finmath-lib.svg)](https://github.com/finmath/finmath-lib/blob/master/LICENSE.txt) [![Latest release](https://img.shields.io/github/release/finmath/finmath-lib.svg)](https://github.com/finmath/finmath-lib/releases/latest) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib) [![Build Status](https://travis-ci.org/finmath/finmath-lib.svg?branch=master)](https://travis-ci.org/finmath/finmath-lib) [![javadoc](https://javadoc.io/badge2/net.finmath/finmath-lib/javadoc.svg)](https://javadoc.io/doc/net.finmath/finmath-lib) --- **Note**: As of October 12, 2025 the master branch has been renamed to main. In case you have an existing clone on master you may consider doing ``` git fetch origin git branch -m master main # if you still have 'master' git branch -u origin/main main git remote set-head origin -a ``` --- **Project home page: http://finmath.net/finmath-lib** The finmath lib libraries provides (JVM) implementations of methodologies related to mathematical finance, but applicable to other fields. Examples are - Analytic Formulas - Distributions: Normal, Gamma, Non-Central Chi-Squared (some functions are delegated to Apache commons-math). - Models: Black Scholes, Bachelier, SABR, ZABR, CEV, etc. - General numerical algorithms like - Generation of random numbers - Optimization (a Levenberg\u2013Marquardt algorithm is provided) - Valuation using **Fourier transforms** / **characteristic functions** (contributed by Alessandro Gnoatto, Lorenzo Torricelli and others) - Black-Scholes model - Heston model - Bates model - Two factor Bates model - Merton model",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![GitHub license](https://img.shields.io/github/license/finmath/finmath-lib.svg)](https://github.com/finmath/finmath-lib/blob/master/LICENSE.txt)",
+      "- Hull-White Short Rate Model (with time dependent parameters)",
+      "- **American Monte-Carlo**: Estimation of conditional expectations in a Monte-Carlo framework",
+      "- **Monte-Carlo Simulation on GPGPUs** (via Cuda) (requires finmath-lib-cuda-extensions https://github.com/finmath/finmath-lib-cuda-extensions )",
+      "- **Bond curve calibration** using local linear regression (see https://ssrn.com/abstract=3073942 ).",
+      "- Parametric curves like Nelson-Siegel and Nelson-Siegel-Svensson.",
+      "- **SABR smile** parameterization.",
+      "- Swaption volatility cubes with SABR parameterization.",
+      "- Simulation of **interest rate term structure models** (LIBOR market model with local and stochastic volatility)",
+      "- LIBOR market model with local and stochastic volatility",
+      "- Local and stochastic volatility models (SABR, ZABR)",
+      "cover some selected topics with demo spreadsheets and uml diagrams.",
+      "License",
+      "`net.finmath.*`) are distributed under the [Apache License version",
+      "[Apache License version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html",
+      "The [finmath-lib-cuda-extensions](http://finmath.net/finmath-lib-cuda-extensions/) implement the interface `RandomVariable` via Cuda GPU code. This allows to perform Monte-Carlo simulations on the GPUs with a minimal change: a replacement of the random variabl"
+    ],
+    "dependency_repos": [
+      "finmath/finmath-experiments",
+      "finmath/finmath-lib",
+      "finmath/finmath-lib-cuda-extensions",
+      "finmath/finmath-spreadsheets"
+    ]
+  }
+]
