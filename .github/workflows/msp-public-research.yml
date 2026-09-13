@@ -1,12 +1,13 @@
-name: MSP public repository evidence
+name: MSP public frontier evidence
 on:
   push:
     branches: [research/it-services-msps-20260913]
     paths: [.github/workflows/msp-public-research.yml]
 permissions:
   contents: read
+  actions: read
 jobs:
-  public-repository-evidence:
+  public-frontier-evidence:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -15,13 +16,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          curl --fail --silent --show-error --location https://raw.githubusercontent.com/sisodias/siso-industry-packs/1f77eea1da30703d68820c7430455a176d82f4b2/research-tools/msps_public_sweep.py --output /tmp/msps_public_sweep.py
-          python3 /tmp/msps_public_sweep.py
-      - name: Preserve public metadata and source-file evidence
+          curl --fail --silent --show-error --location https://raw.githubusercontent.com/sisodias/siso-industry-packs/005b3227d0ee254a6a6856d6db60a2585be13006/research-tools/msps_frontier_review.py --output /tmp/msps_frontier_review.py
+          python3 /tmp/msps_frontier_review.py
+      - name: Preserve public source dossiers and review receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: msp-repository-evidence-20260913
+          name: msp-frontier-evidence-20260913
           path: evidence/repo-sweep/
           retention-days: 2
           if-no-files-found: error
