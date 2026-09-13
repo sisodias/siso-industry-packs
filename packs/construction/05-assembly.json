@@ -1,0 +1,32 @@
+{
+  "date":"2026-09-13",
+  "status":"proposed_not_implemented",
+  "evidence_class":"analysis",
+  "industry":"construction",
+  "primary_segment":"Occupied-home kitchen, bathroom and interior remodeling",
+  "deployment":{"application_host_owner":"client","application_hosts_per_client":1,"siso_hosting":false,"vps_ram_gib_evaluation":8,"vps_ram_gib_planning":16,"resource_floor_verified":false,"gpu_required":false,"external_accounts":"Client-owned email/SMS/social, accounting/payroll, merchant services and encrypted off-host backup destination","availability":"Single failure domain; no high-availability claim","recovery_point_target_hours":24,"restore_target_hours":4,"recovery_targets_verified":false},
+  "spine":[
+    {"object":"Party","identity":"party_id","fields":["person_or_business","roles","contact_channel_ids","billing_and_site_relationships"]},
+    {"object":"Job","identity":"job_id","fields":["site","parties","scope_baseline","external_ids","access_retention_policy"]},
+    {"object":"WorkPackage","identity":"work_package_id","fields":["job_id","scope_revision","trade","holds","schedule","acknowledgement"]},
+    {"object":"Conversation","identity":"conversation_id","fields":["provider_thread_message_ids","channel","sender","timestamps","attachments","job_request_links"]},
+    {"object":"EvidenceDocRevision","identity":"revision_id","fields":["original_hash","source","receipt_time","parent_supersedes","access_export_metadata"]},
+    {"object":"CommercialRecord","identity":"commercial_record_id","fields":["type","exact_revision","amount_currency","approval_evidence","ledger_reference"]}
+  ],
+  "components":[
+    {"repository":"frappe/erpnext","verdict":"ADOPT","role":"Project/party/procurement/time/draft commercial base","stages":["W02","W03","W04","W05","W06","W07","W08","W09","W10"],"source":"https://github.com/frappe/erpnext","production_admitted":false},
+    {"repository":"chatwoot/chatwoot","verdict":"ADOPT","role":"Core shared inbox","stages":["W01","W08"],"source":"https://github.com/chatwoot/chatwoot","production_admitted":false},
+    {"repository":"docusealco/docuseal","verdict":"ADOPT","role":"Linked core signing or explicitly priced required edition","stages":["W04","W08"],"source":"https://github.com/docusealco/docuseal","production_admitted":false},
+    {"repository":"Kozea/WeasyPrint","verdict":"ADOPT","role":"Controlled PDF packets/export","stages":["W09","W10"],"source":"https://github.com/Kozea/WeasyPrint","production_admitted":false},
+    {"repository":"restic/restic","verdict":"ADOPT","role":"Encrypted backup and tested restoration","stages":["W01","W02","W03","W04","W05","W06","W07","W08","W09","W10"],"source":"https://github.com/restic/restic","production_admitted":false}
+  ],
+  "optional_study":["opf/openproject","InvoicePlane/InvoicePlane","paperless-ngx/paperless-ngx","IfcOpenShell/IfcOpenShell","joniles/mpxj","braedonsaunders/bidwright"],
+  "state_machine":{"states":["requested","scoped","priced","sent_for_approval","approved","rejected","superseded","released_to_field","billing_eligible"],"required_transition_evidence":["actor","exact_revision","timestamp","source_evidence"],"guards":["Draft is not approval","Repricing creates a new revision requiring renewed approval","Signature is not independent proof of legal sufficiency","Field release is a separate authorized action","Offline queued capture is not acknowledgement","Invoice preparation does not authorize payment"]},
+  "authored_glue":["Reversible identity and cost-code mapping","Immutable original-file/revision references","Approval and release guards","Authenticated idempotent webhook handling","Durable retries and visible exception queue","Reviewed accounting export and reconciliation","Complete export manifests","Client-owned restoration procedure"],
+  "retained_authority":["Professional scope/quantity/engineering/safety review","Permits and jurisdiction requirements","Contract rights and acceptance","Accounting ledger","Payroll approval","Payment approval and bank settlement"],
+  "gaps":["US estimating inputs","Professional and jurisdiction authority","Approval/dispute edge cases","Offline field behavior","Accounting/payroll fidelity","External channels/payments","Paid-edition/API/SSO/role rights","One-box operations/recovery","Migration and field adoption","Incomplete repository/bank/health/adoption research"],
+  "acceptance_tests":["Wrong job/site","Duplicate webhook","Stale approval","Repriced signed change","Offline retry","Partial upload","Rejected change","Missing authority","Conflicting ledger status","Independent restore and full export"],
+  "application_code_written":false,
+  "builds":0,
+  "deployments":0
+}

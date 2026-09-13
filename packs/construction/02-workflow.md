@@ -1,7 +1,38 @@
-# Workflow — US small construction contractors
+# 02 · Ten-stage workflow and shared objects
 
-> **Not yet researched.** Replace this file with the real output.
->
-> 6-12 workflow stages with trigger, inputs, outputs, pain, frequency, handoff, data_object. Include the chat surface.
+Observed **2026-09-13**. [analysis] This is a proposed workflow for the reconstructed remodeler. All frequencies are **unmeasured assumptions**. Pain references are the exact quotations and original URLs in `01-person.md`; their application to a stage is an inference, not a direct observation of this operator. Machine-readable counterpart: `02-workflow.json`.
 
-_Status: empty · industry `construction` · priority medium_
+| ID | Stage / trigger | Inputs | Outputs | Pain: quoted + linked | Frequency assumption | Handoff | Persistent objects |
+|---|---|---|---|---|---|---|---|
+| W01 | Lead/conversation intake; new inquiry | Thread, sender, site, photos, desired scope | Qualified inquiry and proposed survey | P01: “There's just too many ways to communicate now” [source](https://www.reddit.com/r/Contractor/comments/vz3blu/what_all_do_you_use_to_createrecordprocess_change/) | 10/week | Owner, office, homeowner | Conversation, Party, Job |
+| W02 | Survey/scope packet; qualified appointment | Measurements, notes, photos, drawings, exclusions | Versioned scope and questions/holds | P07: “unable to change the shipping address in the app” [source](https://www.reddit.com/r/Construction/comments/16sqdvt/starting_off_on_my_own_as_a_remodeling_contractor/) | 3/week | Owner, homeowner, designer | Job, EvidenceDocRevision, WorkPackage |
+| W03 | Estimate/sub bids; scope ready for pricing | Quantity inputs, bids, supplier quotes, cost codes | Reviewed estimate revision and comparisons | P05: “that has been very inconsistent lol” [source](https://www.reddit.com/r/ConstructionManagers/comments/1ij9g2g/change_order_management/) | 2/week | Owner-estimator, subs, suppliers | CommercialRecord, WorkPackage, EvidenceDocRevision |
+| W04 | Contract/selections/deposit; estimate accepted | Authorized terms, scope revision, selections | Recorded acceptance, deadlines, deposit status | P02: “making sure any changes are relayed correctly” [source](https://www.reddit.com/r/Contractor/comments/vz3blu/what_all_do_you_use_to_createrecordprocess_change/) | 1 award/week | Owner, homeowner, adviser, bookkeeper | CommercialRecord, Party, Job |
+| W05 | Purchasing/documents/permit tracking; approved package | PO draft, delivery site, vendor/COI documents, permit checklist | Approved PO, exceptions, status evidence | P07: “unable to change the shipping address in the app” [source](https://www.reddit.com/r/Construction/comments/16sqdvt/starting_off_on_my_own_as_a_remodeling_contractor/) | 10 transactions/week | Owner, supplier, trade, relevant authority | CommercialRecord, Party, EvidenceDocRevision, Job |
+| W06 | Schedule/dispatch; work and readiness reviewed | Dependencies, availability, material/access status, holds | Acknowledged plan | P09: “We don't bring subs into Buildbook because that is a little clunky.” [source](https://www.reddit.com/r/Construction/comments/1iqb442/construction_software_pricing_comparison_based_on/) | 15 events/week | Owner, crew, sub, homeowner | WorkPackage, Job, Conversation |
+| W07 | Field/time/expense capture; workday or delivery | Photos, notes, hours, receipts, job reference | Reviewed daily record and exceptions | P08: “the accounting lift was annoying” [source](https://www.reddit.com/r/Carpentry/comments/10pyzri/estimating_and_accounting_software_what_are_you/) | 25 records/week | Crew, owner, bookkeeper, payroll reviewer | EvidenceDocRevision, WorkPackage, CommercialRecord |
+| W08 | Change/approval/release; requested change or condition | Original scope, thread, price/schedule impact, authority | Approved exact revision or rejection; separate field release | P02: “making sure any changes are relayed correctly” [source](https://www.reddit.com/r/Contractor/comments/vz3blu/what_all_do_you_use_to_createrecordprocess_change/) | 5 requests/week | Owner, homeowner, designer, affected trade | CommercialRecord, Conversation, EvidenceDocRevision, WorkPackage |
+| W09 | Billing/reconciliation/payroll handoff; milestone/cut-off | Approved work/changes, evidence, ledger IDs, approved hours | Human-approved billing/payroll packet and exceptions | P03: “Yes double entry but the only way to cross check compare that everything in sage is correct.” [source](https://www.reddit.com/r/ConstructionManagers/comments/1ij9g2g/change_order_management/) | 5 packets/week | Owner, bookkeeper, accountant, payroll provider, customer | CommercialRecord, Party, EvidenceDocRevision |
+| W10 | Punch/closeout/warranty; proposed completion or later issue | Photos, manuals, approved scope, acceptance, request | Assigned actions and retained handover history | P01: “difficult to keep track of every text, email, call, and in-person discussion” [source](https://www.reddit.com/r/Contractor/comments/vz3blu/what_all_do_you_use_to_createrecordprocess_change/) | 5 actions/week | Owner, homeowner, trade, reviewer | Job, WorkPackage, EvidenceDocRevision, Conversation |
+
+## Chat surface and conversion boundary
+
+[practitioner] Texts, email, calls and in-person discussions are directly described in the [change-order thread](https://www.reddit.com/r/Contractor/comments/vz3blu/what_all_do_you_use_to_createrecordprocess_change/). WhatsApp/Instagram are **optional channel candidates**, not verified dominant channels for this segment.
+
+[analysis] Proposed owner: office coordinator during agreed staffed hours, owner for scope/pricing decisions, named backup for absence. Proposed service target: acknowledge within two staffed hours; this is not a measured response time or promised client SLA.
+
+[analysis] Five recurring intents to validate: Do you serve my area/type of project? When can you survey/start? What information is needed for a quote? What is the status/next visit? What happens if I change the scope? Automate only approved factual responses and administrative collection. Do not generate binding prices, technical judgments or contractual assurances.
+
+[analysis] Conversion points: inquiry → human-qualified lead → mutually confirmed survey; estimate → reviewed contract proposal; scope request → draft change. Preserve the original message ID/channel/time and attachment hashes, then let a human assign the correct party/site/job. Phone/in-person notes require attribution and confirmation, not fabricated transcripts. Maintain multiple jobs per party and multiple parties per job.
+
+## Why this can be a super-app rather than unrelated tabs
+
+[analysis] The same six objects recur across stages: Party, Job, WorkPackage, Conversation, EvidenceDocRevision and CommercialRecord. A shared identity/revision model can connect the workflow, but the incumbent accounting ledger, payroll and professional-authority systems retain their own authority. APIs alone do not produce that model.
+
+[analysis] Approval state machine: requested → scoped → priced → sent_for_approval → approved/rejected/superseded → released_to_field → billing_eligible. Every transition identifies the actor, exact revision, evidence and time. A revised price invalidates prior approval for that changed revision. A signature record does not independently establish legal sufficiency. Field release requires a separate authorized action and acknowledgement; offline submission is not receipt.
+
+## Extend, do not replace, the Foundry record
+
+[vendor] The existing public [construction record](https://github.com/sisodias/great-library-of-siso/blob/main/research/industries/source/intelligence/agency/industries/construction.json) covers bid intake, schedule coordination, change-order records and invoice follow-up. Preserve its review and falsifier boundaries. [analysis] This map adds lead capture, site/scope identity, selections, purchasing, field/time/expense, closeout and warranty, while retaining the four earlier administrative processes.
+
+[analysis] Stop or redesign any workflow that raises wrong-version, missing-approval, unauthorized-work, duplicate-billing or private-document-misrouting rates, or delays safety/quality escalation. No safety, engineering, tax, labor, permit or contract decision is delegated to the assembly.
