@@ -8,57 +8,58 @@ permissions:
 jobs:
   public-evidence:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
     steps:
-      - name: Re-run pinned research collector with bounded pacing; no candidate code execution
+      - name: Read public metadata, README and licence blobs; never execute candidate code
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          python3 - <<'PATCH'
-          import urllib.request, textwrap
-          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/8fcd24ea4a65dcc964f538f636a3e91b2e6e9a6f/.github/workflows/events-research-export.yml'
-          source=urllib.request.urlopen(url,timeout=30).read().decode()
-          code=source.split("python3 - <<'PY'\n",1)[1].split('\n          PY',1)[0]
-          code=textwrap.dedent(code)
-          start=code.index('requests = 0\n')
-          end=code.index('queries = [',start)
-          replacement='''import threading, urllib.error
-          requests = 0
-          lock=threading.Lock()
-          next_request=0.0
-          def get(path):
-              global requests,next_request
-              u='https://api.github.com/'+path.lstrip('/')
-              for attempt in range(3):
-                  with lock:
-                      time.sleep(max(0,next_request-time.monotonic()))
-                      next_request=time.monotonic()+0.65
-                      requests+=1
-                      if requests>1100: raise RuntimeError('API request cap reached')
-                  req=urllib.request.Request(u,headers={'User-Agent':'SISO-public-evidence-diagnostic','Accept':'application/vnd.github+json','Authorization':'Bearer '+os.environ['GH_TOKEN']})
-                  try:
-                      with urllib.request.urlopen(req,timeout=30) as r: return json.loads(r.read(5000000))
-                  except urllib.error.HTTPError as e:
-                      try: detail=json.loads(e.read()).get('message','')
-                      except Exception: detail='HTTP failure'
-                      error={'_error':str(e.code)+': '+detail,'_url':u}
-                      if e.code in (403,429) and attempt<2:
-                          delay=min(90,max(60,int(e.headers.get('Retry-After','60'))))
-                          print('READ_BACKOFF',e.code,detail[:160],delay,flush=True)
-                          time.sleep(delay)
-                      else: return error
-                  except Exception as e: return {'_error':type(e).__name__+': '+str(e),'_url':u}
-              return error
-          '''
-          code=code[:start]+textwrap.dedent(replacement)+code[end:]
-          code=code.replace("'getontime/ontime'","'cpvalente/ontime'").replace("'org:getontime'","'user:cpvalente'")
-          code=code.replace('time.sleep(2.2)','time.sleep(4.2)').replace('selected=selected[:165]','selected=selected[:130]').replace('max_workers=3','max_workers=2')
-          exec(compile(code,'pinned-public-research-collector','exec'),{'__name__':'__main__'})
-          PATCH
-      - name: Upload bounded evidence including any partial failures
+          python3 - <<'PY'
+          import datetime, json, os, pathlib, time, urllib.request, urllib.error
+          out=pathlib.Path('evidence-export');out.mkdir()
+          names='''HiEventsDev/Hi.Events chatwoot/chatwoot docusealco/docuseal knadh/listmonk Dolibarr/dolibarr eventschedule/eventschedule pretix/pretix alfio-event/alf.io sabre-io/vobject sabre-io/dav pretix/python-drafthorse cpvalente/ontime engelsystem/engelsystem kimai/kimai frappe/erpnext frappe/hrms documenso/documenso OpenSignLabs/OpenSign LibreBooking/app alextselegidis/easyappointments pretalx/pretalx Attendize/Attendize fossasia/open-event-server fossasia/open-event-frontend bitfocus/companion openvenues/libpostal civicrm/civicrm-core mautic/mautic invoiceplane/InvoicePlane invoiceninja/invoiceninja nfc-tools/libnfc zxing-js/library zxing-cpp/zxing-cpp nimiq/qr-scanner volkszaehler/mbus LibreSign/libresign pbek/QOwnNotes activepieces/activepieces Rallly/rallly phpList/phplist3 ArnasDon/wacrm Foundry376/Mailspring kestra-io/kestra neuronetio/gantt-schedule-timeline-calendar Kozea/Radicale nonsalant/contract cirosantilli/china-dictatorship coders4help/volunteer_planner christianklotz/dabke rlanvin/php-rrule roostorg/osprey Tracer-Cloud/opensre jasonjanofsky/Acord60Mins fossasia/eventyay-exhibition lesion/gancio tschoffelen/php-pkpass Pittvandewitt/Wavelet jshea2/OSC-for-OBS akaunting/akaunting jae-jae/Camtd clibs/entr saltstack/salt OpenLightingProject/open-fixture-library PeramatoG/Perastage ExistentialAudio/SwiftOSC ZUGFeRD/mustangproject sebastienrousseau/pain001 playasoft/volunteers udacity/cd0046-SQL-and-Data-Modeling-for-the-Web BabyJ723/blast-ON awesome-selfhosted/awesome-selfhosted missihawk/Festival-Advancing Pavilion360/settlement-generator tranchien2002/Evi kitanlaw/thegroupdtx-mom-sponsor-deck arengia/crewfest alphagov/temporary-event-notice-prototype qwwiwi/public-gbrain-agentos uvdesk/community-skeleton dreamhunter2333/cloudflare_temp_email lukevella/rallly LetsFG/LetsFG jkbrzt/rrule dwallet-labs/ika gege-circle/.github ahmedsaadawi13/splash-book kcsujeet/ilamy-calendar chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020 upgundecha/howtheysre api-evangelist/acord Sfedfcv/redesigned-pancake Billionmail/BillionMail ngerakines/apevents chobbledotcom/tickets SeineEloquenz/fosswallet lloydstubber/my-wsl-setup fiverecords/DMXRouter idurar/idurar-erp-crm FloorBoltRevitalize/Camtasia-Studio EventFahrplan/EventFahrplan cpvalente/stupidArtnet bitfocus/companion-satellite Iam1337/extOSC horstoeko/zugferd prog-nov/iso20022-messages-for-go AnimeNL/volunteer-portal-api cmdlinebeep/fyyur cybersader/awesome-siem mikeroyal/Self-Hosting-Guide Ayush-Gupta376/Decentralized-Event-Insurance bshanz/v0-activation alphagov/govuk-licensing-ten-prototype bookatechie/support-inbox papercups-io/papercups Mailu/Mailu jamesmh/coravel ANovokmet/svelte-gantt pimutils/khal ntheile/blockusign esig/dss ShizukuIchi/pdf-editor redcross/dcsops bhavinvirani/Scheduler DouglasdeMoura/chroncal guardianproject/ripple openstatusHQ/openstatus BaharathBathula/ACORDAI Mdshobu/Liberty-House-Club-Whitepaper leemunroe/responsive-html-email-template moim-social/moim samouraiworld/zenao devartis/passbook alexbosworth/run-lnd museumsvictoria/nodel lucidrains/flamingo-pytorch Stringfleproxy/Camtasia-Studio abusufyanvu/6S191_MIT_DeepLearning Wilm0r/giggity cpvalente/ontime-viewer-template pretix/django-formset-js'''.split()
+          def graphql(query):
+              req=urllib.request.Request('https://api.github.com/graphql',data=json.dumps({'query':query}).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'User-Agent':'SISO-events-evidence','Content-Type':'application/json'})
+              try:
+                  with urllib.request.urlopen(req,timeout=40) as r:return json.load(r)
+              except urllib.error.HTTPError as e:
+                  return {'http_error':e.code,'message':e.read(4000).decode('utf-8','replace')}
+          quota=graphql('{rateLimit {limit remaining resetAt cost}}')
+          (out/'quota-before.json').write_text(json.dumps(quota,indent=2))
+          if quota.get('http_error') or quota.get('errors') or quota.get('data',{}).get('rateLimit',{}).get('remaining',0)<250:
+              raise SystemExit('GraphQL quota unavailable; no reads attempted')
+          paths=['README.md','README.rst','README','readme.md','LICENSE','LICENSE.md','LICENSE.txt','COPYING','COPYING.md','LICENSE_ADDITIONAL_TERMS','enterprise/LICENSE','ee/LICENSE']
+          fields='''id databaseId nameWithOwner url description isPrivate isArchived isFork stargazerCount forkCount pushedAt primaryLanguage {name} licenseInfo {spdxId name} repositoryTopics(first:15) {nodes {topic {name}}} defaultBranchRef {name target {... on Commit {oid committedDate history(first:12,since:"2026-03-13T00:00:00Z") {totalCount nodes {oid committedDate author {name user {login}}}}}}} issues(first:5,orderBy:{field:UPDATED_AT,direction:DESC}) {totalCount nodes {number state createdAt updatedAt closedAt comments {totalCount}}}'''
+          for index,path in enumerate(paths):fields+=' f'+str(index)+':object(expression:'+json.dumps('HEAD:'+path)+'){... on Blob {text byteSize oid}}'
+          received=0; errors=[]
+          with (out/'repositories.jsonl').open('w') as file:
+              for start in range(0,len(names),8):
+                  batch=names[start:start+8]; query='{rateLimit {remaining resetAt cost} '
+                  for j,name in enumerate(batch):
+                      owner,repo=name.split('/',1)
+                      query+='r'+str(j)+':repository(owner:'+json.dumps(owner)+',name:'+json.dumps(repo)+'){'+fields+'} '
+                  query+='}'
+                  data=graphql(query)
+                  if data.get('http_error'):
+                      errors.append({'batch':batch,'error':data});break
+                  for error in data.get('errors',[]):errors.append({'batch':batch,'error':error})
+                  for j,name in enumerate(batch):
+                      repo=data.get('data',{}).get('r'+str(j))
+                      if not repo:continue
+                      if repo.get('isPrivate'):raise RuntimeError('Non-public source refused')
+                      repo['requested_name']=name;repo['observed_at']=datetime.datetime.now(datetime.timezone.utc).isoformat();repo['evidence_transport']='GitHub GraphQL API via connector-created read-only research workflow'
+                      repo['files']={path:repo.pop('f'+str(k),None) for k,path in enumerate(paths)}
+                      file.write(json.dumps(repo,ensure_ascii=False)+'\n');file.flush();received+=1
+                  rate=data.get('data',{}).get('rateLimit',{})
+                  print('BATCH',start,'received',received,'remaining',rate.get('remaining'),flush=True)
+                  if rate.get('remaining',0)<150:break
+                  time.sleep(1)
+          (out/'manifest.json').write_text(json.dumps({'selected':len(names),'received':received,'errors':errors,'files_requested':paths,'no_candidate_code_executed':True,'observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat()},indent=2))
+          PY
+      - name: Upload evidence and explicit failures
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: events-oss-evidence-paced
+          name: events-oss-graphql-evidence
           path: evidence-export/
           retention-days: 7
