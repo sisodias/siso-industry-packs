@@ -1,0 +1,1261 @@
+[
+  {
+    "full_name": "eprbell/dali-rp2",
+    "requested_name": "eprbell/dali-rp2",
+    "id": 465909742,
+    "url": "https://github.com/eprbell/dali-rp2",
+    "stars": 81,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a17f269ca8156abec23c1342230bf17b510f6ace",
+    "last_commit_date": "2026-02-12T00:50:12Z",
+    "archived": false,
+    "fork": false,
+    "description": "DaLI (Data Loader Interface) is a data loader and input generator for RP2 (https://pypi.org/project/rp2), the privacy-focused, free, open-source cryptocurrency tax calculator: DaLI removes the need to manually prepare RP2 input files. Just like RP2, DaLI is also free, open-source and it prioritizes user privacy.",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2022 eprbell"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# DaLI for RP2 v0.6.12",
+      "## Table of Contents",
+      "## Introduction",
+      "## License",
+      "## Download",
+      "## Installation",
+      "### Installation on Ubuntu Linux",
+      "### Installation on macOS",
+      "### Installation on Windows 10",
+      "### Installation on Other Unix-like Systems",
+      "## Running",
+      "## Configuration File",
+      "## Reporting Bugs",
+      "## Contributing",
+      "## Developer Documentation",
+      "## Frequently Asked Questions",
+      "## Change Log"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/eprbell/dali-rp2/issues/300",
+        "createdAt": "2026-02-15T11:20:49Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/eprbell/dali-rp2/issues/298",
+        "createdAt": "2026-01-14T10:41:48Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-01-14T11:10:07Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".isort.cfg",
+      ".pre-commit-config.yaml",
+      ".pylintrc",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "Makefile",
+      "README.dev.md",
+      "README.md",
+      "config",
+      "docs",
+      "input",
+      "lychee.toml",
+      "mypy.ini",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/README.md",
+        "sha256": "106323d51456c7948607c8ee7263fc1c3ea363f4902e3c1929d524adf1772592",
+        "bytes": 10880
+      },
+      "LICENSE": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/LICENSE",
+        "sha256": "eacb48d377d20d690f15c275999c655b4d9c51665d8881b00b4d4fecef776ac0",
+        "bytes": 11337
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/pyproject.toml",
+        "sha256": "2745e6bc83eb87b9065315662340fad6f3e15226c8ff13151907fb4835ca4e21",
+        "bytes": 276
+      },
+      "setup.py": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/setup.py",
+        "sha256": "9eab88ae585180329efa80f37d40691fe12a30658b6bb9a3635ff780f00ca624",
+        "bytes": 92
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/eprbell/dali-rp2/commit/a17f269ca8156abec23c1342230bf17b510f6ace",
+      "metadata": "https://api.github.com/repos/eprbell/dali-rp2"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# DaLI for RP2 v0.6.12 Privacy-focused, free, extensible data loader for RP2 (the crypto tax calculator) [![Static Analysis / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/static_analysis.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/static_analysis.yml) [![Documentation Check / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/documentation_check.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/documentation_check.yml) [![Unix Unit Tests / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/unix_unit_tests.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/unix_unit_tests.yml) [![Windows Unit Tests / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/windows_unit_tests.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/windows_unit_tests.yml) [![CodeQL/Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/codeql-analysis.yml) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/eprbell/dali-rp2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=I%20use%20RP2,%20the%20privacy-focused,%20open%20source,%20free,%20non-commercial%20crypto%20tax%20calculator&url=https://github.com/eprbell/rp2/?anything) ## Table of Contents * **[Introduction](#introduction)** * **[License](#license)** * **[Download](#download)** * **[Installation](#installation)** * [Ubuntu Linux](#installation-on-ubuntu-linux) * [macOS](#installation-on-macos) * [Windows 10](#installation-on-windows-10) * [Other Unix-like Systems](#installation-on-other-unix-like-systems) * **[Running](#running)** * [Linux, macOS, Windows 10 and Other Unix-like Systems](#running-on-linux-macos-windows-10-and-other-unix-like-systems) * [Windows 10](#running-on-windows-10) * **[Configuration File](#configuration-file)** * **[Reporting Bugs](#reporting-bugs)** * **[Contributing](#contributing)** * **[Developer Documentation](#developer-documentation)** * **[Frequently Asked Questions](#frequently-asked-questions)** * **[Change Log](#change-log)** ## Introduction [DaLI](https://github.com/eprbell/dali-rp2) (Data Loader Interface) is a data loader and input generator for [RP2](https://github.com/eprbell/rp2), the privacy-focused, free, non-commercial, open-source, community-driven multi-country cryptocurrency tax calculator: DaLI removes the need to manually prepare RP2 input files. Just like RP2, DaLI is also free, non-commercial, open-source and it prioritizes user privacy by storing crypto transaction data on the user's computer and never sending it anywhere else. It performs the following operations: * it reads in crypto transaction information from multiples native sources: CSV",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [
+      "non-commercial"
+    ],
+    "runtime_clues": [
+      "<!--- Licensed under the Apache License, Version 2.0 (the \"License\"); --->",
+      "<!--- you may not use this file except in compliance with the License. --->",
+      "<!--- You may obtain a copy of the License at --->",
+      "<!---     http://www.apache.org/licenses/LICENSE-2.0 --->",
+      "<!--- distributed under the License is distributed on an \"AS IS\" BASIS, --->",
+      "<!--- See the License for the specific language governing permissions and --->",
+      "<!--- limitations under the License. --->",
+      "* **[License](#license)**",
+      "DaLI has a programmable plugin architecture for [data loaders](https://github.com/eprbell/dali-rp2/blob/main/README.dev.md#data-loader-plugin-development) (both CSV and REST-based), [pair converters](https://github.com/eprbell/dali-rp2/blob/main/README.dev.md#",
+      "* DaLI offers no guarantee of correctness (read the [license](https://github.com/eprbell/dali-rp2/tree/main/LICENSE)): always verify results with the help of a tax professional.",
+      "## License",
+      "DaLI is released under the terms of Apache License Version 2.0. For more information see [LICENSE](https://github.com/eprbell/dali-rp2/tree/main/LICENSE) or <http://www.apache.org/licenses/LICENSE-2.0>.",
+      "DaLI has been tested on Ubuntu Linux, macOS and Windows 10 but it should work on all systems that have Python version 3.10.0 or greater.",
+      "sudo apt-get install python3 python3-pip",
+      "brew install python3",
+      "First make sure [Python](https://python.org) 3.10 or greater is installed (in the Python installer window be sure to click on \"Add Python to PATH\").",
+      "* install python 3.10 or greater"
+    ],
+    "dependency_repos": [
+      "eprbell/dali-rp2",
+      "eprbell/rp2"
+    ]
+  },
+  {
+    "full_name": "BittyTax/BittyTax",
+    "requested_name": "BittyTax/BittyTax",
+    "id": 183510832,
+    "url": "https://github.com/BittyTax/BittyTax",
+    "stars": 504,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "97998259b56ff5d7b2f38664353edc76378597f5",
+    "last_commit_date": "2026-08-31T10:09:39Z",
+    "archived": false,
+    "fork": false,
+    "description": "Crypto-currency tax calculator with support for all popular wallets, exchanges, explorers and migration from other crypto tax platforms",
+    "language": "Python",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# BittyTax",
+      "## Overview",
+      "## Why use BittyTax?",
+      "## License/Disclaimer",
+      "## Getting Started",
+      "## Transaction Records",
+      "### Deposit",
+      "### Withdrawal",
+      "### Stake",
+      "### Unstake",
+      "### Mining",
+      "### Staking-Reward",
+      "### Interest",
+      "### Dividend",
+      "### Income",
+      "### Gift-Received",
+      "### Fork",
+      "### Airdrop",
+      "### Referral",
+      "### Cashback",
+      "### Fee-Rebate",
+      "### Spend",
+      "### Gift-Sent",
+      "### Gift-Spouse",
+      "### Charity-Sent",
+      "### Lost",
+      "### Trade",
+      "### Loan",
+      "### Loan-Repayment",
+      "### Loan-Interest"
+    ],
+    "recent_commit_count": 70,
+    "recent_authors_sample50": [
+      "Copilot",
+      "crowfest",
+      "dependabot[bot]",
+      "loekj",
+      "nanonano",
+      "ragamuffin"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/BittyTax/BittyTax/issues/506",
+        "createdAt": "2026-08-26T13:22:07Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/BittyTax/BittyTax/issues/494",
+        "createdAt": "2026-05-21T17:25:57Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-22T08:48:16Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-22T17:20:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-05-22T17:55:36Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-05-22T18:05:01Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-22T18:16:24Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-05-22T18:35:20Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-22T19:01:45Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "root_entries": [
+      ".flake8",
+      ".github",
+      ".gitignore",
+      ".pylint_dictionary",
+      ".pylintrc",
+      ".run",
+      ".vscode",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "data",
+      "img",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/README.md",
+        "sha256": "e14c118b8d704a01e0f23e8505ec25844958f02a253c47a9b8b95b35c89542d4",
+        "bytes": 73570
+      },
+      "LICENSE": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/LICENSE",
+        "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed",
+        "bytes": 34524
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/pyproject.toml",
+        "sha256": "0b182913025f7d8d433559f9bd9461127e139408f693eef90f9ca44a936206c4",
+        "bytes": 904
+      },
+      "setup.py": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/setup.py",
+        "sha256": "ef7b23c3468c8130483cd7578c14e977b39b372fd088f0e163b47be196d1291e",
+        "bytes": 69
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/BittyTax/BittyTax/commit/97998259b56ff5d7b2f38664353edc76378597f5",
+      "metadata": "https://api.github.com/repos/BittyTax/BittyTax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![BittyTax logo](https://github.com/BittyTax/BittyTax/raw/master/img/BittyTax.svg) [![Version badge][version-badge]][version] [![License badge][license-badge]][license] [![CI][ci-badge]][ci] [![Python badge][python-badge]][python] [![Downloads badge][downloads-badge]][downloads] [![Stars badge][github-stars-badge]][github-stars] [![Sponsor badge][sponsor-badge]][sponsor] [![X badge][x-badge]][x] [![Discord badge][discord-badge]][discord] [![Donate badge][donate-badge]][donate] # BittyTax ## Overview BittyTax is a collection of command-line tools to help you calculate your cryptoasset taxes in the UK. This tool is designed to be used by someone who is already familiar with cryptoasset taxation rules in the UK. HMRC has published guidance on this. We've collected some useful links in the [Resources](#resources) section at the end. BittyTax comprises of the following tools. 1. `bittytax` - process your transaction records and generate a PDF tax report (see [Accounting Tool](#accounting-tool)) 2. `bittytax_conv` - convert your wallet and exchange files into transaction records (see [Conversion Tool](#conversion-tool)) 3. `bittytax_price` - (optional) lookup historic price data for cryptoassets and foreign currencies (see [Price Tool](#price-tool)) Although UK focused, many of the tools can be used for other countries and currencies, see [International support](https://github.com/BittyTax/BittyTax/wiki/International-Support). There is also a US version of BittyTax which has its own branch, see [USA](https://github.com/BittyTax/BittyTax/wiki/USA). ## Why use BittyTax? * Open-source: growing community of users * Free to use:",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License badge][license-badge]][license]",
+      "[![Python badge][python-badge]][python]",
+      "## License/Disclaimer",
+      "This software is copyright (c) Nano Nano Ltd, and licensed for use under the AGPLv3 License, see [LICENSE](https://github.com/BittyTax/BittyTax/blob/master/LICENSE) file for details. The [BittyTaxAPI](https://github.com/BittyTax/BittyTax/wiki/BittyTaxAPI) serv",
+      "You will need Python installed on your machine before you can install BittyTax, see the [installation](https://github.com/BittyTax/BittyTax/wiki/Installation) guide which covers Windows, macOS and Linux for full details.",
+      "| | `Referral` | Tokens received as a reward through a referral program |",
+      "\\* - `Staking` has been deprecated, please use `Staking-Reward`.",
+      "The `Referral` transaction type is used to record tokens received as a reward through a referral program.",
+      "If the disposal proceeds exceed the HMRC reporting threshold (previously 4 times the annual tax-free allowance) this is shown. HMRC requires you to report this in your self assessment even if the gain was within your annual allowance.",
+      "HMRC also requires you to include details of each gain or loss. You can use the `--summary` option in combination with `--taxyear` to generate a PDF report which only includes the capital gains disposals and summary for that specific tax year, this can then be",
+      "import: 'Sheet1' row[2] ['Deposit', '870', 'GBP', '', '', '', '', '', '', '', 'LocalBitcoins', '2013-05-24 20:16:46', 'from Bank'] [TID:1]",
+      "import: 'Sheet1' row[3] ['Trade', '10', 'BTC', '', '870', 'GBP', '', '', '', '', 'LocalBitcoins', '2013-05-24 20:17:40', ''] [TID:2]",
+      "import: 'Sheet1' row[4] ['Withdrawal', '', '', '', '10', 'BTC', '', '', '', '', 'LocalBitcoins', '2013-05-24 20:20:49', 'to Desktop wallet'] [TID:3]",
+      "import: 'Sheet1' row[5] ['Deposit', '10', 'BTC', '', '', '', '', '', '', '', 'Desktop wallet', '2013-05-24 20:20:49', 'from LocalBitcoins'] [TID:4]",
+      "This requires the buy, sell and fee assets in the transaction record first to be given a valuation, that is unless a fixed value has already been specified, or the asset is already in GBP.",
+      "Timestamps are normalised to be in local time (GMT or BST). This is so that tax calculations for the same day will be correct.",
+      "split: TR Trade 10 BTC <- 870 GBP 'LocalBitcoins' 2013-05-24T20:17:40 UTC [TID:2]",
+      "split:   BUY Trade 10 BTC (=\u00a3870.00 GBP) 'LocalBitcoins' 2013-05-24T21:17:40 BST [TID:2.1]"
+    ],
+    "dependency_repos": [
+      "BittyTax/BittyTax",
+      "sponsors/BittyTax"
+    ]
+  },
+  {
+    "full_name": "Polymarket/py-clob-client",
+    "requested_name": "Polymarket/py-clob-client",
+    "id": 455013779,
+    "url": "https://github.com/Polymarket/py-clob-client",
+    "stars": 1233,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b076b04d61135657e25dccc1bbd6866a96bd8c6e",
+    "last_commit_date": "2026-05-25T18:13:30Z",
+    "archived": true,
+    "fork": false,
+    "description": "Python client for the Polymarket CLOB",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Python CLOB Client",
+      "## Documentation",
+      "## Installation",
+      "# install from PyPI (Python 3.9>)",
+      "## Usage",
+      "### Quickstart (read\u2011only)",
+      "### Start trading (EOA)",
+      "### Start trading (proxy wallet)",
+      "#### Funder Address",
+      "#### Signature Types",
+      "### Find markets, prices, and orderbooks",
+      "### Place a market order (buy by $ amount)",
+      "### Place a limit order (shares at a price)",
+      "### Manage orders",
+      "### Markets (read\u2011only)",
+      "### User trades (requires auth)",
+      "## Important: Token Allowances for MetaMask/EOA Users",
+      "### Do I need to set allowances?",
+      "### What are allowances?",
+      "### Quick Setup",
+      "### Setting Allowances",
+      "### Example Code",
+      "## Notes"
+    ],
+    "recent_commit_count": 4,
+    "recent_authors_sample50": [
+      "mustafa-poly",
+      "suhailkakar"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/py-clob-client/issues/344",
+        "createdAt": "2026-05-10T18:42:09Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/py-clob-client/issues/284",
+        "createdAt": "2026-02-24T01:38:14Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-02-25T13:55:44Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "examples",
+      "py_clob_client",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/README.md",
+        "sha256": "cfadd667a58235a6486a6784b359d4be07b30c64a589fe7fe17baec15b8620a5",
+        "bytes": 9809
+      },
+      "LICENSE": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/LICENSE",
+        "sha256": "d85f8c587d5e82eff9a54fdc7c58ee9c45a25cc72af802b8841242443b4db83f",
+        "bytes": 1067
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/requirements.txt",
+        "sha256": "65ffded7cb540a73a15b74d9225f2629b0bcf443e46daeb101450f8c79783457",
+        "bytes": 206
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/setup.py",
+        "sha256": "34383d100a9986c90385b528daff63c706a098d5b28854ffd31a35b7cc4944ac",
+        "bytes": 1157
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/py-clob-client/commit/b076b04d61135657e25dccc1bbd6866a96bd8c6e",
+      "metadata": "https://api.github.com/repos/Polymarket/py-clob-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > The client is no longer functional and should not be used for new or existing integrations. > > Please migrate to our new unified SDK: > https://github.com/Polymarket/py-sdk # Polymarket Python CLOB Client Python client for the Polymarket Central Limit Order Book (CLOB). ## Documentation ## Installation ```bash # install from PyPI (Python 3.9>) pip install py-clob-client ``` ## Usage The examples below are short and copy\u2011pasteable. - What you need: - **Python 3.9+** - **Private key** that owns funds on Polymarket - Optional: a **proxy/funder address** if you use an email or smart\u2011contract wallet - Tip: store secrets in environment variables (e.g., with `.env`) ### Quickstart (read\u2011only) ```python from py_clob_client.client import ClobClient client = ClobClient(\"https://clob.polymarket.com\") # Level 0 (no auth) ok = client.get_ok() time = client.get_server_time() print(ok, time) ``` ### Start trading (EOA) **Note**: If using MetaMask or hardware wallet, you must first set token allowances. See [Token Allowances section](#important-token-allowances-for-metamaskeoa-users) below. ```python from py_clob_client.client import ClobClient HOST = \"https://clob.polymarket.com\" CHAIN_ID = 137 PRIVATE_KEY = \"",
+    "license_excerpt": "MIT License Copyright (c) 2022 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "> This repository has been archived and is no longer maintained.",
+      "# Polymarket Python CLOB Client",
+      "Python client for the Polymarket Central Limit Order Book (CLOB).",
+      "# install from PyPI (Python 3.9>)",
+      "- **Python 3.9+**",
+      "```python",
+      "```python",
+      "For email/Magic or browser wallet proxies, you need to specify two additional parameters:",
+      "The **signature_type** parameter tells the system how to verify your signatures:",
+      "```python",
+      "```python",
+      "from py_clob_client.clob_types import BookParams",
+      "books = client.get_order_books([BookParams(token_id=token_id)])",
+      "```python",
+      "```python",
+      "```python",
+      "from py_clob_client.clob_types import OpenOrderParams",
+      "open_orders = client.get_orders(OpenOrderParams())"
+    ],
+    "dependency_repos": [
+      "Polymarket/py-sdk"
+    ]
+  },
+  {
+    "full_name": "Polymarket/clob-client",
+    "requested_name": "Polymarket/clob-client",
+    "id": 418655420,
+    "url": "https://github.com/Polymarket/clob-client",
+    "stars": 514,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "7df8257dc95f99edb257b53a7873e273a9b4a9b3",
+    "last_commit_date": "2026-05-25T18:13:36Z",
+    "archived": true,
+    "fork": false,
+    "description": "Typescript client for the Polymarket CLOB",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket CLOB Client",
+      "### Usage",
+      "### Using viem WalletClient",
+      "### Error Handling"
+    ],
+    "recent_commit_count": 14,
+    "recent_authors_sample50": [
+      "carlos-poly",
+      "fednerpolymarket",
+      "mustafa-poly",
+      "poly-rodr",
+      "suhailkakar"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/clob-client/issues/305",
+        "createdAt": "2026-02-18T08:58:09Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-02-19T14:29:33Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-11T15:29:00Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/clob-client/issues/355",
+        "createdAt": "2026-05-08T13:52:34Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".npmignore",
+      ".vscode",
+      "LICENSE",
+      "README.md",
+      "biome.json",
+      "examples",
+      "package.json",
+      "pnpm-lock.yaml",
+      "src",
+      "tests",
+      "tsconfig.build.json",
+      "tsconfig.json",
+      "tsconfig.test.json",
+      "vitest.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/clob-client/blob/7df8257dc95f99edb257b53a7873e273a9b4a9b3/README.md",
+        "sha256": "47c25ab2904852c161655f286219377c488acc43b709186f1995f60e60231350",
+        "bytes": 3406
+      },
+      "LICENSE": {
+        "url": "https://github.com/Polymarket/clob-client/blob/7df8257dc95f99edb257b53a7873e273a9b4a9b3/LICENSE",
+        "sha256": "d85f8c587d5e82eff9a54fdc7c58ee9c45a25cc72af802b8841242443b4db83f",
+        "bytes": 1067
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/clob-client/blob/7df8257dc95f99edb257b53a7873e273a9b4a9b3/package.json",
+        "sha256": "b351e58577d57082429053990bde9cd5ae9a5dfa718ebb220547413b762777cb",
+        "bytes": 2297
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/clob-client/commit/7df8257dc95f99edb257b53a7873e273a9b4a9b3",
+      "metadata": "https://api.github.com/repos/Polymarket/clob-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > The client is no longer functional and should not be used for new or existing integrations. > > Please migrate to our new unified SDK: > https://github.com/Polymarket/ts-sdk # Polymarket CLOB Client Typescript client for the Polymarket CLOB ### Usage ```ts // npm install @polymarket/clob-client // npm install ethers // Client initialization example and dumping API Keys import { ApiKeyCreds, ClobClient, OrderType, Side, } from \"@polymarket/clob-client\"; import { Wallet } from \"@ethersproject/wallet\"; const host = 'https://clob.polymarket.com'; const funder = ''; // This is your Polymarket Profile Address, where you send UDSC to. const signer = new Wallet(\"\"); // This is your Private Key. If using email login export from https://reveal.magic.link/polymarket otherwise export from your Web3 Application // In general don't create a new API key, always derive or createOrDerive const creds = new ClobClient(host, 137, signer).createOrDeriveApiKey(); //0: Browser Wallet(Metamask, Coinbase Wallet, etc) //1: Magic/Email Login const signatureType = 1; (async () => { const clobClient = new ClobClient(host, 137, signer, await creds, signatureType, funder); const resp2",
+    "license_excerpt": "MIT License Copyright (c) 2022 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "> This repository has been archived and is no longer maintained."
+    ],
+    "dependency_repos": [
+      "Polymarket/ts-sdk"
+    ]
+  },
+  {
+    "full_name": "Polymarket/agents",
+    "requested_name": "Polymarket/agents",
+    "id": 823871392,
+    "url": "https://github.com/Polymarket/agents",
+    "stars": 3787,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "081f2b5594c37edeb9d3780a778c084d5b6f2743",
+    "last_commit_date": "2024-11-05T15:40:29Z",
+    "archived": true,
+    "fork": false,
+    "description": "Trade autonomously on Polymarket using AI Agents",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2024 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Agents",
+      "## Features",
+      "# Getting started",
+      "## Architecture",
+      "### APIs",
+      "### Scripts",
+      "# Contributing",
+      "# Related Repos",
+      "# Prediction markets reading",
+      "# License",
+      "# Contact",
+      "# Terms of Service"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/agents/issues/227",
+        "createdAt": "2026-04-26T19:05:23Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-26T19:05:47Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-26T19:06:29Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/agents/issues/221",
+        "createdAt": "2026-03-26T16:20:37Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-03-26T16:21:05Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CONTRIBUTING.md",
+      "Dockerfile",
+      "LICENSE.md",
+      "README.md",
+      "agents",
+      "docs",
+      "requirements.txt",
+      "scripts",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/agents/blob/081f2b5594c37edeb9d3780a778c084d5b6f2743/README.md",
+        "sha256": "b03b40eaf3e624de8bc9df8305d706253d401a3a2c972513569841c1f6994b31",
+        "bytes": 7671
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/Polymarket/agents/blob/081f2b5594c37edeb9d3780a778c084d5b6f2743/LICENSE.md",
+        "sha256": "e908c548dbc91be04bd67b89c2ed62b653485f3f2f489bbd7232799c7ffd7505",
+        "bytes": 1067
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/agents/blob/081f2b5594c37edeb9d3780a778c084d5b6f2743/requirements.txt",
+        "sha256": "d0f1e5aa11f97215e944f699e467b4feec6285d083773a815acc60ac9c6067eb",
+        "bytes": 3269
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/agents/commit/081f2b5594c37edeb9d3780a778c084d5b6f2743",
+      "metadata": "https://api.github.com/repos/Polymarket/agents"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url] Polymarket Agents Trade autonomously on Polymarket using AI Agents Explore the docs \u00bb View Demo \u00b7 Report Bug \u00b7 Request Feature # Polymarket Agents Polymarket Agents is a developer framework and set of utilities for building AI agents for Polymarket. This code is free and publicly available under MIT License open source license ([terms of service](#terms-of-service))! ## Features - Integration with Polymarket API - AI agent utilities for prediction markets - Local and remote RAG (Retrieval-Augmented Generation) support - Data sourcing from betting services, news providers, and web search - Comphrehensive LLM tools for prompt engineering # Getting started This repo is inteded for use with Python 3.9 1. Clone the repository ``` git clone https://github.com/{username}/polymarket-agents.git cd polymarket-agents ``` 2. Create the virtual environment ``` virtualenv --python=python3.9 .venv ``` 3. Activate the virtual environment - On Windows: ``` .venv\\Scripts\\activate ``` - On macOS and Linux: ``` source .venv/bin/activate ``` 4. Install the required dependencies: ``` pip install -r requirements.txt ``` 5. Set up your environment variables: - Create a `.env` file in the project",
+    "license_excerpt": "MIT License Copyright (c) 2024 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![MIT License][license-shield]][license-url]",
+      "Polymarket Agents is a developer framework and set of utilities for building AI agents for Polymarket.",
+      "This code is free and publicly available under MIT License open source license ([terms of service](#terms-of-service))!",
+      "- Local and remote RAG (Retrieval-Augmented Generation) support",
+      "This repo is inteded for use with Python 3.9",
+      "virtualenv --python=python3.9 .venv",
+      "python scripts/python/cli.py",
+      "python agents/application/trade.py",
+      "8. Note: If running the command outside of docker, please set the following env var:",
+      "export PYTHONPATH=\".\"",
+      "If running with docker is preferred, we provide the following scripts:",
+      "./scripts/bash/build-docker.sh",
+      "./scripts/bash/run-docker-dev.sh",
+      "Files for managing your local environment, server set-up to run the application remotely, and cli for end-user commands.",
+      "`cli.py` is the primary user interface for the repo. Users can run various commands to interact with the Polymarket API, retrieve relevant news articles, query local data, send data/prompts to LLMs, and execute trades in Polymarkets.",
+      "`python scripts/python/cli.py command_name [attribute value] [attribute value]`",
+      "python scripts/python/cli.py get-all-markets --limit <LIMIT> --sort-by <SORT_BY>",
+      "- [py-clob-client](https://github.com/Polymarket/py-clob-client): Python client for the Polymarket CLOB"
+    ],
+    "dependency_repos": [
+      "Polymarket/agents",
+      "Polymarket/clob-client",
+      "Polymarket/py-clob-client",
+      "Polymarket/python-order-utils",
+      "langchain-ai/langchain",
+      "polymarket/agents"
+    ]
+  },
+  {
+    "full_name": "Polymarket/ctf-exchange",
+    "requested_name": "Polymarket/ctf-exchange",
+    "id": 539647622,
+    "url": "https://github.com/Polymarket/ctf-exchange",
+    "stars": 355,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ed5c7708b7be3aa98bf5f0c6602b57cc498e2ef4",
+    "last_commit_date": "2026-05-11T17:13:35Z",
+    "archived": true,
+    "fork": false,
+    "description": "Polymarket CTF Exchange",
+    "language": "Solidity",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "# MIT License",
+      "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket CTF Exchange",
+      "## Background",
+      "## Documentation",
+      "## Audit",
+      "## Deployments",
+      "## Development",
+      "## Testing"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "suhailkakar"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/ctf-exchange/issues/35",
+        "createdAt": "2026-03-08T11:28:07Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-03-08T11:31:13Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-03-12T01:54:45Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-06T04:30:45Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/ctf-exchange/issues/33",
+        "createdAt": "2026-03-01T08:33:29Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".prettierrc",
+      "LICENSE.md",
+      "README.md",
+      "artifacts",
+      "audit",
+      "broadcast",
+      "deploy",
+      "docs",
+      "foundry.lock",
+      "foundry.toml",
+      "lib",
+      "package.json",
+      "remappings.txt",
+      "snapshots",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/ctf-exchange/blob/ed5c7708b7be3aa98bf5f0c6602b57cc498e2ef4/README.md",
+        "sha256": "e6b957ee9e8b3a3728e084404e36b9fa224d75bc02eec22f9b96279992e3184f",
+        "bytes": 2621
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/Polymarket/ctf-exchange/blob/ed5c7708b7be3aa98bf5f0c6602b57cc498e2ef4/LICENSE.md",
+        "sha256": "7b13a7f81395c804bceb6901575c3d025db19a5fc08ff7ee4f4e09ccaa1e9c1e",
+        "bytes": 1038
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/ctf-exchange/blob/ed5c7708b7be3aa98bf5f0c6602b57cc498e2ef4/package.json",
+        "sha256": "cd9dbd34dc8050d76e4ff000f8cdb58b982d9a9484708d0d7512a6f98f59f8bb",
+        "bytes": 210
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/ctf-exchange/commit/ed5c7708b7be3aa98bf5f0c6602b57cc498e2ef4",
+      "metadata": "https://api.github.com/repos/Polymarket/ctf-exchange"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > Contract addresses have been updated. Please refer to the V2 repository for the latest deployments and integration details: > https://github.com/Polymarket/ctf-exchange-v2 # Polymarket CTF Exchange [![Version][version-badge]][version-link] [![License][license-badge]][license-link] [![Test][ci-badge]][ci-link] [version-badge]: https://img.shields.io/github/v/release/polymarket/ctf-exchange.svg?label=version [version-link]: https://github.com/Polymarket/ctf-exchange/releases [license-badge]: https://img.shields.io/github/license/polymarket/ctf-exchange [license-link]: https://github.com/Polymarket/ctf-exchange/blob/main/LICENSE.md [ci-badge]: https://github.com/Polymarket/ctf-exchange/actions/workflows/Tests.yml/badge.svg [ci-link]: https://github.com/Polymarket/ctf-exchange/actions/workflows/Tests.yml ## Background The Polymarket CTF Exchange is an exchange protocol that facilitates atomic swaps between [Conditional Tokens Framework(CTF)](https://docs.gnosis.io/conditionaltokens/) ERC1155 assets and an ERC20 collateral asset. It is intended to be used in a hybrid-decentralized exchange model wherein there is an operator that provides offchain matching services while settlement happens on-chain, non-custodially. ## Documentation Docs for the CTF Exchange are available in this repo [here](./docs/Overview.md). ## Audit These contracts have been audited by Chainsecurity and the report is available [here](./audit/ChainSecurity_Polymarket_Exchange_audit.pdf). ## Deployments | Network | Address | | ---------------- | --------------------------------------------------------------------------------- | | Polygon | [0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E](https://polygonscan.com/address/0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E)| | Amoy | [0xdFE02Eb6733538f8Ea35D585af8DE5958AD99E40](https://amoy.polygonscan.com/address/0xdfe02eb6733538f8ea35d585af8de5958ad99e40)| ## Development Install [Foundry](https://github.com/foundry-rs/foundry/). Foundry has daily updates, run `foundryup` to update `forge` and `cast`. --- ## Testing To run all tests: `forge test` To run test",
+    "license_excerpt": "# MIT License Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"),",
+    "license_warnings": [],
+    "runtime_clues": [
+      "> This repository has been archived and is no longer maintained.",
+      "[![License][license-badge]][license-link]",
+      "[license-badge]: https://img.shields.io/github/license/polymarket/ctf-exchange",
+      "[license-link]: https://github.com/Polymarket/ctf-exchange/blob/main/LICENSE.md",
+      "The Polymarket CTF Exchange is an exchange protocol that facilitates atomic swaps between [Conditional Tokens Framework(CTF)](https://docs.gnosis.io/conditionaltokens/) ERC1155 assets and an ERC20 collateral asset."
+    ],
+    "dependency_repos": [
+      "Polymarket/ctf-exchange",
+      "Polymarket/ctf-exchange-v2",
+      "foundry-rs/foundry"
+    ]
+  },
+  {
+    "full_name": "gnosis/conditional-tokens-contracts",
+    "requested_name": "gnosis/conditional-tokens-contracts",
+    "id": 158600202,
+    "url": "https://github.com/gnosis/conditional-tokens-contracts",
+    "stars": 306,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "eeefca66eb46c800a9aaab88db2064a99026fde5",
+    "last_commit_date": "2020-09-17T16:02:43Z",
+    "archived": false,
+    "fork": false,
+    "description": "Smart contracts for conditional tokens.",
+    "language": "Solidity",
+    "license": "LGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "   GNU GPL, and only to the extent that such information is",
+      "of the GNU Lesser General Public License from time to time. Such new",
+      "of the GNU Lesser General Public License \"or any later version\""
+    ],
+    "license_files_read": true,
+    "readme_path": "README.rst",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/issues/137",
+        "createdAt": "2026-07-20T04:44:03Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/issues/132",
+        "createdAt": "2025-10-05T10:39:32Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".eslintignore",
+      ".eslintrc.js",
+      ".gitattributes",
+      ".gitignore",
+      ".npmignore",
+      ".readthedocs.yml",
+      ".soliumignore",
+      ".soliumrc.json",
+      ".travis.yml",
+      "LICENSE",
+      "README.rst",
+      "codechecks.yml",
+      "contracts",
+      "docs",
+      "migrations",
+      "networks.json",
+      "package.json",
+      "test",
+      "truffle-config.js",
+      "utils",
+      "yarn.lock"
+    ],
+    "source_files": {
+      "README.rst": {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/README.rst",
+        "sha256": "d645fbf6e6ef666a8eeae6f0848476f1d89c27d7ebbcd27907a6240b1135052f",
+        "bytes": 1107
+      },
+      "LICENSE": {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/LICENSE",
+        "sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b",
+        "bytes": 7651
+      },
+      "package.json": {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/package.json",
+        "sha256": "093d735556bb636a4945f7c9122015fcfec0ddafb04397dc9eb9f59942a548c5",
+        "bytes": 2115
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/gnosis/conditional-tokens-contracts/commit/eeefca66eb46c800a9aaab88db2064a99026fde5",
+      "metadata": "https://api.github.com/repos/gnosis/conditional-tokens-contracts"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Conditional Tokens Contracts ============================ .. image:: https://travis-ci.org/gnosis/conditional-tokens-contracts.svg?branch=master :target: https://travis-ci.org/gnosis/conditional-tokens-contracts :alt: Build Status .. image:: https://badges.greenkeeper.io/gnosis/conditional-tokens-contracts.svg :target: https://greenkeeper.io/ :alt: Greenkeeper badge Smart contracts for conditional tokens. `\u2192 Online Documentation`_ .. _\u2192 Online Documentation: https://docs.gnosis.io/conditionaltokens/ The conditional tokens contracts are deployed at the following addresses: * Mainnet: ```0xC59b0e4De5F1248C1140964E0fF287B192407E0C``` * xDai: ```0xCeAfDD6bc0bEF976fdCd1112955828E00543c0Ce``` * Rinkeby: ```0x36bede640D19981A82090519bC1626249984c908``` License ------- All smart contracts are released under the `LGPL 3.0`_ license. Security and Liability ~~~~~~~~~~~~~~~~~~~~~~ All contracts are **WITHOUT ANY WARRANTY**; *without even* the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. .. _LGPL 3.0: https://www.gnu.org/licenses/lgpl-3.0.en.html",
+    "license_excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "License",
+      "All smart contracts are released under the `LGPL 3.0`_ license.",
+      ".. _LGPL 3.0: https://www.gnu.org/licenses/lgpl-3.0.en.html"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/poly-market-maker",
+    "requested_name": "Polymarket/poly-market-maker",
+    "id": 463280854,
+    "url": "https://github.com/Polymarket/poly-market-maker",
+    "stars": 322,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "55b83499ffc81bbd6b7c15c40ff9179b5e3d323c",
+    "last_commit_date": "2024-03-11T17:21:44Z",
+    "archived": false,
+    "fork": false,
+    "description": "Market maker keeper for the Polymarket CLOB",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2023 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# poly-market-maker",
+      "## NOTE",
+      "## Description",
+      "## Requirements",
+      "## Setup",
+      "## Usage",
+      "### Usage with Docker",
+      "## Config",
+      "## Strategies",
+      "### Strategy Lifecycle"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/poly-market-maker/issues/86",
+        "createdAt": "2025-08-21T07:05:26Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-28T07:05:32Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/poly-market-maker/issues/87",
+        "createdAt": "2026-04-06T17:13:16Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".flake8",
+      ".github",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE.txt",
+      "Makefile",
+      "README.md",
+      "bin",
+      "config.env",
+      "config",
+      "docker-compose.build.yml",
+      "docker-compose.yml",
+      "docs",
+      "install-dev.sh",
+      "install.sh",
+      "logging.yaml",
+      "poly_market_maker",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "run-local.sh",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/poly-market-maker/blob/55b83499ffc81bbd6b7c15c40ff9179b5e3d323c/README.md",
+        "sha256": "f56076d80c54686dd081179cf43b2478b67f3fed7eb2be0bbe2d5a971a0a6bcc",
+        "bytes": 1562
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/Polymarket/poly-market-maker/blob/55b83499ffc81bbd6b7c15c40ff9179b5e3d323c/LICENSE.txt",
+        "sha256": "04ef0aac452dc066f5233765c7ee26bb6e4e0a77900c4f67cedd982373232f7f",
+        "bytes": 1066
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/poly-market-maker/blob/55b83499ffc81bbd6b7c15c40ff9179b5e3d323c/requirements.txt",
+        "sha256": "4b452decdcf0f5790e196ed97670d042a3e4d4ffabfbe771d56bff27077c8b7e",
+        "bytes": 841
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/poly-market-maker/commit/55b83499ffc81bbd6b7c15c40ff9179b5e3d323c",
+      "metadata": "https://api.github.com/repos/Polymarket/poly-market-maker"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# poly-market-maker Market maker keeper for the Polymarket CLOB. ## NOTE This software is experimental and in active development. Use at your own risk. ## Description The keeper is an automated market maker for CLOB markets. Places and cancels orders to keep open orders near the midpoint price according to one of two strategies. ## Requirements - Python 3.10 ## Setup - Run `./install.sh` to set up the virtual environment and install depedencies. - Create a `.env` file. See `.env.example`. - Modify the entries in `config.env`. - Modify the corresponding strategy config in `./config`, if desired. ## Usage - Start the keeper with `./run-local.sh`. ### Usage with Docker - To start the keeper with docker, run `docker compose up`. ## Config The `config.env` file defines 3 environment variables: - `CONDITION_ID`, the condition id of the market in hex string format. - `STRATEGY`, the strategy to use, either \"Bands\" or \"AMM\" (case insensitive) - `CONFIG`, the path to the strategy config file. ## Strategies - [Amm](./docs/strategies/amm.md) - [Bands](./docs/strategies/bands.md) ### Strategy Lifecycle Every `sync_interval` (the default is 30s), the strategies do the",
+    "license_excerpt": "MIT License Copyright (c) 2023 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- Python 3.10",
+      "- Start the keeper with `./run-local.sh`.",
+      "### Usage with Docker",
+      "- To start the keeper with docker, run `docker compose up`."
+    ],
+    "dependency_repos": []
+  }
+]
