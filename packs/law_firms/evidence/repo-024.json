@@ -1,0 +1,186 @@
+{
+  "audit_id": "R024",
+  "requested_full_name": "LibPDF-js/core",
+  "observed_at": "2026-09-13T16:10:01.029485+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "LibPDF-js/core",
+  "html_url": "https://github.com/LibPDF-js/core",
+  "description": "A modern PDF library for TypeScript. Parse, modify, and generate PDFs with a clean, intuitive API.",
+  "stargazers_count": 1822,
+  "forks_count": 64,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-01-11T23:14:44Z",
+  "updated_at": "2026-09-12T23:14:38Z",
+  "pushed_at": "2026-09-07T11:38:08Z",
+  "size": 29169,
+  "open_issues_count": 36,
+  "topics": [
+    "digital-signature",
+    "document",
+    "esign",
+    "generator",
+    "pades",
+    "parser",
+    "pdf",
+    "pdf-document",
+    "pdf-generator",
+    "pdf-parsing",
+    "pkcs7",
+    "signing",
+    "typescript"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "fec895dd4a496b750728366ae491fec5effb8418",
+  "last_commit": "2026-09-07T11:38:07Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/LibPDF-js/core",
+    "commit": "https://github.com/LibPDF-js/core/commit/fec895dd4a496b750728366ae491fec5effb8418"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "3b2be449b3e46ae46b9114f2719564566d20765ecdad05154e96daff2c8520cf",
+    "text": "# LibPDF\n\n[![npm](https://img.shields.io/npm/v/@libpdf/core)](https://www.npmjs.com/package/@libpdf/core)\n[![npm downloads](https://img.shields.io/npm/dm/@libpdf/core)](https://www.npmjs.com/package/@libpdf/core)\n[![CI](https://github.com/LibPDF-js/core/actions/workflows/ci.yml/badge.svg)](https://github.com/LibPDF-js/core/actions/workflows/ci.yml)\n[![GitHub stars](https://img.shields.io/github/stars/libpdf-js/core?style=flat)](https://github.com/LibPDF-js/core)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)\n[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)\n\nA modern PDF library for TypeScript. Parse, modify, and generate PDFs with a clean, intuitive API.\n\n> **Beta Software**: LibPDF is under active development and APIs may change between minor versions, but we use it in production at [Documenso](https://documenso.com) and consider it ready for real-world use.\n\n## Why LibPDF?\n\nLibPDF was born from frustration. At [Documenso](https://documenso.com), we found ourselves wrestling with the JavaScript PDF ecosystem:\n\n- **PDF.js** is excellent for rendering and even has annotation editing — but it requires a browser\n- **pdf-lib** has a great API, but chokes on slightly malformed documents\n- **pdfkit** only generates, no parsing at all\n\nWe kept adding workarounds. A patch here for a malformed xref table. A hack there for an encrypted document. Eventually, we decided to build what we actually needed:\n\n- **Lenient like PDFBox and PDF.js**: opens documents other libraries reject\n- **Intuitive like pdf-lib**: clean, TypeScript-first API\n- **Complete**: encryption, digital signatures, incremental saves, form filling\n\n## Features\n\n| Feature            | Status | Notes                                      |\n| ------------------ | ------ | ------------------------------------------ |\n| Parse any PDF      | Yes    | Graceful fallback for malformed documents  |\n| Create PDFs        | Yes    | From scratch or modify existing            |\n| Encryption         | Yes    | RC4, AES-128, AES-256 (R2-R6)              |\n| Digital Signatures | Yes    | PAdES B-B, B-T, B-LT, B-LTA                |\n| Form Filling       | Yes    | Text, checkbox, radio, dropdown, signature |\n| Form Flattening    | Yes    | Bake fields into page content              |\n| Merge & Split      | Yes    | Combine or extract pages                   |\n| Attachments        | Yes    | Embed and extract files                    |\n| Text Extraction    | Yes    | With position information                  |\n| Font Embedding     | Yes    | TTF/OpenType with subsetting               |\n| Images             | Yes    | JPEG, PNG (with alpha)                     |\n| Incremental Saves  | Yes    | Append changes, preserve signatures        |\n\n## Installation\n\n```bash\nnpm install @libpdf/core\n# or\nbun add @libpdf/core\n```\n\n## Quick Start\n\n### Parse an existing PDF\n\n```typescript\nimport { PDF } from \"@libpdf/core\";\n\nconst pdf = await PDF.load(bytes);\nconst pages = pdf.getPages();\n\nconsole.log(`${pages.length} pages`);\n```\n\n### Open an encrypted PDF\n\n```typescript\nconst pdf = await PDF.load(bytes, { credentials: \"password\" });\n```\n\n### Fill a form\n\n```typescript\nconst pdf = await PDF.load(bytes);\nconst form = pdf.getForm();\n\nform.fill({\n  name: \"Jane Doe\",\n  email: \"jane@example.com\",\n  agreed: true,\n});\n\nconst filled = await pdf.save();\n```\n\n### Sign a document\n\n```typescript\nimport { PDF, P12Signer } from \"@libpdf/core\";\n\nconst pdf = await PDF.load(bytes);\nconst signer = await P12Signer.create(p12Bytes, \"password\");\n\nconst signed = await pdf.sign({\n  signer,\n  reason: \"I approve this document\",\n});\n```\n\n### Merge PDFs\n\n```typescript\nconst merged = await PDF.merge([pdf1Bytes, pdf2Bytes, pdf3Bytes]);\n```\n\n### Draw on a page\n\n```typescript\nimport { PDF, rgb } from \"@libpdf/core\";\n\nconst pdf = PDF.create();\nconst page = pdf.addPage({ size: \"letter\" });\n\npage.drawText(\"Hello, World!\", {\n  x: 50,\n  y: 700,\n  fontSize: 24,\n  color: rgb(0, 0, 0),\n});\n\npage.drawRectangle({\n  x: 50,\n  y: 600,\n  width: 200,\n  height: 100,\n  color: rgb(0.9, 0.9, 0.9),\n  borderColor: rgb(0, 0, 0),\n  borderWidth: 1,\n});\n\nconst output = await pdf.save();\n```\n\n## Runtime Support\n\nLibPDF runs everywhere:\n\n- **Node.js** 20+\n- **Bun**\n- **Browsers** (modern, with Web Crypto)\n\n## Known Limitations\n\nSome features are not yet implemented:\n\n| Feature                     | Status           | Notes                                  |\n| --------------------------- | ---------------- | -------------------------------------- |\n| Signature verification      | Not implemented  | Signing works; verification is planned |\n| TrueType Collections (.ttc) | Not supported    | Extract individual fonts first         |\n| JBIG2 image decoding        | Passthrough only | Images preserved but not decoded       |\n| JPEG2000 (JPX) decoding     | Passthrough only | Images preserved but not decoded       |\n| Certificate encryption      | Not supported    | Password encryption works              |\n| JavaScript actions          | Ignored          | Form calculations not executed         |\n\nThese limitations are documented to set expectations. Most don't affect typical use cases like form filling, signing, or document manipulation.\n\n## Philosophy\n\n### Be lenient\n\nReal-world PDFs are messy. Export a document through three different tools and you'll get three slightly different interpretations of the spec. LibPDF prioritizes _opening your document_ over strict compliance. When standard parsing fails, we fall back to brute-force recovery, scanning the entire file to rebuild the structure.\n\n### Two API layers\n\n- **High-level**: `PDF`, `PDFPage`, `PDFForm` for common tasks\n- **Low-level**: `PdfDict`, `PdfArray`, `PdfStream` for full control\n\n## Documentation\n\nFull documentation at [libpdf.dev](https://libpdf.dev)\n\n## Sponsors\n\nLibPDF is developed by [Documenso](https://documenso.com), the open-source DocuSign alternative.\n\n<a href=\"https://documenso.com\">\n  <img src=\"apps/docs/public/sponsors/documenso.png\" alt=\"Documenso\" height=\"24\">\n</a>\n\n## Contributing\n\nWe welcome contributions! See our [contributing guide](CONTRIBUTING.md) for details.\n\n```bash\n# Clone the repo\ngit clone https://github.com/LibPDF-js/core.git libpdf\ncd libpdf\n\n# Install dependencies\nbun install\n\n# Run tests\nbun run test\n\n# Type check\nbun run typecheck\n```\n\n## License\n\n[MIT](LICENSE)\n\nThe `src/fontbox/` directory is licensed under [Apache-2.0](src/fontbox/LICENSE) as it is derived from [Apache PDFBox](https://pdfbox.apache.org/).\n",
+    "characters": 6596,
+    "source_url": "https://github.com/LibPDF-js/core/blob/fec895dd4a496b750728366ae491fec5effb8418/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "780f927ddc7dd12f9f2906d0edd26f0474f71d7602d5704c13f1e482b7702821",
+    "text": "MIT License\n\nCopyright (c) 2026 Lucas Smith\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1068,
+    "source_url": "https://github.com/LibPDF-js/core/blob/fec895dd4a496b750728366ae491fec5effb8418/LICENSE.md",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 42,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "Mythie",
+      "contributions": 204
+    },
+    {
+      "login": "github-actions[bot]",
+      "contributions": 44
+    },
+    {
+      "login": "ntedvs",
+      "contributions": 3
+    },
+    {
+      "login": "Uaitt",
+      "contributions": 1
+    },
+    {
+      "login": "ljagiello",
+      "contributions": 1
+    },
+    {
+      "login": "mateuscgoncalves",
+      "contributions": 1
+    },
+    {
+      "login": "redsuperbat",
+      "contributions": 1
+    },
+    {
+      "login": "beaulac",
+      "contributions": 1
+    },
+    {
+      "login": "vercel[bot]",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 61,
+      "title": "Feature request: PDF Rendering",
+      "state": "open",
+      "created_at": "2026-04-16T04:45:42Z",
+      "updated_at": "2026-08-06T09:02:35Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/LibPDF-js/core/issues/61",
+      "author_association": "NONE"
+    },
+    {
+      "number": 89,
+      "title": "ability to PARSE drawings?",
+      "state": "open",
+      "created_at": "2026-08-05T09:56:04Z",
+      "updated_at": "2026-08-05T09:56:04Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/LibPDF-js/core/issues/89",
+      "author_association": "NONE"
+    },
+    {
+      "number": 81,
+      "title": "getMediaBox()/getCropBox() return raw x2/y2 as width/height for non-zero-origin boxes",
+      "state": "open",
+      "created_at": "2026-06-22T09:46:26Z",
+      "updated_at": "2026-07-30T13:58:30Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/LibPDF-js/core/issues/81",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "LibPDF-js/core",
+        "capability_tag": "pdf-parse",
+        "category_slug": "file-conversion-tool",
+        "summary": "Modern TypeScript library to parse, modify and generate PDF documents",
+        "reuse_value": 85,
+        "stars": 1738,
+        "license": "MIT",
+        "language": "TypeScript",
+        "url": "https://github.com/LibPDF-js/core",
+        "rank_score": 85017380
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "LibPDF-js/core",
+        "stars": 1738,
+        "license": "MIT",
+        "language": "TypeScript",
+        "unit_class": "component",
+        "reuse_value": 85,
+        "liftability": 90,
+        "fame_gap": -5,
+        "cat_slug": "file-conversion-tool",
+        "cat_name": "File / Format Conversion Tool",
+        "description": "A modern PDF library for TypeScript. Parse, modify, and generate PDFs with a clean, intuitive API."
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

@@ -1,0 +1,184 @@
+{
+  "audit_id": "R020",
+  "requested_full_name": "MatthiasValvekens/pyHanko",
+  "observed_at": "2026-09-13T16:10:01.029485+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "MatthiasValvekens/pyHanko",
+  "html_url": "https://github.com/MatthiasValvekens/pyHanko",
+  "description": "pyHanko: sign and stamp PDF files",
+  "stargazers_count": 765,
+  "forks_count": 110,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-08-06T12:48:43Z",
+  "updated_at": "2026-09-13T01:24:42Z",
+  "pushed_at": "2026-09-10T05:56:03Z",
+  "size": 19175,
+  "open_issues_count": 5,
+  "topics": [
+    "digital-signature",
+    "pades",
+    "pdf",
+    "pkcs11",
+    "signature"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "3f0e5eebc74cd4eeab7c7bd6072692f33d2e2f95",
+  "last_commit": "2026-09-10T05:50:47Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/MatthiasValvekens/pyHanko",
+    "commit": "https://github.com/MatthiasValvekens/pyHanko/commit/3f0e5eebc74cd4eeab7c7bd6072692f33d2e2f95"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "ee5fcc86086f5ea07f0b24aba437c2bce26c918caa4e11f0df95f4f09a56c2d6",
+    "text": "![pyHanko](docs/images/pyhanko-logo.svg)\n\n![Codecov](https://img.shields.io/codecov/c/github/MatthiasValvekens/pyHanko)\n![pypi (pyHanko)](https://img.shields.io/pypi/v/pyHanko.svg?label=pyHanko)\n![pypi (pyhanko-certvalidator)](https://img.shields.io/pypi/v/pyhanko-certvalidator.svg?label=pyhanko-certvalidator)\n![pypi (pyhanko-cli)](https://img.shields.io/pypi/v/pyhanko-cli.svg?label=pyhanko-cli)\n\n\n\nThe lack of open-source CLI tooling to handle digitally signing and stamping PDF files was bothering me, so I went ahead and rolled my own.\n\n*Note:* This project is currently in beta, and not yet production-ready.\n\n### Documentation\n\nThe [documentation for pyHanko is hosted on ReadTheDocs](https://docs.pyhanko.eu/en/latest/)\nand includes information on CLI usage, library usage, and API reference documentation derived from\ninline docstrings.\n\n### Installing\n\nPyHanko is hosted on [PyPI](https://pypi.org/project/pyHanko/),\nand can be installed using `pip`:\n\n```bash\npip install 'pyHanko[pkcs11,image-support,opentype,qr]' pyhanko-cli\n```\n\nDepending on your shell, you might have to leave off the quotes:\n\n```bash\npip install pyHanko[pkcs11,image-support,opentype,qr] pyhanko-cli\n```\n\nThis `pip` invocation includes the optional dependencies required for PKCS#11, image handling,\nOpenType/TrueType support, QR code generation and the CLI.\n\nPyHanko requires Python 3.10 or later.\n\n### Contributing\n\nDo you have a question about pyHanko?\n[Post it on the discussion forum][discussion-forum]!\n\nThis project welcomes community contributions. If there's a feature you'd like\nto have implemented, a bug you want to report, or if you're keen on\ncontributing in some other way: that's great! However, please make sure to\nreview the [contribution guidelines](CONTRIBUTING.md) before making your\ncontribution. When in doubt, [ask for help on the discussion board][discussion-forum].\n\n**Please do not ask for support on the issue tracker.** The issue tracker is for bug\nreports and actionable feature requests. Questions related to pyHanko usage\nand development should be asked in the [discussion forum][discussion-forum] instead.\n\n\n[discussion-forum]: https://github.com/MatthiasValvekens/pyHanko/discussions\n\n\n### Features\n\nThe code in this repository functions both as a library and as a command-line tool\n(the latter is distributed as a distinct ``pyhanko-cli`` package).\nHere is a short overview of the features.\nNote that not all of these are necessarily exposed through the CLI.\n\n - Stamping\n    - Simple text-based stamps\n    - QR stamps\n    - Font can be monospaced, or embedded from a TTF/OTF font (requires `[opentype]` optional deps)\n - Document preparation \n    - Add empty signature fields to existing PDFs\n    - Add seed values to signature fields, with or without constraints\n    - Manage document metadata\n - Signing\n    * Option to use async signing API\n    - Signatures can be invisible, or with an appearance based on the stamping tools\n    - LTV-enabled signatures are supported\n        - PAdES baseline profiles B-B, B-T, B-LT and B-LTA are all supported.\n        - Adobe-style revocation info embedding is also supported.\n    - RFC 3161 timestamp server support\n    - Support for multiple signatures (all modifications are executed using incremental updates to \n      preserve cryptographic integrity)\n    - Supports RSA, DSA, ECDSA, EdDSA, and ML-DSA\n      - RSA padding modes: PKCS#1 v1.5 and RSASSA-PSS\n      - DSA\n      - ECDSA curves: anything supported by the `cryptography` library, \n        see [here](https://cryptography.io/en/latest/hazmat/primitives/asymmetric/ec/#elliptic-curves).\n      - EdDSA: both Ed25519 and Ed448 are supported (in \"pure\" mode only, as per RFC 8419)\n      - ML-DSA\n    - Built-in support for PDF extensions defined in ISO/TS 32001 and ISO/TS 32002.\n    - PKCS#11 support\n        - Available both from the library and through the CLI\n        - Extra convenience wrapper for Belgian eID cards\n    - \"Interrupted signing\" mode for ease of integration with remote and/or interactive signing\n      processes.\n - Signature validation\n    - Cryptographic integrity check\n    - Authentication through X.509 chain of trust validation\n    - Difference analysis on files with multiple signatures and/or incremental \n      updates made after signing\n    - Signature seed value constraint validation\n    - AdES validation\n    - Validating against EU trusted lists\n - Encryption\n    - All encryption methods in PDF 2.0 are supported, except for\n      some very outdated message encryption methods in the public-key security handler.\n    - Authenticated encryption via ISO/TS 32003 and 32004.\n    - In addition, we support a number of extra file encryption\n      modes of operation for the public-key security handler that are not\n      explicitly called out in the standard.\n         - RSAES-OAEP (does not appear to be widely supported in PDF tooling)\n         - ephemeral-static ECDH with X9.63 key derivation (supported by Acrobat)\n - CLI & configuration\n    - YAML-based configuration (optional for most features)\n    - CLI based on `click` \n        - Available as `pyhanko` (when installed) or `python -m pyhanko` when running from\n          the source directory\n        - Built-in help: run `pyhanko --help` to get started\n\n\n### Some TODOs and known limitations\n\nSee the [known issues](https://docs.pyhanko.eu/en/latest/known-issues.html)\npage in the documentation.\n\n\n### Acknowledgement\n\nThis repository includes code from `PyPDF2` (with both minor and major modifications); the original license has been included [here](pyhanko/pdf_utils/LICENSE.PyPDF2).\n\n\n## License\n\nMIT License, see [LICENSE](LICENSE).\n",
+    "characters": 5651,
+    "source_url": "https://github.com/MatthiasValvekens/pyHanko/blob/3f0e5eebc74cd4eeab7c7bd6072692f33d2e2f95/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "7b02fde677d4376be46068078822079bf3f511f2303ef144e529c09ea833828c",
+    "text": "MIT License\n\nCopyright (c) 2020-2026 Matthias Valvekens\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1080,
+    "source_url": "https://github.com/MatthiasValvekens/pyHanko/blob/3f0e5eebc74cd4eeab7c7bd6072692f33d2e2f95/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "MatthiasValvekens",
+      "contributions": 2510
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 211
+    },
+    {
+      "login": "wbond",
+      "contributions": 120
+    },
+    {
+      "login": "fornwall",
+      "contributions": 4
+    },
+    {
+      "login": "SnijderC",
+      "contributions": 3
+    },
+    {
+      "login": "justinschoeman",
+      "contributions": 3
+    },
+    {
+      "login": "sagarvora",
+      "contributions": 3
+    },
+    {
+      "login": "jautogrubeceu",
+      "contributions": 2
+    },
+    {
+      "login": "MatLaft",
+      "contributions": 2
+    },
+    {
+      "login": "fossabot",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 845,
+      "title": "Signatures with a non-ETSI /SubFilter (ICP-Brasil \"/PBAD.PAdES\") are silently dropped from embedded_signatures",
+      "state": "closed",
+      "created_at": "2026-09-07T22:13:11Z",
+      "updated_at": "2026-09-08T21:18:58Z",
+      "closed_at": "2026-09-08T21:18:40Z",
+      "comments": 3,
+      "html_url": "https://github.com/MatthiasValvekens/pyHanko/issues/845",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 845,
+      "created_at": "2026-09-07T22:13:11Z",
+      "first_affiliated_reply_in_sample": "2026-09-08T05:00:49Z",
+      "source_url": "https://github.com/MatthiasValvekens/pyHanko/issues/845#issuecomment-5579514973"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0082",
+        "repo": "MatthiasValvekens/pyHanko",
+        "url": "https://github.com/MatthiasValvekens/pyHanko",
+        "labels": [
+          "engine_or_primitive",
+          "primitive"
+        ],
+        "family_ids": [
+          "B14",
+          "B21"
+        ],
+        "family_names": [],
+        "evidence_classes": [
+          "p03_live_metadata_classified"
+        ],
+        "operator_signals": [],
+        "observed_facts": [
+          "MatthiasValvekens/pyHanko supplies e_sign, files_documents at active maintenance under a permissive rights posture."
+        ],
+        "current_verdict": "deeper_evidence_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 22,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "MatthiasValvekens/pyHanko",
+        "stars": 735,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 70,
+        "liftability": 90,
+        "fame_gap": -20,
+        "cat_slug": "cryptography-library",
+        "cat_name": "Cryptography / ZK / FHE Library",
+        "description": "pyHanko: sign and stamp PDF files"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
