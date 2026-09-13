@@ -1,0 +1,3135 @@
+{
+  "observed_at": "2026-09-13T15:52:15.191909+00:00",
+  "status": "documentation_collected_requires_human_scoring",
+  "collected_unique_repositories": 430,
+  "batch_count": 55,
+  "unavailable": [
+    {
+      "name": "NautilusTrader/nautilus_trader",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "twopirllc/pandas-ta",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "alpaca-markets/alpaca-py",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "quickfixn/quickfixn",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "fix-trading-community/orchestra",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "ofxparse/ofxparse",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "ofxstatement/ofxstatement",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "Polymarket/py-order-utils",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "Polymarket/order-utils",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    },
+    {
+      "name": "Polymarket/subgraph",
+      "discovery": [
+        {
+          "round": 0,
+          "lane": "prior-lead"
+        }
+      ]
+    }
+  ],
+  "search_queries": 51,
+  "search_rounds": 3,
+  "two_dry_rounds_proven": false,
+  "bank_sources": {
+    "bank/bank_best.jsonl": {
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/bank/bank_best.jsonl",
+      "sha256": "333399106db88203b975243501d8b9893cc86e1e9efd2a26bf20ae66462a3dc3",
+      "rows": 23778
+    },
+    "capability-shelf/source-registry.jsonl": {
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/capability-shelf/source-registry.jsonl",
+      "sha256": "c04954f32ea74bee20fec1bd90bdce6135da309f8daded979d5bc180cd20411f",
+      "rows": 3010
+    },
+    "bank/bank_adoption_v2.jsonl": {
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/bank/bank_adoption_v2.jsonl",
+      "sha256": "3ba06bd75e8ebdb83d85ba24ed61defa2322962984b7542c036493c322839ba6",
+      "rows": 2722
+    },
+    "bank/bank_liftable_ranked.jsonl": {
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/bank/bank_liftable_ranked.jsonl",
+      "sha256": "0a35d81e927116874bfff0bf0b144cc4391c065b3ea5f84b143d8723c03c9850",
+      "rows": 32137
+    }
+  },
+  "repo_index": [
+    {
+      "full_name": "OpenBB-finance/OpenBB",
+      "id": 323048702,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "QuantConnect/Lean",
+      "id": 27251463,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "microsoft/qlib",
+      "id": 287463830,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "vnpy/vnpy",
+      "id": 31522041,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "mementum/backtrader",
+      "id": 29050338,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "polakowo/vectorbt",
+      "id": 110684325,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "kernc/backtesting.py",
+      "id": 163788469,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "pmorissette/bt",
+      "id": 21006723,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "pmorissette/ffn",
+      "id": 21006364,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "stefan-jansen/zipline-reloaded",
+      "id": 342145253,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quantopian/zipline",
+      "id": 6297520,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quantopian/pyfolio",
+      "id": 36670205,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quantopian/alphalens",
+      "id": 60379729,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "stefan-jansen/pyfolio-reloaded",
+      "id": 341360629,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "stefan-jansen/alphalens-reloaded",
+      "id": 341661949,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ranaroussi/quantstats",
+      "id": 184420323,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "PyPortfolio/PyPortfolioOpt",
+      "id": 135300551,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "id": 244460835,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "skfolio/skfolio",
+      "id": 731792488,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "lballabio/QuantLib",
+      "id": 48185587,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "OpenSourceRisk/Engine",
+      "id": 70231960,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "OpenGamma/Strata",
+      "id": 20882897,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "finmath/finmath-lib",
+      "id": 8832601,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "domokane/FinancePy",
+      "id": 217872093,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "vollib/py_vollib",
+      "id": 87398184,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bashtage/arch",
+      "id": 23468876,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "TA-Lib/ta-lib",
+      "id": 66132152,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "TA-Lib/ta-lib-python",
+      "id": 3810626,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bukosabino/ta",
+      "id": 116043206,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quantopian/empyrical",
+      "id": 54192943,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "freqtrade/freqtrade",
+      "id": 91629816,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jesse-ai/jesse",
+      "id": 156847937,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hummingbot/hummingbot",
+      "id": 179163124,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hummingbot/gateway",
+      "id": 593895987,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ccxt/ccxt",
+      "id": 91253698,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bmoscon/cryptofeed",
+      "id": 114459569,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bmoscon/cryptostore",
+      "id": 167632962,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "thrasher-corp/gocryptotrader",
+      "id": 25868356,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Drakkar-Software/OctoBot",
+      "id": 122682362,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Superalgos/Superalgos",
+      "id": 201978761,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "DeviaVir/zenbot",
+      "id": 62025838,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "askmike/gekko",
+      "id": 10020773,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "alpacahq/alpaca-trade-api-python",
+      "id": 124611126,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "InteractiveBrokers/tws-api-public",
+      "id": 8437619,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ib-api-reloaded/ib_async",
+      "id": 772323655,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "erdewit/ib_insync",
+      "id": 97003332,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "IbcAlpha/IBC",
+      "id": 120807705,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gnzsnz/ib-gateway-docker",
+      "id": 675229764,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quickfix/quickfix",
+      "id": 11636673,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quickfix-j/quickfixj",
+      "id": 19937094,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "quickfixgo/quickfix",
+      "id": 8825501,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "fix8/fix8",
+      "id": 3142204,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "da4089/simplefix",
+      "id": 75831836,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "nkaz001/hftbacktest",
+      "id": 528898425,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ranaroussi/yfinance",
+      "id": 91948540,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "akfamily/akshare",
+      "id": 212037775,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "waditu/tushare",
+      "id": 28904322,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "FinanceData/FinanceDataReader",
+      "id": 130222943,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dpguthrie/yahooquery",
+      "id": 227721998,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "pydata/pandas-datareader",
+      "id": 29273084,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/databento-python",
+      "id": 440757282,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/dbn",
+      "id": 530577937,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "massive-com/client-python",
+      "id": 216660192,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Nasdaq/data-link-python",
+      "id": 423862002,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dgunning/edgartools",
+      "id": 581872397,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jadchaar/sec-edgar-downloader",
+      "id": 162630779,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sec-edgar/sec-edgar",
+      "id": 14759456,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Arelle/Arelle",
+      "id": 1866915,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "libofx/libofx",
+      "id": 67738133,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "csingley/ofxtools",
+      "id": 910161,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/beanprice",
+      "id": 282466780,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/beancount",
+      "id": 266158455,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/beangulp",
+      "id": 335171417,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/fava",
+      "id": 47411155,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ledger/ledger",
+      "id": 16309,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hledgerorg/hledger",
+      "id": 9301414,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Gnucash/gnucash",
+      "id": 7966650,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "portfolio-performance/portfolio",
+      "id": 3816238,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ghostfolio/ghostfolio",
+      "id": 357671824,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "rotki/rotki",
+      "id": 123909654,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "eprbell/rp2",
+      "id": 380024351,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "eprbell/dali-rp2",
+      "id": 465909742,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "BittyTax/BittyTax",
+      "id": 183510832,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/py-clob-client",
+      "id": 455013779,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/clob-client",
+      "id": 418655420,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/agents",
+      "id": 823871392,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/ctf-exchange",
+      "id": 539647622,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gnosis/conditional-tokens-contracts",
+      "id": 158600202,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/poly-market-maker",
+      "id": 463280854,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/real-time-data-client",
+      "id": 942875438,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/builder-signing-sdk",
+      "id": 1062854511,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Polymarket/builder-relayer-client",
+      "id": 1068072689,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Polymarket/py-builder-signing-sdk",
+      "id": 1079894007,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Polymarket/py-builder-relayer-client",
+      "id": 1081395207,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Polymarket/safe-wallet-integration",
+      "id": 1120012436,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Kalshi/kalshi-starter-code-python",
+      "id": 907505902,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "manifoldmarkets/manifold",
+      "id": 433321004,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Metaculus/metaculus",
+      "id": 806782347,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gnosis/prediction-market-agent-tooling",
+      "id": 754633748,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gnosis/prediction-market-agent",
+      "id": 740388837,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sisodias/MiroFish",
+      "id": 1342250103,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "TauricResearch/TradingAgents",
+      "id": 909213664,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "AI4Finance-Foundation/FinGPT",
+      "id": 600544354,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "AI4Finance-Foundation/FinRL",
+      "id": 282653872,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "AI4Finance-Foundation/FinRobot",
+      "id": 763842651,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "HKUDS/Vibe-Trading",
+      "id": 1198306812,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "virattt/ai-hedge-fund",
+      "id": 896144595,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "virattt/dexter",
+      "id": 1076426995,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Eleven-Trading/TradeNote",
+      "id": 378445599,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "marketcalls/openalgo",
+      "id": 759901912,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "StockSharp/StockSharp",
+      "id": 27703983,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "edtechre/pybroker",
+      "id": 589385734,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "zvtvz/zvt",
+      "id": 179451497,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "paperswithbacktest/awesome-systematic-trading",
+      "id": 455982203,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "wangzhe3224/awesome-systematic-trading",
+      "id": 437352558,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "wilsonfreitas/awesome-quant",
+      "id": 43425480,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "quantlib/QuantLib-SWIG",
+      "id": 51711967,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "QuantConnect/lean-cli",
+      "id": 334775686,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "QuantConnect/Lean.DataSource.Polygon",
+      "id": 697335008,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "duckdb/duckdb",
+      "id": 138754790,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jupyterlab/jupyterlab",
+      "id": 60374819,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "marimo-team/marimo",
+      "id": 678526156,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jupytext/jupytext",
+      "id": 137444487,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "csingley/ibflex",
+      "id": 117591796,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "camel-ai/oasis",
+      "id": 887684103,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/ts-sdk",
+      "id": 1199694645,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/py-sdk",
+      "id": 1228704556,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "marcuswang6/stock-top-papers",
+      "id": 688282987,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "GeneBO98/tradetally",
+      "id": 1009651373,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Cursivez/journalit",
+      "id": 1010395964,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jettbrains/-L-",
+      "id": 218151890,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hugodemenez/deltalytix",
+      "id": 850416509,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Bilovodskyi/ai-trading-journal",
+      "id": 914676048,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "mransbro/tradingjournal",
+      "id": 453138852,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "kansoku-trade/kansoku",
+      "id": 1279426975,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "OnlyTerp/papertrench",
+      "id": 1319277794,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Simple-Rich-Trading-Journal/Simple-Rich-Trading-Journal",
+      "id": 812329566,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "JokerJohn/openclaw-autotrader",
+      "id": 1178536012,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Phya123/eml-trading-bot-clean",
+      "id": 1121381313,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "id": 1131513930,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Fincept-Corporation/FinceptTerminal",
+      "id": 849406496,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "JerBouma/FinanceDatabase",
+      "id": 333850832,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jaungiers/LSTM-Neural-Network-for-Time-Series-Prediction",
+      "id": 76793704,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "atilaahmettaner/tradingview-mcp",
+      "id": 1034736943,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "matplotlib/mplfinance",
+      "id": 226144726,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "questdb/questdb",
+      "id": 19257422,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "simonlin1212/a-stock-data",
+      "id": 1235056479,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "JerBouma/FinanceToolkit",
+      "id": 180137089,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "1nchaos/adata",
+      "id": 644231758,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "QuantDreamGit/HFT-LimitOrderBook",
+      "id": 1103072233,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Alparse/databento-dotnet",
+      "id": 1097394161,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "nblythe/dbn",
+      "id": 1103242443,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "tbeason/DatabentoBinaryEncoding.jl",
+      "id": 1000339917,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "vchernoy/mbo-orderbook",
+      "id": 1103056086,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ab2163/market-data-streamer",
+      "id": 1094409683,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "azizuysal/dbn-cache",
+      "id": 1125592554,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "UFund-Me/Qbot",
+      "id": 569509049,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "xbtlin/ai-berkshire",
+      "id": 1203777920,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "simonlin1212/TradingAgents-astock",
+      "id": 1237174940,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "virattt/ai-financial-agent",
+      "id": 906406820,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Hvass-Labs/Finance-Research",
+      "id": 141877897,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "cn-vhql/FactorHub",
+      "id": 1069816384,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "stefan-jansen/machine-learning-for-trading",
+      "id": 132754148,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "rsvp/fecon235",
+      "id": 26385494,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "z4ir3/finance-courses",
+      "id": 214157519,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "JayabharathP/The-Python-Mega-Course-Build-10-Real-World-Applications-",
+      "id": 200508401,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Deffro/Data-Science-Portfolio",
+      "id": 175027643,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "McCloud77/Portfolio-Construction-and-Analysis",
+      "id": 202749572,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "nitsuga1986/machine-learning-nd-portfolio",
+      "id": 176404370,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "blckswmngbrd/PyPortfolioOptimizationNotebooks",
+      "id": 146108078,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Draichi/Portfolio-Management-list",
+      "id": 170947286,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "mhallsmoore/qstrader",
+      "id": 47397646,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "AlgoTraders/stock-analysis-engine",
+      "id": 149031098,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "santoshlite/EigenLedger",
+      "id": 345647829,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "josephchenhk/qtrader",
+      "id": 295894890,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "fbertram/TuringTrader",
+      "id": 195689135,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "lukstei/trading-backtest",
+      "id": 49152041,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ryantcullen/stock-bot",
+      "id": 320710006,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "myhhub/stock",
+      "id": 616738094,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "OpenByteInc/QuantDinger",
+      "id": 1124295269,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Koukyosyumei/h5i-db",
+      "id": 1308323775,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "rajmaurya0904/bhav",
+      "id": 1288919575,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "andywarui/xaubot",
+      "id": 1118668480,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "joemccann/doob",
+      "id": 1181087811,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "edwardclewer/tick_backtest",
+      "id": 1102016209,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "shaojintian/crypto_backtesting",
+      "id": 920639636,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "DRose-Devs/zonk",
+      "id": 1336961709,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "greybeard-code/gbBacktester",
+      "id": 1323996944,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "s-brez/trading-server",
+      "id": 173863164,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ArturSepp/QuantInvestStrats",
+      "id": 583712573,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "convexfi/riskparity.py",
+      "id": 196768103,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "chibui191/bitcoin_volatility_forecasting",
+      "id": 387236715,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "fortitudo-tech/fortitudo.tech",
+      "id": 417058394,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hudson-and-thames/mlfinlab",
+      "id": 170544934,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "tradytics/eiten",
+      "id": 293687812,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "osqp/osqp",
+      "id": 69313892,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "firmai/machine-learning-asset-management",
+      "id": 196379842,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ManojKumarPatnaik/Major-project-list",
+      "id": 403036914,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hiteshsuthar01/OK-",
+      "id": 484751748,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ahmadjoya/generate-password-lite",
+      "id": 562951762,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Mdshobu/Liberty-House-Club-Whitepaper",
+      "id": 513253735,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Wallace-Best/best",
+      "id": 16673254,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Gabriel1231n2j3n/hacks-para-krunker",
+      "id": 334350040,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "N30nHaCkZ/linux",
+      "id": 32324932,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "asad70/Options-Max-Pain-Calculator",
+      "id": 446284806,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "muditbhargava66/High-Frequency-Trading-FPGA-System",
+      "id": 771909475,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Thomvanoorschot/zigma",
+      "id": 949069291,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Rastaman4e/-1",
+      "id": 358678226,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ztomsy/ztom",
+      "id": 184413431,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "uberdeveloper/omspy",
+      "id": 415345233,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "abiodunaremu/openea",
+      "id": 936845047,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "nvxtien/emporia",
+      "id": 1312971389,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ferrumfix/ferrumfix",
+      "id": 238081759,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "StratCraftsAI/NexusFix",
+      "id": 1139441042,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "maxim2266/FullFIX",
+      "id": 41417780,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "arthurlm/quickfix-rs",
+      "id": 716256692,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "imandra-ai/fix-engine",
+      "id": 75571156,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "logotype/fixparser",
+      "id": 41256780,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "co11ter/goFAST",
+      "id": 141422278,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "robaho/go-trader",
+      "id": 146024974,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "fintechees/Expert-Advisor-Studio",
+      "id": 171330046,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "paritytrading/philadelphia",
+      "id": 35380608,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gsitgithub/SubMicroTrading",
+      "id": 40910483,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ettec/open-trading-platform",
+      "id": 224417961,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "felipewind/fix-trading-simulator",
+      "id": 311175967,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "fabston/TradingView-Webhook-Bot",
+      "id": 257615431,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "robswc/tradingview-webhooks-bot",
+      "id": 203641226,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "aarora4/Awesome-Prediction-Market-Tools",
+      "id": 1107240622,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "alleyway/add-tradingview-alerts-tool",
+      "id": 299269406,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts",
+      "id": 284509910,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "hackingthemarkets/tradingview-binance-strategy-alert-webhook",
+      "id": 293323747,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "just-nilux/awesome-tradingview",
+      "id": 294439951,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "soranoo/TradingView-Free-Webhook-Alerts",
+      "id": 456580172,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+      "id": 63839029,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "danpaquin/coinbasepro-python",
+      "id": 63375309,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Crypto-toolbox/HFT-Orderbook",
+      "id": 98400312,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "chronoxor/CppTrader",
+      "id": 97720792,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "uniswap-python/uniswap-python",
+      "id": 163547548,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sadighian/crypto-rl",
+      "id": 138102346,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "tardis-dev/tardis-node",
+      "id": 191725387,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "mihailgaberov/orderbook",
+      "id": 399750427,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "tardis-dev/tardis-machine",
+      "id": 191731001,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "binance/binance-websocket-examples",
+      "id": 275789187,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "adrianhajdin/coinpulse",
+      "id": 1121246873,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "jnidzwetzki/bitfinex-v2-wss-api-java",
+      "id": 115510408,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "brucify/orderly",
+      "id": 491175256,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "SpiralDevelopment/crypto-hft-data",
+      "id": 281109676,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "rmbell09-lang/tradesight",
+      "id": 1185616788,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "jrodolfo/solace",
+      "id": 925260884,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "OnePunchMonk/TradeRecon",
+      "id": 1026838955,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "AshishTalpada/samvid-trading-core",
+      "id": 1222060311,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "manynames3/brokerops-platform",
+      "id": 1240448690,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Prashant-Panicker/low-latency-trading-engine",
+      "id": 1342124730,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Yun-0000/opticycle",
+      "id": 1350151329,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Alphalokii/Nexus-trading-intelligence-network-",
+      "id": 1173177710,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "EliteQuant/EliteQuant",
+      "id": 111503597,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "letianzj/QuantResearch",
+      "id": 275286502,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "fmilthaler/FinQuant",
+      "id": 166674659,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "uebber/ibkr-german-tax-declaration-engine",
+      "id": 990547458,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Esonhugh/ibkr-trade-analyzer",
+      "id": 1233205365,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gabbersepp/ib-flex-reader",
+      "id": 153567615,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "spawnaga/FlexTrader",
+      "id": 590697396,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "clifton/ib-flex",
+      "id": 1133136461,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "drkthng/ibkr2kap",
+      "id": 1181544354,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "oh-rid/claude-code-plugin-ib",
+      "id": 1249155671,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "LuxAlgo/trade-journal",
+      "id": 1345440309,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "gitricko/tradenote-selfhost",
+      "id": 1013510273,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "madmatt112/tradr",
+      "id": 1315197623,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "G-OTW/OpenTraderWorld",
+      "id": 1282273350,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sinhong2011/TraderMemos",
+      "id": 1298841209,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "khata-dev/khata",
+      "id": 1215907349,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "anvilfilbert/Auto-Crypto-Tradingjournal",
+      "id": 1230850495,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Jeanorochka/julia_tradediary_analysis",
+      "id": 1365247505,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Jeanorochka/moex-trade-diary",
+      "id": 1365192073,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Eleven-Trading/jtrade",
+      "id": 328315997,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bytePatrol/Market_Companion",
+      "id": 1149513786,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hamed-nasrollahi/HxTradeHelper",
+      "id": 1135610787,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "roberthopman/trade-tracking-and-journaling",
+      "id": 1157829929,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Civil-Cucumber/TradingViewDataAssembler_Public",
+      "id": 607316749,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "leionion/ai-trading-journal-audit-tool",
+      "id": 1179800829,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "simonro/Trading-Journal-AI",
+      "id": 1359591685,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "bsteps/zerodha-fno-trade-journal",
+      "id": 1012777720,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "santiagodata/trading_journal_dashboard_pro",
+      "id": 1137705774,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "rmcmillan34/edge-journal",
+      "id": 1074052423,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "hightechdev518/CSV-Based-Trading-Journal-Dashboard",
+      "id": 1195664971,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "chriswhong/plutoplus",
+      "id": 36095441,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Cryptoaj-hack/DFDTOKEN",
+      "id": 343352350,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "SE-Design/FAQ.md",
+      "id": 74291799,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "SwedbankAB/Swedbank",
+      "id": 512097302,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "NYCPlanning/labs-tax-lot-selector",
+      "id": 96819746,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "chriswhong/paint-the-town",
+      "id": 185247505,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "THEFEASTCOIN/FEEDN",
+      "id": 381503851,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "andrewfowl/Awesome_Technical_Accounting",
+      "id": 1272734392,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "buddies2705/awesome-crypto-tax",
+      "id": 1232753630,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jorgedihe/calfifo",
+      "id": 1253209334,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ncreighton/02642164-cryptocurrency-tax-calculator-",
+      "id": 1226123009,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "jseutter/ofxparse",
+      "id": 235672,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "aclindsa/ofxgo",
+      "id": 45782564,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "annacruz/ofx",
+      "id": 368790,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "asgrim/ofxparser",
+      "id": 10301821,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "chilts/node-ofx",
+      "id": 6088199,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "aasmith/ofx-parser",
+      "id": 47769,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "sebastienrousseau/bankstatementparser",
+      "id": 716009113,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "leonardomelosantos/ofxparser.net",
+      "id": 36581808,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "je-suis-tm/quant-trading",
+      "id": 127918080,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "georgezouq/awesome-ai-in-finance",
+      "id": 146531619,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "thuquant/awesome-quant",
+      "id": 58469357,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "grananqvist/Awesome-Quant-Machine-Learning-Trading",
+      "id": 156283359,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "krishnakumarsekar/awesome-quantum-machine-learning",
+      "id": 89471385,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "GoogleCloudPlatform/market-data-transcoder",
+      "id": 553238480,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sduprey/optimal_transaction_execution",
+      "id": 16837587,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "bbalouki/itchcpp",
+      "id": 1081976698,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "PIYUSH-KUMAR1809/market-data-parser",
+      "id": 1220189908,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+      "id": 153149113,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "nethakah/tick2trade",
+      "id": 1284295158,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+      "id": 153152039,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "lim-james/ITCH-Order-Book",
+      "id": 1262090753,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "AndrewAMD/SierraChartZorroPlugin",
+      "id": 149489239,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "QANTau/DTC-Client",
+      "id": 136256175,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "vbmithr/poloniex",
+      "id": 89845828,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "puneat/SierraCharts.DTC.NET",
+      "id": 669554703,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "106968687/DTC-SC",
+      "id": 240872282,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "pschleger/dtcc-trade-reporting",
+      "id": 1028370414,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "AndreuCrespo/trading-brain",
+      "id": 1254555188,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "seanpray/dtc-py",
+      "id": 1116233221,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "FIXTradingCommunity/FIXML",
+      "id": 39651148,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "sarxos/fixml-converter",
+      "id": 3080782,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "kupl/FixML",
+      "id": 142087404,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "UBC-MDS-2023-24/fixml",
+      "id": 791553396,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "FIXTradingCommunity/fixconv",
+      "id": 48504444,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Allaye/fixml",
+      "id": 597787752,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Alek-S/Define-FIXML",
+      "id": 49613958,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "abdelkaderamar/fix2xml",
+      "id": 125433874,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "isaacharrisholt/quiffen",
+      "id": 377167843,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "spmason/qif2json",
+      "id": 5143017,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "saltedge/salt-parser",
+      "id": 43501284,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "codito/bout",
+      "id": 115207040,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dandrake/betterment-pdf-to-qif",
+      "id": 39156764,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "antoinejaussoin/rust-qif-parser",
+      "id": 278689748,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "danielvlopes/quicken",
+      "id": 683730,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": true
+    },
+    {
+      "full_name": "acw/qif",
+      "id": 80264349,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "lukerosiak/pysec",
+      "id": 9861504,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "eliangcs/pystock-crawler",
+      "id": 12506377,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "tooksoi/ScraXBRL",
+      "id": 53261275,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "greedo/python-xbrl",
+      "id": 22587015,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "manusimidt/py-xbrl",
+      "id": 330915618,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "BuffettCode/edinet_xbrl",
+      "id": 118321003,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "emilycoco/parse-xbrl",
+      "id": 52418118,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "matthelmer/edinet-tools",
+      "id": 840895544,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "matdue/ibkr-steuerrechner",
+      "id": 655272410,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "aurelschwitter/ibkr-to-etax",
+      "id": 1140120103,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Marfusios/premium-tracker",
+      "id": 1039644002,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "westonplatter/ngv_reports_ibkr",
+      "id": 453508959,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "almog/IBKR-to-1325-form",
+      "id": 646563988,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "manojVivek/itr-schedule-fa-from-ibkr",
+      "id": 1295333230,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "joaovictornsv/ibkr-ir",
+      "id": 1331431940,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/rs-clob-client",
+      "id": 1112331307,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dev-polymarket/clob-client-v2",
+      "id": 1228664213,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jtranq/polyfill-rs",
+      "id": 1024570714,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "qualiaenjoyer/polymarket-apis",
+      "id": 918420403,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "TechieBoy/polymarket-rs-client",
+      "id": 894022902,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "0xNetuser/Polymarket-golang",
+      "id": 1119662897,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "0-don/polymarket-wallet-recovery",
+      "id": 1131442596,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "SiegfriedBz/Bet2Gether-DApp",
+      "id": 1085036721,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "wgw31king/binary-prediction-market-mvp",
+      "id": 1228685738,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "GeiserX/DeclaRenta",
+      "id": 1207185051,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "volodymyr-kovtun/Pitly",
+      "id": 1181149420,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "stadlmax/pyFIFOtax",
+      "id": 595093265,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jbatalle/queds",
+      "id": 477860600,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jaantaponen/verotunkki",
+      "id": 436745090,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "SkeLLLa/klopit",
+      "id": 1208528657,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "dTaxLab/dtax",
+      "id": 1179407258,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Lastoneparis/awesome-bloomberg-alternatives",
+      "id": 1213649878,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "patl4588/bloomberg-terminal-alternative",
+      "id": 1214100066,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "rubayetrezwan/purpleberg-terminal",
+      "id": 1182472431,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "GiridharSalana/omniscient",
+      "id": 1208541168,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "SauravLamba17/God-sVision-",
+      "id": 1289162529,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "alexbernal0/OBQ_AI_Platform",
+      "id": 1202353535,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "harrybrar666/harry666",
+      "id": 1234357816,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ultimatesimp/Cloneberg-Terminal",
+      "id": 1016772021,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "x1xhlol/market-ai-resolution",
+      "id": 1127940382,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "SoraOracle/SoraOracle",
+      "id": 1079188094,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "defi-ape/polymarket-kalshi-arbitrage-bot",
+      "id": 1253061374,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "kobita1122/decentralized-prediction-market",
+      "id": 1137407469,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "drydocs/tholos",
+      "id": 1290254217,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "PaulieB14/graph-polymarket-mcp",
+      "id": 1169627448,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Poly-market/Polymarket",
+      "id": 1085289747,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "solutions-plug/predictIQ",
+      "id": 1160965875,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "SOYJUN/FTP-implement-based-on-UDP",
+      "id": 33744517,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "nyaundid/EC2-AWS-AND-SHELL",
+      "id": 173417306,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "Teppo652/poll",
+      "id": 239883756,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "geeyancode/TriviaGame",
+      "id": 171145532,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "jagnoor/TriviaGame_JAG",
+      "id": 136394552,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "jjannross/workout-tracker",
+      "id": 352149926,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "rookie-22/TriviaGame",
+      "id": 162184519,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "databento/databento-rs",
+      "id": 653316826,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/databento-cpp",
+      "id": 539286517,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/secdef-parser",
+      "id": 263393477,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/epoch",
+      "id": 1054483755,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "databento/.github",
+      "id": 727210448,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": false
+    },
+    {
+      "full_name": "beancount/smart_importer",
+      "id": 112750160,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/beancount-mode",
+      "id": 303555018,
+      "bank_status": "NEW",
+      "readme_read": false,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/ledger2beancount",
+      "id": 125626223,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "beancount/beangrow",
+      "id": 333634558,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ib-api-reloaded/memorial",
+      "id": 773595216,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "ib-api-reloaded/eventkit",
+      "id": 842727217,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "ib-api-reloaded/nest_asyncio",
+      "id": 842727587,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Polymarket/polymarket-cli",
+      "id": 1165733654,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "TheQuantum-Dev/journedge",
+      "id": 1165121326,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "myc0576/SmartMoney-Cub",
+      "id": 1279923114,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "leionion/liquidation-cluster-signal-scraper",
+      "id": 1180037299,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "barter-rs/barter-rs",
+      "id": 548473954,
+      "bank_status": "ALREADY IN THE BANK",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "wingfoil-io/wingfoil",
+      "id": 1058247783,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "jensnesten/rust_bt",
+      "id": 929069000,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "MathisWellmann/lfest-rs",
+      "id": 257867196,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "calumrussell/rotala",
+      "id": 400827447,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "wickra-lib/wickra",
+      "id": 1245836208,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "Verdenroz/finance-query",
+      "id": 783100934,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "kuestcom/prediction-market",
+      "id": 1028651481,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "lawmaster10/howcryptoworksbook",
+      "id": 1048334045,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    },
+    {
+      "full_name": "nahrek/polyledger",
+      "id": 1355017800,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "microsoft/0xDeCA10B",
+      "id": 181561897,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+      "id": 1066504944,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "YichengYang-Ethan/oracle3",
+      "id": 1169524736,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "brucify/revolutax",
+      "id": 487241948,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "z4dri05/bitpanda_tax",
+      "id": 1243489031,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "wetfish/eztaxes",
+      "id": 1183637900,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "YizhouFan/CryCal",
+      "id": 886141842,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "umutto/crypto-tax",
+      "id": 396335432,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": true
+    },
+    {
+      "full_name": "asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+      "id": 1009832539,
+      "bank_status": "NEW",
+      "readme_read": true,
+      "license_files_read": false
+    }
+  ]
+}
