@@ -1,0 +1,158 @@
+{
+  "audit_id": "R078",
+  "requested_full_name": "openlawteam/openlaw-core",
+  "observed_at": "2026-09-13T16:10:51.593721+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "openlawteam/openlaw-core",
+  "html_url": "https://github.com/openlawteam/openlaw-core",
+  "description": "Shared Scala libraries for the OpenLaw project.",
+  "stargazers_count": 111,
+  "forks_count": 23,
+  "default_branch": "master",
+  "archived": true,
+  "disabled": false,
+  "created_at": "2018-04-30T14:56:52Z",
+  "updated_at": "2026-07-24T14:03:04Z",
+  "pushed_at": "2021-08-03T13:11:28Z",
+  "size": 1722,
+  "open_issues_count": 12,
+  "topics": [
+    "ethereum",
+    "flow",
+    "legaltech",
+    "library",
+    "markup-language",
+    "oracles",
+    "parser",
+    "scala",
+    "smart-contracts",
+    "vm",
+    "webpack"
+  ],
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "revision": "4abddddcfd5e9d370d47073e416695945c4a36d5",
+  "last_commit": "2021-08-03T13:11:27Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/openlawteam/openlaw-core",
+    "commit": "https://github.com/openlawteam/openlaw-core/commit/4abddddcfd5e9d370d47073e416695945c4a36d5"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "40bda2557f778abed664e79eca09e7219060684b8db9a3856b5d5cf3c34d8804",
+    "text": "# Shared Scala libraries for the OpenLaw project\n\n[![CodeFactor](https://www.codefactor.io/repository/github/openlawteam/openlaw-core/badge)](https://www.codefactor.io/repository/github/openlawteam/openlaw-core)\n\n## Getting started\n\nIf you want to learn more about this library, please read our [OpenLaw core overview](https://docs.openlaw.io/openlaw-core/).\n\nIf you want to use OpenLaw core in your Scala project, here is how to add it to your sbt project:\n\n```scala\n// First add our repository\nresolvers += \"Openlaw core\" at \"https://dl.bintray.com/openlawos/openlaw-core\"\n\n//add the dependency\nlibraryDependencies += \"org.openlaw\" %% \"openlaw-core\" % \"<last version>\"\n```\n\n## Contributing\n\nWant to get involved? See detailed information about contributing [here](docs/CONTRIBUTING.md)!\n\n### Versioning\n\nProject versioning is automatically maintained from [Semantic Versioning](https://semver.org/spec/v2.0.0.html) formatted tags via `sbt-git`.\n\n<small>If the most recent release was versioned `v1.2.3`, you may notice your local version is something like `1.2.3-7-a1b2c3d`. This means you are `7` commits past release `1.2.3`, and the latest commit was SHA `a1b2c3d`.</small>\n\n### Code Formatting\n\nWe adhere to standardized code formatting via\n[scalafmt](https://scalameta.org/scalafmt/). All PRs will be automatically\nchecked for adherence. If they do not adhere to standardized formatting, they\nshould be corrected prior to being merged.\n\nThe best way is let your editor handle everything for you everytime you hit\nsave, see the [Scalafmt Installation\nDocs](https://scalameta.org/scalafmt/docs/installation.html) or the OpenLaw\ndeveloper setup documentation.\n\nTo manually verify, can run `make lint-style` to check and `make lint-style-fix`\nto automatically repair all files.\n\n### Release Process\n\nFor project maintainers, our current release process is documented [here](docs/ReleaseProcess.md).\n\n## License\n\nCopyright 2019 Aaron Wright, David Roon, and ConsenSys AG.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n",
+    "characters": 2499,
+    "source_url": "https://github.com/openlawteam/openlaw-core/blob/4abddddcfd5e9d370d47073e416695945c4a36d5/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "text": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "characters": 11357,
+    "source_url": "https://github.com/openlawteam/openlaw-core/blob/4abddddcfd5e9d370d47073e416695945c4a36d5/LICENSE",
+    "detected": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "adridadou",
+      "contributions": 125
+    },
+    {
+      "login": "outkaj",
+      "contributions": 81
+    },
+    {
+      "login": "craig-openlaw",
+      "contributions": 67
+    },
+    {
+      "login": "jdville03",
+      "contributions": 25
+    },
+    {
+      "login": "fforbeck",
+      "contributions": 13
+    },
+    {
+      "login": "Happy0",
+      "contributions": 8
+    },
+    {
+      "login": "eyalperry88",
+      "contributions": 3
+    },
+    {
+      "login": "craigwblake",
+      "contributions": 2
+    },
+    {
+      "login": "mroth",
+      "contributions": 2
+    },
+    {
+      "login": "mingfang",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 276,
+      "title": "Security Vulnerability",
+      "state": "open",
+      "created_at": "2022-11-26T21:27:45Z",
+      "updated_at": "2022-11-26T21:27:45Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/openlawteam/openlaw-core/issues/276",
+      "author_association": "NONE"
+    },
+    {
+      "number": 272,
+      "title": "Is there any markup tag like ethereumcall but can call other blockchain-based contract?",
+      "state": "closed",
+      "created_at": "2021-03-30T12:56:59Z",
+      "updated_at": "2021-12-01T03:43:23Z",
+      "closed_at": "2021-12-01T03:43:23Z",
+      "comments": 0,
+      "html_url": "https://github.com/openlawteam/openlaw-core/issues/272",
+      "author_association": "NONE"
+    },
+    {
+      "number": 271,
+      "title": "can not invite users to instance ",
+      "state": "open",
+      "created_at": "2021-01-13T15:59:37Z",
+      "updated_at": "2021-01-13T15:59:37Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/openlawteam/openlaw-core/issues/271",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

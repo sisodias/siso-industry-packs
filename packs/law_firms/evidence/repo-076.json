@@ -1,0 +1,142 @@
+{
+  "audit_id": "R076",
+  "requested_full_name": "accordproject/ergo",
+  "observed_at": "2026-09-13T16:10:51.593721+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "accordproject/ergo",
+  "html_url": "https://github.com/accordproject/ergo",
+  "description": "Programming Language for Smart Legal Contracts",
+  "stargazers_count": 170,
+  "forks_count": 55,
+  "default_branch": "main",
+  "archived": true,
+  "disabled": false,
+  "created_at": "2018-02-06T14:40:37Z",
+  "updated_at": "2026-09-04T00:30:54Z",
+  "pushed_at": "2023-04-09T14:30:50Z",
+  "size": 90926,
+  "open_issues_count": 49,
+  "topics": [
+    "accord-project",
+    "blockchain",
+    "corda",
+    "digital-asset",
+    "ergo",
+    "ergo-compiler",
+    "ethereum",
+    "hacktoberfest",
+    "hyperledger",
+    "javascript",
+    "language",
+    "legal",
+    "legal-engineering",
+    "legaltech",
+    "smart-contracts",
+    "tezos",
+    "verification"
+  ],
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "revision": "5b69ad377bbe7b18a461bda42967b70ecb075c54",
+  "last_commit": "2022-10-14T15:34:00Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/accordproject/ergo",
+    "commit": "https://github.com/accordproject/ergo/commit/5b69ad377bbe7b18a461bda42967b70ecb075c54"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "9d89c9a6357c391a02b937b079914ff2ae845908412554eac0def48e35f47926",
+    "text": "<p align=\"center\">\n  <a href=\"https://www.accordproject.org/projects/ergo\">\n    <img src=\"./ergo.png\" alt=\"Ergo logo\">\n  </a>\n</p>\n\n<p align=\"center\">\n     <a href=\"https://github.com/accordproject/ergo/actions/workflows/build.yml\"><img src=\"https://github.com/accordproject/ergo/actions/workflows/build.yml/badge.svg\" alt=\"Build Status\"></a>\n  <a href=\"https://circleci.com/gh/accordproject/ergo\"><img src=\"https://circleci.com/gh/accordproject/ergo.svg?style=shield\" alt=\"Build Mechanization Status\"></a>\n  <a href=\"https://coveralls.io/github/accordproject/ergo?branch=master\"><img src=\"https://coveralls.io/repos/github/accordproject/ergo/badge.svg?branch=master\" alt=\"Coverage Status\"></a>\n  <a href=\"./LICENSE\"><img src=\"https://img.shields.io/github/license/accordproject/ergo?color=bright-green\" alt=\"GitHub license\"></a>\n  <a href=\"https://www.npmjs.com/package/@accordproject/ergo-cli\"><img src=\"https://img.shields.io/npm/dm/@accordproject/ergo-cli\" alt=\"downloads\"></a>\n  <a href=\"https://badge.fury.io/js/%40accordproject%2Fergo-cli\"><img src=\"https://badge.fury.io/js/%40accordproject%2Fergo-cli.svg\" alt=\"npm version\"></a>\n  <a href=\"https://discord.gg/Zm99SKhhtA/\">\n    <img src=\"https://img.shields.io/badge/Accord%20Project-Join%20Discord-blue\" alt=\"Join the Accord Project Discord Server\"/>\n  </a>\n</p>\n\n## Introduction\n\nThis is the source code for the Ergo compiler. Ergo is the [Accord Project][apmain] language for Smart Legal Contracts.\n\nThe Ergo compiler is distributed as an [npm package][npmpkg]. \n\nThe Ergo compiler is written using the [Coq][coq] proof assistant, with parsing and support code written in [OCaml][OCaml]. It makes extensive use of the [Q*cert compiler][Qcert] for code generation and type checking.\n\nBoth the Ergo language and its compiler are in early development phase. If you would like to build from source or to contribute, consult the [DEVELOPERS][developers] file.\n\n## Try Ergo online\n\nIf you want to take a peek at Ergo without installing anything, check out the interactive [REPL][REPL] (read-eval-print-loop) for Ergo stand-alone, or the [Accord Project Template Studio][studio] which illustrates Ergo in Accord Project templates.\n\n## Documentation\n\nThe most recent Ergo documentation is in the [Ergo Language Guide][docergo].\n\n## Structure of the Code Repository\n\nTop level repository (ergo), with sub packages. Each sub-package is published as an independent npm module using `lerna`:\n* [ergo-cli](https://github.com/accordproject/ergo/tree/master/packages/ergo-cli) : Command line interface for the Ergo compiler\n* [ergo-compiler](https://github.com/accordproject/ergo/tree/master/packages/ergo-compiler) : Core classes for the Ergo compiler\n* [ergo-engine](https://github.com/accordproject/ergo/tree/master/packages/ergo-engine) : A Node.js VM based execution engine for Ergo\n* [ergo-test](https://github.com/accordproject/ergo/tree/master/packages/ergo-test) : Cucumber based testing for Ergo\n\n## Installation\n\nThe easiest way to install Ergo is as a [Node.js][nodejs] package. Once you have Node.js installed on your machine, you can get the Ergo compiler and command-line using the Node.js package manager by typing the following in a terminal:\n\n```sh\n$ npm install -g @accordproject/ergo-cli\n```\n\nThis will install the Ergo command-line (`ergo`) and Read-Eval-Print-Loop (`ergotop`). Those will allow you to create, test and compile Ergo contracts. You can check your installed version by typing the following in a terminal:\n\n```sh\n$ ergo --version\n```\n\nOr to get command line help:\n\n```sh\n$ ergo --help\nergo <command>\n\nCommands:\n  ergo draft       create a contract text from data\n  ergo trigger     send a request to the contract\n  ergo invoke      invoke a clause of the contract\n  ergo initialize  initialize the state for a contract\n  ergo compile     compile a contract\n\nOptions:\n  --help         Show help                                             [boolean]\n  --version      Show version number                                   [boolean]\n  --verbose, -v                                                 [default: false]\n```\n\n### Create contract text\n\nTo create a contract text from a contract:\n\n```sh\n$ ergo draft --template ./tests/volumediscount --data ./tests/volumediscount/data.json\n```\n\n### Initialize a contract\n\nTo obtain the initial state of the contract:\n\n```sh\n$ ergo initialize --template ./tests/volumediscount --data ./tests/volumediscount/data.json\n06:40:29 - info:\n```\n\n### Send a request to a contract\n\nTo send a request to a contract:\n\n```sh\n$ ergo trigger --template ./tests/volumediscount --data ./tests/volumediscount/data.json --request ./tests/volumediscount/request.json --state ./tests/volumediscount/state.json\n06:40:01 - info:\n{\n  \"clause\": \"orgXaccordprojectXvolumediscountXVolumeDiscount\",\n  \"request\": {\n    \"$class\": \"org.accordproject.volumediscount.VolumeDiscountRequest\",\n    \"netAnnualChargeVolume\": 10.4\n  },\n  \"response\": {\n    \"$class\": \"org.accordproject.volumediscount.VolumeDiscountResponse\",\n    \"discountRate\": 2.8,\n    \"transactionId\": \"13fa7cb6-03fc-4fd8-8e12-9a85ac8d5eb7\",\n    \"timestamp\": \"2019-10-12T23:56:33.688Z\"\n  },\n  \"state\": {\n    \"$class\": \"org.accordproject.cicero.contract.AccordContractState\",\n    \"stateId\": \"1\"\n  },\n  \"emit\": []\n}\n```\n\n### Invoke a clause\n\nTo invoke a specific clause of the contract:\n\n```sh\n$ ergo invoke --template ./tests/volumediscount --clauseName volumediscount --data ./tests/volumediscount/data.json --params ./tests/volumediscount/params.json --state ./tests/volumediscount/state.json\n```\n\n### Compile a contract\n\nTo compile your first Ergo contract to JavaScript:\n\n```sh\n$ ergo compile ./tests/volumediscount/model/model.cto ./tests/volumediscount/logic/logic.ergo\nProcessing file: ./tests/volumediscount/logic.ergo -- compiled to: ./tests/volumediscount/logic.js\n```\n\nBy default, Ergo compiles to JavaScript for execution. You can inspect\nthe compiled JavaScript code in `./tests/volumediscount/logic.js`\n\n\n[npmpkg]: https://www.npmjs.com/package/@accordproject/ergo-cli\n[coq]: https://coq.inria.fr\n[OCaml]: https://ocaml.org\n[Qcert]: https://querycert.github.io\n[REPL]: https://ergorepl.netlify.com\n[studio]: https://studio.accordproject.org\n[nodejs]: https://nodejs.org/\n\n---\n\n<p align=\"center\">\n  <a href=\"https://www.accordproject.org/\">\n    <img src=\"APLogo.png\" alt=\"Accord Project Logo\" width=\"400\" />\n  </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"./LICENSE\">\n    <img src=\"https://img.shields.io/github/license/accordproject/cicero?color=bright-green\" alt=\"GitHub license\">\n  </a>\n  <a href=\"https://discord.gg/Zm99SKhhtA\">\n    <img src=\"https://img.shields.io/badge/Accord%20Project-Join%20Discord-blue\" alt=\"Join the Accord Project Discord Server\"/>\n  </a>\n</p>\n\nAccord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].\n\n## Learn More About Accord Project\n\n### [Overview][apmain]\n\n### [Documentation][apdoc]\n\n## Contributing\n\nThe Accord Project technology is being developed as open source. All the software packages are being actively maintained on GitHub and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.\n\nFind out what’s coming on our [blog][apblog].\n\nJoin the Accord Project Technology Working Group [Discord Server][apdiscord] to get involved!\n\nFor code contributions, read our [CONTRIBUTING guide][contributing] and information for [DEVELOPERS][developers].\n\n### README Badge\n\nUsing Accord Project? Add a README badge to let everyone know: [![accord project](https://img.shields.io/badge/powered%20by-accord%20project-19C6C8.svg)](https://www.accordproject.org/)\n\n```\n[![accord project](https://img.shields.io/badge/powered%20by-accord%20project-19C6C8.svg)](https://www.accordproject.org/)\n```\n\n## License <a name=\"license\"></a>\n\nAccord Project source code files are made available under the [Apache License, Version 2.0][apache].\nAccord Project documentation files are made available under the [Creative Commons Attribution 4.0 International License][creativecommons] (CC-BY-4.0).\n\nCopyright 2018-2019 Clause, Inc. All trademarks are the property of their respective owners. See [LF Projects Trademark Policy](https://lfprojects.org/policies/trademark-policy/).\n\n[linuxfound]: https://www.linuxfoundation.org\n[charter]: https://github.com/accordproject/governance/blob/master/accord-project-technical-charter.md\n[apmain]: https://accordproject.org/ \n[apblog]: https://medium.com/@accordhq\n[apdoc]: https://docs.accordproject.org/\n[apdiscord]: https://discord.gg/Zm99SKhhtA \n\n[contributing]: https://github.com/accordproject/ergo/blob/master/CONTRIBUTING.md\n[developers]: https://github.com/accordproject/ergo/blob/master/DEVELOPERS.md\n\n[apache]: https://github.com/accordproject/ergo/blob/master/LICENSE\n[creativecommons]: http://creativecommons.org/licenses/by/4.0/",
+    "characters": 9061,
+    "source_url": "https://github.com/accordproject/ergo/blob/5b69ad377bbe7b18a461bda42967b70ecb075c54/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "text": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "characters": 11357,
+    "source_url": "https://github.com/accordproject/ergo/blob/5b69ad377bbe7b18a461bda42967b70ecb075c54/LICENSE",
+    "detected": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "jeromesimeon",
+      "contributions": 799
+    },
+    {
+      "login": "kach",
+      "contributions": 170
+    },
+    {
+      "login": "mttrbrts",
+      "contributions": 139
+    },
+    {
+      "login": "dselman",
+      "contributions": 20
+    },
+    {
+      "login": "jolanglinais",
+      "contributions": 20
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 13
+    },
+    {
+      "login": "jbesq347",
+      "contributions": 10
+    },
+    {
+      "login": "peterhunn",
+      "contributions": 6
+    },
+    {
+      "login": "petrgazarov",
+      "contributions": 6
+    },
+    {
+      "login": "algomaster99",
+      "contributions": 5
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 887,
+      "title": "Depreciation and not recognized errors",
+      "state": "open",
+      "created_at": "2022-10-23T07:37:09Z",
+      "updated_at": "2022-10-23T08:11:41Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/accordproject/ergo/issues/887",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

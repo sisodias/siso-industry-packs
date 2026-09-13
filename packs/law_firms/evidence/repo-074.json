@@ -1,0 +1,100 @@
+{
+  "audit_id": "R074",
+  "requested_full_name": "laws-africa/slaw",
+  "observed_at": "2026-09-13T16:10:51.593721+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "laws-africa/slaw",
+  "html_url": "https://github.com/laws-africa/slaw",
+  "description": "Slaw is a lightweight library for rendering and generating Akoma Ntoso acts from plain text and PDF documents.",
+  "stargazers_count": 28,
+  "forks_count": 11,
+  "default_branch": "master",
+  "archived": true,
+  "disabled": false,
+  "created_at": "2014-09-17T16:07:14Z",
+  "updated_at": "2026-03-29T02:19:54Z",
+  "pushed_at": "2022-06-28T12:33:06Z",
+  "size": 634,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "0c1c25b7efc72dcd045f97f9049f8c32b2041139",
+  "last_commit": "2022-06-28T12:32:32Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/laws-africa/slaw",
+    "commit": "https://github.com/laws-africa/slaw/commit/0c1c25b7efc72dcd045f97f9049f8c32b2041139"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "24aa70b09b60605fe654c0be087590e28d3bfff9122f77338b180d029c12bb40",
+    "text": "# Slaw [![Build Status](https://travis-ci.org/longhotsummer/slaw.svg)](http://travis-ci.org/longhotsummer/slaw) [![Gem Version](https://badge.fury.io/rb/slaw.svg)](https://badge.fury.io/rb/slaw)\n\nSlaw is a lightweight library for generating Akoma Ntoso 3.0 Act XML from plain text documents.\nIt is used to power [Indigo](https://github.com/laws-africa/indigo) and uses grammars developed for the legal\ntradition in South Africa, although others traditions are supported.\n\nSlaw allows you to:\n\n1. parse plain text and transform it into an Akoma Ntoso Act XML document\n2. unparse Akoma Ntoso XML into a plain-text format suitable for re-parsing\n\nSlaw is lightweight because it wraps around a Nokogiri XML representation of\nthe parsed document. It provides some support methods for manipulating these\ndocuments, but anything advanced must manipulate the XML directly.\n\n## Installation\n\nAdd this line to your application's Gemfile:\n\n    gem 'slaw'\n\nAnd then execute:\n\n    $ bundle\n\nOr install it with:\n\n    $ gem install slaw\n\nThe simplest way to use Slaw is via the commandline:\n\n    $ slaw parse myfile.text --grammar za\n\n## Overview\n\nSlaw generates Acts in the [Akoma Ntoso](http://www.akomantoso.org) 2.0 XML\nstandard for legislative documents. It first parses plain text using a grammar\nand then generates XML from the resulting syntax tree.\n\nMost by-laws in South Africa are available as PDF documents. You will therefore\nneed to extract the text from the PDF first, using a tool like pdftotext.\nPDFs can product oddities (such as oddly wrapped lines) and Slaw has a number of\nrules-of-thumb for correcting these. These rules are based on South African\nby-laws and may not be suitable for all regions.\n\nThe grammar is expressed as a [Treetop](https://github.com/nathansobo/treetop/) grammar\nand has been developed specifically for the format of South African acts and by-laws.\nGrammars for other regions could de developed depending on the complexity of a region's\nformats.\n\nThe grammar cannot catch some subtleties of an act or by-law -- such as nested list numbering --\nso Slaw performs some post-processing on the XML produced by the parser. In particular,\nit nests lists correctly.\n\n## Parsing\n\nSlaw uses Treetop to compile a grammar into a backtracking parser. The parser builds a parse\ntree, the nodes of which know how to serialize themselves in XML format.\n\nSupporting formats from other country's legal traditions probably requires creating a new grammar\nand parser.\n\n## Adding your own grammar\n\nSlaw can dynamically load your custom Treetop grammars. When called with ``--grammar xy``, Slaw\ntries to require `slaw/grammars/xy/act` and instantiate the parser class ``Slaw::Grammars::XY::ActParser``.\nSlaw always uses the rule `act` as the root of the parser.\n\nYou can create your own grammar by creating a gem that provides these files and classes.\n\n## Contributing\n\n1. Fork it at http://github.com/longhotsummer/slaw/fork\n2. Install dependencies: `bundle install`\n3. Create your feature branch: `git checkout -b my-new-feature`\n4. Write great code!\n5. Run tests: `rspec`\n6. Commit your changes: `git commit -am 'Add some feature'`\n7. Push to the branch: `git push origin my-new-feature`\n8. Create a new Pull Request\n\n## Releasing\n\n1. Update `lib/slaw/version.rb`\n2. Run `rake release`\n\n## Changelog\n\n### 13.0.0 (28 June 2022)\n\n* Generate correct `.../!main` in FRBR URIs.\n\n### 12.0.0 (31 January 2022)\n\n* Use `<br/>` for newlines in tables, rather than `<eol/>`, since it's more semantically correct.\n\n### 11.0.0 (29 October 2021)\n\n* Prefix eId attributes in attachments with attachement's eId\n* Use crossHeading element for crossheadings\n\n### 10.7.0 (11 June 2021)\n\n* Support underlines with `__text__`\n\n### 10.6.0 (10 May 2021)\n\n* Handle sup and sub when extracting from HTML.\n\n### 10.5.0 (20 April 2021)\n\n* Handle escaping inlines when unparsing.\n\n### 10.4.1 (14 April 2021)\n\n* Handle escaping in inlines, so that forward slashes in link text are unescaped correctly, eg `[https:\\/\\/example.com](https://example.com)`\n\n### 10.4.0 (9 April 2021)\n\n* Remove dependency on mimemagic. Guess file type based on filename instead.\n\n### 10.3.1 (11 January 2021)\n\n* Strip ascii, unicode general and unicode supplemental punctuation from num elements when building eIds\n\n### 10.2.0 (4 September 2020)\n\n* support inline superscript `^^text^^`\n* support inline subscript `_^text^_`\n\n### 10.1.0 (18 June 2020)\n\n* hcontainer elements have name attributes, to be compliant with AKN 3.0\n\n### 10.0.0 (12 June 2020)\n\n* BREAKING: Create XML with AKN 3 namespace (http://docs.oasis-open.org/legaldocml/ns/akn/3.0), AKN2 is no longer supported\n* BREAKING: replace id attributes with eId attributes\n* BREAKING: serialize schedules as attachments to act, not as components as peers of the act\n* BREAKING: anonymous blocks are serialized as hcontainers, not paragraphs\n* BREAKING: crossheading hcontainer IDs correctly use hcontainer\n* Remove unnecessary schemaLocation header in root element\n\n### 9.2.0 (10 June 2020)\n\n* Subpart numbers are optional\n\n### 9.1.0 (15 April 2020)\n\n* Subsections can have numbers such as 1.1A and 1.1bis\n\n### 9.0.0 (17 Mar 2020)\n\n* Support SUBPART\n\n### 8.0.1 (26 Feb 2020)\n\n* Fix bug with id prefix on schedules container\n\n### 8.0.0 (19 Feb 2020)\n\n* Obey --id-prefix for group nodes\n* Ensure that schedules prefix their children, for those that require it (parts and chapters)\n\n### 7.0.0 (31 Jan 2020)\n\n* Lists ids are now numbered sequentially, rather than by tree position\n* New Slaw::Grammars::Counters helper module\n\n### 6.2.0 (15 Jan 2020)\n\n* Better support for ol, ul and li when importing from HTML\n\n### 6.1.0 (6 Jan 2020)\n\n* Support Chapters inside Parts\n\n### 6.0.0 (7 Nov 2019)\n\n* Give grammars the opportunity to post-process generated XML\n* Move blocklist handling into postprocessing for ZA grammar\n* ZA grammar rewrites schedule aliases to include full text content of headings\n\n### 5.0.0 (25 Oct 2019)\n\n* Schedules have a new grammar to make it easier for users to understand headings and subheadings.\n* The way schedule IDs are generated has been simplified.\n\n### 4.2.0 (7 Sept 2019)\n\n* BODY is allowed to be empty\n\n### 4.1.0 (4 June 2019)\n\n* BODY marks start of body\n\n### 4.0.0 (29 May 2019)\n\n* Preserve whitespace for mixed content nodes\n* Don't pretty-print XML, as this can introduce meaningful whitespace\n\n### 3.4.0 (20 May 2019)\n\n* Restructure subsections to support generic block elements, starting with an inline block element\n\n### 3.3.3 (17 May 2019)\n\n* FIX bug where unparse was returning XML, not text\n\n### 3.3.2 (15 May 2019)\n\n* Internal adjustments to make rules easier to override\n\n### 3.3.1 (15 May 2019)\n\n* Crossheadings at start of body (ending preface and preamble)\n\n### 3.3.0 (1 May 2019)\n\n* Only renest annotated blocklists\n* Table grammar uses additional rules and permits whitespace\n\n### 3.2.0 (22 April 2019)\n\n* Permit inline content in chapter, part and section headings\n\n### 3.1.1 (10 April 2019)\n\n* FIX don't error when a line is just a backslash\n\n### 3.1.0 (29 March 2019)\n\n* Add --ascii flag to %-encode utf-8 strings into US-ASCII for speed. See https://github.com/cjheath/treetop/issues/31\n\n### 3.0.0 (28 March 2019)\n\n* Inline bold and italics\n* Support for CROSSHEADING elements using an empty hcontainer until we support AKN 3.0\n* Support for LONGTITLE in PREFACE\n* Remarks and references support nested inline elements\n* BREAKING: `clauses` rule renamed to `inline_elements` so as not to clash with real AKN clauses\n* BREAKING: `block_paragraphs` rule renamed to `generic_container` and adjusted to be singular to be simpler to understand\n* BREAKING: un-numbered paragraph elements have new ids, that should not clash with numbered paragraphs from other grammars\n\n### 2.2.0 (18 March 2019)\n\n* Schedules use hcontainer, not article\n* Schedules allow rich content in title and heading\n\n### 2.1.0 (18 March 2019)\n\n* Make subclassing preface statements easier\n\n### 2.0.0 (15 March 2019)\n\n* Remove support for PDFs. Do text extraction from PDFs outside of this library.\n* Support dynamically loading grammars from other gems.\n* Don't change ALL CAPS headings to Sentence Case.\n\n### 1.0.4 (5 February 2019)\n\n* SECURITY require Nokogiri 1.8.5 or greater to address https://nvd.nist.gov/vuln/detail/CVE-2018-14404\n\n### 1.0.3 (26 September 2018)\n\n* FIX bug in all grammars that dropped less-than symbols `<` from input text.\n\n### 1.0.2 (2 June 2018)\n\n* FIX bug in ZA grammar when parsing dotted numbered subsections ending with a newline\n\n### 1.0.1\n\n* Improved support for other legal traditions / grammars.\n* Add Polish legal tradition grammar.\n* Slaw no longer does too much introspection of a parsed document, since that can be so tradition-dependent.\n* Move reformatting out of Slaw since it's tradition-dependent.\n* Remove definition linking, Slaw no longer supports it.\n* Remove unused code for interacting with the internals of acts.\n\n### 0.17.2\n\n* Match defined terms in 'definition' section.\n* Updated nokogiri dependency to 1.8.2\n\n### 0.17.0\n\n* Support links and images inside tables, by parsing tables natively.\n\n### 0.16.0\n\n* Support --crop for PDFs. Requires [poppler](https://poppler.freedesktop.org/) pdftotex, not xpdf.\n\n### 0.15.2\n\n* Update nokogiri to ~> 1.8.1\n\n### 0.15.1\n\n* Ignore non-AKN compatible table attributes\n\n### 0.15.0\n\n* Support tables in many non-PDF documents (eg. Word documents) by converting to HTML and then to Akoma Ntoso\n\n### 0.14.2\n\n* Convert non-breaking space (\\xA0) to space\n\n### 0.14.1\n\n* Support links in remarks\n\n### 0.14.0\n\n* Support inline image tags, using Markdown syntax: \\![alt text](image url)\n* Smarter un-break lines\n\n### 0.13.0\n\n* FIX allow Schedule, Part and other headings at the start of blocklist and subsections\n* FIX replace empty CONTENT elements with empty P tags so XML validates\n* Better handling of empty subsections and blocklist items\n\n### 0.12.0\n\n* Support links/references using Markdown-like \\[text](href) syntax.\n* FIX allow remarks in blocklist items\n\n### 0.11.0\n\n* Support newlines in table cells as EOL (or BR in HTML)\n* FIX unparsing of remarks, introduced in 0.10.0\n\n### 0.10.1\n\n* Ensure backslash escaping handles listIntroductions and partial words correctly\n\n### 0.10.0\n\n* New command `unparse FILE` which transforms an Akoma Ntoso XML document into plain text, suitable for re-parsing\n* Support escaping special words with a backslash\n\n### 0.9.0\n\n* This release makes reasonably significant changes to generated XML, particularly\n  for sections without explicit subsections.\n* Blocklists with (aa) following (z) are using the same numbering format.\n* Change how blockList listIntroduction elements are created to be more generic\n* Support for sections that dive straight into lists without subsections\n* Simplify grammar\n* Fix elements with potentially duplicate ids\n\n### 0.8.3\n\n* During cleanup, break lines on section titles that don't have a space after the number, eg: \"New section title 4.(1) The content...\"\n\n### 0.8.2\n\n* Schedules can be empty (#10)\n\n### 0.8.1\n\n* Schedules can have both a title and a heading, permitting schedules titled \"First Schedule\" and not just \"Schedule 1\"\n\n### 0.8.0\n\n* FEATURE: parse command only reformats input for PDFs or when --reformat is given\n* FIX: don't error on defn tags without link to defined term\n\n### 0.7.4\n\n* use refersTo to identify blocks containing term definitions, rather than setting an (invalid) ID\n\n### 0.7.3\n\n* add link-definitions command to find and extract defined terms and link them to their definitions\n* exit with non-zero exit code on failure (see https://github.com/erikhuda/thor/issues/244)\n\n### 0.7.2\n\n* add --section-number-position argument to slaw command\n* grammar supports empty chapters and parts\n\n### 0.7.1\n\n* major changes to grammar to permit chapters, parts, sections etc. in schedules\n",
+    "characters": 11807,
+    "source_url": "https://github.com/laws-africa/slaw/blob/0c1c25b7efc72dcd045f97f9049f8c32b2041139/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "b6ab975ada0178365f68842b76bb06e47be1592abb4dee3fdf6162d0eac5f40b",
+    "text": "Copyright (c) 2014 Greg Kempe\n\nMIT License\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1067,
+    "source_url": "https://github.com/laws-africa/slaw/blob/0c1c25b7efc72dcd045f97f9049f8c32b2041139/LICENSE.txt",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "longhotsummer",
+      "contributions": 430
+    },
+    {
+      "login": "goose-life",
+      "contributions": 8
+    },
+    {
+      "login": "werner",
+      "contributions": 2
+    },
+    {
+      "login": "KarlAmort",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 61,
+      "title": "Use br rather than eol",
+      "state": "closed",
+      "created_at": "2022-01-30T16:11:01Z",
+      "updated_at": "2022-01-31T07:29:31Z",
+      "closed_at": "2022-01-31T07:29:31Z",
+      "comments": 0,
+      "html_url": "https://github.com/laws-africa/slaw/issues/61",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
