@@ -1,0 +1,76 @@
+{
+  "audit_id": "R146",
+  "requested_full_name": "finnertallon-png/private-legal-rag",
+  "observed_at": "2026-09-13T17:05:16.822436+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "finnertallon-png/private-legal-rag",
+  "html_url": "https://github.com/finnertallon-png/private-legal-rag",
+  "description": "Matter-segregated retrieval over legal documents, entirely on local infrastructure. Ethical walls enforced at retrieval, verified by test — nothing leaves the network.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-08-21T02:07:07Z",
+  "updated_at": "2026-08-21T02:38:58Z",
+  "pushed_at": "2026-08-21T02:38:51Z",
+  "size": 58,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "3ab49f1db6b58a459baec9e2c1706f23f5553b57",
+  "last_commit": "2026-08-21T02:38:51Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/finnertallon-png/private-legal-rag",
+    "commit": "https://github.com/finnertallon-png/private-legal-rag/commit/3ab49f1db6b58a459baec9e2c1706f23f5553b57"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "0ed6861df9f0337ddf94a5b5d7798f0b4736d8582da67e4c19111bb3e24b1edc",
+    "text": "# Private Legal RAG\n\nThe retrieval system from `02-construction-claim-rag`, deployed entirely on local\ninfrastructure. No document, query, or embedding leaves the network.\n\n## The problem\n\nThe barrier to AI adoption inside law firms is rarely capability. It is that\nclient documents are privileged, outside counsel guidelines frequently restrict\nwhere client data may be processed, and clients increasingly audit their firms'\nsecurity posture directly. A tool that requires sending documents to a third\nparty API is a non-starter for a large share of a firm's matters regardless of\nhow well it performs.\n\n## Who this is for\n\nFirm IT and security teams evaluating whether AI over client documents can be\ndone inside their own perimeter.\n\n## What this demonstrates\n\n- Local model serving and local embedding, no external inference calls\n- Local vector store, no hosted index\n- Query and retrieval audit logging sufficient for an internal review\n- **Matter-level access segregation** — retrieval is filtered by the requesting\n  user's matter access before ranking, so a user cannot retrieve from a matter\n  they are walled off from\n\nThat last item is the part most retrieval systems get wrong. Ethical walls are\nnot a preference, and a system that enforces them only in its answer layer while\nretrieving across everything has already failed.\n\n## Deployment and data residency\n\nSee `docs/DEPLOYMENT.md` — architecture, data flow, and what an auditor would\nwant to see.\n\n## Access control\n\nSee `docs/ACCESS_CONTROL.md` — the segregation model, its threat model, and its\nknown gaps.\n\n## Running it\n\n```sh\npython -m venv .venv && .venv/Scripts/pip install -e \".[dev]\"\n\n# Ingest the sample corpus (three synthetic matters; embeds locally)\npython -m private_rag ingest data/sample\n\n# Query as a user — every query is identity-bound and audited\npython -m private_rag query \"crane inspection findings\" --user alice\npython -m private_rag query \"escrow release condition\" --user alice   # walled: nothing responsive\npython -m private_rag query \"escrow release condition\" --user bob\n\n# Deletion that means it\npython -m private_rag forget ATLAS-LTR-001\npython -m private_rag close-matter atlas-escrow\n\npython -m private_rag audit\npytest   # includes the segregation suite; runs fully offline\n\n# Grounded answers from a local model (requires Ollama + `ollama pull qwen3:8b`)\npython -m private_rag ask \"What is the dispute over the escrow release?\" --user bob\npython -m private_rag ask \"What is the dispute over the escrow release?\" --user alice  # walled: honest refusal\n\n# Local web UI on http://127.0.0.1:8765 — identity picker, the documents\n# that identity can see, and chat over the store. Same enforcement path\n# as the CLI; the picker is the demo stand-in for SSO (see ACCESS_CONTROL).\npython -m private_rag serve\n```\n\nRetrieval, segregation, deletion, audit, and local generation are implemented\nand tested. The model receives only what retrieval returned for the asking\nidentity, citations are verified verbatim in code after generation, and an\nidentity whose retrieval comes back empty gets a refusal without the model\nbeing called at all. Measured hardware footprint is in `docs/DEPLOYMENT.md`.\n\n## Limitations\n\nSee `docs/LIMITATIONS.md`.\n\n## License\n\nMIT. See `LICENSE`.\n",
+    "characters": 3267,
+    "source_url": "https://github.com/finnertallon-png/private-legal-rag/blob/3ab49f1db6b58a459baec9e2c1706f23f5553b57/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8dba35a767f7a3eeed66230b865559d6d3cc80a5f02511a504bd9559ab581048",
+    "text": "MIT License\n\nCopyright (c) 2026 Tallon Finner\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1070,
+    "source_url": "https://github.com/finnertallon-png/private-legal-rag/blob/3ab49f1db6b58a459baec9e2c1706f23f5553b57/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 14,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "finnertallon-png",
+      "contributions": 14
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

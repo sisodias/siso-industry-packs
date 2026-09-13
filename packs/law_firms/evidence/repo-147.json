@@ -1,0 +1,76 @@
+{
+  "audit_id": "R147",
+  "requested_full_name": "MushiSenpai/sovereign-legal-rag-results",
+  "observed_at": "2026-09-13T17:05:16.822436+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "MushiSenpai/sovereign-legal-rag-results",
+  "html_url": "https://github.com/MushiSenpai/sovereign-legal-rag-results",
+  "description": "Measured results of a private, local-only legal RAG system — hybrid retrieval with reranking, cited answers, refusal discipline, ethical walls. Benchmarks honest, failures included.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-07-01T22:38:55Z",
+  "updated_at": "2026-07-12T15:37:03Z",
+  "pushed_at": "2026-07-12T15:36:55Z",
+  "size": 781,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "a73cc6b7832f31f76df9b50327840cc05459dfe1",
+  "last_commit": "2026-07-12T15:36:16Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/MushiSenpai/sovereign-legal-rag-results",
+    "commit": "https://github.com/MushiSenpai/sovereign-legal-rag-results/commit/a73cc6b7832f31f76df9b50327840cc05459dfe1"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4acc393c3d07425bb5fba603d900358c558e2926fac1ee5b002edf6534e2d197",
+    "text": "# Sovereign Legal RAG — Results\n\n**Private document intelligence for legal teams, running entirely on hardware the\nfirm controls.** This repository publishes what the system achieves — measured\nretrieval quality, real sample behavior, and honest limitations. The engine\nitself (code, prompts, pipeline, and tuning) is private and deployed for clients.\n\n> Built by [MushiSenpai](https://theinvalid.me) as the application layer of the\n> [Sovereign AI Deployment](https://theinvalid.me/services) offer. Everything\n> below was measured on **real public legal data** (expert-annotated commercial\n> contracts), so the numbers are on the kind of documents a firm actually has —\n> not toy data.\n\n---\n\n## What it does\n\n- **Hybrid retrieval with reranking** — semantic search *and* exact-term search\n  (defined terms, party names, `Section 12.4(b)`) fused into one ranked list,\n  then reranked for precision. Lawyers search both ways; the system catches both.\n- **Pinpoint citations** — every answer cites `[document, page/section]`.\n- **Refusal discipline** — answers only from retrieved text; when the documents\n  don't contain the answer it says exactly that, instead of inventing.\n- **Ethical walls** — a user retrieves only documents in matters they're cleared\n  for; walled documents can't surface in an answer *or* a citation.\n- **Tamper-evident audit** — every query, role, and surfaced document is logged\n  to an append-only, hash-chained audit log.\n- **Local-only, zero egress** — no cloud API, no per-token bills. The only\n  network call is to the firm's *own* LLM endpoint. Unplug the network; it\n  still answers.\n\n<p align=\"center\"><img src=\"assets/retrieval-blocks.svg\" alt=\"Block architecture: a legal question runs through semantic and exact-term retrieval in parallel, fused, reranked, gated by matter-level access control, then answered with citations by a local LLM; every query goes to an append-only audit log\" width=\"640\"></p>\n\n---\n\n## Measured retrieval quality\n\n150 clause-localization questions over real, expert-annotated commercial\ncontracts (CUAD v1). A **hit** = a retrieved chunk contains the annotated answer\nspan. Numbers are from a real run; full tables and method in\n[RESULTS.md](RESULTS.md).\n\n| mode | MRR | R@1 | R@5 | R@10 |\n|---|---|---|---|---|\n| semantic only | 0.4337 | 0.3067 | 0.5867 | 0.7667 |\n| keyword only | 0.5512 | 0.3933 | 0.7467 | 0.86 |\n| hybrid | 0.5307 | 0.38 | 0.7667 | 0.86 |\n| **hybrid + rerank** | **0.5639** | **0.44** | 0.74 | 0.8467 |\n\nThree findings worth more than the headline number:\n\n1. **Semantic-only search — the standard \"chat with your PDFs\" recipe — is the\n   weakest mode on legal text.** Clause language is exact-term heavy; a pure\n   vector search misses what a lawyer actually types.\n2. **Fusion alone isn't magic** — plain hybrid trails keyword search on MRR\n   here. It's the reranking pass that converts fused recall into top-rank\n   precision (best MRR and R@1 of all modes).\n3. **Reranking trades a little deep recall (R@10) for precision at rank 1** —\n   the right trade for cited answers built from the top few passages.\n\n**Vision retrieval (experimental tier):** retrieving over rendered *page\nimages* — no OCR, no text parsing — beat text hybrid retrieval on a 120-question\npage-level eval, **MRR 0.6489 vs 0.5208**. Full table in\n[RESULTS.md](RESULTS.md#vision-retrieval-page-level-120-questions).\n\n---\n\n## See it run\n\nTerminal proof — local endpoints, ethical walls, a grounded cited answer:\n\n![Terminal demo: local-only endpoints, ethical walls, cited answer](assets/airgap.gif)\n\nSplit screen — cited query · hash-chained audit log · external egress staying flat:\n\n![Split-screen demo: cited query, audit log, zero egress](assets/splitscreen.gif)\n\nThe retrieval-mode comparison UI — the same query through all four modes,\nside-by-side, with expandable cited passages:\n\n![Web UI demo: one query, four retrieval modes compared](assets/webui.gif)\n\n---\n\n## Sample behavior (captured live)\n\nReal transcripts, verbatim, in [RESULTS.md](RESULTS.md#sample-behavior-captured-live):\n\n- Two retrievals with pinpoint citations — an *indemnification obligations*\n  question landing on the contract's indemnification section, and a\n  *governing law* question landing on `25. APPLICABLE LAW`.\n- A **correct refusal**: a `compliance` role asks about a walled matter → the\n  ethical wall returns zero sources → the system replies\n  *\"I could not find this in the provided documents.\"* — without ever calling\n  the LLM — and the audit log records the query with `n=0`.\n\n---\n\n## Honest limitations\n\n- **R@1 is 0.44.** The top-ranked chunk contains the annotated span 44% of the\n  time; the system answers from the top *k* passages, not just rank 1, and\n  cites so a lawyer can verify. This is measured retrieval, not a marketing claim.\n- The eval measures **clause localization (retrieval)**, not end-to-end answer\n  correctness — grounding is enforced by design (citations + refusal), but\n  generation quality is not separately scored here.\n- One corpus (English commercial contracts), one run, 150/120 questions. No\n  cross-corpus or statute-heavy eval yet.\n- Vision retrieval numbers are **proof-of-concept scale** and need a GPU;\n  it's an optional tier, not the default path.\n- Hybrid *without* reranking underperformed keyword search on MRR on this\n  corpus — kept in the table because that's the point of measuring.\n\n---\n\n## What's *not* in this repo\n\nThe engine is the product: source code, prompt templates, chunking and fusion\nparameters, model choices, the ingestion pipeline, and the eval harness are\nprivate. This repo is the measured record of what that engine does.\n\n**Want it on your own documents?** It's available as a private deployment —\n[theinvalid.me/services](https://theinvalid.me/services). I'll run a small\nslice of your non-sensitive files as a capability demo before any commitment.\n\n---\n\n## Data attribution & license\n\nEval ground truth: [CUAD v1](https://www.atticusprojectai.org/cuad) (The Atticus\nProject), CC BY 4.0 — expert clause annotations over public commercial contracts.\n\n**License: All rights reserved. Benchmarks and findings shared for transparency.**\n",
+    "characters": 6154,
+    "source_url": "https://github.com/MushiSenpai/sovereign-legal-rag-results/blob/a73cc6b7832f31f76df9b50327840cc05459dfe1/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "9c1780a570fc4922eb8b34c94f2cd61dc4722dc2f175ace2c2c6f30cea27c48f",
+    "text": "All rights reserved.\n\nBenchmarks and findings in this repository are shared for transparency.\nNo license is granted to reproduce, redistribute, or create derivative works\nfrom the contents of this repository without written permission.\n\nEvaluation ground truth referenced here is CUAD v1 (The Atticus Project),\nlicensed CC BY 4.0 by its authors; that license applies to the CUAD dataset\nitself, not to this repository's contents.\n",
+    "characters": 430,
+    "source_url": "https://github.com/MushiSenpai/sovereign-legal-rag-results/blob/a73cc6b7832f31f76df9b50327840cc05459dfe1/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "MushiSenpai",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,60 @@
+{
+  "audit_id": "R145",
+  "requested_full_name": "RamiJaloudi/matter-wall-ai-admin",
+  "observed_at": "2026-09-13T17:05:16.822436+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "RamiJaloudi/matter-wall-ai-admin",
+  "html_url": "https://github.com/RamiJaloudi/matter-wall-ai-admin",
+  "description": "SQL-backed client-matter validation and ethical walls middleware with Ollama admin dashboard",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-07-15T04:24:13Z",
+  "updated_at": "2026-07-15T04:24:21Z",
+  "pushed_at": "2026-07-15T04:24:16Z",
+  "size": 11,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": null,
+  "revision": "ed3984659090589c48b12f77fa9b4db50da6d4e9",
+  "last_commit": "2026-07-15T04:22:22Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/RamiJaloudi/matter-wall-ai-admin",
+    "commit": "https://github.com/RamiJaloudi/matter-wall-ai-admin/commit/ed3984659090589c48b12f77fa9b4db50da6d4e9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "e9f4d49fb8d3552e15fd96d98232aa4222737f4986617c9b5c355dab3a22ec3a",
+    "text": "# Matter Wall AI Admin\n\nSQL-backed client-matter validation and ethical walls middleware with an administrator dashboard and optional Ollama AI assistant.\n\n## What It Does\n\n- Validates whether a user can open or work on a client/matter.\n- Checks ethical wall access before downstream systems expose matter data.\n- Provides admin CRUD screens over the SQL tables.\n- Uses Ollama locally to help administrators summarize wall risks and draft remediation steps.\n\n## Architecture\n\n- `FastAPI` backend\n- `SQLite` default SQL database\n- Plain HTML/CSS/JavaScript admin dashboard served by the API\n- Optional Ollama integration at `http://localhost:11434`\n\n## Quick Start\n\n```powershell\npython -m venv .venv\n.\\.venv\\Scripts\\Activate.ps1\npip install -e .[dev]\nmatter-wall seed\nmatter-wall serve\n```\n\nOpen:\n\n```text\nhttp://127.0.0.1:8080\n```\n\n## Middleware APIs\n\nClient-matter validation:\n\n```http\nPOST /api/middleware/client-matter/validate\n```\n\nEthical wall check:\n\n```http\nPOST /api/middleware/ethical-walls/check\n```\n\nSee [docs/IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) for SQL schema, API examples, dashboard workflows, and implementation notes.\n",
+    "characters": 1154,
+    "source_url": "https://github.com/RamiJaloudi/matter-wall-ai-admin/blob/ed3984659090589c48b12f77fa9b4db50da6d4e9/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 1,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "RamiJaloudi",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

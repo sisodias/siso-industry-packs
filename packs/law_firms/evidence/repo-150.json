@@ -1,0 +1,60 @@
+{
+  "audit_id": "R150",
+  "requested_full_name": "Mudassar-sys/matter-workspace",
+  "observed_at": "2026-09-13T17:05:16.822436+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Mudassar-sys/matter-workspace",
+  "html_url": "https://github.com/Mudassar-sys/matter-workspace",
+  "description": "Law firm matter workspace prototype: Microsoft Entra ID sign-in, role-based access and ethical walls on Supabase RLS, automatic SharePoint matter folders via Microsoft Graph.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-09-08T15:37:07Z",
+  "updated_at": "2026-09-08T17:47:54Z",
+  "pushed_at": "2026-09-08T17:47:30Z",
+  "size": 113,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": null,
+  "revision": "114cfde8d4b9574d3b47ae2553c298ed5451714d",
+  "last_commit": "2026-09-08T17:47:29Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/Mudassar-sys/matter-workspace",
+    "commit": "https://github.com/Mudassar-sys/matter-workspace/commit/114cfde8d4b9574d3b47ae2553c298ed5451714d"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "36c532ea47340b04ae0d654d3be6f0341a74941107fc999140cadbec3f1fc312",
+    "text": "# Matter Workspace prototype\n\nA small, real implementation of the four things that decide whether a custom\nmatter-management system survives contact with a law firm:\n\n1. **Microsoft Entra ID sign-in** (OpenID Connect, single tenant, delegated Graph token with silent refresh).\n2. **Roles enforced in the database**: attorney, paralegal, supervisor. Every query runs under Postgres row-level security keyed to the signed-in email. The UI cannot over-fetch.\n3. **Ethical walls**: a walled person cannot see the matter, its members, its documents link, or the fact that a wall exists. Supervisor visibility is overridden too.\n4. **SharePoint provisioning**: opening a matter creates `Matters/<no> - <client>/` plus nine standard sub-folders through Microsoft Graph, using the signed-in user's own permissions, and stores the link on the record.\n\nEverything a user does is written to an audit table under the acting identity.\n\n## Stack\n\n| Layer | Choice | Why |\n| --- | --- | --- |\n| App | Next.js (App Router, server actions, TypeScript) | One deployable, server-side secrets, no client-side tokens |\n| Identity | Auth.js with the Microsoft Entra ID provider | Standard OIDC, tenant MFA and conditional access stay with IT |\n| Data | Supabase Postgres with row-level security | Policies live next to the data; a UI bug cannot leak a row |\n| Documents | Microsoft Graph, root site document library | Delegated calls, so SharePoint permissions still apply |\n| Hosting | Vercel | Zero-ops for a prototype; the app is stateless and portable to Azure |\n\n## How the security model works\n\nThe app never uses the Supabase service key. On every request it signs a\nfive-minute HS256 JWT containing `email` and `app_role` for the acting user, and\nSupabase evaluates policies against those claims:\n\n```sql\n-- excerpt from supabase/schema.sql\ncreate function can_see_matter(m uuid) returns boolean ... as $$\n  select not is_walled(m)\n    and ( jwt_role() = 'supervisor'\n       or exists (select 1 from matter_members where matter_id = m and email = jwt_email())\n       or exists (select 1 from matters where id = m and responsible_attorney = jwt_email()) );\n$$;\ncreate policy matters_read on matters for select using (can_see_matter(id));\n```\n\nWalls are checked first, so a supervisor who is walled off a matter loses it too.\nWalled users cannot read `matter_walls`, so they cannot discover that a wall exists.\n\n### Demo control\n\nOne Microsoft account is flagged `is_demo_admin`. That account gets a \"run every\nquery as\" switch in the header. It only changes the identity in the signed JWT;\nthe database does the rest. This is how one login can demonstrate all three\nroles and the wall. It is a demo affordance and would be removed for production.\n\n## Run locally\n\n```bash\ncp .env.example .env.local   # fill in the values below\nnpm install\nnpm run dev\n```\n\nEnvironment:\n\n| Variable | Source |\n| --- | --- |\n| `AUTH_SECRET` | `openssl rand -base64 32` |\n| `AUTH_URL` | `http://localhost:3000` locally, the site URL in production |\n| `AUTH_MICROSOFT_ENTRA_ID_ID` | App registration, Application (client) ID |\n| `AUTH_MICROSOFT_ENTRA_ID_SECRET` | App registration, Certificates and secrets |\n| `AUTH_MICROSOFT_ENTRA_ID_TENANT_ID` | App registration, Directory (tenant) ID |\n| `SUPABASE_URL` | Supabase project settings, API |\n| `SUPABASE_PUBLISHABLE_KEY` | Supabase project settings, API (anon / publishable key) |\n| `SUPABASE_JWT_SECRET` | Supabase project settings, JWT secret (legacy HS256) |\n\nApp registration requirements:\n\n- Platform **Web**, redirect URI `<site>/api/auth/callback/microsoft-entra-id`\n- Delegated Graph permissions: `User.Read`, `Sites.ReadWrite.All`, `Files.ReadWrite.All`, `offline_access`, with admin consent granted\n- Single tenant\n\nDatabase: paste `supabase/schema.sql` into the Supabase SQL editor and run it.\nIt creates the tables, policies and demo seed data. Change the supervisor email\nin the seed block to the Microsoft account that will sign in.\n\n## What is deliberately not here\n\n- No document upload, versioning metadata or retention labels (next step, same Graph calls).\n- No Outlook or Teams integration.\n- No data migration from the current system.\n- No production hardening: rate limits, key rotation, alerting.\n\n## Layout\n\n```\nauth.ts                 Auth.js configuration, Graph scopes, token refresh\nlib/identity.ts         who is signed in, who they are acting as\nlib/supabase.ts         per-request JWT signing, RLS-scoped client\nlib/graph.ts            SharePoint provisioning and folder listing\nlib/actions.ts          server actions: open matter, walls, members, stage\napp/                    pages: landing, matters, matter detail, open matter, audit\nsupabase/schema.sql     tables, policies, seed data\n```\n",
+    "characters": 4739,
+    "source_url": "https://github.com/Mudassar-sys/matter-workspace/blob/114cfde8d4b9574d3b47ae2553c298ed5451714d/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 13,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "Mudassar-sys",
+      "contributions": 13
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
