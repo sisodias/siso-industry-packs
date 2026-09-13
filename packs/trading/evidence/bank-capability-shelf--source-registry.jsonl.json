@@ -1,0 +1,5503 @@
+{
+  "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/capability-shelf/source-registry.jsonl",
+  "sha256": "c04954f32ea74bee20fec1bd90bdce6135da309f8daded979d5bc180cd20411f",
+  "total_rows": 3010,
+  "match_count": 72,
+  "rows": [
+    {
+      "source_id": "SRC-0008",
+      "repo": "frappe/erpnext",
+      "url": "https://github.com/frappe/erpnext",
+      "labels": [
+        "product_base",
+        "product",
+        "ERPNext"
+      ],
+      "family_ids": [
+        "U15",
+        "U17",
+        "U19",
+        "U21",
+        "U54",
+        "U66",
+        "B01",
+        "B04",
+        "B05",
+        "B20"
+      ],
+      "family_names": [
+        "Proposal, quote and CPQ",
+        "Accounting and general ledger",
+        "Inventory and warehouse management",
+        "Procurement and vendor management",
+        "Accounting practice operations",
+        "Field service management"
+      ],
+      "evidence_classes": [
+        "expanded_universe_seed",
+        "p03_live_metadata_classified",
+        "historical_operator_nomination"
+      ],
+      "operator_signals": [
+        {
+          "nomination_id": "ON-028",
+          "origin": "foundry_value_matrix_specialist",
+          "observed_at": "2026-08-03",
+          "note": "Composite ERP specialist candidate."
+        }
+      ],
+      "observed_facts": [
+        "frappe/erpnext supplies inventory, billing, crm at active maintenance under a strong-copyleft rights posture."
+      ],
+      "current_verdict": "priority_deeper_evidence_candidate",
+      "foundry_stage": "specialist_candidate",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 60,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-0034",
+      "repo": "bigcapitalhq/bigcapital",
+      "url": "https://github.com/bigcapitalhq/bigcapital",
+      "labels": [
+        "product_base",
+        "product"
+      ],
+      "family_ids": [
+        "U17",
+        "U54",
+        "B04",
+        "B16",
+        "B20"
+      ],
+      "family_names": [
+        "Accounting and general ledger",
+        "Accounting practice operations"
+      ],
+      "evidence_classes": [
+        "expanded_universe_seed",
+        "p03_live_metadata_classified"
+      ],
+      "operator_signals": [],
+      "observed_facts": [
+        "bigcapitalhq/bigcapital supplies billing, analytics_bi at active maintenance under a strong-copyleft rights posture."
+      ],
+      "current_verdict": "deeper_evidence_candidate",
+      "foundry_stage": "not_joined",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 25,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-0124",
+      "repo": "akaunting/akaunting",
+      "url": "https://github.com/akaunting/akaunting",
+      "labels": [],
+      "family_ids": [
+        "U17"
+      ],
+      "family_names": [
+        "Accounting and general ledger"
+      ],
+      "evidence_classes": [
+        "expanded_universe_seed"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "not_joined",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 1,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 6,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "ui_assembly",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:001",
+            "accounting_firms:workflow_behavior:001",
+            "accounting_firms:data_model:001"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0138",
+      "repo": "etewiah/property_web_builder",
+      "url": "https://github.com/etewiah/property_web_builder",
+      "labels": [],
+      "family_ids": [
+        "U64"
+      ],
+      "family_names": [
+        "Real-estate brokerage and listings"
+      ],
+      "evidence_classes": [
+        "expanded_universe_seed"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "not_joined",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 1,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-0384",
+      "repo": "ariba-k/fair-loan-predictor",
+      "url": "https://github.com/ariba-k/fair-loan-predictor",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 4,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:008",
+            "mortgage_brokers:workflow_behavior:008",
+            "mortgage_brokers:data_model:008"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0664",
+      "repo": "darcys22/godbledger",
+      "url": "https://github.com/darcys22/godbledger",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 6,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "runtime_deployment",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:003",
+            "accounting_firms:workflow_behavior:003",
+            "accounting_firms:data_model:003"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0665",
+      "repo": "darius-lesch/pyloan",
+      "url": "https://github.com/darius-lesch/pyloan",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:005",
+            "mortgage_brokers:workflow_behavior:005",
+            "mortgage_brokers:data_model:005"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0695",
+      "repo": "devb-saratoga/mortgage-network",
+      "url": "https://github.com/devb-saratoga/mortgage-network",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 7,
+          "dimensions_observed": [
+            "agent_authority",
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "runtime_deployment",
+            "verification_eval",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:002",
+            "mortgage_brokers:workflow_behavior:002",
+            "mortgage_brokers:data_model:002"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0697",
+      "repo": "Deveshsaipandian/Offline-Multimodal-Financial-Intelligent-System-",
+      "url": "https://github.com/deveshsaipandian/offline-multimodal-financial-intelligent-system-",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "insurance_agencies",
+          "industry_label": "Insurance Agencies",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "verification_eval",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "insurance_agencies:demand_atom_fit:005",
+            "insurance_agencies:workflow_behavior:004",
+            "insurance_agencies:data_model:005"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0785",
+      "repo": "efrainteinert/Mortgage-Loan-Calculator",
+      "url": "https://github.com/efrainteinert/mortgage-loan-calculator",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 4,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:004",
+            "mortgage_brokers:workflow_behavior:004",
+            "mortgage_brokers:data_model:004"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0851",
+      "repo": "ferrarisf50/Fannie-Mae-single-family-mortgage-loan-data",
+      "url": "https://github.com/ferrarisf50/fannie-mae-single-family-mortgage-loan-data",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 4,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:006",
+            "mortgage_brokers:workflow_behavior:006",
+            "mortgage_brokers:data_model:006"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0883",
+      "repo": "frappe/books",
+      "url": "https://github.com/frappe/books",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 7,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "runtime_deployment",
+            "ui_assembly",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:002",
+            "accounting_firms:workflow_behavior:002",
+            "accounting_firms:data_model:002"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-0927",
+      "repo": "Gitdigital-products/LedgerX-repo",
+      "url": "https://github.com/gitdigital-products/ledgerx-repo",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1051",
+      "repo": "inforkgodara/store-pos",
+      "url": "https://github.com/inforkgodara/store-pos",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:004",
+            "accounting_firms:workflow_behavior:004",
+            "accounting_firms:data_model:004"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1148",
+      "repo": "johnnymo87/ibkr-portfolio-rebalancer",
+      "url": "https://github.com/johnnymo87/ibkr-portfolio-rebalancer",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1163",
+      "repo": "JS-Beginners/mortgage-loan-calculator",
+      "url": "https://github.com/js-beginners/mortgage-loan-calculator",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 4,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:003",
+            "mortgage_brokers:workflow_behavior:003",
+            "mortgage_brokers:data_model:003"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1185",
+      "repo": "juxt/juxt-accounting",
+      "url": "https://github.com/juxt/juxt-accounting",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:005",
+            "accounting_firms:workflow_behavior:005",
+            "accounting_firms:data_model:005"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1275",
+      "repo": "ledgersmb/LedgerSMB",
+      "url": "https://github.com/ledgersmb/ledgersmb",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1398",
+      "repo": "mezotv/portfolio",
+      "url": "https://github.com/mezotv/portfolio",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1399",
+      "repo": "MG-Trading-Terminal/mg-market-maker",
+      "url": "https://github.com/mg-trading-terminal/mg-market-maker",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1405",
+      "repo": "michaelrak-spec/portfolio",
+      "url": "https://github.com/michaelrak-spec/portfolio",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1576",
+      "repo": "NJAUHB/FinancialReportAnalysisTools",
+      "url": "https://github.com/njauhb/financialreportanalysistools",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1579",
+      "repo": "nl-hugo/hypotheek-calculator",
+      "url": "https://github.com/nl-hugo/hypotheek-calculator",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 6,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "runtime_deployment",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:007",
+            "mortgage_brokers:workflow_behavior:007",
+            "mortgage_brokers:data_model:007"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1759",
+      "repo": "prashants/webzash",
+      "url": "https://github.com/prashants/webzash",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:006",
+            "accounting_firms:workflow_behavior:006",
+            "accounting_firms:data_model:006"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1763",
+      "repo": "preezy/IBKR-CLIENTPORTAL-TRADING-BOT",
+      "url": "https://github.com/preezy/ibkr-clientportal-trading-bot",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-1812",
+      "repo": "rajivjc/mortgage-blockchain-demo",
+      "url": "https://github.com/rajivjc/mortgage-blockchain-demo",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "mortgage_brokers",
+          "industry_label": "Mortgage Brokers",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "runtime_deployment",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "approval_publish",
+            "extract_structure",
+            "follow_up_chase",
+            "intake_normalize"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "mortgage_brokers:demand_atom_fit:001",
+            "mortgage_brokers:workflow_behavior:001",
+            "mortgage_brokers:data_model:001"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1846",
+      "repo": "redstreet/beancount_reds_importers",
+      "url": "https://github.com/redstreet/beancount_reds_importers",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 6,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "verification_eval",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:008",
+            "accounting_firms:workflow_behavior:008",
+            "accounting_firms:data_model:008"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1847",
+      "repo": "redstreet/fava_investor",
+      "url": "https://github.com/redstreet/fava_investor",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [
+        {
+          "industry_id": "accounting_firms",
+          "industry_label": "Accounting Firms",
+          "observed_slots": 5,
+          "dimensions_observed": [
+            "data_model",
+            "demand_atom_fit",
+            "economics_maintenance",
+            "provenance_rights",
+            "workflow_behavior"
+          ],
+          "capability_families_observed": [
+            "data"
+          ],
+          "atom_ids_observed": [
+            "extract_structure",
+            "follow_up_chase",
+            "reconcile_audit"
+          ],
+          "evidence_refs": [
+            "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+          ],
+          "example_slot_ids": [
+            "accounting_firms:demand_atom_fit:007",
+            "accounting_firms:workflow_behavior:007",
+            "accounting_firms:data_model:007"
+          ]
+        }
+      ],
+      "industry_demand_status": "observed_join"
+    },
+    {
+      "source_id": "SRC-1855",
+      "repo": "renothetrader/recruitment-ats",
+      "url": "https://github.com/renothetrader/recruitment-ats",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-2124",
+      "repo": "superxz3r0/LLM-Augmented-Financial-Report-Analysis-Tool",
+      "url": "https://github.com/superxz3r0/llm-augmented-financial-report-analysis-tool",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-2306",
+      "repo": "Vincentho711/Interactive-Brokers-Trading-Bot",
+      "url": "https://github.com/vincentho711/interactive-brokers-trading-bot",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-2308",
+      "repo": "virattt/financial-agent-ui",
+      "url": "https://github.com/virattt/financial-agent-ui",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    {
+      "source_id": "SRC-2546",
+      "repo": "akhilrex/hammond",
+      "url": "https://github.com/akhilrex/hammond",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "reconcile_audit",
+        "report_digest"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:reconcile_audit",
+        "cross_industry:report_digest"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0113",
+        "repo": "akhilrex/hammond",
+        "url": "https://github.com/akhilrex/hammond",
+        "what_it_is": "A self hosted vehicle expense tracking system with support for multiple users.",
+        "stars": 595,
+        "pushed_at": "2023-01-30T21:08:58Z",
+        "language": "Go",
+        "license": "agpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/akhilrex/hammond/blob/HEAD/README.md",
+          "characters_read": 10418
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=expense%20management&type=repositories",
+            "source_title": "GitHub repository search: expense management",
+            "detail": "expense management"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "reconcile_audit",
+          "report_digest"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:reconcile_audit",
+          "cross_industry:report_digest"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "expense management"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "akhilrex/hammond",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2559",
+      "repo": "postfinance/kubenurse",
+      "url": "https://github.com/postfinance/kubenurse",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "cross_industry",
+      "discovery_industries": [],
+      "discovery_categories": [
+        "monitor_alert",
+        "monitoring_alerts"
+      ],
+      "discovery_cells": [
+        "cross_industry:monitor_alert",
+        "cross_industry:monitoring_alerts"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0126",
+        "repo": "postfinance/kubenurse",
+        "url": "https://github.com/postfinance/kubenurse",
+        "what_it_is": "Neighbourhood incoming checks metric Kubenurse is a little service that monitors all network connections in a Kubernetes cluster.",
+        "stars": 494,
+        "pushed_at": "2026-08-25T11:51:31Z",
+        "language": "Go",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/postfinance/kubenurse/blob/HEAD/README.md",
+          "characters_read": 23811
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=network%20monitoring&type=repositories",
+            "source_title": "GitHub repository search: network monitoring",
+            "detail": "network monitoring"
+          }
+        ],
+        "industries": [],
+        "categories": [
+          "monitor_alert",
+          "monitoring_alerts"
+        ],
+        "cells": [
+          "cross_industry:monitor_alert",
+          "cross_industry:monitoring_alerts"
+        ],
+        "industry_scope": "cross_industry",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "network monitoring"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "dry:monitoring_alerts"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "postfinance/kubenurse",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2605",
+      "repo": "OS4ED/openSIS-Classic",
+      "url": "https://github.com/os4ed/opensis-classic",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "education_training"
+      ],
+      "discovery_categories": [
+        "education_admin",
+        "intake_normalize"
+      ],
+      "discovery_cells": [
+        "cross_industry:education_admin",
+        "cross_industry:intake_normalize",
+        "education_training:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0172",
+        "repo": "OS4ED/openSIS-Classic",
+        "url": "https://github.com/OS4ED/openSIS-Classic",
+        "what_it_is": "Community Edition version 9.3 (Rel date: 06/02/2026) openSIS is an easy to use Student Information System for organizing student information and school related operations to promote efficiency in K 12, trade schools and higher education school systems.",
+        "stars": 337,
+        "pushed_at": "2026-06-08T13:41:27Z",
+        "language": "PHP",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/OS4ED/openSIS-Classic/blob/HEAD/README.md",
+          "characters_read": 1042
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=student%20information%20system&type=repositories",
+            "source_title": "GitHub repository search: student information system",
+            "detail": "student information system"
+          }
+        ],
+        "industries": [
+          "education_training"
+        ],
+        "categories": [
+          "education_admin",
+          "intake_normalize"
+        ],
+        "cells": [
+          "cross_industry:education_admin",
+          "cross_industry:intake_normalize",
+          "education_training:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "student information system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:education_training"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "os4ed/opensis-classic",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2617",
+      "repo": "DataIntegrationAlliance/data_integration_celery",
+      "url": "https://github.com/dataintegrationalliance/data_integration_celery",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "cross_industry",
+      "discovery_industries": [],
+      "discovery_categories": [
+        "sync_browser_operations",
+        "sync_handoff"
+      ],
+      "discovery_cells": [
+        "cross_industry:sync_browser_operations",
+        "cross_industry:sync_handoff"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0184",
+        "repo": "DataIntegrationAlliance/data_integration_celery",
+        "url": "https://github.com/DataIntegrationAlliance/data_integration_celery",
+        "what_it_is": "\u901a\u8fc7celery\u5b9a\u671f\u6267\u884c\u66f4\u76f8\u5173\u4efb\u52a1\uff0c\u5c06\u4e07\u5f97wind\uff0c\u540c\u82b1\u987aifind\uff0c\u4e1c\u65b9\u8d22\u5bccchoice\u7b49\u6570\u636e\u7ec8\u7aef\u7684\u6570\u636e\u8fdb\u884c\u6574\u5408\uff0c\u6e05\u6d17\uff0c\u4e00\u81f4\u5316\uff0c\u4f9b\u5176\u4ed6\u7cfb\u7edf\u6570\u636e\u5206\u6790\u4f7f\u7528 \u5982\u679c\u9700\u8981\u4e0b\u8f7d windy\u3001ifind\u3001choice \u7b49\u6570\u636e\uff0c\u9700\u8981\u5b89\u88c5\u5bf9\u5e94\u7684\u7ec4\u5efa \u4e3a\u4e86\u652f\u6301\u72ec\u7acb\u8fd0\u884c\u5728windows\u73af\u5883\u4e0b\uff0ccelery \u7684 broker \u9009\u62e9 rabbitmq \u800c\u975e redis\uff08\u4ec5\u652f\u6301linux\uff09 + IFind\u3001Wind\u3001Tushare\u3001JQDataSDK\u3001CMC\u7b49\u7528\u6237\u540d\u5bc6\u7801\u914d\u7f6e\u4fe1\u606f RabbitMQ\uff1a\u4e0b\u8f7d\u5730\u5740\uff1b rabbitmq server 3.7.14.exe RabbitMQ \u8fd0\u884c\u4f9d\u8d56\u4e8e Erlang\uff1a\u4e0b\u8f7d\u5730\u5740\uff1b OTP 21.3 Windows\u2026",
+        "stars": 305,
+        "pushed_at": "2021-04-20T13:09:58Z",
+        "language": "Python",
+        "license": "gpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/DataIntegrationAlliance/data_integration_celery/blob/HEAD/README.md",
+          "characters_read": 7023
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=data%20integration&type=repositories",
+            "source_title": "GitHub repository search: data integration",
+            "detail": "data integration"
+          }
+        ],
+        "industries": [],
+        "categories": [
+          "sync_browser_operations",
+          "sync_handoff"
+        ],
+        "cells": [
+          "cross_industry:sync_browser_operations",
+          "cross_industry:sync_handoff"
+        ],
+        "industry_scope": "cross_industry",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "data integration"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "fill:highest-ranked-fresh"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "dataintegrationalliance/data_integration_celery",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2637",
+      "repo": "SLMolenaar/orderbook-simulator-cpp",
+      "url": "https://github.com/slmolenaar/orderbook-simulator-cpp",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "cross_industry",
+      "discovery_industries": [],
+      "discovery_categories": [
+        "sync_browser_operations",
+        "sync_handoff"
+      ],
+      "discovery_cells": [
+        "cross_industry:sync_browser_operations",
+        "cross_industry:sync_handoff"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0204",
+        "repo": "SLMolenaar/orderbook-simulator-cpp",
+        "url": "https://github.com/SLMolenaar/orderbook-simulator-cpp",
+        "what_it_is": "A low latency limit order book implementation in C++20 with real time market data integration.",
+        "stars": 268,
+        "pushed_at": "2026-03-16T19:47:41Z",
+        "language": "C++",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/SLMolenaar/orderbook-simulator-cpp/blob/HEAD/README.md",
+          "characters_read": 13298
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=data%20integration&type=repositories",
+            "source_title": "GitHub repository search: data integration",
+            "detail": "data integration"
+          }
+        ],
+        "industries": [],
+        "categories": [
+          "sync_browser_operations",
+          "sync_handoff"
+        ],
+        "cells": [
+          "cross_industry:sync_browser_operations",
+          "cross_industry:sync_handoff"
+        ],
+        "industry_scope": "cross_industry",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "data integration"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "dry:sync_browser_operations"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "slmolenaar/orderbook-simulator-cpp",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2700",
+      "repo": "384863451/invoice_ocr",
+      "url": "https://github.com/384863451/invoice_ocr",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "extract_structure",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:extract_structure",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0267",
+        "repo": "384863451/invoice_ocr",
+        "url": "https://github.com/384863451/invoice_ocr",
+        "what_it_is": "\u8bc6\u522b\u6587\u4ef6\u7c7b\u578b\uff1a\u56fe\u7247\uff0cpdf\uff0cofd, 0,90,180,270\u56db\u79cd\u5ea6\u6570\u3002 \u8bc6\u522b\u7c7b\u578b\uff1a\u589e\u503c\u7a0e\u4e13\u7528\u53d1\u7968, \u589e\u503c\u7a0e\u666e\u901a\u53d1\u7968, \u589e\u503c\u7a0e\u7535\u5b50\u4e13\u7528\u53d1\u7968, \u589e\u503c\u7a0e\u7535\u5b50\u666e\u901a\u53d1\u7968, \u589e\u503c\u7a0e\u666e\u901a\u53d1\u7968\uff08\u5377\u5f0f\uff09, \u8fc7\u8def\u8d39\u53d1\u7968, \u706b\u8f66\u7968, \u98de\u673a\u7968, \u5ba2\u8fd0\u7968, \u51fa\u79df\u8f66\u7968, \u5b9a\u989d, \u901a\u7528\u673a\u6253\u53d1\u7968 2.",
+        "stars": 164,
+        "pushed_at": "2022-03-20T05:06:48Z",
+        "language": "Python",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/384863451/invoice_ocr/blob/HEAD/README.md",
+          "characters_read": 1235
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=invoice%20OCR&type=repositories",
+            "source_title": "GitHub repository search: invoice OCR",
+            "detail": "invoice OCR"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "extract_structure",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:extract_structure",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "invoice OCR"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "384863451/invoice_ocr",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2711",
+      "repo": "Manager-io/Manager",
+      "url": "https://github.com/manager-io/manager",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0278",
+        "repo": "Manager-io/Manager",
+        "url": "https://github.com/Manager-io/Manager",
+        "what_it_is": "Manager is free accounting software for small businesses.",
+        "stars": 157,
+        "pushed_at": "2026-08-18T02:58:16Z",
+        "language": "C#",
+        "license": "other",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/Manager-io/Manager/blob/HEAD/README.md",
+          "characters_read": 8117
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "manager-io/manager",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2749",
+      "repo": "artoh/kitupiikki",
+      "url": "https://github.com/artoh/kitupiikki",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0316",
+        "repo": "artoh/kitupiikki",
+        "url": "https://github.com/artoh/kitupiikki",
+        "what_it_is": "Ykk\u00f6sversio julkaistu nimell\u00e4 Kitupiikki Finnish bookkeeping software for small organisations Comments, variable names, documentations and the software itself are, of course, in Finnish only!",
+        "stars": 126,
+        "pushed_at": "2026-08-07T06:54:36Z",
+        "language": "C++",
+        "license": "other",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/artoh/kitupiikki/blob/HEAD/README.md",
+          "characters_read": 2324
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=bookkeeping%20software&type=repositories",
+            "source_title": "GitHub repository search: bookkeeping software",
+            "detail": "bookkeeping software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "bookkeeping software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "artoh/kitupiikki",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2754",
+      "repo": "xup6jammy/AI-INVOICE-OCR-ENGINE",
+      "url": "https://github.com/xup6jammy/ai-invoice-ocr-engine",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "extract_structure",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:extract_structure",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0321",
+        "repo": "xup6jammy/AI-INVOICE-OCR-ENGINE",
+        "url": "https://github.com/xup6jammy/AI-INVOICE-OCR-ENGINE",
+        "what_it_is": "A complete AI powered document OCR (Optical Character Recognition) solution based on PaddleOCR v5 , optimized for invoice and accounting document recognition with support for Chinese and English text.",
+        "stars": 123,
+        "pushed_at": "2025-11-27T04:53:57Z",
+        "language": "Python",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/xup6jammy/AI-INVOICE-OCR-ENGINE/blob/HEAD/README.md",
+          "characters_read": 6358
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=invoice%20OCR&type=repositories",
+            "source_title": "GitHub repository search: invoice OCR",
+            "detail": "invoice OCR"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "extract_structure",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:extract_structure",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "invoice OCR"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "xup6jammy/ai-invoice-ocr-engine",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2774",
+      "repo": "LinxHQ/linxbooks",
+      "url": "https://github.com/linxhq/linxbooks",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0341",
+        "repo": "LinxHQ/linxbooks",
+        "url": "https://github.com/LinxHQ/linxbooks",
+        "what_it_is": "Open source accounting software (customers, invoices, quotations, bills, expenses, payrolls and reports).",
+        "stars": 107,
+        "pushed_at": "2020-04-22T08:45:54Z",
+        "language": "PHP",
+        "license": "agpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/LinxHQ/linxbooks/blob/HEAD/README.md",
+          "characters_read": 1982
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "linxhq/linxbooks",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2789",
+      "repo": "104H/Open-Source-Python-POS-and-Accounting-Software",
+      "url": "https://github.com/104h/open-source-python-pos-and-accounting-software",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0356",
+        "repo": "104H/Open-Source-Python-POS-and-Accounting-Software",
+        "url": "https://github.com/104H/Open-Source-Python-POS-and-Accounting-Software",
+        "what_it_is": "This software is written using Python 3 and powered by MySQL.",
+        "stars": 95,
+        "pushed_at": "2024-07-19T06:25:23Z",
+        "language": "Python",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/104H/Open-Source-Python-POS-and-Accounting-Software/blob/HEAD/README.md",
+          "characters_read": 2196
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "104h/open-source-python-pos-and-accounting-software",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2794",
+      "repo": "dabberman456/finance-mcp-app",
+      "url": "https://github.com/dabberman456/finance-mcp-app",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "reconcile_audit",
+        "report_digest"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:reconcile_audit",
+        "cross_industry:report_digest"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0361",
+        "repo": "dabberman456/finance-mcp-app",
+        "url": "https://github.com/dabberman456/finance-mcp-app",
+        "what_it_is": "A premium fintech style React Native app for tracking financial goals and savings.",
+        "stars": 90,
+        "pushed_at": "2026-07-14T08:44:13Z",
+        "language": "TypeScript",
+        "license": "mpl-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/dabberman456/finance-mcp-app/blob/HEAD/README.md",
+          "characters_read": 4505
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=expense%20management&type=repositories",
+            "source_title": "GitHub repository search: expense management",
+            "detail": "expense management"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "reconcile_audit",
+          "report_digest"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:reconcile_audit",
+          "cross_industry:report_digest"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "expense management"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "dabberman456/finance-mcp-app",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2805",
+      "repo": "DistributedCollective/Sovryn-frontend",
+      "url": "https://github.com/distributedcollective/sovryn-frontend",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0372",
+        "repo": "DistributedCollective/Sovryn-frontend",
+        "url": "https://github.com/DistributedCollective/Sovryn-frontend",
+        "what_it_is": "GitHub Wiki Forum Blog LinkedIn Twitter Edge Firefox Chrome Safari iOS Safari Opera Brave last 10 versions last 10 versions last 10 versions last 6 versions last 6 versions last 10 versions last 10 versions Make a fork of this repository and clone it to your machine.",
+        "stars": 80,
+        "pushed_at": "2026-08-11T09:47:18Z",
+        "language": "TypeScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/DistributedCollective/Sovryn-frontend/blob/HEAD/README.md",
+          "characters_read": 8952
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "distributedcollective/sovryn-frontend",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2817",
+      "repo": "mradkov/p2p-lending",
+      "url": "https://github.com/mradkov/p2p-lending",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0384",
+        "repo": "mradkov/p2p-lending",
+        "url": "https://github.com/mradkov/p2p-lending",
+        "what_it_is": "Peer 2 peer lending platform on the Ethereum blockchain network.",
+        "stars": 70,
+        "pushed_at": "2023-05-19T19:51:12Z",
+        "language": "JavaScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/mradkov/p2p-lending/blob/HEAD/README.md",
+          "characters_read": 2225
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "mradkov/p2p-lending",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2825",
+      "repo": "MatKollar/Invoice_OCR_app",
+      "url": "https://github.com/matkollar/invoice_ocr_app",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "extract_structure",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:extract_structure",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0392",
+        "repo": "MatKollar/Invoice_OCR_app",
+        "url": "https://github.com/MatKollar/Invoice_OCR_app",
+        "what_it_is": "Web application for recognizing and managing data from Slovak invoices.",
+        "stars": 59,
+        "pushed_at": "2025-03-10T18:44:30Z",
+        "language": "JavaScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/MatKollar/Invoice_OCR_app/blob/HEAD/README.md",
+          "characters_read": 3176
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=invoice%20OCR&type=repositories",
+            "source_title": "GitHub repository search: invoice OCR",
+            "detail": "invoice OCR"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "extract_structure",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:extract_structure",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "invoice OCR"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "matkollar/invoice_ocr_app",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2829",
+      "repo": "scallop-io/sui-scallop-sdk",
+      "url": "https://github.com/scallop-io/sui-scallop-sdk",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0396",
+        "repo": "scallop-io/sui-scallop-sdk",
+        "url": "https://github.com/scallop-io/sui-scallop-sdk",
+        "what_it_is": "TypeScript SDK for integrating with the Scallop lending protocol on Sui.",
+        "stars": 56,
+        "pushed_at": "2026-08-28T05:02:47Z",
+        "language": "TypeScript",
+        "license": "apache-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/scallop-io/sui-scallop-sdk/blob/HEAD/README.md",
+          "characters_read": 16124
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "scallop-io/sui-scallop-sdk",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2830",
+      "repo": "chiupam/invoiceOCR",
+      "url": "https://github.com/chiupam/invoiceocr",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "extract_structure",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:extract_structure",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0397",
+        "repo": "chiupam/invoiceOCR",
+        "url": "https://github.com/chiupam/invoiceOCR",
+        "what_it_is": "\u4e00\u4e2a\u57fa\u4e8eFlask\u6846\u67b6\u5f00\u53d1\u7684\u667a\u80fd\u53d1\u7968\u7ba1\u7406\u7cfb\u7edf\uff0c\u652f\u6301\u53d1\u7968\u56fe\u7247\u4e0a\u4f20\u4e0eOCR\u8bc6\u522b\uff0c\u63d0\u4f9b\u53d1\u7968\u4fe1\u606f\u7ba1\u7406\u3001\u6570\u636e\u5bfc\u51fa\u53ca\u7edf\u8ba1\u5206\u6790\u7b49\u529f\u80fd\u3002\u7cfb\u7edf\u91c7\u7528\u817e\u8baf\u4e91OCR API\u8fdb\u884c\u53d1\u7968\u6587\u5b57\u8bc6\u522b\uff0c\u5b9e\u73b0\u53d1\u7968\u4fe1\u606f\u7684\u667a\u80fd\u63d0\u53d6\u4e0e\u5904\u7406\u3002 \ud83d\udee1\ufe0f \u4e24\u6b65\u9a8c\u8bc1\uff08TOTP\uff0c\u517c\u5bb9Google Authenticator\uff09 \u2705 \u65b0\u589e\u5b8c\u6574\u7684\u7528\u6237\u767b\u5f55\u8ba4\u8bc1\u7cfb\u7edf\uff08Flask Login + bcrypt\uff09 \u2705 \u65b0\u589e TOTP \u4e24\u6b65\u9a8c\u8bc1\uff08MFA\uff09\uff0c\u517c\u5bb9 Google Authenticator \u2705 \u65b0\u589e\u8d26\u6237\u9501\u5b9a\u673a\u5236\uff1a5\u6b21\u5bc6\u7801\u9519\u8bef\u9501\u5b9a15\u5206\u949f\uff0c\u9501\u5b9a\u671f\u95f4\u7981\u7528\u8868\u5355+\u5012\u8ba1\u65f6 \u2705 \u65b0\u589e Flask Limiter \u8bf7\u6c42\u9650\u6d41\uff08GET 60/min, POST 20/min\uff09 \u2705 \u65b0\u589e\u5168\u5c40 CSRF\u2026",
+        "stars": 55,
+        "pushed_at": "2026-08-05T15:41:19Z",
+        "language": "Python",
+        "license": "apache-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/chiupam/invoiceOCR/blob/HEAD/README.md",
+          "characters_read": 10037
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=invoice%20OCR&type=repositories",
+            "source_title": "GitHub repository search: invoice OCR",
+            "detail": "invoice OCR"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "extract_structure",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:extract_structure",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "invoice OCR"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "chiupam/invoiceocr",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2832",
+      "repo": "techinfo-youtube/Expense-Management-System-MERN-STACK-Project",
+      "url": "https://github.com/techinfo-youtube/expense-management-system-mern-stack-project",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "reconcile_audit",
+        "report_digest"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:reconcile_audit",
+        "cross_industry:report_digest"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0399",
+        "repo": "techinfo-youtube/Expense-Management-System-MERN-STACK-Project",
+        "url": "https://github.com/techinfo-youtube/Expense-Management-System-MERN-STACK-Project",
+        "what_it_is": "Complete MERN STACK PROJECT Mongodb ExpressJS ReactJS NodeJS Please check branches because all code has been added in multiple branches if you want last or final code then please check final code branch.",
+        "stars": 55,
+        "pushed_at": "2023-06-01T13:17:11Z",
+        "language": "JavaScript",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/techinfo-youtube/Expense-Management-System-MERN-STACK-Project/blob/HEAD/README.md",
+          "characters_read": 355
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=expense%20management&type=repositories",
+            "source_title": "GitHub repository search: expense management",
+            "detail": "expense management"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "reconcile_audit",
+          "report_digest"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:reconcile_audit",
+          "cross_industry:report_digest"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "expense management"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "techinfo-youtube/expense-management-system-mern-stack-project",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2835",
+      "repo": "ossobv/exactonline",
+      "url": "https://github.com/ossobv/exactonline",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0402",
+        "repo": "ossobv/exactonline",
+        "url": "https://github.com/ossobv/exactonline",
+        "what_it_is": "Exact Online REST API Library in Python ..",
+        "stars": 53,
+        "pushed_at": "2023-07-29T20:57:37Z",
+        "language": "Python",
+        "license": "lgpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/ossobv/exactonline/blob/HEAD/README.md",
+          "characters_read": 13201
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "ossobv/exactonline",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2839",
+      "repo": "maziyank/nats",
+      "url": "https://github.com/maziyank/nats",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0406",
+        "repo": "maziyank/nats",
+        "url": "https://github.com/maziyank/nats",
+        "what_it_is": "NATS is a Next.js based ERP system designed to handle various business functions ranging from accounting, inventory, sales, purchasing, POS, to payroll.",
+        "stars": 52,
+        "pushed_at": "2026-08-15T04:08:04Z",
+        "language": "TypeScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/maziyank/nats/blob/HEAD/README.md",
+          "characters_read": 3765
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "maziyank/nats",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2844",
+      "repo": "jkdevcode/trackmyexpenses",
+      "url": "https://github.com/jkdevcode/trackmyexpenses",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "reconcile_audit",
+        "report_digest"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:reconcile_audit",
+        "cross_industry:report_digest"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0411",
+        "repo": "jkdevcode/trackmyexpenses",
+        "url": "https://github.com/jkdevcode/trackmyexpenses",
+        "what_it_is": "TrackMyExpenses is a full stack expense management platform built as a monorepo with a React frontend and a NestJS backend.",
+        "stars": 48,
+        "pushed_at": "2026-04-19T02:53:06Z",
+        "language": "TypeScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/jkdevcode/trackmyexpenses/blob/HEAD/README.md",
+          "characters_read": 5607
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=expense%20management&type=repositories",
+            "source_title": "GitHub repository search: expense management",
+            "detail": "expense management"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "reconcile_audit",
+          "report_digest"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:reconcile_audit",
+          "cross_industry:report_digest"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "expense management"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "jkdevcode/trackmyexpenses",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2860",
+      "repo": "b1f6c1c4/ProfessionalAccounting",
+      "url": "https://github.com/b1f6c1c4/professionalaccounting",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0427",
+        "repo": "b1f6c1c4/ProfessionalAccounting",
+        "url": "https://github.com/b1f6c1c4/ProfessionalAccounting",
+        "what_it_is": "\u4f7f\u7528\u501f\u8d37\u8bb0\u5e10\u6cd5\u7684\u8bb0\u8d26\u8f6f\u4ef6 Accounting software with debit and credit Containerized, nginx + monolithic .NET 9.0 + MongoDB Customized DSL (Domain Specfic Langauge) for easy CRUD A GUI portal for travel expenditures TLSv1.3 end to end encryption \u57fa\u4e8eTLSv1.3\u7684\u6570\u636e\u4f20\u8f93\u4fdd\u62a4 TLSv1.3 certificate based authentication \u57fa\u4e8eTLSv1.3\u5ba2\u6237\u7aef\u8bc1\u4e66\u7684\u8eab\u4efd\u8ba4\u8bc1 WebAuthn\u2026",
+        "stars": 39,
+        "pushed_at": "2025-09-19T05:23:36Z",
+        "language": "C#",
+        "license": "agpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/b1f6c1c4/ProfessionalAccounting/blob/HEAD/README.md",
+          "characters_read": 9481
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "b1f6c1c4/professionalaccounting",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2866",
+      "repo": "lg2de/SimpleAccounting",
+      "url": "https://github.com/lg2de/simpleaccounting",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "accounting_firms"
+      ],
+      "discovery_categories": [
+        "accounting",
+        "reconcile_audit"
+      ],
+      "discovery_cells": [
+        "accounting_firms:vertical_product_or_tool",
+        "cross_industry:accounting",
+        "cross_industry:reconcile_audit"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0433",
+        "repo": "lg2de/SimpleAccounting",
+        "url": "https://github.com/lg2de/SimpleAccounting",
+        "what_it_is": "SimpleAccounting is a simple program for accounting.",
+        "stars": 37,
+        "pushed_at": "2026-08-27T00:44:01Z",
+        "language": "C#",
+        "license": "gpl-3.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/lg2de/SimpleAccounting/blob/HEAD/README.md",
+          "characters_read": 6118
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=accounting%20software&type=repositories",
+            "source_title": "GitHub repository search: accounting software",
+            "detail": "accounting software"
+          }
+        ],
+        "industries": [
+          "accounting_firms"
+        ],
+        "categories": [
+          "accounting",
+          "reconcile_audit"
+        ],
+        "cells": [
+          "accounting_firms:vertical_product_or_tool",
+          "cross_industry:accounting",
+          "cross_industry:reconcile_audit"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "accounting software"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:accounting_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "lg2de/simpleaccounting",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2869",
+      "repo": "radwan503/Faname--RealEstate",
+      "url": "https://github.com/radwan503/faname--realestate",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "real_estate"
+      ],
+      "discovery_categories": [
+        "extract_structure",
+        "listings"
+      ],
+      "discovery_cells": [
+        "cross_industry:extract_structure",
+        "cross_industry:listings",
+        "real_estate:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0436",
+        "repo": "radwan503/Faname--RealEstate",
+        "url": "https://github.com/radwan503/Faname--RealEstate",
+        "what_it_is": "Fanam is a Real Estate, Architecture &amp; interior design Bootstrap HTML Template for real estate website, manage and listing a local or global directory site, real estate agency, real estate agent, real estate company website, property listing, real estate listing, real esate website, real estate broker, realtor,\u2026",
+        "stars": 37,
+        "pushed_at": "2021-08-30T18:21:14Z",
+        "language": "HTML",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/radwan503/Faname--RealEstate/blob/HEAD/README.md",
+          "characters_read": 842
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=real%20estate%20listings&type=repositories",
+            "source_title": "GitHub repository search: real estate listings",
+            "detail": "real estate listings"
+          }
+        ],
+        "industries": [
+          "real_estate"
+        ],
+        "categories": [
+          "extract_structure",
+          "listings"
+        ],
+        "cells": [
+          "cross_industry:extract_structure",
+          "cross_industry:listings",
+          "real_estate:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "real estate listings"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:real_estate"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "radwan503/faname--realestate",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2876",
+      "repo": "thatkazuk1/QuickCredit",
+      "url": "https://github.com/thatkazuk1/quickcredit",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0443",
+        "repo": "thatkazuk1/QuickCredit",
+        "url": "https://github.com/thatkazuk1/QuickCredit",
+        "what_it_is": "Quick Credit is an online lending platform that provides short term soft loans to individuals.",
+        "stars": 34,
+        "pushed_at": "2019-10-23T18:32:46Z",
+        "language": "HTML",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/thatkazuk1/QuickCredit/blob/HEAD/README.md",
+          "characters_read": 8001
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "thatkazuk1/quickcredit",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2877",
+      "repo": "kenny1st/decentralized-lending-platform",
+      "url": "https://github.com/kenny1st/decentralized-lending-platform",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0444",
+        "repo": "kenny1st/decentralized-lending-platform",
+        "url": "https://github.com/kenny1st/decentralized-lending-platform",
+        "what_it_is": "A blockchain powered lending and borrowing platform that eliminates intermediaries, enabling users to earn interest or borrow assets by providing collateral.",
+        "stars": 33,
+        "pushed_at": "2025-02-06T12:17:51Z",
+        "language": "Solidity",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/kenny1st/decentralized-lending-platform/blob/HEAD/README.md",
+          "characters_read": 970
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "kenny1st/decentralized-lending-platform",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2879",
+      "repo": "Cryptoaj-hack/DFDTOKEN",
+      "url": "https://github.com/cryptoaj-hack/dfdtoken",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0446",
+        "repo": "Cryptoaj-hack/DFDTOKEN",
+        "url": "https://github.com/Cryptoaj-hack/DFDTOKEN",
+        "what_it_is": "Decentralized Finance (DeFi) Development Services &amp; Solutions Eliminate the role of a middleman by availing decentralized finance (DEFI) development services &amp; solutions.",
+        "stars": 32,
+        "pushed_at": "2021-03-01T09:49:57Z",
+        "language": null,
+        "license": "apache-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/Cryptoaj-hack/DFDTOKEN/blob/HEAD/README.md",
+          "characters_read": 8435
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "cryptoaj-hack/dfdtoken",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2881",
+      "repo": "PancakeBunny-finance/qubit-finance",
+      "url": "https://github.com/pancakebunny-finance/qubit-finance",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0448",
+        "repo": "PancakeBunny-finance/qubit-finance",
+        "url": "https://github.com/PancakeBunny-finance/qubit-finance",
+        "what_it_is": "Docs: finance.gitbook.io/qubit finance/ ProxyAdmin: 0x40151e5d012E7de6000F7144288ef50af78882be QubitToken: 0x17B7163cf1Dbd286E262ddc68b553D899B93f526 Qore: 0xF70314eb9c7Fe7D88E6af5aa7F898b3A162dcd48 QValidator: 0x0cD79409eD80d8a153A3c729aa1f8b5D44A29282 QubitLocker: 0xB8243be1D145a528687479723B394485cE3cE773\u2026",
+        "stars": 31,
+        "pushed_at": "2022-02-22T07:12:03Z",
+        "language": "Solidity",
+        "license": "other",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/PancakeBunny-finance/qubit-finance/blob/HEAD/README.md",
+          "characters_read": 5165
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "pancakebunny-finance/qubit-finance",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2882",
+      "repo": "carlos-emr/carlos",
+      "url": "https://github.com/carlos-emr/carlos",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "healthcare_medical_practices"
+      ],
+      "discovery_categories": [
+        "data_binding",
+        "practice_management"
+      ],
+      "discovery_cells": [
+        "cross_industry:data_binding",
+        "cross_industry:practice_management",
+        "healthcare_medical_practices:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0449",
+        "repo": "carlos-emr/carlos",
+        "url": "https://github.com/carlos-emr/carlos",
+        "what_it_is": "CARLOS (Clinical Assisting Recording Ledger Open Source) is an electronic medical records system forked from the OpenO EMR project.",
+        "stars": 30,
+        "pushed_at": "2026-08-28T15:24:24Z",
+        "language": "Java",
+        "license": "gpl-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/carlos-emr/carlos/blob/HEAD/README.md",
+          "characters_read": 5928
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=electronic%20medical%20record&type=repositories",
+            "source_title": "GitHub repository search: electronic medical record",
+            "detail": "electronic medical record"
+          }
+        ],
+        "industries": [
+          "healthcare_medical_practices"
+        ],
+        "categories": [
+          "data_binding",
+          "practice_management"
+        ],
+        "cells": [
+          "cross_industry:data_binding",
+          "cross_industry:practice_management",
+          "healthcare_medical_practices:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "electronic medical record"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "general:niche-product",
+          "industry:healthcare_medical_practices"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "carlos-emr/carlos",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2887",
+      "repo": "Expert610/LoanIQ-Smart-Loan-Approval-System",
+      "url": "https://github.com/expert610/loaniq-smart-loan-approval-system",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0454",
+        "repo": "Expert610/LoanIQ-Smart-Loan-Approval-System",
+        "url": "https://github.com/Expert610/LoanIQ-Smart-Loan-Approval-System",
+        "what_it_is": "LoanIQ is a full stack lending platform that bridges the gap between automated AI predictions and human decision making.",
+        "stars": 29,
+        "pushed_at": "2026-04-30T16:22:50Z",
+        "language": "Python",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/Expert610/LoanIQ-Smart-Loan-Approval-System/blob/HEAD/README.md",
+          "characters_read": 2437
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "expert610/loaniq-smart-loan-approval-system",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2888",
+      "repo": "getsan4u/loan-origination-system",
+      "url": "https://github.com/getsan4u/loan-origination-system",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "loan_origination",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:loan_origination",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0455",
+        "repo": "getsan4u/loan-origination-system",
+        "url": "https://github.com/getsan4u/loan-origination-system",
+        "what_it_is": "DigiFi is the world\u2019s first open source loan origination system (\"LOS\").",
+        "stars": 29,
+        "pushed_at": "2019-08-07T19:18:50Z",
+        "language": "JavaScript",
+        "license": "apache-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/getsan4u/loan-origination-system/blob/HEAD/README.md",
+          "characters_read": 2967
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=loan%20origination%20system&type=repositories",
+            "source_title": "GitHub repository search: loan origination system",
+            "detail": "loan origination system"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "loan_origination",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:loan_origination",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "loan origination system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "getsan4u/loan-origination-system",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2908",
+      "repo": "TejasAdhiya/TrustFirst",
+      "url": "https://github.com/tejasadhiya/trustfirst",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0475",
+        "repo": "TejasAdhiya/TrustFirst",
+        "url": "https://github.com/TejasAdhiya/TrustFirst",
+        "what_it_is": "Blockchain powered informal lending with AI mediation and TEE security Features \u2022 Tech Stack \u2022 Getting Started \u2022 Web3 Integration TrustFirst is a Web3 powered peer to peer lending platform that brings transparency and accountability to informal money lending.",
+        "stars": 20,
+        "pushed_at": "2026-05-01T14:13:06Z",
+        "language": "TypeScript",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/TejasAdhiya/TrustFirst/blob/HEAD/README.md",
+          "characters_read": 12555
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "tejasadhiya/trustfirst",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2911",
+      "repo": "poocart/lend721",
+      "url": "https://github.com/poocart/lend721",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0478",
+        "repo": "poocart/lend721",
+        "url": "https://github.com/poocart/lend721",
+        "what_it_is": "LEND721 is Ethereum Smart Contract that allows lending ERC 721 Smart Contracts (NFT) and gain interest from it.",
+        "stars": 18,
+        "pushed_at": "2023-01-24T01:47:16Z",
+        "language": "JavaScript",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/poocart/lend721/blob/HEAD/README.md",
+          "characters_read": 2315
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "poocart/lend721",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2917",
+      "repo": "kenny1st/p2p-lending-platform",
+      "url": "https://github.com/kenny1st/p2p-lending-platform",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0484",
+        "repo": "kenny1st/p2p-lending-platform",
+        "url": "https://github.com/kenny1st/p2p-lending-platform",
+        "what_it_is": "A decentralized platform where users can lend and borrow cryptocurrencies directly, with smart contract based escrow and dynamic interest rates.",
+        "stars": 15,
+        "pushed_at": "2025-02-09T22:21:42Z",
+        "language": null,
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/kenny1st/p2p-lending-platform/blob/HEAD/README.md",
+          "characters_read": 168
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "kenny1st/p2p-lending-platform",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2922",
+      "repo": "FinStack-No-Code-LOS/Loan-Origination-System-Architecture",
+      "url": "https://github.com/finstack-no-code-los/loan-origination-system-architecture",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "loan_origination",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:loan_origination",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0489",
+        "repo": "FinStack-No-Code-LOS/Loan-Origination-System-Architecture",
+        "url": "https://github.com/FinStack-No-Code-LOS/Loan-Origination-System-Architecture",
+        "what_it_is": "Understand how FinStack's No Code Loan Origination System is built using only FOSS technologies and securely deployed on the lender's cloud.",
+        "stars": 12,
+        "pushed_at": "2025-09-08T20:54:57Z",
+        "language": null,
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/FinStack-No-Code-LOS/Loan-Origination-System-Architecture/blob/HEAD/README.md",
+          "characters_read": 1607
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=loan%20origination%20system&type=repositories",
+            "source_title": "GitHub repository search: loan origination system",
+            "detail": "loan origination system"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "loan_origination",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:loan_origination",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "loan origination system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "finstack-no-code-los/loan-origination-system-architecture",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2926",
+      "repo": "crypto-lend/cryptolend.ui",
+      "url": "https://github.com/crypto-lend/cryptolend.ui",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0493",
+        "repo": "crypto-lend/cryptolend.ui",
+        "url": "https://github.com/crypto-lend/cryptolend.ui",
+        "what_it_is": "UI for interacting with Smart Contracts over ETH Lending Platform.",
+        "stars": 11,
+        "pushed_at": "2024-04-22T23:55:43Z",
+        "language": "CSS",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/crypto-lend/cryptolend.ui/blob/HEAD/README.md",
+          "characters_read": 979
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "crypto-lend/cryptolend.ui",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2928",
+      "repo": "Rachana901070/video-loan-origination-system",
+      "url": "https://github.com/rachana901070/video-loan-origination-system",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "loan_origination",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:loan_origination",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0495",
+        "repo": "Rachana901070/video-loan-origination-system",
+        "url": "https://github.com/Rachana901070/video-loan-origination-system",
+        "what_it_is": "This is a Next.js project bootstrapped with create next app .",
+        "stars": 11,
+        "pushed_at": "2026-04-21T08:37:28Z",
+        "language": "TypeScript",
+        "license": null,
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/Rachana901070/video-loan-origination-system/blob/HEAD/README.md",
+          "characters_read": 1450
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=loan%20origination%20system&type=repositories",
+            "source_title": "GitHub repository search: loan origination system",
+            "detail": "loan origination system"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "loan_origination",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:loan_origination",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "loan origination system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "rachana901070/video-loan-origination-system",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2929",
+      "repo": "realnimish/FracNL",
+      "url": "https://github.com/realnimish/fracnl",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0496",
+        "repo": "realnimish/FracNL",
+        "url": "https://github.com/realnimish/FracNL",
+        "what_it_is": "FracNL is a DeFi NFT lending platform where borrowers can lock some fraction of their NFTs as collateral and multiple users can participate as lender against any given listing.",
+        "stars": 11,
+        "pushed_at": "2023-02-28T18:19:00Z",
+        "language": "JavaScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/realnimish/FracNL/blob/HEAD/README.md",
+          "characters_read": 4518
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "realnimish/fracnl",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-2941",
+      "repo": "HelioASjunior/nexi-legal-system",
+      "url": "https://github.com/helioasjunior/nexi-legal-system",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "law_firms"
+      ],
+      "discovery_categories": [
+        "matter_management",
+        "triage_route"
+      ],
+      "discovery_cells": [
+        "cross_industry:matter_management",
+        "cross_industry:triage_route",
+        "law_firms:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0508",
+        "repo": "HelioASjunior/nexi-legal-system",
+        "url": "https://github.com/HelioASjunior/nexi-legal-system",
+        "what_it_is": "Web system for legal office operations, combining client management, case workflow, legal calendar, finance, role based access, and a SQLite API with encrypted data at rest.",
+        "stars": 6,
+        "pushed_at": "2026-04-07T19:58:09Z",
+        "language": "TypeScript",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/HelioASjunior/nexi-legal-system/blob/HEAD/README.md",
+          "characters_read": 11157
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=legal%20case%20management&type=repositories",
+            "source_title": "GitHub repository search: legal case management",
+            "detail": "legal case management"
+          }
+        ],
+        "industries": [
+          "law_firms"
+        ],
+        "categories": [
+          "matter_management",
+          "triage_route"
+        ],
+        "cells": [
+          "cross_industry:matter_management",
+          "cross_industry:triage_route",
+          "law_firms:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "legal case management"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:law_firms"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "helioasjunior/nexi-legal-system",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    {
+      "source_id": "SRC-3003",
+      "repo": "noimank/easyths",
+      "url": "https://github.com/noimank/easyths",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "reference_only_generic",
+      "discovery_disposition_reason": "README describes automation of a desktop stock-trading application; it is not browser operations or an Actionist vertical capability.",
+      "discovery_industry_scope": "cross_industry",
+      "discovery_industries": [],
+      "discovery_categories": [],
+      "discovery_cells": [],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0570",
+        "repo": "noimank/easyths",
+        "url": "https://github.com/noimank/easyths",
+        "what_it_is": "\u57fa\u4e8e pywinauto \u7684\u540c\u82b1\u987a\u4ea4\u6613\u8f6f\u4ef6\u81ea\u52a8\u5316\u9879\u76ee\uff0c\u63d0\u4f9b RESTful API \u63a5\u53e3\uff0c\u901a\u8fc7\u64cd\u4f5c\u961f\u5217\u786e\u4fdd\u9ad8\u5e76\u53d1\u4e0b\u7684\u64cd\u4f5c\u987a\u5e8f\u548c\u4e00\u81f4\u6027\u3002 \u6267\u884c\u770b\u95e8\u72d7 \uff1a\u5355\u64cd\u4f5c\u786c\u8d85\u65f6\u7194\u65ad\uff08\u9ed8\u8ba4 10 \u79d2\uff0c\u53ef\u914d\u7f6e\uff09\uff0c\u754c\u9762\u5361\u6b7b\u81ea\u52a8\u65ad\u8fde\u3001\u540e\u7eed\u64cd\u4f5c\u5feb\u901f\u5931\u8d25\uff0c\u91cd\u8fde\u5373\u6062\u590d\uff0c\u961f\u5217\u4e0d\u963b\u585e \u591a\u8d26\u6237\u652f\u6301 \uff1a\u8d26\u6237\u5217\u8868\u67e5\u8be2\u3001\u539f\u5b50\u5207\u6362\u4e0e\u6309\u8d26\u6237\u5b9a\u5411\u6267\u884c\uff0c\u5207\u6362\u4e0e\u64cd\u4f5c\u5728\u540c\u4e00\u961f\u5217\u69fd\u5185\u539f\u5b50\u5b8c\u6210 \u5185\u5d4c Web \u63a7\u5236\u53f0 \uff1a\u6d4f\u89c8\u5668\u6253\u5f00\u5373\u7528\u7684\u64cd\u4f5c\u53f0\uff0c\u64cd\u4f5c\u8868\u5355\u7531\u63a5\u53e3\u5951\u7ea6\u81ea\u52a8\u751f\u6210\uff0c\u65e0\u9700\u5b89\u88c5\u4efb\u4f55\u524d\u7aef\u4f9d\u8d56 MCP \u652f\u6301 \uff1a\u652f\u6301 Model Context Protocol\uff0c\u53ef\u88ab AI \u52a9\u624b\uff08\u5982 Claude Code\u3001Cursor\uff09\u76f4\u63a5\u8c03\u7528 \u6ce8\uff1a\u2026",
+        "stars": 117,
+        "pushed_at": "2026-08-25T10:00:57Z",
+        "language": "Python",
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/noimank/easyths/blob/HEAD/README.md",
+          "characters_read": 9275
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=UI%20automation&type=repositories",
+            "source_title": "GitHub repository search: UI automation",
+            "detail": "UI automation"
+          }
+        ],
+        "industries": [],
+        "categories": [],
+        "cells": [],
+        "industry_scope": "cross_industry",
+        "disposition": "reference_only_generic",
+        "disposition_reason": "README describes automation of a desktop stock-trading application; it is not browser operations or an Actionist vertical capability.",
+        "scope_reason": "README describes automation of a desktop stock-trading application; it is not browser operations or an Actionist vertical capability.",
+        "query_count": 1,
+        "source_queries": [
+          "UI automation"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "fill:highest-ranked-fresh"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "noimank/easyths",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    }
+  ]
+}
