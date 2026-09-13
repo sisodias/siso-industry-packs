@@ -1,0 +1,799 @@
+[
+  {
+    "full_name": "sduprey/optimal_transaction_execution",
+    "requested_name": "sduprey/optimal_transaction_execution",
+    "id": 16837587,
+    "url": "https://github.com/sduprey/optimal_transaction_execution",
+    "stars": 34,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "77613ec675a1b56cc8672a9bcadccef152ed238a",
+    "last_commit_date": "2014-02-14T13:56:19Z",
+    "archived": false,
+    "fork": false,
+    "description": "This entry contains two topics  The first item is entirely based on the following paper:  http://sfb649.wiwi.hu-berlin.de/papers/pdf/SFB649DP2011-056.pdf   It contains 2 MATLAB demonstrating script : DATA_preprocessing.m & VAR_modeling_script.m  DATA_preprocessing.m uses the LOBSTER framework (https://lobster.wiwi.hu-berlin.de/) to preprocess high frequency data from  the NASDAQ Total View ITCH (csv files) allowing us to reconstruct exactly at each time the order book up  to ten depths. Just look at the published script !   VAR_modeling_script.m contains the modeling of the whole order book as VEC/VAR process.  It uses the great VAR/VEC Joahnsen cointegration framework.  After calibrating your VAR model, you then assess the impact of an order  using shock scenario (sensitivity analysis) to the VAR process.  We deal with 3 scenarii : normal limit order, aggressive limit order & normal market order).  Play section by section the script (to open up figures which contain a lot of graphs).   It contains a power point to help you present this complex topic.   The second item is entirely based on the following paper :  http://www.courant.nyu.edu/~almgren/papers/optliq.pdf   It contains a mupad document : symbolic_demo.mn  I did struggle to get something nice with the symbolic toolbox.  I was not able to drive a continuous workflow and had to recode some equations myself.  I nevertheless managed to get a closed form solution for the simplified linear cost model.   It contains a MATLAB demonstrating script : working_script.m  For more sophisticated cost model, there is no more closed form  and we there highlighted MATLAB numerical optimization abilities (fmincon).   It contains an Optimization Apps you can install.  Just launch the optimization with the default parameters.  And then switch the slider between volatility risk and liquidation costs  to see the trading strategies evolve on the efficient frontier.   It contains a power point to help you present this complex topic. ",
+    "language": "MATLAB",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": null,
+    "readme_read": false,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      "OPTIMAL_ORDER",
+      "TRANSACTION_OPTIMIZATION",
+      "readme.txt"
+    ],
+    "source_files": {},
+    "upstream_urls": {
+      "commit": "https://github.com/sduprey/optimal_transaction_execution/commit/77613ec675a1b56cc8672a9bcadccef152ed238a",
+      "metadata": "https://api.github.com/repos/sduprey/optimal_transaction_execution"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "bbalouki/itchcpp",
+    "requested_name": "bbalouki/itchcpp",
+    "id": 1081976698,
+    "url": "https://github.com/bbalouki/itchcpp",
+    "stars": 13,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8af52e5ebcc1a112749a28510d998f56a031db8f",
+    "last_commit_date": "2026-09-10T18:57:30Z",
+    "archived": false,
+    "fork": false,
+    "description": "High-Performance NASDAQ TotalView-ITCH 5.0 Parser & Market-Data Platform",
+    "language": "C++",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "The MIT License (MIT)",
+      "Copyright (c) 2025 - 2026 Bertin Balouki SIMYELI",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# High-Performance NASDAQ ITCH 5.0 Parser",
+      "## Table of Contents",
+      "## Project Philosophy",
+      "## Key Features",
+      "## Architectural Overview",
+      "### Fast, Allocation-Free Single-Pass Decoding",
+      "### Type-Safe Message Handling",
+      "### Endianness and Byte Order",
+      "## Getting Started",
+      "### Prerequisites",
+      "### Building the Project",
+      "### Running Tests and Benchmarks",
+      "## Dependency Management",
+      "## Comprehensive Usage Guide",
+      "### Example 1: Parsing a File into a Vector",
+      "### Example 2: High-Performance Callback-Based Parsing",
+      "### Example 3: Filtering Messages by Type",
+      "### Example 4: A Complete, Compilable Example",
+      "### Example 5: Building and Displaying an Order Book",
+      "#### Example Output",
+      "### Feed Ingestion (Transport)",
+      "### Full-Market Book Engine",
+      "### Analytics",
+      "### Interoperability",
+      "### Simulation & Ecosystem",
+      "## API Reference: ITCH 5.0 Message Types",
+      "### System Event Messages",
+      "### Stock and Administrative Messages",
+      "### Order Messages",
+      "### Trade Messages"
+    ],
+    "recent_commit_count": 211,
+    "recent_authors_sample50": [
+      "bbalouki",
+      "dependabot[bot]",
+      "juniorep"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CMakeLists.txt",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "VERSION.txt",
+      "benchmarks",
+      "cmake",
+      "conanfile.py",
+      "docs",
+      "examples",
+      "fuzz",
+      "include",
+      "packaging",
+      "pyproject.toml",
+      "python",
+      "scripts",
+      "src",
+      "tests",
+      "tools",
+      "vcpkg.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/bbalouki/itchcpp/blob/8af52e5ebcc1a112749a28510d998f56a031db8f/README.md",
+        "sha256": "a8a5d1ab48a5771ca6be942bfa3503fa79ba57243c5be20dfa1468b0604fb45a",
+        "bytes": 37768
+      },
+      "LICENSE": {
+        "url": "https://github.com/bbalouki/itchcpp/blob/8af52e5ebcc1a112749a28510d998f56a031db8f/LICENSE",
+        "sha256": "d08e5db6abff6964651ccb91141fcf6d7faccb05b32ff65b6ef1c8d9483ed0a9",
+        "bytes": 1096
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/bbalouki/itchcpp/blob/8af52e5ebcc1a112749a28510d998f56a031db8f/pyproject.toml",
+        "sha256": "45a34db4c2acf2486a06fc0ee661b9368714049aa0bd09804a606191c5759862",
+        "bytes": 2642
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/bbalouki/itchcpp/commit/8af52e5ebcc1a112749a28510d998f56a031db8f",
+      "metadata": "https://api.github.com/repos/bbalouki/itchcpp"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# High-Performance NASDAQ ITCH 5.0 Parser [![Build](https://github.com/bbalouki/itchcpp/actions/workflows/build.yml/badge.svg)](https://github.com/bbalouki/itchcpp/actions/workflows/build.yml) [![Docs](https://github.com/bbalouki/itchcpp/actions/workflows/docs.yml/badge.svg)](https://bbalouki.github.io/itchcpp/) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white) ![Vcpkg Version](https://img.shields.io/vcpkg/v/bbalouki-itch) [![C++20](https://img.shields.io/badge/C++-20-blue.svg)](https://isocpp.org/std/the-standard) [![CMake](https://img.shields.io/badge/CMake-3.25+-blue.svg)](https://cmake.org/) [![PyPi status](https://img.shields.io/pypi/status/itchcpp.svg?maxAge=60)](https://pypi.python.org/pypi/itchcpp) [![PYPI Version](https://img.shields.io/pypi/v/itchcpp)](https://pypi.org/project/itchcpp/) [![CodeFactor](https://www.codefactor.io/repository/github/bbalouki/itchcpp/badge)](https://www.codefactor.io/repository/github/bbalouki/itchcpp) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![LinkedIn](https://img.shields.io/badge/LinkedIn-grey?logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/bertin-balouki-simyeli-15b17a1a6/) [![PayPal Me](https://img.shields.io/badge/PayPal%20Me-blue?logo=paypal)](https://paypal.me/bertinbalouki?country.x=SN&locale.x=en_US) A modern, high-performance C++20 library for parsing NASDAQ TotalView-ITCH 5.0 protocol data feeds. This parser is designed for maximum speed, minimal memory overhead, and type safety, making it ideal for latency-sensitive financial applications, market data analysis, and quantitative research. \ud83d\udcd6 [**API documentation:**](https://bbalouki.github.io/itchcpp/). --- ## Table of Contents 1. [Project Philosophy](#project-philosophy) 2. [Key Features](#key-features) 3. [Architectural Overview](#architectural-overview) - [Fast, Allocation-Free Single-Pass Decoding](#fast-allocation-free-single-pass-decoding) - [Type-Safe Message Handling](#type-safe-message-handling) - [Endianness and Byte Order](#endianness-and-byte-order) 4. [Getting Started](#getting-started) - [Prerequisites](#prerequisites) - [Building the Project](#building-the-project) - [Running Tests and Benchmarks](#running-tests-and-benchmarks) 5. [Dependency Management](#dependency-management) 6. [Comprehensive Usage Guide](#comprehensive-usage-guide) - [Example 1: Parsing a File into a Vector](#example-1-parsing-a-file-into-a-vector) - [Example 2: High-Performance Callback-Based Parsing](#example-2-high-performance-callback-based-parsing) - [Example 3: Filtering Messages by Type](#example-3-filtering-messages-by-type) - [Example 4: A Complete, Compilable Example](#example-4-a-complete-compilable-example) 7. [API Reference: ITCH 5.0 Message Types](#api-reference-itch-50-message-types) - [System Event Messages](#system-event-messages) - [Stock and Administrative Messages](#stock-and-administrative-messages) - [Order Messages](#order-messages) - [Trade Messages](#trade-messages) - [Imbalance and Price Discovery Messages](#imbalance-and-price-discovery-messages) 8. [Performance](#performance) 9. [Coding Standards](#coding-standards) 10. [Frequently",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2025 - 2026 Bertin Balouki SIMYELI Permission is hereby granted, free of charge, to any person obtaining a copy",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![PyPi status](https://img.shields.io/pypi/status/itchcpp.svg?maxAge=60)](https://pypi.python.org/pypi/itchcpp)",
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+      "[![PayPal Me](https://img.shields.io/badge/PayPal%20Me-blue?logo=paypal)](https://paypal.me/bertinbalouki?country.x=SN&locale.x=en_US)",
+      "A modern, high-performance C++20 library for parsing NASDAQ TotalView-ITCH 5.0 protocol data feeds. This parser is designed for maximum speed, minimal memory overhead, and type safety, making it ideal for latency-sensitive financial applications, market data a",
+      "12. [License](#license)",
+      "1.  **Performance Above All**: In market data processing, performance is not just a feature; it's a requirement. This library is architected to eliminate unnecessary overhead. It avoids dynamic memory allocations and stream I/O in its critical path, decoding e",
+      "multicast framing, SoupBinTCP (Glimpse/recovery) framing, and `.pcap`/`.pcapng`",
+      "- **Zero-Copy Overlay API**: Inspect raw frames through lazy typed views that",
+      "`itch-tool` CLI (inspect/filter/stats/convert), and native Python bindings",
+      "- **Allocation-Free Core**: The callback-based parsing loop performs zero dynamic memory allocations, minimizing latency and jitter.",
+      "- Use a callback for efficient, low-memory stream processing of large files.",
+      "The parser is a fast, allocation-free, single-pass field decoder. Each message type is defined as a packed `struct` whose layout mirrors the ITCH wire format, and each frame is decoded in one forward pass: fields are copied out and converted from network byte ",
+      "Dispatch is driven by a compile-time table keyed on the one-byte message type, so selecting the right decoder is a single flat-array lookup followed by a direct, inlinable call. There is no red-black-tree lookup and no type-erased `std::function` indirection. ",
+      "- **Efficient Memory Layout:** Messages are stored contiguously in memory, which improves CPU cache utilization and overall processing speed.",
+      "This is the simplest approach. It reads an entire file into memory and returns a `std::vector` of parsed messages. This method is convenient for smaller files but may consume significant memory for large datasets.",
+      "This is the most memory-efficient way to process large files. The parser invokes your callback function for each message it finds, avoiding the need to store all messages in memory at once. For best performance, read the file into a buffer first.",
+      "delivered inside transport framing. The `itch::transport` module decodes the",
+      "framing that actually arrives on the wire and on disk, then feeds the existing"
+    ],
+    "dependency_repos": [
+      "bbalouki/itch",
+      "bbalouki/itchcpp",
+      "bbalouki/itchcpp.git"
+    ]
+  },
+  {
+    "full_name": "PIYUSH-KUMAR1809/market-data-parser",
+    "requested_name": "PIYUSH-KUMAR1809/market-data-parser",
+    "id": 1220189908,
+    "url": "https://github.com/PIYUSH-KUMAR1809/market-data-parser",
+    "stars": 13,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c",
+    "last_commit_date": "2026-09-08T11:33:22Z",
+    "archived": false,
+    "fork": false,
+    "description": "C++20 NASDAQ ITCH + NSE FO file parser",
+    "language": "C",
+    "license": "MIT",
+    "actual_license_paths": [
+      "COPYING.minilzo",
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 1989, 1991 Free Software Foundation, Inc.,",
+      "the GNU Lesser General Public License instead.)  You can apply it to",
+      "copyright notice and disclaimer of warranty; keep intact all the",
+      "original copyright holder who places the Program under this License",
+      "WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR",
+      "the \"copyright\" line and a pointer to where the full notice is found.",
+      "    Copyright (C) <year>  <name of author>",
+      "    GNU General Public License for more details."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# High-Performance Market Data Parser",
+      "### Key Takeaways",
+      "## Key Features",
+      "## Architecture",
+      "## Performance",
+      "### Microbenchmarks",
+      "## Build and Run",
+      "### Prerequisites",
+      "### Compiling",
+      "### Running parsers",
+      "### Testing",
+      "## Support"
+    ],
+    "recent_commit_count": 7,
+    "recent_authors_sample50": [
+      "PIYUSH-KUMAR1809"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".github",
+      ".gitignore",
+      "CMakeLists.txt",
+      "CONTRIBUTING.md",
+      "COPYING.minilzo",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "benchmarks",
+      "config.toml",
+      "generate_data.py",
+      "include",
+      "run_itch.sh",
+      "run_nse.sh",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/blob/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c/README.md",
+        "sha256": "12c86d2a34d45cec1125069f2d37c691a858ce5715b66d6bb2f5b523ca14d01d",
+        "bytes": 5002
+      },
+      "COPYING.minilzo": {
+        "url": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/blob/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c/COPYING.minilzo",
+        "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+        "bytes": 17984
+      },
+      "LICENSE": {
+        "url": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/blob/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c/LICENSE",
+        "sha256": "784a19ae2268205b9d39d30fa9934b76168b2bb98f78d9d8f13804fa4d45c0f4",
+        "bytes": 1069
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/commit/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c",
+      "metadata": "https://api.github.com/repos/PIYUSH-KUMAR1809/market-data-parser"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# High-Performance Market Data Parser A C++20 file parser for NASDAQ TotalView-ITCH 5.0 and NSE FO snapshots. Built for full-tape replay: `mmap` / `pread`, packed structs, and an order-id map with no heap traffic on the add/delete path. ![C++](https://img.shields.io/badge/C++-20-blue.svg?style=flat&logo=c%2B%2B) ![License](https://img.shields.io/badge/License-MIT-green.svg) [![CI](https://github.com/PIYUSH-KUMAR1809/market-data-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/PIYUSH-KUMAR1809/market-data-parser/actions/workflows/ci.yml) > **Performance Benchmark (v2.0)**: **~11.36 million ITCH msgs/s** | **25.88 s** for 293,989,079 messages (8,616 MiB) on Apple M1 Pro. **~4.7\u00d7** vs v1.0 on the same file. Bring your own licensed dumps. This repository does not redistribute exchange data. ### Key Takeaways * **I/O**: ITCH is `mmap` + `MADV_SEQUENTIAL`. NSE FO is 256 MiB double-buffer `pread`. * **Book**: One global order-id map (`id \u2192 side, price, qty, symbol[8]`). Not a price-level ladder. * **Memory**: `DenseMap` open-addressing plus `std::pmr` arenas. Order objects are PODs. * **ITCH dispatch**: Mutates on `A F E C X D U`. Length-skips `S R H Y L V W K J h P Q B I N` (including trades `P`/`Q`). --- ## Key Features * **NASDAQ ITCH 5.0**: Length-prefixed TotalView-ITCH file replay. Locate filter and parser merge included. * **NSE FO snapshot**: Packed `SnapshotRecord`, invalid",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![C++](https://img.shields.io/badge/C++-20-blue.svg?style=flat&logo=c%2B%2B) ![License](https://img.shields.io/badge/License-MIT-green.svg) [![CI](https://github.com/PIYUSH-KUMAR1809/market-data-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/PI",
+      "Bring your own licensed dumps. This repository does not redistribute exchange data.",
+      "*   **Memory**: `DenseMap` open-addressing plus `std::pmr` arenas. Order objects are PODs.",
+      "1.  **Ingestion**: The CLI maps or streams a local file. No multicast join.",
+      "python3 generate_data.py",
+      "This project is free and MIT-licensed. If it was useful \u2014 for a replay, a benchmark, or learning how ITCH/NSE dumps are laid out \u2014 you can buy me a coffee. Completely optional."
+    ],
+    "dependency_repos": [
+      "PIYUSH-KUMAR1809/market-data-parser"
+    ]
+  },
+  {
+    "full_name": "juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "requested_name": "juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "id": 153149113,
+    "url": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "stars": 9,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c5e577e41b3e210f49c7b5c2848f6da2291d3b7f",
+    "last_commit_date": "2018-12-18T20:05:33Z",
+    "archived": false,
+    "fork": false,
+    "description": "Market Data Feed Handler, ITCH Protocol.  MoldUDP Multicast  Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ).",
+    "language": "Java",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (C) 2018 Juan J. Mart\u00ednez"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# BIVA-MoldUDP-Multicast-Handler"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      "BIVA_MoldUDP_Multicast_Handler",
+      "LICENSE",
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/blob/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f/README.md",
+        "sha256": "c1bb41deac248a8952b77c3e180a78ce296e6f42f29a39bb7b432acdb8435312",
+        "bytes": 812
+      },
+      "LICENSE": {
+        "url": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/blob/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f/LICENSE",
+        "sha256": "afa699edb972e792b807f361d43f11201fb1bf1fbab3a9f8310823a286e52074",
+        "bytes": 501
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/commit/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f",
+      "metadata": "https://api.github.com/repos/juanjmtzs/BIVA-MoldUDP-Multicast-Handler"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# BIVA-MoldUDP-Multicast-Handler To RUN: java -jar $myJar $mcastGroup $mcastPort $receiverInterfaceIP $folder $ipRecovery $portRecovery & Market Data Feed Handler, ITCH Protocol. MoldUDP Multicast Useful for the",
+    "license_excerpt": "Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "nethakah/tick2trade",
+    "requested_name": "nethakah/tick2trade",
+    "id": 1284295158,
+    "url": "https://github.com/nethakah/tick2trade",
+    "stars": 8,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "2b767fe23ab9d9b85a6be1ab686931991276473c",
+    "last_commit_date": "2026-09-12T00:37:12Z",
+    "archived": false,
+    "fork": false,
+    "description": "Hardware-accelerated (FPGA) HFT trading pipeline for NASDAQ TotalView-ITCH 5.0  market data. Implements an async FIFO, MoldUDP64 deframer, ITCH parser, L1/L2/L3 limit order book, and trade signal engine. SystemVerilog RTL verified in Verilator against a C++ golden model and running on a Xilinx ZCU104 at 240 MHz with 33 ns decision latency.",
+    "language": "C++",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2026 Nethaka Haldo"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Complete NASDAQ Trading Pipeline (HFT) on FPGA",
+      "## Layout",
+      "## Quickstart",
+      "## Scope/Goals",
+      "## License & Copyright"
+    ],
+    "recent_commit_count": 193,
+    "recent_authors_sample50": [
+      "nethakah"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "build_logs",
+      "fpga",
+      "rtl",
+      "scripts",
+      "sw",
+      "tb"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/nethakah/tick2trade/blob/2b767fe23ab9d9b85a6be1ab686931991276473c/README.md",
+        "sha256": "b5c2df35ee8e3fa6db62ddaf7186f48e25402e42e653932c4a536d9b2b6df056",
+        "bytes": 4853
+      },
+      "LICENSE": {
+        "url": "https://github.com/nethakah/tick2trade/blob/2b767fe23ab9d9b85a6be1ab686931991276473c/LICENSE",
+        "sha256": "8b907409f5ab1e0bcf6ec37514305125af020131f30db0facbb8854688e77f31",
+        "bytes": 11343
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/nethakah/tick2trade/commit/2b767fe23ab9d9b85a6be1ab686931991276473c",
+      "metadata": "https://api.github.com/repos/nethakah/tick2trade"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Complete NASDAQ Trading Pipeline (HFT) on FPGA `SystemVerilog` \u00b7 `Verilator/C++` \u00b7 `Vivado 2024.1` \u00b7 `PYNQ` \u00b7 `Xilinx ZCU104 (XCZU7EV)` This project is my own build for a NASDAQ ITCH 5.0 market data pipeline. Due to high-frequency trading (HFT), no one does this in software nowadays; instead, this is implemented completely on an FPGA board, with configurable thresholds (memory writing in C/C++) to change trading strategies. Practically: MoldUDP64 packets in over AXI4-Stream, limit order book reconstructed on-chip, and a preloaded order fires when the book hits threshold conditions set via AXI-Lite. | Metric | Value | | :-- | :-- | | Decision latency | 33.3 ns (8 cycles @ 240 MHz) | | Clock, in-system | 240 MHz, +0.130 ns post-route | | Clock, standalone | 288 MHz out-of-context | | LUTs | 20,229 / 230,400 (8.78%) | | Registers | 3,060 / 460,800 (0.66%) | | BRAM / URAM / DSP | 0 / 0 / 0 | Note: Decision latency, in this case, is measuring from the last byte of the ITCH message to `order_fire` asserting (the",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "This project is my own build for a NASDAQ ITCH 5.0 market data pipeline. Due to high-frequency trading (HFT), no one does this in software nowadays; instead, this is implemented completely on an FPGA board, with configurable thresholds (memory writing in C/C++",
+      "| BRAM / URAM / DSP | 0 / 0 / 0 |",
+      "4. moldudp_deframer",
+      "The on-chip order book here is 3 levels of LUTRAM (see /build_logs/ to see how I came to this):",
+      "moldudp_deframer.sv     UDP envelope, sequence tracking, gap count",
+      "run.py                  PYNQ driver, programs the PL and reads counters",
+      "`REQUIRES: Verilator, Vivado 2024.1`",
+      "- [x] MoldUDP64 deframer with sequence gap detection",
+      "- [x] Three-level order book in LUTRAM",
+      "- [ ] ASIC flow with Genus/Innovus to find PPA in SRAM instead of LUTRAM",
+      "## License & Copyright",
+      "Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE)."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "requested_name": "juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "id": 153152039,
+    "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "stars": 5,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "54dc8ffa19f6fcb5e47b075413067f302f38f251",
+    "last_commit_date": "2018-10-15T19:45:18Z",
+    "archived": false,
+    "fork": false,
+    "description": "Market Data Feed Handler, ITCH Protocol.  SoupBinTCP Unicast  Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ).",
+    "language": "Java",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (C) 2018 Juan J. Mart\u00ednez"
+    ],
+    "license_files_read": true,
+    "readme_path": "README",
+    "readme_read": true,
+    "readme_headings": [
+      "# BIVA-SoupBinTCP-Multicast-Handler"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/issues/1",
+        "createdAt": "2020-06-21T10:59:49Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      "BIVA_SoupBinTCP_Unicast_Handler",
+      "LICENSE",
+      "README"
+    ],
+    "source_files": {
+      "README": {
+        "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/blob/54dc8ffa19f6fcb5e47b075413067f302f38f251/README",
+        "sha256": "a07156b42d69a2ff677c6197719554257a81b67269b7cdc1532b0a90913a9c22",
+        "bytes": 773
+      },
+      "LICENSE": {
+        "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/blob/54dc8ffa19f6fcb5e47b075413067f302f38f251/LICENSE",
+        "sha256": "b5edcca3741b839c7542d2566faa8c6020a1574e106bdec9121e049812bfbe60",
+        "bytes": 497
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/commit/54dc8ffa19f6fcb5e47b075413067f302f38f251",
+      "metadata": "https://api.github.com/repos/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# BIVA-SoupBinTCP-Multicast-Handler To RUN: java -jar $myJar $user $pass $ip $port $seq $folder & Market Data Feed Handler, ITCH Protocol. SoupBinTCP Unicast Useful for the",
+    "license_excerpt": "Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "lim-james/ITCH-Order-Book",
+    "requested_name": "lim-james/ITCH-Order-Book",
+    "id": 1262090753,
+    "url": "https://github.com/lim-james/ITCH-Order-Book",
+    "stars": 5,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "784d8a337bbd62676889905b822f12eb5feac975",
+    "last_commit_date": "2026-06-17T08:32:15Z",
+    "archived": false,
+    "fork": false,
+    "description": "Low-latency NASDAQ ITCH 5.0 market data pipeline",
+    "language": "C++",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ITCH Order Book",
+      "## Architecture",
+      "## Build",
+      "# optimised release",
+      "# w/ latency instrumentation",
+      "# sanitizers",
+      "## Run",
+      "## Performance (TSLA, 527k messages)",
+      "## Requirements"
+    ],
+    "recent_commit_count": 72,
+    "recent_authors_sample50": [
+      "lim-james"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "README.md",
+      "bench",
+      "include",
+      "makefile",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/lim-james/ITCH-Order-Book/blob/784d8a337bbd62676889905b822f12eb5feac975/README.md",
+        "sha256": "88c72ce3cebe504c38b33107fcc81186760a0802a86dd535ac4c524e110ab17a",
+        "bytes": 1827
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/lim-james/ITCH-Order-Book/commit/784d8a337bbd62676889905b822f12eb5feac975",
+      "metadata": "https://api.github.com/repos/lim-james/ITCH-Order-Book"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ITCH Order Book Low-latency NASDAQ ITCH 5.0 market data pipeline built in C++26. Replays binary feed files through a lock-free SPMC ring buffer into",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **Feed**: memory-mapped file source, dispatch via SPMC disruptor",
+      "- **Order book**: bounded sorted array (top 10 price levels per side), contiguous in memory"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "AndrewAMD/SierraChartZorroPlugin",
+    "requested_name": "AndrewAMD/SierraChartZorroPlugin",
+    "id": 149489239,
+    "url": "https://github.com/AndrewAMD/SierraChartZorroPlugin",
+    "stars": 49,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "43d3645e17a8349fb6d3dffa541c91d0a51222d7",
+    "last_commit_date": "2021-04-20T14:47:57Z",
+    "archived": false,
+    "fork": false,
+    "description": "A Zorro broker API plugin for Sierra Chart, written in Win32 C++.",
+    "language": "C++",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2018 Andrew M. Dolder (andrew@vitaltrades.com)",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Sierra Chart Plugin for Zorro",
+      "## Build Instructions",
+      "## Installation Instructions",
+      "## About Sierra Chart",
+      "## Configuring Sierra Chart DTC Server",
+      "## Configuring Zorro",
+      "### User field",
+      "### Password field",
+      "## Plugin Capabilities",
+      "## Example Test Script",
+      "## Known Issues",
+      "## License",
+      "## Resources",
+      "## Contact Info"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/AndrewAMD/SierraChartZorroPlugin/issues/2",
+        "createdAt": "2024-02-07T07:42:54Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-20T15:41:43Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/AndrewAMD/SierraChartZorroPlugin/issues/1",
+        "createdAt": "2021-02-02T11:50:42Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-02-02T13:58:08Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "SierraChart2.sln",
+      "SierraChart2",
+      "asio",
+      "dtc",
+      "zorro"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/AndrewAMD/SierraChartZorroPlugin/blob/43d3645e17a8349fb6d3dffa541c91d0a51222d7/README.md",
+        "sha256": "bb96180b4f79d9a71bd40a5b4c3ae3ffdec5498964136822a5a79914e13f3b6a",
+        "bytes": 10116
+      },
+      "LICENSE": {
+        "url": "https://github.com/AndrewAMD/SierraChartZorroPlugin/blob/43d3645e17a8349fb6d3dffa541c91d0a51222d7/LICENSE",
+        "sha256": "e35a7dc00d39e0cfc43645f0ae017e85a4aa35b674fcbd19fa2cf349a411bd94",
+        "bytes": 1098
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/AndrewAMD/SierraChartZorroPlugin/commit/43d3645e17a8349fb6d3dffa541c91d0a51222d7",
+      "metadata": "https://api.github.com/repos/AndrewAMD/SierraChartZorroPlugin"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Sierra Chart Plugin for Zorro This plugin works both as a broker plugin to the Zorro Trading Automaton and as a client to Sierra Chart in order to: 1) Get live market data 2) Get historical market data 3) Trade algorithmically 4) Track your trading account This plugin was written in Win32 C/C++ using Visual Studio 2019. ## Build Instructions This plugin depends on the following libraries: * Asio standalone library (included) * DTC Protocol library (included) Build in Visual Studio 2019 or greater. This plugin must be compiled in 32-bit (x86) in order to be compatible with Zorro. ## Installation Instructions To install the plugin, simply place the SierraChart.dll file in the Plugin folder where Zorro is installed. [The DLL release builds can be found here.](https://github.com/AndrewAMD/SierraChartZorroPlugin/releases) ## About Sierra Chart Sierra Chart is a trading platform with support for [many brokers](https://www.sierrachart.com/index.php?page=doc/SupportedDataAndTradingServices.php). Sierra Chart has a fully integrated [DTC Server](https://www.sierrachart.com/index.php?page=doc/DTCServer.php). It has two dedicated ports: 1) One for all trading, current market data, account data, and position data. 2) One for all historical market data. ## Configuring Sierra Chart",
+    "license_excerpt": "MIT License Copyright (c) 2018 Andrew M. Dolder (andrew@vitaltrades.com) Permission is hereby granted, free of charge, to any person obtaining a copy of this software",
+    "license_warnings": [],
+    "runtime_clues": [
+      "A Sierra Chart instance can be accessed locally or over the internet. This plugin only uses TLS encryption.  Unencrypted connections are not supported by this plugin.",
+      "* \"h\" - DTC server hostname. Default value: \"127.0.0.1\" (localhost - the same computer)",
+      "## License",
+      "This project has an MIT-style license. See the LICENSE.md file for more details."
+    ],
+    "dependency_repos": [
+      "AndrewAMD/SierraChartZorroPlugin"
+    ]
+  }
+]
