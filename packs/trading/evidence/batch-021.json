@@ -1,0 +1,1173 @@
+[
+  {
+    "full_name": "Alparse/databento-dotnet",
+    "requested_name": "Alparse/databento-dotnet",
+    "id": 1097394161,
+    "url": "https://github.com/Alparse/databento-dotnet",
+    "stars": 13,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "22c706b4d44174c8072ccf3cbe1b28248876accb",
+    "last_commit_date": "2026-09-07T05:50:10Z",
+    "archived": false,
+    "fork": false,
+    "description": "High-performance .NET client for Databento market data - Live streaming, historical queries, and reference data APIs",
+    "language": "C#",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright 2025 Serhat Alpar",
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# databento-dotnet",
+      "## Table of Contents",
+      "## Installation",
+      "## Quick Start",
+      "### 1. Set Your API Key",
+      "# Windows",
+      "# Linux/macOS",
+      "### 2. Live Streaming",
+      "### 3. Historical Data",
+      "## Features",
+      "### Supported Schemas (20)",
+      "## Symbol Mapping",
+      "### Live Client Symbol Mapping",
+      "### LiveBlocking Client Symbol Mapping",
+      "### Historical Client Symbol Mapping",
+      "## Backtesting",
+      "### Historical API Backtesting",
+      "### File-Based Backtesting (Offline)",
+      "### Code Parity with Live Trading",
+      "## API Reference",
+      "### LiveClient",
+      "### LiveBlockingClient",
+      "### HistoricalClient",
+      "### ReferenceClient",
+      "### Resilience & Auto-Reconnect",
+      "#### Retry Policies",
+      "#### Resilience Callbacks",
+      "## Building from Source",
+      "### Windows",
+      "# Prerequisites: .NET 8 SDK, CMake 3.24+, Visual Studio 2019+"
+    ],
+    "recent_commit_count": 7,
+    "recent_authors_sample50": [
+      "Alparse"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Alparse/databento-dotnet/issues/37",
+        "createdAt": "2026-08-11T16:51:20Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-07T05:59:20Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Alparse/databento-dotnet/issues/36",
+        "createdAt": "2026-07-22T20:03:13Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-25T01:43:05Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "API_Classification.md",
+      "API_REFERENCE.md",
+      "BUILDING.md",
+      "CHANGELOG.md",
+      "Directory.Build.props",
+      "LICENSE",
+      "QUICKSTART.md",
+      "README.md",
+      "Readme_For_Coding_Agents.md",
+      "archives",
+      "build",
+      "databento-dotnet.sln",
+      "docs",
+      "examples",
+      "future_improvements.md",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Alparse/databento-dotnet/blob/22c706b4d44174c8072ccf3cbe1b28248876accb/README.md",
+        "sha256": "86aceb5d8c34cf0f48428250222450dfab066005d1c063f825ce73e3ecf2c395",
+        "bytes": 15900
+      },
+      "LICENSE": {
+        "url": "https://github.com/Alparse/databento-dotnet/blob/22c706b4d44174c8072ccf3cbe1b28248876accb/LICENSE",
+        "sha256": "c95bf01ab3655e2af750fc95d7ffdcd10683319dc59a8f2fd278a05620a23857",
+        "bytes": 10732
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Alparse/databento-dotnet/commit/22c706b4d44174c8072ccf3cbe1b28248876accb",
+      "metadata": "https://api.github.com/repos/Alparse/databento-dotnet"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# databento-dotnet [![NuGet](https://img.shields.io/badge/NuGet-v5.3.6-blue)](https://www.nuget.org/packages/Databento.Client) [![Downloads](https://img.shields.io/badge/Downloads-20.3K-blue)](https://www.nuget.org/packages/Databento.Client) [![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0-purple)](https://dotnet.microsoft.com/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) A high-performance .NET client for [Databento](https://databento.com) market data. Stream real-time data or query historical records with async/await and IAsyncEnumerable.",
+    "license_excerpt": "Copyright 2025 Serhat Alpar Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License.",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)",
+      "- [License](#license)",
+      "// Live mode (requires market hours)",
+      "## License",
+      "Apache 2.0 - See [LICENSE](LICENSE)"
+    ],
+    "dependency_repos": [
+      "Alparse/databento-dotnet",
+      "Alparse/databento-dotnet.git",
+      "databento/databento-cpp"
+    ]
+  },
+  {
+    "full_name": "nblythe/dbn",
+    "requested_name": "nblythe/dbn",
+    "id": 1103242443,
+    "url": "https://github.com/nblythe/dbn",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d6b00946b54e41651a4719963a53a5e680a20b32",
+    "last_commit_date": "2026-01-23T21:10:35Z",
+    "archived": false,
+    "fork": false,
+    "description": "C client for Databento live market data API",
+    "language": "C",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Databento live market data C client and sample applications  ",
+      "## Build requirements",
+      "# apt install build-essential cmake pkg-config libsodium-dev liburing-dev",
+      "## Building",
+      "## Build outputs"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/nblythe/dbn/issues/1",
+        "createdAt": "2025-11-24T19:39:09Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-12-01T18:18:40Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/nblythe/dbn/issues/5",
+        "createdAt": "2025-11-24T19:47:13Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-12-01T18:18:07Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "dbn_multi_stats",
+      "dbn_roots",
+      "dbn_stats",
+      "libdbn",
+      "libdbnopra"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/nblythe/dbn/blob/d6b00946b54e41651a4719963a53a5e680a20b32/README.md",
+        "sha256": "85a6f9362b329b226d8d851cd87f6c8f057003a828d7afa2a70eb0fdbeaa0cc2",
+        "bytes": 1971
+      },
+      "LICENSE": {
+        "url": "https://github.com/nblythe/dbn/blob/d6b00946b54e41651a4719963a53a5e680a20b32/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/nblythe/dbn/commit/d6b00946b54e41651a4719963a53a5e680a20b32",
+      "metadata": "https://api.github.com/repos/nblythe/dbn"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Databento live market data C client and sample applications **(C) 2025 Nathan Blythe** \\ **Released under the Apache-2.0 license, see LICENSE** ## Build requirements - CMake 3.10 or newer - A modern C compiler (`gcc` or `clang`, usually) - `libsodium` (used in Databento authentication) - `liburing` (for double-buffered socket I/O) - `pkg-config` (for use by CMake to locate `libsodium` and `liburing`) On Debian and Ubuntu `apt`-based systems, build requirements can be installed with: ``` # apt install build-essential cmake pkg-config libsodium-dev liburing-dev ``` ## Building ``` $ cd dbn $ cmake . -DCMAKE_BUILD_TYPE=Release -- The C compiler identification is GNU 12.2.0 -- Detecting C compiler ABI info -- Detecting C compiler ABI info - done -- Check for working C compiler: /usr/bin/cc - skipped -- Detecting C compile features -- Detecting C compile features - done -- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\") -- Checking for module 'libsodium' -- Found libsodium, version 1.0.18 -- Checking for module 'liburing' -- Found liburing, version 2.3 -- Configuring done -- Generating done -- Build files have been written to: /home/user/dbn $ make",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Released under the Apache-2.0 license, see LICENSE**"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "tbeason/DatabentoBinaryEncoding.jl",
+    "requested_name": "tbeason/DatabentoBinaryEncoding.jl",
+    "id": 1000339917,
+    "url": "https://github.com/tbeason/DatabentoBinaryEncoding.jl",
+    "stars": 3,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8dabb82ac855d68641bf3f462adfdbd450750f37",
+    "last_commit_date": "2026-09-10T15:22:39Z",
+    "archived": false,
+    "fork": false,
+    "description": "Julia implementation of the Databento Binary Encoding (DBN) message encoding and storage format for normalized market data.",
+    "language": "Julia",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Tyler Beason",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# DatabentoBinaryEncoding.jl\r",
+      "## Features\r",
+      "## Performance\r",
+      "## Installation\r",
+      "## Usage\r",
+      "### Reading DBN Files\r",
+      "# Tip: `import DatabentoBinaryEncoding as DBN` gives you the terser `DBN.foo` prefix.\r",
+      "# Read entire file into memory (fastest for bulk loading)\r",
+      "# Read with metadata\r",
+      "# Optimized type-specific eager read (5-6x faster than read_dbn)\r",
+      "# Generic streaming for mixed-type files\r",
+      "# High-performance callback streaming (near-zero allocations!)\r",
+      "# Best for pure processing workloads - 40 M records/sec\r",
+      "### Replaying DBN Files\r",
+      "# Replay in real time \u2014 each record fires after the real gap to the previous one\r",
+      "# Replay 100x faster, paced by receive time, with overnight gaps capped at 1s\r",
+      "# Replay an already-loaded collection (e.g. from read_dbn)\r",
+      "### Writing DBN Files\r",
+      "# Create metadata for trades\r",
+      "# Create trade message\r",
+      "# Write to file\r",
+      "# Write compressed file\r",
+      "### Streaming Writer\r",
+      "# Create streaming writer for real-time data\r",
+      "# Write records as they arrive\r",
+      "### Data Export\r",
+      "# Convert to different formats\r",
+      "# Convert to DataFrame for analysis\r",
+      "### Data Import\r",
+      "# Convert other formats to DBN\r"
+    ],
+    "recent_commit_count": 57,
+    "recent_authors_sample50": [
+      "dawsh2",
+      "dependabot[bot]",
+      "tbeason"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/tbeason/DatabentoBinaryEncoding.jl/issues/20",
+        "createdAt": "2026-05-22T02:40:49Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-22T02:40:50Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-05-25T16:07:24Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-01T17:16:21Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-05T15:46:19Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-22T18:23:09Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-24T18:18:27Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-10T15:37:48Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/tbeason/DatabentoBinaryEncoding.jl/issues/48",
+        "createdAt": "2026-09-10T14:53:13Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-10T14:53:26Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-09-10T14:53:40Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-10T15:23:01Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-09-10T15:23:17Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "LICENSE",
+      "Project.toml",
+      "README.md",
+      "benchmark",
+      "docs",
+      "src",
+      "test"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/tbeason/DatabentoBinaryEncoding.jl/blob/8dabb82ac855d68641bf3f462adfdbd450750f37/README.md",
+        "sha256": "421e7eff3d0e8ae829d6f604a9fa4e05c321a1ec2003a04bc5c344a86e05243c",
+        "bytes": 8238
+      },
+      "LICENSE": {
+        "url": "https://github.com/tbeason/DatabentoBinaryEncoding.jl/blob/8dabb82ac855d68641bf3f462adfdbd450750f37/LICENSE",
+        "sha256": "ca1ee6b84860a36dd097a82e0b768ac8327b5a6a362e9c5a168110b75302462b",
+        "bytes": 1069
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/tbeason/DatabentoBinaryEncoding.jl/commit/8dabb82ac855d68641bf3f462adfdbd450750f37",
+      "metadata": "https://api.github.com/repos/tbeason/DatabentoBinaryEncoding.jl"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# DatabentoBinaryEncoding.jl Julia implementation of the Databento Binary Encoding (DBN) message encoding and storage format for normalized market data. **\u26a0\ufe0f Development Status**: This package is under active development. While core functionality is complete and tested for byte-for-byte compatibility with the official Rust implementation, the API may still evolve. Production use is possible but not yet recommended. For more details, read the [introduction to DBN](https://databento.com/docs/standards-and-conventions/databento-binary-encoding). ## Features - \u2705 Complete DBN v3 Format Support - \u2705 Efficient streaming support (read and write) - \u2705 Timestamp-paced replay (simulate a live feed at any speed) - \u2705 Zstd file compression support (read and write) - \u2705 Bidirectional format conversion (DBN \u2194 JSON/Parquet/CSV) - \u2705 Byte-for-byte compatibility with official implementations - \u2705 All DBN message types (Trades, MBO, MBP, OHLCV, definitions, statistics, imbalance, status) - \u2705 Consolidated & BBO schemas (CBBO, CMBP-1, TCBBO, BBO-1s/1m) - \u2705 Live control records (SymbolMappingMsg, SystemMsg, ErrorMsg), tolerant of v3 unset-`stype` sentinels - \u2705 High-precision timestamp handling - \u2705 Fixed-point price arithmetic ## Performance DatabentoBinaryEncoding.jl is optimized for high-throughput market data processing: - **Read**: Up to 40M records/sec with",
+    "license_excerpt": "MIT License Copyright (c) 2026 Tyler Beason Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**\u26a0\ufe0f Development Status**: This package is under active development. While core functionality is complete and tested for byte-for-byte compatibility with the official Rust implementation, the API may still evolve. Production use is possible but not yet recomme",
+      "# Read entire file into memory (fastest for bulk loading)",
+      "local \u2014 the stream re-synchronizes and timing error does not accumulate across",
+      "# Convert to DataFrame for analysis",
+      "df = records_to_dataframe(records)",
+      "## License",
+      "This package is released under the [MIT License](LICENSE).",
+      "[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html)."
+    ],
+    "dependency_repos": [
+      "databento/dbn",
+      "tbeason/DatabentoBinaryEncoding.jl"
+    ]
+  },
+  {
+    "full_name": "vchernoy/mbo-orderbook",
+    "requested_name": "vchernoy/mbo-orderbook",
+    "id": 1103056086,
+    "url": "https://github.com/vchernoy/mbo-orderbook",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "2c59cf31fc4bf524ff144986fb444bb7ab84b38f",
+    "last_commit_date": "2025-11-25T01:30:14Z",
+    "archived": false,
+    "fork": false,
+    "description": "Market-By-Order (MBO) data tools: DBN replay, streaming, consumption, and order book reconstruction.",
+    "language": "Rust",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# mbo-orderbook",
+      "## \u2728 Features",
+      "### \ud83d\udd39 Raw DBN Streaming (Zero-Copy)",
+      "### \ud83d\udd39 Decode + Encode DBN Streamer",
+      "### \ud83d\udd39 MBO Consumer",
+      "### \ud83d\udd39 DBN Replay (local)",
+      "### \ud83d\udd39 Modular Architecture",
+      "## \ud83d\ude80 Build",
+      "### \ud83d\udce6 Usage Examples",
+      "#### 1\ufe0f\u20e3 Replay DBN locally",
+      "#### 2\ufe0f\u20e3 Raw DBN Streamer (Zero-Copy)",
+      "#### 3\ufe0f\u20e3 Decode+Encode DBN Streamer",
+      "#### 4\ufe0f\u20e3 MBO Consumer",
+      "## \ud83d\udc33 Docker Support",
+      "### \ud83d\udce6 Build the Docker Image",
+      "### \ud83d\ude80 Run Examples",
+      "#### 1\ufe0f\u20e3 Stream DBN data using the decode+encode streamer",
+      "#### 2\ufe0f\u20e3 Run the zero-copy raw streamer",
+      "#### 3\ufe0f\u20e3 Replay DBN data inside Docker",
+      "#### 4\ufe0f\u20e3 Run the consumer from inside Docker",
+      "#### \ud83d\udcc1 Mounted Volumes",
+      "### \ud83d\udee0 Dockerfile Overview"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "README.md",
+      "mbo_tools",
+      "mypy.ini",
+      "pyproject.toml",
+      "requirements.txt",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/README.md",
+        "sha256": "ead8006248826e3c0be4a14969e7af85721b1fd1af3af60d3b97c6c1d1dee0f1",
+        "bytes": 5584
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/Cargo.toml",
+        "sha256": "31750bc64f2a7ae701df779bf4aeaa300b5d94c51628bd5b1cd97cbde628c31c",
+        "bytes": 410
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/pyproject.toml",
+        "sha256": "9e174b53acf0f907711c342899205229dead9afc61913d1405449480bca6b17b",
+        "bytes": 145
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/vchernoy/mbo-orderbook/commit/2c59cf31fc4bf524ff144986fb444bb7ab84b38f",
+      "metadata": "https://api.github.com/repos/vchernoy/mbo-orderbook"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# mbo-orderbook Market-By-Order (MBO) data tools: DBN replay, streaming, consumption, and order book reconstruction. Rust playground for MBO order book tools: - `mbo-replay` \u2013 reads",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Rust playground for MBO order book tools:",
+      "`mbo-orderbook` is a Rust toolkit for working with **Market-By-Order (MBO)** market data in **Databento DBN format**.",
+      "The project is structured as a multi-binary Rust workspace, designed to resemble a production-style market data pipeline.",
+      "- **buffered mode** \u2013 file loaded once into memory,",
+      "- **streaming mode** \u2013 chunked reads per client (constant memory).",
+      "### \ud83d\udd39 DBN Replay (local)",
+      "#### 1\ufe0f\u20e3 Replay DBN locally",
+      "Constant memory footprint.",
+      "## \ud83d\udc33 Docker Support",
+      "This project provides a multi-stage Dockerfile for building Rust binaries in a builder image and packaging them into a minimal, production-ready runtime image.",
+      "This allows you to run the MBO streamers and consumers without installing Rust locally.",
+      "### \ud83d\udce6 Build the Docker Image",
+      "docker build -t mbo-orderbook .",
+      "compile all Rust binaries in release mode",
+      "docker run --rm -p 5000:5000 \\",
+      "docker run --rm -p 5000:5000 \\",
+      "#### 3\ufe0f\u20e3 Replay DBN data inside Docker",
+      "docker run --rm \\"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "ab2163/market-data-streamer",
+    "requested_name": "ab2163/market-data-streamer",
+    "id": 1094409683,
+    "url": "https://github.com/ab2163/market-data-streamer",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f57cc729f6568cdd9253b9936ca81f83f1a230e6",
+    "last_commit_date": "2025-11-28T15:44:31Z",
+    "archived": false,
+    "fork": false,
+    "description": "High-performance market data streamer and order book reconstruction engine. Streams Databento DBN data and rebuilds a market-by-order (MBO) book with low latency.",
+    "language": "C++",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 Ajinkya",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Market Data Streamer and Order Book Engine",
+      "## At a Glance",
+      "## Benchmarks and Tests",
+      "## Performance",
+      "## Getting Started"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "data",
+      "docs",
+      "run_bench.sh",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ab2163/market-data-streamer/blob/f57cc729f6568cdd9253b9936ca81f83f1a230e6/README.md",
+        "sha256": "9b3fd11240de649d190c00c1c412976950eea271e5494148fa48764f66a5df38",
+        "bytes": 1696
+      },
+      "LICENSE": {
+        "url": "https://github.com/ab2163/market-data-streamer/blob/f57cc729f6568cdd9253b9936ca81f83f1a230e6/LICENSE",
+        "sha256": "6f4528d42c559418d53cff2898448c0e8a46c7c0f2e08179955f148f0705dc80",
+        "bytes": 1064
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ab2163/market-data-streamer/commit/f57cc729f6568cdd9253b9936ca81f83f1a230e6",
+      "metadata": "https://api.github.com/repos/ab2163/market-data-streamer"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Market Data Streamer and Order Book Engine High-throughput C++ system that replays historical market data over TCP to multiple clients, which reconstruct limit order books and track best bid/offer (BBO) in real time. ## At a Glance * *High throughput*: ~1M messages/second (single client) and ~2.5M messages/second aggregate (five clients). * *Order book engine*: builds order books from MBO (message-by-order) data using exchange-style semantics (e.g. modify changes order priority). * *Modern C++ implementation*: uses `std::unordered_map` and tracked best bid/ask for speed, batched TCP sends, and a simple thread pool for scaling. * *Tests and benchmarks included*: Catch2 unit and integration tests and a benchmark script that runs with a user-selected number of clients. ![Class diagram](/docs/system-diag.png) ## Benchmarks and Tests **Benchmark script** (`run_bench.sh`) runs system with user-selected number of clients and reports: * Messages sent * Messages received * Error rates * Throughput (messages/second) **Catch2 tests:** * Unit tests for order book engine * Unit tests for TCP mechanics * Integration tests covering entire pipeline ## Performance **Single Client** ~1M messages/second **Five Clients** ~500k messages/second per client Benchmarks were run",
+    "license_excerpt": "MIT License Copyright (c) 2025 Ajinkya Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![Class diagram](/docs/system-diag.png)"
+    ],
+    "dependency_repos": [
+      "ab2163/market-data-streamer.git"
+    ]
+  },
+  {
+    "full_name": "azizuysal/dbn-cache",
+    "requested_name": "azizuysal/dbn-cache",
+    "id": 1125592554,
+    "url": "https://github.com/azizuysal/dbn-cache",
+    "stars": 0,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "2e76ed5b171e4ddb73454a1468d6017c4797a959",
+    "last_commit_date": "2026-03-25T10:44:38Z",
+    "archived": false,
+    "fork": false,
+    "description": "Download and cache historical market data from Databento",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 Aziz Uysal",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# dbn-cache",
+      "## Installation",
+      "### As a library",
+      "# or",
+      "### CLI only (global install)",
+      "# or",
+      "# or",
+      "## Configuration",
+      "## CLI Usage",
+      "# Show help",
+      "# Download E-mini S&P 500 continuous futures (1-minute OHLCV)",
+      "# Download specific contract (dates auto-detected for supported futures)",
+      "# Download current front-month contract (auto-detected)",
+      "# Batch download all quarterly contracts for a root symbol",
+      "# Override auto-detection with explicit dates",
+      "# Download from different dataset (default: GLBX.MDP3)",
+      "# Update cached data to latest available (data has ~24h embargo)",
+      "# List cached data (table view with quality indicators)",
+      "# Estimate cost before downloading",
+      "# Verify cache integrity (check for missing files)",
+      "# Reference commands",
+      "### Auto-Detection for Futures Contracts",
+      "# No --start/--end needed - dates auto-detected",
+      "# \u2192 Downloads: Dec 6, 2024 to Mar 21, 2025",
+      "# Adjust rollover buffer (default 14 days before front-month)",
+      "# Explicit dates still work and override auto-detection",
+      "### Front-Month Download",
+      "# \u2192 Resolves to NQM26 (or whichever contract is currently active)",
+      "# \u2192 Dates auto-detected from rollover through expiration",
+      "# \u2192 Resolves to MNQM26"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "azizuysal"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".mise.toml",
+      ".vscode",
+      "LICENSE",
+      "README.md",
+      "pyproject.toml",
+      "src",
+      "tests",
+      "typings",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/azizuysal/dbn-cache/blob/2e76ed5b171e4ddb73454a1468d6017c4797a959/README.md",
+        "sha256": "8ab3a3159af48f843009429be2b511bad59a11b85fc3db4fa41f75f33e945f31",
+        "bytes": 10403
+      },
+      "LICENSE": {
+        "url": "https://github.com/azizuysal/dbn-cache/blob/2e76ed5b171e4ddb73454a1468d6017c4797a959/LICENSE",
+        "sha256": "0d6ae3adbf9e505ec2c993a713ca9aa8f3cac21bf98b4f13bde6f8ccc7df206c",
+        "bytes": 1067
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/azizuysal/dbn-cache/blob/2e76ed5b171e4ddb73454a1468d6017c4797a959/pyproject.toml",
+        "sha256": "1888be8e18be08cd4396e5cda6fe710032894a76ec27f7a0d3fe6f7156c97ebd",
+        "bytes": 1580
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/azizuysal/dbn-cache/commit/2e76ed5b171e4ddb73454a1468d6017c4797a959",
+      "metadata": "https://api.github.com/repos/azizuysal/dbn-cache"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# dbn-cache Download and cache historical market data from Databento. ## Installation ### As a library ```bash uv add dbn-cache # or pip install dbn-cache ``` ### CLI only (global install) ```bash uv tool install dbn-cache # or pipx install dbn-cache # or mise use -g pipx:dbn-cache ``` ## Configuration Set your Databento API key: ```bash export DATABENTO_API_KEY=db-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ``` Optionally configure cache location: ```bash export DATABENTO_CACHE_DIR=/path/to/cache ``` Default cache locations: - **Unix/Mac:** `~/.databento` - **Windows:** `%LOCALAPPDATA%\\databento` ## CLI Usage The CLI is available as `dbn` (or `dbn-cache`): ```bash # Show help dbn -h dbn download -h # Download E-mini S&P 500 continuous futures (1-minute OHLCV) dbn download ES.c.0 --schema ohlcv-1m --start 2024-01-01 --end 2024-12-01 # Download specific contract (dates auto-detected for supported futures) dbn download NQH25 --schema ohlcv-1m # Download current front-month contract (auto-detected) dbn download NQ --schema ohlcv-1m dbn download MNQ --schema ohlcv-1m # Batch download all quarterly contracts for a root symbol dbn download NQ --schema ohlcv-1m --from 2016 # 2016 to present dbn download NQ --schema ohlcv-1m --from 2016 --to 2020 # 2016 to 2020 # Override",
+    "license_excerpt": "MIT License Copyright (c) 2025 Aziz Uysal Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **Windows:** `%LOCALAPPDATA%\\databento`",
+      "When updating cached data, expired futures contracts automatically trigger download of the successor contract with the same schemas:",
+      "```python",
+      "successor = get_next_contract(\"NQH26\")  # \"NQM26\"",
+      "# Get as Polars LazyFrame",
+      "# Or as Pandas DataFrame"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "UFund-Me/Qbot",
+    "requested_name": "UFund-Me/Qbot",
+    "id": 569509049,
+    "url": "https://github.com/UFund-Me/Qbot",
+    "stars": 18496,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f0425ae4ae8bd02b79656b8f7039f4cd6874095e",
+    "last_commit_date": "2026-03-11T12:16:11Z",
+    "archived": false,
+    "fork": false,
+    "description": "[\ud83d\udd25updating ...] AI \u81ea\u52a8\u91cf\u5316\u4ea4\u6613\u673a\u5668\u4eba(\u5b8c\u5168\u672c\u5730\u90e8\u7f72) AI-powered Quantitative Investment Research Platform. \ud83d\udcc3 online docs: https://ufund-me.github.io/Qbot   \u2728 :news: qbot-mini: https://github.com/Charmve/iQuant",
+    "language": "Jupyter Notebook",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022 UFund-Me",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Quick Start",
+      "## Highlights",
+      "## Strategy pool",
+      "### Benchmark and Model zoo",
+      "### \u4ea4\u6613\u6307\u6807/\u56e0\u5b50",
+      "## \u652f\u6301\u7684\u5b9e\u76d8\u4ea4\u6613\u63a5\u53e3",
+      "### \u5b9e\u76d8\u4ea4\u6613\u63a5\u53e3",
+      "### \u4eff\u771f\u4ea4\u6613\u63a5\u53e3/\u5e73\u53f0",
+      "## \u52a0\u5bc6\u8d27\u5e01\u4ea4\u6613\u6240\u6ce8\u518c\u63a8\u8350\u7801",
+      "### \u4e3a\u4ec0\u4e48\u9009\u62e9\u5e01\u5b89\u4ea4\u6613\u6240",
+      "## \u5f00\u6e90\u5171\u521b\u3001\u793e\u533a\u5171\u5efa",
+      "## Qbot \u7248\u672c\u8bf4\u660e",
+      "## \u7b56\u7565\u539f\u7406\u53ca\u6e90\u7801\u5206\u6790",
+      "## Quantstats Report",
+      "### Some strategy backtest results:",
+      "# \u8bbe\u7f6e\u4f63\u91d1\u4e3a0.001, \u9664\u4ee5100\u53bb\u6389%\u53f7",
+      "## TODO",
+      "### No-code operation",
+      "## Contributing",
+      "## \ud83c\udf6e Community",
+      "## :warning: Disclaimer",
+      "## \ud83d\udd25 Stargazers Over Time",
+      "## Repository Statistics",
+      "## Sponsors & support",
+      "## LICENSE",
+      "## \u2665\ufe0f Acknowledgements"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/UFund-Me/Qbot/issues/73",
+        "createdAt": "2023-11-16T15:32:10Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-05-14T09:56:04Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-07-01T08:32:11Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/UFund-Me/Qbot/issues/115",
+        "createdAt": "2026-06-29T06:42:18Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "UFund-Me/Qbot",
+      "stars": 17732,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "reference",
+      "reuse_value": 65,
+      "liftability": 25,
+      "fame_gap": 40,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "[\ud83d\udd25updating ...] AI \u81ea\u52a8\u91cf\u5316\u4ea4\u6613\u673a\u5668\u4eba(\u5b8c\u5168\u672c\u5730\u90e8\u7f72) AI-powered Quantitative Investment Research Platform. \ud83d\udcc3 online docs: https://ufund-"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".editorconfig",
+      ".flake8",
+      ".gitattributes",
+      ".gitconfig",
+      ".github",
+      ".gitignore",
+      ".style.cfg",
+      ".vscode",
+      "CLONE.md",
+      "COMMUNITY.md",
+      "CONTRIBUTING.md",
+      "DEVELOPMENT.md",
+      "LICENSE",
+      "PRICE.md",
+      "README.md",
+      "WORKSPACE",
+      "dev",
+      "docs",
+      "env_setup.sh",
+      "main.py",
+      "monitoring.py",
+      "pyfunds",
+      "pyfutures",
+      "pytrader",
+      "qbot",
+      "qbot_main.py",
+      "quick_start.md",
+      "requirements.txt",
+      "scripts",
+      "tests",
+      "utils",
+      "web"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/README.md",
+        "sha256": "03aece095db881dc36141fabf7b690dff3c938df15ee3fe7e7f312896b6445f6",
+        "bytes": 42770
+      },
+      "LICENSE": {
+        "url": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/LICENSE",
+        "sha256": "84a96e93e5484ec519151b072b1b1127bc35086ae2d65b5bb8b63231227c028a",
+        "bytes": 1065
+      },
+      "requirements.txt": {
+        "url": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/requirements.txt",
+        "sha256": "35c8f13c3d4bd4dcd5911b6803714ba0e33fbbccde4412369558a5f24a6adb04",
+        "bytes": 448
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/UFund-Me/Qbot/commit/f0425ae4ae8bd02b79656b8f7039f4cd6874095e",
+      "metadata": "https://api.github.com/repos/UFund-Me/Qbot"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "\ud83d\udc46 \u53f3\u4e0a\u89d2\u70b9\u51fb \u544a\u8bc9\u6211\uff0c\u4f60\u5e0c\u671b\u8fd9\u4e2a\u9879\u76ee\u7ee7\u7eed\u52a0\u901f\u5f00\u53d1\u8fed\u4ee3 \u2764\ufe0f & \u2615\ufe0f \ud83e\udd16 Qbot since Sep 26 [![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml) [![AutoTrade](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml) [![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml) [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml) &nbsp; Qbot website HOT &nbsp;&nbsp;&nbsp;&nbsp; Qbot DeepWiki TRY IT OUT &nbsp; AI\u667a\u80fd\u91cf\u5316\u6295\u7814\u5e73\u53f0 > Qbot is an AI-oriented automated quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment. Qbot supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL. --> ``` \ud83e\udd16 Qbot = \u667a\u80fd\u4ea4\u6613\u7b56\u7565 + \u56de\u6d4b\u7cfb\u7edf + \u81ea\u52a8\u5316\u91cf\u5316\u4ea4\u6613 (+ \u53ef\u89c6\u5316\u5206\u6790\u5de5\u5177) | | | | | | | \\_ quantstats (dashboard\\online operation) | | \\______________ Qbot - vnpy, pytrader, pyfunds | \\____________________________ BackTest - backtrader, easyquant \\________________________________________ quant.ai - qlib, deep learning strategies ``` \ud83c\udfba \u53f7\u5916 \uff1aQbot\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\u5f00\u53d1\u62db\u52df [UFund-miniprogram](https://github.com/UFund-Me/UFund-miniprogram) \u4e0d\u5efa\u8bae fork \u9879\u76ee\uff0c\u672c\u9879\u76ee\u4f1a\u6301\u7eed\u66f4\u65b0\uff0c\u53ea fork \u770b\u4e0d\u5230\u66f4\u65b0\uff0c\u5efa\u8bae Star \u2b50\ufe0f ~ \u559c\u6b22\u8fd9\u4e2a\u9879\u76ee\u5417\uff1f\u8bf7\u8003\u8651[ \u2764\ufe0f\u8d5e\u52a9](#sponsors--support) \u672c\u9879\u76ee\uff0c\u4ee5\u5e2e\u52a9\u6539\u8fdb\uff01 ## Quick Start Qbot\u662f\u4e00\u4e2a\u514d\u8d39\u7684\u91cf\u5316\u6295\u7814\u5e73\u53f0\uff0c\u63d0\u4f9b\u4ece\u6570\u636e\u83b7\u53d6\u3001\u4ea4\u6613\u7b56\u7565\u5f00\u53d1\u3001\u7b56\u7565\u56de\u6d4b\u3001\u6a21\u62df\u4ea4\u6613\u5230\u6700\u7ec8\u5b9e\u76d8\u4ea4\u6613\u7684\u5168\u95ed\u73af\u6d41\u7a0b\u3002\u5728\u5b9e\u76d8\u63a5\u5165\u524d\uff0c\u6709\u80a1\u7968\u3001\u57fa\u91d1\u8bc4\u6d4b\u548c\u7b56\u7565\u56de\u6d4b\uff0c\u5728\u6a21\u62df\u73af\u5883\u4e0b\u505a\u4ea4\u6613\u9a8c\u8bc1\uff0c\u8fd1\u4e4e\u5b9e\u76d8\u7684\u65f6\u5ef6\u3001\u6ed1\u70b9\u4eff\u771f\u3002\u6545\uff0c\u672c\u5e73\u53f0\u63d0\u4f9bGUI\u524d\u7aef/\u5ba2\u6237\u7aef\uff08\u90e8\u5206\u529f\u80fd\u4e5f\u652f\u6301\u7f51\u9875\uff09\uff0c\u540e\u7aef\u505a\u6570\u636e\u5904\u7406\u3001\u4ea4\u6613\u8c03\u5ea6\uff0c\u5b9e\u73b0\u4e8b\u4ef6\u9a71\u52a8\u7684\u4ea4\u6613\u6d41\u7a0b\u3002\u5bf9\u4e8e\u7b56\u7565\u7814\u7a76\u90e8\u5206\uff0c\u5c24\u5176\u5f3a\u8c03\u673a\u5668\u5b66\u4e60\u3001\u5f3a\u5316\u5b66\u4e60\u7684AI\u7b56\u7565\uff0c\u7ed3\u5408\u591a\u56e0\u5b50\u6a21\u578b\u63d0\u9ad8\u6536\u76ca\u6bd4\u3002 \u4f46\u672c\u9879\u76ee\u53ef\u80fd\u9700\u8981\u4e00\u70b9\u70b9python\u57fa\u7840\u77e5\u8bc6\uff0c\u6709\u4e00\u70b9\u70b9\u4ea4\u6613\u7ecf\u9a8c\uff0c\u4f1a\u66f4\u5bb9\u6613\u4f53\u4f1a\u4f5c\u8005\u7684\u521d\u8877\uff0c\u89e3\u51b3\u5f53\u4e0b\u4ea7\u54c1\u7a7a\u7f3a\u548c\u5e7f\u5927\u6563\u6237\u670b\u53cb\u7684\u4ea4\u6613\u75db\u70b9\uff0c\u73b0\u5728\u76f4\u63a5\u514d\u8d39\u5f00\u6e90\u51fa\u6765\uff01 Qbot \u76ee\u524d\u4ec5\u5728 python3.8 pyhont3.9 \u4e0b\u6d4b\u8bd5\u8fc7\uff0c\u5176\u4ed6\u7248\u672c\u672a\u6d4b\u8bd5\u3002 1. \u6a21\u5757\u5316\u5206\u5c42\u8bbe\u8ba1\uff1a\u6570\u636e\u5c42\u3001\u7b56\u7565\u5c42\u3001\u4ea4\u6613\u5f15\u64ce\u62bd\u8c61\u8bbe\u8ba1 - \u6570\u636e\u3001\u7b56\u7565\u4e2d\u95f4\u8868\u8fbe\uff0c\u65b9\u4fbf\u591a\u79cd\u6570\u636e\u63a5\u53e3\u3001\u4ea4\u6613\u63a5\u53e3\u63a5\u5165\uff0c\u7528\u6237\u81ea\u5b9a\u4e49\u7b56\u7565\u548c\u56e0\u5b50\u6316\u6398 - \u652f\u6301\u591a\u79cd\u4ea4\u6613\u5bf9\u8c61\uff1a\u80a1\u7968\u3001\u57fa\u91d1\u3001\u671f\u8d27\u3001\u865a\u62df\u8d27\u5e01 2. \u4eba\u5de5\u667a\u80fd\u4ea4\u6613\u7b56\u7565\u3001\u81ea\u52a8\u5316\u56e0\u5b50\u6316\u6398 \u673a\u5668\u5b66\u4e60\u3001\u5f3a\u5316\u5b66\u4e60\u3001\u6df1\u5ea6\u5b66\u4e60\u7b56\u7565\u5f00\u53d1\uff0c\u56e0\u5b50\u6316\u6398\u81ea\u52a8\u5316workflow 3. \u591a\u79cd\u4ea4\u6613\u65b9\u5f0f\uff1a\u5728\u7ebf\u56de\u6d4b + \u6a21\u62df\u4ea4\u6613 + \u5b9e\u76d8\u81ea\u52a8\u5316\u4ea4\u6613 \u4ee5\u7b56\u7565\u7814\u7a76\u4e3a\u76ee\u6807\uff0c\u63d0\u4f9b\u591a\u79cd\u4ea4\u6613\u65b9\u5f0f\u9a8c\u8bc1\u7b56\u7565\u548c\u63d0\u9ad8\u6536\u76ca\u3002 4. \u591a\u79cd\u63d0\u793a\u65b9\u5f0f\uff1a\u90ae\u4ef6 + \u98de\u4e66 + \u5f39\u7a97 + \u5fae\u4fe1 \u8fd9\u662fqbot\u7684\u6d88\u606f\u63d0\u793a\u6a21\u5757\uff0c\u591a\u79cd\u65b9\u5f0f\u63d0\u793a\u4ea4\u6613\u4fe1\u606f\uff1a\u4ea4\u6613\u4e70\u5356\u4fe1\u606f\u3001\u6bcf\u65e5\u4ea4\u6613\u6536\u76ca\u7ed3\u679c\u3001\u80a1\u7968\u6bcf\u65e5\u63a8\u8350\u7b49\u3002 ## Strategy pool \u901a\u8fc7Qbot \u53ef\u4ee5\u79ef\u6728\u5f0f\u5b8c\u6210\u7b56\u7565\u7f16\u5199\u3001\u591a\u56e0\u5b50\u6316\u6398\uff0c\u5b9e\u73b0\u6570\u636e\u5f00\u53d1\u3001\u56e0\u5b50\u5f00\u53d1\u3001\u7ec4\u5408\u4f18\u5316\u3001\u4ea4\u6613\u6267\u884c\u7684[\u91cf\u5316\u4ea4\u6613\u5168\u6d41\u7a0b](docs/01-\u65b0\u624b\u6307\u5f15/\u91cf\u5316\u7b56\u7565\u7684\u5206\u7c7b\u548c\u539f\u7406.md#1\u91cf\u5316\u9009\u80a1\u7b56\u7565)\u3002 \u5982\u679c\u8bf4\u7b56\u7565\u662f\u91cf\u5316\u7684\u6838\u5fc3 \uff0c\u90a3\u4e48\u56e0\u5b50\u5c31\u662f\u7b56\u7565\u7684\u6838\u5fc3\u3002 \u901a\u8fc7Qbot\u91cf\u5316\u6295\u7814\u5e73\u53f0\u7814\u7a76\u5458\u53ef\u5b9e\u73b0\u81ea\u52a8\u5316\u56e0\u5b50\u6316\u6398\uff0c\u63d0\u53d6\u51fa\u5177\u5907\u9884\u6d4b\u80fd\u529b\u7684\u5355\u56e0\u5b50\uff0c\u5229\u7528\u5386\u53f2\u6570\u636e\u8fdb\u884c\u56de\u6d4b\uff0c\u5982\u679c\u56de\u6d4b\u7ed3\u679c\u663e\u793a\u8be5\u56e0\u5b50\u7684\u9884\u6d4b\u80fd\u529b\u8fbe\u6807\uff0c\u5c31\u63d0\u4ea4\u5230\u56e0\u5b50\u5e93\u3002\u7136\u540e\uff0c\u5bf9\u56e0\u5b50\u5e93\u91cc\u7684\u56e0\u5b50\u8fdb\u884c\u6709\u673a\u7ec4\u5408\uff0c\u4ee5\u5f62\u6210\u9884\u6d4b\u6a21\u578b\uff0c\u9884\u6d4b\u6a21\u578b\u662f\u6574\u4e2a\u91cf\u5316\u7b56\u7565\u7684\u76ee\u6807\u3002 \u4ee5\u4e0b\u5373\u4e3a\uff0c \u6570\u636e\u6307\u6807\u5355\u56e0\u5b50\u6216\u7ec4\u5408\u56e0\u5b50 \u548c \u901a\u8fc7\u6df1\u5ea6\u5b66\u4e60\u3001\u673a\u5668\u5b66\u4e60\u3001\u5f3a\u5316\u5b66\u4e60\u6316\u6398\u5230\u7684\u4ea4\u6613\u56e0\u5b50 \uff0c\u7136\u540e\u901a\u8fc7\u7ec4\u5408\u4f18\u5316\u7b97\u6cd5\u5b9e\u73b0\u8d8b\u52bf\u4ea4\u6613\u3001\u98ce\u9669\u7b56\u7565\u3001alpha\u7b56\u7565\u3001\u52a8\u91cf\u8f6e\u52a8\u7b49\u7b49\u4ea4\u6613\u7b56\u7565\u3002 \u7b56\u7565\u5e93\u6e90\u4ee3\u7801\u8def\u5f84\uff1a[qbot/strategy](qbot/strategy) \u7ecf\u5178\u7b56\u7565 \u4ea4\u6613\u5bf9\u8c61 \u9009\u80a1 \u62e9\u65f6 \u98ce\u9669\u63a7\u5236 (\u7ec4\u5408\u3001\u4ed3\u4f4d\u7ba1\u7406) \u80a1\u7968/\u671f\u8d27/\u865a\u62df\u8d27\u5e01 \u5e03\u6797\u7ebf\u5747\u503c\u56de\u5f52",
+    "license_excerpt": "MIT License Copyright (c) 2022 UFund-Me Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<a href=\"https://github.com/UFund-Me/Qbot\"><img src=\"https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue\" alt=\"Python version\"></a>",
+      "\ud83c\udfba <b>\u53f7\u5916</b>\uff1aQbot\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\u5f00\u53d1\u62db\u52df [UFund-miniprogram](https://github.com/UFund-Me/UFund-miniprogram)",
+      "\u4f46\u672c\u9879\u76ee\u53ef\u80fd\u9700\u8981\u4e00\u70b9\u70b9python\u57fa\u7840\u77e5\u8bc6\uff0c\u6709\u4e00\u70b9\u70b9\u4ea4\u6613\u7ecf\u9a8c\uff0c\u4f1a\u66f4\u5bb9\u6613\u4f53\u4f1a\u4f5c\u8005\u7684\u521d\u8877\uff0c\u89e3\u51b3\u5f53\u4e0b\u4ea7\u54c1\u7a7a\u7f3a\u548c\u5e7f\u5927\u6563\u6237\u670b\u53cb\u7684\u4ea4\u6613\u75db\u70b9\uff0c\u73b0\u5728\u76f4\u63a5\u514d\u8d39\u5f00\u6e90\u51fa\u6765\uff01",
+      "<b>Qbot \u76ee\u524d\u4ec5\u5728 python3.8 pyhont3.9 \u4e0b\u6d4b\u8bd5\u8fc7\uff0c\u5176\u4ed6\u7248\u672c\u672a\u6d4b\u8bd5\u3002</b>",
+      "export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner",
+      "python main.py  #if run on Mac, please use 'pythonw main.py'",
+      "<li><a href=\"docs/tutorials_code/08.harami_in_A_market\">\u591a\u7b56\u7565\u6574\u5408</a></li>",
+      "<li><a href=\"qbot/strategy/benchmarks/Localformer\">Localformer ('2021)</a></li>",
+      "Results and models are available in the [model zoo](docs/03-\u667a\u80fd\u7b56\u7565/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run ``python backend/pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_l",
+      "|                | status | benchmark |   framework  | DGCNN | RegNetX | addition |   arXiv    |",
+      "|  Localformer   |   \u2713    |     \u2717     |   pytorch    |   \u2717   |    \u2717    |  Juyong Jiang, et al. |     \u2717      |",
+      "\u53e6\u5916\u63d0\u4f9b\u5f00\u901a\u5238\u5546\u91cf\u5316\u4ea4\u6613\u63a5\u53e3\uff0c\u652f\u6301python\u7f16\u5199\u5b9e\u76d8\u4ea4\u6613",
+      "## LICENSE",
+      "<img src=\"qbot/asserts/statics/imgs/license_by-nc-sa_4.0.png\">"
+    ],
+    "dependency_repos": [
+      "MShawon/github-clone-count-badge",
+      "SunshowerC/fund-strategy",
+      "UFund-Me/.github",
+      "UFund-Me/FinGPT",
+      "UFund-Me/Qbot",
+      "UFund-Me/UFund-miniprogram",
+      "axiaoxin-com/investool",
+      "microsoft/qlib",
+      "sponsors/Charmve",
+      "topics/quant-trade",
+      "vnpy/vnpy"
+    ]
+  },
+  {
+    "full_name": "xbtlin/ai-berkshire",
+    "requested_name": "xbtlin/ai-berkshire",
+    "id": 1203777920,
+    "url": "https://github.com/xbtlin/ai-berkshire",
+    "stars": 16317,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "43fbaed85af8b88ce233b263e7c76c8a953ae380",
+    "last_commit_date": "2026-09-11T21:10:16Z",
+    "archived": false,
+    "fork": false,
+    "description": "AI \u65f6\u4ee3\u7684\u4f2f\u514b\u5e0c\u5c14\uff1a\u57fa\u4e8e Claude Code / Codex \u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6\u3002\u5df4\u83f2\u7279\u00b7\u8292\u683c\u00b7\u6bb5\u6c38\u5e73\u00b7\u674e\u5f55\u56db\u5927\u5e08\u65b9\u6cd5\u8bba + \u591aAgent\u5e76\u884c\u7814\u7a76\u3002| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+    "language": "HTML",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 xbtlin",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# AI Berkshire - AI \u65f6\u4ee3\u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6",
+      "## Real Track Record",
+      "### 2024 \u5168\u5e74\u6536\u76ca\uff1a+69.29%",
+      "### 2025 \u5168\u5e74\u6536\u76ca\uff1a+66.38%",
+      "### \u4e0e\u4e3b\u8981\u6307\u6570\u5bf9\u6bd4",
+      "### \u7cbe\u9009\u7814\u7a76\u9996\u53d1\u4e8e\u516c\u4f17\u53f7",
+      "## \u4e3a\u4ec0\u4e48\u4e0d\u80fd\u76f4\u63a5\u95ee AI\uff1f",
+      "### 1. \u5f3a\u5236\u7ed9\u7ed3\u8bba\uff0c\u4e0d\u6253\u592a\u6781",
+      "### 2. \u56db\u5927\u5e08\u89c6\u89d2\u5bf9\u6297\uff0c\u800c\u975e\u5355\u4e00\u5206\u6790",
+      "### 3. \u7ed3\u6784\u5316\u53cd\u504f\u89c1\u673a\u5236",
+      "### 4. \u91d1\u878d\u6570\u636e\u7684\u7cbe\u786e\u6027",
+      "# \u5e02\u503c\u624b\u7b97\u6821\u9a8c\uff1a\u80a1\u4ef7 \u00d7 \u603b\u80a1\u672c\uff0c\u4e0e\u62a5\u544a\u6570\u636e\u5bf9\u6bd4",
+      "# \u2705 \u9a8c\u8bc1\u901a\u8fc7, \u504f\u5dee\u4ec5 0.08%",
+      "### 5. \u53ef\u590d\u73b0\u7684\u7814\u7a76\u6d41\u7a0b",
+      "### 6. \u591aAgent\u5e76\u884c = \u7814\u7a76\u6df1\u5ea6\u7684\u500d\u589e",
+      "### \u4e00\u53e5\u8bdd\u603b\u7ed3",
+      "## \u6574\u4f53\u67b6\u6784",
+      "## Skills \u4e00\u89c8\uff0820\u4e2a\uff09",
+      "### \ud83d\udd2c \u6df1\u5ea6\u7814\u7a76\u7c7b",
+      "### \ud83d\udcca \u8d22\u62a5\u5206\u6790\u7c7b",
+      "### \ud83c\udfed \u884c\u4e1a\u7b5b\u9009\u7c7b",
+      "### \ud83d\udcc8 \u6301\u4ed3\u7ba1\u7406\u7c7b",
+      "### \ud83e\udde0 \u601d\u7ef4\u5de5\u5177\u7c7b",
+      "### \ud83d\udd17 \u642d\u914d Claude Code \u5185\u7f6e\u7684 /deep-research",
+      "## \u5feb\u901f\u5f00\u59cb",
+      "### \u6210\u672c\u4e0e\u6a21\u578b\u9009\u62e9",
+      "### 1. \u5b89\u88c5 AI \u5ba2\u6237\u7aef",
+      "# macOS / Linux",
+      "# \u6216\u4f7f\u7528 npm",
+      "# \u6216\u4f7f\u7528 Homebrew"
+    ],
+    "recent_commit_count": 1498,
+    "recent_authors_sample50": [
+      "xbtlin"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/xbtlin/ai-berkshire/issues/107",
+        "createdAt": "2026-09-10T03:02:52Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/xbtlin/ai-berkshire/issues/61",
+        "createdAt": "2026-07-10T07:59:02Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-10T16:03:43Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-07-11T13:45:27Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-03T17:52:55Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "README_EN.md",
+      "README_JA.md",
+      "SECURITY.md",
+      "ai_CLAUDE.md",
+      "assets",
+      "codex-prompts",
+      "codex-skills",
+      "data",
+      "docs",
+      "logs",
+      "output",
+      "reports",
+      "scripts",
+      "skills",
+      "tests",
+      "tools",
+      "\u5b9e\u76d8\u8bb0\u5f55",
+      "\u7b5b\u9009\u516c\u53f8"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/xbtlin/ai-berkshire/blob/43fbaed85af8b88ce233b263e7c76c8a953ae380/README.md",
+        "sha256": "56838f349a8154c417241b31423612a13d4184324038323688aad4aaef2ca4cd",
+        "bytes": 35260
+      },
+      "LICENSE": {
+        "url": "https://github.com/xbtlin/ai-berkshire/blob/43fbaed85af8b88ce233b263e7c76c8a953ae380/LICENSE",
+        "sha256": "81b843bec8a087f4c20e5be8ad744cfe1a169dc0b4f0147cbe61e6cd3da39981",
+        "bytes": 1063
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/xbtlin/ai-berkshire/commit/43fbaed85af8b88ce233b263e7c76c8a953ae380",
+      "metadata": "https://api.github.com/repos/xbtlin/ai-berkshire"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "\u4e2d\u6587 | [English](README_EN.md) | [\u65e5\u672c\u8a9e](README_JA.md) [![GitHub Trending](https://trendshift.io/api/badge/repositories/63696)](https://trendshift.io/repositories/63696) # AI Berkshire - AI \u65f6\u4ee3\u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6 > \"Price is what you pay, value is what you get.\" \u2014 Warren Buffett > > \u7528 AI \u91cd\u65b0\u5b9a\u4e49\u6295\u8d44\u7814\u7a76\u7684\u6df1\u5ea6\u4e0e\u6548\u7387\u3002 **AI Berkshire** \u662f\u4e00\u5957\u540c\u65f6\u517c\u5bb9 Claude Code \u4e0e Codex \u7684\u6295\u8d44\u7814\u7a76 Skill \u5408\u96c6\uff0c\u5c06\u5df4\u83f2\u7279\u3001\u8292\u683c\u3001\u6bb5\u6c38\u5e73\u3001\u674e\u5f55\u56db\u4f4d\u4ef7\u503c\u6295\u8d44\u5927\u5e08\u7684\u65b9\u6cd5\u8bba\u7cfb\u7edf\u5316\u3001\u7ed3\u6784\u5316\uff0c\u901a\u8fc7 AI Agent \u5b9e\u73b0\u4e13\u4e1a\u7ea7\u6295\u8d44\u7814\u7a76\u3002 \u4e00\u4e2a\u4eba + Claude Code / Codex = \u4e00\u4e2a\u6295\u7814\u56e2\u961f\u3002 > \ud83d\udcee **\u4ed3\u5e93\u662f\u5168\u91cf\u6846\u67b6\uff0c\u516c\u4f17\u53f7\u662f\u7cbe\u9009\u3002** \u771f\u6b63\u503c\u5f97\u6df1\u7814\u7684\u516c\u53f8\uff0c\u52a0\u4e0a\u62a5\u544a\u4e4b\u5916\u6211\u81ea\u5df1\u7684\u5224\u65ad\u4e0e\u53d6\u820d\uff0c\u90fd\u5728\u5fae\u4fe1\u516c\u4f17\u53f7\u300c**\u590d\u5229\u70bc\u4e39\u7089**\u300d\u2014\u2014[\u626b\u7801\u5173\u6ce8 \u2193](#\u7cbe\u9009\u7814\u7a76\u9996\u53d1\u4e8e\u516c\u4f17\u53f7) > \ud83d\udcca **\u65e5\u66f4\u5185\u5bb9\u662f\u7814\u7a76\u62a5\u544a\uff0c\u5168\u90e8\u5728 [\u7814\u7a76\u62a5\u544a\u7d22\u5f15](reports/README.md)\u3002** 2346 \u4efd\u62a5\u544a \u00b7 110 \u5bb6\u516c\u53f8 \u00b7 23 \u4e2a\u4e13\u9898\uff0c\u6309\u516c\u53f8\u4e0e\u4e13\u9898\u5206\u7ec4\uff0c\u66f4\u65b0\u81f3 2026-09-12\u3002 [\u5b9e\u76d8\u4e1a\u7ee9](#real-track-record) \u00b7 [\u4e3a\u4ec0\u4e48\u4e0d\u80fd\u76f4\u63a5\u95eeAI](#\u4e3a\u4ec0\u4e48\u4e0d\u80fd\u76f4\u63a5\u95ee-ai) \u00b7 [Skills \u4e00\u89c8](#skills-\u4e00\u89c820\u4e2a) \u00b7 [\u5feb\u901f\u5f00\u59cb](#\u5feb\u901f\u5f00\u59cb) \u00b7 [\u5b9e\u6218\u62a5\u544a](#\u5b9e\u6218\u7814\u7a76\u62a5\u544a) \u00b7 [\u7814\u7a76\u7d22\u5f15](reports/README.md) \u00b7 [\u8bbe\u8ba1\u7406\u5ff5](#\u8bbe\u8ba1\u7406\u5ff5) \u00b7 [\u516c\u4f17\u53f7](#\u7cbe\u9009\u7814\u7a76\u9996\u53d1\u4e8e\u516c\u4f17\u53f7) --- ## Real Track Record > \u4e0d\u662f\u7eb8\u4e0a\u8c08\u5175\u3002\u8fd9\u5957\u6846\u67b6\u80cc\u540e\u662f\u771f\u91d1\u767d\u94f6\u9a8c\u8bc1\u7684\u6295\u8d44\u4f53\u7cfb\u3002 ### 2024 \u5168\u5e74\u6536\u76ca\uff1a+69.29% ### 2025 \u5168\u5e74\u6536\u76ca\uff1a+66.38% ### \u4e0e\u4e3b\u8981\u6307\u6570\u5bf9\u6bd4 | \u6307\u6807 | 2024 \u5168\u5e74 | 2025 \u5168\u5e74 | |------|----------|----------| | **\u672c\u6846\u67b6\u5b9e\u76d8** | **+69.29%** | **+66.38%** | | \u6052\u751f\u6307\u6570 | +17.67% | +27.77% | | \u6807\u666e500 | +23.31% | +16.39% | | \u6caa\u6df1300 | +14.68% | +17.66% | | \u7eb3\u65af\u8fbe\u514b | +28.64% | +20.36% | **2024 \u5e74\u8d85\u989d\u6536\u76ca**\uff1a\u8dd1\u8d62\u6807\u666e500 **46\u4e2a\u767e\u5206\u70b9**\uff0c\u8dd1\u8d62\u6052\u751f\u6307\u6570 **52\u4e2a\u767e\u5206\u70b9** **2025 \u5e74\u8d85\u989d\u6536\u76ca**\uff1a\u8dd1\u8d62\u6807\u666e500 **50\u4e2a\u767e\u5206\u70b9**\uff0c\u8dd1\u8d62\u6052\u751f\u6307\u6570 **39\u4e2a\u767e\u5206\u70b9** **\u4e24\u5e74\u7d2f\u8ba1\u5b9e\u76d8\u6536\u76ca\u8d85 146\u4e07\u5143**\uff0c\u8fde\u7eed\u4e24\u5e74\u5927\u5e45\u8dd1\u8d62\u5168\u7403\u4e3b\u8981\u6307\u6570\u3002 > *\u514d\u8d23\u58f0\u660e\uff1a\u5386\u53f2\u6536\u76ca\u4e0d\u4ee3\u8868\u672a\u6765\u8868\u73b0\u3002\u622a\u56fe\u6765\u81ea\u5bcc\u9014\u8bc1\u5238\u771f\u5b9e\u8d26\u6237\u3002* ### \u7cbe\u9009\u7814\u7a76\u9996\u53d1\u4e8e\u516c\u4f17\u53f7 \u4ed3\u5e93\u91cc\u662f\u5b8c\u6574\u7684\u6846\u67b6\u548c\u5168\u91cf\u62a5\u544a\uff0c\u516c\u4f17\u53f7\u91cc\u662f**\u7cbe\u9009**\u2014\u2014\u771f\u6b63\u503c\u5f97\u6df1\u7814\u7684\u516c\u53f8\uff0c\u52a0\u4e0a\u62a5\u544a\u4e4b\u5916\u6211\u81ea\u5df1\u7684\u5224\u65ad\u4e0e\u53d6\u820d\uff1a **\u590d\u5229\u70bc\u4e39\u7089** \u2014\u2014 \u7528 AI \u70bc\u6295\u7814\u8fd9\u9897\u4e39\u3002 --- ## \u4e3a\u4ec0\u4e48\u4e0d\u80fd\u76f4\u63a5\u95ee AI\uff1f \u4f60\u5f53\u7136\u53ef\u4ee5\u76f4\u63a5\u95ee Claude\uff1a\"\u5e2e\u6211\u5206\u6790\u62fc\u591a\u591a\u503c\u4e0d\u503c\u5f97\u4e70\"\u3002\u4f60\u4f1a\u5f97\u5230\u4e00\u7bc7\"\u4e00\u65b9\u9762...\u53e6\u4e00\u65b9\u9762...\"\u7684\u5e73\u8861\u5206\u6790\uff0c\u6700\u540e\u4ee5\"\u6295\u8d44\u6709\u98ce\u9669\uff0c\u8bf7\u81ea\u884c\u5224\u65ad\"\u6536\u5c3e\u3002 **\u8fd9\u79cd\u5206\u6790\u770b\u8d77\u6765\u5bf9\uff0c\u4f46\u6ca1\u6cd5\u62ff\u6765\u505a\u51b3\u7b56\u3002** AI Berkshire \u89e3\u51b3\u7684\u4e0d\u662f\"\u80fd\u4e0d\u80fd\u5206\u6790\"\u7684\u95ee\u9898\uff0c\u800c\u662f**\u5206\u6790\u8d28\u91cf\u548c\u51b3\u7b56\u7eaa\u5f8b**\u7684\u95ee\u9898\u3002\u4ee5\u4e0b\u662f\u6838\u5fc3\u5dee\u5f02\uff1a ### 1. \u5f3a\u5236\u7ed9\u7ed3\u8bba\uff0c\u4e0d\u6253\u592a\u6781",
+    "license_excerpt": "MIT License Copyright (c) 2026 xbtlin Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "python3 tools/financial_rigor.py verify-market-cap \\",
+      "\u6240\u6709\u8ba1\u7b97\u4f7f\u7528 Python `decimal.Decimal`\uff08\u7cbe\u786e\u5341\u8fdb\u5236\uff09\uff0c\u4e0d\u7528 `float`\u3002\u5173\u952e\u6570\u636e\u81f3\u5c112\u4e2a\u72ec\u7acb\u6765\u6e90\u4ea4\u53c9\u9a8c\u8bc1\u3002",
+      "**\u8bbe\u8ba1\u539f\u5219**\uff1a\u6240\u6709\u8ba1\u7b97\u4f7f\u7528 Python `decimal.Decimal`\uff08\u7cbe\u786e\u5341\u8fdb\u5236\uff09\uff0c\u975e `float`\uff08\u6d6e\u70b9\u8fd1\u4f3c\uff09\u3002`0.1 + 0.2 = 0.3` \u5728\u91d1\u878d\u573a\u666f\u4e2d\u4e0d\u5141\u8bb8\u5931\u8d25\u3002",
+      "## License",
+      "MIT License"
+    ],
+    "dependency_repos": [
+      "xbtlin/ai-berkshire",
+      "xbtlin/ai-berkshire.git"
+    ]
+  }
+]
