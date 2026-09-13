@@ -1,0 +1,85 @@
+{
+  "audit_id": "R134",
+  "requested_full_name": "retrocodes12/trustpacket",
+  "observed_at": "2026-09-13T16:26:09.059958+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "retrocodes12/trustpacket",
+  "html_url": "https://github.com/retrocodes12/trustpacket",
+  "description": "Three-way trust reconciliation for law firm client accounts. Two exports in, a signed packet out. Node + SQLite, no external services.",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-07-31T06:14:03Z",
+  "updated_at": "2026-08-31T10:37:38Z",
+  "pushed_at": "2026-07-31T06:15:38Z",
+  "size": 121,
+  "open_issues_count": 0,
+  "topics": [
+    "bookkeeping",
+    "iolta",
+    "legal",
+    "legal-tech",
+    "nodejs",
+    "reconciliation",
+    "sqlite",
+    "trust-accounting"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "2ab9d43af12811d8ed67f8bf73ff812e659c8119",
+  "last_commit": "2026-07-31T06:15:37Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/retrocodes12/trustpacket",
+    "commit": "https://github.com/retrocodes12/trustpacket/commit/2ab9d43af12811d8ed67f8bf73ff812e659c8119"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "b1e4188819c007e493d4fbe3bbe1e44b55eb5ac3e00761e45e57a755a858bc12",
+    "text": "# TrustPacket\n\nTwo exports in, a signed three-way trust reconciliation packet out.\n\nA bookkeeper uploads a trust bank statement and a client ledger. Every line is matched, the\nthree balances are proved against each other, and the output is the four-part packet a bar\nrule asks for — plus an exceptions page naming the overdrawn client, the stale cheque and the\nbank charge nobody posted. That exceptions page is the part Clio and MyCase stop short of.\n\nBuilt for one person running the monthly close for eight to fifteen law firms.\n\nMIT licensed. Runs on one machine with no external services — Node, SQLite, and nothing else.\n\n> **This is a calculation tool, not legal or accounting advice.** It arithmetically proves\n> three balances against each other and prints what it found. It does not know your rules, it\n> cannot certify compliance, and it is not a substitute for the professional who reviews and\n> signs the packet. Verify the retention period and report format your jurisdiction actually\n> requires.\n\n### Status, honestly\n\nThe reconciliation engine is well covered — 86 tests, including the cases that decide whether\na packet can be trusted: uncleared cheques carried across months, unassigned transactions that\nmust break agreement rather than hide, bank charges flagged instead of absorbed, and an empty\nor partially-read file that refuses to call itself reconciled.\n\nWhat has *not* happened: **no real firm has run a real export through this.** Column mapping is\ntested against the documented header shapes of Clio, PracticePanther, QuickBooks, Xero, Chase,\nBank of America and Wells Fargo, but documented is not the same as observed. No bar reviewer\nhas looked at the packet. Nobody has been billed for it.\n\nIf you use it on real books, the first thing worth doing is checking the packet against a\nreconciliation you already trust.\n\n---\n\n## Running it\n\n```bash\nnpm install\nnpm start                 # http://127.0.0.1:3000\n```\n\nOpen it and press **Try the sample files** — the demo carries three deliberate problems so the\noutput shows what the tool is for. `/?demo=1` walks the whole flow automatically.\n\n### With a password, on a server\n\n```bash\nTRUSTPACKET_PASSWORD='a long passphrase' \\\nTRUSTPACKET_SECRET=\"$(openssl rand -base64 32)\" \\\nHOST=0.0.0.0 npm start\n```\n\n**Without `TRUSTPACKET_PASSWORD` the server refuses to bind anything but loopback and exits 1.**\nClient trust records would otherwise be one unauthenticated request away.\n\n| Variable | Default | Meaning |\n|---|---|---|\n| `PORT` | `3000` | Listen port |\n| `HOST` | `127.0.0.1` | Interface. Anything else demands a password |\n| `TRUSTPACKET_PASSWORD` | unset | Operator password. Unset means open, loopback only |\n| `TRUSTPACKET_SECRET` | derived | Session signing key. Set it explicitly so sessions survive a restart |\n| `TRUSTPACKET_DB` | `data/trustpacket.db` | Database file, resolved against the install directory |\n\n### What is public and what is not\n\nThe demo is deliberately open so a prospect can put their own file through it without an\naccount. Anything that reads or writes stored records needs a session:\n\n| Open | Requires sign-in |\n|---|---|\n| The sample files | Firms, the portfolio, history |\n| Reconciling an uploaded pair | Saving a reconciliation |\n| Downloading that packet and CSVs | Backup and restore |\n\nNaming a `firmId` on any request makes it a stored-data request.\n\n---\n\n## Records and retention\n\nTrust records are a multi-year obligation, so nothing here is a one-way door.\n\n```bash\nnpm run backup                        # dated snapshot into data/backups, keeps the last 30\nnode scripts/backup.mjs --keep 90     # or wherever, for however long\n```\n\nRestore is a merge, not a replace: a firm already present by name keeps its identity and only\ngains the periods it is missing, so running the same restore twice changes nothing the second\ntime. `GET /api/backup.json` and `POST /api/restore` do the same over HTTP.\n\nA cron line, if you want it unattended:\n\n```\n17 3 * * *  cd /opt/trustpacket && /usr/bin/node scripts/backup.mjs --keep 60 >> /var/log/trustpacket-backup.log 2>&1\n```\n\n### Jurisdiction\n\nRetention wording on the packet follows the firm's configured jurisdiction. California, New\nYork and Florida were checked against their own rules; Texas is from secondary summaries and\nsays so on the document. Anything else asks you to set a period rather than inventing one.\n\nThe jurisdiction is frozen into each saved reconciliation, so a firm that later moves does not\nretroactively change a packet somebody already signed.\n\n**None of this is legal advice.** The packet states what the firm configured, and a human\nreviews and signs it.\n\n---\n\n## Deploying\n\n`deploy/trustpacket.service` is a systemd unit. On the server:\n\n```bash\nsudo cp deploy/trustpacket.service /etc/systemd/system/\nsudo systemctl edit trustpacket          # set the password and secret here, not in the unit\nsudo systemctl enable --now trustpacket\ncurl -s localhost:3000/health            # {\"ok\":true,\"auth\":true}\n```\n\nPut it behind a TLS terminator. The session cookie only sets `Secure` when the request arrives\nover HTTPS, so terminate properly and forward `X-Forwarded-Proto`.\n\n---\n\n## Development\n\n```bash\nnpm test              # 86 unit and integration tests\nnpm run test:ui       # browser pass against a running server on :3000\nnpm run test:ui:locked# browser pass with a password set, on its own instance\nnpm run test:a11y     # contrast, names, keyboard, live regions — measured, not assumed\nnpm run check         # all four\nnpm run sample        # regenerate the demo files and packets\n```\n\n`scripts/ui-check.mjs` drives real Chrome and fails on any console error. It has caught bugs\nthe unit tests could not — a timezone fault that filed records under the wrong day, and a\ndropped click handler — so run it before believing a green suite.\n\n### Layout\n\n| Path | What lives there |\n|---|---|\n| `src/reconcile.js` | The three-way reconciliation and the matcher |\n| `src/money.js` | Money and dates. **Everything is integer cents** |\n| `src/parse.js` · `src/xlsx.js` | CSV and XLSX ingestion, column guessing |\n| `src/store.js` | SQLite: firms, periods, carry-forward, overrides, backup |\n| `src/packet.js` · `src/detail.js` | The PDF packet and the working CSVs |\n| `src/jurisdictions.js` | Retention rules, with sources |\n| `public/` | The browser app |\n\n### Two things to know before changing anything\n\n**Money is integer cents everywhere.** The product's promise is that the packet foots to the\ncent; floats cannot make that promise.\n\n**Never `new Date(someDateString)`.** The constructor reads `\"06/30/2026\"` as *local* midnight,\nwhich east of UTC serialises back as the 29th. That silently filed records under the wrong day\nonce already. Use `parseDate` from `src/money.js`.\n\n---\n\n## Contributing\n\nThe parts most worth improving, roughly in order of how much they would help someone:\n\n**Export formats.** `tests/realformats.test.js` pins the header shapes of the systems this was\nbuilt against. If your practice management software or bank exports something it cannot read,\na fixture in that file plus an alias in `src/parse.js` fixes it for everyone. A failing fixture\nis a perfectly good contribution on its own.\n\n**Jurisdictions.** `src/jurisdictions.js` carries retention periods with a source and a checked\ndate. California, New York and Florida were read from their own rules; Texas is from secondary\nsummaries and says so on the printed packet. Adding a state means citing where the number came\nfrom — an unsourced entry is worse than an absent one, because it prints as though it were\nauthoritative.\n\n**The packet itself.** It is built to a general reading of a monthly three-way reconciliation.\nIf your bar expects a specific arrangement or an additional schedule, that is worth knowing.\n\nRun `npm run check` before opening anything: unit tests, two browser passes, and an\naccessibility audit that has to come back with zero findings.\n\n## Why this exists\n\nThe monthly three-way trust reconciliation is required by rule in every US state and, for a\nbookkeeper carrying eight to fifteen firms across four different accounting systems, is still\nlargely done by hand. The tools that do it well assume the firm's books live inside them and\ncharge per firm or per seat, which does not fit somebody serving ten firms they do not own the\nsubscriptions for.\n\nWhether that gap is worth paying to close was never established — nobody was ever asked. The\ncode is here because the problem is real even if the business was not proven.\n\n## License\n\nMIT. See `LICENSE`.\n",
+    "characters": 8563,
+    "source_url": "https://github.com/retrocodes12/trustpacket/blob/2ab9d43af12811d8ed67f8bf73ff812e659c8119/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c5a0f88d4c02b0e403247fd81f1a39d9b7c5bbb3236deb84ea1b52d23ffc91fc",
+    "text": "MIT License\n\nCopyright (c) 2026 TrustPacket contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1081,
+    "source_url": "https://github.com/retrocodes12/trustpacket/blob/2ab9d43af12811d8ed67f8bf73ff812e659c8119/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "retrocodes12",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

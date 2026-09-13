@@ -1,0 +1,79 @@
+{
+  "audit_id": "R138",
+  "requested_full_name": "kirillsakhin/billing-lint",
+  "observed_at": "2026-09-13T16:26:09.059958+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "kirillsakhin/billing-lint",
+  "html_url": "https://github.com/kirillsakhin/billing-lint",
+  "description": "A linter for legal billing statements — catch vague narratives, block billing, math errors and invalid UTBMS codes before the bill goes out",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-08-31T19:21:18Z",
+  "updated_at": "2026-08-31T19:48:03Z",
+  "pushed_at": "2026-08-31T19:25:39Z",
+  "size": 111,
+  "open_issues_count": 0,
+  "topics": [
+    "billing",
+    "e-billing",
+    "ledes",
+    "legal-engineering",
+    "legal-tech",
+    "linter",
+    "utbms"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "0f892d94400eb89cf1b786a483b6159741c781f3",
+  "last_commit": "2026-08-31T19:23:30Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/kirillsakhin/billing-lint",
+    "commit": "https://github.com/kirillsakhin/billing-lint/commit/0f892d94400eb89cf1b786a483b6159741c781f3"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "239c911bcad1ac700fd0e37db2f363447df7fffb5d8838f581a32fbb292ca2cb",
+    "text": "# billing-lint\n\n[![CI](https://github.com/kirillsakhin/billing-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/kirillsakhin/billing-lint/actions/workflows/ci.yml)\n\nA linter for legal billing statements. Point it at a pre-bill export — CSV, XLSX or\nLEDES 1998B — and it flags the problems that get invoices cut or bounced back: vague\nnarratives, block billing, math that doesn't add up, template leftovers, duplicated\nentries, invalid UTBMS codes. Deterministically, offline, in CI if you want.\n\n## Why\n\nAnyone who reviews pre-bills knows the drill. The narrative says \"attention to file\".\nTwo entries bill the same document review twice. An entry says \"Draft letter to\n[client name]\". Hours × rate doesn't equal the amount. Every one of these costs money\nor trust when a client's billing team finds it first.\n\nThe obvious 2026 answer is \"have an LLM review the statement\" — and it works worse\nthan you'd expect. LLM batch review is inconsistent: the same defect gets flagged in\nentry 3 and silently passed in entry 47, and two runs of the same statement disagree\nwith each other. Reviewing 400 entries in one prompt makes it worse, not better.\n\nSo billing-lint does it the other way around. Deterministic rules first: they catch\nthe same defect every time, in every entry, with no API key, and they can gate a CI\npipeline or a pre-send checklist. The LLM comes second, optionally, and only where it\nadds something rules can't — suggesting a better narrative for entries the rules\nalready flagged.\n\n## Install\n\n```\npip install billing-lint\n```\n\nOr `pipx install billing-lint` for the CLI alone. Extras: `billing-lint[xlsx]` for\nExcel files, `billing-lint[llm]` for the LLM suggestion pass.\n\n## Quickstart\n\n```\nbilling-lint check prebill.csv\n```\n\nAgainst the bundled demo statement ([`examples/sample_en.csv`](examples/sample_en.csv)):\n\n```\nbilling-lint — examples/sample_en.csv\nformat=csv entries=23 matter_language=en\n\nERROR   BL001 line 4: amount 500.00 does not match hours × rate = 600.00\nERROR   BL006 line 9: placeholder text in narrative: '[client name]'\nERROR   BL010 line 16: zero or negative hours (0)\nWARNING BL002 line 5: vague narrative (matched: 'attention to file')\nWARNING BL003 line 6: possible block billing: 3 activities in one 3.5h entry\nWARNING BL004 line 7: possibly non-billable activity (matched: 'scanning')\nWARNING BL005 line 8: narrative language 'ru' differs from matter language 'en'\nWARNING BL007 line 10: narrative names a colleague (Quint); consider a role-based reference\nWARNING BL008 line 12: exact duplicate of line 11\nWARNING BL008 line 14: near-duplicate of line 13 (similarity 0.83)\nWARNING BL009 line 15: unknown task code 'L999'\nWARNING BL010 statement: Quint, Leo billed 13.5h on 2026-08-14 (max 12h)\nINFO    BL010 statement: 20 of 21 entries are exact multiples of 0.5h — check\nthat increments reflect actual time\n```\n\nFor CI or scripting:\n\n```\nbilling-lint check invoice.ledes --format json --fail-on warning\n```\n\nExit codes: `0` — clean (below the `--fail-on` threshold), `1` — findings at or above\nit, `2` — usage or file error. Reports come as `console`, `json` or `md`\n(`--output report.md` writes to a file).\n\n## Rules\n\n| ID | Name | Default | What it catches |\n|----|------|---------|-----------------|\n| BL000 | ledes-structure | error | malformed LEDES 1998B records |\n| BL001 | math-integrity | error | hours × rate ≠ amount; line totals ≠ invoice total |\n| BL002 | vague-narrative | warning | \"attention to file\", «работа по делу», one-word narratives |\n| BL003 | block-billing | warning | several activities lumped into one long entry |\n| BL004 | non-billable-activity | warning | clerical work billed as fees (filing, scanning, invoicing) |\n| BL005 | language-mismatch | warning | narrative language ≠ matter language (en/ru) |\n| BL006 | placeholder-text | error | `[name]`, TBD, XXX, `{{merge_field}}` on a client bill |\n| BL007 | name-in-narrative | warning | colleagues named where a role reference belongs |\n| BL008 | duplicate-narrative | warning | exact and near-duplicate entries within a date window |\n| BL009 | utbms-validity | warning | unknown L/A/E/B/C/P codes; fee/expense code mismatches; missing required codes |\n| BL010 | time-anomalies | warning | zero/negative hours (error), >12h days, suspiciously uniform increments (info) |\n\n`billing-lint rules` prints this list; every threshold and severity is configurable.\n\n**Honest limits.** BL003 is a heuristic — it splits the narrative on separators and\ncounts activity verbs, and it will sometimes be wrong in both directions. BL007 builds\nits name list from the statement's own timekeepers (no NER, no external data), so it\nonly knows the people on the bill plus any `extra_names` you configure. Russian\nsurname inflection («обсуждение с Соколовой») defeats exact matching — a known v1\nlimit. Rule IDs are stable API: they never get renumbered, so you can pin config and\nCI checks to them.\n\n## Input formats\n\n- **CSV** — headers are matched against a synonym table in English and Russian\n  (`Description`/`Описание`, `Hours`/`Часы`, …). Anything nonstandard maps explicitly\n  via `input.columns` in config. Decimal commas (`1,5`) parse fine. Minimum viable\n  columns: a narrative plus hours or amount.\n- **XLSX** — first worksheet, same mapping (`pip install \"billing-lint[xlsx]\"`).\n- **LEDES 1998B** — the 24-field e-billing format. Structure is validated (BL000),\n  the invoice total is reconciled (BL001), and task/activity codes are required\n  (BL009) as the format intends.\n- Dates: ISO (`2026-08-05`), LEDES (`20260805`), European dotted (`05.08.2026`), and\n  slash dates read as US `MM/DD/YYYY`.\n\n## Configuration\n\n`billing-lint init` writes a starter `.billing-lint.yaml`. Everything is optional:\n\n```yaml\nmatter_language: auto   # en | ru | auto (majority vote of narratives)\nfail_on: error          # exit 1 at or above this severity\n\ninput:\n  format: auto          # auto | csv | ledes\n  columns:              # only what the synonym table can't guess\n    narrative: \"Line Description\"\n\nrules:\n  BL007:\n    enabled: false      # your firm doesn't mind names in narratives\n  BL008:\n    similarity_threshold: 0.7\n    date_window_days: 3\n  BL009:\n    require_codes: true # force UTBMS codes even for CSV input\n  BL010:\n    max_daily_hours: 10\n\nllm:\n  model: anthropic/claude-sonnet-5\n  max_entries: 50\n  timeout_seconds: 60\n```\n\nUnknown keys are errors, not silent ignores — a typo in a rule name won't quietly\ndisable your check.\n\n## LLM pass\n\n```\nbilling-lint check prebill.csv --llm anthropic/claude-sonnet-5\nbilling-lint check prebill.csv --llm default        # uses llm.model from config\n```\n\nThe model only sees entries the deterministic rules already flagged (capped at\n`llm.max_entries`), and returns a suggested rewrite per entry, shown in the report.\nAny model [litellm](https://github.com/BerriAI/litellm) supports works — Anthropic,\nOpenAI, a local Ollama model. Two guardrails are built in: a suggestion containing\nplaceholder text (`[name of court]` and friends) is withheld rather than shown, and\nif the pass fails part-way the report says so prominently instead of pretending it\nran.\n\n**Privacy:** without `--llm`, nothing ever leaves your machine. With it, only the\nflagged narratives and their findings go to the provider you chose.\n\n## Roadmap\n\nMore languages (the wordlists are plain YAML — PRs welcome), LEDES XML 2.x, more\nUTBMS code sets, configurable date-order parsing. See\n[CONTRIBUTING.md](CONTRIBUTING.md) for how to add a rule or a language.\n\n## License\n\nMIT.\n",
+    "characters": 7530,
+    "source_url": "https://github.com/kirillsakhin/billing-lint/blob/0f892d94400eb89cf1b786a483b6159741c781f3/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "6ee031bd04303dfd103598bff6da10687c59357a7b421dbc81cfe91c1db3a2b3",
+    "text": "MIT License\n\nCopyright (c) 2026 Kirill Sakhin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1070,
+    "source_url": "https://github.com/kirillsakhin/billing-lint/blob/0f892d94400eb89cf1b786a483b6159741c781f3/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 25,
+  "commits_six_months_capped": false,
+  "contributors_top10": [],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

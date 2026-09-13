@@ -1,0 +1,76 @@
+{
+  "audit_id": "R137",
+  "requested_full_name": "aharonhannan/WA-CrRLJ-3.3-Calculator",
+  "observed_at": "2026-09-13T16:26:09.059958+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "aharonhannan/WA-CrRLJ-3.3-Calculator",
+  "html_url": "https://github.com/aharonhannan/WA-CrRLJ-3.3-Calculator",
+  "description": "A React single-page application for calculating trial deadlines under Washington State Criminal Court Rule CrRLJ 3.3.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-02-07T01:23:32Z",
+  "updated_at": "2026-02-17T01:17:32Z",
+  "pushed_at": "2026-02-17T01:20:27Z",
+  "size": 741,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "d3d6cd7dcb90a43c519863a8279d85ff34446bc2",
+  "last_commit": "2026-02-17T01:17:22Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/aharonhannan/WA-CrRLJ-3.3-Calculator",
+    "commit": "https://github.com/aharonhannan/WA-CrRLJ-3.3-Calculator/commit/d3d6cd7dcb90a43c519863a8279d85ff34446bc2"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "f281ebf6c5bf48a6b5d571e2a2f52987621cddef63379dd004286c410625316c",
+    "text": "# Washington State Speedy Trial Calculator (CrRLJ 3.3)\n\n**Free online calculator for Washington State \"Right to Speedy Trial\" deadlines under CrRLJ 3.3**\n\nCalculate trial deadlines for Washington's **courts of limited jurisdiction** (district and municipal courts). CrRLJ 3.3 mandates that trials occur within **60 days** for in-custody defendants and **90 days** for out-of-custody defendants from the date of arraignment. Violations typically result in **dismissal with prejudice**.\n\n## Live Calculator\n\n**[https://aharonhannan.github.io/WA-CrRLJ-3.3-Calculator/](https://aharonhannan.github.io/WA-CrRLJ-3.3-Calculator/)**\n\n## Why Use This Calculator?\n- **Handles complex scenarios** - Resets, exclusions, cure periods, and the 30-day minimum rule\n- **Visual timeline** - See all critical dates at a glance\n- **Free and open source** - MIT licensed\n\n## Features\n\n### Core Functionality\n- **Accurate Date Calculations**: Implements all CrRLJ 3.3 requirements including:\n  - 60-day limit for defendants detained in jail\n  - 90-day limit for defendants not detained\n  - Automatic extension to 90 days if defendant released before 60-day limit expires\n  - Commencement date resets for various events\n  - Excluded period tracking\n  - 30-day minimum rule after excluded periods\n  - Cure period calculations (14 days detained / 28 days not detained)\n\n### User-Friendly Design\n- **Clean Interface**: Professional, attorney-focused design\n- **Visual Timeline**: Clear visualization of all critical dates\n- **Detailed Breakdown**: Step-by-step calculation explanation\n- **Real-time Validation**: Checks if scheduled trial dates are timely\n\n### Additional Features\n- **Print Support**: Print-optimized results for court filings\n- **Export to Text**: Download calculations as text files\n- **Local Storage**: Saves recent calculations\n- **Responsive Design**: Works on desktop, tablet, and mobile devices\n\n## Technology Stack\n\n- **Build Tool**: Vite\n- **Framework**: React 18 with hooks\n- **Styling**: CSS (adapted from original)\n- **Deployment**: GitHub Pages via `gh-pages` package\n\n## Development\n\n### Prerequisites\n- Node.js 18+\n- npm 9+\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Development Server\n\n```bash\nnpm run dev\n```\n\n### Build for Production\n\n```bash\nnpm run build\n```\n\nCreates a production build in the `dist` directory.\n\n### Preview Production Build\n\n```bash\nnpm run preview\n```\n\n### Deploy to GitHub Pages\n\n```bash\nnpm run deploy\n```\n\nThis builds and deploys to GitHub Pages. The site will be available at:\n`https://aharonhannan.github.io/WA-CrRLJ-3.3-Calculator/`\n\n## How to Use\n\n### Basic Steps\n\n1. **Enter Basic Information**\n   - Set the arraignment date (initial commencement date)\n   - Select custody status (detained vs. not detained)\n   - If applicable, enter release date\n\n2. **Add Commencement Date Resets** (if any)\n   - Click \"+ Add Commencement Date Reset\"\n   - Select the type of reset event:\n     - Waiver\n     - Failure to Appear\n     - New Trial/Mistrial\n     - Appellate Review/Stay\n     - Collateral Proceeding\n     - Change of Venue\n     - Disqualification of Counsel\n     - Deferred Prosecution\n   - Enter the new commencement date\n   - Add notes if needed\n\n3. **Add Excluded Periods** (if any)\n   - Click \"+ Add Excluded Period\"\n   - Select the exclusion type:\n     - Competency Proceedings\n     - Proceedings on Unrelated Charges\n     - Continuance\n     - Period Between Dismissal and Refiling\n     - Disposition of Related Charge\n     - Foreign or Federal Custody\n     - Juvenile Proceedings\n     - Unavoidable/Unforeseen Circumstances\n     - Judge Disqualification\n   - Enter start and end dates\n   - Add notes if needed\n\n4. **Enter Trial Information**\n   - Enter the scheduled trial date (to check if timely)\n   - Check \"Apply Cure Period\" if applicable\n\n5. **Calculate**\n   - Click \"Calculate Trial Deadline\"\n   - Review the results, timeline, and calculation breakdown\n\n### Understanding the Results\n\nThe calculator provides:\n- **Status**: Whether the scheduled trial is timely or untimely\n- **Trial Deadline**: The last allowable date for trial\n- **Timeline**: Visual representation of all events and dates\n- **Calculation Breakdown**: Detailed explanation of how the deadline was calculated\n\n## Key CrRLJ 3.3 Rules Implemented\n\n### Time Limits (Section b)\n- **Detained in Jail**: 60 days from commencement date\n- **Not Detained**: 90 days from commencement date\n- **Released Before 60 Days**: Extends to 90 days\n- **30-Day Minimum**: After any excluded period ends, trial must be at least 30 days later\n\n### Commencement Date (Section c)\n- **Initial**: Date of arraignment per CrRLJ 4.1\n- **Resets**: Elapsed time resets to zero on specific events (latest reset applies if multiple)\n\n### Excluded Periods (Section e)\nThe following periods don't count toward the time limit:\n- Competency proceedings\n- Proceedings on unrelated charges\n- Continuances granted by the court\n- Time between dismissal and refiling\n- Disposition of related charges\n- Foreign/federal custody\n- Juvenile proceedings\n- Unavoidable/unforeseen circumstances\n- 5 days after judge disqualification\n\n### Cure Period (Section g)\n- **One-time extension**: Can be granted within 5 days after time limit expires\n- **Duration**: 14 days (detained) or 28 days (not detained)\n- **Requirement**: Finding that defendant won't be substantially prejudiced\n\n## Important Disclaimers\n\n**This calculator is provided for informational purposes only and does not constitute legal advice.**\n\n- Always verify calculations manually\n- Consult the current version of CrRLJ 3.3\n- Review relevant case law and local court rules\n- Court deadlines may vary based on specific circumstances not captured by this calculator\n- When in doubt, consult with experienced counsel\n\n## Rule Reference\n\nBased on **CrRLJ 3.3 (Effective July 9, 2024)**\n\nKey sections:\n- (a) General Provisions\n- (b) Time for Trial\n- (c) Commencement Date\n- (d) Trial Settings and Notice\n- (e) Excluded Periods\n- (f) Continuances\n- (g) Cure Period\n- (h) Dismissal With Prejudice\n\n## License\n\nMIT License - See [LICENSE](LICENSE) file for details.\n\n## Contributing\n\nContributions welcome! Please open an issue or submit a pull request.\n\n## Keywords\n\nWashington speedy trial, CrRLJ 3.3, right to speedy trial, WA criminal defense, time for trial calculator, district court deadline, municipal court deadline, 60 day rule, 90 day rule, speedy trial dismissal, courts of limited jurisdiction, Washington criminal court rules\n\n---\n\n**Version**: 2.0 (React SPA)\n**Author**: Aharon Hannan\n**Last Updated**: February 2026\n**Rule Version**: CrRLJ 3.3 (Effective July 9, 2024)\n",
+    "characters": 6618,
+    "source_url": "https://github.com/aharonhannan/WA-CrRLJ-3.3-Calculator/blob/d3d6cd7dcb90a43c519863a8279d85ff34446bc2/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "ff3b5b2d9dc16dd39db0a1d65af51bfab655edd3c747ce0337d55fdddc6c4096",
+    "text": "MIT License\n\nCopyright (c) 2026 Aharon Hannan\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1070,
+    "source_url": "https://github.com/aharonhannan/WA-CrRLJ-3.3-Calculator/blob/d3d6cd7dcb90a43c519863a8279d85ff34446bc2/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "aharonhannan",
+      "contributions": 7
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

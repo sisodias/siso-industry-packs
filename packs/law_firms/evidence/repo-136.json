@@ -1,0 +1,87 @@
+{
+  "audit_id": "R136",
+  "requested_full_name": "mizcausevic-dev/legal-ai-incident-card-profile",
+  "observed_at": "2026-09-13T16:26:09.059958+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "mizcausevic-dev/legal-ai-incident-card-profile",
+  "html_url": "https://github.com/mizcausevic-dev/legal-ai-incident-card-profile",
+  "description": "LegalTech AI Incident Card profile: 18 event types covering privilege breaches, work-product violations, court-sanctioned hallucinations (Mata v. Avianca), conflict-check bypasses, UPL, vendor training-data violations. 6-code privilege_waiver_risk_taxonomy. ed25519 signature REQUIRED.",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-05-30T05:16:18Z",
+  "updated_at": "2026-08-10T06:07:35Z",
+  "pushed_at": "2026-05-31T20:41:54Z",
+  "size": 10,
+  "open_issues_count": 0,
+  "topics": [
+    "ai-governance",
+    "attorney-client-privilege",
+    "bar-discipline",
+    "ed25519",
+    "incident-card",
+    "kinetic-gain-protocol-suite",
+    "legaltech",
+    "mata-v-avianca",
+    "privilege-waiver",
+    "work-product-doctrine"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "ff6d601f956baf6523cc61a6f5c42d24f7c15027",
+  "last_commit": "2026-05-31T20:41:53Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/mizcausevic-dev/legal-ai-incident-card-profile",
+    "commit": "https://github.com/mizcausevic-dev/legal-ai-incident-card-profile/commit/ff6d601f956baf6523cc61a6f5c42d24f7c15027"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "79cf06ba55e057992dacd696646fee26dded1a8b66d7b5351de296ca9f65a5b4",
+    "text": "# legal-ai-incident-card-profile\n\n> **LegalTech Incident Card — Spec #5 of the LegalTech 6-pack.** Profile of the [AI Incident Card spec](https://github.com/mizcausevic-dev/incident-card-spec) scoped to legal-AI incidents at law firms, in-house legal departments, public defenders, and legal-AI vendors. Covers privilege breaches, work-product doctrine violations, Mata v. Avianca-class court-sanctioned hallucinations, conflict-check bypasses, UPL violations, and AI vendor training-data-use violations.\n\nPart of the [Kinetic Gain Protocol Suite](https://suite.kineticgain.com).\n\n> Status: v0.1 draft. Profile at [`profile.json`](./profile.json).\n\n## What this profile is\n\nA **structured incident-record format** signed by the supervising attorney, sufficient for the firm's General Counsel, Managing Partner, outside ethics counsel, state bar disciplinary counsel, and (where required) the affected tribunal to triage and respond.\n\n**18 event types** covering the full surface where a legal AI tool can produce a reportable incident:\n\n- privileged-disclosure-to-unauthorized-recipient\n- work-product-doctrine-violation\n- cross-matter-information-leak\n- conflict-check-bypass\n- engagement-letter-out-of-scope-action\n- **court-sanctioned-hallucination-class** (Mata v. Avianca)\n- bar-discipline-trigger\n- unauthorized-practice-of-law\n- attorney-supervisor-bypass\n- client-deepfake-impersonation-attempt\n- ai-vendor-training-data-use-violation\n- privilege-log-incomplete-due-to-ai-tagging\n- ediscovery-tar-coding-error-systematic\n- ediscovery-spoliation-by-ai-retention-policy\n- bar-association-investigation-opened\n- court-standing-order-violation\n- billing-misconduct-ai-time-fraud\n- cross-border-data-residency-violation\n\n**4 severities** (S1-low → S4-critical), each with named escalation pathways.\n\n**10 referral pathways** including LegalTech-distinctive: outside ethics counsel engagement, state bar disciplinary counsel notification, court disclosure (where the AI incident reached a tribunal), professional liability insurer notification, criminal-defense effective-assistance disclosure.\n\n## LegalTech-distinctive design\n\n**Privilege waiver risk taxonomy (6 codes)** — `no-privilege-risk-applicable` → `low-vendor-channel-only` → `moderate-third-party-but-recoverable` (Fed. R. Evid. 502(d) clawback) → `high-waiver-likely` → `critical-cross-matter-or-subject-matter`. No sibling-vertical Incident Card has anything like this — privilege waiver mechanics are unique to LegalTech. Filing an Incident Card without a privilege-waiver-risk assessment is malpractice-adjacent.\n\n**Signature REQUIRED, not optional.** Most sibling-vertical Incident Cards make the ed25519 signature optional. LegalTech requires it because Incident Cards reach state bar disciplinary counsel + tribunals — there has to be an attesting attorney whose name is on the line, and the signature establishes that the card was issued by them and not retroactively altered.\n\n**Criminal-defense effective-assistance disclosure pathway.** Triggered when the affected matter is criminal defense AND severity ≥ S2-moderate. Surfaces a Sixth Amendment obligation no sibling vertical has — the *defendant* (and any appellate counsel) need to know an AI tool was implicated in a moderate-or-higher incident on their matter.\n\n**Court disclosure pathway** as a first-class referral channel — for `court-sanctioned-hallucination-class` and `court-standing-order-violation`. The incident isn't fully addressed until the affected tribunal has been notified.\n\n## Use\n\n```bash\n# Validate the profile is well-formed\nnode -e \"JSON.parse(require('fs').readFileSync('profile.json','utf8'))\"\n```\n\n## What this is NOT\n\n- Not a bar discipline outcome — documents the incident; the bar's separate process determines discipline.\n- Not a malpractice waiver — filing does not waive defenses the firm may have.\n- Not itself privilege-waiving — filing should be done with privilege-preservation review.\n\n## Composes with\n\n- [`incident-card-spec`](https://github.com/mizcausevic-dev/incident-card-spec) — the upstream spec this profile conforms to\n- [`matter-decision-record-audit-stream`](https://github.com/mizcausevic-dev/matter-decision-record-audit-stream) — emits `legaltech_ai_incident.filed` / `.remediated` / `.regulator_referred` / `.court_disclosed` / `.client_notified` events\n- [`aba-rule-1-6-readiness-evidence-bundle`](https://github.com/mizcausevic-dev/aba-rule-1-6-readiness-evidence-bundle) — sibling compliance Evidence Bundle\n- [`legal-applicant-bias-coverage-lab`](https://github.com/mizcausevic-dev/legal-applicant-bias-coverage-lab) — sibling bias Evidence Bundle\n- [`state-bar-ai-disclosure-tracker`](https://github.com/mizcausevic-dev/state-bar-ai-disclosure-tracker) — sibling state-bar lifecycle tracker\n- [Kinetic Gain Protocol Suite](https://suite.kineticgain.com) — umbrella\n\n## Compliance posture\n\n**Incident-readiness scaffolding** for law firms + legal-AI vendors. Card format does not establish bar compliance, does not waive privilege, does not constitute discipline. Per the standing public-language guardrail across the Suite.\n\n## License\n\nProfile + supporting documentation: MIT.\n",
+    "characters": 5165,
+    "source_url": "https://github.com/mizcausevic-dev/legal-ai-incident-card-profile/blob/ff6d601f956baf6523cc61a6f5c42d24f7c15027/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "a5ed17e0b90a1c916d186faf030f02c99f81eb210e3f51a4f10c7b75ad64b224",
+    "text": "MIT License\n\nCopyright (c) 2026 Miz Causevic\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1069,
+    "source_url": "https://github.com/mizcausevic-dev/legal-ai-incident-card-profile/blob/ff6d601f956baf6523cc61a6f5c42d24f7c15027/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "mizcausevic-dev",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

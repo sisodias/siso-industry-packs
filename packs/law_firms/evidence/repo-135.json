@@ -1,0 +1,60 @@
+{
+  "audit_id": "R135",
+  "requested_full_name": "J-pilon/legal-conflict-checker",
+  "observed_at": "2026-09-13T16:26:09.059958+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "J-pilon/legal-conflict-checker",
+  "html_url": "https://github.com/J-pilon/legal-conflict-checker",
+  "description": "This is a prototype for automatic conflict checking for law firms",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2025-10-28T19:08:00Z",
+  "updated_at": "2026-01-16T17:20:34Z",
+  "pushed_at": "2025-12-22T01:19:52Z",
+  "size": 129,
+  "open_issues_count": 6,
+  "topics": [],
+  "license": null,
+  "revision": "022af65df7d339dfb5f3cd231b891f728a4964a2",
+  "last_commit": "2025-10-30T18:52:51Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/J-pilon/legal-conflict-checker",
+    "commit": "https://github.com/J-pilon/legal-conflict-checker/commit/022af65df7d339dfb5f3cd231b891f728a4964a2"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "a20f4fd756ae35bb45105a45d8b14979d52c1101f131211bada7b16fb768be2e",
+    "text": "# Legal Conflict Checker — Assistive, Reversible, Audit-Ready\n\n**TL;DR:** A safe, **suggestions-only** conflict-check assist that runs on intake, surfaces **ranked matches** for human review, and writes an **audit log**. It’s **feature-flagged**, **reversible**, and requires **no schema changes**. Built to explore how Clio-style intake can be both faster and more defensible.\n\n## Why this exists (business lens)\n\nManual conflict checks burn **30–60 minutes** per new client and are inconsistent to document. That slows **intake completion** and weakens trust. This prototype shows a low-blast-radius path to:\n\n* **Speed:** move conflict-hint surfacing from minutes → **seconds**.\n* **Trust:** make **documented clearance** the default via an attached log.\n* **Safety:** keep humans in the loop; **suggestions ≠ decisions**.\n\n## What it does (product behavior)\n\nWhen a new intake is submitted, the service runs a fuzzy similarity scan across existing **clients, prior/alias names, related parties, and matter titles**. It returns a **ranked list of “Suggested Conflicts”** to a reviewer, who would mark it as **Cleared** or **Escalate** after review. Every check produces a **timestamped Conflict Check Log** (reviewer, inputs, decision).\n\n* **Assistive posture:** never hard-blocks intake; reviewers decide.\n* **Permissions respected:** suggestions/logs respect matter/user access (ethical walls).\n* **Instant rollback:** everything is behind `CONFLICT_COLLECTOR_ENABLED`.\n\n## Success criteria (if this shipped as a pilot)\n\n* **Intake completion %** ↑ (pilot vs matched control)\n* **Median conflict-resolution time** ↓ to **< 10s** for suggestions\n* **Documented clearance rate** ↑ (log attached by default)\n* **Panel open rate** ≥ 80% when suggestions exist; **false-positive ceiling** ≤ 0.5%\n* **Support tickets** mentioning “conflict/ethical wall” ↓\n\n## Architecture at a glance\n\n* **Service:** `ConflictCollector` orchestrates detectors over historical matters.\n* **Detectors:** pluggable strategy classes (concurrent / lawyer-client / successive).\n* **UI:** a simple **Suggested Conflicts** panel (rank + reason + action).\n* **Logging:** immutable conflict-check entry per intake (decision + timestamp).\n* **Ops:** feature flag `CONFLICT_COLLECTOR_ENABLED`, small PRs, tests, and rollback notes.\n\n## Run it locally (quick start)\n\n```bash\ngit clone https://github.com/J-pilon/legal-conflict-checker\ncd legal-conflict-checker\nbundle install\nrails s\n# Optional: disable assist for comparison\nCONFLICT_COLLECTOR_ENABLED=false rails s\n```\n\nSubmit a sample intake:\n\n```bash\ncurl -X POST http://localhost:3000/new_intake/create \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"matter_number\": \"2024-1076\",\n    \"title\": \"Martinez Restaurant Group Employment Dispute\",\n    \"client_name\": \"Commercial Bank\",\n    \"client_type\": \"Corporation\",\n    \"practice_area\": \"Employment Law\",\n    \"matter_type\": \"Discrimination\",\n    \"status\": \"Active\",\n    \"opened_date\": \"2024-05-15\",\n    \"closed_date\": null,\n    \"adverse_parties\": [\"Former Employee\", \"EEOC\"],\n    \"related_parties\": [\"Jennifer Martinez (Legal Counsel)\", \"HR Department Staff\"],\n    \"assigned_attorney\": \"Sarah Williams\",\n    \"description\": \"Employment contract negotiation for senior physician position\",\n    \"conflict_check\": null\n  }'\n```\n\nOpen the dashboard: `http://localhost:3000/dashboard`\n\n## Safety rails (non-negotiables)\n\n* **Feature-flagged & reversible:** kill-switch via `CONFLICT_COLLECTOR_ENABLED`.\n* **Suggestive, not dispositive:** humans review; no auto-declines in v1.\n* **No schema change required** for this prototype.\n* **No external calls / PII egress:** data stays within the app boundary.\n* **Permissions honored:** no leakage across ethical walls.\n\n## Links (proof & context)\n\n* **2 min walkthrough** *[Walkthrough video](https://www.loom.com/share/6f00569193b6464eb2c2c4cd4233c2fe)*\n* **Risk Brief:** *[Clio Risk Brief](https://docs.google.com/document/d/14FJi-sjk3aj_fNPVaOa0v5mm6L8011yPgGm2pxUfFQ8/edit?usp=sharing)*\n* **PR #5:** conflict detector logic — [https://github.com/J-pilon/legal-conflict-checker/pull/5](https://github.com/J-pilon/legal-conflict-checker/pull/5)\n* **PR #6:** UI dashboard + detected conflicts modal — [https://github.com/J-pilon/legal-conflict-checker/pull/6](https://github.com/J-pilon/legal-conflict-checker/pull/6)\n* **PR #7:** feature flag logic — [https://github.com/J-pilon/legal-conflict-checker/pull/7](https://github.com/J-pilon/legal-conflict-checker/pull/7)\n* **PR #8:** auditable conflict check log — [https://github.com/J-pilon/legal-conflict-checker/pull/8](https://github.com/J-pilon/legal-conflict-checker/pull/8)\n\n## What’s in here (tech map)\n\n* **Models:** `LegalMatter`, `Attorney`\n* **Service:** `ConflictCollector` (fan-out, aggregate, rank)\n* **Detectors:**\n\n  * `ConcurrentConflictDetector` — party/alias clashes\n  * `LawyerClientConflictDetector` — attorney interest vs former client\n  * `SuccessiveConflictDetector` — matter/title/description proximity\n* **Controllers/Views:** `NewIntakeController`, `DashboardController`, `AuditController`\n\n## Roadmap (safe next steps)\n\n* **Phase 2 (not in this prototype):** reviewer-triggered **non-engagement** / **waiver** templates (human-approved, logged, attached to matter).\n* **Threshold tuning:** per-firm config + offline evaluation set.\n* **More detectors:** opposing counsel graphs; phonetic/locale variants.\n* **Metrics collector:** counters for suggestions/opens/decisions to drive the KPIs above.\n\n",
+    "characters": 5493,
+    "source_url": "https://github.com/J-pilon/legal-conflict-checker/blob/022af65df7d339dfb5f3cd231b891f728a4964a2/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "J-pilon",
+      "contributions": 42
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
