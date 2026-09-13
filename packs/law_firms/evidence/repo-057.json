@@ -1,0 +1,146 @@
+{
+  "audit_id": "R057",
+  "requested_full_name": "freelawproject/courtlistener-api-client",
+  "observed_at": "2026-09-13T16:10:37.605444+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/courtlistener-api-client",
+  "html_url": "https://github.com/freelawproject/courtlistener-api-client",
+  "description": "Python SDK for the CourtListener API",
+  "stargazers_count": 28,
+  "forks_count": 9,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-01-31T11:36:23Z",
+  "updated_at": "2026-09-04T17:26:04Z",
+  "pushed_at": "2026-09-05T06:13:22Z",
+  "size": 1618,
+  "open_issues_count": 42,
+  "topics": [
+    "api",
+    "case-law",
+    "courtlistener",
+    "law",
+    "pacer",
+    "recap",
+    "sdk"
+  ],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "a526aa75992b4651a558017cae6c0244f3eb4bca",
+  "last_commit": "2026-09-04T17:25:58Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/courtlistener-api-client",
+    "commit": "https://github.com/freelawproject/courtlistener-api-client/commit/a526aa75992b4651a558017cae6c0244f3eb4bca"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "370ef7a622ae057c82e90dfbc6dc0d2169fa6c00fb0a650a3f679f27b4615acf",
+    "text": "# CourtListener API Client\n\nA Python client for the [CourtListener API](https://www.courtlistener.com/help/api/rest/v4), providing access to millions of legal opinions, dockets, judges, and more from [Free Law Project](https://free.law/).\n\n> **Using an LLM?** This repo also ships the **CourtListener MCP server**, which exposes the API to any Model Context Protocol client (Claude Desktop, Cursor, etc.). See [MCP_README.md](MCP_README.md) for connection details and for running it locally. Free Law Project hosts it at [`mcp.courtlistener.com`](https://mcp.courtlistener.com/). See the [MCP documentation](https://wiki.free.law/c/courtlistener/help/api/mcp) on the wiki for setup instructions.\n\n## Installation\n\n```bash\npip install courtlistener-api-client\n```\n\n## Authentication\n\nYou'll need a CourtListener API token. You can get one by [creating an account](https://www.courtlistener.com/register/) and generating a token in your [profile settings](https://www.courtlistener.com/profile/api/).\n\nSet it as an environment variable:\n\n```bash\nexport COURTLISTENER_API_TOKEN=\"your-token-here\"\n```\n\nOr pass it directly to the client:\n\n```python\nfrom courtlistener import CourtListener\n\nclient = CourtListener(api_token=\"your-token-here\")\n```\n\n## Quickstart\n\n```python\nfrom courtlistener import CourtListener\n\nclient = CourtListener()\n\n# Get a specific opinion by ID\nopinion = client.opinions.get(1)\n\n# Search for opinions\nresponse = client.opinions.list(cluster__case_name=\"Miranda\")\n\n# Access results from the current page\nfor opinion in response.get_results():\n    print(opinion)\n\n# Check the total count of matching results\nprint(response.get_count())\n\n# Iterate through all results across pages\nresponse = client.dockets.list(court=\"scotus\")\nfor docket in response:\n    print(docket)\n```\n\n### Pagination\n\nList queries return a `ResourceIterator` that handles pagination automatically:\n\n```python\nresults = client.dockets.list(court=\"scotus\")\n\n# Iterate through all results across all pages\nfor docket in results:\n    print(docket)\n\n# Or navigate pages manually\nresults = client.dockets.list(court=\"scotus\")\nprint(results.get_results())   # current page results\n\nif results.has_next():\n    results.next()\n    print(results.get_results())  # next page results\n```\n\n## Available Endpoints\n\nAccess any endpoint as an attribute on the client. Each endpoint supports `.get(id)` and `.list(**filters)`.\n\n| Endpoint | Description |\n| --- | --- |\n| `search` | Search opinions, RECAP, judges, and oral arguments |\n| `dockets` | Court dockets |\n| `docket_entries` | Docket entries |\n| `recap_documents` | RECAP documents |\n| `opinions` | Court opinions |\n| `opinions_cited` | Citation relationships |\n| `clusters` | Opinion clusters |\n| `courts` | Court information |\n| `audio` | Oral argument audio |\n| `people` | Judges and other persons |\n| `positions` | Judge positions |\n| `parties` | Case parties |\n| `attorneys` | Attorneys |\n| `financial_disclosures` | Financial disclosures |\n| `alerts` | User alerts |\n| `docket_alerts` | Docket alerts |\n| `prayers` | Pray and Pay requests |\n| `tags` | User-created tags |\n| `visualizations` | Visualization data |\n| `schools` | Schools |\n| `educations` | Judge education records |\n| `political_affiliations` | Political affiliations |\n| `aba_ratings` | ABA ratings |\n| `fjc_integrated_database` | FJC integrated database |\n\nSee the [CourtListener API docs](https://www.courtlistener.com/api/rest-info/) for the full list and available filters.\n\n## Async\n\n`AsyncCourtListener` mirrors `CourtListener` method for method. Anything that\nmakes a request is awaited, iteration uses `async for`, and the client is an\nasync context manager.\n\n```python\nfrom courtlistener import AsyncCourtListener\n\nasync with AsyncCourtListener() as client:\n    opinion = await client.opinions.get(1)\n\n    results = client.dockets.list(court=\"scotus\")\n    async for docket in results:\n        print(docket)\n```\n",
+    "characters": 3923,
+    "source_url": "https://github.com/freelawproject/courtlistener-api-client/blob/a526aa75992b4651a558017cae6c0244f3eb4bca/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "db2c3c974a69bd9141257a10daee138116cd04ec354cd5239d0af52bc5025772",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2020, Free Law Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1326,
+    "source_url": "https://github.com/freelawproject/courtlistener-api-client/blob/a526aa75992b4651a558017cae6c0244f3eb4bca/LICENSE",
+    "detected": {
+      "key": "bsd-2-clause",
+      "name": "BSD 2-Clause \"Simplified\" License",
+      "spdx_id": "BSD-2-Clause",
+      "url": "https://api.github.com/licenses/bsd-2-clause",
+      "node_id": "MDc6TGljZW5zZTQ="
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "nadahlberg",
+      "contributions": 560
+    },
+    {
+      "login": "claude",
+      "contributions": 18
+    },
+    {
+      "login": "pre-commit-ci[bot]",
+      "contributions": 13
+    },
+    {
+      "login": "chaco-fl",
+      "contributions": 3
+    },
+    {
+      "login": "ERosendo",
+      "contributions": 2
+    },
+    {
+      "login": "mlissner",
+      "contributions": 2
+    },
+    {
+      "login": "rachlllg",
+      "contributions": 2
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 296,
+      "title": "`analyze_citations`: replace the \"possible hallucinated citation\" warning with a factual mismatch note; make partial verification explicit",
+      "state": "open",
+      "created_at": "2026-09-10T16:58:12Z",
+      "updated_at": "2026-09-10T16:58:12Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/courtlistener-api-client/issues/296",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 295,
+      "title": "Text-source fallback for document tools, with `text_source` in the response",
+      "state": "open",
+      "created_at": "2026-09-10T16:58:01Z",
+      "updated_at": "2026-09-10T16:58:01Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/courtlistener-api-client/issues/295",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 294,
+      "title": "MCP_README tool table is missing four tools",
+      "state": "open",
+      "created_at": "2026-09-10T16:57:38Z",
+      "updated_at": "2026-09-10T16:57:38Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/courtlistener-api-client/issues/294",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
