@@ -1,0 +1,1068 @@
+[
+  {
+    "full_name": "aurelschwitter/ibkr-to-etax",
+    "requested_name": "aurelschwitter/ibkr-to-etax",
+    "id": 1140120103,
+    "url": "https://github.com/aurelschwitter/ibkr-to-etax",
+    "stars": 11,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "044a7d1d47582ddff6415f02ad16d8f7dac880da",
+    "last_commit_date": "2026-02-05T21:37:23Z",
+    "archived": false,
+    "fork": false,
+    "description": "Simplify your Swiss tax declaration by automatically converting Interactive Brokers (IBKR) FlexQuery exports into eCH-0196 electronic tax statements compatible with Swiss cantonal tax systems.",
+    "language": "C#",
+    "license": "GPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 1989, 1991 Free Software Foundation, Inc.,",
+      "the GNU Lesser General Public License instead.)  You can apply it to",
+      "copyright notice and disclaimer of warranty; keep intact all the",
+      "original copyright holder who places the Program under this License",
+      "WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR",
+      "the \"copyright\" line and a pointer to where the full notice is found.",
+      "    Copyright (C) <year>  <name of author>",
+      "    GNU General Public License for more details."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ibkr-to-etax",
+      "## \ud83d\udccb Table of Contents",
+      "## \u26a0\ufe0f Important Disclaimer",
+      "## \u2728 Features",
+      "### \ud83d\udd04 IBKR to eCH-0196 Conversion",
+      "### \ud83d\udcca What Gets Converted",
+      "## \ud83d\ude80 Quick Start",
+      "### 1. Install Prerequisites",
+      "### 2. Build the Project",
+      "### 3. Export Data from IBKR",
+      "### 4. Convert to eCH-0196",
+      "### 5. Upload to Tax System",
+      "## \ud83d\udcd6 IBKR Setup Guide",
+      "### Step 1: Create a FlexQuery",
+      "### Step 2: Configure Query Settings",
+      "### Step 3: Save the Query",
+      "### Step 4: Run the FlexQuery",
+      "## \ud83d\udcbb Usage",
+      "### Convert IBKR Export to eCH-0196",
+      "# Basic conversion",
+      "### Functions available for debugging",
+      "## \ud83d\udce4 Uploading to Tax System",
+      "### Zurich (ZH) Canton Example",
+      "## \ud83d\udcca Output Example",
+      "## \ud83c\udfd7\ufe0f Project Structure",
+      "## \ud83d\udd27 Dependencies",
+      "## \ud83e\udd1d Contributing",
+      "## \ud83d\udcdd License",
+      "## \ud83d\udcda References & Standards"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/aurelschwitter/ibkr-to-etax/issues/4",
+        "createdAt": "2026-05-12T21:23:29Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-13T00:47:58Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/aurelschwitter/ibkr-to-etax/issues/3",
+        "createdAt": "2026-02-20T06:54:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "ibkr-to-etax.csproj",
+      "ibkr-to-etax.sln",
+      "nlog.config",
+      "schemas",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/aurelschwitter/ibkr-to-etax/blob/044a7d1d47582ddff6415f02ad16d8f7dac880da/README.md",
+        "sha256": "e1266be0b21b57df6ac281a550d9fc3b9b7e7ca675d8955dabb4fb50771b240d",
+        "bytes": 12288
+      },
+      "LICENSE": {
+        "url": "https://github.com/aurelschwitter/ibkr-to-etax/blob/044a7d1d47582ddff6415f02ad16d8f7dac880da/LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "bytes": 18092
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/aurelschwitter/ibkr-to-etax/commit/044a7d1d47582ddff6415f02ad16d8f7dac880da",
+      "metadata": "https://api.github.com/repos/aurelschwitter/ibkr-to-etax"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ibkr-to-etax > **Automate your Swiss tax filing**: Convert Interactive Brokers trading data to eCH-0196 compliant tax statements. Simplify your Swiss tax declaration by automatically converting Interactive Brokers (IBKR) FlexQuery exports into eCH-0196 electronic tax statements compatible with Swiss cantonal tax systems. ## \ud83d\udccb Table of Contents - [Features](#features) - [Quick Start](#quick-start) - [IBKR Setup Guide](#ibkr-setup-guide) - [Usage](#usage) - [Project Structure](#project-structure) - [License](#license) ## \u26a0\ufe0f Important Disclaimer **This tool is provided \"as-is\" without warranty of any kind.** You are solely responsible for: - Verifying all generated data against official IBKR statements - Ensuring accuracy of your tax declaration - Complying with Swiss tax regulations Always cross-check the output before submitting to tax authorities. ## \u2728 Features ### \ud83d\udd04 IBKR to eCH-0196 Conversion - \u2705 Parses IBKR FlexQuery XML exports automatically - \u2705 Converts securities positions, trades, dividends, and withholding taxes - \u2705 Generates eCH-0196-2-2 compliant XML for direct upload - \u2705 Correctly allocates Swiss (GrossRevenueA) vs Foreign (GrossRevenueB) dividends - \u2705 Calculates additional US withholding tax (15% treaty rate) - \u2705 Displays comprehensive financial summary ### \ud83d\udcca What Gets Converted",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- [License](#license)",
+      "2. Configure the query parameters:",
+      "![Query parameters](docs/ibkr-query-parameters.png)",
+      "| Parameter     | Value                                 |",
+      "## \ud83d\udcdd License",
+      "This program is free software licensed under **GNU General Public License v2.0 (GPLv2)**.",
+      "You may redistribute and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.",
+      "This program is distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [LICENSE](LICENSE) file for full details."
+    ],
+    "dependency_repos": [
+      "aurelschwitter/ibkr-to-etax.git"
+    ]
+  },
+  {
+    "full_name": "Marfusios/premium-tracker",
+    "requested_name": "Marfusios/premium-tracker",
+    "id": 1039644002,
+    "url": "https://github.com/Marfusios/premium-tracker",
+    "stars": 11,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fe8062c81c62fa05d09608c64bd2c7977de79825",
+    "last_commit_date": "2025-08-19T10:04:00Z",
+    "archived": false,
+    "fork": false,
+    "description": "Portfolio tracker for InteractiveBrokers statements with focus on options selling and wheel strategy",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# \ud83d\udcca IBKR Portfolio Analyzer",
+      "## \u2728 Overview",
+      "## \ud83d\ude80 Key Features",
+      "## \u2699\ufe0f How to Use",
+      "## \ud83d\uddbc\ufe0f Screenshot",
+      "## \ud83d\udee0\ufe0f Tech Stack",
+      "## \ud83d\udda5\ufe0f Getting Started (For Developers)",
+      "### Prerequisites",
+      "### Running Locally",
+      "## \ud83d\ude80 Deployment",
+      "## \ud83e\udd1d Contributing",
+      "## \u2696\ufe0f Disclaimer",
+      "## \ud83d\udcc4 License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "App.tsx",
+      "README.md",
+      "components",
+      "constants.tsx",
+      "context",
+      "img",
+      "index.html",
+      "index.tsx",
+      "locales",
+      "metadata.json",
+      "package.json",
+      "services",
+      "tsconfig.json",
+      "types.ts",
+      "version.ts",
+      "vite.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Marfusios/premium-tracker/blob/fe8062c81c62fa05d09608c64bd2c7977de79825/README.md",
+        "sha256": "afcdf139c2556182109ef4872f2954a5902e224d57e3fc1ddb547e73841cc3da",
+        "bytes": 5852
+      },
+      "package.json": {
+        "url": "https://github.com/Marfusios/premium-tracker/blob/fe8062c81c62fa05d09608c64bd2c7977de79825/package.json",
+        "sha256": "5e28a89ef533721801542bdb11d276374dcd07e3125fd2af3abcc1845805e667",
+        "bytes": 439
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Marfusios/premium-tracker/commit/fe8062c81c62fa05d09608c64bd2c7977de79825",
+      "metadata": "https://api.github.com/repos/Marfusios/premium-tracker"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# \ud83d\udcca IBKR Portfolio Analyzer Turn your Interactive Brokers activity statement into a powerful decision-making tool. Visualize your gains, manage portfolio risk, and trade with",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "This project is a static web application with no backend dependencies. You can run it locally with any simple HTTP server.",
+      "-   A simple local web server. If you have Python installed, you can use its built-in server.",
+      "### Running Locally",
+      "2.  **Start a local server:**",
+      "If you have Python 3, you can run:",
+      "python -m http.server",
+      "Navigate to `http://localhost:8000` (or the address provided by your server) in your web browser.",
+      "## \ud83d\udcc4 License",
+      "This project is licensed under the MIT License."
+    ],
+    "dependency_repos": [
+      "your-username/ibkr-portfolio-analyzer.git"
+    ]
+  },
+  {
+    "full_name": "westonplatter/ngv_reports_ibkr",
+    "requested_name": "westonplatter/ngv_reports_ibkr",
+    "id": 453508959,
+    "url": "https://github.com/westonplatter/ngv_reports_ibkr",
+    "stars": 10,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a4fec5b6b0a6df1fb8bdd6d1eb5f46f2c190c10a",
+    "last_commit_date": "2026-08-12T03:53:26Z",
+    "archived": false,
+    "fork": false,
+    "description": "Compose custom reports from IBKR  Flex Statements.",
+    "language": "Python",
+    "license": "BSD-3-Clause",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) 2021-2026, Weston Platter"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# NextGenVol IBKR Reports",
+      "## Installing",
+      "## Getting Started",
+      "## uv Commands",
+      "### Essential Commands",
+      "## Development"
+    ],
+    "recent_commit_count": 5,
+    "recent_authors_sample50": [
+      "github-actions[bot]",
+      "westonplatter"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/westonplatter/ngv_reports_ibkr/issues/39",
+        "createdAt": "2026-01-30T04:48:02Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-02-12T16:29:56Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/westonplatter/ngv_reports_ibkr/issues/11",
+        "createdAt": "2022-09-05T19:29:53Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".release-please-manifest.json",
+      ".trunk",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "LICENSE",
+      "README.md",
+      "Taskfile.yml",
+      "data",
+      "docs",
+      "ngv_reports_ibkr",
+      "notebooks",
+      "pyproject.toml",
+      "release-please-config.json",
+      "scripts",
+      "tests",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/westonplatter/ngv_reports_ibkr/blob/a4fec5b6b0a6df1fb8bdd6d1eb5f46f2c190c10a/README.md",
+        "sha256": "2402586eefec738db7712cb45c94995a941fd3c474415a63b82889ab5334156b",
+        "bytes": 5044
+      },
+      "LICENSE": {
+        "url": "https://github.com/westonplatter/ngv_reports_ibkr/blob/a4fec5b6b0a6df1fb8bdd6d1eb5f46f2c190c10a/LICENSE",
+        "sha256": "dd23f0d32bc86e7f2077a33ce1920fc41357fe16135fa0b17d522775d21de316",
+        "bytes": 1484
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/westonplatter/ngv_reports_ibkr/blob/a4fec5b6b0a6df1fb8bdd6d1eb5f46f2c190c10a/pyproject.toml",
+        "sha256": "9a1d2c9aae08eafb97689cc8852f2be353de762eb5378f54a5205be7fe2d76f3",
+        "bytes": 1145
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/westonplatter/ngv_reports_ibkr/commit/a4fec5b6b0a6df1fb8bdd6d1eb5f46f2c190c10a",
+      "metadata": "https://api.github.com/repos/westonplatter/ngv_reports_ibkr"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Tests](https://github.com/westonplatter/ngv_reports_ibkr/actions/workflows/ci.yml/badge.svg)](https://github.com/westonplatter/ngv_reports_ibkr/actions/workflows/ci.yml) [![Docs](https://github.com/westonplatter/ngv_reports_ibkr/actions/workflows/docs.yml/badge.svg)](https://github.com/westonplatter/ngv_reports_ibkr/actions/workflows/docs.yml) # NextGenVol IBKR Reports Python package to generate reports from Interactive Brokers. **[\ud83d\udcda Documentation](https://westonplatter.github.io/ngv_reports_ibkr/)** | [API Reference](https://westonplatter.github.io/ngv_reports_ibkr/api.html) > **Disclaimer**: This project is not affiliated with or endorsed by Interactive Brokers. It is an independent tool for processing and analyzing Flex Report data from Interactive Brokers' API. ## Installing Install the module from github, ```bash pip install git+https://github.com/westonplatter/ngv_reports_ibkr.git@main ``` Or add it to your `requirements.txt` file, ```bash ngv_reports_ibkr @ git+https://github.com/westonplatter/ngv_reports_ibkr.git@main ``` Or add it as a uv direct dependency in your `pyproject.toml`, ```toml [project] dependencies = [ \"ngv_reports_ibkr @ git+https://github.com/westonplatter/ngv_reports_ibkr.git@main\", ] [tool.hatch.metadata] allow-direct-references = true ``` ## Getting Started 1. Create a Flex Report in the Interactive Broker website (see this [link](https://guides.interactivebrokers.com/ap/Content/activityflex.htm)) 1. Query Name = AllAccounts-AnnualReport 2. Sections to include in the report. In each, select all Options and all Fields/Columns except: `Serial Number`, `Delivery Type`, `Commodity Type`, `Fineness`, `Weight`. 1. Account Information 2. Change in NAV 3. Complex Positions 4. Mark-to-Market Performance Summary in Base 5. Month & Year to Date Performance Summary in Base 6. Open Positions 7. Option Exercises, Assignments, and Expirations 8. Realized and",
+    "license_excerpt": "Copyright (c) 2021-2026, Weston Platter Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Python package to generate reports from Interactive Brokers.",
+      "3. Accounts = select all desired accounts (python code is able to handle single or multiple accounts)",
+      "uv run python -c \"from ngv_reports_ibkr.download_trades import execute_csv_for_accounts; execute_csv_for_accounts('annual', cache=True)\"",
+      "This project uses [uv](https://docs.astral.sh/uv/) for dependency management and Python environment management.",
+      "- **Run Python code**",
+      "uv run python <script>     # Run a Python script",
+      "uv build                   # Build the package (replaces python setup.py sdist bdist_wheel)",
+      "uv run python scripts/ibkr_sensitive_data_check.py              # staged changes, else unstaged",
+      "uv run python scripts/ibkr_sensitive_data_check.py --paths docs # scan whole files/dirs"
+    ],
+    "dependency_repos": [
+      "westonplatter/ngv_reports_ibkr",
+      "westonplatter/ngv_reports_ibkr.git"
+    ]
+  },
+  {
+    "full_name": "almog/IBKR-to-1325-form",
+    "requested_name": "almog/IBKR-to-1325-form",
+    "id": 646563988,
+    "url": "https://github.com/almog/IBKR-to-1325-form",
+    "stars": 10,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c36c1592056c5694b2c6e799c2598a992dead117",
+    "last_commit_date": "2023-06-07T12:45:08Z",
+    "archived": false,
+    "fork": false,
+    "description": "Processes Interactive Brokers CSV statement into Israel tax report form 1325",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2023 Almog Kurtser",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Interactive Brokers (IBKR) to Israel 1325 Tax Form Converter",
+      "## Description",
+      "## How to Use",
+      "# DISCLAIMER"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/almog/IBKR-to-1325-form/issues/6",
+        "createdAt": "2025-04-16T07:30:36Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-04-16T07:46:07Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-05-23T22:21:02Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/almog/IBKR-to-1325-form/issues/4",
+        "createdAt": "2024-05-07T18:19:16Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "requirements.txt",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/almog/IBKR-to-1325-form/blob/c36c1592056c5694b2c6e799c2598a992dead117/README.md",
+        "sha256": "61d2b6a9857e26fe296c22c7fafff21cf16231ea27adff1afa3e97a06c62f9e8",
+        "bytes": 1825
+      },
+      "LICENSE": {
+        "url": "https://github.com/almog/IBKR-to-1325-form/blob/c36c1592056c5694b2c6e799c2598a992dead117/LICENSE",
+        "sha256": "b1e36f4b58b6c4289fe3c9ead66ca26fd7162ef78f22524e1d2743bb0d9442de",
+        "bytes": 1070
+      },
+      "requirements.txt": {
+        "url": "https://github.com/almog/IBKR-to-1325-form/blob/c36c1592056c5694b2c6e799c2598a992dead117/requirements.txt",
+        "sha256": "26c25abb1e3fa2913161e37654d6e07a8f9ca8fec862a6b6c11bddc592e73768",
+        "bytes": 16
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/almog/IBKR-to-1325-form/commit/c36c1592056c5694b2c6e799c2598a992dead117",
+      "metadata": "https://api.github.com/repos/almog/IBKR-to-1325-form"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Interactive Brokers (IBKR) to Israel 1325 Tax Form Converter This script automates the conversion of an Interactive Brokers (IBKR) financial statement CSV file into a format suitable for Israel's 1325 tax form. ## Description The script processes the statement produced by IBKR's custom report, as described in this [fintranslator.com article](https://fintranslator.com/2022/07/11/ib-annual-statement-for-israel-tax-reporting/). Each Trade row is merged with its corresponding ClosedLot and the currency rates for the buy and sale days (currently only supports USD), as well as other calculations necessary for the 1325 form, as detailed [here](https://fintranslator.com/israel-tax-return-example-2019). ## How to Use 1. Clone the repository. 2. Copy your IBKR statement into the root directory of the project. 3. Install requirements: ```bash $ pip install -r ./requirements.txt ``` 4. Run the script using the following commands: ```bash $ python src ``` The output, an Excel spreadsheet, will be generated in the same directory. # DISCLAIMER This software is provided \"as is\" without any warranty of any kind. The author(s) disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement. The software is intended for educational and",
+    "license_excerpt": "MIT License Copyright (c) 2023 Almog Kurtser Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "$ python src"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "manojVivek/itr-schedule-fa-from-ibkr",
+    "requested_name": "manojVivek/itr-schedule-fa-from-ibkr",
+    "id": 1295333230,
+    "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr",
+    "stars": 9,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "379926f16621c90b35ccfc5703ecf5ffcc3f6adf",
+    "last_commit_date": "2026-07-13T12:01:24Z",
+    "archived": false,
+    "fork": false,
+    "description": "Convert IBKR Activity Statements to filing-ready Indian Schedule FA, data 100% stays in browser. ",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Manoj Vivek",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ITR Schedule FA Helper \u2014 IBKR \u2192 Schedule FA",
+      "## What it does",
+      "## Privacy",
+      "## Inputs",
+      "## How it works",
+      "## Develop",
+      "## Deploy",
+      "## Stack"
+    ],
+    "recent_commit_count": 15,
+    "recent_authors_sample50": [
+      "manojVivek"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/issues/4",
+        "createdAt": "2026-08-04T06:45:04Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/issues/3",
+        "createdAt": "2026-07-29T15:27:29Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "docs",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "public",
+      "scripts",
+      "src",
+      "tests",
+      "tsconfig.json",
+      "vitest.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/README.md",
+        "sha256": "12d43210974eaa07d6fccf3e49df8071140ab6319edc591396cba998c1dda52a",
+        "bytes": 3954
+      },
+      "LICENSE": {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/LICENSE",
+        "sha256": "ec8e05a4bd24eeb60fbec171639d6cabb89d0c085c0ee94779e58a52522d2810",
+        "bytes": 1068
+      },
+      "package.json": {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/package.json",
+        "sha256": "b252adc335090da9981c51639cdcb6800a0aaa66815cf5550bc000e2de07fd34",
+        "bytes": 848
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/commit/379926f16621c90b35ccfc5703ecf5ffcc3f6adf",
+      "metadata": "https://api.github.com/repos/manojVivek/itr-schedule-fa-from-ibkr"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ITR Schedule FA Helper \u2014 IBKR \u2192 Schedule FA Turn raw **Interactive Brokers** Activity Statements into a filing-ready Indian **Schedule FA** (Foreign Assets) workbook \u2014 per-tranche Table A3 at the correct daily **SBI TTBR**, computed **entirely in your browser**. Ready-made Schedule FA workbooks exist inside platforms like Vested/INDmoney for their own accounts. IBKR just gives you raw CSVs. This tool closes that gap for IBKR investors, to the Black-Money-Act \"tranche-level\" standard. > **Not tax advice.** It assists disclosure preparation \u2014 review the output with > your CA. ## What it does - **One row per purchase lot** (tranche-level), FIFO for sales \u2014 the standard the \u20b910 lakh non-disclosure penalty makes you want to get right. - **Initial value** = lot cost \u00d7 SBI TT buying rate **on the acquisition date**. - **Peak value** = daily maximum over the held window of `units \u00d7 close \u00d7 TTBR`, anchored to the broker's own 31-Dec close (so split-adjusted price feeds can't distort the level). - **Closing** = units held on 31-Dec \u00d7 31-Dec close \u00d7 31-Dec TTBR. - **Dividends** attributed to the",
+    "license_excerpt": "MIT License Copyright (c) 2026 Manoj Vivek Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "npm run dev            # http://localhost:3000 \u2014 click \"Load sample statements\""
+    ],
+    "dependency_repos": [
+      "skbly7/sbi-tt-rates-historical"
+    ]
+  },
+  {
+    "full_name": "joaovictornsv/ibkr-ir",
+    "requested_name": "joaovictornsv/ibkr-ir",
+    "id": 1331431940,
+    "url": "https://github.com/joaovictornsv/ibkr-ir",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a6bb67939c15f524ad7b9b890834e097d6af698e",
+    "last_commit_date": "2026-08-20T21:41:09Z",
+    "archived": false,
+    "fork": false,
+    "description": "Generate IRPF guidance from Interactive Brokers Activity Statement (CSV) \u2014 Brazilian tax reporting helper",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Jo\u00e3o Victor Negreiros",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# IBKR para IRPF",
+      "## Privacidade",
+      "## O que faz",
+      "## Como usar (depois de baixar)",
+      "## Como baixar o programa",
+      "## Problemas comuns",
+      "## Para desenvolvedores"
+    ],
+    "recent_commit_count": 10,
+    "recent_authors_sample50": [
+      "joaovictornsv"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "TECH_README.md",
+      "docs",
+      "examples",
+      "generate.py",
+      "ibkr-ir.spec",
+      "requirements.txt",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/joaovictornsv/ibkr-ir/blob/a6bb67939c15f524ad7b9b890834e097d6af698e/README.md",
+        "sha256": "79806dcdd8d7f43599880fcc639eca18996f295cf3e26348b198c9d9883c2879",
+        "bytes": 4455
+      },
+      "LICENSE": {
+        "url": "https://github.com/joaovictornsv/ibkr-ir/blob/a6bb67939c15f524ad7b9b890834e097d6af698e/LICENSE",
+        "sha256": "885f708b08e2ba0be641d55348f05bf0888793f7f83e8d3a03f9a4e1d0b3df64",
+        "bytes": 1079
+      },
+      "requirements.txt": {
+        "url": "https://github.com/joaovictornsv/ibkr-ir/blob/a6bb67939c15f524ad7b9b890834e097d6af698e/requirements.txt",
+        "sha256": "a381ded2d0663c8a6e1acc1304a28c260816bfb6c1976751c15584540d0bfa3a",
+        "bytes": 72
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/joaovictornsv/ibkr-ir/commit/a6bb67939c15f524ad7b9b890834e097d6af698e",
+      "metadata": "https://api.github.com/repos/joaovictornsv/ibkr-ir"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# IBKR para IRPF Programa gratuito que l\u00ea o **Activity Statement** (extrato de atividades) da **Interactive Brokers** e gera um relat\u00f3rio HTML com os valores para a declara\u00e7\u00e3o do **IRPF** \u2014 Bens e Direitos, dividendos, ganho de capital e avisos sobre DARF, GCAP e CBE. > Ferramenta n\u00e3o oficial. N\u00e3o tem liga\u00e7\u00e3o com a Interactive Brokers. **N\u00e3o \u00e9 assessoria fiscal** \u2014 confira tudo com um contador antes de enviar a declara\u00e7\u00e3o. --- ## Privacidade - Roda **100% no seu computador** - **N\u00e3o** envia seu extrato da IBKR para nenhum servidor - Na primeira execu\u00e7\u00e3o, busca taxas **PTAX** no site do Banco Central (e guarda em `cache/` no seu computador) - **N\u00e3o** compartilhe seu extrato CSV, a pasta `output/` nem o `cache/` publicamente --- ## O que faz - L\u00ea o extrato **Activity Statement** exportado da IBKR em **CSV** - Calcula valores em reais (com PTAX) para copiar no IRPF - Gera **`output/irpf-AAAA.html`** \u2014 abra no navegador e use os bot\u00f5es de copiar - Salva **`output/irpf-AAAA.json`** para facilitar a declara\u00e7\u00e3o do ano seguinte O relat\u00f3rio inclui, entre outros: - **Bens e",
+    "license_excerpt": "MIT License Copyright (c) 2026 Jo\u00e3o Victor Negreiros Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Programa gratuito que l\u00ea o **Activity Statement** (extrato de atividades) da **Interactive Brokers** e gera um relat\u00f3rio HTML com os valores para a declara\u00e7\u00e3o do **IRPF** \u2014 Bens e Direitos, dividendos, ganho de capital e avisos sobre DARF, GCAP e CBE.",
+      "> Ferramenta n\u00e3o oficial. N\u00e3o tem liga\u00e7\u00e3o com a Interactive Brokers. **N\u00e3o \u00e9 assessoria fiscal** \u2014 confira tudo com um contador antes de enviar a declara\u00e7\u00e3o.",
+      "2. Coloque o **programa** e o **extrato CSV** na **mesma pasta**",
+      "5. Copie os valores para o programa da Receita Federal",
+      "**Dica:** crie uma **pasta fixa** s\u00f3 para o IRPF (programa + extratos + relat\u00f3rios). Exemplo:",
+      "\u251c\u2500\u2500 ibkr-ir-macos-arm64      \u2190 programa (ou ibkr-ir.exe no Windows)",
+      "## Como baixar o programa",
+      "![Baixar o programa na p\u00e1gina Releases](docs/images/01-download-release.png)",
+      "| Arquivo n\u00e3o encontrado | Abra o terminal **dentro da pasta** onde est\u00e3o o programa e o extrato. |",
+      "| Mac bloqueia o programa | **Privacidade e Seguran\u00e7a \u2192 Abrir assim mesmo**, ou `xattr -cr ./ibkr-ir-macos-arm64`. |",
+      "| Sem internet na 1\u00aa vez | O programa precisa baixar PTAX do BCB na primeira execu\u00e7\u00e3o. |"
+    ],
+    "dependency_repos": [
+      "joaovictornsv/ibkr-ir"
+    ]
+  },
+  {
+    "full_name": "Polymarket/rs-clob-client",
+    "requested_name": "Polymarket/rs-clob-client",
+    "id": 1112331307,
+    "url": "https://github.com/Polymarket/rs-clob-client",
+    "stars": 686,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "dc8f1e58eb1e504dcb3d45a94a647dd2da89912b",
+    "last_commit_date": "2026-05-11T17:13:55Z",
+    "archived": true,
+    "fork": false,
+    "description": "Polymarket Rust CLOB Client",
+    "language": "Rust",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025-2026 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Rust Client",
+      "## Table of Contents",
+      "## Overview",
+      "## Getting started",
+      "## Feature Flags",
+      "## Re-exported Types",
+      "### From `types` module",
+      "### From `auth` module",
+      "### From `error` module",
+      "## Examples",
+      "### CLOB Client",
+      "#### Unauthenticated client (read-only)",
+      "#### Authenticated client",
+      "#### Builder-authenticated client",
+      "### WebSocket Streaming",
+      "### Optional APIs",
+      "#### Data API",
+      "#### Gamma API",
+      "#### Bridge API",
+      "## Additional CLOB Capabilities",
+      "## Token Allowances",
+      "### Do I need to set allowances?",
+      "### What are allowances?",
+      "### Quick Setup",
+      "### Setting Allowances",
+      "## Minimum Supported Rust Version (MSRV)",
+      "## Contributing",
+      "## About Polymarket"
+    ],
+    "recent_commit_count": 13,
+    "recent_authors_sample50": [
+      "chaz-polymarket",
+      "dependabot[bot]",
+      "liby",
+      "suhailkakar",
+      "umeeSthein"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/rs-clob-client/issues/345",
+        "createdAt": "2026-05-01T08:10:46Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-05T11:24:00Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/rs-clob-client/issues/337",
+        "createdAt": "2026-04-19T05:59:53Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-19T14:03:52Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-19T14:07:50Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-19T15:02:12Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-19T17:57:52Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T01:45:22Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T06:36:29Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T08:28:20Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T13:17:03Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T14:41:35Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-20T15:26:02Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".idea",
+      ".pre-commit-config.yaml",
+      ".vscode",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "assets",
+      "benches",
+      "clippy.toml",
+      "examples",
+      "rustfmt.toml",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/README.md",
+        "sha256": "1a1e4308cd1151cde05bc0932030b94dc425954903efc2d8db0046074e5b3bac",
+        "bytes": 19727
+      },
+      "LICENSE": {
+        "url": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/LICENSE",
+        "sha256": "2ef5f959b834b22b3e2798a5c0f20a4742a9c1bdb85a7171c72603c58a0a0137",
+        "bytes": 1072
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/Cargo.toml",
+        "sha256": "b42f866f9f1bd2c8ccf502613375aff3908daf88264622d8d255122e93fa8294",
+        "bytes": 7366
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/rs-clob-client/commit/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b",
+      "metadata": "https://api.github.com/repos/Polymarket/rs-clob-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > The client is no longer functional and should not be used for new or existing integrations. > > Please migrate to the V2 client: > https://github.com/Polymarket/rs-clob-client-v2 ![Polymarket](assets/logo.png) # Polymarket Rust Client [![Crates.io](https://img.shields.io/crates/v/polymarket-client-sdk.svg)](https://crates.io/crates/polymarket-client-sdk) [![CI](https://github.com/Polymarket/rs-clob-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Polymarket/rs-clob-client/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/Polymarket/rs-clob-client/graph/badge.svg?token=FW1BYWWFJ2)](https://codecov.io/gh/Polymarket/rs-clob-client) An ergonomic Rust client for interacting with Polymarket services, primarily the Central Limit Order Book (CLOB). This crate provides strongly typed request builders, authenticated endpoints, `alloy` support and more. ## Table of Contents - [Overview](#overview) - [Getting Started](#getting-started) - [Feature Flags](#feature-flags) - [Re-exported Types](#re-exported-types) - [Examples](#examples) - [CLOB Client](#clob-client) - [WebSocket Streaming](#websocket-streaming) - [Optional APIs](#optional-apis) - [Additional CLOB Capabilities](#additional-clob-capabilities) - [Setting Token Allowances](#token-allowances) - [Minimum Supported Rust Version (MSRV)](#minimum-supported-rust-version-msrv) - [Contributing](#contributing) - [About Polymarket](#about-polymarket) ## Overview - **Typed CLOB requests** (orders, trades, markets, balances, and more) - **Dual authentication flows** - Normal authenticated flow - [Builder](https://docs.polymarket.com/developers/builders/builder-intro) authentication flow - **Type-level state machine** - Prevents using authenticated endpoints before authenticating - Compile-time enforcement of correct transitions - **Signer support** via `alloy::signers::Signer` - Including remote signers, e.g. AWS KMS - **Zero-cost abstractions** \u2014",
+    "license_excerpt": "MIT License Copyright (c) 2025-2026 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "> This repository has been archived and is no longer maintained.",
+      "# Polymarket Rust Client",
+      "An ergonomic Rust client for interacting with Polymarket services, primarily the Central Limit Order Book (CLOB).",
+      "- [Minimum Supported Rust Version (MSRV)](#minimum-supported-rust-version-msrv)",
+      "```rust",
+      "Decimal, dec,                          // from rust_decimal + rust_decimal_macros",
+      "```rust",
+      "LocalSigner, Signer,          // from alloy::signers (LocalSigner + trait)",
+      "```rust",
+      "```rust,ignore",
+      "```rust,ignore",
+      "use alloy::signers::local::LocalSigner;",
+      "let signer = LocalSigner::from_str(&private_key)?.with_chain_id(Some(POLYGON));",
+      "```rust,ignore",
+      "```rust,ignore",
+      "```rust,ignore",
+      "The **signature_type** parameter tells the system how to verify your signatures:",
+      "```rust,ignore"
+    ],
+    "dependency_repos": [
+      "Polymarket/rs-clob-client",
+      "Polymarket/rs-clob-client-v2"
+    ]
+  },
+  {
+    "full_name": "dev-polymarket/clob-client-v2",
+    "requested_name": "dev-polymarket/clob-client-v2",
+    "id": 1228664213,
+    "url": "https://github.com/dev-polymarket/clob-client-v2",
+    "stars": 512,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "33ead89a7a1ac329bdcaa67641b02ae8bbcda804",
+    "last_commit_date": "2026-06-06T08:19:56Z",
+    "archived": false,
+    "fork": false,
+    "description": "polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob - TypeScript client for Polymarket's CLOB (V2)",
+    "language": null,
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 polymarkets ",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket CLOB Client V2",
+      "## Installation (choose your package manager)",
+      "### Usage",
+      "### Market Orders",
+      "### Authentication",
+      "### Error Handling"
+    ],
+    "recent_commit_count": 12,
+    "recent_authors_sample50": [
+      "dev-polymarket",
+      "evanphi7"
+    ],
+    "issue_samples": [],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_best.jsonl",
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": {
+      "full_name": "dev-polymarket/clob-client-v2",
+      "capability_tag": "http-client",
+      "category_slug": "client-library-sdk",
+      "summary": "HTTP client SDK for Polymarket's central limit order book API",
+      "reuse_value": 70,
+      "stars": 593,
+      "license": "MIT",
+      "language": "",
+      "url": "https://github.com/dev-polymarket/clob-client-v2",
+      "rank_score": 70005930
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "dev-polymarket/clob-client-v2",
+      "stars": 593,
+      "license": "MIT",
+      "language": "",
+      "unit_class": "component",
+      "reuse_value": 70,
+      "liftability": 90,
+      "fame_gap": -20,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket c"
+    },
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "dist",
+      "examples",
+      "package.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/README.md",
+        "sha256": "252fd50d8517223b326235932c2cf7cfab42fb9eba4cc5df32480a4e69de1ff9",
+        "bytes": 3163
+      },
+      "LICENSE": {
+        "url": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/LICENSE",
+        "sha256": "b101b2821538f0738076a8b3f58f0c18a8759867bc8197dbbfc1af2e147b440c",
+        "bytes": 1069
+      },
+      "package.json": {
+        "url": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/package.json",
+        "sha256": "cb38dbcc50c5706087a4d8fe7250caddd0e66f46ea2d3ea5508b4bc7fcd513e6",
+        "bytes": 1460
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/dev-polymarket/clob-client-v2/commit/33ead89a7a1ac329bdcaa67641b02ae8bbcda804",
+      "metadata": "https://api.github.com/repos/dev-polymarket/clob-client-v2"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Polymarket CLOB Client V2 TypeScript client for the Polymarket CLOB (v2) ## Installation (choose your package manager) ``` npm i @polymarkets/clob-client-v2 # npm / pnpm / yarn ``` ### Usage ```ts // npm install @polymarkets/clob-client-v2 // npm install viem import { ApiKeyCreds, Chain, ClobClient, OrderType, Side } from \"@polymarkets/clob-client-v2\"; import { createWalletClient, http } from \"viem\"; import { privateKeyToAccount } from \"viem/accounts\"; const host = \" \"; const chainId = Chain.POLYGON; // or Chain.AMOY for testnet const account = privateKeyToAccount(\"0x...\"); // your private key const walletClient = createWalletClient({ account, transport: http() }); // Step 1: obtain API credentials using your wallet (L1 auth) const clobClient = new ClobClient({ host, chain: chainId, signer: walletClient }); const creds = await clobClient.createOrDeriveApiKey(); // Step 2: initialize a fully-authenticated client (L1 + L2) const client = new ClobClient({ host, chain: chainId, signer: walletClient, creds }); // Place a resting limit buy (GTC) const resp = await client.createAndPostOrder( { tokenID: \"\", // token ID of the market outcome \u2014 get from https://docs.polymarket.com price: 0.4, side: Side.BUY, size: 100, }, { tickSize: \"0.01\" }, OrderType.GTC,",
+    "license_excerpt": "MIT License Copyright (c) 2026 polymarkets Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  }
+]
