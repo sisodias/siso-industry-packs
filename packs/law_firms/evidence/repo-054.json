@@ -1,0 +1,125 @@
+{
+  "audit_id": "R054",
+  "requested_full_name": "freelawproject/inception",
+  "observed_at": "2026-09-13T16:10:34.768132+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/inception",
+  "html_url": "https://github.com/freelawproject/inception",
+  "description": "Our microservice for generating embeddings from blocks of text",
+  "stargazers_count": 58,
+  "forks_count": 18,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2024-10-23T18:08:34Z",
+  "updated_at": "2026-09-12T17:32:12Z",
+  "pushed_at": "2026-09-04T16:34:02Z",
+  "size": 268,
+  "open_issues_count": 16,
+  "topics": [
+    "ai",
+    "embeddings",
+    "microservice",
+    "semantic-search",
+    "vector-search"
+  ],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "8f38e26406a2d269a8e81f7516715ff9707c472a",
+  "last_commit": "2026-09-04T16:34:00Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/inception",
+    "commit": "https://github.com/freelawproject/inception/commit/8f38e26406a2d269a8e81f7516715ff9707c472a"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "819101958fb0b9a959b2cda0c4bc27813fe545a793e90edae0d13f51abf9d4b9",
+    "text": "<img align=\"right\" src=\"https://github.com/user-attachments/assets/7ec21ced-43a3-4c72-995c-70c3832d594e\" alt=\"A logo for the project showing a document and some AI sparkles.\">\n\n# Inception\n\nInception is our microservice for generating embeddings from blocks of text.\n\nIt is a high-performance FastAPI service that generates text embeddings using SentenceTransformers, specifically designed for processing legal documents and search queries. The service efficiently handles both short search queries and lengthy court opinions, generating semantic embeddings that can be used for document similarity matching and semantic search applications. It includes support for GPU acceleration when available.\n\nThe service is optimized to handle two main use cases:\n- Embedding search queries: Quick, CPU-based processing for short search queries\n- Embedding court opinions: NVIDIA CUDA GPU-accelerated processing for longer legal documents, with intelligent text chunking to maintain context\n\n## Features\n\n- Specialized text embedding generation for legal documents using `freelawproject/modernbert-embed-base_finetune_512`, a `sentence_transformer` model finetuned on top of `nomic-ai/modernbert-embed-base`\n- Intelligent text chunking optimized for court opinions, based on sentence boundaries\n- Dedicated CPU-based processing for search queries, ensuring fast response times\n- GPU acceleration support for processing lengthy court opinions\n- Batch processing capabilities for multiple documents\n- Comprehensive text preprocessing and cleaning tailored for legal text\n- Health check endpoint\n\n\n## Configuration\n\nThe service can be configured through environment variables or a `.env` file. Copy `.env.example` to `.env` to get started:\n```bash\ncp .env.example .env\n```\n\n### Environment Variables\n\nModel Settings:\n- `TRANSFORMER_MODEL_NAME`\n\n    Default: `freelawproject/modernbert-embed-base_finetune_512`\n\n    The name or path of the SentenceTransformer model to use for generating embeddings.\n\n- `TRANSFORMER_MODEL_VERSION`\n\n    Default: `main`\n\n    The version of the SentenceTransformer model to use for generating embeddings. Use `main` for the latest version.\n\n- `MAX_TOKENS`\n\n    Default: `512` (Range: 256–10000)\n\n    Maximum number of tokens per chunk when splitting text. If the text exceeds this limit, it is split into multiple chunks based on sentence boundaries. If a sentence exceeds this limit, it is truncated. Sentences are defined by `nltk.tokenize.sent_tokenize`, which follows English heuristics to detect sentence boundaries.\n\n- `OVERLAP_RATIO`\n\n    Default: `0.004` (Range: 0-0.01)\n\n    The ratio to calculate the number of sentences to overlap between chunks when splitting text. Sentences are defined by `nltk.tokenize.sent_tokenize`, which follows English heuristics to detect sentence boundaries. `num_overlap_sentences = int(MAX_TOKENS * OVERLAP_RATIO)`.\n\n- `MIN_TEXT_LENGTH`\n\n    Default: `1`\n\n    The minimum length (in characters) of text required before attempting to process.\n\n- `MAX_QUERY_LENGTH`\n\n    Default: `1000`\n\n    The maximum allowable length (in characters) for a query text.\n\n- `MAX_TEXT_LENGTH`\n\n    Default: `10000000` (characters)\n\n    The maximum allowable length (in characters) for any single text input.\n\n- `MAX_BATCH_SIZE`\n\n    Default: `100`\n\n    The maximum number of items you can process in a single batch.\n\n- `PROCESSING_BATCH_SIZE`\n\n    Default: `8`\n\n    The batch size used internally by the model encoder. This helps to control memory usage and speed when processing multiple chunks or texts.\n\n- `POOL_TIMEOUT`\n\n    Default: `3600` (seconds)\n\n    Timeout for multi-process pool operations. Determines how long worker processes will wait before timing out.\n\nServer Settings:\n- `HOST`\n\n    Default: `0.0.0.0`\n\n    The host interface on which the server listens.\n\n- `PORT`\n\n    Default: `8005`\n\n    The port on which the server listens for incoming requests.\n\n- `EMBEDDING_WORKERS`\n\n    Default: `4`\n\n    Number of Gunicorn worker processes for serving the embedding service. Increase if you need higher concurrency.\n\n- `MAX_WORKERS`\n\n    Default: `4`\n\n    Number of Threadpool worker processes for chunking. Increase if you need higher concurrency.\n\nGPU Settings:\n- `FORCE_CPU`\n\n    Default: `false`\n\n    Forces the service to run on CPU even if a GPU is available. Useful for debugging or ensuring CPU is selected on query embedding service instances.\n\nMonitoring:\n- `ENABLE_METRICS`\n\n    Default: `true`\n\n    Enables Prometheus metrics collection for performance and usage monitoring.\n\n- `SENTRY_DSN`\n\n    Optional\n\n    Sentry DSN for error tracking.\n\nCORS Settings:\n- `ALLOWED_ORIGINS`\n\n    A comma-separated list of allowed origins for cross-origin requests.\n\n    Example: `ALLOWED_ORIGINS=https://example.com,https://example2.com`\n\n- `ALLOWED_METHODS`\n\n    A comma-separated list of allowed HTTP methods for cross-origin requests.\n\n    Example: `ALLOWED_METHODS=GET,POST,OPTIONS`\n\n- `ALLOWED_HEADERS`\n\n    A comma-separated list of allowed HTTP headers for cross-origin requests.\n\n    Example: `ALLOWED_HEADERS=Authorization,Content-Type`\n\nSee `.env.example` for a complete list of configuration options.\n\n\n## Installation\n\nThis project uses UV for dependency management. To get started:\n\n1. Install [UV](https://docs.astral.sh/uv/getting-started/installation/):\n   ```bash\n   curl -LsSf https://astral.sh/uv/install.sh | sh\n   ```\n\n2. Clone the repository and install dependencies:\n   ```bash\n   git clone https://github.com/freelawproject/inception\n   cd inception\n   uv sync --extra cpu\n   ```\n   Use `--extra gpu`  for CUDA GPU support.\n\n## Quick Start\n\n### Running the Service\n\nThe easiest way to run the embedding service is using Docker.\n\nBuild:\n```bash\ndocker build -t inception:latest --build-arg TARGET_ENV=prod .\n```\n\nRun with CPU:\n```bash\ndocker run -d -p 8005:8005 inception\n```\n\nRun with GPU:\n```bash\ndocker run -d \\\n  --rm \\\n  --runtime=nvidia \\\n  -e NVIDIA_VISIBLE_DEVICES=all \\\n  -e NVIDIA_DRIVER_CAPABILITIES=compute \\\n  --shm-size=16g \\\n  -p 8005:8005 \\\n  inception\n```\n\nRun from hosted image:\n\nwith CPU:\n```bash\ndocker run -d -p 8005:8005 freelawproject/inception:v2\n```\n\nwith GPU:\n```bash\ndocker run -d \\\n  --rm \\\n  --runtime=nvidia \\\n  -e NVIDIA_VISIBLE_DEVICES=all \\\n  -e NVIDIA_DRIVER_CAPABILITIES=compute \\\n  --shm-size=16g \\\n  -p 8005:8005 \\\n  freelawproject/inception:v2\n```\n\nFor development, run it with docker compose:\n\nwith CPU:\n```bash\ndocker compose -f docker-compose.dev.yml up\n```\n\nwith GPU:\n```bash\ndocker compose -f docker-compose.dev-gpu.yml up\n```\n\nTo handle more concurrent tasks, increase the number of workers:\n```bash\ndocker run -d -p 8005:8005 -e EMBEDDING_WORKERS=4 freelawproject/inception:v2\n```\n\nCheck that the service is running:\n```bash\ncurl http://localhost:8005\n```\nShould return: \"Heartbeat detected.\"\n\n### Running the Service Outside of Docker\n\n1. Activate the venv\n```bash\nsource .venv/bin/activate\n```\n\n2. Start the microservice\n```bash\nuvicorn inception.main:app \\\n        --host 0.0.0.0 \\\n        --port 8005 \\\n        --log-level debug \\\n        --reload\n```\n\n## Running tests\n\nRun all the tests:\n```bash\ndocker exec -it inception-embedding-service pytest tests -v\n```\n\nRun tests from a marker:\n```bash\ndocker exec -it inception-embedding-service pytest -m embedding_generation -v\n```\nSee all available markers in [pytest.ini](pytest.ini)\n\n## API Endpoints\n\n### Query Embeddings\nGenerate embeddings for search queries (CPU-optimized):\n```bash\ncurl 'http://localhost:8005/api/v1/embed/query' \\\n  -X 'POST' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"text\": \"What are the requirements for copyright infringement?\"}'\n```\n\n### Document Embeddings\nGenerate embeddings for court opinions or legal documents (GPU-accelerated when available):\n```bash\ncurl 'http://localhost:8005/api/v1/embed/text' \\\n  -X 'POST' \\\n  -H 'Content-Type: text/plain' \\\n  -d 'The court finds that the defendant...'\n```\n\n### Batch Processing\nProcess multiple documents in one request:\n```bash\ncurl 'http://localhost:8005/api/v1/embed/batch' \\\n  -X 'POST' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"documents\": [\n      {\"id\": 1, \"text\": \"First court opinion...\"},\n      {\"id\": 2, \"text\": \"Second court opinion...\"}\n    ]\n  }'\n```\n\nYou can interact with the service using any HTTP client. Here's a Python example using the `requests` library:\n\n```python\nimport requests\n\n# Initialize base URL\nbase_url = \"http://localhost:8005\"\n\n# Get embedding for a query.\nresponse = requests.post(\n    f\"{base_url}/api/v1/embed/query\",\n    json={\"text\": \"What is copyright infringement?\"},\n    timeout=1,\n)\nquery_embedding = response.json()[\"embedding\"]\n\n# Get embeddings for a single document.\nresponse = requests.post(\n    f\"{base_url}/api/v1/embed/text\",\n    data=\"The court finds that...\",\n    timeout=10,\n)\ndoc_embeddings = response.json()[\"embeddings\"]\n\n# Get embeddings for a batch of documents.\nresponse = requests.post(\n    f\"{base_url}/api/v1/embed/batch\",\n    json={\n            \"documents\": [\n                {\"id\": 1, \"text\": \"First test document\"},\n                {\"id\": 2, \"text\": \"Second test document\"},\n            ]\n        },\n    timeout=20,\n)\ndocument_1_embeddings = response.json()[0][\"embeddings\"]\ndocument_2_embeddings = response.json()[1][\"embeddings\"]\n```\n\n## Contributing\n\nWe welcome contributions to improve the embedding service!\n\nPlease ensure you:\n- Follow the existing code style\n- Add tests for new features\n- Update documentation as needed\n- Test thoroughly using testing [provided tools](#running-tests).\n- Lint tools pass:\n```bash\ndocker exec -it inception-embedding-service pre-commit run --all-files\n```\n- Use type hints and make sure mypy passes:\n```bash\ndocker exec -it inception-embedding-service mypy inception\n```\n\n### Updating Dependencies\n\n1. The best way is to update the dependencies in Docker\n\nStep 1: Build the docker image\n\nwith CPU:\n```bash\ndocker compose -f docker-compose.dev.yml build --no-cache\n```\n\nwith GPU:\n```bash\ndocker compose -f docker-compose.dev-gpu.yml build --no-cache\n```\n\nStep 2: Spin-up the docker image\n\nwith CPU:\n```bash\ndocker compose -f docker-compose.dev.yml up\n```\n\nwith GPU:\n```bash\ndocker compose -f docker-compose.dev-gpu.yml up\n```\n\nStep 3: Add the new dependencies\n```bash\ndocker exec -it inception-embedding-service uv add \"transformers>=4.48.0,<5.0.0\"\n```\n\n2. Alternatively, add the dependency to your list of dependencies in `pyproject.toml`:\n`\"transformers>=4.48.0,<5.0.0\"`\nThen run:\n```bash\ndocker exec -it inception-embedding-service uv lock\n```\nThis will rebuild the `uv.lock` file, adding the new dependency and updating other dependencies if available, while ensuring they match the specified version constraints.\n\n3. Alternatively, use uv to add or update dependencies outside of Docker if dependency conflicts arise when resolving them within Docker. This can happen when the development container platform mismatches the production or testing target platform.\n\n```bash\nuv add \"transformers>=4.48.0,<5.0.0\"\n```\n\n```bash\nuv lock\n```\n\n## Monitoring\n\nThe service includes several monitoring endpoints:\n\n- `/health`: Health check endpoint providing service status and GPU information\n- `/metrics`: Prometheus metrics endpoint for monitoring request counts and processing times\n\nExample health check:\n```bash\ncurl http://localhost:8005/health\n```\n\nExample metrics:\n```bash\ncurl http://localhost:8005/metrics\n```\n\n## Requirements\n\n- Python 3.12+\n- CUDA-compatible GPU (highly recommended, for long texts embedding)\n",
+    "characters": 11486,
+    "source_url": "https://github.com/freelawproject/inception/blob/8f38e26406a2d269a8e81f7516715ff9707c472a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "00e0015c3c717059090aec00617459eaff0000d946cf61fdc9f2b2520b5a1807",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2024, Free Law Project\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1305,
+    "source_url": "https://github.com/freelawproject/inception/blob/8f38e26406a2d269a8e81f7516715ff9707c472a/LICENSE",
+    "detected": {
+      "key": "bsd-2-clause",
+      "name": "BSD 2-Clause \"Simplified\" License",
+      "spdx_id": "BSD-2-Clause",
+      "url": "https://api.github.com/licenses/bsd-2-clause",
+      "node_id": "MDc6TGljZW5zZTQ="
+    }
+  },
+  "commits_six_months_sample_count": 4,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "rachlllg",
+      "contributions": 47
+    },
+    {
+      "login": "mlissner",
+      "contributions": 24
+    },
+    {
+      "login": "albertisfu",
+      "contributions": 20
+    },
+    {
+      "login": "adamchainz",
+      "contributions": 3
+    },
+    {
+      "login": "claude",
+      "contributions": 1
+    },
+    {
+      "login": "ERosendo",
+      "contributions": 1
+    },
+    {
+      "login": "legaltextai",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 50,
+      "title": "Make inception a general purpose inference engine for small models on CPU",
+      "state": "open",
+      "created_at": "2026-03-04T20:39:21Z",
+      "updated_at": "2026-03-04T23:59:53Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/freelawproject/inception/issues/50",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 50,
+      "created_at": "2026-03-04T20:39:21Z",
+      "first_affiliated_reply_in_sample": "2026-03-04T23:59:52Z",
+      "source_url": "https://github.com/freelawproject/inception/issues/50#issuecomment-4001069544"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

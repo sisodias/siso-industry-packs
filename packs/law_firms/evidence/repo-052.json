@@ -1,0 +1,141 @@
+{
+  "audit_id": "R052",
+  "requested_full_name": "freelawproject/doctor",
+  "observed_at": "2026-09-13T16:10:34.768132+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/doctor",
+  "html_url": "https://github.com/freelawproject/doctor",
+  "description": "A microservice for document conversion at scale",
+  "stargazers_count": 130,
+  "forks_count": 32,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-09-10T13:29:42Z",
+  "updated_at": "2026-09-12T01:13:52Z",
+  "pushed_at": "2026-09-11T16:12:26Z",
+  "size": 22436,
+  "open_issues_count": 25,
+  "topics": [
+    "document",
+    "extraction",
+    "ffmpeg",
+    "ocr",
+    "pdf"
+  ],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "954fa548046f545783d1784cee585b4819e42cac",
+  "last_commit": "2026-09-08T21:30:28Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/doctor",
+    "commit": "https://github.com/freelawproject/doctor/commit/954fa548046f545783d1784cee585b4819e42cac"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "19dc06ad0be6feb634b26217d6e832e7e1dcb7ad636d5f6645ded191508d1f77",
+    "text": "\nDoctor\n------------------------------------\n\nWelcome to Doctor, Free Law Project's microservice for converting, extracting and modifying documents and audio files.\n\nAt a high level, this service provides you with high-performance HTTP endpoints that can:\n\n - Extract text from various types of documents\n - Convert audio files from one format to another while stripping messy metadata\n - Create thumbnails of PDFs\n - Provide metadata about PDFs\n\nUnder the hood, Doctor uses gunicorn to connect to a django service. The django service uses\ncarefully configured implementations of `ffmpeg`, `pdftotext`, `tesseract`, `ghostscript`, and a\nnumber of other converters.\n\n\nQuick Start\n-----------\n\nAssuming you have docker installed run:\n\n    docker run -d -p 5050:5050 freelawproject/doctor:latest\n\nThis will expose the endpoints on port 5050 with one gunicorn worker. This is usually ideal because it allows you to horizontally scale Doctor using an orchestration system like Kubernetes.\n\nIf you are not using a system that supports horizontal scaling, you may wish to have more gunicorn workers so that Doctor can handle more simultaneous tasks. To set that up, simply set the DOCTOR_WORKERS environment variable:\n\n    docker run -d -p 5050:5050 -e DOCTOR_WORKERS=16 freelawproject/doctor:latest\n\nIf you are doing OCR or audio conversion, scaling through a system like Kubernetes or through by giving Doctor many workers becomes particularly important. If it does not have a worker available, your call to Doctor will probably time out.\n\nAfter the image is running, you should be able to test that you have a working environment by running\n\n    curl http://localhost:5050\n\nwhich should return a text response:\n\n    Heartbeat detected.\n\n\nENDPOINTS\n-------------\n\n## Overview\n\nThe service currently supports the following tools:\n\n1. Extract text from PDF, RTF, DOC, DOCX, or WPD, HTML, TXT files.\n1. OCR text from a scanned PDF.\n1. Get page count for a PDF document.\n1. Check for bad redactions in a PDF document.\n1. Convert audio files from wma, ogg, wav to MP3.\n1. Create a thumbnail of the first page of a PDF (for use in Open Graph tags)\n1. Convert an image or images to a PDF.\n1. Identify the mime type of a file.\n\n\nA brief description and curl command for each endpoint is provided below.\n\n## Extractors\n\n### Endpoint: /extract/doc/text/\n\nGiven a document, extract out the text and assorted metadata. Supports the following document types:\n\n - `pdf` - Adobe portable document format files, via `pdftotext`.\n - `doc` - Word document files, via `antiword`.\n - `docx` - Open Office XML files, via `docx2txt`.\n - `html` - HTML files, via `lxml.html.clean.Cleaner`. Strips out dangerous tags and hoists their contents to their parent. Hoisted tags include: `a`, `body`, `font`, `noscript`, and `img`.\n - `txt` - Text files. This attempts to normalize all encoding questions to utf-8. First, we try cp1251, then utf-8, ignoring errors.\n - `wpd` - Word Perfect files, via `wpd2html` followed by cleaning the HTML as above.\n\n```bash\ncurl 'http://localhost:5050/extract/doc/text/' \\\n  -X 'POST' \\\n  -F \"file=@doctor/test_assets/vector-pdf.pdf\"\n```\n\nParameters:\n\n - `ocr_available`: Whether doctor should use tesseract to provide OCR services for the document. OCR is always possible in doctor, but sometimes you won't want to use it, since it can be slow. If you want it disabled for this request, omit this optional parameter. To enable it, set ocr_available to `True`:\n\n```bash\ncurl 'http://localhost:5050/extract/doc/text/?ocr_available=True' \\\n  -X 'POST' \\\n  -F \"file=@doctor/test_assets/image-pdf.pdf\"\n```\n\nOCR renders and reads the PDF in slices of `DOCTOR_OCR_PAGES_PER_SLICE`\npages (default 25), one slice at a time, so a request's peak memory and\n`/tmp` usage are set by the slice size rather than by the document's page\ncount. Lower it if pods with several concurrent OCR requests run out of\nmemory; raise it to spend fewer ghostscript and tesseract invocations on\nlarge documents. The extracted text is the same whatever the value.\n\nMagic:\n\n - The mimetype of the file will be determined by the name of the file you pass in. For example, if you pass in medical_assessment.pdf, the `pdf` extractor will be used.\n\nValid requests will receive a JSON response with the following keys:\n\n - `content`: The utf-8 encoded text of the file\n - `err`: An error message, if one should occur.\n - `extension`: The sniffed extension of the file.\n - `extracted_by_ocr`: Whether OCR was needed and used during processing.\n - `page_count`: The number of pages, if it applies.\n\n### Endpoint: /extract/recap/text/\n\nGiven a RECAP pdf, extract out the text using PDF Plumber, OCR or a combination of the two\n\nParameters:\n\n - `strip_margin`: Whether doctor should crop the edges of the recap document during processing. With PDF plumber it will ignore traditional 1 inch margin.  With an OCR it lowers the threshold for hiding OCR gibberish. To enable it, set strip_margin to `True`:\n\n```bash\ncurl 'http://localhost:5050/extract/recap/text/?strip_margin=True' \\\n  -X 'POST' \\\n  -F \"file=@doctor/recap_extract/gov.uscourts.cacd.652774.40.0.pdf\"\n```\n\nValid requests will receive a JSON response with the following keys:\n\n - `content`: The utf-8 encoded text of the file\n - `extracted_by_ocr`: Whether OCR was needed and used during processing.\n\n\n### Endpoint: /extract/opinion/structured/\n\nGiven a **digital** (text-based) court PDF and the court it came from, extract a\nstructured opinion with [centralia][centralia]. For the courts centralia has\nbeen ported to this replaces pdftotext/OCR: instead of one flat string you get\nthe case-level criteria, one entry per writing with its own author and text, and\nHarvard casebody XML. The payload is passed through exactly as centralia returns\nit — nothing is composed or re-stitched here.\n\n[centralia]: https://github.com/freelawproject/centralia\n\nParameters:\n\n - `court_id` (required): The CourtListener court id, e.g. `ca1`. It is required\n   rather than sniffed, because centralia reads only the courts it has a reader\n   for, and an unregistered id would otherwise silently read worse.\n - `allow_pending` (optional): Read a court that is still being worked on.\n   Without it, a held-back court is refused; `diagnostics.rollout` reports\n   which you got.\n\n```bash\ncurl 'http://localhost:5050/extract/opinion/structured/' \\\n  -X 'POST' \\\n  -F \"file=@doctor/test_assets/ca1-opinion.pdf\" \\\n  -F 'court_id=ca1'\n```\n\nValid requests receive a JSON response with `success: true` plus centralia's\npayload. The keys callers use most:\n\n - `status`: `valid` | `review` | `scanned` | `failed`\n - `cluster`: the case — case name, citation, docket number, filing dates (both\n   as printed and ISO), panel, parties, disposition, lower court\n - `opinions`: one entry per writing, each with `type`, `author`, `author_name`,\n   `text`, `html` and `footnotes`. Footnote text is **already inside** the\n   writing's `text`; callers do not append it.\n - `headmatter` / `endmatter`: the cover and the appearances, as role-bearing\n   rows, each with its own `footnotes`\n - `html`: the document's text as HTML; `casebody`: Harvard casebody XML\n - `diagnostics`: page facts, what went unplaced, and `warnings`\n\nNote that `status` alone is not an OCR-fallback signal: an image-based PDF can\ncome back `valid` with zero opinions and no text. Callers should fall back to\n`/extract/doc/text/` when the returned text is empty.\n\nFailures return `{\"success\": false, \"error_code\": ..., \"msg\": ...}`. The error\ncodes are `VALIDATION_FAILED`, `UNKNOWN_COURT` (no court declares that id),\n`COURT_NOT_RELEASED` (the court is still being worked on; pass `allow_pending`)\nand `EXTRACTION_FAILED`. As with `/convert/pdf/bitonal/`, `msg` is a **string**\nfor every code except `VALIDATION_FAILED`, where it is the **object** Django's\nform validation produces (field name to a list of `{message, code}`), so a\ncaller reading `msg` should expect either shape.\n\n\n## Utilities\n\n### Endpoint: /utils/page-count/pdf/\n\nThis method takes a document and returns the page count.\n\n    curl 'http://localhost:5050/utils/page-count/pdf/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\"\n\nThis will return an HTTP response with page count.  In the above example it would return __2__.\n\n### Endpoint: /utils/check-redactions/pdf/\n\nThis method takes a document and returns the bounding boxes of bad\nredactions as well as any discovered text.\n\n    curl 'http://localhost:5050/utils/check-redactions/pdf/' \\\n\t  -X 'POST' \\\n\t  -F \"file=@doctor/test_assets/x-ray/rectangles_yes.pdf\"\n\nreturns as JSON response with bounding box(es) and text recovered.\n```\n{\n  \"error\": false,\n  \"results\": {\n    \"1\": [\n      {\n        \"bbox\": [\n          412.54998779296875,\n          480.6099853515625,\n          437.8699951171875,\n          494.39996337890625\n        ],\n        \"text\": \"“No”\"\n      },\n      {\n        \"bbox\": [\n          273.3500061035156,\n          315,\n          536.8599853515625,\n          328.79998779296875\n        ],\n        \"text\": \"“Yes”, but did not disclose all relevant medical history\"\n      },\n      {\n        \"bbox\": [\n          141.22999572753906,\n          232.20001220703125,\n          166.54998779296875,\n          246\n        ],\n        \"text\": \"“No”\"\n      }\n    ]\n  }\n}\n```\n\nThe \"error\" field is set if there was an issue processing the PDF.\n\nIf \"results\" is empty there were no bad redactions found otherwise it\nis a list of bounding box along with the text recovered.\n\nSee: https://github.com/freelawproject/x-ray/#readme\n\n### Endpoint: /utils/mime-type/\n\nThis method takes a document and returns the mime type.\n\n    curl 'http://localhost:5050/utils/mime-type/?mime=False' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\"\n\nreturns as JSON response identifying the document type\n\n    {\"mimetype\": \"PDF document, version 1.3\"}\n\nand\n\n    curl 'http://localhost:5050/utils/mime-type/?mime=True' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\"\n\nreturns as JSON response identifying the document type\n\n    {\"mimetype\": \"application/pdf\"}\n\nAnother example  \n\n    curl 'http://localhost:5050/utils/mime-type/?mime=True' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/word-doc.doc\"\n\nreturns\n\n    {\"mimetype\": \"application/msword\"}\n\nThis method is useful for identifying the type of document, incorrect documents and weird documents.\n\n### Endpoint: /utils/add/text/pdf/\n\nThis method will take an image PDF and return the PDF with transparent text overlayed on the document.\nThis allows users to copy and paste (more or less) from our OCRd text.\n\n    curl 'http://localhost:5050/utils/add/text/pdf/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\" \\\n     -o image-pdf-with-embedded-text.pdf\n\n### Endpoint: /utils/audio/duration/\n\nThis endpoint returns the duration of an MP3 file.\n\n    curl 'http://localhost:5050/utils/audio/duration/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/1.mp3\"\n\n### Endpoint: /utils/document-number/pdf/\n\nThis method takes a document from the federal filing system and returns its document entry number.\n\n    curl 'http://localhost:5050/utils/document-number/pdf/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/recap_documents/ca2_1-1.pdf\"\n\nThis will return an HTTP response with the document number.  In the above example it would return __1-1__.\n\n\n## Converters\n\n### Endpoint: /convert/image/pdf/\n\nGiven an image of indeterminate length, this endpoint will convert it to a pdf with reasonable page breaks. This is meant for extremely long images that represent multi-page documents, but can be used to convert a smaller image to a one-page PDF.\n\n    curl 'http://localhost:5050/convert/image/pdf/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/long-image.tiff\" \\\n      --output test-image-to-pdf.pdf\n\nKeep in mind that this curl will write the file to the current directory.\n\n### Endpoint: /convert/images/pdf/\n\nGiven a list of urls for images, this endpoint will convert them to a pdf. This can be used to convert multiple images to a multi-page PDF. We use this to convert financial disclosure images to simple PDFs.\n\n    curl 'http://localhost:5050/convert/images/pdf/?sorted_urls=%5B%22https%3A%2F%2Fcom-courtlistener-storage.s3-us-west-2.amazonaws.com%2Ffinancial-disclosures%2F2011%2FA-E%2FArmstrong-SB%2520J3.%252009.%2520CAN_R_11%2FArmstrong-SB%2520J3.%252009.%2520CAN_R_11_Page_1.tiff%22%2C+%22https%3A%2F%2Fcom-courtlistener-storage.s3-us-west-2.amazonaws.com%2Ffinancial-disclosures%2F2011%2FA-E%2FArmstrong-SB%2520J3.%252009.%2520CAN_R_11%2FArmstrong-SB%2520J3.%252009.%2520CAN_R_11_Page_2.tiff%22%5D' \\\n        -X POST \\\n        -o image.pdf\n\nThis returns the binary data of the pdf.\n\n\n### Endpoint: /convert/pdf/bitonal/\n\nConverts a scanned PDF (or a page range of it) to a bitonal (1-bit, CCITT\nGroup 4) PDF. Pages are rasterized to grayscale one at a time, thresholded,\nand re-embedded as raw G4 streams, so memory use stays flat regardless of\ndocument size. Each output page keeps the exact MediaBox of its source page,\nso detection boxes expressed relative to the page rect stay valid.\n\nParameters:\n\n - `dpi` (default 300, range 72-600): rasterization resolution.\n - `threshold` (default 128, range 0-255): gray values above it become white.\n - `first_page` / `last_page` (optional, 1-indexed, inclusive): page range.\n - `page_timeout` (default 120, max 200) / `total_timeout` (default 1800,\n   max 1800): seconds one page, and the whole conversion, may take. Both\n   default to the settings below, which are also their ceilings; above a\n   ceiling is `VALIDATION_FAILED`.\n - `input_url` (instead of a `file` upload): a presigned GET URL to fetch the\n   input from.\n - `output_url` (optional): a presigned PUT URL. When given, the result is\n   uploaded there (Content-Type `application/pdf` must be part of the\n   signature) and the response is a JSON summary instead of the PDF itself.\n\nWith a file upload, the PDF comes back inline:\n\n    curl 'http://localhost:5050/convert/pdf/bitonal/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\" \\\n     -F 'dpi=300' \\\n     -F 'threshold=128' \\\n     -o bitonal.pdf\n\nWith presigned URLs, doctor never needs storage credentials — it only ever\nsees the URLs:\n\n    curl 'http://localhost:5050/convert/pdf/bitonal/' \\\n     -X 'POST' \\\n     --data-urlencode \"input_url=$PRESIGNED_GET\" \\\n     --data-urlencode \"output_url=$PRESIGNED_PUT\"\n\nwhich returns a summary like:\n\n    {\"success\": true, \"pages\": 200, \"page_count\": 200, \"dpi\": 300,\n     \"threshold\": 128, \"first_page\": 1, \"last_page\": 200,\n     \"bytes\": 14680064, \"sha256\": \"...\", \"source_sha256\": \"...\",\n     \"duration_ms\": 61200}\n\nFailures return `{\"success\": false, \"error_code\": ..., \"msg\": ...}`. The\nerror codes are: `VALIDATION_FAILED`, `INVALID_PDF`, `PAGE_RANGE_INVALID`,\n`CONVERSION_FAILED`, `CONVERSION_TIMEOUT`, `PAGE_COUNT_MISMATCH`,\n`PAGE_GEOMETRY_MISMATCH`, `EGRESS_BLOCKED`, `INPUT_TOO_LARGE`,\n`INPUT_DOWNLOAD_FAILED`, `INPUT_URL_EXPIRED`, `RESULT_UPLOAD_FAILED`,\n`RESULT_URL_EXPIRED` and `INTERNAL_ERROR`. The `*_EXPIRED` codes mean a\npresigned signature returned HTTP 403, so the caller must re-presign rather\nthan retry the same URL. Transient transport failures are retried with\nbackoff before failing; a malformed URL is never retried and fails as\n`INPUT_DOWNLOAD_FAILED` or `RESULT_UPLOAD_FAILED`.\n`INTERNAL_ERROR` means doctor itself failed unexpectedly — unlike\n`CONVERSION_FAILED`, the same request may succeed on retry.\n`CONVERSION_TIMEOUT` means a page, or the whole conversion, ran out of time;\nlike `INTERNAL_ERROR`, and unlike `CONVERSION_FAILED`, it may succeed on\nretry. A failure on a page also reports `page_number`, `pages_completed`,\n`elapsed_ms`, `pixels` (the page at the requested dpi) and, for a timeout,\n`timeout_limit` (`page` or `total`, whichever limit was nearer) as their own\nJSON fields, so no caller has to parse the message text.\n\nA single PUT is atomic on S3: the result object existing implies all of its\nbytes are there, so `head_object` on the (caller-chosen) result key is a\nreliable completion probe. Note the upload happens while the request stays\nopen; the HTTP response is the status channel.\n\nThe `DOCTOR_EGRESS_ALLOWED_HOSTS` environment variable (comma-separated\nfnmatch patterns) restricts which hosts `input_url` and `output_url` may\npoint to; allowed URLs must also be https. It defaults to\n`*.amazonaws.com`, which accepts presigned S3 URLs while blocking\ncluster-internal targets. Deployments can tighten it to exact bucket\nhostnames (a pattern without wildcards is an exact match), and setting it\nempty disables the check entirely, which local development and the test\nsuite rely on (see `.env.example`).\n\nFour more environment variables bound the resources one request can\nconsume. `DOCTOR_BITONAL_PAGE_TIMEOUT_SECONDS` (default 120) limits a\nsingle page's `pdftoppm` call and `DOCTOR_BITONAL_PAGE_TIMEOUT_MAX_SECONDS`\n(default 200) caps what `page_timeout` may raise it to;\n`DOCTOR_BITONAL_TIMEOUT_SECONDS` (default 1800) is the whole-conversion\nbudget and its own ceiling; `DOCTOR_BITONAL_MAX_DOWNLOAD_BYTES`\n(default 1 GiB, 0 disables) caps how large an `input_url` download may be\n(`INPUT_TOO_LARGE`). The defaults carry 30-60x headroom over the designed\nworkload (a 200-page shard converts in about a minute), so they only trip\non stuck or runaway work.\n\n### Endpoint: /convert/pdf/thumbnail/\n\nThumbnail takes a pdf and returns a png thumbnail of the first page.\n\n    curl 'http://localhost:5050/convert/pdf/thumbnail/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/image-pdf.pdf\" \\\n     -o test-thumbnail.png\n\nThis returns the binary data of the thumbnail.\n\nKeep in mind that this curl will also write the file to the current directory.\n\n### Endpoint: /convert/pdf/thumbnails/\n\nGiven a PDF and a range or pages, this endpoint will return a zip file containing thumbnails\nfor each page requested. This endpoint also takes an optional parameter called max_dimension,\nthis property scales the long side of each thumbnail (width for landscape pages, height for\nportrait pages) to fit in the specified number of pixels.\n\nFor example if you want thumbnails for the first four pages:\n\n    curl 'http://localhost:5050/convert/pdf/thumbnails/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/vector-pdf.pdf\" \\\n     -F 'pages=\"[1,2,3,4]\"' \\\n     -F 'max_dimension=350' \\\n     -o thumbnails.zip\n\nThis will return four thumbnails in a zip file.\n\n### Endpoint: /convert/audio/mp3/\n\nThis endpoint takes an audio file and converts it to an MP3 file.  This is used to convert different audio formats\nfrom courts across the country and standardizes the format for our end users.  \n\nThis endpoint also adds the SEAL of the court to the MP3 file and updates the metadata to reflect our updates.\n\n    curl 'http://localhost:5050/convert/audio/mp3/?audio_data=%7B%22court_full_name%22%3A+%22Testing+Supreme+Court%22%2C+%22court_short_name%22%3A+%22Testing+Supreme+Court%22%2C+%22court_pk%22%3A+%22test%22%2C+%22court_url%22%3A+%22http%3A%2F%2Fwww.example.com%2F%22%2C+%22docket_number%22%3A+%22docket+number+1+005%22%2C+%22date_argued%22%3A+%222020-01-01%22%2C+%22date_argued_year%22%3A+%222020%22%2C+%22case_name%22%3A+%22SEC+v.+Frank+J.+Custable%2C+Jr.%22%2C+%22case_name_full%22%3A+%22case+name+full%22%2C+%22case_name_short%22%3A+%22short%22%2C+%22download_url%22%3A+%22http%3A%2F%2Fmedia.ca7.uscourts.gov%2Fsound%2Fexternal%2Fgw.15-1442.15-1442_07_08_2015.mp3%22%7D' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/1.wma\"\n\nThis returns the audio file as a file response.\n\n### Endpoint: /convert/audio/ogg/\n\nThis endpoint takes an audio file and converts it to an OGG file. The conversion process downsizes files by using\na single audio channel and fixing the sampling rate to 8 kHz.\n\nThis endpoint also optimizes the output for voice over IP applications.\n\n    curl 'http://localhost:5050/convert/audio/ogg/' \\\n     -X 'POST' \\\n     -F \"file=@doctor/test_assets/1.wma\"\n\nThis returns the audio file as a file response.\n\n\n## Testing\n\nTesting is designed to be run with the `compose.yaml` file.  To see more about testing\ncheckout the DEVELOPING.md file.\n\n## Sentry Logging\n\nFor debugging purposes, it's possible to set your Sentry DSN to send events to Sentry.\nBy default, no SENTRY_DSN is set and no events will be sent to Sentry.\nTo use Sentry set the SENTRY_DSN environment variable to your DSN. Using Docker you can set it with:\n\n    docker run -d -p 5050:5050 -e SENTRY_DSN=<https://yout-sentry-dsn> freelawproject/doctor:latest\n",
+    "characters": 20551,
+    "source_url": "https://github.com/freelawproject/doctor/blob/954fa548046f545783d1784cee585b4819e42cac/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "db2c3c974a69bd9141257a10daee138116cd04ec354cd5239d0af52bc5025772",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2020, Free Law Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1326,
+    "source_url": "https://github.com/freelawproject/doctor/blob/954fa548046f545783d1784cee585b4819e42cac/LICENSE",
+    "detected": {
+      "key": "bsd-2-clause",
+      "name": "BSD 2-Clause \"Simplified\" License",
+      "spdx_id": "BSD-2-Clause",
+      "url": "https://api.github.com/licenses/bsd-2-clause",
+      "node_id": "MDc6TGljZW5zZTQ="
+    }
+  },
+  "commits_six_months_sample_count": 33,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "flooie",
+      "contributions": 363
+    },
+    {
+      "login": "mlissner",
+      "contributions": 72
+    },
+    {
+      "login": "pre-commit-ci[bot]",
+      "contributions": 44
+    },
+    {
+      "login": "quevon24",
+      "contributions": 26
+    },
+    {
+      "login": "albertisfu",
+      "contributions": 25
+    },
+    {
+      "login": "ERosendo",
+      "contributions": 20
+    },
+    {
+      "login": "adamchainz",
+      "contributions": 17
+    },
+    {
+      "login": "troglodite2",
+      "contributions": 10
+    },
+    {
+      "login": "Brennan-Chesley-FLP",
+      "contributions": 9
+    },
+    {
+      "login": "grossir",
+      "contributions": 6
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 248,
+      "title": "Leaked temp files from killed workers fill the pod disk; add a safety net for /tmp",
+      "state": "open",
+      "created_at": "2026-09-01T14:48:34Z",
+      "updated_at": "2026-09-08T13:23:50Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/freelawproject/doctor/issues/248",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "number": 245,
+      "title": "Bitonal: give a different error code at a time limit, and let the request set the time limits",
+      "state": "closed",
+      "created_at": "2026-08-25T15:42:51Z",
+      "updated_at": "2026-08-26T00:29:56Z",
+      "closed_at": "2026-08-26T00:29:56Z",
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/doctor/issues/245",
+      "author_association": "CONTRIBUTOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

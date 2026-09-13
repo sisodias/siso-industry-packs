@@ -1,0 +1,146 @@
+{
+  "audit_id": "R050",
+  "requested_full_name": "freelawproject/reporters-db",
+  "observed_at": "2026-09-13T16:10:34.768132+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/reporters-db",
+  "html_url": "https://github.com/freelawproject/reporters-db",
+  "description": "A database of court reporters, tests and other experiments",
+  "stargazers_count": 135,
+  "forks_count": 50,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2014-11-17T19:03:56Z",
+  "updated_at": "2026-09-10T04:36:59Z",
+  "pushed_at": "2026-08-13T16:50:16Z",
+  "size": 12106,
+  "open_issues_count": 45,
+  "topics": [],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "e095e6bf914ffd0a7b272f3764179cf3dbdf246c",
+  "last_commit": "2026-08-13T16:50:14Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/reporters-db",
+    "commit": "https://github.com/freelawproject/reporters-db/commit/e095e6bf914ffd0a7b272f3764179cf3dbdf246c"
+  },
+  "readme": {
+    "path": "README.rst",
+    "sha256": "bc0b566f0a5850698c2d4739951713ebd343c01e8f478aaad262e094a497546a",
+    "text": "+---------------+---------------------+-------------------+\n| |Lint Badge|  | |Test Badge|        |  |Version Badge|  |\n+---------------+---------------------+-------------------+\n\n.. |Lint Badge| image:: https://github.com/freelawproject/reporters-db/workflows/Lint/badge.svg\n.. |Test Badge| image:: https://github.com/freelawproject/reporters-db/workflows/Tests/badge.svg\n.. |Version Badge| image:: https://badge.fury.io/py/reporters-db.svg\n\nBackground of the Free Law Reporters Database\n=============================================\n\nA long, long time ago near a courthouse not too far away, people started\nkeeping books of every important opinion that was ever written. These\nbooks became known as *reporters* and were generally created by\nlibrarian-types of yore such as `Mr. William\nCranch <https://en.wikipedia.org/wiki/William_Cranch>`__ and `Alex\nDallas <https://en.wikipedia.org/wiki/Alexander_J._Dallas_%28statesman%29>`__.\n\nThese people were busy for the next few centuries and created\n*thousands* of these books, culminating in what we know today as West's\nreporters or as regional reporters like the \"Dakota Reports\" or the\nthoroughly-named, \"Synopses of the Decisions of the Supreme Court of\nTexas Arising from Restraints by Conscript and Other Military\nAuthorities (Robards).\"\n\nIn this repository we've taken a look at all these reporters and tried\nto sort out what we know about them and convert that to data. This data\nis available as a JSON file, as Python variables, and can be browsed in an\nunofficial CSV (it's usually out of date).\n\nNaturally, converting several centuries' history into clean data results\nin a mess, but we've done our best and this mess is in use in a number\nof projects as listed below. As of version 3.2.32, this data contains information\nabout 1,167 reporters and 2,102 name variations.\n\nWe hope you'll find this useful to your endeavors and that you'll share\nyour work with the community if you improve or use this work.\n\n\nData Sourcing\n=============\n\nThis project has been enhanced several times with data from several sources:\n\n1. The original data came from parsing the citation fields for millions of cases in CourtListener.\n\n2. A second huge push came from parsing metadata obtained from two major legal publishers, and by parsing the citation fields of Havard's Case.law database.\n\n3. An audit was performed and additional fields were added by using regular expressions to find number-word-number strings in the entire Harvard Case.law database. The results of this were sorted by frequency, with the top omissions fixed.\n\nAlong the way, small and subtle improvements have been made as gaps were identified and fixed.\n\nThe result is that this database should thus be very complete when it comes to reporter abbreviations and variations. It has the data from CourtListener, two major legal publishers, and Harvard's Case.law. Hundreds of hours have gone into this database to make it complete.\n\n\nInstallation (Python)\n=====================\n\nYou can install the Free Law Reporters Database with a few simple\ncommands:\n\n::\n\n    pip install reporters-db\n\nOf course, if you're not using Python, the data is in the ``json``\nformat, so you should be able to import it using your language of\nchoice. People occasionally play with converting this to other languages, but\nno other implementations are presently known.\n\n\nAPI\n===\nUsing this database is pretty simple. As this is a database, here are no\npublic methods or classes, only variables. Importing any of these these\nvariables loads them all, including loading several JSON files from disk. It is\ntherefore recommended not to load these variables more than necessary.\n\nThe simplest way to understand this data is to simply import these variables\nand look at them.\n\nAll variables are imported from the package root as follows:\n\n::\n\n    from reporters_db import REPORTERS\n\nThe available variables are:\n\n- ``REPORTERS`` — This is the main database and contains a huge dict of reporters as described below.\n\n- ``LAWS`` — Our database of statutory abbreviations, mapping the statute abbreviations to their metadata. For example ``Ark. Reg`` is the abbreviation for the ``Arkansas Register``.\n\n- ``JOURNALS`` — Same idea as ``LAWS``, but for legal journal abbreviations.\n\n- ``STATE_ABBREVIATIONS`` — Bluebook style abbreviations for each state. For example, ``Ala.`` for Alaska and ``Haw.`` for Hawaii.\n\n- ``CASE_NAME_ABBREVIATIONS`` — Bluebook style abbreviations for common words, mapping each abbreviation to a list of possible words. For example, ``Admin`` maps to ``[\"Administrative\", \"Administration\"]``.\n\nA few specialized reporter-related variables are:\n\n- ``VARIATIONS_ONLY`` — This contains a dict mapping a canonical reporter abbreviation to a list of possible variations it could represent. For example, ``A. 2d`` sometimes incorrectly lacks a space, and has a variation list of ``[\"A.2d\"]``. ``P.R.`` could be ``[\"Pen. & W.\", \"P.R.R.\", \"P.\"]``.\n\n- ``EDITIONS`` — A simple dict to map the abbreviations for each reporter edition to the canonical reporter. For example, ``A.2d`` maps to ``A.``.\n\n- ``NAMES_TO_EDITIONS`` — A simple dict to map the name of a reporter back to its canonilcal abbreviations. For example, ``Atlantic Reporter`` maps to ``['A.', 'A.2d']``.\n\nCSV\n===\n\nYou can make a CSV of this data by running:\n\n::\n\n    make_csv.py\n\nWe keep a copy of this CSV in this repository (``reporters.csv``), but\nit is not kept up to date. It should, however, provide a good idea of\nwhat's here.\n\n\nKnown Implementations\n=====================\n\n1. This work was originally deployed in the\n   `CourtListener <https://www.courtlistener.com>`__ citation finder\n   beginning in about 2012. It has been used literally millions of times\n   to identify citations between cases.\n\n2. An extension for Firefox known as the `Free Law\n   Ferret <http://citationstylist.org/2013/08/20/free-law-ferret-document-to-cited-cases-in-a-click/>`__\n   uses this code to find citations in your browser as you read things\n   -- all over the Web.\n\n3. A Node module called\n   `Walverine <https://github.com/adelevie/walverine>`__ uses an\n   iteration of this code to find citations using the V8 JavaScript\n   engine.\n\nAdditional usages can be `found via Github <https://github.com/freelawproject/reporters-db/network/dependents?package_id=UGFja2FnZS01MjU0MTgzNg%3D%3D>`__.\n\n\nSome Notes on the Data\n======================\n\nSome things to bear in mind as you are examining the Free Law Reporters\nDatabase:\n\n1. Each Reporter key maps to a list of reporters that that key can\n   represent. In some cases (especially in early reporters), the key is\n   ambiguous, referring to more than one possible reporter.\n\n2. Formats follow the Blue Book standard, with variations listed for\n   local rules and other ways lawyers abbreviate it over the years or\n   accidentally.\n\n3. The ``variations`` key consists of data from local rules, found\n   through organic usage in our corpus and from the `Cardiff Index to\n   Legal Abbreviations <http://www.legalabbrevs.cardiff.ac.uk/>`__. We\n   have used a dict for these values due to the fact that there can be\n   variations for each series.\n\n4. ``mlz_jurisdiction`` corresponds to the work that is being done for\n   Multi-Lingual Zotero. This field is maintained by Frank Bennett and\n   may sometimes be missing values.\n\n5. Some reporters have ``href`` or ``notes`` fields to provide a link to\n   the best available reference (often Wikipedia) or to provide notes\n   about the reporter itself.\n\n6. Regarding dates of the editions, there are a few things to know. In\n   reporters with multiple series, if multiple volumes have the same\n   dates, this indicates that the point where one series ends and the\n   other begins is unknown. If an edition has 1750 as its start date,\n   this indicates that the actual start date is unknown. Likewise, if an\n   edition has ``null`` as its end date, that indicates the actual end\n   date is either unknown, or it's known that the series has not\n   completed. These areas need research before we can release version\n   1.1 of this database. Finally, dates are inclusive, so the first and\n   last opinions in a reporter series have the same dates as the\n   database.\n\n\nA complete data point has fields like so:\n\n::\n\n    \"$citation\": [\n        {\n            \"cite_type\": \"state|federal|neutral|specialty|specialty_west|specialty_lexis|state_regional|scotus_early\",\n            \"editions\": {\n                \"$citation\": {\n                    \"end\": null,\n                    \"regexes\": [],\n                    \"start\": \"1750-01-01T00:00:00\"\n                },\n                \"$citation 2d\": {\n                    \"end\": null,\n                    \"regexes\": [],\n                    \"start\": \"1750-01-01T00:00:00\"\n                }\n            },\n            \"examples\": [],\n            \"mlz_jurisdiction\": [],\n            \"name\": \"\",\n            \"variations\": {},\n            \"notes\": \"\",\n            \"href\": \"\",\n            \"publisher\": \"\"\n        }\n    ],\n\nThe \"regexes\" field and regexes.json placeholders\n-------------------------------------------------\n\nThe \"regexes\" field can contain raw regular expressions to match a custom citation format,\nor can contain placeholders to be substituted from ``regexes.json`` using\n`python Template formatting <https://docs.python.org/3/library/string.html#template-strings>`__.\n\nIf custom regexes are provided, the tests will require that all regexes match at least one\nexample in ``examples`` and that all examples match at least one regex.\n\nWhen adding a new regex it can be useful to ``pip install exrex`` and run the tests *without*\nadding any examples to get a listing of potential citations that would be matched by the new\nregex.\n\n\n``state_abbreviations`` and ``case_name_abbreviations`` files\n-------------------------------------------------------------\n\n1. Abbreviations are based on data from the values in the nineteenth\n   edition of the Blue Book supplemented with abbreviations found in our\n   corpus.\n2. ``case_name_abbreviations.json`` contains the abbreviations that are\n   likely to occur in the case name of an opinion.\n3. ``state_abbreviations.json`` contains the abbreviations that are\n   likely to be used to refer to American states.\n\nNotes on Specific Data Point and References\n-------------------------------------------\n\n1. A good way to look up abbreviations is in `Prince's Bieber Dictionary\n   of Legal Abbreviations <https://books.google.com/books?id=4aJsAwAAQBAJ&dq=%22Ohio+Law+Rep.%22&source=gbs_navlinks_s>`__. You can find a lot of this book on Google Books,\n   but we have it as a PDF too. Just ask.\n\n2. Mississippi supports neutral citations, but does so in their own\n   format, as specified in `this\n   rule <http://www.aallnet.org/main-menu/Advocacy/access/citation/neutralrules/rules-ms.html>`__.\n   Research is needed for the format in ``reporters.json`` to see if it\n   is used accidentally as a variant of their rule or whether it is an\n   error in this database.\n\n3. New Mexico dates confirmed via the `table\n   here <http://www.nmcompcomm.us/nmcases/pdf/NM%20Reports%20to%20Official%20-%20Vols.%201-75.pdf>`__.\n\n4. Both Puerto Rico and \"Pennsylvania State Reports, Penrose and Watts\"\n   use the citation \"P.R.\"\n\n\nTests\n=====\n\nWe have a few tests that make sure things haven't completely broken.\nThey are automatically run by Travis CI each time a push is completed\nand should be run by developers as well before pushing. They can be run\nwith:\n\n::\n\n    python tests.py\n\nIt's pretty simple, right?\n\n\nReleases\n--------\n\nUpdate setup.py, add a git tag to the commit with the version number, and push\nto master. Be sure you have your tooling set up to push git tags. That's often\nnot the default. Github Actions will push a release to PyPi if tests pass.\n\n\nLicense\n=======\n\nThis repository is available under the permissive BSD license, making it\neasy and safe to incorporate in your own libraries.\n\nPull and feature requests welcome. Online editing in Github is possible\n(and easy!)\n",
+    "characters": 12011,
+    "source_url": "https://github.com/freelawproject/reporters-db/blob/e095e6bf914ffd0a7b272f3764179cf3dbdf246c/README.rst"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "a84c58fa06060e74682fe4808403a082a3472fc39e6e4ac299241df9f9c7f1be",
+    "text": "Copyright (c) 2014, Free Law Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n",
+    "characters": 1300,
+    "source_url": "https://github.com/freelawproject/reporters-db/blob/e095e6bf914ffd0a7b272f3764179cf3dbdf246c/LICENSE",
+    "detected": {
+      "key": "bsd-2-clause",
+      "name": "BSD 2-Clause \"Simplified\" License",
+      "spdx_id": "BSD-2-Clause",
+      "url": "https://api.github.com/licenses/bsd-2-clause",
+      "node_id": "MDc6TGljZW5zZTQ="
+    }
+  },
+  "commits_six_months_sample_count": 27,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "flooie",
+      "contributions": 752
+    },
+    {
+      "login": "mlissner",
+      "contributions": 185
+    },
+    {
+      "login": "quevon24",
+      "contributions": 111
+    },
+    {
+      "login": "pre-commit-ci[bot]",
+      "contributions": 40
+    },
+    {
+      "login": "jcushman",
+      "contributions": 39
+    },
+    {
+      "login": "grossir",
+      "contributions": 25
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 21
+    },
+    {
+      "login": "bbernicker",
+      "contributions": 17
+    },
+    {
+      "login": "adamchainz",
+      "contributions": 11
+    },
+    {
+      "login": "Luis-manzur",
+      "contributions": 11
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 253,
+      "title": "Add \"The Columbia Journal of Law & the Arts\" to journals.json",
+      "state": "open",
+      "created_at": "2026-05-06T11:08:53Z",
+      "updated_at": "2026-07-25T04:10:56Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/freelawproject/reporters-db/issues/253",
+      "author_association": "NONE"
+    },
+    {
+      "number": 270,
+      "title": "Add Public laws \"popular names\"",
+      "state": "open",
+      "created_at": "2026-07-16T03:35:02Z",
+      "updated_at": "2026-07-16T05:17:02Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/reporters-db/issues/270",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "number": 273,
+      "title": "Detect statutory citations to named Acts (e.g. \"section 10(b) of the Securities Exchange Act\")",
+      "state": "open",
+      "created_at": "2026-07-16T04:28:10Z",
+      "updated_at": "2026-07-16T04:28:10Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/reporters-db/issues/273",
+      "author_association": "CONTRIBUTOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

@@ -1,0 +1,124 @@
+{
+  "audit_id": "R053",
+  "requested_full_name": "freelawproject/x-ray",
+  "observed_at": "2026-09-13T16:10:34.768132+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/x-ray",
+  "html_url": "https://github.com/freelawproject/x-ray",
+  "description": "A tool to detect whether a PDF has a bad redaction",
+  "stargazers_count": 824,
+  "forks_count": 53,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-12-17T00:14:49Z",
+  "updated_at": "2026-09-12T17:23:28Z",
+  "pushed_at": "2026-07-06T22:29:30Z",
+  "size": 21277,
+  "open_issues_count": 42,
+  "topics": [],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "9b55190175d3b00fa0158c4b0ef5b8406131daa5",
+  "last_commit": "2026-01-21T23:46:40Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/x-ray",
+    "commit": "https://github.com/freelawproject/x-ray/commit/9b55190175d3b00fa0158c4b0ef5b8406131daa5"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "cf86755fba6ba03b8d9510be6ac3e2790849b12dc3b003a9de115eeb45497564",
+    "text": "![Image of REDACTED STAMP](https://raw.githubusercontent.com/freelawproject/x-ray/main/redacted.png)\n\nx-ray is a Python library for finding bad redactions in PDF documents.\n\n## Why?\n\nAt Free Law Project, we collect millions of PDFs. An ongoing problem\nis that people fail to properly redact things. Instead of doing it the right\nway, they just draw a black rectangle or a black highlight on top of black\ntext and call it a day. Well, when that happens you just select the text under\nthe rectangle, and you can read it again. Not great.\n\nAfter witnessing this problem for years (our favorite is the doc that shared \nTaylor Swift's personal phone number), we decided it would be good to do\nsomething about it. \n\nThis tool is our answer. You give the tool the path to a PDF. It tells you if \nit has worthless redactions in it and whether to call Taylor (don't).\n\n\n## What next?\n\nRight now, `x-ray` works pretty well and we are using it to analyze documents\nin our collections. It could be better though. Bad redactions take many forms.\nSee the issues tab for other examples we don't yet support. We'd love your\nhelp solving some of tougher cases.\n\n\n## Installation\n\nWith uv, do:\n\n```text\nuv add x-ray\n```\n\nWith pip, that'd be:\n```text\npip install x-ray\n```\n\n## Usage\n\n`uvx` lets you run this without even installing it. For example, here's an amicus brief we filed that doesn't have any bad redactions, so it returns an empty dict:\n\n```\nuvx --from x-ray xray https://storage.courtlistener.com/recap/gov.uscourts.ca3.125346/gov.uscourts.ca3.125346.45.0.pdf\n{}\n```\n\nOnce you *do* install x-ray, you can easily use it on the command line. Once installed, just:\n\n```bash\n% xray path/to/your/file.pdf\n{\n  \"1\": [\n    {\n      \"bbox\": [\n        58.550079345703125,\n        72.19873046875,\n        75.65007781982422,\n        739.3987426757812\n      ],\n      \"text\": \"The Ring travels by way of Cirith Ungol\"\n    }\n  ]\n}\n```\n\nOr if you have the file on a server somewhere, give it a URL. If it starts with `https://`, it will be interpreted as a PDF to download. Here's congressional testimony our director made (it doesn't have any bad redactions):\n\n```bash\n% xray https://free.law/pdf/congressional-testimony-michael-lissner-free-law-project-hearing-on-ethics-and-transparency-2021-10-26.pdf\n{}\n```\n\nA fun trick you can do is to make a file with one URL per line, call it `urls.txt`. Then you can run this to check each URL:\n\n```bash\nxargs -n 1 xray  < urls.txt\n```\n\nHowever you run `xray` on the command line, you'll get JSON as output. When you have that, you can use it with tools like [`jq`][jq]. The format is as follows:\n\n - It's a dict.\n - The keys are page numbers.\n - Each page number maps to a list of dicts.\n - Each of those dicts maps to two keys.\n - The first key is `bbox`. This is a four-tuple that indicates the x,y positions of the upper left corner and then lower right corners of the bad redaction.\n - The second key is `text`. This is the text under the bad rectangle.\n\nSimple enough.\n\nYou can also use it as a Python module, if you prefer the long-form:\n\n```\n% python -m xray some-file.pdf\n```\n\nBut that's not as easy to remember.\n\nIf you want a bit more, you can, of course, use `xray` in Python:\n\n```python\nfrom pprint import pprint\nimport xray\nbad_redactions = xray.inspect(\"some/path/to/your/file.pdf\")  # Pathlib works too\npprint(bad_redactions)\n{1: [{'bbox': (58.550079345703125,\n               72.19873046875,\n               75.65007781982422,\n               739.3987426757812),\n      'text': 'Aragorn is the one true king.'}]}\n```\n\nThe output is the same as above, except it's a Python object, not a JSON object.\n\nIf you already have the file contents as a `bytes` object, that'll work too:\n\n```python\nsome_bytes = requests.get(\"https://lotr-secrets.com/some-doc.pdf\").content\nbad_redactions = xray.inspect(some_bytes)\n```\n\nNote that because the `inspect` method uses the same signature no matter what,\nthe type of the object you give it is essential:\n\nInput | `xray`'s Assumption\n-- | --\n`str` or Pathlib `Path` | local file\n`str` that starts with `https://` | URL to download\n`bytes` | PDF in memory\n\nThis means that if you provide the filename on disk as a bytes object instead\nof a `str`, it's not going to work. This will fail:\n\n```python\nxray.inspect(b\"some-file-path.pdf\")\n```\n\nThat's pretty much it. There are no configuration files or other variables to\nlearn. You give it a file name. If there is a bad redaction in it, you'll soon\nfind out.\n\n\n## How it works\n\nUnder the covers, `xray` uses the high-performant [PyMuPDF project][mu] to parse PDFs. It has been a wonderful project to work with.\n\nYou can read the source to see how it works, but the general idea is to:\n\n1. Find rectangles in a PDF.\n\n2. Find letters in the same location\n\n3. Render the rectangle as an image\n\n4. Inspect the rectangle to see if it's all one color. If it is, then that's a\n   bad redaction. If not, then we assume you can see a mix of text and\n   drawings, indicating a redaction that's OK.\n\nThe PDF format is a big and complicated one, so it's difficult to do all this perfectly. We do our best, but there's always more to do to make it better. [Donations][d] and sponsored work help.\n\n[d]: https://free.law/donate/\n\n\n## Contributions\n\nPlease see the issues list on Github for things we need, or start a conversation if you have questions. Before you do your first contribution, we'll need a signed contributor license agreement. See the template in the repo.\n\n\n## Deployment\n\nReleases happen automatically via Github Actions. To trigger an automated build:\n\n0. Update CHANGES.md\n\n1. Update the version in pyproject.toml\n\n2. Tag the commit with something like \"v0.0.0\".\n\n\nIf you wish to create a new version manually, the process is:\n\n1. Update version info in `pyproject.toml`\n\n2. Configure your Pypi credentials [with Poetry][creds]\n\n3. Build and publish the version:\n\n```sh\npoetry publish --build\n```\n\n\n\n## License\n\nThis repository is available under the permissive BSD license, making it easy and safe to incorporate in your own libraries.\n\nPull and feature requests welcome. Online editing in GitHub is possible (and easy!).\n\n[jq]: https://stedolan.github.io/jq/\n[mu]: https://pymupdf.readthedocs.io/\n[asc]: https://en.wikipedia.org/wiki/Ascender_(typography)\n[creds]: https://python-poetry.org/docs/repositories/#configuring-credentials\n",
+    "characters": 6352,
+    "source_url": "https://github.com/freelawproject/x-ray/blob/9b55190175d3b00fa0158c4b0ef5b8406131daa5/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "db2c3c974a69bd9141257a10daee138116cd04ec354cd5239d0af52bc5025772",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2020, Free Law Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1326,
+    "source_url": "https://github.com/freelawproject/x-ray/blob/9b55190175d3b00fa0158c4b0ef5b8406131daa5/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "mlissner",
+      "contributions": 213
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 72
+    },
+    {
+      "login": "pre-commit-ci[bot]",
+      "contributions": 26
+    },
+    {
+      "login": "adamchainz",
+      "contributions": 10
+    },
+    {
+      "login": "albertisfu",
+      "contributions": 6
+    },
+    {
+      "login": "dependabot-preview[bot]",
+      "contributions": 6
+    },
+    {
+      "login": "ttys0dev",
+      "contributions": 3
+    },
+    {
+      "login": "gabebw",
+      "contributions": 2
+    },
+    {
+      "login": "quevon24",
+      "contributions": 2
+    },
+    {
+      "login": "epicfaace",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 227,
+      "title": "Find prompt injection",
+      "state": "open",
+      "created_at": "2026-08-15T21:24:20Z",
+      "updated_at": "2026-08-15T21:24:20Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/freelawproject/x-ray/issues/227",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
