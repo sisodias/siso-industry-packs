@@ -1,0 +1,181 @@
+{
+  "audit_id": "R048",
+  "requested_full_name": "freelawproject/juriscraper",
+  "observed_at": "2026-09-13T16:10:28.546971+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "freelawproject/juriscraper",
+  "html_url": "https://github.com/freelawproject/juriscraper",
+  "description": "An API to scrape American court websites for metadata.",
+  "stargazers_count": 633,
+  "forks_count": 172,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2014-08-08T12:50:35Z",
+  "updated_at": "2026-09-11T16:54:54Z",
+  "pushed_at": "2026-09-11T19:00:44Z",
+  "size": 68315,
+  "open_issues_count": 280,
+  "topics": [
+    "courts",
+    "government",
+    "pacer",
+    "scraping"
+  ],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "e4c2aef8b3a71de1c72d362ce1bb5b511b97050f",
+  "last_commit": "2026-08-31T22:22:02Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/freelawproject/juriscraper",
+    "commit": "https://github.com/freelawproject/juriscraper/commit/e4c2aef8b3a71de1c72d362ce1bb5b511b97050f"
+  },
+  "readme": {
+    "path": "README.rst",
+    "sha256": "1dc98d8d62a81d80b647a90d5a8a3779b717a14c00a09f4d2b581f8e2051861e",
+    "text": "+---------------+---------------------+-------------------+\n| |Lint Badge|  | |Test Badge|        |  |Version Badge|  |\n+---------------+---------------------+-------------------+\n\n\n.. |Lint Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Lint/badge.svg\n.. |Test Badge| image:: https://github.com/freelawproject/juriscraper/workflows/Tests/badge.svg\n.. |Version Badge| image:: https://badge.fury.io/py/juriscraper.svg\n\n\nWhat is This?\n=============\n\nJuriscraper is a scraper library started many years ago that gathers judicial opinions, oral arguments, and PACER data in the American court system. It is currently able to scrape:\n\n-  a variety of pages and reports within the PACER system\n-  opinions from all major appellate Federal courts\n-  opinions from all state courts of last resort except for Georgia (typically their \"Supreme Court\")\n-  oral arguments from all appellate federal courts that offer them\n\nJuriscraper is part of a two-part system. The second part is your code,\nwhich calls Juriscraper. Your code is responsible for calling a scraper,\ndownloading and saving its results. A reference implementation of the\ncaller has been developed and is in use at\n`CourtListener.com <https://www.courtlistener.com>`__. The code for that\ncaller can be `found\nhere <https://github.com/freelawproject/courtlistener/blob/main/cl/scrapers/management/commands/cl_scrape_opinions.py>`__.\nThere is also a basic sample caller `included in\nJuriscraper <https://github.com/freelawproject/juriscraper/blob/main/sample_caller.py>`__\nthat can be used for testing or as a starting point when developing your\nown.\n\nSome of the design goals for this project are:\n\n-  extensibility to support video, oral argument audio, etc.\n-  extensibility to support geographies (US, Cuba, Mexico, California)\n-  Mime type identification through magic numbers\n-  Generalized architecture with minimal code repetition\n-  XPath-based scraping powered by lxml's html parser\n-  return all meta data available on court websites (caller can pick\n   what it needs)\n-  no need for a database\n-  clear log levels (DEBUG, INFO, WARN, CRITICAL)\n-  friendly as possible to court websites\n\nInstallation & Dependencies\n===========================\n\nFirst step: Install Python 3.9+, then:\n\nInstall the dependencies\n------------------------\n\nOn Ubuntu based distributions/Debian Linux::\n\n    sudo apt-get install libxml2-dev libxslt-dev libyaml-dev\n\nOn Arch based distributions::\n\n    sudo pacman -S libxml2 libxslt libyaml\n\nOn macOS with Homebrew <https://brew.sh>::\n\n    brew install libyaml\n\n\nThen install the code\n---------------------\n\n::\n\n    pip install juriscraper\n\nYou can set an environment variable for where you want to stash your logs (this\ncan be skipped, and `/var/log/juriscraper/debug.log` will be used as the\ndefault if it exists on the filesystem)::\n\n    export JURISCRAPER_LOG=/path/to/your/log.txt\n\nFinally, do your WebDriver\n--------------------------\nSome websites are too difficult to crawl without some sort of automated\nWebDriver. For these, Juriscraper either uses a locally-installed copy of\ngeckodriver or can be configured to connect to a remote webdriver. If you prefer\nthe local installation, you can download Selenium FireFox Geckodriver::\n\n    # choose OS compatible package from:\n    #   https://github.com/mozilla/geckodriver/releases/tag/v0.26.0\n    # un-tar/zip your download\n    sudo mv geckodriver /usr/local/bin\n\nIf you prefer to use a remote webdriver, like `Selenium's docker image <https://hub.docker.com/r/selenium/standalone-firefox>`__, you can\nconfigure it with the following variables:\n\n``WEBDRIVER_CONN``: Use this to set the connection string to your remote\nwebdriver. By default, this is ``local``, meaning it will look for a local\ninstallation of geckodriver. Instead, you can set this to something like,\n``'http://YOUR_DOCKER_IP:4444/wd/hub'``, which will switch it to using a remote\ndriver and connect it to that location.\n\n``SELENIUM_VISIBLE``: Set this to any value to disable headless mode in your\nselenium driver, if it supports it. Otherwise, it defaults to headless.\n\nFor example, if you want to watch a headless browser run, you can do so by\nstarting selenium with::\n\n    docker run \\\n        -p 4444:4444 \\\n        -p 5900:5900 \\\n        -v /dev/shm:/dev/shm \\\n        selenium/standalone-firefox-debug\n\nThat'll launch it on your local machine with two open ports. 4444 is the\ndefault on the image for accessing the webdriver. 5900 can be used to connect\nvia a VNC viewer, and can be used to watch progress if the ``SELENIUM_VISIBLE``\nvariable is set.\n\nOnce you have selenium running like that, you can do a test like::\n\n    WEBDRIVER_CONN='http://localhost:4444/wd/hub' \\\n        SELENIUM_VISIBLE=yes \\\n        python sample_caller.py -c juriscraper.opinions.united_states.state.kan_p\n\nKansas's precedential scraper uses a webdriver. If you do this and watch\nselenium, you should see it in action.\n\nContributing\n============\n\nWe welcome contributions! If you'd like to get involved, please take a look at our\n`CONTRIBUTING.md <CONTRIBUTING.md>`__\nguide for instructions on setting up your environment, running tests, and more.\n\nLicense\n=======\n\nJuriscraper is licensed under the permissive BSD license.\n\n|forthebadge made-with-python|\n\n.. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg\n    :target: https://www.python.org/\n",
+    "characters": 5418,
+    "source_url": "https://github.com/freelawproject/juriscraper/blob/e4c2aef8b3a71de1c72d362ce1bb5b511b97050f/README.rst"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "f65e400a4777a102dea5c6f46b558b52a9d7167cca6938afb2080f03a3c32d12",
+    "text": "Copyright (c) 2009, Free Law Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1299,
+    "source_url": "https://github.com/freelawproject/juriscraper/blob/e4c2aef8b3a71de1c72d362ce1bb5b511b97050f/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "mlissner",
+      "contributions": 1572
+    },
+    {
+      "login": "flooie",
+      "contributions": 1093
+    },
+    {
+      "login": "grossir",
+      "contributions": 752
+    },
+    {
+      "login": "arderyp",
+      "contributions": 418
+    },
+    {
+      "login": "Luis-manzur",
+      "contributions": 383
+    },
+    {
+      "login": "albertisfu",
+      "contributions": 315
+    },
+    {
+      "login": "MorganBennetDev",
+      "contributions": 214
+    },
+    {
+      "login": "pre-commit-ci[bot]",
+      "contributions": 172
+    },
+    {
+      "login": "quevon24",
+      "contributions": 152
+    },
+    {
+      "login": "Andr3iC",
+      "contributions": 82
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 2176,
+      "title": "`supremecourt.ohio.gov`: issue with parsing PDFs",
+      "state": "open",
+      "created_at": "2026-09-10T14:17:24Z",
+      "updated_at": "2026-09-10T14:17:40Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/freelawproject/juriscraper/issues/2176",
+      "author_association": "NONE"
+    },
+    {
+      "number": 2173,
+      "title": "Transient TransportError failures for reaching DOCTOR_HOST",
+      "state": "open",
+      "created_at": "2026-09-09T15:00:49Z",
+      "updated_at": "2026-09-09T15:01:24Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/freelawproject/juriscraper/issues/2173",
+      "author_association": "NONE"
+    },
+    {
+      "number": 2091,
+      "title": "Pennsylvania scraper",
+      "state": "open",
+      "created_at": "2026-08-03T17:09:43Z",
+      "updated_at": "2026-09-08T22:32:05Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/freelawproject/juriscraper/issues/2091",
+      "author_association": "CONTRIBUTOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "freelawproject/juriscraper",
+        "capability_tag": "web-scraping",
+        "category_slug": "web-scraping-api",
+        "summary": "API to scrape American court websites for legal metadata",
+        "reuse_value": 75,
+        "stars": 600,
+        "license": "BSD-2-Clause",
+        "language": "HTML",
+        "url": "https://github.com/freelawproject/juriscraper",
+        "rank_score": 75006000
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "freelawproject/juriscraper",
+        "stars": 600,
+        "license": "BSD-2-Clause",
+        "language": "HTML",
+        "unit_class": "component",
+        "reuse_value": 75,
+        "liftability": 90,
+        "fame_gap": -15,
+        "cat_slug": "web-scraping-api",
+        "cat_name": "Web Scraping / Crawl API",
+        "description": "An API to scrape American court websites for metadata."
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
