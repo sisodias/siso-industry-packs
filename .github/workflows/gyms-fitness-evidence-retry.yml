@@ -1,0 +1,71 @@
+name: Gyms fitness evidence retry
+on:
+  push:
+    branches: [research/gyms-fitness-20260913]
+    paths: [.github/workflows/gyms-fitness-evidence-retry.yml]
+permissions:
+  contents: read
+concurrency:
+  group: gyms-fitness-public-evidence
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Run pinned research collector with bounded backoff
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/6e799394648d9162d4e943e2a7f4edcb75f561ff/.github/workflows/gyms-fitness-evidence-audit.yml'
+          with urllib.request.urlopen(url,timeout=30) as r: workflow=r.read().decode()
+          start=workflow.index('          """One-shot public-source research collector')
+          end=workflow.index('\n          PY',start)
+          script='\n'.join(line[10:] for line in workflow[start:end].splitlines())
+          a=script.index('def api(path):'); b=script.index('\ndef save(',a)
+          replacement='''def api(path):
+              assert path.startswith('/repos/') or path.startswith('/search/repositories?')
+              for attempt in range(5):
+                  time.sleep(0.35)
+                  req=urllib.request.Request(API+path,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-gyms-public-evidence','X-GitHub-Api-Version':'2022-11-28'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=45) as resp: return json.load(resp)
+                  except urllib.error.HTTPError as e:
+                      try: message=json.load(e).get('message','')
+                      except Exception: message=''
+                      limited=e.code==429 or (e.code==403 and ('rate limit' in message.lower() or 'abuse' in message.lower() or e.headers.get('x-ratelimit-remaining')=='0'))
+                      if limited and attempt<4:
+                          try: delay=int(e.headers.get('retry-after','60'))
+                          except ValueError: delay=60
+                          if e.headers.get('x-ratelimit-remaining')=='0':
+                              try: delay=max(delay,int(e.headers.get('x-ratelimit-reset','0'))-int(time.time())+2)
+                              except ValueError: pass
+                          if delay>180: return {'_error':e.code,'message':message,'retry_after_seconds':delay}
+                          print('Public API rate-limit backoff',delay,'seconds',flush=True);time.sleep(max(60,delay));continue
+                      if e.code in (500,502,503,504) and attempt<4:time.sleep(10*(attempt+1));continue
+                      return {'_error':e.code,'message':message}
+                  except (TimeoutError,OSError):
+                      if attempt<4:time.sleep(5);continue
+                      return {'_error':'network'}
+              return {'_error':'retries'}
+          '''
+          import textwrap
+          # Keep the definition at column zero and its body indented consistently.
+          replacement='def api(path):\n'+textwrap.dedent(replacement.split('\n',1)[1]).rstrip()+'\n'
+          replacement='def api(path):\n'+textwrap.indent(textwrap.dedent(replacement.split('\n',1)[1]),'    ')
+          script=script[:a]+replacement+script[b:]
+          script=script.replace('max_workers=3','max_workers=1')
+          compile(script,'pinned_public_research_collector','exec')
+          exec(compile(script,'pinned_public_research_collector','exec'))
+          PY
+      - name: Preserve research evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gyms-fitness-public-evidence-retry
+          path: evidence/
+          retention-days: 3
+          if-no-files-found: error
