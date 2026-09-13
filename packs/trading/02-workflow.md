@@ -1,7 +1,49 @@
-# Workflow — Independent traders and small trading desks
+# Workflow — from an idea to a reconciled review
 
-> **Not yet researched.** Replace this file with the real output.
->
-> 6-12 workflow stages with trigger, inputs, outputs, pain, frequency, handoff, data_object. Include the chat surface.
+Research cut: 2026-09-13. **[analysis]** Proposed workflow for the own-account operator defined in [01-person.md](01-person.md); not an observed time study. Actual counts, durations and channel response times remain unmeasured. The same ten rows are supplied in [02-workflow.json](02-workflow.json). Practitioner quotations are evidence of possible pain, not estimates of its prevalence.
 
-_Status: empty · industry `trading` · priority high_
+## Ten stages, one chain of evidence
+
+| ID | Stage | Trigger | Inputs | Outputs | Pain: exact quotation and source [practitioner] | Frequency [analysis; unmeasured] | Handoff | Persistent data objects |
+|---|---|---|---|---|---|---|---|---|
+| W01 | Capture an idea and its source | Operator selects an email, conversation, filing or link. | Original message/export, URL, timestamp, attachment. | Attributed evidence item linked to a draft case, or explicit discard. | “i log my trades and write my notes but then idk if its even helping?” [P03](https://www.reddit.com/r/Daytrading/comments/1szvtye/what_journal_do_you_guys_use/) | Per selected idea; count unknown. | Sender/source → operator; no sender obtains trading authority. | EvidenceItem, ResearchCase |
+| W02 | Identify instruments and acquire dated data | A case needs price, contract or filing evidence. | Venue identifiers, contract specification, authorized feed or supplied file. | Validated Instrument and immutable source snapshot; missing/stale flag. | “IBKR API seems to be quite awful to read.” [P07](https://www.reddit.com/r/algotrading/comments/1i2h8x1/what_is_your_data_provider/) | Per import/refresh; count unknown. | Data provider/broker → operator. | Instrument, EvidenceItem |
+| W03 | Develop a thesis and disconfirming scenario | Sufficient evidence exists to investigate. | Evidence items, chart captures, assumptions. | Written thesis, competing explanation, invalidation condition and no-trade option. | “used tradersync before that, i mean i log my trades and write my notes but then idk if its even helping?” [P03](https://www.reddit.com/r/Daytrading/comments/1szvtye/what_journal_do_you_guys_use/) | Per investigated case; count unknown. | Operator; optional reviewer only by consent. | ResearchCase, EvidenceItem |
+| W04 | Run a reproducible experiment | Operator requests a strategy or scenario test. | Versioned dataset, code/configuration, assumptions, fee/fill model. | ExperimentRun with inputs, revision, outputs and limitations. | No direct experiment-specific practitioner quotation collected; do not substitute a generic complaint. | Per experiment, not necessarily daily. | Operator → isolated local worker → operator. | ExperimentRun, ResearchCase, EvidenceItem |
+| W05 | Prepare a risk-bounded plan | Research supports considering an action. | Current account events, derived positions, instrument constraints, proposed exposure. | Versioned TradePlan with explicit human approval or rejection. | No direct risk-sizing practitioner quotation collected; evidence gap retained. | Per proposed trade/rebalance. | Operator retains risk and decision authority. | TradePlan, Instrument, AccountEvent |
+| W06 | Paper-test or prepare broker execution | An approved plan passes freshness/permission checks. | Plan, selected account, current broker state. | Broker acknowledgement and actual order/fill events, or an intelligible failure. Pilot itself is read-only. | “IBKR API seems to be quite awful to read.” [P07](https://www.reddit.com/r/algotrading/comments/1i2h8x1/what_is_your_data_provider/) | Per submitted action; count unknown. | Operator → existing broker interface → broker acknowledgement. | TradePlan, AccountEvent |
+| W07 | Monitor status and exceptions | A subscribed event arrives, or freshness expires. | Broker/feed events, alert rules, laptop availability. | Timestamped status, stale flag, missed-event/reconciliation task. | “Alerts are being sent out with delays ranging from a few seconds to several minutes” [P04](https://www.reddit.com/r/TradingView/comments/1dap1qu/ongoing_issues_with_alert_webhook_delays_on/) | Event-driven while laptop awake; no 24/7 guarantee. | External feed → local process → operator. | AccountEvent, EvidenceItem, TradePlan |
+| W08 | Reconcile fills, fees, cash and corrections | Statement/export arrives, or connection recovers. | Broker statements, execution IDs, prior import receipts and corrections. | Matched events plus explicit unresolved exceptions; never silently force a balance. | “This was working perfectly for several weeks, now everything is broken.” [P06](https://www.reddit.com/r/interactivebrokers/comments/1t8onmo/flex_queries_from_multiple_ip_addresses/) | Per statement/import and after recovery. | Broker → local importer → operator; broker clarification when needed. | AccountEvent, EvidenceItem, Instrument |
+| W09 | Review execution against reasoning | Reconciled events are ready for review. | Original case/plan, fills, chart evidence, fees and exception state. | Review attached to the original case; deviations and unanswered questions preserved. | “My broker doesnt show me entry/close of past trades in the chart which makes it hard to review just by looking at the chart.” [P02](https://www.reddit.com/r/Daytrading/comments/1nxwpa4/how_do_you_journal/) | Proposed daily/weekly review; actual cadence unknown. | Operator; optional mentor via explicit redacted export. | ResearchCase, TradePlan, AccountEvent, EvidenceItem |
+| W10 | Prepare bookkeeping/tax evidence | Reporting period closes or accountant asks a question. | Accepted events, original statements, FX assumptions and unresolved differences. | Versioned accountant pack and acknowledgement; no automatic filing or tax conclusion. | “I've been talking for several months with my accountant and Interactive Brokers about a big mismatch in some tax reports” [P08](https://www.reddit.com/r/interactivebrokers/comments/ku2lgm/forex_pl_details_statement_doubt_proceeds_in_gbp/) | Per reporting period/request; count unknown. | Operator ↔ accountant ↔ broker. | AccountEvent, EvidenceItem, ResearchCase |
+
+[analysis] W04 and W05 deliberately retain quotation gaps. The eight complaints in Stage 1 meet the count requirement but do not prove every workflow step has been interviewed. W08 also needs the specific exercise/assignment distinction raised in [P05](https://www.reddit.com/r/interactivebrokers/comments/17cz6zq/need_help_understanding_the_performance_statement/); the user's interpretation is not accounting ground truth.
+
+## The six-object spine
+
+[analysis] This is a proposed interchange contract, not application code, an implemented schema or a second authoritative broker ledger.
+
+| Object | Identity and invariant | What must not be collapsed |
+|---|---|---|
+| Instrument | Internal ID plus versioned venue/broker identifiers, asset type, currency and contract specification. | Equity ticker, option contract, crypto asset, prediction-market condition and outcome token are different identities. |
+| EvidenceItem | Source locator, captured-at time, event/as-of time where supplied, content hash, rights/retention label. Preserve the original bytes. | Retrieval time is not the time the information became knowable. A screenshot is not a structured fill. |
+| ResearchCase | Thesis, evidence links, uncertainty, invalidation condition, subsequent review entries. | Original belief and hindsight review; append revisions rather than rewrite history. |
+| ExperimentRun | Case ID, dataset/config/code revisions, environment receipt, simulation assumptions and result artifact links. | Simulated fills and actual fills; fitted results and held-out observations. |
+| TradePlan | Case/instrument/account references, proposed exposure, constraints, version and approval state. | Recommendation, human approval, order request and completed execution. |
+| AccountEvent | Source account/event identifiers, type, quantities, currency, timestamps, fees, original evidence and superseding/correction links. | Order, partial fill, cancellation, cash transfer, funding, corporate action, assignment, exercise and settlement. |
+
+[analysis] Positions, cash balances, P&L and portfolio views are derived projections with an as-of boundary. A journal group may contain several executions; an execution must not be duplicated simply because it appears in both a broker export and a later statement. Corrections need a traceable supersession path, not deletion of the original evidence.
+
+[analysis] These shared identities make a coherent operating workflow plausible. They do not make every surrounding tool part of one product. Email, market data, brokerage and professional accounting retain their own systems and authority. The super-app owns the user's evidence/decision/review links, not the exchange or custodian.
+
+## The chat surface: useful, but not invented demand
+
+[analysis] A participant's actual use of WhatsApp, Telegram, Discord, SMS, Instagram, email or phone has not been established. Do not fabricate inbound customer orders for an own-account trader. The first importer should accept user-selected files, pasted source links and consented message exports. No inbox scraping, credential collection or automatic message forwarding is authorized by this blueprint.
+
+[analysis] The proposed transition is **conversation → attributed EvidenceItem → draft ResearchCase**, and only later, after deliberate operator action, a TradePlan. A message saying “buy” is not authorization to place an order. Sender identity and quoted assertions must remain attached to the original source. Replying to a sender is a separate permission from reading an exported message.
+
+[analysis] Five candidate repeated intents to validate: (1) What changed in this case? (2) Which fills or fees are unexplained? (3) What exposure does the current plan add? (4) Why did I enter or exit? (5) Which records does my accountant need? These are interview hypotheses, not observed message-volume statistics. The operator answers; response-time and escalation targets remain unmeasured.
+
+## First acceptance slice
+
+[analysis] Start with W08 → W09 using an operator-supplied statement plus existing notes. Preserve raw files, import idempotently, show unresolved differences, and link accepted events to reasoning. A second reader should be able to recover the original source and explain the transformation. Test a duplicate import, partial fill, correction, missing fee, wrong currency, unmatched instrument and laptop sleep/recovery case. None of those tests has been executed in this research pass.
