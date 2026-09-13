@@ -1,0 +1,36 @@
+name: SaaS candidate expansion receipts
+on:
+  push:
+    branches: [research/saas-base-stack-20260913]
+    paths: [.github/workflows/saas-base-stack-candidate-expansion.yml]
+permissions: {}
+jobs:
+  public-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Inspect additional public source candidates
+        env:
+          PYTHONUNBUFFERED: '1'
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          python3 - <<'PY'
+          import ast,textwrap,urllib.request
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/649134b513b554ac2a9a0f56db3e53dbca088092/.github/workflows/saas-base-stack-public-git-receipts.yml'
+          with urllib.request.urlopen(url,timeout=30) as response: original=response.read().decode()
+          code=textwrap.dedent(original.split("          python3 - <<'PY'\n",1)[1].split('\n          PY\n',1)[0])
+          names={'go-vikunja/vikunja':'W05','polarsource/polar':'W04','wasp-lang/open-saas':'W03','nextjs/saas-starter':'W03','laravel/cashier-stripe':'W04','getfider/fider':'W07','getpaykit/paykit':'W04','Kozea/Radicale':'W05','bradenmacdonald/ofx-js':'W09','open-telemetry/opentelemetry-proto':'W08','integrallis/stripe_event':'W04','spatie/laravel-stripe-webhooks':'W04','thunderbird/appointment':'W05','msgbyte/tianji':'W07','Openpanel-dev/openpanel':'W07','kdeldycke/awesome-iam':'W03','activemerchant/active_merchant':'W04','postalserver/postal':'W06','wal-g/wal-g':'W10'}
+          code=code.replace('def save(path,data):','names='+repr(names)+'\nselected=set(names)\ndef save(path,data):')
+          code=code.replace("f.lower().startswith(('readme','license','licence','copying','notice'))]", "(f.lower().startswith(('readme','license','licence','copying','notice')) or f in ('MIT-LICENSE','MIT-LICENCE'))]")
+          code=code.replace("out['all_license_paths']=[f for f in allfiles", "targets += [f for f in allfiles if f in ('docs/README.md','docs/index.md','README.rst') or f == 'mkdocs.yml']\n            out['all_license_paths']=[f for f in allfiles")
+          ast.parse(code)
+          exec(compile(code,'pinned-additional-public-source-collector','exec'))
+          PY
+      - name: Preserve additional source receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: saas-candidate-expansion-receipts
+          path: git-receipts/
+          if-no-files-found: error
+          retention-days: 3
