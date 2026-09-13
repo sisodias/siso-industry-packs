@@ -1,0 +1,1104 @@
+[
+  {
+    "full_name": "jtranq/polyfill-rs",
+    "requested_name": "jtranq/polyfill-rs",
+    "id": 1024570714,
+    "url": "https://github.com/jtranq/polyfill-rs",
+    "stars": 226,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "851c1b0396ae86a7934d331062b39e2ae4b2daba",
+    "last_commit_date": "2026-09-12T17:09:09Z",
+    "archived": false,
+    "fork": false,
+    "description": "The Fastest Polymarket Rust Client",
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]",
+      "MIT License",
+      "Copyright (c) 2025-2026 Julius Tranquilli and contributors",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Live Demo",
+      "## Quick Start",
+      "## Performance Comparison",
+      "### Memory Architecture",
+      "### Architectural Principles",
+      "### Measured Network Improvements",
+      "## License"
+    ],
+    "recent_commit_count": 107,
+    "recent_authors_sample50": [
+      "jtranq"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jtranq/polyfill-rs/issues/23",
+        "createdAt": "2026-03-23T18:03:15Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-03-24T15:26:01Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-03-28T21:32:17Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-06-16T18:17:52Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/jtranq/polyfill-rs/issues/26",
+        "createdAt": "2026-04-21T14:30:04Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-22T19:07:18Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-22T20:42:04Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-28T12:42:05Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".spellcheck.yml",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE-APACHE",
+      "LICENSE-MIT",
+      "README.md",
+      "assets",
+      "benches",
+      "clippy.toml",
+      "docs",
+      "examples",
+      "header.png",
+      "rustfmt.toml",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/README.md",
+        "sha256": "bd9dca5615b93152c0333764cb03312b4e03f6cd7de98dc777a5d485b6113591",
+        "bytes": 8311
+      },
+      "LICENSE-APACHE": {
+        "url": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/LICENSE-APACHE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "LICENSE-MIT": {
+        "url": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/LICENSE-MIT",
+        "sha256": "161f839b5f23809d2116aa5e37368b6387bda665ab1778020badd5a008b1fbd5",
+        "bytes": 1096
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/Cargo.toml",
+        "sha256": "2c1f4d17a2d6b486bf26b9e64b7a18c525b61853e9290b4af211a105c034a158",
+        "bytes": 3273
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jtranq/polyfill-rs/commit/851c1b0396ae86a7934d331062b39e2ae4b2daba",
+      "metadata": "https://api.github.com/repos/jtranq/polyfill-rs"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![polyfill-rs](header.png) [![Crates.io](https://img.shields.io/crates/v/polyfill-rs.svg)](https://crates.io/crates/polyfill-rs) [![Documentation](https://docs.rs/polyfill-rs/badge.svg)](https://docs.rs/polyfill-rs) [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](#license) A high-performance Polymarket Rust client with latency-optimized data structures and allocator-conscious hot paths. The `0.4.x` line is V2-native and intentionally breaking for authenticated trading flows. At the time that this project was started, `polymarket-rs-client` was a Polymarket Rust Client with a few GitHub stars, but which seemed to be unmaintained. I took on the task of creating a Rust client which could beat the benchmarks quoted in the README.md of that project, with the added constraint of also maintaining zero alloc hot paths. I also want to take a moment to clarify what zero-alloc means because I've now recieved double digit messages about this on twitter/x and telegram. In this repository the strict claim is limited to tested, warmed hot paths: existing-level book updates and selected read-side calculations are covered by no-heap-traffic tests that count allocations, reallocations, and deallocations. Snapshot churn, first-seen books, and new price levels can still touch the allocator by design. Notably order book paths that can touch the allocator by design: - First time seeing a token/book (HashMap insert + key clone):",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](#license)",
+      "A high-performance Polymarket Rust client with latency-optimized data structures and allocator-conscious hot paths. The `0.4.x` line is V2-native and intentionally breaking for authenticated trading flows.",
+      "At the time that this project was started, `polymarket-rs-client` was a Polymarket Rust Client with a few GitHub stars, but which seemed to be unmaintained. I took on the task of creating a Rust client which could beat the benchmarks quoted in the README.md of",
+      "I also want to take a moment to clarify what zero-alloc means because I've now recieved double digit messages about this on twitter/x and telegram. In this repository the strict claim is limited to tested, warmed hot paths: existing-level book updates and sele",
+      "```rust",
+      "| Operation | Metric | polyfill-rs | rs-clob-client-v2 | polymarket-rs-client | Official Python Client |",
+      "- **4.2x faster** than Official Python Client",
+      "**Benchmark Methodology:** The `rs-clob-client-v2` comparison separates cold start, warm connection, steady-state typed requests, network-only byte fetches, and CPU-only parsing. The latest local live-network run was on June 22, 2026 against `https://clob.poly",
+      "Run the WS hot-path benchmark locally with `cargo bench --bench ws_hot_path`.",
+      "### Memory Architecture",
+      "Configurable book depth limiting prevents memory bloat. Hot data structures group frequently-accessed fields for cache line efficiency. Allocation-sensitive hot paths are covered by targeted no-heap-traffic tests where the implementation currently avoids alloc",
+      "## License",
+      "Licensed under either the [Apache License, Version 2.0](LICENSE-APACHE) or the",
+      "[MIT license](LICENSE-MIT), at your option."
+    ],
+    "dependency_repos": [
+      "floor-licker/polyfill-rs"
+    ]
+  },
+  {
+    "full_name": "qualiaenjoyer/polymarket-apis",
+    "requested_name": "qualiaenjoyer/polymarket-apis",
+    "id": 918420403,
+    "url": "https://github.com/qualiaenjoyer/polymarket-apis",
+    "stars": 194,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "2d883ed84ae99555bbceeb0959d05ccd1ef39f20",
+    "last_commit_date": "2026-09-13T12:34:29Z",
+    "archived": false,
+    "fork": false,
+    "description": "Unified Polymarket v2 APIs with Pydantic data validation - Clob, Gamma, Data, Web3, Websockets, GraphQL clients.",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Polymarket Mental Models",
+      "### Events, Markets and Outcomes",
+      "### Tokens",
+      "### Splits and Merges",
+      "### Unified Order Book",
+      "### Negative Risk and Conversions",
+      "## Clients overview",
+      "### PolymarketReadOnlyClobClient",
+      "### PolymarketClobClient",
+      "### PolymarketGammaClient",
+      "### PolymarketDataClient",
+      "### `PolymarketWeb3Client` / `PolymarketGaslessWeb3Client`",
+      "### AsyncPolymarketWebsocketsClient / PolymarketWebsocketsClient",
+      "### PolymarketGraphQLClient / AsyncPolymarketGraphQLClient"
+    ],
+    "recent_commit_count": 184,
+    "recent_authors_sample50": [
+      "dependabot[bot]",
+      "qualiaenjoyer"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/qualiaenjoyer/polymarket-apis/issues/110",
+        "createdAt": "2026-06-30T19:52:55Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-04T19:08:47Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-05T19:14:26Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-20T19:41:06Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/qualiaenjoyer/polymarket-apis/issues/95",
+        "createdAt": "2026-06-05T22:54:11Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-08T23:49:57Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-06-09T22:29:44Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "README.md",
+      "pyproject.toml",
+      "src",
+      "tests",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/qualiaenjoyer/polymarket-apis/blob/2d883ed84ae99555bbceeb0959d05ccd1ef39f20/README.md",
+        "sha256": "03063e6025d0b8d23851b4bf661e2ec2a8a86b7551df95796c780931c725d9c4",
+        "bytes": 16421
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/qualiaenjoyer/polymarket-apis/blob/2d883ed84ae99555bbceeb0959d05ccd1ef39f20/pyproject.toml",
+        "sha256": "adf068fa128d9ea8fc0105b8588d11f291e9232bdde499318380777632f08131",
+        "bytes": 8087
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/qualiaenjoyer/polymarket-apis/commit/2d883ed84ae99555bbceeb0959d05ccd1ef39f20",
+      "metadata": "https://api.github.com/repos/qualiaenjoyer/polymarket-apis"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# polymarket-apis [![PyPI version](https://img.shields.io/pypi/v/polymarket-apis.svg)](https://pypi.org/project/polymarket-apis/) Unified Polymarket v2 APIs with Pydantic data validation - Clob, Gamma, Data, Web3, Websockets, GraphQL clients. ## Polymarket Mental Models ###",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- get market microstructure parameters by `condition_id` (`get_clob_market_info`) - tokens, tick size, minimum order size, fees, rewards, RFQ flags, and order-age settings",
+      "- get `GammaMarkets` with pagination and filtering by `slug`, `market_id`, `token_id`, `condition_id`, `tag_id`, active/closed/archived status, liquidity window, volume window, start date window, end date window, and ordering",
+      "- get `Events` with pagination and filtering by `slug`, `event_id`, `tag_id`, active/closed/archived status, liquidity window, volume window, start date window, end date window, and ordering",
+      "- tracks whether the local market book state is synchronized after a full snapshot",
+      "- pass `local_order_books=LocalOrderBookStore()` to update local order books directly in the socket reader before callback queue processing",
+      "```python",
+      "```python",
+      "```python",
+      "```python"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "TechieBoy/polymarket-rs-client",
+    "requested_name": "TechieBoy/polymarket-rs-client",
+    "id": 894022902,
+    "url": "https://github.com/TechieBoy/polymarket-rs-client",
+    "stars": 85,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c4bbe22fa5f89805b273730bc11e6ab3d0da4f4d",
+    "last_commit_date": "2025-05-24T13:49:09Z",
+    "archived": false,
+    "fork": false,
+    "description": "A rust client for interacting with polymarket.",
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2024 Sanket Shanbhag"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Rust Client &emsp; [![Latest Version]][crates.io] [![Docs Badge]][docs]",
+      "## Why use this instead of the official client?",
+      "## Installing",
+      "## Usage"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/TechieBoy/polymarket-rs-client/issues/11",
+        "createdAt": "2025-11-29T14:13:23Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/TechieBoy/polymarket-rs-client/issues/7",
+        "createdAt": "2025-06-01T12:38:41Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/TechieBoy/polymarket-rs-client/blob/c4bbe22fa5f89805b273730bc11e6ab3d0da4f4d/README.md",
+        "sha256": "ea34805c0f5bc62fcd2eabd0ea4d70c933d1bf5401fae6761550608796eccac3",
+        "bytes": 2758
+      },
+      "LICENSE": {
+        "url": "https://github.com/TechieBoy/polymarket-rs-client/blob/c4bbe22fa5f89805b273730bc11e6ab3d0da4f4d/LICENSE",
+        "sha256": "06e6ab9e67191ab7ea116ba0e13c0451ff7e63f49026761d3e624619eec27ad6",
+        "bytes": 11345
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/TechieBoy/polymarket-rs-client/blob/c4bbe22fa5f89805b273730bc11e6ab3d0da4f4d/Cargo.toml",
+        "sha256": "2f03555153401caab3d5aef82893132c8c0f7e5911e4474fb9d2d3f4689df941",
+        "bytes": 1011
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/TechieBoy/polymarket-rs-client/commit/c4bbe22fa5f89805b273730bc11e6ab3d0da4f4d",
+      "metadata": "https://api.github.com/repos/TechieBoy/polymarket-rs-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Polymarket Rust Client &emsp; [![Latest Version]][crates.io] [![Docs Badge]][docs] [Latest Version]: https://img.shields.io/crates/v/polymarket-rs-client.svg [crates.io]: https://crates.io/crates/polymarket-rs-client [Docs Badge]: https://docs.rs/polymarket-rs-client/badge.svg [docs]: https://docs.rs/polymarket-rs-client An async rust client for interacting with [Polymarket](https://polymarket.com/). > [!NOTE] > This code is still in active developement and alpha quality. Use at your own risk. ## Why use this instead of the official client? 1. You get to write Rust! 2. Most calls are anywhere from 1.5x to upto 4x faster. 3. Upto 10x less memory usage. Some benchmarks on my machine: | | polymarket-rs-client | Official Python client | |-------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------| | Create a order with EIP-712 signature. | **266.5 ms \u00b1 28.6 ms** | 1.127 s \u00b1 0.047 s | | Fetch and parse json(simplified markets). | **404.5 ms \u00b1 22.9 ms** | 1.366 s \u00b1 0.048 s | | Fetch markets. Mem usage | **88,053 allocs, 81,823 frees, 15,945,966 bytes allocated** | 211,898 allocs, 202,962 frees, 128,457,588 bytes allocated | ## Installing ```sh cargo add polymarket-rs-client ``` The client internally uses a reqwest [`Client`](https://docs.rs/reqwest/latest/reqwest/struct.Client.html), so you will also need the `tokio` runtime. ```sh cargo add -F rt-multi-thread,macros tokio",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "# Polymarket Rust Client &emsp; [![Latest Version]][crates.io] [![Docs Badge]][docs]",
+      "An async rust client for interacting with [Polymarket](https://polymarket.com/).",
+      "1. You get to write Rust!",
+      "3. Upto 10x less memory usage.",
+      "| | polymarket-rs-client | Official Python client |",
+      "For representing order amounts and sizes, the client uses the `rust-decimal` crate. It is recommended to install this crate as well.",
+      "cargo add rust-decimal",
+      "```rust",
+      "The `ClobClient` implements the same API as the [official python client](https://github.com/Polymarket/py-clob-client). All available functions are listed in the [docs](https://docs.rs/polymarket-rs-client/latest/polymarket_rs_client/struct.ClobClient.html)."
+    ],
+    "dependency_repos": [
+      "Polymarket/py-clob-client"
+    ]
+  },
+  {
+    "full_name": "0xNetuser/Polymarket-golang",
+    "requested_name": "0xNetuser/Polymarket-golang",
+    "id": 1119662897,
+    "url": "https://github.com/0xNetuser/Polymarket-golang",
+    "stars": 76,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c632343dce50e5068aa68b4ea3cfc12a4c8a1473",
+    "last_commit_date": "2026-05-20T09:58:48Z",
+    "archived": false,
+    "fork": false,
+    "description": "Polymarket Clob Golang Client",
+    "language": "Go",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Go SDK",
+      "## Features",
+      "## What's new in v0.3.0",
+      "### WebSocket (real-time book + user events)",
+      "### Wrap USDC.e \u2192 pUSD (CollateralOnramp)",
+      "### Bridge (cross-chain deposits)",
+      "### Rewards / Rebates",
+      "### Data API + Gamma API",
+      "## V2 quick start",
+      "## Installation",
+      "## Quick Start",
+      "### Level 0 \u2014 read-only",
+      "### Level 1 \u2014 private key, derive API key",
+      "### Level 2 \u2014 place a V2 limit order",
+      "### POLY_1271 (Deposit Wallet, smart-contract wallet)",
+      "### Order types",
+      "### Market order (V2)",
+      "### Auto balance protection (V2 only)",
+      "## Examples",
+      "### Heartbeat API",
+      "## Web3 Clients",
+      "### PolymarketWeb3Client (Pay Gas)",
+      "### PolymarketGaslessWeb3Client (No Gas)",
+      "## V2-only",
+      "## Environment Variables",
+      "## References",
+      "## Breaking changes (V2 migration)",
+      "## License",
+      "## Contributing"
+    ],
+    "recent_commit_count": 11,
+    "recent_authors_sample50": [
+      "netuser"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/0xNetuser/Polymarket-golang/issues/7",
+        "createdAt": "2026-05-20T15:06:15Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-23T08:53:23Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-05-28T02:55:16Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/0xNetuser/Polymarket-golang/issues/6",
+        "createdAt": "2026-04-19T23:53:03Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-20T08:43:54Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "README.md",
+      "README_zh.md",
+      "examples",
+      "go.mod",
+      "go.sum",
+      "polymarket"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/0xNetuser/Polymarket-golang/blob/c632343dce50e5068aa68b4ea3cfc12a4c8a1473/README.md",
+        "sha256": "920521d83ad63006b11d8213993516ffc925deec6781423da5da27cf2aeaeb16",
+        "bytes": 13460
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/0xNetuser/Polymarket-golang/commit/c632343dce50e5068aa68b4ea3cfc12a4c8a1473",
+      "metadata": "https://api.github.com/repos/0xNetuser/Polymarket-golang"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Polymarket Go SDK [English](README.md) | [\u4e2d\u6587](README_zh.md) A comprehensive Go SDK for the Polymarket CLOB. Aligned with both [py-clob-client](https://github.com/Polymarket/py-clob-client) (V1, archived 2026-05) and [py-clob-client-v2](https://github.com/Polymarket/py-clob-client-v2) (V2,",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "A comprehensive Go SDK for the Polymarket CLOB. Aligned with both [py-clob-client](https://github.com/Polymarket/py-clob-client) (V1, archived 2026-05) and [py-clob-client-v2](https://github.com/Polymarket/py-clob-client-v2) (V2, current).",
+      "- \u2705 **V2-native** \u2014 aligned with `py-clob-client-v2` (V1 was archived 2026-05)",
+      "Read deadline (3.5\u00d7 ping) auto-resets on every frame \u2014 no more silent freeze on",
+      "### Wrap USDC.e \u2192 pUSD (CollateralOnramp)",
+      "// approve(USDC.e \u2192 Onramp) + Onramp.wrap(USDC.e, recipient, amount) in one relay tx",
+      "`examples_local/gasless_batch_redeem/`).",
+      "Used by example programs:",
+      "- [py-clob-client-v2](https://github.com/Polymarket/py-clob-client-v2) \u2014 official Python V2 client (this SDK targets parity)",
+      "- [py-clob-client](https://github.com/Polymarket/py-clob-client) \u2014 V1 (archived 2026-05)",
+      "## License",
+      "This project is licensed under the MIT License."
+    ],
+    "dependency_repos": [
+      "Polymarket/py-clob-client",
+      "Polymarket/py-clob-client-v2"
+    ]
+  },
+  {
+    "full_name": "0-don/polymarket-wallet-recovery",
+    "requested_name": "0-don/polymarket-wallet-recovery",
+    "id": 1131442596,
+    "url": "https://github.com/0-don/polymarket-wallet-recovery",
+    "stars": 10,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "66fb2f376eaed784ea27da786360e63821876c82",
+    "last_commit_date": "2026-01-10T03:06:34Z",
+    "archived": false,
+    "fork": false,
+    "description": "Recover USDC and prediction market positions from Polymarket smart contract wallets (Proxy & Safe). Sell positions, redeem winnings, and withdraw funds directly.",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Wallet Recovery Tools",
+      "## What This Solves",
+      "## Features",
+      "## Prerequisites",
+      "## Quick Start",
+      "## What the Script Does",
+      "## Configuration",
+      "## Wallet Types Explained",
+      "## Important Notes",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/0-don/polymarket-wallet-recovery/issues/2",
+        "createdAt": "2026-05-08T16:49:27Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/0-don/polymarket-wallet-recovery/issues/1",
+        "createdAt": "2026-03-16T08:52:21Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W05",
+        "lane": "format",
+        "query": "ERC1155 prediction"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "README.md",
+      "package.json",
+      "src",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/0-don/polymarket-wallet-recovery/blob/66fb2f376eaed784ea27da786360e63821876c82/README.md",
+        "sha256": "86d9b2695d3fc35b58afabb20d11e263d031bbde2d7f4adadb83c83621a1dcfc",
+        "bytes": 3379
+      },
+      "package.json": {
+        "url": "https://github.com/0-don/polymarket-wallet-recovery/blob/66fb2f376eaed784ea27da786360e63821876c82/package.json",
+        "sha256": "62a2b0b949dbc472ca7beed5ecb7f1f8d4230e4103fbaf5bf47a8b0770d646db",
+        "bytes": 280
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/0-don/polymarket-wallet-recovery/commit/66fb2f376eaed784ea27da786360e63821876c82",
+      "metadata": "https://api.github.com/repos/0-don/polymarket-wallet-recovery"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Polymarket Wallet Recovery Tools Recover funds stuck in Polymarket smart contract wallets. If you've lost access to your Polymarket account or have funds trapped",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "| Proxy       | Email/Magic login | No\\*              | Requires MagicLink for trading |",
+      "- This tool requires MATIC for gas fees",
+      "## License"
+    ],
+    "dependency_repos": [
+      "0-don/polymarket-wallet-recovery.git"
+    ]
+  },
+  {
+    "full_name": "SiegfriedBz/Bet2Gether-DApp",
+    "requested_name": "SiegfriedBz/Bet2Gether-DApp",
+    "id": 1085036721,
+    "url": "https://github.com/SiegfriedBz/Bet2Gether-DApp",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "25d8d041b1f30185002067a32cbafe2f4b9ec04b",
+    "last_commit_date": "2026-05-18T16:20:04Z",
+    "archived": false,
+    "fork": false,
+    "description": "\ud83c\udfb2 Trustless prediction markets driven by decentralized data. Automated settlement via Chainlink Price Feeds and Automation with zero admin intervention. Built with Next.js, Solidity, Foundry, wagmi, and nuqs for server-side state sync.",
+    "language": "Solidity",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "# MIT License",
+      "Copyright (c) 2025 [Siegfried Bozza](https://github.com/SiegfriedBz)",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Bet2Gether \u2014 A Web3 Prediction Markets Case Study",
+      "## Try the Live Demo",
+      "## Why",
+      "## Solution",
+      "## Features in Action",
+      "### Create a round and bet",
+      "### Autonomous resolution by Chainlink Automation",
+      "### Reward bridge: Tenderly + Chainlink VRF",
+      "### Pull-payment claim",
+      "## Architecture",
+      "#### System overview : autonomous resolution and Event-driven reward bridge",
+      "#### Key patterns",
+      "## Tech Stack",
+      "## Test Metrics",
+      "## Setup (Deployment and Verification)",
+      "### Deployed addresses (Sepolia)",
+      "### Contracts",
+      "### Frontend",
+      "### Tenderly Web3 Action",
+      "## Roadmap",
+      "## Author"
+    ],
+    "recent_commit_count": 8,
+    "recent_authors_sample50": [
+      "SiegfriedBz",
+      "vercel[bot]"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W05",
+        "lane": "format",
+        "query": "ERC1155 prediction"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "be",
+      "fe",
+      "web3-actions"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/SiegfriedBz/Bet2Gether-DApp/blob/25d8d041b1f30185002067a32cbafe2f4b9ec04b/README.md",
+        "sha256": "5506d2866719e53fad7ca1d2877ccae0c48a268a22f436a81825a7753b906497",
+        "bytes": 12381
+      },
+      "LICENSE": {
+        "url": "https://github.com/SiegfriedBz/Bet2Gether-DApp/blob/25d8d041b1f30185002067a32cbafe2f4b9ec04b/LICENSE",
+        "sha256": "12dc2b140fcae4ea594a0ae6d917a7c2bd472996c28afc5d040321ab6f11f4db",
+        "bytes": 1108
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/SiegfriedBz/Bet2Gether-DApp/commit/25d8d041b1f30185002067a32cbafe2f4b9ec04b",
+      "metadata": "https://api.github.com/repos/SiegfriedBz/Bet2Gether-DApp"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://bet2gether-alpha.vercel.app) ![CI-Foundry](https://github.com/SiegfriedBz/Bet2Gether-DApp/actions/workflows/foundry-tests.yml/badge.svg) ![Foundry](https://img.shields.io/badge/Foundry-Tests-informational) [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) # Bet2Gether \u2014 A Web3 Prediction Markets Case Study Bet2Gether is an experiment in running binary prediction markets where settlement and reward draws stay outside any operator's hands. Players bet ETH on whether a **Chainlink price feed** will close above or below a target by a deadline. Settlement is triggered by **Chainlink Automation**, the winning side splits a time-weighted pool (earlier bets carry more weight), and round creators that win receive a **Chainlink VRF**\u2013randomized **ERC-1155** collectible minted by a **Tenderly Web3 Action** bridge. **[Live demo](https://bet2gether-alpha.vercel.app)** --- ## Try the Live Demo To explore the live demo, you need a browser wallet ([MetaMask](https://metamask.io/) works) funded with Ethereum Sepolia ETH \u2014 grab some free from the faucet below. No local setup required. 1. Open the **[live demo](https://bet2gether-alpha.vercel.app)**. 2. Connect a wallet on **Ethereum Sepolia**. 3. Create a round (pick a Chainlink feed, target price, side, duration), or bet on an active round. 4. After the deadline, Chainlink Automation resolves the round; winners pull their share with **Claim Rewards**. Need testnet ETH? [Sepolia Faucet](https://sepolia-faucet.pk910.de/) ![Desktop tour](assets/desktop-tour.gif) --- ##",
+    "license_excerpt": "# MIT License Copyright (c) 2025 [Siegfried Bozza](https://github.com/SiegfriedBz) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)",
+      "To explore the live demo, you need a browser wallet ([MetaMask](https://metamask.io/) works) funded with Ethereum Sepolia ETH \u2014 grab some free from the faucet below. No local setup required.",
+      "- **Operator-settled markets.** An admin or off-chain keeper picks the price, calls `resolve()`, and decides who gets paid. The value proposition of trust-minimized outcomes then rests on trusting that one entity.",
+      "- **Permissionless on-chain markets without a keeper.** Somebody still has to trigger resolution. If users do it, settlement is gameable (winners delay, losers grief). If a single bot does it, the trust assumption shifts back to that operator.",
+      "Reward distribution can introduce a second trust hole: random rewards driven by `block.hash`, `block.timestamp`, or admin-picked `tokenId`s are predictable or manipulable, especially by miners/validators or the operator themselves.",
+      "Set `ALCHEMY_SEPOLIA_RPC_URL`, `PRIVATE_KEY`, and `ETHERSCAN_API_KEY` in `be/.env`. Allow-listed feeds and VRF parameters live in [`be/script/Constants_PredictionPool.sol`](be/script/Constants_PredictionPool.sol) and [`be/script/Constants_PredictionPoolToken.s",
+      "`fe/.env` requires `NEXT_PUBLIC_ETH_SEPOLIA_ALCHEMY_HTTP_URL`, `NEXT_PUBLIC_ETH_SEPOLIA_ALCHEMY_WS_URL`, and `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`. Network config: [`fe/app/_config/wagmi.ts`](fe/app/_config/wagmi.ts)."
+    ],
+    "dependency_repos": [
+      "SiegfriedBz/Bet2Gether-DApp"
+    ]
+  },
+  {
+    "full_name": "wgw31king/binary-prediction-market-mvp",
+    "requested_name": "wgw31king/binary-prediction-market-mvp",
+    "id": 1228685738,
+    "url": "https://github.com/wgw31king/binary-prediction-market-mvp",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "be6ee7d6ee979d0f479dca60370dc71202d7b251",
+    "last_commit_date": "2026-05-04T11:08:48Z",
+    "archived": false,
+    "fork": false,
+    "description": "Minimal binary (YES/NO) prediction market MVP: ERC20 collateral, ERC1155 positions, parimutuel payouts. Built with Solidity, OpenZeppelin & HardHat 3. For educational/MVP use only.",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Mvp-polymarket contributors",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Mvp-polymarket",
+      "## Features",
+      "## \u4e2d\u6587\u6982\u8981",
+      "## Requirements",
+      "## Setup",
+      "## Test & compile",
+      "## Deploy",
+      "## Contract layout",
+      "## Events",
+      "## License"
+    ],
+    "recent_commit_count": 6,
+    "recent_authors_sample50": [
+      "wgw31king"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W05",
+        "lane": "format",
+        "query": "ERC1155 prediction"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "contracts",
+      "hardhat.config.ts",
+      "package-lock.json",
+      "package.json",
+      "scripts",
+      "test",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/wgw31king/binary-prediction-market-mvp/blob/be6ee7d6ee979d0f479dca60370dc71202d7b251/README.md",
+        "sha256": "7c4680cf6b064d2b26ee177245114765dcce990e286e8c85b51f682ef6113050",
+        "bytes": 3322
+      },
+      "LICENSE": {
+        "url": "https://github.com/wgw31king/binary-prediction-market-mvp/blob/be6ee7d6ee979d0f479dca60370dc71202d7b251/LICENSE",
+        "sha256": "a9c441a7bd5d0a5e323cd951fc99c63400356628c55502d7cfb5e2058b88aa5c",
+        "bytes": 1084
+      },
+      "package.json": {
+        "url": "https://github.com/wgw31king/binary-prediction-market-mvp/blob/be6ee7d6ee979d0f479dca60370dc71202d7b251/package.json",
+        "sha256": "ff26ef1e486669f37cbbb5810fa0d7d21fbc373d61a9354dbac8938eb0564c96",
+        "bytes": 856
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/wgw31king/binary-prediction-market-mvp/commit/be6ee7d6ee979d0f479dca60370dc71202d7b251",
+      "metadata": "https://api.github.com/repos/wgw31king/binary-prediction-market-mvp"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Mvp-polymarket Minimal **binary (YES / NO) prediction market**: users stake an ERC20 collateral (e.g. USDT), receive **ERC1155** position tokens, resolver declares the outcome, winners redeem **parimutuel** payouts. Built with **Solidity**, **OpenZeppelin**, **HardHat 3**. **Disclaimer:** This is educational / MVP code. It uses a **centralized resolver**, has **not been audited**, and may not comply with regulations in your jurisdiction. Use at your own risk. --- ## Features - **Roles:** `DEFAULT_ADMIN_ROLE`, `MARKET_ADMIN_ROLE` (create / cancel markets), `RESOLVER_ROLE` (resolve after deadline). - **Trading:** `buyShares(marketId, isYes, amount)` pulls collateral 1:1 and mints ERC1155 ids `tokenId = (marketId << 1) | (isYes ? 0 : 1)`. - **Settlement:** `resolve` after `endTime`; `claim` / `claimAll` burn winning tokens and pay `payout = collateral * amount / winningShares` (internal accounting stays consistent across partial claims). - **Cancellation:** `cancelMarket` while open; `refundCancelled` burns tokens and returns collateral 1:1. - **Safety:** `ReentrancyGuard` on `buyShares`, `claim`, `claimAll`, `refundCancelled`; `SafeERC20`; **no peer-to-peer ERC1155 transfers** (mint/burn only). --- ## \u4e2d\u6587\u6982\u8981 - **\u7ba1\u7406\u5458** \u521b\u5efa\u5e02\u573a\uff08\u5143\u6570\u636e URI + `endTime`\uff09\uff0c\u53ef **\u53d6\u6d88** \u5f00\u653e\u4e2d\u7684\u5e02\u573a\u3002 - **\u7528\u6237** \u7528\u62b5\u62bc\u4ee3\u5e01\uff08\u90e8\u7f72\u65f6\u7ed1\u5b9a\uff0c\u4e00\u822c\u4e3a USDT\uff09\u4e70\u5165 YES \u6216 NO \u4efd\u989d\uff08ERC1155\uff09\u3002 - **\u88c1\u51b3\u5458** \u5728\u622a\u6b62\u65f6\u95f4\u540e\u8bbe\u7f6e **YES \u6216",
+    "license_excerpt": "MIT License Copyright (c) 2026 Mvp-polymarket contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Local (default EDR network)** \u2014 deploys `MockERC20` collateral + `PredictionMarket`:",
+      "npm run deploy:local",
+      "| `USDT_ADDRESS`  | Collateral ERC20; if empty locally, script deploys a mock  |",
+      "| [`contracts/mocks/MockERC20.sol`](contracts/mocks/MockERC20.sol) | Test / local collateral |",
+      "## License",
+      "MIT \u2014 see [LICENSE](LICENSE)."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "GeiserX/DeclaRenta",
+    "requested_name": "GeiserX/DeclaRenta",
+    "id": 1207185051,
+    "url": "https://github.com/GeiserX/DeclaRenta",
+    "stars": 47,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c48e8422a9b9340904a18b7fc865fc31bad656e3",
+    "last_commit_date": "2026-09-10T08:53:45Z",
+    "archived": false,
+    "fork": false,
+    "description": "Convierte informes de brokers extranjeros en declaraciones fiscales espa\u00f1olas: Modelo 100 (Renta), Modelo 720, Modelo 721 (cripto) y D-6. 100% gratuito, privado y self-hosted.",
+    "language": "TypeScript",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Despliegue r\u00e1pido",
+      "## El problema",
+      "## Brokers soportados",
+      "## Modelos fiscales",
+      "## Casillas del Modelo 100",
+      "## Interfaz web",
+      "## Inicio r\u00e1pido",
+      "### Web (recomendado)",
+      "### Docker",
+      "# Web (nginx)",
+      "# CLI",
+      "### CLI",
+      "# Informe Modelo 100 (JSON a stdout)",
+      "# Varios ficheros de distintos brokers",
+      "# Exportar en CSV",
+      "# Exportar en PDF",
+      "# Con compensaci\u00f3n de p\u00e9rdidas de a\u00f1os anteriores (Art. 49 LIRPF)",
+      "# Modelo 720",
+      "# Modelo 720 con tipos A/M/C (comparando con declaraci\u00f3n del a\u00f1o anterior)",
+      "# Modelo D-6 (gu\u00eda AFORIX)",
+      "# Modelo D-6 con detecci\u00f3n de bajas (comparando con a\u00f1o anterior)",
+      "## Motor fiscal",
+      "## Observabilidad: traza del motor de divisas (FX)",
+      "### En la web (modo diagn\u00f3stico)",
+      "### En la CLI",
+      "# Traza a un fichero, en CSV",
+      "# Traza a stderr (sin ruta), en JSONL (por defecto)",
+      "### Formato de la traza",
+      "## Privacidad",
+      "## Desarrollo"
+    ],
+    "recent_commit_count": 407,
+    "recent_authors_sample50": [
+      "GeiserX",
+      "dependabot[bot]",
+      "github-actions[bot]"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/GeiserX/DeclaRenta/issues/282",
+        "createdAt": "2026-08-19T14:34:48Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-20T14:12:20Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/GeiserX/DeclaRenta/issues/53",
+        "createdAt": "2026-04-19T10:32:17Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-04-19T10:45:34Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-04-19T10:50:18Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-05-31T02:37:20Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-08-20T14:04:33Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".beads",
+      ".coderabbit.yaml",
+      ".dockerignore",
+      ".github",
+      ".gitignore",
+      ".mise.toml",
+      ".npmignore",
+      ".prettierrc.json",
+      "CLAUDE.md",
+      "Dockerfile",
+      "Dockerfile.web",
+      "LICENSE",
+      "README.md",
+      "ROADMAP.md",
+      "SECURITY.md",
+      "codecov.yml",
+      "docs",
+      "eslint.config.js",
+      "nginx.conf",
+      "package-lock.json",
+      "package.json",
+      "scripts",
+      "src",
+      "tests",
+      "tsconfig.eslint.json",
+      "tsconfig.json",
+      "tsconfig.test.json",
+      "tsup.config.ts",
+      "vite.config.ts",
+      "vitest.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/GeiserX/DeclaRenta/blob/c48e8422a9b9340904a18b7fc865fc31bad656e3/README.md",
+        "sha256": "fbebbb25a37e95609d920ba5c0e9744b60c621fdae670fe8758801e656642d4d",
+        "bytes": 17278
+      },
+      "LICENSE": {
+        "url": "https://github.com/GeiserX/DeclaRenta/blob/c48e8422a9b9340904a18b7fc865fc31bad656e3/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "package.json": {
+        "url": "https://github.com/GeiserX/DeclaRenta/blob/c48e8422a9b9340904a18b7fc865fc31bad656e3/package.json",
+        "sha256": "a15310a3bc9427dbb7beb48277510b77179a92b7209eaeaff48c3eef9a756ac1",
+        "bytes": 2774
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/GeiserX/DeclaRenta/commit/c48e8422a9b9340904a18b7fc865fc31bad656e3",
+      "metadata": "https://api.github.com/repos/GeiserX/DeclaRenta"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "DeclaRenta Herramienta fiscal gratuita para inversores con brokers internacionales. declarenta.com \u2014 \u00dasalo gratis, sin registro IBKR \u00b7 Degiro \u00b7 Flatex \u00b7 Scalable Capital \u00b7 eToro \u00b7 Freedom24 \u00b7 Trade Republic \u00b7 Revolut \u00b7 Lightyear \u00b7 Coinbase \u00b7 Binance \u00b7 Kraken \u00b7 Trading 212 \u2192 Modelo 100 \u00b7 Modelo 720 \u00b7 Modelo 721 \u00b7 D-6 Self-hosted \u00b7 Privacidad total \u00b7 Tus datos no salen de tu equipo --- ## Despliegue r\u00e1pido [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/GeiserX/DeclaRenta) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/GeiserX/DeclaRenta) [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/from?repoUrl=https://github.com/GeiserX/DeclaRenta) DeclaRenta es una web est\u00e1tica (Vite) \u2014 funciona en cualquier hosting de archivos est\u00e1ticos. Tambi\u00e9n disponible como imagen Docker: `drumsergio/declarenta:web`. --- ## El problema Si inviertes con un broker extranjero, hacer la renta es un infierno: - **Renta Web no importa datos** de brokers extranjeros \u2014 todo manual - **FIFO obligatorio** con tipos ECB oficiales (no los del broker) - **Regla anti-churning** (2 meses cotizados / 1 a\u00f1o no cotizados) que nadie detecta autom\u00e1ticamente - **Doble imposici\u00f3n** internacional que hay que calcular a mano - **Modelo 720** obligatorio si tus activos en el extranjero superan 50.000 EUR - **Modelo D-6** solo",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<strong>Herramienta fiscal gratuita para inversores con brokers internacionales.</strong>",
+      "<a href=\"https://github.com/GeiserX/DeclaRenta/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/GeiserX/DeclaRenta?style=flat-square&color=dc2626\" alt=\"License\"/></a>",
+      "Self-hosted \u00b7 Privacidad total \u00b7 Tus datos no salen de tu equipo",
+      "DeclaRenta es una web est\u00e1tica (Vite) \u2014 funciona en cualquier hosting de archivos est\u00e1ticos. Tambi\u00e9n disponible como imagen Docker: `drumsergio/declarenta:web`.",
+      "- **Comparativa interanual**: guarda informes en localStorage y compara variaciones a\u00f1o a a\u00f1o",
+      "### Docker",
+      "docker run -p 8080:80 drumsergio/declarenta:web",
+      "docker run --rm -v $(pwd):/data drumsergio/declarenta convert --input /data/flex_query.xml --year 2025",
+      "Para auditar o depurar c\u00f3mo se construye una cifra de divisa (casillas 1633/1637), DeclaRenta puede emitir una **traza completa de los movimientos internos del motor FX**: el libro mayor `acquire \u2192 park \u2192 unpark \u2192 discard \u2192 profit \u2192 dispose`, con el saldo del ",
+      "- O, de forma persistente, en la consola del navegador: `localStorage.declarenta_debug = \"1\"` y recargar.",
+      "- **Self-hosted**: los datos se procesan en tu equipo. La \u00fanica conexi\u00f3n externa de la app es al API del BCE para tipos de cambio (datos p\u00fablicos).",
+      "- La web guarda perfil fiscal y res\u00famenes interanuales en `localStorage` del navegador para evitar subir datos a servidores. Puedes borrarlos desde la comparativa interanual o limpiando los datos del sitio.",
+      "- [**Telegram @declarenta**](https://t.me/declarenta) \u2014 canal de novedades y discusi\u00f3n"
+    ],
+    "dependency_repos": [
+      "GeiserX/DeclaRenta",
+      "GeiserX/DeclaRenta.git",
+      "GeiserX/awesome-spain",
+      "sponsors/GeiserX"
+    ]
+  }
+]
