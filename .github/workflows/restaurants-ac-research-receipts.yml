@@ -1,0 +1,74 @@
+name: Restaurants AC public research receipts
+on:
+  push:
+    branches: [research/restaurants-ac-blueprint-20260913]
+    paths: [.github/workflows/restaurants-ac-research-receipts.yml]
+permissions:
+  contents: read
+concurrency:
+  group: restaurants-ac-public-research-20260913
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Verify commercial checkpoint and run only the pinned SISO research collector
+        shell: bash
+        run: |
+          python3 -u - <<'PY'
+          import ast, base64, hashlib, json, os, pathlib, threading, time, urllib.parse, urllib.request
+          repo = 'sisodias/siso-industry-packs'
+          revision = '45a0bcae84c22eaa60e3c6608c73e5638300c675'
+          assert os.environ['GITHUB_REPOSITORY'] == repo
+          assert os.environ['GITHUB_REF'] == 'refs/heads/research/restaurants-ac-blueprint-20260913'
+          class SafeRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, request, fp, code, msg, headers, newurl):
+                  new = super().redirect_request(request, fp, code, msg, headers, newurl)
+                  if new is not None and urllib.parse.urlsplit(request.full_url).netloc != urllib.parse.urlsplit(newurl).netloc:
+                      new.remove_header('Authorization')
+                  return new
+          urllib.request.install_opener(urllib.request.build_opener(SafeRedirect()))
+          originals = {}
+          expected = {
+              'packs/restaurants/03-companies.md': 'd3969a08c04513b92ae9bf1c77552f0d35b10c99',
+              'packs/restaurants/evidence/collect-public-sources.py': '6ff8df267593e8a1e78c4e5b19221eb7aff40c1f',
+          }
+          for path, blob in expected.items():
+              url = 'https://api.github.com/repos/'+repo+'/contents/'+path+'?ref='+revision
+              request = urllib.request.Request(url, headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'], 'Accept':'application/vnd.github+json', 'User-Agent':'siso-restaurants-ac-research'})
+              with urllib.request.urlopen(request, timeout=45) as response:
+                  obj = json.load(response)
+              raw = base64.b64decode(obj['content'], validate=False)
+              assert obj['sha'] == blob
+              assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest() == blob
+              originals[path] = raw
+          out = pathlib.Path('evidence'); out.mkdir(exist_ok=True)
+          checkpoint = {'source_revision':revision, 'files':[{ 'path':p, 'blob_sha':expected[p], 'sha256':hashlib.sha256(raw).hexdigest()} for p,raw in originals.items()], 'mode':'public research only; no application execution, deployment or repository writes'}
+          (out/'stage3-checkpoint.json').write_text(json.dumps(checkpoint, indent=2)+'\n')
+          code = originals['packs/restaurants/evidence/collect-public-sources.py'].decode('utf-8')
+          ast.parse(code)
+          # Bound aggregate request rate across the collector's three workers.
+          original_open = urllib.request.urlopen
+          lock = threading.Lock()
+          next_request = [0.0]
+          def paced_open(request, *args, **kwargs):
+              url = request.full_url if hasattr(request, 'full_url') else str(request)
+              if urllib.parse.urlsplit(url).netloc == 'api.github.com':
+                  with lock:
+                      time.sleep(max(0.0, next_request[0]-time.monotonic()))
+                      next_request[0] = time.monotonic()+0.25
+              return original_open(request, *args, **kwargs)
+          urllib.request.urlopen = paced_open
+          exec(compile(code, 'pinned-siso-public-source-collector', 'exec'), {'__name__':'__main__'})
+          PY
+      - name: Preserve public evidence including failure receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: restaurants-ac-public-evidence-${{ github.run_id }}
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 7
