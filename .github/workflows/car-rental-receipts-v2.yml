@@ -1,0 +1,27 @@
+name: Car rental research receipts v2
+on:
+  push:
+    branches: [research/car-rental-20260913]
+    paths: [.github/workflows/car-rental-receipts-v2.yml]
+permissions:
+  contents: read
+jobs:
+  public-source-receipts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Read public source evidence only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          curl --fail --silent --show-error "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/packs/car_rental/research-receipts-v2.py" -o /tmp/car-rental-receipts.py
+          python /tmp/car-rental-receipts.py
+      - name: Preserve receipts even after partial collection
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: car-rental-public-evidence
+          path: /tmp/car-rental-evidence/
+          retention-days: 7
+          if-no-files-found: error
