@@ -1,0 +1,353 @@
+{
+  "round": 6,
+  "observed_at": "2026-09-13T17:22:08.952076+00:00",
+  "prior_rounds_read": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "queries": [
+    {
+      "stage": "S04",
+      "lane": "C",
+      "artifact": "litigation LFP exchange parser",
+      "query": "\"Concordance\" \"LFP\" in:description",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=%22Concordance%22+%22LFP%22+in%3Adescription&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 1,
+      "incomplete_results": false,
+      "error": null,
+      "results": [
+        {
+          "full_name": "frisk55frisk/loadfile-tool",
+          "description": "eDiscovery load file CLI — validate, convert, and inspect Concordance DAT, OPT, LFP, DII, and EDRM XML",
+          "html_url": "https://github.com/frisk55frisk/loadfile-tool",
+          "stargazers_count": 0,
+          "archived": false,
+          "pushed_at": "2026-03-31T11:58:23Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "topics": [
+            "concordance",
+            "ediscovery",
+            "legal-tech",
+            "litigation-support",
+            "load-file",
+            "python-cli"
+          ]
+        }
+      ],
+      "new_names": []
+    },
+    {
+      "stage": "S07",
+      "lane": "C",
+      "artifact": "NIEM court-filing interchange specification",
+      "query": "\"NIEM\" \"court filing\" in:description",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=%22NIEM%22+%22court+filing%22+in%3Adescription&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 1,
+      "incomplete_results": false,
+      "error": null,
+      "results": [
+        {
+          "full_name": "cabralje/ecf5-iepd",
+          "description": "NIEM IEPD from OASIS LegalXML Electronic Court Filing 5.0",
+          "html_url": "https://github.com/cabralje/ecf5-iepd",
+          "stargazers_count": 1,
+          "archived": false,
+          "pushed_at": "2019-01-10T05:00:16Z",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          },
+          "topics": []
+        }
+      ],
+      "new_names": []
+    },
+    {
+      "stage": "S09",
+      "lane": "A",
+      "artifact": "legal pre-bill lint engine",
+      "query": "\"UTBMS\" \"linter\" in:description",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=%22UTBMS%22+%22linter%22+in%3Adescription&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 1,
+      "incomplete_results": false,
+      "error": null,
+      "results": [
+        {
+          "full_name": "kirillsakhin/billing-lint",
+          "description": "A linter for legal billing statements — catch vague narratives, block billing, math errors and invalid UTBMS codes before the bill goes out",
+          "html_url": "https://github.com/kirillsakhin/billing-lint",
+          "stargazers_count": 0,
+          "archived": false,
+          "pushed_at": "2026-08-31T19:25:39Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "topics": [
+            "billing",
+            "e-billing",
+            "ledes",
+            "legal-engineering",
+            "legal-tech",
+            "linter",
+            "utbms"
+          ]
+        }
+      ],
+      "new_names": []
+    },
+    {
+      "stage": "S12",
+      "lane": "C",
+      "artifact": "BagIt conformance fixtures",
+      "query": "\"BagIt\" \"conformance\" in:name,description",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=%22BagIt%22+%22conformance%22+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 2,
+      "incomplete_results": false,
+      "error": null,
+      "results": [
+        {
+          "full_name": "LibraryOfCongress/bagit-conformance-suite",
+          "description": "Test cases for validating BagIt implementations",
+          "html_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite",
+          "stargazers_count": 12,
+          "archived": false,
+          "pushed_at": "2023-01-10T19:44:04Z",
+          "license": {
+            "key": "other",
+            "name": "Other",
+            "spdx_id": "NOASSERTION",
+            "url": null,
+            "node_id": "MDc6TGljZW5zZTA="
+          },
+          "topics": []
+        },
+        {
+          "full_name": "plocher/Swift2Bagit",
+          "description": "Data offload tool for extracting data from Seagate's LTS2/Swift cloud storage product.  Generates a disk structure that conforms to the BagIt spec.",
+          "html_url": "https://github.com/plocher/Swift2Bagit",
+          "stargazers_count": 0,
+          "archived": false,
+          "pushed_at": "2016-05-19T20:58:25Z",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "topics": []
+        }
+      ],
+      "new_names": [
+        "plocher/Swift2Bagit"
+      ]
+    },
+    {
+      "stage": "S02",
+      "lane": "B",
+      "artifact": "ethical-wall tagged source systems",
+      "query": "topic:ethical-walls",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=topic%3Aethical-walls&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 0,
+      "incomplete_results": false,
+      "error": null,
+      "results": [],
+      "new_names": []
+    },
+    {
+      "stage": "S07",
+      "lane": "B",
+      "artifact": "LegalXML tagged implementations",
+      "query": "topic:legalxml",
+      "per_page": 20,
+      "observed_at": "2026-09-13T17:22:08.952076+00:00",
+      "source_url": "https://api.github.com/search/repositories?q=topic%3Alegalxml&sort=stars&order=desc&per_page=20&page=1",
+      "total_count": 4,
+      "incomplete_results": false,
+      "error": null,
+      "results": [
+        {
+          "full_name": "seanpm2001/Learn-LegalXML",
+          "description": "📚️ A repository for showcasing my knowledge of the LegalXML programming language, and continuing to learn the language.",
+          "html_url": "https://github.com/seanpm2001/Learn-LegalXML",
+          "stargazers_count": 2,
+          "archived": false,
+          "pushed_at": "2024-03-07T04:58:42Z",
+          "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0",
+            "node_id": "MDc6TGljZW5zZTk="
+          },
+          "topics": [
+            "article",
+            "collection",
+            "education",
+            "gpl3",
+            "gplv3",
+            "knowledge",
+            "learn",
+            "learn-legalxml",
+            "learn-legalxml-lang",
+            "learn-legalxml-language",
+            "legalxml",
+            "legalxml-lang",
+            "legalxml-language",
+            "seanpm2001",
+            "seanpm2001-docs",
+            "seanpm2001-documentation",
+            "seanpm2001-education",
+            "seanpm2001-languages",
+            "seanpm2001-learn",
+            "seanpm2001-life-archive"
+          ]
+        },
+        {
+          "full_name": "seanpm2001/AI2001_Category-Source_Code-SC-LegalXML",
+          "description": "🧠️🖥️2️⃣️0️⃣️0️⃣️1️⃣️💾️📜️ The sourceCode:LegalXML category for AI2001, containing LegalXML Language programming language datasets",
+          "html_url": "https://github.com/seanpm2001/AI2001_Category-Source_Code-SC-LegalXML",
+          "stargazers_count": 2,
+          "archived": false,
+          "pushed_at": "2024-01-25T06:52:59Z",
+          "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0",
+            "node_id": "MDc6TGljZW5zZTk="
+          },
+          "topics": [
+            "ai",
+            "ai-2001",
+            "ai-2001-dataset",
+            "ai-2001-development",
+            "ai2001",
+            "ai2001-dataset",
+            "ai2001-development",
+            "artificial-intelligence",
+            "dataset",
+            "gpl3",
+            "gplv3",
+            "legalxml",
+            "legalxml-lang",
+            "legalxml-language",
+            "legalxml-sc-dataset",
+            "sc-dataset",
+            "source-code-dataset"
+          ]
+        },
+        {
+          "full_name": "seanpm2001/SNU_2D_ProgrammingTools_IDE_LegalXML",
+          "description": "⌨️ The LegalXML programming language IDE submodule for SNU Programming Tools (2D Mode) ",
+          "html_url": "https://github.com/seanpm2001/SNU_2D_ProgrammingTools_IDE_LegalXML",
+          "stargazers_count": 2,
+          "archived": false,
+          "pushed_at": "2024-03-07T05:01:11Z",
+          "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0",
+            "node_id": "MDc6TGljZW5zZTk="
+          },
+          "topics": [
+            "gpl3",
+            "gplv3",
+            "ide",
+            "legalxml",
+            "legalxml-lang",
+            "legalxml-language",
+            "programming",
+            "snu",
+            "snu-2d",
+            "snu-2d-programming-tools",
+            "snu-2d-programmingtools",
+            "snu-development",
+            "snu-programming-tools",
+            "snu2d-programming-tools",
+            "snu2d-programmingtools",
+            "snu2dprogrammingtools",
+            "snuprogramming-tools",
+            "snuprogrammingtools",
+            "web-development",
+            "web-ide"
+          ]
+        },
+        {
+          "full_name": "seanpm2001/Bliss_Browser_LegalXML",
+          "description": "🌳️🌐️#️⃣️ The Bliss Browser LegalXML language support module, allowing LegalXML programs to be written in and ran within the browser.",
+          "html_url": "https://github.com/seanpm2001/Bliss_Browser_LegalXML",
+          "stargazers_count": 1,
+          "archived": false,
+          "pushed_at": "2024-12-23T07:54:08Z",
+          "license": {
+            "key": "gpl-3.0",
+            "name": "GNU General Public License v3.0",
+            "spdx_id": "GPL-3.0",
+            "url": "https://api.github.com/licenses/gpl-3.0",
+            "node_id": "MDc6TGljZW5zZTk="
+          },
+          "topics": [
+            "bliss-browser",
+            "bliss-browser-development",
+            "bliss-browser-language-support",
+            "bliss-browser-languages",
+            "bliss-browser-languagesupport",
+            "bliss-browser-legalxml",
+            "bliss-browser-project",
+            "browser",
+            "gpl3",
+            "gplv3",
+            "legalxml",
+            "legalxml-lang",
+            "legalxml-language",
+            "web-browser",
+            "web-development"
+          ]
+        }
+      ],
+      "new_names": [
+        "seanpm2001/Learn-LegalXML",
+        "seanpm2001/AI2001_Category-Source_Code-SC-LegalXML",
+        "seanpm2001/SNU_2D_ProgrammingTools_IDE_LegalXML",
+        "seanpm2001/Bliss_Browser_LegalXML"
+      ]
+    }
+  ],
+  "unique_new_count": 5,
+  "new_names": [
+    "plocher/Swift2Bagit",
+    "seanpm2001/AI2001_Category-Source_Code-SC-LegalXML",
+    "seanpm2001/Bliss_Browser_LegalXML",
+    "seanpm2001/Learn-LegalXML",
+    "seanpm2001/SNU_2D_ProgrammingTools_IDE_LegalXML"
+  ],
+  "sort": "stars descending; bounded pages, not exhaustive GitHub enumeration"
+}
