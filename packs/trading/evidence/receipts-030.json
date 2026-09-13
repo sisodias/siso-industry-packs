@@ -1,0 +1,1071 @@
+[
+  {
+    "full_name": "madmatt112/tradr",
+    "requested_name": "madmatt112/tradr",
+    "id": 1315197623,
+    "url": "https://github.com/madmatt112/tradr",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Self-hostable trading journal and analysis platform",
+    "stars": 13,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "dc9dd32a1019dd0e7e6730cbcb734c502d9abd06",
+    "last_commit_date": "2026-09-13T03:32:25Z",
+    "pushed_at_not_commit_date": "2026-09-13T03:32:25Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "madmatt112"
+    ],
+    "contributors_sample": [
+      {
+        "login": "madmatt112",
+        "contributions": 311,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "fd4860614f2f27026e73cfd65a018e1f3699753e0418aa2fc3bb83a5aed5f531",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_candidates": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".codeindex.yaml",
+      ".dependency-cruiser.cjs",
+      ".dockerignore",
+      ".env.example",
+      ".env.test",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".prettierignore",
+      ".vale.ini",
+      ".vale",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "NOTICE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARK.md",
+      "apps",
+      "bench",
+      "docker-compose.ci.yml",
+      "docker-compose.dev.yml",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "e2e",
+      "eslint.config.js",
+      "lychee.toml",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "prettier.config.js",
+      "scripts",
+      "tsconfig.base.json",
+      "vitest.workspace.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/package.json",
+        "sha256": "3a13be567f3f9bec42e6effd8888d3ff70dfd3ce7843841ff0ff31cc29d8c150"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/madmatt112/tradr",
+      "commit": "https://github.com/madmatt112/tradr/commit/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06",
+      "readme": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/README.md",
+      "license": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/LICENSE",
+      "recent_commits": "https://api.github.com/repos/madmatt112/tradr/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/madmatt112/tradr/contributors",
+      "issues": "https://api.github.com/repos/madmatt112/tradr/issues"
+    },
+    "readme_excerpt": "Log every fill, size the trade before you take it, and see what your record actually says. Self-hostable in one command. The journal shows its work. Tradr is a self-hostable journal for options and equities traders. It records the whole arc of a position \u2014 draft, scale-in, partial close \u2014 with every fill, fee, and note attached, then shows you what your record actually says. It runs as a complete manual journal with **no keys configured at all**. Every external integration is opt-in, and nothing phones home until you switch it on. It never places an order. ## How to run it **Self-hosted, with the quickstart below** \u2014 free and completely unlimited, forever. No feature is fenced off; plan gating is a single deployment setting that ships **off**. **Hosted at [app.tradr.cloud](https://app.tradr.cloud)**, if you'd rather not run a server. It is the same software from the same releases, with backups and upgrades handled for you. The free plan is capped ([what the caps are](https://docs.tradr.cloud/user-guide/reference/plan-limits/)); Pro lifts them for $10 a month. Nothing in the self-hosted build depends on it. ## Quickstart Requires Docker with Compose v2 and `openssl`. About two minutes. ```bash git clone https://github.com/madmatt112/tradr.git cd tradr ./docker/quickstart.sh ``` The script generates the three required secrets, writes your `.env`, starts the stack, and waits for t",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "manifoldmarkets/manifold",
+    "requested_name": "manifoldmarkets/manifold",
+    "id": 433321004,
+    "url": "https://github.com/manifoldmarkets/manifold",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Manifold Markets: A market for every question",
+    "stars": 517,
+    "forks": 243,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "48f03b1c75bedf2e43cc5b9cd4a936bc57918881",
+    "last_commit_date": "2026-09-13T03:06:32Z",
+    "pushed_at_not_commit_date": "2026-09-13T04:19:27Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "JasonMendoza2008",
+      "evand",
+      "mantikoros",
+      "orborde",
+      "shankypanky",
+      "todwadd",
+      "wasabipesto"
+    ],
+    "contributors_sample": [
+      {
+        "login": "IanPhilips",
+        "contributions": 5178,
+        "type": "User"
+      },
+      {
+        "login": "jahooma",
+        "contributions": 3391,
+        "type": "User"
+      },
+      {
+        "login": "mantikoros",
+        "contributions": 2678,
+        "type": "User"
+      },
+      {
+        "login": "sipec",
+        "contributions": 2213,
+        "type": "User"
+      },
+      {
+        "login": "ingawei",
+        "contributions": 1125,
+        "type": "User"
+      },
+      {
+        "login": "mqp",
+        "contributions": 955,
+        "type": "User"
+      },
+      {
+        "login": "akrolsmir",
+        "contributions": 702,
+        "type": "User"
+      },
+      {
+        "login": "todwadd",
+        "contributions": 305,
+        "type": "User"
+      },
+      {
+        "login": "SirSaltyy",
+        "contributions": 220,
+        "type": "User"
+      },
+      {
+        "login": "FRCassarino",
+        "contributions": 124,
+        "type": "User"
+      },
+      {
+        "login": "wasabipesto",
+        "contributions": 73,
+        "type": "User"
+      },
+      {
+        "login": "casesandberg",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "jannalulu",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "bcongdon",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "bgila",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "shankypanky",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "marsteralex",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "PhilBladen",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "Martin-Milbradt",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "ahalekelly",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "Bohaska",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "NcyRocks",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "LivInTheLookingGlass",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "ForrestWeiswolf",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "syvb",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "diomidova",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "ProgramCrafter",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "MayMeta",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "jkerkhoff",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "evand",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "c16fb6f514c1e50dbc62f2269f50dbe45497f2ffa4ab95a581c80ae4c5b099ba",
+    "license": "MIT",
+    "license_path": "LICENSE.md",
+    "license_file_sha256": "006a14637c8cc5a3d59e93216f1edd626b9a6a34f502025d1bd315ad3084cb87",
+    "license_candidates": [
+      "LICENSE.md"
+    ],
+    "root_entries": [
+      ".claude",
+      ".cursor",
+      ".easignore",
+      ".firebaserc",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".mcp.json",
+      ".prettierignore",
+      ".prettierrc",
+      ".vscode",
+      ".yarnrc",
+      "LICENSE.md",
+      "README.md",
+      "SECURITY.md",
+      "SHOP_SYSTEM.md",
+      "backend",
+      "client-common",
+      "common",
+      "dev-docs",
+      "dev.sh",
+      "docs",
+      "firebase.json",
+      "knowledge.cursorrules",
+      "knowledge.md",
+      "mani",
+      "manifold-info.knowledge.md",
+      "native",
+      "package.json",
+      "perps-launch-runbook.md",
+      "perps-model-classification-backlog.md",
+      "private-storage.rules",
+      "scripts",
+      "storage.rules",
+      "twitch-bot",
+      "web",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/manifoldmarkets/manifold/blob/48f03b1c75bedf2e43cc5b9cd4a936bc57918881/package.json",
+        "sha256": "7981402aa2296899e9a337bd293ee812dbf0760edf0ab094ecacae78018ee31f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/manifoldmarkets/manifold",
+      "commit": "https://github.com/manifoldmarkets/manifold/commit/48f03b1c75bedf2e43cc5b9cd4a936bc57918881",
+      "readme": "https://github.com/manifoldmarkets/manifold/blob/48f03b1c75bedf2e43cc5b9cd4a936bc57918881/README.md",
+      "license": "https://github.com/manifoldmarkets/manifold/blob/48f03b1c75bedf2e43cc5b9cd4a936bc57918881/LICENSE.md",
+      "recent_commits": "https://api.github.com/repos/manifoldmarkets/manifold/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/manifoldmarkets/manifold/contributors",
+      "issues": "https://api.github.com/repos/manifoldmarkets/manifold/issues"
+    },
+    "readme_excerpt": "# Manifold This [monorepo][monorepo] has basically everything involved in running and operating Manifold. ## Getting started 0. Make sure you have [Yarn 1.x][yarn] 1. `$ cd web` 2. `$ yarn` 3. `$ yarn dev:dev` 4. Your site will be available on http://localhost:3000 See [`web/README.md`][web-readme] for more details on hacking on the web client. ## General architecture Manifold's public API and web app are hosted by [Vercel][vercel]. Our data has been stored in Firebase's database [Cloud Firestore][cloud-firestore] but we have almost entirely migrated it to SQL hosted on [Supabase][supabase]. We often use supabase directly on the client to get the data. However, for complicated operations (like buying shares) we have a separate internal HTTP API deployed in a docker container in google cloud. This is separate from the public-facing api hosted via Vercel; see [`functions/README.md`][functions-readme] for more details. ## Directory overview - [web/](./web/): UI and business logic for the client. Where most of the site lives. The public API endpoints are also in here. - [backend/](./backend/): All the rest of the stuff we run on GCP. - [common/](./common/): Typescript library code shared between `web/` & `backend/` & `shared/`. If you want to look at how the market math works, most of that's in here (it gets called from the `bet` and `sellBet` endpoints in `functions/`.) Also conta",
+    "license_excerpt": "MIT License Copyright (c) 2022 Manifold Markets, Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above cop"
+  },
+  {
+    "full_name": "ManojKumarPatnaik/Major-project-list",
+    "requested_name": "ManojKumarPatnaik/Major-project-list",
+    "id": 403036914,
+    "url": "https://github.com/ManojKumarPatnaik/Major-project-list",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A list of practical projects that anyone can solve in any programming language (See solutions). These projects are divided into multiple categories, and each category has its own folder.  To get started, simply fork this repo.  CONTRIBUTING See ways of contributing to this repo. You can contribute solutions (will be published in this repo) to existing problems, add new projects, or remove existing ones. Make sure you follow all instructions properly.  Solutions You can find implementations of these projects in many other languages by other users in this repo.  Credits  Problems are motivated by the ones shared at:  Martyr2\u2019s Mega Project List Rosetta Code Table of Contents Numbers Classic Algorithms Graph Data Structures Text Networking Classes Threading Web Files Databases Graphics and Multimedia Security Numbers Find PI to the Nth Digit - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go.  Find e to the Nth Digit - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go.  Fibonacci Sequence - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.  Prime Factorization - Have the user enter a number and find all Prime Factors (if there are any) and display them.  Next Prime Number - Have the program find prime numbers until the user chooses to stop asking for the next one.  Find Cost of Tile to Cover W x H Floor - Calculate the total cost of the tile it would take to cover a floor plan of width and height, using a cost entered by the user.  Mortgage Calculator - Calculate the monthly payments of a fixed-term mortgage over given Nth terms at a given interest rate. Also, figure out how long it will take the user to pay back the loan. For added complexity, add an option for users to select the compounding interval (Monthly, Weekly, Daily, Continually).  Change Return Program - The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.  Binary to Decimal and Back Converter - Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.  Calculator - A simple calculator to do basic operators. Make it a scientific calculator for added complexity.  Unit Converter (temp, currency, volume, mass, and more) - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to, and then the value. The program will then make the conversion.  Alarm Clock - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.  Distance Between Two Cities - Calculates the distance between two cities and allows the user to specify a unit of distance. This program may require finding coordinates for the cities like latitude and longitude.  Credit Card Validator - Takes in a credit card number from a common credit card vendor (Visa, MasterCard, American Express, Discoverer) and validates it to make sure that it is a valid number (look into how credit cards use a checksum).  Tax Calculator - Asks the user to enter a cost and either a country or state tax. It then returns the tax plus the total cost with tax.  Factorial Finder - The Factorial of a positive integer, n, is defined as the product of the sequence n, n-1, n-2, ...1, and the factorial of zero, 0, is defined as being 1. Solve this using both loops and recursion.  Complex Number Algebra - Show addition, multiplication, negation, and inversion of complex numbers in separate functions. (Subtraction and division operations can be made with pairs of these operations.) Print the results for each operation tested.  Happy Numbers - A happy number is defined by the following process. Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers. Display an example of your output here. Find the first 8 happy numbers.  Number Names - Show how to spell out a number in English. You can use a preexisting implementation or roll your own, but you should support inputs up to at least one million (or the maximum value of your language's default bounded integer type if that's less). Optional: Support for inputs other than positive integers (like zero, negative integers, and floating-point numbers).  Coin Flip Simulation - Write some code that simulates flipping a single coin however many times the user decides. The code should record the outcomes and count the number of tails and heads.  Limit Calculator - Ask the user to enter f(x) and the limit value, then return the value of the limit statement Optional: Make the calculator capable of supporting infinite limits.  Fast Exponentiation - Ask the user to enter 2 integers a and b and output a^b (i.e. pow(a,b)) in O(LG n) time complexity.  Classic Algorithms Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.  Sorting - Implement two types of sorting algorithms: Merge sort and bubble sort.  Closest pair problem - The closest pair of points problem or closest pair problem is a problem of computational geometry: given n points in metric space, find a pair of points with the smallest distance between them.  Sieve of Eratosthenes - The sieve of Eratosthenes is one of the most efficient ways to find all of the smaller primes (below 10 million or so).  Graph Graph from links - Create a program that will create a graph or network from a series of links.  Eulerian Path - Create a program that will take as an input a graph and output either an Eulerian path or an Eulerian cycle, or state that it is not possible. An Eulerian path starts at one node and traverses every edge of a graph through every node and finishes at another node. An Eulerian cycle is an eulerian Path that starts and finishes at the same node.  Connected Graph - Create a program that takes a graph as an input and outputs whether every node is connected or not.  Dijkstra\u2019s Algorithm - Create a program that finds the shortest path through a graph using its edges.  Minimum Spanning Tree - Create a program that takes a connected, undirected graph with weights and outputs the minimum spanning tree of the graph i.e., a subgraph that is a tree, contains all the vertices, and the sum of its weights is the least possible.  Data Structures Inverted index - An Inverted Index is a data structure used to create full-text search. Given a set of text files, implement a program to create an inverted index. Also, create a user interface to do a search using that inverted index which returns a list of files that contain the query term/terms. The search index can be in memory.  Text Fizz Buzz - Write a program that prints the numbers from 1 to 100. But for multiples of three print \u201cFizz\u201d instead of the number and for the multiples of five print \u201cBuzz\u201d. For numbers which are multiples of both three and five print \u201cFizzBuzz\u201d.  Reverse a String - Enter a string and the program will reverse it and print it out.  Pig Latin - Pig Latin is a game of alterations played in the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: \"banana\" would yield anana-bay). Read Wikipedia for more information on rules.  Count Vowels - Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.  Check if Palindrome - Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backward like \u201cracecar\u201d  Count Words in a String - Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.  Text Editor - Notepad-style application that can open, edit, and save text documents. Optional: Add syntax highlighting and other features.  RSS Feed Creator - Given a link to RSS/Atom Feed, get all posts and display them.  Quote Tracker (market symbols etc) - A program that can go out and check the current value of stocks for a list of symbols entered by the user. The user can set how often the stocks are checked. For CLI, show whether the stock has moved up or down. Optional: If GUI, the program can show green up and red down arrows to show which direction the stock value has moved.  Guestbook / Journal - A simple application that allows people to add comments or write journal entries. It can allow comments or not and timestamps for all entries. Could also be made into a shoutbox. Optional: Deploy it on Google App Engine or Heroku or any other PaaS (if possible, of course).  Vigenere / Vernam / Ceasar Ciphers - Functions for encrypting and decrypting data messages. Then send them to a friend.  Regex Query Tool - A tool that allows the user to enter a text string and then in a separate control enter a regex pattern. It will run the regular expression against the source text and return any matches or flag errors in the regular expression.  Networking FTP Program - A file transfer program that can transfer files back and forth from a remote web sever.  Bandwidth Monitor - A small utility program that tracks how much data you have uploaded and downloaded from the net during the course of your current online session. See if you can find out what periods of the day you use more and less and generate a report or graph that shows it.  Port Scanner - Enter an IP address and a port range where the program will then attempt to find open ports on the given computer by connecting to each of them. On any successful connections mark the port as open.  Mail Checker (POP3 / IMAP) - The user enters various account information include web server and IP, protocol type (POP3 or IMAP), and the application will check for email at a given interval.  Country from IP Lookup - Enter an IP address and find the country that IP is registered in. Optional: Find the Ip automatically.  Whois Search Tool - Enter an IP or host address and have it look it up through whois and return the results to you.  Site Checker with Time Scheduling - An application that attempts to connect to a website or server every so many minute or a given time and check if it is up. If it is down, it will notify you by email or by posting a notice on the screen.  Classes Product Inventory Project - Create an application that manages an inventory of products. Create a product class that has a price, id, and quantity on hand. Then create an inventory class that keeps track of various products and can sum up the inventory value.  Airline / Hotel Reservation System - Create a reservation system that books airline seats or hotel rooms. It charges various rates for particular sections of the plane or hotel. For example, first class is going to cost more than a coach. Hotel rooms have penthouse suites which cost more. Keep track of when rooms will be available and can be scheduled.  Company Manager - Create a hierarchy of classes - abstract class Employee and subclasses HourlyEmployee, SalariedEmployee, Manager, and Executive. Everyone's pay is calculated differently, research a bit about it. After you've established an employee hierarchy, create a Company class that allows you to manage the employees. You should be able to hire, fire, and raise employees.  Bank Account Manager - Create a class called Account which will be an abstract class for three other classes called CheckingAccount, SavingsAccount, and BusinessAccount. Manage credits and debits from these accounts through an ATM-style program.  Patient / Doctor Scheduler - Create a patient class and a doctor class. Have a doctor that can handle multiple patients and set up a scheduling program where a doctor can only handle 16 patients during an 8 hr workday.  Recipe Creator and Manager - Create a recipe class with ingredients and put them in a recipe manager program that organizes them into categories like desserts, main courses, or by ingredients like chicken, beef, soups, pies, etc.  Image Gallery - Create an image abstract class and then a class that inherits from it for each image type. Put them in a program that displays them in a gallery-style format for viewing.  Shape Area and Perimeter Classes - Create an abstract class called Shape and then inherit from it other shapes like diamond, rectangle, circle, triangle, etc. Then have each class override the area and perimeter functionality to handle each shape type.  Flower Shop Ordering To Go - Create a flower shop application that deals in flower objects and use those flower objects in a bouquet object which can then be sold. Keep track of the number of objects and when you may need to order more.  Family Tree Creator - Create a class called Person which will have a name, when they were born, and when (and if) they died. Allow the user to create these Person classes and put them into a family tree structure. Print out the tree to the screen.  Threading Create A Progress Bar for Downloads - Create a progress bar for applications that can keep track of a download in progress. The progress bar will be on a separate thread and will communicate with the main thread using delegates.  Bulk Thumbnail Creator - Picture processing can take a bit of time for some transformations. Especially if the image is large. Create an image program that can take hundreds of images and converts them to a specified size in the background thread while you do other things. For added complexity, have one thread handling re-sizing, have another bulk renaming of thumbnails, etc.  Web Page Scraper - Create an application that connects to a site and pulls out all links, or images, and saves them to a list. Optional: Organize the indexed content and don\u2019t allow duplicates. Have it put the results into an easily searchable index file.  Online White Board - Create an application that allows you to draw pictures, write notes and use various colors to flesh out ideas for projects. Optional: Add a feature to invite friends to collaborate on a whiteboard online.  Get Atomic Time from Internet Clock - This program will get the true atomic time from an atomic time clock on the Internet. Use any one of the atomic clocks returned by a simple Google search.  Fetch Current Weather - Get the current weather for a given zip/postal code. Optional: Try locating the user automatically.  Scheduled Auto Login and Action - Make an application that logs into a given site on a schedule and invokes a certain action and then logs out. This can be useful for checking webmail, posting regular content, or getting info for other applications and saving it to your computer.  E-Card Generator - Make a site that allows people to generate their own little e-cards and send them to other people. Do not use Flash. Use a picture library and perhaps insightful mottos or quotes.  Content Management System - Create a content management system (CMS) like Joomla, Drupal, PHP Nuke, etc. Start small. Optional: Allow for the addition of modules/addons.  Web Board (Forum) - Create a forum for you and your buddies to post, administer and share thoughts and ideas.  CAPTCHA Maker - Ever see those images with letters numbers when you signup for a service and then ask you to enter what you see? It keeps web bots from automatically signing up and spamming. Try creating one yourself for online forms.  Files Quiz Maker - Make an application that takes various questions from a file, picked randomly, and puts together a quiz for students. Each quiz can be different and then reads a key to grade the quizzes.  Sort Excel/CSV File Utility - Reads a file of records, sorts them, and then writes them back to the file. Allow the user to choose various sort style and sorting based on a particular field.  Create Zip File Maker - The user enters various files from different directories and the program zips them up into a zip file. Optional: Apply actual compression to the files. Start with Huffman Algorithm.  PDF Generator - An application that can read in a text file, HTML file, or some other file and generates a PDF file out of it. Great for a web-based service where the user uploads the file and the program returns a PDF of the file. Optional: Deploy on GAE or Heroku if possible.  Mp3 Tagger - Modify and add ID3v1 tags to MP3 files. See if you can also add in the album art into the MP3 file\u2019s header as well as other ID3v2 tags.  Code Snippet Manager - Another utility program that allows coders to put in functions, classes, or other tidbits to save for use later. Organized by the type of snippet or language the coder can quickly lookup code. Optional: For extra practice try adding syntax highlighting based on the language.  Databases SQL Query Analyzer - A utility application in which a user can enter a query and have it run against a local database and look for ways to make it more efficient.  Remote SQL Tool - A utility that can execute queries on remote servers from your local computer across the Internet. It should take in a remote host, user name, and password, run the query and return the results.  Report Generator - Create a utility that generates a report based on some tables in a database. Generates sales reports based on the order/order details tables or sums up the day's current database activity.  Event Scheduler and Calendar - Make an application that allows the user to enter a date and time of an event, event notes, and then schedule those events on a calendar. The user can then browse the calendar or search the calendar for specific events. Optional: Allow the application to create re-occurrence events that reoccur every day, week, month, year, etc.  Budget Tracker - Write an application that keeps track of a household\u2019s budget. The user can add expenses, income, and recurring costs to find out how much they are saving or losing over a period of time. Optional: Allow the user to specify a date range and see the net flow of money in and out of the house budget for that time period.  TV Show Tracker - Got a favorite show you don\u2019t want to miss? Don\u2019t have a PVR or want to be able to find the show to then PVR it later? Make an application that can search various online TV Guide sites, locate the shows/times/channels and add them to a database application. The database/website then can send you email reminders that a show is about to start and which channel it will be on.  Travel Planner System - Make a system that allows users to put together their own little travel itinerary and keep track of the airline/hotel arrangements, points of interest, budget, and schedule.  Graphics and Multimedia Slide Show - Make an application that shows various pictures in a slide show format. Optional: Try adding various effects like fade in/out, star wipe, and window blinds transitions.  Stream Video from Online - Try to create your own online streaming video player.  Mp3 Player - A simple program for playing your favorite music files. Add features you think are missing from your favorite music player.  Watermarking Application - Have some pictures you want copyright protected? Add your own logo or text lightly across the background so that no one can simply steal your graphics off your site. Make a program that will add this watermark to the picture. Optional: Use threading to process multiple images simultaneously.  Turtle Graphics - This is a common project where you create a floor of 20 x 20 squares. Using various commands you tell a turtle to draw a line on the floor. You have moved forward, left or right, lift or drop the pen, etc. Do a search online for \"Turtle Graphics\" for more information. Optional: Allow the program to read in the list of commands from a file.  GIF Creator A program that puts together multiple images (PNGs, JPGs, TIFFs) to make a smooth GIF that can be exported. Optional: Make the program convert small video files to GIFs as well.  Security Caesar cipher - Implement a Caesar cipher, both encoding, and decoding. The key is an integer from 1 to 25. This cipher rotates the letters of the alphabet (A to Z). The encoding replaces each letter with the 1st to 25th next letter in the alphabet (wrapping Z to A). So key 2 encrypts \"HI\" to \"JK\", but key 20 encrypts \"HI\" to \"BC\". This simple \"monoalphabetic substitution cipher\" provides almost no security, because an attacker who has the encoded message can either use frequency analysis to guess the key, or just try all 25 keys.",
+    "stars": 250,
+    "forks": 51,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "1bc6f5724b21b57c98318f662003b68e2ab091f3",
+    "last_commit_date": "2025-07-29T10:22:11Z",
+    "pushed_at_not_commit_date": "2025-07-29T10:22:11Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "ManojKumarPatnaik",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "Blend1221",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "HannahSlaughterZacharski",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ljoypeterson",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "manojkumar-uriti",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ManojKumarPatnaik/Major-project-list/issues/13",
+      "created_at": "2025-12-02T18:00:51Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d34d528559ff130c3b3ee91adb6a739549ae52bb3bc70f002b000285cd3376d0",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "e37281a4a826aa8b8049cb81edd860e2cf6ad94566e69e8abb995c84be2d975e",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".devcontainer",
+      ".github",
+      ".vscode",
+      "Add$9999999",
+      "LICENSE",
+      "Projects-master.zip",
+      "README.md",
+      "ff"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "product_shelf"
+    ],
+    "bank_row": null,
+    "shelf_row": {
+      "source_id": "SRC-2645",
+      "repo": "ManojKumarPatnaik/Major-project-list",
+      "url": "https://github.com/manojkumarpatnaik/major-project-list",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "hospitality"
+      ],
+      "discovery_categories": [
+        "reservation",
+        "schedule_coordinate"
+      ],
+      "discovery_cells": [
+        "cross_industry:reservation",
+        "cross_industry:schedule_coordinate",
+        "hospitality:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0212",
+        "repo": "ManojKumarPatnaik/Major-project-list",
+        "url": "https://github.com/ManojKumarPatnaik/Major-project-list",
+        "what_it_is": "Find PI to the Nth Digit Enter a number and have the program generate PI up to that many decimal places.",
+        "stars": 247,
+        "pushed_at": "2025-07-29T10:22:11Z",
+        "language": null,
+        "license": "mit",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/HEAD/README.md",
+          "characters_read": 19257
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=hotel%20reservation%20system&type=repositories",
+            "source_title": "GitHub repository search: hotel reservation system",
+            "detail": "hotel reservation system"
+          }
+        ],
+        "industries": [
+          "hospitality"
+        ],
+        "categories": [
+          "reservation",
+          "schedule_coordinate"
+        ],
+        "cells": [
+          "cross_industry:reservation",
+          "cross_industry:schedule_coordinate",
+          "hospitality:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "hotel reservation system"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:hospitality"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "manojkumarpatnaik/major-project-list",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "C",
+        "query": "options symbol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ManojKumarPatnaik/Major-project-list",
+      "commit": "https://github.com/ManojKumarPatnaik/Major-project-list/commit/1bc6f5724b21b57c98318f662003b68e2ab091f3",
+      "readme": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/1bc6f5724b21b57c98318f662003b68e2ab091f3/README.md",
+      "license": "https://github.com/ManojKumarPatnaik/Major-project-list/blob/1bc6f5724b21b57c98318f662003b68e2ab091f3/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ManojKumarPatnaik/Major-project-list/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ManojKumarPatnaik/Major-project-list/contributors",
+      "issues": "https://api.github.com/repos/ManojKumarPatnaik/Major-project-list/issues"
+    },
+    "readme_excerpt": "# Major-project-list - **Find PI to the Nth Digit** - Enter a number and have the program generate PI up to that many decimal places. Keep a limit to how far the program will go. - **Find e to the Nth Digit** - Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go. - **Fibonacci Sequence** - Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number. - **Prime Factorization** - Have the user enter a number and find all Prime Factors (if there are any) and display them. - **Next Prime Number** - Have the program find prime numbers until the user chooses to stop asking for the next one. - **Find Cost of Tile to Cover W x H Floor** - Calculate the total cost of the tile it would take to cover a floor plan of width and height, using a cost entered by the user. - **Mortgage Calculator** - Calculate the monthly payments of a fixed-term mortgage over given Nth terms at a given interest rate. Also, figure out how long it will take the user to pay back the loan. For added complexity, add an option for users to select the compounding interval (Monthly, Weekly, Daily, Continually). - **Change Return Program** - The user enters a cost and then the amount of money given. The program will figure out the change and the numb",
+    "license_excerpt": "MIT License Copyright (c) 2022 MAJOR PROJECT Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright no"
+  },
+  {
+    "full_name": "manojVivek/itr-schedule-fa-from-ibkr",
+    "requested_name": "manojVivek/itr-schedule-fa-from-ibkr",
+    "id": 1295333230,
+    "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Convert IBKR Activity Statements to filing-ready Indian Schedule FA, data 100% stays in browser. ",
+    "stars": 9,
+    "forks": 7,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "379926f16621c90b35ccfc5703ecf5ffcc3f6adf",
+    "last_commit_date": "2026-07-13T12:01:24Z",
+    "pushed_at_not_commit_date": "2026-07-13T12:01:40Z",
+    "commits_since_20260313_count_capped100": 15,
+    "recent_commit_authors": [
+      "manojVivek"
+    ],
+    "contributors_sample": [
+      {
+        "login": "manojVivek",
+        "contributions": 15,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/issues/4",
+      "created_at": "2026-08-04T06:45:04Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "12d43210974eaa07d6fccf3e49df8071140ab6319edc591396cba998c1dda52a",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ec8e05a4bd24eeb60fbec171639d6cabb89d0c085c0ee94779e58a52522d2810",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "docs",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "public",
+      "scripts",
+      "src",
+      "tests",
+      "tsconfig.json",
+      "vitest.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/package.json",
+        "sha256": "b252adc335090da9981c51639cdcb6800a0aaa66815cf5550bc000e2de07fd34"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/manojVivek/itr-schedule-fa-from-ibkr",
+      "commit": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/commit/379926f16621c90b35ccfc5703ecf5ffcc3f6adf",
+      "readme": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/README.md",
+      "license": "https://github.com/manojVivek/itr-schedule-fa-from-ibkr/blob/379926f16621c90b35ccfc5703ecf5ffcc3f6adf/LICENSE",
+      "recent_commits": "https://api.github.com/repos/manojVivek/itr-schedule-fa-from-ibkr/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/manojVivek/itr-schedule-fa-from-ibkr/contributors",
+      "issues": "https://api.github.com/repos/manojVivek/itr-schedule-fa-from-ibkr/issues"
+    },
+    "readme_excerpt": "# ITR Schedule FA Helper \u2014 IBKR \u2192 Schedule FA Turn raw **Interactive Brokers** Activity Statements into a filing-ready Indian **Schedule FA** (Foreign Assets) workbook \u2014 per-tranche Table A3 at the correct daily **SBI TTBR**, computed **entirely in your browser**. Ready-made Schedule FA workbooks exist inside platforms like Vested/INDmoney for their own accounts. IBKR just gives you raw CSVs. This tool closes that gap for IBKR investors, to the Black-Money-Act \"tranche-level\" standard. > **Not tax advice.** It assists disclosure preparation \u2014 review the output with > your CA. ## What it does - **One row per purchase lot** (tranche-level), FIFO for sales \u2014 the standard the \u20b910 lakh non-disclosure penalty makes you want to get right. - **Initial value** = lot cost \u00d7 SBI TT buying rate **on the acquisition date**. - **Peak value** = daily maximum over the held window of `units \u00d7 close \u00d7 TTBR`, anchored to the broker's own 31-Dec close (so split-adjusted price feeds can't distort the level). - **Closing** = units held on 31-Dec \u00d7 31-Dec close \u00d7 31-Dec TTBR. - **Dividends** attributed to the lots held on each pay date, at the pay-date TTBR. - **Table A2** custodial account: the un-invested cash (reconstructed from the statement's ledger, forex conversions included) + the income rollup. - **Reconciliation badge**: \u03a3 per-lot closings must equal the year-end portfolio. - Downloads a `.",
+    "license_excerpt": "MIT License Copyright (c) 2026 Manoj Vivek Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "manusimidt/py-xbrl",
+    "requested_name": "manusimidt/py-xbrl",
+    "id": 330915618,
+    "url": "https://github.com/manusimidt/py-xbrl",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python-based parser for parsing XBRL and iXBRL files",
+    "stars": 154,
+    "forks": 52,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "29dcc844ad7cc87195f3198e7e7ee42b45a45ece",
+    "last_commit_date": "2026-09-13T11:10:33Z",
+    "pushed_at_not_commit_date": "2026-09-13T11:10:33Z",
+    "commits_since_20260313_count_capped100": 7,
+    "recent_commit_authors": [
+      "DMZ22",
+      "manusimidt",
+      "mariuszlipinski"
+    ],
+    "contributors_sample": [
+      {
+        "login": "manusimidt",
+        "contributions": 274,
+        "type": "User"
+      },
+      {
+        "login": "Pablompg",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "mariuszlipinski",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "Sam-el0",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "arpadatscorp",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "yen31",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "fhopecc",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "rossbowen",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "pvmagacho-nde",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "DMZ22",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mrx23dot",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "skogsmaskin",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "stkerr",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ahoward-ch",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 1,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/manusimidt/py-xbrl/issues/178",
+      "created_at": "2026-03-22T23:17:44Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f3abab1e4efa6146516b5922185c1249456b1ebe5ebde97f5dea6cf3164e93d2",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".readthedocs.yml",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "prek.toml",
+      "pyproject.toml",
+      "ruff.toml",
+      "tests",
+      "ty.toml",
+      "uv.lock",
+      "xbrl"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/manusimidt/py-xbrl/blob/29dcc844ad7cc87195f3198e7e7ee42b45a45ece/pyproject.toml",
+        "sha256": "e1f6adc6b8230898772281c9a8e94fa90eabcd9b02e6600f392fde614edf9da0"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "XBRL parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/manusimidt/py-xbrl",
+      "commit": "https://github.com/manusimidt/py-xbrl/commit/29dcc844ad7cc87195f3198e7e7ee42b45a45ece",
+      "readme": "https://github.com/manusimidt/py-xbrl/blob/29dcc844ad7cc87195f3198e7e7ee42b45a45ece/README.md",
+      "license": "https://github.com/manusimidt/py-xbrl/blob/29dcc844ad7cc87195f3198e7e7ee42b45a45ece/LICENSE",
+      "recent_commits": "https://api.github.com/repos/manusimidt/py-xbrl/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/manusimidt/py-xbrl/contributors",
+      "issues": "https://api.github.com/repos/manusimidt/py-xbrl/issues"
+    },
+    "readme_excerpt": "## XBRL-Parser [![PyPI](https://img.shields.io/pypi/v/py-xbrl)](https://pypi.org/project/py-xbrl/#history) [![PyPI - Status](https://img.shields.io/pypi/status/py-xbrl)](https://pypi.org/project/py-xbrl/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/py-xbrl)](https://pypi.org/project/py-xbrl/) [![GitHub](https://img.shields.io/github/license/manusimidt/py-xbrl)](https://github.com/manusimidt/py-xbrl/blob/main/LICENSE) [![PyPI - Downloads](https://img.shields.io/pypi/dm/py-xbrl)](https://pypi.org/project/py-xbrl/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/manusimidt/py-xbrl)](https://github.com/m4nu3l99/xbrl_parser) [![Documentation Status](https://readthedocs.org/projects/py-xbrl/badge/?version=latest)](https://py-xbrl.readthedocs.io/en/latest/?badge=latest) ## XBRL-Parser Py-xbrl is a python library that allows the user to easily parse XBRL-Documents. Py-xbrl is primarily build to parse Instance Documents (originally from the SEC) but can also be used to parse any type of XBRL Document as long as it follows the XBRL 2.1 Specification (2003)[^1] or the iXBRL 1.1 Specification(2013)[^2]. XBRL is a very information-rich markup language that can have highly complex structures. This library tries to capture as much of the original information as possible. Py-xbrl will automatically download and parse all referenced XBRL-File",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "manynames3/brokerops-platform",
+    "requested_name": "manynames3/brokerops-platform",
+    "id": 1240448690,
+    "url": "https://github.com/manynames3/brokerops-platform",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Production-capable insurance reconciliation platform for carrier statements, exception review, AWS ECS/RDS infrastructure, Terraform, CI/CD, observability, and cost-conscious preview environments.",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "11e3e6d7d886cea81bf9122ef826722ac8d63455",
+    "last_commit_date": "2026-05-16T17:33:38Z",
+    "pushed_at_not_commit_date": "2026-05-21T20:20:53Z",
+    "commits_since_20260313_count_capped100": 6,
+    "recent_commit_authors": [
+      "manynames3"
+    ],
+    "contributors_sample": [],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "0caaf78d5c333ac5ec7a197aea36ebc38fa6bcf31bbd8c9dc81016d554be1d1d",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "Makefile",
+      "README.md",
+      "adr",
+      "apps",
+      "data",
+      "docker-compose.yml",
+      "docs",
+      "infra",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "runbooks",
+      "scripts",
+      "tsconfig.base.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/manynames3/brokerops-platform/blob/11e3e6d7d886cea81bf9122ef826722ac8d63455/package.json",
+        "sha256": "328b3401abb173ffde26332942b4dab1091fdd9396ef91e0e08e8861e6670025"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/manynames3/brokerops-platform",
+      "commit": "https://github.com/manynames3/brokerops-platform/commit/11e3e6d7d886cea81bf9122ef826722ac8d63455",
+      "readme": "https://github.com/manynames3/brokerops-platform/blob/11e3e6d7d886cea81bf9122ef826722ac8d63455/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/manynames3/brokerops-platform/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/manynames3/brokerops-platform/contributors",
+      "issues": "https://api.github.com/repos/manynames3/brokerops-platform/issues"
+    },
+    "readme_excerpt": "# BrokerOps Platform BrokerOps Platform is a production-capable insurance back-office reconciliation platform built with TypeScript, Node.js, Next.js, PostgreSQL, Redis-compatible caching, Terraform, ECS, RDS PostgreSQL, CI/CD, blue-green deployment support, observability, AI-assisted exception review, and operational runbooks. The system models carrier statement ingestion, transaction normalization, reconciliation exceptions, audit history, AI-assisted review, and operational dashboards. BrokerOps uses environment-aware architecture: local development runs the full application stack through Docker Compose, preview environments validate the AWS deployment path with cost-conscious defaults, and the production profile supports an always-on ECS/RDS/ElastiCache deployment. ## Core workflow 1. Carrier statements are ingested from structured CSV data. 2. CSV rows are validated before any database writes occur. 3. Rows are normalized into PostgreSQL. 4. Reconciliation logic matches statement rows against expected policy records. 5. Exceptions are created for mismatches, missing records, duplicate payments, account mismatches, and unexpected amounts. 6. The AI-assisted review layer explains exceptions using structured evidence only. 7. Human review decisions and system events are written to an audit trail. 8. Dashboards and metrics expose workflow health and infrastructure health. ## S",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "marcuswang6/stock-top-papers",
+    "requested_name": "marcuswang6/stock-top-papers",
+    "id": 688282987,
+    "url": "https://github.com/marcuswang6/stock-top-papers",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Top paper collection for stock price prediction, quantitative trading. Covering top conferences and journals like KDD, WWW, CIKM, AAAI, IJCAI, ACL, EMNLP.",
+    "stars": 492,
+    "forks": 56,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "waterking",
+    "latest_commit": "78405982209be1e268e76ea41dbebe1329198ed7",
+    "last_commit_date": "2025-09-29T09:23:28Z",
+    "pushed_at_not_commit_date": "2025-09-29T09:24:10Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "marcuswang6",
+        "contributions": 13,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/marcuswang6/stock-top-papers/issues/2",
+      "created_at": "2026-07-15T23:19:27Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f808670dfb26decb65faa7c198be983c4a72ac64a4b83701ea11ab04f45e4a4c",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/marcuswang6/stock-top-papers",
+      "commit": "https://github.com/marcuswang6/stock-top-papers/commit/78405982209be1e268e76ea41dbebe1329198ed7",
+      "readme": "https://github.com/marcuswang6/stock-top-papers/blob/78405982209be1e268e76ea41dbebe1329198ed7/README.md",
+      "license": "https://github.com/marcuswang6/stock-top-papers/blob/78405982209be1e268e76ea41dbebe1329198ed7/LICENSE",
+      "recent_commits": "https://api.github.com/repos/marcuswang6/stock-top-papers/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/marcuswang6/stock-top-papers/contributors",
+      "issues": "https://api.github.com/repos/marcuswang6/stock-top-papers/issues"
+    },
+    "readme_excerpt": "# About The sole purpose of this repository is to help me organize recent academic papers *with codes* related to _stock price prediction_, _quantitative trading_, _risk modeling_. This is a non-exhausting list, even though I'll try to keep it updated... Feel free to suggest decent papers via a PR. If you find this repository helpful consider leaving a :star: # Table of Contents - [About](#about) - [Table of Contents](#table-of-contents) - [Sorted by Time](#sorted-by-time) - [2025](#2025) - [2024](#2024) - [2023](#2023) - [2022](#2022) - [2021](#2021) - [2020](#2020) - [Older Papers](#older-papers) - [Sorted by Tasks](#sorted-by-tasks) - [Stock Price Prediction](#stock-price-prediction) - [Stock Trading](#stock-trading) - [Asset Pricing](#asset-pricing) - [Risk Modeling](#risk-modeling) - [Volatility \\& Risk Forecasting](#volatility--risk-forecasting) - [Sorted by Models](#sorted-by-models) - [Transformer](#transformer) - [Graph Neural Networks](#graph-neural-networks) - [Large Language Models](#large-language-models) - [Other Models (SSM/Mamba, MLP, MoE, Foundation, Generative)](#other-models-ssmmamba-mlp-moe-foundation-generative) - [Sorted by Methods](#sorted-by-methods) - [NLP-based Methods](#nlp-based-methods) - [Graph Learning](#graph-learning) - [Reinforcement-learning](#reinforcement-learning) - [Meta- \\& Multi-task Learning](#meta---multi-task-learning) - [Retrieval-Au",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "Marfusios/premium-tracker",
+    "requested_name": "Marfusios/premium-tracker",
+    "id": 1039644002,
+    "url": "https://github.com/Marfusios/premium-tracker",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Portfolio tracker for InteractiveBrokers statements with focus on options selling and wheel strategy",
+    "stars": 11,
+    "forks": 10,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "fe8062c81c62fa05d09608c64bd2c7977de79825",
+    "last_commit_date": "2025-08-19T10:04:00Z",
+    "pushed_at_not_commit_date": "2025-08-19T10:04:02Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Marfusios",
+        "contributions": 10,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "afcdf139c2556182109ef4872f2954a5902e224d57e3fc1ddb547e73841cc3da",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "App.tsx",
+      "README.md",
+      "components",
+      "constants.tsx",
+      "context",
+      "img",
+      "index.html",
+      "index.tsx",
+      "locales",
+      "metadata.json",
+      "package.json",
+      "services",
+      "tsconfig.json",
+      "types.ts",
+      "version.ts",
+      "vite.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Marfusios/premium-tracker/blob/fe8062c81c62fa05d09608c64bd2c7977de79825/package.json",
+        "sha256": "5e28a89ef533721801542bdb11d276374dcd07e3125fd2af3abcc1845805e667"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Marfusios/premium-tracker",
+      "commit": "https://github.com/Marfusios/premium-tracker/commit/fe8062c81c62fa05d09608c64bd2c7977de79825",
+      "readme": "https://github.com/Marfusios/premium-tracker/blob/fe8062c81c62fa05d09608c64bd2c7977de79825/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Marfusios/premium-tracker/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Marfusios/premium-tracker/contributors",
+      "issues": "https://api.github.com/repos/Marfusios/premium-tracker/issues"
+    },
+    "readme_excerpt": "# \ud83d\udcca IBKR Portfolio Analyzer Turn your Interactive Brokers activity statement into a powerful decision-making tool. Visualize your gains, manage portfolio risk, and trade with confidence. --- ## \u2728 Overview The **IBKR Portfolio Analyzer** is a sophisticated, privacy-focused web application designed for traders who want to gain deeper insights from their Interactive Brokers activity statements. While beneficial for all investors, it has a special focus on visualizing and calculating key performance and risk metrics for short option strategies, particularly **The Wheel**. This tool processes your entire activity statement CSV file directly in your browser, ensuring your financial data remains completely private and never leaves your computer. ## \ud83d\ude80 Key Features - **Privacy First**: All data processing is done client-side. Your statement is **never** uploaded to any server. - **Comprehensive Dashboard**: Get a 360-degree view of your portfolio's performance with key metrics like Net Asset Value (NAV), Time-Weighted Return (TWR), and detailed P/L summaries. - **Advanced Options Analysis**: - **Wheel Strategy Tracking**: Automatically identifies and analyzes completed and pending Wheel cycles, calculating total P/L, premiums, duration, and annualized returns. - **Short Put Risk Management**: Visualizes your potential collateral requirements for short puts, separating them by risk (In-t",
+    "license_excerpt": ""
+  }
+]

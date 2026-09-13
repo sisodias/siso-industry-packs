@@ -1,0 +1,1548 @@
+[
+  {
+    "full_name": "oh-rid/claude-code-plugin-ib",
+    "requested_name": "oh-rid/claude-code-plugin-ib",
+    "id": 1249155671,
+    "url": "https://github.com/oh-rid/claude-code-plugin-ib",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Claude Code plugin for Interactive Brokers \u2014 read-only IB Client Portal Gateway lifecycle, REST + Flex Web Service skills, options/portfolio/tax tooling, order-blocking hook.",
+    "stars": 5,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "77495dbb2b8c6c5abff42f2bdc455e16bf7995a0",
+    "last_commit_date": "2026-05-25T18:41:01Z",
+    "pushed_at_not_commit_date": "2026-05-25T18:41:03Z",
+    "commits_since_20260313_count_capped100": 2,
+    "recent_commit_authors": [
+      "oh-rid"
+    ],
+    "contributors_sample": [
+      {
+        "login": "oh-rid",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "f872ee09cc8529b3dc47c6006b98e58f3dcd3255d616df05a60ddd847daef72e",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "a2966e21917624c193c385f79980e9344978170f7432cb892504287e22f60233",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude-plugin",
+      ".env.example",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "agents",
+      "commands",
+      "hooks",
+      "scripts",
+      "skills"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "product_shelf"
+    ],
+    "bank_row": null,
+    "shelf_row": {
+      "source_id": "SRC-1610",
+      "repo": "oh-rid/claude-code-plugin-ib",
+      "url": "https://github.com/oh-rid/claude-code-plugin-ib",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/oh-rid/claude-code-plugin-ib",
+      "commit": "https://github.com/oh-rid/claude-code-plugin-ib/commit/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0",
+      "readme": "https://github.com/oh-rid/claude-code-plugin-ib/blob/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0/README.md",
+      "license": "https://github.com/oh-rid/claude-code-plugin-ib/blob/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0/LICENSE",
+      "recent_commits": "https://api.github.com/repos/oh-rid/claude-code-plugin-ib/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/oh-rid/claude-code-plugin-ib/contributors",
+      "issues": "https://api.github.com/repos/oh-rid/claude-code-plugin-ib/issues"
+    },
+    "readme_excerpt": "# ib-portfolio-management A [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin for working with Interactive Brokers from the terminal \u2014 lifecycle for the Client Portal Gateway, IB REST + Flex Web Service skills, an options strategy framework, portfolio reporting / rebalance / tax-loss-harvest workflows, and an order-blocking hook so the assistant cannot accidentally place a trade. **Read-only by design.** The `block-orders.sh` PreToolUse hook denies any Bash call that hits an order or order-reply endpoint. Orders go through TWS Desktop or the IB mobile app \u2014 never through this plugin. Not affiliated with Interactive Brokers. ## Two IB APIs \u2014 and why you need both IB exposes account state through two completely different APIs. This plugin wraps both because each fills a gap the other can't. | API | What it gives you | What it can't | Setup cost | |---|---|---|---| | **CP Gateway** (`localhost:5000`) | Live quotes, option chains, current positions, account state, margin metrics, Greeks. Authenticated by your normal IB login + 2FA every ~24h | **Only the last 7 days of trades.** No tax-year history, no closed-lots P&L, no realized FIFO across years | Required. Step 5-6 in install | | **Flex Web Service** (`ndcdyn.interactivebrokers.com`) | **Full trade history**, closed lots with cost basis, realized P&L, dividends, fees \u2014 anything you'd put in an accountant's repor",
+    "license_excerpt": "MIT License Copyright (c) 2026 oh-rid Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice an"
+  },
+  {
+    "full_name": "OnePunchMonk/TradeRecon",
+    "requested_name": "OnePunchMonk/TradeRecon",
+    "id": 1026838955,
+    "url": "https://github.com/OnePunchMonk/TradeRecon",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A real-time trade reconciliation engine that ingests execution, broker, and PnL data, detects mismatches with tolerance-based checks, and provides live alerts, audit trails, and dashboards for compliance and monitoring.",
+    "stars": 4,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "54c57415b36a67e227665d27b09fb7e9091dd407",
+    "last_commit_date": "2025-08-17T17:59:06Z",
+    "pushed_at_not_commit_date": "2025-08-17T17:59:07Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "OnePunchMonk",
+        "contributions": 8,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "40058b59c36d278c4a6221f1032427f4bd40015ec468498d097ee79b0a268e18",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "Dockerfile",
+      "README.md",
+      "app",
+      "data",
+      "docker-compose.yml",
+      "grafana",
+      "kafka",
+      "prometheus",
+      "readme-screenshots",
+      "reports",
+      "requirements.txt",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/OnePunchMonk/TradeRecon/blob/54c57415b36a67e227665d27b09fb7e9091dd407/requirements.txt",
+        "sha256": "be2b3450b0f86e7d35e7728a2bffd7807c7e92fc760354b51fa811181e508946"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OnePunchMonk/TradeRecon",
+      "commit": "https://github.com/OnePunchMonk/TradeRecon/commit/54c57415b36a67e227665d27b09fb7e9091dd407",
+      "readme": "https://github.com/OnePunchMonk/TradeRecon/blob/54c57415b36a67e227665d27b09fb7e9091dd407/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/OnePunchMonk/TradeRecon/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OnePunchMonk/TradeRecon/contributors",
+      "issues": "https://api.github.com/repos/OnePunchMonk/TradeRecon/issues"
+    },
+    "readme_excerpt": "# \ud83d\udd04 TradeRecon: Real-Time Trade Reconciliation Engine [![Project Status: Stable](https://img.shields.io/badge/status-stable-green.svg)](https://github.com/OnePunchMonk/TradeRecon) A streaming post-trade reconciliation system inspired by real-world infrastructure. > **System & Monitoring Metrics** > - \u26a1 **Per-record Latency:** ~45ms --- ## \ud83e\udde0 Problem Statement In trading systems, multiple systems (internal and external) log the same trade at different times, with slight variations. These include: - Internal trading engines - Broker confirmations - Risk/PnL systems - Clearinghouses or custodians Discrepancies in price, quantity, or timestamp can indicate serious issues: execution errors, data corruption, or compliance violations. **Goals** - Reconciling trade records across systems - Detecting and flagging mismatches - Generating end-of-day compliance reports - Ensuring timely alerts and robust downstream reliability --- ## \ud83c\udfaf Project Goal To build a real-time, Kafka-driven trade reconciliation engine that compares: - Execution data from the internal engine - Confirmation data from broker systems - Optional risk snapshots from the PnL system \u2026and flags any mismatches in real-time. --- ## \ud83d\udca1 Use Case and Need In a fast-paced trading environment, maintaining data integrity across numerous disparate systems is paramount. Even minor variations in trade details can lead to significant fi",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "OnlyTerp/papertrench",
+    "requested_name": "OnlyTerp/papertrench",
+    "id": 1319277794,
+    "url": "https://github.com/OnlyTerp/papertrench",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Paper-trade Solana memecoins on the sites you already use. Real prices, fake money, and a record you can actually learn from.",
+    "stars": 71,
+    "forks": 17,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "main",
+    "latest_commit": "bd9967c63f45013bdd6453937ee2cdc5493ca899",
+    "last_commit_date": "2026-09-13T01:42:31Z",
+    "pushed_at_not_commit_date": "2026-09-13T01:42:39Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "OnlyTerp",
+      "amogus0471",
+      "audit",
+      "devin-ai-integration[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "OnlyTerp",
+        "contributions": 513,
+        "type": "User"
+      },
+      {
+        "login": "devin-ai-integration[bot]",
+        "contributions": 101,
+        "type": "Bot"
+      },
+      {
+        "login": "amogus0471",
+        "contributions": 63,
+        "type": "User"
+      },
+      {
+        "login": "opsec-bot",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/OnlyTerp/papertrench/issues/110",
+      "created_at": "2026-09-02T02:33:12Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d864769405621bda8b380a6a376b01163e07bdb25084efd59d1dd18f13d30e13",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "44faf6cb407a207266c7a0e461d7a730252c4a7c05815acf85482f0146a35261",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".contracts",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "DEFECTS.md",
+      "LICENSE",
+      "PREDICTION-AUDIT-FEEDBACK.md",
+      "README.md",
+      "ROADMAP.md",
+      "bot",
+      "brand",
+      "docs",
+      "extension",
+      "ptrecon.config.json",
+      "scripts",
+      "server",
+      "site",
+      "tools"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "B",
+        "query": "topic:trading-journal"
+      },
+      {
+        "round": 3,
+        "stage": "W09",
+        "lane": "topic",
+        "query": "topic:trading-journal pushed:>2026-03-13"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OnlyTerp/papertrench",
+      "commit": "https://github.com/OnlyTerp/papertrench/commit/bd9967c63f45013bdd6453937ee2cdc5493ca899",
+      "readme": "https://github.com/OnlyTerp/papertrench/blob/bd9967c63f45013bdd6453937ee2cdc5493ca899/README.md",
+      "license": "https://github.com/OnlyTerp/papertrench/blob/bd9967c63f45013bdd6453937ee2cdc5493ca899/LICENSE",
+      "recent_commits": "https://api.github.com/repos/OnlyTerp/papertrench/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OnlyTerp/papertrench/contributors",
+      "issues": "https://api.github.com/repos/OnlyTerp/papertrench/issues"
+    },
+    "readme_excerpt": "**Paper-trade Solana memecoins on the sites you already use.** Real prices. Fake money. A record you can actually learn from. [![License: MIT](https://img.shields.io/badge/License-MIT-FF9D45.svg?style=flat-square)](LICENSE) [![Tests](https://img.shields.io/badge/tests-1665%20passing-34D399?style=flat-square)](#tests) [![Chrome MV3](https://img.shields.io/badge/Chrome-MV3-6AA9FF?style=flat-square)](#install) [![No tracking](https://img.shields.io/badge/telemetry-none-8D97A9?style=flat-square)](#privacy) ### [\u25b6 Watch the launch video](https://papertrench.com/assets/launch.mp4) *(GitHub's file viewer can't stream the 15 MB mp4 \u2014 it plays on the site.)* --- ## What it is PaperTrench is a Chrome extension that overlays a paper-trading terminal on **Axiom, Padre, Photon, GMGN, BullX, Dexscreener, Birdeye, Jupiter, Pump.fun, Fomo, and Lute**. You trade the real chart, at the real live price, with money that isn't real \u2014 then review exactly what you did and why. It exists because the usual way people learn this market is to lose money finding out that they chase, oversize, and round-trip their winners. This tells you that in an afternoon instead. ## Why it's different **It never invents a price.** Every fill uses a price validated against a trusted anchor. When no source has a price yet, the panel says so instead of showing a number. **It measures process, not just P&L.** Anyone can ge",
+    "license_excerpt": "MIT License Copyright (c) 2026 PaperTrench contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above c"
+  },
+  {
+    "full_name": "OpenBB-finance/OpenBB",
+    "requested_name": "OpenBB-finance/OpenBB",
+    "id": 323048702,
+    "url": "https://github.com/OpenBB-finance/OpenBB",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open Data Platform for analysts, quants and AI agents.",
+    "stars": 72952,
+    "forks": 7546,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "develop",
+    "latest_commit": "3e071fcc2cd9f891cac6040ae60296dba76dab46",
+    "last_commit_date": "2026-07-20T17:45:28Z",
+    "pushed_at_not_commit_date": "2026-09-11T15:00:10Z",
+    "commits_since_20260313_count_capped100": 47,
+    "recent_commit_authors": [
+      "Bortlesboat",
+      "ChimdumebiNebolisa",
+      "JasonOA888",
+      "Sanjays2402",
+      "Shreyansh1729",
+      "dagecko",
+      "deeleeramone",
+      "dhruvv16-hash",
+      "jitchamoli",
+      "piiq",
+      "sandole"
+    ],
+    "contributors_sample": [
+      {
+        "login": "jmaslek",
+        "contributions": 1035,
+        "type": "User"
+      },
+      {
+        "login": "deeleeramone",
+        "contributions": 761,
+        "type": "User"
+      },
+      {
+        "login": "montezdesousa",
+        "contributions": 562,
+        "type": "User"
+      },
+      {
+        "login": "aia",
+        "contributions": 384,
+        "type": "User"
+      },
+      {
+        "login": "colin99d",
+        "contributions": 360,
+        "type": "User"
+      },
+      {
+        "login": "hjoaquim",
+        "contributions": 254,
+        "type": "User"
+      },
+      {
+        "login": "JerBouma",
+        "contributions": 187,
+        "type": "User"
+      },
+      {
+        "login": "tehcoderer",
+        "contributions": 154,
+        "type": "User"
+      },
+      {
+        "login": "jose-donato",
+        "contributions": 138,
+        "type": "User"
+      },
+      {
+        "login": "piiq",
+        "contributions": 135,
+        "type": "User"
+      },
+      {
+        "login": "Chavithra",
+        "contributions": 135,
+        "type": "User"
+      },
+      {
+        "login": "alokan",
+        "contributions": 124,
+        "type": "User"
+      },
+      {
+        "login": "martinb-ai",
+        "contributions": 93,
+        "type": "User"
+      },
+      {
+        "login": "IgorWounds",
+        "contributions": 90,
+        "type": "User"
+      },
+      {
+        "login": "simmonsj330",
+        "contributions": 77,
+        "type": "User"
+      },
+      {
+        "login": "luqmanbello",
+        "contributions": 65,
+        "type": "User"
+      },
+      {
+        "login": "northern-64bit",
+        "contributions": 61,
+        "type": "User"
+      },
+      {
+        "login": "dot-agi",
+        "contributions": 60,
+        "type": "User"
+      },
+      {
+        "login": "minhhoang1023",
+        "contributions": 42,
+        "type": "User"
+      },
+      {
+        "login": "kulbinderdio",
+        "contributions": 40,
+        "type": "User"
+      },
+      {
+        "login": "cclauss",
+        "contributions": 37,
+        "type": "User"
+      },
+      {
+        "login": "andrewkenreich",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "lolrenx",
+        "contributions": 34,
+        "type": "User"
+      },
+      {
+        "login": "soggyomelette",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "devwolff",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "shadycuz",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "hinxx",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "buzzCraft",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "clothespin",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "arcutright",
+        "contributions": 15,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/OpenBB-finance/OpenBB/issues/7455",
+      "created_at": "2026-04-05T11:07:32Z",
+      "state": "open",
+      "comments": 23,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "38ace73536447eded94a0608c7a9490b33a8ebbcdf980c3fc2998d698ba960b5",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "442baa7865ddf53ba04808a29e4810ac1fd9c83383d4ac76297cec4569e19222",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".codespell.ignore",
+      ".codespell.skip",
+      ".coveragerc",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".markdownlintrc",
+      ".pre-commit-config.yaml",
+      ".pylintrc",
+      ".secrets.baseline",
+      "CODE_OF_CONDUCT.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "assets",
+      "build",
+      "cli",
+      "cookiecutter",
+      "desktop",
+      "examples",
+      "images",
+      "openbb_platform",
+      "pytest.ini",
+      "ruff.toml"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "B",
+        "query": "topic:quantitative-finance"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OpenBB-finance/OpenBB",
+      "commit": "https://github.com/OpenBB-finance/OpenBB/commit/3e071fcc2cd9f891cac6040ae60296dba76dab46",
+      "readme": "https://github.com/OpenBB-finance/OpenBB/blob/3e071fcc2cd9f891cac6040ae60296dba76dab46/README.md",
+      "license": "https://github.com/OpenBB-finance/OpenBB/blob/3e071fcc2cd9f891cac6040ae60296dba76dab46/LICENSE",
+      "recent_commits": "https://api.github.com/repos/OpenBB-finance/OpenBB/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OpenBB-finance/OpenBB/contributors",
+      "issues": "https://api.github.com/repos/OpenBB-finance/OpenBB/issues"
+    },
+    "readme_excerpt": "[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/openbb_finance.svg?style=social&label=Follow%20%40openbb_finance)](https://x.com/openbb_finance) [![Discord Shield](https://img.shields.io/discord/831165782750789672)](https://discord.com/invite/xPHTuHCmuV) [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/OpenBB-finance/OpenBB) [![PyPI](https://img.shields.io/pypi/v/openbb?color=blue&label=PyPI%20Package)](https://pypi.org/project/openbb/) Open Data Platform by OpenBB (ODP) is the open-source toolset that helps data engineers integrate proprietary, licensed, and public data sources into downstream applications like AI copilots and research dashboards. ODP operates as the \"connect once, consume everywhere\" infrastructure layer that consolidates and exposes data to multiple surfaces at once: Python environments for quants, OpenBB Workspace and Excel for analysts, MCP servers for AI agents, and REST APIs for other applications. Get started with: `pip install openbb` ```python from openbb import obb output = obb.equity.price.historical(\"AAPL\") df = output.to_dataframe() ``` Data integrations available can be found here: --- ## OpenBB Workspace While the Open Data Platform prov",
+    "license_excerpt": "Copyright (c) 2021-2025 OpenBB Inc. All files in this repository are licensed under the GNU Affero General Public License v3.0. GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specific"
+  },
+  {
+    "full_name": "OpenByteInc/QuantDinger",
+    "requested_name": "OpenByteInc/QuantDinger",
+    "id": 1124295269,
+    "url": "https://github.com/OpenByteInc/QuantDinger",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open-source AI Trading OS and commercial-ready multi-tenant SaaS platform \u2014 research markets, build Python strategies, backtest, paper/live trade, and monitor crypto, stocks, and forex, with built-in user management, billing, payments, and settlement to launch and operate your own trading service.",
+    "stars": 11591,
+    "forks": 2405,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0",
+    "last_commit_date": "2026-09-13T11:46:28Z",
+    "pushed_at_not_commit_date": "2026-09-13T15:33:32Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Dev-next-gen",
+      "Henry",
+      "SAY-5",
+      "dependabot[bot]",
+      "mameikagou",
+      "mwaleedta",
+      "tianhe"
+    ],
+    "contributors_sample": [
+      {
+        "login": "tianhe",
+        "contributions": 198,
+        "type": "User"
+      },
+      {
+        "login": "quantdinger-lab",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "brokermr810",
+        "contributions": 36,
+        "type": "User"
+      },
+      {
+        "login": "p369349074",
+        "contributions": 36,
+        "type": "User"
+      },
+      {
+        "login": "hang666",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "XSX-Milan",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "claude",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "smc1263",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Yeadon8888",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "RheagalFire",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Bortlesboat",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "N0el4kLs",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vicjayjay",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mwaleedta",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "springwings",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Dev-next-gen",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "luoshan5261486",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mameikagou",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "santbabaq-ops",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "x",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/OpenByteInc/QuantDinger/issues/130",
+      "created_at": "2026-06-01T07:59:45Z",
+      "state": "closed",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-06-11T09:30:11Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "54304dcdb903040152d7a535b38fb79b3381549e720fda49c4aed15e1c593ce4",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c0a1e0a8cd6a160d060858b2eff80befc9f2cf42db1433d34c1af0f92d6489b0",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".cursor",
+      ".dockerignore",
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitleaksignore",
+      ".spectral.agent.yaml",
+      ".spectral.yaml",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "CONTRIBUTORS.md",
+      "DEVELOPMENT.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARKS.md",
+      "VERSION",
+      "backend_api_python",
+      "docker-compose.build.yml",
+      "docker-compose.ghcr.yml",
+      "docker-compose.observability.yml",
+      "docker-compose.production.yml",
+      "docker-compose.yml",
+      "docs",
+      "install.ps1",
+      "install.sh",
+      "mcp_server",
+      "ops",
+      "scripts"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OpenByteInc/QuantDinger",
+      "commit": "https://github.com/OpenByteInc/QuantDinger/commit/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0",
+      "readme": "https://github.com/OpenByteInc/QuantDinger/blob/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0/README.md",
+      "license": "https://github.com/OpenByteInc/QuantDinger/blob/ff195f437b9e692cb7cc516e9f4cdb2138fe8cd0/LICENSE",
+      "recent_commits": "https://api.github.com/repos/OpenByteInc/QuantDinger/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OpenByteInc/QuantDinger/contributors",
+      "issues": "https://api.github.com/repos/OpenByteInc/QuantDinger/issues"
+    },
+    "readme_excerpt": "QuantDinger Open-source AI Trading OS Turn trading ideas into Python strategies, backtests, paper trading, live execution, and monitoring \u2014 all in one self-hosted stack. QuantDinger is a product of Open Byte Inc. AI research \u2192 Strategy code \u2192 Backtest \u2192 Paper/Live execution \u2192 Monitoring English \u00b7 \u7b80\u4f53\u4e2d\u6587 \u00b7 API \u00b7 AI Agents & MCP Live App \u00b7 Website \u00b7 Video Demo \u00b7 Official Support Email SUPPORTED BY &nbsp;&nbsp;&nbsp;&nbsp; > QuantDinger can submit real orders when live trading is explicitly enabled. > Start with paper trading, use restricted API keys, and review the risk and > compliance requirements for your jurisdiction. This project does not provide > investment advice. ## Watch QuantDinger in action ## What QuantDinger is QuantDinger is an **open-source AI Trading OS** for independent traders, Python strategy authors, and small teams. Its local-first, self-hosted design keeps market data, strategy code, broker credentials, and deployment under the operator's control. The project combines: - multi-provider AI market research and analysis; - Python indicators and Strategy API V2 development; - server-side backtesting and experiment workflows; - paper and live execution across crypto exchanges and traditional brokers; - web, mobile H5, human API, Agent Gateway, and MCP access; - PostgreSQL-backed state, durable workers, audit logs, and optional monitoring. It is not a black-box sig",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "OpenGamma/Strata",
+    "requested_name": "OpenGamma/Strata",
+    "id": 20882897,
+    "url": "https://github.com/OpenGamma/Strata",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": " Open source analytics and market risk library from OpenGamma",
+    "stars": 962,
+    "forks": 317,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "987932ee95bf53e2baaff9a6b8e738a00f558b10",
+    "last_commit_date": "2026-09-07T16:20:26Z",
+    "pushed_at_not_commit_date": "2026-09-07T16:20:30Z",
+    "commits_since_20260313_count_capped100": 25,
+    "recent_commit_authors": [
+      "Andras1022",
+      "James-OpenGamma",
+      "SaponeRolando",
+      "mergify[bot]",
+      "opengammacibot",
+      "skitini",
+      "vaibhavkrishnakumar",
+      "yukiiwashita"
+    ],
+    "contributors_sample": [
+      {
+        "login": "jodastephen",
+        "contributions": 2677,
+        "type": "User"
+      },
+      {
+        "login": "cjkent",
+        "contributions": 480,
+        "type": "User"
+      },
+      {
+        "login": "yukiiwashita",
+        "contributions": 318,
+        "type": "User"
+      },
+      {
+        "login": "marc-henrard",
+        "contributions": 301,
+        "type": "User"
+      },
+      {
+        "login": "opengammacibot",
+        "contributions": 286,
+        "type": "User"
+      },
+      {
+        "login": "jonathansenior",
+        "contributions": 227,
+        "type": "User"
+      },
+      {
+        "login": "julianhowarth",
+        "contributions": 56,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 54,
+        "type": "Bot"
+      },
+      {
+        "login": "dependabot-preview[bot]",
+        "contributions": 46,
+        "type": "Bot"
+      },
+      {
+        "login": "skitini",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "benhamilton-brown",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "ashleyheath",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "brianweller89",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "santorog",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "James-OpenGamma",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "anand-uk",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "jacbop",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "andreiruse",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "beajeanm",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "Mistuus",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "daminuk",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "Andras1022",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "hsaleem06",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "martynassateika",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "MichaelRol",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "akshaishah",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "doughertyaaron95",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ChristianOG",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "davidcervi",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "SaponeRolando",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "32e4fa64965df83b2e527d127a5de74eb65914c9bb5db62c22a1e32898196943",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_candidates": [
+      "LICENSE.txt",
+      "NOTICE.txt"
+    ],
+    "root_entries": [
+      ".circleci",
+      ".github",
+      ".gitignore",
+      "LICENSE.txt",
+      "NOTICE.txt",
+      "README.md",
+      "RELEASE.md",
+      "SECURITY.md",
+      "eclipse",
+      "examples",
+      "modules",
+      "pom.xml",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "OpenGamma/Strata",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Java analytics and market risk library for derivatives/finance",
+      "reuse_value": 78,
+      "stars": 948,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "url": "https://github.com/OpenGamma/Strata",
+      "rank_score": 78009480
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "OpenGamma/Strata",
+      "stars": 948,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "unit_class": "component",
+      "reuse_value": 78,
+      "liftability": 90,
+      "fame_gap": -12,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Open source analytics and market risk library from OpenGamma"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OpenGamma/Strata",
+      "commit": "https://github.com/OpenGamma/Strata/commit/987932ee95bf53e2baaff9a6b8e738a00f558b10",
+      "readme": "https://github.com/OpenGamma/Strata/blob/987932ee95bf53e2baaff9a6b8e738a00f558b10/README.md",
+      "license": "https://github.com/OpenGamma/Strata/blob/987932ee95bf53e2baaff9a6b8e738a00f558b10/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/OpenGamma/Strata/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OpenGamma/Strata/contributors",
+      "issues": "https://api.github.com/repos/OpenGamma/Strata/issues"
+    },
+    "readme_excerpt": "Strata ====== [![Strata Build Status](https://circleci.com/gh/OpenGamma/Strata.svg?style=shield)](https://strata.opengamma.io) [![License](http://img.shields.io/:license-apache-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html) This repository contains the source code of [Strata](https://strata.opengamma.io), the open source analytics and market risk library from [OpenGamma](https://opengamma.com/). Strata is released as Open Source Software under the [Apache v2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html). [![OpenGamma](https://s3-eu-west-1.amazonaws.com/og-public-downloads/og-logo-alpha.png \"OpenGamma\")](https://opengamma.com/) Using Strata ------------ Documentation for Strata can be found at the [Strata home page](https://strata.opengamma.io). To use Strata Java SE 8u40 or later is required. The JAR files are available in [Maven Central](https://search.maven.org/search?q=g:com.opengamma.strata): ``` com.opengamma.strata strata-measure 2.12.0 ``` The JAR files, along with the command line tool and examples, can also be obtained from the [Strata Releases](https://github.com/OpenGamma/Strata/releases) page on GitHub. Building Strata --------------- The source code can be cloned using [git](http://git-scm.com/) from GitHub: ``` git clone https://github.com/OpenGamma/Strata.git ``` The projects use [Apache Maven](https://maven.apache.org/) as the build ",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "OpenSourceRisk/Engine",
+    "requested_name": "OpenSourceRisk/Engine",
+    "id": 70231960,
+    "url": "https://github.com/OpenSourceRisk/Engine",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open Source Risk Engine",
+    "stars": 786,
+    "forks": 303,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "3d75a69087911a7e2cf1e6882da7bc27135c0762",
+    "last_commit_date": "2026-09-11T17:26:17Z",
+    "pushed_at_not_commit_date": "2026-09-11T17:26:31Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Damien Barker",
+      "Damien.Barker",
+      "Gitlab CI",
+      "Ripalta",
+      "farahkhashman",
+      "francis duffy",
+      "francis.duffy@lseg.com",
+      "meghal.sachdev@lseg.com",
+      "obrienjoey",
+      "pcaspers",
+      "sebastien.bouvard"
+    ],
+    "contributors_sample": [
+      {
+        "login": "pcaspers",
+        "contributions": 14410,
+        "type": "User"
+      },
+      {
+        "login": "damienbarker",
+        "contributions": 3455,
+        "type": "User"
+      },
+      {
+        "login": "mgroncki",
+        "contributions": 2345,
+        "type": "User"
+      },
+      {
+        "login": "rolandlichters",
+        "contributions": 2069,
+        "type": "User"
+      },
+      {
+        "login": "NathanielVolfango",
+        "contributions": 831,
+        "type": "User"
+      },
+      {
+        "login": "farahkhashman",
+        "contributions": 520,
+        "type": "User"
+      },
+      {
+        "login": "hsegger",
+        "contributions": 438,
+        "type": "User"
+      },
+      {
+        "login": "paulgiltinan",
+        "contributions": 400,
+        "type": "User"
+      },
+      {
+        "login": "MartinMSjogren",
+        "contributions": 266,
+        "type": "User"
+      },
+      {
+        "login": "cfdickmann",
+        "contributions": 190,
+        "type": "User"
+      },
+      {
+        "login": "RuanRichter",
+        "contributions": 168,
+        "type": "User"
+      },
+      {
+        "login": "obrienjoey",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "gbfredrik",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "alexchow-ore",
+        "contributions": 138,
+        "type": "User"
+      },
+      {
+        "login": "alexchow-acadia",
+        "contributions": 119,
+        "type": "User"
+      },
+      {
+        "login": "DeweyRichter",
+        "contributions": 100,
+        "type": "User"
+      },
+      {
+        "login": "niknow",
+        "contributions": 79,
+        "type": "User"
+      },
+      {
+        "login": "nvolfango",
+        "contributions": 78,
+        "type": "User"
+      },
+      {
+        "login": "rkapl123",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "kohnech",
+        "contributions": 44,
+        "type": "User"
+      },
+      {
+        "login": "QuaternionRisk",
+        "contributions": 39,
+        "type": "User"
+      },
+      {
+        "login": "sarpkacar",
+        "contributions": 30,
+        "type": "User"
+      },
+      {
+        "login": "AlexWinter89",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "Borgomi42",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "chrissmithqrm",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "machalejm",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "james-machale-lseg",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "bmmay",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "irigopouPR",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "yaofei-li",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/OpenSourceRisk/Engine/issues/361",
+      "created_at": "2026-09-10T14:38:41Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a4c6fbbeed4b0d8bd0f91dd32401d5191fd7de1364a920f34765ce1f35cab362",
+    "license": "NOASSERTION",
+    "license_path": "license.txt",
+    "license_file_sha256": "cae7892665c00e450c6cb87bcc3246986b2597aa4cef6a4771d74cce364e34e5",
+    "license_candidates": [
+      "license.txt",
+      "licenseheader.txt"
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      "App",
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "Configurations",
+      "Docker",
+      "Docs",
+      "Examples",
+      "FrontEnd",
+      "News.txt",
+      "ORE-SWIG",
+      "OREAnalytics",
+      "OREData",
+      "ORETest",
+      "PythonIntegration",
+      "QuantExt",
+      "QuantLib",
+      "README.md",
+      "ThirdPartyLibs",
+      "Tools",
+      "cmake",
+      "license.txt",
+      "licenseheader.txt",
+      "ore.props",
+      "runCmakeVS.cmd",
+      "tutorials",
+      "tutorials_index.md",
+      "xsd"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/OpenSourceRisk/Engine",
+      "commit": "https://github.com/OpenSourceRisk/Engine/commit/3d75a69087911a7e2cf1e6882da7bc27135c0762",
+      "readme": "https://github.com/OpenSourceRisk/Engine/blob/3d75a69087911a7e2cf1e6882da7bc27135c0762/README.md",
+      "license": "https://github.com/OpenSourceRisk/Engine/blob/3d75a69087911a7e2cf1e6882da7bc27135c0762/license.txt",
+      "recent_commits": "https://api.github.com/repos/OpenSourceRisk/Engine/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/OpenSourceRisk/Engine/contributors",
+      "issues": "https://api.github.com/repos/OpenSourceRisk/Engine/issues"
+    },
+    "readme_excerpt": "# ORE The [Open Source Risk](http://opensourcerisk.org) project aims at establishing a transparent peer-reviewed framework for pricing and risk analysis that can serve as * a benchmarking, validation, training, teaching reference * an extensible foundation for tailored risk solutions Open Source Risk Engine (ORE) provides * contemporary risk analytics and value adjustments (XVAs) * interfaces for trade/market data and system configuration (API and XML) * simple application launchers in Excel, LibreOffice, Python, Jupyter * various examples that demonstrate typical use cases * comprehensive test suites ORE is based on [QuantLib](http://quantlib.org), the open source library for quantitative finance, and it extends QuantLib in terms of simulation models, financial instruments and pricing engines. ORE is sponsored by [Acadia Inc](http://acadia.inc) as part of the firm's commitment to transparency in pricing methods and risk analytics applied in the industry. ORE is free/open software, provided under the Modified BSD License, which permits using and modifying the code base as well as incorporating it into commercial applications. ## Documentation A detailed User Guide is provided that covers * installation instructions * description of how to run the examples and which results to expect * trade and market data structure * application configuration * methodology overview ## API Refe",
+    "license_excerpt": "Open Source Risk Engine (ORE) is Copyright (C) 2016-2020 Quaternion Risk Management Ltd. Copyright (C) 2021 Acadia Inc. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met : Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of con"
+  },
+  {
+    "full_name": "osqp/osqp",
+    "requested_name": "osqp/osqp",
+    "id": 69313892,
+    "url": "https://github.com/osqp/osqp",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The Operator Splitting QP Solver",
+    "stars": 2192,
+    "forks": 417,
+    "archived": false,
+    "fork": false,
+    "language": "C",
+    "default_branch": "master",
+    "latest_commit": "1572ae068e9ce9ca723cf8223548ade1ff7acc29",
+    "last_commit_date": "2025-11-10T12:54:10Z",
+    "pushed_at_not_commit_date": "2026-01-12T12:56:23Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "bstellato",
+        "contributions": 1353,
+        "type": "User"
+      },
+      {
+        "login": "gbanjac",
+        "contributions": 644,
+        "type": "User"
+      },
+      {
+        "login": "imciner2",
+        "contributions": 548,
+        "type": "User"
+      },
+      {
+        "login": "vineetbansal",
+        "contributions": 203,
+        "type": "User"
+      },
+      {
+        "login": "goulart-paul",
+        "contributions": 135,
+        "type": "User"
+      },
+      {
+        "login": "micschub",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 17,
+        "type": "Bot"
+      },
+      {
+        "login": "AmitSolomonPrinceton",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "mlubin",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "ebarnard",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Jaanilj",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "govindchari",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "hongkai-dai",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "maxschaller",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "traversaro",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "nikalra",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "esquires",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "EdsterG",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "albertoguiggiani",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ahoarau",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bnaras",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "danielpmorton",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "drewrisinger",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "FabienPean",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "gustav-b",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tink3r",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kevinsmia1939",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mcg1969",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pvarin",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bnovoselnik",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/osqp/osqp/issues/790",
+      "created_at": "2026-08-21T19:14:30Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a72d2fc2aa69744724db815874628c4971f9eee7af77fc9cc5a21d889890b4e2",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ae5e69b1fea4c316b80e4bc2cb49ac82c0e9b34785415e128e00c975bd10f687",
+    "license_candidates": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".valgrind-suppress.supp",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "algebra",
+      "configure",
+      "docs",
+      "examples",
+      "include",
+      "site",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "osqp/osqp",
+      "capability_tag": "none",
+      "category_slug": "numeric-dataframe-library",
+      "summary": "C library implementing the OSQP convex QP solver for optimization",
+      "reuse_value": 85,
+      "stars": 2147,
+      "license": "Apache-2.0",
+      "language": "C",
+      "url": "https://github.com/osqp/osqp",
+      "rank_score": 85021470
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "osqp/osqp",
+      "stars": 2147,
+      "license": "Apache-2.0",
+      "language": "C",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "numeric-dataframe-library",
+      "cat_name": "Numeric / DataFrame Library",
+      "description": "The Operator Splitting QP Solver"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/osqp/osqp",
+      "commit": "https://github.com/osqp/osqp/commit/1572ae068e9ce9ca723cf8223548ade1ff7acc29",
+      "readme": "https://github.com/osqp/osqp/blob/1572ae068e9ce9ca723cf8223548ade1ff7acc29/README.md",
+      "license": "https://github.com/osqp/osqp/blob/1572ae068e9ce9ca723cf8223548ade1ff7acc29/LICENSE",
+      "recent_commits": "https://api.github.com/repos/osqp/osqp/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/osqp/osqp/contributors",
+      "issues": "https://api.github.com/repos/osqp/osqp/issues"
+    },
+    "readme_excerpt": "# The Operator Splitting QP Solver [![Algebra: Built-in](https://github.com/osqp/osqp/actions/workflows/algebra-builtin.yml/badge.svg)](https://github.com/osqp/osqp/actions/workflows/algebra-builtin.yml) [![Code coverage](https://coveralls.io/repos/github/osqp/osqp/badge.svg?branch=master)](https://coveralls.io/github/osqp/osqp?branch=master) ![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg) ![PyPI - downloads](https://img.shields.io/pypi/dm/osqp.svg?label=Pypi%20downloads) ![Conda - downloads](https://img.shields.io/conda/dn/conda-forge/osqp.svg?label=Conda%20downloads) [**Visit our GitHub Discussions page**](https://github.com/orgs/osqp/discussions) for any questions related to the solver! **The documentation** is available at [**osqp.org**](https://osqp.org/) The OSQP (Operator Splitting Quadratic Program) solver is a numerical optimization package for solving problems in the form ``` minimize 0.5 x' P x + q' x subject to l <= A x <= u ``` where `x in R^n` is the optimization variable. The objective function is defined by a positive semidefinite matrix `P in S^n_+` and vector `q in R^n`. The linear constraints are defined by matrix `A in R^{m x n}` and vectors `l` and `u` so that `l_i in R U {-inf}` and `u_i in R U {+inf}` for all `i in 1,...,m`. ## Citing OSQP If you are using OSQP for your work, we encourage you to * [Cite the related papers](ht",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

@@ -1,0 +1,930 @@
+[
+  {
+    "full_name": "UBC-MDS-2023-24/fixml",
+    "requested_name": "UBC-MDS-2023-24/fixml",
+    "id": 791553396,
+    "url": "https://github.com/UBC-MDS-2023-24/fixml",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "LLM Tool for effective test evaluation of ML projects with curated Checklists and LLM prompts",
+    "stars": 4,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "10b8f41b2fd5a264bc4612df7d27aecee74adfee",
+    "last_commit_date": "2024-11-28T18:46:35Z",
+    "pushed_at_not_commit_date": "2024-11-28T18:46:35Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "SoloSynth1",
+        "contributions": 255,
+        "type": "User"
+      },
+      {
+        "login": "tonyshumlh",
+        "contributions": 82,
+        "type": "User"
+      },
+      {
+        "login": "JohnShiuMK",
+        "contributions": 57,
+        "type": "User"
+      },
+      {
+        "login": "jinyz8888",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "eltociear",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ttimbers",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/UBC-MDS-2023-24/fixml/issues/211",
+      "created_at": "2024-11-01T21:50:03Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2024-11-03T22:00:53Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3364b05bcce96a49b7e5c75698b82d27e1739948089a452b9e00cc68c41c49f8",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "1c1c05a62e774913d030238e3309afbfc46618c0483f8d87ae6ccc921b15b112",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".coveragerc",
+      ".env.template",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "CHANGELOG.md",
+      "CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "_quarto.yml",
+      "analysis",
+      "data",
+      "docs",
+      "environment.yml",
+      "img",
+      "misc",
+      "poetry.lock",
+      "pyproject.toml",
+      "report",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/UBC-MDS-2023-24/fixml/blob/10b8f41b2fd5a264bc4612df7d27aecee74adfee/pyproject.toml",
+        "sha256": "c99c918c695987d4f230290422fb38e15141499acbb78a200893fcb901c792ce"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "FIXML"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/UBC-MDS-2023-24/fixml",
+      "commit": "https://github.com/UBC-MDS-2023-24/fixml/commit/10b8f41b2fd5a264bc4612df7d27aecee74adfee",
+      "readme": "https://github.com/UBC-MDS-2023-24/fixml/blob/10b8f41b2fd5a264bc4612df7d27aecee74adfee/README.md",
+      "license": "https://github.com/UBC-MDS-2023-24/fixml/blob/10b8f41b2fd5a264bc4612df7d27aecee74adfee/LICENSE",
+      "recent_commits": "https://api.github.com/repos/UBC-MDS-2023-24/fixml/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/UBC-MDS-2023-24/fixml/contributors",
+      "issues": "https://api.github.com/repos/UBC-MDS-2023-24/fixml/issues"
+    },
+    "readme_excerpt": "# FixML [![Python 3.12.0+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/) [![GitHub Release](https://img.shields.io/github/release/ubc-mds/fixml.svg?style=flat)]() [![PyPI - Version](https://img.shields.io/pypi/v/fixml)](https://pypi.org/project/fixml/) [![GitHub Activity](https://img.shields.io/github/last-commit/ubc-mds/fixml/main.svg?style=flat)]() [![Project Status: Active \u2013 The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Documentation Status](https://readthedocs.org/projects/fixml/badge/?version=latest)](https://fixml.readthedocs.io/en/latest/?badge=latest) ![CI status check](https://github.com/UBC-MDS/fixml/actions/workflows/ci.yml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) A tool for providing context-aware evaluations using a checklist-based approach on the Machine Learning project code bases. ## Documentations - Guides and API documentations: [https://fixml.readthedocs.org](https://fixml.readthedocs.org) - Reports and proposals: [https://ubc-mds.github.io/fixml](https://ubc-mds.github.io/fixml) ## Ins",
+    "license_excerpt": "# Instructional Material All reports and non-software related materials including tables, plots and images under this project is made available under the **Creative Commons Attribution 4.0 International License** ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). ## You are free to: **Share** \u2014 copy and redistribute the material in any medium or format for any purpose, even commercially. **Adapt** \u2014 remix, transform, and build upon the material for any purpose, even commercially. The l"
+  },
+  {
+    "full_name": "uberdeveloper/omspy",
+    "requested_name": "uberdeveloper/omspy",
+    "id": 415345233,
+    "url": "https://github.com/uberdeveloper/omspy",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Improved Order Management System for stock trading",
+    "stars": 55,
+    "forks": 29,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "1fbd39331e1568fb259364c3b3bb2a7a647cec0b",
+    "last_commit_date": "2025-12-01T18:21:41Z",
+    "pushed_at_not_commit_date": "2025-12-05T21:23:17Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "uberdeveloper",
+        "contributions": 494,
+        "type": "User"
+      },
+      {
+        "login": "soumyarai2050",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "google-labs-jules[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/uberdeveloper/omspy/issues/49",
+      "created_at": "2024-12-14T14:55:40Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4cd137f79b3ba00ae5c127bf0aa12b6c1a37bbbd24824749a1dbb8ff02e8fea9",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "5e210132b6a2e7ddf28956b642f8a5fc07001bab456bc388e07755e21349ee37",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "mkdocs.yml",
+      "omspy",
+      "poetry.lock",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/uberdeveloper/omspy/blob/1fbd39331e1568fb259364c3b3bb2a7a647cec0b/pyproject.toml",
+        "sha256": "5dc4e8a02e06bec695d1b10afe5b675b91625e56183a70969ab9b02cfe069b7f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "A",
+        "query": "order management trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/uberdeveloper/omspy",
+      "commit": "https://github.com/uberdeveloper/omspy/commit/1fbd39331e1568fb259364c3b3bb2a7a647cec0b",
+      "readme": "https://github.com/uberdeveloper/omspy/blob/1fbd39331e1568fb259364c3b3bb2a7a647cec0b/README.md",
+      "license": "https://github.com/uberdeveloper/omspy/blob/1fbd39331e1568fb259364c3b3bb2a7a647cec0b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/uberdeveloper/omspy/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/uberdeveloper/omspy/contributors",
+      "issues": "https://api.github.com/repos/uberdeveloper/omspy/issues"
+    },
+    "readme_excerpt": "# \ud83d\udcc8 OMSpy Order Management A powerful yet simple order management system for trading operations. Build, track, and execute orders with confidence. ## \u2728 Features - \ud83c\udfaf **Simple API** - Intuitive order creation and management - \ud83d\udcca **Position Tracking** - Real-time position and P&L monitoring - \ud83d\udcbe **Database Integration** - Built-in SQLite persistence - \ud83d\udd04 **Order Types** - Market, Limit, Stop, and complex orders - \ud83d\udce6 **Order Baskets** - Group and manage multiple orders - \u26a1 **High Performance** - Optimized for trading workflows ## \ud83d\ude80 Quick Start ### \ud83c\udfaf Create a Basic Order ```python from omspy.order import Order # Create a simple market buy order order = Order(symbol=\"AAPL\", side=\"buy\", quantity=10) print(f\"Order ID: {order.id}\") ``` ### \ud83d\udcb0 Create Different Order Types ```python # Market order (executes immediately) market_order = Order(symbol=\"TSLA\", side=\"buy\", quantity=5) # Limit order (executes at specific price or better) limit_order = Order(symbol=\"MSFT\", side=\"sell\", quantity=3, order_type=\"LIMIT\", price=380.50) # Stop loss order (triggers when price drops) stop_order = Order(symbol=\"NVDA\", side=\"sell\", quantity=2, order_type=\"STOP\", trigger_price=450.00) ``` ### \u23f0 Time-Based Orders ```python # Order that expires after 30 minutes short_order = Order(symbol=\"GOOGL\", side=\"buy\", quantity=1, expires_in=1800) # 30 minutes # Day order (valid until market close) day_order = Order(symbol=\"",
+    "license_excerpt": "MIT License Copyright (c) 2021-present, Ubermensch Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyri"
+  },
+  {
+    "full_name": "uebber/ibkr-german-tax-declaration-engine",
+    "requested_name": "uebber/ibkr-german-tax-declaration-engine",
+    "id": 990547458,
+    "url": "https://github.com/uebber/ibkr-german-tax-declaration-engine",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Automate the generation of figures for your German tax declaration (Anlage KAP, KAP-INV, SO) based on Interactive Brokers (IBKR) Flex Query reports.",
+    "stars": 18,
+    "forks": 6,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "5a64079c277451da1b082a1d7f753821cc68466f",
+    "last_commit_date": "2026-08-09T11:42:17Z",
+    "pushed_at_not_commit_date": "2026-08-09T11:43:07Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Fsaupe",
+      "uebber"
+    ],
+    "contributors_sample": [
+      {
+        "login": "uebber",
+        "contributions": 176,
+        "type": "User"
+      },
+      {
+        "login": "Fsaupe",
+        "contributions": 58,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/uebber/ibkr-german-tax-declaration-engine/issues/85",
+      "created_at": "2026-08-26T21:21:56Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f1f5383cc30f3eebfe3324324feccf914ab8a2c1711780ca10fae69222400f3f",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8fe7cc7b3743442b77fb59ef6052c912bb9b65d2792c60b6622ba1a1c3a0cf8b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CLAUDE.md",
+      "LICENSE",
+      "PRD.md",
+      "README.md",
+      "VALIDATION_REPORT.md",
+      "docs",
+      "input_data_spec.md",
+      "pyproject.toml",
+      "reference",
+      "scripts",
+      "src",
+      "tests",
+      "uv.lock",
+      "validate_ledgers.py"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/uebber/ibkr-german-tax-declaration-engine/blob/5a64079c277451da1b082a1d7f753821cc68466f/pyproject.toml",
+        "sha256": "22689cf713a8620ffc3b0d0a1d11a4a982ac4a52690c6a402d5d2ae19e6ef55e"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/uebber/ibkr-german-tax-declaration-engine",
+      "commit": "https://github.com/uebber/ibkr-german-tax-declaration-engine/commit/5a64079c277451da1b082a1d7f753821cc68466f",
+      "readme": "https://github.com/uebber/ibkr-german-tax-declaration-engine/blob/5a64079c277451da1b082a1d7f753821cc68466f/README.md",
+      "license": "https://github.com/uebber/ibkr-german-tax-declaration-engine/blob/5a64079c277451da1b082a1d7f753821cc68466f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/uebber/ibkr-german-tax-declaration-engine/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/uebber/ibkr-german-tax-declaration-engine/contributors",
+      "issues": "https://api.github.com/repos/uebber/ibkr-german-tax-declaration-engine/issues"
+    },
+    "readme_excerpt": "# IBKR German Tax Declaration Engine **Automate the generation of figures for your German tax declaration (Anlage KAP, KAP-INV, SO) based on Interactive Brokers (IBKR) Flex Query CSV reports.** ## What is this? German tax residents using Interactive Brokers (IBKR) often face significant challenges in accurately completing their tax declaration forms, especially Anlage KAP, Anlage KAP-INV, and Anlage SO. This tool aims to simplify this process by: 1. Parsing your IBKR Flex Query CSV reports (with full historical data for FIFO cost basis). 2. Identifying and classifying your assets (stocks, bonds, ETFs, options, CFDs, etc.). 3. Performing currency conversions to EUR using daily ECB rates. 4. Calculating capital gains/losses using the FIFO method (with `Decimal` precision). 5. Handling corporate actions (splits, cash mergers, stock-for-stock mergers, taxable stock dividends). 6. Processing option exercises, assignments, expirations, and cash settlements (index options). 7. Tracking position flips (IBKR `C;O` / `O;C` indicators) with automatic FIFO lot splitting. 8. Calculating income from dividends, interest, and fees within the tax year. 9. Applying German Teilfreistellung (partial tax exemption) for investment funds. 10. Calculating Vorabpauschale for investment funds. 11. Tracking foreign currency positions and FX gains/losses under section 23 EStG. 12. Aggregating figures requ",
+    "license_excerpt": "MIT License Copyright (c) 2025 uebber Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice an"
+  },
+  {
+    "full_name": "UFund-Me/Qbot",
+    "requested_name": "UFund-Me/Qbot",
+    "id": 569509049,
+    "url": "https://github.com/UFund-Me/Qbot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "[\ud83d\udd25updating ...] AI \u81ea\u52a8\u91cf\u5316\u4ea4\u6613\u673a\u5668\u4eba(\u5b8c\u5168\u672c\u5730\u90e8\u7f72) AI-powered Quantitative Investment Research Platform. \ud83d\udcc3 online docs: https://ufund-me.github.io/Qbot   \u2728 :news: qbot-mini: https://github.com/Charmve/iQuant",
+    "stars": 18496,
+    "forks": 2599,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "main",
+    "latest_commit": "f0425ae4ae8bd02b79656b8f7039f4cd6874095e",
+    "last_commit_date": "2026-03-11T12:16:11Z",
+    "pushed_at_not_commit_date": "2026-03-11T12:16:42Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Charmve",
+        "contributions": 149,
+        "type": "User"
+      },
+      {
+        "login": "actions-user",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "merdan-9",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/UFund-Me/Qbot/issues/73",
+      "created_at": "2023-11-16T15:32:10Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2024-05-14T09:56:04Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "03aece095db881dc36141fabf7b690dff3c938df15ee3fe7e7f312896b6445f6",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "84a96e93e5484ec519151b072b1b1127bc35086ae2d65b5bb8b63231227c028a",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".editorconfig",
+      ".flake8",
+      ".gitattributes",
+      ".gitconfig",
+      ".github",
+      ".gitignore",
+      ".style.cfg",
+      ".vscode",
+      "CLONE.md",
+      "COMMUNITY.md",
+      "CONTRIBUTING.md",
+      "DEVELOPMENT.md",
+      "LICENSE",
+      "PRICE.md",
+      "README.md",
+      "WORKSPACE",
+      "dev",
+      "docs",
+      "env_setup.sh",
+      "main.py",
+      "monitoring.py",
+      "pyfunds",
+      "pyfutures",
+      "pytrader",
+      "qbot",
+      "qbot_main.py",
+      "quick_start.md",
+      "requirements.txt",
+      "scripts",
+      "tests",
+      "utils",
+      "web"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/requirements.txt",
+        "sha256": "35c8f13c3d4bd4dcd5911b6803714ba0e33fbbccde4412369558a5f24a6adb04"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "UFund-Me/Qbot",
+      "stars": 17732,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "reference",
+      "reuse_value": 65,
+      "liftability": 25,
+      "fame_gap": 40,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "[\ud83d\udd25updating ...] AI \u81ea\u52a8\u91cf\u5316\u4ea4\u6613\u673a\u5668\u4eba(\u5b8c\u5168\u672c\u5730\u90e8\u7f72) AI-powered Quantitative Investment Research Platform. \ud83d\udcc3 online docs: https://ufund-"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/UFund-Me/Qbot",
+      "commit": "https://github.com/UFund-Me/Qbot/commit/f0425ae4ae8bd02b79656b8f7039f4cd6874095e",
+      "readme": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/README.md",
+      "license": "https://github.com/UFund-Me/Qbot/blob/f0425ae4ae8bd02b79656b8f7039f4cd6874095e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/UFund-Me/Qbot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/UFund-Me/Qbot/contributors",
+      "issues": "https://api.github.com/repos/UFund-Me/Qbot/issues"
+    },
+    "readme_excerpt": "\ud83d\udc46 \u53f3\u4e0a\u89d2\u70b9\u51fb \u544a\u8bc9\u6211\uff0c\u4f60\u5e0c\u671b\u8fd9\u4e2a\u9879\u76ee\u7ee7\u7eed\u52a0\u901f\u5f00\u53d1\u8fed\u4ee3 \u2764\ufe0f & \u2615\ufe0f \ud83e\udd16 Qbot since Sep 26 [![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml) [![AutoTrade](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml) [![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml) [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml) &nbsp; Qbot website HOT &nbsp;&nbsp;&nbsp;&nbsp; Qbot DeepWiki TRY IT OUT &nbsp; AI\u667a\u80fd\u91cf\u5316\u6295\u7814\u5e73\u53f0 > Qbot is an AI-oriented automated quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment. Qbot supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL. --> ``` \ud83e\udd16 Qbot = \u667a\u80fd\u4ea4\u6613\u7b56\u7565 + \u56de\u6d4b\u7cfb\u7edf + \u81ea\u52a8\u5316\u91cf\u5316\u4ea4\u6613 (+ \u53ef\u89c6\u5316\u5206\u6790\u5de5\u5177) | | | | | | | \\_ quantstats (dashboard\\online operation) | | \\______________ Qbot - vnpy, pytrader, pyfunds | \\____________________________ BackTest - backtrader, easyquant \\________________________________________ quant.ai - qlib, deep learning strategies ``` \ud83c\udfba \u53f7\u5916 \uff1aQbot\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\u5f00\u53d1\u62db\u52df [UFund-mi",
+    "license_excerpt": "MIT License Copyright (c) 2022 UFund-Me Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice "
+  },
+  {
+    "full_name": "ultimatesimp/Cloneberg-Terminal",
+    "requested_name": "ultimatesimp/Cloneberg-Terminal",
+    "id": 1016772021,
+    "url": "https://github.com/ultimatesimp/Cloneberg-Terminal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "An (very basic) alternative to the bloomberg terminal",
+    "stars": 0,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": null,
+    "last_commit_date": null,
+    "pushed_at_not_commit_date": "2025-07-09T13:55:28Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [],
+    "issue_response_sample": null,
+    "readme_path": null,
+    "readme_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W03",
+        "lane": "application",
+        "query": "Bloomberg terminal alternative"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ultimatesimp/Cloneberg-Terminal",
+      "commit": "https://github.com/ultimatesimp/Cloneberg-Terminal/commit/None",
+      "readme": null,
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/ultimatesimp/Cloneberg-Terminal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ultimatesimp/Cloneberg-Terminal/contributors",
+      "issues": "https://api.github.com/repos/ultimatesimp/Cloneberg-Terminal/issues"
+    },
+    "readme_excerpt": "",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "umutto/crypto-tax",
+    "requested_name": "umutto/crypto-tax",
+    "id": 396335432,
+    "url": "https://github.com/umutto/crypto-tax",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Personal cryptocurrency tax calculator for Japan's miscellaneous income. ",
+    "stars": 1,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "master",
+    "latest_commit": "8c8147dfd17537a3b59e72e6673ed4fc066ab0a1",
+    "last_commit_date": "2022-02-20T10:11:02Z",
+    "pushed_at_not_commit_date": "2022-02-20T10:11:31Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "umutto",
+        "contributions": 61,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "8a753fb0f3e4f38b8388fc421837a29593c1fe6214c81261159972d2ad7f4af4",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b3db731e474cd2326680170c83c6d77bb7fedf694e7f601091a9873baa705018",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".eslintrc.json",
+      ".gitignore",
+      ".nvmrc",
+      ".vscode",
+      "@types",
+      "LICENSE",
+      "README.md",
+      "check_version.js",
+      "components",
+      "ecosystem.config.js",
+      "layouts",
+      "lib",
+      "model",
+      "next-env.d.ts",
+      "next.config.js",
+      "package-lock.json",
+      "package.json",
+      "pages",
+      "postcss.config.js",
+      "public",
+      "styles",
+      "tailwind.config.js",
+      "tsconfig.json",
+      "utils"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/package.json",
+        "sha256": "0c8b60d958fd3e25177cd3fe5dd22edf70362e6733474114d62e8c7131645c17"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/umutto/crypto-tax",
+      "commit": "https://github.com/umutto/crypto-tax/commit/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1",
+      "readme": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/README.md",
+      "license": "https://github.com/umutto/crypto-tax/blob/8c8147dfd17537a3b59e72e6673ed4fc066ab0a1/LICENSE",
+      "recent_commits": "https://api.github.com/repos/umutto/crypto-tax/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/umutto/crypto-tax/contributors",
+      "issues": "https://api.github.com/repos/umutto/crypto-tax/issues"
+    },
+    "readme_excerpt": "# crypto-tax Personal cryptocurrency tax calculator for Japan's miscellaneous income. This is a rough project that I've did for myself while studying react/nextjs and nosql for the first time, so it may not work correctly... --- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+    "license_excerpt": "MIT License Copyright (c) 2021 Umut Karakulak Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright n"
+  },
+  {
+    "full_name": "uniswap-python/uniswap-python",
+    "requested_name": "uniswap-python/uniswap-python",
+    "id": 163547548,
+    "url": "https://github.com/uniswap-python/uniswap-python",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\ud83e\udd84 The unofficial Python client for the Uniswap exchange.",
+    "stars": 1012,
+    "forks": 375,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "bc8fdf4b915efac134c2cb6cadca8ec5073b1c48",
+    "last_commit_date": "2026-08-05T18:10:34Z",
+    "pushed_at_not_commit_date": "2026-08-05T18:10:35Z",
+    "commits_since_20260313_count_capped100": 8,
+    "recent_commit_authors": [
+      "ErikBjare",
+      "TimeToBuildBob",
+      "botbikamordehai2-sketch",
+      "liquid-8"
+    ],
+    "contributors_sample": [
+      {
+        "login": "ErikBjare",
+        "contributions": 165,
+        "type": "User"
+      },
+      {
+        "login": "shanefontaine",
+        "contributions": 134,
+        "type": "User"
+      },
+      {
+        "login": "liquid-8",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "TimeToBuildBob",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "KeremP",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      },
+      {
+        "login": "ytoast",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "antazoey",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Matteljay",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Rishirandhawa",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jz448",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "anryko",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jibranbinsaleem",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "lfeng100",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nsuarez75",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nimcon",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nxet",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Voyz",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "botbikamordehai2-sketch",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Leibniz137",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jhb10c",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ekzhang",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ericjang",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ehtec",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ChristianPerez34",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cmackeen",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "antibagr",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "PawlowskiAdrian",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/uniswap-python/uniswap-python/issues/342",
+      "created_at": "2023-07-24T14:45:51Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2023-07-28T23:37:46Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f857289a9a6fc29fade8f28288016131d6f933f8b821a15ce5f45d4743225165",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "5e1595e7b21db70ff9531f3040f0ae47e1b7f1220ee1174cc7c94e585a71cffa",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CODE_OF_CONDUCT.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "codecov.yml",
+      "docs",
+      "examples",
+      "mypy.ini",
+      "poetry.lock",
+      "pyproject.toml",
+      "tests",
+      "uniswap"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/uniswap-python/uniswap-python/blob/bc8fdf4b915efac134c2cb6cadca8ec5073b1c48/pyproject.toml",
+        "sha256": "7c77eba30cf8cd1afbb4dd63321d175813878a21e67a78ca9fbd9068b0cd16e9"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "uniswap-python/uniswap-python",
+      "capability_tag": "none",
+      "category_slug": "client-library-sdk",
+      "summary": "Python client wrapper around the Uniswap DEX API",
+      "reuse_value": 70,
+      "stars": 1008,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/uniswap-python/uniswap-python",
+      "rank_score": 70010080
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "uniswap-python/uniswap-python",
+      "stars": 1008,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 70,
+      "liftability": 90,
+      "fame_gap": -20,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "\ud83e\udd84 The unofficial Python client for the Uniswap exchange."
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/uniswap-python/uniswap-python",
+      "commit": "https://github.com/uniswap-python/uniswap-python/commit/bc8fdf4b915efac134c2cb6cadca8ec5073b1c48",
+      "readme": "https://github.com/uniswap-python/uniswap-python/blob/bc8fdf4b915efac134c2cb6cadca8ec5073b1c48/README.md",
+      "license": "https://github.com/uniswap-python/uniswap-python/blob/bc8fdf4b915efac134c2cb6cadca8ec5073b1c48/LICENSE",
+      "recent_commits": "https://api.github.com/repos/uniswap-python/uniswap-python/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/uniswap-python/uniswap-python/contributors",
+      "issues": "https://api.github.com/repos/uniswap-python/uniswap-python/issues"
+    },
+    "readme_excerpt": "# uniswap-python [![GitHub Actions](https://github.com/shanefontaine/uniswap-python/workflows/Test/badge.svg)](https://github.com/shanefontaine/uniswap-python/actions) [![codecov](https://codecov.io/gh/uniswap-python/uniswap-python/branch/master/graph/badge.svg?token=VHAZHHLFX8)](https://codecov.io/gh/uniswap-python/uniswap-python) [![Downloads](https://pepy.tech/badge/uniswap-python)](https://pepy.tech/project/uniswap-python) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/shanefontaine/uniswap-python/master/LICENSE) [![PyPI](https://img.shields.io/pypi/v/uniswap-python)](https://pypi.org/project/uniswap-python/) [![Typechecking: Mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/uniswap-python/uniswap-python/badge)](https://www.gitpoap.io/gh/uniswap-python/uniswap-python) [![GitHub Repo stars](https://img.shields.io/github/stars/uniswap-python/uniswap-python?style=social)](https://github.com/uniswap-python/uniswap-python/stargazers) [![Twitter Follow](https://img.shields.io/twitter/follow/UniswapPython?label=Follow&style=social)](https://twitter.com/UniswapPython) The unofficial Python client for [Uniswap](https://uniswap.io/). Docume",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2018 Shane Fontaine Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above c"
+  },
+  {
+    "full_name": "vbmithr/poloniex",
+    "requested_name": "vbmithr/poloniex",
+    "id": 89845828,
+    "url": "https://github.com/vbmithr/poloniex",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Poloniex trading DTC\u00a0server",
+    "stars": 7,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "OCaml",
+    "default_branch": "master",
+    "latest_commit": "27ab33c7db1e96b77d136ce8222072a4bbd4c2b7",
+    "last_commit_date": "2019-05-21T09:50:18Z",
+    "pushed_at_not_commit_date": "2020-02-04T16:53:42Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "vbmithr",
+        "contributions": 100,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": null,
+    "readme_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "dune-project",
+      "poloniex-data.opam",
+      "poloniex.opam",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/vbmithr/poloniex",
+      "commit": "https://github.com/vbmithr/poloniex/commit/27ab33c7db1e96b77d136ce8222072a4bbd4c2b7",
+      "readme": null,
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/vbmithr/poloniex/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/vbmithr/poloniex/contributors",
+      "issues": "https://api.github.com/repos/vbmithr/poloniex/issues"
+    },
+    "readme_excerpt": "",
+    "license_excerpt": ""
+  }
+]

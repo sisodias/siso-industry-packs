@@ -1,0 +1,1160 @@
+[
+  {
+    "full_name": "paperswithbacktest/awesome-systematic-trading",
+    "requested_name": "paperswithbacktest/awesome-systematic-trading",
+    "id": 455982203,
+    "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+    "stars": 14260,
+    "forks": 1712,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "4e23dd84c9ff746ddfcbc856316bcbcef0855b81",
+    "last_commit_date": "2026-09-03T09:13:55Z",
+    "pushed_at_not_commit_date": "2026-09-03T09:13:55Z",
+    "commits_since_20260313_count_capped100": 41,
+    "recent_commit_authors": [
+      "DiwanshuG",
+      "Lucky AI",
+      "asavinov",
+      "claude",
+      "dragon1086@naver.com",
+      "edarchimbaud",
+      "eltociear",
+      "initial-d",
+      "kingchenc",
+      "mvanhorn",
+      "squidKid-deluxe"
+    ],
+    "contributors_sample": [
+      {
+        "login": "edarchimbaud",
+        "contributions": 152,
+        "type": "User"
+      },
+      {
+        "login": "jmunro-mangroup",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "leftys",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ss18",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "tilakpatel22",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "asavinov",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "claude",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DiwanshuG",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "grimyfishtank",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "HugoDelatte",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "eltociear",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mvanhorn",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "initial-d",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iamjinlei",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kingchenc",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "squidKid-deluxe",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading/issues/107",
+      "created_at": "2026-09-05T06:52:22Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "456caf198b42ef5e8da1c4fd937229af49ade6061482521c4817a35f4d200a09",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".vscode",
+      "README.md",
+      "README_ja.md",
+      "README_zh.md",
+      "scripts",
+      "static"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 2,
+        "stage": "W01-W10",
+        "lane": "registry",
+        "query": "awesome quant"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading",
+      "commit": "https://github.com/paperswithbacktest/awesome-systematic-trading/commit/4e23dd84c9ff746ddfcbc856316bcbcef0855b81",
+      "readme": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/4e23dd84c9ff746ddfcbc856316bcbcef0855b81/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contributors",
+      "issues": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/issues"
+    },
+    "readme_excerpt": "Awesome Systematic Trading [\u5e0c\u671b\u9605\u8bfb\u4e2d\u6587\u7248\uff1f\u70b9\u6211](./README_zh.md) [\u65e5\u672c\u8a9e\u7248\u306f\u3053\u3061\u3089](./README_ja.md) We are collecting a list of resources papers, softwares, books, articles for finding, developing, and running systematic trading (quantitative trading) strategies. ### What will you find here? - [136 libraries and packages](#libraries-and-packages) for research and live trading, with dead and dormant projects flagged - [Strategies](#strategies) from published papers, with the Sharpe ratio each one produced when it was coded and run - [55 books](#books) for beginners and professionals - [22 videos](#videos) and interviews - And also some [blogs](#blogs) and [courses](#courses) ### What the replication record looks like We have coded and run 4,843 of these papers over their own full history. Some numbers worth knowing before you pick one to implement: - The median replication returns a **Sharpe ratio of 0.37**, and **48% clear a t-statistic of 1.96**. Half the published record cannot be distinguished from zero on its own sample. - Median test window: **34 years**. A strategy needs roughly `(1.96 / Sharpe)\u00b2` years to prove itself, so a Sharpe of 0.4 needs about 24 of them. - The median strategy carries a **beta of +0.17** to the S&P 500. Removing it takes the median information ratio down to **0.21**, so a meaningful slice of the published edge is index exposure rather than skill. - Across 2,838 pap",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "paritytrading/philadelphia",
+    "requested_name": "paritytrading/philadelphia",
+    "id": 35380608,
+    "url": "https://github.com/paritytrading/philadelphia",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Fast FIX protocol library for the JVM",
+    "stars": 346,
+    "forks": 94,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "8bce333b10f32b863f54368c063981ed5b5df7da",
+    "last_commit_date": "2026-09-12T09:30:40Z",
+    "pushed_at_not_commit_date": "2026-09-12T09:30:48Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "dependabot[bot]",
+      "jvirtanen"
+    ],
+    "contributors_sample": [
+      {
+        "login": "jvirtanen",
+        "contributions": 1396,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 319,
+        "type": "Bot"
+      },
+      {
+        "login": "jheusser",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "JanStureNielsen",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ddimtirov",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dmech",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ammachado",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "alesale",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "arturo-salinas",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ksmr",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "khsergvl",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "2cc6029e976c77c0925e0a5c70f6438af5200bc90b03ffbddab489b00d3eeb4c",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "LICENSE.txt",
+      "README.md",
+      "UPGRADE-1.0.0.md",
+      "UPGRADE-1.2.0.md",
+      "UPGRADE-2.0.0.md",
+      "UPGRADE-2.1.0.md",
+      "applications",
+      "checkstyle.xml",
+      "documentation",
+      "examples",
+      "libraries",
+      "pom.xml",
+      "scripts",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/paritytrading/philadelphia",
+      "commit": "https://github.com/paritytrading/philadelphia/commit/8bce333b10f32b863f54368c063981ed5b5df7da",
+      "readme": "https://github.com/paritytrading/philadelphia/blob/8bce333b10f32b863f54368c063981ed5b5df7da/README.md",
+      "license": "https://github.com/paritytrading/philadelphia/blob/8bce333b10f32b863f54368c063981ed5b5df7da/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/paritytrading/philadelphia/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/paritytrading/philadelphia/contributors",
+      "issues": "https://api.github.com/repos/paritytrading/philadelphia/issues"
+    },
+    "readme_excerpt": "# Philadelphia Philadelphia is a fast Financial Information Exchange (FIX) protocol library for the JVM. You can use Philadelphia to connect to stock exchanges, brokerage firms, and other network endpoints that use the FIX protocol. You can also use it to provide your own services using the FIX protocol. Philadelphia is designed to exhibit low and predictable latency. To achieve this, it supports non-blocking networking and does not allocate memory on message reception or transmission. Philadelphia requires Java Runtime Environment (JRE) 11 or newer. ## Download See the [latest release][] on GitHub. [latest release]: https://github.com/paritytrading/philadelphia/releases/latest ## Modules Philadelphia contains the following libraries: - [**Core**](libraries/core) implements the FIX protocol. - [**FIX 4.0**](libraries/fix40), [**FIX 4.1**](libraries/fix41), [**FIX 4.2**](libraries/fix42), [**FIX 4.3**](libraries/fix43), [**FIX 4.4**](libraries/fix44), [**FIX 5.0**](libraries/fix50), [**FIX 5.0 SP1**](libraries/fix50sp1), [**FIX 5.0 SP2**](libraries/fix50sp2), [**FIX Latest**](libraries/fixlatest), and [**FIXT 1.1**](libraries/fixt11) implement profiles for the corresponding FIX protocol versions. See the [FIX Trading Community][] for the protocol specifications. [FIX Trading Community]: http://www.fixtrading.org Philadelphia contains the following applications: - [**Terminal Cli",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "patl4588/bloomberg-terminal-alternative",
+    "requested_name": "patl4588/bloomberg-terminal-alternative",
+    "id": 1214100066,
+    "url": "https://github.com/patl4588/bloomberg-terminal-alternative",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Bloomberg Terminal alternative: MeterCall pay-per-call replacement. See metercall.ai/alternatives/bloomberg-terminal.html",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f",
+    "last_commit_date": "2026-04-18T05:51:30Z",
+    "pushed_at_not_commit_date": "2026-04-18T05:51:30Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "patl4588"
+    ],
+    "contributors_sample": [
+      {
+        "login": "patl4588",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "899132512ca7a88de2b63f1c489891ea0349c34dd6e9d80f7220f07c836ddede",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W03",
+        "lane": "application",
+        "query": "Bloomberg terminal alternative"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/patl4588/bloomberg-terminal-alternative",
+      "commit": "https://github.com/patl4588/bloomberg-terminal-alternative/commit/fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f",
+      "readme": "https://github.com/patl4588/bloomberg-terminal-alternative/blob/fd6c8bb2e1ca5b938a38b8079e6c41d48065b63f/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/patl4588/bloomberg-terminal-alternative/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/patl4588/bloomberg-terminal-alternative/contributors",
+      "issues": "https://api.github.com/repos/patl4588/bloomberg-terminal-alternative/issues"
+    },
+    "readme_excerpt": "# Bloomberg Terminal alternative (2026): MeterCall pay-per-call > Bloomberg Terminal runs ~$24,000/yr. MeterCall replaces the finance data workflow with pay-per-call economics \u2014 ~98% less at typical utilization. ## Short version **Bloomberg Terminal** is the incumbent finance data tool. Seat-licensed. Annual commit. Pro tier around $24,000/yr. **MeterCall** is a module marketplace with pay-per-call pricing. You buy the exact finance data module, you pay per call, no seat fee, no minimum. [\u2192 Read the full comparison](https://metercall.ai/alternatives/bloomberg-terminal.html) [\u2192 See MeterCall pricing](https://metercall.ai/pricing.html) [\u2192 Browse all modules](https://metercall.ai/built/) ## The math | | Bloomberg Terminal | MeterCall | |---|---|---| | Pricing | $24,000/yr flat | per-call | | Seat fees | yes | none | | Minimum commit | annual | none | | Typical small-team cost | $24,000/yr | under $400/yr | | Typical savings | \u2014 | **~98%** | ## Why this matters Most finance data seats run at 5\u201315% actual utilization. You pay for 100%. MeterCall inverts this: you pay only for the calls you make. For teams with spiky or low-volume finance data needs, this is usually a 5\u201320x cost reduction. ## When to stay on Bloomberg Terminal - You rely on Bloomberg Terminal-specific certifications or compliance wrappers - Your procurement mandates Bloomberg Terminal vendor status - You need Bloombe",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "PaulieB14/graph-polymarket-mcp",
+    "requested_name": "PaulieB14/graph-polymarket-mcp",
+    "id": 1169627448,
+    "url": "https://github.com/PaulieB14/graph-polymarket-mcp",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "MCP server for Polymarket prediction markets \u2014 31 tools combining The Graph subgraphs + Polymarket REST APIs (Gamma + CLOB) for market search, live prices, order books, trader P&L, open interest, and resolution data",
+    "stars": 4,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "main",
+    "latest_commit": "be7f1952e79d8f29b54b6d94bedc30a236ce0f29",
+    "last_commit_date": "2026-08-09T15:35:38Z",
+    "pushed_at_not_commit_date": "2026-08-09T15:36:14Z",
+    "commits_since_20260313_count_capped100": 10,
+    "recent_commit_authors": [
+      "PaulieB14"
+    ],
+    "contributors_sample": [
+      {
+        "login": "PaulieB14",
+        "contributions": 36,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "d71de17a5d6b40c02112687b960985b9cea02526444211fbfb91acc1e7858b53",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "383c972a48dfe204a57654658b7d6cd3105169bcd6a9fa9f2d4c626ebe2aaf7e",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "SKILL.md",
+      "glama.json",
+      "package-lock.json",
+      "package.json",
+      "server.json",
+      "smithery.yaml",
+      "src",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/PaulieB14/graph-polymarket-mcp/blob/be7f1952e79d8f29b54b6d94bedc30a236ce0f29/package.json",
+        "sha256": "bb8e9a59cb8157d9a365d564296a8e6393ef128267e264078f00189be4c102fb"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "format",
+        "query": "prediction market resolution"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/PaulieB14/graph-polymarket-mcp",
+      "commit": "https://github.com/PaulieB14/graph-polymarket-mcp/commit/be7f1952e79d8f29b54b6d94bedc30a236ce0f29",
+      "readme": "https://github.com/PaulieB14/graph-polymarket-mcp/blob/be7f1952e79d8f29b54b6d94bedc30a236ce0f29/README.md",
+      "license": "https://github.com/PaulieB14/graph-polymarket-mcp/blob/be7f1952e79d8f29b54b6d94bedc30a236ce0f29/LICENSE",
+      "recent_commits": "https://api.github.com/repos/PaulieB14/graph-polymarket-mcp/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/PaulieB14/graph-polymarket-mcp/contributors",
+      "issues": "https://api.github.com/repos/PaulieB14/graph-polymarket-mcp/issues"
+    },
+    "readme_excerpt": "# graph-polymarket-mcp [![npm version](https://img.shields.io/npm/v/graph-polymarket-mcp)](https://www.npmjs.com/package/graph-polymarket-mcp) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-published-blue)](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.PaulieB14/graph-polymarket-mcp) [![smithery badge](https://smithery.ai/badge/paulieb14/graph-polymarket-mcp)](https://smithery.ai/servers/paulieb14/graph-polymarket-mcp) **MCP server for querying [Polymarket](https://polymarket.com/) prediction market data via [The Graph](https://thegraph.com/) subgraphs and Polymarket REST APIs.** Exposes 31 tools that AI agents (Claude, Cursor, etc.) can use to search markets, get real-time CLOB prices and order books, query on-chain data, trader P&L, positions, activity, open interest, market resolution status, and trader profiles. **v2.0.0** \u2014 adds 10 new tools powered by Polymarket's Gamma and CLOB APIs (inspired by [polymarket-cli](https://github.com/Polymarket/polymarket-cli)): market search, event browsing, live prices, spreads, order books, price history, and more. No API key needed for these tools \u2014 they hit Polymarket's public REST endpoints directly. > Published to the [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.PaulieB14/graph-polymarket-mcp) as `io.github.PaulieB14/graph-polymarket-mcp` ## Prerequisites",
+    "license_excerpt": "MIT License Copyright (c) 2025 PaulieB14 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice"
+  },
+  {
+    "full_name": "Phya123/eml-trading-bot-clean",
+    "requested_name": "Phya123/eml-trading-bot-clean",
+    "id": 1121381313,
+    "url": "https://github.com/Phya123/eml-trading-bot-clean",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "4551be024c3a52a6e0224320121d477faa542c77",
+    "last_commit_date": "2026-09-09T03:18:59Z",
+    "pushed_at_not_commit_date": "2026-09-09T03:18:59Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Phya123"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Phya123",
+        "contributions": 268,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "31b51ca971569ab4cc867cb750c191fab889f6c8c8bd9ecaabde4da56fa62702",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "Procfile",
+      "README.md",
+      "__pycache__",
+      "bot.py",
+      "requirements.txt",
+      "runtime.txt"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Phya123/eml-trading-bot-clean/blob/4551be024c3a52a6e0224320121d477faa542c77/requirements.txt",
+        "sha256": "e235f1f92515d8f4df7ce76dfebca94802c93665a92f56933bdc3b86c4572715"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "C",
+        "query": "EML trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Phya123/eml-trading-bot-clean",
+      "commit": "https://github.com/Phya123/eml-trading-bot-clean/commit/4551be024c3a52a6e0224320121d477faa542c77",
+      "readme": "https://github.com/Phya123/eml-trading-bot-clean/blob/4551be024c3a52a6e0224320121d477faa542c77/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Phya123/eml-trading-bot-clean/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Phya123/eml-trading-bot-clean/contributors",
+      "issues": "https://api.github.com/repos/Phya123/eml-trading-bot-clean/issues"
+    },
+    "readme_excerpt": "# EML Sentinel Capital Engine A risk-managed automated trading engine for equities & ETFs, deployed 24/7 on Railway and executed via Alpaca. **Mission:** Build a disciplined, rules-based system that prioritizes capital protection, repeatability, and controlled exposure \u2014 without emotional trading. ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Deploy](https://img.shields.io/badge/deploy-railway-purple) ![Execution](https://img.shields.io/badge/execution-alpaca-black) ![Style](https://img.shields.io/badge/style-risk_managed-blue) --- ## What it does - Trades a curated basket of liquid symbols (example: **SPY, QQQ, XLE**) - Runs as a persistent **worker service** (no browser needed) - Checks market state and **sleeps when the market is closed** - Executes only when rules align \u2014 focused on consistency over hype ## Risk Controls (Built In) - **Exposure control:** uses a defined portion of equity (keeps cash reserve) - **Daily budget cap:** prevents overspending/overtrading - **Daily stop logic:** can pause trading after hitting profit target or risk limit - **Order safety checks:** avoids unsafe notional sizing when buying power is low - **Debug/trial mode:** set `FORCE_TRADE=true` to let the bot buy a test position even if no strong signal is present - **Force symbol:** optionally set `FORCE_TRADE_SYMBOL=SPY` to force a test buy for a single symbol ## Who it'",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "PIYUSH-KUMAR1809/market-data-parser",
+    "requested_name": "PIYUSH-KUMAR1809/market-data-parser",
+    "id": 1220189908,
+    "url": "https://github.com/PIYUSH-KUMAR1809/market-data-parser",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "C++20 NASDAQ ITCH + NSE FO file parser",
+    "stars": 13,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "C",
+    "default_branch": "main",
+    "latest_commit": "b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c",
+    "last_commit_date": "2026-09-08T11:33:22Z",
+    "pushed_at_not_commit_date": "2026-09-08T11:33:26Z",
+    "commits_since_20260313_count_capped100": 7,
+    "recent_commit_authors": [
+      "PIYUSH-KUMAR1809"
+    ],
+    "contributors_sample": [
+      {
+        "login": "PIYUSH-KUMAR1809",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "12c86d2a34d45cec1125069f2d37c691a858ce5715b66d6bb2f5b523ca14d01d",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "784a19ae2268205b9d39d30fa9934b76168b2bb98f78d9d8f13804fa4d45c0f4",
+    "license_candidates": [
+      "COPYING.minilzo",
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".github",
+      ".gitignore",
+      "CMakeLists.txt",
+      "CONTRIBUTING.md",
+      "COPYING.minilzo",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "benchmarks",
+      "config.toml",
+      "generate_data.py",
+      "include",
+      "run_itch.sh",
+      "run_nse.sh",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/PIYUSH-KUMAR1809/market-data-parser",
+      "commit": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/commit/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c",
+      "readme": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/blob/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c/README.md",
+      "license": "https://github.com/PIYUSH-KUMAR1809/market-data-parser/blob/b5c7b2d42590e6ff99e59454ed2bdbd08e3d7d0c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/PIYUSH-KUMAR1809/market-data-parser/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/PIYUSH-KUMAR1809/market-data-parser/contributors",
+      "issues": "https://api.github.com/repos/PIYUSH-KUMAR1809/market-data-parser/issues"
+    },
+    "readme_excerpt": "# High-Performance Market Data Parser A C++20 file parser for NASDAQ TotalView-ITCH 5.0 and NSE FO snapshots. Built for full-tape replay: `mmap` / `pread`, packed structs, and an order-id map with no heap traffic on the add/delete path. ![C++](https://img.shields.io/badge/C++-20-blue.svg?style=flat&logo=c%2B%2B) ![License](https://img.shields.io/badge/License-MIT-green.svg) [![CI](https://github.com/PIYUSH-KUMAR1809/market-data-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/PIYUSH-KUMAR1809/market-data-parser/actions/workflows/ci.yml) > **Performance Benchmark (v2.0)**: **~11.36 million ITCH msgs/s** | **25.88 s** for 293,989,079 messages (8,616 MiB) on Apple M1 Pro. **~4.7\u00d7** vs v1.0 on the same file. Bring your own licensed dumps. This repository does not redistribute exchange data. ### Key Takeaways * **I/O**: ITCH is `mmap` + `MADV_SEQUENTIAL`. NSE FO is 256 MiB double-buffer `pread`. * **Book**: One global order-id map (`id \u2192 side, price, qty, symbol[8]`). Not a price-level ladder. * **Memory**: `DenseMap` open-addressing plus `std::pmr` arenas. Order objects are PODs. * **ITCH dispatch**: Mutates on `A F E C X D U`. Length-skips `S R H Y L V W K J h P Q B I N` (including trades `P`/`Q`). --- ## Key Features * **NASDAQ ITCH 5.0**: Length-prefixed TotalView-ITCH file replay. Locate filter and parser merge included. * **NSE FO snapshot**: Packed `SnapshotReco",
+    "license_excerpt": "MIT License Copyright (c) 2026 Piyush Kumar Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright not"
+  },
+  {
+    "full_name": "pmorissette/bt",
+    "requested_name": "pmorissette/bt",
+    "id": 21006723,
+    "url": "https://github.com/pmorissette/bt",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "bt - flexible backtesting for Python",
+    "stars": 2982,
+    "forks": 501,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "10e151ab7703642792536a9ef4279fac28e3cb9c",
+    "last_commit_date": "2026-09-12T21:29:12Z",
+    "pushed_at_not_commit_date": "2026-09-12T21:32:23Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Bortlesboat",
+      "Jo2234",
+      "JohnDReynolds",
+      "Whning0513",
+      "aerraj",
+      "dependabot[bot]",
+      "dylanpulver",
+      "kondor9",
+      "mameikagou",
+      "timkpaine"
+    ],
+    "contributors_sample": [
+      {
+        "login": "timkpaine",
+        "contributions": 304,
+        "type": "User"
+      },
+      {
+        "login": "pmorissette",
+        "contributions": 84,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 29,
+        "type": "Bot"
+      },
+      {
+        "login": "JordanPlatts",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "JohnDReynolds",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "danilogalisteu",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "ran404",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "FinQuest",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "MDDietz1",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Whning0513",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Bortlesboat",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "pearsedoolin",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "nathanramoscfa",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "leonth",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "mirca",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "tamccall",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "quant12345",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "mkeds",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dulacp",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "AlbertoParravicini",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "zero-element",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "samy80",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jonahsheep",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mameikagou",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "lnzeta",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jeamick",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "brrrak",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bigtan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "aerraj",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RoryGlenn",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "1e8b88096250b668d1da109e585e758af2e3013cd79c032fb84a2eb99ef0c2fc",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".copier-answers.yaml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "benchmarks",
+      "bt",
+      "docs",
+      "examples",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/pyproject.toml",
+        "sha256": "e402af11e720f11da960ae315b4a497918187ec7e7b64088c9a970bf3d67cdde"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "pmorissette/bt",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Python backtesting framework for financial strategies",
+      "reuse_value": 70,
+      "stars": 2894,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/pmorissette/bt",
+      "rank_score": 70028940
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "pmorissette/bt",
+      "stars": 2894,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "substrate",
+      "reuse_value": 70,
+      "liftability": 25,
+      "fame_gap": 45,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "bt - flexible backtesting for Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/pmorissette/bt",
+      "commit": "https://github.com/pmorissette/bt/commit/10e151ab7703642792536a9ef4279fac28e3cb9c",
+      "readme": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/README.md",
+      "license": "https://github.com/pmorissette/bt/blob/10e151ab7703642792536a9ef4279fac28e3cb9c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/pmorissette/bt/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/pmorissette/bt/contributors",
+      "issues": "https://api.github.com/repos/pmorissette/bt/issues"
+    },
+    "readme_excerpt": "# bt \u2014 Flexible Backtesting for Python [![Build Status](https://github.com/pmorissette/bt/workflows/Build%20Status/badge.svg)](https://github.com/pmorissette/bt/actions/) [![PyPI Version](https://img.shields.io/pypi/v/bt)](https://pypi.org/project/bt/) [![PyPI License](https://img.shields.io/pypi/l/bt)](https://pypi.org/project/bt/) Build, test, and compare investment strategies from reusable Python components. bt combines strategy logic with historical price data, tracks portfolio positions and transactions, and provides performance statistics and charts through [ffn](https://github.com/pmorissette/ffn). - **Compose strategy logic:** combine algorithms for scheduling, security selection, weighting, and rebalancing. - **Build portfolios of strategies:** nest strategies and securities in a common tree. - **Model trading costs:** configure commissions and transaction cost models. - **Compare results:** inspect returns, weights, transactions, drawdowns, and other statistics. ## Install ```bash pip install bt ``` See the [installation guide](docs/source/install.md) for additional details. ## A first backtest This example uses synthetic prices, so it runs without downloading market data: ```python import numpy as np import pandas as pd import bt prices = pd.DataFrame( { \"asset_a\": np.linspace(100, 120, 252), \"asset_b\": np.linspace(100, 110, 252), }, index=pd.bdate_range(\"2020-01-01\"",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015 Philippe Morissette Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The ab"
+  },
+  {
+    "full_name": "pmorissette/ffn",
+    "requested_name": "pmorissette/ffn",
+    "id": 21006364,
+    "url": "https://github.com/pmorissette/ffn",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "ffn - a financial function library for Python",
+    "stars": 2678,
+    "forks": 379,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "866ce1b5d2945795f876280058962b1e6b4f6b2b",
+    "last_commit_date": "2026-09-12T21:29:14Z",
+    "pushed_at_not_commit_date": "2026-09-12T21:32:14Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Aryan-Kochhar",
+      "Bortlesboat",
+      "JohnDReynolds",
+      "WatchTree-19",
+      "aerraj",
+      "ipezygj",
+      "mameikagou",
+      "mateosandoval10",
+      "timkpaine",
+      "wolfgang-aura"
+    ],
+    "contributors_sample": [
+      {
+        "login": "timkpaine",
+        "contributions": 307,
+        "type": "User"
+      },
+      {
+        "login": "pmorissette",
+        "contributions": 68,
+        "type": "User"
+      },
+      {
+        "login": "JordanPlatts",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 25,
+        "type": "Bot"
+      },
+      {
+        "login": "JohnDReynolds",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "Bortlesboat",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "Anjum48",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "pratapvardhan",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "ViktorMalesevic",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "Aryan-Kochhar",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "sfjep",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "quant12345",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "GuyPago",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "ipezygj",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "RoryGlenn",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "edgrowity",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "fucktx",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "simjason",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "degiere",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "sven337",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "nathanramoscfa",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "noodlefrenzy",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "johnsloper",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Gamrix",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "FinQuest",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "changlan",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "wolfgang-aura",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "russlan23",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nyxst4ck",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mateosandoval10",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "06c453ab7bd8951cd03096b489c3155bc069a1d7711761d7728f28cbb786e84a",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".copier-answers.yaml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "benchmarks",
+      "docs",
+      "ffn",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/pyproject.toml",
+        "sha256": "6020bbac0f300b97a2a30f0fb83f56d54e6278b20a630e9c30a10e51ff7fbd2e"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "adoption",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "pmorissette/ffn",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Financial function library for Python (analytics/computations)",
+      "reuse_value": 65,
+      "stars": 2607,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/pmorissette/ffn",
+      "rank_score": 65026070
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "pmorissette/ffn",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "ffn",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 67858,
+      "downloads_period": "last-month",
+      "dependent_repos": 125,
+      "dependent_pkgs": 10,
+      "rank_avg": 1.8784964777953785,
+      "reach_percentile": 98.1,
+      "reuse_value": 65,
+      "stars": 2607,
+      "adoption_score": 46.2,
+      "real_value": 46,
+      "verdict": "confirm",
+      "fame_gap": 11.0,
+      "raw_json": "{\"dl\": 67858, \"deprepos\": 125, \"deppkgs\": 10, \"rank_avg\": 1.8784964777953785, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "liftability_row": {
+      "full_name": "pmorissette/ffn",
+      "stars": 2607,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 65,
+      "liftability": 90,
+      "fame_gap": -25,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "ffn - a financial function library for Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/pmorissette/ffn",
+      "commit": "https://github.com/pmorissette/ffn/commit/866ce1b5d2945795f876280058962b1e6b4f6b2b",
+      "readme": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/README.md",
+      "license": "https://github.com/pmorissette/ffn/blob/866ce1b5d2945795f876280058962b1e6b4f6b2b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/pmorissette/ffn/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/pmorissette/ffn/contributors",
+      "issues": "https://api.github.com/repos/pmorissette/ffn/issues"
+    },
+    "readme_excerpt": "# ffn - Financial Functions for Python ![ffn](docs/source/_static/logo.png) [![Build Status](https://github.com/pmorissette/ffn/workflows/Build%20Status/badge.svg)](https://github.com/pmorissette/ffn/actions/) [![PyPI Version](https://img.shields.io/pypi/v/ffn)](https://pypi.org/project/ffn/) [![PyPI License](https://img.shields.io/pypi/l/ffn)](https://pypi.org/project/ffn/) If you are looking for a full backtesting framework, please check out [bt](https://github.com/pmorissette/bt). bt is built atop ffn and makes it easy and fast to backtest quantitative strategies. ## Overview ffn is a library that contains many useful functions for those who work in **quantitative finance**. It stands on the shoulders of giants (Pandas, Numpy, Scipy, etc.) and provides a vast array of utilities, from performance measurement and evaluation to graphing and common data transformations. ```python import ffn returns = ffn.get('aapl,msft,c,gs,ge', start='2010-01-01').to_returns().dropna() print(returns.calc_mean_var_weights().as_format('.2%')) ``` Example output: ```text aapl 62.54% c -0.00% ge 36.19% gs -0.00% msft 1.26% dtype: object ``` ## Installation The easiest way to install `ffn` is from the [Python Package Index](https://pypi.python.org/pypi/ffn/) using `pip`. ```bash pip install ffn ``` Since ffn has many dependencies, we strongly recommend installing the [Anaconda Scientific Python Dist",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015 Philippe Morissette Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The ab"
+  }
+]

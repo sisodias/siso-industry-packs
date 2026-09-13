@@ -1,0 +1,1266 @@
+[
+  {
+    "full_name": "Prashant-Panicker/low-latency-trading-engine",
+    "requested_name": "Prashant-Panicker/low-latency-trading-engine",
+    "id": 1342124730,
+    "url": "https://github.com/Prashant-Panicker/low-latency-trading-engine",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Low-latency .NET trading engine with streaming market data, centralized risk controls and broker reconciliation.",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "main",
+    "latest_commit": "337461ffc103820ae9ce07bd29f78692b74e1067",
+    "last_commit_date": "2026-08-22T08:34:05Z",
+    "pushed_at_not_commit_date": "2026-08-25T23:07:21Z",
+    "commits_since_20260313_count_capped100": 5,
+    "recent_commit_authors": [
+      "Prashant-Panicker"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Prashant-Panicker",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "42cd6b8c2538659233e21fdd7a812ebbfb8912470d1787129c39f518118f04bc",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LltEngine.slnx",
+      "README.md",
+      "SCHEMA.postgresql.sql",
+      "SECURITY.md",
+      "docs",
+      "dotnet-tools.json",
+      "global.json",
+      "infra",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Prashant-Panicker/low-latency-trading-engine",
+      "commit": "https://github.com/Prashant-Panicker/low-latency-trading-engine/commit/337461ffc103820ae9ce07bd29f78692b74e1067",
+      "readme": "https://github.com/Prashant-Panicker/low-latency-trading-engine/blob/337461ffc103820ae9ce07bd29f78692b74e1067/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Prashant-Panicker/low-latency-trading-engine/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Prashant-Panicker/low-latency-trading-engine/contributors",
+      "issues": "https://api.github.com/repos/Prashant-Panicker/low-latency-trading-engine/issues"
+    },
+    "readme_excerpt": "# Low Latency Trading Engine [![Build and test](https://github.com/Prashant-Panicker/low-latency-trading-engine/actions/workflows/aws-deploy.yml/badge.svg)](https://github.com/Prashant-Panicker/low-latency-trading-engine/actions/workflows/aws-deploy.yml) > A low-latency retail trading engine for Indian markets, designed for personal use and small operator groups using broker APIs such as Zerodha. ## Overview Low Latency Trading Engine is a .NET-based algorithmic trading system for **Indian cash equities (NSE/BSE)**. It is optimized for practical retail trading rather than institutional HFT: simple operations, low avoidable latency, clear risk controls, and a deployment model that fits a portfolio of roughly **up to 300 monitored symbols** and **\u20b910\u201350 lakh capital**. The project keeps the right abstractions for long-term flexibility: - Broker abstraction through `IBrokerAdapter` - Strategy plugin model through `IStrategy` - Paper trading and backtesting support - Central `RiskGuard` before order execution - PostgreSQL for persistence - Admin API and dashboard support - Persistence-backed named universes for large cross-sectional scans ## What This Project Is - A **retail low-latency** trading engine, not exchange-colocated HFT - Designed for **one operator or a small trusted group** - Built around **Zerodha retail API constraints** - Intended to run with **minimal infrastructur",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "pschleger/dtcc-trade-reporting",
+    "requested_name": "pschleger/dtcc-trade-reporting",
+    "id": 1028370414,
+    "url": "https://github.com/pschleger/dtcc-trade-reporting",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A proof-of-concept project exploring how far one can build a DTCC regulatory trade reporting system entirely with AI \u2014 from requirements and specifications to implementation and testing. The human acts primarily as an orchestrator, intervening only as a last resort.",
+    "stars": 2,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4",
+    "last_commit_date": "2025-07-31T13:52:26Z",
+    "pushed_at_not_commit_date": "2025-07-31T13:53:20Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "pschleger",
+        "contributions": 108,
+        "type": "User"
+      },
+      {
+        "login": "slavaoblog",
+        "contributions": 55,
+        "type": "User"
+      },
+      {
+        "login": "Ksenniya",
+        "contributions": 25,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "94709b314fb316a59722e749a1e4e28b53ad0159e75780046abe53df9338cfd7",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".ai",
+      ".augment-guidelines",
+      ".augment",
+      ".env.template",
+      ".github",
+      ".gitignore",
+      ".java-version",
+      "Dockerfile",
+      "LICENSE",
+      "POSTPONED_ITEMS.md",
+      "README.md",
+      "build.gradle",
+      "docs",
+      "gradle",
+      "gradlew",
+      "gradlew.bat",
+      "llms-full.txt",
+      "llms.txt",
+      "src",
+      "usage-rules.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/pschleger/dtcc-trade-reporting",
+      "commit": "https://github.com/pschleger/dtcc-trade-reporting/commit/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4",
+      "readme": "https://github.com/pschleger/dtcc-trade-reporting/blob/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4/README.md",
+      "license": "https://github.com/pschleger/dtcc-trade-reporting/blob/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4/LICENSE",
+      "recent_commits": "https://api.github.com/repos/pschleger/dtcc-trade-reporting/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/pschleger/dtcc-trade-reporting/contributors",
+      "issues": "https://api.github.com/repos/pschleger/dtcc-trade-reporting/issues"
+    },
+    "readme_excerpt": "# DTCC Regulatory Reporting System A proof-of-concept project exploring how far one can build a DTCC regulatory trade reporting system entirely with AI \u2014 from requirements and specifications to implementation and testing. The human acts primarily as an orchestrator, intervening only as a last resort. --- ## \ud83d\ude80 System Overview - **Entity-Driven Processing**: Transform trades through defined entity lifecycles using Cyoda workflows - **Event-Driven Architecture**: React to business events with appropriate state machine transitions - **Regulatory Compliance**: Meet DTCC GTR reporting requirements and deadlines - **Scalable Processing**: Handle high-volume trade processing with SLA compliance - **Comprehensive Monitoring**: Track system performance and business metrics with full audit trails ### Key Capabilities - Process **FpML trade confirmations** into structured Trade entities - Maintain **position calculations** and reconciliation workflows - Generate and submit **regulatory reports** to DTCC GTR - Manage **master data** (counterparties, products, legal entities) - Handle **trade lifecycle events** (amendments, cancellations, maturities) - Provide **exception handling** and manual intervention workflows --- ## \ud83d\udee0\ufe0f Getting Started > \u2615 **Java 21 Required** > Make sure Java 21 is installed and set as the active version. ### 1. Clone the Project ```bash git clone cd dtcc-regulatory-r",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "puneat/SierraCharts.DTC.NET",
+    "requested_name": "puneat/SierraCharts.DTC.NET",
+    "id": 669554703,
+    "url": "https://github.com/puneat/SierraCharts.DTC.NET",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "SierraCharts.DTC.NET is a powerful .NET library that provides an implementation of the Data/Trading Communication (DTC) protocol for Sierra Charts. ",
+    "stars": 6,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "dd00d631e9a26cf8fd07d2243ee4091554f0f1a5",
+    "last_commit_date": "2023-07-22T16:53:47Z",
+    "pushed_at_not_commit_date": "2023-07-22T16:53:47Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "puneat",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "1e0e56257d8facb332f94c89e023ab092a5b8d1afd0f5522bba11c2f5e13fb82",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "99d23bbb7683fe55b88f78226401ff7048eea93d0202cfb5949a8d8729d599b9",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/puneat/SierraCharts.DTC.NET",
+      "commit": "https://github.com/puneat/SierraCharts.DTC.NET/commit/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5",
+      "readme": "https://github.com/puneat/SierraCharts.DTC.NET/blob/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5/README.md",
+      "license": "https://github.com/puneat/SierraCharts.DTC.NET/blob/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5/LICENSE",
+      "recent_commits": "https://api.github.com/repos/puneat/SierraCharts.DTC.NET/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/puneat/SierraCharts.DTC.NET/contributors",
+      "issues": "https://api.github.com/repos/puneat/SierraCharts.DTC.NET/issues"
+    },
+    "readme_excerpt": "# SierraCharts.DTC.NET ![License](https://img.shields.io/badge/license-MIT-blue) SierraCharts.DTC.NET is a powerful .NET library that provides a robust implementation of the Data/Trading Communication (DTC) protocol for Sierra Charts. This protocol enables external applications to interface with Sierra Charts, request data, subscribe to updates, and execute other necessary operations. SierraCharts.DTC.NET supports requests for various data types such as market data, alerts, account details, fills data, order book data. In addition, it allows external applications to subscribe to Sierra Charts updates. The library offers flexibility by supporting multiple encoding options including Binary, Google Protocol Buffers (GPB), JSON, and Binary With Variable Length Strings Encoding. ## Features - Query market data, alerts, account details, fills data, orderbook data. - Subscribe to Sierra Charts updates. - Supports multiple encoding options: Binary, GPB, JSON, and Binary With Variable Length Strings Encoding.",
+    "license_excerpt": "MIT License Copyright (c) 2023 Puneet Mishra Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright no"
+  },
+  {
+    "full_name": "pydata/pandas-datareader",
+    "requested_name": "pydata/pandas-datareader",
+    "id": 29273084,
+    "url": "https://github.com/pydata/pandas-datareader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Extract data from a wide range of Internet sources into a pandas DataFrame.",
+    "stars": 3268,
+    "forks": 693,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de",
+    "last_commit_date": "2026-07-21T08:27:57Z",
+    "pushed_at_not_commit_date": "2026-07-21T08:28:05Z",
+    "commits_since_20260313_count_capped100": 53,
+    "recent_commit_authors": [
+      "Copilot",
+      "Jaypatel1511",
+      "bashtage",
+      "dependabot[bot]",
+      "\u6c88\u56fd\u6743"
+    ],
+    "contributors_sample": [
+      {
+        "login": "bashtage",
+        "contributions": 339,
+        "type": "User"
+      },
+      {
+        "login": "davidastephens",
+        "contributions": 89,
+        "type": "User"
+      },
+      {
+        "login": "femtotrader",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "addisonlynch",
+        "contributions": 39,
+        "type": "User"
+      },
+      {
+        "login": "simongarisch",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "gliptak",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "hayd",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "gfyoung",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "sinhrks",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "StochasticDoge",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "suminb",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "jorisvandenbossche",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "jreback",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "oceanapplications",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "Mottl",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "rgkimball",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "lukashalim",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "econdb",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "GreenArt11",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "ikonnikov",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "jtkiley",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "kdcro101",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "hydrosquall",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "chaburkland",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 4,
+        "type": "Bot"
+      },
+      {
+        "login": "partev",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "peijiche",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "dtemkin",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "boingaon",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "stoffprof",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/pydata/pandas-datareader/issues/1032",
+      "created_at": "2026-08-22T16:59:37Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "663af3b381e03b2ae58b76cfd4bb6da2218a713729f598516d74c86be5cbf7be",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE.md",
+    "license_file_sha256": "1114ad27e18866954fd63f8a9c0bc4bf0ef77f17376de066b797d202fd107213",
+    "license_candidates": [
+      "LICENSE.md"
+    ],
+    "root_entries": [
+      ".codecov.yml",
+      ".coveragerc",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "LICENSE.md",
+      "MANIFEST.in",
+      "README.md",
+      "conftest.py",
+      "docs",
+      "pandas_datareader",
+      "pyproject.toml",
+      "release-procedure.md",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/pyproject.toml",
+        "sha256": "364f52bcc16d02526378e55282202bf7b60abca414ecca36c31c6c50f6ecddb1"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/requirements.txt",
+        "sha256": "db53607468574423029602d821f5ccff8bbcfd6e68651bc55a547ee9c2a1c94b"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/pydata/pandas-datareader",
+      "commit": "https://github.com/pydata/pandas-datareader/commit/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de",
+      "readme": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/README.md",
+      "license": "https://github.com/pydata/pandas-datareader/blob/9a3e2fe8c4e202bf9be6b4543fd1a06c3cdce7de/LICENSE.md",
+      "recent_commits": "https://api.github.com/repos/pydata/pandas-datareader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/pydata/pandas-datareader/contributors",
+      "issues": "https://api.github.com/repos/pydata/pandas-datareader/issues"
+    },
+    "readme_excerpt": "# pandas-datareader Macroeconomic and factor-oriented remote data access for pandas. [![CI Testing](https://github.com/pydata/pandas-datareader/actions/workflows/ci.yml/badge.svg)](https://github.com/pydata/pandas-datareader/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/pandas-datareader.svg)](https://pypi.python.org/pypi/pandas-datareader/) [![Codecov](https://codecov.io/gh/pydata/pandas-datareader/branch/master/graph/badge.svg)](https://codecov.io/gh/pydata/pandas-datareader) [![RTD](https://readthedocs.org/projects/pandas-datareader/badge/?version=latest)](https://pandas-datareader.readthedocs.io/en/latest/) [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![License](https://img.shields.io/pypi/l/pandas-datareader)](https://github.com/pydata/pandas-datareader/blob/main/LICENSE.md) ## Installation Install using `pip` ``` shell pip install pandas-datareader ``` ## Usage ``` python import pandas_datareader as pdr pdr.get_data_fred('GS10') ``` The public API is focused on macroeconomic, policy, and factor-style data sources such as FRED, Fama/French, Bank of Canada, World Bank, OECD, Eurostat, and the new `pandas_datareader.macro` interface. ## Documentation [Stable documentation](https://pydata.github.io/pandas-datareader/) is available on [github.io](https://pydata.github.io/pandas-datareader/). A sec",
+    "license_excerpt": "======= License ======= pandas is distributed under a 3-clause (\"Simplified\" or \"New\") BSD license. Parts of NumPy, SciPy, numpydoc, bottleneck, which all have BSD-compatible licenses, are included. Their licenses follow the pandas license. pandas license ============== Copyright (c) 2011-2012, Lambda Foundry, Inc. and PyData Development Team All rights reserved. Copyright (c) 2008-2011 AQR Capital Management, LLC All rights reserved. Redistribution and use in source and binary forms, with or wi"
+  },
+  {
+    "full_name": "PyPortfolio/PyPortfolioOpt",
+    "requested_name": "PyPortfolio/PyPortfolioOpt",
+    "id": 135300551,
+    "url": "https://github.com/PyPortfolio/PyPortfolioOpt",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity",
+    "stars": 6022,
+    "forks": 1170,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "main",
+    "latest_commit": "a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+    "last_commit_date": "2026-07-07T21:13:11Z",
+    "pushed_at_not_commit_date": "2026-07-07T21:18:14Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "jaydevkalivarapu"
+    ],
+    "contributors_sample": [
+      {
+        "login": "robertmartin8",
+        "contributions": 623,
+        "type": "User"
+      },
+      {
+        "login": "phschiele",
+        "contributions": 36,
+        "type": "User"
+      },
+      {
+        "login": "SeaPea1",
+        "contributions": 31,
+        "type": "User"
+      },
+      {
+        "login": "fkiraly",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "88d52bdba0366127fffca9dfa93895",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 13,
+        "type": "Bot"
+      },
+      {
+        "login": "tschm",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "gpfins",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "yosukesan",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "pmn4",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "bhutraaditya",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "gumblex",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "schneiderfelipe",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "gliptak",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "fdabrandao",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "samatix",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "philippdubach",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "SteveDiamond",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "thenordine",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "TommyBark",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tuantp7",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tingiskhan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "duranvrNubank",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "webbsledge",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Wilm0r",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "andyherfer",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "aral190",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "baobach",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bvonboyen",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mkeds",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/PyPortfolio/PyPortfolioOpt/issues/644",
+      "created_at": "2025-11-08T19:31:46Z",
+      "state": "open",
+      "comments": 10,
+      "first_staff_comment_in_sample": "2025-11-10T22:28:10Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "aa39aacf964b967b8b23063f91eeb5997136e10e40fb62e7c5a848e348a00123",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0e401d63a7b31bde363ca577a2537af1c345fccbf532edc55cb589f568b2a883",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "cookbook",
+      "docs",
+      "example",
+      "media",
+      "pypfopt",
+      "pyproject.toml",
+      "readthedocs.yml",
+      "requirements.txt",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/pyproject.toml",
+        "sha256": "5b31e906acaed67517ecc84797bcd44335be3a0dcf55c605185fe066000b96ac"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/requirements.txt",
+        "sha256": "acfd08fda8721e30f91c777e295269f155d55d8ef67d6d4a8aad566cabfaf6b0"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "PyPortfolio/PyPortfolioOpt",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Financial portfolio optimization (efficient frontier, Black-Litterman) in Python",
+      "reuse_value": 85,
+      "stars": 5802,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/PyPortfolio/PyPortfolioOpt",
+      "rank_score": 85058020
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "PyPortfolio/PyPortfolioOpt",
+      "stars": 5802,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk P"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/PyPortfolio/PyPortfolioOpt",
+      "commit": "https://github.com/PyPortfolio/PyPortfolioOpt/commit/a6638d2e06dae6f444fd022cfd4b3c528902a85b",
+      "readme": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/README.md",
+      "license": "https://github.com/PyPortfolio/PyPortfolioOpt/blob/a6638d2e06dae6f444fd022cfd4b3c528902a85b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/PyPortfolio/PyPortfolioOpt/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/PyPortfolio/PyPortfolioOpt/contributors",
+      "issues": "https://api.github.com/repos/PyPortfolio/PyPortfolioOpt/issues"
+    },
+    "readme_excerpt": "## Welcome to PyPortfolioOpt PyPortfolioOpt is a library implementing portfolio optimization methods, including classical mean-variance optimization, Black-Litterman allocation, or shrinkage and Hierarchical Risk Parity. PyPortfolioOpt is inspired by scikit-learn; it is **extensive** yet easily **extensible**, for casual investors, or professionals looking for an easy prototyping tool. Whether you are a fundamentals-oriented investor who has identified a handful of undervalued picks, or an algorithmic trader who has a basket of strategies, PyPortfolioOpt can help you combine your alpha sources in a risk-efficient way. | | **[Documentation](https://pyportfolioopt.readthedocs.io/en/latest/)** \u00b7 **[Tutorials](https://github.com/pyportfolio/pyportfolioopt/tree/main/cookbook)** \u00b7 **[Release Notes](https://github.com/PyPortfolio/PyPortfolioOpt/releases)** | |---|---| | **Open&#160;Source** | [![MIT](https://img.shields.io/github/license/pyportfolio/pyportfolioopt)](https://github.com/pyportfolio/pyportfolioopt/blob/main/LICENSE) [![GC.OS Sponsored](https://img.shields.io/badge/GC.OS-Sponsored%20Project-orange.svg?style=flat&colorA=0eac92&colorB=2077b4)](https://gc-os-ai.github.io/) | | | **Community** | [![!discord](https://img.shields.io/static/v1?logo=discord&label=discord&message=chat&color=lightgreen)](https://discord.gg/7uKdHfdcJG) [![!linkedin](https://img.shields.io/static/v1?",
+    "license_excerpt": "MIT License Copyright (c) 2018 Robert Andrew Martin Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyr"
+  },
+  {
+    "full_name": "QANTau/DTC-Client",
+    "requested_name": "QANTau/DTC-Client",
+    "id": 136256175,
+    "url": "https://github.com/QANTau/DTC-Client",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Data and Trading Communications Protocol Client",
+    "stars": 12,
+    "forks": 7,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "master",
+    "latest_commit": "d90267550b107a5cfbe903c6251951638fb0ea8f",
+    "last_commit_date": "2023-01-03T04:25:37Z",
+    "pushed_at_not_commit_date": "2023-01-03T04:30:12Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "QANTau",
+        "contributions": 15,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/QANTau/DTC-Client/issues/3",
+      "created_at": "2021-07-26T13:14:44Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1d7c07e5a15e2941da629000b3ec145322dc81a9b293d8f1f2f8f6f81a70592a",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8d08a7bc17fce360c543093fd1f61309e36dbc908f208c38fdf9841034888204",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "DTC-Client-Realtime",
+      "DTC-Client.sln",
+      "DTC-Client.sln.DotSettings",
+      "DTC",
+      "LICENSE",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/QANTau/DTC-Client",
+      "commit": "https://github.com/QANTau/DTC-Client/commit/d90267550b107a5cfbe903c6251951638fb0ea8f",
+      "readme": "https://github.com/QANTau/DTC-Client/blob/d90267550b107a5cfbe903c6251951638fb0ea8f/README.md",
+      "license": "https://github.com/QANTau/DTC-Client/blob/d90267550b107a5cfbe903c6251951638fb0ea8f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/QANTau/DTC-Client/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/QANTau/DTC-Client/contributors",
+      "issues": "https://api.github.com/repos/QANTau/DTC-Client/issues"
+    },
+    "readme_excerpt": "# DTC Protocol Client Library This project contains a C# library and a sample implementation for accessing services realtime and historical data via the DTC Protocol (www.dtcprotocol.org). The sample client application is intended to be used as an aid to understanding the DTC Protocol rather than as a standalone data management/viewing tool. * Only a small number of DTC message types are supported, although any unsupported messages are handled (altough the results are not processed). * This project compiles x64 using .NET Framework 4.5.1. * Other than for the intial negotiation, only Json encoding is supported. This library was originally developed to allow SmartQuant products (OpenQuant / QuantRouter / QuantBase) to access SierraChart data and execution services. # Important Note This project is no longer maintained, and the resulting code is no longer in use. The repository is maintained to assist anyone looking at accessing DTC (Sierra Chart) via C#. In my own work, I now use the [Zorro Trader](https://zorro-project.com) plugin for Sierra Chart, as documented: * https://zorro-project.com/manual/en/sierra.htm * https://github.com/AndrewAMD/SierraChartZorroPlugin",
+    "license_excerpt": "MIT License Copyright (c) 2018 Adam Burgess - QANT Pty Ltd (Australia) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditio"
+  },
+  {
+    "full_name": "qualiaenjoyer/polymarket-apis",
+    "requested_name": "qualiaenjoyer/polymarket-apis",
+    "id": 918420403,
+    "url": "https://github.com/qualiaenjoyer/polymarket-apis",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Unified Polymarket v2 APIs with Pydantic data validation - Clob, Gamma, Data, Web3, Websockets, GraphQL clients.",
+    "stars": 194,
+    "forks": 48,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "2d883ed84ae99555bbceeb0959d05ccd1ef39f20",
+    "last_commit_date": "2026-09-13T12:34:29Z",
+    "pushed_at_not_commit_date": "2026-09-13T12:34:36Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "MAKMED1337",
+      "arssing",
+      "dependabot[bot]",
+      "qualiaenjoyer"
+    ],
+    "contributors_sample": [
+      {
+        "login": "qualiaenjoyer",
+        "contributions": 242,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 22,
+        "type": "Bot"
+      },
+      {
+        "login": "MAKMED1337",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "arssing",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "codez0mb1e",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "HScarb",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kabunchi",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/qualiaenjoyer/polymarket-apis/issues/110",
+      "created_at": "2026-06-30T19:52:55Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "03063e6025d0b8d23851b4bf661e2ec2a8a86b7551df95796c780931c725d9c4",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "README.md",
+      "pyproject.toml",
+      "src",
+      "tests",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/qualiaenjoyer/polymarket-apis/blob/2d883ed84ae99555bbceeb0959d05ccd1ef39f20/pyproject.toml",
+        "sha256": "adf068fa128d9ea8fc0105b8588d11f291e9232bdde499318380777632f08131"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/qualiaenjoyer/polymarket-apis",
+      "commit": "https://github.com/qualiaenjoyer/polymarket-apis/commit/2d883ed84ae99555bbceeb0959d05ccd1ef39f20",
+      "readme": "https://github.com/qualiaenjoyer/polymarket-apis/blob/2d883ed84ae99555bbceeb0959d05ccd1ef39f20/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/qualiaenjoyer/polymarket-apis/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/qualiaenjoyer/polymarket-apis/contributors",
+      "issues": "https://api.github.com/repos/qualiaenjoyer/polymarket-apis/issues"
+    },
+    "readme_excerpt": "# polymarket-apis [![PyPI version](https://img.shields.io/pypi/v/polymarket-apis.svg)](https://pypi.org/project/polymarket-apis/) Unified Polymarket v2 APIs with Pydantic data validation - Clob, Gamma, Data, Web3, Websockets, GraphQL clients. ## Polymarket Mental Models ### Events, Markets and Outcomes The Polymarket ecosystem is organized hierarchically: ```mermaid flowchart LR A([Event]) --- B([Market A]) A --- C([Market B]) A ~~~ Dot1@{ shape: sm-circ} A ~~~ Dot2@{ shape: sm-circ} A ~~~ Dot3@{ shape: sm-circ} A -.- D([Market n]) B --- E([Outcome 1]) B --- F([Outcome 2]) C --- G([Outcome 1]) C --- H([Outcome 2]) ``` - **Event** \u2014 represents a proposition or question such as \u201cHow many Fed rate cuts in 2025?\u201d. - Identified by a human-readable **`slug`** (e.g. `how-many-fed-rate-cuts-in-2025`) and an **event `id`** (e.g. `16085`). - **Market** \u2014 represents a specific option for the related event (e.g. 1 rate cut in 2025). An Event has 1 or more corresponding Markets. (e.g. 9 options in this case - {0, 1, 2, ..., 7, 8 or more} rate cuts in 2025) - Identified by a **`condition id`** (e.g. `0x8e9b6942b4dac3117dadfacac2edb390b6d62d59c14152774bb5fcd983fc134e` for 1 rate cut in 2025), a human-readable **`slug`** (e.g. `'will-1-fed-rate-cut-happen-in-2025'`) and a **market `id`** (e.g. `516724`). - **Outcome** \u2014 represents a binary option related to a market. (most commonly `Yes`/`No`,",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "QuantConnect/Lean",
+    "requested_name": "QuantConnect/Lean",
+    "id": 27251463,
+    "url": "https://github.com/QuantConnect/Lean",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",
+    "stars": 21613,
+    "forks": 5243,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "master",
+    "latest_commit": "6eb389012d73c364547d61546ff822fc8432dee2",
+    "last_commit_date": "2026-09-11T22:16:54Z",
+    "pushed_at_not_commit_date": "2026-09-12T23:12:28Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "0xpinara",
+      "AlexCatarino",
+      "DerekMelchin",
+      "JosueNina",
+      "Martin-Molinero",
+      "Romazes",
+      "YadavKapil",
+      "bm1016bm-svg",
+      "hsm207",
+      "jhonabreul",
+      "kobihikri",
+      "mameikagou",
+      "matvt-cell",
+      "mkzung",
+      "pengpengyi92",
+      "vbs100"
+    ],
+    "contributors_sample": [
+      {
+        "login": "mchandschuh",
+        "contributions": 2554,
+        "type": "User"
+      },
+      {
+        "login": "jaredbroad",
+        "contributions": 2305,
+        "type": "User"
+      },
+      {
+        "login": "Martin-Molinero",
+        "contributions": 1968,
+        "type": "User"
+      },
+      {
+        "login": "StefanoRaggi",
+        "contributions": 1598,
+        "type": "User"
+      },
+      {
+        "login": "AlexCatarino",
+        "contributions": 887,
+        "type": "User"
+      },
+      {
+        "login": "jhonabreul",
+        "contributions": 409,
+        "type": "User"
+      },
+      {
+        "login": "gsalaz98",
+        "contributions": 338,
+        "type": "User"
+      },
+      {
+        "login": "Jay-Jay-D",
+        "contributions": 298,
+        "type": "User"
+      },
+      {
+        "login": "quietjoy",
+        "contributions": 289,
+        "type": "User"
+      },
+      {
+        "login": "Marinovsky",
+        "contributions": 215,
+        "type": "User"
+      },
+      {
+        "login": "quant1729",
+        "contributions": 209,
+        "type": "User"
+      },
+      {
+        "login": "C-SELLERS",
+        "contributions": 202,
+        "type": "User"
+      },
+      {
+        "login": "JosueNina",
+        "contributions": 155,
+        "type": "User"
+      },
+      {
+        "login": "AdalyatNazirov",
+        "contributions": 125,
+        "type": "User"
+      },
+      {
+        "login": "simonsonjack",
+        "contributions": 125,
+        "type": "User"
+      },
+      {
+        "login": "Romazes",
+        "contributions": 116,
+        "type": "User"
+      },
+      {
+        "login": "jingwu74",
+        "contributions": 115,
+        "type": "User"
+      },
+      {
+        "login": "jameschch",
+        "contributions": 104,
+        "type": "User"
+      },
+      {
+        "login": "LouisSzeto",
+        "contributions": 79,
+        "type": "User"
+      },
+      {
+        "login": "devalkeralia",
+        "contributions": 56,
+        "type": "User"
+      },
+      {
+        "login": "mushketyk",
+        "contributions": 49,
+        "type": "User"
+      },
+      {
+        "login": "HalldorAndersen",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "rjra2611",
+        "contributions": 43,
+        "type": "User"
+      },
+      {
+        "login": "kaffeebrauer",
+        "contributions": 40,
+        "type": "User"
+      },
+      {
+        "login": "adam-may",
+        "contributions": 36,
+        "type": "User"
+      },
+      {
+        "login": "DerekMelchin",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "IlshatGaripov",
+        "contributions": 30,
+        "type": "User"
+      },
+      {
+        "login": "jmerle",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "espirulina",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "smartchris84",
+        "contributions": 21,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/QuantConnect/Lean/issues/9790",
+      "created_at": "2026-09-13T11:22:50Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "readme.md",
+    "readme_sha256": "c93d2d649740ffdbfeca35ee5035eff668dc1f0a6b97873756addb70f4f4b91e",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "522cf0a716ce03f67d46f8fceb5bf78c5b84400ec5cd8d14bf9f02cddc1cb6ba",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".devcontainer",
+      ".dockerignore",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".nuget",
+      ".travis.yml",
+      ".vs",
+      ".vscode",
+      "Algorithm.CSharp",
+      "Algorithm.Framework",
+      "Algorithm.Python",
+      "Algorithm",
+      "AlgorithmFactory",
+      "Api",
+      "Brokerages",
+      "CONTRIBUTING.md",
+      "Common",
+      "Compression",
+      "Configuration",
+      "Data",
+      "Dockerfile",
+      "DockerfileJupyter",
+      "DockerfileLeanFoundation",
+      "DockerfileLeanFoundationARM",
+      "Documentation",
+      "DownloaderDataProvider",
+      "Engine",
+      "Indicators",
+      "LICENSE",
+      "Launcher",
+      "LocalPackages",
+      "Logging",
+      "Messaging",
+      "Optimizer.Launcher",
+      "Optimizer",
+      "QuantConnect.Lean.sln",
+      "QuantConnect.Lean.sln.DotSettings",
+      "Queues",
+      "Report",
+      "Research",
+      "Tests",
+      "ToolBox",
+      "ci_build_stubs.sh",
+      "compare_benchmarks.py",
+      "find_datasource_repos.py",
+      "google9161359af9633398.html",
+      "lean.ico",
+      "mypy.ini",
+      "readme.md",
+      "rebase_organization_branches.sh",
+      "run_benchmarks.py",
+      "run_syntax_check.py"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "QuantConnect/Lean",
+      "stars": 20029,
+      "license": "Apache-2.0",
+      "language": "C#",
+      "unit_class": "substrate",
+      "reuse_value": 90,
+      "liftability": 15,
+      "fame_gap": 75,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/QuantConnect/Lean",
+      "commit": "https://github.com/QuantConnect/Lean/commit/6eb389012d73c364547d61546ff822fc8432dee2",
+      "readme": "https://github.com/QuantConnect/Lean/blob/6eb389012d73c364547d61546ff822fc8432dee2/readme.md",
+      "license": "https://github.com/QuantConnect/Lean/blob/6eb389012d73c364547d61546ff822fc8432dee2/LICENSE",
+      "recent_commits": "https://api.github.com/repos/QuantConnect/Lean/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/QuantConnect/Lean/contributors",
+      "issues": "https://api.github.com/repos/QuantConnect/Lean/issues"
+    },
+    "readme_excerpt": "[![Build Status](https://github.com/QuantConnect/Lean/workflows/Build%20%26%20Test%20Lean/badge.svg)](https://github.com/QuantConnect/Lean/actions?query=workflow%3A%22Build%20%26%20Test%20Lean%22) &nbsp;&nbsp;&nbsp; [![Regression Tests](https://github.com/QuantConnect/Lean/workflows/Regression%20Tests/badge.svg)](https://github.com/QuantConnect/Lean/actions?query=workflow%3A%22Regression%20Tests%22) &nbsp;&nbsp;&nbsp; [![LEAN Forum](https://img.shields.io/badge/debug-LEAN%20Forum-53c82b.svg)](https://www.quantconnect.com/forum/discussions/1/lean) &nbsp;&nbsp;&nbsp; [![Discord Chat](https://img.shields.io/badge/chat-Discord-53c82b.svg)](https://www.quantconnect.com/discord) [Lean Home][1] | [Documentation][2] | [Download Zip][3] | [Docker Hub][8] | [Nuget][9] # LEAN is an event-driven, professional-caliber algorithmic trading platform built with a passion for elegant engineering and deep quant concept modeling. Out-of-the-box alternative data and live-trading support. # LEAN is modular in design, with each component pluggable and customizable. It ships with models for all major plug-in points. # QuantConnect Lean CLI is a command-line interface tool for interacting with the Lean algorithmic trading engine, which is an open-source platform for backtesting and live trading algorithms in multiple financial markets. It allows developers to manage projects, run backtests, deploy live",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

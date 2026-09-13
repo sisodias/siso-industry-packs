@@ -1,0 +1,758 @@
+[
+  {
+    "full_name": "mransbro/tradingjournal",
+    "requested_name": "mransbro/tradingjournal",
+    "id": 453138852,
+    "url": "https://github.com/mransbro/tradingjournal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A simple trade journal app built with Python Flask.",
+    "stars": 51,
+    "forks": 19,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "16ee926387540605b6a82f4802d2af61e79cda9b",
+    "last_commit_date": "2023-02-13T20:49:16Z",
+    "pushed_at_not_commit_date": "2023-02-13T20:49:16Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "mransbro",
+        "contributions": 109,
+        "type": "User"
+      },
+      {
+        "login": "msmmichael",
+        "contributions": 16,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/mransbro/tradingjournal/issues/31",
+      "created_at": "2023-03-01T02:00:19Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "9c61fde3fdc89a51e7499c79ecf6a28ac7cac7ee67c048a667dafe0c8cfe9ae5",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env-example",
+      ".gitignore",
+      ".python-version",
+      "Procfile",
+      "README.md",
+      "app",
+      "config.py",
+      "img",
+      "requirements.txt",
+      "run.py",
+      "runtime.txt",
+      "sample_trades.csv",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/mransbro/tradingjournal/blob/16ee926387540605b6a82f4802d2af61e79cda9b/requirements.txt",
+        "sha256": "b4a20744a17bad92ac5ccc1e6456c3f8d25c070e72b19009e9e8e85a4031ceec"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      },
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "B",
+        "query": "topic:trading-journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/mransbro/tradingjournal",
+      "commit": "https://github.com/mransbro/tradingjournal/commit/16ee926387540605b6a82f4802d2af61e79cda9b",
+      "readme": "https://github.com/mransbro/tradingjournal/blob/16ee926387540605b6a82f4802d2af61e79cda9b/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/mransbro/tradingjournal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/mransbro/tradingjournal/contributors",
+      "issues": "https://api.github.com/repos/mransbro/tradingjournal/issues"
+    },
+    "readme_excerpt": "# Trading journal A simple trade journal app built with Python Flask. ![home](https://github.com/mransbro/tradingjournal/blob/main/img/homepage.png) ## Installation Make sure you have the following prereqs: 1. Python >= 3.11 2. Pip 3. Git Installing the app is easy: 1. Clone the repository in the directory you wish: `git clone` https://github.com/mransbro/tradingjournal.git 2. Enter the tradingjournal directory. (cd tradingjournal) 3. Install requirements: `pip install -r requirements.txt` 4. Run the app: `python3 run.py`. 5. For production use gunicron `gunicorn -w 4 \"app:init_app()\"` ## Want to try it out Demo running on [Render](https://tradingjounral.onrender.com) ## Roadmap - Error handling - Tests - Reduce number of packages # Built with - [Python 3](https://python.org): programming language - [Flask](https://flask.palletsprojects.com): web framework - [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com): database - [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/): python WSGI server - [Bootstrap](https://getbootstrap.com/): CSS and JS framework - [Black](https://black.readthedocs.io/en/stable/): Python linting",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts",
+    "requested_name": "Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts",
+    "id": 284509910,
+    "url": "https://github.com/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python based Trading Bot that uses TradingView.com webhook JSON alerts to place orders(buy/sell/close/manage positions/TP/SL/TS etc.) on Bybit.com. ",
+    "stars": 521,
+    "forks": 111,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "39baede533d388da563365244b659563d48137d8",
+    "last_commit_date": "2023-02-07T20:20:41Z",
+    "pushed_at_not_commit_date": "2023-02-16T02:09:55Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Mtemi",
+        "contributions": 59,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 8,
+        "type": "Bot"
+      },
+      {
+        "login": "joseeyw",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "crypttops",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/issues/38",
+      "created_at": "2026-08-05T18:39:52Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4006e46c5b64ce766faf26418ab5cbbd5cd8b2bcefa2176064846b8e437f7d8b",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "Pipfile",
+      "README.md",
+      "actions.py",
+      "auth.py",
+      "config.env",
+      "config.py",
+      "core",
+      "data.json",
+      "generate_alert_message.py",
+      "pinescript_test.txt",
+      "pybybit.py",
+      "requirements.txt",
+      "webhook-bot.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/blob/39baede533d388da563365244b659563d48137d8/requirements.txt",
+        "sha256": "1c550d8ce60f375b653bffc35dff6a612f20129e164b82055c1343ec41c8fe3c"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "A",
+        "query": "trading alerts"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts",
+      "commit": "https://github.com/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/commit/39baede533d388da563365244b659563d48137d8",
+      "readme": "https://github.com/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/blob/39baede533d388da563365244b659563d48137d8/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/contributors",
+      "issues": "https://api.github.com/repos/Mtemi/Bybit-Trading-Bot-Integrated-with-TradingView-Webhook-Alerts/issues"
+    },
+    "readme_excerpt": "Bybit-Auto-Trading-Bot-Ordes-placed-via-TradingView-Webhook . After setting up this bot, which is an easy version, you can also get a more advanced version here: ###https://github.com/Mtemi/BybitTelegramBot for free. # Setup of this Bot: You can setup a free version of this bot with the instructions below !!!! The code provided here may need some development intuition because it may not necessarily work since Bybit keep updating their REST API endpoints and their websockets. Incase of issues installing the code join our discord here: https://discord.gg/XKNBAGtmuB and ask the questions you may have. Access Bybit Documentation here: https://bybit-exchange.github.io/docs/inverse/#t-introduction Join our Discord Server https://discord.gg/bwCJTVDbRr for Assistance and Updates Upgrade with Telegram integration is available as per your requirements. # ..: Python based Bybit.com Trading Bot using TradingView.com alerts via webhooks as a trigger to buy/sell/close/manage positions Importantly make sure you create an account on Bybit as well as TradingView: Have knowledge in preparing a python environment, then normal procedures of running python code applies. A web app of this app is in the making. Where you can set your private and public Bybit keys. The parameters are set from TradingView webhooks. several webhooks can be applied. User is able to set TradingView alerts and decide what ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "muditbhargava66/High-Frequency-Trading-FPGA-System",
+    "requested_name": "muditbhargava66/High-Frequency-Trading-FPGA-System",
+    "id": 771909475,
+    "url": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The High-Frequency Trading FPGA System is an ultra-low latency platform for electronic trading on FPGAs. It features a TCP/IP stack, order matching engine, custom IP core, and risk management module for accelerated and reliable trade execution.",
+    "stars": 193,
+    "forks": 43,
+    "archived": false,
+    "fork": false,
+    "language": "Verilog",
+    "default_branch": "main",
+    "latest_commit": "80967da8ebc386a7e76b21d56619e733107a1e40",
+    "last_commit_date": "2024-04-25T20:53:26Z",
+    "pushed_at_not_commit_date": "2024-04-25T20:53:26Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "muditbhargava66",
+        "contributions": 9,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System/issues/5",
+      "created_at": "2026-04-04T22:06:43Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "95001326da59d815b0ed308a3ce4fb3ca21e80a0ed6ee8e3ab5e5b3b93508037",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "a0ae502460e802e2a8afc42db6cd28d3c5d08245ae53e0c6b136ce74b5143892",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "constraints",
+      "images",
+      "src",
+      "testbenches"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "A",
+        "query": "order management trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/muditbhargava66/High-Frequency-Trading-FPGA-System",
+      "commit": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System/commit/80967da8ebc386a7e76b21d56619e733107a1e40",
+      "readme": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System/blob/80967da8ebc386a7e76b21d56619e733107a1e40/README.md",
+      "license": "https://github.com/muditbhargava66/High-Frequency-Trading-FPGA-System/blob/80967da8ebc386a7e76b21d56619e733107a1e40/LICENSE",
+      "recent_commits": "https://api.github.com/repos/muditbhargava66/High-Frequency-Trading-FPGA-System/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/muditbhargava66/High-Frequency-Trading-FPGA-System/contributors",
+      "issues": "https://api.github.com/repos/muditbhargava66/High-Frequency-Trading-FPGA-System/issues"
+    },
+    "readme_excerpt": "# High-Frequency Trading FPGA System This repository contains the code and documentation for a high-frequency trading (HFT) system implemented on an FPGA. The system utilizes a TCP/IP stack for communication, an order matching engine for trade execution, and a custom IP core for accelerated processing. The design is optimized for ultra-low latency and high throughput. ## Table of Contents - [Introduction](#introduction) - [Features](#features) - [Directory Structure](#directory-structure) - [System Overview](#system-overview) - [Architecture](#architecture) - [Getting Started](#getting-started) - [Prerequisites](#prerequisites) - [Installation](#installation) - [Usage](#usage) - [Testing](#testing) - [Testbench Hierarchy](#testbench-hierarchy) - [Running Tests](#running-tests) - [Synthesis and Implementation](#synthesis-and-implementation) - [Resource Utilization](#resource-utilization) - [Timing Analysis](#timing-analysis) - [Deployment](#deployment) - [Future Work](#future-work) - [Contributing](#contributing) - [License](#license) ## Introduction The High-Frequency Trading FPGA System is designed to provide a high-performance and low-latency solution for electronic trading. It leverages the power of FPGAs to achieve deterministic and fast execution of trading algorithms. The system includes a full-featured TCP/IP stack for reliable communication, an order matching engine for",
+    "license_excerpt": "MIT License Copyright (c) 2024 Mudit Bhargava Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright n"
+  },
+  {
+    "full_name": "myc0576/SmartMoney-Cub",
+    "requested_name": "myc0576/SmartMoney-Cub",
+    "id": 1279923114,
+    "url": "https://github.com/myc0576/SmartMoney-Cub",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Read-only AI trading companion harness for decision logging, D1/D3 review, and rule evolution.",
+    "stars": 23,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "cdbb7382f8c43cc90d5d29543aea972042d809b7",
+    "last_commit_date": "2026-07-29T16:00:05Z",
+    "pushed_at_not_commit_date": "2026-09-12T14:34:25Z",
+    "commits_since_20260313_count_capped100": 44,
+    "recent_commit_authors": [
+      "SmartMoney-Cub Bot",
+      "myc0576",
+      "release-bot"
+    ],
+    "contributors_sample": [
+      {
+        "login": "myc0576",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "release-bot",
+        "contributions": 20,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/myc0576/SmartMoney-Cub/issues/9",
+      "created_at": "2026-09-12T11:32:30Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3797f0981e04a8ab6a9da64d857a49563c68611c790244b54c478205748a24eb",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f1e8983a28c30028fc6cea8cf1d527d1266ced98ccfd7f2daaa5eda2933ede45",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "AGENT_RUNBOOK.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "LICENSE",
+      "README.md",
+      "README.zh-CN.md",
+      "artifacts",
+      "assets",
+      "docs",
+      "examples",
+      "opendesign",
+      "pyproject.toml",
+      "schemas",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/myc0576/SmartMoney-Cub/blob/cdbb7382f8c43cc90d5d29543aea972042d809b7/pyproject.toml",
+        "sha256": "bb8dc2f452cbe0f903ee01ff429acc4955f837cb838cea831e9073e0e9b88844"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W09",
+        "lane": "topic",
+        "query": "topic:trading-journal pushed:>2026-03-13"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/myc0576/SmartMoney-Cub",
+      "commit": "https://github.com/myc0576/SmartMoney-Cub/commit/cdbb7382f8c43cc90d5d29543aea972042d809b7",
+      "readme": "https://github.com/myc0576/SmartMoney-Cub/blob/cdbb7382f8c43cc90d5d29543aea972042d809b7/README.md",
+      "license": "https://github.com/myc0576/SmartMoney-Cub/blob/cdbb7382f8c43cc90d5d29543aea972042d809b7/LICENSE",
+      "recent_commits": "https://api.github.com/repos/myc0576/SmartMoney-Cub/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/myc0576/SmartMoney-Cub/contributors",
+      "issues": "https://api.github.com/repos/myc0576/SmartMoney-Cub/issues"
+    },
+    "readme_excerpt": "# smartmoney-cub-harness [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![Tests](https://img.shields.io/badge/tests-pytest-informational)](tests/) [![Read-only](https://img.shields.io/badge/mode-read--only-brightgreen)](docs/safety.md) [![No financial advice](https://img.shields.io/badge/no-financial%20advice-critical)](docs/safety.md) [![Human-in-the-loop](https://img.shields.io/badge/human--in--the--loop-required-blueviolet)](docs/harness-contract.md) [![Agent-ready](https://img.shields.io/badge/agent--ready-offline%20artifacts-success)](docs/agent-integration.md) ![SmartMoney-Cub bilingual cover](assets/smartmoney-cub-harness-cover.png) `smartmoney-cub-harness` is a **local-first, read-only, agent-agnostic control plane for trading review and evidence governance**. It turns an external caller's offline run into portable, reviewable artifacts without taking trading authority. External Agent or CLI caller \u2192 Run Envelope \u2192 frozen Benchmark/Evidence Pack \u2192 deterministic replay \u2192 explicit human promotion gate. It has **no embedded LLM**, **no broker connection**, and **no automatic trading**. It does not place, cancel, or execute trades; select stocks; mutate accounts; run a background autonomous trading Agent; or automatically mutate core rules. [\u7b80\u4f53\u4e2d\u6587](README.z",
+    "license_excerpt": "MIT License Copyright (c) 2026 smartmoney-cub-harness contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: "
+  },
+  {
+    "full_name": "myhhub/stock",
+    "requested_name": "myhhub/stock",
+    "id": 616738094,
+    "url": "https://github.com/myhhub/stock",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "stock\u80a1\u7968.\u83b7\u53d6\u80a1\u7968\u6570\u636e,\u8ba1\u7b97\u80a1\u7968\u6307\u6807,\u7b79\u7801\u5206\u5e03,\u8bc6\u522b\u80a1\u7968\u5f62\u6001,\u7efc\u5408\u9009\u80a1,\u9009\u80a1\u7b56\u7565,\u80a1\u7968\u9a8c\u8bc1\u56de\u6d4b,\u80a1\u7968\u81ea\u52a8\u4ea4\u6613,\u652f\u6301PC\u53ca\u79fb\u52a8\u8bbe\u5907\u3002",
+    "stars": 14353,
+    "forks": 2950,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "b6e0ca2268cfbadd02f5ed052159c187b6670231",
+    "last_commit_date": "2026-04-02T02:25:44Z",
+    "pushed_at_not_commit_date": "2026-04-02T02:26:35Z",
+    "commits_since_20260313_count_capped100": 3,
+    "recent_commit_authors": [
+      "myhhub"
+    ],
+    "contributors_sample": [
+      {
+        "login": "myhhub",
+        "contributions": 615,
+        "type": "User"
+      },
+      {
+        "login": "lihaiwenserver",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dominicx",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "xxxpeifan",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/myhhub/stock/issues/536",
+      "created_at": "2026-09-08T14:37:47Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4e0307b72ca8975bbd602f84a9e6cbdb493e8c05d8cee34d6bfe5dd42fddeb19",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "cron",
+      "docker",
+      "img",
+      "instock",
+      "requirements.txt",
+      "supervisor"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/requirements.txt",
+        "sha256": "cb1c54d2224376be60308aae9e295efc35cb3237e78174100485cd8a44766bec"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "myhhub/stock",
+      "stars": 13066,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "reference",
+      "reuse_value": 78,
+      "liftability": 8,
+      "fame_gap": 70,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "stock\u80a1\u7968.\u83b7\u53d6\u80a1\u7968\u6570\u636e,\u8ba1\u7b97\u80a1\u7968\u6307\u6807,\u7b79\u7801\u5206\u5e03,\u8bc6\u522b\u80a1\u7968\u5f62\u6001,\u7efc\u5408\u9009\u80a1,\u9009\u80a1\u7b56\u7565,\u80a1\u7968\u9a8c\u8bc1\u56de\u6d4b,\u80a1\u7968\u81ea\u52a8\u4ea4\u6613,\u652f\u6301PC\u53ca\u79fb\u52a8\u8bbe\u5907\u3002"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/myhhub/stock",
+      "commit": "https://github.com/myhhub/stock/commit/b6e0ca2268cfbadd02f5ed052159c187b6670231",
+      "readme": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/README.md",
+      "license": "https://github.com/myhhub/stock/blob/b6e0ca2268cfbadd02f5ed052159c187b6670231/LICENSE",
+      "recent_commits": "https://api.github.com/repos/myhhub/stock/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/myhhub/stock/contributors",
+      "issues": "https://api.github.com/repos/myhhub/stock/issues"
+    },
+    "readme_excerpt": "[\u5bf9\u5e94IMA\u77e5\u8bc6\u5e93](https://ima.qq.com/wiki/?shareId=8b0da768c77bc863f1cad8eb9482e37a6eeb26ad7171523b687d48c1a67c8e2c)\uff1a\u80a1\u7968\u91cf\u5316\u56e0\u5b50 AI \u51b3\u7b56\u5f15\u64ce\uff0c2200 + \u7ef4\u4e13\u4e1a\u56e0\u5b50\u6c60\uff0cAI \u6df1\u5ea6\u89e3\u6790\u591a\u7ef4\u6570\u636e\uff0c\u7cbe\u51c6\u6316\u6398\u9ad8\u786e\u5b9a\u6027\u4e2a\u80a1\uff0c\u8d4b\u80fd\u4e13\u4e1a\u6295\u8d44\u9ad8\u6548\u7a33\u5065\u51b3\u7b56\u3002 https://ima.qq.com/wiki/?shareId=8b0da768c77bc863f1cad8eb9482e37a6eeb26ad7171523b687d48c1a67c8e2c \u3002 **InStock\u80a1\u7968\u7cfb\u7edf** InStock\u80a1\u7968\u7cfb\u7edf\uff0c\u6293\u53d6\u6bcf\u65e5\u80a1\u7968\u3001ETF\u5173\u952e\u6570\u636e\uff0c\u8ba1\u7b97\u80a1\u7968\u6280\u672f\u6307\u6807\u3001\u7b79\u7801\u5206\u5e03\uff0c\u8bc6\u522bK\u7ebf\u5404\u79cd\u5f62\u6001\uff0c\u7efc\u5408\u9009\u80a1\uff0c\u5185\u7f6e\u591a\u79cd\u9009\u80a1\u7b56\u7565\uff0c\u652f\u6301\u9009\u80a1\u9a8c\u8bc1\u56de\u6d4b\uff0c\u652f\u6301\u81ea\u52a8\u4ea4\u6613\uff0c\u652f\u6301\u6279\u91cf\u65f6\u95f4\uff0c\u8fd0\u884c\u9ad8\u6548\uff0c\u652f\u6301PC\u3001\u5e73\u677f\u3001\u624b\u673a\u79fb\u52a8\u8bbe\u5907\u663e\u793a\uff0c\u540c\u65f6\u63d0\u4f9bDocker\u955c\u50cf\u65b9\u4fbf\u5b89\u88c5\uff0c\u662f\u91cf\u5316\u6295\u8d44\u7684\u597d\u5e2e\u624b\u3002 The stock system,Capture key data on daily stocks and ETFs, calculate stock technical indicators, chip distribution, Position Cost Distribution(CYQ), identify various K-line forms, comprehensive stock selection, built-in multiple stock selection strategies, support stock selection verification and backtesting, support automatic trading, and support batch time , runs efficiently, supports display on PCs, tablets, and mobile phones, and provides Docker images for easy installation, making it a good helper for quantitative investment. Docker\u955c\u50cf\uff1ahttps://hub.docker.com/r/mayanghua/instock \u3002 # \u529f\u80fd\u4ecb\u7ecd ## \u4e00\uff1a\u7efc\u5408\u9009\u80a1 \u7efc\u5408\u9009\u80a1\u652f\u6301\u80a1\u7968\u8303\u56f4\u3001\u57fa\u672c\u9762\u3001\u6280\u672f\u9762\u3001\u6d88\u606f\u9762\u3001\u4eba\u6c14\u6307\u6807\u3001\u884c\u60c5\u6570\u636e\u7b49\u65b9\u9762\u5171200\u591a\u4e2a\u4fe1\u606f\u680f\u76ee\u8fdb\u884c\u81ea\u7531\u7ec4\u5408\u9009\u80a1\u3002\u9009\u80a1\u6761\u4ef6\u5206\u4e3a\u4ee5\u4e0b\u5927\u7c7b\uff1a ``` 1.\u80a1\u7968\u8303\u56f4 \u5e02\u573a\u3001 \u884c\u4e1a\u3001\u5730\u533a\u3001 \u6982\u5ff5\u3001 \u98ce\u683c\u3001\u6307\u6570\u6210\u4efd\u3001 \u4e0a\u5e02\u65f6\u95f4\u3002 2.\u57fa\u672c\u9762 \u4f30\u503c\u6307\u6807\u3001\u6bcf\u80a1\u6307\u6807\u3001\u76c8\u5229\u80fd\u529b\u3001\u6210\u957f\u80fd\u529b\u3001\u8d44\u672c\u7ed3\u6784\u4e0e\u507f\u503a\u80fd\u529b\u3001\u80a1\u672c\u80a1\u4e1c\u3002 3.\u6280\u672f\u9762 MACD\u91d1\u53c9\u3001KDJ\u91d1\u53c9\u3001\u653e\u91cf\u7a81\u7834\u3001\u4f4e\u4f4d\u8d44\u91d1\u51c0\u6d41\u5165\u3001\u9ad8\u4f4d\u8d44\u91d1\u51c0\u6d41\u51fa\u3001\u5411\u4e0a\u7a81\u7834\u5747\u7ebf\u3001\u5747\u7ebf\u591a\u5934\u6392\u5217\u3001\u5747\u7ebf\u7a7a\u5934\u6392\u5217\u3001\u8fde\u6da8\u653e\u91cf\u3001\u4e0b\u8dcc\u65e0\u91cf\u3001\u4e00\u6839\u5927\u9633\u7ebf\u3001\u4e24\u6839\u5927\u9633\u7ebf\u3001\u65ed\u65e5\u4e1c\u5347\u3001\u5f3a\u52bf\u591a\u65b9\u3001\u70ae\u62e8\u4e91\u89c1\u65e5\u3001\u4e03\u4ed9\u5973\u4e0b\u51e1(\u4e03\u8fde\u9634)\u3001\u516b\u4ed9\u8fc7\u6d77(\u516b\u8fde\u9633)\u3001\u4e5d\u9633\u795e\u529f(\u4e5d\u8fde\u9633)\u3001\u56db\u4e32\u9633\u3001\u5929\u91cf\u6cd5\u5219\u3001\u653e\u91cf\u4e0a\u653b\u3001\u7a7f\u5934\u7834\u811a\u3001\u5012\u8f6c\u9524\u5934\u3001\u5c04\u51fb\u4e4b\u661f\u3001\u9ec4\u660f\u4e4b\u661f\u3001\u66d9\u5149\u521d\u73b0\u3001\u8eab\u6000\u516d\u7532\u3001\u4e4c\u4e91\u76d6\u9876\u3001\u65e9\u6668\u4e4b\u661f\u3001\u7a84\u5e45\u6574\u7406\u3002 4.\u6d88\u606f\u9762 \u516c\u544a\u5927\u4e8b\u3001\u673a\u6784\u5173\u6ce8\u60c5\u51b5\u3001\u673a\u6784\u6301\u80a1\u5bb6",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "N30nHaCkZ/linux",
+    "requested_name": "N30nHaCkZ/linux",
+    "id": 32324932,
+    "url": "https://github.com/N30nHaCkZ/linux",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "  Linux kernel release 3.x <http://kernel.org/>  These are the release notes for Linux version 3.  Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong.   WHAT IS LINUX?    Linux is a clone of the operating system Unix, written from scratch by   Linus Torvalds with assistance from a loosely-knit team of hackers across   the Net. It aims towards POSIX and Single UNIX Specification compliance.    It has all the features you would expect in a modern fully-fledged Unix,   including true multitasking, virtual memory, shared libraries, demand   loading, shared copy-on-write executables, proper memory management,   and multistack networking including IPv4 and IPv6.    It is distributed under the GNU General Public License - see the   accompanying COPYING file for more details.   ON WHAT HARDWARE DOES IT RUN?    Although originally developed first for 32-bit x86-based PCs (386 or higher),   today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and   UltraSPARC, Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell,   IBM S/390, MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS,   Xtensa, Tilera TILE, AVR32 and Renesas M32R architectures.    Linux is easily portable to most general-purpose 32- or 64-bit architectures   as long as they have a paged memory management unit (PMMU) and a port of the   GNU C compiler (gcc) (part of The GNU Compiler Collection, GCC). Linux has   also been ported to a number of architectures without a PMMU, although   functionality is then obviously somewhat limited.   Linux has also been ported to itself. You can now run the kernel as a   userspace application - this is called UserMode Linux (UML).  DOCUMENTATION:   - There is a lot of documentation available both in electronic form on    the Internet and in books, both Linux-specific and pertaining to    general UNIX questions.  I'd recommend looking into the documentation    subdirectories on any Linux FTP site for the LDP (Linux Documentation    Project) books.  This README is not meant to be documentation on the    system: there are much better sources available.   - There are various README files in the Documentation/ subdirectory:    these typically contain kernel-specific installation notes for some     drivers for example. See Documentation/00-INDEX for a list of what    is contained in each file.  Please read the Changes file, as it    contains information about the problems, which may result by upgrading    your kernel.   - The Documentation/DocBook/ subdirectory contains several guides for    kernel developers and users.  These guides can be rendered in a    number of formats:  PostScript (.ps), PDF, HTML, & man-pages, among others.    After installation, \"make psdocs\", \"make pdfdocs\", \"make htmldocs\",    or \"make mandocs\" will render the documentation in the requested format.  INSTALLING the kernel source:   - If you install the full sources, put the kernel tarball in a    directory where you have permissions (eg. your home directory) and    unpack it:       gzip -cd linux-3.X.tar.gz | tar xvf -     or       bzip2 -dc linux-3.X.tar.bz2 | tar xvf -     Replace \"X\" with the version number of the latest kernel.     Do NOT use the /usr/src/linux area! This area has a (usually    incomplete) set of kernel headers that are used by the library header    files.  They should match the library, and not get messed up by    whatever the kernel-du-jour happens to be.   - You can also upgrade between 3.x releases by patching.  Patches are    distributed in the traditional gzip and the newer bzip2 format.  To    install by patching, get all the newer patch files, enter the    top level directory of the kernel source (linux-3.X) and execute:       gzip -cd ../patch-3.x.gz | patch -p1     or       bzip2 -dc ../patch-3.x.bz2 | patch -p1     Replace \"x\" for all versions bigger than the version \"X\" of your current    source tree, _in_order_, and you should be ok.  You may want to remove    the backup files (some-file-name~ or some-file-name.orig), and make sure    that there are no failed patches (some-file-name# or some-file-name.rej).    If there are, either you or I have made a mistake.     Unlike patches for the 3.x kernels, patches for the 3.x.y kernels    (also known as the -stable kernels) are not incremental but instead apply    directly to the base 3.x kernel.  For example, if your base kernel is 3.0    and you want to apply the 3.0.3 patch, you must not first apply the 3.0.1    and 3.0.2 patches. Similarly, if you are running kernel version 3.0.2 and    want to jump to 3.0.3, you must first reverse the 3.0.2 patch (that is,    patch -R) _before_ applying the 3.0.3 patch. You can read more on this in    Documentation/applying-patches.txt     Alternatively, the script patch-kernel can be used to automate this    process.  It determines the current kernel version and applies any    patches found.       linux/scripts/patch-kernel linux     The first argument in the command above is the location of the    kernel source.  Patches are applied from the current directory, but    an alternative directory can be specified as the second argument.   - Make sure you have no stale .o files and dependencies lying around:       cd linux      make mrproper     You should now have the sources correctly installed.  SOFTWARE REQUIREMENTS     Compiling and running the 3.x kernels requires up-to-date    versions of various software packages.  Consult    Documentation/Changes for the minimum version numbers required    and how to get updates for these packages.  Beware that using    excessively old versions of these packages can cause indirect    errors that are very difficult to track down, so don't assume that    you can just update packages when obvious problems arise during    build or operation.  BUILD directory for the kernel:     When compiling the kernel, all output files will per default be    stored together with the kernel source code.    Using the option \"make O=output/dir\" allow you to specify an alternate    place for the output files (including .config).    Example:       kernel source code: /usr/src/linux-3.X      build directory:    /home/name/build/kernel     To configure and build the kernel, use:       cd /usr/src/linux-3.X      make O=/home/name/build/kernel menuconfig      make O=/home/name/build/kernel      sudo make O=/home/name/build/kernel modules_install install     Please note: If the 'O=output/dir' option is used, then it must be    used for all invocations of make.  CONFIGURING the kernel:     Do not skip this step even if you are only upgrading one minor    version.  New configuration options are added in each release, and    odd problems will turn up if the configuration files are not set up    as expected.  If you want to carry your existing configuration to a    new version with minimal work, use \"make oldconfig\", which will    only ask you for the answers to new questions.   - Alternative configuration commands are:       \"make config\"      Plain text interface.       \"make menuconfig\"  Text based color menus, radiolists & dialogs.       \"make nconfig\"     Enhanced text based color menus.       \"make xconfig\"     X windows (Qt) based configuration tool.       \"make gconfig\"     X windows (Gtk) based configuration tool.       \"make oldconfig\"   Default all questions based on the contents of                         your existing ./.config file and asking about                         new config symbols.       \"make silentoldconfig\"                         Like above, but avoids cluttering the screen                         with questions already answered.                         Additionally updates the dependencies.       \"make olddefconfig\"                         Like above, but sets new symbols to their default                         values without prompting.       \"make defconfig\"   Create a ./.config file by using the default                         symbol values from either arch/$ARCH/defconfig                         or arch/$ARCH/configs/${PLATFORM}_defconfig,                         depending on the architecture.       \"make ${PLATFORM}_defconfig\"                         Create a ./.config file by using the default                         symbol values from                         arch/$ARCH/configs/${PLATFORM}_defconfig.                         Use \"make help\" to get a list of all available                         platforms of your architecture.       \"make allyesconfig\"                         Create a ./.config file by setting symbol                         values to 'y' as much as possible.       \"make allmodconfig\"                         Create a ./.config file by setting symbol                         values to 'm' as much as possible.       \"make allnoconfig\" Create a ./.config file by setting symbol                         values to 'n' as much as possible.       \"make randconfig\"  Create a ./.config file by setting symbol                         values to random values.       \"make localmodconfig\" Create a config based on current config and                            loaded modules (lsmod). Disables any module                            option that is not needed for the loaded modules.                             To create a localmodconfig for another machine,                            store the lsmod of that machine into a file                            and pass it in as a LSMOD parameter.                     target$ lsmod > /tmp/mylsmod                    target$ scp /tmp/mylsmod host:/tmp                     host$ make LSMOD=/tmp/mylsmod localmodconfig                             The above also works when cross compiling.       \"make localyesconfig\" Similar to localmodconfig, except it will convert                            all module options to built in (=y) options.     You can find more information on using the Linux kernel config tools    in Documentation/kbuild/kconfig.txt.   - NOTES on \"make config\":      - Having unnecessary drivers will make the kernel bigger, and can       under some circumstances lead to problems: probing for a       nonexistent controller card may confuse your other controllers      - Compiling the kernel with \"Processor type\" set higher than 386       will result in a kernel that does NOT work on a 386.  The       kernel will detect this on bootup, and give up.      - A kernel with math-emulation compiled in will still use the       coprocessor if one is present: the math emulation will just       never get used in that case.  The kernel will be slightly larger,       but will work on different machines regardless of whether they       have a math coprocessor or not.      - The \"kernel hacking\" configuration details usually result in a       bigger or slower kernel (or both), and can even make the kernel       less stable by configuring some routines to actively try to       break bad code to find kernel problems (kmalloc()).  Thus you       should probably answer 'n' to the questions for \"development\",       \"experimental\", or \"debugging\" features.  COMPILING the kernel:   - Make sure you have at least gcc 3.2 available.    For more information, refer to Documentation/Changes.     Please note that you can still run a.out user programs with this kernel.   - Do a \"make\" to create a compressed kernel image. It is also    possible to do \"make install\" if you have lilo installed to suit the    kernel makefiles, but you may want to check your particular lilo setup first.     To do the actual install, you have to be root, but none of the normal    build should require that. Don't take the name of root in vain.   - If you configured any of the parts of the kernel as `modules', you    will also have to do \"make modules_install\".   - Verbose kernel compile/build output:     Normally, the kernel build system runs in a fairly quiet mode (but not    totally silent).  However, sometimes you or other kernel developers need    to see compile, link, or other commands exactly as they are executed.    For this, use \"verbose\" build mode.  This is done by inserting    \"V=1\" in the \"make\" command.  E.g.:       make V=1 all     To have the build system also tell the reason for the rebuild of each    target, use \"V=2\".  The default is \"V=0\".   - Keep a backup kernel handy in case something goes wrong.  This is     especially true for the development releases, since each new release    contains new code which has not been debugged.  Make sure you keep a    backup of the modules corresponding to that kernel, as well.  If you    are installing a new kernel with the same version number as your    working kernel, make a backup of your modules directory before you    do a \"make modules_install\".     Alternatively, before compiling, use the kernel config option    \"LOCALVERSION\" to append a unique suffix to the regular kernel version.    LOCALVERSION can be set in the \"General Setup\" menu.   - In order to boot your new kernel, you'll need to copy the kernel    image (e.g. .../linux/arch/i386/boot/bzImage after compilation)    to the place where your regular bootable kernel is found.    - Booting a kernel directly from a floppy without the assistance of a    bootloader such as LILO, is no longer supported.     If you boot Linux from the hard drive, chances are you use LILO, which    uses the kernel image as specified in the file /etc/lilo.conf.  The    kernel image file is usually /vmlinuz, /boot/vmlinuz, /bzImage or    /boot/bzImage.  To use the new kernel, save a copy of the old image    and copy the new image over the old one.  Then, you MUST RERUN LILO    to update the loading map!! If you don't, you won't be able to boot    the new kernel image.     Reinstalling LILO is usually a matter of running /sbin/lilo.     You may wish to edit /etc/lilo.conf to specify an entry for your    old kernel image (say, /vmlinux.old) in case the new one does not    work.  See the LILO docs for more information.      After reinstalling LILO, you should be all set.  Shutdown the system,    reboot, and enjoy!     If you ever need to change the default root device, video mode,    ramdisk size, etc.  in the kernel image, use the 'rdev' program (or    alternatively the LILO boot options when appropriate).  No need to    recompile the kernel to change these parameters.    - Reboot with the new kernel and enjoy.   IF SOMETHING GOES WRONG:   - If you have problems that seem to be due to kernel bugs, please check    the file MAINTAINERS to see if there is a particular person associated    with the part of the kernel that you are having trouble with. If there    isn't anyone listed there, then the second best thing is to mail    them to me (torvalds@linux-foundation.org), and possibly to any other    relevant mailing-list or to the newsgroup.   - In all bug-reports, *please* tell what kernel you are talking about,    how to duplicate the problem, and what your setup is (use your common    sense).  If the problem is new, tell me so, and if the problem is    old, please try to tell me when you first noticed it.   - If the bug results in a message like       unable to handle kernel paging request at address C0000010      Oops: 0002      EIP:   0010:XXXXXXXX      eax: xxxxxxxx   ebx: xxxxxxxx   ecx: xxxxxxxx   edx: xxxxxxxx      esi: xxxxxxxx   edi: xxxxxxxx   ebp: xxxxxxxx      ds: xxxx  es: xxxx  fs: xxxx  gs: xxxx      Pid: xx, process nr: xx      xx xx xx xx xx xx xx xx xx xx     or similar kernel debugging information on your screen or in your    system log, please duplicate it *exactly*.  The dump may look    incomprehensible to you, but it does contain information that may    help debugging the problem.  The text above the dump is also    important: it tells something about why the kernel dumped code (in    the above example, it's due to a bad kernel pointer). More information    on making sense of the dump is in Documentation/oops-tracing.txt   - If you compiled the kernel with CONFIG_KALLSYMS you can send the dump    as is, otherwise you will have to use the \"ksymoops\" program to make    sense of the dump (but compiling with CONFIG_KALLSYMS is usually preferred).    This utility can be downloaded from    ftp://ftp.<country>.kernel.org/pub/linux/utils/kernel/ksymoops/ .    Alternatively, you can do the dump lookup by hand:   - In debugging dumps like the above, it helps enormously if you can    look up what the EIP value means.  The hex value as such doesn't help    me or anybody else very much: it will depend on your particular    kernel setup.  What you should do is take the hex value from the EIP    line (ignore the \"0010:\"), and look it up in the kernel namelist to    see which kernel function contains the offending address.     To find out the kernel function name, you'll need to find the system    binary associated with the kernel that exhibited the symptom.  This is    the file 'linux/vmlinux'.  To extract the namelist and match it against    the EIP from the kernel crash, do:       nm vmlinux | sort | less     This will give you a list of kernel addresses sorted in ascending    order, from which it is simple to find the function that contains the    offending address.  Note that the address given by the kernel    debugging messages will not necessarily match exactly with the    function addresses (in fact, that is very unlikely), so you can't    just 'grep' the list: the list will, however, give you the starting    point of each kernel function, so by looking for the function that    has a starting address lower than the one you are searching for but    is followed by a function with a higher address you will find the one    you want.  In fact, it may be a good idea to include a bit of    \"context\" in your problem report, giving a few lines around the    interesting one.      If you for some reason cannot do the above (you have a pre-compiled    kernel image or similar), telling me as much about your setup as    possible will help.  Please read the REPORTING-BUGS document for details.   - Alternatively, you can use gdb on a running kernel. (read-only; i.e. you    cannot change values or set break points.) To do this, first compile the    kernel with -g; edit arch/i386/Makefile appropriately, then do a \"make    clean\". You'll also need to enable CONFIG_PROC_FS (via \"make config\").     After you've rebooted with the new kernel, do \"gdb vmlinux /proc/kcore\".    You can now use all the usual gdb commands. The command to look up the    point where your system crashed is \"l *0xXXXXXXXX\". (Replace the XXXes    with the EIP value.)     gdb'ing a non-running kernel currently fails because gdb (wrongly)    disregards the starting offset for which the kernel is compiled.",
+    "stars": 26,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "c5005ba5257976249e4ebc41e9dc45b9486a22ee",
+    "last_commit_date": "2015-03-16T12:58:31Z",
+    "pushed_at_not_commit_date": "2021-07-14T12:28:54Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "N30nHaCkZ",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/N30nHaCkZ/linux/issues/6",
+      "created_at": "2026-08-21T06:26:54Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "b25312a55133114e3f7b7e89657dcc89da5d8087ead1e4bb6e6fd44b51e59422",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "C",
+        "query": "options symbol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/N30nHaCkZ/linux",
+      "commit": "https://github.com/N30nHaCkZ/linux/commit/c5005ba5257976249e4ebc41e9dc45b9486a22ee",
+      "readme": "https://github.com/N30nHaCkZ/linux/blob/c5005ba5257976249e4ebc41e9dc45b9486a22ee/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/N30nHaCkZ/linux/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/N30nHaCkZ/linux/contributors",
+      "issues": "https://api.github.com/repos/N30nHaCkZ/linux/issues"
+    },
+    "readme_excerpt": "# linux Linux kernel release 3.x &lt;http://kernel.org/> These are the release notes for Linux version 3. Read them carefully, as they tell you what this is all about, explain how to install the kernel, and what to do if something goes wrong. WHAT IS LINUX? Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance. It has all the features you would expect in a modern fully-fledged Unix, including true multitasking, virtual memory, shared libraries, demand loading, shared copy-on-write executables, proper memory management, and multistack networking including IPv4 and IPv6. It is distributed under the GNU General Public License - see the accompanying COPYING file for more details. ON WHAT HARDWARE DOES IT RUN? Although originally developed first for 32-bit x86-based PCs (386 or higher), today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and UltraSPARC, Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell, IBM S/390, MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS, Xtensa, Tilera TILE, AVR32 and Renesas M32R architectures. Linux is easily portable to most general-purpose 32- or 64-bit architectures as long as they have a paged memory management unit (PMMU) and a port of the GNU C comp",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "nahrek/polyledger",
+    "requested_name": "nahrek/polyledger",
+    "id": 1355017800,
+    "url": "https://github.com/nahrek/polyledger",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Resumable Polymarket indexer: CLOB market metadata plus on-chain trades from Polygon, in one DuckDB file you can query with SQL",
+    "stars": 623,
+    "forks": 110,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "f5cea50b8246af5b236d67e1a4c46495eb346750",
+    "last_commit_date": "2026-09-07T16:51:03Z",
+    "pushed_at_not_commit_date": "2026-09-07T16:51:03Z",
+    "commits_since_20260313_count_capped100": 22,
+    "recent_commit_authors": [
+      "nahrek"
+    ],
+    "contributors_sample": [
+      {
+        "login": "nahrek",
+        "contributions": 22,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "0ad2a1536fdceee4aa47c500bd96a3a18ffe8160ab288d5c9f67d6f67cde3271",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "5bceb2f2dcbf4d4f35ec6367998a98b689392c6c8caf1e12ad3d598885095fef",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "examples",
+      "polyledger",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/nahrek/polyledger/blob/f5cea50b8246af5b236d67e1a4c46495eb346750/pyproject.toml",
+        "sha256": "e5a1346da334b725ec1a8c8dd556df42015e859820811bd2e906a30a61ee3882"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nahrek/polyledger",
+      "commit": "https://github.com/nahrek/polyledger/commit/f5cea50b8246af5b236d67e1a4c46495eb346750",
+      "readme": "https://github.com/nahrek/polyledger/blob/f5cea50b8246af5b236d67e1a4c46495eb346750/README.md",
+      "license": "https://github.com/nahrek/polyledger/blob/f5cea50b8246af5b236d67e1a4c46495eb346750/LICENSE",
+      "recent_commits": "https://api.github.com/repos/nahrek/polyledger/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nahrek/polyledger/contributors",
+      "issues": "https://api.github.com/repos/nahrek/polyledger/issues"
+    },
+    "readme_excerpt": "# PolyLedger A resumable indexer for Polymarket market metadata and on-chain trade data, backed by DuckDB. PolyLedger pulls every market from the Polymarket CLOB API, streams every `OrderFilled` event from Polygon via [Envio HyperSync](https://envio.dev), and writes both into a single DuckDB file you can query with SQL immediately. --- ## Table of contents - [Features](#features) - [Requirements](#requirements) - [Installation](#installation) - [Quick start](#quick-start) - [CLI reference](#cli-reference) - [Data model](#data-model) - [Indexed contracts](#indexed-contracts) - [Configuration](#configuration) - [Design notes](#design-notes) - [Development](#development) - [Limitations](#limitations) - [License](#license) ## Features - **Resumable by construction.** Rows and the block cursor are committed in a single transaction, so an interrupted run resumes exactly where it stopped. - **Idempotent writes.** `order_fills` is keyed on `(transaction_hash, log_index)` and inserted with `ON CONFLICT DO NOTHING`. Re-running a range is a no-op. - **DuckDB storage.** Columnar compression, real types, indexes, and SQL joins, all in one file on disk. No server. - **Both contract generations.** Decodes the V2 `OrderFilled` layout and the older V1 one, with separate checkpoints per stream. - **Schema validation.** Every API response passes through Pydantic models, so an upstream format chan",
+    "license_excerpt": "MIT License Copyright (c) 2026 Joe Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and t"
+  },
+  {
+    "full_name": "Nasdaq/data-link-python",
+    "requested_name": "Nasdaq/data-link-python",
+    "id": 423862002,
+    "url": "https://github.com/Nasdaq/data-link-python",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A Python library for Nasdaq Data Link's RESTful API",
+    "stars": 624,
+    "forks": 95,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "431094f87292c3c566ddbd647296f65957ac2254",
+    "last_commit_date": "2022-08-29T16:26:36Z",
+    "pushed_at_not_commit_date": "2022-11-15T17:36:44Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "ericvautour-quandl",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "couture-ql",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "runawaycoast",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dimitryzub",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Nasdaq/data-link-python/issues/54",
+      "created_at": "2026-03-12T09:34:54Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f92eefecfbda311909517e783b1b441153c2c20b15a3baed65624497fb718e0f",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "2e8b9c9e1cb70d3200ba8c376c0f6e3969bbf49f254a043775b78883e4b0ec08",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".circleci",
+      ".gitignore",
+      "CHANGELOG.md",
+      "FOR_ANALYSTS.md",
+      "FOR_DEVELOPERS.md",
+      "LICENSE.txt",
+      "LONG_DESCRIPTION.rst",
+      "MANIFEST.in",
+      "Makefile",
+      "README.md",
+      "nasdaqdatalink",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "test",
+      "tox.ini"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/requirements.txt",
+        "sha256": "cf36168778dae078252b395965148a1eda66a408f6950236c57f48797ba4de02"
+      },
+      "setup.py": {
+        "url": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/setup.py",
+        "sha256": "d102d88c80a712ced5b70e9103fac1f50753d6ae74af1778381a7a87c5b513e2"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Nasdaq/data-link-python",
+      "commit": "https://github.com/Nasdaq/data-link-python/commit/431094f87292c3c566ddbd647296f65957ac2254",
+      "readme": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/README.md",
+      "license": "https://github.com/Nasdaq/data-link-python/blob/431094f87292c3c566ddbd647296f65957ac2254/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/Nasdaq/data-link-python/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Nasdaq/data-link-python/contributors",
+      "issues": "https://api.github.com/repos/Nasdaq/data-link-python/issues"
+    },
+    "readme_excerpt": "# Nasdaq Data Link Python Client This is the official documentation for Nasdaq Data Link's Python Package. The package can be used to interact with the latest version of the [Nasdaq Data Link's RESTful API](https://docs.data.nasdaq.com/docs). This package is compatible with python v3.7+. ## Installation The installation process varies depending on your python version and system used. However in most cases the following should work: ```shell pip install nasdaq-data-link ``` Alternatively on some systems python3 may use a different pip executable and may need to be installed via an alternate pip command. For example: ```shell pip3 install nasdaq-data-link ``` ## Configuration | Option | Explanation | Example | |---|---|---| | api_key | Your access key | `tEsTkEy123456789` | Used to identify who you are and provide full access. | | use_retries | Whether API calls which return statuses in `retry_status_codes` should be automatically retried | True | number_of_retries | Maximum number of retries that should be attempted. Only used if `use_retries` is True | 5 | max_wait_between_retries | Maximum amount of time in seconds that should be waited before attempting a retry. Only used if `use_retries` is True | 8 | retry_backoff_factor | Determines the amount of time in seconds that should be waited before attempting another retry. Note that this factor is exponential so a `retry_backoff_",
+    "license_excerpt": "Copyright (c) 2021 Nasdaq Data Link Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and "
+  }
+]

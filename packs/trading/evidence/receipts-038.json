@@ -1,0 +1,1134 @@
+[
+  {
+    "full_name": "Polymarket/polymarket-cli",
+    "requested_name": "Polymarket/polymarket-cli",
+    "id": 1165733654,
+    "url": "https://github.com/Polymarket/polymarket-cli",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 2874,
+    "forks": 352,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "9b18b5faf5493b945c48ca22efaf9645f0c69ab8",
+    "last_commit_date": "2026-05-26T15:37:55Z",
+    "pushed_at_not_commit_date": "2026-05-26T15:37:56Z",
+    "commits_since_20260313_count_capped100": 7,
+    "recent_commit_authors": [
+      "suhailkakar"
+    ],
+    "contributors_sample": [
+      {
+        "login": "suhailkakar",
+        "contributions": 47,
+        "type": "User"
+      },
+      {
+        "login": "rursache",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/polymarket-cli/issues/71",
+      "created_at": "2026-05-18T11:55:19Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "e7dc1a50b294b25325220cdf8531c3c86aa9cd975953e67dee3363c5ce2bdfae",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Formula",
+      "README.md",
+      "install.sh",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/Polymarket/polymarket-cli/blob/9b18b5faf5493b945c48ca22efaf9645f0c69ab8/Cargo.toml",
+        "sha256": "3d7b3f0223a2693587dfcd7d34539c03e4381221641fe1485fa04c29261769ec"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/polymarket-cli",
+      "commit": "https://github.com/Polymarket/polymarket-cli/commit/9b18b5faf5493b945c48ca22efaf9645f0c69ab8",
+      "readme": "https://github.com/Polymarket/polymarket-cli/blob/9b18b5faf5493b945c48ca22efaf9645f0c69ab8/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Polymarket/polymarket-cli/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/polymarket-cli/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/polymarket-cli/issues"
+    },
+    "readme_excerpt": "# Polymarket CLI Rust CLI for Polymarket. Browse markets, place orders, manage positions, and interact with onchain contracts \u2014 from a terminal or as a JSON API for scripts and agents. > **Warning:** This is early, experimental software. Use at your own risk and do not use with large amounts of funds. APIs, commands, and behavior may change without notice. Always verify transactions before confirming. ## Install ### Homebrew (macOS / Linux) ```bash brew tap Polymarket/polymarket-cli https://github.com/Polymarket/polymarket-cli brew install polymarket ``` ### Shell script ```bash curl -sSL https://raw.githubusercontent.com/Polymarket/polymarket-cli/main/install.sh | sh ``` ### Build from source ```bash git clone https://github.com/Polymarket/polymarket-cli cd polymarket-cli cargo install --path . ``` ## Quick Start ```bash # No wallet needed \u2014 browse markets immediately polymarket markets list --limit 5 polymarket markets search \"election\" polymarket events list --tag politics # Check a specific market polymarket markets get will-trump-win-the-2024-election # JSON output for scripts polymarket -o json markets list --limit 3 ``` To trade, set up a wallet: ```bash polymarket setup # Or manually: polymarket wallet create polymarket approve set ``` ## Configuration ### Wallet Setup The CLI needs a private key to sign orders and on-chain transactions. Three ways to provide it (checke",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Polymarket/py-builder-relayer-client",
+    "requested_name": "Polymarket/py-builder-relayer-client",
+    "id": 1081395207,
+    "url": "https://github.com/Polymarket/py-builder-relayer-client",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python Client for the Polymarket Relayer API",
+    "stars": 42,
+    "forks": 19,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "267a36d84d7839b6e4ac134297d9230fc224cf8f",
+    "last_commit_date": "2026-05-29T14:08:30Z",
+    "pushed_at_not_commit_date": "2026-05-29T14:08:30Z",
+    "commits_since_20260313_count_capped100": 19,
+    "recent_commit_authors": [
+      "cesarenaldi",
+      "suhailkakar"
+    ],
+    "contributors_sample": [
+      {
+        "login": "cesarenaldi",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "suhailkakar",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "JonathanAmenechi",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/py-builder-relayer-client/issues/27",
+      "created_at": "2026-07-03T10:47:53Z",
+      "state": "open",
+      "comments": 5,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "cf395eac0b706b51b6b8326acc9360608eb1263615cc6d605cf1f363d4e7ef38",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "Makefile",
+      "README.md",
+      "examples",
+      "py_builder_relayer_client",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/requirements.txt",
+        "sha256": "b5ca3d926033b2d4587bc14ebd0f76d89a533155f9051fce029bada9786fc03b"
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/setup.py",
+        "sha256": "72b0b43f1a9f8dce08c66bb9c610b52ee93ef62277e3ae6ca88f1bf9fd353100"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/py-builder-relayer-client",
+      "commit": "https://github.com/Polymarket/py-builder-relayer-client/commit/267a36d84d7839b6e4ac134297d9230fc224cf8f",
+      "readme": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Polymarket/py-builder-relayer-client/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/py-builder-relayer-client/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/py-builder-relayer-client/issues"
+    },
+    "readme_excerpt": "# py-builder-relayer-client Python client library for interacting with the Polymarket Relayer infrastructure ## Installation ```bash pip install py-builder-relayer-client ``` ## Configuration Create a `.env` file based on .env.example with credentials: ```env RELAYER_URL=https://relayer-v2-staging.polymarket.dev/ CHAIN_ID=80002 PK=your_private_key_here BUILDER_API_KEY=your_api_key BUILDER_SECRET=your_api_secret BUILDER_PASS_PHRASE=your_passphrase ```",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Polymarket/py-builder-signing-sdk",
+    "requested_name": "Polymarket/py-builder-signing-sdk",
+    "id": 1079894007,
+    "url": "https://github.com/Polymarket/py-builder-signing-sdk",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python SDK for creating authenticated builder headers",
+    "stars": 8,
+    "forks": 5,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "e5403c4a86e28b8aa9105d52bc5606fdb5511be0",
+    "last_commit_date": "2025-10-20T20:11:19Z",
+    "pushed_at_not_commit_date": "2025-10-20T22:17:42Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "JonathanAmenechi",
+        "contributions": 8,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/py-builder-signing-sdk/issues/2",
+      "created_at": "2025-12-08T08:37:29Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3f1fdbacdd0a458e0cc0a9c88095cc07b858987b3a5fcdb68c4c86791e50fc95",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "Makefile",
+      "README.md",
+      "py_builder_signing_sdk",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/requirements.txt",
+        "sha256": "fb850f1643c6c6ba481f27bf7fa809adc5d75d498eed44adf822f0838b8c43ec"
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/setup.py",
+        "sha256": "db8a2331db733828014ff3e8e22b0c66f54917c0310f67e6620a040d0103b263"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/py-builder-signing-sdk",
+      "commit": "https://github.com/Polymarket/py-builder-signing-sdk/commit/e5403c4a86e28b8aa9105d52bc5606fdb5511be0",
+      "readme": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Polymarket/py-builder-signing-sdk/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/py-builder-signing-sdk/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/py-builder-signing-sdk/issues"
+    },
+    "readme_excerpt": "# py-builder-signing-sdk Python SDK for Polymarket builder authentication and signing. ## Installation ```bash pip install py-builder-signing-sdk ``` ## Usage ```python from py_builder_signing_sdk import BuilderConfig, BuilderApiKeyCreds, RemoteBuilderConfig # Local signing creds = BuilderApiKeyCreds( key=\"your-api-key\", secret=\"your-secret\", passphrase=\"your-passphrase\" ) config = BuilderConfig(local_builder_creds=creds) # Remote signing remote_config = RemoteBuilderConfig( url=\"http://localhost:3000/sign\", token=\"your-auth-token\" # optional ) config = BuilderConfig(remote_builder_config=remote_config) # Generate signed headers headers = config.generate_builder_headers(\"POST\", \"/order\", '{\"data\": \"example\"}') ```",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Polymarket/py-clob-client",
+    "requested_name": "Polymarket/py-clob-client",
+    "id": 455013779,
+    "url": "https://github.com/Polymarket/py-clob-client",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python client for the Polymarket CLOB",
+    "stars": 1233,
+    "forks": 387,
+    "archived": true,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "b076b04d61135657e25dccc1bbd6866a96bd8c6e",
+    "last_commit_date": "2026-05-25T18:13:30Z",
+    "pushed_at_not_commit_date": "2026-05-25T18:13:33Z",
+    "commits_since_20260313_count_capped100": 4,
+    "recent_commit_authors": [
+      "mustafa-poly",
+      "suhailkakar"
+    ],
+    "contributors_sample": [
+      {
+        "login": "poly-rodr",
+        "contributions": 168,
+        "type": "User"
+      },
+      {
+        "login": "JonathanAmenechi",
+        "contributions": 108,
+        "type": "User"
+      },
+      {
+        "login": "fednerpolymarket",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "L-Kov",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "sahilgat02",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "poly-caleb",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "juliankoh",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "mustafa-poly",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "suhailkakar",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ddresner-pm",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "chenr1",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/py-clob-client/issues/344",
+      "created_at": "2026-05-10T18:42:09Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "cfadd667a58235a6486a6784b359d4be07b30c64a589fe7fe17baec15b8620a5",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "d85f8c587d5e82eff9a54fdc7c58ee9c45a25cc72af802b8841242443b4db83f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "examples",
+      "py_clob_client",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/requirements.txt",
+        "sha256": "65ffded7cb540a73a15b74d9225f2629b0bcf443e46daeb101450f8c79783457"
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/setup.py",
+        "sha256": "34383d100a9986c90385b528daff63c706a098d5b28854ffd31a35b7cc4944ac"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/py-clob-client",
+      "commit": "https://github.com/Polymarket/py-clob-client/commit/b076b04d61135657e25dccc1bbd6866a96bd8c6e",
+      "readme": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/README.md",
+      "license": "https://github.com/Polymarket/py-clob-client/blob/b076b04d61135657e25dccc1bbd6866a96bd8c6e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Polymarket/py-clob-client/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/py-clob-client/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/py-clob-client/issues"
+    },
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > The client is no longer functional and should not be used for new or existing integrations. > > Please migrate to our new unified SDK: > https://github.com/Polymarket/py-sdk # Polymarket Python CLOB Client Python client for the Polymarket Central Limit Order Book (CLOB). ## Documentation ## Installation ```bash # install from PyPI (Python 3.9>) pip install py-clob-client ``` ## Usage The examples below are short and copy\u2011pasteable. - What you need: - **Python 3.9+** - **Private key** that owns funds on Polymarket - Optional: a **proxy/funder address** if you use an email or smart\u2011contract wallet - Tip: store secrets in environment variables (e.g., with `.env`) ### Quickstart (read\u2011only) ```python from py_clob_client.client import ClobClient client = ClobClient(\"https://clob.polymarket.com\") # Level 0 (no auth) ok = client.get_ok() time = client.get_server_time() print(ok, time) ``` ### Start trading (EOA) **Note**: If using MetaMask or hardware wallet, you must first set token allowances. See [Token Allowances section](#important-token-allowances-for-metamaskeoa-users) below. ```python from py_clob_client.client import ClobClient HOST = \"https://clob.polymarket.com\" CHAIN_ID = 137 PRIVATE_KEY = \" \" FUNDER = \" \" client = ClobClient( HOST, # The CLOB API endpoint key=PRIVATE_KEY, # Your wallet's pri",
+    "license_excerpt": "MIT License Copyright (c) 2022 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notic"
+  },
+  {
+    "full_name": "Polymarket/real-time-data-client",
+    "requested_name": "Polymarket/real-time-data-client",
+    "id": 942875438,
+    "url": "https://github.com/Polymarket/real-time-data-client",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A TypeScript client to receive real time data messages",
+    "stars": 229,
+    "forks": 55,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "c937d9c11cdd2b771aa4818392a1b6dda65c25de",
+    "last_commit_date": "2026-03-03T18:38:55Z",
+    "pushed_at_not_commit_date": "2026-03-05T20:50:08Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "poly-rodr",
+        "contributions": 68,
+        "type": "User"
+      },
+      {
+        "login": "mttwlkr",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "mttwlkr-pm",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "JonathanAmenechi",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "worktrial1",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/real-time-data-client/issues/26",
+      "created_at": "2025-12-04T10:20:13Z",
+      "state": "open",
+      "comments": 20,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d8bca0d46eaadf380290dd2b751fb0c8bd7b84aaa56eb4c0e1b2b00c628b6038",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "d85f8c587d5e82eff9a54fdc7c58ee9c45a25cc72af802b8841242443b4db83f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".npmignore",
+      ".prettierignore",
+      ".prettierrc",
+      ".vscode",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "eslint.config.mjs",
+      "examples",
+      "package.json",
+      "src",
+      "tsconfig.eslint.json",
+      "tsconfig.json",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/package.json",
+        "sha256": "39d4e54c8a2c30ba7e29b3bd958fcca62db953aa2f815b4352c921551b1fa77b"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/real-time-data-client",
+      "commit": "https://github.com/Polymarket/real-time-data-client/commit/c937d9c11cdd2b771aa4818392a1b6dda65c25de",
+      "readme": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/README.md",
+      "license": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Polymarket/real-time-data-client/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/real-time-data-client/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/real-time-data-client/issues"
+    },
+    "readme_excerpt": "# Real time data client This client provides a wrapper to connect to the `real-time-data-streaming` `WebSocket` service. ## How to use it Here is a quick example about how to connect to the service and start receiving messages (you can find more in the folder `examples/`): ```typescript import { RealTimeDataClient } from \"../src/client\"; import { Message } from \"../src/model\"; const onMessage = (message: Message): void => { console.log(message.topic, message.type, message.payload); }; const onConnect = (client: RealTimeDataClient): void => { // Subscribe to a topic client.subscribe({ subscriptions: [ { topic: \"comments\", type: \"*\", // \"*\"\" can be used to connect to all the types of the topic filters: `{\"parentEntityID\":100,\"parentEntityType\":\"Event\"}`, // empty means no filter }, ], }); }; new RealTimeDataClient({ onMessage, onConnect }).connect(); ``` ## How to subscribe and unsubscribe from messages Once the connection is stablished and you have a `client: RealTimeDataClient` object, you can `subscribe` and `unsubscribe` to many messages streamings using the same connection. ### Subscribe Subscribe to 'trades' messages from the topic 'activity' and to the all comments messages. ```typescript client.subscribe({ subscriptions: [ { topic: \"activity\", type: \"trades\", }, ], }); client.subscribe({ subscriptions: [ { topic: \"comments\", type: \"*\", // \"*\"\" can be used to connect to al",
+    "license_excerpt": "MIT License Copyright (c) 2022 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notic"
+  },
+  {
+    "full_name": "Polymarket/rs-clob-client",
+    "requested_name": "Polymarket/rs-clob-client",
+    "id": 1112331307,
+    "url": "https://github.com/Polymarket/rs-clob-client",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Polymarket Rust CLOB Client",
+    "stars": 686,
+    "forks": 212,
+    "archived": true,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "dc8f1e58eb1e504dcb3d45a94a647dd2da89912b",
+    "last_commit_date": "2026-05-11T17:13:55Z",
+    "pushed_at_not_commit_date": "2026-05-11T17:14:31Z",
+    "commits_since_20260313_count_capped100": 13,
+    "recent_commit_authors": [
+      "chaz-polymarket",
+      "dependabot[bot]",
+      "liby",
+      "suhailkakar",
+      "umeeSthein"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dependabot[bot]",
+        "contributions": 58,
+        "type": "Bot"
+      },
+      {
+        "login": "Haut",
+        "contributions": 54,
+        "type": "User"
+      },
+      {
+        "login": "chaz-polymarket",
+        "contributions": 53,
+        "type": "User"
+      },
+      {
+        "login": "gramistella",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "ethdew19",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "RecRanger",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "birchrust",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "minhd-vu",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "0xOnkel",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ariofrio",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "liby",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "davidcardenasus",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DenisGorbachev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "viktorcrypt",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "labrinyang",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nhtyy",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ozanselte",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "timqi",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Quertyy",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "haxdds",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Shubham-Rasal",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "suhailkakar",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "umeeSthein",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vikions",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cowrrr",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "eroderust",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "gr8den",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hack-wrench",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jclmnop",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kkthmyh",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Polymarket/rs-clob-client/issues/345",
+      "created_at": "2026-05-01T08:10:46Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1a1e4308cd1151cde05bc0932030b94dc425954903efc2d8db0046074e5b3bac",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2ef5f959b834b22b3e2798a5c0f20a4742a9c1bdb85a7171c72603c58a0a0137",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".idea",
+      ".pre-commit-config.yaml",
+      ".vscode",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "assets",
+      "benches",
+      "clippy.toml",
+      "examples",
+      "rustfmt.toml",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/Cargo.toml",
+        "sha256": "b42f866f9f1bd2c8ccf502613375aff3908daf88264622d8d255122e93fa8294"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/rs-clob-client",
+      "commit": "https://github.com/Polymarket/rs-clob-client/commit/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b",
+      "readme": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/README.md",
+      "license": "https://github.com/Polymarket/rs-clob-client/blob/dc8f1e58eb1e504dcb3d45a94a647dd2da89912b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Polymarket/rs-clob-client/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/rs-clob-client/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/rs-clob-client/issues"
+    },
+    "readme_excerpt": "> [!WARNING] > This repository has been archived and is no longer maintained. > > The client is no longer functional and should not be used for new or existing integrations. > > Please migrate to the V2 client: > https://github.com/Polymarket/rs-clob-client-v2 ![Polymarket](assets/logo.png) # Polymarket Rust Client [![Crates.io](https://img.shields.io/crates/v/polymarket-client-sdk.svg)](https://crates.io/crates/polymarket-client-sdk) [![CI](https://github.com/Polymarket/rs-clob-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Polymarket/rs-clob-client/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/Polymarket/rs-clob-client/graph/badge.svg?token=FW1BYWWFJ2)](https://codecov.io/gh/Polymarket/rs-clob-client) An ergonomic Rust client for interacting with Polymarket services, primarily the Central Limit Order Book (CLOB). This crate provides strongly typed request builders, authenticated endpoints, `alloy` support and more. ## Table of Contents - [Overview](#overview) - [Getting Started](#getting-started) - [Feature Flags](#feature-flags) - [Re-exported Types](#re-exported-types) - [Examples](#examples) - [CLOB Client](#clob-client) - [WebSocket Streaming](#websocket-streaming) - [Optional APIs](#optional-apis) - [Additional CLOB Capabilities](#additional-clob-capabilities) - [Setting Token Allowances](#token-allowances) - [Minimum Supported Rust Version ",
+    "license_excerpt": "MIT License Copyright (c) 2025-2026 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright "
+  },
+  {
+    "full_name": "Polymarket/safe-wallet-integration",
+    "requested_name": "Polymarket/safe-wallet-integration",
+    "id": 1120012436,
+    "url": "https://github.com/Polymarket/safe-wallet-integration",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 6,
+    "forks": 3,
+    "archived": true,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "49ec9991b7f3e95197a4d53910f6086bf3ff2294",
+    "last_commit_date": "2025-12-22T14:47:09Z",
+    "pushed_at_not_commit_date": "2025-12-22T14:47:09Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "ayv8er",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "f1c9590b3e5b5b94a13e163a528d5f95a015d9128b66780d0d51dcbfe02d89ac",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env.local",
+      ".gitignore",
+      "README.md",
+      "app",
+      "components",
+      "constants",
+      "eslint.config.mjs",
+      "hooks",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "providers",
+      "tsconfig.json",
+      "utils"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Polymarket/safe-wallet-integration/blob/49ec9991b7f3e95197a4d53910f6086bf3ff2294/package.json",
+        "sha256": "6bb2499a2968130f878e933c5587a64f537f4a04a0d57cf9d1a978476d69c138"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Polymarket/safe-wallet-integration",
+      "commit": "https://github.com/Polymarket/safe-wallet-integration/commit/49ec9991b7f3e95197a4d53910f6086bf3ff2294",
+      "readme": "https://github.com/Polymarket/safe-wallet-integration/blob/49ec9991b7f3e95197a4d53910f6086bf3ff2294/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Polymarket/safe-wallet-integration/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Polymarket/safe-wallet-integration/contributors",
+      "issues": "https://api.github.com/repos/Polymarket/safe-wallet-integration/issues"
+    },
+    "readme_excerpt": "# Polymarket Integration Reference A Next.js reference implementation for integrators to add Polymarket trading to their platforms. Works with any EIP-6963 compatible browser wallet. This implementation demonstrates: - **Geoblocking** - Enforce Polymarket's geographic restrictions - **Market Discovery** - Surface liquid markets via Gamma API - **Wallet Infrastructure** - Deploy Polymarket-compatible Safe wallets - **Builder Codes** - Attribute orderflow to your integration - **Trading** - FAK market orders with automatic slippage - **Fee Collection** - Collect integrator fees on market orders - **Position Management** - Display user positions via Data API --- ## Table of Contents 1. [Overview](#overview) 2. [Quick Start](#quick-start) 3. [Integration Guidelines](#integration-guidelines) - [Geoblocking](#geoblocking) - [Market Discovery](#market-discovery) - [Wallet Infrastructure](#wallet-infrastructure) - [Builder Codes](#builder-codes) - [User API Credentials](#user-api-credentials) - [Token Approvals](#token-approvals) - [Authenticated CLOB Client](#authenticated-clob-client) - [Trading](#trading) - [Fee Collection](#fee-collection) - [Position Management](#position-management) - [IP Whitelists](#ip-whitelists) 4. [Implementation Details](#implementation-details) 5. [Project Structure](#project-structure) 6. [Environment Variables](#environment-variables) 7. [Key Dependencie",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "portfolio-performance/portfolio",
+    "requested_name": "portfolio-performance/portfolio",
+    "id": 3816238,
+    "url": "https://github.com/portfolio-performance/portfolio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Track and evaluate the performance of your investment portfolio across stocks, cryptocurrencies, and other assets.",
+    "stars": 4071,
+    "forks": 816,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "master",
+    "latest_commit": "876565dedf5262e1715f39195eb9d92440cfaabd",
+    "last_commit_date": "2026-09-13T14:24:29Z",
+    "pushed_at_not_commit_date": "2026-09-13T14:29:56Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "MMarafi",
+      "Metal450",
+      "Michal M",
+      "Mikerion",
+      "adeorato",
+      "aragar",
+      "buchen",
+      "dependabot[bot]",
+      "georgemac-labs",
+      "huntingthesun",
+      "investnitin71-art",
+      "kimmerin",
+      "kriegerse",
+      "mierin12",
+      "stoeggich"
+    ],
+    "contributors_sample": [
+      {
+        "login": "buchen",
+        "contributions": 4863,
+        "type": "User"
+      },
+      {
+        "login": "Nirus2000",
+        "contributions": 1444,
+        "type": "User"
+      },
+      {
+        "login": "inv-trad",
+        "contributions": 146,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 131,
+        "type": "Bot"
+      },
+      {
+        "login": "chirlu",
+        "contributions": 124,
+        "type": "User"
+      },
+      {
+        "login": "mierin12",
+        "contributions": 114,
+        "type": "User"
+      },
+      {
+        "login": "Morpheus1w3",
+        "contributions": 101,
+        "type": "User"
+      },
+      {
+        "login": "OnkelDok",
+        "contributions": 70,
+        "type": "User"
+      },
+      {
+        "login": "ZfT2",
+        "contributions": 62,
+        "type": "User"
+      },
+      {
+        "login": "gamue",
+        "contributions": 56,
+        "type": "User"
+      },
+      {
+        "login": "christen90",
+        "contributions": 52,
+        "type": "User"
+      },
+      {
+        "login": "sebasbaumh",
+        "contributions": 49,
+        "type": "User"
+      },
+      {
+        "login": "pfalcon",
+        "contributions": 44,
+        "type": "User"
+      },
+      {
+        "login": "kimmerin",
+        "contributions": 42,
+        "type": "User"
+      },
+      {
+        "login": "RomanLangrehr",
+        "contributions": 41,
+        "type": "User"
+      },
+      {
+        "login": "nbusseneau",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "hporten",
+        "contributions": 32,
+        "type": "User"
+      },
+      {
+        "login": "simpsus",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "cmaoling",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "tfabritius",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "gynngr",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "tquellenberg",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "hjbflyer",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "stephanmunich",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "georgemac-labs",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "ma4nn",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "etzelc",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "aragar",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "akoch",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "masterzuso",
+        "contributions": 12,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "2cd3963824b6235bdc2f2f42a844496ca465118f3fc88a8311f9f25dde434232",
+    "license": "EPL-1.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "22e0ff3e946377a65cede42300b894ab228488194b1474412bb305a68327b4f0",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "features",
+      "name.abuchen.portfolio.bootstrap",
+      "name.abuchen.portfolio.feature",
+      "name.abuchen.portfolio.junit",
+      "name.abuchen.portfolio.pdfbox1",
+      "name.abuchen.portfolio.pdfbox3",
+      "name.abuchen.portfolio.tests",
+      "name.abuchen.portfolio.ui.tests",
+      "name.abuchen.portfolio.ui",
+      "name.abuchen.portfolio",
+      "portfolio-app",
+      "portfolio-build-tools-check",
+      "portfolio-build-tools",
+      "portfolio-product",
+      "portfolio-target-definition"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/portfolio-performance/portfolio",
+      "commit": "https://github.com/portfolio-performance/portfolio/commit/876565dedf5262e1715f39195eb9d92440cfaabd",
+      "readme": "https://github.com/portfolio-performance/portfolio/blob/876565dedf5262e1715f39195eb9d92440cfaabd/README.md",
+      "license": "https://github.com/portfolio-performance/portfolio/blob/876565dedf5262e1715f39195eb9d92440cfaabd/LICENSE",
+      "recent_commits": "https://api.github.com/repos/portfolio-performance/portfolio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/portfolio-performance/portfolio/contributors",
+      "issues": "https://api.github.com/repos/portfolio-performance/portfolio/issues"
+    },
+    "readme_excerpt": "# About [Portfolio Performance](https://www.portfolio-performance.info): Track and evaluate the performance of your investment portfolio across stocks, cryptocurrencies, and other assets. ## Status [![Build Status](https://github.com/portfolio-performance/portfolio/workflows/CI/badge.svg)](https://github.com/portfolio-performance/portfolio/actions?query=workflow%3ACI) [![Latest Release](https://img.shields.io/github/release/buchen/portfolio.svg)](https://github.com/portfolio-performance/portfolio/releases/latest) [![Release Date](https://img.shields.io/github/release-date/buchen/portfolio?color=blue)](https://github.com/portfolio-performance/portfolio/releases/latest) [![License](https://img.shields.io/github/license/buchen/portfolio.svg)](https://github.com/portfolio-performance/portfolio/blob/master/LICENSE) [![LOC](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=ncloc)](https://sonarcloud.io/dashboard?id=name.abuchen.portfolio%3Aportfolio-app) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=bugs)](https://sonarcloud.io/project/issues?id=name.abuchen.portfolio%3Aportfolio-app&resolved=false&types=BUG) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=vulnerabilities)](https://sonarcloud.",
+    "license_excerpt": "Eclipse Public License - v 1.0 THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE (\"AGREEMENT\"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT. 1. DEFINITIONS \"Contribution\" means: a) in the case of the initial Contributor, the initial code and documentation distributed under this Agreement, and b) in the case of each subsequent Contributor: i) changes to the Program, and ii) additions to the Program; wh"
+  }
+]

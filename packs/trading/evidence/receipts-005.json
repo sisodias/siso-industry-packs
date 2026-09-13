@@ -1,0 +1,1178 @@
+[
+  {
+    "full_name": "anvilfilbert/Auto-Crypto-Tradingjournal",
+    "requested_name": "anvilfilbert/Auto-Crypto-Tradingjournal",
+    "id": 1230850495,
+    "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Self-hosted crypto futures journal for CEXs - wide and deep analytics - Crypto Trading course (Beginner to Pro; Standalone-Module) - AI trader",
+    "stars": 3,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "HTML",
+    "default_branch": "main",
+    "latest_commit": "ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d",
+    "last_commit_date": "2026-06-05T16:43:56Z",
+    "pushed_at_not_commit_date": "2026-06-10T15:15:47Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "anvilfilbert"
+    ],
+    "contributors_sample": [
+      {
+        "login": "anvilfilbert",
+        "contributions": 648,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/issues/17",
+      "created_at": "2026-05-09T11:08:34Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-06-05T15:55:42Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "0236ebcd918c927c5c208c39c0c544b7d811eee120d6fd4d20ca4623be0a40ac",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".mcp.json",
+      "CLAUDE.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "agent_chart_draw.py",
+      "agent_data_collector.py",
+      "agent_data_interpreter.py",
+      "agent_data_reviewer.py",
+      "agent_market_sentiment.py",
+      "agent_orchestrator.py",
+      "agent_risk_mgmt.py",
+      "agent_trade_monitor.py",
+      "agent_trade_prep.py",
+      "agent_types.py",
+      "ai_advisor.py",
+      "ai_blindspots.py",
+      "ai_calibration.py",
+      "ai_call.py",
+      "ai_client.py",
+      "ai_hindsight.py",
+      "ai_limit.py",
+      "ai_live_trade.py",
+      "ai_pattern_detector.py",
+      "ai_rulebook.py",
+      "ai_scanner.py",
+      "ai_score_comparison.py",
+      "ai_self_review.py",
+      "ai_trade_grader.py",
+      "analytics.py",
+      "app.py",
+      "backtest_engine.py",
+      "backtest_metrics.py",
+      "backtest_optimizer.py",
+      "backtest_quality.py",
+      "backups",
+      "bear_phase.py",
+      "bitget_client.py",
+      "bitget_sync.py",
+      "blofin_client.py",
+      "blofin_sync.py",
+      "ccxt_client.py",
+      "cerebras_client.py",
+      "chart_candles.py",
+      "chart_confluence.py",
+      "chart_context.py",
+      "chart_cpr.py",
+      "chart_divergence.py",
+      "chart_fvg.py",
+      "chart_indicators.py",
+      "chart_mtf_ema.py",
+      "chart_patterns.py",
+      "chart_rsi.py",
+      "chart_session.py",
+      "chart_sr.py",
+      "chart_supply_demand.py",
+      "chart_vmc_cipher.py",
+      "chart_vmc_cipher_a.py",
+      "chart_vmc_draw.py",
+      "chart_vmc_signals.py",
+      "chart_volume_profile.py",
+      "chart_vwap.py",
+      "chart_wyckoff.py",
+      "coinalyze_client.py",
+      "coingecko_client.py",
+      "consensus.py",
+      "constants.py",
+      "data_sources.py",
+      "database.py",
+      "deribit_client.py",
+      "docs",
+      "dspy_modules",
+      "entry_watcher.py",
+      "exposure_monitor.py",
+      "finnhub_client.py",
+      "gemini_client.py",
+      "grok_client.py",
+      "groq_client.py",
+      "helpers.py",
+      "importer.py",
+      "indicators.py",
+      "journal_paused.py",
+      "liquidation_client.py",
+      "liquidation_levels.py",
+      "market_context.py",
+      "market_regime.py",
+      "mfe_mae.py",
+      "monitor_scheduler.py",
+      "nansen_client.py",
+      "onchain_client.py",
+      "openai_compat_client.py",
+      "openrouter_client.py",
+      "position_risk_monitor.py",
+      "prompt_builder.py",
+      "prompt_fragments.py",
+      "requirements.txt",
+      "risk_analytics.py",
+      "routes",
+      "scanner_criteria.py",
+      "scanner_event_trigger.py",
+      "scanner_invalidator.py",
+      "scanner_prompts.py",
+      "scanner_scheduler.py",
+      "scanner_stages.py",
+      "scanner_watchlist.py",
+      "scripts",
+      "self_review_scheduler.py",
+      "setup_classifier.py",
+      "shadow_runner.py",
+      "signal_scorer.py",
+      "skills-lock.json",
+      "static",
+      "sync_base.py",
+      "system_state.py",
+      "telegram_notify.py",
+      "templates",
+      "tests",
+      "token_log.py",
+      "tp_ladder.py",
+      "trade_history.py",
+      "trade_utils.py",
+      "trading-journal-factsheet.html",
+      "trading-journal-factsheet.pdf",
+      "trading-journal.service",
+      "trading",
+      "training",
+      "volume_baseline.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/requirements.txt",
+        "sha256": "c2ccdaf56d447f30741b40735e400c9b230f3b680de0c2cc7b5e6468ec7c7d61"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/anvilfilbert/Auto-Crypto-Tradingjournal",
+      "commit": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/commit/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d",
+      "readme": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/README.md",
+      "license": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/anvilfilbert/Auto-Crypto-Tradingjournal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/anvilfilbert/Auto-Crypto-Tradingjournal/contributors",
+      "issues": "https://api.github.com/repos/anvilfilbert/Auto-Crypto-Tradingjournal/issues"
+    },
+    "readme_excerpt": "# Trading Journal > **Disclaimer:** Vibe-coded with [Claude Code](https://claude.ai/code). Not reviewed by professional security experts. Use at your own risk. > **Disclaimer: Automatic AI trading** > I recommend to use paper trading (integrated feature; no real money), to get a good knowledge about scoring decisions and workflows. Risk (if hit at hard SL) ist hard-coded: max. 1% of port-size on single entry, max. 2% of port-size if DCA strategy is activated. > **This tool was made for learning purposes. If you use the trading feature with real money - your decision...** Self-hosted crypto futures trading journal with live exchange sync, a 7-agent AI pipeline, interactive Telegram assistant, and deep performance analytics. Runs on a Raspberry Pi 5 (or any Linux box). The trading module can be used completely standalone or integrated into the Journal. See README in training-folder. Architecture Doc \u00b7 User Guide \u00b7 Module Map --- ## \ud83c\udfac Feature Tour The autonomous Bitget chain \u2014 equity, breakers, open positions, decision log, and the catastrophe-hedge state all in one screen: ### \ud83d\udd2d Setup Scanner Three-stage pipeline filters 300+ symbols every 30 min. Surfaces only high-conviction setups (score \u2265 7) with R:R, urgency, and the confluence reasoning that fired each pick. ### \ud83d\udee1 Risk Dashboard Institutional-grade portfolio metrics \u2014 VaR, position correlation, P&L attribution vs BTC benchm",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "Arelle/Arelle",
+    "requested_name": "Arelle/Arelle",
+    "id": 1866915,
+    "url": "https://github.com/Arelle/Arelle",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Arelle open source XBRL platform",
+    "stars": 237,
+    "forks": 360,
+    "archived": false,
+    "fork": false,
+    "language": "HTML",
+    "default_branch": "master",
+    "latest_commit": "3dd1d06ccba2fa422734962dc9d390e2187e7b16",
+    "last_commit_date": "2026-09-11T20:20:58Z",
+    "pushed_at_not_commit_date": "2026-09-13T02:07:47Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "aaroncameron-wk",
+      "austinmatherne-wk",
+      "dependabot[bot]",
+      "derekgengenbacher-wf",
+      "stevenbronson-wk",
+      "volodymyrtur-wk"
+    ],
+    "contributors_sample": [
+      {
+        "login": "hefischer",
+        "contributions": 2882,
+        "type": "User"
+      },
+      {
+        "login": "austinmatherne-wk",
+        "contributions": 2347,
+        "type": "User"
+      },
+      {
+        "login": "aaroncameron-wk",
+        "contributions": 1211,
+        "type": "User"
+      },
+      {
+        "login": "derekgengenbacher-wf",
+        "contributions": 851,
+        "type": "User"
+      },
+      {
+        "login": "stevenbronson-wk",
+        "contributions": 698,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 595,
+        "type": "Bot"
+      },
+      {
+        "login": "allenbross-wf",
+        "contributions": 295,
+        "type": "User"
+      },
+      {
+        "login": "volodymyrtur-wk",
+        "contributions": 260,
+        "type": "User"
+      },
+      {
+        "login": "ggravlingen",
+        "contributions": 247,
+        "type": "User"
+      },
+      {
+        "login": "strr",
+        "contributions": 149,
+        "type": "User"
+      },
+      {
+        "login": "gmongelli",
+        "contributions": 102,
+        "type": "User"
+      },
+      {
+        "login": "selgamal",
+        "contributions": 53,
+        "type": "User"
+      },
+      {
+        "login": "ryangeiser1",
+        "contributions": 45,
+        "type": "User"
+      },
+      {
+        "login": "sagesmith-wf",
+        "contributions": 42,
+        "type": "User"
+      },
+      {
+        "login": "RobinetDenisAcsone",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "brettkail-wk",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "ChristopheDeBernardi",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "chrislococo-wf",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "Rjchauhan18",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "geoffreyPiraprez",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "pczacsone",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "hermfischer",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "kris2kris",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "rheimbuch",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "freddym56",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "rossbowen",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "christianhellsten",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hermfischer-wf",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "zubu007",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nowheresly",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "af30d1e4b864dea094255f5830eca364ba56941dc4377a53650d07c9b81ed0ba",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE.md",
+    "license_file_sha256": "0ab43a73de0e0501e081917a98bee744a2973f933514eb276da7900b304ced0f",
+    "license_candidates": [
+      "LICENSE.md"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".git-blame-ignore-revs",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "CONTRIBUTING.md",
+      "COPYRIGHT.md",
+      "LICENSE.md",
+      "MANIFEST.in",
+      "QuickBooks.qwc",
+      "README.md",
+      "arelle.pyw",
+      "arelle",
+      "arelleCmdLine.py",
+      "arelleGUI.pyw",
+      "buildVersion.py",
+      "conftest.py",
+      "distro.py",
+      "docker",
+      "docs",
+      "generateMessagesCatalog.py",
+      "installWin64.nsi",
+      "markdown-to-rtf.filter.lua",
+      "messages.pot",
+      "msgfmt.py",
+      "pygettext.py",
+      "pyproject.toml",
+      "requirements-build.txt",
+      "requirements-dev.txt",
+      "requirements-docs.txt",
+      "requirements-plugins.txt",
+      "requirements-test.txt",
+      "requirements-versioning.txt",
+      "requirements.txt",
+      "runtime.txt",
+      "scripts",
+      "tests",
+      "tox.ini"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/Arelle/Arelle/blob/3dd1d06ccba2fa422734962dc9d390e2187e7b16/pyproject.toml",
+        "sha256": "bc1d15fc0af659635b9042b108a68b34303a2475b0360aaf745972287aa1ccab"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Arelle/Arelle/blob/3dd1d06ccba2fa422734962dc9d390e2187e7b16/requirements.txt",
+        "sha256": "494d6a21eb9aefe801dd16cd5d3be37d4f55aba27c489fe1b5c7cd21a79127b7"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Arelle/Arelle",
+      "commit": "https://github.com/Arelle/Arelle/commit/3dd1d06ccba2fa422734962dc9d390e2187e7b16",
+      "readme": "https://github.com/Arelle/Arelle/blob/3dd1d06ccba2fa422734962dc9d390e2187e7b16/README.md",
+      "license": "https://github.com/Arelle/Arelle/blob/3dd1d06ccba2fa422734962dc9d390e2187e7b16/LICENSE.md",
+      "recent_commits": "https://api.github.com/repos/Arelle/Arelle/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Arelle/Arelle/contributors",
+      "issues": "https://api.github.com/repos/Arelle/Arelle/issues"
+    },
+    "readme_excerpt": "# Arelle [![PyPI](https://img.shields.io/pypi/v/arelle-release)](https://pypi.org/project/arelle-release/) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/arelle-release)](https://pypi.org/project/arelle-release/) [![Read the Docs](https://img.shields.io/readthedocs/arelle)](https://arelle.readthedocs.io/) [![Arelle Banner](https://raw.githubusercontent.com/Arelle/Arelle/master/docs/website/assets/images/arelle.svg)](https://arelle.org/) ## Table of Contents - [Arelle](#arelle) - [Table of Contents](#table-of-contents) - [Description](#description) - [Documentation](#documentation) - [Features](#features) - [Need Support?](#need-support) - [Arelle Within Other Products](#arelle-within-other-products) - [EDGAR or EFM Validations](#edgar-or-efm-validations) - [Installing or Running Arelle](#installing-or-running-arelle) - [Bug Report or Feature Request](#bug-report-or-feature-request) - [Security Vulnerabilities](#security-vulnerabilities) - [How-To and General XBRL Questions](#how-to-and-general-xbrl-questions) - [Email](#email) - [How To Contribute](#how-to-contribute) - [\ud83d\udc65 Contributors](#-contributors) - [License](#license) ## Description Arelle is an end-to-end open source XBRL platform, which provides the XBRL community with an easy to use set of tools. It supports XBRL and its extension features in an extensible manner. It does this in a compact yet robust ",
+    "license_excerpt": "# License Copyright \u00a9 2011-present Workiva, Inc. Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specif"
+  },
+  {
+    "full_name": "arthurlm/quickfix-rs",
+    "requested_name": "arthurlm/quickfix-rs",
+    "id": 716256692,
+    "url": "https://github.com/arthurlm/quickfix-rs",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Rust binding of QuickFIX library",
+    "stars": 60,
+    "forks": 25,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "34e98038c365d064aec4ba49d345c825878e277c",
+    "last_commit_date": "2026-08-30T21:15:11Z",
+    "pushed_at_not_commit_date": "2026-08-30T21:15:11Z",
+    "commits_since_20260313_count_capped100": 3,
+    "recent_commit_authors": [
+      "arthurlm",
+      "webbrain-one"
+    ],
+    "contributors_sample": [
+      {
+        "login": "arthurlm",
+        "contributions": 306,
+        "type": "User"
+      },
+      {
+        "login": "blerstt",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "webbrain-one",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/arthurlm/quickfix-rs/issues/36",
+      "created_at": "2026-09-09T19:17:31Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "7778fbda2f4ebc6f22d232e30a8e2de4e87be73cffaab1d7e602640e0932aa30",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE-APACHE",
+    "license_file_sha256": "992490e7830004a8cadfec55a171696bf660c130158f24e3a860b8acbfd2d4f3",
+    "license_candidates": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT"
+    ],
+    "root_entries": [
+      ".cargo",
+      ".clang-format",
+      ".config",
+      ".envrc",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE-APACHE",
+      "LICENSE-MIT",
+      "README.md",
+      "configs",
+      "doc",
+      "quickfix-ffi",
+      "quickfix-msg-gen",
+      "quickfix-msg40",
+      "quickfix-msg41",
+      "quickfix-msg42",
+      "quickfix-msg43",
+      "quickfix-msg44",
+      "quickfix-msg50",
+      "quickfix-spec-parser",
+      "quickfix"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/Cargo.toml",
+        "sha256": "2fcbf7d56ae1aa192e93e690a88854b7782c6ab7ab4176da1c21596279a2734d"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/arthurlm/quickfix-rs",
+      "commit": "https://github.com/arthurlm/quickfix-rs/commit/34e98038c365d064aec4ba49d345c825878e277c",
+      "readme": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/README.md",
+      "license": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/LICENSE-APACHE",
+      "recent_commits": "https://api.github.com/repos/arthurlm/quickfix-rs/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/arthurlm/quickfix-rs/contributors",
+      "issues": "https://api.github.com/repos/arthurlm/quickfix-rs/issues"
+    },
+    "readme_excerpt": "# quickfix-rs Rust bindings for the QuickFix C++ library. ## Minimum Supported Rust Version (MSRV) This workspace and all its crates require Rust **1.70.0** or newer. Ensure your toolchain is updated before building.",
+    "license_excerpt": "The QuickFIX Software License, Version 1.0 Copyright (c) 2001- quickfixengine.org All rights reserved. Copyright (c) 2023- Arthur LE MOIGNE for quickfix-rs. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright not"
+  },
+  {
+    "full_name": "ArturSepp/QuantInvestStrats",
+    "requested_name": "ArturSepp/QuantInvestStrats",
+    "id": 583712573,
+    "url": "https://github.com/ArturSepp/QuantInvestStrats",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Performance analytics, portfolio backtesting, risk analysis, and factsheet reporting in Python",
+    "stars": 633,
+    "forks": 72,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "e808498b51b86b837682e7afd3982e92e365c33e",
+    "last_commit_date": "2026-09-13T14:38:48Z",
+    "pushed_at_not_commit_date": "2026-09-13T15:00:24Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "ArturSepp",
+      "JohnDReynolds"
+    ],
+    "contributors_sample": [
+      {
+        "login": "ArturSepp",
+        "contributions": 526,
+        "type": "User"
+      },
+      {
+        "login": "JohnDReynolds",
+        "contributions": 93,
+        "type": "User"
+      },
+      {
+        "login": "claude",
+        "contributions": 38,
+        "type": "User"
+      },
+      {
+        "login": "quant-strat",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "miohtama",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vaibhav8a",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "francisliu2",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "2b55d6016f8e557f3644c74c3866ed5e1fea4857fc6fcedee6ecebd16f2cabde",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "8d598c0661817b184da3902a30f7b137bae4ad8478977ce9e1499bc1669285a1",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".claude",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "GOVERNANCE.md",
+      "LICENSE.txt",
+      "MANIFEST.in",
+      "README.md",
+      "docs",
+      "examples",
+      "notebooks",
+      "paper.bib",
+      "paper.md",
+      "pyproject.toml",
+      "src",
+      "tools",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/ArturSepp/QuantInvestStrats/blob/e808498b51b86b837682e7afd3982e92e365c33e/pyproject.toml",
+        "sha256": "9300c3fb3a4e389fac959f092ba3515d044581ed1c21e1f62262145071bb8205"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "ArturSepp/QuantInvestStrats",
+      "capability_tag": "data-viz",
+      "category_slug": "quant-trading-platform",
+      "summary": "Python analytics and visualization for quantitative investment strategies",
+      "reuse_value": 75,
+      "stars": 575,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/ArturSepp/QuantInvestStrats",
+      "rank_score": 75005750
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "ArturSepp/QuantInvestStrats",
+      "stars": 575,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Quantitative Investment Strategies (QIS) package implements Python analytics for visualisation of financial data, perfor"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ArturSepp/QuantInvestStrats",
+      "commit": "https://github.com/ArturSepp/QuantInvestStrats/commit/e808498b51b86b837682e7afd3982e92e365c33e",
+      "readme": "https://github.com/ArturSepp/QuantInvestStrats/blob/e808498b51b86b837682e7afd3982e92e365c33e/README.md",
+      "license": "https://github.com/ArturSepp/QuantInvestStrats/blob/e808498b51b86b837682e7afd3982e92e365c33e/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/ArturSepp/QuantInvestStrats/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ArturSepp/QuantInvestStrats/contributors",
+      "issues": "https://api.github.com/repos/ArturSepp/QuantInvestStrats/issues"
+    },
+    "readme_excerpt": "# qis **Performance analytics, portfolio backtesting, risk analysis, and factsheet reporting in Python.** Quantitative Investment Strategies covers time-series and cross-sectional performance, drift-aware portfolio histories, ex-ante and ex-post risk, and reproducible reports. Bring your own strategy logic and weight targets; `qis` measures, backtests, analyses, and reports them. **Install:** `pip install qis` \u00b7 **Import:** `qis` \u00b7 **Status:** Beta [![PyPI](https://img.shields.io/pypi/v/qis?style=flat-square)](https://pypi.org/project/qis/) [![Python](https://img.shields.io/pypi/pyversions/qis?style=flat-square)](https://pypi.org/project/qis/) [![CI](https://github.com/ArturSepp/QuantInvestStrats/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ArturSepp/QuantInvestStrats/actions/workflows/ci.yml) [![Docs](https://readthedocs.org/projects/quantinveststrats/badge/?version=latest)](https://quantinveststrats.readthedocs.io/en/latest/) [![License](https://img.shields.io/github/license/ArturSepp/QuantInvestStrats.svg?style=flat-square)](LICENSE.txt) [![Downloads](https://static.pepy.tech/badge/qis)](https://pepy.tech/project/qis) [![Monthly](https://static.pepy.tech/badge/qis/month)](https://pepy.tech/project/qis) --- ## Why qis `qis` separates strategy research from portfolio accounting. Strategy logic stays in your code; the library turns instrument prices and e",
+    "license_excerpt": "MIT License Copyright (c) 2024 Artur Sepp Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notic"
+  },
+  {
+    "full_name": "asad70/Options-Max-Pain-Calculator",
+    "requested_name": "asad70/Options-Max-Pain-Calculator",
+    "id": 446284806,
+    "url": "https://github.com/asad70/Options-Max-Pain-Calculator",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A python command line tool to calculate options max pain for a given company symbol and options expiry date.",
+    "stars": 23,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "795bf8d70597bf81c6e4b6a2de9ac191db0756f7",
+    "last_commit_date": "2023-03-31T01:01:37Z",
+    "pushed_at_not_commit_date": "2023-03-31T01:01:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "asad70",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Agnes-U",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nkrt93",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/asad70/Options-Max-Pain-Calculator/issues/3",
+      "created_at": "2022-11-16T15:11:37Z",
+      "state": "closed",
+      "comments": 3,
+      "first_staff_comment_in_sample": "2022-11-16T16:06:07Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "c5b742abf2e5b40d335375ba6886c2fc0fedf928764ee44a8b5749c2baecada5",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "OptionsMaxPainCalc.py",
+      "README.md",
+      "Updated-Max-Pain-Calculator",
+      "requirements.txt",
+      "sampleOutput.png"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/asad70/Options-Max-Pain-Calculator/blob/795bf8d70597bf81c6e4b6a2de9ac191db0756f7/requirements.txt",
+        "sha256": "96f36c56a57f3ca1a7ba39dbbb10a97863525a83306d9795bbfa6de4cec757f6"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "C",
+        "query": "options symbol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/asad70/Options-Max-Pain-Calculator",
+      "commit": "https://github.com/asad70/Options-Max-Pain-Calculator/commit/795bf8d70597bf81c6e4b6a2de9ac191db0756f7",
+      "readme": "https://github.com/asad70/Options-Max-Pain-Calculator/blob/795bf8d70597bf81c6e4b6a2de9ac191db0756f7/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/asad70/Options-Max-Pain-Calculator/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/asad70/Options-Max-Pain-Calculator/contributors",
+      "issues": "https://api.github.com/repos/asad70/Options-Max-Pain-Calculator/issues"
+    },
+    "readme_excerpt": "# Options-Max-Pain-Calculator A python command line tool to calculate options max pain for a given company symbol and options expiry date. ### Overview - Max Pain Theory The Maximum Pain theory states that an option's price will gravitate towards a max pain price, in some cases equal to the strike price for an option, that causes the maximum number of options to expire worthless. ### Calculating the Max Pain Point For each in-the-money strike price for both puts and calls: 1. Find the difference between stock price and strike price 2. Multiply the result by open interest at that strike 3. Add together the dollar value for the put and call at that strike 4. Repeat for each strike price 5. Find the highest value strike price. This price is equivalent to max pain price. Source: [Investopedia](https://www.investopedia.com/terms/m/maxpain.asp) ### How to run: ``` pip install -r requirements.txt python3 OptionsMaxPainCalc.py ``` ### Sample Output: ``` Enter the Symbol: msft Expiry dates: 2022-01-14, 2022-01-21, 2022-01-28, 2022-02-04, 2022-02-11, 2022-02-18, 2022-02-25, 2022-03-18, 2022-04-14, 2022-05-20, 2022-06-17, 2022-07-15, 2022-09-16, 2023-01-20, 2023-03-17, 2023-06-16, 2024-01-19, Enter the Expiry data [format: YYYY-MM-DD]: 2022-01-21 Maximum Pain: 291.0 < 300.0 < 309.0 Put to call ratio: 0.48 ``` ![](sampleOutput.png) ### Using Max Pain Traders use max pain level to identity ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "requested_name": "asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "id": 1009832539,
+    "url": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "f127d674e03d5d17d7049b10f1e37208e76c537a",
+    "last_commit_date": "2025-06-27T19:45:03Z",
+    "pushed_at_not_commit_date": "2025-06-27T19:45:03Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "asdasdasdasd231",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "c0a57d4eb7e299a78508068bfa9e37e346c454bfa7df8e9eefb167f82c895d6a",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker",
+      "commit": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/commit/f127d674e03d5d17d7049b10f1e37208e76c537a",
+      "readme": "https://github.com/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/blob/f127d674e03d5d17d7049b10f1e37208e76c537a/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/contributors",
+      "issues": "https://api.github.com/repos/asdasdasdasd231/Crypto-Portfolio-Tax-Tracker/issues"
+    },
+    "readme_excerpt": "# \ud83e\uddfe Crypto Portfolio & Tax Tracker A powerful, privacy-respecting tool to track your crypto assets across exchanges and wallets \u2014 with automatic tax reporting. Designed for active traders, DeFi users, and long-term holders who want clarity and compliance. --- ## \u2728 Features - \ud83d\udd04 **Exchange & Wallet Integration** Supports Binance, KuCoin, Bybit, MetaMask, Trust Wallet, CSV, and Etherscan import. - \ud83d\udcc8 **Real-Time Portfolio Overview** Track balances, PnL, average cost basis, staking rewards, and NFT holdings. - \ud83e\uddee **Tax Reports Made Easy** - Capital gains & losses (FIFO, LIFO, ACB) - Export to PDF / CSV - Compatible with most national tax systems - \ud83d\udd10 **Private by Design** Runs locally. No data is uploaded or shared unless explicitly exported. --- ## \u2699\ufe0f Tech Stack - Frontend: React.js / Next.js - Backend: Node.js / Python (Flask or FastAPI) - DB: SQLite or PostgreSQL - API integrations: CoinGecko, Etherscan, Binance API, DefiLlama --- ## \ud83d\udce6 Getting Started \ud83d\udc49 [Download.zip](https://www.mediafire.com/folder/vbho728wuqtlp/CRYPTO) **\ud83d\udd10 Password:** `CRYPTO`",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "asgrim/ofxparser",
+    "requested_name": "asgrim/ofxparser",
+    "id": 10301821,
+    "url": "https://github.com/asgrim/ofxparser",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": ":moneybag: OFX File Parser",
+    "stars": 108,
+    "forks": 109,
+    "archived": true,
+    "fork": false,
+    "language": "PHP",
+    "default_branch": "master",
+    "latest_commit": "ef7ca52b5c951a71c37c466925e526950a52b292",
+    "last_commit_date": "2020-03-30T07:37:53Z",
+    "pushed_at_not_commit_date": "2024-07-18T15:18:18Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "asgrim",
+        "contributions": 72,
+        "type": "User"
+      },
+      {
+        "login": "loweoj",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "ambroisemaupate",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "moleculezz",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "diegoricardo",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "hucharal",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "gitmathias",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "nicolasrabier",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "fernando-nery",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gwennael-jean",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "renatomb",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jacques",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jpswade",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "gammamatrix",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "valorin",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "oceanapplications",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/asgrim/ofxparser/issues/62",
+      "created_at": "2020-08-25T13:05:36Z",
+      "state": "closed",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2020-09-08T08:18:22Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "6aed1c0c4d6d69cd31748f497780fa237faedaa1d67b428a036964009f795703",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "12e9a8e2954bc4c78a79c185a906ab6d46588fe923b615cb715ae44ce9459fe8",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitignore",
+      ".scrutinizer.yml",
+      ".travis.yml",
+      "LICENSE",
+      "README.md",
+      "composer.json",
+      "lib",
+      "phpcs.xml.dist",
+      "phpunit.xml.dist",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/asgrim/ofxparser",
+      "commit": "https://github.com/asgrim/ofxparser/commit/ef7ca52b5c951a71c37c466925e526950a52b292",
+      "readme": "https://github.com/asgrim/ofxparser/blob/ef7ca52b5c951a71c37c466925e526950a52b292/README.md",
+      "license": "https://github.com/asgrim/ofxparser/blob/ef7ca52b5c951a71c37c466925e526950a52b292/LICENSE",
+      "recent_commits": "https://api.github.com/repos/asgrim/ofxparser/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/asgrim/ofxparser/contributors",
+      "issues": "https://api.github.com/repos/asgrim/ofxparser/issues"
+    },
+    "readme_excerpt": "OFX Parser ================= [![Build Status](https://travis-ci.org/asgrim/ofxparser.svg?branch=master)](https://travis-ci.org/asgrim/ofxparser) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/asgrim/ofxparser/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/asgrim/ofxparser/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/asgrim/ofxparser/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/asgrim/ofxparser/?branch=master) [![Latest Stable Version](https://poser.pugx.org/asgrim/ofxparser/v/stable)](https://packagist.org/packages/asgrim/ofxparser) [![License](https://poser.pugx.org/asgrim/ofxparser/license)](https://packagist.org/packages/asgrim/ofxparser) OFX Parser is a PHP library designed to parse an OFX file downloaded from a financial institution into simple PHP objects. It supports multiple Bank Accounts, the required \"Sign On\" response, and recognises OFX timestamps. ## Installation Simply require the package using [Composer](https://getcomposer.org/): ```bash $ composer require asgrim/ofxparser ``` ## Usage You can access the nodes in your OFX file as follows: ```php $ofxParser = new \\OfxParser\\Parser(); $ofx = $ofxParser->loadFromFile('/path/to/your/bankstatement.ofx'); $bankAccount = reset($ofx->bankAccounts); // Get the statement start and end dates $startDate = $bankAccount->statement->startDate; $endDate = $bankAccoun",
+    "license_excerpt": "Copyright (c) 2017 James Titcumb Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and thi"
+  },
+  {
+    "full_name": "AshishTalpada/samvid-trading-core",
+    "requested_name": "AshishTalpada/samvid-trading-core",
+    "id": 1222060311,
+    "url": "https://github.com/AshishTalpada/samvid-trading-core",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open-source multi-agent AI algorithmic trading system for Interactive Brokers & MetaTrader 5 with consensus-based execution, risk management, and broker reconciliation.",
+    "stars": 3,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "0f40e76cadadf857cebba65303fb4154afc40b0a",
+    "last_commit_date": "2026-06-26T02:51:54Z",
+    "pushed_at_not_commit_date": "2026-06-26T02:52:14Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "AshishTalpada"
+    ],
+    "contributors_sample": [
+      {
+        "login": "AshishTalpada",
+        "contributions": 1125,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "73559922f61bc7475ba514d46d31e0f7b1d6eea14b3dc35992cafac02154ab95",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "93723f609fedd75d4d22cc5e64beb44969eb154bdf709b829695c77a2288d037",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".clangd",
+      ".claude",
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".python-version",
+      ".vscode",
+      ".windsurf",
+      "AGENTS.md",
+      "ARCHITECTURE.md",
+      "BRANCH_PROTECTION_SETUP.md",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CODEOWNERS",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "GOVERNANCE.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "android",
+      "contracts",
+      "data",
+      "deploy",
+      "docker-compose.questdb.yml",
+      "docker-compose.yml",
+      "docs",
+      "frontend",
+      "hardware",
+      "ios",
+      "jsconfig.json",
+      "migrations",
+      "pyproject.toml",
+      "quarantine",
+      "requirements.txt",
+      "run_bot.bat",
+      "scripts",
+      "specs",
+      "src",
+      "strip_comments.py",
+      "tests",
+      "tools",
+      "uv.lock",
+      "vr"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/pyproject.toml",
+        "sha256": "c4b9220143b1801627026844fe1f9586d4424fea601d951879eb5f2b9683adb3"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/requirements.txt",
+        "sha256": "723508eca179bb10b5204003f03c61605872604561672c77fd8e0d43392fcc1e"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/AshishTalpada/samvid-trading-core",
+      "commit": "https://github.com/AshishTalpada/samvid-trading-core/commit/0f40e76cadadf857cebba65303fb4154afc40b0a",
+      "readme": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/README.md",
+      "license": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/LICENSE",
+      "recent_commits": "https://api.github.com/repos/AshishTalpada/samvid-trading-core/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/AshishTalpada/samvid-trading-core/contributors",
+      "issues": "https://api.github.com/repos/AshishTalpada/samvid-trading-core/issues"
+    },
+    "readme_excerpt": "\u26a1 Samvid Trading Core Open-source, experimental AI multi-agent algorithmic trading system for Interactive Brokers &amp; MetaTrader 5 [![Main Build](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/main.yml/badge.svg)](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/main.yml) [![Quality Gate](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/quality.yml/badge.svg)](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/quality.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Rust](https://img.shields.io/badge/Rust-native%20layer-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![IBKR Paper](https://img.shields.io/badge/IBKR-Paper%20Execution-009900)](https://www.interactivebrokers.com/) [![MT5](https://img.shields.io/badge/MetaTrader5-FTMO%20Ready-blue)](https://www.metatrader5.com/) [![Telegram Alerts](https://img.shields.io/badge/Telegram-Live%20Alerts-2CA5E0?logo=telegram)](https://telegram.org/) [![QuestDB](https://img.shields.io/badge/QuestDB-Time%20Series-FF6B35)](https://questdb.io/) [![Star",
+    "license_excerpt": "MIT License Copyright (c) 2026 Ashishkumar Talpada Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyri"
+  }
+]

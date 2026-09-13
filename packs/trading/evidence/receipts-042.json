@@ -1,0 +1,930 @@
+[
+  {
+    "full_name": "rmbell09-lang/tradesight",
+    "requested_name": "rmbell09-lang/tradesight",
+    "id": 1185616788,
+    "url": "https://github.com/rmbell09-lang/tradesight",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Self-hosted Python strategy research and Alpaca paper trading with broker reconciliation, evidence gates, and live execution disabled.",
+    "stars": 170,
+    "forks": 25,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "8b2de128b5180d05e87a51a191685298e2e888e6",
+    "last_commit_date": "2026-07-15T00:10:24Z",
+    "pushed_at_not_commit_date": "2026-07-15T00:10:25Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Lucky",
+      "Lucky AI",
+      "rmbell09-lang"
+    ],
+    "contributors_sample": [
+      {
+        "login": "rmbell09-lang",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/rmbell09-lang/tradesight/issues/15",
+      "created_at": "2026-06-21T04:14:04Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "06d1c5d9785d6faf9bc73a61081a3e44f666308f3599bc5d42c31da3454e44ef",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AUDIT_2026-03-11.md",
+      "AUDIT_2026-04-13.md",
+      "BUGS.md",
+      "BUILDER_BRIEFING_PHASE1.md",
+      "CIRCUIT_BREAKER_SPEC.md",
+      "CONFLUENCE_BLOCKERS.md",
+      "LOGO.txt",
+      "LOGO_DESIGN.txt",
+      "NEXT_TASKS.md",
+      "PREFLIGHT_PHASE1_20260320.md",
+      "README.md",
+      "START_TRADESIGHT.py",
+      "STATUS_20260311.md",
+      "TRADING_LOG.md",
+      "WEBSOCKET_REVIEW_1191.md",
+      "audits",
+      "dashboard.log",
+      "data",
+      "docs",
+      "icon.icns",
+      "icon.iconset",
+      "install_tradesight.py",
+      "intro_demo.ipynb",
+      "launch_tradesight.sh",
+      "logo.jpg",
+      "logo.png",
+      "logo_bigger.png",
+      "logo_fixed.png",
+      "logo_icon_only.png",
+      "logo_large.png",
+      "ops",
+      "pyproject.toml",
+      "reports",
+      "requirements-dev.txt",
+      "requirements-runtime.txt",
+      "requirements.txt",
+      "run_paper_trader.py",
+      "run_scan.sh",
+      "scripts",
+      "signals",
+      "simple_test_fix.py",
+      "simple_test_launch.py",
+      "src",
+      "test_icon.jpg",
+      "tests",
+      "tradesight",
+      "tradesight_bias_audit.md",
+      "verify_indicators.py",
+      "web"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/pyproject.toml",
+        "sha256": "398d76b8f250009a477875e7e9ab41d7567f499ee39e6ddc567d70268b3bffce"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/requirements.txt",
+        "sha256": "274f900af344786e88d07896a64bf72284cf315d704cd63a71d5283001015ce1"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/rmbell09-lang/tradesight",
+      "commit": "https://github.com/rmbell09-lang/tradesight/commit/8b2de128b5180d05e87a51a191685298e2e888e6",
+      "readme": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/rmbell09-lang/tradesight/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/rmbell09-lang/tradesight/contributors",
+      "issues": "https://api.github.com/repos/rmbell09-lang/tradesight/issues"
+    },
+    "readme_excerpt": "# TradeSight TradeSight is a self-hosted strategy-research and **paper-trading** application. It evaluates strategy families against historical data, preserves champion/challenger evidence, and connects to an Alpaca paper account for broker-simulated orders and reconciliation. TradeSight is research software. It is not financial advice, does not promise returns, and does not contain an enabled live-money execution path. ## What is real in the current release - Alpaca market data is labeled `REAL` only after source verification. - Orders, positions, and fills from the Alpaca paper endpoint are labeled `PAPER`. - Broker/local accounting is reconciled from a defined paper-account epoch. - Historical local P&L that lacks complete broker proof is preserved as `LEGACY / UNVERIFIED` and excluded from trusted performance. - Strategy Lab reads the persisted optimizer, tournament database, champion, challengers, and rejection evidence. - The Live Readiness screen shows mandatory evidence gates but cannot activate live trading. - Polymarket records are archived and hidden when stale; the scanner is not currently maintained. ## Requirements - Python 3.11 or newer - macOS or Linux - Alpaca **paper** credentials for broker-backed market and trading evidence ## Supported installation Extract the verified TradeSight source release, then run: ```bash python3 install_tradesight.py ./launch_trade",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "rmcmillan34/edge-journal",
+    "requested_name": "rmcmillan34/edge-journal",
+    "id": 1074052423,
+    "url": "https://github.com/rmcmillan34/edge-journal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open-source trade journal and analytics. Import CSVs (MT5, cTrader, NinjaTrader), track accounts, view metrics & calendar PnL, attach screenshots, Test Driven Development, Docker, multi-archotecture.",
+    "stars": 2,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "cc14079c85166f65bd8bc18ddb82fae518d6c7e3",
+    "last_commit_date": "2025-10-28T11:30:40Z",
+    "pushed_at_not_commit_date": "2025-10-28T11:32:09Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "rmcmillan34",
+        "contributions": 52,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/rmcmillan34/edge-journal/issues/23",
+      "created_at": "2025-10-29T10:30:09Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d4fa687cbd5e93b8743303cee57339dba9c2e61ccc4bf64b144ae63c182b7ad6",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0673f768daffc35cb485a970564772a564ca1e1f9b83b28495933d0513550631",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "CLAUDE.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "TROUBLESHOOTING_CONTEXT.md",
+      "VERSION",
+      "api",
+      "docker-compose.yml",
+      "docs",
+      "web"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "C",
+        "query": "trading CSV journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/rmcmillan34/edge-journal",
+      "commit": "https://github.com/rmcmillan34/edge-journal/commit/cc14079c85166f65bd8bc18ddb82fae518d6c7e3",
+      "readme": "https://github.com/rmcmillan34/edge-journal/blob/cc14079c85166f65bd8bc18ddb82fae518d6c7e3/README.md",
+      "license": "https://github.com/rmcmillan34/edge-journal/blob/cc14079c85166f65bd8bc18ddb82fae518d6c7e3/LICENSE",
+      "recent_commits": "https://api.github.com/repos/rmcmillan34/edge-journal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/rmcmillan34/edge-journal/contributors",
+      "issues": "https://api.github.com/repos/rmcmillan34/edge-journal/issues"
+    },
+    "readme_excerpt": "# Edge-Journal [![Version](https://img.shields.io/badge/version-0.5.3-blue.svg)](./VERSION) [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](./LICENSE) [![ci](https://github.com/rmcmillan34/edge-journal/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/rmcmillan34/edge-journal/actions/workflows/ci.yml) Local-first, OSS trading journal \u2014 **CSV-first** imports, dashboards, and journaling. Runs locally with Docker. ## What\u2019s in here - `web/`: Next.js app (App Router). Uploads, Trades, Dashboard. - `api/`: FastAPI service with tests (pytest) and Alembic migrations. - `docker-compose.yml`: runs Web + API + Postgres. - `.github/workflows/ci.yml`: lint/tests + multi-arch images. - `Makefile`: quality-of-life commands. - `docs/`: Roadmap, agents, requirements, examples. ## Quick start ```bash # one-time build + run docker compose up --build # Web: http://localhost:3000 # API: http://localhost:8000 (health at /health) ``` Sign up in the web UI, then see the User Guide at `docs/USAGE.md`. Highlights: - Upload CSV at `/upload` \u2192 preview mapping and timezone \u2192 commit - View imports at `/uploads` (download errors CSV, delete import) - Trades at `/trades` (filters, manual create, notes, attachments) - Dashboard at `/dashboard` (KPIs, equity curve, calendar) - Daily Journal at `/journal/YYYY-MM-DD` (notes, link trades, attachments) - Templates at `/templat",
+    "license_excerpt": "MIT License \u2014 replace with full MIT or Apache-2.0 text as preferred."
+  },
+  {
+    "full_name": "robaho/go-trader",
+    "requested_name": "robaho/go-trader",
+    "id": 146024974,
+    "url": "https://github.com/robaho/go-trader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "financial exchange written in Go, designed for algorithmic trading tests",
+    "stars": 520,
+    "forks": 90,
+    "archived": false,
+    "fork": false,
+    "language": "Go",
+    "default_branch": "master",
+    "latest_commit": "23bac0628caec8fca40d14d7757949174366066c",
+    "last_commit_date": "2026-06-30T02:01:51Z",
+    "pushed_at_not_commit_date": "2026-06-30T02:04:40Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "robaho"
+    ],
+    "contributors_sample": [
+      {
+        "login": "robaho",
+        "contributions": 60,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "napoleon665",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/robaho/go-trader/issues/23",
+      "created_at": "2026-06-22T15:34:05Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-06-30T02:03:05Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "722c015daaa0bf3315bf58cf6b4fae625accfab5e2c68e23151b2c874791e1a4",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".vscode",
+      "LICENSE",
+      "README.md",
+      "cmd",
+      "configs",
+      "doc",
+      "go.mod",
+      "go.sum",
+      "internal",
+      "pkg",
+      "web",
+      "web_lit"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/robaho/go-trader",
+      "commit": "https://github.com/robaho/go-trader/commit/23bac0628caec8fca40d14d7757949174366066c",
+      "readme": "https://github.com/robaho/go-trader/blob/23bac0628caec8fca40d14d7757949174366066c/README.md",
+      "license": "https://github.com/robaho/go-trader/blob/23bac0628caec8fca40d14d7757949174366066c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/robaho/go-trader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/robaho/go-trader/contributors",
+      "issues": "https://api.github.com/repos/robaho/go-trader/issues"
+    },
+    "readme_excerpt": "# go-trader A financial exchange written in Go including complete order book, fix protocol, and market data distribution. It was originally developed to further my knowledge of Go and test its suitability for high-performance financial applications, and it has continued to evolve into an ideal teaching/reference project for Go (interfaces, low-level networking, web development, json, Go routines, etc.). Check out [cpp-trader](https://github.com/robaho/cpp-trader) for a C++ version, albeit with less features. ## Features - client to server communication using: - FIX (using quickfixgo) - gRPC - UDP multicast for market data distribution. - TCP replay of dropped market data packets. - Uses the high-performance fixed point library [fixed](https://github.com/robaho/fixed) which I also developed. - Includes multiple clients: - command line - server-side web using Go templates - SPA web using Lit - A sample \"market maker\" to mass quote the market. - A sample \"playback\" to simulate markets from recorded market data. - Supported order types: - limit - market - [REST api](https://github.com/robaho/go-trader/blob/2b92b5652eb5c6a93b83262f45ba1f237fb180b0/internal/exchange/webserver.go#L41-L54) The exchange is designed to allow for easy back-testing of trading strategies. It supports limit and market orders. There is a very simple sample \"algo\". The program structure is applicable to many s",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "roberthopman/trade-tracking-and-journaling",
+    "requested_name": "roberthopman/trade-tracking-and-journaling",
+    "id": 1157829929,
+    "url": "https://github.com/roberthopman/trade-tracking-and-journaling",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Multi-tenant RoR app, enabling: firms/brokers, account configurations, trades, payouts, and more.",
+    "stars": 2,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Ruby",
+    "default_branch": "main",
+    "latest_commit": "7639c8ad9caea719e531050698a5eff191bbec52",
+    "last_commit_date": "2026-02-14T11:31:41Z",
+    "pushed_at_not_commit_date": "2026-02-14T11:31:43Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "roberthopman",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "4c55a9faa8f9e4319a6a21f4f0cf910962b51e6bcb89c14ce4f93af2d5dc9f73",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".annotaterb.yml",
+      ".dockerignore",
+      ".editorconfig",
+      ".env.sample",
+      ".erb_lint.yml",
+      ".gitattributes",
+      ".gitignore",
+      ".kamal",
+      ".node-version",
+      ".overcommit.yml",
+      ".prettierrc.cjs",
+      ".rubocop.yml",
+      ".ruby-version",
+      ".stylelintrc.js",
+      ".stylelintrc.json",
+      "CLAUDE.md",
+      "DEPLOYMENT.md",
+      "Dockerfile",
+      "Gemfile",
+      "Gemfile.lock",
+      "Procfile",
+      "README.md",
+      "Rakefile",
+      "Screenshot accounts.png",
+      "Screenshot journal.png",
+      "Screenshot trades.png",
+      "app",
+      "bin",
+      "config.ru",
+      "config",
+      "db",
+      "eslint.config.js",
+      "lib",
+      "log",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.cjs",
+      "public",
+      "run-pty.json",
+      "script",
+      "scripts",
+      "storage",
+      "test",
+      "tmp",
+      "vendor",
+      "vite.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/roberthopman/trade-tracking-and-journaling/blob/7639c8ad9caea719e531050698a5eff191bbec52/package.json",
+        "sha256": "8bc9103815664bb292b60a9064a0f32210fada7c404a6c31f158af093cc99377"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/roberthopman/trade-tracking-and-journaling",
+      "commit": "https://github.com/roberthopman/trade-tracking-and-journaling/commit/7639c8ad9caea719e531050698a5eff191bbec52",
+      "readme": "https://github.com/roberthopman/trade-tracking-and-journaling/blob/7639c8ad9caea719e531050698a5eff191bbec52/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/roberthopman/trade-tracking-and-journaling/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/roberthopman/trade-tracking-and-journaling/contributors",
+      "issues": "https://api.github.com/repos/roberthopman/trade-tracking-and-journaling/issues"
+    },
+    "readme_excerpt": "# Intro This is a trade tracking and journaling application. More details in [CLAUDE.md](CLAUDE.md). ## Screenshots ![Accounts](Screenshot%20accounts.png) ![Trades](Screenshot%20trades.png) ![Journal](Screenshot%20journal.png) ## Production To create a new Heroku app for this project: ```sh heroku create heroku buildpacks:set heroku/ruby heroku buildpacks:add --index 1 heroku/nodejs heroku config:set NPM_CONFIG_INCLUDE='dev' YARN_PRODUCTION=false git push heroku ``` To deploy the app to Heroku: ```sh git push heroku ``` ## Prerequisites This project requires: - Ruby (see [.ruby-version](./.ruby-version)), preferably managed using [rbenv](https://github.com/rbenv/rbenv) - Node 20 (LTS) or newer - Yarn 1.x (classic) - PostgreSQL must be installed and accepting connections On macOS, these [Homebrew](http://brew.sh) packages are recommended: ``` brew install rbenv brew install node brew install yarn brew install postgresql@17 ``` ## Getting started ### bin/setup Run this script to install necessary dependencies and prepare the Rails app to be started for the first time. ``` bin/setup ``` > [!TIP] > The `bin/setup` script is idempotent and is designed to be run often. You should run it every time you pull code that introduces new dependencies or makes other significant changes to the project. > [!TIP] > To drop your existing database and start over with a clean local environment, us",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "robswc/tradingview-webhooks-bot",
+    "requested_name": "robswc/tradingview-webhooks-bot",
+    "id": 203641226,
+    "url": "https://github.com/robswc/tradingview-webhooks-bot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "a framework \ud83c\udfd7 for trading with tradingview webhooks!",
+    "stars": 768,
+    "forks": 209,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "a164fc88edafbe2e877c6193dd17afb4f76f1236",
+    "last_commit_date": "2024-02-29T20:04:23Z",
+    "pushed_at_not_commit_date": "2024-02-29T20:05:35Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "robswc",
+        "contributions": 61,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "LPX55",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "zahidhussaina2l",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "khamarr3524",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/robswc/tradingview-webhooks-bot/issues/72",
+      "created_at": "2026-02-10T13:14:27Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "108daad979e01c8d868ea5b2dc9d2b1e03d2c7eef738288149436b5962771107",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "9269a9bf55dc67ad74fb61a42e6cb9ff43e033073f5d06c7a4e659f5c2301e58",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "docker-compose.mac.yml",
+      "docker-compose.windows.yml",
+      "docker-compose.yml",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "A",
+        "query": "trading alerts"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/robswc/tradingview-webhooks-bot",
+      "commit": "https://github.com/robswc/tradingview-webhooks-bot/commit/a164fc88edafbe2e877c6193dd17afb4f76f1236",
+      "readme": "https://github.com/robswc/tradingview-webhooks-bot/blob/a164fc88edafbe2e877c6193dd17afb4f76f1236/README.md",
+      "license": "https://github.com/robswc/tradingview-webhooks-bot/blob/a164fc88edafbe2e877c6193dd17afb4f76f1236/LICENSE",
+      "recent_commits": "https://api.github.com/repos/robswc/tradingview-webhooks-bot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/robswc/tradingview-webhooks-bot/contributors",
+      "issues": "https://api.github.com/repos/robswc/tradingview-webhooks-bot/issues"
+    },
+    "readme_excerpt": "![demopic](https://user-images.githubusercontent.com/38849824/160300853-ef6fe753-36d6-41a9-9bd2-8a06f7add71d.png) ![](https://img.shields.io/github/license/robswc/tradingview-webhooks-bot?style=for-the-badge) ![](https://img.shields.io/github/commit-activity/y/robswc/tradingview-webhooks-bot?style=for-the-badge) ![](https://img.shields.io/twitter/follow/robswc?style=for-the-badge) [tvwb_demo.webm](https://user-images.githubusercontent.com/38849824/192352217-0bd08426-98b7-4188-8e5b-67d7aa93ba09.webm) ### \ud83d\udcc0 Live Demo \ud83d\udda5 **There's now a live demo available at [http://tvwb.robswc.me](http://tvwb.robswc.me). Feel free to check it out or send it some webhooks!** [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=2865cad8f863&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge) ### [Get Support on Discord](https://discord.gg/wrjuSaZCFh) # The What \ud83d\udd2c Tradingview-webhooks-bot (TVWB) is a small, Python-based framework that allows you to extend or implement your own logic using data from [Tradingview's webhooks](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/). TVWB is not a trading library, it's a framework for building your own trading logic. # The How \ud83c\udfd7 TVWB is fundamentally a set of components with a webapp serving as the GUI. TVWB was built with ",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "rookie-22/TriviaGame",
+    "requested_name": "rookie-22/TriviaGame",
+    "id": 162184519,
+    "url": "https://github.com/rookie-22/TriviaGame",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "# JavaScript Assignment 2  ### Overview  In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.  ### Submission on BCS  * Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!  ### Before You Begin  1. Create a GitHub repo called `TriviaGame`, then clone the repo to your computer.  2. Create a file inside of the `TriviaGame` folder called `index.html`. This is where you'll mark up all of your HTML. 3. Don't forget to include a script tag with the jQuery library.  4. Create a folder inside of the `TriviaGame` folder called `assets`. 5. Inside `assets`, create three folders: `css`, `javascript`, `images`     * In your `css` folder, create a `style.css` file.    * In your `javascript` folder, create an `app.js` file; here you'll write all of your JavaScript and jQuery.    * In your `images` folder, save whatever images you'd like to use in this exercise.  6. Choose a game to build from your options below.   ### Option One: Basic Quiz (Timed Form)  ![Basic](Images/1-basic.jpg)  **[Click Here to Watch the Demo](https://youtu.be/fBIj8YsA9dk)**.  * You'll create a trivia form with multiple choice or true/false options (your choice).  * The player will have a limited amount of time to finish the quiz.     * The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.  * Don't let the player pick more than one answer per question.  * Don't forget to include a countdown timer.  ### Option Two: Advanced Assignment (Timed Questions)  ![Advanced](Images/2-advanced.jpg)  **[Click Here to Watch the demo](https://youtu.be/xhmmiRmxQ8Q)**.  * You'll create a trivia game that shows only one question until the player answers it or their time runs out.  * If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.  * The scenario is similar for wrong answers and time-outs.    * If the player runs out of time, tell the player that time's up and display the correct answer. Wait a few seconds, then show the next question.   * If the player chooses the wrong answer, tell the player they selected the wrong option and then display the correct answer. Wait a few seconds, then show the next question.  * On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).  ### Reminder: Submission on BCS  * Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!  - - -  ### Minimum Requirements  Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Adding a README.md as well as adding this homework to your portfolio are required as well and more information can be found below.  - - -  ### Create a README.md  Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:  * [About READMEs](https://help.github.com/articles/about-readmes/)  * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)  - - -  ### Add To Your Portfolio  After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.  - - -  ### A Few Last Notes  * Styling and theme are completely up to you. Get creative!  * Remember to deploy your assignment to Github Pages.  *If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.    **Good Luck!**",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "26902fae3647c6aafc6939e59f02ea1d03624164",
+    "last_commit_date": "2018-12-17T20:40:13Z",
+    "pushed_at_not_commit_date": "2018-12-17T20:41:10Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "rookie-22",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "5b6afc88ce0ed754841584b548a4af19bf1a24b482385824ee20f44a688296e6",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md",
+      "assets",
+      "index.html"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "options exercise assignment"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/rookie-22/TriviaGame",
+      "commit": "https://github.com/rookie-22/TriviaGame/commit/26902fae3647c6aafc6939e59f02ea1d03624164",
+      "readme": "https://github.com/rookie-22/TriviaGame/blob/26902fae3647c6aafc6939e59f02ea1d03624164/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/rookie-22/TriviaGame/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/rookie-22/TriviaGame/contributors",
+      "issues": "https://api.github.com/repos/rookie-22/TriviaGame/issues"
+    },
+    "readme_excerpt": "# TriviaGame # JavaScript Assignment 2 ### Overview In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS. ### Submission on BCS * Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "requested_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "id": 63839029,
+    "url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data.",
+    "stars": 2337,
+    "forks": 694,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "cd3411f4730f601ae1e2db2ba457f38ebf0ece95",
+    "last_commit_date": "2022-08-27T20:48:33Z",
+    "pushed_at_not_commit_date": "2022-08-27T20:48:46Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "rorysroes",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/issues/10",
+      "created_at": "2025-08-09T15:18:58Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "8919a48e8cbbe32fc9093c7d0b1c44e30d02f554a34578e89ef54be2819a791e",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "Data_Transformation",
+      "Feature_Selection",
+      "Graph",
+      "Model_Selection",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+      "commit": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/commit/cd3411f4730f601ae1e2db2ba457f38ebf0ece95",
+      "readme": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/blob/cd3411f4730f601ae1e2db2ba457f38ebf0ece95/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/contributors",
+      "issues": "https://api.github.com/repos/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy/issues"
+    },
+    "readme_excerpt": "## Modeling High-Frequency Limit Order Book Dynamics Using Machine Learning * Framework to capture the dynamics of high-frequency limit order books. #### Overview In this project I used machine learning methods to capture the high-frequency limit order book dynamics and simple trading strategy to get the P&L outcomes. * Feature Extractor * Rise Ratio * Depth Ratio [Note] : [Feature_Selection] (Feature_Selection) * Learning Model Trainer * RandomForestClassifier * ExtraTreesClassifier * AdaBoostClassifier * GradientBoostingClassifier * SVM * Use best model to predict next 10 seconds * Prediction outcome * Profit & Loss [Note] : [Model_Selection] (Model_Selection)",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "rotki/rotki",
+    "requested_name": "rotki/rotki",
+    "id": 123909654,
+    "url": "https://github.com/rotki/rotki",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A portfolio tracking, analytics, accounting and management application that protects your privacy",
+    "stars": 4023,
+    "forks": 755,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "develop",
+    "latest_commit": "fe32b325fd77f54d718864446d5a32150fc5a979",
+    "last_commit_date": "2026-09-11T14:16:28Z",
+    "pushed_at_not_commit_date": "2026-09-11T14:16:28Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "LefterisJP",
+      "kelsos",
+      "yabirgb"
+    ],
+    "contributors_sample": [
+      {
+        "login": "LefterisJP",
+        "contributions": 9195,
+        "type": "User"
+      },
+      {
+        "login": "kelsos",
+        "contributions": 5017,
+        "type": "User"
+      },
+      {
+        "login": "yabirgb",
+        "contributions": 2947,
+        "type": "User"
+      },
+      {
+        "login": "lukicenturi",
+        "contributions": 1721,
+        "type": "User"
+      },
+      {
+        "login": "prettyirrelevant",
+        "contributions": 580,
+        "type": "User"
+      },
+      {
+        "login": "nicholasyoder",
+        "contributions": 517,
+        "type": "User"
+      },
+      {
+        "login": "thegodfatherbeeearth",
+        "contributions": 291,
+        "type": "User"
+      },
+      {
+        "login": "tewshi",
+        "contributions": 194,
+        "type": "User"
+      },
+      {
+        "login": "isidorosp",
+        "contributions": 176,
+        "type": "User"
+      },
+      {
+        "login": "vnavascues",
+        "contributions": 171,
+        "type": "User"
+      },
+      {
+        "login": "OjusWiZard",
+        "contributions": 135,
+        "type": "User"
+      },
+      {
+        "login": "coinyon",
+        "contributions": 67,
+        "type": "User"
+      },
+      {
+        "login": "cleanerzkp",
+        "contributions": 62,
+        "type": "User"
+      },
+      {
+        "login": "arosboro",
+        "contributions": 45,
+        "type": "User"
+      },
+      {
+        "login": "dimyG",
+        "contributions": 37,
+        "type": "User"
+      },
+      {
+        "login": "kascheri12",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "moxw",
+        "contributions": 31,
+        "type": "User"
+      },
+      {
+        "login": "CPatchane",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "PabloCastellano",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "jbrit",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "dongdongzhuzhu",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "zinkkrysty",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "hjorthjort",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "prodesert22",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "TomAFrench",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "YanVictorSN",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "TheBlueMastiff",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "tomvodi",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "jaste111",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "dbast",
+        "contributions": 9,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/rotki/rotki/issues/5709",
+      "created_at": "2023-03-01T18:57:30Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-09-12T13:50:26Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4073cf1e85c044d328f8e659d491df61c328a35b2519e2cb4731fd2b62c6f8a7",
+    "license": "AGPL-3.0",
+    "license_path": "LICENSE.md",
+    "license_file_sha256": "eb6f58a98d8bdb6d3c8fee3817543589f3cd0921d14748fa0630edff2d4c08b0",
+    "license_candidates": [
+      "LICENSE.md"
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".codecov.yml",
+      ".coveragerc",
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".ignore",
+      ".pylint.rc",
+      ".readthedocs.yaml",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "LICENSE.md",
+      "Makefile",
+      "README.md",
+      "_typos.toml",
+      "colibri",
+      "crates",
+      "docs",
+      "frontend",
+      "funding.json",
+      "package.py",
+      "packaging",
+      "pyproject.toml",
+      "releases_sponsors.md",
+      "rotkehlchen.spec",
+      "rotkehlchen",
+      "rotkehlchen_mock",
+      "stubs",
+      "tools",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/pyproject.toml",
+        "sha256": "2ddb8753ade54a81ee86fcb1e7def23e6c23434e70b65da66db511c7d2a8a448"
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/Cargo.toml",
+        "sha256": "784c5b33e8782ed0847fd103af1a694c562490556354d67bc85e568bb8dd85cb"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/rotki/rotki",
+      "commit": "https://github.com/rotki/rotki/commit/fe32b325fd77f54d718864446d5a32150fc5a979",
+      "readme": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/README.md",
+      "license": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/LICENSE.md",
+      "recent_commits": "https://api.github.com/repos/rotki/rotki/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/rotki/rotki/contributors",
+      "issues": "https://api.github.com/repos/rotki/rotki/issues"
+    },
+    "readme_excerpt": "rotki: The Opensource, Self-Hosted Portfolio Manager A privacy-focused portfolio manager, accounting, and analytics tool. [![GitHub release](https://img.shields.io/github/release/rotki/rotki.svg)](https://GitHub.com/rotki/rotki/releases/) [![Docker Image Version](https://img.shields.io/docker/v/rotki/rotki/latest?label=Docker)](https://hub.docker.com/r/rotki/rotki) [![GitHub commits](https://img.shields.io/github/commits-since/rotki/rotki/latest.svg)](https://GitHub.com/rotki/rotki/commit/) [![GitHub contributors](https://img.shields.io/github/contributors/rotki/rotki.svg?style=flat)](https://github.com/rotki/rotki/graphs/contributors) [![Visitors](https://api.visitorbadge.io/api/visitors?path=rotki%2Frotki%20&countColor=%23263759&style=flat)](https://rotki.com/) [![GitHub forks](https://img.shields.io/github/forks/rotki/rotki)](https://github.com/rotki/rotki/forks) [![GitHub stars](https://img.shields.io/github/stars/rotki/rotki)](https://github.com/rotki/rotki/stargazers) [![GitHub last commit](https://img.shields.io/github/last-commit/rotki/rotki)](https://github.com/rotki/rotki/commits/master) [![Github downloads](https://img.shields.io/github/downloads/rotki/rotki/total.svg)](https://GitHub.com/rotki/rotki/releases/) [![Hiring](https://img.shields.io/badge/Hiring-Open-brightgreen)](https://rotki.com/jobs/) [![X Follow](https://img.shields.io/twitter/follow/rotkiapp)](https",
+    "license_excerpt": "### GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. ### Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most sof"
+  }
+]

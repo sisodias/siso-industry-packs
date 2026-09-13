@@ -1,0 +1,828 @@
+[
+  {
+    "full_name": "0-don/polymarket-wallet-recovery",
+    "requested_name": "0-don/polymarket-wallet-recovery",
+    "id": 1131442596,
+    "url": "https://github.com/0-don/polymarket-wallet-recovery",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Recover USDC and prediction market positions from Polymarket smart contract wallets (Proxy & Safe). Sell positions, redeem winnings, and withdraw funds directly.",
+    "stars": 10,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "66fb2f376eaed784ea27da786360e63821876c82",
+    "last_commit_date": "2026-01-10T03:06:34Z",
+    "pushed_at_not_commit_date": "2026-01-10T03:06:36Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "0-don",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/0-don/polymarket-wallet-recovery/issues/2",
+      "created_at": "2026-05-08T16:49:27Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "86d9b2695d3fc35b58afabb20d11e263d031bbde2d7f4adadb83c83621a1dcfc",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "README.md",
+      "package.json",
+      "src",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/0-don/polymarket-wallet-recovery/blob/66fb2f376eaed784ea27da786360e63821876c82/package.json",
+        "sha256": "62a2b0b949dbc472ca7beed5ecb7f1f8d4230e4103fbaf5bf47a8b0770d646db"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W05",
+        "lane": "format",
+        "query": "ERC1155 prediction"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/0-don/polymarket-wallet-recovery",
+      "commit": "https://github.com/0-don/polymarket-wallet-recovery/commit/66fb2f376eaed784ea27da786360e63821876c82",
+      "readme": "https://github.com/0-don/polymarket-wallet-recovery/blob/66fb2f376eaed784ea27da786360e63821876c82/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/0-don/polymarket-wallet-recovery/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/0-don/polymarket-wallet-recovery/contributors",
+      "issues": "https://api.github.com/repos/0-don/polymarket-wallet-recovery/issues"
+    },
+    "readme_excerpt": "# Polymarket Wallet Recovery Tools Recover funds stuck in Polymarket smart contract wallets. If you've lost access to your Polymarket account or have funds trapped in proxy/safe wallets, these tools can help you retrieve your USDC and positions. ## What This Solves Polymarket uses smart contract wallets internally. When you create an account: - **Email/Magic accounts** use Proxy Wallets - **Browser wallets** (MetaMask, Coinbase Wallet, Rainbow, etc.) use Safe Wallets Your funds can get \"stuck\" in these wallets if: - You lose access to your Polymarket account - The website is unavailable - You want to withdraw directly without using the UI - You have unresolved winning positions that need redemption ## Features - **Wallet Discovery**: Automatically finds all wallets (EOA, Proxy, Safe) associated with your private key - **Position Scanning**: Detects all prediction market positions with balances - **Market Selling**: Sells active positions at market price - **Position Redemption**: Redeems winning positions from resolved markets - **USDC Withdrawal**: Withdraws all USDC from smart contract wallets to your EOA ## Prerequisites - [Bun](https://bun.com/) - A Polygon RPC URL (Alchemy, Infura, or other provider) - Your wallet's private key ## Quick Start 1. Clone the repository: ```bash git clone https://github.com/0-don/polymarket-wallet-recovery.git cd polymarket-wallet-recovery ```",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "0xNetuser/Polymarket-golang",
+    "requested_name": "0xNetuser/Polymarket-golang",
+    "id": 1119662897,
+    "url": "https://github.com/0xNetuser/Polymarket-golang",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Polymarket Clob Golang Client",
+    "stars": 76,
+    "forks": 23,
+    "archived": false,
+    "fork": false,
+    "language": "Go",
+    "default_branch": "main",
+    "latest_commit": "c632343dce50e5068aa68b4ea3cfc12a4c8a1473",
+    "last_commit_date": "2026-05-20T09:58:48Z",
+    "pushed_at_not_commit_date": "2026-05-20T10:00:15Z",
+    "commits_since_20260313_count_capped100": 11,
+    "recent_commit_authors": [
+      "netuser"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Livezxy",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/0xNetuser/Polymarket-golang/issues/7",
+      "created_at": "2026-05-20T15:06:15Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-05-23T08:53:23Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "920521d83ad63006b11d8213993516ffc925deec6781423da5da27cf2aeaeb16",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "README.md",
+      "README_zh.md",
+      "examples",
+      "go.mod",
+      "go.sum",
+      "polymarket"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/0xNetuser/Polymarket-golang",
+      "commit": "https://github.com/0xNetuser/Polymarket-golang/commit/c632343dce50e5068aa68b4ea3cfc12a4c8a1473",
+      "readme": "https://github.com/0xNetuser/Polymarket-golang/blob/c632343dce50e5068aa68b4ea3cfc12a4c8a1473/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/0xNetuser/Polymarket-golang/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/0xNetuser/Polymarket-golang/contributors",
+      "issues": "https://api.github.com/repos/0xNetuser/Polymarket-golang/issues"
+    },
+    "readme_excerpt": "# Polymarket Go SDK [English](README.md) | [\u4e2d\u6587](README_zh.md) A comprehensive Go SDK for the Polymarket CLOB. Aligned with both [py-clob-client](https://github.com/Polymarket/py-clob-client) (V1, archived 2026-05) and [py-clob-client-v2](https://github.com/Polymarket/py-clob-client-v2) (V2, current). Follow at X: @netu5er ## Features - \u2705 **V2-native** \u2014 aligned with `py-clob-client-v2` (V1 was archived 2026-05) - \u2705 **CTF Exchange V2** order signing (EIP-712 EOA + EIP-1271 Solady wrapped for Deposit Wallet) - \u2705 **Automatic version negotiation** \u2014 `/version` cache + retry on `order_version_mismatch` - \u2705 **Builder code / Builder API key** for fee attribution - \u2705 **Three Authentication Levels**: L0, L1, L2 (with HMAC body signing aligned to V2) - \u2705 **Order Management**: limit + market, post-only, GTC/GTD/FOK/FAK, batch - \u2705 **RFQ**: request-for-quote flow - \u2705 **WebSocket** \u2014 `/ws/market` + `/ws/user` with typed dispatcher, read deadline, reconnect-aware sentinels - \u2705 **Bridge** \u2014 cross-chain deposit/withdraw via `bridge.polymarket.com` - \u2705 **Rewards / Rebates** \u2014 full earnings + market reward configs - \u2705 **Gasless on-chain ops** \u2014 split / merge / redeem / convert / wrap USDC.e\u2192pUSD - \u2705 **Strong typing** + byte-for-byte tested against py-clob-client-v2 golden signatures ## What's new in v0.3.0 Full V2 migration plus four new module groups. Quick taste of each \u2014 see [CHANGELOG.md](CHA",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "106968687/DTC-SC",
+    "requested_name": "106968687/DTC-SC",
+    "id": 240872282,
+    "url": "https://github.com/106968687/DTC-SC",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The smart contracts for data trading certification",
+    "stars": 4,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09",
+    "last_commit_date": "2020-06-18T03:51:58Z",
+    "pushed_at_not_commit_date": "2020-06-18T03:51:59Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "106968687",
+        "contributions": 6,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "9d77a87956e5c24b6985046a10373059033bc0ad1e4bbb94803f368a22083457",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "CDSC.sol",
+      "DTSC.sol",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/106968687/DTC-SC",
+      "commit": "https://github.com/106968687/DTC-SC/commit/89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09",
+      "readme": "https://github.com/106968687/DTC-SC/blob/89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/106968687/DTC-SC/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/106968687/DTC-SC/contributors",
+      "issues": "https://api.github.com/repos/106968687/DTC-SC/issues"
+    },
+    "readme_excerpt": "# DTC-SC The smart contracts for data trading certification",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "1nchaos/adata",
+    "requested_name": "1nchaos/adata",
+    "id": 644231758,
+    "url": "https://github.com/1nchaos/adata",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\u514d\u8d39\u5f00\u6e90A\u80a1\u91cf\u5316\u4ea4\u6613\u6570\u636e\u5e93\uff1b \u4e13\u6ce8A\u80a1\uff0c\u4e13\u6ce8\u91cf\u5316\uff0c\u5411\u9633\u800c\u751f\uff1b \u5f00\u653e\u3001\u7eaf\u51c0\u3001\u6301\u7eed\u3001\u4e3aAi(\u7231)\u53d1\u7535\u3002\u4e3a\u4e2a\u4eba\u91cf\u5316\u4ea4\u6613\u800c\u751f\uff0c\u4fdd\u536b3000\u70b9\uff0c\u73cd\u60dc\u5e95\u90e8\u673a\u4f1a......\u3010\u80a1\u7968\u6570\u636e\uff0c\u80a1\u7968\u884c\u60c5\u6570\u636e\uff0c\u80a1\u7968\u91cf\u5316\u6570\u636e\uff0c\u80a1\u7968\u4ea4\u6613\u6570\u636e\uff0ck\u7ebf\u884c\u60c5\u6570\u636e\uff0c\u80a1\u7968\u6982\u5ff5\u6570\u636e\uff0c\u80a1\u7968\u6570\u636e\u63a5\u53e3\uff0c\u884c\u60c5\u6570\u636e\u63a5\u53e3\uff0c\u91cf\u5316\u4ea4\u6613\u6570\u636e\u3011\u3010\u591a\u6570\u636e\u6e90\u878d\u5408\uff0c\u52a8\u6001\u8bbe\u7f6e\u4ee3\u7406\uff0c\u4fdd\u969c\u6570\u636e\u9ad8\u53ef\u7528\u6027\u3011",
+    "stars": 5187,
+    "forks": 696,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "b14f4e57b2175302f18b6eaf934f7dff9207a141",
+    "last_commit_date": "2025-12-26T11:09:57Z",
+    "pushed_at_not_commit_date": "2025-12-26T11:09:57Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "1nchaos",
+        "contributions": 299,
+        "type": "User"
+      },
+      {
+        "login": "dominicx",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "MegaWall3",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Secondfish90",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "komomoo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Lorry1123",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "LuneZ99",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fenggeHu",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "itdragons",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "top2189",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/1nchaos/adata/issues/188",
+      "created_at": "2026-08-27T09:05:12Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3a95a4770076c796633691063c3e6cb9fd28feff194134a1359fe3b9e51164d5",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "HISTORY.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "adata",
+      "config.toml",
+      "docs",
+      "pylintrc",
+      "pyproject.toml",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/1nchaos/adata/blob/b14f4e57b2175302f18b6eaf934f7dff9207a141/pyproject.toml",
+        "sha256": "4b825f05740b4f76a9a13c9f5d66a86dd70f7d8c91cf525910148d23cc9ec57b"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/1nchaos/adata/blob/b14f4e57b2175302f18b6eaf934f7dff9207a141/requirements.txt",
+        "sha256": "2614e932d2986d0a958f316c5d6dad74325f9c17bd40be542f6b7b716e3ca80f"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "1nchaos/adata",
+      "capability_tag": "none",
+      "category_slug": "client-library-sdk",
+      "summary": "Open-source A-share stock data API for quantitative trading",
+      "reuse_value": 65,
+      "stars": 4800,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "url": "https://github.com/1nchaos/adata",
+      "rank_score": 65048000
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "1nchaos/adata",
+      "stars": 4800,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 65,
+      "liftability": 90,
+      "fame_gap": -25,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "\u514d\u8d39\u5f00\u6e90A\u80a1\u91cf\u5316\u4ea4\u6613\u6570\u636e\u5e93\uff1b \u4e13\u6ce8A\u80a1\uff0c\u4e13\u6ce8\u91cf\u5316\uff0c\u5411\u9633\u800c\u751f\uff1b \u5f00\u653e\u3001\u7eaf\u51c0\u3001\u6301\u7eed\u3001\u4e3aAi(\u7231)\u53d1\u7535\u3002\u4e3a\u4e2a\u4eba\u91cf\u5316\u4ea4\u6613\u800c\u751f\uff0c\u4fdd\u536b3000\u70b9\uff0c\u73cd\u60dc\u5e95\u90e8\u673a\u4f1a......\u3010\u80a1\u7968\u6570\u636e\uff0c\u80a1\u7968\u884c\u60c5\u6570\u636e\uff0c\u80a1\u7968\u91cf\u5316\u6570\u636e\uff0c\u80a1\u7968\u4ea4\u6613\u6570\u636e\uff0ck\u7ebf\u884c\u60c5\u6570\u636e\uff0c\u80a1\u7968\u6982\u5ff5\u6570\u636e\uff0c"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "B",
+        "query": "topic:market-data"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/1nchaos/adata",
+      "commit": "https://github.com/1nchaos/adata/commit/b14f4e57b2175302f18b6eaf934f7dff9207a141",
+      "readme": "https://github.com/1nchaos/adata/blob/b14f4e57b2175302f18b6eaf934f7dff9207a141/README.md",
+      "license": "https://github.com/1nchaos/adata/blob/b14f4e57b2175302f18b6eaf934f7dff9207a141/LICENSE",
+      "recent_commits": "https://api.github.com/repos/1nchaos/adata/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/1nchaos/adata/contributors",
+      "issues": "https://api.github.com/repos/1nchaos/adata/issues"
+    },
+    "readme_excerpt": "# [AData](https://adata.30006124.xyz) ![GitHub language count](https://img.shields.io/github/languages/count/1nchaos/adata)![GitHub top language](https://img.shields.io/github/languages/top/1nchaos/adata)[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/adata?color=d)](https://pypi.org/project/adata/)[![Licence](https://img.shields.io/hexpm/l/apa?color=d)](https://gitee.com/inchaos/adata/blob/main/LICENSE)[![Downloads](https://static.pepy.tech/badge/adata/week)](https://pepy.tech/project/adata)![GitHub Repo stars](https://img.shields.io/github/stars/1nchaos/adata)![GitHub issues](https://img.shields.io/github/issues/1nchaos/adata)![GitHub contributors](https://img.shields.io/github/contributors/1nchaos/adata)![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/1nchaos/adata)[![Downloads](https://static.pepy.tech/badge/adata)](https://pepy.tech/project/adata)![PyPI - Version](https://img.shields.io/pypi/v/adata) ## 0\u3001[\u4ecb\u7ecd](https://adata.30006124.xyz/idea.html) > \u4e13\u6ce8A\u80a1\uff0c\u4e13\u6ce8\u91cf\u5316\uff0c\u5411\u9633\u800c\u751f\uff1b\u5f00\u653e\u3001\u7eaf\u51c0\u3001\u6301\u7eed\u3001\u4e3aAi(\u7231)\u53d1\u7535\u3002 > > \u4e13\u6ce8\u80a1\u7968\u884c\u60c5\u6570\u636e\uff0c\u4e3a\u4e86\u4fdd\u8bc1\u6570\u636e\u7684\u9ad8\u53ef\u7528\u6027\uff0c\u91c7\u7528\u591a\u6570\u636e\u6e90\u878d\u5408\u5207\u6362\u3002 > > \u76ee\u6807\uff1a\u652f\u6301\u4e2a\u4eba\u91cf\u5316\u884c\u60c5\u7684\u9700\u8981\uff1b\u4f17\u4eba\u62fe\u67f4\u706b\u7130\u9ad8\uff0c\u6b22\u8fce\u52a0\u5165\u3002 **\u5e02\u573a\u5bd2\u51b7\uff0c\u53d1\u70ed\u4e0d\u6613\uff0c\u575a\u6301\u66f4\u96be\uff1b\u5982\u6709\u5e2e\u52a9\u5230\u4f60\uff0c\u53f3\u4e0a\u89d2\u70b9 \u2b50Star \u4e00\u952e\u4e09\u8fde\uff0c\u8c22\u8c22\u652f\u6301\u548c\u6536\u85cf^_^** ## \u4e00\u3001[\u5feb\u901f\u5f00\u59cb](https://adata.30006124.xyz/quickStart.html) ### \uff081\uff09\u5b89\u88c5sdk ~~~python # \u9996\u6b21\u5b89\u88c5 pip install adata # \u6307\u5b9a\u955c\u50cf\u6e90 pip install adata -i http://mirrors.aliyun.com/pypi/simple/ # \u5347\u7ea7\u7248\u672c pip install -U adata # \u6307\u5b9a\u955c\u50cf\u6e90 pip install -U adata -",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "aarora4/Awesome-Prediction-Market-Tools",
+    "requested_name": "aarora4/Awesome-Prediction-Market-Tools",
+    "id": 1107240622,
+    "url": "https://github.com/aarora4/Awesome-Prediction-Market-Tools",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A curated list of Prediction Market Tools - AI Agents, Analytics, APIs, Dashboards, Copy Trading, Alerting, Tracking and More!!",
+    "stars": 740,
+    "forks": 253,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "865e5e9fc4698c05a7b546159b097203cbe54af3",
+    "last_commit_date": "2026-09-03T22:24:58Z",
+    "pushed_at_not_commit_date": "2026-09-03T22:24:58Z",
+    "commits_since_20260313_count_capped100": 39,
+    "recent_commit_authors": [
+      "Atwood1236",
+      "YichengYang-Ethan",
+      "aaronjmars",
+      "aarora4",
+      "adamewozniak",
+      "adlai88",
+      "alexander-schneider",
+      "arshka",
+      "austin02202016",
+      "bartolomej",
+      "elpou88",
+      "ibruno",
+      "ken-octagon",
+      "pablo2811",
+      "singulariteer"
+    ],
+    "contributors_sample": [
+      {
+        "login": "aarora4",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "bartolomej",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "Atwood1236",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "adamewozniak",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "akegaviar",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "arshka",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ibruno",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "elpou88",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "realfishsam",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "aaronjmars",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "adlai88",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "allquantor",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "austin02202016",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ken-octagon",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "libaice",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "maamalama",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pablo2811",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bolivian-peru",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "singulariteer",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "37b2ff43620affb6293c3a1f1939086369a16e89c2e3dcc16394ea0ab8259c4e",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "A",
+        "query": "trading alerts"
+      },
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/aarora4/Awesome-Prediction-Market-Tools",
+      "commit": "https://github.com/aarora4/Awesome-Prediction-Market-Tools/commit/865e5e9fc4698c05a7b546159b097203cbe54af3",
+      "readme": "https://github.com/aarora4/Awesome-Prediction-Market-Tools/blob/865e5e9fc4698c05a7b546159b097203cbe54af3/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/aarora4/Awesome-Prediction-Market-Tools/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/aarora4/Awesome-Prediction-Market-Tools/contributors",
+      "issues": "https://api.github.com/repos/aarora4/Awesome-Prediction-Market-Tools/issues"
+    },
+    "readme_excerpt": "# Awesome Prediction Market Tools [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re) > The most complete, community-maintained directory of prediction market tools \u2014 analytics platforms, trading bots, dashboards, APIs, data feeds, alert systems, educational resources, and more. > Covering Polymarket, Kalshi, Manifold, Hyperliquid, and the wider forecasting ecosystem. Pull requests welcome \u2014 add your tool or improve the list! --- ## \u2b50 Featured: Oddpool **[Oddpool](https://www.oddpool.com)** \u2014 _The Bloomberg for prediction markets._ Oddpool aggregates cross-venue prediction market data across platforms like Polymarket and Kalshi, including live odds, spreads, liquidity, orderbook depth, arbitrage opportunities, and historical market data. It provides real-time feeds, analytics dashboards, and institutional-grade datasets for traders, quants, and researchers building strategies or analyzing prediction-market microstructure. \ud83d\udc49 **Check out the live dashboards:** **https://www.oddpool.com** --- ## Contents - [\ud83e\udde0 AI Agents](#ai-agents) - [\ud83e\udde9 APIs](#apis) - [\ud83d\udd39 Aggregator](#aggregator) - [\ud83d\udd14 Alerts](#alerts) - [\ud83d\udcca Analytics Tools](#analytics-tools) - [\ud83d\udd39 Arbitrage tools](#arbitrage-tools) - [\ud83d\udcc8 Dashboards](#dashboards) - [\ud83d\udce1 Data](#data) - [\ud83d\udcb8 DeFi](#defi) - [\ud83d\udcda Educational Resources](#educational-resources) - [\ud83d\udd39 Extensions](#extensions) - [\ud83d\udd39 Funds](#funds) - [\ud83c\udfd7\ufe0f Infrastructure]",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "aasmith/ofx-parser",
+    "requested_name": "aasmith/ofx-parser",
+    "id": 47769,
+    "url": "https://github.com/aasmith/ofx-parser",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Parses OFX",
+    "stars": 59,
+    "forks": 37,
+    "archived": false,
+    "fork": false,
+    "language": "Ruby",
+    "default_branch": "master",
+    "latest_commit": "fa26c9360ed81b80617a2ed5edd3966dff84ba4b",
+    "last_commit_date": "2015-04-06T20:55:27Z",
+    "pushed_at_not_commit_date": "2020-11-30T16:51:32Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "aasmith",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "jsmecham",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jisaac01",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "medius",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "danawoodman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "libkazz",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "russss",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/aasmith/ofx-parser/issues/21",
+      "created_at": "2025-07-08T08:26:41Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.txt",
+    "readme_sha256": "6a241650fbf6ac04bcfe4a2624ee06471f2708f464ba424ab0b66ba693dc5a1c",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "History.txt",
+      "Manifest.txt",
+      "README.txt",
+      "Rakefile",
+      "lib",
+      "ofx-parser.gemspec",
+      "test"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/aasmith/ofx-parser",
+      "commit": "https://github.com/aasmith/ofx-parser/commit/fa26c9360ed81b80617a2ed5edd3966dff84ba4b",
+      "readme": "https://github.com/aasmith/ofx-parser/blob/fa26c9360ed81b80617a2ed5edd3966dff84ba4b/README.txt",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/aasmith/ofx-parser/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/aasmith/ofx-parser/contributors",
+      "issues": "https://api.github.com/repos/aasmith/ofx-parser/issues"
+    },
+    "readme_excerpt": "== ofx-parser by Andrew A. Smith http://ofx-parser.rubyforge.org/ http://rubyforge.org/projects/ofx-parser/ == DESCRIPTION: ofx-parser is a ruby library to parse a realistic subset of the lengthy OFX 1.x specification. == FEATURES/PROBLEMS: * Reads OFX responses - i.e. those downloaded from financial institutions and puts it into a usable object graph. * Supports the 3 main message sets: banking, credit card and investment accounts, as well as the required 'sign on' set. * Knows about SIC codes - if your institution provides them. See http://www.eeoc.gov/stats/jobpat/siccodes.html * Monetary amounts can be retrieved either as a raw string, or in pennies. * Supports OFX timestamps. == SYNOPSIS: Supports bank accounts: require 'rubygems' require 'ofx-parser' ofx = OfxParser::OfxParser.parse(open(\"bank-statement.ofx\")) bank_acct = ofx.bank_accounts.first bank_acct.number # => '103333333333' bank_acct.routing_number # => '033000033' bank_acct.balance # => '123.45' bank_acct.balance_in_pennies # => 12345 bank_acct.statement.start_date # => DateTime bank_acct.statement.end_date # => DateTime bank_acct.statement.transactions.size # => 4 bank_acct.statement.transactions.first.payee # => \"FOO, INC.\" bank_acct.statement.transactions.first.type # => :DEBIT bank_acct.statement.transactions.first.amount # => '-11.11' bank_acct.statement.transactions.first.amount_in_pennies # => -1111 Also s",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "ab2163/market-data-streamer",
+    "requested_name": "ab2163/market-data-streamer",
+    "id": 1094409683,
+    "url": "https://github.com/ab2163/market-data-streamer",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "High-performance market data streamer and order book reconstruction engine. Streams Databento DBN data and rebuilds a market-by-order (MBO) book with low latency.",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "main",
+    "latest_commit": "f57cc729f6568cdd9253b9936ca81f83f1a230e6",
+    "last_commit_date": "2025-11-28T15:44:31Z",
+    "pushed_at_not_commit_date": "2025-11-28T15:44:39Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "ab2163",
+        "contributions": 46,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "9b3fd11240de649d190c00c1c412976950eea271e5494148fa48764f66a5df38",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "6f4528d42c559418d53cff2898448c0e8a46c7c0f2e08179955f148f0705dc80",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "data",
+      "docs",
+      "run_bench.sh",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ab2163/market-data-streamer",
+      "commit": "https://github.com/ab2163/market-data-streamer/commit/f57cc729f6568cdd9253b9936ca81f83f1a230e6",
+      "readme": "https://github.com/ab2163/market-data-streamer/blob/f57cc729f6568cdd9253b9936ca81f83f1a230e6/README.md",
+      "license": "https://github.com/ab2163/market-data-streamer/blob/f57cc729f6568cdd9253b9936ca81f83f1a230e6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ab2163/market-data-streamer/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ab2163/market-data-streamer/contributors",
+      "issues": "https://api.github.com/repos/ab2163/market-data-streamer/issues"
+    },
+    "readme_excerpt": "# Market Data Streamer and Order Book Engine High-throughput C++ system that replays historical market data over TCP to multiple clients, which reconstruct limit order books and track best bid/offer (BBO) in real time. ## At a Glance * *High throughput*: ~1M messages/second (single client) and ~2.5M messages/second aggregate (five clients). * *Order book engine*: builds order books from MBO (message-by-order) data using exchange-style semantics (e.g. modify changes order priority). * *Modern C++ implementation*: uses `std::unordered_map` and tracked best bid/ask for speed, batched TCP sends, and a simple thread pool for scaling. * *Tests and benchmarks included*: Catch2 unit and integration tests and a benchmark script that runs with a user-selected number of clients. ![Class diagram](/docs/system-diag.png) ## Benchmarks and Tests **Benchmark script** (`run_bench.sh`) runs system with user-selected number of clients and reports: * Messages sent * Messages received * Error rates * Throughput (messages/second) **Catch2 tests:** * Unit tests for order book engine * Unit tests for TCP mechanics * Integration tests covering entire pipeline ## Performance **Single Client** ~1M messages/second **Five Clients** ~500k messages/second per client Benchmarks were run on i7 dual-core laptop with Ubuntu 22.04. ## Getting Started *Prerequisites* * Linux environment (tested on Ubuntu 22.04) * ",
+    "license_excerpt": "MIT License Copyright (c) 2025 Ajinkya Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice a"
+  },
+  {
+    "full_name": "abdelkaderamar/fix2xml",
+    "requested_name": "abdelkaderamar/fix2xml",
+    "id": 125433874,
+    "url": "https://github.com/abdelkaderamar/fix2xml",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A C++ library to convert messages between Quickfix and FIXML",
+    "stars": 3,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "fa781b747a8e40ed4c2d3dee8294fb51654f7428",
+    "last_commit_date": "2018-09-06T13:02:11Z",
+    "pushed_at_not_commit_date": "2018-09-06T13:02:22Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "abdelkaderamar",
+        "contributions": 55,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "34cd0858ba6df9bb00e5fe03b9bf2ae028630ad30d8d7e8b6ffe61cc4a3eded4",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "996fac0678fe4dbe155dabe918b7ede70f46ea3c76c3b85dfee0876251a1eb9f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".travis.yml",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "TODO",
+      "cmake",
+      "spec",
+      "src",
+      "test",
+      "tools"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "FIXML"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/abdelkaderamar/fix2xml",
+      "commit": "https://github.com/abdelkaderamar/fix2xml/commit/fa781b747a8e40ed4c2d3dee8294fb51654f7428",
+      "readme": "https://github.com/abdelkaderamar/fix2xml/blob/fa781b747a8e40ed4c2d3dee8294fb51654f7428/README.md",
+      "license": "https://github.com/abdelkaderamar/fix2xml/blob/fa781b747a8e40ed4c2d3dee8294fb51654f7428/LICENSE",
+      "recent_commits": "https://api.github.com/repos/abdelkaderamar/fix2xml/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/abdelkaderamar/fix2xml/contributors",
+      "issues": "https://api.github.com/repos/abdelkaderamar/fix2xml/issues"
+    },
+    "readme_excerpt": "# FIX2XML Key Features How To Use Compilation Credit License ## Key Features - Convert C++ quickfix messages to FIXML - Convert a FIXML messages to a C++ quickfix messages ## How To Use The code below shows how to convert a C++ quickfix message to its FIXML representation. ```cpp fixml2fix_converter converter (fix_filename, xsd_schema); NewOrderSingle fix_message; // set FIX messages fields // ... // ... converter.fix2fixml(fix_message, str); ``` The conversion from a FIXML message to its equivalent C++ quickfix message can be done using the same converter type `fixml2fix_converter` ```cpp string str = \" \" \" \" \" \" \" \" \" \" \" \" ; FIX::Message fix_msg; converter.fixml2fix(str, fix_msg); ``` ## Compilation ## Credit - [gcc](https://gcc.gnu.org/) - [boost](https://www.boost.org/) - [Apache Xerces-C++](http://xerces.apache.org/xerces-c/) - [Cmake](https://cmake.org/) - [Google Test](https://github.com/google/googletest) ## License MIT",
+    "license_excerpt": "MIT License Copyright (c) 2018 abdelkaderamar Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright n"
+  }
+]

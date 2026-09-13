@@ -1,0 +1,1435 @@
+[
+  {
+    "full_name": "hugodemenez/deltalytix",
+    "requested_name": "hugodemenez/deltalytix",
+    "id": 850416509,
+    "url": "https://github.com/hugodemenez/deltalytix",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Trading journal with AI agents and dashboard with statistics",
+    "stars": 153,
+    "forks": 59,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "1f05079d89ff13227253af552be32db9112de87e",
+    "last_commit_date": "2026-09-10T13:20:19Z",
+    "pushed_at_not_commit_date": "2026-09-12T16:46:44Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "cursoragent",
+      "hugh-deltalytix",
+      "hugodemenez"
+    ],
+    "contributors_sample": [
+      {
+        "login": "hugodemenez",
+        "contributions": 1631,
+        "type": "User"
+      },
+      {
+        "login": "cursoragent",
+        "contributions": 149,
+        "type": "User"
+      },
+      {
+        "login": "Copilot",
+        "contributions": 70,
+        "type": "Bot"
+      },
+      {
+        "login": "claude",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "hugh-deltalytix",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 8,
+        "type": "Bot"
+      },
+      {
+        "login": "cursor[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/hugodemenez/deltalytix/issues/512",
+      "created_at": "2026-09-09T02:51:51Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4e619a382546e21ad62e5a404d6609a664aab778cbc86a0c77b32d415af95c1b",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "430486a58434c559894948fda1d2a3d05fc4e63a7bb150ac430836ca61946063",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".cursor",
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "Dockerfile.bun",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "SELF_HOSTING.md",
+      "agents",
+      "app",
+      "bun.lock",
+      "components.json",
+      "components",
+      "content",
+      "context",
+      "docker-compose.yml",
+      "eslint.config.mjs",
+      "hooks",
+      "instrumentation-client.ts",
+      "instrumentation.ts",
+      "lib",
+      "locales",
+      "mdx-components.tsx",
+      "next.config.ts",
+      "package.json",
+      "postcss.config.mjs",
+      "prisma.config.ts",
+      "prisma",
+      "proxy.test.ts",
+      "proxy.ts",
+      "public",
+      "scripts",
+      "server",
+      "skills-lock.json",
+      "store",
+      "supabase",
+      "tailwind.config.ts",
+      "tsconfig.json",
+      "types",
+      "vercel.json",
+      "videos",
+      "vitest.config.ts",
+      "vitest.e2e.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/hugodemenez/deltalytix/blob/1f05079d89ff13227253af552be32db9112de87e/package.json",
+        "sha256": "dde69832c6c14d7e09c044580a32928778c3f0390273600e9d22e2e9950a3069"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      },
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "B",
+        "query": "topic:trading-journal"
+      },
+      {
+        "round": 3,
+        "stage": "W09",
+        "lane": "topic",
+        "query": "topic:trading-journal pushed:>2026-03-13"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/hugodemenez/deltalytix",
+      "commit": "https://github.com/hugodemenez/deltalytix/commit/1f05079d89ff13227253af552be32db9112de87e",
+      "readme": "https://github.com/hugodemenez/deltalytix/blob/1f05079d89ff13227253af552be32db9112de87e/README.md",
+      "license": "https://github.com/hugodemenez/deltalytix/blob/1f05079d89ff13227253af552be32db9112de87e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/hugodemenez/deltalytix/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/hugodemenez/deltalytix/contributors",
+      "issues": "https://api.github.com/repos/hugodemenez/deltalytix/issues"
+    },
+    "readme_excerpt": "# Deltalytix Open-source trading journal and analytics for futures and prop-firm traders [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/) [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/) [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/a5YVF5Ec2n) [\ud83d\ude80 Live app](https://deltalytix.app) \u2022 [\ud83d\udcac Discord](https://discord.gg/a5YVF5Ec2n) \u2022 [\ud83d\udc1b Report a bug](https://github.com/hugodemenez/deltalytix/issues) --- Deltalytix pulls your fills out of your broker, turns them into a performance record you can actually read, and helps you work out which of your habits are making money and which are costing it. It is built for traders juggling several funded and live accounts, where the hard part is not placing the trade but keeping an honest account of what happened afterwards. Use it hosted at [deltalytix.app](https://deltalytix.app), or run the whole thing yourself. ## What it does **Get your trades in.** Direct sync for Rithmic, Tradovate, Thor, and DXfeed. File and statement import for Interactive Brokers PDFs, ATAS, FTMO, ",
+    "license_excerpt": "Creative Commons Attribution-NonCommercial 4.0 International License Copyright (c) 2024-present Deltalytix. This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. You are free to: Share \u2014 copy and redistribute the material in any medium or format Adapt \u2014 remix, transform, and build upon"
+  },
+  {
+    "full_name": "hummingbot/gateway",
+    "requested_name": "hummingbot/gateway",
+    "id": 593895987,
+    "url": "https://github.com/hummingbot/gateway",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Middleware that standardizes DEX API endpoints on different blockchain networks",
+    "stars": 259,
+    "forks": 289,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "f090f4ab7a8159b85fca2f3d4467970a5231cf5f",
+    "last_commit_date": "2026-07-29T21:16:23Z",
+    "pushed_at_not_commit_date": "2026-09-13T08:01:11Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "cardosofede",
+      "fengtality",
+      "mlguys",
+      "nikspz",
+      "rapcmia",
+      "smypmsa"
+    ],
+    "contributors_sample": [
+      {
+        "login": "fengtality",
+        "contributions": 1393,
+        "type": "User"
+      },
+      {
+        "login": "vic-en",
+        "contributions": 218,
+        "type": "User"
+      },
+      {
+        "login": "nikspz",
+        "contributions": 210,
+        "type": "User"
+      },
+      {
+        "login": "rapcmia",
+        "contributions": 169,
+        "type": "User"
+      },
+      {
+        "login": "mlguys",
+        "contributions": 93,
+        "type": "User"
+      },
+      {
+        "login": "OjusWiZard",
+        "contributions": 70,
+        "type": "User"
+      },
+      {
+        "login": "isreallee82",
+        "contributions": 42,
+        "type": "User"
+      },
+      {
+        "login": "chesoft",
+        "contributions": 30,
+        "type": "User"
+      },
+      {
+        "login": "tiagofilipenunes",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "petioptrv",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "CrimsonJacket",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "WuonParticle",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "elijahsnoz",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "cardosofede",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "cuddle-dev",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "smypmsa",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "david-hummingbot",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 7,
+        "type": "Bot"
+      },
+      {
+        "login": "harjas27",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "klpanagi",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "gzliudan",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gglucass",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gordonkoehn",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "nkhrs",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "vpashkov",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "james-hummingbot",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "alvaro-mota-funttastic",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sytranvn",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "flanagansteve",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "PaulGiancarlo",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/hummingbot/gateway/issues/694",
+      "created_at": "2026-09-05T10:16:38Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "b96da90637464b03ca11d05bdf1cef1aa1b06ac59771a491c2cffc51d6f04cde",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2c6cefe56c039f3b8deca102f1a801d444f759682af5401e39245e2b67dd8820",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".prettierignore",
+      ".prettierrc",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Changelog.md",
+      "Dockerfile",
+      "GEMINI.md",
+      "LICENSE",
+      "README.md",
+      "docker-compose.yml",
+      "gateway-setup.sh",
+      "jest.config.js",
+      "nodemon.json",
+      "openapi.json",
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "scripts",
+      "src",
+      "test",
+      "tsconfig.build.json",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/hummingbot/gateway/blob/f090f4ab7a8159b85fca2f3d4467970a5231cf5f/package.json",
+        "sha256": "268256db2c85edd1cfbbf420b3ed26d0485d85fbf83a80378d13a88539957621"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/hummingbot/gateway",
+      "commit": "https://github.com/hummingbot/gateway/commit/f090f4ab7a8159b85fca2f3d4467970a5231cf5f",
+      "readme": "https://github.com/hummingbot/gateway/blob/f090f4ab7a8159b85fca2f3d4467970a5231cf5f/README.md",
+      "license": "https://github.com/hummingbot/gateway/blob/f090f4ab7a8159b85fca2f3d4467970a5231cf5f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/hummingbot/gateway/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/hummingbot/gateway/contributors",
+      "issues": "https://api.github.com/repos/hummingbot/gateway/issues"
+    },
+    "readme_excerpt": "``` \u2554\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2557 \u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2557 \u2588\u2588\u2557 \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255d \u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u255a\u2550\u2550\u2588\u2588\u2554\u2550\u2550\u255d\u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255d\u2588\u2588\u2551 \u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u255a\u2588\u2588\u2557 \u2588\u2588\u2554\u255d \u2588\u2588\u2551 \u2588\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2551 \u2588\u2557 \u2588\u2588\u2551\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u255a\u2588\u2588\u2588\u2588\u2554\u255d \u2588\u2588\u2551 \u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u255d \u2588\u2588\u2551\u2588\u2588\u2588\u2557\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2551 \u255a\u2588\u2588\u2554\u255d \u255a\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2551 \u2588\u2588\u2551 \u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u255a\u2588\u2588\u2588\u2554\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2551 \u2588\u2588\u2551 \u2588\u2588\u2551 \u255a\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u255d \u255a\u2550\u255d \u255a\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u255d\u255a\u2550\u2550\u255d \u255a\u2550\u255d \u255a\u2550\u255d \u255a\u2550\u255d ``` # Hummingbot Gateway ## Introduction Hummingbot Gateway is a versatile API server that standardizes interactions with blockchain networks and decentralized exchanges (DEXs). It acts as a middleware layer, providing a unified interface for performing actions like checking balances, executing trades, and managing wallets across different protocols. Gateway can be accessed through: - **REST API**: Direct HTTP/HTTPS endpoints for programmatic access - **Hummingbot Client**: For automated trading strategies, use the [Hummingbot repository](https://github.com/hummingbot/hummingbot) ### Key Features - **Standardized REST API**: Consistent endpoints for interacting with blockchains (Ethereum, Solana) and DEXs (Uniswap, Jupiter, Raydium, Meteora, PancakeSwap, 0x) - **Three Trading Types**: Router (DEX aggregators), AMM (V2-style pools), and CLMM (V3-style concentrated liquidity) - **Modular Architecture**: Clear separation of concerns with distinct modules for chains, connectors, configuration, and wallet management - **TypeScript-based**: Leverages the TypeScri",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "hummingbot/hummingbot",
+    "requested_name": "hummingbot/hummingbot",
+    "id": 179163124,
+    "url": "https://github.com/hummingbot/hummingbot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open source software that helps you create and deploy high-frequency crypto trading bots",
+    "stars": 19987,
+    "forks": 4924,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "2bfaccc48dd49e71a5b6d9b3011808e127dd00cd",
+    "last_commit_date": "2026-07-30T21:20:02Z",
+    "pushed_at_not_commit_date": "2026-09-10T21:33:04Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "cardosofede",
+      "chevoisiatesalvati",
+      "dizpers",
+      "erickuhn19",
+      "fengtality",
+      "lgrawet",
+      "nikspz",
+      "petioptrv",
+      "rapcmia",
+      "ybapat"
+    ],
+    "contributors_sample": [
+      {
+        "login": "cardosofede",
+        "contributions": 3058,
+        "type": "User"
+      },
+      {
+        "login": "vic-en",
+        "contributions": 1589,
+        "type": "User"
+      },
+      {
+        "login": "Nullably",
+        "contributions": 1577,
+        "type": "User"
+      },
+      {
+        "login": "fengtality",
+        "contributions": 1576,
+        "type": "User"
+      },
+      {
+        "login": "yzhang1994",
+        "contributions": 1277,
+        "type": "User"
+      },
+      {
+        "login": "nikspz",
+        "contributions": 1230,
+        "type": "User"
+      },
+      {
+        "login": "petioptrv",
+        "contributions": 965,
+        "type": "User"
+      },
+      {
+        "login": "dennisocana",
+        "contributions": 901,
+        "type": "User"
+      },
+      {
+        "login": "rapcmia",
+        "contributions": 893,
+        "type": "User"
+      },
+      {
+        "login": "JeremyKono",
+        "contributions": 673,
+        "type": "User"
+      },
+      {
+        "login": "aarmoa",
+        "contributions": 640,
+        "type": "User"
+      },
+      {
+        "login": "CrimsonJacket",
+        "contributions": 510,
+        "type": "User"
+      },
+      {
+        "login": "tomasgaudino",
+        "contributions": 503,
+        "type": "User"
+      },
+      {
+        "login": "isreallee82",
+        "contributions": 485,
+        "type": "User"
+      },
+      {
+        "login": "mlguys",
+        "contributions": 326,
+        "type": "User"
+      },
+      {
+        "login": "michaelc9",
+        "contributions": 312,
+        "type": "User"
+      },
+      {
+        "login": "veecos2",
+        "contributions": 307,
+        "type": "User"
+      },
+      {
+        "login": "Danilo-Araujo-Silva",
+        "contributions": 301,
+        "type": "User"
+      },
+      {
+        "login": "TheHolyRoger",
+        "contributions": 298,
+        "type": "User"
+      },
+      {
+        "login": "PtrckM",
+        "contributions": 289,
+        "type": "User"
+      },
+      {
+        "login": "chowryan",
+        "contributions": 255,
+        "type": "User"
+      },
+      {
+        "login": "MementoRC",
+        "contributions": 229,
+        "type": "User"
+      },
+      {
+        "login": "klpanagi",
+        "contributions": 191,
+        "type": "User"
+      },
+      {
+        "login": "kmcgowan2000",
+        "contributions": 170,
+        "type": "User"
+      },
+      {
+        "login": "martinkou",
+        "contributions": 142,
+        "type": "User"
+      },
+      {
+        "login": "leastchaos",
+        "contributions": 128,
+        "type": "User"
+      },
+      {
+        "login": "carlolm",
+        "contributions": 108,
+        "type": "User"
+      },
+      {
+        "login": "willaPa",
+        "contributions": 97,
+        "type": "User"
+      },
+      {
+        "login": "mhrvth",
+        "contributions": 95,
+        "type": "User"
+      },
+      {
+        "login": "navijation",
+        "contributions": 91,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/hummingbot/hummingbot/issues/8437",
+      "created_at": "2026-08-26T12:25:46Z",
+      "state": "open",
+      "comments": 4,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "179e404ee85129a0b714d234246b0b9c13345f1ce19f50dd065e8c83af28c1c7",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f0dd03c14db3dfbce03c166645f88fda96599ad1a5d217fddb49134de8c72a29",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".coveragerc",
+      ".dockerignore",
+      ".flake8",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "CURSOR_VSCODE_SETUP.md",
+      "Dockerfile",
+      "LICENSE",
+      "MANIFEST.in",
+      "Makefile",
+      "README.md",
+      "bin",
+      "clean",
+      "compile",
+      "compile.bat",
+      "conf",
+      "controllers",
+      "docker-compose.yml",
+      "hummingbot",
+      "install",
+      "logs",
+      "pyproject.toml",
+      "scripts",
+      "setup.py",
+      "setup",
+      "start",
+      "test",
+      "uninstall"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/hummingbot/hummingbot/blob/2bfaccc48dd49e71a5b6d9b3011808e127dd00cd/pyproject.toml",
+        "sha256": "e85650c33216ef0ebc8b04108b5602ef098ee4eef08d75cf74851328e78d4109"
+      },
+      "setup.py": {
+        "url": "https://github.com/hummingbot/hummingbot/blob/2bfaccc48dd49e71a5b6d9b3011808e127dd00cd/setup.py",
+        "sha256": "d4d41020032480833fdcacec4470d93331c569f29cc974868cc9e4c348db2733"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "hummingbot/hummingbot",
+      "stars": 18963,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "substrate",
+      "reuse_value": 85,
+      "liftability": 20,
+      "fame_gap": 65,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Open source software that helps you create and deploy high-frequency crypto trading bots"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "B",
+        "query": "topic:quantitative-finance"
+      },
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      },
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/hummingbot/hummingbot",
+      "commit": "https://github.com/hummingbot/hummingbot/commit/2bfaccc48dd49e71a5b6d9b3011808e127dd00cd",
+      "readme": "https://github.com/hummingbot/hummingbot/blob/2bfaccc48dd49e71a5b6d9b3011808e127dd00cd/README.md",
+      "license": "https://github.com/hummingbot/hummingbot/blob/2bfaccc48dd49e71a5b6d9b3011808e127dd00cd/LICENSE",
+      "recent_commits": "https://api.github.com/repos/hummingbot/hummingbot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/hummingbot/hummingbot/contributors",
+      "issues": "https://api.github.com/repos/hummingbot/hummingbot/issues"
+    },
+    "readme_excerpt": "![Hummingbot](https://github.com/user-attachments/assets/3213d7f8-414b-4df8-8c1b-a0cd142a82d8) ---- [![License](https://img.shields.io/badge/License-Apache%202.0-informational.svg)](https://github.com/hummingbot/hummingbot/blob/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url?url=https://twitter.com/_hummingbot?style=social&label=_hummingbot)](https://twitter.com/_hummingbot) [![Youtube](https://img.shields.io/youtube/channel/subscribers/UCxzzdEnDRbylLMWmaMjywOA)](https://www.youtube.com/@hummingbot) [![Discord](https://img.shields.io/discord/530578568154054663?logo=discord&logoColor=white&style=flat-square)](https://discord.gg/hummingbot) Hummingbot is an open-source framework that helps you design and deploy automated trading strategies, or **bots**, that can run on many centralized or decentralized exchanges. Over the past year, Hummingbot users have generated over $34 billion in trading volume across 140+ unique trading venues. The Hummingbot codebase is free and publicly available under the Apache 2.0 open-source license. Our mission is to **democratize high-frequency trading** by creating a global community of algorithmic traders and developers that share knowledge and contribute to the codebase. ## Quick Links * [Website and Docs](https://hummingbot.org): Official Hummingbot website and documentation * [Installation](https://hummingbot.org/installation/): I",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "Hvass-Labs/Finance-Research",
+    "requested_name": "Hvass-Labs/Finance-Research",
+    "id": 141877897,
+    "url": "https://github.com/Hvass-Labs/Finance-Research",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Research in investment finance with Python Notebooks",
+    "stars": 1132,
+    "forks": 229,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "50debc6a8ce4811daeefafa2b618fc0d21bd5440",
+    "last_commit_date": "2026-07-03T09:11:31Z",
+    "pushed_at_not_commit_date": "2026-07-03T09:11:31Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "Hvass-Labs"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Hvass-Labs",
+        "contributions": 84,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Hvass-Labs/Finance-Research/issues/4",
+      "created_at": "2021-04-30T05:10:47Z",
+      "state": "closed",
+      "comments": 5,
+      "first_staff_comment_in_sample": "2021-05-08T10:16:34Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "68cdb6ee1adf49dc5ee346dda5ec5daa6bf3e89cdf8c23f11b258ade7bec50a8",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0332c8edee4ae3a5006e82a9c7dc8cce124616be6fca65c2b07bd241433c5b6a",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "01B_Better_Long-Term_Stock_Forecasts.ipynb",
+      "01C_Theory_of_Long-Term_Stock_Forecasting.ipynb",
+      "01D_Testing_the_Stock_Forecasting_Model.ipynb",
+      "01E_Forecasting_US_Stock_Indices.ipynb",
+      "01F_Forecasting_Int_Stock_Indices.ipynb",
+      "01G_Forecasting_House_Price_Index.ipynb",
+      "01_Forecasting_Long-Term_Stock_Returns.ipynb",
+      "02_Comparing_Stock_Indices.ipynb",
+      "03_Portfolio_Optimization_Using_Signals.ipynb",
+      "04_Multi-Objective_Portfolio_Optimization.ipynb",
+      "05_Forecasting_PSales_Ratio.ipynb",
+      "06_Forecasting_Sales_Growth.ipynb",
+      "07_Forecasting_Dividends.ipynb",
+      "Forecasting_Stock_Indices.xlsx",
+      "LICENSE",
+      "Paper_Fast_Portfolio_Diversification.ipynb",
+      "Paper_Long-Term_Stock_Forecasting.ipynb",
+      "Paper_Portfolio_Group_Constraints.ipynb",
+      "Paper_Simple_Portfolio_Optimization.ipynb",
+      "Paper_Volatility_Harvesting.ipynb",
+      "README.md",
+      "curve_fit.py",
+      "data.py",
+      "data",
+      "data_keys.py",
+      "diversify.py",
+      "images",
+      "portfolio.py",
+      "portfolio_multi.py",
+      "portfolio_utils.py",
+      "recovery.py",
+      "requirements.txt",
+      "returns.py",
+      "stats.py",
+      "utils.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/requirements.txt",
+        "sha256": "22b462fffca3dc32534e8d8fceb100a0d7af2027bb4986e16b50629337ed2e04"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Hvass-Labs/Finance-Research",
+      "commit": "https://github.com/Hvass-Labs/Finance-Research/commit/50debc6a8ce4811daeefafa2b618fc0d21bd5440",
+      "readme": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/README.md",
+      "license": "https://github.com/Hvass-Labs/Finance-Research/blob/50debc6a8ce4811daeefafa2b618fc0d21bd5440/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Hvass-Labs/Finance-Research/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Hvass-Labs/Finance-Research/contributors",
+      "issues": "https://api.github.com/repos/Hvass-Labs/Finance-Research/issues"
+    },
+    "readme_excerpt": "# Finance Research [Original repository on GitHub](https://github.com/Hvass-Labs/Finance-Research) Original author is [Magnus Erik Hvass Pedersen](http://www.hvass-labs.org) ## Introduction This is a collection of research papers on long-term investing, portfolio optimization, etc. They are written as Python Notebooks so they can easily be modified and run again. ## Quick Start This research on stock valuation has been made into a web-site that everyone can easily use. Portfolio optimization will be available later. [Give it a try!](https://SimSim.Run?refcode=github-finance-research) ## Python Package The [InvestOps](https://github.com/Hvass-Labs/InvestOps) Python package contains the main results and algorithms from this research, making it very easy to use in your own Python projects. ## Papers The following Python Notebooks produce the plots and statistics for some of my \"normal\" research papers which can be downloaded from [SSRN](http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1993051) and [GitHub](https://github.com/Hvass-Labs/Finance-Papers). - Long-Term Stock Forecasting ([PDF](https://ssrn.com/abstract=3750775)) ([Video](https://www.youtube.com/watch?v=L8OtWNCQAAs)) ([Notebook](https://github.com/Hvass-Labs/Finance-Research/blob/master/Paper_Long-Term_Stock_Forecasting.ipynb)) ([Google Colab](https://colab.research.google.com/github/Hvass-Labs/Finance-Research/b",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015-2018 by Magnus Erik Hvass Pedersen Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following con"
+  },
+  {
+    "full_name": "ib-api-reloaded/eventkit",
+    "requested_name": "ib-api-reloaded/eventkit",
+    "id": 842727217,
+    "url": "https://github.com/ib-api-reloaded/eventkit",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "maintaining: event-driven data pipelines",
+    "stars": 5,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "141c9b6abf4418b47a03c10d44c6bbd9d9d55f5d",
+    "last_commit_date": "2025-06-22T00:41:13Z",
+    "pushed_at_not_commit_date": "2026-04-08T00:41:30Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "erdewit",
+        "contributions": 78,
+        "type": "User"
+      },
+      {
+        "login": "gnzsnz",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "mattsta",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "stnatter",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ib-api-reloaded/eventkit/issues/12",
+      "created_at": "2025-10-25T17:02:30Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2025-10-26T12:29:32Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "feb811e03a3ade8734441c87d34b223f9a38681c51857337f161801f7f803a7f",
+    "license": "BSD-2-Clause",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0108c51a81ff1e3a3740c952e0d71b41d48f92142da91449017e5ec6059966c7",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".readthedocs.yml",
+      "ARCHITECTURE.md",
+      "LICENSE",
+      "README.rst",
+      "TODO.md",
+      "docs",
+      "eventkit",
+      "notebooks",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/ib-api-reloaded/eventkit/blob/141c9b6abf4418b47a03c10d44c6bbd9d9d55f5d/pyproject.toml",
+        "sha256": "cfeba393bf8fffe0740e6e88debe50f453c877fd3e668745764a339b584a8522"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:ib-api-reloaded"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ib-api-reloaded/eventkit",
+      "commit": "https://github.com/ib-api-reloaded/eventkit/commit/141c9b6abf4418b47a03c10d44c6bbd9d9d55f5d",
+      "readme": "https://github.com/ib-api-reloaded/eventkit/blob/141c9b6abf4418b47a03c10d44c6bbd9d9d55f5d/README.rst",
+      "license": "https://github.com/ib-api-reloaded/eventkit/blob/141c9b6abf4418b47a03c10d44c6bbd9d9d55f5d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ib-api-reloaded/eventkit/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ib-api-reloaded/eventkit/contributors",
+      "issues": "https://api.github.com/repos/ib-api-reloaded/eventkit/issues"
+    },
+    "readme_excerpt": "|Build| |PyVersion| |Status| |PyPiVersion| |License| |Docs| Introduction ------------ The primary use cases of eventkit are * to send events between loosely coupled components; * to compose all kinds of event-driven data pipelines. The interface is kept as Pythonic as possible, with familiar names from Python and its libraries where possible. For scheduling asyncio is used and there is seamless integration with it. See the examples and the `introduction notebook `_ to get a true feel for the possibilities. Installation ------------ :: pip3 install eventkit Python_ version 3.6 or higher is required. Examples -------- **Create an event and connect two listeners** .. code-block:: python import eventkit as ev def f(a, b): print(a * b) def g(a, b): print(a / b) event = ev.Event() event += f event += g event.emit(10, 5) **Create a simple pipeline** .. code-block:: python import eventkit as ev event = ( ev.Sequence('abcde') .map(str.upper) .enumerate() ) print(event.run()) # in Jupyter: await event.list() Output:: [(0, 'A'), (1, 'B'), (2, 'C'), (3, 'D'), (4, 'E')] **Create a pipeline to get a running average and standard deviation** .. code-block:: python import random import eventkit as ev source = ev.Range(1000).map(lambda i: random.gauss(0, 1)) event = source.array(500)[ev.ArrayMean, ev.ArrayStd].zip() print(event.last().run()) # in Jupyter: await event.last() Output:: [(0.00790957",
+    "license_excerpt": "BSD 2-Clause License Copyright (c) 2023, Ewald de Wit All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/o"
+  },
+  {
+    "full_name": "ib-api-reloaded/ib_async",
+    "requested_name": "ib-api-reloaded/ib_async",
+    "id": 772323655,
+    "url": "https://github.com/ib-api-reloaded/ib_async",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python sync/async framework for Interactive Brokers API (replaces ib_insync)",
+    "stars": 1739,
+    "forks": 251,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "ab629f34c1823ea4c1542f32f07377208a86bdfd",
+    "last_commit_date": "2025-12-06T15:32:58Z",
+    "pushed_at_not_commit_date": "2026-08-19T03:04:44Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "erdewit",
+        "contributions": 713,
+        "type": "User"
+      },
+      {
+        "login": "mattsta",
+        "contributions": 82,
+        "type": "User"
+      },
+      {
+        "login": "yehoshuadimarsky",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "stnatter",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "gnzsnz",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "805karansaini",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "alobbs",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ZhongDai813",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "stenri",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "m12t",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "mikishab",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "HenryAsa",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gliptak",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Elektra58",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "zhengchenliang",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "zentooo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "t1user",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "slmg",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sharpkids",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "abbass2",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iovsiann",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "docker-tws",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tankorsmash",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "shaagerup",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sohailsomani",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "prurph",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "onursatici",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ynodir",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "batterseapower",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jspahrsummers",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ib-api-reloaded/ib_async/issues/171",
+      "created_at": "2025-08-22T11:30:26Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d383b8577bffae465511deafac256c5276cf02838ba0df1273609d46368fbec2",
+    "license": "BSD-2-Clause",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f50221a51914f4d1848f00a96ef9654570f5b5231bb5283c2a51ab261e289b13",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "examples",
+      "ib_async",
+      "notebooks",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/ib-api-reloaded/ib_async/blob/ab629f34c1823ea4c1542f32f07377208a86bdfd/pyproject.toml",
+        "sha256": "551879088367440d0da7cca871af67a90c3284dc865e20fb80cb6b76fab2f532"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "adoption",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "ib-api-reloaded/ib_async",
+      "capability_tag": "none",
+      "category_slug": "client-library-sdk",
+      "summary": "Python sync/async framework for Interactive Brokers trading API",
+      "reuse_value": 75,
+      "stars": 1641,
+      "license": "BSD-2-Clause",
+      "language": "Python",
+      "url": "https://github.com/ib-api-reloaded/ib_async",
+      "rank_score": 75016410
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "ib-api-reloaded/ib_async",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "ib_async",
+      "unit_class": "capability",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 469086,
+      "downloads_period": "last-month",
+      "dependent_repos": 0,
+      "dependent_pkgs": 0,
+      "rank_avg": 36.799935415634856,
+      "reach_percentile": 63.2,
+      "reuse_value": 75,
+      "stars": 1641,
+      "adoption_score": 37.8,
+      "real_value": 37,
+      "verdict": "confirm",
+      "fame_gap": -15.4,
+      "raw_json": "{\"dl\": 469086, \"deprepos\": 0, \"deppkgs\": 0, \"rank_avg\": 36.799935415634856, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "liftability_row": {
+      "full_name": "ib-api-reloaded/ib_async",
+      "stars": 1641,
+      "license": "BSD-2-Clause",
+      "language": "Python",
+      "unit_class": "capability",
+      "reuse_value": 75,
+      "liftability": 55,
+      "fame_gap": 20,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "Python sync/async framework for Interactive Brokers API (replaces ib_insync)"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:ib-api-reloaded"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ib-api-reloaded/ib_async",
+      "commit": "https://github.com/ib-api-reloaded/ib_async/commit/ab629f34c1823ea4c1542f32f07377208a86bdfd",
+      "readme": "https://github.com/ib-api-reloaded/ib_async/blob/ab629f34c1823ea4c1542f32f07377208a86bdfd/README.md",
+      "license": "https://github.com/ib-api-reloaded/ib_async/blob/ab629f34c1823ea4c1542f32f07377208a86bdfd/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ib-api-reloaded/ib_async/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ib-api-reloaded/ib_async/contributors",
+      "issues": "https://api.github.com/repos/ib-api-reloaded/ib_async/issues"
+    },
+    "readme_excerpt": "[![Build](https://github.com/ib-api-reloaded/ib_async/actions/workflows/test.yml/badge.svg?branch=next)](https://github.com/ib-api-reloaded/ib_async/actions) [![PyVersion](https://img.shields.io/badge/python-3.10+-blue.svg)](#) [![PyPiVersion](https://img.shields.io/pypi/v/ib_async.svg)](https://pypi.python.org/pypi/ib_async) [![License](https://img.shields.io/badge/license-BSD-blue.svg)](#) [![Docs](https://img.shields.io/badge/Documentation-green.svg)](https://ib-api-reloaded.github.io/ib_async/) # ib_async ## Update ## Introduction `ib_async` is a Python library that provides a clean, modern interface to Interactive Brokers' Trader Workstation (TWS) and IB Gateway. It handles the complexities of the [IBKR API](https://ibkrcampus.com/ibkr-api-page/twsapi-doc/) so you can focus on building trading applications, research tools, and market data analysis. ### What You Can Build * **Market Data Applications**: Stream live quotes, historical data, and market depth * **Trading Systems**: Place, modify, and monitor orders programmatically * **Portfolio Tools**: Track positions, account balances, and P&L in real-time * **Research Platforms**: Analyze contract details, option chains, and fundamental data * **Risk Management**: Monitor exposures and implement automated controls ### Key Features * **Simple and Intuitive**: Write straightforward Python code without dealing with callback c",
+    "license_excerpt": "BSD 2-Clause License Copyright (c) 2019 - 2023, Ewald de Wit Copyright (c) 2024, Matt Stancliff All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the follo"
+  },
+  {
+    "full_name": "ib-api-reloaded/memorial",
+    "requested_name": "ib-api-reloaded/memorial",
+    "id": 773595216,
+    "url": "https://github.com/ib-api-reloaded/memorial",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A place for people to write rememberances of original ib_insync creator Ewald de Wit including personal notes or just historical messages from forums/issues/email. Feel free to create new issues or PRs on this repository with your messages or links to others and we will get all updates added.",
+    "stars": 6,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "d3c7eacab341c0a8a23e0e037e02c950bd963284",
+    "last_commit_date": "2024-03-25T22:34:36Z",
+    "pushed_at_not_commit_date": "2024-03-25T22:35:52Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "mattsta",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ib-api-reloaded/memorial/issues/1",
+      "created_at": "2024-04-12T02:02:29Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f65a85d0d5153925c03dc2ed627d4ab0445dcc1a1d8feb9d0c6824f2d794e6c5",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:ib-api-reloaded"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ib-api-reloaded/memorial",
+      "commit": "https://github.com/ib-api-reloaded/memorial/commit/d3c7eacab341c0a8a23e0e037e02c950bd963284",
+      "readme": "https://github.com/ib-api-reloaded/memorial/blob/d3c7eacab341c0a8a23e0e037e02c950bd963284/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/ib-api-reloaded/memorial/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ib-api-reloaded/memorial/contributors",
+      "issues": "https://api.github.com/repos/ib-api-reloaded/memorial/issues"
+    },
+    "readme_excerpt": "# Memories of Ewald de Wit [From his family](https://github.com/erdewit/ib_insync): > Unfortunately, our dear brother Ewald de Wit passed away monday, March eleven as a result of a serious illness last year. > Although we were not involved in his activities on this platform, we felt the due to inform you. > We thank you for knowing him. > > Maritza and Philippe de Wit ## 2024 Notes from [archived thread](https://old.reddit.com/r/algotrading/comments/1b89p89/does_anyone_know_why_the_ib_insync_python_library/?sort=new): > Dear Ruben de Wit and Family, > The news of Ewald's passing profoundly saddens us, and we are all the more grateful for his incredible legacy through the ib_insync library. It's genuinely heartwarming to learn of his profound impact on so many people, many of whom, like myself, benefitted immensely from his dedication and brilliance without having had the chance to express our gratitude directly. Ewald's creation has not just been a tool but a community and source of inspiration for all its users. > He was so generous with his time and support. His work has been extremely impactful to this community. > The work he has put into this project, has helped so many people across the world. > He will be missed by the community. ## 2021 He accepted updates with humility even though nobody had any demanding expecations: https://github.com/erdewit/ib_insync/pull/385 ## Mo",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "ib-api-reloaded/nest_asyncio",
+    "requested_name": "ib-api-reloaded/nest_asyncio",
+    "id": 842727587,
+    "url": "https://github.com/ib-api-reloaded/nest_asyncio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "maintaining: patch asyncio to allow nested event loops ",
+    "stars": 3,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "a05e89d8f9a7784250eb7f8c65cd0cfd051dc36d",
+    "last_commit_date": "2024-08-15T00:30:07Z",
+    "pushed_at_not_commit_date": "2026-04-08T02:31:50Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "erdewit",
+        "contributions": 129,
+        "type": "User"
+      },
+      {
+        "login": "diego-plan9",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "mattsta",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "stnatter",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "uriyyo",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "5j9",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dsblank",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "gsmecher",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "crusaderky",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hugovk",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "unkcpz",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "KOLANICH",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bollwyvl",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.rst",
+    "readme_sha256": "d153dbfd0dfb0cc8fac0faae11d4b8af9d8030139ae3d01b116b4bd0a7455631",
+    "license": "BSD-2-Clause",
+    "license_path": "LICENSE",
+    "license_file_sha256": "bece9f68655ff23b77413246c0650386b87da7c3682303dd0ee8e3ea7630e85b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "nest_asyncio.py",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/ib-api-reloaded/nest_asyncio/blob/a05e89d8f9a7784250eb7f8c65cd0cfd051dc36d/pyproject.toml",
+        "sha256": "c1022cc79cb567735f02be2621e2f0b3d8d3499403cc8479b7cd16e008791f3a"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:ib-api-reloaded"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ib-api-reloaded/nest_asyncio",
+      "commit": "https://github.com/ib-api-reloaded/nest_asyncio/commit/a05e89d8f9a7784250eb7f8c65cd0cfd051dc36d",
+      "readme": "https://github.com/ib-api-reloaded/nest_asyncio/blob/a05e89d8f9a7784250eb7f8c65cd0cfd051dc36d/README.rst",
+      "license": "https://github.com/ib-api-reloaded/nest_asyncio/blob/a05e89d8f9a7784250eb7f8c65cd0cfd051dc36d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ib-api-reloaded/nest_asyncio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ib-api-reloaded/nest_asyncio/contributors",
+      "issues": "https://api.github.com/repos/ib-api-reloaded/nest_asyncio/issues"
+    },
+    "readme_excerpt": "|Build| |Status| |PyPiVersion| |License| |Downloads| Introduction ------------ By design asyncio `does not allow `_ its event loop to be nested. This presents a practical problem: When in an environment where the event loop is already running it's impossible to run tasks and wait for the result. Trying to do so will give the error \"``RuntimeError: This event loop is already running``\". The issue pops up in various environments, such as web servers, GUI applications and in Jupyter notebooks. This module patches asyncio to allow nested use of ``asyncio.run`` and ``loop.run_until_complete``. Installation ------------ .. code-block:: pip3 install nest_asyncio Python 3.5 or higher is required. Usage ----- .. code-block:: python import nest_asyncio nest_asyncio.apply() Optionally the specific loop that needs patching can be given as argument to ``apply``, otherwise the current event loop is used. An event loop can be patched whether it is already running or not. Only event loops from asyncio can be patched; Loops from other projects, such as uvloop or quamash, generally can't be patched. .. |Build| image:: https://github.com/erdewit/nest_asyncio/actions/workflows/test.yml/badge.svg?branche=master :alt: Build :target: https://github.com/erdewit/nest_asyncio/actions .. |PyPiVersion| image:: https://img.shields.io/pypi/v/nest_asyncio.svg :alt: PyPi :target: https://pypi.python.org/pypi/",
+    "license_excerpt": "BSD 2-Clause License Copyright (c) 2018-2020, Ewald de Wit All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation "
+  }
+]

@@ -1,0 +1,1298 @@
+[
+  {
+    "full_name": "dpguthrie/yahooquery",
+    "requested_name": "dpguthrie/yahooquery",
+    "id": 227721998,
+    "url": "https://github.com/dpguthrie/yahooquery",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python wrapper for an unofficial Yahoo Finance API",
+    "stars": 920,
+    "forks": 165,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "c67551c6982301158c90d001ac3d480907fea43d",
+    "last_commit_date": "2025-05-15T15:07:55Z",
+    "pushed_at_not_commit_date": "2025-05-15T15:07:59Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "dpguthrie",
+        "contributions": 376,
+        "type": "User"
+      },
+      {
+        "login": "maread99",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      },
+      {
+        "login": "dsaouda",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "LRAbbade",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ms32035",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RMisaki",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rodrigobercini",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/dpguthrie/yahooquery/issues/344",
+      "created_at": "2026-07-07T19:23:17Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4ad758a36b40f45ca1a1d6197fb8ab2ca0a4e4bcba4e7f58485f9c1208c1a111",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "c4e4f57bc2ad92628a75f4a44d0040ab46950a37aa739b78660b37cafc490321",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CHANGELOG.rst",
+      "CNAME",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "Makefile",
+      "README.md",
+      "demo",
+      "docs",
+      "pyproject.toml",
+      "tests",
+      "uv.lock",
+      "yahooquery"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/dpguthrie/yahooquery/blob/c67551c6982301158c90d001ac3d480907fea43d/pyproject.toml",
+        "sha256": "b5afb86c586f1b260a665ab2e8de53b91159cdb5f0d9c01635b6ca47b3b52830"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "dpguthrie/yahooquery",
+      "capability_tag": "http-client",
+      "category_slug": "client-library-sdk",
+      "summary": "Python wrapper for Yahoo Finance market data API",
+      "reuse_value": 75,
+      "stars": 912,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/dpguthrie/yahooquery",
+      "rank_score": 75009120
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "dpguthrie/yahooquery",
+      "stars": 912,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "Python wrapper for an unofficial Yahoo Finance API"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dpguthrie/yahooquery",
+      "commit": "https://github.com/dpguthrie/yahooquery/commit/c67551c6982301158c90d001ac3d480907fea43d",
+      "readme": "https://github.com/dpguthrie/yahooquery/blob/c67551c6982301158c90d001ac3d480907fea43d/README.md",
+      "license": "https://github.com/dpguthrie/yahooquery/blob/c67551c6982301158c90d001ac3d480907fea43d/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/dpguthrie/yahooquery/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dpguthrie/yahooquery/contributors",
+      "issues": "https://api.github.com/repos/dpguthrie/yahooquery/issues"
+    },
+    "readme_excerpt": "Python wrapper for an unofficial Yahoo Finance API --- **Documentation**: https://yahooquery.dpguthrie.com **Interactive Demo**: https://yahooquery.streamlit.app/ **Source Code**: https://github.com/dpguthrie/yahooquery **Blog Post**: https://towardsdatascience.com/the-unofficial-yahoo-finance-api-32dcf5d53df --- ## Overview Yahooquery is a python interface to unofficial Yahoo Finance API endpoints. The package allows a user to retrieve nearly all the data visible via the Yahoo Finance front-end. Some features of yahooquery: - **Fast**: Data is retrieved through API endpoints instead of web scraping. Additionally, asynchronous requests can be utilized with simple configuration - **Simple**: Data for multiple symbols can be retrieved with simple one-liners - **User-friendly**: Pandas Dataframes are utilized where appropriate - **Premium**: Yahoo Finance premium subscribers are able to retrieve data available through their subscription ## Requirements Python 3.9+ - **Versions on or after 2.4.0 require python 3.9+** - [Pandas](https://pandas.pydata.org) - Fast, powerful, flexible and easy to use open source data analysis and manipulation tool - [Requests](https://requests.readthedocs.io/en/master/) - The elegant and simple HTTP library for Python, built for human beings. - [Requests-Futures](https://github.com/ross/requests-futures) - Asynchronous Python HTTP Requests for Humans #",
+    "license_excerpt": "MIT License Copyright (c) 2020 Doug Guthrie Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright not"
+  },
+  {
+    "full_name": "Draichi/Portfolio-Management-list",
+    "requested_name": "Draichi/Portfolio-Management-list",
+    "id": 170947286,
+    "url": "https://github.com/Draichi/Portfolio-Management-list",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": ":notebook: List of portfolio management resources, using Reinforcement Learning.",
+    "stars": 41,
+    "forks": 9,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "8f787813a4823e3e485008868b7cc250d58b6b86",
+    "last_commit_date": "2023-10-20T23:42:16Z",
+    "pushed_at_not_commit_date": "2023-10-20T23:42:17Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Draichi",
+        "contributions": 77,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "883393dc4149af17859c56693c5a197b4f4ea8badef1899a33d53730faf8c532",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md",
+      "books"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Draichi/Portfolio-Management-list",
+      "commit": "https://github.com/Draichi/Portfolio-Management-list/commit/8f787813a4823e3e485008868b7cc250d58b6b86",
+      "readme": "https://github.com/Draichi/Portfolio-Management-list/blob/8f787813a4823e3e485008868b7cc250d58b6b86/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Draichi/Portfolio-Management-list/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Draichi/Portfolio-Management-list/contributors",
+      "issues": "https://api.github.com/repos/Draichi/Portfolio-Management-list/issues"
+    },
+    "readme_excerpt": "# Portfolio Management Research A list of important resources in my research on the portfolio management problem. ## Courses - [DeepMind x UCL | RL Lecture Series 2021](https://youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm&si=3k6CH5E2wS7OD1Ut) - [DeepMind x UCL | Deep Learning Lecture Series 2020](https://www.youtube.com/playlist?list=PLqYmG7hTraZCDxZ44o4p3N5Anz3lLRVZF) - [Coursera | Reinforcement Learning Specialization](https://www.coursera.org/specializations/reinforcement-learning) - [FastAI | Practical Deep Learning for Coders](https://course.fast.ai) - [Hugging Face | Deep Reinforcement Learning Course](https://huggingface.co/learn/deep-rl-course/en/unit0/introduction) - [MIT | 6.S191](https://youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&si=jEOFnqwd2mmJnOwv) - [Stanford | CS229](https://youtube.com/playlist?list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy) ## Books - [Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) - [Deep Learning for Coders with fastai and PyTorch](https://github.com/fastai/fastbook) - [Vector Calculus, Susan Jane Colley](/books/Vector%20Calculus.pdf) (optional) - [Introduction to Probability, Bertsekas & Tsitsiklis](/books/Math--Bertsekas_Tsitsiklis_Introduction_to_probability.pdf) (optional) - [Hands on Machine Learning ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Drakkar-Software/OctoBot",
+    "requested_name": "Drakkar-Software/OctoBot",
+    "id": 122682362,
+    "url": "https://github.com/Drakkar-Software/OctoBot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Free open source crypto trading bot to automate AI, Grid, DCA and TradingView strategies on Binance, Hyperliquid and 15+ exchanges, with a simple interface.",
+    "stars": 6565,
+    "forks": 1272,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "dc0efc8ec36c138bd619272b2b59042778668408",
+    "last_commit_date": "2026-08-10T09:47:27Z",
+    "pushed_at_not_commit_date": "2026-09-13T15:07:08Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "GuillaumeDSM",
+      "Herklos",
+      "blueyed",
+      "claude"
+    ],
+    "contributors_sample": [
+      {
+        "login": "GuillaumeDSM",
+        "contributions": 1435,
+        "type": "User"
+      },
+      {
+        "login": "Herklos",
+        "contributions": 979,
+        "type": "User"
+      },
+      {
+        "login": "C4hu3t3",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "techfreaque",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "renovate-bot",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 9,
+        "type": "Bot"
+      },
+      {
+        "login": "claude",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "dependabot-preview[bot]",
+        "contributions": 5,
+        "type": "Bot"
+      },
+      {
+        "login": "KapadiaNaitik",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "gabriel-milan",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "dependabot-support",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "blueyed",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "hristo-mavrodiev",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ImgBotApp",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jgannondo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "LaurentBouquet",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "B1Fr0st",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "evil-maid",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "semamca35",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Drakkar-Software/OctoBot/issues/3679",
+      "created_at": "2026-09-09T18:23:16Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "0ac4d555ba535a38d1badd42a1b0cadd2b1b7196c1cd371b2e1f52f98679f231",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitpod.yml",
+      ".pants.ignore",
+      "BUILD",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Cargo.toml",
+      "DELIVERY.md",
+      "Dockerfile",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "additional_tests",
+      "bin",
+      "dev_requirements.txt",
+      "docker-compose.https.yml",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "extra_requirements.txt",
+      "full_requirements.txt",
+      "octobot.hcl",
+      "octobot",
+      "packages",
+      "pants-plugins",
+      "pants.toml",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.cfg.pants",
+      "setup.py",
+      "standard.rc",
+      "start.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/Drakkar-Software/OctoBot/blob/dc0efc8ec36c138bd619272b2b59042778668408/requirements.txt",
+        "sha256": "2a45de8fb502c63188c92cdb2991a3445d94f8be45b45ac5a7785f15b9e29166"
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/Drakkar-Software/OctoBot/blob/dc0efc8ec36c138bd619272b2b59042778668408/Cargo.toml",
+        "sha256": "c5a47dbfa2de840d1405135b13f462a0201ce124e7a20cfba0479027d6ddd21a"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Drakkar-Software/OctoBot",
+      "commit": "https://github.com/Drakkar-Software/OctoBot/commit/dc0efc8ec36c138bd619272b2b59042778668408",
+      "readme": "https://github.com/Drakkar-Software/OctoBot/blob/dc0efc8ec36c138bd619272b2b59042778668408/README.md",
+      "license": "https://github.com/Drakkar-Software/OctoBot/blob/dc0efc8ec36c138bd619272b2b59042778668408/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Drakkar-Software/OctoBot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Drakkar-Software/OctoBot/contributors",
+      "issues": "https://api.github.com/repos/Drakkar-Software/OctoBot/issues"
+    },
+    "readme_excerpt": "# OctoBot - Free Open Source Crypto Trading Bot [![PyPI](https://img.shields.io/pypi/v/OctoBot.svg?logo=pypi)](https://pypi.org/project/OctoBot) [![Downloads](https://pepy.tech/badge/octobot/month)](https://pepy.tech/project/octobot) [![Dockerhub](https://img.shields.io/docker/pulls/drakkarsoftware/octobot.svg?logo=docker)](https://hub.docker.com/r/drakkarsoftware/octobot) [![OctoBot-CI](https://github.com/Drakkar-Software/OctoBot/workflows/OctoBot-CI/badge.svg)](https://github.com/Drakkar-Software/OctoBot/actions) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Drakkar-Software/OctoBot) [![OctoBot](https://img.shields.io/badge/dynamic/json.svg?&url=https://octobot.cloud/api/community/stats&query=$.total_bots&color=blue&label=Installed%20OctoBots)](https://www.octobot.cloud/trading-bot?utm_source=github&utm_medium=dk&utm_campaign=regular_open_source_content&utm_content=readme_installed_bots_badge) [![Telegram Chat](https://img.shields.io/badge/telegram-chat-green.svg?logo=telegram&label=Telegram)](https://t.me/octobot_trading) [![Discord](https://img.shields.io/discord/530629985661222912.svg?logo=discord&label=Discord)](https://discord.com/invite/vHkcb8W) [![Telegram News](https://img.shields.io/badge/telegram-news-blue.svg?logo=telegram&label=Telegram)](https://t.me/OctoBot_Project) [![Twitter](https://img.shields.io/twitter/follow/DrakkarsOctobot.svg?la",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "drkthng/ibkr2kap",
+    "requested_name": "drkthng/ibkr2kap",
+    "id": 1181544354,
+    "url": "https://github.com/drkthng/ibkr2kap",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Tax reporting tool for German investors using Interactive Brokers. Parses IBKR Flex Query XML and Activity Statement CSV exports, applies FIFO cost-basis tracking across multiple years, converts currencies using official ECB rates, and generates a structured Excel report ready for Anlage KAP.",
+    "stars": 6,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "6d3621a2ee3a05fccf644c152f8350b8e773bf1f",
+    "last_commit_date": "2026-03-25T16:29:05Z",
+    "pushed_at_not_commit_date": "2026-03-25T16:33:10Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "drkthng"
+    ],
+    "contributors_sample": [
+      {
+        "login": "drkthng",
+        "contributions": 165,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "381c4152e3575c6a9e0b93bc6dca0339c97c3bd0409caa815ee1b23ce7b3b626",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".agent",
+      ".bg-shell",
+      ".gemini",
+      ".gitignore",
+      ".gsd",
+      ".python-version",
+      ".streamlit",
+      "GSD-STYLE.md",
+      "PROJECT_RULES.md",
+      "README.md",
+      "adapters",
+      "debug_ca_validation.py",
+      "debug_et.py",
+      "debug_key.py",
+      "docs",
+      "inspect_ibflex.py",
+      "inspect_real_xml.py",
+      "inspect_with_parser.py",
+      "inspect_with_parser_v2.py",
+      "main.py",
+      "model_capabilities.yaml",
+      "pyproject.toml",
+      "scripts",
+      "src",
+      "test_monkeypatch.py",
+      "test_preprocessing.py",
+      "tests",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/drkthng/ibkr2kap/blob/6d3621a2ee3a05fccf644c152f8350b8e773bf1f/pyproject.toml",
+        "sha256": "b32af151d1bee5f7a5924cb2265316096f5f4ccd220e0470d2d98bbdbb9993e5"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/drkthng/ibkr2kap",
+      "commit": "https://github.com/drkthng/ibkr2kap/commit/6d3621a2ee3a05fccf644c152f8350b8e773bf1f",
+      "readme": "https://github.com/drkthng/ibkr2kap/blob/6d3621a2ee3a05fccf644c152f8350b8e773bf1f/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/drkthng/ibkr2kap/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/drkthng/ibkr2kap/contributors",
+      "issues": "https://api.github.com/repos/drkthng/ibkr2kap/issues"
+    },
+    "readme_excerpt": "# IBKR2KAP **IBKR2KAP** is a robust, local-first application designed specifically for German retail investors and traders who use Interactive Brokers (IBKR). It bridges the gap between IBKR's complex reporting and the strict requirements of German tax law, automating the generation of data ready for the **Anlage KAP** (Einkommensteuererkl\u00e4rung). ## \ud83d\ude80 Key Features * **Accurate Data Ingestion:** Parses IBKR Flex Query XML files (and provides a fallback for CSV Activity Statements). * **Strict Financial Precision:** Uses Python's `decimal` type and SQLAlchemy 2.0 (with SQLite) to ensure absolute precision. Floating-point errors are unacceptable in tax reporting. * **Tax-Compliant FIFO Engine:** Accurately matches buys and sells according to the First-In, First-Out (FIFO) principle required by German tax law, using settlement dates (Settle-Date). * **German Tax Categorization:** Automatically separates gains and losses into the correct German tax pools: * *Aktienverrechnungstopf* (Losses from stocks can only be offset against stock gains). * *Termingesch\u00e4fte* (Options and Futures). * *Sonstige* (Dividends, Interest, etc.). * **\u00a7 23 EStG Compliance (Currency Gains):** Features a dedicated FX FIFO engine to track pools of foreign currency (e.g., USD) and automatically identifies taxable exchange rate gains/losses for currency held for 1 year or less. * **Complex Options Handling:** ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "DRose-Devs/zonk",
+    "requested_name": "DRose-Devs/zonk",
+    "id": 1336961709,
+    "url": "https://github.com/DRose-Devs/zonk",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Quantitative strategy research and backtesting CLI. Reads all price data from local parquet files \u2014 no external API calls for price data.",
+    "stars": 3,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "86084f2e9bb15ca6d2cab6880e56c657c8fa5962",
+    "last_commit_date": "2026-08-17T09:56:04Z",
+    "pushed_at_not_commit_date": "2026-08-17T09:56:09Z",
+    "commits_since_20260313_count_capped100": 5,
+    "recent_commit_authors": [
+      "DRose-Devs",
+      "VR"
+    ],
+    "contributors_sample": [
+      {
+        "login": "DRose-Devs",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "922cf6ad1487d4a12613d0fe08a144f9a2eb94a9fed0b63f580f3366ecdb5368",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "eacc1c9cefda264523292c409106c19e3a79266c567229c3ec3c0540f4fd28db",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "Cargo.toml",
+      "DESIGN.md",
+      "LICENSE",
+      "README.md",
+      "design",
+      "docs",
+      "presets",
+      "run_historical.sh",
+      "scripts",
+      "src",
+      "tasks",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/DRose-Devs/zonk/blob/86084f2e9bb15ca6d2cab6880e56c657c8fa5962/Cargo.toml",
+        "sha256": "21be0ab17c59419940491d26bae9be0111fb22ada0bcfb7fa14886b16ed2112c"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "C",
+        "query": "Parquet backtest"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/DRose-Devs/zonk",
+      "commit": "https://github.com/DRose-Devs/zonk/commit/86084f2e9bb15ca6d2cab6880e56c657c8fa5962",
+      "readme": "https://github.com/DRose-Devs/zonk/blob/86084f2e9bb15ca6d2cab6880e56c657c8fa5962/README.md",
+      "license": "https://github.com/DRose-Devs/zonk/blob/86084f2e9bb15ca6d2cab6880e56c657c8fa5962/LICENSE",
+      "recent_commits": "https://api.github.com/repos/DRose-Devs/zonk/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/DRose-Devs/zonk/contributors",
+      "issues": "https://api.github.com/repos/DRose-Devs/zonk/issues"
+    },
+    "readme_excerpt": "# zonk ![zonk](.github/hero.png) Quantitative strategy research and backtesting CLI. Reads all price data from local `~/market-warehouse/` parquet files \u2014 no external API calls for price data. ## Prerequisites - Rust 2024 edition (1.85+) - Populated `~/market-warehouse/` data lake (bronze parquet layer) \u2014 see [market-data-warehouse](https://github.com/joemccann/market-data-warehouse) ## Install Build and install to `~/.cargo/bin` (must be in your `$PATH`): ```bash cargo build --release cp target/release/zonk ~/.cargo/bin/zonk ``` Verify: ```bash zonk list-strategies ``` ## Update After pulling changes or making edits, rebuild and reinstall: ```bash cargo build --release && cp target/release/zonk ~/.cargo/bin/zonk ``` ## Quick Start ```bash # List available strategies and presets zonk list-strategies zonk list-presets # Run strategies zonk run overnight-drift --no-plots zonk run intraday-drift --ticker SPY zonk run intraday-drift --ticker SPY --short zonk run breadth-washout --universe ndx100 --signal-mode oversold zonk run breadth-ma --universe ndx100 --short-period 50 --threshold 80 zonk run breadth-dual-ma --universe ndx100 --short-period 50 --long-period 200 --threshold 20 zonk run ndx100-sma-breadth --end-date 2026-03-11 ``` ## Autoresearch Loop (Rust) Build and run the automated candidate-discovery loop from Rust: ```bash # build binaries cargo build --release # run with a",
+    "license_excerpt": "MIT License Copyright (c) 2026 Byju Patel Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notic"
+  },
+  {
+    "full_name": "drydocs/tholos",
+    "requested_name": "drydocs/tholos",
+    "id": 1290254217,
+    "url": "https://github.com/drydocs/tholos",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Bonded assertion and dispute oracle for resolving real world outcomes. Resolution infra for prediction markets and anything else that needs a trustworthy yes/no.",
+    "stars": 5,
+    "forks": 37,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "2414ac55e60ecf7be76a098d4f92fc8abe47a507",
+    "last_commit_date": "2026-09-12T04:49:43Z",
+    "pushed_at_not_commit_date": "2026-09-12T04:49:43Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Babigdk",
+      "BigManly4",
+      "CepherXx",
+      "Christopherdominic",
+      "Cyber-Mitch",
+      "DevSolex",
+      "Iker2522",
+      "JohnArayaE",
+      "Johnsource-hub",
+      "Kayce10",
+      "LuisD-Dev",
+      "Primex-hub",
+      "Ranjeet2063",
+      "ReinaMaze",
+      "Santia2004",
+      "TheCriners",
+      "Theophilus131",
+      "Tobi-8",
+      "XxHugheadxX",
+      "ZacLou",
+      "ZuLu0890",
+      "ajanakuiyanuoluwa07-glitch",
+      "aweledavid3",
+      "blockchain-maxis",
+      "collinsezedike",
+      "comzzy-comzzy",
+      "dimin4241-svg",
+      "eliassmthl-collab",
+      "olathedev",
+      "peter-j23",
+      "playmaker410",
+      "xtep103"
+    ],
+    "contributors_sample": [
+      {
+        "login": "collinsezedike",
+        "contributions": 70,
+        "type": "User"
+      },
+      {
+        "login": "Iker2522",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "JohnArayaE",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "ZacLou",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Johnsource-hub",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "xtep103",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dimin4241-svg",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Kayce10",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Santia2004",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Babigdk",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "comzzy-comzzy",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "BigManly4",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "CepherXx",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Christopherdominic",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DevSolex",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "LuisD-Dev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "olathedev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ReinaMaze",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Ranjeet2063",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Cyber-Mitch",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Primex-hub",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "TheCriners",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Theophilus131",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Tobi-8",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "XxHugheadxX",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ZuLu0890",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "aweledavid3",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "blockchain-maxis",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "eliassmthl-collab",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "peter-j23",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/drydocs/tholos/issues/213",
+      "created_at": "2026-09-10T18:56:59Z",
+      "state": "open",
+      "comments": 8,
+      "first_staff_comment_in_sample": "2026-09-11T06:17:55Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "9bb339861b5cc295e3fcbd706f3f19fa7ad1e4a1a0c53f8fffae394a7560e6ff",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "694d2eb1059228e6a50541db2ab3d61fea733f4079d30c8eeaa0689339c5c03b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "contracts",
+      "demos",
+      "docs",
+      "packages",
+      "rust-toolchain.toml",
+      "scripts",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/drydocs/tholos/blob/2414ac55e60ecf7be76a098d4f92fc8abe47a507/Cargo.toml",
+        "sha256": "822b7b004a73b86a10a240eb18e3c314e9b6a21500a0e42b7871f6c975f338fe"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "format",
+        "query": "prediction market resolution"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/drydocs/tholos",
+      "commit": "https://github.com/drydocs/tholos/commit/2414ac55e60ecf7be76a098d4f92fc8abe47a507",
+      "readme": "https://github.com/drydocs/tholos/blob/2414ac55e60ecf7be76a098d4f92fc8abe47a507/README.md",
+      "license": "https://github.com/drydocs/tholos/blob/2414ac55e60ecf7be76a098d4f92fc8abe47a507/LICENSE",
+      "recent_commits": "https://api.github.com/repos/drydocs/tholos/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/drydocs/tholos/contributors",
+      "issues": "https://api.github.com/repos/drydocs/tholos/issues"
+    },
+    "readme_excerpt": "# Tholos [![CI](https://github.com/drydocs/tholos/actions/workflows/ci.yml/badge.svg)](https://github.com/drydocs/tholos/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://drydocs.github.io/tholos/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) Bonded assertion and dispute oracle for resolving real world outcomes. Resolution infra for prediction markets and anything else that needs a trustworthy yes/no. Docs: [drydocs.github.io/tholos](https://drydocs.github.io/tholos/) ## Status The assertion and dispute contract (`contracts/tholos`) is implemented, tested, and has been deployed and exercised on Stellar testnet. - Core propose/dispute/resolve flow: done - Admin-controlled resolver committee updates: done - Pause / emergency-stop: done - Reentrancy hardening (state written before external token transfers): done - CI (fmt, clippy, tests, wasm build): done - Fee-funded reward for uncontested finalizes: done (configurable `finalize_reward_bps`, bond-funded) - Stake-weighted bond-poster resolution (protocol v2): design proposed, not implemented See [CONTRACT.md](docs/src/CONTRACT.md) for the full interface and known gaps, [ARCHITECTURE.md](docs/src/ARCHITECTURE.md) for design rationale, or [V2_RESOLUTION.md](docs/src/V2_RESOLUTION.md) for the proposed, design-only stake-weighted resolution mechanism. See [I",
+    "license_excerpt": "MIT License Copyright (c) 2026 drydocs Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice a"
+  },
+  {
+    "full_name": "dTaxLab/dtax",
+    "requested_name": "dTaxLab/dtax",
+    "id": 1179407258,
+    "url": "https://github.com/dTaxLab/dtax",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The only complete TypeScript crypto tax engine on npm \u2014 23 exchange parsers, FIFO/LIFO/HIFO/Specific ID, Form 8949, wash sale detection, DeFi support",
+    "stars": 9,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "8c7a9af89befef6de8ee699124c9f15fedba2bde",
+    "last_commit_date": "2026-07-29T00:07:00Z",
+    "pushed_at_not_commit_date": "2026-07-29T00:08:05Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Phosmax",
+      "maxwellyu1024",
+      "namjar",
+      "powerpook"
+    ],
+    "contributors_sample": [
+      {
+        "login": "namjar",
+        "contributions": 216,
+        "type": "User"
+      },
+      {
+        "login": "powerpook",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "maxwellyu1024",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 10,
+        "type": "Bot"
+      },
+      {
+        "login": "akibax",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/dTaxLab/dtax/issues/28",
+      "created_at": "2026-08-26T13:22:06Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a94a75ff3e6f62a92af808d7f8d258d07b0218716bf9df671f8092a735586526",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0bef2ffe991f747efa452ba54c7ae6f6208e20d48b635d3baec59c45d38ac6a9",
+    "license_candidates": [
+      "LICENSE",
+      "LICENSE-COMMERCIAL"
+    ],
+    "root_entries": [
+      ".env.production.example",
+      ".github",
+      ".gitignore",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "LICENSE-COMMERCIAL",
+      "README.es.md",
+      "README.ja.md",
+      "README.ko.md",
+      "README.md",
+      "README.pt.md",
+      "README.zh-Hant.md",
+      "README.zh.md",
+      "SECURITY.md",
+      "apps",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "tsconfig.base.json",
+      "tsconfig.json",
+      "turbo.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/package.json",
+        "sha256": "1fb54a52dd676e7a6956409fbac9610e4931404933b24bd03a95cdd7cadae53f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dTaxLab/dtax",
+      "commit": "https://github.com/dTaxLab/dtax/commit/8c7a9af89befef6de8ee699124c9f15fedba2bde",
+      "readme": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/README.md",
+      "license": "https://github.com/dTaxLab/dtax/blob/8c7a9af89befef6de8ee699124c9f15fedba2bde/LICENSE",
+      "recent_commits": "https://api.github.com/repos/dTaxLab/dtax/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dTaxLab/dtax/contributors",
+      "issues": "https://api.github.com/repos/dTaxLab/dtax/issues"
+    },
+    "readme_excerpt": "dTax The only complete TypeScript crypto tax engine on npm English \u00b7 \u7b80\u4f53\u4e2d\u6587 \u00b7 \u7e41\u9ad4\u4e2d\u6587 \u00b7 Espa\u00f1ol \u00b7 \u65e5\u672c\u8a9e \u00b7 \ud55c\uad6d\uc5b4 \u00b7 Portugu\u00eas --- **29 exchange parsers** | **8 cost basis methods** \u2014 FIFO / LIFO / HIFO / UK Share Pooling / +4 more | **Form 8949 + Schedule D** | **Wash sale detection** | **What-if simulator** ## Install ```bash npm install @dtax/tax-engine ``` ## Quick Example ```typescript import { parseCsv, CostBasisCalculator, generateForm8949, } from \"@dtax/tax-engine\"; // 1. Parse any exchange CSV (auto-detects format) const { lots, events } = parseCsv(csvString); // 2. Calculate gains/losses const calc = new CostBasisCalculator(\"FIFO\"); calc.addLots(lots); const results = events.map((e) => calc.calculate(e)); // 3. Generate IRS Form 8949 const report = generateForm8949(results); ``` ## CLI Calculate taxes from the command line without writing any code: ```bash npx @dtax/cli calculate trades.csv --method FIFO npx @dtax/cli calculate trades.csv --method LIFO --year 2025 --json npx @dtax/cli calculate coinbase.csv binance.csv --method HIFO ``` Install globally for repeated use: ```bash npm install -g @dtax/cli dtax calculate trades.csv --method FIFO --form8949 report.csv dtax calculate trades.csv --schedule-d --include-wash-sales ``` ## Supported Exchanges (29 Parsers) All parsers auto-detect the CSV format. No configuration required. | Category | Exchanges | | --------- | -------------",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2026 DTax Contributors This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+  },
+  {
+    "full_name": "duckdb/duckdb",
+    "requested_name": "duckdb/duckdb",
+    "id": 138754790,
+    "url": "https://github.com/duckdb/duckdb",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "DuckDB is an analytical in-process SQL database management system",
+    "stars": 41200,
+    "forks": 3762,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "v2.0-cyanoptera",
+    "latest_commit": "10de9573794001c649621013bdd93553b54e00c9",
+    "last_commit_date": "2026-09-11T19:14:29Z",
+    "pushed_at_not_commit_date": "2026-09-11T19:35:43Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "DinosL",
+      "Dtenwolde",
+      "JaySon-Huang",
+      "Maxxen",
+      "Mytherin",
+      "RK905",
+      "dentiny",
+      "jaiswalvikas9991",
+      "kryonix",
+      "smvv",
+      "ted-wq-x"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Mytherin",
+        "contributions": 26357,
+        "type": "User"
+      },
+      {
+        "login": "Tishj",
+        "contributions": 7308,
+        "type": "User"
+      },
+      {
+        "login": "pdet",
+        "contributions": 5314,
+        "type": "User"
+      },
+      {
+        "login": "hannes",
+        "contributions": 3602,
+        "type": "User"
+      },
+      {
+        "login": "carlopi",
+        "contributions": 2395,
+        "type": "User"
+      },
+      {
+        "login": "taniabogatsch",
+        "contributions": 2375,
+        "type": "User"
+      },
+      {
+        "login": "samansmink",
+        "contributions": 2183,
+        "type": "User"
+      },
+      {
+        "login": "Tmonster",
+        "contributions": 1968,
+        "type": "User"
+      },
+      {
+        "login": "Dtenwolde",
+        "contributions": 1771,
+        "type": "User"
+      },
+      {
+        "login": "Maxxen",
+        "contributions": 1620,
+        "type": "User"
+      },
+      {
+        "login": "dentiny",
+        "contributions": 1231,
+        "type": "User"
+      },
+      {
+        "login": "hawkfish",
+        "contributions": 1164,
+        "type": "User"
+      },
+      {
+        "login": "kryonix",
+        "contributions": 1084,
+        "type": "User"
+      },
+      {
+        "login": "maiadegraaf",
+        "contributions": 1016,
+        "type": "User"
+      },
+      {
+        "login": "lnkuiper",
+        "contributions": 891,
+        "type": "User"
+      },
+      {
+        "login": "smvv",
+        "contributions": 856,
+        "type": "User"
+      },
+      {
+        "login": "Mause",
+        "contributions": 826,
+        "type": "User"
+      },
+      {
+        "login": "ZuleykhaPavlichenkova-TomTom",
+        "contributions": 788,
+        "type": "User"
+      },
+      {
+        "login": "artjomPlaunov",
+        "contributions": 750,
+        "type": "User"
+      },
+      {
+        "login": "tiagokepe",
+        "contributions": 705,
+        "type": "User"
+      },
+      {
+        "login": "EtgarDev",
+        "contributions": 464,
+        "type": "User"
+      },
+      {
+        "login": "krlmlr",
+        "contributions": 404,
+        "type": "User"
+      },
+      {
+        "login": "nickgerrets",
+        "contributions": 398,
+        "type": "User"
+      },
+      {
+        "login": "d-justen",
+        "contributions": 344,
+        "type": "User"
+      },
+      {
+        "login": "yan-alex",
+        "contributions": 279,
+        "type": "User"
+      },
+      {
+        "login": "krleonid",
+        "contributions": 239,
+        "type": "User"
+      },
+      {
+        "login": "c-herrewijn",
+        "contributions": 216,
+        "type": "User"
+      },
+      {
+        "login": "diegomestre2",
+        "contributions": 194,
+        "type": "User"
+      },
+      {
+        "login": "szarnyasg",
+        "contributions": 191,
+        "type": "User"
+      },
+      {
+        "login": "binste",
+        "contributions": 170,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/duckdb/duckdb/issues/25663",
+      "created_at": "2026-09-13T12:38:20Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-09-13T12:51:01Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "907b44f4727089c4475a5f9342e76ed2cdb39cac5619feb4ed9c5c065f5cc559",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "075c33400ffcb0c586dd106a029d3e733e9da3693f8fcb9cebfc651c8a2f14e3",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".clangd",
+      ".codecov.yml",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".sanitizer-leak-suppressions.txt",
+      ".sanitizer-thread-suppressions.txt",
+      "AGENTS.md",
+      "AI_POLICY.md",
+      "CITATION.cff",
+      "CLAUDE.md",
+      "CMakeLists.txt",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Doxyfile",
+      "DuckDBConfig.cmake.in",
+      "DuckDBConfigVersion.cmake.in",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "api_spec",
+      "benchmark",
+      "data",
+      "examples",
+      "extension",
+      "logo",
+      "scripts",
+      "src",
+      "test",
+      "third_party",
+      "tools"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "duckdb/duckdb",
+      "stars": 38966,
+      "license": "MIT",
+      "language": "C++",
+      "unit_class": "capability",
+      "reuse_value": 95,
+      "liftability": 75,
+      "fame_gap": 20,
+      "cat_slug": "database-engine",
+      "cat_name": "Database Engine / Data Store",
+      "description": "DuckDB is an analytical in-process SQL database management system"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/duckdb/duckdb",
+      "commit": "https://github.com/duckdb/duckdb/commit/10de9573794001c649621013bdd93553b54e00c9",
+      "readme": "https://github.com/duckdb/duckdb/blob/10de9573794001c649621013bdd93553b54e00c9/README.md",
+      "license": "https://github.com/duckdb/duckdb/blob/10de9573794001c649621013bdd93553b54e00c9/LICENSE",
+      "recent_commits": "https://api.github.com/repos/duckdb/duckdb/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/duckdb/duckdb/contributors",
+      "issues": "https://api.github.com/repos/duckdb/duckdb/issues"
+    },
+    "readme_excerpt": "## DuckDB DuckDB is a high-performance analytical database system. It is designed to be fast, reliable, portable, and easy to use. DuckDB provides a rich SQL dialect with support far beyond basic SQL. DuckDB supports arbitrary and nested correlated subqueries, window functions, collations, complex types (arrays, structs, maps), and [several extensions designed to make SQL easier to use](https://duckdb.org/docs/current/sql/dialect/friendly_sql.html). DuckDB is available as a [standalone CLI application](https://duckdb.org/docs/current/clients/cli/overview) and has clients for [Python](https://duckdb.org/docs/current/clients/python/overview), [R](https://duckdb.org/docs/current/clients/r), [Java](https://duckdb.org/docs/current/clients/java), [Wasm](https://duckdb.org/docs/current/clients/wasm/overview), etc., with deep integrations with packages such as [pandas](https://duckdb.org/docs/guides/python/sql_on_pandas) and [dplyr](https://duckdb.org/docs/current/clients/r#duckplyr-dplyr-api). For more information on using DuckDB, please refer to the [DuckDB documentation](https://duckdb.org/docs/current/). ## Installation If you want to install DuckDB, please see [our installation page](https://duckdb.org/docs/installation/) for instructions. ## Data Import For CSV files and Parquet files, data import is as simple as referencing the file in the FROM clause: ```sql SELECT * FROM 'myfi",
+    "license_excerpt": "Copyright 2018-2026 Stichting DuckDB Foundation Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright"
+  }
+]

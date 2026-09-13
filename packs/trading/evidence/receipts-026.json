@@ -1,0 +1,1232 @@
+[
+  {
+    "full_name": "josephchenhk/qtrader",
+    "requested_name": "josephchenhk/qtrader",
+    "id": 295894890,
+    "url": "https://github.com/josephchenhk/qtrader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A Light Event-Driven Algorithmic Trading Engine",
+    "stars": 548,
+    "forks": 109,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "209f96b8122e7a7fc18de611c821ef4d7f64ba56",
+    "last_commit_date": "2026-09-07T07:47:04Z",
+    "pushed_at_not_commit_date": "2026-09-07T07:47:04Z",
+    "commits_since_20260313_count_capped100": 3,
+    "recent_commit_authors": [
+      "emt-Q",
+      "josephchenhk"
+    ],
+    "contributors_sample": [
+      {
+        "login": "josephchenhk",
+        "contributions": 316,
+        "type": "User"
+      },
+      {
+        "login": "emt-Q",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/josephchenhk/qtrader/issues/31",
+      "created_at": "2024-05-14T03:25:35Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4122f696ee61208343e211300ed1ae3144bec0f8fe8dd368a2881397fd191ed1",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "MANIFEST.in",
+      "README.md",
+      "__init__.py",
+      "contents",
+      "examples",
+      "qtrader",
+      "qtrader_config_sample.py",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/requirements.txt",
+        "sha256": "cead0858a13ee18a480b15cecd75227650dd46f012fc26e7c04f0b120b012214"
+      },
+      "setup.py": {
+        "url": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/setup.py",
+        "sha256": "2da114b15eb4d1c7e713c77eb82e390937ef2073b1cae39f6095832357cfc7ba"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/josephchenhk/qtrader",
+      "commit": "https://github.com/josephchenhk/qtrader/commit/209f96b8122e7a7fc18de611c821ef4d7f64ba56",
+      "readme": "https://github.com/josephchenhk/qtrader/blob/209f96b8122e7a7fc18de611c821ef4d7f64ba56/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/josephchenhk/qtrader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/josephchenhk/qtrader/contributors",
+      "issues": "https://api.github.com/repos/josephchenhk/qtrader/issues"
+    },
+    "readme_excerpt": "# QTrader: A Light Event-Driven Algorithmic Trading Engine **Latest update on 2026-09-07** `qtrader` has been fully upgraded to Systematic Investment Research Intelligence (Atabet Quant Intelligence), please refer to `www.atabet.com` for more information. ## Key modifications - 2022-09-07: Moved `qtrader.config` to `qtrader_config` ## Introduction QTrader is a light and flexible event-driven algorithmic trading engine that can be used to backtest strategies, and seamlessly switch to live trading without any pain. ## Key Features * Completely **same code** for backtesting / simulation / live trading * Support trading of various assets: equity, futures * Resourceful functionalities to support live monitoring and analysis ## Quick Install You may run the folllowing command to install QTrader immediately: ```python # Virtual environment is recommended (python 3.8 or above is supported) >> conda create -n qtrader python=3.8 >> conda activate qtrader # Install stable version from pip (currently version 0.0.4) >> pip install qtrader # Alternatively, install latest version from github >> pip install git+https://github.com/josephchenhk/qtrader@master ``` ## Create a Configuration File At your current working directory, create `qtrader_config.py` if not exists. There is an example `qtrader_config_sample.py` for your reference. Adjust the items if necessary. ## Prepare the Data QTrader su",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "jrodolfo/solace",
+    "requested_name": "jrodolfo/solace",
+    "id": 925260884,
+    "url": "https://github.com/jrodolfo/solace",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Full-stack Solace PubSub+ workspace with a Spring Boot broker API, React publisher UI, Java subscriber, lifecycle tracking, retry, reconciliation, and architecture documentation.",
+    "stars": 4,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "302363d0209133c04914b4a8005cee106ba1eaa6",
+    "last_commit_date": "2026-07-15T16:11:15Z",
+    "pushed_at_not_commit_date": "2026-07-15T16:11:19Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "jrodolfo"
+    ],
+    "contributors_sample": [
+      {
+        "login": "jrodolfo",
+        "contributions": 299,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "4016a57b25b2bdb5ea117b6d92a6c7fc93382075550db971ed16a27b231ca9b0",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "fcb14615b44fffcf174083bc025722ecf00ebd68f1914c43ccb616061f6853db",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "docker-compose.yml",
+      "docs",
+      "scripts",
+      "solace-broker-api",
+      "solace-publisher-ui",
+      "solace-subscriber"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/jrodolfo/solace",
+      "commit": "https://github.com/jrodolfo/solace/commit/302363d0209133c04914b4a8005cee106ba1eaa6",
+      "readme": "https://github.com/jrodolfo/solace/blob/302363d0209133c04914b4a8005cee106ba1eaa6/README.md",
+      "license": "https://github.com/jrodolfo/solace/blob/302363d0209133c04914b4a8005cee106ba1eaa6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/jrodolfo/solace/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/jrodolfo/solace/contributors",
+      "issues": "https://api.github.com/repos/jrodolfo/solace/issues"
+    },
+    "readme_excerpt": "# Solace Workspace [![CI](https://github.com/jrodolfo/solace/actions/workflows/ci.yml/badge.svg)](https://github.com/jrodolfo/solace/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Java 21](https://img.shields.io/badge/Java-21-007396?logo=openjdk&logoColor=white)](https://openjdk.org/) [![Spring Boot 4.1](https://img.shields.io/badge/Spring%20Boot-4.1-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/) [![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/) [![Solace](https://img.shields.io/badge/Solace-PubSub%2B-00C895)](https://solace.com/) Solace Workspace is an open-source proof-of-concept that demonstrates event-driven integration patterns using Solace PubSub+. Built as a small full-stack application, it showcases message publishing, lifecycle tracking, retries, and operational visibility while illustrating how isolated systems can communicate through an Event-Driven Architecture. Explore the sections below for architecture diagrams, implementation details, and design decisions behind the project. It is organized as three active modules: - [solace-broker-api](solace-broker-api/README.md): Spring Boot backend for publishing, storing, re",
+    "license_excerpt": "MIT License Copyright (c) 2026 Rod Oliveira Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright not"
+  },
+  {
+    "full_name": "jseutter/ofxparse",
+    "requested_name": "jseutter/ofxparse",
+    "id": 235672,
+    "url": "https://github.com/jseutter/ofxparse",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Ofx file format parser for Python",
+    "stars": 218,
+    "forks": 125,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "25aa80072be71da9f4ea0924ae1d1aaea2d5820c",
+    "last_commit_date": "2021-05-31T03:54:22Z",
+    "pushed_at_not_commit_date": "2024-04-26T13:57:10Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "jseutter",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "jaraco",
+        "contributions": 40,
+        "type": "User"
+      },
+      {
+        "login": "rkhwaja",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "guyrt",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "captin411",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "malikoth",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "iffy",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "mikeivanov",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "tonnydourado",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "nathangrigg",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "santagada",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jantman",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "egh",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "zenbot",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "achiang",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "natebragg",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "danc86",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "westurner",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "orangain",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "absoludity",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "josephw",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ericmoritz",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "udibr",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "idealisms",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ilesh-silentinfotech",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ansother",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "viraptor",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sreeshas",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "raninho",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cilynx",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/jseutter/ofxparse/issues/182",
+      "created_at": "2026-08-05T15:51:07Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "9ab70c593703bf1082b5db6d1b39b6cc6ffceb7628ee12d3810761276fc70559",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "25e75507d0e1d9d2487c12fc839780f2905b18553a60ab1895ac9d999db30370",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".coverage",
+      ".coveragerc",
+      ".gitignore",
+      ".travis.yml",
+      "AUTHORS",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "mcc_codes.csv",
+      "ofxparse",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "tests",
+      "todo.txt",
+      "utils"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/requirements.txt",
+        "sha256": "5cfd10dc2dadcf9001dbf13001fa60d66a40bfb313b23f53785ccf6bf469474a"
+      },
+      "setup.py": {
+        "url": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/setup.py",
+        "sha256": "37012c87020f2ea7027feb44e5831ff5c91c7f0c012a26d32a8c293560cc4558"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/jseutter/ofxparse",
+      "commit": "https://github.com/jseutter/ofxparse/commit/25aa80072be71da9f4ea0924ae1d1aaea2d5820c",
+      "readme": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/README.rst",
+      "license": "https://github.com/jseutter/ofxparse/blob/25aa80072be71da9f4ea0924ae1d1aaea2d5820c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/jseutter/ofxparse/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/jseutter/ofxparse/contributors",
+      "issues": "https://api.github.com/repos/jseutter/ofxparse/issues"
+    },
+    "readme_excerpt": "ofxparse ======== ofxparse is a parser for Open Financial Exchange (.ofx) format files. OFX files are available from almost any online banking site, so they work well if you want to pull together your finances from multiple sources. Online trading accounts also provide account statements in OFX files. There are three different types of OFX files, called BankAccount, CreditAccount and InvestmentAccount files. This library has been tested with real-world samples of all three types. If you find a file that does not work with this library, please consider contributing the file so ofxparse can be improved. See the Help! section below for directions on how to do this. Example Usage ============= Here's a sample program .. code:: python from ofxparse import OfxParser with codecs.open('file.ofx') as fileobj: ofx = OfxParser.parse(fileobj) # The OFX object ofx.account # An Account object # AccountType # (Unknown, Bank, CreditCard, Investment) # Account account = ofx.account account.account_id # The account number account.number # The account number (deprecated -- returns account_id) account.routing_number # The bank routing number account.branch_id # Transit ID / branch number account.type # An AccountType object account.statement # A Statement object account.institution # An Institution object # InvestmentAccount(Account) account.brokerid # Investment broker ID account.statement # An I",
+    "license_excerpt": "Copyright (c) 2009 Jerry Seutter Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and thi"
+  },
+  {
+    "full_name": "jtranq/polyfill-rs",
+    "requested_name": "jtranq/polyfill-rs",
+    "id": 1024570714,
+    "url": "https://github.com/jtranq/polyfill-rs",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The Fastest Polymarket Rust Client",
+    "stars": 226,
+    "forks": 48,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "851c1b0396ae86a7934d331062b39e2ae4b2daba",
+    "last_commit_date": "2026-09-12T17:09:09Z",
+    "pushed_at_not_commit_date": "2026-09-12T17:09:09Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "jtranq"
+    ],
+    "contributors_sample": [
+      {
+        "login": "jtranq",
+        "contributions": 230,
+        "type": "User"
+      },
+      {
+        "login": "onsails",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "bd9dca5615b93152c0333764cb03312b4e03f6cd7de98dc777a5d485b6113591",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE-APACHE",
+    "license_file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_candidates": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".spellcheck.yml",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE-APACHE",
+      "LICENSE-MIT",
+      "README.md",
+      "assets",
+      "benches",
+      "clippy.toml",
+      "docs",
+      "examples",
+      "header.png",
+      "rustfmt.toml",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/Cargo.toml",
+        "sha256": "2c1f4d17a2d6b486bf26b9e64b7a18c525b61853e9290b4af211a105c034a158"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      },
+      {
+        "round": 3,
+        "stage": "W03",
+        "lane": "topic",
+        "query": "topic:prediction-market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/jtranq/polyfill-rs",
+      "commit": "https://github.com/jtranq/polyfill-rs/commit/851c1b0396ae86a7934d331062b39e2ae4b2daba",
+      "readme": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/README.md",
+      "license": "https://github.com/jtranq/polyfill-rs/blob/851c1b0396ae86a7934d331062b39e2ae4b2daba/LICENSE-APACHE",
+      "recent_commits": "https://api.github.com/repos/jtranq/polyfill-rs/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/jtranq/polyfill-rs/contributors",
+      "issues": "https://api.github.com/repos/jtranq/polyfill-rs/issues"
+    },
+    "readme_excerpt": "![polyfill-rs](header.png) [![Crates.io](https://img.shields.io/crates/v/polyfill-rs.svg)](https://crates.io/crates/polyfill-rs) [![Documentation](https://docs.rs/polyfill-rs/badge.svg)](https://docs.rs/polyfill-rs) [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](#license) A high-performance Polymarket Rust client with latency-optimized data structures and allocator-conscious hot paths. The `0.4.x` line is V2-native and intentionally breaking for authenticated trading flows. At the time that this project was started, `polymarket-rs-client` was a Polymarket Rust Client with a few GitHub stars, but which seemed to be unmaintained. I took on the task of creating a Rust client which could beat the benchmarks quoted in the README.md of that project, with the added constraint of also maintaining zero alloc hot paths. I also want to take a moment to clarify what zero-alloc means because I've now recieved double digit messages about this on twitter/x and telegram. In this repository the strict claim is limited to tested, warmed hot paths: existing-level book updates and selected read-side calculations are covered by no-heap-traffic tests that count allocations, reallocations, and deallocations. Snapshot churn, first-seen books, and new price levels can still touch the allocator by design. Notably order book paths that can touch the allocator by design: - F",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "requested_name": "juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "id": 153149113,
+    "url": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Market Data Feed Handler, ITCH Protocol.  MoldUDP Multicast  Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ).",
+    "stars": 9,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "master",
+    "latest_commit": "c5e577e41b3e210f49c7b5c2848f6da2291d3b7f",
+    "last_commit_date": "2018-12-18T20:05:33Z",
+    "pushed_at_not_commit_date": "2018-12-18T20:05:34Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "juanjmtzs",
+        "contributions": 12,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "c1bb41deac248a8952b77c3e180a78ce296e6f42f29a39bb7b432acdb8435312",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "afa699edb972e792b807f361d43f11201fb1bf1fbab3a9f8310823a286e52074",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "BIVA_MoldUDP_Multicast_Handler",
+      "LICENSE",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/juanjmtzs/BIVA-MoldUDP-Multicast-Handler",
+      "commit": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/commit/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f",
+      "readme": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/blob/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f/README.md",
+      "license": "https://github.com/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/blob/c5e577e41b3e210f49c7b5c2848f6da2291d3b7f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/contributors",
+      "issues": "https://api.github.com/repos/juanjmtzs/BIVA-MoldUDP-Multicast-Handler/issues"
+    },
+    "readme_excerpt": "# BIVA-MoldUDP-Multicast-Handler To RUN: java -jar $myJar $mcastGroup $mcastPort $receiverInterfaceIP $folder $ipRecovery $portRecovery & Market Data Feed Handler, ITCH Protocol. MoldUDP Multicast Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ). Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be reproduced in any manner whatsoever without the express written permission of the owner. The purpose of this is to be consulted and used as a referece of functionallyty. Developed in Mexico City First version, 2018 @author: Juan J. Mart\u00ednez @email: juanjmtzs@gmail.com @phone: +52-1-55-1247-8044 @linkedin: https://www.linkedin.com/in/juanjmtzs/",
+    "license_excerpt": "Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be reproduced in any manner whatsoever without the express written permission of the owner. The purpose of this is to be consulted and used as a referece of functionallyty. Developed in Mexico City First version, 2018 @author: Juan J. Mart\u00ednez @email: juanjmtzs@gmail.com @phone: +52-1-55-1247-8044 @linkedin: https://www.linkedin.com/in/juanjmtzs/"
+  },
+  {
+    "full_name": "juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "requested_name": "juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "id": 153152039,
+    "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Market Data Feed Handler, ITCH Protocol.  SoupBinTCP Unicast  Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ).",
+    "stars": 5,
+    "forks": 4,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "master",
+    "latest_commit": "54dc8ffa19f6fcb5e47b075413067f302f38f251",
+    "last_commit_date": "2018-10-15T19:45:18Z",
+    "pushed_at_not_commit_date": "2018-10-15T19:45:18Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "juanjmtzs",
+        "contributions": 10,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/issues/1",
+      "created_at": "2020-06-21T10:59:49Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README",
+    "readme_sha256": "a07156b42d69a2ff677c6197719554257a81b67269b7cdc1532b0a90913a9c22",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b5edcca3741b839c7542d2566faa8c6020a1574e106bdec9121e049812bfbe60",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "BIVA_SoupBinTCP_Unicast_Handler",
+      "LICENSE",
+      "README"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler",
+      "commit": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/commit/54dc8ffa19f6fcb5e47b075413067f302f38f251",
+      "readme": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/blob/54dc8ffa19f6fcb5e47b075413067f302f38f251/README",
+      "license": "https://github.com/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/blob/54dc8ffa19f6fcb5e47b075413067f302f38f251/LICENSE",
+      "recent_commits": "https://api.github.com/repos/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/contributors",
+      "issues": "https://api.github.com/repos/juanjmtzs/BIVA-SoupBinTCP-Unicast-Handler/issues"
+    },
+    "readme_excerpt": "# BIVA-SoupBinTCP-Multicast-Handler To RUN: java -jar $myJar $user $pass $ip $port $seq $folder & Market Data Feed Handler, ITCH Protocol. SoupBinTCP Unicast Useful for the new Mexican Stock Exchange BIVA (Bolsa Institucional de Valores) that uses X-Stream (NASDAQ). Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be reproduced in any manner whatsoever without the express written permission of the owner. The purpose of this is to be consulted and used as a referece of functionallyty. Developed in Mexico City First version, 2018 @author: Juan J. Mart\u00ednez @email: juanjmtzs@gmail.com @phone: +52-1-55-1247-8044 @linkedin: https://www.linkedin.com/in/juanjmtzs/",
+    "license_excerpt": "Copyright (C) 2018 Juan J. Mart\u00ednez All rights reserved. This complete software or any portion thereof can be used as reference but may not be reproduced in any manner whatsoever without the express written permission of the owner. The purpose of this is to be consulted and used as a referece of functionallyty. Developed in Mexico City First version, 2018 @author Juan J. Mart\u00ednez @email juanjmtzs@gmail.com @phone +52-1-55-1247-8044 @linkedin https://www.linkedin.com/in/juanjmtzs/"
+  },
+  {
+    "full_name": "jupyterlab/jupyterlab",
+    "requested_name": "jupyterlab/jupyterlab",
+    "id": 60374819,
+    "url": "https://github.com/jupyterlab/jupyterlab",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "JupyterLab computational environment.",
+    "stars": 15301,
+    "forks": 4093,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "cd7f6133a5809c83ebbede50673b06aa2fd0c311",
+    "last_commit_date": "2026-09-12T14:44:19Z",
+    "pushed_at_not_commit_date": "2026-09-12T16:20:06Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Darshan808",
+      "GagandeepSingh20",
+      "IsabelParedes",
+      "JoeyAsh96",
+      "JussiRoos",
+      "MUFFANUJ",
+      "NONAN23x",
+      "Whning0513",
+      "Zsailer",
+      "afshin",
+      "brichet",
+      "dependabot[bot]",
+      "fly1d",
+      "fonsp",
+      "jasongrout",
+      "jtpio",
+      "krassowski",
+      "pre-commit-ci[bot]",
+      "tomatotomata"
+    ],
+    "contributors_sample": [
+      {
+        "login": "afshin",
+        "contributions": 3737,
+        "type": "User"
+      },
+      {
+        "login": "jasongrout",
+        "contributions": 2996,
+        "type": "User"
+      },
+      {
+        "login": "jtpio",
+        "contributions": 1318,
+        "type": "User"
+      },
+      {
+        "login": "ian-r-rose",
+        "contributions": 1260,
+        "type": "User"
+      },
+      {
+        "login": "ellisonbg",
+        "contributions": 770,
+        "type": "User"
+      },
+      {
+        "login": "krassowski",
+        "contributions": 602,
+        "type": "User"
+      },
+      {
+        "login": "telamonian",
+        "contributions": 583,
+        "type": "User"
+      },
+      {
+        "login": "saulshanabrook",
+        "contributions": 562,
+        "type": "User"
+      },
+      {
+        "login": "fcollonval",
+        "contributions": 549,
+        "type": "User"
+      },
+      {
+        "login": "echarles",
+        "contributions": 403,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 293,
+        "type": "Bot"
+      },
+      {
+        "login": "KsavinN",
+        "contributions": 270,
+        "type": "User"
+      },
+      {
+        "login": "vidartf",
+        "contributions": 255,
+        "type": "User"
+      },
+      {
+        "login": "cameronoelsen",
+        "contributions": 195,
+        "type": "User"
+      },
+      {
+        "login": "gnestor",
+        "contributions": 170,
+        "type": "User"
+      },
+      {
+        "login": "zuoyuanh",
+        "contributions": 160,
+        "type": "User"
+      },
+      {
+        "login": "dwillmer",
+        "contributions": 132,
+        "type": "User"
+      },
+      {
+        "login": "kgryte",
+        "contributions": 132,
+        "type": "User"
+      },
+      {
+        "login": "sccolbert",
+        "contributions": 127,
+        "type": "User"
+      },
+      {
+        "login": "markellekelly",
+        "contributions": 119,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 117,
+        "type": "Bot"
+      },
+      {
+        "login": "bollwyvl",
+        "contributions": 112,
+        "type": "User"
+      },
+      {
+        "login": "mbektas",
+        "contributions": 94,
+        "type": "User"
+      },
+      {
+        "login": "MUFFANUJ",
+        "contributions": 94,
+        "type": "User"
+      },
+      {
+        "login": "brichet",
+        "contributions": 87,
+        "type": "User"
+      },
+      {
+        "login": "JohanMabille",
+        "contributions": 80,
+        "type": "User"
+      },
+      {
+        "login": "JasonWeill",
+        "contributions": 76,
+        "type": "User"
+      },
+      {
+        "login": "willingc",
+        "contributions": 75,
+        "type": "User"
+      },
+      {
+        "login": "jzf2101",
+        "contributions": 74,
+        "type": "User"
+      },
+      {
+        "login": "hbcarlos",
+        "contributions": 72,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/jupyterlab/jupyterlab/issues/19754",
+      "created_at": "2026-09-13T13:05:30Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-09-13T15:41:56Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f2a9d4e09ca81a79ffe7f21ca31cbb51d8e04cf0a801d638ae3f32c3317b67d3",
+    "license": "BSD-3-Clause",
+    "license_path": "LICENSE",
+    "license_file_sha256": "56b2e89eae0571033d778a9790872f17ee219c723b826399052522ddb94b2853",
+    "license_candidates": [
+      ".licenserc.yaml",
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".cleanignore",
+      ".codespellignore",
+      ".devcontainer",
+      ".dockerignore",
+      ".git-blame-ignore-revs",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".licenserc.yaml",
+      ".meeseeksdev.yml",
+      ".pre-commit-config.yaml",
+      ".prettierignore",
+      ".prettierrc",
+      ".readthedocs.yml",
+      ".stylelintignore",
+      ".stylelintrc.yaml",
+      ".vscode",
+      ".yarnrc.yml",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "CORPORATE.md",
+      "LICENSE",
+      "README.md",
+      "RELEASE.md",
+      "binder",
+      "buildapi.py",
+      "buildutils",
+      "clean.py",
+      "conftest.py",
+      "design",
+      "dev_mode",
+      "docker",
+      "docs",
+      "eslint.config.mjs",
+      "eslint.config.typecheck.mjs",
+      "examples",
+      "galata",
+      "jupyter-config",
+      "jupyterlab.desktop",
+      "jupyterlab.svg",
+      "jupyterlab",
+      "lerna.json",
+      "package.json",
+      "packages",
+      "postcss.config.js",
+      "pyproject.toml",
+      "scripts",
+      "testutils",
+      "tsconfig.eslint.json",
+      "tsconfigbase.json",
+      "tsconfigbase.test.json",
+      "typedoc.base.json",
+      "typedoc.js",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/jupyterlab/jupyterlab/blob/cd7f6133a5809c83ebbede50673b06aa2fd0c311/pyproject.toml",
+        "sha256": "404e4bb70a2df49c6c8c7013c261df91084b35321eee88d05db127cca04f74c3"
+      },
+      "package.json": {
+        "url": "https://github.com/jupyterlab/jupyterlab/blob/cd7f6133a5809c83ebbede50673b06aa2fd0c311/package.json",
+        "sha256": "767d0cc065f7b261149827a4b593f63c2e4d0b254f27d84247f439b9f3dd4129"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/jupyterlab/jupyterlab",
+      "commit": "https://github.com/jupyterlab/jupyterlab/commit/cd7f6133a5809c83ebbede50673b06aa2fd0c311",
+      "readme": "https://github.com/jupyterlab/jupyterlab/blob/cd7f6133a5809c83ebbede50673b06aa2fd0c311/README.md",
+      "license": "https://github.com/jupyterlab/jupyterlab/blob/cd7f6133a5809c83ebbede50673b06aa2fd0c311/LICENSE",
+      "recent_commits": "https://api.github.com/repos/jupyterlab/jupyterlab/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/jupyterlab/jupyterlab/contributors",
+      "issues": "https://api.github.com/repos/jupyterlab/jupyterlab/issues"
+    },
+    "readme_excerpt": "**[Installation](#installation)** | **[Documentation](https://jupyterlab.readthedocs.io)** | **[Contributing](#contributing)** | **[License](#license)** | **[Team](#team)** | **[Getting help](#getting-help)** | # [JupyterLab](https://jupyterlab.readthedocs.io) [![PyPI version](https://badge.fury.io/py/jupyterlab.svg)](https://badge.fury.io/py/jupyterlab) [![PyPI Downloads](https://static.pepy.tech/personalized-badge/jupyterlab?period=monthly&units=INTERNATIONAL_SYSTEM&left_color=GRAY&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/jupyterlab) [![Build Status](https://github.com/jupyterlab/jupyterlab/workflows/Linux%20Tests/badge.svg)](https://github.com/jupyterlab/jupyterlab/actions?query=branch%3Amain+workflow%3A%22Linux+Tests%22) [![Build Status](https://github.com/jupyterlab/jupyterlab/workflows/Windows%20Tests/badge.svg)](https://github.com/jupyterlab/jupyterlab/actions?query=branch%3Amain+workflow%3A%22Windows+Tests%22) [![Documentation Status](https://readthedocs.org/projects/jupyterlab/badge/?version=stable)](http://jupyterlab.readthedocs.io/en/stable/) [![Crowdin](https://badges.crowdin.net/jupyterlab/localized.svg)](https://crowdin.com/project/jupyterlab) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8675/badge)](https://www.bestpractices.dev/projects/8675) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/jupyte",
+    "license_excerpt": "Copyright (c) 2015-2026 Project Jupyter Contributors All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/"
+  },
+  {
+    "full_name": "jupytext/jupytext",
+    "requested_name": "jupytext/jupytext",
+    "id": 137444487,
+    "url": "https://github.com/jupytext/jupytext",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Jupyter Notebooks as Markdown Documents, Julia, Python or R scripts",
+    "stars": 7244,
+    "forks": 426,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "b581f0ad3734f4f3846865e0f3f6b0261b27841d",
+    "last_commit_date": "2026-09-11T09:22:35Z",
+    "pushed_at_not_commit_date": "2026-09-11T09:26:54Z",
+    "commits_since_20260313_count_capped100": 78,
+    "recent_commit_authors": [
+      "Copilot",
+      "bsipocz",
+      "dependabot[bot]",
+      "krassowski",
+      "mahendrapaipuri",
+      "mwouts",
+      "nvxbug",
+      "peytondmurray",
+      "steovd"
+    ],
+    "contributors_sample": [
+      {
+        "login": "mwouts",
+        "contributions": 2295,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 60,
+        "type": "Bot"
+      },
+      {
+        "login": "chrisjsewell",
+        "contributions": 56,
+        "type": "User"
+      },
+      {
+        "login": "mahendrapaipuri",
+        "contributions": 54,
+        "type": "User"
+      },
+      {
+        "login": "LecrisUT",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "parmentelat",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "choldgraf",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "matthewfeickert",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "kiendang",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "Skylion007",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "bzinberg",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "Copilot",
+        "contributions": 5,
+        "type": "Bot"
+      },
+      {
+        "login": "krassowski",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "martinRenou",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "matthew-brett",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jest",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "joelostblom",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "itcarroll",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jhelie",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "fcollonval",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "telamonian",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "slmg",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "halcyon-gh",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "zhuoqiang",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Freshwood",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "fwouts",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "idvorkin",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jjoonathan",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "phaustin",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "nthiery",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "29e6577f2528114d216baa2f48398aeb6c986773f56080f2d160de794302df60",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "070ca5b818b33b62d6673d4fa7044876d2d831b7ce942ff2e2b4923a5bbefb1b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".git-blame-ignore-revs",
+      ".git_archival.txt",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".pre-commit-hooks.yaml",
+      ".readthedocs.yml",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "binder",
+      "demo",
+      "docs",
+      "jupyterlab",
+      "pixi.lock",
+      "pyproject.toml",
+      "src",
+      "tests",
+      "tools",
+      "website",
+      "zizmor.yml"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/jupytext/jupytext/blob/b581f0ad3734f4f3846865e0f3f6b0261b27841d/pyproject.toml",
+        "sha256": "96b16690652af9cba0c62b95ff3a2c50d9c203850858f13f0309907def259d03"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "jupytext/jupytext",
+      "capability_tag": "markdown-render",
+      "category_slug": "file-conversion-tool",
+      "summary": "Round-trip Jupyter notebooks as Markdown/Plain scripts",
+      "reuse_value": 85,
+      "stars": 7199,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/jupytext/jupytext",
+      "rank_score": 85071990
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "jupytext/jupytext",
+      "stars": 7199,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 82,
+      "fame_gap": 3,
+      "cat_slug": "file-conversion-tool",
+      "cat_name": "File / Format Conversion Tool",
+      "description": "Jupyter Notebooks as Markdown Documents, Julia, Python or R scripts"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/jupytext/jupytext",
+      "commit": "https://github.com/jupytext/jupytext/commit/b581f0ad3734f4f3846865e0f3f6b0261b27841d",
+      "readme": "https://github.com/jupytext/jupytext/blob/b581f0ad3734f4f3846865e0f3f6b0261b27841d/README.md",
+      "license": "https://github.com/jupytext/jupytext/blob/b581f0ad3734f4f3846865e0f3f6b0261b27841d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/jupytext/jupytext/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/jupytext/jupytext/contributors",
+      "issues": "https://api.github.com/repos/jupytext/jupytext/issues"
+    },
+    "readme_excerpt": "[![](https://github.com/jupytext/jupytext/blob/17aea37c612f33a4e27eeee4b81966f1506920fd/docs/images/logo_large.png?raw=true)](https://jupytext.org) [![CI](https://github.com/jupytext/jupytext/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jupytext/jupytext/actions) [![codecov.io](https://codecov.io/github/jupytext/jupytext/coverage.svg?branch=main)](https://codecov.io/gh/jupytext/jupytext/branch/main) [![MIT License](https://img.shields.io/github/license/jupytext/jupytext)](https://github.com/jupytext/jupytext/blob/main/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![GitHub language count](https://img.shields.io/github/languages/count/jupytext/jupytext)](https://jupytext.org/formats/languages/) [![Conda Version](https://anaconda.org/conda-forge/jupytext/badges/version.svg)](https://anaconda.org/conda-forge/jupytext/) [![Pypi](https://img.shields.io/pypi/v/jupytext.svg)](https://pypi.python.org/pypi/jupytext) [![pyversions](https://img.shields.io/pypi/pyversions/jupytext.svg)](https://pypi.python.org/pypi/jupytext) [![Binder:lab](https://img.shields.io/badge/binder-jupyterlab-0172B2.svg)](https://mybinder.org/v2/gh/jupytext/jupytext/main?urlpath=lab/tree/demo/get_started.ipynb) [![Binder:notebook](https://img.shields.io/badge/binder-notebook-0172B2.svg)](https://mybinder.org/v2/gh/j",
+    "license_excerpt": "MIT License Copyright (c) 2018-2026 Marc Wouts Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright "
+  }
+]

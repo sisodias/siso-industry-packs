@@ -1,0 +1,1134 @@
+[
+  {
+    "full_name": "FinanceData/FinanceDataReader",
+    "requested_name": "FinanceData/FinanceDataReader",
+    "id": 130222943,
+    "url": "https://github.com/FinanceData/FinanceDataReader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Financial data reader",
+    "stars": 1542,
+    "forks": 407,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "addcbb7e887f0db6176a87d323de5de28357b5f4",
+    "last_commit_date": "2026-05-13T19:12:04Z",
+    "pushed_at_not_commit_date": "2026-05-13T19:12:11Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "FinanceData"
+    ],
+    "contributors_sample": [
+      {
+        "login": "FinanceData",
+        "contributions": 122,
+        "type": "User"
+      },
+      {
+        "login": "phi-friday",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "partrita",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jackmappotion",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dalinaum",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "moonkyung-kang",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Tommylee1013",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "melemo2",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "DavidKimDY",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Zerohertz",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "stat17-hb",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "leon1114",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "znmean",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/FinanceData/FinanceDataReader/issues/285",
+      "created_at": "2026-09-09T09:33:54Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-09-10T19:33:29Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f222baf34f7c2dc6ad6999a7b09c97812c3d1cd82403f076ebb115dff1a4c28f",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "14897b0d20856ef838cdbfcf1db0eb3741400adbe7b33273ac0ccc3fd5698d10",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "LICENSE.txt",
+      "README.md",
+      "_config.yml",
+      "calendars",
+      "docs",
+      "fetch_test.py",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/FinanceData/FinanceDataReader/blob/addcbb7e887f0db6176a87d323de5de28357b5f4/pyproject.toml",
+        "sha256": "d02c20d19c67b46020532878806c3d51c4db10858c1c09d2b896d867755232d7"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "FinanceData/FinanceDataReader",
+      "stars": 1504,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "Financial data reader"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/FinanceData/FinanceDataReader",
+      "commit": "https://github.com/FinanceData/FinanceDataReader/commit/addcbb7e887f0db6176a87d323de5de28357b5f4",
+      "readme": "https://github.com/FinanceData/FinanceDataReader/blob/addcbb7e887f0db6176a87d323de5de28357b5f4/README.md",
+      "license": "https://github.com/FinanceData/FinanceDataReader/blob/addcbb7e887f0db6176a87d323de5de28357b5f4/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/FinanceData/FinanceDataReader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/FinanceData/FinanceDataReader/contributors",
+      "issues": "https://api.github.com/repos/FinanceData/FinanceDataReader/issues"
+    },
+    "readme_excerpt": "# FinanceDataReader Open Source Financial data reader **2018-2026 [FinanceData.KR]()** # Overview The FinanceDataReader is financial data reader(crawler) for finance. The main functions are as follows. * KRX Stock listings (\uc2dc\uc7a5\ubcc4 \uc0c1\uc7a5 \uc885\ubaa9 \ub9ac\uc2a4\ud305): 'KRX', 'KOSPI', 'KOSDAQ', 'KONEX' * Global Stock Symbol listings(\ud574\uc678 \uac70\ub798\uc18c \uc0c1\uc7a5 \uc885\ubaa9 \ub9ac\uc2a4\ud305): 'NASDAQ', 'NYSE', 'AMEX', 'S&P500', 'SSE'(\uc0c1\ud574), 'SZSE'(\uc2ec\ucc9c), 'HKEX'(\ud64d\ucf69), 'TSE'(\ub3c4\ucfc4), 'HOSE'(\ud638\uce58\ubbfc) * KRX delistings: 'KRX-DELISTING'(\uc0c1\uc7a5\ud3d0\uc9c0\uc885\ubaa9), 'KRX-ADMINISTRATIVE' (\uad00\ub9ac\uc885\ubaa9), 'KRX-MARCAP'(\uc2dc\uac00\ucd1d\uc561) * ETF Symbol listings: 'ETF/KR' * Stock price(\uac1c\ubcc4\uc885\ubaa9 \uac00\uaca9 \ub370\uc774\ud130): '005930'(Samsung), '091990'(Celltrion Healthcare) ... * Stock price(\ud574\uc678 \uac70\ub798\uc18c \uac1c\ubcc4\uc885\ubaa9 \uac00\uaca9 \ub370\uc774\ud130): 'AAPL', 'AMZN', 'GOOG' ... (you can specify exchange(market) and symbol) * Indexes: 'KS11'(\ucf54\uc2a4\ud53c\uc9c0\uc218), 'KQ11'(\ucf54\uc2a4\ub2e5\uc9c0\uc218), 'DJI'(\ub2e4\uc6b0\uc874\uc2a4\uc9c0\uc218), 'IXIC'(\ub098\uc2a4\ub2e5\uc9c0\uc218), 'US500'(S&P 500\uc9c0\uc218) ... * Exchanges: 'USD/KRW', 'USD/EUR', 'CNY/KRW' ... (\uc870\ud569\uac00\ub2a5\ud55c \ud654\ud3d0\ubcc4 \ud658\uc728 \ub370\uc774\ud130 \uc77c\uc790\ubcc4 \ub370\uc774\ud130) * Cryptocurrency price data (\uc554\ud638\ud654\ud3d0 \uac00\uaca9 \ub370\uc774\ud130): 'BTC/USD', 'ETH/KRW' ... # Install ```bash pip install finance-datareader ``` \ub610\ub294 [uv](https://docs.astral.sh/uv/)\ub97c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0: ```bash uv add finance-datareader # \ud504\ub85c\uc81d\ud2b8 \uc758\uc874\uc131\uc73c\ub85c \ucd94\uac00 uv tool install finance-datareader # CLI \ub3c4\uad6c\ub85c \uae00\ub85c\ubc8c \uc124\uce58 ``` # CLI `fdr` \uba85\ub839\uc5b4\ub97c \uc0ac\uc6a9\ud558\uc5ec \ud130\ubbf8\ub110\uc5d0\uc11c \uc9c1\uc811 \uae08\uc735 \ub370\uc774\ud130\ub97c \uc870\ud68c\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4. ```bash # \uc124\uce58 \uc5c6\uc774 \ubc14\ub85c \uc2e4\ud589 uvx --from finance-datareader fdr price AAPL --start 2024 # \ub610\ub294 uv tool \uc124\uce58 \ud6c4 \uc0ac\uc6a9 uv tool install finance-datareader ``` ### \uac00\uaca9 \ub370\uc774\ud130 \uc870\ud68c (price) ```bash fdr p",
+    "license_excerpt": "MIT License Copyright (c) 2024 FinanceData.KR Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright n"
+  },
+  {
+    "full_name": "Fincept-Corporation/FinceptTerminal",
+    "requested_name": "Fincept-Corporation/FinceptTerminal",
+    "id": 849406496,
+    "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+    "stars": 31382,
+    "forks": 4433,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "main",
+    "latest_commit": "09b70f3bc5c751d0e9507cb877de0270445034fb",
+    "last_commit_date": "2026-09-08T14:48:54Z",
+    "pushed_at_not_commit_date": "2026-09-08T14:49:11Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Sujallukhi04",
+      "akmalsyrf",
+      "anan-1027",
+      "github-actions[bot]",
+      "ivanoviczeljko",
+      "mstru54",
+      "smz202000",
+      "somya25498",
+      "texas0418",
+      "tilakpatel22"
+    ],
+    "contributors_sample": [
+      {
+        "login": "tilakpatel22",
+        "contributions": 824,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 69,
+        "type": "Bot"
+      },
+      {
+        "login": "Jaimin-ptl07",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "actions-user",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "anan-1027",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "rudrasheth",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "Sujallukhi04",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "Aviral2610",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "Abhi-1100",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "Shubh179",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "aviral",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "TanviKamath",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "irfan-ansari-au28",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "elchiwalajayraj-glitch",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "RachitChotalia",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "google-labs-jules[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      },
+      {
+        "login": "foxolotl1128",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "joe960913",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "SyedaAnshrahGillani",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Shivam-Amin",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Marcelluxx",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Recluse58",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "zhaoyao73",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "somya25498",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "smz202000",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mstru54",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bounce12340",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "arnow117",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "akmalsyrf",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal/issues/325",
+      "created_at": "2026-05-27T21:08:48Z",
+      "state": "closed",
+      "comments": 4,
+      "first_staff_comment_in_sample": "2026-05-28T05:47:22Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "8163c6b4d5c1415aab21be6c655b915a5495fa633b260d81913d84c6c6ca763c",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "78daf20f76a2463ef36cac315302e04b9aae29f228a7abfe6ecd8d1c7661f45f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "fincept-qt",
+      "fincept_icon.ico",
+      "funding.json",
+      "images",
+      "setup.sh",
+      "updates.json"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "A",
+        "query": "market data"
+      },
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      },
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "B",
+        "query": "topic:quantitative-finance"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Fincept-Corporation/FinceptTerminal",
+      "commit": "https://github.com/Fincept-Corporation/FinceptTerminal/commit/09b70f3bc5c751d0e9507cb877de0270445034fb",
+      "readme": "https://github.com/Fincept-Corporation/FinceptTerminal/blob/09b70f3bc5c751d0e9507cb877de0270445034fb/README.md",
+      "license": "https://github.com/Fincept-Corporation/FinceptTerminal/blob/09b70f3bc5c751d0e9507cb877de0270445034fb/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Fincept-Corporation/FinceptTerminal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Fincept-Corporation/FinceptTerminal/contributors",
+      "issues": "https://api.github.com/repos/Fincept-Corporation/FinceptTerminal/issues"
+    },
+    "readme_excerpt": "> [!IMPORTANT] > ## \ud83d\udd12 Fincept Terminal **Enterprise** \u2014 the private edition. Launch price: **90% off, ends soon.** > Proprietary real-time data \u00b7 Multi-agent AI research \u00b7 Live broker & algo execution \u00b7 Priority support > > | Plan | Was | **Launch price** | > |:--|:--:|:--:| > | **Exclusive** | ~~$99~~ | **$10** /user/mo | > | **Exclusive+** \u2b50 Most popular | ~~$199~~ | **$20** /user/mo | > | **Exclusive Pro** | ~~$299~~ | **$40** /user/mo | > > [![Claim launch price](https://img.shields.io/badge/%F0%9F%94%A5_Claim_launch_price_%E2%86%92-C06524?style=for-the-badge)](https://fincept.in/enterprise/signup) &nbsp; [![Compare plans](https://img.shields.io/badge/Compare_plans-1F2328?style=for-the-badge)](https://fincept.in/pricing) > > Early seats locked in at launch price for life \u00b7 No annual lock-in, cancel anytime \u00b7 This open-source repo stays free under AGPL-3.0 # Fincept Terminal [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-C06524)](https://github.com/Fincept-Corporation/FinceptTerminal/blob/main/LICENSE) [![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C?logo=cplusplus)](https://isocpp.org/) [![Qt6](https://img.shields.io/badge/Qt-6-41CD52?logo=qt&logoColor=white)](https://www.qt.io/) [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Hits](https://hits.sh/github.com/Fincept-Corporat",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2025-2026 Fincept Corporation This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or F"
+  },
+  {
+    "full_name": "finmath/finmath-lib",
+    "requested_name": "finmath/finmath-lib",
+    "id": 8832601,
+    "url": "https://github.com/finmath/finmath-lib",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Mathematical Finance Library: Algorithms and methodologies related to mathematical finance.",
+    "stars": 582,
+    "forks": 175,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "9bd054ff694026760e46371ef61b96a4dbd7b8b0",
+    "last_commit_date": "2026-08-29T21:40:06Z",
+    "pushed_at_not_commit_date": "2026-08-29T21:40:07Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "cfries"
+    ],
+    "contributors_sample": [
+      {
+        "login": "cfries",
+        "contributions": 4621,
+        "type": "User"
+      },
+      {
+        "login": "AlessandroGnoatto",
+        "contributions": 89,
+        "type": "User"
+      },
+      {
+        "login": "rolandbachl",
+        "contributions": 82,
+        "type": "User"
+      },
+      {
+        "login": "NiklasRodi",
+        "contributions": 33,
+        "type": "User"
+      },
+      {
+        "login": "stefansedlmair",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "VEichel",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "IkeThermite",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "William1104",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "delreluca",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "agrotz",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "AlgoAmigo",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "agrotz-msai",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "BBreiden",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "emcleod",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "IanMayo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "luca-bressan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "maxsing",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nahian1005002",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mquirin",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "noittom",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "SilverSteven",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/finmath/finmath-lib/issues/54",
+      "created_at": "2018-06-07T09:05:40Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-05-17T21:14:46Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "19de40b55974996ebdd11df6f14cbb62ef0cabe10b8b6fd8451118bd1721aa49",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+    "license_candidates": [
+      "LICENSE.txt",
+      "NOTICE.txt"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".idea",
+      ".project",
+      ".travis.yml",
+      "LICENSE.txt",
+      "NOTICE.txt",
+      "README.md",
+      "bnd.bnd",
+      "checkstyle",
+      "docs",
+      "finmath lib eclipse code style preferences.epf",
+      "finmath-checkstyle-java-6.xml",
+      "lib",
+      "maven-release-site.sh",
+      "maven-release.sh",
+      "pom.xml",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "finmath/finmath-lib",
+      "capability_tag": "none",
+      "category_slug": "scientific-computing-library",
+      "summary": "Mathematical finance algorithms and Monte Carlo simulation library",
+      "reuse_value": 85,
+      "stars": 574,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "url": "https://github.com/finmath/finmath-lib",
+      "rank_score": 85005740
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "finmath/finmath-lib",
+      "stars": 574,
+      "license": "Apache-2.0",
+      "language": "Java",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "scientific-computing-library",
+      "cat_name": "Scientific / Numerical Computing Library",
+      "description": "Mathematical Finance Library: Algorithms and methodologies related to mathematical finance."
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/finmath/finmath-lib",
+      "commit": "https://github.com/finmath/finmath-lib/commit/9bd054ff694026760e46371ef61b96a4dbd7b8b0",
+      "readme": "https://github.com/finmath/finmath-lib/blob/9bd054ff694026760e46371ef61b96a4dbd7b8b0/README.md",
+      "license": "https://github.com/finmath/finmath-lib/blob/9bd054ff694026760e46371ef61b96a4dbd7b8b0/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/finmath/finmath-lib/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/finmath/finmath-lib/contributors",
+      "issues": "https://api.github.com/repos/finmath/finmath-lib/issues"
+    },
+    "readme_excerpt": "About finmath lib ========== **************************************** **Mathematical Finance Library: Algorithms and methodologies related to mathematical finance.** **************************************** [![Twitter](https://img.shields.io/twitter/url/https/github.com/finmath/finmath-lib.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ffinmath%2Ffinmath-lib) [![GitHub license](https://img.shields.io/github/license/finmath/finmath-lib.svg)](https://github.com/finmath/finmath-lib/blob/master/LICENSE.txt) [![Latest release](https://img.shields.io/github/release/finmath/finmath-lib.svg)](https://github.com/finmath/finmath-lib/releases/latest) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib) [![Build Status](https://travis-ci.org/finmath/finmath-lib.svg?branch=master)](https://travis-ci.org/finmath/finmath-lib) [![javadoc](https://javadoc.io/badge2/net.finmath/finmath-lib/javadoc.svg)](https://javadoc.io/doc/net.finmath/finmath-lib) --- **Note**: As of October 12, 2025 the master branch has been renamed to main. In case you have an existing clone on master you may consider doing ``` git fetch origin git branch -m master main # if you still have 'master' git branch -u origin/main main git remote set-head origin -",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "fintechees/Expert-Advisor-Studio",
+    "requested_name": "fintechees/Expert-Advisor-Studio",
+    "id": 171330046,
+    "url": "https://github.com/fintechees/Expert-Advisor-Studio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Expert Advisors, Browser-based EA, Free Crypto / Forex Historical DATA API plugins, EA Codes Generator, Market Maker Bot, Crypto Options Plugin, DEX / Payment Gateway Plugins, Binance API, FIX API related. Fintechee means Fintech ee.",
+    "stars": 358,
+    "forks": 66,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1",
+    "last_commit_date": "2026-09-04T04:25:20Z",
+    "pushed_at_not_commit_date": "2026-09-04T04:25:20Z",
+    "commits_since_20260313_count_capped100": 7,
+    "recent_commit_authors": [
+      "fintechee"
+    ],
+    "contributors_sample": [
+      {
+        "login": "fintechee",
+        "contributions": 681,
+        "type": "User"
+      },
+      {
+        "login": "juedaren-gmail",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mwsym0759",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "taposhsarker1",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/fintechees/Expert-Advisor-Studio/issues/14",
+      "created_at": "2026-09-04T03:17:29Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-09-04T04:27:48Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "18524e7971231520ea89433f69b3fe8434475a4c3b4d2fe031414e04e6fef61f",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ab2153d9ed2d1a02594cb96c7d09623dc828e944706d2a7a06dbd4c27ed6e890",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "AI",
+      "EA",
+      "Indicators",
+      "LICENSE",
+      "README.md",
+      "analyzestructure.png",
+      "architecture.png",
+      "c_cpp_compiler.gif",
+      "cppcompiler.png",
+      "ecosystem.png",
+      "extension.png",
+      "screenshot",
+      "simple_manual.txt"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/fintechees/Expert-Advisor-Studio",
+      "commit": "https://github.com/fintechees/Expert-Advisor-Studio/commit/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1",
+      "readme": "https://github.com/fintechees/Expert-Advisor-Studio/blob/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1/README.md",
+      "license": "https://github.com/fintechees/Expert-Advisor-Studio/blob/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1/LICENSE",
+      "recent_commits": "https://api.github.com/repos/fintechees/Expert-Advisor-Studio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/fintechees/Expert-Advisor-Studio/contributors",
+      "issues": "https://api.github.com/repos/fintechees/Expert-Advisor-Studio/issues"
+    },
+    "readme_excerpt": "> ## Declaration of Human Rights Compliance! > ### THIS REPOSITORY COMPLIES WITH UNIVERSAL HUMAN RIGHTS STANDARDS. USAGE IS STRICTLY PROHIBITED FOR ANY ENTITIES OR REPRESENTATIVES ASSOCIATED WITH TOTALITARIAN REGIMES, LIFELONG AUTHORITARIAN LEADERSHIP SYSTEMS, OR DOMESTIC DIGITAL SURVEILLANCE ENFORCEMENT. > ### \u672c\u4ed3\u5e93\u7b26\u5408\u666e\u4e16\u4eba\u6743\u6807\u51c6\u3002\u4e25\u7981\u4efb\u4f55\u4e0e\u6781\u6743\u4f53\u5236\u3001\u7ec8\u8eab\u5a01\u6743\u9886\u5bfc\u5236\u6216\u56fd\u5185\u6570\u5b57\u76d1\u63a7\u6267\u6cd5\u76f8\u5173\u7684\u5b9e\u4f53\u6216\u4ee3\u8868\u4f7f\u7528\u3002 > ## Anti-Racism Announcement! > ### WE ABSOLUTELY DISALLOW PROVIDING OUR SERVICE/PRODUCT/WHITE-LABEL TO ANY RACIST OR RACIST-SUPPORTED BUSINESS. > ### ESPECIALLY AGAINST A NOTORIOUS RACIST JESSE NICKLES, HE IS ABSOLUTELY ON OUR BLACKLIST FOREVER! > ### TO KNOW WHO JESSE NICKLES IS AND WHAT HE IS DOING, PLEASE CHECK THIS REVIEW POSTED BY A VICTIM: > https://wpjohnny.com/littlebizzy-jesse-nickles-fraud-slander-alert/ > ### OR THIS CLAIM(TO TAKE DOWN HIS INDEX ON GOOGLE) SUBMITTED BY ANOTHER VICTIM > https://www.lumendatabase.org/notices/28558356 > ### OR THIS LAWSUIT AGAINST HIM BY HIS ALMA MATER > https://cite.case.law/frd/304/594/ > ### JESSE NICKLES' GITHUB USERNAME: jessuppi Expert Advisor Studio The most sophisticated Github repository for creating expert advisors(trading robots) and making automated trading doable on the Web browser. Created by Fintechee ## News!! ### AI Trader Released! ![Fintechee AI Trader](https://github.com/fintechees/Expert-Advisor-Studio/blob/master/AI/ai-trader.png) https://www.fintechee.com/",
+    "license_excerpt": "Fintechee License = MIT License + Restrictions for Autocrats, Stasi-Operators & Racists This software is licensed under the MIT License with the following ultimate restrictions: - \ud83d\udeab NO usage granted to Autocrats, lifelong non-retirement regime members, or their official representatives (including unconstitutional law-makers). - \ud83d\udeab NO usage granted to Net-grid surveillance operatives or state-sponsored harassment handlers. - \ud83d\udeab NO usage granted to anyone practicing or endorsing Racial Discriminatio"
+  },
+  {
+    "full_name": "firmai/machine-learning-asset-management",
+    "requested_name": "firmai/machine-learning-asset-management",
+    "id": 196379842,
+    "url": "https://github.com/firmai/machine-learning-asset-management",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Machine Learning in Asset Management (by @firmai)",
+    "stars": 1750,
+    "forks": 465,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "4cad3100819528718f3fca84a3e87107dc7bd911",
+    "last_commit_date": "2021-12-17T07:17:49Z",
+    "pushed_at_not_commit_date": "2021-12-17T07:17:49Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "firmai",
+        "contributions": 77,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/firmai/machine-learning-asset-management/issues/6",
+      "created_at": "2020-05-17T12:15:06Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2020-05-30T23:31:31Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "e1ab78934a2f4a6edf3d75d099962a6e736e7c425ed81d27b1f9e808c98055b8",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md",
+      "assets"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/firmai/machine-learning-asset-management",
+      "commit": "https://github.com/firmai/machine-learning-asset-management/commit/4cad3100819528718f3fca84a3e87107dc7bd911",
+      "readme": "https://github.com/firmai/machine-learning-asset-management/blob/4cad3100819528718f3fca84a3e87107dc7bd911/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/firmai/machine-learning-asset-management/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/firmai/machine-learning-asset-management/contributors",
+      "issues": "https://api.github.com/repos/firmai/machine-learning-asset-management/issues"
+    },
+    "readme_excerpt": "# Machine Learning in Asset Management If you like this type of content then visit [ML Quant](https://www.ml-quant.com/) site below: ---------- > https://www.ml-quant.com/ ![](https://user-images.githubusercontent.com/26666267/145840123-bc077dd0-0980-439a-824b-9c09a5f779de.png) --------- ## Part One Follow this [link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3420952) for SSRN paper. If you feel like citing something you can use: [Snow, D (2020)](https://jfds.pm-research.com/content/2/1/10). Machine Learning in Asset Management\u2014Part 1: Portfolio Construction\u2014***Trading Strategies***. The Journal of Financial Data Science, Winter 2020, 2 (1) 10-23. > This is the first in a series of articles dealing with machine learning in asset management. Asset management can be broken into the following tasks: (1) portfolio construction, (2) risk management, (3) capital management, (4) infrastructure and deployment, and (5) sales and marketing. This article focuses on portfolio construction using machine learning. Historically, algorithmic trading could be more narrowly defined as the automation of sell-side trade execution, but since the introduction of more advanced algorithms, the definition has grown to include idea generation, alpha factor design, asset allocation, position sizing, and the testing of strategies. Machine learning, from the vantage of a decision-making tool, can",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "fix8/fix8",
+    "requested_name": "fix8/fix8",
+    "id": 3142204,
+    "url": "https://github.com/fix8/fix8",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Modern open source C++ FIX framework featuring complete schema customisation, high performance and fast development.",
+    "stars": 468,
+    "forks": 156,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "fd6a550685ed9addbdccb27e605eb11e5ff949e0",
+    "last_commit_date": "2023-05-24T21:40:36Z",
+    "pushed_at_not_commit_date": "2025-12-12T02:31:42Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "syegres",
+        "contributions": 114,
+        "type": "User"
+      },
+      {
+        "login": "dakka",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "neomantra",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "evdubs",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "ido",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "richbourne",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "cgfischer",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "elfring",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "korst1k",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gunjanMunjal94",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iammckane",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jmjatlanta",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "antonam000",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rw-geek",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "syegres8",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "a1a2a74e279dee8da5c53d2aa4efd91961aa9282c2a08208dd954f555fe08547",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "72dbfa111950e52a82e8af352fcc7594b32c85cd8cb4553c086fb60d53955448",
+    "license_candidates": [
+      "COPYING",
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".autom4te.cfg",
+      ".gitattributes",
+      ".gitignore",
+      ".gitmodules",
+      "AUTHORS",
+      "CNAME",
+      "CONTRIBUTORS",
+      "COPYING",
+      "ChangeLog",
+      "INSTALL",
+      "LICENSE",
+      "Makefile.am",
+      "NEWS",
+      "README",
+      "README.md",
+      "bootstrap",
+      "compiler",
+      "configure",
+      "configure.ac",
+      "contrib",
+      "doc",
+      "fix8.spec.in",
+      "include",
+      "m4",
+      "msvc",
+      "runtime",
+      "schema",
+      "stocklib",
+      "test",
+      "utests",
+      "util",
+      "version.sh"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/fix8/fix8",
+      "commit": "https://github.com/fix8/fix8/commit/fd6a550685ed9addbdccb27e605eb11e5ff949e0",
+      "readme": "https://github.com/fix8/fix8/blob/fd6a550685ed9addbdccb27e605eb11e5ff949e0/README.md",
+      "license": "https://github.com/fix8/fix8/blob/fd6a550685ed9addbdccb27e605eb11e5ff949e0/LICENSE",
+      "recent_commits": "https://api.github.com/repos/fix8/fix8/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/fix8/fix8/contributors",
+      "issues": "https://api.github.com/repos/fix8/fix8/issues"
+    },
+    "readme_excerpt": "# [Fix8](http://www.fix8.org) Open Source C++ FIX Engine A modern open source C++ FIX framework featuring complete schema driven customisation, high performance and fast application development. The system is comprised of a compiler for generating C++ message and field encoders, decoders and instantiation tables; a runtime library to support the generated code and framework; and a set of complete client/server test applications. [Fix8 Market Tech](https://www.fix8mt.com/) develops and maintains Fix8, [Fix8Pro and UFE](https://www.fix8mt.com), the commercially supported version of Fix8. **For enterprise use we recommend Fix8Pro.** ## Contents 1. [Contents](#contents) 1. [Features](#features) 1. [Directory Layout](#directory-layout) 1. [Documentation](#documentation) 1. [Branch Layout](#branch-layout) 1. [C++11](#c11) 1. [External Dependencies (required)](#external-dependencies-required) 1. [Optional Dependencies](#optional-dependencies) 1. [Building on Linux/UNIX](#building-on-linuxunix) 1. [Building on OSX](#building-on-osx) 1. [Building on Windows](#building-on-windows) 1. [Support](#support) 1. [Downloads](#downloads) 1. [Getting help or reporting problems](#getting-help-or-reporting-problems) 1. [Making a Pull Request](#making-a-pull-request) 1. [License](#license) 1. [Fix8Pro and Fix8 Market Technologies](#fix8pro-and-fix8-market-technologies) 1. [More Information](#more-in",
+    "license_excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License below with certain specific exceptions (see COPYING). GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright ("
+  },
+  {
+    "full_name": "FIXTradingCommunity/fixconv",
+    "requested_name": "FIXTradingCommunity/fixconv",
+    "id": 48504444,
+    "url": "https://github.com/FIXTradingCommunity/fixconv",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A reference implementation of the translation between tag=value and FIXML.",
+    "stars": 4,
+    "forks": 4,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "master",
+    "latest_commit": "45999e65fc3ddff0cf1aa41bfb7324af7ee687ab",
+    "last_commit_date": "2022-01-04T16:21:15Z",
+    "pushed_at_not_commit_date": "2022-01-04T16:21:15Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "donmendelson",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README",
+    "readme_sha256": "33d2b2ff0e0e7810da78cb6855524bdbb3df6fb611b216dc5f5c6389f885a970",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "LICENSE",
+      "README",
+      "fixconv.top",
+      "pom.xml",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "FIXML"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/FIXTradingCommunity/fixconv",
+      "commit": "https://github.com/FIXTradingCommunity/fixconv/commit/45999e65fc3ddff0cf1aa41bfb7324af7ee687ab",
+      "readme": "https://github.com/FIXTradingCommunity/fixconv/blob/45999e65fc3ddff0cf1aa41bfb7324af7ee687ab/README",
+      "license": "https://github.com/FIXTradingCommunity/fixconv/blob/45999e65fc3ddff0cf1aa41bfb7324af7ee687ab/LICENSE",
+      "recent_commits": "https://api.github.com/repos/FIXTradingCommunity/fixconv/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/FIXTradingCommunity/fixconv/contributors",
+      "issues": "https://api.github.com/repos/FIXTradingCommunity/fixconv/issues"
+    },
+    "readme_excerpt": "A reference implementation of the translation between tag=value and FIXML. Driven from the Unified FIX Repository. Includes code, JUnit tests and Maven site for documentation. A contribution to FIX Protocol Limited.",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "FIXTradingCommunity/FIXML",
+    "requested_name": "FIXTradingCommunity/FIXML",
+    "id": 39651148,
+    "url": "https://github.com/FIXTradingCommunity/FIXML",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The FIXML standard for encoding FIX messages in XML.",
+    "stars": 14,
+    "forks": 4,
+    "archived": false,
+    "fork": false,
+    "language": "Shell",
+    "default_branch": "master",
+    "latest_commit": "d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2",
+    "last_commit_date": "2026-07-14T11:39:29Z",
+    "pushed_at_not_commit_date": "2026-07-14T11:39:34Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "kleihan"
+    ],
+    "contributors_sample": [
+      {
+        "login": "rshriver",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "donmendelson",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kleihan",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/FIXTradingCommunity/FIXML/issues/8",
+      "created_at": "2023-12-05T16:35:20Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": "2023-12-05T16:54:14Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "5829985b08bf6bfb10133c3ade55c4e17068a848f11022ea99d365fc55659584",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "913711d16eaf65d63ac336ece12296f61b149ef1add7b1466077d78456540983",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "FIXML 1.1",
+      "FIXML 1.2",
+      "LICENSE",
+      "README.md",
+      "XMLSchemaForFIX"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "FIXML"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/FIXTradingCommunity/FIXML",
+      "commit": "https://github.com/FIXTradingCommunity/FIXML/commit/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2",
+      "readme": "https://github.com/FIXTradingCommunity/FIXML/blob/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2/README.md",
+      "license": "https://github.com/FIXTradingCommunity/FIXML/blob/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2/LICENSE",
+      "recent_commits": "https://api.github.com/repos/FIXTradingCommunity/FIXML/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/FIXTradingCommunity/FIXML/contributors",
+      "issues": "https://api.github.com/repos/FIXTradingCommunity/FIXML/issues"
+    },
+    "readme_excerpt": "# FIXML The FIXML standard for encoding FIX messages in XML. FIXML 1.2/ is the directory for FIXML 1.2 recommendations. ## License FIXML specifications are \u00a9 Copyright 2006-2020 FIX Protocol Ltd. FIX Simple Binary Encoding by FIX Protocol Ltd. is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License . Based on a work at https://github.com/FIXTradingCommunity/fix-simple-binary-encoding",
+    "license_excerpt": "Creative Commons Attribution-NoDerivatives 4.0 International Public License By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NoDerivatives 4.0 International Public License (\"Public License\"). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such righ"
+  }
+]

@@ -1,0 +1,1141 @@
+[
+  {
+    "full_name": "convexfi/riskparity.py",
+    "requested_name": "convexfi/riskparity.py",
+    "id": 196768103,
+    "url": "https://github.com/convexfi/riskparity.py",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Fast and scalable construction of risk parity portfolios",
+    "stars": 326,
+    "forks": 74,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "eed1bb3ee92c06bdfa65c9536ec148f9e38c9221",
+    "last_commit_date": "2026-08-31T13:51:53Z",
+    "pushed_at_not_commit_date": "2026-08-31T13:51:54Z",
+    "commits_since_20260313_count_capped100": 2,
+    "recent_commit_authors": [
+      "mirca"
+    ],
+    "contributors_sample": [
+      {
+        "login": "mirca",
+        "contributions": 141,
+        "type": "User"
+      },
+      {
+        "login": "dppalomar",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 4,
+        "type": "Bot"
+      },
+      {
+        "login": "DanielPNewman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jaehyukchoi",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/convexfi/riskparity.py/issues/33",
+      "created_at": "2024-10-19T00:56:28Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1fb820bbd3385440de30d83bdbb2b486e943592a541a6d8c028b32f9215be12e",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "d3690684474b62fa161d49401702d5b8ee350c4e06f9663daef6da377c1ee7c8",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "docs",
+      "pyproject.toml",
+      "setup.py",
+      "src",
+      "third-party"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/pyproject.toml",
+        "sha256": "18c96b9ca3a7b2ce1af339d9c50ca65769cd0bd810c4adec4d54415519088397"
+      },
+      "setup.py": {
+        "url": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/setup.py",
+        "sha256": "e8006844988d4d4357314528d0cac02bd490ea2c97af4d0b473b05283423ad74"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/convexfi/riskparity.py",
+      "commit": "https://github.com/convexfi/riskparity.py/commit/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221",
+      "readme": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/README.md",
+      "license": "https://github.com/convexfi/riskparity.py/blob/eed1bb3ee92c06bdfa65c9536ec148f9e38c9221/LICENSE",
+      "recent_commits": "https://api.github.com/repos/convexfi/riskparity.py/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/convexfi/riskparity.py/contributors",
+      "issues": "https://api.github.com/repos/convexfi/riskparity.py/issues"
+    },
+    "readme_excerpt": "# riskparity.py [![PyPI version](https://badge.fury.io/py/riskparityportfolio.svg)](https://badge.fury.io/py/riskparityportfolio) [![Downloads](https://pepy.tech/badge/riskparityportfolio)](https://pepy.tech/project/riskparityportfolio) [![codecov](https://codecov.io/gh/mirca/riskparity.py/branch/master/graph/badge.svg)](https://codecov.io/gh/mirca/riskparity.py) **riskparityportfolio** provides solvers to design risk parity portfolios. In its simplest form, we consider the convex formulation with a unique solution proposed by [Spinu (2013)](https://dx.doi.org/10.2139/ssrn.2297383) and use cyclical methods inspired by [Griveau-Billion et al. (2013)](https://arxiv.org/pdf/1311.4057.pdf) and [Choi & Chen (2022)](https://www.emerald.com/insight/content/doi/10.1108/JDQS-12-2021-0031/full/pdf). For more general formulations, which are usually nonconvex, we implement the successive convex approximation method proposed by [Feng & Palomar (2015)](https://doi.org/10.1109/TSP.2015.2452219). **Documentation:** [**https://mirca.github.io/riskparity.py**](https://mirca.github.io/riskparity.py) **R version:** [**https://mirca.github.io/riskParityPortfolio**](https://mirca.github.io/riskParityPortfolio) **Rust version:** [**https://github.com/mirca/riskparity.rs**](https://github.com/mirca/riskparity.rs) **Talks**: [**slides HKML meetup 2020**](https://speakerdeck.com/mirca/breaking-down-risk",
+    "license_excerpt": "MIT License Copyright (c) 2021 The Authors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "Crypto-toolbox/HFT-Orderbook",
+    "requested_name": "Crypto-toolbox/HFT-Orderbook",
+    "id": 98400312,
+    "url": "https://github.com/Crypto-toolbox/HFT-Orderbook",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Limit Order Book for high-frequency trading (HFT), as described by WK Selph, implemented in Python3 and C",
+    "stars": 1387,
+    "forks": 312,
+    "archived": false,
+    "fork": false,
+    "language": "C",
+    "default_branch": "master",
+    "latest_commit": "df10c9da18705bdeed3c7c37532970a58def9912",
+    "last_commit_date": "2024-11-13T19:41:45Z",
+    "pushed_at_not_commit_date": "2024-11-13T19:41:46Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "deepbrook",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "petros-double-test1",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Lazzaretti",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "petenilson",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "wardbradt",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "thethepai",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Crypto-toolbox/HFT-Orderbook/issues/34",
+      "created_at": "2026-04-18T16:07:11Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "c49ae43ea843e665d1b77c324ae012e18a2a0b89312ed36f82a27ea060bc8c36",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "1d9b1b228924a8ba5dbd47d6975159c011427ce5360b734a0cb57f12a8aea09c",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "lob.py",
+      "orderbook_tests.py",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Crypto-toolbox/HFT-Orderbook",
+      "commit": "https://github.com/Crypto-toolbox/HFT-Orderbook/commit/df10c9da18705bdeed3c7c37532970a58def9912",
+      "readme": "https://github.com/Crypto-toolbox/HFT-Orderbook/blob/df10c9da18705bdeed3c7c37532970a58def9912/README.md",
+      "license": "https://github.com/Crypto-toolbox/HFT-Orderbook/blob/df10c9da18705bdeed3c7c37532970a58def9912/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Crypto-toolbox/HFT-Orderbook/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Crypto-toolbox/HFT-Orderbook/contributors",
+      "issues": "https://api.github.com/repos/Crypto-toolbox/HFT-Orderbook/issues"
+    },
+    "readme_excerpt": "# HFT-Orderbook Limit Order Book for high-frequency trading (HFT), as described by WK Selph, implemented in C. Based on WK Selph's Blogpost: http://howtohft.wordpress.com/2011/02/15/how-to-build-a-fast-limit-order-book/ Available at Archive.org's WayBackMachine: https://goo.gl/KF1SRm \"There are three main operations that a limit order book (LOB) has to implement: add, cancel, and execute. The goal is to implement these operations in O(1) time while making it possible for the trading model to efficiently ask questions like \u201cwhat are the best bid and offer?\u201d, \u201chow much volume is there between prices A and B?\u201d or \u201cwhat is order X\u2019s current position in the book?\u201d. The vast majority of the activity in a book is usually made up of add and cancel operations as market makers jockey for position, with executions a distant third (in fact I would argue that the bulk of the useful information on many stocks, particularly in the morning, is in the pattern of adds and cancels, not executions, but that is a topic for another post). An add operation places an order at the end of a list of orders to be executed at a particular limit price, a cancel operation removes an order from anywhere in the book, and an execution removes an order from the inside of the book (the inside of the book is defined as the oldest buy order at the highest buying price and the oldest sell order at the lowest selling",
+    "license_excerpt": "MIT License Copyright (c) 2017 Nils Diefenbach Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright "
+  },
+  {
+    "full_name": "Cryptoaj-hack/DFDTOKEN",
+    "requested_name": "Cryptoaj-hack/DFDTOKEN",
+    "id": 343352350,
+    "url": "https://github.com/Cryptoaj-hack/DFDTOKEN",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Decentralized Finance (DeFi) Development Services & Solutions Eliminate the role of a middleman by availing decentralized finance (DEFI) development services & solutions. Get access to the major financial services through a blockchain network and experience the benefits of automation, a higher level of security, anonymity, interoperability, and transparency.  Our wide range of services include   Market-Making Consulting We take immense efforts in establishing financial markets that understand the customers\u2019 proprietary algorithms. We aim at improving the access of liquidity to investors and democratize the whole system. We render customized features according to the customer\u2019s expected return on investment.   Decentralized Crypto Banking We ensure a frictionless user experience by facilitating the direct transfer of value between the involved parties supported by decentralization. Our ready-to-launch white-label mobile payment apps render a variety of services such as wallet integration, value holding, and detailed transactional analysis.   Defi Lottery System Development We provide a no-loss lottery system that benefits our participants completely. We take steps to eliminate the custodianship of the pooled capital. We permit investing your capital in other related dapps and distribute the rewards in form of a major share of the interest earned to a winner randomly selected by the smart contracts. We assure the regular flow of returns.   Derivatives Over Defi Platform We ensure seamless access to derivatives and maximize your earning potential by many notches. by establishing robust dapps, we enable traders to hedge their portfolio of investments and minimize risks by directly engaging with their peers through a democratic platform. We are experts in derivatives market-making and Dapp platform development.   Decentralized Fund Management All your crypto assets will be managed to yield high performance in a decentralized exchange through smart control and management. with in-depth experience in investment exchanges along with our strong knowledge of defi, we render our services at low fees and avoid potential risks.   Defi Insurance System Development We ensure that there are no risks present in our smart contract. With our robust provision of insurance services, we assure you that there will be no chance of uncontrollable liquidity requests. We contain futuristic risks, uncertainties, and emergencies through lucrative insurance deals.   Defi Yield Farming Platform Development Yield farming refers to the technique through which one can earn more cryptocurrencies by using his existing holding of cryptos. Liquidity providers play a vital role in the success of yield farming. They stake their assets in liquidity pools and facilitate trading in cryptos by creating a market.   Defi Staking Platform Development Defi staking involves a mechanism where crypto assets will be staked on a supported wallet or exchange and passive income will be earned. The rewards can be calculated based on the quantity of staked assets, the staking duration, inflation rate, and the network issuance rate.   Defi Lending Platform Development Defi lending platforms have been made popular by the likes of aave and compound. The basic features of a defi lending platform include flash loan facilities, a fiat payment gateway, and an exclusive margin trading facility, the advantages of defi lending include high immutability, better transparency, quick access, and resistance to transaction censorship.   Defi Smart Contract Development One of the pivotal reasons behind the tremendous growth of defi services is due to the heavy investments made in robust defi smart contract development. They are created with the solidity programming language, highly encrypted, and automates the tasks to be executed based on certain pre-set terms and conditions.   Defi Dapp Development Defi Dapp development plays a critical role to avoid the risk of a central point of failure. They are highly secure when compared to centralized applications due to the absence of a central authority.   Defi Tokens Development Defi tokens development has played a critical role in boosting the growth of decentralized applications. Their value is currently higher than bitcoin. it has a huge trading volume and has garnered a lot of attention from the mainstream crowd in recent times.   Defi Dex Development Like Uniswap Uniswap is one of the leading defi projects being undertaken. It is an innovative venture as it utilizes incentivized liquidity pools instead of regular order books. every user of uni swap will is rewarded with a percentage of fees incurred on every ethereum transaction for rendering liquidity to the system.   Defi Wallet Development Traders will have complete control over their funds through defi wallet development without the interference of any authorities in the system. Supreme security is guaranteed for users without any compromise. By supplying customized private keys to every user, there will not be any chances for any loss of data.   DeFi Marketing Services To assist DeFi projects gain user engagement, marketing services are indispensable.From drafting white paper, video and content marketing, to legal advisory, marketing and community management, our DeFi marketing and consulting services are well-versed to get the job done.   DeFi Synthetic Asset Development Synthetic assets derive their value from underlying assets and derivatives which are essentially smart contracts. In DeFi, Synthetic assets have gained acclaim as they involve low risks and little chance of price fluctuations. Users can easily invest, trade, and own assets with no hassles.   DeFi Solutions For Ecommerce Streamline your Ecommerce business with DeFi and its pragmatic tools. With DeFi\u2019s solutions , benefits like omission of intermediaries, faster shipping, supply chain management, and real time tracking can be integrated with your Ecommerce business, increasing profits.   DeFi Tokenization Development Tokenization Development is one of the pragmatic solutions DeFi offers. Users can now convert inoperative and underutilized assets into great profits by simply tokenizing their assets. With our DeFi tokenization, avail of ERC20, ERC721 & NFT tokens for your assets.   DeFi Crowdfunding Platform Development Although a relatively new sector, DeFi crowdfunding has become the go-to mode of aggregating funds to support businesses and start-ups. Our DeFi Crowdfunding platform services come with additional benefits in the likes of tax benefits, instant approval, fundraising calendars and more.   DeFi Real Estate Platform Development DeFi has revolutionized the ways of real estate management. Now real estate owners and investors, with the help of blockchain based tokens, can make property investment seamless and manageable. With fractional ownership, financial inclusivity is now possible.   DeFi ICO Development One of the leading fundraising methods, DeFi ICO services are distinguished. Creating utile tokens, community management, escalating coin value, and launching projects with diligence & guidance from market analysts and blockchain experts is inclusive of our ICO Development.   DeFi Exchange Development Offering users a plethora of apparent benefits, DEXs are the prized innovation of DeFi. Offering high-end security, durable liquidity, complete anonymity and financial inclusivity, DEXs make trading and transacting crypto accessible and lucrative for crypto enthusiasts.   DeFi Protocol Like Yearn. Finance Yearn. Finance offers the best APY the market has to offer by referring to popular exchanges. This protocol offers its users the best yields in a highly secure network. With in-built smart contracts and an open source code, it supports a range of Stablecoins offering huge returns.   DeFi Protocol Like AAve The DeFi protocol Aave offers crypto traders a robust platform for lending and borrowing of crypto for which they earn high interests. The highlight feature of Aave - Flash loans and flexible interest rates make it a profitable platform for crypto traders.   DeFi Exchange Like 1inch 1inch exchange now has the reputation of being the DEX offering users the lowest slippage. As an aggregator, 1inch connects several exchanges to one platform in a non-custodial ecosystem. With governance and farming features, trading on 1inch remains prominent.",
+    "stars": 32,
+    "forks": 8,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "9192f1c1d16733755b58c1b2010719e28ff0e58b",
+    "last_commit_date": "2021-03-01T09:49:57Z",
+    "pushed_at_not_commit_date": "2021-03-01T09:49:57Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Cryptoaj-hack",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "28281a3663484e4920e0aaac8d989ed57a8f6d7c7cb1999c2d05d37b639b37e7",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "product_shelf"
+    ],
+    "bank_row": null,
+    "shelf_row": {
+      "source_id": "SRC-2879",
+      "repo": "Cryptoaj-hack/DFDTOKEN",
+      "url": "https://github.com/cryptoaj-hack/dfdtoken",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake",
+        "github_search"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "discovery_disposition": "candidate",
+      "discovery_disposition_reason": null,
+      "discovery_industry_scope": "vertical",
+      "discovery_industries": [
+        "mortgage_brokers"
+      ],
+      "discovery_categories": [
+        "lending",
+        "workflow"
+      ],
+      "discovery_cells": [
+        "cross_industry:lending",
+        "cross_industry:workflow",
+        "mortgage_brokers:vertical_product_or_tool"
+      ],
+      "discovery_evidence_class": "github_search",
+      "discovery_evidence_classes": [
+        "github_search"
+      ],
+      "discovery_metadata": {
+        "candidate_id": "NIGHT-DISCOVERY-0446",
+        "repo": "Cryptoaj-hack/DFDTOKEN",
+        "url": "https://github.com/Cryptoaj-hack/DFDTOKEN",
+        "what_it_is": "Decentralized Finance (DeFi) Development Services &amp; Solutions Eliminate the role of a middleman by availing decentralized finance (DEFI) development services &amp; solutions.",
+        "stars": 32,
+        "pushed_at": "2021-03-01T09:49:57Z",
+        "language": null,
+        "license": "apache-2.0",
+        "readme_evidence": {
+          "status": "read",
+          "source_url": "https://github.com/Cryptoaj-hack/DFDTOKEN/blob/HEAD/README.md",
+          "characters_read": 8435
+        },
+        "evidence_class": "github_search",
+        "evidence_classes": [
+          "github_search"
+        ],
+        "evidence_sources": [
+          {
+            "evidence_class": "github_search",
+            "source_url": "https://github.com/search?q=lending%20platform&type=repositories",
+            "source_title": "GitHub repository search: lending platform",
+            "detail": "lending platform"
+          }
+        ],
+        "industries": [
+          "mortgage_brokers"
+        ],
+        "categories": [
+          "lending",
+          "workflow"
+        ],
+        "cells": [
+          "cross_industry:lending",
+          "cross_industry:workflow",
+          "mortgage_brokers:vertical_product_or_tool"
+        ],
+        "industry_scope": "vertical",
+        "disposition": "candidate",
+        "disposition_reason": null,
+        "scope_reason": null,
+        "query_count": 1,
+        "source_queries": [
+          "lending platform"
+        ],
+        "graph_seeds": [],
+        "selection_reasons": [
+          "industry:mortgage_brokers"
+        ],
+        "licensing_selection_weight": 0,
+        "observed_at": "2026-08-28",
+        "registry_dedup": {
+          "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+          "canonical_repo": "cryptoaj-hack/dfdtoken",
+          "match": false
+        }
+      },
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot",
+      "discovery_industry_join": {
+        "status": "discovery_scope_preserved_without_observed_slot_join",
+        "observed_slot_count": 0,
+        "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+      }
+    },
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Cryptoaj-hack/DFDTOKEN",
+      "commit": "https://github.com/Cryptoaj-hack/DFDTOKEN/commit/9192f1c1d16733755b58c1b2010719e28ff0e58b",
+      "readme": "https://github.com/Cryptoaj-hack/DFDTOKEN/blob/9192f1c1d16733755b58c1b2010719e28ff0e58b/README.md",
+      "license": "https://github.com/Cryptoaj-hack/DFDTOKEN/blob/9192f1c1d16733755b58c1b2010719e28ff0e58b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Cryptoaj-hack/DFDTOKEN/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Cryptoaj-hack/DFDTOKEN/contributors",
+      "issues": "https://api.github.com/repos/Cryptoaj-hack/DFDTOKEN/issues"
+    },
+    "readme_excerpt": "# DFDTOKEN Decentralized Finance (DeFi) Development Services &amp; Solutions Eliminate the role of a middleman by availing decentralized finance (DEFI) development services &amp; solutions. Get access to the major financial services through a blockchain network and experience the benefits of automation, a higher level of security, anonymity, interoperability, and transparency. Our wide range of services include Market-Making Consulting We take immense efforts in establishing financial markets that understand the customers\u2019 proprietary algorithms. We aim at improving the access of liquidity to investors and democratize the whole system. We render customized features according to the customer\u2019s expected return on investment. Decentralized Crypto Banking We ensure a frictionless user experience by facilitating the direct transfer of value between the involved parties supported by decentralization. Our ready-to-launch white-label mobile payment apps render a variety of services such as wallet integration, value holding, and detailed transactional analysis. Defi Lottery System Development We provide a no-loss lottery system that benefits our participants completely. We take steps to eliminate the custodianship of the pooled capital. We permit investing your capital in other related dapps and distribute the rewards in form of a major share of the interest earned to a winner randomly ",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "csingley/ibflex",
+    "requested_name": "csingley/ibflex",
+    "id": 117591796,
+    "url": "https://github.com/csingley/ibflex",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python parser for Interactive Brokers Flex XML statements",
+    "stars": 118,
+    "forks": 64,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "dad9fd3c1edf133c4a4394cdc3c57bae82d466a3",
+    "last_commit_date": "2026-09-08T06:29:50Z",
+    "pushed_at_not_commit_date": "2026-09-08T06:29:51Z",
+    "commits_since_20260313_count_capped100": 27,
+    "recent_commit_authors": [
+      "bobwilkinson20",
+      "csingley",
+      "debegr92",
+      "eyalk11"
+    ],
+    "contributors_sample": [
+      {
+        "login": "csingley",
+        "contributions": 165,
+        "type": "User"
+      },
+      {
+        "login": "pavitrakumar78",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "5Ub-Z3r0",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "michelgb",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "patrikbrusheim",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "titov-vv",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "agusalex",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "pstinner",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "troyev",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "particlep",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jaikumarm",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Dopetob1",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "derek-rein",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "debegr92",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "eyalk11",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "akeedev",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "robcohen",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "N0-man",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kychanbp",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "raivil",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "OSadovy",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jnd940",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "galoni",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Dr-Nuke",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bobwilkinson20",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "akotulski",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "grunichev",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/csingley/ibflex/issues/123",
+      "created_at": "2026-09-10T13:16:41Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "8ac5ff6119dc73e94c3a82eae632282cddb0ca580754ae0be6434e5bffd11f2a",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "76028f473b2eae38c9f93aea035c8997b4681c54a857f9d5209b6dc50c78bcd4",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE.txt",
+      "Makefile",
+      "README.rst",
+      "ibflex",
+      "pyproject.toml",
+      "requirements.txt",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/csingley/ibflex/blob/dad9fd3c1edf133c4a4394cdc3c57bae82d466a3/pyproject.toml",
+        "sha256": "7f1dd518a38eb01b558f76e5e234d967aa2087169601abed39a9ed262084c53d"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/csingley/ibflex/blob/dad9fd3c1edf133c4a4394cdc3c57bae82d466a3/requirements.txt",
+        "sha256": "510fe7e3e1e941423e646b777e408cd64874db9a232773a6f7e2c1508c419811"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/csingley/ibflex",
+      "commit": "https://github.com/csingley/ibflex/commit/dad9fd3c1edf133c4a4394cdc3c57bae82d466a3",
+      "readme": "https://github.com/csingley/ibflex/blob/dad9fd3c1edf133c4a4394cdc3c57bae82d466a3/README.rst",
+      "license": "https://github.com/csingley/ibflex/blob/dad9fd3c1edf133c4a4394cdc3c57bae82d466a3/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/csingley/ibflex/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/csingley/ibflex/contributors",
+      "issues": "https://api.github.com/repos/csingley/ibflex/issues"
+    },
+    "readme_excerpt": "========================================================= Python parser for Interactive Brokers Flex XML statements ========================================================= ``ibflex`` is a Python library for converting brokerage statement data in Interactive Brokers' Flex XML format into standard Python data structures, so it can be conveniently processed and analyzed with Python scripts. *N.B. This module has nothing to do with programmatic trading. It's about reading brokerage reports.* ``ibflex`` is compatible with Python version 3.10+. The parser has no dependencies beyond the Python standard library (although the optional client for fetching Flex Statements from Interactive Brokers' server does depend on `requests`_ ). The parser is lenient by default: unknown XML attributes and element types are skipped with a warning rather than raising an error, so new fields added by Interactive Brokers won't break your code. `Pull requests`_ are welcome. If you're submitting a pull request for an updated type, please do me a favor and include a test case based on your real-world data (censored to remove any personal information) in `tests.test_types.py`. You should easily be able to cut&paste one of the existing `unittest.TestCase` subclasses in that file and adapt it to your own data. Thanks very much; my own datastream does not have full coverage of the object model! Installation =",
+    "license_excerpt": "Copyright (c) 2017 Christopher Singley Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice a"
+  },
+  {
+    "full_name": "csingley/ofxtools",
+    "requested_name": "csingley/ofxtools",
+    "id": 910161,
+    "url": "https://github.com/csingley/ofxtools",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python OFX Library",
+    "stars": 345,
+    "forks": 74,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "894cfe94fa5d0820c24c9435687b296895a36f81",
+    "last_commit_date": "2026-06-12T18:48:16Z",
+    "pushed_at_not_commit_date": "2026-08-01T07:16:20Z",
+    "commits_since_20260313_count_capped100": 70,
+    "recent_commit_authors": [
+      "csingley",
+      "dependabot[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "csingley",
+        "contributions": 1005,
+        "type": "User"
+      },
+      {
+        "login": "rianhunter",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "turicas",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "aclindsa",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "fergbrain",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "euresti",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "gliptak",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "diraol",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "stoklund",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Karlinde",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "redstreet",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "camillehuot",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Zburatorul",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "plummer86",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "EntPyle",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "P-Laf",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "reedstrm",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cloudydata",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "danweiss90",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mvbentes",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/csingley/ofxtools/issues/158",
+      "created_at": "2022-06-04T11:54:25Z",
+      "state": "closed",
+      "comments": 22,
+      "first_staff_comment_in_sample": "2022-06-05T02:03:46Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "adfee246fb9ec20f86e183c9c24dc065c1c6107c03dc7d01d131b0ddc90179b1",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2f082e9c481fe98dee1c3cd14923f0b2172196141889f43da443e2431636f615",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".readthedocs.yaml",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.rst",
+      "SECURITY.md",
+      "docs",
+      "ofxtools",
+      "pyproject.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/csingley/ofxtools/blob/894cfe94fa5d0820c24c9435687b296895a36f81/pyproject.toml",
+        "sha256": "76b894471abf2e326c8ba1e22c75c2c88db76b5b8bb92092a9d076abf3d7136b"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/csingley/ofxtools",
+      "commit": "https://github.com/csingley/ofxtools/commit/894cfe94fa5d0820c24c9435687b296895a36f81",
+      "readme": "https://github.com/csingley/ofxtools/blob/894cfe94fa5d0820c24c9435687b296895a36f81/README.rst",
+      "license": "https://github.com/csingley/ofxtools/blob/894cfe94fa5d0820c24c9435687b296895a36f81/LICENSE",
+      "recent_commits": "https://api.github.com/repos/csingley/ofxtools/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/csingley/ofxtools/contributors",
+      "issues": "https://api.github.com/repos/csingley/ofxtools/issues"
+    },
+    "readme_excerpt": "Open Financial Exchange (OFX) Tools for Python ============================================== .. image:: https://github.com/csingley/ofxtools/actions/workflows/commit-ofxtools.yml/badge.svg :alt: CI tests status :target: https://github.com/csingley/ofxtools/actions/workflows/commit-ofxtools.yml .. image:: https://coveralls.io/repos/github/csingley/ofxtools/badge.svg?branch=master :target: https://coveralls.io/github/csingley/ofxtools?branch=master .. image:: https://img.shields.io/badge/dependencies-None-green.svg :target: https://github.com/csingley/ofxtools/blob/master/pyproject.toml .. image:: https://badge.fury.io/py/ofxtools.svg :target: https://badge.fury.io/py/ofxtools .. image:: https://static.pepy.tech/badge/ofxtools :alt: Total PyPI downloads :target: https://pepy.tech/projects/ofxtools ``ofxtools`` is a Python library for working with Open Financial Exchange (OFX) data - the standard format for downloading financial information from banks and stockbrokers. OFX data is widely provided by financial institutions so that their customers can import transactions into financial management software such as Quicken or GnuCash. If you want to download your transaction data outside of one of these programs - if you wish to develop a Python application to use this data - if you need to generate your own OFX-formatted data... ``ofxtools`` is for you! What is it? ----------- ``ofx",
+    "license_excerpt": "Copyright (C) 2010 Christopher Singley (csingley@gmail.com) This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General "
+  },
+  {
+    "full_name": "Cursivez/journalit",
+    "requested_name": "Cursivez/journalit",
+    "id": 1010395964,
+    "url": "https://github.com/Cursivez/journalit",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Obsidian trading journal with broker sync, trade imports, analytics, prop firm tracking, reviews and rule-based trading workflows.",
+    "stars": 219,
+    "forks": 24,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "098d27747df1b3a5fb177ff3a147d9a5cfbe0dcb",
+    "last_commit_date": "2026-09-05T06:41:33Z",
+    "pushed_at_not_commit_date": "2026-09-05T06:41:37Z",
+    "commits_since_20260313_count_capped100": 26,
+    "recent_commit_authors": [
+      "Cursivez",
+      "github-actions[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "github-actions[bot]",
+        "contributions": 100,
+        "type": "Bot"
+      },
+      {
+        "login": "Cursivez",
+        "contributions": 30,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Cursivez/journalit/issues/2",
+      "created_at": "2025-11-26T06:47:34Z",
+      "state": "closed",
+      "comments": 24,
+      "first_staff_comment_in_sample": "2025-11-26T17:21:28Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "729e2a1376210d486a40be3ba5f2f3d2408150655daf469c0e6af860e80ed850",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "4cff3e16fdfd3487d47097bb35365d5e4a30b7d315b10d8eb9f8057d8217ad54",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".npmrc",
+      ".prettierignore",
+      ".prettierrc",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "PRIVACY.md",
+      "README.de.md",
+      "README.es.md",
+      "README.fr.md",
+      "README.hi.md",
+      "README.it.md",
+      "README.md",
+      "README.ru.md",
+      "README.ta.md",
+      "README.vi.md",
+      "README.zh.md",
+      "assets",
+      "changelog",
+      "esbuild.config.mjs",
+      "eslint.config.mjs",
+      "main.js",
+      "manifest.json",
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "scripts",
+      "src",
+      "stylelint.obsidian-compat.mjs",
+      "styles.css",
+      "tsconfig.json",
+      "versions.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Cursivez/journalit/blob/098d27747df1b3a5fb177ff3a147d9a5cfbe0dcb/package.json",
+        "sha256": "aaf856ebd939cc630787a61f6aa676cc7823c5914d487e4bd11c0eaaccad5cd8"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      },
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "B",
+        "query": "topic:trading-journal"
+      },
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      },
+      {
+        "round": 3,
+        "stage": "W09",
+        "lane": "topic",
+        "query": "topic:trading-journal pushed:>2026-03-13"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Cursivez/journalit",
+      "commit": "https://github.com/Cursivez/journalit/commit/098d27747df1b3a5fb177ff3a147d9a5cfbe0dcb",
+      "readme": "https://github.com/Cursivez/journalit/blob/098d27747df1b3a5fb177ff3a147d9a5cfbe0dcb/README.md",
+      "license": "https://github.com/Cursivez/journalit/blob/098d27747df1b3a5fb177ff3a147d9a5cfbe0dcb/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Cursivez/journalit/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Cursivez/journalit/contributors",
+      "issues": "https://api.github.com/repos/Cursivez/journalit/issues"
+    },
+    "readme_excerpt": "Local-first trading journal for Obsidian. [![Obsidian Plugin](https://img.shields.io/badge/Obsidian-Plugin-purple?style=flat-square&logo=obsidian)](https://obsidian.md/) [![Docs](https://img.shields.io/badge/docs-journalit.co-0B7285?style=flat-square&logo=readthedocs&logoColor=white)](https://journalit.co/docs) [![Discord](https://img.shields.io/badge/discord-join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/AkSw3D9h8b) English | Espa\u00f1ol | Deutsch | \u0420\u0443\u0441\u0441\u043a\u0438\u0439 | \u7b80\u4f53\u4e2d\u6587 | Fran\u00e7ais | Italiano | Ti\u1ebfng Vi\u1ec7t | \u0939\u093f\u0928\u094d\u0926\u0940 | \u0ba4\u0bae\u0bbf\u0bb4\u0bcd [Installation](#installation) \u00b7 [Supported brokers](#supported-brokers) \u00b7 [Privacy](PRIVACY.md) ![Home View](https://raw.githubusercontent.com/Cursivez/journalit/main/assets/readme/home-view.png) ## Installation Install Journalit from Obsidian Community Plugins: 1. Open **Settings \u2192 Community Plugins \u2192 Browse** 2. Search for `Journalit` 3. Click **Install**, then **Enable** Community page: https://community.obsidian.md/plugins/journalit ## Highlights - **Local-first**: core journaling stays inside your Obsidian vault. - **Home View dashboard**: draggable widgets + trading heatmap. - **Trading dashboard**: track performance and patterns at a glance. - **Account dashboard**: built for prop firm profit targets and drawdowns. - **Review system (V2)**: daily \u2192 yearly templates with a layout builder. - **[Trade Import](https://journalit.co/csv",
+    "license_excerpt": "Proprietary Source-Available License Copyright (C) 2026 by Cursivez All rights reserved. This software and associated documentation files (the \"Software\") are proprietary. The source code is made available for transparency and Obsidian Community plugin review only. It is not available under an open source license. The compiled plugin files (main.js, manifest.json, and styles.css) may be used with Obsidian.md in accordance with the applicable Journalit terms. The source code may be viewed for ins"
+  },
+  {
+    "full_name": "da4089/simplefix",
+    "requested_name": "da4089/simplefix",
+    "id": 75831836,
+    "url": "https://github.com/da4089/simplefix",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Simple FIX protocol implementation for Python",
+    "stars": 255,
+    "forks": 66,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "007e3d7ffe904bcb2cfbfcb7ee8a4c13c5f3ea0a",
+    "last_commit_date": "2026-06-01T12:39:12Z",
+    "pushed_at_not_commit_date": "2026-06-01T21:20:25Z",
+    "commits_since_20260313_count_capped100": 2,
+    "recent_commit_authors": [
+      "da4089"
+    ],
+    "contributors_sample": [
+      {
+        "login": "da4089",
+        "contributions": 267,
+        "type": "User"
+      },
+      {
+        "login": "christian-oudard",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "msarilar",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "JonathonMurphy",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "pjona",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Code0x58",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "deepsourcebot",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "aleix007",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/da4089/simplefix/issues/64",
+      "created_at": "2026-05-20T08:20:59Z",
+      "state": "closed",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-06-01T06:54:40Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "d284f37286c4e4f41047822cba4fffb5c747ecd2dfe2f00c57005fdcf8072f05",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".deepsource.toml",
+      ".github",
+      ".gitignore",
+      ".travis.yml",
+      "CONTRIBUTING.rst",
+      "LICENSE",
+      "MANIFEST.in",
+      "NOTES.rst",
+      "README.rst",
+      "appveyor.yml",
+      "dev",
+      "doc",
+      "requirements",
+      "setup.py",
+      "simplefix",
+      "test",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "setup.py": {
+        "url": "https://github.com/da4089/simplefix/blob/007e3d7ffe904bcb2cfbfcb7ee8a4c13c5f3ea0a/setup.py",
+        "sha256": "08e43e9e5c192c1df9eda493ab66f70941efd6b6bcd844032ddb04f840e8b699"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/da4089/simplefix",
+      "commit": "https://github.com/da4089/simplefix/commit/007e3d7ffe904bcb2cfbfcb7ee8a4c13c5f3ea0a",
+      "readme": "https://github.com/da4089/simplefix/blob/007e3d7ffe904bcb2cfbfcb7ee8a4c13c5f3ea0a/README.rst",
+      "license": "https://github.com/da4089/simplefix/blob/007e3d7ffe904bcb2cfbfcb7ee8a4c13c5f3ea0a/LICENSE",
+      "recent_commits": "https://api.github.com/repos/da4089/simplefix/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/da4089/simplefix/contributors",
+      "issues": "https://api.github.com/repos/da4089/simplefix/issues"
+    },
+    "readme_excerpt": "========= simplefix ========= | |Build Status| |Docs| |Coverage| |Python| | |PyPI| |PePY Downloads| |PePY Monthly| Introduction ============ `FIX `_ (Financial Information eXchange) Protocol is a widely-used, text-based protocol for interaction between parties in financial trading. Banks, brokers, clearing firms, exchanges, and other general market participants use FIX protocol for all phases of electronic trading. Typically, a FIX implementation exists as a FIX Engine: a standalone service that acts as a gateway for other applications (matching engines, trading algos, etc) and implements the FIX protocol. The most popular Open Source FIX engine is probably one of the versions of `QuickFIX `_. This package provides a *simple* implementation of the FIX application-layer protocol. It does no socket handling, and does not implement FIX recovery or any message persistence. It supports the creation, encoding, and decoding of FIX messages. Licence ======= The module is licensed under the `MIT license `_. While this is not legal advice, in short this means you're free to do whatever you like with this code, with the exception of claiming you wrote it. Version Support =============== simplefix will support all CPython releases from the Python Foundation until one year after their end-of-life date. The earliest currently supported release is 3.9, which reached end-of-life on 2025-10-31,",
+    "license_excerpt": "MIT License Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice s"
+  },
+  {
+    "full_name": "dandrake/betterment-pdf-to-qif",
+    "requested_name": "dandrake/betterment-pdf-to-qif",
+    "id": 39156764,
+    "url": "https://github.com/dandrake/betterment-pdf-to-qif",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Parse Betterment's PDF statements, output QIF files",
+    "stars": 10,
+    "forks": 4,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "9a02ae464a65edfd028b0b49766521bb81cc01d9",
+    "last_commit_date": "2025-07-06T18:13:28Z",
+    "pushed_at_not_commit_date": "2025-07-06T18:13:31Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "dandrake",
+        "contributions": 30,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "06583f99bef4d6f0e19b2f963058587d62726046fb2ca9e13a68094b22fb2b4b",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "README.md",
+      "betterment_pdf_to_qif.py",
+      "compare-holdings.org",
+      "compare-holdings.py"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "QIF parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dandrake/betterment-pdf-to-qif",
+      "commit": "https://github.com/dandrake/betterment-pdf-to-qif/commit/9a02ae464a65edfd028b0b49766521bb81cc01d9",
+      "readme": "https://github.com/dandrake/betterment-pdf-to-qif/blob/9a02ae464a65edfd028b0b49766521bb81cc01d9/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/dandrake/betterment-pdf-to-qif/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dandrake/betterment-pdf-to-qif/contributors",
+      "issues": "https://api.github.com/repos/dandrake/betterment-pdf-to-qif/issues"
+    },
+    "readme_excerpt": "# Parse Betterment's PDF statements, output QIF [Betterment](http://betterment.com) is a nice brokerage service but they don't provide transaction data in any parseable, structured format. The Python script here will parse your quarterly statement PDF and produce QIF files suitable for importing into an accounting program. (I use Moneydance.) This is super hackish and brittle and this should really just be thought of as a starting point, and not as a genuinely usable tool. ## Requirements You'll need Python 3 and the `pdftotext` utility. I use Ubuntu Linux and `pdftotext` is available in the `poppler-utils` package. In some other OS, you'll need to work out on your own how to extract text from the PDF. ## On rounding and number of shares Betterment seems to round the number of shares transacted and internally record more precision. I have seen on my statement the following: Reported transactions (all purchases): | price | num shares | amount | |-------|------------|--------| | 92.20 | .057 | 5.30 | | 92.62 | .057 | 5.30 | | 93.05 | .055 | 5.10 | Betterment reported a total increase of .170 shares -- but .057 + .057 + .055 = .169! However, if you use the amount and the price, you get a total of 0.169516035336005 shares, which rounds to .170. In another case, I saw this: * Reported starting balance: .005 shares (1 previous transaction) * Reported total purchases: .010 shares (2 t",
+    "license_excerpt": ""
+  }
+]

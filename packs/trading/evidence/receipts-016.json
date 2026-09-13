@@ -1,0 +1,994 @@
+[
+  {
+    "full_name": "eprbell/rp2",
+    "requested_name": "eprbell/rp2",
+    "id": 380024351,
+    "url": "https://github.com/eprbell/rp2",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Privacy-focused, free, open-source cryptocurrency tax calculator for multiple countries: it handles multiple coins/exchanges and computes long/short-term capital gains, cost bases, in/out lot relationships/fractioning, and account balances. It supports FIFO, LIFO, HIFO and it outputs in form 8949 format. It has a programmable plugin architecture",
+    "stars": 401,
+    "forks": 61,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "eb2a36853db5094011d664cbe498a59b50dd44cd",
+    "last_commit_date": "2026-01-26T07:06:03Z",
+    "pushed_at_not_commit_date": "2026-07-27T12:02:56Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "eprbell",
+        "contributions": 1179,
+        "type": "User"
+      },
+      {
+        "login": "qwhelan",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "macanudo527",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "Larision",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "mdavid217",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "ninideol",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "jayr0d",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "debben",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "bvontress",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "antonok-edm",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kianmeng",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iloveitaly",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "spoderman-xbt",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/eprbell/rp2/issues/156",
+      "created_at": "2026-07-04T10:37:27Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": "2026-07-06T06:56:05Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d92b2a6319ef400eb0f3ca7c8d1a866299d97b1f295a45f8697c58b470d38975",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "798566881d2f202ca5f62c01e6a27ed451f9110b4018f8f46f881280ed1607b2",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".isort.cfg",
+      ".pre-commit-config.yaml",
+      ".pylintrc",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "Makefile",
+      "README.dev.md",
+      "README.md",
+      "config",
+      "docs",
+      "input",
+      "lychee.toml",
+      "mypy.ini",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/pyproject.toml",
+        "sha256": "2745e6bc83eb87b9065315662340fad6f3e15226c8ff13151907fb4835ca4e21"
+      },
+      "setup.py": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/setup.py",
+        "sha256": "9eab88ae585180329efa80f37d40691fe12a30658b6bb9a3635ff780f00ca624"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "eprbell/rp2",
+      "stars": 392,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "desktop-gui-app",
+      "cat_name": "Desktop GUI Application",
+      "description": "Privacy-focused, free, open-source cryptocurrency tax calculator for multiple countries: it handles multiple coins/excha"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      },
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/eprbell/rp2",
+      "commit": "https://github.com/eprbell/rp2/commit/eb2a36853db5094011d664cbe498a59b50dd44cd",
+      "readme": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/README.md",
+      "license": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/LICENSE",
+      "recent_commits": "https://api.github.com/repos/eprbell/rp2/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/eprbell/rp2/contributors",
+      "issues": "https://api.github.com/repos/eprbell/rp2/issues"
+    },
+    "readme_excerpt": "![RP2 Logo](https://raw.githubusercontent.com/eprbell/rp2/main/docs/images/rp2_header.png) # RP2 v1.7.2 Privacy-focused, free, powerful crypto tax calculator **IMPORTANT NOTICE FOR USA TAXPAYERS**: Starting in 2025, the USA has transitioned from [Universal Application to Per-Wallet Application](https://github.com/eprbell/rp2/issues/135#issuecomment-2454959334). Support for Per-Wallet Application in RP2 is still under development \u2014 see [issue #135](https://github.com/eprbell/rp2/issues/135). Do not use RP2 for 2025 (and later) USA tax reporting until this issue is fully resolved. **IMPORTANT NOTICE FOR TAXPAYERS WORLDWIDE**: Support for Per-Wallet Application in RP2 is still in development - see [issue 135 for details](https://github.com/eprbell/rp2/issues/135#issuecomment-2454959334). If your country mandates Per-Wallet Application, do not use RP2 for tax reporting until that issue is resolved. If your country permits Universal Application (already supported by RP2), you may safely use RP2. [![Static Analysis / Main Branch](https://github.com/eprbell/rp2/actions/workflows/static_analysis.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/static_analysis.yml) [![Documentation Check / Main Branch](https://github.com/eprbell/rp2/actions/workflows/documentation_check.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/documentation_check.yml) [![Unix Unit",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "erdewit/ib_insync",
+    "requested_name": "erdewit/ib_insync",
+    "id": 97003332,
+    "url": "https://github.com/erdewit/ib_insync",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python sync/async framework for Interactive Brokers API",
+    "stars": 3282,
+    "forks": 870,
+    "archived": true,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40",
+    "last_commit_date": "2024-03-14T19:50:06Z",
+    "pushed_at_not_commit_date": "2024-03-14T19:50:06Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "erdewit",
+        "contributions": 714,
+        "type": "User"
+      },
+      {
+        "login": "yehoshuadimarsky",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "stnatter",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "805karansaini",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "alobbs",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ZhongDai813",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "stenri",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "m12t",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "mikishab",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gliptak",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Elektra58",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "prurph",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sohailsomani",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "shaagerup",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tankorsmash",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "docker-tws",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iovsiann",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "abbass2",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sharpkids",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "slmg",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "t1user",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "zentooo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "onursatici",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ynodir",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "batterseapower",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mattsta",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jspahrsummers",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jarfo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "drathm",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pieman-hypothesis",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/erdewit/ib_insync/issues/694",
+      "created_at": "2024-02-15T07:54:25Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "6f09b2d88734686b0223304acd6f1afede7eab3c6507f126ddec6131f38e3e45",
+    "license": "BSD-2-Clause",
+    "license_path": "LICENSE",
+    "license_file_sha256": "6700d2f3e7475d57f05b615b735d932cee499fc2f42f4301d25652c4aa2aa9a3",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yml",
+      "LICENSE",
+      "README.rst",
+      "dist.sh",
+      "docs",
+      "examples",
+      "ib_insync",
+      "mypy.ini",
+      "notebooks",
+      "requirements-dev.txt",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/erdewit/ib_insync/blob/ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40/requirements.txt",
+        "sha256": "166cec9b21c51cdc8080690f68309c3ac7f53bfd9d5eb545668ad692b0d002cf"
+      },
+      "setup.py": {
+        "url": "https://github.com/erdewit/ib_insync/blob/ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40/setup.py",
+        "sha256": "6ddc6b2278cd91cf57b05628a1b5cf3f48f68591d10839a234fe4c22cfa194cb"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "erdewit/ib_insync",
+      "capability_tag": "http-client",
+      "category_slug": "quant-trading-platform",
+      "summary": "Sync/async Python client for Interactive Brokers trading API",
+      "reuse_value": 70,
+      "stars": 3277,
+      "license": "BSD-2-Clause",
+      "language": "Python",
+      "url": "https://github.com/erdewit/ib_insync",
+      "rank_score": 70032770
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "erdewit/ib_insync",
+      "stars": 3277,
+      "license": "BSD-2-Clause",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 70,
+      "liftability": 80,
+      "fame_gap": -10,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Python sync/async framework for Interactive Brokers API"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/erdewit/ib_insync",
+      "commit": "https://github.com/erdewit/ib_insync/commit/ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40",
+      "readme": "https://github.com/erdewit/ib_insync/blob/ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40/README.rst",
+      "license": "https://github.com/erdewit/ib_insync/blob/ef5ea29e44e0c40bbadbc16c2281b3ac58aa4a40/LICENSE",
+      "recent_commits": "https://api.github.com/repos/erdewit/ib_insync/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/erdewit/ib_insync/contributors",
+      "issues": "https://api.github.com/repos/erdewit/ib_insync/issues"
+    },
+    "readme_excerpt": "|Build| |Group| |PyVersion| |Status| |PyPiVersion| |License| |Downloads| |Docs| Notice ============ :: Unfortunately, our dear brother Ewald de Wit passed away monday, March eleven as a result of a serious illness last year. Although we were not involved in his activities on this platform, we felt the due to inform you. We thank you for knowing him. Maritza and Philippe de Wit Introduction ============ The goal of the IB-insync library is to make working with the `Trader Workstation API `_ from Interactive Brokers as easy as possible. The main features are: * An easy to use linear style of programming; * An `IB component `_ that automatically keeps in sync with the TWS or IB Gateway application; * A fully asynchonous framework based on `asyncio `_ and `eventkit `_ for advanced users; * Interactive operation with live data in Jupyter notebooks. Be sure to take a look at the `notebooks `_, the `recipes `_ and the `API docs `_. Installation ------------ :: pip install ib_insync Requirements: * Python 3.6 or higher; * A running TWS or IB Gateway application (version 1023 or higher). Make sure the `API port is enabled `_ and 'Download open orders on connection' is checked. The ibapi package from IB is not needed. Example ------- This is a complete script to download historical data: .. code-block:: python from ib_insync import * # util.startLoop() # uncomment this line when in a not",
+    "license_excerpt": "BSD 2-Clause License Copyright (c) 2019 - 2023, Ewald de Wit All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentatio"
+  },
+  {
+    "full_name": "Esonhugh/ibkr-trade-analyzer",
+    "requested_name": "Esonhugh/ibkr-trade-analyzer",
+    "id": 1233205365,
+    "url": "https://github.com/Esonhugh/ibkr-trade-analyzer",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Claude Code plugin: Analyze Interactive Brokers (IBKR) trading history \u2014 P&L, portfolio, fees, patterns, fx. Read-only Flex API access.",
+    "stars": 18,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "7cbbe9af3653c49ebc8764a9c9c7508f019e94d6",
+    "last_commit_date": "2026-05-31T17:11:35Z",
+    "pushed_at_not_commit_date": "2026-05-31T17:11:39Z",
+    "commits_since_20260313_count_capped100": 25,
+    "recent_commit_authors": [
+      "Esonhugh"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Esonhugh",
+        "contributions": 25,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "d730a217e011d2fdb305ce6081ddf496a154051dd2ae98a347657d7f550936c8",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "27e997b2b567f2b619bfa9981d128d010c989b6e1b8872a6bc0ee7c1ff6cc395",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude-plugin",
+      ".gitignore",
+      ".mcp.json",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README-zh.md",
+      "README.md",
+      "commands",
+      "docs",
+      "ibkr_analyzer_lib",
+      "server",
+      "skills"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Esonhugh/ibkr-trade-analyzer",
+      "commit": "https://github.com/Esonhugh/ibkr-trade-analyzer/commit/7cbbe9af3653c49ebc8764a9c9c7508f019e94d6",
+      "readme": "https://github.com/Esonhugh/ibkr-trade-analyzer/blob/7cbbe9af3653c49ebc8764a9c9c7508f019e94d6/README.md",
+      "license": "https://github.com/Esonhugh/ibkr-trade-analyzer/blob/7cbbe9af3653c49ebc8764a9c9c7508f019e94d6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Esonhugh/ibkr-trade-analyzer/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Esonhugh/ibkr-trade-analyzer/contributors",
+      "issues": "https://api.github.com/repos/Esonhugh/ibkr-trade-analyzer/issues"
+    },
+    "readme_excerpt": "# IBKR Trade Analyzer [![Version](https://img.shields.io/badge/version-2.2.1-blue)](https://github.com/Esonhugh/Marketplace/tree/Skyworship/plugins/ibkr-trade-analyzer) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE) **A Claude Code plugin for analyzing Interactive Brokers trading history \u2014 read-only, zero risk.** ## What It Does This plugin connects to your IBKR account (via the read-only Flex Web Service API) or reads local CSV/XML exports, then generates comprehensive trading analysis reports covering: | Dimension | Details | |-----------|---------| | **Trading Patterns** | Frequency, holding periods, time-of-day patterns, win rate, profit factor | | **P&L Performance** | Realized P&L, equity curve, Sharpe ratio, max drawdown, monthly returns | | **Portfolio Structure** | Asset allocation, sector concentration, long/short ratio, position sizing | | **Cost Basis (3 methods)** | Breakeven/\u4fdd\u672c\u4ef7 (Futu method), FIFO, LIFO \u2014 side-by-side comparison | | **Fees & Cash Flow** | Commissions, interest, dividends, financing costs, fee-to-PnL ratio | | **Cash & Currency** | Multi-currency balances, FX conversion rates (1 USD = X FCY), liquidity ratio | | **Trading Style Profile** | Auto-generated qualitative summary (day/swing/position trader, bias, risk) | | **Risk Assessment** | Scored 0-100 across 6 dimensions with specific warnings | | **Price Charts** | Historic",
+    "license_excerpt": "MIT License Copyright (c) 2024 Esonhugh Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice "
+  },
+  {
+    "full_name": "ettec/open-trading-platform",
+    "requested_name": "ettec/open-trading-platform",
+    "id": 224417961,
+    "url": "https://github.com/ettec/open-trading-platform",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "An open source highly scalable platform for building cross asset execution orientated trading applications that can be easily deployed on-prem or in the cloud.  Primarily written in Golang, with a Java FIX market simulator and React client.",
+    "stars": 175,
+    "forks": 85,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "72de73bfd09cfab3d3f7aa424c3dd43b5799876e",
+    "last_commit_date": "2023-12-20T13:22:17Z",
+    "pushed_at_not_commit_date": "2023-12-20T13:22:17Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "ettec",
+        "contributions": 536,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ettec/open-trading-platform/issues/59",
+      "created_at": "2026-06-15T14:28:07Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a7c3950daf6758017cdbbf60ec83da18aa62209db0afa5c1946716e72b5e64c1",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "dataload",
+      "go",
+      "grafana-dashboards",
+      "helm-otp-chart",
+      "install",
+      "java",
+      "otp-system-diagram.png",
+      "protobuf",
+      "react-frontend-screenshot.png",
+      "react",
+      "scripts"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ettec/open-trading-platform",
+      "commit": "https://github.com/ettec/open-trading-platform/commit/72de73bfd09cfab3d3f7aa424c3dd43b5799876e",
+      "readme": "https://github.com/ettec/open-trading-platform/blob/72de73bfd09cfab3d3f7aa424c3dd43b5799876e/README.md",
+      "license": "https://github.com/ettec/open-trading-platform/blob/72de73bfd09cfab3d3f7aa424c3dd43b5799876e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ettec/open-trading-platform/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ettec/open-trading-platform/contributors",
+      "issues": "https://api.github.com/repos/ettec/open-trading-platform/issues"
+    },
+    "readme_excerpt": "## Open Trading Platform An open source highly scaleable platform for building cross asset execution orientated trading applications that can be easily deployed on-prem or in the cloud. ![image-20210913193759923](react-frontend-screenshot.png) ### Table of contents 1. [synopsis](#synopsis) 2. [architecture overview](#architectureoverview) 3. [services](#services) 4. [where could it be useful?](#wherecoulditbeuseful) 5. [about the author](#abouttheauthor) ## synopsis The platform consists of a number of kubernetes managed services that are common in execution orientated trading applications as shown in the system diagram below, for more indepth information on the responsibilities of each service see [services](#services) #### Open Trading Platform System Diagram ![](otp-system-diagram.png) The technologies and languages utilised by the platform are detailed further in the [architecture overview](#architectureoverview). The aim and guiding principles behind the platform are outlined below. To get an out of the box configuration of the platform running with which to interact see [here](https://github.com/ettec/open-trading-platform/blob/master/install/README.md) for the simple installation guide. A common choice typically faced by companies with demanding trading execution requirements is between choosing a vendor solution or building a bespoke solution. The vendor platform option",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "fabston/TradingView-Webhook-Bot",
+    "requested_name": "fabston/TradingView-Webhook-Bot",
+    "id": 257615431,
+    "url": "https://github.com/fabston/TradingView-Webhook-Bot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\ud83d\udcca Send TradingView alerts to Telegram, Discord, Slack, Twitter and Email. ",
+    "stars": 1857,
+    "forks": 503,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "7eff8f9e9e13f350d7a3f258329285eb3a0bbd37",
+    "last_commit_date": "2024-05-01T01:42:52Z",
+    "pushed_at_not_commit_date": "2026-09-01T22:40:10Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "kroil",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "fabston",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "sakuyamaij",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jagzmz",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 1,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "25612f69e13dfc11d73abc73644247f724f31a298cd1335e9d15f6f716e90c27",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f0ec424b71c863ee4782fc0857d4fda922b089053f9de52a7a2d953524001d85",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "config.py",
+      "docker-compose.yml",
+      "handler.py",
+      "main.py",
+      "requirements.txt"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/fabston/TradingView-Webhook-Bot/blob/7eff8f9e9e13f350d7a3f258329285eb3a0bbd37/requirements.txt",
+        "sha256": "ba4b8e71f8a6884bc61be86dbf875081b36b01bb4229c38f309387ba0a1e05d3"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "A",
+        "query": "trading alerts"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/fabston/TradingView-Webhook-Bot",
+      "commit": "https://github.com/fabston/TradingView-Webhook-Bot/commit/7eff8f9e9e13f350d7a3f258329285eb3a0bbd37",
+      "readme": "https://github.com/fabston/TradingView-Webhook-Bot/blob/7eff8f9e9e13f350d7a3f258329285eb3a0bbd37/README.md",
+      "license": "https://github.com/fabston/TradingView-Webhook-Bot/blob/7eff8f9e9e13f350d7a3f258329285eb3a0bbd37/LICENSE",
+      "recent_commits": "https://api.github.com/repos/fabston/TradingView-Webhook-Bot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/fabston/TradingView-Webhook-Bot/contributors",
+      "issues": "https://api.github.com/repos/fabston/TradingView-Webhook-Bot/issues"
+    },
+    "readme_excerpt": "About \u2022 Features \u2022 Installation \u2022 Images \u2022 Help ## About The **TradingView Webhook Bot** \u2699\ufe0f listens to [TradingView](https://tradingview.com) alerts via [webhooks](https://www.tradingview.com/support/solutions/43000529348-i-want-to-know-more-about-webhooks/) using [flask](https://flask.palletsprojects.com/en/1.1.x/). All alerts can be instantly sent to Telegram, Discord, Twitter and/or Email. > \ud83d\udcca If you are looking for an exchange to trade on, I can recommend **Bybit**. > **[Sign up now](https://partner.bybit.com/b/20882)** and receive up to **$30,000** in Deposit Rewards! ## Features - Telegram Support using the [Python Telegram](https://github.com/python-telegram-bot/python-telegram-bot) libary. - Discord Support using [webhooks](https://support.discord.com/hc/de/articles/228383668-Webhooks-verwenden). - Slack Support using [webhooks](https://api.slack.com/messaging/webhooks). - Twitter Support using the [tweepy](https://github.com/tweepy/tweepy) libary. - Email Support using [smtplib](https://docs.python.org/3/library/smtplib.html). - Alert channels can be enabled or disabled in [`config.py`](https://github.com/fabston/TradingView-Webhook-Bot/blob/master/config.py). - Dynamically send alerts to different Telegram and/or Discord channels. - TradingView `{{close}}`, `{{exchange}}` etc. variables support. Read more [here](https://www.tradingview.com/blog/en/introducing-variable",
+    "license_excerpt": "MIT License Copyright (c) 2020 fabston Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice a"
+  },
+  {
+    "full_name": "fbertram/TuringTrader",
+    "requested_name": "fbertram/TuringTrader",
+    "id": 195689135,
+    "url": "https://github.com/fbertram/TuringTrader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The Open-Source Backtesting Engine/ Trading Simulator by Bertram Enterprises.",
+    "stars": 536,
+    "forks": 119,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "master",
+    "latest_commit": "0a7dc60ed9df6f94920b13b6233cd0d0926f2528",
+    "last_commit_date": "2023-04-17T15:58:00Z",
+    "pushed_at_not_commit_date": "2026-05-19T00:16:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "fbertram",
+        "contributions": 857,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/fbertram/TuringTrader/issues/24",
+      "created_at": "2025-08-07T07:58:22Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2025-08-07T16:22:10Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "0d75a3ba87a9dd7c6547987a1a8e8b3a76f2a5dcee7a3a377e4062f2d8ba161d",
+    "license": "AGPL-3.0",
+    "license_path": "COPYING.txt",
+    "license_file_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "license_candidates": [
+      "COPYING.txt"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "Algorithms",
+      "BooksAndPubs",
+      "BooksAndPubsV2",
+      "COPYING.txt",
+      "Data",
+      "DocFX",
+      "More",
+      "README.md",
+      "SINGLE_CLICK_BUILD.bat",
+      "Templates",
+      "TuringTrader.Setup",
+      "TuringTrader.Simulator",
+      "TuringTrader.Tests",
+      "TuringTrader.sln",
+      "TuringTrader",
+      "default-files.lnk",
+      "packages"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/fbertram/TuringTrader",
+      "commit": "https://github.com/fbertram/TuringTrader/commit/0a7dc60ed9df6f94920b13b6233cd0d0926f2528",
+      "readme": "https://github.com/fbertram/TuringTrader/blob/0a7dc60ed9df6f94920b13b6233cd0d0926f2528/README.md",
+      "license": "https://github.com/fbertram/TuringTrader/blob/0a7dc60ed9df6f94920b13b6233cd0d0926f2528/COPYING.txt",
+      "recent_commits": "https://api.github.com/repos/fbertram/TuringTrader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/fbertram/TuringTrader/contributors",
+      "issues": "https://api.github.com/repos/fbertram/TuringTrader/issues"
+    },
+    "readme_excerpt": "# TuringTrader ![GNU Affero General Public License](https://www.gnu.org/graphics/agplv3-155x51.png) An open-source backtesting engine/ trading simulator, licensed under [AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0). For news, updates, and more information about the project, please visit our website at https://www.turingtrader.org/. ## Installing To install TuringTrader, download the setup file from https://www.turingtrader.org/download/. ## Documentation Find the TuringTrader documentation at https://www.turingtrader.org/documentation/. ## Building from Source ### Prerequisites - Microsoft Visual Studio Community 2022 - installation must include Workloads for .NET desktop development and Universal Windows Platform development - .NET 6.0 SDK - DocFX toolset version 2.62.2 - WiX Toolset v4 (FireGiant's HeatWave Community Edition) ### Build Steps Here are the individual steps to build TuringTrader from source: - Install TuringTrader from binary distribution - Open TuringTrader solution in Visual Studio - Build release version of TuringTrader project - Publish TuringTrader application - Build BooksAndPubs project (linked against the binary version installed) - Build setup project - Build documentation The project also contains a script for a single-click build of the installer. See [SINGLE_CLICK_BUILD.bat](https://github.com/fbertram/TuringTrader/blob/develop/SINGLE_CLICK_BUILD",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software an"
+  },
+  {
+    "full_name": "felipewind/fix-trading-simulator",
+    "requested_name": "felipewind/fix-trading-simulator",
+    "id": 311175967,
+    "url": "https://github.com/felipewind/fix-trading-simulator",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A trading simulator between a Broker and a Stock Exchange using the Financial Information eXchange (FIX) Protocol. It's a study project using QuickFIX/J, Quarkus, Angular, Docker, Docker Compose and PostgreSQL.",
+    "stars": 92,
+    "forks": 38,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "722b0f8679cf2227c4d957762791b2ae977335db",
+    "last_commit_date": "2024-09-09T22:26:37Z",
+    "pushed_at_not_commit_date": "2024-09-09T22:26:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "felipewind",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "finvedicdev",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/felipewind/fix-trading-simulator/issues/8",
+      "created_at": "2025-06-17T12:19:38Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "73a8cc2660c2af416367357fe3a8dfb4f449aa4e1c0c998ae51a9678edb08859",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "9f922ce4bb3f2d80c50582f7884abf15ee4f95c000a63499e4ea23317d4fc00f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "broker-back-end",
+      "broker-front-end",
+      "docker-compose-docker-hub.yml",
+      "docker-compose.yml",
+      "documentation",
+      "exchange-back-end",
+      "exchange-front-end",
+      "init-broker.sql",
+      "init-exchange.sql",
+      "run-after-local-build.sh",
+      "run-from-docker-hub.sh",
+      "run-with-local-build.sh"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/felipewind/fix-trading-simulator",
+      "commit": "https://github.com/felipewind/fix-trading-simulator/commit/722b0f8679cf2227c4d957762791b2ae977335db",
+      "readme": "https://github.com/felipewind/fix-trading-simulator/blob/722b0f8679cf2227c4d957762791b2ae977335db/README.md",
+      "license": "https://github.com/felipewind/fix-trading-simulator/blob/722b0f8679cf2227c4d957762791b2ae977335db/LICENSE",
+      "recent_commits": "https://api.github.com/repos/felipewind/fix-trading-simulator/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/felipewind/fix-trading-simulator/contributors",
+      "issues": "https://api.github.com/repos/felipewind/fix-trading-simulator/issues"
+    },
+    "readme_excerpt": "# Fix Trading Simulator - [Overview](#overview) - [System Architecture](#system-architecture) - [Project Structure](#project-structure) - [Features](#features) - [Running the project](#running-the-project) - [Images](#images) - [Help Queries](#help-queries) # Overview A trading simulator between a Broker and a Stock Exchange using the [Financial Information eXchange (FIX) Protocol](https://www.fixtrading.org/). It's a study project using [QuickFIX/J](https://www.quickfixj.org/), [Quarkus](https://quarkus.io/), [Angular](https://angular.io/), Docker, Docker Compose and [PostgreSQL](https://www.postgresql.org/). If you want to participate on this project, just open an issue and we can talk about! Both Broker and Exchange systems were built with Quarkus on the back-end and Angular on the front-end. The back-ends communicate each other with QuickFIX/J and each has a schema into the PostgreSQL. Each Angular front-end communicates with the Quarkus back-end using REST and Websockets. # System Architecture ![image](./documentation/design/fix-trading-simulator-design.png) # Project Structure [Broker back-end](./broker-back-end/README.md) [Broker front-end](./broker-front-end/README.md) [Exchange back-end](./exchange-back-end/README.md) [Exchange front-end](./exchange-front-end/README.md) [Documentation](./documentation/README.md) # Features ## Orders You can submit, negotiate, cancel an",
+    "license_excerpt": "MIT License Copyright (c) 2020 Felipe Henrique Gross Windmoller Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The"
+  },
+  {
+    "full_name": "ferrumfix/ferrumfix",
+    "requested_name": "ferrumfix/ferrumfix",
+    "id": 238081759,
+    "url": "https://github.com/ferrumfix/ferrumfix",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Financial Information eXchange protocol implemented in Rust",
+    "stars": 450,
+    "forks": 81,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "ca2bbe4c6461108646f35f7cc9245bf1848ec368",
+    "last_commit_date": "2026-04-15T18:40:19Z",
+    "pushed_at_not_commit_date": "2026-04-15T18:43:22Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "neysofu"
+    ],
+    "contributors_sample": [
+      {
+        "login": "neysofu",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "0a879b656c078b56909ff4545a73a12b09e4ed69566727fa3015d9290180b8fe",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".cargo",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".vscode",
+      "AGENTS.md",
+      "BACKERS.yml",
+      "Cargo.toml",
+      "FUNDING.yml",
+      "README.md",
+      "acceptance",
+      "examples",
+      "justfile",
+      "lib",
+      "rust-toolchain.toml",
+      "rustfmt.toml",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/ferrumfix/ferrumfix/blob/ca2bbe4c6461108646f35f7cc9245bf1848ec368/Cargo.toml",
+        "sha256": "15fcce4b1f52634318b9e4f060cf1a55ad83b65d038d45782a4736356cc0715c"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ferrumfix/ferrumfix",
+      "commit": "https://github.com/ferrumfix/ferrumfix/commit/ca2bbe4c6461108646f35f7cc9245bf1848ec368",
+      "readme": "https://github.com/ferrumfix/ferrumfix/blob/ca2bbe4c6461108646f35f7cc9245bf1848ec368/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/ferrumfix/ferrumfix/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ferrumfix/ferrumfix/contributors",
+      "issues": "https://api.github.com/repos/ferrumfix/ferrumfix/issues"
+    },
+    "readme_excerpt": "# FerrumFIX [![Crates.io](https://img.shields.io/crates/v/fefix)](https://crates.io/crates/fefix) [![Website](https://img.shields.io/badge/website-ferrumfix.org-orange)](https://ferrumfix.org) [![Docs.rs](https://img.shields.io/badge/docs.rs-latest-green)](https://docs.rs/fefix/) [![Minimal rustc version](https://img.shields.io/badge/rustc-1.56%2B-lightgrey)](https://img.shields.io/badge/rustc-1.56%2B-lightgrey) [![matrix.org](https://img.shields.io/badge/matrix.org-%23ferrum--fix-blue)](https://matrix.to/#/#ferrum-fix:matrix.org) [![License](https://img.shields.io/crates/l/fefix)](https://crates.io/crates/fefix) [![CI status](https://img.shields.io/github/workflow/status/ferrumfix/ferrumfix/CI/develop)](https://github.com/ferrumfix/ferrumfix/actions) Love FerrumFIX? Buy me a coffee and [support](https://github.com/sponsors/ferrumfix) the project! FerrumFIX is a FIX engine implementation in Rust. Please note that it's currently under heavy development and wildly unstable, so all interested parties should refrain from using it in production prior to its 1.0 release. Performance and full adherence to the FIX protocol are nevertheless core goals of the project which, if anything, might serve as a useful foundation for others' work. - [FerrumFIX](#ferrumfix) - [About](#about) - [Sponsors](#sponsors) - [Contributing](#contributing) - [Legal](#legal) ## About FerrumFIX provides parsi",
+    "license_excerpt": ""
+  }
+]

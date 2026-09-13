@@ -1,0 +1,906 @@
+[
+  {
+    "full_name": "edtechre/pybroker",
+    "requested_name": "edtechre/pybroker",
+    "id": 589385734,
+    "url": "https://github.com/edtechre/pybroker",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Algorithmic Trading in Python with Machine Learning",
+    "stars": 3538,
+    "forks": 454,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "95e00fecb1006490601aca7e2e8de609f032e12d",
+    "last_commit_date": "2026-08-28T03:34:58Z",
+    "pushed_at_not_commit_date": "2026-09-07T16:14:00Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Pirat83",
+      "dependabot[bot]",
+      "edtechre",
+      "jkoelker",
+      "mameikagou"
+    ],
+    "contributors_sample": [
+      {
+        "login": "edtechre",
+        "contributions": 1140,
+        "type": "User"
+      },
+      {
+        "login": "Pirat83",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 29,
+        "type": "Bot"
+      },
+      {
+        "login": "none2003",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jkoelker",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "treeyh",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mameikagou",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "quant9527",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RiverAi7z",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "svroonland",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "e2c84296b78776c266a250f4b3dca46d27d3d224e1d7f553b52b48948a057d22",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "da959ac23cb6eb2636b9389acc0cfec35e7ffa79a0420bb5469a132a2db18650",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".bench",
+      ".claude",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yml",
+      "CLAUDE.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "asv.conf.json",
+      "benchmarks",
+      "docs",
+      "pyproject.toml",
+      "requirements.txt",
+      "scripts",
+      "setup.cfg",
+      "skills",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/edtechre/pybroker/blob/95e00fecb1006490601aca7e2e8de609f032e12d/pyproject.toml",
+        "sha256": "d12259123e58eb5c9014b7579dbbae983a8aac5962451e69531310f696ed64d0"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/edtechre/pybroker/blob/95e00fecb1006490601aca7e2e8de609f032e12d/requirements.txt",
+        "sha256": "ded5406953b5fee4a988990e259a9f33e1f6502505ebd7f462df6c0a5be2f6cf"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/edtechre/pybroker",
+      "commit": "https://github.com/edtechre/pybroker/commit/95e00fecb1006490601aca7e2e8de609f032e12d",
+      "readme": "https://github.com/edtechre/pybroker/blob/95e00fecb1006490601aca7e2e8de609f032e12d/README.md",
+      "license": "https://github.com/edtechre/pybroker/blob/95e00fecb1006490601aca7e2e8de609f032e12d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/edtechre/pybroker/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/edtechre/pybroker/contributors",
+      "issues": "https://api.github.com/repos/edtechre/pybroker/issues"
+    },
+    "readme_excerpt": "[![python](https://img.shields.io/badge/python-v3-brightgreen.svg)](https://www.python.org/) [![Apache 2.0 with Commons Clause](https://img.shields.io/badge/license-Apache%202.0%20Clause-green)](https://www.pybroker.com/en/latest/license.html) [![Documentation Status](https://readthedocs.org/projects/pybroker/badge/?version=latest)](https://www.pybroker.com/en/latest/?badge=latest) [![Package status](https://github.com/edtechre/pybroker/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/edtechre/pybroker/actions) [![Downloads](https://static.pepy.tech/badge/lib-pybroker)](https://pepy.tech/project/lib-pybroker) [![Github stars](https://img.shields.io/github/stars/edtechre/pybroker?style=social)](https://github.com/edtechre/pybroker/) [![Twitter](https://img.shields.io/twitter/follow/libpybroker?style=social)](https://twitter.com/intent/follow?screen_name=libpybroker) ## Algorithmic Trading in Python with Machine Learning Are you looking to enhance your trading strategies with the power of Python and machine learning? **PyBroker** is a Python framework designed for developing algorithmic trading strategies, with a focus on strategies that use machine learning. With PyBroker, you can easily create and fine-tune trading rules, build powerful models, and gain valuable insights into your strategy\u2019s performance. ## Key Features * A super-fast backtesting engine buil",
+    "license_excerpt": "\u201cCommons Clause\u201d License Condition v1.0 The Software is provided to you by the Licensor under the License, as defined below, subject to the following condition. Without limiting other conditions in the License, the grant of rights under the License will not include, and the License does not grant to you, the right to Sell the Software. For purposes of the foregoing, \u201cSell\u201d means practicing any or all of the rights granted to you under the License to provide to third parties, for a fee or other c"
+  },
+  {
+    "full_name": "edwardclewer/tick_backtest",
+    "requested_name": "edwardclewer/tick_backtest",
+    "id": 1102016209,
+    "url": "https://github.com/edwardclewer/tick_backtest",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Deterministic, YAML-driven backtester (Python/Cython) with vectorised data ingestion; per-run manifests, NDJSON logs, and trade-level Parquet output. Snapshots entry-time metrics and signals while computing stratified expectancy. 8m ticks/minute single thread performance.",
+    "stars": 4,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "b3e7afd727a33b3c63278da5fc195f9dca4d1999",
+    "last_commit_date": "2026-04-06T21:32:06Z",
+    "pushed_at_not_commit_date": "2026-08-15T16:16:56Z",
+    "commits_since_20260313_count_capped100": 54,
+    "recent_commit_authors": [
+      "edwardclewer"
+    ],
+    "contributors_sample": [
+      {
+        "login": "edwardclewer",
+        "contributions": 57,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "3e2cca7ac8f5859a14826007b9a94e0c27597d3ec9b27b91ccfecd3fc33e2fcf",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "cfa18da4a2a40a2543d16258ad68754703731dd36860ab76c74663274339386e",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "SECURITY.md",
+      "config",
+      "docs",
+      "mkdocs.yml",
+      "pyproject.toml",
+      "pytest.ini",
+      "requirements-docs.txt",
+      "requirements.txt",
+      "scripts",
+      "setup.py",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/edwardclewer/tick_backtest/blob/b3e7afd727a33b3c63278da5fc195f9dca4d1999/pyproject.toml",
+        "sha256": "a8bfed837260fe4f3ff0c60de6da6a8e636f6ed156e3b95f8405b45230e24c1d"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/edwardclewer/tick_backtest/blob/b3e7afd727a33b3c63278da5fc195f9dca4d1999/requirements.txt",
+        "sha256": "991d57447fe3a5a92eee7131f819a008305e19300af5ba21d329f018b36a1fab"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "C",
+        "query": "Parquet backtest"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/edwardclewer/tick_backtest",
+      "commit": "https://github.com/edwardclewer/tick_backtest/commit/b3e7afd727a33b3c63278da5fc195f9dca4d1999",
+      "readme": "https://github.com/edwardclewer/tick_backtest/blob/b3e7afd727a33b3c63278da5fc195f9dca4d1999/README.md",
+      "license": "https://github.com/edwardclewer/tick_backtest/blob/b3e7afd727a33b3c63278da5fc195f9dca4d1999/LICENSE",
+      "recent_commits": "https://api.github.com/repos/edwardclewer/tick_backtest/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/edwardclewer/tick_backtest/contributors",
+      "issues": "https://api.github.com/repos/edwardclewer/tick_backtest/issues"
+    },
+    "readme_excerpt": "# Tick Backtest *Deterministic tick-level FX backtesting for reproducible research.* Tick Backtest is a configuration-first Python 3.12 package for FX strategy research. You provide Parquet tick shards and YAML configs; the package validates the configuration, runs deterministic backtests, and writes manifests, logs, reports, and analysis artefacts to disk. ### Highlights - **Performance:** ~130k ticks/second/core on AMD 5950X (Parquet -> metrics -> signals -> trades) - **Deterministic runs:** config snapshots, git hash, dependency snapshot, and shard hashes are captured per run - **Resilient pipelines:** per-pair failure isolation, tick validation, and structured telemetry - **Declarative research:** swap YAML configs instead of editing strategy code - **Report ready:** trade tables, Markdown summaries, metric stratification CSV/PNG artefacts - **CLI + API parity:** every supported command is exposed both as `tick-backtest ...` and `tick_backtest.api.*(...)` Documentation is hosted here: [Documentation Site](https://edwardclewer.github.io/tick_backtest/). Release process details live in [docs/releasing.md](docs/releasing.md). --- ## Install Installed-package usage is the primary workflow. ```bash python3.12 -m venv .venv source .venv/bin/activate pip install tick-backtest ``` The package uses compiled extensions for core runtime components. Normal installed usage assumes those",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "Eleven-Trading/jtrade",
+    "requested_name": "Eleven-Trading/jtrade",
+    "id": 328315997,
+    "url": "https://github.com/Eleven-Trading/jtrade",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "jtrade is a simple and an open source tool to journalize your trades.",
+    "stars": 7,
+    "forks": 2,
+    "archived": true,
+    "fork": false,
+    "language": "HTML",
+    "default_branch": "main",
+    "latest_commit": "d229d859cf0fc50351882e98b807b08775ae3d94",
+    "last_commit_date": "2021-06-21T06:27:37Z",
+    "pushed_at_not_commit_date": "2021-06-21T06:27:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "7aklhz",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "3cd87bebe3b658f11918fd9ea0be02a63b2afb3b63a3482d769e7e52338e75d9",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "captain-definition",
+      "composer.json",
+      "composer.lock",
+      "credentials.php",
+      "dist",
+      "gulpfile.js",
+      "package-lock.json",
+      "package.json",
+      "src"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/package.json",
+        "sha256": "e72123d32febfc6741087f0ec55a5d6ebaac252b5276051a9e03b58b237a2d9e"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Eleven-Trading/jtrade",
+      "commit": "https://github.com/Eleven-Trading/jtrade/commit/d229d859cf0fc50351882e98b807b08775ae3d94",
+      "readme": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/README.md",
+      "license": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Eleven-Trading/jtrade/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Eleven-Trading/jtrade/contributors",
+      "issues": "https://api.github.com/repos/Eleven-Trading/jtrade/issues"
+    },
+    "readme_excerpt": "! This code is not maintained any more and has been replaced by [TradeNote](https://github.com/Eleven-Trading/TradeNote), a full version open source trade journal ! # jtrade jtrade is a simple and an open source tool to journalize your trades. # The project ## Motivation TraderVue and TraderSync are great and very powerful trading journals. However, after using them for a while, I was missing the following: - Flexibility in creating graphs - Avoid being dependant on a specific software, company or solution provider - Use, store, move and backup my data at my terms - Increase control over my financial data ## Features - Executions are concatenated into trades - Add strategy and mistakes to better track and improve your trades - Add screenshot of stock graph - Add link to your trade video ## Screenshots Include logo/demo screenshot etc. # Tech/framework used ## Built with - Bootstrap 5 - VueJS - PHP ## Getting Started ### Prerequisites #### Software and tools - Gulp for building the project - MYSQL database for storing your data - AWS S3 bucket for storing images and videos - (optional) Visualization tool like metabase to visualize your trades #### Database structure See MYSQLTableStructure ### Installation - Add a .env file at the root of the project with the following variables: - mysqlhost = xxx - mysqlport = xxx - mysqluser = xxx - mysqlpassword = xxx - mysqldb = xxx - AWS_BU",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "Eleven-Trading/TradeNote",
+    "requested_name": "Eleven-Trading/TradeNote",
+    "id": 378445599,
+    "url": "https://github.com/Eleven-Trading/TradeNote",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "TradeNote is an open source trading journal that helps traders store, discover and recollect all their trades so they can become and remain consistent and profitable traders",
+    "stars": 959,
+    "forks": 287,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "main",
+    "latest_commit": "56eb096631f95c1cdf5d9ef416e7d0115c56465e",
+    "last_commit_date": "2025-04-14T16:54:30Z",
+    "pushed_at_not_commit_date": "2025-04-14T16:54:40Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "7aklhz",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "cainfe",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "barretthugh",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "xel-arjona",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "t00ts",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cderv",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Eleven-Trading/TradeNote/issues/164",
+      "created_at": "2026-03-25T13:10:49Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a40bd813c068f9837028cd35d4d1e7f75802810b53725f3b7edccd83dd0c192b",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "backup-mongodb.sh",
+      "brokers",
+      "captain-definition",
+      "codemirror-graphql",
+      "docker-compose-local.yml",
+      "docker-compose.yml",
+      "docker",
+      "index.html",
+      "index.mjs",
+      "package-lock.json",
+      "package.json",
+      "requiredClasses.json",
+      "src",
+      "vite.config.js"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Eleven-Trading/TradeNote/blob/56eb096631f95c1cdf5d9ef416e7d0115c56465e/package.json",
+        "sha256": "8244f2fe755be81f08c44815e610244e8dca4dcbcd7e95f6ffcaff41f45b0749"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Eleven-Trading/TradeNote",
+      "commit": "https://github.com/Eleven-Trading/TradeNote/commit/56eb096631f95c1cdf5d9ef416e7d0115c56465e",
+      "readme": "https://github.com/Eleven-Trading/TradeNote/blob/56eb096631f95c1cdf5d9ef416e7d0115c56465e/README.md",
+      "license": "https://github.com/Eleven-Trading/TradeNote/blob/56eb096631f95c1cdf5d9ef416e7d0115c56465e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Eleven-Trading/TradeNote/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Eleven-Trading/TradeNote/contributors",
+      "issues": "https://api.github.com/repos/Eleven-Trading/TradeNote/issues"
+    },
+    "readme_excerpt": "TradeNote - Open Source Trading Journal - \ud83c\udf10 Website | \ud83d\udcda Documentation | Discord There are numerous great and very powerful trading journals out there. However, I wanted to build a journal for traders who care about data security and privacy but also for individuals that need simplicity and flexibility. By creating and sharing TradeNote as an open source project, I hope to help other days traders like myself store, discover and recollect trade patterns so they can become and remain consistent and profitable traders. ![dashboard](https://tradenote.co/screenshots/dashboard2.png \"Dashboard\") # Installation For detailed installation and user guide, please visit the [documentation](https://tradenote.co/project-overview.html \"documentation\") page. ## Docker Compose ### Requirements - Docker - Docker Compose ### Installation 1. Download the docker compose.yml file 2. Run `docker compose up -d` This will automatically setup the database (mongodDB) and the TradeNote app. You can then access the website on http://localhost:8080. If you cannot access the website, please refer to the importante notice above (and try changing the mongo version) or get support via [Discord](https://discord.gg/ZbHekKYb85 \"Discord\") ## Docker ### Requirements - Docker - Node 18.X - MongoDB ### Installation You need to have a running MongoDB database. Please see their [Docker Hub](https://hub.docker.com/_/mongo ",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "eliangcs/pystock-crawler",
+    "requested_name": "eliangcs/pystock-crawler",
+    "id": 12506377,
+    "url": "https://github.com/eliangcs/pystock-crawler",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "(UNMAINTAINED) Crawl and parse financial reports (XBRL) from SEC EDGAR, and daily stock prices from Yahoo Finance",
+    "stars": 317,
+    "forks": 97,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "8b803c8944f36af46daf04c6767a74132e37a101",
+    "last_commit_date": "2014-10-19T08:09:57Z",
+    "pushed_at_not_commit_date": "2024-05-14T22:15:34Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "eliangcs",
+        "contributions": 461,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/eliangcs/pystock-crawler/issues/17",
+      "created_at": "2014-10-13T13:51:42Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "0ca0f3787e0c5f7e0baae932c6dfcf5290a8c854413ced62bd87c8a9f74d30a7",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c7a5689a93c4e57ff8c4dca33a3d43a4549f0da02cf9e141fea8e889ffef4cae",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".travis.yml",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.rst",
+      "bin",
+      "pystock_crawler",
+      "pytest.ini",
+      "requirements-test.txt",
+      "requirements.txt",
+      "scrapy.cfg",
+      "setup.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/eliangcs/pystock-crawler/blob/8b803c8944f36af46daf04c6767a74132e37a101/requirements.txt",
+        "sha256": "3265d36d30ac006e946c9a077b0fe9256e48fcbe77a58e7744e056e005cddafb"
+      },
+      "setup.py": {
+        "url": "https://github.com/eliangcs/pystock-crawler/blob/8b803c8944f36af46daf04c6767a74132e37a101/setup.py",
+        "sha256": "1a3743d3b2914086838ff9740d993814bed240f4cc650a8635481d5718dbd7da"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "XBRL parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/eliangcs/pystock-crawler",
+      "commit": "https://github.com/eliangcs/pystock-crawler/commit/8b803c8944f36af46daf04c6767a74132e37a101",
+      "readme": "https://github.com/eliangcs/pystock-crawler/blob/8b803c8944f36af46daf04c6767a74132e37a101/README.rst",
+      "license": "https://github.com/eliangcs/pystock-crawler/blob/8b803c8944f36af46daf04c6767a74132e37a101/LICENSE",
+      "recent_commits": "https://api.github.com/repos/eliangcs/pystock-crawler/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/eliangcs/pystock-crawler/contributors",
+      "issues": "https://api.github.com/repos/eliangcs/pystock-crawler/issues"
+    },
+    "readme_excerpt": "pystock-crawler =============== .. image:: https://badge.fury.io/py/pystock-crawler.png :target: http://badge.fury.io/py/pystock-crawler .. image:: https://travis-ci.org/eliangcs/pystock-crawler.png?branch=master :target: https://travis-ci.org/eliangcs/pystock-crawler .. image:: https://coveralls.io/repos/eliangcs/pystock-crawler/badge.png?branch=master :target: https://coveralls.io/r/eliangcs/pystock-crawler ``pystock-crawler`` is a utility for crawling historical data of US stocks, including: * Ticker symbols listed in NYSE, NASDAQ or AMEX from `NASDAQ.com`_ * Daily prices from `Yahoo Finance`_ * Fundamentals from 10-Q and 10-K filings (XBRL) on `SEC EDGAR`_ Example Output -------------- NYSE ticker symbols:: DDD 3D Systems Corporation MMM 3M Company WBAI 500.com Limited ... Apple's daily prices:: symbol,date,open,high,low,close,volume,adj_close AAPL,2014-04-28,572.80,595.75,572.55,594.09,23890900,594.09 AAPL,2014-04-25,564.53,571.99,563.96,571.94,13922800,571.94 AAPL,2014-04-24,568.21,570.00,560.73,567.77,27092600,567.77 ... Google's fundamentals:: symbol,end_date,amend,period_focus,fiscal_year,doc_type,revenues,op_income,net_income,eps_basic,eps_diluted,dividend,assets,cur_assets,cur_liab,cash,equity,cash_flow_op,cash_flow_inv,cash_flow_fin GOOG,2009-06-30,False,Q2,2009,10-Q,5522897000.0,1873894000.0,1484545000.0,4.7,4.66,0.0,35158760000.0,23834853000.0,2000962000.0,1191135",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2013 Chang-Hung Liang Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above"
+  },
+  {
+    "full_name": "EliteQuant/EliteQuant",
+    "requested_name": "EliteQuant/EliteQuant",
+    "id": 111503597,
+    "url": "https://github.com/EliteQuant/EliteQuant",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A list of online resources for quantitative modeling, trading, portfolio management",
+    "stars": 4180,
+    "forks": 709,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "61e911dcf16530201f2066db26cd5a8842916663",
+    "last_commit_date": "2020-07-22T21:10:57Z",
+    "pushed_at_not_commit_date": "2024-06-15T16:17:39Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "EliteQuant",
+        "contributions": 32,
+        "type": "User"
+      },
+      {
+        "login": "Immortalin",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jankrepl",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ivigamberdiev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "raghukul01",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "wardn",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "44d56d4489534ad2b462af295298b40eeb8eaffc86d12cb4c7d7253bcecab11b",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "Top-100-Structural-Zone-w-Citadel-Highlights_20190327.png"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/EliteQuant/EliteQuant",
+      "commit": "https://github.com/EliteQuant/EliteQuant/commit/61e911dcf16530201f2066db26cd5a8842916663",
+      "readme": "https://github.com/EliteQuant/EliteQuant/blob/61e911dcf16530201f2066db26cd5a8842916663/README.md",
+      "license": "https://github.com/EliteQuant/EliteQuant/blob/61e911dcf16530201f2066db26cd5a8842916663/LICENSE",
+      "recent_commits": "https://api.github.com/repos/EliteQuant/EliteQuant/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/EliteQuant/EliteQuant/contributors",
+      "issues": "https://api.github.com/repos/EliteQuant/EliteQuant/issues"
+    },
+    "readme_excerpt": "# EliteQuant A list of online resources for quantitative modeling, trading, portfolio management There are lots of other valuable online resources. We are not trying to be exhaustive. Please feel free to send a pull request if you believe something is worth recommending. A general rule of thumb for open source projects is having already received 100 stars on github. * [Quantitative Trading Platform](#quantitative-trading-platform) * [Trading System](#trading-system) * [Quantitative Library](#quantitative-library) * [Quantitative Model](#quantitative-model) * [Trading API](#trading-api) * [Data Source](#data-source) * [Cryptocurrency](#cryptocurrency) * [Companies](#companies) * [Fintech](#fintech) * [Websites Forums Blogs](#websites-forums-blogs) - - - ## Quantitative Trading Platform * [awesome-quant](https://github.com/wilsonfreitas/awesome-quant) - Awesome quant is another curated list of quant resources * [Quantopian](https://www.quantopian.com/) - First Python-based online quantitative trading platform; its core library [zipline](https://github.com/quantopian/zipline) and its performance evaluation library [pyfolio](https://github.com/quantopian/pyfolio); and [alphalens](https://github.com/quantopian/alphalens) * [QuantConnect](https://www.quantconnect.com/) - C# based online quantitative trading platform; its core library [Lean](https://github.com/QuantConnect/Lean) * [Qu",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "emilycoco/parse-xbrl",
+    "requested_name": "emilycoco/parse-xbrl",
+    "id": 52418118,
+    "url": "https://github.com/emilycoco/parse-xbrl",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Parse xbrl documents to extract tags for common financial data",
+    "stars": 60,
+    "forks": 22,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "fb1ce24e6914d0ddd7f1c887b87fc9afa1cb875e",
+    "last_commit_date": "2018-07-24T16:59:22Z",
+    "pushed_at_not_commit_date": "2020-09-26T09:01:29Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "emilycoco",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "pdehaan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "asdfjkalsdfla",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/emilycoco/parse-xbrl/issues/7",
+      "created_at": "2024-09-19T08:41:24Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "5964dbb3eb85f22f1d1ee763799b6faf0d7a98a3d6d2d187f545f34425cb2f7c",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "4e541c02a4546e37189a6c0b73ee31c502724a789b186969c819f06d69255a79",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".npmignore",
+      "CHANGELOG.md",
+      "FundamentalAccountingConcepts.js",
+      "LICENSE",
+      "README.md",
+      "index.js",
+      "npm-debug.log",
+      "package.json",
+      "parsedXml.json",
+      "test.js",
+      "test"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/emilycoco/parse-xbrl/blob/fb1ce24e6914d0ddd7f1c887b87fc9afa1cb875e/package.json",
+        "sha256": "98275cdb93ee3d89aebb7fcd2fbf9679a97da9d4fcffcb266e2e06efbd98736b"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "XBRL parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/emilycoco/parse-xbrl",
+      "commit": "https://github.com/emilycoco/parse-xbrl/commit/fb1ce24e6914d0ddd7f1c887b87fc9afa1cb875e",
+      "readme": "https://github.com/emilycoco/parse-xbrl/blob/fb1ce24e6914d0ddd7f1c887b87fc9afa1cb875e/README.md",
+      "license": "https://github.com/emilycoco/parse-xbrl/blob/fb1ce24e6914d0ddd7f1c887b87fc9afa1cb875e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/emilycoco/parse-xbrl/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/emilycoco/parse-xbrl/contributors",
+      "issues": "https://api.github.com/repos/emilycoco/parse-xbrl/issues"
+    },
+    "readme_excerpt": "# parse-xbrl Module to parse xbrl documents and output json. ## Installation ``` Dependency: npm install --save parse-xbrl Dev Dependency: npm install --save-dev parse-xbrl ``` ## Usage Xbrl is a standardized language based on xml used to codify financial reporting. This module provides two tasks, parse and parseStr. parse takes one parameter, a file path to an xbrl document, and returns a promise that resolves with a json document of key financial data from the file. ParseStr takes a string of XML and returns the same promise. Xbrl documents can be malformed and inaccurate, so results aren't guaranteed. This module is based on the [python xbrl parser](https://github.com/lukerosiak/pysec) written by Luke Rosiak. Check out the web client for this package [here](http://www.xbrltojson.com/). ###### Example usage: ``` var ParseXbrl = require('parse-xbrl'); // path to locally accessible file, does not load file over http/https ParseXbrl.parse('./test/sampleXbrlDocuments/amazon_10k.xml').then(function(parsedDoc) { // Use results... }); // string of correctly formatted xml/xbrl ParseXbrl.parseStr(' ').then(function(parsedString) { // Use results... }); ``` ###### Example output for Amazon's 10k (annual) statement: ``` { EntityRegistrantName: 'AMAZON COM INC', CurrentFiscalYearEndDate: '--12-31', EntityCentralIndexKey: '0001018724', EntityFilerCategory: 'Large Accelerated Filer', Tradi",
+    "license_excerpt": "Copyright (c) 2016, Emily Coco <emilymcoco@gmail.com> The MIT License (MIT) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following con"
+  },
+  {
+    "full_name": "eprbell/dali-rp2",
+    "requested_name": "eprbell/dali-rp2",
+    "id": 465909742,
+    "url": "https://github.com/eprbell/dali-rp2",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "DaLI (Data Loader Interface) is a data loader and input generator for RP2 (https://pypi.org/project/rp2), the privacy-focused, free, open-source cryptocurrency tax calculator: DaLI removes the need to manually prepare RP2 input files. Just like RP2, DaLI is also free, open-source and it prioritizes user privacy.",
+    "stars": 81,
+    "forks": 54,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "a17f269ca8156abec23c1342230bf17b510f6ace",
+    "last_commit_date": "2026-02-12T00:50:12Z",
+    "pushed_at_not_commit_date": "2026-02-12T00:50:12Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "eprbell",
+        "contributions": 509,
+        "type": "User"
+      },
+      {
+        "login": "macanudo527",
+        "contributions": 393,
+        "type": "User"
+      },
+      {
+        "login": "ndopencode",
+        "contributions": 44,
+        "type": "User"
+      },
+      {
+        "login": "iloveitaly",
+        "contributions": 34,
+        "type": "User"
+      },
+      {
+        "login": "stevendavis",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "topherbuckley",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "jayr0d",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "houqp",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "Larision",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "qwhelan",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "nitrocode",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "jamesbaber1",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "kiates",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "nopencode",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "X1011",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "orientalperil",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "spoderman-xbt",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/eprbell/dali-rp2/issues/300",
+      "created_at": "2026-02-15T11:20:49Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "106323d51456c7948607c8ee7263fc1c3ea363f4902e3c1929d524adf1772592",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "eacb48d377d20d690f15c275999c655b4d9c51665d8881b00b4d4fecef776ac0",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".isort.cfg",
+      ".pre-commit-config.yaml",
+      ".pylintrc",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "Makefile",
+      "README.dev.md",
+      "README.md",
+      "config",
+      "docs",
+      "input",
+      "lychee.toml",
+      "mypy.ini",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/pyproject.toml",
+        "sha256": "2745e6bc83eb87b9065315662340fad6f3e15226c8ff13151907fb4835ca4e21"
+      },
+      "setup.py": {
+        "url": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/setup.py",
+        "sha256": "9eab88ae585180329efa80f37d40691fe12a30658b6bb9a3635ff780f00ca624"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/eprbell/dali-rp2",
+      "commit": "https://github.com/eprbell/dali-rp2/commit/a17f269ca8156abec23c1342230bf17b510f6ace",
+      "readme": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/README.md",
+      "license": "https://github.com/eprbell/dali-rp2/blob/a17f269ca8156abec23c1342230bf17b510f6ace/LICENSE",
+      "recent_commits": "https://api.github.com/repos/eprbell/dali-rp2/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/eprbell/dali-rp2/contributors",
+      "issues": "https://api.github.com/repos/eprbell/dali-rp2/issues"
+    },
+    "readme_excerpt": "# DaLI for RP2 v0.6.12 Privacy-focused, free, extensible data loader for RP2 (the crypto tax calculator) [![Static Analysis / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/static_analysis.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/static_analysis.yml) [![Documentation Check / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/documentation_check.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/documentation_check.yml) [![Unix Unit Tests / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/unix_unit_tests.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/unix_unit_tests.yml) [![Windows Unit Tests / Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/windows_unit_tests.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/windows_unit_tests.yml) [![CodeQL/Main Branch](https://github.com/eprbell/dali-rp2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/eprbell/dali-rp2/actions/workflows/codeql-analysis.yml) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/eprbell/dali-rp2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=I%20use%20RP2,%20the%20privacy-focused,%20open%20source,%20free,%20non-commercial%20crypto%20tax%20calc",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

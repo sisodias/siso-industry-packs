@@ -1,0 +1,1299 @@
+[
+  {
+    "full_name": "databento/secdef-parser",
+    "requested_name": "databento/secdef-parser",
+    "id": 263393477,
+    "url": "https://github.com/databento/secdef-parser",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Demo showing how to parse secdef files",
+    "stars": 20,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "8c8c00cdab9140345200f202f673d98e1dcc2392",
+    "last_commit_date": "2020-05-12T16:50:44Z",
+    "pushed_at_not_commit_date": "2020-05-12T16:50:49Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "rkrn",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "8a5c57942c1c5b655f0e6b7c60a5c90db2ea3df8c2b318fe17671eb2f4084935",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "427252ae8c6b1a6ea2e032085ed9321387e2a4db80e4e50f608c695684401ab7",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "secdef_parser.py"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W02",
+        "lane": "maintainer",
+        "query": "user:databento"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/databento/secdef-parser",
+      "commit": "https://github.com/databento/secdef-parser/commit/8c8c00cdab9140345200f202f673d98e1dcc2392",
+      "readme": "https://github.com/databento/secdef-parser/blob/8c8c00cdab9140345200f202f673d98e1dcc2392/README.md",
+      "license": "https://github.com/databento/secdef-parser/blob/8c8c00cdab9140345200f202f673d98e1dcc2392/LICENSE",
+      "recent_commits": "https://api.github.com/repos/databento/secdef-parser/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/databento/secdef-parser/contributors",
+      "issues": "https://api.github.com/repos/databento/secdef-parser/issues"
+    },
+    "readme_excerpt": "# secdef-parser This project contains a command line tool that demonstrates how to parse secdef files found on CME's public FTP server (ftp://ftp.cmegroup.com/SBEFix/Production/). For the purpose of this demonstration, the tool generates a list of the most active futures products ranked by open interest. # About secdef files The secdef file contains useful production instrument definition data and settlement prices formatted as concatenated FIX (plaintext) messages. You can learn more about the message specifications [here](https://www.cmegroup.com/confluence/display/EPICSANDBOX/MDP+3.0+-+Security+Definition) especially if you want to parse other fields from the secdef files besides the ones extracted by this tool. CME updates its secdef files almost daily. However, for intraday instrument definition updates, you should not be using this approach. More information about secdef files can be found at: ftp://ftp.cmegroup.com/SBEFix/Production/secdef_disclaimer.txt # Requirements Required: - Python >= 3.4 - pandas >= 0.24.2 Recommended: - Minimum 4 GB free memory. secdef files often contain 400k+ instrument definitions which comes to 300+ MB uncompressed. This tool is not optimized for low memory devices and uses substantial amount of memory to parse the secdef files relatively quickly. # Installation Clone this repository. ``` git clone https://github.com/databento/secdef-parser.g",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2020 Databento, Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above "
+  },
+  {
+    "full_name": "dcajasn/Riskfolio-Lib",
+    "requested_name": "dcajasn/Riskfolio-Lib",
+    "id": 244460835,
+    "url": "https://github.com/dcajasn/Riskfolio-Lib",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Portfolio Optimization in Python",
+    "stars": 4495,
+    "forks": 706,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "632a9e48fbaf2b9f8e83864a492332364b6ed32c",
+    "last_commit_date": "2026-06-22T00:55:09Z",
+    "pushed_at_not_commit_date": "2026-08-18T17:08:34Z",
+    "commits_since_20260313_count_capped100": 20,
+    "recent_commit_authors": [
+      "alexander-schneider",
+      "dcajasn"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dcajasn",
+        "contributions": 396,
+        "type": "User"
+      },
+      {
+        "login": "microprediction",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ibraheem-moosa",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "lqhuang",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ryanrussell",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/dcajasn/Riskfolio-Lib/issues/248",
+      "created_at": "2026-09-01T02:51:28Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "9f7aa31d90a936fb1b2ac76f6e99ff5dbaaae51b109e3241c3c0512450fffdea",
+    "license": "BSD-3-Clause",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "7f7a68d261604e432e818993f92b74b636c632e31f207730dd189267044aa5e6",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".readthedocs.yaml",
+      "AUTHORS.rst",
+      "CHANGELOG.rst",
+      "LICENSE.txt",
+      "MANIFEST.in",
+      "README.md",
+      "_config.yml",
+      "continuous_integration",
+      "docs",
+      "examples",
+      "lib",
+      "pyproject.toml",
+      "requirements.txt",
+      "riskfolio",
+      "setup.cfg",
+      "setup.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/pyproject.toml",
+        "sha256": "357eb4dd274070197b62ba42587527300be3ecffcf7f39deeee786e2ca57be84"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/requirements.txt",
+        "sha256": "abba2938220313c80965a84c578810616af57fbb6ecbc0af71a618325aa0cf06"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Python library for portfolio optimization and financial analysis",
+      "reuse_value": 85,
+      "stars": 4287,
+      "license": "BSD-3-Clause",
+      "language": "C++",
+      "url": "https://github.com/dcajasn/Riskfolio-Lib",
+      "rank_score": 85042870
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "stars": 4287,
+      "license": "BSD-3-Clause",
+      "language": "C++",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Portfolio Optimization in Python"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "A",
+        "query": "portfolio risk"
+      },
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      },
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dcajasn/Riskfolio-Lib",
+      "commit": "https://github.com/dcajasn/Riskfolio-Lib/commit/632a9e48fbaf2b9f8e83864a492332364b6ed32c",
+      "readme": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/README.md",
+      "license": "https://github.com/dcajasn/Riskfolio-Lib/blob/632a9e48fbaf2b9f8e83864a492332364b6ed32c/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/dcajasn/Riskfolio-Lib/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dcajasn/Riskfolio-Lib/contributors",
+      "issues": "https://api.github.com/repos/dcajasn/Riskfolio-Lib/issues"
+    },
+    "readme_excerpt": "# Riskfolio-Lib **Portfolio Optimization in Python, Easy for Everyone.** [![Star History Chart](https://api.star-history.com/svg?repos=dcajasn/Riskfolio-Lib&type=timeline&legend=top-left)](https://www.star-history.com/#dcajasn/Riskfolio-Lib&type=timeline&legend=top-left) ## Description Riskfolio-Lib is a library for making __Portfolio Optimization in Python__ made in Peru &#x1F1F5;&#x1F1EA;. Its objective is to help students, academics and practitioners to build investment portfolios based on mathematically complex models with low effort. It is built on top of [CVXPY](https://www.cvxpy.org/) and closely integrated with [Pandas](https://pandas.pydata.org/) data structures. Some of key functionalities that Riskfolio-Lib offers: - Mean Risk and Logarithmic Mean Risk (Kelly Criterion) Portfolio Optimization with 4 objective functions: - Minimum Risk. - Maximum Return. - Maximum Utility Function. - Maximum Risk Adjusted Return Ratio. - Mean Risk and Logarithmic Mean Risk (Kelly Criterion) Portfolio Optimization with 26 convex risk measures: **Dispersion Risk Measures:** - Standard Deviation. - Square Root Kurtosis. - p-th Root Even Moment of order 2p. - Mean Absolute Deviation (MAD). - Gini Mean Difference (GMD). - Conditional Value at Risk Range. - Tail Gini Range. - Entropic Value at Risk Range. - Relativistic Value at Risk Range. - Range. &nbsp; **Downside Risk Measures:** - Semi",
+    "license_excerpt": "Copyright (c) 2020-2026, Dany Cajas All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials "
+  },
+  {
+    "full_name": "Deffro/Data-Science-Portfolio",
+    "requested_name": "Deffro/Data-Science-Portfolio",
+    "id": 175027643,
+    "url": "https://github.com/Deffro/Data-Science-Portfolio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "This portfolio is a compilation of notebooks which I created for Data Science related tasks like Tutorials, Exploratory Data Analysis, and Machine Learning.",
+    "stars": 83,
+    "forks": 54,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "908d9af44d6be082896cb9c9f0549d768c66e90f",
+    "last_commit_date": "2025-01-09T06:39:12Z",
+    "pushed_at_not_commit_date": "2025-01-09T06:39:14Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Deffro",
+        "contributions": 161,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "0904eb90c015d0e84e9d373c7aa7ca42867a235ae016317b912779aa1aec5ff9",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".DS_Store",
+      ".gitignore",
+      "Generative AI",
+      "Notebooks",
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Deffro/Data-Science-Portfolio",
+      "commit": "https://github.com/Deffro/Data-Science-Portfolio/commit/908d9af44d6be082896cb9c9f0549d768c66e90f",
+      "readme": "https://github.com/Deffro/Data-Science-Portfolio/blob/908d9af44d6be082896cb9c9f0549d768c66e90f/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Deffro/Data-Science-Portfolio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Deffro/Data-Science-Portfolio/contributors",
+      "issues": "https://api.github.com/repos/Deffro/Data-Science-Portfolio/issues"
+    },
+    "readme_excerpt": "# Data Science Portfolio by Dimitrios Effrosynidis \u0391 compilation of notebooks I created for Data Science related tasks like Tutorials, Generative AI, Exploratory Data Analysis, and Machine Learning. More notebooks will be added as I learn things and devote time to write about them. Visit [my website](https://deffro.github.io/) or my [Medium](https://medium.com/@dimitris.effrosynidis) profile, where I include everything listed here and much more. Below is a summary of them. # :wrench: Fine-Tuning a Pre-trained LLM for Sentiment Classification The code is located [here](https://github.com/Deffro/Data-Science-Portfolio/tree/master/Generative%20AI/Fine-Tuning%20a%20Pre-trained%20LLM%20for%20Sentiment%20Classification). ## Highlights: ### **1. Task-Specific Model** - Use the pre-trained Hugging Face model `juliensimon/reviews-sentiment-analysis`, fine-tuned for sentiment classification. - Perform inference on the test set with the base model, achieving an accuracy of 79%. ### **2. Fine-Tuning the Model** - Set Training Arguments: Configure hyperparameters like learning rate, batch size, and number of epochs. - Train the Model: Fine-tune the pre-trained model using the Hugging Face `Trainer` API. - Evaluation: Test the fine-tuned model, achieving an improved accuracy of 89%. # \ud83d\udcd6 How to Create a RAG System Step-by-Step The code is located [here](https://github.com/Deffro/Data-Science-",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "defi-ape/polymarket-kalshi-arbitrage-bot",
+    "requested_name": "defi-ape/polymarket-kalshi-arbitrage-bot",
+    "id": 1253061374,
+    "url": "https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "15-minute prediction market arbitrage bot: poll Kalshi Trade API and Polymarket CLOB, detect YES/UP spreads and late-resolution gaps, expose Express /status, and place Polymarket buys via @polymarket/clob-client.",
+    "stars": 12,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "dc3bd80a1c0d2db2d598045faf4b3601abc5c604",
+    "last_commit_date": "2026-05-29T05:55:01Z",
+    "pushed_at_not_commit_date": "2026-05-29T05:56:15Z",
+    "commits_since_20260313_count_capped100": 8,
+    "recent_commit_authors": [
+      "mathdroid"
+    ],
+    "contributors_sample": [
+      {
+        "login": "xtoshi999",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "mathdroid",
+        "contributions": 8,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot/issues/2",
+      "created_at": "2026-07-13T10:23:09Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "6712af6c2140f24474305eff1a85db3c4740bb8214a37508c36f59d404efbe88",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "README.md",
+      "package-lock.json",
+      "package.json",
+      "src",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot/blob/dc3bd80a1c0d2db2d598045faf4b3601abc5c604/package.json",
+        "sha256": "4074314ee4f6f5d5b26cb528b6e6faf0b73dcd9788a2e2e26c8c2ea614a158ce"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "format",
+        "query": "prediction market resolution"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/defi-ape/polymarket-kalshi-arbitrage-bot",
+      "commit": "https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot/commit/dc3bd80a1c0d2db2d598045faf4b3601abc5c604",
+      "readme": "https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot/blob/dc3bd80a1c0d2db2d598045faf4b3601abc5c604/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/defi-ape/polymarket-kalshi-arbitrage-bot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/defi-ape/polymarket-kalshi-arbitrage-bot/contributors",
+      "issues": "https://api.github.com/repos/defi-ape/polymarket-kalshi-arbitrage-bot/issues"
+    },
+    "readme_excerpt": "# Polymarket-Kalshi Arbitrage Bot Professional TypeScript bot for monitoring short-duration prediction markets across **Polymarket** and **Kalshi**, detecting pricing gaps, and placing buy orders on Polymarket when configured arbitrage rules are satisfied. **Canonical repository:** [github.com/defi-ape/polymarket-kalshi-arbitrage-bot](https://github.com/defi-ape/polymarket-kalshi-arbitrage-bot) The bot is designed for 15-minute markets where fast pricing updates, clear execution rules, and transparent runtime status matter. It continuously compares Kalshi YES pricing against Polymarket UP pricing, exposes a simple monitoring API, and can initialize an authenticated Polymarket order client for automated execution. > Important: Prediction market trading involves risk. This project provides configurable automation and monitoring logic; it does not guarantee profit or eliminate execution, liquidity, market, regulatory, or operational risk. ## What This Bot Does - Monitors a paired Kalshi and Polymarket market on a configurable interval. - Pulls Polymarket UP/DOWN token pricing from the Polymarket CLOB. - Pulls Kalshi YES/NO pricing and market status from the Kalshi trade API. - Waits until a configurable start window has passed before evaluating trades. - Emits structured arbitrage signals through `/status`. - Places Polymarket buy orders using `@polymarket/clob-client` when valid ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "dev-polymarket/clob-client-v2",
+    "requested_name": "dev-polymarket/clob-client-v2",
+    "id": 1228664213,
+    "url": "https://github.com/dev-polymarket/clob-client-v2",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob - TypeScript client for Polymarket's CLOB (V2)",
+    "stars": 512,
+    "forks": 292,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "33ead89a7a1ac329bdcaa67641b02ae8bbcda804",
+    "last_commit_date": "2026-06-06T08:19:56Z",
+    "pushed_at_not_commit_date": "2026-06-06T08:19:56Z",
+    "commits_since_20260313_count_capped100": 12,
+    "recent_commit_authors": [
+      "dev-polymarket",
+      "evanphi7"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dev-polymarket",
+        "contributions": 10,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "252fd50d8517223b326235932c2cf7cfab42fb9eba4cc5df32480a4e69de1ff9",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b101b2821538f0738076a8b3f58f0c18a8759867bc8197dbbfc1af2e147b440c",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "dist",
+      "examples",
+      "package.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/package.json",
+        "sha256": "cb38dbcc50c5706087a4d8fe7250caddd0e66f46ea2d3ea5508b4bc7fcd513e6"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "dev-polymarket/clob-client-v2",
+      "capability_tag": "http-client",
+      "category_slug": "client-library-sdk",
+      "summary": "HTTP client SDK for Polymarket's central limit order book API",
+      "reuse_value": 70,
+      "stars": 593,
+      "license": "MIT",
+      "language": "",
+      "url": "https://github.com/dev-polymarket/clob-client-v2",
+      "rank_score": 70005930
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "dev-polymarket/clob-client-v2",
+      "stars": 593,
+      "license": "MIT",
+      "language": "",
+      "unit_class": "component",
+      "reuse_value": 70,
+      "liftability": 90,
+      "fame_gap": -20,
+      "cat_slug": "client-library-sdk",
+      "cat_name": "Client Library / SDK",
+      "description": "polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket clob | polymarket c"
+    },
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "SDK",
+        "query": "Polymarket client"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dev-polymarket/clob-client-v2",
+      "commit": "https://github.com/dev-polymarket/clob-client-v2/commit/33ead89a7a1ac329bdcaa67641b02ae8bbcda804",
+      "readme": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/README.md",
+      "license": "https://github.com/dev-polymarket/clob-client-v2/blob/33ead89a7a1ac329bdcaa67641b02ae8bbcda804/LICENSE",
+      "recent_commits": "https://api.github.com/repos/dev-polymarket/clob-client-v2/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dev-polymarket/clob-client-v2/contributors",
+      "issues": "https://api.github.com/repos/dev-polymarket/clob-client-v2/issues"
+    },
+    "readme_excerpt": "# Polymarket CLOB Client V2 TypeScript client for the Polymarket CLOB (v2) ## Installation (choose your package manager) ``` npm i @polymarkets/clob-client-v2 # npm / pnpm / yarn ``` ### Usage ```ts // npm install @polymarkets/clob-client-v2 // npm install viem import { ApiKeyCreds, Chain, ClobClient, OrderType, Side } from \"@polymarkets/clob-client-v2\"; import { createWalletClient, http } from \"viem\"; import { privateKeyToAccount } from \"viem/accounts\"; const host = \" \"; const chainId = Chain.POLYGON; // or Chain.AMOY for testnet const account = privateKeyToAccount(\"0x...\"); // your private key const walletClient = createWalletClient({ account, transport: http() }); // Step 1: obtain API credentials using your wallet (L1 auth) const clobClient = new ClobClient({ host, chain: chainId, signer: walletClient }); const creds = await clobClient.createOrDeriveApiKey(); // Step 2: initialize a fully-authenticated client (L1 + L2) const client = new ClobClient({ host, chain: chainId, signer: walletClient, creds }); // Place a resting limit buy (GTC) const resp = await client.createAndPostOrder( { tokenID: \"\", // token ID of the market outcome \u2014 get from https://docs.polymarket.com price: 0.4, side: Side.BUY, size: 100, }, { tickSize: \"0.01\" }, OrderType.GTC, ); console.log(resp); ``` See [examples](examples/) for more information. ### Market Orders ```ts // Market buy \u2014 amount is in US",
+    "license_excerpt": "MIT License Copyright (c) 2026 polymarkets Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "DeviaVir/zenbot",
+    "requested_name": "DeviaVir/zenbot",
+    "id": 62025838,
+    "url": "https://github.com/DeviaVir/zenbot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Zenbot is a command-line cryptocurrency trading bot using Node.js and MongoDB.",
+    "stars": 8261,
+    "forks": 1967,
+    "archived": true,
+    "fork": false,
+    "language": "HTML",
+    "default_branch": "unstable",
+    "latest_commit": "52872fb4b5f9d10e2f891d95daec05da0b721ceb",
+    "last_commit_date": "2022-02-14T16:11:27Z",
+    "pushed_at_not_commit_date": "2022-02-14T16:11:27Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "snyk-bot",
+        "contributions": 641,
+        "type": "User"
+      },
+      {
+        "login": "DeviaVir",
+        "contributions": 132,
+        "type": "User"
+      },
+      {
+        "login": "greenkeeper[bot]",
+        "contributions": 73,
+        "type": "Bot"
+      },
+      {
+        "login": "nedievas",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "defkev",
+        "contributions": 32,
+        "type": "User"
+      },
+      {
+        "login": "krystophv",
+        "contributions": 29,
+        "type": "User"
+      },
+      {
+        "login": "Haehnchen",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "station384",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "cmroche",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "glennfu",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "tiagosiebler",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "brucetus",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 15,
+        "type": "Bot"
+      },
+      {
+        "login": "haxwell",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "crubb",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "BAKFR",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "olexiyb",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "cvinacua",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "emabo",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "fuzzyTew",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "kernelsndrs",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "KryptoNova",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "grigio",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "Shawn8901",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "mmdiego",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "theDiverDK",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "MT00x",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "firepol",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "talvasconcelos",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "Maddcow",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "fce208c9e27e92f9be6dd115e95bd9d629b616325bd12a1146765078be1ed7b7",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "5ce93a9ec5b7c9d5d1418d7c994d56a572152c0ee4d32401a7c3fb08a3003515",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".editorconfig",
+      ".env-sample",
+      ".eslintignore",
+      ".eslintrc",
+      ".github",
+      ".gitignore",
+      ".jsbeautifyrc",
+      ".snyk",
+      ".travis.yml",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "Dockerfile",
+      "ISSUE_TEMPLATE.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "assets",
+      "boot.js",
+      "commands",
+      "conf-sample.js",
+      "docker-compose-traefik.yml",
+      "docker-compose-windows.yml",
+      "docker-compose.yml",
+      "docs",
+      "extensions",
+      "lib",
+      "models",
+      "package-lock.json",
+      "package.json",
+      "post_install.js",
+      "scripts",
+      "simulations",
+      "stats",
+      "templates",
+      "test",
+      "update.bat",
+      "update.sh",
+      "webpack-src",
+      "webpack.config.js",
+      "zenbot.bat",
+      "zenbot.js",
+      "zenbot.sh"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/DeviaVir/zenbot/blob/52872fb4b5f9d10e2f891d95daec05da0b721ceb/package.json",
+        "sha256": "5e042148437d5688c798221e882149eaf591af3aded47c500396520992bb49b2"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/DeviaVir/zenbot",
+      "commit": "https://github.com/DeviaVir/zenbot/commit/52872fb4b5f9d10e2f891d95daec05da0b721ceb",
+      "readme": "https://github.com/DeviaVir/zenbot/blob/52872fb4b5f9d10e2f891d95daec05da0b721ceb/README.md",
+      "license": "https://github.com/DeviaVir/zenbot/blob/52872fb4b5f9d10e2f891d95daec05da0b721ceb/LICENSE",
+      "recent_commits": "https://api.github.com/repos/DeviaVir/zenbot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/DeviaVir/zenbot/contributors",
+      "issues": "https://api.github.com/repos/DeviaVir/zenbot/issues"
+    },
+    "readme_excerpt": "WARNING: project is no longer actively maintained, make sure to update any dependencies if you plan on using this in your project. ![zenbot logo](assets/logo.png) > \u201cTo follow the path, look to the master, follow the master, walk with the master, see through the master, become the master.\u201d > \u2013 Zen Proverb # Zenbot [![Build/Test Status](https://travis-ci.org/DeviaVir/zenbot.svg?branch=master)](https://travis-ci.org/DeviaVir/zenbot) ## Description Zenbot is a command-line cryptocurrency trading bot using Node.js and MongoDB. It features: - Fully-automated [technical-analysis](https://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:introduction_to_technical_indicators_and_oscillators)-based trading approach - Full support for [Binance](https://www.binance.com/), [Bitfinex](https://www.bitfinex.com/), [Bitstamp](https://www.bitstamp.net/), [Bittrex](https://bittrex.com/), [CEX.IO](https://cex.io/), [GDAX](https://gdax.com/), [Gemini](https://gemini.com/), [HitBTC](https://hitbtc.com/), [Kraken](https://www.kraken.com/), [Poloniex](https://poloniex.com/)and [TheRockTrading](https://www.therocktrading.com/), work on further exchange support is ongoing. - Plugin architecture for implementing exchange support, or writing new strategies - Simulator for [backtesting strategies](https://gist.github.com/carlos8f/b09a734cf626ffb9bb3bcb1ca35f3db4) against historical data",
+    "license_excerpt": "MIT License Copyright (c) 2018 Carlos Rodriguez Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright"
+  },
+  {
+    "full_name": "dgunning/edgartools",
+    "requested_name": "dgunning/edgartools",
+    "id": 581872397,
+    "url": "https://github.com/dgunning/edgartools",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV \u2014 clean API, well-typed, MIT-licensed.",
+    "stars": 2705,
+    "forks": 481,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "abe44344c56cf4bfb5443e0debca7e39342f6e7a",
+    "last_commit_date": "2026-09-11T15:33:03Z",
+    "pushed_at_not_commit_date": "2026-09-11T15:41:47Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "AmirF194",
+      "JonArnfred",
+      "biautomator",
+      "dgunning",
+      "hashd1ve",
+      "heykav",
+      "manantlerio",
+      "sambai-dev"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dgunning",
+        "contributions": 4081,
+        "type": "User"
+      },
+      {
+        "login": "paultiq",
+        "contributions": 93,
+        "type": "User"
+      },
+      {
+        "login": "rla3rd",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "MauritsBrinkman",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "jacob187",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "ghedo44",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "kevinchiu",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "ivy113",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "binggao1230",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "webbsledge",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "cthamilton",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "TrendingWize",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "jekozyra",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "benobytes",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "sf1tzp",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "pierotofy",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "0ywfe",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "hashd1ve",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "yodaiken",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "danielerosa",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "HonzaCuhel",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "JonArnfred",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "linusbiostat",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "manantlerio",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "joseturegano",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "biautomator",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "vgreg",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "sean-enderby-wbs",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "sambai-dev",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "baqamisaif",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/dgunning/edgartools/issues/1209",
+      "created_at": "2026-08-31T15:46:33Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "943bb25c120e0d4965e44f1baa5f3afb82423e5cf9b41155eae5901ca3877f57",
+    "license": "MIT",
+    "license_path": "LICENSE.txt",
+    "license_file_sha256": "249fb5021f07689c5fb17925c4d8bcd04fd9e2cee4b4b789499fb80b1e9dfe0c",
+    "license_candidates": [
+      "LICENSE.txt"
+    ],
+    "root_entries": [
+      ".claude",
+      ".codefactor.yml",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".readthedocs.yaml",
+      "CHANGELOG-archive.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "README.md",
+      "changelog.d",
+      "data",
+      "docs",
+      "edgar",
+      "engineering",
+      "examples",
+      "mkdocs.yml",
+      "notebooks",
+      "pyproject.toml",
+      "pyrightconfig.json",
+      "scripts",
+      "tests",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/pyproject.toml",
+        "sha256": "13b6b79634019b55b751c7151e6b182883649f64543760f39d0491a544d00a48"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "adoption",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "dgunning/edgartools",
+      "capability_tag": "none",
+      "category_slug": "data-integration-platform",
+      "summary": "Typed Python library for SEC EDGAR filings analysis",
+      "reuse_value": 85,
+      "stars": 2383,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/dgunning/edgartools",
+      "rank_score": 85023830
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "dgunning/edgartools",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "edgartools",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 496373,
+      "downloads_period": "last-month",
+      "dependent_repos": 0,
+      "dependent_pkgs": 1,
+      "rank_avg": 16.70821824482129,
+      "reach_percentile": 83.3,
+      "reuse_value": 85,
+      "stars": 2383,
+      "adoption_score": 38.0,
+      "real_value": 38,
+      "verdict": "demote",
+      "fame_gap": -31.8,
+      "raw_json": "{\"dl\": 496373, \"deprepos\": 0, \"deppkgs\": 1, \"rank_avg\": 16.70821824482129, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "liftability_row": {
+      "full_name": "dgunning/edgartools",
+      "stars": 2383,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 85,
+      "liftability": 90,
+      "fame_gap": -5,
+      "cat_slug": "data-integration-platform",
+      "cat_name": "Data Integration / ELT Platform",
+      "description": "Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV \u2014 clean API, well-typed, "
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/dgunning/edgartools",
+      "commit": "https://github.com/dgunning/edgartools/commit/abe44344c56cf4bfb5443e0debca7e39342f6e7a",
+      "readme": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/README.md",
+      "license": "https://github.com/dgunning/edgartools/blob/abe44344c56cf4bfb5443e0debca7e39342f6e7a/LICENSE.txt",
+      "recent_commits": "https://api.github.com/repos/dgunning/edgartools/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/dgunning/edgartools/contributors",
+      "issues": "https://api.github.com/repos/dgunning/edgartools/issues"
+    },
+    "readme_excerpt": "# EdgarTools \u2014 Python Library for SEC EDGAR Filings **EdgarTools** is a Python library for accessing SEC EDGAR filings as structured data. Parse financial statements, insider trades, fund holdings, proxy statements, and 20+ other filing types with a consistent Python API \u2014 in a few lines of code. Free and open source. ![EdgarTools SEC filing data extraction demo](https://raw.githubusercontent.com/dgunning/edgartools/main/docs/images/edgartools-demo.gif) ## Why EdgarTools? SEC EDGAR has every filing back to 1994, free \u2014 and almost none of it is ready to use. EdgarTools turns any filing into a typed Python object, so a 10-K's revenue is one line instead of an afternoon of XBRL parsing. ```python # Apple's latest income statement \u2014 rendered, standardized, done from edgar import Company Company(\"AAPL\").get_financials().income_statement() ``` Financial Statements Income, balance sheet, cash flow in one call XBRL-standardized for cross-company comparison Every Filing Type 13F holdings, Form 4 insiders, 8-K events, funds, proxies Typed objects + pandas DataFrames for 20+ forms Built for Pipelines &amp; AI Rate-limit aware, smart caching, enterprise mirrors Built-in MCP server + LLM-ready text for RAG ## How It Works Everything starts with a **`Company`** or a **`Filing`**. Call **`.obj()`** and you get a typed object built for that form \u2014 its data ready as pandas DataFrames and clean ",
+    "license_excerpt": "MIT License Copyright (c) 2022-present Dwight Gunning <dgunning@gmail.com> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following cond"
+  },
+  {
+    "full_name": "domokane/FinancePy",
+    "requested_name": "domokane/FinancePy",
+    "id": 217872093,
+    "url": "https://github.com/domokane/FinancePy",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A Python Finance Library that focuses on the pricing and risk-management of Financial Derivatives, including fixed-income, equity, FX and credit derivatives. ",
+    "stars": 3148,
+    "forks": 439,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "2b9227fea9d832c4033421d6cd53a54316414fca",
+    "last_commit_date": "2026-09-12T08:46:53Z",
+    "pushed_at_not_commit_date": "2026-09-12T08:46:54Z",
+    "commits_since_20260313_count_capped100": 81,
+    "recent_commit_authors": [
+      "Copilot",
+      "DMZ22",
+      "DominicHong",
+      "binggao1230",
+      "dependabot[bot]",
+      "domokane",
+      "dylanpulver",
+      "kadyrbekovhamit-cyber",
+      "sanjey99",
+      "shubhamlodha21"
+    ],
+    "contributors_sample": [
+      {
+        "login": "domokane",
+        "contributions": 930,
+        "type": "User"
+      },
+      {
+        "login": "FergalOK",
+        "contributions": 136,
+        "type": "User"
+      },
+      {
+        "login": "idorrington92",
+        "contributions": 67,
+        "type": "User"
+      },
+      {
+        "login": "shunmaruko",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "nashquant",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "poornagurram",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "sagayev",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "DominicHong",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "jeroenkerkhof",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "piterbarg",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jtamas18",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "ryanrussell",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 3,
+        "type": "Bot"
+      },
+      {
+        "login": "saeedamen",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Akshat111111",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "VFermat",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "gpelleri",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kadyrbekovhamit-cyber",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "shubhamlodha21",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sanjey99",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "binggao1230",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Copilot",
+        "contributions": 1,
+        "type": "Bot"
+      },
+      {
+        "login": "rkcah",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Mattyuan98",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mayank1897",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dylanpulver",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DMZ22",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cclauss",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "AmeyShrivastava",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "abhi-g80",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "d328c711561c83d89cf12f41a7b8947bb81191290b60fb06285787ca3908ae28",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pylintrc",
+      "CHANGELOG.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "docs",
+      "financepy",
+      "mkdocs.yml",
+      "notebooks",
+      "pyproject.toml",
+      "regression_tests",
+      "requirements.txt",
+      "setup.py",
+      "unit_tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/domokane/FinancePy/blob/2b9227fea9d832c4033421d6cd53a54316414fca/pyproject.toml",
+        "sha256": "ad37a0bea1c35863715e771274c736321103e85b8bb194dffcb012daefa9c562"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/domokane/FinancePy/blob/2b9227fea9d832c4033421d6cd53a54316414fca/requirements.txt",
+        "sha256": "ae19f054f979f862e70dd6961bf7ff922db0dff8f2ccb8bee6f9e29c7c0780b8"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/domokane/FinancePy",
+      "commit": "https://github.com/domokane/FinancePy/commit/2b9227fea9d832c4033421d6cd53a54316414fca",
+      "readme": "https://github.com/domokane/FinancePy/blob/2b9227fea9d832c4033421d6cd53a54316414fca/README.md",
+      "license": "https://github.com/domokane/FinancePy/blob/2b9227fea9d832c4033421d6cd53a54316414fca/LICENSE",
+      "recent_commits": "https://api.github.com/repos/domokane/FinancePy/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/domokane/FinancePy/contributors",
+      "issues": "https://api.github.com/repos/domokane/FinancePy/issues"
+    },
+    "readme_excerpt": "# FinancePy A one-stop library for pricing and risk-managing options, futures and other financial instruments. See below for a comprehensive overview. ## First Installation FinancePy can be installed from pip using the following command: `pip install financepy` To upgrade an existing installation type: `pip install --upgrade financepy` Then start a Python terminal and type `from financepy.utils import *` Here is a quick check to make sure it all loaded. Type ```>>> Date(19,2,2026).add_days(2)``` You should see ```21-FEB-2026``` Warning: You may notice that the library can take several seconds to import after the first install if you do a wildcard import of classes which rely on certain models. This is because financepy relies upon Numba to compile a lot of the models - resulting in calculation speeds similar to C/C++. This compile only takes place on the first import of the model and the compiled code is then cached on your machine. No further compilation will be required. As a consequence subsequent imports will be almost instant. ## Quickstart Guide \ud83d\udc49 See [Quick Start Guide](./docs/QUICKSTART.md) to get going in 2 minutes! ## Structure of Financepy The structure of financepy is as follows ``` \u251c\u2500\u2500 market/ \u251c\u2500\u2500 models/ \u251c\u2500\u2500 products/ \u251c\u2500\u2500 utils/ ``` The market folder contains objects linked to structured market data such as interest rate term structures, i.e `curves' and volatilit",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  }
+]

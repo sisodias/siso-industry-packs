@@ -1,0 +1,755 @@
+[
+  {
+    "full_name": "chriswhong/paint-the-town",
+    "requested_name": "chriswhong/paint-the-town",
+    "id": 185247505,
+    "url": "https://github.com/chriswhong/paint-the-town",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Collaborative Data Art using NYC tax lots data (MapPLUTO)",
+    "stars": 10,
+    "forks": 4,
+    "archived": true,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "a7568fb5a6ef40ddfe1ac227fdb96aac1a43ba42",
+    "last_commit_date": "2020-12-07T07:09:20Z",
+    "pushed_at_not_commit_date": "2022-12-09T22:58:24Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "chriswhong",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "62d228f681952e3b4e36cffdd057d41b94f358bcb01024051ad98b63a99ae8cf",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env-sample",
+      ".gitignore",
+      "Dockerfile",
+      "Procfile",
+      "README.md",
+      "app.js",
+      "bin",
+      "frontend",
+      "helpers",
+      "package-lock.json",
+      "package.json",
+      "public",
+      "routes",
+      "scripts",
+      "yarn-error.log",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/chriswhong/paint-the-town/blob/a7568fb5a6ef40ddfe1ac227fdb96aac1a43ba42/package.json",
+        "sha256": "9c1f6087295fbdedc45abdfdd018e8b4d170cd5bce07e3d9b835e1f3f8dbed61"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/chriswhong/paint-the-town",
+      "commit": "https://github.com/chriswhong/paint-the-town/commit/a7568fb5a6ef40ddfe1ac227fdb96aac1a43ba42",
+      "readme": "https://github.com/chriswhong/paint-the-town/blob/a7568fb5a6ef40ddfe1ac227fdb96aac1a43ba42/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/chriswhong/paint-the-town/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/chriswhong/paint-the-town/contributors",
+      "issues": "https://api.github.com/repos/chriswhong/paint-the-town/issues"
+    },
+    "readme_excerpt": "# paint-the-town A Collaborative Civic Data Art Project using NYC's MapPLUTO Dataset ## About Paint the town shows a map of New York City where users can click the map to \"paint\" a tax lot using any color they like. Paint actions are stored in a database and updated on all user's maps in real time. Over time, interesting patterns and color schemes will emerge as individual users add color to the part of the map that interests them. ## Architecture Paint the town is an ember.js frontend and an express.js + postgres/postgis backend. (PEEN Stack? PostgreSQL-Express-Ember-Node) ### Backend The express API serves three major functions: - Provide a `POST /colors` endpoint for submitting paint actions. This endpoint checks for a valid bbl (tax lot id), color, and a username of more than 3 characters. There is no authentication, anyone can POST a paint action with valid inputs. - Serve vector tiles of NYC MapPLUTO joined with paint actions. This is accomplished using `ST_AsMVT` so no additional processing is needed in express, the vector tile protocol buffers come straight from PostGIS. - Provide a websocket (socket.io) server. Clients connect to the socket.io server and receive a message whenever a paint action has occurred. The response is used to update the map in real-time as other users are painting. ### Frontend The ember.js app lives in the `frontend` directory in this repo. Loa",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "chriswhong/plutoplus",
+    "requested_name": "chriswhong/plutoplus",
+    "id": 36095441,
+    "url": "https://github.com/chriswhong/plutoplus",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A \"clip & ship\" download tool for NYC PLUTO tax lot datadata",
+    "stars": 47,
+    "forks": 34,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "35040c0622b1445ea3e733a3dca3d202850809f3",
+    "last_commit_date": "2020-02-28T05:08:57Z",
+    "pushed_at_not_commit_date": "2023-01-04T22:18:46Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "chriswhong",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "aykutsimseks",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "pichot",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "bd88199e1f12bc7408a787040faceac8f3fbc4166c3b14911bc59883fc865bef",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".babelrc",
+      ".eslintrc",
+      ".gitignore",
+      ".nojekyll",
+      "README.md",
+      "css",
+      "data",
+      "favicon.png",
+      "fonts",
+      "index.html",
+      "js",
+      "package.json",
+      "src",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/chriswhong/plutoplus/blob/35040c0622b1445ea3e733a3dca3d202850809f3/package.json",
+        "sha256": "5548168887f076d788e83982f82fbec9f56e4a67ec060dd6cbee9173f78edae7"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/chriswhong/plutoplus",
+      "commit": "https://github.com/chriswhong/plutoplus/commit/35040c0622b1445ea3e733a3dca3d202850809f3",
+      "readme": "https://github.com/chriswhong/plutoplus/blob/35040c0622b1445ea3e733a3dca3d202850809f3/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/chriswhong/plutoplus/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/chriswhong/plutoplus/contributors",
+      "issues": "https://api.github.com/repos/chriswhong/plutoplus/issues"
+    },
+    "readme_excerpt": "# plutoplus A \"clip & ship\" download tool for NYC PLUTO tax lot data, allowing the user to download only the desired columns and geographic area. Hosted on github pages at [http://chriswhong.github.io/plutoplus](http://chriswhong.github.io/plutoplus) ## Data Current PLUTO dataset is 18v2, this app's data was last updated on 15 September 2018. ![cursor_and_pluto_data_downloader_powered_by_cartodb_and_plutoplus_ _bash_ _102x35](https://cloud.githubusercontent.com/assets/1833820/8522377/7719b904-23bb-11e5-936c-0fe760ed3621.png) ## Why PLUTO is an amazing NYC Open Data Resource that contains a wealth of information about the city's tax lots, including zoning, # of units, tax assessments, and more. It contains information for the city's 870,000+ properties, and includes over 80 attributes for each lot! That's a lot of open data! MapPLUTO (PLUTO data plus a polygon for each lot) is so large, that [the Department of City Planning publishes it by borough as shapefiles](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). I built this downloader to help people get access to smaller chunks of the data quickly and easily for whatever they are working on. ## How it Works This app is essentially a SQL Builder, it compiles the user's settings into a PostGIS query that is sent to Carto's SQL API. The SQL looks like `SELECT {selected PLUTO columns} FROM mapplutotabl",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "chronoxor/CppTrader",
+    "requested_name": "chronoxor/CppTrader",
+    "id": 97720792,
+    "url": "https://github.com/chronoxor/CppTrader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "High performance components for building Trading Platform such as ultra fast matching engine, order book processor",
+    "stars": 1069,
+    "forks": 305,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "main",
+    "latest_commit": "39421f50ae673be34235e24eac95827220763652",
+    "last_commit_date": "2026-09-09T00:10:10Z",
+    "pushed_at_not_commit_date": "2026-09-09T00:15:24Z",
+    "commits_since_20260313_count_capped100": 7,
+    "recent_commit_authors": [
+      "chronoxor"
+    ],
+    "contributors_sample": [
+      {
+        "login": "chronoxor",
+        "contributions": 582,
+        "type": "User"
+      },
+      {
+        "login": "dingobye",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/chronoxor/CppTrader/issues/43",
+      "created_at": "2026-07-15T05:42:33Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "70421edff2def196b962b05328e66ab321361a24ff2779e1823d309588749ad4",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ea49851a9fc6074cfd1a45baaaecbcd6eb173ec60d4a2fa4d62e2c157fb87524",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".gitlinks",
+      "CLAUDE.md",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "TODO.md",
+      "bin",
+      "documents",
+      "examples",
+      "include",
+      "modules",
+      "performance",
+      "source",
+      "tests",
+      "tools"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "chronoxor/CppTrader",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "High-performance C++ trading platform matching engine",
+      "reuse_value": 75,
+      "stars": 1041,
+      "license": "MIT",
+      "language": "C++",
+      "url": "https://github.com/chronoxor/CppTrader",
+      "rank_score": 75010410
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "chronoxor/CppTrader",
+      "stars": 1041,
+      "license": "MIT",
+      "language": "C++",
+      "unit_class": "capability",
+      "reuse_value": 75,
+      "liftability": 70,
+      "fame_gap": 5,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "High performance components for building Trading Platform such as ultra fast matching engine, order book processor"
+    },
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/chronoxor/CppTrader",
+      "commit": "https://github.com/chronoxor/CppTrader/commit/39421f50ae673be34235e24eac95827220763652",
+      "readme": "https://github.com/chronoxor/CppTrader/blob/39421f50ae673be34235e24eac95827220763652/README.md",
+      "license": "https://github.com/chronoxor/CppTrader/blob/39421f50ae673be34235e24eac95827220763652/LICENSE",
+      "recent_commits": "https://api.github.com/repos/chronoxor/CppTrader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/chronoxor/CppTrader/contributors",
+      "issues": "https://api.github.com/repos/chronoxor/CppTrader/issues"
+    },
+    "readme_excerpt": "# CppTrader [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Release](https://img.shields.io/github/release/chronoxor/CppTrader.svg?sort=semver)](https://github.com/chronoxor/CppTrader/releases) [![Linux (clang)](https://github.com/chronoxor/CppTrader/actions/workflows/build-linux-clang.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-linux-clang.yml) [![Linux (gcc)](https://github.com/chronoxor/CppTrader/actions/workflows/build-linux-gcc.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-linux-gcc.yml) [![MacOS](https://github.com/chronoxor/CppTrader/actions/workflows/build-macos.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-macos.yml) [![Windows (Cygwin)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-cygwin.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-cygwin.yml) [![Windows (MSYS2)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-msys2.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-msys2.yml) [![Windows (MinGW)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-mingw.yml/badge.svg)](https://github.com/chronoxor/CppTrader/actions/workflows/build-windows-mingw.yml) [![Windows (Visual Studio)](https://github.com/c",
+    "license_excerpt": "MIT License Copyright (c) 2017-2026 Ivan Shynkarenka Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copy"
+  },
+  {
+    "full_name": "Civil-Cucumber/TradingViewDataAssembler_Public",
+    "requested_name": "Civil-Cucumber/TradingViewDataAssembler_Public",
+    "id": 607316749,
+    "url": "https://github.com/Civil-Cucumber/TradingViewDataAssembler_Public",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Tool to assemble paper trading data from TradingView into a readable csv format, to be able to create a Trading Journal in a spreadsheet.",
+    "stars": 22,
+    "forks": 4,
+    "archived": false,
+    "fork": false,
+    "language": "ShaderLab",
+    "default_branch": "main",
+    "latest_commit": "aff75b76e10637bff4856cd9cafbf35d4bc53ee3",
+    "last_commit_date": "2026-07-11T10:11:28Z",
+    "pushed_at_not_commit_date": "2026-07-11T10:11:29Z",
+    "commits_since_20260313_count_capped100": 4,
+    "recent_commit_authors": [
+      "Civil-Cucumber"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Civil-Cucumber",
+        "contributions": 54,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Civil-Cucumber/TradingViewDataAssembler_Public/issues/2",
+      "created_at": "2023-08-13T11:18:05Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2023-08-13T15:04:55Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "439835e6e889ec12bca9c17e5f5b9382f78d2bf17ca38a1515ecebe79f4b3f55",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "Assets",
+      "Packages",
+      "ProjectSettings",
+      "README.md",
+      "UserSettings"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "C",
+        "query": "trading CSV journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Civil-Cucumber/TradingViewDataAssembler_Public",
+      "commit": "https://github.com/Civil-Cucumber/TradingViewDataAssembler_Public/commit/aff75b76e10637bff4856cd9cafbf35d4bc53ee3",
+      "readme": "https://github.com/Civil-Cucumber/TradingViewDataAssembler_Public/blob/aff75b76e10637bff4856cd9cafbf35d4bc53ee3/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Civil-Cucumber/TradingViewDataAssembler_Public/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Civil-Cucumber/TradingViewDataAssembler_Public/contributors",
+      "issues": "https://api.github.com/repos/Civil-Cucumber/TradingViewDataAssembler_Public/issues"
+    },
+    "readme_excerpt": "# TradingView Data Assembler This tool assembles your data from any of these 5 sources... - **TradingView:** - TradingView's Paper Trading - TradingView's Interactive Brokers Paper account connection - TradingView's Interactive Brokers Live account connection - **Interactive Brokers' Activity Statement:** - Interactive Brokers' Paper account Activity Statement - Interactive Brokers' Live account Activity Statement ...into a **single readable csv format** in your clipboard, that you can then easily paste into your **Trading Journal spreadsheet** to update it. --> 1 row = 1 trade of the same stock or option, until all bought stocks have been sold. (Multi-leg Options are treated as separate trades.) **Columns:** 1. _Symbol_ 2. _Side_ 3. _Time of first entry_ 4. _Avg entry price_ 5. _Total entry amount (incl. later position increases)_ 6. _Stop Loss_ 7. _Price Target_ 8. _Time of final exit_ 9. _Avg exit price_ 10. _Total exit amount (incl. earlier partial closes)_ 11. _Amount of entries in total_ 12. _Timestamps of position increases (separated by '#')_ 13. _Amount of exits in total_ 14. _Timestamps of partial closes (separated by '#')_ 15. _Total commission costs_ **HINT:** 'Stop Loss' or 'Price Target' info can only be read out if you if you are importing the information from TradingView, and set them up there. Unfortunately Interactive Brokers itself doesn't provide a way to ex",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "clifton/ib-flex",
+    "requested_name": "clifton/ib-flex",
+    "id": 1133136461,
+    "url": "https://github.com/clifton/ib-flex",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Type-safe Rust parser for Interactive Brokers FLEX query XML statements",
+    "stars": 7,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "a433988cfed08847e8bd3b264b35a2d90d87e45d",
+    "last_commit_date": "2026-06-02T16:53:52Z",
+    "pushed_at_not_commit_date": "2026-06-02T16:53:55Z",
+    "commits_since_20260313_count_capped100": 14,
+    "recent_commit_authors": [
+      "clifton"
+    ],
+    "contributors_sample": [
+      {
+        "login": "clifton",
+        "contributions": 49,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "f4d494872b6320ea20753acd722ec9a2dcb46f6059e450fae0bff1da2bda30e0",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "e17ac8754232eab1b36b0b53e2c3b0903aeee38b3966f81264cb7d8a02887406",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "Cargo.toml",
+      "FLEX_SETUP.md",
+      "LICENSE",
+      "README.md",
+      "benches",
+      "examples",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/Cargo.toml",
+        "sha256": "c994333d84f27c9d2473e5465fc2341ddba6dda6e922dd20de7c4c7c68266adf"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      },
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/clifton/ib-flex",
+      "commit": "https://github.com/clifton/ib-flex/commit/a433988cfed08847e8bd3b264b35a2d90d87e45d",
+      "readme": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/README.md",
+      "license": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/clifton/ib-flex/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/clifton/ib-flex/contributors",
+      "issues": "https://api.github.com/repos/clifton/ib-flex/issues"
+    },
+    "readme_excerpt": "# ib-flex [![crates.io](https://img.shields.io/crates/v/ib-flex.svg)](https://crates.io/crates/ib-flex) [![docs.rs](https://docs.rs/ib-flex/badge.svg)](https://docs.rs/ib-flex) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) Type-safe Rust parser for Interactive Brokers FLEX XML statements with comprehensive coverage and financial precision. ## Features - **Complete attribute coverage** - Maps the full set of IB FLEX attributes (modeled against the mature [ibflex](https://github.com/csingley/ibflex) reference), so you don't silently lose data - **Robust on real data** - Tolerates IB's real-world quirks: thousands separators, `-`/`--`/`N/A` sentinels, `MULTI` dates, `Yes`/`No` booleans, legacy date/time separators - **Financial precision** - `rust_decimal` for all monetary values (no floating-point error) - **Type-safe** - 19 enums covering asset classes, trade/cash/corporate-action types, transfer types, and more - **Comprehensive sections** - Trades, positions, cash, corporate actions, transfers, performance summaries, accruals, and 40+ FLEX sections in total - **Edge cases covered** - Warrants, T-Bills, CFDs, crypto, fractional shares, cancelled/corrected trades, cost-basis lots - **Optional API client** - Fetch FLEX statements programmatically from IB (`api-client` feature) ## Installation Add this to your `Cargo.toml`: ```toml [dependencies] ib-flex",
+    "license_excerpt": "MIT License Copyright (c) 2026 Clifton King Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright not"
+  },
+  {
+    "full_name": "cn-vhql/FactorHub",
+    "requested_name": "cn-vhql/FactorHub",
+    "id": 1069816384,
+    "url": "https://github.com/cn-vhql/FactorHub",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FactorHub is an open-source modern quantitative factor analysis platform designed specifically for the Chinese A-share market.  FactorHub = Factor + Hub  A full-stack quantitative investment research system integrating factor management, analysis, mining, portfolio optimization, and strategy backtesting.",
+    "stars": 412,
+    "forks": 119,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "8d0af3f6a8e4593c9bdaee746ad645548e09bbb9",
+    "last_commit_date": "2026-07-12T07:30:34Z",
+    "pushed_at_not_commit_date": "2026-07-12T07:31:38Z",
+    "commits_since_20260313_count_capped100": 20,
+    "recent_commit_authors": [
+      "cn-vhql",
+      "defoliation1",
+      "renxia"
+    ],
+    "contributors_sample": [
+      {
+        "login": "cn-vhql",
+        "contributions": 42,
+        "type": "User"
+      },
+      {
+        "login": "defoliation1",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "renxia",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/cn-vhql/FactorHub/issues/12",
+      "created_at": "2026-09-02T07:53:28Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "abbb48e14ef727feb8eaff12dd201747ee799859fe4fa05a18a32401b1ecb0c7",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".claude",
+      ".dockerignore",
+      ".github",
+      ".gitignore",
+      "README.md",
+      "README_JP.md",
+      "README_ZH.md",
+      "backend",
+      "config",
+      "data",
+      "docker",
+      "frontend",
+      "image",
+      "pyproject.toml",
+      "scripts",
+      "start_all.py",
+      "start_api.py",
+      "tests",
+      "utils",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/cn-vhql/FactorHub/blob/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9/pyproject.toml",
+        "sha256": "71c9b5c921223b11cc9defa5fb6b8caf5e2ac4090de72d89ff6f2688633c787a"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/cn-vhql/FactorHub",
+      "commit": "https://github.com/cn-vhql/FactorHub/commit/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9",
+      "readme": "https://github.com/cn-vhql/FactorHub/blob/8d0af3f6a8e4593c9bdaee746ad645548e09bbb9/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/cn-vhql/FactorHub/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/cn-vhql/FactorHub/contributors",
+      "issues": "https://api.github.com/repos/cn-vhql/FactorHub/issues"
+    },
+    "readme_excerpt": "# FactorHub **FactorHub** is an open-source modern quantitative factor analysis platform designed specifically for the Chinese A-share market. > FactorHub = Factor + Hub A full-stack quantitative investment research system integrating factor management, analysis, mining, portfolio optimization, and strategy backtesting. --- ## Language Options - \ud83c\udde8\ud83c\uddf3 **\u4e2d\u6587 (Chinese)** - [README_ZH.md](README_ZH.md) - \ud83c\uddef\ud83c\uddf5 **\u65e5\u672c\u8a9e (Japanese)** - [README_JP.md](README_JP.md) --- ## Core Value Proposition | Value Pillar | Description | |--------------|-------------| | \ud83c\udfaf **Complete Factor Lifecycle Management** | Full support from factor creation, validation, analysis to deployment | | \ud83e\uddea **Scientific Factor Evaluation System** | Professional indicators including IC/IR analysis, monotonicity test, turnover analysis | | \ud83e\uddec **Intelligent Factor Mining** | Genetic algorithm-based automated factor mining to discover alpha signals | | \ud83e\udd16 **AI Research Assistant** | Supports natural-language factor generation, AI interpretation of analysis results, and report drafting | | \ud83d\udcca **Professional Backtesting Engine** | Support for multi-factor combination, strategy comparison, and performance attribution analysis | --- ## Core Features ![1773500695533](image/README_ZH/1773500695533.png) ### 1. Factor Management - \u2705 **Custom Factor Definition** - Supports Tongda Xinhua (MyLanguage) syntax and TALib functions - \u2705 **Formula ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "co11ter/goFAST",
+    "requested_name": "co11ter/goFAST",
+    "id": 141422278,
+    "url": "https://github.com/co11ter/goFAST",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Go implementation of the FAST Protocol (FIX Adapted for STreaming)",
+    "stars": 49,
+    "forks": 24,
+    "archived": false,
+    "fork": false,
+    "language": "Go",
+    "default_branch": "master",
+    "latest_commit": "4263f2ff6f8c4da3152204190af86b64a8ce8a6d",
+    "last_commit_date": "2020-04-22T18:42:34Z",
+    "pushed_at_not_commit_date": "2020-04-22T18:42:42Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "co11ter",
+        "contributions": 149,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/co11ter/goFAST/issues/2",
+      "created_at": "2020-02-11T16:22:55Z",
+      "state": "closed",
+      "comments": 4,
+      "first_staff_comment_in_sample": "2020-02-12T16:21:21Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "652f8d25796faddeaa84b4b32ea654f878b1b0f9be79ffced78dd0bee9614a12",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "cast.go",
+      "decimal.go",
+      "decoder.go",
+      "decoder_test.go",
+      "doc.go",
+      "encoder.go",
+      "encoder_test.go",
+      "error.go",
+      "example_decoder_test.go",
+      "example_encoder_test.go",
+      "example_test.go",
+      "fast_test.go",
+      "field.go",
+      "instruction.go",
+      "logger.go",
+      "message.go",
+      "pmap.go",
+      "reader.go",
+      "reflector.go",
+      "storage.go",
+      "template.go",
+      "template_test.go",
+      "testdata",
+      "writer.go"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/co11ter/goFAST",
+      "commit": "https://github.com/co11ter/goFAST/commit/4263f2ff6f8c4da3152204190af86b64a8ce8a6d",
+      "readme": "https://github.com/co11ter/goFAST/blob/4263f2ff6f8c4da3152204190af86b64a8ce8a6d/README.md",
+      "license": "https://github.com/co11ter/goFAST/blob/4263f2ff6f8c4da3152204190af86b64a8ce8a6d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/co11ter/goFAST/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/co11ter/goFAST/contributors",
+      "issues": "https://api.github.com/repos/co11ter/goFAST/issues"
+    },
+    "readme_excerpt": "goFAST ====== [![GoDoc](https://godoc.org/github.com/co11ter/goFAST?status.svg)](https://godoc.org/github.com/co11ter/goFAST) goFAST is a Go implementation of the FAST Protocol (FIX Adapted for STreaming). Work-in-progress, expect bugs and missing features. Installation ------------ Install the FAST library using the \"go get\" command: go get github.com/co11ter/goFAST Usage ----- See [documentation](https://godoc.org/github.com/co11ter/goFAST) examples. Benchmark --------- Run `go test -bench=.`. Only Decoder Benchmark is implemented. $ go test -bench=. goos: linux goarch: amd64 pkg: github.com/co11ter/goFAST BenchmarkDecoder_DecodeReflection-4 200000 10403 ns/op 795 B/op 68 allocs/op BenchmarkDecoder_DecodeReceiver-4 300000 5453 ns/op 321 B/op 32 allocs/op PASS ok github.com/co11ter/goFAST 4.977s TODO ---- - apply errors - add benchmark of encoder - optimize encoder - implement delta and tail operators for string type",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "codito/bout",
+    "requested_name": "codito/bout",
+    "id": 115207040,
+    "url": "https://github.com/codito/bout",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Parse and export pdf bank statements to QIF format.",
+    "stars": 17,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "63cda67e19706bd627db3410d4b02a9f67d2505c",
+    "last_commit_date": "2023-12-30T11:35:48Z",
+    "pushed_at_not_commit_date": "2023-12-30T11:35:54Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "codito",
+        "contributions": 19,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "ef7e0143264ce7c8b30ca064c87cd5b2ea4b594d4e64b6440bbbf4eb7755450b",
+    "license": "MIT",
+    "license_path": "LICENSE.md",
+    "license_file_sha256": "afa8fc3a0aeff3c8d5e1e4e4a61a74b894afd4750f66a511e6a1798aa26cc46a",
+    "license_candidates": [
+      "LICENSE.md"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE.md",
+      "MANIFEST.in",
+      "README.md",
+      "bout.py",
+      "development.txt",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "test_bout.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/codito/bout/blob/63cda67e19706bd627db3410d4b02a9f67d2505c/requirements.txt",
+        "sha256": "0cac0e472eba3359aa79e9674ff11a5fd0484b9c465fc1cb774c30938edcc5d7"
+      },
+      "setup.py": {
+        "url": "https://github.com/codito/bout/blob/63cda67e19706bd627db3410d4b02a9f67d2505c/setup.py",
+        "sha256": "6cedfa5cda04836cf290a0871a7a54503fed4e7ff1d1d56a2a8761632a32a2d9"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "QIF parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/codito/bout",
+      "commit": "https://github.com/codito/bout/commit/63cda67e19706bd627db3410d4b02a9f67d2505c",
+      "readme": "https://github.com/codito/bout/blob/63cda67e19706bd627db3410d4b02a9f67d2505c/README.md",
+      "license": "https://github.com/codito/bout/blob/63cda67e19706bd627db3410d4b02a9f67d2505c/LICENSE.md",
+      "recent_commits": "https://api.github.com/repos/codito/bout/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/codito/bout/contributors",
+      "issues": "https://api.github.com/repos/codito/bout/issues"
+    },
+    "readme_excerpt": "# Bout Parse bank statements (csv) and export them to qif format. [![PyPI](https://img.shields.io/pypi/v/bout.svg)](https://pypi.python.org/pypi/bout) Supports _ICICI_ bank and credit card statements out of box. Contributions are most welcome for adding support for another bank. Create an [issue](https://github.com/codito/bout/issues/new) to start. Download the bank statements in `csv` format from the ICICI website and provide them as an input to the tool. # Installation pip install bout Arch Linux may use the `bout` package from [AUR](https://aur.archlinux.org/packages/bout/). yaourt -S bout # Usage $ # convert an ICICI statement to qif $ bout ~/Downloads/icici_statement.csv --profile icici > /tmp/icici.qif $ cat /tmp/icici.qif !Account NMyAccount TMyBank ^ !Type:Bank D01/07/2017 MBIL/12419860068/VF M Jun 17/344548182 T-354.56 ^ $ # convert a password protected ICICI Credit Card statement $ bout ~/Downloads/cc_jun.csv --profile icicicc > /tmp/icicicc.qif $ cat /tmp/icicicc.qif !Account NMyAccount TMyBank ^ !Type:Bank D14/06/2017 MAPOLLO HOSPITALS HYDERABAD IN T-60.00 ^ $ # print verbose messages to diagnose conversion $ bout ~/Downloads/cc_jun.csv --debug --profile icicicc > /tmp/icicicc.qif # Contribute Please try `bout` and file any issues at github issues page. Your patches are welcome!",
+    "license_excerpt": "Copyright (c) 2017 Arun Mahapatra Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and th"
+  }
+]

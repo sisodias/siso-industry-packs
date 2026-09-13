@@ -1,0 +1,1198 @@
+[
+  {
+    "full_name": "abiodunaremu/openea",
+    "requested_name": "abiodunaremu/openea",
+    "id": 936845047,
+    "url": "https://github.com/abiodunaremu/openea",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FxChartAI AI-Agent Trading EA is an open-source MQL5 Expert Advisor for MetaTrader 5 that trades using signals from FxChartAI. It employs trend confirmation, candle tail/trendline analysis, and dynamic order management. Free for personal & commercial use. Contributions welcome.",
+    "stars": 49,
+    "forks": 9,
+    "archived": false,
+    "fork": false,
+    "language": "HTML",
+    "default_branch": "main",
+    "latest_commit": "26081013310c9899a4a209c14777a4f8f5ed4325",
+    "last_commit_date": "2025-03-11T18:48:18Z",
+    "pushed_at_not_commit_date": "2025-03-11T18:48:26Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "abiodunaremu",
+        "contributions": 6,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/abiodunaremu/openea/issues/4",
+      "created_at": "2026-08-07T21:41:19Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "21082106ffb7c4ca86bc2df9f7a6012788427c7575a5060646979b231c6b6ad4",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "CONTRIBUTE.md",
+      "LICENSE",
+      "README.md",
+      "datasets",
+      "fxchartai_openea.mq5",
+      "include",
+      "reports"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "A",
+        "query": "order management trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/abiodunaremu/openea",
+      "commit": "https://github.com/abiodunaremu/openea/commit/26081013310c9899a4a209c14777a4f8f5ed4325",
+      "readme": "https://github.com/abiodunaremu/openea/blob/26081013310c9899a4a209c14777a4f8f5ed4325/README.md",
+      "license": "https://github.com/abiodunaremu/openea/blob/26081013310c9899a4a209c14777a4f8f5ed4325/LICENSE",
+      "recent_commits": "https://api.github.com/repos/abiodunaremu/openea/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/abiodunaremu/openea/contributors",
+      "issues": "https://api.github.com/repos/abiodunaremu/openea/issues"
+    },
+    "readme_excerpt": "# FxChartAI AI-Agent Trading EA FxChartAI AI-Agent Trading EA is an open-source Expert Advisor (EA) for MetaTrader 5, designed for agentic trading using signals received from FxChartAI. The EA processes market signals from FxChartAI and implements a structured trading checklist for making trading decisions. It now integrates live signal data via API calls (with fallback CSV test mode) and includes advanced trend confirmation, candle tail/trendline analysis, dynamic order management, and robust error handling. This project is free to use for both personal and commercial purposes, and we encourage contributions to help improve the agent toward achieving 100% accurate trade decisions. ![openea-all-positions_jpg](https://github.com/user-attachments/assets/87e55224-ce66-4869-a4f2-e658e7052973) ## Features - **API & CSV Signal Integration:** - Retrieves live signals from FxChartAI API via GET requests. - Fallback support for CSV-based signals in test mode. - Signals include `position` (0 = Buy, 1 = Sell, 2 = None), and `weight` (0 = High, 1 = Low, 2 = None). - **Multi-Timeframe Analysis:** - Processes both M10 and H1 data. - Confirms trends using consecutive signal checks. - Uses advanced candle tail and trendline analysis for trade confirmation. - **Dynamic Order Management:** - Places pending orders (Buy/Sell Stops) or executes market orders based on signal analysis. - Manages open",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "aclindsa/ofxgo",
+    "requested_name": "aclindsa/ofxgo",
+    "id": 45782564,
+    "url": "https://github.com/aclindsa/ofxgo",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Golang library for querying and parsing OFX",
+    "stars": 152,
+    "forks": 29,
+    "archived": false,
+    "fork": false,
+    "language": "Go",
+    "default_branch": "master",
+    "latest_commit": "b2d1132f5987d6a150ccbf4152048cf0bf1ca625",
+    "last_commit_date": "2026-02-09T11:33:07Z",
+    "pushed_at_not_commit_date": "2026-02-09T11:33:07Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "aclindsa",
+        "contributions": 186,
+        "type": "User"
+      },
+      {
+        "login": "dtbartle",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "JohnStarich",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "superhawk610",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "nicksnyder",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "davidalpert",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dpward",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "lgwieser",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mkobetic",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Johnny-Malizia",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mhabb",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/aclindsa/ofxgo/issues/60",
+      "created_at": "2026-06-21T06:57:27Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "6271b8c0cfdcf31a98b104c829729a902632e5aa5b906674e8bee45174d4e60a",
+    "license": "GPL-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "d8c320ffc0030d1b096ae4732b50d2b811cf95e9a9b7377c1127b2563e0a0388",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      "LICENSE",
+      "README.md",
+      "bank.go",
+      "bank_test.go",
+      "basic_client.go",
+      "basic_client_test.go",
+      "client.go",
+      "cmd",
+      "common.go",
+      "common_test.go",
+      "constants.go",
+      "constants_test.go",
+      "creditcard.go",
+      "creditcard_test.go",
+      "discovercard_client.go",
+      "doc.go",
+      "generate_constants.py",
+      "go.mod",
+      "go.sum",
+      "invstmt.go",
+      "invstmt_test.go",
+      "leaf_elements.go",
+      "profile.go",
+      "profile_test.go",
+      "request.go",
+      "request_test.go",
+      "response.go",
+      "response_test.go",
+      "samples",
+      "seclist.go",
+      "signon.go",
+      "signon_test.go",
+      "signup.go",
+      "signup_test.go",
+      "types.go",
+      "types_test.go",
+      "util.go",
+      "vanguard_client.go"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/aclindsa/ofxgo",
+      "commit": "https://github.com/aclindsa/ofxgo/commit/b2d1132f5987d6a150ccbf4152048cf0bf1ca625",
+      "readme": "https://github.com/aclindsa/ofxgo/blob/b2d1132f5987d6a150ccbf4152048cf0bf1ca625/README.md",
+      "license": "https://github.com/aclindsa/ofxgo/blob/b2d1132f5987d6a150ccbf4152048cf0bf1ca625/LICENSE",
+      "recent_commits": "https://api.github.com/repos/aclindsa/ofxgo/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/aclindsa/ofxgo/contributors",
+      "issues": "https://api.github.com/repos/aclindsa/ofxgo/issues"
+    },
+    "readme_excerpt": "# OFXGo [![Go Report Card](https://goreportcard.com/badge/github.com/aclindsa/ofxgo)](https://goreportcard.com/report/github.com/aclindsa/ofxgo) [![Build Status](https://github.com/aclindsa/ofxgo/workflows/ofxgo%20CI%20Test/badge.svg?branch=master)](https://github.com/aclindsa/ofxgo/actions?query=workflow%3A%22ofxgo+CI+Test%22+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/github/aclindsa/ofxgo/badge.svg?branch=master)](https://coveralls.io/github/aclindsa/ofxgo?branch=master) [![PkgGoDev](https://pkg.go.dev/badge/github.com/aclindsa?ofxgo)](https://pkg.go.dev/github.com/aclindsa/ofxgo) **OFXGo** is a library for querying OFX servers and/or parsing the responses. It also provides an example command-line client to demonstrate the use of the library. ## Goals The main purpose of this project is to provide a library to make it easier to query financial information with OFX from the comfort of Golang, without having to marshal/unmarshal to SGML or XML. The library does _not_ intend to abstract away all of the details of the OFX specification, which would be difficult to do well. Instead, it exposes the OFX SGML/XML hierarchy as structs which mostly resemble it. Its primary goal is to enable the creation of other personal finance software in Go (as it was created to allow me to fetch OFX transactions for my own project, [MoneyGo](https://github.com/aclindsa/moneygo)",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free softwar"
+  },
+  {
+    "full_name": "acw/qif",
+    "requested_name": "acw/qif",
+    "id": 80264349,
+    "url": "https://github.com/acw/qif",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A Haskell library for parsing and rendering QIF files.",
+    "stars": 3,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "Haskell",
+    "default_branch": "master",
+    "latest_commit": "b00b140e50bfae27b16e6acba802ee71f0cc15a0",
+    "last_commit_date": "2023-10-14T14:49:40Z",
+    "pushed_at_not_commit_date": "2023-10-14T14:49:40Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "acw",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "pSub",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/acw/qif/issues/1",
+      "created_at": "2018-09-19T15:06:27Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2018-09-24T16:35:05Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3fdbb5c99bff13d7d912a5fb8488f179e73bdb3418971c7d217d18af12aee1dd",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b6755b7a269bc70916485a63385f4244013d9efc6c07ee3ac1d6440832d574b5",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".travis.yml",
+      "LICENSE",
+      "README.md",
+      "Setup.hs",
+      "Test.hs",
+      "qif.cabal",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "QIF parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/acw/qif",
+      "commit": "https://github.com/acw/qif/commit/b00b140e50bfae27b16e6acba802ee71f0cc15a0",
+      "readme": "https://github.com/acw/qif/blob/b00b140e50bfae27b16e6acba802ee71f0cc15a0/README.md",
+      "license": "https://github.com/acw/qif/blob/b00b140e50bfae27b16e6acba802ee71f0cc15a0/LICENSE",
+      "recent_commits": "https://api.github.com/repos/acw/qif/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/acw/qif/contributors",
+      "issues": "https://api.github.com/repos/acw/qif/issues"
+    },
+    "readme_excerpt": "# Haskell QIF Library This library is designed to do simple parsing and rendering of QIF financial documents. The goal is to support transmission of financial information between programs, not to serve as the back end to any particular financial software. There does not appear to be a specification of QIF by any standards body, so this parser attempts to be as general as possible given the limited documentation I've seen. I have tested it against the output of at least one financial program; I don't know that it will work with others, though. If you find a QIF file for which this parser does not work, please report the problem and, if possible, provide the file.",
+    "license_excerpt": "Copyright (c) 2016, Adam Wick All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provid"
+  },
+  {
+    "full_name": "adrianhajdin/coinpulse",
+    "requested_name": "adrianhajdin/coinpulse",
+    "id": 1121246873,
+    "url": "https://github.com/adrianhajdin/coinpulse",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "CryptoPulse is a high-performance analytics dashboard built with Next.js 16. It leverages WebSockets and CoinGecko to provide real-time market data, live orderbooks, and integrated TradingView charts.",
+    "stars": 148,
+    "forks": 56,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "48c379527e5464152fbd034d91dc0e84dd0f2dea",
+    "last_commit_date": "2026-01-07T16:32:12Z",
+    "pushed_at_not_commit_date": "2026-01-07T16:32:15Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "adrianhajdin",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "basedhound",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "9f0d78963ea24a37c240d2c4218697858d34b3b21b6d0e321d65e214dcfefc79",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      ".idea",
+      ".junie",
+      ".prettierignore",
+      ".prettierrc",
+      "README.md",
+      "app",
+      "components.json",
+      "components",
+      "constants.ts",
+      "eslint.config.mjs",
+      "hooks",
+      "lib",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "public",
+      "tsconfig.json",
+      "type.d.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/adrianhajdin/coinpulse/blob/48c379527e5464152fbd034d91dc0e84dd0f2dea/package.json",
+        "sha256": "357e5edc60e8a4d9fccf18601c91c3972e50cd737998eacb641a0f9a3093d46f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/adrianhajdin/coinpulse",
+      "commit": "https://github.com/adrianhajdin/coinpulse/commit/48c379527e5464152fbd034d91dc0e84dd0f2dea",
+      "readme": "https://github.com/adrianhajdin/coinpulse/blob/48c379527e5464152fbd034d91dc0e84dd0f2dea/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/adrianhajdin/coinpulse/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/adrianhajdin/coinpulse/contributors",
+      "issues": "https://api.github.com/repos/adrianhajdin/coinpulse/issues"
+    },
+    "readme_excerpt": "CryptoPulse \u2014 Analytics Dashboard Build this project step by step with our detailed tutorial on JavaScript Mastery YouTube. Join the JSM family! ## \ud83d\udccb Table of Contents 1. \u2728 [Introduction](#introduction) 2. \u2699\ufe0f [Tech Stack](#tech-stack) 3. \ud83d\udd0b [Features](#features) 4. \ud83e\udd38 [Quick Start](#quick-start) 5. \ud83d\udd17 [Assets](#links) 6. \ud83d\ude80 [More](#more) ## \ud83d\udea8 Tutorial This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, JavaScript Mastery . If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner! ## \u2728 Introduction CryptoPulse is a high-performance analytics dashboard built with Next.js 16, TailwindCSS v4, and shadcn/ui, delivering real-time market intelligence via CoinGecko\u2019s API and WebSockets. It features high-frequency price tracking and live orderbook streams for low-latency updates, paired with interactive TradingView candlestick charts to visualize OHLCV data with surgical precision. From a dynamic homepage showcasing global stats and trending assets to robust token pages with multi-fiat converters and advanced search tables, the platform provides a modular, developer-friendly stack optimized for speed and clarity. If you're getting started and need assistance or face any bugs, join our active Discord community with over **5",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "ahmadjoya/generate-password-lite",
+    "requested_name": "ahmadjoya/generate-password-lite",
+    "id": 562951762,
+    "url": "https://github.com/ahmadjoya/generate-password-lite",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "generate-password-lite is usable for every javascript and typescript based project like react, vue, node, etc. it used to generate passwords that may contain alphabets, number and symbols. The options parameter enables the user to enable or disable the characters that are used to generate random password.",
+    "stars": 36,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "main",
+    "latest_commit": "1fcb7e12de01f072fba2a1bc817eb4d564f4f249",
+    "last_commit_date": "2026-08-26T18:59:49Z",
+    "pushed_at_not_commit_date": "2026-08-26T18:59:53Z",
+    "commits_since_20260313_count_capped100": 4,
+    "recent_commit_authors": [
+      "ahmadjoya"
+    ],
+    "contributors_sample": [
+      {
+        "login": "ahmadjoya",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "aramoh3ni",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "Mustafa-Zahedi",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ahmadjoya/generate-password-lite/issues/11",
+      "created_at": "2026-06-23T17:40:26Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-08-26T19:05:32Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "82f815d199b55004caae19da74b2ff4e826f07a0cdf0a49155cb8fe1c5f9712b",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "aceb08b1089b1ac358957fe31400cf2d7ac0def80dd779349ab0c722ea3c8ec2",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".npmignore",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "package.json",
+      "scripts",
+      "src",
+      "test",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/ahmadjoya/generate-password-lite/blob/1fcb7e12de01f072fba2a1bc817eb4d564f4f249/package.json",
+        "sha256": "3325a551f9d2c2cdfb11060cdd798a4e017fa356f0e6532f7ae4b2361a56f477"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "C",
+        "query": "options symbol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ahmadjoya/generate-password-lite",
+      "commit": "https://github.com/ahmadjoya/generate-password-lite/commit/1fcb7e12de01f072fba2a1bc817eb4d564f4f249",
+      "readme": "https://github.com/ahmadjoya/generate-password-lite/blob/1fcb7e12de01f072fba2a1bc817eb4d564f4f249/README.md",
+      "license": "https://github.com/ahmadjoya/generate-password-lite/blob/1fcb7e12de01f072fba2a1bc817eb4d564f4f249/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ahmadjoya/generate-password-lite/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ahmadjoya/generate-password-lite/contributors",
+      "issues": "https://api.github.com/repos/ahmadjoya/generate-password-lite/issues"
+    },
+    "readme_excerpt": "# generate-password-lite A tiny, dependency-free password generator for JavaScript and TypeScript projects \u2014 Node.js, React, Next.js, Vue, Svelte, Deno, Bun, and the browser. Passwords may contain lowercase letters, uppercase letters, numbers and symbols. The `options` parameter lets you enable or disable each group, exclude specific characters, and require a minimum number of characters from each group. - **Secure by default** \u2014 every character comes from the Web Crypto CSPRNG (`crypto.getRandomValues`), never `Math.random()`. - **Zero dependencies** \u2014 nothing else is pulled into your lockfile. - **Dual ESM + CommonJS** \u2014 `import` and `require` both work, with matching type declarations. - **Fully typed** \u2014 TypeScript definitions ship with the package. > **Note** > This package is also published under the name [`js-generate-password`](https://www.npmjs.com/package/js-generate-password). The two packages are the same library \u2014 use whichever name you already depend on. ## Installation ```bash npm install generate-password-lite ``` ```bash yarn add generate-password-lite ``` ```bash pnpm add generate-password-lite ``` **Requirements:** Node.js 18 or newer, or any modern browser. Both provide the Web Crypto API that this package relies on. ## Usage ### ES modules / TypeScript ```ts import { GeneratePassword } from 'generate-password-lite' const password = GeneratePassword({ length",
+    "license_excerpt": "MIT License Copyright (c) 2022 Ahmad Joya Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notic"
+  },
+  {
+    "full_name": "AI4Finance-Foundation/FinGPT",
+    "requested_name": "AI4Finance-Foundation/FinGPT",
+    "id": 600544354,
+    "url": "https://github.com/AI4Finance-Foundation/FinGPT",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FinGPT: Open-Source Financial Large Language Models!  Revolutionize \ud83d\udd25    We release the trained model on HuggingFace.",
+    "stars": 21246,
+    "forks": 3012,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "0d766ffc9447e8fb570ebc317398c2fe87965e93",
+    "last_commit_date": "2026-09-13T15:48:24Z",
+    "pushed_at_not_commit_date": "2026-09-13T15:48:24Z",
+    "commits_since_20260313_count_capped100": 63,
+    "recent_commit_authors": [
+      "BruceYanghy",
+      "PR Bot",
+      "Urivan Flores Saaib",
+      "alexander-schneider",
+      "alexanderbaikal",
+      "faridun-ag2",
+      "jellyfishing2346",
+      "octo-patch",
+      "ujjwaldhaka71"
+    ],
+    "contributors_sample": [
+      {
+        "login": "BruceYanghy",
+        "contributions": 311,
+        "type": "User"
+      },
+      {
+        "login": "YangletLiu",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "oliverwang15",
+        "contributions": 88,
+        "type": "User"
+      },
+      {
+        "login": "Noir97",
+        "contributions": 40,
+        "type": "User"
+      },
+      {
+        "login": "jellyfishing2346",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "raphaelzhou1",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "boyuZh",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "zhumingpassional",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "llk010502",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "ycsama0703",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "Yonv1943",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "gxxu-ml",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "WilliamGazeley",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "pitmonticone",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "claude",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "eltociear",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Shahupdates",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "octo-patch",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bhargavshirin",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "asmcos",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "XJTLUmedia",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "GuichardVictor",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Shivam250702",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RadientBrain",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pschofield2",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "MoizMujtaba",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mmmarchetti",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "EleniVerteouri",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Kris248",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Kalyanimhala",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/AI4Finance-Foundation/FinGPT/issues/16",
+      "created_at": "2023-06-17T16:09:46Z",
+      "state": "closed",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d6bccbf6ce223a6cfa96e7c7c45ee5ccedbca425c48e87b5cb1c24a679327b5e",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2a3183a35138275582698c16b07e9b33992d822434bb4c7728673c6204bb1848",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".gitpod.yml",
+      ".idea",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "FinGPT_ Training with LoRA and Meta-Llama-3-8B.ipynb",
+      "FinGPT_Inference_Llama2_13B_falcon_7B_for_Beginners.ipynb",
+      "FinGPT_Training_LoRA_with_ChatGLM2_6B_for_Beginners.ipynb",
+      "FinGPT_Training_LoRA_with_ChatGLM2_6B_for_Beginners_v2-2.ipynb",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "SETUP.md",
+      "Use_Cases.md",
+      "cloud_test_fingpt.py",
+      "figs",
+      "fingpt",
+      "finogrid",
+      "requirements.txt",
+      "setup.py",
+      "test_imports.py",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/AI4Finance-Foundation/FinGPT/blob/0d766ffc9447e8fb570ebc317398c2fe87965e93/requirements.txt",
+        "sha256": "676a55ce6d84759cf2889f360e62e20e977a5fa59c19c653dd29fb9c372f9b3d"
+      },
+      "setup.py": {
+        "url": "https://github.com/AI4Finance-Foundation/FinGPT/blob/0d766ffc9447e8fb570ebc317398c2fe87965e93/setup.py",
+        "sha256": "6168059b0f9ad8ff96da49ce6b4c880248b0e527b590506999ec6f8bf44c643c"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "AI4Finance-Foundation/FinGPT",
+      "stars": 20649,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "reference",
+      "reuse_value": 80,
+      "liftability": 8,
+      "fame_gap": 72,
+      "cat_slug": "model-weights",
+      "cat_name": "Model Weights / Reference Impl",
+      "description": "FinGPT: Open-Source Financial Large Language Models! Revolutionize \ud83d\udd25 We release the trained model on HuggingFace."
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/AI4Finance-Foundation/FinGPT",
+      "commit": "https://github.com/AI4Finance-Foundation/FinGPT/commit/0d766ffc9447e8fb570ebc317398c2fe87965e93",
+      "readme": "https://github.com/AI4Finance-Foundation/FinGPT/blob/0d766ffc9447e8fb570ebc317398c2fe87965e93/README.md",
+      "license": "https://github.com/AI4Finance-Foundation/FinGPT/blob/0d766ffc9447e8fb570ebc317398c2fe87965e93/LICENSE",
+      "recent_commits": "https://api.github.com/repos/AI4Finance-Foundation/FinGPT/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/AI4Finance-Foundation/FinGPT/contributors",
+      "issues": "https://api.github.com/repos/AI4Finance-Foundation/FinGPT/issues"
+    },
+    "readme_excerpt": "# FinGPT: Open-Source Financial Large Language Models [![Downloads](https://static.pepy.tech/badge/fingpt)](https://pepy.tech/project/fingpt) [![Downloads](https://static.pepy.tech/badge/fingpt/week)](https://pepy.tech/project/fingpt) [![Join Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/trsr8SXpW5) [![Python 3.8](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![PyPI](https://img.shields.io/pypi/v/fingpt.svg)](https://pypi.org/project/fingpt/) ![License](https://img.shields.io/github/license/AI4Finance-Foundation/fingpt.svg?color=brightgreen) ![](https://img.shields.io/github/issues-raw/AI4Finance-Foundation/fingpt?label=Issues) ![](https://img.shields.io/github/issues-closed-raw/AI4Finance-Foundation/fingpt?label=Closed+Issues) ![](https://img.shields.io/github/issues-pr-raw/AI4Finance-Foundation/fingpt?label=Open+PRs) ![](https://img.shields.io/github/issues-pr-closed-raw/AI4Finance-Foundation/fingpt?label=Closed+PRs) Let us not expect Wall Street to open-source LLMs or open APIs, due to FinTech institutes' internal regulations and policies. [Blueprint of FinGPT](https://ai4finance.org/research/fingpt-open-source-finllm.html) ![Visitors](https://api.visitorbadge.io/api/VisitorHit?user=AI4Finance-Foundation&repo=FinGPT&countColor=%23B17A) [![Discord](https://dcbadge.limes.pink/api/server/",
+    "license_excerpt": "MIT License Copyright (c) 2024 AI4Finance Foundation Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above"
+  },
+  {
+    "full_name": "AI4Finance-Foundation/FinRL",
+    "requested_name": "AI4Finance-Foundation/FinRL",
+    "id": 282653872,
+    "url": "https://github.com/AI4Finance-Foundation/FinRL",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FinRL\u00ae:  Financial Reinforcement Learning. \ud83d\udd25",
+    "stars": 16277,
+    "forks": 3499,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "2334a5fe6d30629157f13c3b0319e1637e15e123",
+    "last_commit_date": "2026-07-12T06:22:09Z",
+    "pushed_at_not_commit_date": "2026-07-13T23:02:18Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Atharva Joshi",
+      "BruceYanghy",
+      "Jaco-Ren",
+      "pre-commit-ci[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "BruceYanghy",
+        "contributions": 869,
+        "type": "User"
+      },
+      {
+        "login": "zhumingpassional",
+        "contributions": 847,
+        "type": "User"
+      },
+      {
+        "login": "YangletLiu",
+        "contributions": 369,
+        "type": "User"
+      },
+      {
+        "login": "ZiyiXia",
+        "contributions": 240,
+        "type": "User"
+      },
+      {
+        "login": "rayrui312",
+        "contributions": 199,
+        "type": "User"
+      },
+      {
+        "login": "pre-commit-ci[bot]",
+        "contributions": 86,
+        "type": "Bot"
+      },
+      {
+        "login": "everssun",
+        "contributions": 54,
+        "type": "User"
+      },
+      {
+        "login": "Athe-kunal",
+        "contributions": 51,
+        "type": "User"
+      },
+      {
+        "login": "louisowen6",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 44,
+        "type": "Bot"
+      },
+      {
+        "login": "Xiao000L",
+        "contributions": 39,
+        "type": "User"
+      },
+      {
+        "login": "spencerR1992",
+        "contributions": 38,
+        "type": "User"
+      },
+      {
+        "login": "Youbadawy",
+        "contributions": 31,
+        "type": "User"
+      },
+      {
+        "login": "dominiquegarmier",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "marcipops",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "16GMCN",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "CaioSBC",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "eyast",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "cryptocoinserver",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "ObaidaAlhaasan",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "carlogrisetti",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "rambod-rahmani",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "geekpineapple",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "Yonv1943",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "DEVNODEREACT",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "shenlei515",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "TekpreXyz",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "kentwhf",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "csbobby",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "ytliu74",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/AI4Finance-Foundation/FinRL/issues/1440",
+      "created_at": "2026-09-08T08:19:07Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "68a2b25cb83218c08fd2be10b9cce6896e2bdf8f0ae3fa87bd174c3d3ace5926",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "486a06be9075686b75b35649de0adf9076508c5d0cc5b00af7928b7a96bffe65",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".vscode",
+      "1.66.32",
+      "LICENSE",
+      "README.md",
+      "docker",
+      "docs",
+      "examples",
+      "figs",
+      "finrl",
+      "poetry.lock",
+      "pyproject.toml",
+      "requirements.txt",
+      "setup.cfg",
+      "setup.py",
+      "unit_tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/AI4Finance-Foundation/FinRL/blob/2334a5fe6d30629157f13c3b0319e1637e15e123/pyproject.toml",
+        "sha256": "bc28042fbda127047b2ce131f1f319bfaf1103092903b653b72b12f92fe84ca9"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/AI4Finance-Foundation/FinRL/blob/2334a5fe6d30629157f13c3b0319e1637e15e123/requirements.txt",
+        "sha256": "8587fef4df3af901472259262651798c55b48075f3d2364990a7c15b0a37bc97"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "AI4Finance-Foundation/FinRL",
+      "stars": 15490,
+      "license": "MIT",
+      "language": "Jupyter Notebook",
+      "unit_class": "substrate",
+      "reuse_value": 85,
+      "liftability": 18,
+      "fame_gap": 67,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "FinRL\u00ae: Financial Reinforcement Learning. \ud83d\udd25"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/AI4Finance-Foundation/FinRL",
+      "commit": "https://github.com/AI4Finance-Foundation/FinRL/commit/2334a5fe6d30629157f13c3b0319e1637e15e123",
+      "readme": "https://github.com/AI4Finance-Foundation/FinRL/blob/2334a5fe6d30629157f13c3b0319e1637e15e123/README.md",
+      "license": "https://github.com/AI4Finance-Foundation/FinRL/blob/2334a5fe6d30629157f13c3b0319e1637e15e123/LICENSE",
+      "recent_commits": "https://api.github.com/repos/AI4Finance-Foundation/FinRL/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/AI4Finance-Foundation/FinRL/contributors",
+      "issues": "https://api.github.com/repos/AI4Finance-Foundation/FinRL/issues"
+    },
+    "readme_excerpt": "# FinRL: Financial Reinforcement Learning \u2192 FinRL-X [![Downloads](https://static.pepy.tech/badge/finrl)](https://pepy.tech/project/finrl) [![Downloads](https://static.pepy.tech/badge/finrl/week)](https://pepy.tech/project/finrl) [![Join Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/trsr8SXpW5) [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![PyPI](https://img.shields.io/pypi/v/finrl.svg)](https://pypi.org/project/finrl/) [![Documentation Status](https://readthedocs.org/projects/finrl/badge/?version=latest)](https://finrl.readthedocs.io/en/latest/?badge=latest) ![License](https://img.shields.io/github/license/AI4Finance-Foundation/finrl.svg?color=brightgreen) ![](https://img.shields.io/github/issues-raw/AI4Finance-Foundation/finrl?label=Issues) ![](https://img.shields.io/github/issues-closed-raw/AI4Finance-Foundation/finrl?label=Closed+Issues) ![](https://img.shields.io/github/issues-pr-raw/AI4Finance-Foundation/finrl?label=Open+PRs) ![](https://img.shields.io/github/issues-pr-closed-raw/AI4Finance-Foundation/finrl?label=Closed+PRs) [![X](https://img.shields.io/badge/X-Share-black?logo=x)](https://twitter.com/intent/tweet?text=FinRL-Financial-Deep-Reinforcement-Learning%20&url=https://github.com/AI4Finance-Foundation/FinRL&hashtags=DRL,AI) [![LinkedIn](https://img.shields.io/",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2024 AI4Finance Foundation Inc. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:"
+  },
+  {
+    "full_name": "AI4Finance-Foundation/FinRobot",
+    "requested_name": "AI4Finance-Foundation/FinRobot",
+    "id": 763842651,
+    "url": "https://github.com/AI4Finance-Foundation/FinRobot",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FinRobot: An Open-Source AI Agent Platform for Financial Applications using Large Language Models",
+    "stars": 7978,
+    "forks": 1351,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "6d6ccd32c1b8b1904dc656cf06897438aba3daec",
+    "last_commit_date": "2026-09-11T14:19:04Z",
+    "pushed_at_not_commit_date": "2026-09-11T14:19:04Z",
+    "commits_since_20260313_count_capped100": 39,
+    "recent_commit_authors": [
+      "BruceYanghy",
+      "alexander-schneider"
+    ],
+    "contributors_sample": [
+      {
+        "login": "BruceYanghy",
+        "contributions": 186,
+        "type": "User"
+      },
+      {
+        "login": "Noir97",
+        "contributions": 59,
+        "type": "User"
+      },
+      {
+        "login": "PinqiaoWang",
+        "contributions": 56,
+        "type": "User"
+      },
+      {
+        "login": "yilinwu123",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Athe-kunal",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "wangjingcn6",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/AI4Finance-Foundation/FinRobot/issues/113",
+      "created_at": "2026-08-20T08:11:50Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-08-23T12:16:16Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d1877852c6e711c18238cfb859aaedcb2c8c8f11e511a24c6b5f00eea487563a",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "bbcb4226500b503737713f0c9a9da17efce56fa6989b9f0538071dcb60826af5",
+    "license_candidates": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".gitignore",
+      ".gitmodules",
+      ".vscode",
+      "Dockerfile",
+      "FinNLP",
+      "LICENSE",
+      "NOTICE",
+      "OAI_CONFIG_LIST",
+      "README.md",
+      "TRADEMARK_POLICY.md",
+      "agent_builder_demo.py",
+      "config_api_keys",
+      "configs",
+      "deploy.gcloud.sh",
+      "deploy.sh",
+      "experiments",
+      "figs",
+      "finrobot",
+      "finrobot_equity",
+      "report",
+      "requirements-equity.txt",
+      "requirements.txt",
+      "run_web_app.py",
+      "setup.py",
+      "test_module.py",
+      "tutorials_advanced",
+      "tutorials_beginner"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/AI4Finance-Foundation/FinRobot/blob/6d6ccd32c1b8b1904dc656cf06897438aba3daec/requirements.txt",
+        "sha256": "685ca02bb04d09f4019f582ec28e41143eff055654fd706e751dd7aa59caae02"
+      },
+      "setup.py": {
+        "url": "https://github.com/AI4Finance-Foundation/FinRobot/blob/6d6ccd32c1b8b1904dc656cf06897438aba3daec/setup.py",
+        "sha256": "16c90b1727b04f8326c11c534800fdb9cfb5085b2ac327e1a6aa580f95c347f0"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "AI4Finance-Foundation/FinRobot",
+      "stars": 7358,
+      "license": "Apache-2.0",
+      "language": "Jupyter Notebook",
+      "unit_class": "capability",
+      "reuse_value": 75,
+      "liftability": 50,
+      "fame_gap": 25,
+      "cat_slug": "ai-agent-tooling",
+      "cat_name": "AI & Agent Tooling",
+      "description": "FinRobot: An Open-Source AI Agent Platform for Financial Analysis using LLMs \ud83d\ude80 \ud83d\ude80 \ud83d\ude80"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/AI4Finance-Foundation/FinRobot",
+      "commit": "https://github.com/AI4Finance-Foundation/FinRobot/commit/6d6ccd32c1b8b1904dc656cf06897438aba3daec",
+      "readme": "https://github.com/AI4Finance-Foundation/FinRobot/blob/6d6ccd32c1b8b1904dc656cf06897438aba3daec/README.md",
+      "license": "https://github.com/AI4Finance-Foundation/FinRobot/blob/6d6ccd32c1b8b1904dc656cf06897438aba3daec/LICENSE",
+      "recent_commits": "https://api.github.com/repos/AI4Finance-Foundation/FinRobot/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/AI4Finance-Foundation/FinRobot/contributors",
+      "issues": "https://api.github.com/repos/AI4Finance-Foundation/FinRobot/issues"
+    },
+    "readme_excerpt": "# FinRobot: An Open-Source AI Agent Platform for Financial Applications using Large Language Models [![Downloads](https://static.pepy.tech/badge/finrobot)](https://pepy.tech/project/finrobot) [![Downloads](https://static.pepy.tech/badge/finrobot/week)](https://pepy.tech/project/finrobot) [![Join Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/trsr8SXpW5) [![Python 3.8](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/) [![PyPI](https://img.shields.io/pypi/v/finrobot.svg)](https://pypi.org/project/finrobot/) ![License](https://img.shields.io/github/license/AI4Finance-Foundation/finrobot.svg?color=brightgreen) ![](https://img.shields.io/github/issues-raw/AI4Finance-Foundation/finrobot?label=Issues) ![](https://img.shields.io/github/issues-closed-raw/AI4Finance-Foundation/finrobot?label=Closed+Issues) ![](https://img.shields.io/github/issues-pr-raw/AI4Finance-Foundation/finrobot?label=Open+PRs) ![](https://img.shields.io/github/issues-pr-closed-raw/AI4Finance-Foundation/finrobot?label=Closed+PRs) [![FinRobot Desktop](https://img.shields.io/badge/Desktop-v0.1.0-blue)](https://github.com/AI4Finance-Foundation/FinRobot/releases/tag/desktop-v0.1.0) **FinRobot** is an AI Agent platform tailored for financial applications, surpassing FinGPT's single-model approach. It unifies multiple AI technologies\u2014incl",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

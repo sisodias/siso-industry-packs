@@ -1,0 +1,826 @@
+[
+  {
+    "full_name": "nblythe/dbn",
+    "requested_name": "nblythe/dbn",
+    "id": 1103242443,
+    "url": "https://github.com/nblythe/dbn",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "C client for Databento live market data API",
+    "stars": 6,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "C",
+    "default_branch": "main",
+    "latest_commit": "d6b00946b54e41651a4719963a53a5e680a20b32",
+    "last_commit_date": "2026-01-23T21:10:35Z",
+    "pushed_at_not_commit_date": "2026-01-23T21:10:41Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "nblythe",
+        "contributions": 10,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/nblythe/dbn/issues/1",
+      "created_at": "2025-11-24T19:39:09Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2025-12-01T18:18:40Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "85a6f9362b329b226d8d851cd87f6c8f057003a828d7afa2a70eb0fdbeaa0cc2",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "LICENSE",
+      "README.md",
+      "dbn_multi_stats",
+      "dbn_roots",
+      "dbn_stats",
+      "libdbn",
+      "libdbnopra"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nblythe/dbn",
+      "commit": "https://github.com/nblythe/dbn/commit/d6b00946b54e41651a4719963a53a5e680a20b32",
+      "readme": "https://github.com/nblythe/dbn/blob/d6b00946b54e41651a4719963a53a5e680a20b32/README.md",
+      "license": "https://github.com/nblythe/dbn/blob/d6b00946b54e41651a4719963a53a5e680a20b32/LICENSE",
+      "recent_commits": "https://api.github.com/repos/nblythe/dbn/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nblythe/dbn/contributors",
+      "issues": "https://api.github.com/repos/nblythe/dbn/issues"
+    },
+    "readme_excerpt": "# Databento live market data C client and sample applications **(C) 2025 Nathan Blythe** \\ **Released under the Apache-2.0 license, see LICENSE** ## Build requirements - CMake 3.10 or newer - A modern C compiler (`gcc` or `clang`, usually) - `libsodium` (used in Databento authentication) - `liburing` (for double-buffered socket I/O) - `pkg-config` (for use by CMake to locate `libsodium` and `liburing`) On Debian and Ubuntu `apt`-based systems, build requirements can be installed with: ``` # apt install build-essential cmake pkg-config libsodium-dev liburing-dev ``` ## Building ``` $ cd dbn $ cmake . -DCMAKE_BUILD_TYPE=Release -- The C compiler identification is GNU 12.2.0 -- Detecting C compiler ABI info -- Detecting C compiler ABI info - done -- Check for working C compiler: /usr/bin/cc - skipped -- Detecting C compile features -- Detecting C compile features - done -- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\") -- Checking for module 'libsodium' -- Found libsodium, version 1.0.18 -- Checking for module 'liburing' -- Found liburing, version 2.3 -- Configuring done -- Generating done -- Build files have been written to: /home/user/dbn $ make [ 16%] Building C object libdbn/CMakeFiles/libdbn.dir/dbn.c.o [ 33%] Linking C static library libdbn.a [ 33%] Built target dbn ... $ ``` ## Build outputs This project produces five outputs: - `libdbn.a`: Databento real-time",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "requested_name": "ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "id": 1226123009,
+    "url": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Automate crypto tax calculations & portfolio reporting",
+    "stars": 0,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "d91508e93f4bada26075a3e1ec8c23275155d0b8",
+    "last_commit_date": "2026-08-05T22:25:53Z",
+    "pushed_at_not_commit_date": "2026-08-05T22:25:53Z",
+    "commits_since_20260313_count_capped100": 47,
+    "recent_commit_authors": [
+      "ncreighton"
+    ],
+    "contributors_sample": [
+      {
+        "login": "ncreighton",
+        "contributions": 47,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "76f4d50d1fa925f639e0adf13c383cb83864cd39fed840c9303c863a56391b35",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "B",
+        "query": "topic:cryptocurrency-tax"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ncreighton/02642164-cryptocurrency-tax-calculator-",
+      "commit": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-/commit/d91508e93f4bada26075a3e1ec8c23275155d0b8",
+      "readme": "https://github.com/ncreighton/02642164-cryptocurrency-tax-calculator-/blob/d91508e93f4bada26075a3e1ec8c23275155d0b8/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/ncreighton/02642164-cryptocurrency-tax-calculator-/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ncreighton/02642164-cryptocurrency-tax-calculator-/contributors",
+      "issues": "https://api.github.com/repos/ncreighton/02642164-cryptocurrency-tax-calculator-/issues"
+    },
+    "readme_excerpt": "# Cryptocurrency Tax Calculator and Portfolio Reporting Workflow --- ## Free vs Pro | Feature | Free | Pro | |---------|:----:|:---:| | Basic triggers | Yes | Yes | | Standard nodes | Yes | Yes | | Manual execution | Yes | Yes | | Advanced triggers | - | Yes | | Custom nodes | - | Yes | | Scheduled execution | - | Yes | | Error handling | - | Yes | | Priority queue | - | Yes | | Webhook integrations | - | Yes | ### Upgrade to Pro Get the full version with all premium features, priority support, and lifetime updates. **[Get Pro Version](https://buy.stripe.com/7sYcN5fXxgaUe00gUccZb0j)** - [Buy Now (Stripe)](https://buy.stripe.com/7sYcN5fXxgaUe00gUccZb0j) - [Buy on Whop](https://whop.com/cryptocurrency-tax-calculator-and-portfolio-reporting-workflow)",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "nethakah/tick2trade",
+    "requested_name": "nethakah/tick2trade",
+    "id": 1284295158,
+    "url": "https://github.com/nethakah/tick2trade",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Hardware-accelerated (FPGA) HFT trading pipeline for NASDAQ TotalView-ITCH 5.0  market data. Implements an async FIFO, MoldUDP64 deframer, ITCH parser, L1/L2/L3 limit order book, and trade signal engine. SystemVerilog RTL verified in Verilator against a C++ golden model and running on a Xilinx ZCU104 at 240 MHz with 33 ns decision latency.",
+    "stars": 8,
+    "forks": 3,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "main",
+    "latest_commit": "2b767fe23ab9d9b85a6be1ab686931991276473c",
+    "last_commit_date": "2026-09-12T00:37:12Z",
+    "pushed_at_not_commit_date": "2026-09-12T00:37:13Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "nethakah"
+    ],
+    "contributors_sample": [
+      {
+        "login": "nethakah",
+        "contributions": 193,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "b5c2df35ee8e3fa6db62ddaf7186f48e25402e42e653932c4a536d9b2b6df056",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8b907409f5ab1e0bcf6ec37514305125af020131f30db0facbb8854688e77f31",
+    "license_candidates": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "NOTICE",
+      "README.md",
+      "build_logs",
+      "fpga",
+      "rtl",
+      "scripts",
+      "sw",
+      "tb"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nethakah/tick2trade",
+      "commit": "https://github.com/nethakah/tick2trade/commit/2b767fe23ab9d9b85a6be1ab686931991276473c",
+      "readme": "https://github.com/nethakah/tick2trade/blob/2b767fe23ab9d9b85a6be1ab686931991276473c/README.md",
+      "license": "https://github.com/nethakah/tick2trade/blob/2b767fe23ab9d9b85a6be1ab686931991276473c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/nethakah/tick2trade/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nethakah/tick2trade/contributors",
+      "issues": "https://api.github.com/repos/nethakah/tick2trade/issues"
+    },
+    "readme_excerpt": "# Complete NASDAQ Trading Pipeline (HFT) on FPGA `SystemVerilog` \u00b7 `Verilator/C++` \u00b7 `Vivado 2024.1` \u00b7 `PYNQ` \u00b7 `Xilinx ZCU104 (XCZU7EV)` This project is my own build for a NASDAQ ITCH 5.0 market data pipeline. Due to high-frequency trading (HFT), no one does this in software nowadays; instead, this is implemented completely on an FPGA board, with configurable thresholds (memory writing in C/C++) to change trading strategies. Practically: MoldUDP64 packets in over AXI4-Stream, limit order book reconstructed on-chip, and a preloaded order fires when the book hits threshold conditions set via AXI-Lite. | Metric | Value | | :-- | :-- | | Decision latency | 33.3 ns (8 cycles @ 240 MHz) | | Clock, in-system | 240 MHz, +0.130 ns post-route | | Clock, standalone | 288 MHz out-of-context | | LUTs | 20,229 / 230,400 (8.78%) | | Registers | 3,060 / 460,800 (0.66%) | | BRAM / URAM / DSP | 0 / 0 / 0 | Note: Decision latency, in this case, is measuring from the last byte of the ITCH message to `order_fire` asserting (the fabric timestamps itself and reports over AXI-Lite). Overview of the datapath: ``` 1. DDR4 2. AXI-DMA (100 MHz) 3. async_fifo.sv (CDC) 4. moldudp_deframer 5. itch_parser (240 MHz) <- tick2trade_csr feeds into this 6. order_book <- tick2trade_csr feeds into this 7. trade_signal ``` The on-chip order book here is 3 levels of LUTRAM (see /build_logs/ to see how I came to this)",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "nitsuga1986/machine-learning-nd-portfolio",
+    "requested_name": "nitsuga1986/machine-learning-nd-portfolio",
+    "id": 176404370,
+    "url": "https://github.com/nitsuga1986/machine-learning-nd-portfolio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": " Machine Learning Engineer Nanodegree portfolio, which includes projects and their notebooks/reports. ",
+    "stars": 44,
+    "forks": 17,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "71e66e31bc601f928533c7cfdb1aa26c102cc77d",
+    "last_commit_date": "2023-05-17T00:13:39Z",
+    "pushed_at_not_commit_date": "2023-05-17T00:36:06Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "nitsuga1986",
+        "contributions": 39,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "1a10f7559a657408d1fda7e99e81b39ae0b0180fcd0ad4ca289f6c96c410d272",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md",
+      "artificial-intelligence",
+      "deep-learning",
+      "foundations-metrics",
+      "natural-language-processing",
+      "reinforcement-learning"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nitsuga1986/machine-learning-nd-portfolio",
+      "commit": "https://github.com/nitsuga1986/machine-learning-nd-portfolio/commit/71e66e31bc601f928533c7cfdb1aa26c102cc77d",
+      "readme": "https://github.com/nitsuga1986/machine-learning-nd-portfolio/blob/71e66e31bc601f928533c7cfdb1aa26c102cc77d/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/nitsuga1986/machine-learning-nd-portfolio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nitsuga1986/machine-learning-nd-portfolio/contributors",
+      "issues": "https://api.github.com/repos/nitsuga1986/machine-learning-nd-portfolio/issues"
+    },
+    "readme_excerpt": "# Machine Learning Engineer Portfolio This is a collection of fully operational machine learning projects developed as part of the Udacity's *[Machine Learning Engineer Nanodegree Program](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t#)*, the *[Deep Learning Nanodegree Program](https://www.udacity.com/course/deep-learning-nanodegree--nd101)* and the LinkedIn Learning *[Advance Your Skills in Deep Learning and Neural Networks](https://www.linkedin.com/learning/paths/advance-your-skills-in-deep-learning-and-neural-networks)* learning path. **Table of Contents** - [Deep Learning](#deep-learning) - *[Price Prediction for ecommerce products](#price-prediction-for-ecommerce-products)* - *[DCGAN: Deep Convolutional Generative Adversarial Networks](#dcgan-deep-convolutional-generative-adversarial-networks)* - *[Face Generator](#face-generator)* - *[Image Classification](#image-classification)* - [Reinforcement Learning](#reinforcement-learning) - *[Train a Quadcopter How to Fly](#train-a-quadcopter-how-to-fly)* - *[Deep Qlearning for Cart Pole](#deep-qlearning-for-cart-pole)* - *[Train a Self Driving Car](#train-a-self-driving-car)* - [Natural Language Processing](#natural-language-processing) - *[Topic Modeling](#topic-modeling)* - *[Word Embeddings](#word-embeddings)* - [Foundations and Metrics](#foundations-and-metrics) - *[Finding Donors for CharityML]",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "nkaz001/hftbacktest",
+    "requested_name": "nkaz001/hftbacktest",
+    "id": 528898425,
+    "url": "https://github.com/nkaz001/hftbacktest",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Free, open source, a high frequency trading and market making backtesting and trading bot, which accounts for limit orders, queue positions, and latencies, utilizing full tick data for trades and order books(Level-2 and Level-3), with real-world crypto trading examples for Binance and Bybit",
+    "stars": 4677,
+    "forks": 899,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "master",
+    "latest_commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+    "last_commit_date": "2025-12-23T15:31:05Z",
+    "pushed_at_not_commit_date": "2025-12-23T15:57:58Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "nkaz001",
+        "contributions": 953,
+        "type": "User"
+      },
+      {
+        "login": "inheritag",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "bohblue2",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "calumrussell",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "garyttierney",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "mokcoo",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "volemont",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "roykim98",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Garvitpant777",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Arthpatel01",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Ayushi-Angelone",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "SidKZ0",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "WannabeBotter",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "lidarbtc",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "richwomanbtc",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "xtma",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "CodrinSocol",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "emmanuel-ferdman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "MarcoAndreaBuchmann",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "d23rojew",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ttlyw",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "spacegoing",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/nkaz001/hftbacktest/issues/316",
+      "created_at": "2026-06-10T19:17:10Z",
+      "state": "open",
+      "comments": 2,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "b42c9f012bd71d2e1ecb000eb5c5af3e1d24817258b4a812beffbb953a752e42",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b40367c13dfa67c617d6e8037d45581496d9f0429a3274ab19f117404b519a5a",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".cargo",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".readthedocs.yml",
+      "CODE_OF_CONDUCT.md",
+      "Cargo.toml",
+      "LICENSE",
+      "README.rst",
+      "ROADMAP.md",
+      "collector",
+      "connector",
+      "docs",
+      "examples",
+      "hftbacktest-derive",
+      "hftbacktest",
+      "py-hftbacktest",
+      "rustfmt.toml"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/Cargo.toml",
+        "sha256": "0ea3f0269d3ba43263859eec29dbf6b0c79afea04254ca371c31eaf9f0b3195b"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "nkaz001/hftbacktest",
+      "stars": 4210,
+      "license": "MIT",
+      "language": "Rust",
+      "unit_class": "capability",
+      "reuse_value": 85,
+      "liftability": 45,
+      "fame_gap": 40,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Free, open source, a high frequency trading and market making backtesting and trading bot, which accounts for limit orde"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "A",
+        "query": "market data"
+      },
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      },
+      {
+        "round": 3,
+        "stage": "W04",
+        "lane": "topic",
+        "query": "topic:backtesting language:Rust"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nkaz001/hftbacktest",
+      "commit": "https://github.com/nkaz001/hftbacktest/commit/5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+      "readme": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/README.rst",
+      "license": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/LICENSE",
+      "recent_commits": "https://api.github.com/repos/nkaz001/hftbacktest/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nkaz001/hftbacktest/contributors",
+      "issues": "https://api.github.com/repos/nkaz001/hftbacktest/issues"
+    },
+    "readme_excerpt": "=========== HftBacktest =========== |codeql| |python| |pypi| |downloads| |rustc| |crates| |license| |docs| |roadmap| |github| High-Frequency Trading Backtesting Tool ======================================= This framework is designed for developing high frequency trading and market making strategies. It focuses on accounting for both feed and order latencies, as well as the order queue position for order fill simulation. The framework aims to provide more accurate market replay-based backtesting, based on full order book and trade tick feed data. Key Features ============ * Working in `Numba `_ JIT function (Python). * Complete tick-by-tick simulation with a customizable time interval or based on the feed and order receipt. * Full order book reconstruction based on Level-2 Market-By-Price and Level-3 Market-By-Order feeds. * Backtest accounting for both feed and order latency, using provided models or your own custom model. * Order fill simulation that takes into account the order queue position, using provided models or your own custom model. * Backtesting of multi-asset and multi-exchange models * Deployment of a live trading bot for quick prototyping and testing using the same algorithm code: currently for Binance Futures and Bybit. (Rust-only) Documentation ============= See `full document here `_. Tutorials you\u2019ll likely find interesting: * `High-Frequency Grid Trading - Si",
+    "license_excerpt": "MIT License Copyright (c) 2022 nkaz001@protonmail.com Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above cop"
+  },
+  {
+    "full_name": "nvxtien/emporia",
+    "requested_name": "nvxtien/emporia",
+    "id": 1312971389,
+    "url": "https://github.com/nvxtien/emporia",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Emporia is a microservices-based trading platform built with Spring Boot, React, Kafka, and PostgreSQL, featuring real-time market data, order management, execution strategies, and OAuth2 security.",
+    "stars": 47,
+    "forks": 23,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "main",
+    "latest_commit": "67f8136d5e5dabe814775a64d329bf323591d3fb",
+    "last_commit_date": "2026-08-19T04:27:52Z",
+    "pushed_at_not_commit_date": "2026-08-19T07:28:54Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "tien.nguyen"
+    ],
+    "contributors_sample": [],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "6b810e38c87cfef8a9a2ed4a18323ddfe1126fc153c74c55503a7d8a64f91566",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".dockerignore",
+      ".githooks",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CONFIGURATION.md",
+      "Dockerfile",
+      "ENGINEERING.md",
+      "README.md",
+      "authentication",
+      "compose.kafka.yml",
+      "deploy",
+      "docker-compose.full.yml",
+      "docker-compose.yml",
+      "docs",
+      "emporia-algorithmic-strategies",
+      "emporia-ha-core",
+      "emporia-journal",
+      "fix-market-simulator",
+      "fix-simulator-contracts",
+      "frontend",
+      "gateway",
+      "market-data-service",
+      "order-management-service",
+      "pom.xml",
+      "portfolio-service",
+      "scripts",
+      "static-analysis",
+      "static-data-service",
+      "trading-contracts",
+      "user-preferences-service",
+      "verification"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "A",
+        "query": "order management trading"
+      },
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nvxtien/emporia",
+      "commit": "https://github.com/nvxtien/emporia/commit/67f8136d5e5dabe814775a64d329bf323591d3fb",
+      "readme": "https://github.com/nvxtien/emporia/blob/67f8136d5e5dabe814775a64d329bf323591d3fb/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/nvxtien/emporia/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nvxtien/emporia/contributors",
+      "issues": "https://api.github.com/repos/nvxtien/emporia/issues"
+    },
+    "readme_excerpt": "# Emporia Trading Platform [![Documentation](https://img.shields.io/badge/Wiki-Documentation-blue?style=for-the-badge&logo=github)](https://github.com/nvxtien/emporia/wiki) [![JaCoCo Coverage](https://img.shields.io/badge/Coverage-91.95%25-brightgreen?style=for-the-badge)](https://github.com/nvxtien/emporia/wiki/Testing-and-Verification) [![Java 21](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)](https://github.com/nvxtien/emporia) [![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.7-green?style=for-the-badge&logo=springboot)](https://github.com/nvxtien/emporia) [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://github.com/nvxtien/emporia) [![Discord](https://img.shields.io/badge/Discord-Join_chat-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/ZbsryA3Tb) > \ud83d\udcd6 **Comprehensive Platform Documentation & Architectural Specifications are published on the [Emporia GitHub Wiki](https://github.com/nvxtien/emporia/wiki)!** Emporia is an enterprise-grade, distributed stock trading platform built with **Java 21**, **Spring Boot 4.0.7**, **React 19**, **gRPC**, and **PostgreSQL**. Its deployable boundaries strictly follow business capabilities: static data, user preferences, market data, order management, and portfolio are independent services; execution routing runs in-proc",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "nyaundid/EC2-AWS-AND-SHELL",
+    "requested_name": "nyaundid/EC2-AWS-AND-SHELL",
+    "id": 173417306,
+    "url": "https://github.com/nyaundid/EC2-AWS-AND-SHELL",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "SEIS 665 Assignment 2: Linux & Git Overview This week we will focus on becoming familiar with launching a Linux server and working with some basic Linux and Git commands. We will use AWS to launch and host the Linux server. AWS might seem a little confusing at this point. Don\u2019t worry, we will gain much more hands-on experience with AWS throughout the course. The goal is to get you comfortable working with the technology and not overwhelm you with all the details.  Requirements You need to have a personal AWS account and GitHub account for this assignment. You should also read the Git Hands-on Guide and Linux Hands-on Guide before beginning this exercise.  A word about grading One of the key DevOps practices we learn about in this class is the use of automation to increase the speed and repeatability of processes. Automation is utilized during the assignment grading process to review and assess your work.  It\u2019s important that you follow the instructions in each assignment and type in required files and resources with the proper names. All names are case sensitive, so a name like \"Web1\" is not the same as \"web1\". If you misspell a name, use the wrong case, or put a file in the wrong directory location you will lose points on your assignment. This is the easiest way to lose points, and also the most preventable. You should always double-check your work to make sure it accurately reflects the requirements specified in the assignment. You should always carefully review the content of your files before submitting your assignment.  The assignment Let\u2019s get started!  Create GitHub repository The first step in the assignment is to setup a Git repository on GitHub. We will use a special solution called GitHub Classroom for this course which automates the process of setting up student assignment repositories.  Here are the basic steps:  Click on the following link to open Assignment 2 on the GitHub Classroom site: https://classroom.github.com/a/K4zcVmX- (Links to an external site.)Links to an external site.  Click on the Accept this assignment button.  GitHub Classroom will provide you with a URL (https) to access the assignment repository. Either copy this address to your clipboard or write it down somewhere. You will need to use this address to set up the repository on a Linux server.  Example: https://github.com/UST-SEIS665/hw2-seis665-02-spring2019-<your github id>.git At this point your new repository to ready to use. The repository is currently empty. We will put some content in there soon!  Launch Linux server The second step in the assignment is to launch a Linux server using AWS EC2. The server should have the following characteristics:  Amazon Linux 2 AMI 64-bit (usually the first option listed)  Located in a U.S. region (us-east-1)  t2.micro instance type  All default instance settings (storage, vpm, security group, etc.)  I\u2019ve shown you how to launch EC2 instances in class. You can review it on Canvas.  Once you launch the new server, it may take a few minutes to provision.  Log into server The next step is to log into the Linux server using a terminal program with a secure shell (SSH) support. You can use iTerm2 (Links to an external site.)Links to an external site. on a Mac and GitBash/PuTTY (Links to an external site.)Links to an external site. on a PC.  You will need to have the private server key and the public IP address before attempting to log into the server. The server key is basically your password. If you lose it, you will need to terminate the existing instance and launch a new server. I recommend reusing the same key when launching new servers throughout the class. Note, I make this recommendation to make the learning process easier and not because it is a common security practice.  I\u2019ve shown you how to use a terminal application to log into the instance using a Windows desktop. Your personal computer or lab computer may be running a different OS version, but the process is still very similar. You can review the videos on the Canvas.  Working with Linux If you\u2019ve made it this far, congratulations! You\u2019ve made it over the toughest hurdle. By the end of this course, I promise you will be able to launch and log into servers in your sleep.  You should be looking at a login screen that looks something like this:  Last login: Mon Mar 21 21:17:54 2016 from 174-20-199-194.mpls.qwest.net  __|  __|_  )  _|  (     /   Amazon Linux AMI ___|\\___|___| https://aws.amazon.com/amazon-linux-ami/2015.09-release-notes/ 8 package(s) needed for security, out of 17 available Run \"sudo yum update\" to apply all updates. ec2-user@ip-172-31-15-26 ~]$ Your terminal cursor is sitting at the shell prompt, waiting for you to type in your first command. Remember the shell? It is a really cool program that lets you start other programs and manage services on the Linux system. The rest of this assignment will be spent working with the shell.  Note, when you are asked to type in a command in the steps below, don\u2019t type in the dollar-sign ($) character. This is just meant to represent the command prompt. The actual commands are represented by the characters to the right of the command prompt.  Let\u2019s start by asking the shell for some help. Type in:  $ help The shell provides you with a list of commands you can run along with possible command options.  Next, check out one of the pages in the built-in manual:  $ man ls A man page will appear with information on how to use the ls command. This command is used to list the contents of file directories. Either space through the contents of the man page or hit q to exit.  Most of the core Linux commands have man pages available. But honestly, some of these man pages are a bit hard to understand. Sometimes your best bet is to search on Google if you are trying to figure out how to use a specific command.  When you initially log into Linux, the system places you in your home directory. Each user on the system has a separate home directory. Let\u2019s see where your home directory is located:  $ pwd The response should be /home/ec2-user. The pwd command is handy to remember if you ever forget what file directory you are currently located in. If you recall from the Linux Hands-on Guide, this directory is also your current working directory.  Type in:  $ cd / The cd command let\u2019s you change to a new working directory on the server. In this case, we changed to the root (/) directory. This is the parent of all the other directories on the file system.  Type in:  $ ls The ls command lists the contents of the current directory. As you can see, root directory contains many other directories. You will become familiar with these directories over time.  The ls command provides a very basic directory listing. You need to supply the command with some options if you want to see more detailed information.  Type in:  $ ls -la See how this command provides you with much more detailed information about the files and directories? You can use this detailed listing to see the owner, group, and access control list settings for each file or directory. Do you see any files listed? Remember, the first character in the access control list column denotes whether a listed item is a file or a directory.  You probably see a couple files with names like .autofsck. How come you didn\u2019t see this file when you typed in the lscommand without any options? (Try to run this command again to convince yourself.) Files names that start with a period are called hidden files. These files won\u2019t appear on normal directory listings.  Type in:  $ cd /var Then, type in:  $ ls You will see a directory listing for the /var directory. Next, type in:  $ ls .. Huh. This directory listing looks the same as the earlier root directory listing. When you use two periods (..) in a directory path that means you are referring to the parent directory of the current directory. Just think of the two dots as meaning the directory above the current directory.  Now, type in:  $ cd ~ $ pwd Whoa. We\u2019re back at our home directory again. The tilde character (~) is another one of those handy little directory path shortcuts. It always refers to our personal home directory. Keep in mind that since every user has their own home directory, the tilde shortcut will refer to a unique directory for each logged-in user.  Most students are used to navigating a file system by clicking a mouse in nested graphical folders. When they start using a command-line to navigate a file system, they sometimes get confused and lose track of their current position in the file system. Remember, you can always use the pwd command to quickly figure out what directory you are currently working in.  Let\u2019s make some changes to the file system. We can easily make our own directories on the file system. Type:  mkdir test Now type:  ls Cool, there\u2019s our new test directory. Let\u2019s pretend we don\u2019t like that directory name and delete it. Type:  rmdir test Now it\u2019s gone. How can you be sure? You should know how to check to see if the directory still exists at this point. Go ahead and check.  Let\u2019s create another directory. Type in:  $ mkdir documents Next, change to the new directory:  $ cd documents Did you notice that your command prompt displays the name of the current directory? Something like: [ec2-user@ip-172-31-15-26 documents]$. Pretty handy, huh?  Okay, let\u2019s create our first file in the documents directory. This is just an empty file for training purposes. Type in:  $ touch paper.txt Check to see that the new file is in the directory. Now, go back to the previous directory. Remember the double dot shortcut?  $ cd .. Okay, we don\u2019t like our documents directory any more. Let\u2019s blow it away. Type in:  $ rmdir documents Uh oh. The shell didn\u2019t like that command because the directory isn\u2019t empty. Let\u2019s change back into the documents directory. But this time don\u2019t type in the full name of the directory. You can let shell auto-completion do the typing for you. Type in the first couple characters of the directory name and then hit the tab key:  $ cd doc<tab> You should use the tab auto-completion feature often. It saves typing and makes working with the Linux file system much much easier. Tab is your friend.  Now, remove the file by typing:  $ rm paper.txt Did you try to use the tab key instead of typing in the whole file name? Check to make sure the file was deleted from the directory.  Next, create a new file:  $ touch file1 We like file1 so much that we want to make a backup copy. Type:  $ cp file1 file1-backup Check to make sure the new backup copy was created. We don\u2019t really like the name of that new file, so let\u2019s rename it. Type:  $ mv file1-backup backup Moving a file to the same directory and giving it a new name is basically the same thing as renaming it. We could have moved it to a different directory if we wanted.  Let\u2019s list all of the files in the current directory that start with the letter f:  $ ls f* Using wildcard pattern matching in file commands is really useful if you want the command to impact or filter a group of files. Now, go up one directory to the parent directory (remember the double dot shortcut?)  We tried to remove the documents directory earlier when it had files in it. Obviously that won\u2019t work again. However, we can use a more powerful command to destroy the directory and vanquish its contents. Behold, the all powerful remove command:  $ rm -fr documents Did you remember to use auto-completion when typing in documents? This command and set of options forcibly removes the directory and its contents. It\u2019s a dangerous command wielded by the mightiest Linux wizards. Okay, maybe that\u2019s a bit of an exaggeration. Just be careful with it.  Check to make sure the documents directory is gone before proceeding.  Let\u2019s continue. Change to the directory /var and make a directory called test.  Ugh. Permission denied. We created this darn Linux server and we paid for it. Shouldn\u2019t we be able to do anything we want on it? You logged into the system as a user called ec2-user. While this user can create and manage files in its home directory, it cannot change files all across the system. At least it can\u2019t as a normal user. The ec2-user is a member of the root group, so it can escalate its privileges to super-user status when necessary. Let\u2019s try it:  $ sudo mkdir test Check to make sure the directory exists now. Using sudo we can execute commands as a super-user. We can do anything we want now that we know this powerful new command.  Go ahead and delete the test directory. Did you remember to use sudo before the rmdir command? Check to make sure the directory is gone.  You might be asking yourself the question: why can we list the contents of the /var directory but not make changes? That\u2019s because all users have read access to the /var directory and the ls command is a read function. Only the root users or those acting as a super-user can write changes to the directory.  Let\u2019s go back to our home directory:  $ cd ~ Editing text files is a really common task on Linux systems because many of the application configuration files are text files. We can create a text file by using a text editor. Type in:  $ nano myfile.conf The shell starts up the nano text editor and places your terminal cursor in the editing screen. Nano is a simple text-based word processor. Type in a few lines of text. When you\u2019re done writing your novel, hit ctrl-x and answer y to the prompt to save your work. Finally, hit enter to save the text to the filename you specified.  Check to see that your file was saved in the directory. You can take a look at the contents of your file by typing:  $ cat myfile.conf The cat command displays your text file content on the terminal screen. This command works fine for displaying small text files. But if your file is hundreds of lines long, the content will scroll down your terminal screen so fast that you won\u2019t be able to easily read it. There\u2019s a better way to view larger text files. Type in:  $ less myfile.conf The less command will page the display of a text file, allowing you to page through the contents of the file using the space bar. Your text file is probably too short to see the paging in action though. Hit q to quit out of the less text viewer.  Hit the up-arrow key on your keyboard a few times until the commmand nano myfile.conf appears next to your command prompt. Cool, huh? The up-arrow key allows you to replay a previously run command. Linux maintains a list of all the commands you have run since you logged into the server. This is called the command history. It\u2019s a really useful feature if you have to re-run a complex command again.  Now, hit ctrl-c. This cancels whatever command is displayed on the command line.  Type in the following command to create a couple empty files in the directory:  $ touch file1 file2 file3 Confirm that the files were created. Some commands, like touch. allow you to specify multiple files as arguments. You will find that Linux commands have all kinds of ways to make tasks more efficient like this.  Throughout this assignment, we have been running commands and viewing results on the terminal screen. The screen is the standard place for commands to output results. It\u2019s known as the standard out (stdout). However, it\u2019s really useful to output results to the file system sometimes. Type in:  $ ls > listing.txt Take a look at the directory listing now. You just created a new file. View the contents of the listing.txt file. What do you see? Instead of sending the output from the ls command to the screen we sent it to a text file.  Let\u2019s try another one. Type:  $ cat myfile.conf > listing.txt Take a look at the contents of the listing.txt file again. It looks like your myfile.conf file now. It\u2019s like you made a copy of it. But what happened to the previous content in the listing.txt file? When you redirect the output of a command using the right angle-bracket character (>), the output overwrites the existing file. Type this command in:  $ cat myfile.conf >> listing.txt Now look at the contents of the listing.txt file. You should see your original content displayed twice. When you use two angle-bracket characters in the commmand the output appends (or adds to) the file instead of overwriting it.  We redirected the output from a command to a text file. It\u2019s also possible to redirect the input to a command. Typically we use a keyboard to provide input, but sometimes it makes more sense to input a file to a command. For example, how many words are in your new listing.txt file? Let\u2019s find out. Type in:  $ wc -w < listing.txt Did you get a number? This command inputs the listing.txt file into a word count program called wc.  Type in the command:  $ ls /usr/bin The terminal screen probably scrolled quickly as filenames flashed by. The /usr/bin directory holds quite a few files. It would be nice if we could page through the contents of this directory. Well, we can. We can use a special shell feature called pipes. In previous steps, we redirected I/O using the file system. Pipes allow us to redirect I/O between programs. We can redirect the output from one program into another. Type in:  $ ls /usr/bin | less Now the directory listing is paged. Hit the spacebar to page through the listing. The pipe, represented by a vertical bar character (|), takes the output from the ls command and redirects it to the less command where the resulting output is paged. Pipes are super powerful and used all the time by savvy Linux operators.  Hit the q key to quit the paginated directory listing command.  Working with shell scripts Now things are going to get interesting.  We\u2019ve been manually typing in commands throughout this exercise. If we were running a set of repetitive tasks, we would want to automate the process as much as possible. The shell makes it really easy to automate tasks using shell scripts. The shell provides many of the same features as a basic procedural programming language. Let\u2019s write some code.  Type in this command:  $ j=123 $ echo $j We just created a variable named j referencing the string 123. The echo command printed out the value of the variable. We had to use a dollar sign ($) when referencing the variable in another command.  Next, type in:  $ j=1+1 $ echo $j Is that what you expected? The shell just interprets the variable value as a string. It\u2019s not going to do any sort of computation.  Typing in shell script commands on the command line is sort of pointless. We want to be able to create scripts that we can run over-and-over. Let\u2019s create our first shell script.  Use the nano editor to create a file named myscript. When the file is open in the editor, type in the following lines of code:  #!/bin/bash echo Hello $1 Now quit the editor and save your file. We can run our script by typing:  $ ./myscript World Er, what happened? Permission denied. Didn\u2019t we create this file? Why can\u2019t we run it? We can\u2019t run the script file because we haven\u2019t set the execute permission on the file. Type in:  $ chmod u+x myscript This modifies the file access control list to allow the owner of the file to execute it. Let\u2019s try to run the command again. Hit the up-arrow key a couple times until the ./myscript World command is displayed and hit enter.  Hooray! Our first shell script. It\u2019s probably a bit underwhelming. No problem, we\u2019ll make it a little more complex. The script took a single argument called World. Any arguments provided to a shell script are represented as consecutively numbered variables inside the script ($1, $2, etc). Pretty simple.  You might be wondering why we had to type the ./ characters before the name of our script file. Try to type in the command without them:  $ myscript World Command not found. That seems a little weird. Aren\u2019t we currently in the directory where the shell script is located? Well, that\u2019s just not how the shell works. When you enter a command into the shell, it looks for the command in a predefined set of directories on the server called your PATH. Since your script file isn\u2019t in your special path, the shell reports it as not found. By typing in the ./ characters before the command name you are basically forcing the shell to look for your script in the current directory instead of the default path.  Create another file called cleanup using nano. In the file editor window type:  #!/bin/bash # My cleanup script mkdir archive mv file* archive Exit the editor window and save the file. Change the permissions on the script file so that you can execute it. Now run the command:  $ ./cleanup Take a look at the file directory listing. Notice the archive directory? List the contents of that directory. The script automatically created a new directory and moved three files into it. Anything you can do manually at a command prompt can be automated using a shell script.  Let\u2019s create one more shell script. Use nano to create a script called namelist. Here is the content of the script:  #!/bin/bash # for-loop test script names='Jason John Jane' for i in $names do   echo Hello $i done Change the permissions on the script file so that you can execute it. Run the command:  $ ./namelist The script will loop through a set of names stored in a variable displaying each one. Scripts support several programming constructs like for-loops, do-while loops, and if-then-else. These building blocks allow you to create fairly complex scripts for automating tasks.  Installing packages and services We\u2019re nearing the end of this assignment. But before we finish, let\u2019s install some new software packages on our server. The first thing we should do is make sure all the current packages installed on our Linux server are up-to-date. Type in:  $ sudo yum update -y This is one of those really powerful commands that requires sudo access. The system will review the currently installed packages and go out to the Internet and download appropriate updates.  Next, let\u2019s install an Apache web server on our system. Type in:  $ sudo yum install httpd -y Bam! You probably never knew that installing a web server was so easy. We\u2019re not going to actually use the web server in this exercise, but we will in future assignments.  We installed the web server, but is it actually running? Let\u2019s check. Type in:  $ sudo service httpd status Nope. Let\u2019s start it. Type:  $ sudo service httpd start We can use the service command to control the services running on the system. Let\u2019s setup the service so that it automatically starts when the system boots up. Type in:  $ sudo chkconfig httpd on Cool. We installed the Apache web server on our system, but what other programs are currently running? We can use the pscommand to find out. Type in:  $ ps -ax Lots of processes are running on our system. We can even look at the overall performance of our system using the topcommand. Let\u2019s try that now. Type in:  $ top The display might seem a little overwhelming at first. You should see lots of performance information displayed including the cpu usage, free memory, and a list of running tasks.  We\u2019re almost across the finish line. Let\u2019s make sure all of our valuable work is stored in a git repository. First, we need to install git. Type in the command:  $ sudo yum install git -y Check your work It\u2019s very important to check your work before submitting it for grading. A misspelled, misplaced or missing file will cost you points. This may seem harsh, but the reality is that these sorts of mistakes have consequences in the real world. For example, a server instance could fail to launch properly and impact customers because a single required file is missing.  Here is what the contents of your git repository should look like before final submission:  \u2523archive \u2503  \u2523 file1 \u2503  \u2523 file2 \u2503  \u2517 file3 \u2523 namelist \u2517 myfile.conf  Saving our work in the git repository Next, make sure you are still in your home directory (/home/ec2-user). We will install the git repository you created at the beginning of this exercise. You will need to modify this command by typing in the GitHub repository URL you copied earlier.  $ git clone <your GitHub URL here>.git Example: git clone https://github.com/UST-SEIS665/hw2-seis665-02-spring2019-<your github id>.git The git application will ask you for your GitHub username and password. Note, if you have multi-factor authentication enabled on your GitHub account you will need to provide a personal token instead of your password.  Git will clone (copy) the repository from GitHub to your Linux server. Since the repository is empty the clone happens almost instantly. Check to make sure that a sub-directory called \"hw2-seis665-02-spring2019-<username>\" exists in the current directory (where <username> is your GitHub account name). Git automatically created this directory as part of the cloning process.  Change to the hw2-seis665-02-spring2019-<username> directory and type:  $ ls -la Notice the .git hidden directory? This is where git actually stores all of the file changes in your repository. Nothing is actually in your repository yet.  Change back to the parent directory (cd ..). Next, let\u2019s move some of our files into the repository. Type:  $ mv archive hw2-seis665-02-spring2019-<username> $ mv namelist hw2-seis665-02-spring2019-<username> $ mv myfile.conf hw2-seis665-02-spring2019-<username> Hopefully, you remembered to use the auto-complete function to reduce some of that typing. Change to the hw2-seis665-02-spring2019-<username> directory and list the directory contents. Your files are in the working directory, but are not actually stored in the repository because they haven\u2019t been committed yet.  Type in:  $ git status You should see a list of untracked files. Let\u2019s tell git that we want these files tracked. Type in:  $ git add * Now type in the git status command again. Notice how all the files are now being tracked and are ready to be committed. These files are in the git staging area. We\u2019ll commit them to the repository next. Type:  $ git commit -m 'assignment 2 files' Next, take a look at the commit log. Type:  $ git log You should see your commit listed along with an assigned hash (long string of random-looking characters).  Finally, let\u2019s save the repository to our GitHub account. Type in:  $ git push origin master The git client will ask you for your GitHub username and password before pushing the repository.  Go back to the GitHub.com website and login if you have been logged out. Click on the repository link for the assignment. Do you see your files listed there? Congratulations, you completed the exercise!  Terminate server  The last step is to terminate your Linux instance. AWS will bill you for every hour the instance is running. The cost is nominal, but there\u2019s no need to rack up unnecessary charges.  Here are the steps to terminate your instance:  Log into your AWS account and click on the EC2 dashboard.  Click the Instances menu item.  Select your server in the instances table.  Click on the Actions drop down menu above the instances table.  Select the Instance State menu option  Click on the Terminate action.  Your Linux instance will shutdown and disappear in a few minutes. The EC2 dashboard will continue to display the instance on your instance listing for another day or so. However, the state of the instance will be terminated.  Submitting your assignment \u2014 IMPORTANT! If you haven\u2019t already, please e-mail me your GitHub username in order to receive credit for this assignment. There is no need to email me to tell me that you have committed your work to GitHub or to ask me if your GitHub submission worked. If you can see your work in your GitHub repository, I can see your work.",
+    "stars": 56,
+    "forks": 23,
+    "archived": false,
+    "fork": false,
+    "language": "Shell",
+    "default_branch": "master",
+    "latest_commit": "1c4cf2215cccf505e05cb6d40ca113f2eec95fdc",
+    "last_commit_date": "2019-05-21T01:12:16Z",
+    "pushed_at_not_commit_date": "2023-08-30T16:37:51Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "nyaundid",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/nyaundid/EC2-AWS-AND-SHELL/issues/8",
+      "created_at": "2026-05-21T02:56:58Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "991dbfbdd978b3ccaece844587e286aa14cd7ad86309f84cc177be542c43d655",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md",
+      "hw2-seis665-02-spring2019-nyaundid-master"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "options exercise assignment"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/nyaundid/EC2-AWS-AND-SHELL",
+      "commit": "https://github.com/nyaundid/EC2-AWS-AND-SHELL/commit/1c4cf2215cccf505e05cb6d40ca113f2eec95fdc",
+      "readme": "https://github.com/nyaundid/EC2-AWS-AND-SHELL/blob/1c4cf2215cccf505e05cb6d40ca113f2eec95fdc/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/nyaundid/EC2-AWS-AND-SHELL/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/nyaundid/EC2-AWS-AND-SHELL/contributors",
+      "issues": "https://api.github.com/repos/nyaundid/EC2-AWS-AND-SHELL/issues"
+    },
+    "readme_excerpt": "Homework 2 Overview This week we will focus on becoming familiar with launching a Linux server and working with some basic Linux and Git commands. We will use AWS to launch and host the Linux server. AWS might seem a little confusing at this point. Don\u2019t worry, we will gain much more hands-on experience with AWS throughout the course. The goal is to get you comfortable working with the technology and not overwhelm you with all the details. Requirements You need to have a personal AWS account and GitHub account for this assignment. You should also read the Git Hands-on Guide and Linux Hands-on Guide before beginning this exercise. A word about grading One of the key DevOps practices we learn about in this class is the use of automation to increase the speed and repeatability of processes. Automation is utilized during the assignment grading process to review and assess your work. It\u2019s important that you follow the instructions in each assignment and type in required files and resources with the proper names. All names are case sensitive, so a name like \"Web1\" is not the same as \"web1\". If you misspell a name, use the wrong case, or put a file in the wrong directory location you will lose points on your assignment. This is the easiest way to lose points, and also the most preventable. You should always double-check your work to make sure it accurately reflects the requirements sp",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "NYCPlanning/labs-tax-lot-selector",
+    "requested_name": "NYCPlanning/labs-tax-lot-selector",
+    "id": 96819746,
+    "url": "https://github.com/NYCPlanning/labs-tax-lot-selector",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A simple map-based tool for selecting multiple NYC tax lots and downloading a CSV or shapefile of their PLUTO data",
+    "stars": 11,
+    "forks": 5,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "develop",
+    "latest_commit": "ecd4ebfd95a110c3249006d9f39f8f7bcaa32436",
+    "last_commit_date": "2025-12-26T17:51:43Z",
+    "pushed_at_not_commit_date": "2025-12-29T18:27:24Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "allthesignals",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "andycochran",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "dhochbaum-dcp",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "hannahkates",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "TylerMatteo",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "trbmcginnis",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "TangoYankee",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "chriswhong",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fedex1",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rtblair",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/NYCPlanning/labs-tax-lot-selector/issues/41",
+      "created_at": "2024-12-11T15:22:15Z",
+      "state": "closed",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1b6fabe3e4c5310ea71d9797bbf5d85a21b2d1c4f674895f64e62863778aef69",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f5111bf61e5f6b3affcee33fb3d187f8218dfe43b0d1c83a557d6b06be46190f",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env",
+      ".eslintrc",
+      ".gitignore",
+      ".nvmrc",
+      ".static",
+      "CODEOWNERS",
+      "CONTRIBUTING.md",
+      "ISSUE_TEMPLATE.md",
+      "LICENSE",
+      "PULL_REQUEST_TEMPLATE.md",
+      "README.md",
+      "css",
+      "index.html",
+      "js",
+      "node_modules",
+      "package.json",
+      "public",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/NYCPlanning/labs-tax-lot-selector/blob/ecd4ebfd95a110c3249006d9f39f8f7bcaa32436/package.json",
+        "sha256": "d97ebc96e8aa7b12af0e8f12373968fcc9bc1140af624b42914a2a1872c24a90"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/NYCPlanning/labs-tax-lot-selector",
+      "commit": "https://github.com/NYCPlanning/labs-tax-lot-selector/commit/ecd4ebfd95a110c3249006d9f39f8f7bcaa32436",
+      "readme": "https://github.com/NYCPlanning/labs-tax-lot-selector/blob/ecd4ebfd95a110c3249006d9f39f8f7bcaa32436/README.md",
+      "license": "https://github.com/NYCPlanning/labs-tax-lot-selector/blob/ecd4ebfd95a110c3249006d9f39f8f7bcaa32436/LICENSE",
+      "recent_commits": "https://api.github.com/repos/NYCPlanning/labs-tax-lot-selector/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/NYCPlanning/labs-tax-lot-selector/contributors",
+      "issues": "https://api.github.com/repos/NYCPlanning/labs-tax-lot-selector/issues"
+    },
+    "readme_excerpt": "# NYC Tax Lot Selector (BBL List Generator) This is a simple map-based tool for selecting multiple NYC tax lots and downloading a CSV/SHP file with their BBLs (Borough/Block/Lot). Built with Department of City Planning's Business Improvement Division, this tool's primary purpose is to complement other information systems that require a list of affected tax lots to describe a study area, rezoning, or other area of interest. Instead of a more manual process using desktop GIS software, this tool allows the user to quickly identify the lots in their area of interest through a simple, open web interface. The user can select those lots that are within the area of interest, and quickly download the lot identifiers as machine-readable data. ![image](https://user-images.githubusercontent.com/409279/34119049-c32cad06-e3ee-11e7-994b-bea85de03cfc.png) ## How we work [NYC Planning Labs](https://planninglabs.nyc) takes on a single project at a time, working closely with our customers from concept to delivery in a matter of weeks. We conduct regular maintenance between larger projects. ## How you can help In the spirit of free software, everyone is encouraged to help improve this project. Here are some ways you can contribute. - Comment on or clarify [issues](link to issues) - Report [bugs](link to bugs) - Suggest new features - Write or edit documentation - Write code (no patch is too small)",
+    "license_excerpt": "As a work of the government, this project is in the public domain within the United States. Additionally, we waive copyright and related rights in the work worldwide through the CC0 1.0 Universal public domain dedication. ## CC0 1.0 Universal summary This is a human-readable summary of the [Legal Code (read the full text)](https://creativecommons.org/publicdomain/zero/1.0/legalcode). ### No copyright The person who associated a work with this deed has dedicated the work to the public domain by w"
+  }
+]

@@ -1,0 +1,1600 @@
+[
+  {
+    "full_name": "stadlmax/pyFIFOtax",
+    "requested_name": "stadlmax/pyFIFOtax",
+    "id": 595093265,
+    "url": "https://github.com/stadlmax/pyFIFOtax",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Simple Tax Reporting Tool for share transactions on foreign exchanges",
+    "stars": 27,
+    "forks": 7,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "1458a870191793360678829fa78b17ee570c037f",
+    "last_commit_date": "2026-03-03T19:47:51Z",
+    "pushed_at_not_commit_date": "2026-04-02T10:09:56Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "stadlmax",
+        "contributions": 69,
+        "type": "User"
+      },
+      {
+        "login": "szotsaki",
+        "contributions": 51,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/stadlmax/pyFIFOtax/issues/9",
+      "created_at": "2024-06-05T12:32:55Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1ae2e1efbb5b8559780aea1091cb06dac8b4dec92aea26c701552e26b6097498",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "concatenate.py",
+      "convert.py",
+      "converters",
+      "create_report.py",
+      "example",
+      "notebook_example.ipynb",
+      "personal",
+      "pyfifotax",
+      "test"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/stadlmax/pyFIFOtax",
+      "commit": "https://github.com/stadlmax/pyFIFOtax/commit/1458a870191793360678829fa78b17ee570c037f",
+      "readme": "https://github.com/stadlmax/pyFIFOtax/blob/1458a870191793360678829fa78b17ee570c037f/README.md",
+      "license": "https://github.com/stadlmax/pyFIFOtax/blob/1458a870191793360678829fa78b17ee570c037f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/stadlmax/pyFIFOtax/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/stadlmax/pyFIFOtax/contributors",
+      "issues": "https://api.github.com/repos/stadlmax/pyFIFOtax/issues"
+    },
+    "readme_excerpt": "# pyFIFOtax Simple Tax Reporting Tool for share transactions on foreign exchanges # Data Sources A tax report is generated in an automated fashion based on two sources of inputs - a history of transactions including deposits and sales of shares, dividend payments, currency conversions to EUR, and all relevant fees in the process (see `example/transactions.xlsx` for details) - a history of all relevant exchange rates (`eurofxref-hist.csv`, based on official reference rates from [EZB](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.de.html)), in an updated version of this code, the latest rates are automatically downloaded For the history of transactions, you don't have to bother about converting to EUR or matching the sell prices to the buy prices, for instance. This is part of the automated reporting. Simply list the raw data. For the reference rates, you might have to download a newer version depending on your report year, depending on the version of your code. While it would be possible to have a variety of different foreign currencies based on this data, it is currently mainly intended in combination with USD. NOTE: an update extends the functionality of the reporting scripts (including support for stock splits and automated suggestions for AWV reporting). As this breaks the way input data is defined, these things are only a",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "stefan-jansen/alphalens-reloaded",
+    "requested_name": "stefan-jansen/alphalens-reloaded",
+    "id": 341661949,
+    "url": "https://github.com/stefan-jansen/alphalens-reloaded",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Performance analysis of predictive (alpha) stock factors",
+    "stars": 646,
+    "forks": 145,
+    "archived": false,
+    "fork": true,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "f0a07c22d554e4b4036983cc80320b432714fe7e",
+    "last_commit_date": "2025-06-02T09:19:47Z",
+    "pushed_at_not_commit_date": "2025-12-15T04:03:16Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "a-campbell",
+        "contributions": 150,
+        "type": "User"
+      },
+      {
+        "login": "luca-s",
+        "contributions": 146,
+        "type": "User"
+      },
+      {
+        "login": "stefan-jansen",
+        "contributions": 80,
+        "type": "User"
+      },
+      {
+        "login": "jameschristopher",
+        "contributions": 65,
+        "type": "User"
+      },
+      {
+        "login": "twiecki",
+        "contributions": 33,
+        "type": "User"
+      },
+      {
+        "login": "eigenfoo",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 11,
+        "type": "Bot"
+      },
+      {
+        "login": "MichaelJMath",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "mmargenot",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "dmichalowicz",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "HereticSK",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jmccorriston",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ydm",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jimportico",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "richafrank",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "TimShawver",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fawce",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ivigamberdiev",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/stefan-jansen/alphalens-reloaded/issues/30",
+      "created_at": "2024-05-27T10:38:24Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1d0b1818e6379ef4294ea58be3e3789ea1e9829e62c7bdf4f0af033be607892e",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2b651c2d29c644d1c73417cd96e6cfa506d6de102ed96fc3de96d676e089cf29",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "build_and_deploy_docs.sh",
+      "conda",
+      "docs",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/pyproject.toml",
+        "sha256": "b9f5970eed974d980e1b2eb32ea9ffcd70462488897682661cb879d2a78e218c"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/stefan-jansen/alphalens-reloaded",
+      "commit": "https://github.com/stefan-jansen/alphalens-reloaded/commit/f0a07c22d554e4b4036983cc80320b432714fe7e",
+      "readme": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/README.md",
+      "license": "https://github.com/stefan-jansen/alphalens-reloaded/blob/f0a07c22d554e4b4036983cc80320b432714fe7e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/stefan-jansen/alphalens-reloaded/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/stefan-jansen/alphalens-reloaded/contributors",
+      "issues": "https://api.github.com/repos/stefan-jansen/alphalens-reloaded/issues"
+    },
+    "readme_excerpt": "![PyPI](https://img.shields.io/pypi/v/alphalens-reloaded) [![Anaconda](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/conda_package.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/conda_package.yml) [![Tests](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/unit_tests.yml) [![PyPI](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/alphalens-reloaded/actions/workflows/build_wheels.yml) [![Coverage Status](https://coveralls.io/repos/github/stefan-jansen/alphalens-reloaded/badge.svg?branch=main)](https://coveralls.io/github/stefan-jansen/alphalens-reloaded?branch=main) ![GitHub issues](https://img.shields.io/github/issues/stefan-jansen/alphalens-reloaded) ![PyPI - License](https://img.shields.io/pypi/l/alphalens-reloaded) ![Discourse users](https://img.shields.io/discourse/users?server=https%3A%2F%2Fexchange.ml4trading.io%2F) ![Twitter Follow](https://img.shields.io/twitter/follow/ml4trading?style=social) Alphalens is a Python library for performance analysis of predictive (alpha) stock factors. Alphalens works great with the [Zipline](https://www.zipline.ml4trading.io/) open source backtesting library, and [Pyfolio](https:/",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "stefan-jansen/machine-learning-for-trading",
+    "requested_name": "stefan-jansen/machine-learning-for-trading",
+    "id": 132754148,
+    "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Code for Machine Learning for Trading, 3rd edition \u2014 from data sourcing to live execution.",
+    "stars": 20885,
+    "forks": 5610,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "main",
+    "latest_commit": "defadcc81b6373eed26d8cfc996c5cdb04e7104d",
+    "last_commit_date": "2026-09-13T15:32:02Z",
+    "pushed_at_not_commit_date": "2026-09-13T15:43:44Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "stefan-jansen"
+    ],
+    "contributors_sample": [
+      {
+        "login": "stefan-jansen",
+        "contributions": 939,
+        "type": "User"
+      },
+      {
+        "login": "minggnim",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "ryanrussell",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ssilverac",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "KarlosQ",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "mgh-ding",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "NicolaiBanke",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "norbertraus",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jmprathab",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sherrytp",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "franz101",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "geoffworks17",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "thebetauser",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "leehbi",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tomas-rampas",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "a2c85d221802bb0889b6003f05cdc527f9a85412cf7c0c6d3e69c04ffb1d92c1",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "0094a98ecda4424d88af9ab717659aaee3d721c2653ff638aaf8bafbc58ce8c3",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".jupyter",
+      ".pre-commit-config.yaml",
+      ".verified-notebooks.tsv",
+      ".workspace",
+      "01_process_is_edge",
+      "02_financial_data_universe",
+      "03_market_microstructure",
+      "04_fundamental_alternative_data",
+      "05_synthetic_data",
+      "06_strategy_definition",
+      "07_defining_the_learning_task",
+      "08_financial_features",
+      "09_model_based_features",
+      "10_text_feature_engineering",
+      "11_ml_pipeline",
+      "12_gradient_boosting",
+      "13_dl_time_series",
+      "14_latent_factors",
+      "15_causal_estimation",
+      "16_strategy_simulation",
+      "17_portfolio_construction",
+      "18_transaction_costs",
+      "19_risk_management",
+      "20_strategy_synthesis",
+      "21_rl_execution_hedging",
+      "22_rag_financial_research",
+      "23_knowledge_graphs",
+      "24_autonomous_agents",
+      "25_live_trading",
+      "26_mlops_governance",
+      "27_systematic_edge",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "case_studies",
+      "data",
+      "docker-compose.yml",
+      "docs",
+      "envs",
+      "matplotlibrc",
+      "pyproject.toml",
+      "scripts",
+      "sitecustomize.py",
+      "tests",
+      "utils",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/pyproject.toml",
+        "sha256": "a439b60c2aa8b1725efa9e5b0e39abf113a0b0669397c8757ce1f16aca3b7321"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "B",
+        "query": "topic:quantitative-finance"
+      },
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/stefan-jansen/machine-learning-for-trading",
+      "commit": "https://github.com/stefan-jansen/machine-learning-for-trading/commit/defadcc81b6373eed26d8cfc996c5cdb04e7104d",
+      "readme": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/README.md",
+      "license": "https://github.com/stefan-jansen/machine-learning-for-trading/blob/defadcc81b6373eed26d8cfc996c5cdb04e7104d/LICENSE",
+      "recent_commits": "https://api.github.com/repos/stefan-jansen/machine-learning-for-trading/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/stefan-jansen/machine-learning-for-trading/contributors",
+      "issues": "https://api.github.com/repos/stefan-jansen/machine-learning-for-trading/issues"
+    },
+    "readme_excerpt": "# Machine Learning for Trading \u2014 3rd Edition **Build, test, and deploy ML-driven trading strategies \u2014 from data sourcing to live execution.** This repository hosts the code for [*Machine Learning for Trading, 3rd Edition*](https://amzn.to/4eigy2F) by [Stefan Jansen](https://www.linkedin.com/in/applied-ai/) \u2014 a ground-up rebuild, organized around one end-to-end workflow: how you define a research idea and develop it iteratively into a strategy you can actually run, and keep running, in a live market. - [Nine case studies](https://www.ml4trading.io/case-studies/) illustrate the workflow throughout the 27 chapters of the book, from raw data through features, models, backtests, costs, and risk to deployment. - **Generative AI** and **autonomous agents** are new to this edition and cut across that workflow, bringing retrieval-augmented generation, knowledge graphs, and multi-agent systems to financial research. - The [companion website](https://ml4trading.io) features [112 primers](https://ml4trading.io/primer/), [61 agent skills](https://ml4trading.io/skills/), and [six production Python libraries](https://ml4trading.io/libraries/) that facilitate substantial parts of the workflow. **Start here: [Installation](docs/installation.md)** walks a blank Linux, Windows or macOS machine to a running notebook, prerequisites included. The short version is under [Quick Start](#quick-start) be",
+    "license_excerpt": "MIT License Copyright (c) 2024-2026 Stefan Jansen Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyrig"
+  },
+  {
+    "full_name": "stefan-jansen/pyfolio-reloaded",
+    "requested_name": "stefan-jansen/pyfolio-reloaded",
+    "id": 341360629,
+    "url": "https://github.com/stefan-jansen/pyfolio-reloaded",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Portfolio and risk analytics in Python",
+    "stars": 613,
+    "forks": 174,
+    "archived": false,
+    "fork": true,
+    "language": "Jupyter Notebook",
+    "default_branch": "main",
+    "latest_commit": "6b55da7fce365e325046bb080cb13ced1822de95",
+    "last_commit_date": "2025-06-02T13:08:44Z",
+    "pushed_at_not_commit_date": "2025-12-15T11:02:30Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "twiecki",
+        "contributions": 509,
+        "type": "User"
+      },
+      {
+        "login": "eigenfoo",
+        "contributions": 104,
+        "type": "User"
+      },
+      {
+        "login": "gusgordon",
+        "contributions": 87,
+        "type": "User"
+      },
+      {
+        "login": "stefan-jansen",
+        "contributions": 49,
+        "type": "User"
+      },
+      {
+        "login": "a-campbell",
+        "contributions": 44,
+        "type": "User"
+      },
+      {
+        "login": "huaiweicheng",
+        "contributions": 25,
+        "type": "User"
+      },
+      {
+        "login": "richafrank",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "analicia",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "abhijeetkalyan",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "ssanderson",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "sbussmann",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "jameschristopher",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 6,
+        "type": "Bot"
+      },
+      {
+        "login": "justinlent",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "marketneutral",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jzhang18",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "abhijeetk29",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "MBounouar",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "adzuci",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jonathanng",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jankrepl",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "luca-s",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "tswright8281",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dat-boris",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jlopezpena",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ivigamberdiev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fawce",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "devinstevenson",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "willianpaixao",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "traviscross",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/stefan-jansen/pyfolio-reloaded/issues/55",
+      "created_at": "2025-02-12T13:32:53Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "7606b6e56bcddfde2e275a66c8eb9c578a3c589328c32684fdf2bc77069f228d",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2b651c2d29c644d1c73417cd96e6cfa506d6de102ed96fc3de96d676e089cf29",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "WHATSNEW.md",
+      "build_and_deploy_docs.sh",
+      "conda",
+      "docs",
+      "mkdocs.yml",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/pyproject.toml",
+        "sha256": "55f365f01e76f016a452d2e83d0d67a5123ab9cbf487582f132fd6072890a8ea"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/stefan-jansen/pyfolio-reloaded",
+      "commit": "https://github.com/stefan-jansen/pyfolio-reloaded/commit/6b55da7fce365e325046bb080cb13ced1822de95",
+      "readme": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/README.md",
+      "license": "https://github.com/stefan-jansen/pyfolio-reloaded/blob/6b55da7fce365e325046bb080cb13ced1822de95/LICENSE",
+      "recent_commits": "https://api.github.com/repos/stefan-jansen/pyfolio-reloaded/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/stefan-jansen/pyfolio-reloaded/contributors",
+      "issues": "https://api.github.com/repos/stefan-jansen/pyfolio-reloaded/issues"
+    },
+    "readme_excerpt": "![PyPI](https://img.shields.io/pypi/v/pyfolio-reloaded) [![Tests](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/unit_tests.yml) [![conda](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/conda_package.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/conda_package.yml) [![PyPI](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/pyfolio-reloaded/actions/workflows/build_wheels.yml) [![Coverage Status](https://coveralls.io/repos/github/stefan-jansen/pyfolio-reloaded/badge.svg?branch=main)](https://coveralls.io/github/stefan-jansen/pyfolio-reloaded?branch=main) ![GitHub issues](https://img.shields.io/github/issues/stefan-jansen/pyfolio-reloaded) ![Discourse users](https://img.shields.io/discourse/users?server=https%3A%2F%2Fexchange.ml4trading.io%2F) ![Twitter Follow](https://img.shields.io/twitter/follow/ml4trading?style=social) pyfolio is a Python library for performance and risk analysis of financial portfolios that works well with the [Zipline](https://zipline.ml4trading.io/) open source backtesting library. ## Trading Strategy Analysis with pyfolio At the core of pyfolio are various tear sheets that combine various individual plots a",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "stefan-jansen/zipline-reloaded",
+    "requested_name": "stefan-jansen/zipline-reloaded",
+    "id": 342145253,
+    "url": "https://github.com/stefan-jansen/zipline-reloaded",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Zipline, a Pythonic Algorithmic Trading Library",
+    "stars": 1938,
+    "forks": 331,
+    "archived": false,
+    "fork": true,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "943010b9da848e317fc520de87edade2b884d329",
+    "last_commit_date": "2025-11-13T15:14:32Z",
+    "pushed_at_not_commit_date": "2026-01-06T13:01:54Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "fawce",
+        "contributions": 623,
+        "type": "User"
+      },
+      {
+        "login": "richafrank",
+        "contributions": 561,
+        "type": "User"
+      },
+      {
+        "login": "stefan-jansen",
+        "contributions": 353,
+        "type": "User"
+      },
+      {
+        "login": "twiecki",
+        "contributions": 303,
+        "type": "User"
+      },
+      {
+        "login": "ssanderson",
+        "contributions": 262,
+        "type": "User"
+      },
+      {
+        "login": "ehebert",
+        "contributions": 251,
+        "type": "User"
+      },
+      {
+        "login": "sdiehl",
+        "contributions": 201,
+        "type": "User"
+      },
+      {
+        "login": "dmichalowicz",
+        "contributions": 144,
+        "type": "User"
+      },
+      {
+        "login": "jfkirk",
+        "contributions": 126,
+        "type": "User"
+      },
+      {
+        "login": "llllllllll",
+        "contributions": 94,
+        "type": "User"
+      },
+      {
+        "login": "jbredeche",
+        "contributions": 79,
+        "type": "User"
+      },
+      {
+        "login": "StewartDouglas",
+        "contributions": 73,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 46,
+        "type": "Bot"
+      },
+      {
+        "login": "CaptainKanuk",
+        "contributions": 39,
+        "type": "User"
+      },
+      {
+        "login": "quantophred",
+        "contributions": 32,
+        "type": "User"
+      },
+      {
+        "login": "MBounouar",
+        "contributions": 30,
+        "type": "User"
+      },
+      {
+        "login": "freddiev4",
+        "contributions": 30,
+        "type": "User"
+      },
+      {
+        "login": "dalejung",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "buinvest",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "thewassermann",
+        "contributions": 19,
+        "type": "User"
+      },
+      {
+        "login": "nathanwolfe",
+        "contributions": 17,
+        "type": "User"
+      },
+      {
+        "login": "snth",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "cmichelQT",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "analicia",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "benmccann",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "Peque",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "willianpaixao",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "jikamens",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "samklonaris",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "jlowin",
+        "contributions": 7,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/stefan-jansen/zipline-reloaded/issues/320",
+      "created_at": "2026-02-14T11:57:15Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4b008972fe011fcf5b6b546fe2012e2a3552a67b64b934f796fe8308f5be8a7c",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "e35c4578f7db4498e62e278978f6c42e0fce6f21f9993a060b08a33549cd3044",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".claude",
+      ".coveragerc",
+      ".devcontainer",
+      ".flake8",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "AUTHORS",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.rst",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "codecov.yml",
+      "conda",
+      "docs",
+      "pyproject.toml",
+      "rebuild-cython.sh",
+      "setup.py",
+      "src",
+      "tests",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/pyproject.toml",
+        "sha256": "76c2818609ee2c8c4f1f7d6540ffc68407a8601a9837dafc6abcbf0845ab2c3b"
+      },
+      "setup.py": {
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/setup.py",
+        "sha256": "a341ddc4d2df5c2cef4887c4f8e9a6a15328560026d635197471e783488ca0c1"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/stefan-jansen/zipline-reloaded",
+      "commit": "https://github.com/stefan-jansen/zipline-reloaded/commit/943010b9da848e317fc520de87edade2b884d329",
+      "readme": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/README.md",
+      "license": "https://github.com/stefan-jansen/zipline-reloaded/blob/943010b9da848e317fc520de87edade2b884d329/LICENSE",
+      "recent_commits": "https://api.github.com/repos/stefan-jansen/zipline-reloaded/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/stefan-jansen/zipline-reloaded/contributors",
+      "issues": "https://api.github.com/repos/stefan-jansen/zipline-reloaded/issues"
+    },
+    "readme_excerpt": "# Backtest your Trading Strategies | Version Info | [![Python](https://img.shields.io/pypi/pyversions/zipline-reloaded.svg?cacheSeconds=2592000)](https://pypi.python.org/pypi/zipline-reloaded) [![Anaconda-Server Badge](https://anaconda.org/ml4t/zipline-reloaded/badges/platforms.svg)](https://anaconda.org/ml4t/zipline-reloaded) ![PyPI](https://img.shields.io/pypi/v/zipline-reloaded) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/zipline-reloaded/badges/version.svg)](https://anaconda.org/conda-forge/zipline-reloaded) | | ------------------- | ---------- | | **Test** **Status** | [![CI Tests](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/ci_tests_full.yml/badge.svg)](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/unit_tests.yml) [![PyPI](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/stefan-jansen/zipline-reloaded/actions/workflows/build_wheels.yml) [![codecov](https://codecov.io/gh/stefan-jansen/zipline-reloaded/branch/main/graph/badge.svg)](https://codecov.io/gh/stefan-jansen/zipline-reloaded) | | **Community** | [![Discourse](https://img.shields.io/discourse/topics?server=https%3A%2F%2Fexchange.ml4trading.io%2F)](https://exchange.ml4trading.io) [![ML4T](https://img.shields.io/badge/Powered%20by-ML4Trading-blue)](https://ml4trading.io) [![Twitter](https://i",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "StockSharp/StockSharp",
+    "requested_name": "StockSharp/StockSharp",
+    "id": 27703983,
+    "url": "https://github.com/StockSharp/StockSharp",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",
+    "stars": 10742,
+    "forks": 2265,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "master",
+    "latest_commit": "d0e30824e73ff0a0850020036a9d7cf0d55d9c66",
+    "last_commit_date": "2026-09-12T09:52:48Z",
+    "pushed_at_not_commit_date": "2026-09-12T09:56:14Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "mikasoukhov"
+    ],
+    "contributors_sample": [
+      {
+        "login": "mikasoukhov",
+        "contributions": 10921,
+        "type": "User"
+      },
+      {
+        "login": "a-belich",
+        "contributions": 433,
+        "type": "User"
+      },
+      {
+        "login": "sokolovsa",
+        "contributions": 398,
+        "type": "User"
+      },
+      {
+        "login": "MozGangster",
+        "contributions": 295,
+        "type": "User"
+      },
+      {
+        "login": "Sergey-Dvortsov",
+        "contributions": 130,
+        "type": "User"
+      },
+      {
+        "login": "VladSnap",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "KaerMorhen",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "claude",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "alexanderKhaustov",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "risty",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "viosee",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "dmDen",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "KotoBeg",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "moadip84",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jasonnator",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "OlegFedko",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RomSunZ",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Taz33m",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/StockSharp/StockSharp/issues/685",
+      "created_at": "2026-09-11T15:05:53Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "586b15f417d5c0b3c4dd9aaabd1b8a6888db762901c1b21262234d41dcc668ec",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "411e8dabf16d48306ad5dc415e6647b373d063710891ae3ce5f592733d5f2082",
+    "license_candidates": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "Alerts.Interfaces",
+      "Algo.Analytics.CSharp",
+      "Algo.Analytics.FSharp",
+      "Algo.Analytics.Python",
+      "Algo.Analytics",
+      "Algo.Compilation",
+      "Algo.Export",
+      "Algo.Gpu",
+      "Algo.Import",
+      "Algo.Indicators",
+      "Algo.Strategies",
+      "Algo.Testing",
+      "Algo",
+      "BusinessEntities",
+      "Charting.Interfaces",
+      "Configuration",
+      "Designer.Templates",
+      "Diagram.Core",
+      "Fix.Core",
+      "Fix.Dialects",
+      "LICENSE",
+      "Localization.Generator",
+      "Localization.Langs",
+      "Localization",
+      "MatchingEngine",
+      "Media.Generator",
+      "Media.Names",
+      "Media",
+      "Messages",
+      "NOTICE",
+      "README.md",
+      "README.ru.md",
+      "README.zh.md",
+      "Reporting",
+      "Samples",
+      "StockSharp.DotSettings",
+      "StockSharp.slnx",
+      "StockSharp_CI.slnx",
+      "StockSharp_Tests.slnx",
+      "Tests",
+      "props",
+      "scripts",
+      "stocksharp.ico"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "StockSharp/StockSharp",
+      "stars": 10167,
+      "license": "Apache-2.0",
+      "language": "C#",
+      "unit_class": "capability",
+      "reuse_value": 85,
+      "liftability": 55,
+      "fame_gap": 30,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypt"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "B",
+        "query": "topic:backtesting"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/StockSharp/StockSharp",
+      "commit": "https://github.com/StockSharp/StockSharp/commit/d0e30824e73ff0a0850020036a9d7cf0d55d9c66",
+      "readme": "https://github.com/StockSharp/StockSharp/blob/d0e30824e73ff0a0850020036a9d7cf0d55d9c66/README.md",
+      "license": "https://github.com/StockSharp/StockSharp/blob/d0e30824e73ff0a0850020036a9d7cf0d55d9c66/LICENSE",
+      "recent_commits": "https://api.github.com/repos/StockSharp/StockSharp/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/StockSharp/StockSharp/contributors",
+      "issues": "https://api.github.com/repos/StockSharp/StockSharp/issues"
+    },
+    "readme_excerpt": "# [StockSharp - trading platform][1] ## **English** | [\u0420\u0443\u0441\u0441\u043a\u0438\u0439](README.ru.md) | [\u4e2d\u6587](README.zh.md) ## Docs Download Chat YouTube ## Introduction ## **StockSharp** (**S#** for short) \u2013 is a **free** platform for trading on any market in the world (crypto exchanges, American, European, Asian, Russian, stocks, futures, options, Bitcoins, forex, etc.). You will be able to trade manually or automatically (algorithmic trading robots, conventional or HFT). **Available connections**: Binance, MT4, MT5, FIX/FAST, PolygonIO, Trading Technologies, Alpaca Markets, BarChart, CQG, E*Trade, IQFeed, InteractiveBrokers, LMAX, MatLab, Oanda, FXCM, Rithmic, cTrader, DXtrade, BitStamp, Bitfinex, Coinbase, Kraken, Poloniex, GDAX, Bittrex, Bithumb, OKX, Coincheck, CEX.IO, BitMEX, YoBit, Livecoin, EXMO, Deribit, HTX, KuCoin, QuantFEED, Aster, edgeX, Ligther, Paradex, Hyperliquid and many others. Connector source code and the full connector list are available in the [StockSharp Connectors repository](https://github.com/StockSharp/Connectors). ## [Designer][8] **Designer** - a **free** universal algorithmic strategy application for easy strategy creation: - Visual designer to create strategies by mouse clicking - Embedded C# editor - Easy to create own indicators - Built-in debugger - Connections to the multiple electronic boards and brokers - All world platforms - Schema sharing with own team ## [Hydr",
+    "license_excerpt": "StockSharp Custom License Notice Copyright (c) 2010-present StockSharp Platform LLC and/or its affiliates. All rights reserved. All source code, binaries, documentation, examples, media assets, configuration files, and other materials contained in this repository are the proprietary property of StockSharp, unless a file or third-party notice explicitly states otherwise. This repository is not licensed under a general-purpose open source license. Viewing, downloading, copying, building, modifying"
+  },
+  {
+    "full_name": "StratCraftsAI/NexusFix",
+    "requested_name": "StratCraftsAI/NexusFix",
+    "id": 1139441042,
+    "url": "https://github.com/StratCraftsAI/NexusFix",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A zero-alloc, compile-time hardened FIX engine built for sub-100ns execution.",
+    "stars": 99,
+    "forks": 17,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "main",
+    "latest_commit": "ffa8b0a014b5cb4020ec8a99fe22fa3a24bfc494",
+    "last_commit_date": "2026-07-21T09:59:02Z",
+    "pushed_at_not_commit_date": "2026-07-21T11:50:49Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Alan-StratCraftsAI",
+      "nonassa"
+    ],
+    "contributors_sample": [
+      {
+        "login": "nonassa",
+        "contributions": 88,
+        "type": "User"
+      },
+      {
+        "login": "Alan-StratCraftsAI",
+        "contributions": 80,
+        "type": "User"
+      },
+      {
+        "login": "starvian",
+        "contributions": 5,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/StratCraftsAI/NexusFix/issues/3",
+      "created_at": "2026-03-26T01:41:17Z",
+      "state": "closed",
+      "comments": 5,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "6f5d05afad07638a7ae2faa6824cbb401c4a005013fe8dc9e09736074c82d6e1",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "47c06d31a75537ac19c915e68854b6dd6811b2d6ddf227b5cef16391036dc7d7",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".clang-tidy",
+      ".editorconfig",
+      ".githooks",
+      ".github",
+      ".gitignore",
+      "BENCHMARK_REPRODUCTION.md",
+      "CHANGELOG.md",
+      "CMakeLists.txt",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "ROADMAP.md",
+      "SECURITY.md",
+      "SUPPORT.md",
+      "benchmarks",
+      "cmake",
+      "codecov.yml",
+      "docs",
+      "examples",
+      "fuzz",
+      "hermes-skill",
+      "include",
+      "scripts",
+      "src",
+      "start.sh",
+      "tests"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      },
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/StratCraftsAI/NexusFix",
+      "commit": "https://github.com/StratCraftsAI/NexusFix/commit/ffa8b0a014b5cb4020ec8a99fe22fa3a24bfc494",
+      "readme": "https://github.com/StratCraftsAI/NexusFix/blob/ffa8b0a014b5cb4020ec8a99fe22fa3a24bfc494/README.md",
+      "license": "https://github.com/StratCraftsAI/NexusFix/blob/ffa8b0a014b5cb4020ec8a99fe22fa3a24bfc494/LICENSE",
+      "recent_commits": "https://api.github.com/repos/StratCraftsAI/NexusFix/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/StratCraftsAI/NexusFix/contributors",
+      "issues": "https://api.github.com/repos/StratCraftsAI/NexusFix/issues"
+    },
+    "readme_excerpt": "NexusFIX Ultra-Low Latency FIX Protocol Engine for High-Frequency Trading Modern C++23 | Zero-Copy | SIMD-Accelerated | 3x Faster than QuickFIX Performance | Architecture | Features | Quick Start | Docs | Community | Contact --- ## Why NexusFIX? **NexusFIX** is a high-performance **FIX protocol** (Financial Information eXchange) engine built for **ultra-low latency quantitative trading**, **sub-microsecond algorithmic execution**, and **high-frequency trading (HFT)** systems. It solves the **performance bottlenecks** of traditional FIX engines by utilizing **hardware-aware C++ programming**. NexusFIX serves as a modern, faster alternative to QuickFIX with **zero heap allocations** on the critical path. > *\"If you're building a low-latency trading system and QuickFIX is your bottleneck, NexusFIX is your solution.\"* --- ## Performance ### NexusFIX vs QuickFIX Benchmark Tested on Linux with GCC 13.3, 100,000 iterations: | Metric | QuickFIX | NexusFIX | Improvement | |--------|----------|----------|-------------| | **ExecutionReport Parse** | 730 ns | 246 ns | **3.0x faster** | | **NewOrderSingle Parse** | 661 ns | 229 ns | **2.9x faster** | | **Field Lookup** (O(1) post-parse, 4 fields) | 31 ns | 11 ns | **2.9x faster** | | **Parse Throughput** | 1.19M msg/sec | 4.17M msg/sec | **3.5x higher** | | **P99 Parse Latency** | 784 ns | 258 ns | **3.0x lower** | ### Why is NexusFIX Faste",
+    "license_excerpt": "MIT License Copyright (c) 2026 StratCraftsAI Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright no"
+  },
+  {
+    "full_name": "Superalgos/Superalgos",
+    "requested_name": "Superalgos/Superalgos",
+    "id": 201978761,
+    "url": "https://github.com/Superalgos/Superalgos",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Free, open-source crypto trading bot, automated bitcoin / cryptocurrency trading software, algorithmic trading bots. Visually design your crypto trading bot, leveraging an integrated charting system, data-mining, backtesting, paper trading, and multi-server crypto bot deployments.",
+    "stars": 5653,
+    "forks": 6018,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "9f0fb59edd4bae7afa08d06c366e0bcb48103aec",
+    "last_commit_date": "2026-05-07T15:06:57Z",
+    "pushed_at_not_commit_date": "2026-09-13T03:33:18Z",
+    "commits_since_20260313_count_capped100": 3,
+    "recent_commit_authors": [
+      "Awhiteweb",
+      "Beggar Hunter Bot"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Luis-Fernando-Molina",
+        "contributions": 11598,
+        "type": "User"
+      },
+      {
+        "login": "julian-molina",
+        "contributions": 1863,
+        "type": "User"
+      },
+      {
+        "login": "maben1-pub",
+        "contributions": 1258,
+        "type": "User"
+      },
+      {
+        "login": "harrellbm",
+        "contributions": 972,
+        "type": "User"
+      },
+      {
+        "login": "Awhiteweb",
+        "contributions": 587,
+        "type": "User"
+      },
+      {
+        "login": "bearcanrun",
+        "contributions": 511,
+        "type": "User"
+      },
+      {
+        "login": "superalgos-bot",
+        "contributions": 409,
+        "type": "User"
+      },
+      {
+        "login": "gitforkgit",
+        "contributions": 331,
+        "type": "User"
+      },
+      {
+        "login": "nikolabjelo",
+        "contributions": 324,
+        "type": "User"
+      },
+      {
+        "login": "prepheadrus",
+        "contributions": 293,
+        "type": "User"
+      },
+      {
+        "login": "BastianMuc",
+        "contributions": 245,
+        "type": "User"
+      },
+      {
+        "login": "theblockchainarborist",
+        "contributions": 245,
+        "type": "User"
+      },
+      {
+        "login": "quantum8",
+        "contributions": 230,
+        "type": "User"
+      },
+      {
+        "login": "Loui-Molina",
+        "contributions": 179,
+        "type": "User"
+      },
+      {
+        "login": "Smidy13",
+        "contributions": 177,
+        "type": "User"
+      },
+      {
+        "login": "NAmorim",
+        "contributions": 174,
+        "type": "User"
+      },
+      {
+        "login": "maxah",
+        "contributions": 166,
+        "type": "User"
+      },
+      {
+        "login": "PLuv",
+        "contributions": 159,
+        "type": "User"
+      },
+      {
+        "login": "claudioLopezSA",
+        "contributions": 134,
+        "type": "User"
+      },
+      {
+        "login": "end-debug",
+        "contributions": 134,
+        "type": "User"
+      },
+      {
+        "login": "cozed-gh",
+        "contributions": 132,
+        "type": "User"
+      },
+      {
+        "login": "Raplh2502",
+        "contributions": 130,
+        "type": "User"
+      },
+      {
+        "login": "EvaMaria70",
+        "contributions": 121,
+        "type": "User"
+      },
+      {
+        "login": "ssplatt",
+        "contributions": 121,
+        "type": "User"
+      },
+      {
+        "login": "mARTin-B78",
+        "contributions": 114,
+        "type": "User"
+      },
+      {
+        "login": "tiger4242",
+        "contributions": 108,
+        "type": "User"
+      },
+      {
+        "login": "9808us",
+        "contributions": 91,
+        "type": "User"
+      },
+      {
+        "login": "BicMC22",
+        "contributions": 87,
+        "type": "User"
+      },
+      {
+        "login": "whtv",
+        "contributions": 83,
+        "type": "User"
+      },
+      {
+        "login": "DJ05GaZ",
+        "contributions": 82,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Superalgos/Superalgos/issues/5280",
+      "created_at": "2026-03-16T06:21:51Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "ad97787c63595aecd8330a81c0c59d04f393fe5dae3d7dbc3a01e4469e329a1f",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".eslintignore",
+      ".eslintrc.json",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".husky",
+      ".mocks",
+      ".tests",
+      ".vscode",
+      "App-Management",
+      "AppSchemas.js",
+      "Bitcoin-Factory",
+      "Brewfile",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Dashboards",
+      "DashboardsRoot.js",
+      "Docker",
+      "Environment.js",
+      "Exports",
+      "LICENSE",
+      "Launch-Scripts",
+      "MultiProject.js",
+      "Network",
+      "NetworkProfileManager.js",
+      "NetworkRoot.js",
+      "Platform",
+      "PlatformRoot.js",
+      "Plugins",
+      "Profile-Scripts",
+      "Projects",
+      "README.md",
+      "README_Binance_RSA_Keys.md",
+      "README_Docker.md",
+      "README_Documentation_Export.md",
+      "README_Logging.md",
+      "README_Packaged.md",
+      "README_PublicCloud.md",
+      "README_RaspberryPi.md",
+      "README_Signals.md",
+      "Reports",
+      "Secrets.js",
+      "Social-Trading",
+      "SocialTradingRoot.js",
+      "TaskServer",
+      "TaskServerRoot.js",
+      "Translator",
+      "build",
+      "console.html",
+      "dashboards.js",
+      "electron-wrapper.js",
+      "export-docs.js",
+      "install.ps1",
+      "install.sh",
+      "installer",
+      "loggerFactory.js",
+      "manageApps.js",
+      "migrations",
+      "network-node-1.js",
+      "network-node-2.js",
+      "network-node-3.js",
+      "network.js",
+      "package-lock.json",
+      "package.json",
+      "platform.js",
+      "preload.js",
+      "selection.html",
+      "setup.js",
+      "setupPlugins.js",
+      "setupWithTf.js",
+      "social-trading-1.js",
+      "social-trading-2.js",
+      "social-trading-3.js",
+      "socialTrading.js",
+      "socialTradingVue.js",
+      "socialTradingVueDev.js",
+      "uninstall.js",
+      "updateGithubRepos.js",
+      "xlsx-to-csv.js"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Superalgos/Superalgos/blob/9f0fb59edd4bae7afa08d06c366e0bcb48103aec/package.json",
+        "sha256": "909876162aaabf884d202e9bf0c2d17a48b358f752c1b44c9a255d4255576198"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "Superalgos/Superalgos",
+      "stars": 5536,
+      "license": "Apache-2.0",
+      "language": "JavaScript",
+      "unit_class": "reference",
+      "reuse_value": 65,
+      "liftability": 30,
+      "fame_gap": 35,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "Free, open-source crypto trading bot, automated bitcoin / cryptocurrency trading software, algorithmic trading bots. Vis"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Superalgos/Superalgos",
+      "commit": "https://github.com/Superalgos/Superalgos/commit/9f0fb59edd4bae7afa08d06c366e0bcb48103aec",
+      "readme": "https://github.com/Superalgos/Superalgos/blob/9f0fb59edd4bae7afa08d06c366e0bcb48103aec/README.md",
+      "license": "https://github.com/Superalgos/Superalgos/blob/9f0fb59edd4bae7afa08d06c366e0bcb48103aec/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Superalgos/Superalgos/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Superalgos/Superalgos/contributors",
+      "issues": "https://api.github.com/repos/Superalgos/Superalgos/issues"
+    },
+    "readme_excerpt": "# :small_orange_diamond: Superalgos 1.6.1 ![contributors](https://img.shields.io/github/contributors-anon/Superalgos/Superalgos?label=Contributors) ![pull-activity](https://img.shields.io/github/issues-pr-closed-raw/Superalgos/Superalgos?color=blueviolet) ![last-commit](https://img.shields.io/github/last-commit/Superalgos/Superalgos/develop?label=last%20commit%20to%20develop) ![bot-friendliness](https://img.shields.io/badge/Bot%20Friendliness%20Level-119%25-yellow) # :small_orange_diamond: Table of Contents ## Main Topics - [Introduction](#small_orange_diamond-introduction) - [Before You Begin](#small_orange_diamond-before-you-begin) - [Getting Started](#small_orange_diamond-getting-started) - [Installation Options](#small_orange_diamond-installation-options) - [Installation for Developers and Contributors](#small_orange_diamond-installation-for-developers-and-contributors) - [Prerequisites](#prerequisites) - [Superalgos Platform Client Installation](#superalgos-platform-client-installation) - [Usage](#small_orange_diamond-usage) - [Uninstall](#small_orange_diamond-uninstall) - [Get In Touch](#small_orange_diamond-get-in-touch) - [Other Resources](#small_orange_diamond-other-resources) - [Contributing](#small_orange_diamond-contributing) - [License](#small_orange_diamond-license) ## Appendix - [Prerequisites Notes](#small_orange_diamond-prerequisites-notes) - [Troubleshooting D",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

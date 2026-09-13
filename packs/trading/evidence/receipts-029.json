@@ -1,0 +1,803 @@
+[
+  {
+    "full_name": "leonardomelosantos/ofxparser.net",
+    "requested_name": "leonardomelosantos/ofxparser.net",
+    "id": 36581808,
+    "url": "https://github.com/leonardomelosantos/ofxparser.net",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Library developed with C# that reads and translate OFX files (financial files), like a parser to help your own C# application.",
+    "stars": 39,
+    "forks": 39,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "master",
+    "latest_commit": "2d4a3b3adaac5d08d2939b15bff4e0a0b2b57578",
+    "last_commit_date": "2025-06-29T02:53:53Z",
+    "pushed_at_not_commit_date": "2026-03-10T02:28:45Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "leonardomelosantos",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "Ander89BR",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/leonardomelosantos/ofxparser.net/issues/17",
+      "created_at": "2026-05-21T18:27:53Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d75c81d6ce935c0e1592854280db158f76a754026724bbc339fcfc5c905baaaf",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "d72c754bc7ecdb582ccaee42e2a9bf0bfc5745ee1df17d817a207b764ec05ad8",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "LICENSE",
+      "OFXParser.Test",
+      "OFXParser.sln",
+      "OFXParser",
+      "README.md",
+      "azure-pipelines.yml"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "C",
+        "query": "OFX parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/leonardomelosantos/ofxparser.net",
+      "commit": "https://github.com/leonardomelosantos/ofxparser.net/commit/2d4a3b3adaac5d08d2939b15bff4e0a0b2b57578",
+      "readme": "https://github.com/leonardomelosantos/ofxparser.net/blob/2d4a3b3adaac5d08d2939b15bff4e0a0b2b57578/README.md",
+      "license": "https://github.com/leonardomelosantos/ofxparser.net/blob/2d4a3b3adaac5d08d2939b15bff4e0a0b2b57578/LICENSE",
+      "recent_commits": "https://api.github.com/repos/leonardomelosantos/ofxparser.net/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/leonardomelosantos/ofxparser.net/contributors",
+      "issues": "https://api.github.com/repos/leonardomelosantos/ofxparser.net/issues"
+    },
+    "readme_excerpt": "# OFXParser.NET OFXParser.NET \u00e9 uma biblioteca C# para leitura e tradu\u00e7\u00e3o de arquivos OFX (Open Financial Exchange), facilitando a integra\u00e7\u00e3o de dados financeiros em aplica\u00e7\u00f5es .NET. ## Recursos - Leitura e parsing de arquivos OFX. - Extra\u00e7\u00e3o de transa\u00e7\u00f5es banc\u00e1rias, saldos e informa\u00e7\u00f5es de conta. - F\u00e1cil integra\u00e7\u00e3o em projetos C#. - Dispon\u00edvel via NuGet. ## Exemplo de Uso ```csharp string pathOFX = \"D:\\\\data\\\\MyFile.ofx\"; Extract ofxParsed = OFXParser.Parser.GenerateExtract(pathOFX); if (ofxParsed != null) { foreach (var transaction in ofxParsed.Transactions) { // Fa\u00e7a algo com a transa\u00e7\u00e3o } } ``` ## Instala\u00e7\u00e3o Voc\u00ea pode instalar a biblioteca via NuGet: ```shell dotnet add package OFXParser ``` Ou via Package Manager: ```shell Install-Package OFXParser ``` [Veja no NuGet.org](https://www.nuget.org/packages/OFXParser/) ## Documenta\u00e7\u00e3o - **Parser.GenerateExtract(path)**: L\u00ea o arquivo OFX e retorna um objeto `Extract` com as transa\u00e7\u00f5es. - **Extract.Transactions**: Lista de transa\u00e7\u00f5es extra\u00eddas do arquivo. - **Extract.Account**: Informa\u00e7\u00f5es da conta banc\u00e1ria. ## Contribui\u00e7\u00e3o Contribui\u00e7\u00f5es s\u00e3o bem-vindas! Sinta-se \u00e0 vontade para abrir issues ou pull requests. ## Licen\u00e7a Este projeto est\u00e1 licenciado sob a licen\u00e7a MIT. # How to download It's possible download this lib by using Nuget.org. https://www.nuget.org/packages/OFXParser/",
+    "license_excerpt": "MIT License Copyright (c) 2025 Leonardo Melo Santos Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyr"
+  },
+  {
+    "full_name": "letianzj/QuantResearch",
+    "requested_name": "letianzj/QuantResearch",
+    "id": 275286502,
+    "url": "https://github.com/letianzj/QuantResearch",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Quantitative analysis, strategies and backtests",
+    "stars": 3029,
+    "forks": 576,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e",
+    "last_commit_date": "2023-08-26T12:16:04Z",
+    "pushed_at_not_commit_date": "2023-08-26T12:16:05Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "letianzj",
+        "contributions": 120,
+        "type": "User"
+      },
+      {
+        "login": "f0ster",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ryanrussell",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Velocities",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/letianzj/QuantResearch/issues/12",
+      "created_at": "2024-12-01T11:45:05Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "ae887ff0679a9bcef3816f792b703feed8727145765ac3f08fc04ad7ac49502d",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "182c65adbdeb618619dc2edaa3af03e5bd33950d87b2dcbd9d79e79abd404720",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".idea",
+      "Books.md",
+      "LICENSE",
+      "News.md",
+      "README.md",
+      "Resources.md",
+      "backtest",
+      "dash",
+      "data",
+      "eod",
+      "market",
+      "ml",
+      "notebooks",
+      "report",
+      "utils",
+      "workbooks"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "B",
+        "query": "topic:portfolio-management"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/letianzj/QuantResearch",
+      "commit": "https://github.com/letianzj/QuantResearch/commit/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e",
+      "readme": "https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/README.md",
+      "license": "https://github.com/letianzj/QuantResearch/blob/79bbf6a8b5ad74ac2c165663b5e12eb70d76a54e/LICENSE",
+      "recent_commits": "https://api.github.com/repos/letianzj/QuantResearch/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/letianzj/QuantResearch/contributors",
+      "issues": "https://api.github.com/repos/letianzj/QuantResearch/issues"
+    },
+    "readme_excerpt": "# QuantResearch * [Backtest](./backtest) * [Machine Learning and Deep Reinforcement Learning](./ml) * [Online Resources](./Resources.md) * [Live Trading Demo Video](https://youtu.be/CrsrTxqiXNY) ## Notebooks and Blogs |Index |Notebooks |Blogs | |----:|:---------------------------------------------------------------------------------|-----------:| |1 | [Portfolio Optimization One](./notebooks/portfolio_management_one.py) |[link](https://letianzj.github.io/portfolio-management-one.html)| |2 | [Value at Risk One](./notebooks/value_at_risk_one.py) |[link](https://letianzj.github.io/value-at-risk-one.html)| |3 | [Classical Linear Regression](./notebooks/classical_linear_regression.py) |[link](https://letianzj.github.io/classical-linear-regression.html)| |4 | [Bayesian Linear Regression](./notebooks/bayesian_linear_regression.py) |[link](https://letianzj.github.io/bayesian-linear-regression.html)| |5 | [MCMC Linear Regression](./notebooks/mcmc_linear_regression.py) |[link](https://letianzj.github.io/mcmc-linear-regression.html)| |6 | [Kalman Filter Linear Regression](./notebooks/kalman_filter_linear_regression.py) |[link](https://letianzj.github.io/kalman-filter-linear-regression.html)| |7 | [Tensorflow Linear Regression](./notebooks/tensorflow_linear_regression.ipynb) |[link](https://letianzj.github.io/tensorflow-linear-regression.html)| |8 | [quanttrader](https://github.com/letianz",
+    "license_excerpt": "MIT License Copyright (c) 2020 Letian Wang Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "libofx/libofx",
+    "requested_name": "libofx/libofx",
+    "id": 67738133,
+    "url": "https://github.com/libofx/libofx",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The libofx OFX banking protocol abstraction library",
+    "stars": 61,
+    "forks": 27,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "ea5d1cb71a6319b689a87249d53c96f719821113",
+    "last_commit_date": "2023-12-17T15:47:36Z",
+    "pushed_at_not_commit_date": "2023-12-17T15:49:27Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "cstim",
+        "contributions": 93,
+        "type": "User"
+      },
+      {
+        "login": "benoitg",
+        "contributions": 47,
+        "type": "User"
+      },
+      {
+        "login": "wrobelda",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "jralls",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "gjanssens",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "daissi",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "thesamesam",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jeffjl74",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "dpward",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "kjdyck",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "luzpaz",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "LudovicRousseau",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "skierpage",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ingokloecker",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "manish364824",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ZogFluff",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/libofx/libofx/issues/105",
+      "created_at": "2026-07-25T04:08:26Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README",
+    "readme_sha256": "342e8b9bfe4c50769336d08b7ab83fa3e73261af13d1092cdd9c9aaf419759e6",
+    "license": "GPL-2.0",
+    "license_path": "COPYING",
+    "license_file_sha256": "d8c320ffc0030d1b096ae4732b50d2b811cf95e9a9b7377c1127b2563e0a0388",
+    "license_candidates": [
+      "COPYING"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".travis.yml",
+      "AUTHORS",
+      "CMakeLists.txt",
+      "COPYING",
+      "ChangeLog",
+      "LibOFXConfig.cmake.in",
+      "Makefile.am",
+      "NEWS",
+      "README",
+      "autogen.sh",
+      "cmake",
+      "config.h.cmake",
+      "configure.ac",
+      "doc",
+      "dtd",
+      "getopt",
+      "inc",
+      "lib",
+      "libofx.lsm.in",
+      "libofx.pc.in",
+      "libofx.spec.in",
+      "m4",
+      "ofx2qif",
+      "ofxconnect",
+      "ofxdump",
+      "totest.txt",
+      "vcpkg.json"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/libofx/libofx",
+      "commit": "https://github.com/libofx/libofx/commit/ea5d1cb71a6319b689a87249d53c96f719821113",
+      "readme": "https://github.com/libofx/libofx/blob/ea5d1cb71a6319b689a87249d53c96f719821113/README",
+      "license": "https://github.com/libofx/libofx/blob/ea5d1cb71a6319b689a87249d53c96f719821113/COPYING",
+      "recent_commits": "https://api.github.com/repos/libofx/libofx/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/libofx/libofx/contributors",
+      "issues": "https://api.github.com/repos/libofx/libofx/issues"
+    },
+    "readme_excerpt": "Copyright (c) 2002-2010 Benoit Gr\u00e9goire # LibOFX LibOFX library is an API designed to allow applications to very easily support OFX command responses, usually provided by financial institutions. See http://www.ofx.net/ for details and specification. This project was first started as my end of degree project, with the objective to add OFX support to [GnuCash](https://www.gnucash.org/) If you can read French, the original project presentation is included in the doc directory. I finally decided to make it into a generic library, so all OpenSource financial software can benefit. LibOFX strives to achieve the following design goals: * Simplicity: OFX is a VERY complex spec. However, few if any software needs all this complexity. The library tries to hide this complexity by \"flattening\" the data structures, doing timezone conversions, currency conversion, etc. * Data directly usable from C, without conversion: A date is a C `time_t`, money is a float, strings are `char[]`, etc. * C style interface: Although LibOFX is written in C++, it provides an interface usable transparently from both C and C++, using a single header file. LibOFX was implemented directly from the full OFX 1.6 spec, and currently supports: * Banking transactions and statements. * Credit card and statements. * Investment transactions. * OFX 2.0 Future projects for LibOFX include: * Header parsing * DTD autodetection",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free softwar"
+  },
+  {
+    "full_name": "lim-james/ITCH-Order-Book",
+    "requested_name": "lim-james/ITCH-Order-Book",
+    "id": 1262090753,
+    "url": "https://github.com/lim-james/ITCH-Order-Book",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Low-latency NASDAQ ITCH 5.0 market data pipeline",
+    "stars": 5,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "C++",
+    "default_branch": "master",
+    "latest_commit": "784d8a337bbd62676889905b822f12eb5feac975",
+    "last_commit_date": "2026-06-17T08:32:15Z",
+    "pushed_at_not_commit_date": "2026-06-17T08:32:20Z",
+    "commits_since_20260313_count_capped100": 72,
+    "recent_commit_authors": [
+      "lim-james"
+    ],
+    "contributors_sample": [
+      {
+        "login": "lim-james",
+        "contributions": 72,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "88c72ce3cebe504c38b33107fcc81186760a0802a86dd535ac4c524e110ab17a",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "README.md",
+      "bench",
+      "include",
+      "makefile",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "ITCH market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/lim-james/ITCH-Order-Book",
+      "commit": "https://github.com/lim-james/ITCH-Order-Book/commit/784d8a337bbd62676889905b822f12eb5feac975",
+      "readme": "https://github.com/lim-james/ITCH-Order-Book/blob/784d8a337bbd62676889905b822f12eb5feac975/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/lim-james/ITCH-Order-Book/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/lim-james/ITCH-Order-Book/contributors",
+      "issues": "https://api.github.com/repos/lim-james/ITCH-Order-Book/issues"
+    },
+    "readme_excerpt": "# ITCH Order Book Low-latency NASDAQ ITCH 5.0 market data pipeline built in C++26. Replays binary feed files through a lock-free SPMC ring buffer into per-symbol order books. Reconstructed L2 price-level depth. ## Architecture ``` FileSource (mmap) \u2192 FeedHandler \u2192 SPMCRingBuffer \u2192 MarketDataHandler \u00d7 N \u2193 OpenAddressMap (order records) \u2193 LimitedDepthOrderBook (top 10 levels) ``` - **Feed**: memory-mapped file source, dispatch via SPMC disruptor - **Queue**: lock-free single-producer multi-consumer ring buffer, cache-line aligned control blocks - **Deserializer**: reflection-based zero-copy ITCH message parser (`stse`), skips ignored fields at compile time - **Order tracking**: open-addressing hash map keyed by order reference number - **Order book**: bounded sorted array (top 10 price levels per side), contiguous in memory ## Build ```bash # optimised release make release # w/ latency instrumentation make instrumented # sanitizers make asan make ubsan make tsan ``` ## Run ```bash make run_release ARGS=path/to/12302019.NASDAQ_ITCH50 make run_instrumented ARGS=path/to/12302019.NASDAQ_ITCH50 ``` ## Performance (TSLA, 527k messages) | Metric | p50 | p99 | p99.9 | |----------------|---------|----------|----------| | Market event | 320ns | 1.5\u00b5s | 4.0\u00b5s | | Order book insert | 20ns | 80ns | 420ns | | Order book remove | 20ns | 70ns | 270ns | | OAM lookup | 230ns | 960ns | 1.6\u00b5s | ## R",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "logotype/fixparser",
+    "requested_name": "logotype/fixparser",
+    "id": 41256780,
+    "url": "https://github.com/logotype/fixparser",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "FIX5.0SP2 parser.",
+    "stars": 51,
+    "forks": 13,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "fdbb33937b090f8d551a57c8c2f179d9cd13b250",
+    "last_commit_date": "2018-08-04T19:02:31Z",
+    "pushed_at_not_commit_date": "2018-08-04T19:02:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "logotype",
+        "contributions": 110,
+        "type": "User"
+      },
+      {
+        "login": "jonfreedman",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "DusanMinic",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dgt79",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "sami-sweng",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/logotype/fixparser/issues/15",
+      "created_at": "2019-08-13T08:21:31Z",
+      "state": "closed",
+      "comments": 4,
+      "first_staff_comment_in_sample": "2019-08-15T07:26:02Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "829b62e7b5f06db5e4cdaf0e01ad81da6db5c44558c4ce27ef0f549a84ee908c",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "README.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/logotype/fixparser",
+      "commit": "https://github.com/logotype/fixparser/commit/fdbb33937b090f8d551a57c8c2f179d9cd13b250",
+      "readme": "https://github.com/logotype/fixparser/blob/fdbb33937b090f8d551a57c8c2f179d9cd13b250/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/logotype/fixparser/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/logotype/fixparser/contributors",
+      "issues": "https://api.github.com/repos/logotype/fixparser/issues"
+    },
+    "readme_excerpt": "# fixparser [Migrated to GitLab https://gitlab.com/logotype/fixparser](https://gitlab.com/logotype/fixparser)",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "lukerosiak/pysec",
+    "requested_name": "lukerosiak/pysec",
+    "id": 9861504,
+    "url": "https://github.com/lukerosiak/pysec",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Parse XBRL filings from the SEC's EDGAR in Python",
+    "stars": 346,
+    "forks": 144,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "b9ea1ca3e52d9656f01b1b2fa61b27a7ed0493f6",
+    "last_commit_date": "2014-01-22T21:15:22Z",
+    "pushed_at_not_commit_date": "2014-01-22T21:15:23Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "lukerosiak",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "blacksburg98",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/lukerosiak/pysec/issues/18",
+      "created_at": "2017-10-27T11:15:03Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "701ccda8403a1665f07a660226ece2b6e1c893077fafc195ac7e695a7a53f734",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "README.md",
+      "TODO.md",
+      "local_settings-example.py",
+      "manage.py",
+      "pysec",
+      "requirements.txt",
+      "settings.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/lukerosiak/pysec/blob/b9ea1ca3e52d9656f01b1b2fa61b27a7ed0493f6/requirements.txt",
+        "sha256": "3630fdf3cc2a68aab9d769ec84d74bb7eb83c6c8e4a78061e759ba37e76152b9"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "XBRL parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/lukerosiak/pysec",
+      "commit": "https://github.com/lukerosiak/pysec/commit/b9ea1ca3e52d9656f01b1b2fa61b27a7ed0493f6",
+      "readme": "https://github.com/lukerosiak/pysec/blob/b9ea1ca3e52d9656f01b1b2fa61b27a7ed0493f6/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/lukerosiak/pysec/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/lukerosiak/pysec/contributors",
+      "issues": "https://api.github.com/repos/lukerosiak/pysec/issues"
+    },
+    "readme_excerpt": "This is Django code that compiles a list of all SEC filings from EDGAR into SQL, allows you to download them at will, and parses 50+ key accounting terms from XBRL filings. It is also a Python XBRL parser that allows you to easily extract arbitrary XBRL terms while it handles the contexts, etc. appropriately. The XBRL parsing is translated from VB script written by Charles Hoffman, an accountant and XBRL expert, and reliably extracts more than 50 commonly used accounting terms. To set up the index of all SEC filings: Put this django app under manage.py and do your settings.py In settings.py, modify DATA_DIR = '/you/directory/to/download/files/to' and set your database python manage.py syncdb python manage.py sec_import_index This creates the Index() model. To download any filing, call .download() on that model instance. To get its XBRL attributes if it's an XBRL filing, call .xbrl() on it and look at the .fields attribute of the returned model. Or if you just want to use the Python XBRL parser on a .xml file: import xbrl x = xbrl.XBRL(PATH TO LOCAL XML 10-K FILING) print x.fields #a dict of the most important values To get any XBRL term: x.GetFactValue(XMBL TAG, \"Duration\" or \"Instant\" (depending on if it's a year-long or snapshot value)) For more basic usage, see example.py For an example of generating a CSV of a list of companies, see management/commands/xbrl_to_csv.py By Luk",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "lukstei/trading-backtest",
+    "requested_name": "lukstei/trading-backtest",
+    "id": 49152041,
+    "url": "https://github.com/lukstei/trading-backtest",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A stock backtesting engine written in Java. And a pairs trading (cointegration) strategy implementation using a bayesian kalman filter model",
+    "stars": 351,
+    "forks": 140,
+    "archived": false,
+    "fork": false,
+    "language": "Java",
+    "default_branch": "master",
+    "latest_commit": "f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86",
+    "last_commit_date": "2021-07-20T08:38:23Z",
+    "pushed_at_not_commit_date": "2021-07-20T08:38:23Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "lukstei",
+        "contributions": 25,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "fa8b2f32ecfde88d64c3866dd146a6ce0a9742655659cee093e2ccea6912ca2e",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "92058bd5f8799a4c2836b69340cda868cc914ff67890d2252afdecc54af3ae4b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "build.gradle",
+      "gradle",
+      "gradlew",
+      "gradlew.bat",
+      "img",
+      "settings.gradle",
+      "src"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W04",
+        "lane": "A",
+        "query": "backtesting engine"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/lukstei/trading-backtest",
+      "commit": "https://github.com/lukstei/trading-backtest/commit/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86",
+      "readme": "https://github.com/lukstei/trading-backtest/blob/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86/README.md",
+      "license": "https://github.com/lukstei/trading-backtest/blob/f9598b23d0ffaf18fdab3472cb3ed70cbf2b5c86/LICENSE",
+      "recent_commits": "https://api.github.com/repos/lukstei/trading-backtest/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/lukstei/trading-backtest/contributors",
+      "issues": "https://api.github.com/repos/lukstei/trading-backtest/issues"
+    },
+    "readme_excerpt": "## What? This is a general purpose lightweight backtesting engine for stocks, written in Java. Some advantages compared to other backtesting implementations are: * It uses a callback model and since it is implemented in java it should be pretty performant when running many backtests * Easily extensible * Strategies are easily debuggable using a Java IDE * Lightweight and therefore the backtesting engine is easily verifiable * Backtesting results are further analyzable in R or Excel since it uses a CSV output format ### Cointegration/Pairs trading I've written this library primarily to try out this particular strategy. The cointegration strategy, or also known as pairs trading strategy, tries to take two stocks and create a linear model to find a optimal hedge ratio between them in order create a stationary process. Assume stocks A and B with prices `Pa` and `Pb` respectively, we set `Pa = alpha + beta*Pb` and try to find optimal `alpha` and `beta`. One method to find `alpha` and `beta` is using a so called Kalman Filter which is a dynamic bayesian model and we use it as an online linear regression model to get our values. After we've found the values we look at the residuals given by `residuals = Pa - alpha - beta*Pb`, and if the last residual is greater than some threshold value you go short `n` A stocks and long `n*beta` B stocks, for some fixed `n`. For further explanation a",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2016 lukstei Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyrigh"
+  },
+  {
+    "full_name": "LuxAlgo/trade-journal",
+    "requested_name": "LuxAlgo/trade-journal",
+    "id": 1345440309,
+    "url": "https://github.com/LuxAlgo/trade-journal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "The open-source trade journal. Broker sync, P&L calendar, deep analytics, and AI reflection. Self-hosted, MIT, free.",
+    "stars": 42,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "4a92e6b11aa297f6ad9f56b15fd80d1ce647038c",
+    "last_commit_date": "2026-09-12T03:52:27Z",
+    "pushed_at_not_commit_date": "2026-09-12T03:52:27Z",
+    "commits_since_20260313_count_capped100": 33,
+    "recent_commit_authors": [
+      "ChristopherDownie",
+      "alexgrover",
+      "smack369"
+    ],
+    "contributors_sample": [
+      {
+        "login": "smack369",
+        "contributions": 22,
+        "type": "User"
+      },
+      {
+        "login": "ChristopherDownie",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "alexgrover",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/LuxAlgo/trade-journal/issues/8",
+      "created_at": "2026-09-12T15:49:03Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "827d0feb707ce8af1da8d75a852d9ef507671e8dce8678bc307767a08df0708b",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "1b008cf586117be793d621e875f6270aca14a8c7c31914e2371b39b6d6c01631",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".prettierignore",
+      ".prettierrc.json",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARKS.md",
+      "apps",
+      "docker-compose.yml",
+      "docs",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "scripts",
+      "tsconfig.base.json",
+      "vitest.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/package.json",
+        "sha256": "711be5c0482859768865b6a4163773693789e2910ac0729130770efbb1f39796"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      },
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/LuxAlgo/trade-journal",
+      "commit": "https://github.com/LuxAlgo/trade-journal/commit/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c",
+      "readme": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/README.md",
+      "license": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/LICENSE",
+      "recent_commits": "https://api.github.com/repos/LuxAlgo/trade-journal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/LuxAlgo/trade-journal/contributors",
+      "issues": "https://api.github.com/repos/LuxAlgo/trade-journal/issues"
+    },
+    "readme_excerpt": "Broker sync, deep analytics, a P&L calendar, trade replay, prop firm tracking, daily journaling with voice dictation, and AI reflection. Run it locally, or use it free inside LuxAlgo. Trade Journal is a [LuxAlgo](https://luxalgo.com) open-source project. Official repository: [github.com/LuxAlgo/trade-journal](https://github.com/LuxAlgo/trade-journal) [![npm](https://img.shields.io/npm/v/@luxalgo/journal-core?label=npm&color=white)](https://www.npmjs.com/package/@luxalgo/journal-core) [![License](https://img.shields.io/badge/license-MIT-white)](LICENSE) [![TypeScript](https://img.shields.io/badge/lang-TypeScript-white)](packages/core/src/types.ts) [![SQLite](https://img.shields.io/badge/db-SQLite-white)](#quickstart) [Quickstart](#quickstart) \u00b7 [Features](#features) \u00b7 [Screenshots](#screenshots) \u00b7 [How it works](#how-it-works) \u00b7 [Migrate](#migrating-from-tradezella-or-tradervue) \u00b7 [Edge Score](docs/edge-score.md) \u00b7 [Contributing](CONTRIBUTING.md) --- **Record every trade. See what actually works.** Connect a broker, drop in a statement export, or add trades manually from the dashboard. Trade Journal rebuilds your history into round-trip trades, a P&L calendar, deep analytics, and a daily journal you can type, dictate, or ask questions of with your own AI. Your journal lives in a local SQLite database; broker sync, market data, and AI connect to the services you choose. _Dashboar",
+    "license_excerpt": "MIT License Copyright (c) 2026 LuxAlgo Global, LLC Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyri"
+  }
+]

@@ -1,0 +1,1318 @@
+[
+  {
+    "full_name": "vchernoy/mbo-orderbook",
+    "requested_name": "vchernoy/mbo-orderbook",
+    "id": 1103056086,
+    "url": "https://github.com/vchernoy/mbo-orderbook",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Market-By-Order (MBO) data tools: DBN replay, streaming, consumption, and order book reconstruction.",
+    "stars": 2,
+    "forks": 1,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "main",
+    "latest_commit": "2c59cf31fc4bf524ff144986fb444bb7ab84b38f",
+    "last_commit_date": "2025-11-25T01:30:14Z",
+    "pushed_at_not_commit_date": "2025-11-25T01:30:18Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "vchernoy",
+        "contributions": 10,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "ead8006248826e3c0be4a14969e7af85721b1fd1af3af60d3b97c6c1d1dee0f1",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "README.md",
+      "mbo_tools",
+      "mypy.ini",
+      "pyproject.toml",
+      "requirements.txt",
+      "src"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/pyproject.toml",
+        "sha256": "9e174b53acf0f907711c342899205229dead9afc61913d1405449480bca6b17b"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/requirements.txt",
+        "sha256": "d86ef37b6c4b2e4ef0a818a5e7b0ca84569340d3d0de3c99cb52644e960424d1"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W02",
+        "lane": "C",
+        "query": "DBN market"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/vchernoy/mbo-orderbook",
+      "commit": "https://github.com/vchernoy/mbo-orderbook/commit/2c59cf31fc4bf524ff144986fb444bb7ab84b38f",
+      "readme": "https://github.com/vchernoy/mbo-orderbook/blob/2c59cf31fc4bf524ff144986fb444bb7ab84b38f/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/vchernoy/mbo-orderbook/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/vchernoy/mbo-orderbook/contributors",
+      "issues": "https://api.github.com/repos/vchernoy/mbo-orderbook/issues"
+    },
+    "readme_excerpt": "# mbo-orderbook Market-By-Order (MBO) data tools: DBN replay, streaming, consumption, and order book reconstruction. Rust playground for MBO order book tools: - `mbo-replay` \u2013 reads a DBN file, decodes MBO records, pretty-prints them. - `mbo-streamer-raw` \u2013 streams a DBN file as raw bytes over TCP. - `mbo-streamer` \u2013 decode+encode DBN streamer (buffered/streaming modes). - `mbo-consumer` \u2013 connects to a streamer, decodes DBN, prints records. `mbo-orderbook` is a Rust toolkit for working with **Market-By-Order (MBO)** market data in **Databento DBN format**. It includes tools for DBN replay, TCP streaming, raw feeding, and real-time MBO consumption. The project is structured as a multi-binary Rust workspace, designed to resemble a production-style market data pipeline. --- ## \u2728 Features ### \ud83d\udd39 Raw DBN Streaming (Zero-Copy) - Streams DBN files directly over TCP without decoding. - Supports: - **buffered mode** \u2013 file loaded once into memory, - **streaming mode** \u2013 chunked reads per client (constant memory). - Ideal for throughput tests and multi-client distribution. ### \ud83d\udd39 Decode + Encode DBN Streamer - Decodes DBN metadata & records with `AsyncDbnDecoder`. - Re-encodes records using `AsyncDbnEncoder`. - Allows filtering, transformation, rate limiting, etc. - Two modes: - **buffered** (load once), - **streaming** (decode per-connection). ### \ud83d\udd39 MBO Consumer - Connects to any DBN TCP",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "Verdenroz/finance-query",
+    "requested_name": "Verdenroz/finance-query",
+    "id": 783100934,
+    "url": "https://github.com/Verdenroz/finance-query",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open-source API for financial data. Get quotes, historical data, technical indicators, and more.",
+    "stars": 44,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "master",
+    "latest_commit": "cb249658c8ca64ad4a86207a68c7496d34c0b519",
+    "last_commit_date": "2026-09-12T13:25:40Z",
+    "pushed_at_not_commit_date": "2026-09-12T13:25:41Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Verdenroz",
+      "dependabot[bot]",
+      "soothfast-bot[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "Verdenroz",
+        "contributions": 1408,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 109,
+        "type": "Bot"
+      },
+      {
+        "login": "soothfast-bot[bot]",
+        "contributions": 46,
+        "type": "Bot"
+      },
+      {
+        "login": "Johnson-f",
+        "contributions": 30,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Verdenroz/finance-query/issues/497",
+      "created_at": "2026-09-12T11:56:09Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "6a299cb84c921661ac185c6dbe0ec21849739285453fa62ac62bda7c2da4cbac",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "50f206b37d936618482361abb2dfaa4ff25b16f0028e9dc4bc04e189b83a9588",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".config",
+      ".dockerignore",
+      ".env.template",
+      ".github",
+      ".gitignore",
+      ".mcp.json",
+      ".pre-commit-config.yaml",
+      ".soothfast",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Caddyfile",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "benches",
+      "deny.toml",
+      "docker-compose.override.yml",
+      "docker-compose.prod.yml",
+      "docker-compose.yml",
+      "docs",
+      "examples",
+      "finance-query-derive",
+      "finance-query-mcp",
+      "fuzz",
+      "llms.txt",
+      "monitoring",
+      "proto",
+      "sdks",
+      "server",
+      "soothfast-gate.lock",
+      "soothfast.lock",
+      "soothfast.toml",
+      "src",
+      "tests",
+      "v1"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/Verdenroz/finance-query/blob/cb249658c8ca64ad4a86207a68c7496d34c0b519/Cargo.toml",
+        "sha256": "a5e657575022472c675c4fcf60ec1323a7d6492b88a527adda9e81e48d2bf38b"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W04",
+        "lane": "topic",
+        "query": "topic:backtesting language:Rust"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Verdenroz/finance-query",
+      "commit": "https://github.com/Verdenroz/finance-query/commit/cb249658c8ca64ad4a86207a68c7496d34c0b519",
+      "readme": "https://github.com/Verdenroz/finance-query/blob/cb249658c8ca64ad4a86207a68c7496d34c0b519/README.md",
+      "license": "https://github.com/Verdenroz/finance-query/blob/cb249658c8ca64ad4a86207a68c7496d34c0b519/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Verdenroz/finance-query/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Verdenroz/finance-query/contributors",
+      "issues": "https://api.github.com/repos/Verdenroz/finance-query/issues"
+    },
+    "readme_excerpt": "Finance Query [![Crates.io](https://img.shields.io/crates/v/finance-query.svg)](https://crates.io/crates/finance-query) [![Documentation](https://docs.rs/finance-query/badge.svg)](https://docs.rs/finance-query) [![CI](https://github.com/Verdenroz/finance-query/actions/workflows/ci.yml/badge.svg)](https://github.com/Verdenroz/finance-query/actions/workflows/ci.yml) [![Docs coverage](https://verdenroz.github.io/finance-query/perf/badges/coverage.svg)](https://verdenroz.github.io/finance-query/coverage/) [![Soothfast gate](https://verdenroz.github.io/finance-query/perf/badges/gate.svg)](https://verdenroz.github.io/finance-query/perf/summary/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) Rust library, CLI, and HTTP server for querying financial data. ## Hosted API Free hosted version at **[finance-query.com](https://finance-query.com)**: ```bash # Get a quote curl \"https://finance-query.com/v2/quote/AAPL\" # Real-time streaming wscat -c \"wss://finance-query.com/v2/stream\" # GraphQL \u2014 interactive playground open \"https://finance-query.com/graphql\" # MCP \u2014 for AI agents (Claude, Cursor, Windsurf, etc.) # Add to your MCP client config: # { \"url\": \"https://finance-query.com/mcp\" } ``` ## What's in This Repository - **Library** (`finance-query`) - Core logic - **Server** (`finance-query-server`) - HTTP REST API, WebSocket, an",
+    "license_excerpt": "MIT License Copyright (c) 2024 Harvey Tseng Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright not"
+  },
+  {
+    "full_name": "virattt/ai-financial-agent",
+    "requested_name": "virattt/ai-financial-agent",
+    "id": 906406820,
+    "url": "https://github.com/virattt/ai-financial-agent",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A financial agent for investment research",
+    "stars": 2031,
+    "forks": 409,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1",
+    "last_commit_date": "2025-08-19T16:32:53Z",
+    "pushed_at_not_commit_date": "2025-08-19T16:32:55Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "virattt",
+        "contributions": 139,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/virattt/ai-financial-agent/issues/8",
+      "created_at": "2026-03-24T04:56:16Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "3d96a3ee19f4378bf5f14b7985c0066993da6e724c19e284405135ba62fc65e0",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "5809eb2eab284b24fc53b21484398fd264c6f929d3b32ecdc7108a89f037e943",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".eslintrc.json",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "app",
+      "biome.jsonc",
+      "components.json",
+      "components",
+      "drizzle.config.ts",
+      "hooks",
+      "instrumentation.ts",
+      "lib",
+      "middleware.ts",
+      "next-env.d.ts",
+      "next.config.ts",
+      "package.json",
+      "pnpm-lock.yaml",
+      "postcss.config.mjs",
+      "public",
+      "tailwind.config.ts",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/package.json",
+        "sha256": "11503ce1444882cd70c40c0f3a2d0e201ae67850886d70cb323ee4830456db3e"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "A",
+        "query": "investment research"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/virattt/ai-financial-agent",
+      "commit": "https://github.com/virattt/ai-financial-agent/commit/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1",
+      "readme": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/README.md",
+      "license": "https://github.com/virattt/ai-financial-agent/blob/836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1/LICENSE",
+      "recent_commits": "https://api.github.com/repos/virattt/ai-financial-agent/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/virattt/ai-financial-agent/contributors",
+      "issues": "https://api.github.com/repos/virattt/ai-financial-agent/issues"
+    },
+    "readme_excerpt": "# AI Financial Agent \ud83e\udd16 This is a proof of conncept AI financial agent. The goal of this project is to explore the use of AI for investment research. This project is for **educational** purposes only and is not intended for real trading or investment. \ud83d\udc4b **Demo**: You can use a live demo of this project [here](https://chat.financialdatasets.ai/). ## Disclaimer This project is for **educational and research purposes only**. - Not intended for real trading or investment - No warranties or guarantees provided - Past performance does not indicate future results - Creator assumes no liability for financial losses - Consult a financial advisor for investment decisions By using this software, you agree to use it solely for learning purposes. ## Table of Contents \ud83d\udcd6 - [Features](#features) - [Setup](#setup) - [Run the Agent](#run-the-agent) - [Financial Data API](#financial-data-api) - [Deploy Your Own Agent](#deploy-your-own-agent) ## Features - [AI Financial Agent](https://chat.financialdatasets.ai) - Productized version of this project - Chat assistant for financial research, stock analysis, and more - Uses generative UI to display stock prices, fundamentals, and more - [Financial Datasets API](https://financialdatasets.ai) - Access to real-time and historical stock market data - Data is optimized for AI financial agents - 30+ years of financial data with 100% market coverage - Documen",
+    "license_excerpt": "Copyright 2024 Vercel, Inc. Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing p"
+  },
+  {
+    "full_name": "virattt/ai-hedge-fund",
+    "requested_name": "virattt/ai-hedge-fund",
+    "id": 896144595,
+    "url": "https://github.com/virattt/ai-hedge-fund",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "An AI Hedge Fund Team",
+    "stars": 63362,
+    "forks": 11116,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "fc1bf250ead209ae5f02c39c3d0062c4bb554505",
+    "last_commit_date": "2026-09-03T20:28:07Z",
+    "pushed_at_not_commit_date": "2026-09-03T20:28:11Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "GeorgeCCK",
+      "MukundaKatta",
+      "Talha Jubair Siam",
+      "huyua9",
+      "muratclk",
+      "octo-patch",
+      "virattt",
+      "wuyua9",
+      "yamayanagi-graf"
+    ],
+    "contributors_sample": [
+      {
+        "login": "virattt",
+        "contributions": 816,
+        "type": "User"
+      },
+      {
+        "login": "arsaboo",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "jsemldonado",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "KittatamSaisaard",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "ak4631",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "andorsk",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Rai220",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "quantumsheep",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ksylvan",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "bhavna3",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Tobiasmidskards",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "swappysh",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "SimonLiu423",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "GNURub",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "rdparedes",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "salemgolemugoo",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kashifrazzaqui",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "yamayanagi-graf",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "wuyua9",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "MukundaKatta",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "huyua9",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "GuanyuWang1234",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "chadtzeo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "yashar1908",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ChiTownTimmy23",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "spirosrap",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ScottBrenner",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "prgyn8",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "muratclk",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "LuRaCaVez",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/virattt/ai-hedge-fund/issues/711",
+      "created_at": "2026-09-05T09:49:17Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "aa17b6530bc4a5679e17cf1b460ce1018aaed03b3f23a5be6e1a14b4eb067577",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "6cb192c4a37c69c84459d2e1b3da7af51b06d91e35be521c898107bdae18e2a4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "ROADMAP.md",
+      "VISION.md",
+      "hedge_fund",
+      "poetry.lock",
+      "pyproject.toml"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/virattt/ai-hedge-fund/blob/fc1bf250ead209ae5f02c39c3d0062c4bb554505/pyproject.toml",
+        "sha256": "4658513fe53a6d1bfab3415d4d6cb6d984b70400e1ac9c30e3680a719dba4bb6"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "adoption",
+      "liftable"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "virattt/ai-hedge-fund",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "ai-hedge-fund",
+      "unit_class": "capability",
+      "resolved": 0,
+      "link_method": "name-only",
+      "downloads": 175,
+      "downloads_period": "last-month",
+      "dependent_repos": 0,
+      "dependent_pkgs": 0,
+      "rank_avg": 24.781541283264357,
+      "reach_percentile": 75.2,
+      "reuse_value": 75,
+      "stars": 60458,
+      "adoption_score": null,
+      "real_value": null,
+      "verdict": "unresolved",
+      "fame_gap": null,
+      "raw_json": "{\"dl\": 175, \"deprepos\": 0, \"deppkgs\": 0, \"rank_avg\": 24.781541283264357, \"link\": \"name-only\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "liftability_row": {
+      "full_name": "virattt/ai-hedge-fund",
+      "stars": 60458,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "capability",
+      "reuse_value": 75,
+      "liftability": 65,
+      "fame_gap": 10,
+      "cat_slug": "agent-platform",
+      "cat_name": "Standalone Agent Platform",
+      "description": "An AI Hedge Fund Team"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/virattt/ai-hedge-fund",
+      "commit": "https://github.com/virattt/ai-hedge-fund/commit/fc1bf250ead209ae5f02c39c3d0062c4bb554505",
+      "readme": "https://github.com/virattt/ai-hedge-fund/blob/fc1bf250ead209ae5f02c39c3d0062c4bb554505/README.md",
+      "license": "https://github.com/virattt/ai-hedge-fund/blob/fc1bf250ead209ae5f02c39c3d0062c4bb554505/LICENSE",
+      "recent_commits": "https://api.github.com/repos/virattt/ai-hedge-fund/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/virattt/ai-hedge-fund/contributors",
+      "issues": "https://api.github.com/repos/virattt/ai-hedge-fund/issues"
+    },
+    "readme_excerpt": "# AI Hedge Fund This is a proof of concept for an AI-powered hedge fund. The goal of this project is to explore the use of AI to make trading decisions. This project is for **educational** purposes only and is not intended for real trading or investment. > **\ud83d\udea7 The project is evolving.** We're rebuilding it into a persistent, always-on AI hedge fund \u2014 a *fund* as a first-class entity you can backtest, paper-trade, and (opt-in) run live, with the investor agents reimagined as pluggable, backtestable \"alpha models.\" Read the **[Vision \u2192](VISION.md)** and the **[Roadmap \u2192](ROADMAP.md)**. Note: the system does not actually make any trades. [![Twitter Follow](https://img.shields.io/twitter/follow/virattt?style=social)](https://twitter.com/virattt) ## Disclaimer This project is for **educational and research purposes only**. - Not intended for real trading or investment - No investment advice or guarantees provided - Creator assumes no liability for financial losses - Consult a financial advisor for investment decisions - Past performance does not indicate future results By using this software, you agree to use it solely for learning purposes. ## How to Install ```bash pipx install aihf ``` (or `uv tool install aihf`, or `pip install aihf` into an environment of your choice) Then run it from anywhere: ```bash aihf ``` ### API keys The app asks for keys the first time it needs them and",
+    "license_excerpt": "MIT License Copyright (c) 2024 Virat Singh Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "virattt/dexter",
+    "requested_name": "virattt/dexter",
+    "id": 1076426995,
+    "url": "https://github.com/virattt/dexter",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "An autonomous agent for deep financial research",
+    "stars": 27596,
+    "forks": 3410,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "ecaed3011f24ea24ef687ab536aa7f22f7294038",
+    "last_commit_date": "2026-08-04T15:19:48Z",
+    "pushed_at_not_commit_date": "2026-08-04T15:20:42Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Aditya190803",
+      "DogInfantry",
+      "HuzaifaInshal",
+      "abrclano",
+      "be-digital-it",
+      "fix2015",
+      "swrzalek",
+      "takinaga-dev",
+      "vdalal",
+      "virattt"
+    ],
+    "contributors_sample": [
+      {
+        "login": "virattt",
+        "contributions": 434,
+        "type": "User"
+      },
+      {
+        "login": "MKDev11",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "gupta-8",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "sjhddh",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "Crystora",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "vdalal",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "swrzalek",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "claytonlin1110",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "takinaga-dev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rychavda",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rushichavda",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "marvelefe",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kiannidev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "filippos95",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "abrclano",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sharpenteeth",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dimaland1",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fix2015",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "saurav0369",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "HuzaifaInshal",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "axyr",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "be-digital-it",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DogInfantry",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Aditya190803",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/virattt/dexter/issues/294",
+      "created_at": "2026-08-11T07:25:05Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "982f4294335c2941b01297d00f4da6756a1b73dd9c02cdad705e58db767e3a09",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "README.md",
+      "SOUL.md",
+      "bun.lock",
+      "env.example",
+      "jest.config.js",
+      "package-lock.json",
+      "package.json",
+      "scripts",
+      "src",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/virattt/dexter/blob/ecaed3011f24ea24ef687ab536aa7f22f7294038/package.json",
+        "sha256": "842fc69f9ce394bb87ea7e0de967761548aa3a6ca674e2161012d417cc825d9f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/virattt/dexter",
+      "commit": "https://github.com/virattt/dexter/commit/ecaed3011f24ea24ef687ab536aa7f22f7294038",
+      "readme": "https://github.com/virattt/dexter/blob/ecaed3011f24ea24ef687ab536aa7f22f7294038/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/virattt/dexter/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/virattt/dexter/contributors",
+      "issues": "https://api.github.com/repos/virattt/dexter/issues"
+    },
+    "readme_excerpt": "# Dexter \ud83e\udd16 Dexter is an autonomous financial research agent that thinks, plans, and learns as it works. It performs analysis using task planning, self-reflection, and real-time market data. Think Claude Code, but built specifically for financial research. ## Table of Contents - [\ud83d\udc4b Overview](#-overview) - [\u2705 Prerequisites](#-prerequisites) - [\ud83d\udcbb How to Install](#-how-to-install) - [\ud83d\ude80 How to Run](#-how-to-run) - [\ud83d\udcca How to Evaluate](#-how-to-evaluate) - [\ud83d\udc1b How to Debug](#-how-to-debug) - [\ud83d\udcf1 How to Use with WhatsApp](#-how-to-use-with-whatsapp) - [\ud83e\udd1d How to Contribute](#-how-to-contribute) - [\ud83d\udcc4 License](#-license) ## \u26a0\ufe0f Disclaimer This project is for **educational, entertainment, and informational purposes only**. It is not intended for real trading or investment. - Not financial, investment, tax, or legal advice - No guarantees of accuracy, completeness, or fitness for any purpose - Outputs may be incorrect, incomplete, or out of date - Creator and contributors assume no liability for any financial losses or damages - Consult a licensed financial advisor before making investment decisions - Past performance does not indicate future results By using this software, you agree to use it solely for learning and informational purposes and accept all risks associated with its use. ## \ud83d\udc4b Overview Dexter takes complex financial questions and turns them into clear, step-by-step research plans.",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "vnpy/vnpy",
+    "requested_name": "vnpy/vnpy",
+    "id": 31522041,
+    "url": "https://github.com/vnpy/vnpy",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\u57fa\u4e8ePython\u7684\u5f00\u6e90\u91cf\u5316\u4ea4\u6613\u5e73\u53f0\u5f00\u53d1\u6846\u67b6",
+    "stars": 45363,
+    "forks": 12463,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09",
+    "last_commit_date": "2026-08-06T14:30:12Z",
+    "pushed_at_not_commit_date": "2026-09-13T06:36:50Z",
+    "commits_since_20260313_count_capped100": 25,
+    "recent_commit_authors": [
+      "noranhe",
+      "sqsge",
+      "vnpy"
+    ],
+    "contributors_sample": [
+      {
+        "login": "vnpy",
+        "contributions": 2945,
+        "type": "User"
+      },
+      {
+        "login": "1122455801",
+        "contributions": 1589,
+        "type": "User"
+      },
+      {
+        "login": "vnpy-dev-01",
+        "contributions": 599,
+        "type": "User"
+      },
+      {
+        "login": "noranhe",
+        "contributions": 480,
+        "type": "User"
+      },
+      {
+        "login": "nanoric",
+        "contributions": 449,
+        "type": "User"
+      },
+      {
+        "login": "chenxy123",
+        "contributions": 253,
+        "type": "User"
+      },
+      {
+        "login": "Edanflame",
+        "contributions": 57,
+        "type": "User"
+      },
+      {
+        "login": "xldistance",
+        "contributions": 36,
+        "type": "User"
+      },
+      {
+        "login": "winni18",
+        "contributions": 23,
+        "type": "User"
+      },
+      {
+        "login": "lamter",
+        "contributions": 21,
+        "type": "User"
+      },
+      {
+        "login": "youyuanrsq",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "vigarbuaa",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "LimingFang",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "zhu4ling3",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "ares89",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "Gwill",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "border",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "santoshlite",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "shinny-yangyang",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "qqqlyx",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "lhzw",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "wisfern",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "playfund",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "bigtan",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "joans321",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "crystalphi",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "triptips-top",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "rian-dev",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "lyic",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "cccbbbaaab",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/vnpy/vnpy/issues/3792",
+      "created_at": "2026-07-31T04:34:10Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "b8b9901c6c59c46b8cec3d9e2afe27edf9bbba4474df8cced1d14c7c7cca2b38",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "81294e5bcba945564df8586f1d789b016001b7b43eb4de97736679dd882cf191",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      "README_ENG.md",
+      "docs",
+      "examples",
+      "install.bat",
+      "install.sh",
+      "install_osx.sh",
+      "pyproject.toml",
+      "tests",
+      "vnpy"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/vnpy/vnpy/blob/fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09/pyproject.toml",
+        "sha256": "961e374dc212931955698aa33db7e6f1478b5896ebea2c02a521fb41d05f0413"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "adoption",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "vnpy/vnpy",
+      "capability_tag": "none",
+      "category_slug": "fullstack-app-starter",
+      "summary": "Open-source Python framework for quantitative trading platforms",
+      "reuse_value": 75,
+      "stars": 41994,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/vnpy/vnpy",
+      "rank_score": 75419940
+    },
+    "shelf_row": null,
+    "adoption_row": {
+      "full_name": "vnpy/vnpy",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "vnpy",
+      "unit_class": "substrate",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 36512,
+      "downloads_period": "last-month",
+      "dependent_repos": 7,
+      "dependent_pkgs": 2,
+      "rank_avg": 5.46828638238521,
+      "reach_percentile": 94.5,
+      "reuse_value": 75,
+      "stars": 41994,
+      "adoption_score": 36.1,
+      "real_value": 94,
+      "verdict": "promote",
+      "fame_gap": 41.6,
+      "raw_json": "{\"dl\": 36512, \"deprepos\": 7, \"deppkgs\": 2, \"rank_avg\": 5.46828638238521, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    },
+    "liftability_row": {
+      "full_name": "vnpy/vnpy",
+      "stars": 41994,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "substrate",
+      "reuse_value": 75,
+      "liftability": 5,
+      "fame_gap": 70,
+      "cat_slug": "fullstack-app-starter",
+      "cat_name": "Full-Stack App Starter / Boilerplate",
+      "description": "\u57fa\u4e8ePython\u7684\u5f00\u6e90\u91cf\u5316\u4ea4\u6613\u5e73\u53f0\u5f00\u53d1\u6846\u67b6"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/vnpy/vnpy",
+      "commit": "https://github.com/vnpy/vnpy/commit/fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09",
+      "readme": "https://github.com/vnpy/vnpy/blob/fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09/README.md",
+      "license": "https://github.com/vnpy/vnpy/blob/fa5206fe63836f3f8cd1ebd7168fbd19a5e2ff09/LICENSE",
+      "recent_commits": "https://api.github.com/repos/vnpy/vnpy/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/vnpy/vnpy/contributors",
+      "issues": "https://api.github.com/repos/vnpy/vnpy/issues"
+    },
+    "readme_excerpt": "# VeighNa - By Traders, For Traders, AI-Powered. \ud83d\udcac Want to read this in **english** ? Go [**here**](README_ENG.md) VeighNa\u662f\u4e00\u5957\u57fa\u4e8ePython\u7684\u5f00\u6e90\u91cf\u5316\u4ea4\u6613\u7cfb\u7edf\u5f00\u53d1\u6846\u67b6\uff0c\u5728\u5f00\u6e90\u793e\u533a\u6301\u7eed\u4e0d\u65ad\u7684\u8d21\u732e\u4e0b\u4e00\u6b65\u6b65\u6210\u957f\u4e3a\u591a\u529f\u80fd\u91cf\u5316\u4ea4\u6613\u5e73\u53f0\uff0c\u81ea\u53d1\u5e03\u4ee5\u6765\u5df2\u7ecf\u79ef\u7d2f\u4e86\u4f17\u591a\u6765\u81ea\u91d1\u878d\u673a\u6784\u6216\u76f8\u5173\u9886\u57df\u7684\u7528\u6237\uff0c\u5305\u62ec\u79c1\u52df\u57fa\u91d1\u3001\u8bc1\u5238\u516c\u53f8\u3001\u671f\u8d27\u516c\u53f8\u7b49\u3002 \u5728\u4f7f\u7528VeighNa\u8fdb\u884c\u4e8c\u6b21\u5f00\u53d1\uff08\u7b56\u7565\u3001\u6a21\u5757\u7b49\uff09\u7684\u8fc7\u7a0b\u4e2d\u6709\u4efb\u4f55\u7591\u95ee\uff0c\u8bf7\u67e5\u770b[**VeighNa\u9879\u76ee\u6587\u6863**](https://www.vnpy.com/docs/cn/index.html)\uff0c\u5982\u679c\u65e0\u6cd5\u89e3\u51b3\u8bf7\u524d\u5f80[**\u5b98\u65b9\u793e\u533a\u8bba\u575b**](https://www.vnpy.com/forum/)\u7684\u3010\u63d0\u95ee\u6c42\u52a9\u3011\u677f\u5757\u5bfb\u6c42\u5e2e\u52a9\uff0c\u4e5f\u6b22\u8fce\u5728\u3010\u7ecf\u9a8c\u5206\u4eab\u3011\u677f\u5757\u5206\u4eab\u4f60\u7684\u4f7f\u7528\u5fc3\u5f97\uff01 **\u60f3\u8981\u66f4\u4fbf\u6377\u5730\u4e0a\u624b\u671f\u8d27\u91cf\u5316\u4ea4\u6613\uff1f** VeighNa Fusion\u73b0\u5df2\u5728\u5408\u4f5c\u671f\u8d27\u516c\u53f8\u4e0a\u7ebf\uff0c\u5e26\u6765\u4e00\u7ad9\u5f0fCTA\u91cf\u5316\u4ea4\u6613\u4e0e\u667a\u80fd\u6295\u7814\u4f53\u9a8c\uff1a * **\u5f00\u7bb1\u5373\u7528**\uff1a\u901a\u8fc7\u5408\u4f5c\u671f\u8d27\u516c\u53f8\u7533\u8bf7\u5f00\u901a\u6743\u9650\uff0c\u65e0\u9700\u81ea\u884c\u5b8c\u6210\u7e41\u7410\u7684\u63a5\u5165\u6d4b\u8bd5 * **\u6570\u636e\u4e2d\u5fc3**\uff1a\u63d0\u4f9b\u5386\u53f2\u6570\u636e\u4e0b\u8f7d\u548c\u7ba1\u7406\u80fd\u529b\uff0c\u964d\u4f4e\u91cf\u5316\u521d\u5b66\u8005\u7684\u6570\u636e\u51c6\u5907\u95e8\u69db * **\u667a\u7b56\u6295\u7814**\uff1a\u6839\u636e\u7b56\u7565\u63cf\u8ff0\u8f85\u52a9\u68b3\u7406\u903b\u8f91\u3001\u751f\u6210\u4ee3\u7801\uff0c\u5e76\u8854\u63a5\u5386\u53f2\u56de\u6d4b\u4e0e\u53c2\u6570\u4f18\u5316\u6d41\u7a0b \u9605\u8bfb[\u4ea7\u54c1\u4ecb\u7ecd\u6587\u7ae0](https://mp.weixin.qq.com/s/VknqBMnR3tUpWoKuTA8V4A)\u6216\u67e5\u770b[VeighNa Fusion\u6587\u6863](https://www.vnpy.com/docs/cn/fusion/index.html)\u3002 \u5982\u9700\u54a8\u8be2\u5f00\u901a\uff0c\u8bf7\u626b\u63cf\u4e0b\u65b9\u4e8c\u7ef4\u7801\u6dfb\u52a0\u3010Fusion\u5c0f\u52a9\u624b\u3011\uff1a ## AI-Powered VeighNa\u53d1\u5e03\u5341\u5468\u5e74\u4e4b\u9645\u6b63\u5f0f\u63a8\u51fa4.0\u7248\u672c\uff0c\u91cd\u78c5\u65b0\u589e\u9762\u5411AI\u91cf\u5316\u7b56\u7565\u7684[vnpy.alpha](./vnpy/alpha)\u6a21\u5757\uff0c\u4e3a\u4e13\u4e1a\u91cf\u5316\u4ea4\u6613\u5458\u63d0\u4f9b**\u4e00\u7ad9\u5f0f\u591a\u56e0\u5b50\u673a\u5668\u5b66\u4e60\uff08ML\uff09\u7b56\u7565\u5f00\u53d1\u3001\u6295\u7814\u548c\u5b9e\u76d8\u4ea4\u6613\u89e3\u51b3\u65b9\u6848**\uff1a * :bar_chart: **[dataset](./vnpy/alpha/dataset)**\uff1a\u56e0\u5b50\u7279\u5f81\u5de5\u7a0b * \u4e13\u4e3aML\u7b97\u6cd5\u8bad\u7ec3\u4f18\u5316\u8bbe\u8ba1\uff0c\u652f\u6301\u9ad8\u6548\u6279\u91cf\u7279\u5f81\u8ba1\u7b97\u4e0e\u5904\u7406 * \u5185\u7f6e\u4e30\u5bcc\u7684\u56e0\u5b50\u7279\u5f81\u8868\u8fbe\u5f0f\u8ba1\u7b97\u5f15\u64ce\uff0c\u5b9e\u73b0\u5feb\u901f\u4e00\u952e\u751f\u6210\u8bad\u7ec3\u6570\u636e * \u652f\u6301\u81ea\u5b9a\u4e49\u8868\u8fbe\u5f0f\u51fd\u6570\u6ce8\u518c\uff0c\u5e76\u63d0\u4f9b\u7f3a\u5931\u503c\u586b\u5145\u3001\u65e0\u7a77\u503c\u66ff\u6362\u3001\u65f6\u5e8f\u6807\u51c6\u5316\u3001\u7279\u5f81\u5220\u9664\u7b49\u5e38\u7528\u6570\u636e\u5904\u7406\u51fd\u6570 * [Alpha 158](./vnpy/alpha/dataset/datasets/alpha_158.py)\uff1a\u6e90\u4e8e\u5fae\u8f6fQlib\u9879\u76ee\u7684\u80a1\u7968\u5e02\u573a\u7279\u5f81\u96c6\u5408\uff0c\u6db5\u76d6K\u7ebf\u5f62\u6001\u3001\u4ef7\u683c\u8d8b\u52bf\u3001\u65f6\u5e8f\u6ce2\u52a8\u7b49\u591a\u7ef4\u5ea6\u91cf\u5316\u56e0\u5b50 * :bulb: **[model](./vnpy/alpha/model)**\uff1a\u9884\u6d4b\u6a21\u578b\u8bad\u7ec3 * \u63d0\u4f9b\u6807\u51c6\u5316\u7684ML\u6a21\u578b\u5f00\u53d1\u6a21\u677f\uff0c\u5927\u5e45\u7b80\u5316\u6a21\u578b\u6784\u5efa\u4e0e\u8bad\u7ec3\u6d41\u7a0b * \u7edf\u4e00API\u63a5\u53e3\u8bbe\u8ba1\uff0c\u652f\u6301\u65e0\u7f1d\u5207\u6362\u4e0d\u540c\u7b97\u6cd5\u8fdb\u884c\u6027\u80fd\u5bf9\u6bd4\u6d4b\u8bd5 * \u96c6\u6210\u591a\u79cd\u4e3b\u6d41\u673a\u5668\u5b66\u4e60\u7b97\u6cd5\uff1a * [Lasso](./vnpy/alpha/model/models/lasso_model.py)\uff1a\u7ecf\u5178Lasso\u56de\u5f52\u6a21\u578b\uff0c\u901a\u8fc7L1\u6b63\u5219\u5316\u5b9e\u73b0\u7279\u5f81\u9009\u62e9 * [LightGBM](./vnpy/alpha/model/models/lgb",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015-present, Xiaoyou Chen Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The "
+  },
+  {
+    "full_name": "vollib/py_vollib",
+    "requested_name": "vollib/py_vollib",
+    "id": 87398184,
+    "url": "https://github.com/vollib/py_vollib",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 434,
+    "forks": 94,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "11f2058f709328339e3906d99cb04ff41af97776",
+    "last_commit_date": "2026-04-30T08:11:13Z",
+    "pushed_at_not_commit_date": "2026-05-29T02:58:13Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "lbrichards"
+    ],
+    "contributors_sample": [
+      {
+        "login": "kaze",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "lbrichards",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/vollib/py_vollib/issues/35",
+      "created_at": "2026-06-04T11:09:43Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "d36c5228c0d64c450a307867436ed54034d652c0fee793517f22968f81ecca39",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f9a2d9de662e0e440a420120e505cc2bd570356e4726d05d88cd23ebf0121a4a",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "README.rst",
+      "dev-requirements.txt",
+      "docs",
+      "poetry.lock",
+      "py_vollib",
+      "pyproject.toml",
+      "setup.py",
+      "tests",
+      "vollib"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/vollib/py_vollib/blob/11f2058f709328339e3906d99cb04ff41af97776/pyproject.toml",
+        "sha256": "89504c776d94914ed4953ac80e5aaa216b22365b93954bf3f63078eae09d16d8"
+      },
+      "setup.py": {
+        "url": "https://github.com/vollib/py_vollib/blob/11f2058f709328339e3906d99cb04ff41af97776/setup.py",
+        "sha256": "fb21a9262f4980b8d85dd5faef8639c5bfc543f9c9a742575dfe42ad427cee7a"
+      }
+    },
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "vollib/py_vollib",
+      "capability_tag": "none",
+      "category_slug": "math-optimization-solver",
+      "summary": "Python library for options volatility and pricing calculations",
+      "reuse_value": 75,
+      "stars": 412,
+      "license": "MIT",
+      "language": "Python",
+      "url": "https://github.com/vollib/py_vollib",
+      "rank_score": 75004120
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "vollib/py_vollib",
+      "stars": 412,
+      "license": "MIT",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "math-optimization-solver",
+      "cat_name": "Mathematical Optimization / Solver Library",
+      "description": ""
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/vollib/py_vollib",
+      "commit": "https://github.com/vollib/py_vollib/commit/11f2058f709328339e3906d99cb04ff41af97776",
+      "readme": "https://github.com/vollib/py_vollib/blob/11f2058f709328339e3906d99cb04ff41af97776/README.md",
+      "license": "https://github.com/vollib/py_vollib/blob/11f2058f709328339e3906d99cb04ff41af97776/LICENSE",
+      "recent_commits": "https://api.github.com/repos/vollib/py_vollib/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/vollib/py_vollib/contributors",
+      "issues": "https://api.github.com/repos/vollib/py_vollib/issues"
+    },
+    "readme_excerpt": "# vollib `vollib` is a python library for calculating option prices, implied volatility and greeks. At its core is Peter Jaeckel's source code for `LetsBeRational`, an extremely fast and accurate algorithm for obtaining Black's implied volatility from option prices. Building on this solid foundation, `vollib` provides functions to calculate option prices, implied volatility and greeks using Black, Black-Scholes, and Black-Scholes-Merton. `vollib` implements both analytical and numerical greeks for each of the three pricing formulae. ## Input domain Strike prices (`K`) must be strictly positive for the Black, Black-Scholes, and Black-Scholes-Merton pricing functions. A zero strike call has a well-defined mathematical limit, but `vollib` does not special-case that boundary; it preserves the domain and behavior of the underlying LetsBeRational implementation. If an application wants to support `K = 0`, handle that boundary before calling `vollib`. This domain requirement applies equally to calls and puts: | Strike input | Calls | Puts | | --- | --- | --- | | `K = 0` | raises `ZeroDivisionError` | raises `ZeroDivisionError` | | `K < 0` | raises `ValueError` | raises `ValueError` | ## Installation `vollib` 1.0.7 supports Python 3.9 through 3.12. ```bash pip install vollib ``` ## Package history The original `vollib 0.1.x` package was the Python 2.7/C-SWIG implementation. It remains ",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015, Gammon Capital LLC Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The ab"
+  },
+  {
+    "full_name": "volodymyr-kovtun/Pitly",
+    "requested_name": "volodymyr-kovtun/Pitly",
+    "id": 1181149420,
+    "url": "https://github.com/volodymyr-kovtun/Pitly",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Polish PIT-38 tax calculator for Interactive Brokers \u2014 converts trades & dividends to PLN,   calculates FIFO capital gains, and generates ready-to-file PIT-38 values",
+    "stars": 45,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "C#",
+    "default_branch": "main",
+    "latest_commit": "a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca",
+    "last_commit_date": "2026-05-04T15:55:20Z",
+    "pushed_at_not_commit_date": "2026-05-04T15:58:00Z",
+    "commits_since_20260313_count_capped100": 40,
+    "recent_commit_authors": [
+      "Michalaq",
+      "hatedabamboo",
+      "rademax",
+      "volodymyr-kovtun"
+    ],
+    "contributors_sample": [
+      {
+        "login": "volodymyr-kovtun",
+        "contributions": 35,
+        "type": "User"
+      },
+      {
+        "login": "rademax",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Michalaq",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hatedabamboo",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/volodymyr-kovtun/Pitly/issues/19",
+      "created_at": "2026-04-25T21:48:47Z",
+      "state": "closed",
+      "comments": 3,
+      "first_staff_comment_in_sample": "2026-04-27T16:25:20Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "c91a461c256d107c9ed7f8e0f01602801fb340415f9b98d22f68e4e74c1a7398",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "f9c750b5670162a0cd7f6121c17302bcbfe1a677fbc25d6b1dbebcdd7fb1cedd",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.production.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "backend",
+      "compose.ghcr.yml",
+      "compose.production.yml",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "frontend",
+      "ops",
+      "samples",
+      "social-preview.png"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/volodymyr-kovtun/Pitly",
+      "commit": "https://github.com/volodymyr-kovtun/Pitly/commit/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca",
+      "readme": "https://github.com/volodymyr-kovtun/Pitly/blob/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca/README.md",
+      "license": "https://github.com/volodymyr-kovtun/Pitly/blob/a8f7f243c1ca5bb78c4b2cea8a9ebb02e90a0cca/LICENSE",
+      "recent_commits": "https://api.github.com/repos/volodymyr-kovtun/Pitly/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/volodymyr-kovtun/Pitly/contributors",
+      "issues": "https://api.github.com/repos/volodymyr-kovtun/Pitly/issues"
+    },
+    "readme_excerpt": "Pitly PIT-38 tax calculator for foreign stock investors in Poland. Upload your broker statement CSV and get exact PIT-38 field values in seconds. pitly.xyz --- ## Why this exists If you invest through a foreign broker from Poland, every year by **April 30** you must file a **PIT-38** tax declaration. This means manually converting dozens (or hundreds) of transactions to PLN using the correct NBP exchange rate, calculating capital gains with FIFO, figuring out dividend tax with foreign withholding credits, and filling in the right fields on the form. Doing this by hand is tedious, time-consuming, and error-prone. **Pitly automates the entire process.** Upload your broker statement CSV and get the exact values to enter in your PIT-38 \u2014 in seconds, not hours. > Supported brokers: **Interactive Brokers** and **Trading 212**. ## Features - **One-click CSV import** \u2014 drag & drop one or more broker statements, the app merges prior years when FIFO history is needed - **Automatic PLN conversion** \u2014 fetches official [NBP mid exchange rates](https://api.nbp.pl/) for every transaction date (last business day before, per Polish tax law) - **FIFO capital gains calculation** \u2014 buy lots are queued per symbol, sells dequeue first-in-first-out to compute cost basis in PLN - **Dividend tax with foreign credit** \u2014 calculates Polish 19% tax and offsets US withholding (typically 15% under the PL-US ",
+    "license_excerpt": "MIT License Copyright (c) 2025 Volodymyr Kovtun Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright"
+  }
+]

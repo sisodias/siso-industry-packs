@@ -1,0 +1,1044 @@
+[
+  {
+    "full_name": "binance/binance-websocket-examples",
+    "requested_name": "binance/binance-websocket-examples",
+    "id": 275789187,
+    "url": "https://github.com/binance/binance-websocket-examples",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Example code in Nodejs that demonstrate how to subscribe to Binance Websocket server.",
+    "stars": 164,
+    "forks": 52,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "629833c6ffbf6656eee4bd0cf567c69f2de20ce6",
+    "last_commit_date": "2023-12-21T02:23:21Z",
+    "pushed_at_not_commit_date": "2024-03-19T23:25:48Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "2pd",
+        "contributions": 39,
+        "type": "User"
+      },
+      {
+        "login": "ishuen",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 4,
+        "type": "Bot"
+      },
+      {
+        "login": "jorisw",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iSCJT",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/binance/binance-websocket-examples/issues/25",
+      "created_at": "2021-10-25T13:50:49Z",
+      "state": "closed",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "1aed8cbc6475c037be00389bc0d39b38ae190b1a5dc6bd49653d5c1c8384ba1f",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "2366e34fb28a74a6c6c37a0ce217a1bc4639f3f3ca18ce5b2b988eff4eec1e9e",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".babelrc",
+      ".eslintrc.js",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "__test__",
+      "package.json",
+      "src"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/package.json",
+        "sha256": "b2f46829410b87d4619a8480c7e21cac00837c4e151029aa382ca8b810d5c9a6"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/binance/binance-websocket-examples",
+      "commit": "https://github.com/binance/binance-websocket-examples/commit/629833c6ffbf6656eee4bd0cf567c69f2de20ce6",
+      "readme": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/README.md",
+      "license": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/binance/binance-websocket-examples/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/binance/binance-websocket-examples/contributors",
+      "issues": "https://api.github.com/repos/binance/binance-websocket-examples/issues"
+    },
+    "readme_excerpt": "# Binance Websocket Examples ## Local orderbook (Spot) ```bash # Cache local orderbook and echo best price # btcusdt by default npm run orderbook # or provide the trading pair SYMBOL=bnbusdt npm run orderbook ``` ## Spot user data stream ```bash # get user data steam APIKEY=xxxxxx npm run user # Get margin account update from websocket APIKEY=xxxxxx APISECRET=xxxxx npm run margin-user ``` ## Futures user data stream ```bash # Get user data steam on production APIKEY=xxxxxx APISECRET=xxxxx npm run futures-user # On testnet APIKEY=xxxxxx APISECRET=xxxxx WSS_BASE_URL=\"wss://stream.binancefuture.com/\" HTTP_BASE_URL=\"https://testnet.binancefuture.com/\" npm run futures-user ``` ## Delivery Futures user data stream ```bash # Get user data steam - defaults to production APIKEY=xxxxxx APISECRET=xxxxx npm run delivery-futures-user ``` ## Combined streams ```bash # Get multi pairs stream, setting the pairs in src/multi-stream-depth npm run multi-stream ``` ## Spot trade stream delay monitoring ```bash npm run monitor-spot-trade ``` ## Spot depth stream delay monitoring ```bash npm run monitor-spot-depth ``` ## Futures depth stream delay monitoring ```bash npm run monitor-futures ``` ## How to setup ```bash npm install # run test npm run test ``` ## License MIT",
+    "license_excerpt": "MIT License Copyright (c) 2019 Liang Shi Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice"
+  },
+  {
+    "full_name": "BittyTax/BittyTax",
+    "requested_name": "BittyTax/BittyTax",
+    "id": 183510832,
+    "url": "https://github.com/BittyTax/BittyTax",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Crypto-currency tax calculator with support for all popular wallets, exchanges, explorers and migration from other crypto tax platforms",
+    "stars": 504,
+    "forks": 128,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "97998259b56ff5d7b2f38664353edc76378597f5",
+    "last_commit_date": "2026-08-31T10:09:39Z",
+    "pushed_at_not_commit_date": "2026-08-31T12:42:15Z",
+    "commits_since_20260313_count_capped100": 70,
+    "recent_commit_authors": [
+      "Copilot",
+      "crowfest",
+      "dependabot[bot]",
+      "loekj",
+      "nanonano",
+      "ragamuffin"
+    ],
+    "contributors_sample": [
+      {
+        "login": "nanonano",
+        "contributions": 991,
+        "type": "User"
+      },
+      {
+        "login": "ragamuffin",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "Copilot",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "64kps",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "loekj",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dipietro-salvatore",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "SaltwaterC",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "aloisklink",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "benjaminion",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "emmanuel-ferdman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sea212",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jbruchanov",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "PramodKAvvaru",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "RustyFluff",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "crowfest",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pyronox",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "wayneprice",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/BittyTax/BittyTax/issues/506",
+      "created_at": "2026-08-26T13:22:07Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "e14c118b8d704a01e0f23e8505ec25844958f02a253c47a9b8b95b35c89542d4",
+    "license": "AGPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".flake8",
+      ".github",
+      ".gitignore",
+      ".pylint_dictionary",
+      ".pylintrc",
+      ".run",
+      ".vscode",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "data",
+      "img",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/pyproject.toml",
+        "sha256": "0b182913025f7d8d433559f9bd9461127e139408f693eef90f9ca44a936206c4"
+      },
+      "setup.py": {
+        "url": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/setup.py",
+        "sha256": "ef7b23c3468c8130483cd7578c14e977b39b372fd088f0e163b47be196d1291e"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/BittyTax/BittyTax",
+      "commit": "https://github.com/BittyTax/BittyTax/commit/97998259b56ff5d7b2f38664353edc76378597f5",
+      "readme": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/README.md",
+      "license": "https://github.com/BittyTax/BittyTax/blob/97998259b56ff5d7b2f38664353edc76378597f5/LICENSE",
+      "recent_commits": "https://api.github.com/repos/BittyTax/BittyTax/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/BittyTax/BittyTax/contributors",
+      "issues": "https://api.github.com/repos/BittyTax/BittyTax/issues"
+    },
+    "readme_excerpt": "![BittyTax logo](https://github.com/BittyTax/BittyTax/raw/master/img/BittyTax.svg) [![Version badge][version-badge]][version] [![License badge][license-badge]][license] [![CI][ci-badge]][ci] [![Python badge][python-badge]][python] [![Downloads badge][downloads-badge]][downloads] [![Stars badge][github-stars-badge]][github-stars] [![Sponsor badge][sponsor-badge]][sponsor] [![X badge][x-badge]][x] [![Discord badge][discord-badge]][discord] [![Donate badge][donate-badge]][donate] # BittyTax ## Overview BittyTax is a collection of command-line tools to help you calculate your cryptoasset taxes in the UK. This tool is designed to be used by someone who is already familiar with cryptoasset taxation rules in the UK. HMRC has published guidance on this. We've collected some useful links in the [Resources](#resources) section at the end. BittyTax comprises of the following tools. 1. `bittytax` - process your transaction records and generate a PDF tax report (see [Accounting Tool](#accounting-tool)) 2. `bittytax_conv` - convert your wallet and exchange files into transaction records (see [Conversion Tool](#conversion-tool)) 3. `bittytax_price` - (optional) lookup historic price data for cryptoassets and foreign currencies (see [Price Tool](#price-tool)) Although UK focused, many of the tools can be used for other countries and currencies, see [International support](https://github.com/Bi",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software an"
+  },
+  {
+    "full_name": "blckswmngbrd/PyPortfolioOptimizationNotebooks",
+    "requested_name": "blckswmngbrd/PyPortfolioOptimizationNotebooks",
+    "id": 146108078,
+    "url": "https://github.com/blckswmngbrd/PyPortfolioOptimizationNotebooks",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Python Jupyter Notebooks for Financial Portfolio Optimization ",
+    "stars": 41,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "master",
+    "latest_commit": "ea20b59e385c706ae59a26a52ba8c8ba286a611b",
+    "last_commit_date": "2018-08-25T16:20:47Z",
+    "pushed_at_not_commit_date": "2018-08-25T16:20:48Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "blckswmngbrd",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "2fda0bf7cdc7dea1bf5a36a5f5c1a6a7a524d358709dd5fba8e1a8b9f0fcd7b3",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      "FANG_Port.csv",
+      "FourAsstPort.ipynb",
+      "PortOpt.Expected.Returns.Var.Vol.ipynb",
+      "PortOpt.MinVol.Optimization.ipynb",
+      "PortOpt.MonteCarlo.RiskAdjusted.Returns.ipynb",
+      "PortOpt.Opt.MaxSharpe.MinVol.Real.ipynb",
+      "Portfolio_2.csv",
+      "PrtOpt.MnteCrlo.Simple.ipynb",
+      "README.md",
+      "fang.csv"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W03",
+        "lane": "C",
+        "query": "notebook portfolio"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/blckswmngbrd/PyPortfolioOptimizationNotebooks",
+      "commit": "https://github.com/blckswmngbrd/PyPortfolioOptimizationNotebooks/commit/ea20b59e385c706ae59a26a52ba8c8ba286a611b",
+      "readme": "https://github.com/blckswmngbrd/PyPortfolioOptimizationNotebooks/blob/ea20b59e385c706ae59a26a52ba8c8ba286a611b/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/blckswmngbrd/PyPortfolioOptimizationNotebooks/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/blckswmngbrd/PyPortfolioOptimizationNotebooks/contributors",
+      "issues": "https://api.github.com/repos/blckswmngbrd/PyPortfolioOptimizationNotebooks/issues"
+    },
+    "readme_excerpt": "#Python Portfolio Optimization Notebooks A collection of Python3 Juptyer Notebooks focused on Portfolio Optimization using pandas, numpy, matplotlib.pyplot, and scipy Below is a brief list of the topics covered in the notebooks Calculate Log Returns, Daily Returns, Expected Portfolio Returns, Expected Portfolio Variance, Expected Portfolio Volitility, Portfolio Beta, Sharpe Ratio, Treynor Ratio, Information Ratio, Omega Ratio, Sortino Ratio Optimize Minimum Volatility, Maximum Sharpe, Minimum Volatility, Target Return, Portfolios within a Specified range, Generate Random Weights, Covariance Matrix, Correlation Matrix, A Benchmark/Market Returns (S&P500) Visualize Efficient Frontier,Maximum Sharpe Ratio portfolio, Minimum Vol portfolio, Individual asset allocation within a portfolio, Distribution of Returns, Check Distribution of Returns",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "bmoscon/cryptofeed",
+    "requested_name": "bmoscon/cryptofeed",
+    "id": 114459569,
+    "url": "https://github.com/bmoscon/cryptofeed",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Cryptocurrency Exchange Websocket Data Feed Handler",
+    "stars": 2903,
+    "forks": 765,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "e7a73d7444f0265b4131faa2aec2a2c558fed929",
+    "last_commit_date": "2026-09-08T23:22:02Z",
+    "pushed_at_not_commit_date": "2026-09-08T23:22:07Z",
+    "commits_since_20260313_count_capped100": 12,
+    "recent_commit_authors": [
+      "bmoscon",
+      "dependabot[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "bmoscon",
+        "contributions": 2169,
+        "type": "User"
+      },
+      {
+        "login": "olibre",
+        "contributions": 28,
+        "type": "User"
+      },
+      {
+        "login": "Dynamikey",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 24,
+        "type": "Bot"
+      },
+      {
+        "login": "vdbelt",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "peedrr",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "PandaXcentric",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "abashinfection",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "evil-maid",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "agijsberts",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "MarechJ",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "vladzalevskyi",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "xiandong79",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "twmeggs",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "qinghuangchan",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "DavideColdebella",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "t2o2",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "lightcycleresearch",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "quantfiction",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "wangzhe3224",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "zahnz",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "toyan",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "akasimo",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "ablochs",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Quenos",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "globophobe",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "GuillaumeDSM",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "txu2014",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "vincentmele",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "edandavi",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/bmoscon/cryptofeed/issues/1114",
+      "created_at": "2026-06-10T21:24:50Z",
+      "state": "closed",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-09-01T00:37:39Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f1ebce7682cf86a392a92f7c89fc6cffa3571a4ff9d952badfc9413f1eee12b8",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "e43efa771be8126a2576ce33dbca5a027d93da1c2748ce4ecc6101068f0170c5",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AUTHORS.md",
+      "CHANGES.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "README.md",
+      "SECURITY.md",
+      "build-wheels.sh",
+      "config.yaml",
+      "cryptofeed",
+      "examples",
+      "pyproject.toml",
+      "sample_data",
+      "tests",
+      "uv.lock",
+      "wheels.sh"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/bmoscon/cryptofeed/blob/e7a73d7444f0265b4131faa2aec2a2c558fed929/pyproject.toml",
+        "sha256": "07c1f1178aa0af8f0bfb8ac128cdf2c4b4d0e320f8465970ef96653d5bb960e2"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/bmoscon/cryptofeed",
+      "commit": "https://github.com/bmoscon/cryptofeed/commit/e7a73d7444f0265b4131faa2aec2a2c558fed929",
+      "readme": "https://github.com/bmoscon/cryptofeed/blob/e7a73d7444f0265b4131faa2aec2a2c558fed929/README.md",
+      "license": "https://github.com/bmoscon/cryptofeed/blob/e7a73d7444f0265b4131faa2aec2a2c558fed929/LICENSE",
+      "recent_commits": "https://api.github.com/repos/bmoscon/cryptofeed/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/bmoscon/cryptofeed/contributors",
+      "issues": "https://api.github.com/repos/bmoscon/cryptofeed/issues"
+    },
+    "readme_excerpt": "# Cryptocurrency Exchange Feed Handler [![License](https://img.shields.io/badge/license-AGPL-blue.svg)](LICENSE) ![Python](https://img.shields.io/badge/Python-3.12+-green.svg) [![PyPi](https://img.shields.io/badge/PyPi-cryptofeed-brightgreen.svg)](https://pypi.python.org/pypi/cryptofeed) Handles multiple cryptocurrency exchange data feeds and returns normalized and standardized results to client registered callbacks for events like trades, book updates, ticker updates, etc. Utilizes websockets when possible, but can also poll data via REST endpoints if a websocket is not provided. ## Supported exchanges * [Bitfinex](https://bitfinex.com) * [bitFlyer](https://bitflyer.com/) * [Bithumb](https://en.bithumb.com/) * [Bitstamp](https://www.bitstamp.net/) * [Bybit](https://www.bybit.com/) * [Binance](https://www.binance.com/en) * [Binance Delivery](https://binance-docs.github.io/apidocs/delivery/en/) * [Binance Futures](https://www.binance.com/en/futures) * [Binance US](https://www.binance.us/en) * [Bitget](https://www.bitget.com/) * [Coinbase](https://www.coinbase.com/) * [Crypto.com](https://www.crypto.com) * [Deribit](https://www.deribit.com/) * [Gate.io](https://www.gate.io/) * [Gate.io Futures](https://www.gate.io/futures_center) * [dYdX v4](https://dydx.trade/) * [Gemini](https://gemini.com/) * [Hyperliquid](https://hyperliquid.xyz/) * [HTX](https://www.htx.com/) (formerly Huobi",
+    "license_excerpt": "cryptofeed Copyright (C) 2017-2026 Bryant Moscon This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero Gener"
+  },
+  {
+    "full_name": "bmoscon/cryptostore",
+    "requested_name": "bmoscon/cryptostore",
+    "id": 167632962,
+    "url": "https://github.com/bmoscon/cryptostore",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A scalable storage service for cryptocurrency data",
+    "stars": 416,
+    "forks": 136,
+    "archived": true,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "8a4310d6ca1d52f294e015c802863f1ff9da44e2",
+    "last_commit_date": "2024-04-18T17:37:54Z",
+    "pushed_at_not_commit_date": "2024-04-18T17:38:07Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "bmoscon",
+        "contributions": 325,
+        "type": "User"
+      },
+      {
+        "login": "yohplala",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "GoldenNaim",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "mschneider",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "c0indev3l",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "abashinfection",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "anovv",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "iamkucuk",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "rshtirmer",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "wangzhe3224",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "chazzmoney",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "botzill",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jeffneuen",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Newtoniano",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "robie2011",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "myso42",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "xiandong79",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "akasimo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 1,
+        "type": "Bot"
+      },
+      {
+        "login": "ian-wazowski",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ph4z",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "qinghuangchan",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/bmoscon/cryptostore/issues/236",
+      "created_at": "2025-12-13T16:16:17Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "9d3b5b7aa57ecba2b74fa7fa49596ddbea0e25457b3d3f8fa0d07f5c6677253b",
+    "license": "NOASSERTION",
+    "license_path": "LICENSE",
+    "license_file_sha256": "b460b65273cab0f1d897b8760d2f6c05f753d1fee71a794fd9be1f498320d41c",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".flake8",
+      ".github",
+      ".gitignore",
+      "CHANGES.md",
+      "Dockerfile",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "VERSION",
+      "cryptostore.py",
+      "docs",
+      "examples",
+      "tools"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/bmoscon/cryptostore",
+      "commit": "https://github.com/bmoscon/cryptostore/commit/8a4310d6ca1d52f294e015c802863f1ff9da44e2",
+      "readme": "https://github.com/bmoscon/cryptostore/blob/8a4310d6ca1d52f294e015c802863f1ff9da44e2/README.md",
+      "license": "https://github.com/bmoscon/cryptostore/blob/8a4310d6ca1d52f294e015c802863f1ff9da44e2/LICENSE",
+      "recent_commits": "https://api.github.com/repos/bmoscon/cryptostore/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/bmoscon/cryptostore/contributors",
+      "issues": "https://api.github.com/repos/bmoscon/cryptostore/issues"
+    },
+    "readme_excerpt": "# Cryptostore [![License](https://img.shields.io/badge/license-XFree86-blue.svg)](LICENSE) ![Python](https://img.shields.io/badge/Python-3.8+-green.svg) [![Docker Image](https://img.shields.io/badge/Docker-cryptostore-brightgreen.svg)](https://github.com/bmoscon/cryptostore/pkgs/container/cryptostore) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/da2a982c976649e193c807895ee7a33c)](https://www.codacy.com/manual/bmoscon/cryptostore?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bmoscon/cryptostore&amp;utm_campaign=Badge_Grade) Cryptostore is an application wrapper around [Cryptofeed](https://github.com/bmoscon/cryptofeed) that runs in containers, for the purpose of storing cryptocurrency data directly to various databases and message protocols. This project assumes familiarity with Docker, but some basic commands are available to get you started below. ### Using a Prebuilt Container Image Docker images are hosted in GitHub and can be pulled using the following command: ``` docker pull ghcr.io/bmoscon/cryptostore:latest ``` ### To Build a Container From Source ``` docker build . -t \"cryptostore:latest\" ``` ### To Run a Container ``` docker run -e EXCHANGE='COINBASE' -e CHANNELS='trades' -e SYMBOLS='BTC-USD' -e BACKEND='REDIS' cryptostore:latest ``` **Note**: if you've pulled the image from GitHub, the container name will be `ghcr.io/bmoscon/cryptostore",
+    "license_excerpt": "Copyright (C) 2018-2024 Bryant Moscon - bmoscon@gmail.com Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 1. Redist"
+  },
+  {
+    "full_name": "brucify/orderly",
+    "requested_name": "brucify/orderly",
+    "id": 491175256,
+    "url": "https://github.com/brucify/orderly",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A Rust WebSocket client that connects to multiple crypto exchanges and publishes a merged live order book through gRPC stream",
+    "stars": 82,
+    "forks": 24,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "master",
+    "latest_commit": "00b5515880bbdae1d5ec3ba0e5f0996c5b624bda",
+    "last_commit_date": "2022-06-02T14:43:56Z",
+    "pushed_at_not_commit_date": "2022-06-02T14:44:01Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "brucify",
+        "contributions": 55,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/brucify/orderly/issues/4",
+      "created_at": "2023-11-07T19:59:32Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "b643e469490a89a36e2fe48924218c82d9fb9ba6eeeb0ead9dca02bd0642d56d",
+    "license": "MPL-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "build.rs",
+      "proto",
+      "src"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/Cargo.toml",
+        "sha256": "305d6e0f2c55146767439e95e22433ac9752ab98723f5905c9559ec9692aba2c"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/brucify/orderly",
+      "commit": "https://github.com/brucify/orderly/commit/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda",
+      "readme": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/README.md",
+      "license": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/LICENSE",
+      "recent_commits": "https://api.github.com/repos/brucify/orderly/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/brucify/orderly/contributors",
+      "issues": "https://api.github.com/repos/brucify/orderly/issues"
+    },
+    "readme_excerpt": "# orderly A Rust CLI WebSocket client for crypto exchanges. Connects to the WebSocket feeds of multiple exchanges. Subscribes to the live order book for the given currency pair. Publishes a merged order book as a gRPC stream. Currently supports: * Bitstamp WebSocket: `wss://ws.bitstamp.net` * Binance WebSocket: `wss://stream.binance.com:9443/ws` * Kraken WebSocket: `wss://ws.kraken.com` * Coinbase WebSocket: `wss://ws-feed.exchange.coinbase.com` ``` USAGE: orderly-server [OPTIONS] OPTIONS: -h, --help Print help information --no-binance (Optional) Don't show Binance in gRPC stream. Default: false --no-bitstamp (Optional) Don't show Bitstamp in gRPC stream. Default: false --no-kraken (Optional) Don't show Kraken in gRPC stream. Default: false --no-coinbase (Optional) Don't show Coinbase in gRPC stream. Default: false -p, --port (Optional) Port number on which the the gRPC server will be hosted. Default: 50051 -s, --symbol (Optional) Currency pair to subscribe to. Default: ETH/BTC ``` Run gRPC server: ``` cargo run --bin orderly-server ``` or with logs and options: ``` env RUST_LOG=info cargo run --bin orderly-server -- --symbol ETH/BTC --port 50051 ``` Exclude certain exchanges: ``` cargo run --bin orderly-server -- --no-binance --no-bitstamp ``` Client ----- Connects to the gRPC server and streams the orderbook summary. ``` USAGE: orderly-client [OPTIONS] OPTIONS: -h, --help Pri",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or owns Covered Software. 1.2. \"Contributor Version\" means the combination of the Contributions of others (if any) used by a Contributor and that particular Contributor's Contribution. 1.3. \"Contribution\" means Covered Software of a particular Contributor. 1.4. \"Covered Software\" means Source Cod"
+  },
+  {
+    "full_name": "brucify/revolutax",
+    "requested_name": "brucify/revolutax",
+    "id": 487241948,
+    "url": "https://github.com/brucify/revolutax",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Cryptocurrency Tax Calculator for Revolut CSV Statements - Rust CLI",
+    "stars": 6,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "Rust",
+    "default_branch": "master",
+    "latest_commit": "dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6",
+    "last_commit_date": "2023-05-02T16:51:14Z",
+    "pushed_at_not_commit_date": "2023-05-02T16:51:22Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "brucify",
+        "contributions": 57,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "4e31c69ff48d97f37cdf830c7d1cab95d539454e76d5645925a621ab17dcb405",
+    "license": "MPL-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "example",
+      "scripts",
+      "src"
+    ],
+    "dependency_manifests": {
+      "Cargo.toml": {
+        "url": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/Cargo.toml",
+        "sha256": "92626e8904096ba6cee34a9c4f36e460d0af6828e1c8f380e35e863b423e41df"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "topic",
+        "query": "topic:tax-calculator cryptocurrency"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/brucify/revolutax",
+      "commit": "https://github.com/brucify/revolutax/commit/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6",
+      "readme": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/README.md",
+      "license": "https://github.com/brucify/revolutax/blob/dcb0b9bcb86fafdd79dd5a23896bfc8a28515da6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/brucify/revolutax/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/brucify/revolutax/contributors",
+      "issues": "https://api.github.com/repos/brucify/revolutax/issues"
+    },
+    "readme_excerpt": "# revolutax A Rust CLI tool for calculating taxes on cryptocurrencies traded on Revolut. It reads the account statement CSV file from Revolut and generates a new CSV file summarizing the taxable trades. This tools can also generate an [SRU file](https://www.skatteverket.se/privat/deklaration/lamnaenbilagatilldeklarationen.4.515a6be615c637b9aa46366.html?q=sru+fil) that can be uploaded to Swedish Tax Agency ([K4-bilagan - F\u00f6rs\u00e4ljning - V\u00e4rdepapper m.m.](https://skatteverket.se/privat/skatter/vardepapper/deklareraaktierochovrigavardepapper/deklareravardepapperexempel.4.7afdf8a313d3421e9a9519.html)) Although this program is specifically designed for reporting Swedish taxes, it can also be used for general tax reporting purposes in other countries. ## Installation To install Rust, follow the official installation guide available at [rustup.rs](https://rustup.rs/). After Rust is installed, clone the repository and build the project: $ cargo build ## Usage The program reads the transactions of type `EXCHANGE` and `CARD_PAYMENT` and generates a new csv file tax.csv. For example: $ cargo run -- account_statement.csv > tax.csv Here is an example input CSV file `account_statement.csv`: ```csv Type,Product,Started Date,Completed Date,Description,Amount,Currency,Fiat amount,Fiat amount (inc. fees),Fee,Base currency,State,Balance EXCHANGE,Current,2023-01-01 10:00:00,2023-01-01 10:00:00,Excha",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or owns Covered Software. 1.2. \"Contributor Version\" means the combination of the Contributions of others (if any) used by a Contributor and that particular Contributor's Contribution. 1.3. \"Contribution\" means Covered Software of a particular Contributor. 1.4. \"Covered Software\" means Source Cod"
+  },
+  {
+    "full_name": "bsteps/zerodha-fno-trade-journal",
+    "requested_name": "bsteps/zerodha-fno-trade-journal",
+    "id": 1012777720,
+    "url": "https://github.com/bsteps/zerodha-fno-trade-journal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open-source F&O trading journal that transforms your Zerodha CSV exports into comprehensive analytics with P&L tracking, risk analysis, and psychological pattern detection.",
+    "stars": 4,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "master",
+    "latest_commit": "a053d67be29e9d1e66db4be03be51f4a248debbe",
+    "last_commit_date": "2025-07-19T17:10:05Z",
+    "pushed_at_not_commit_date": "2025-07-19T17:10:12Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "bsteps",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "0a574745374e8574949b37bffdbb24cd910f2a304333d0b8a7ac19245a457538",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitignore",
+      "README.md",
+      "eslint.config.js",
+      "index.html",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.js",
+      "public",
+      "sample-trades.csv",
+      "src",
+      "tailwind.config.js",
+      "tsconfig.app.json",
+      "tsconfig.json",
+      "tsconfig.node.json",
+      "vite.config.ts"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/bsteps/zerodha-fno-trade-journal/blob/a053d67be29e9d1e66db4be03be51f4a248debbe/package.json",
+        "sha256": "96e84be44f84c973fd34766ab39fde7d9c7127cd18518d2fc600598882fb69cb"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "C",
+        "query": "trading CSV journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/bsteps/zerodha-fno-trade-journal",
+      "commit": "https://github.com/bsteps/zerodha-fno-trade-journal/commit/a053d67be29e9d1e66db4be03be51f4a248debbe",
+      "readme": "https://github.com/bsteps/zerodha-fno-trade-journal/blob/a053d67be29e9d1e66db4be03be51f4a248debbe/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/bsteps/zerodha-fno-trade-journal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/bsteps/zerodha-fno-trade-journal/contributors",
+      "issues": "https://api.github.com/repos/bsteps/zerodha-fno-trade-journal/issues"
+    },
+    "readme_excerpt": "# \ud83d\udcca Zerodha F&O Trading Journal & Analytics A comprehensive, open-source trading journal and analytics platform specifically designed for **Zerodha F&O (Futures & Options)** traders. Transform your raw trading data into actionable insights with advanced analytics, risk management tools, and psychological pattern analysis. ![Trading Journal Dashboard](https://img.shields.io/badge/Status-Open%20Source-brightgreen) ![React](https://img.shields.io/badge/React-18.x-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.x-blue) ## \u2728 Features ### \ud83d\udcc8 **Core Analytics** - **P&L Dashboard**: Daily, monthly, and overall performance tracking - **Position Tracker**: Real-time position monitoring with realized/unrealized P&L - **Order Analysis**: Detailed order execution analysis with merged trade views - **Performance Charts**: Visual representation of trading performance over time ### \ud83c\udfaf **Advanced Analytics** - **Risk Management**: Drawdown analysis, risk-reward ratios, position sizing - **Market Timing**: Hourly trading patterns, entry/exit timing analysis - **Strategy Analysis**: Win rate analysis, profit factor calculations - **Psychological Patterns**: Revenge trading detection, emotional trading analysis ### \ud83d\udcbc **Portfolio Management** - **Portfolio Analytics**: Sector exposure, capital utilization analysis - *",
+    "license_excerpt": ""
+  }
+]

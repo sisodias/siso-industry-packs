@@ -1,0 +1,1045 @@
+[
+  {
+    "full_name": "Teppo652/poll",
+    "requested_name": "Teppo652/poll",
+    "id": 239883756,
+    "url": "https://github.com/Teppo652/poll",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Test Assignment - Project Sports Poll  Overview The \"Sports Poll\" app is a dead simple poll system around some sports events which can be fetched from this JSON file It allows users to vote on each event and then shows another random event to vote on. There should be one poll, that displays one (random) category at a time. E.g. load Football category       with poll options to vote on from DB, and only display those at a time, next browser reload would maybe display Tennis. The polling options should be what team will win or if it will be a draw, e.g. \u25cf Home Team win (Team A) \u25cf Draw \u25cf Away Team win (Team B)    Delivery When you have completed the task, we\u2019d like you to deliver the following: \u25cf A description of what you have done and how far you got in time allotted for the work on the project. \u25cf Which development tools you used and your general progression on the key issues, what you got stuck on, what you did or didn\u2019t solve etc. \u25cf A step by step instruction to how to run the project. \u25cf Share the source code in a private code hosting on Bitbucket or Github (Bitbucket has free private repositories).  \u25cb For Bitbucket - Share that repository giving admin permissions to bojan.zrnic@itengine.rs and GLOMOadmin and send the URL in an email to dev@glomo.se. \u25cb For Github - Share that repository giving admin permissions to zrnicbojan and adminglomo and send the URL in an email to dev@glomo.se.      Tasks and deliverables per job position  Junior Frontend Developer This exercise is expected to take 3 to 6 hours to complete.   1. Create a page with the best design practices in mind for this small application. The design will be taken into consideration and should be visually pleasant and user friendly. 2. You are free to use any modern Javascript framework that you\u2019d like. The choice of framework may impact the way we assess your assignment. 3. It\u2019s not allowed to use any CSS framework like Bootstrap or similar. 4. The JSON file with the events can be accessed directly from the frontend or hardcoded in the website. 5. The odds can be generated randomly. There is no need to keep track of votes across page reloads.    Senior Frontend Developer This exercise is expected to take 4 to 8 hours to complete.         1. Create a page with the best design practices in mind for this small application. The design will be taken into consideration and should be visually pleasant and user friendly. 2. You are free to use any modern Javascript framework that you\u2019d like. The choice of framework may impact the way we assess your assignment. 3. It\u2019s not allowed to use any CSS framework like Bootstrap or similar. 4. The JSON file with the events can be accessed directly from the frontend or hardcoded in the website. 5. The page should be responsive and work well across different types of devices (desktop, mobile, tablet). 6. Keep event votes stored in a browser local storage so they can persist across page reloads. 7. Add different kind of visualisations based on event attributes (country, state, sport and so on). It is up to you to decide how to best represent the data. 8. Add a couple of automated tests.    Fullstack Developer This exercise is expected to take 5 to 10 hours to complete.   1. Create a backend for Sports Poll. The backend should be created using Node.js. Whichever Node.js framework you select will not impact the way we assess your test. 2. At start, fetch the events from the JSON file and store them in a local database of your choice. 3. Create a backend API to read events. 4. Create a backend API for voting for events (home win, draw, away win). 5. Create a page with the best design practices in mind for this small application. The design will be taken into consideration and should be visually pleasant and user friendly. 6. You are free to use any modern Javascript framework that you\u2019d like. The choice of framework may impact the way we assess your assignment. 7.   8. It\u2019s not allowed to use any CSS framework like Bootstrap or similar. 9. The page should be responsive and work well across different types of devices (desktop, mobile, tablet). 10. Add a couple of automated tests.    Senior Fullstack Developer This exercise is expected to take 7 to 15 hours to complete.   1.     Create a backend for Sports Poll. The backend should be created using Node.js. Whichever Node.js framework you select will not impact the way we assess your test. 2.     At start, fetch the events from the JSON file and store them in a local database of your choice. 3.     Create a backend API to read events.       4.     Create registration/login for the Sports Poll. It could be either with regular email address or Facebook login. 5.     Create a backend API for voting for events (home win, draw, away win), keep track of the votes. Only allow logged users to vote and don\u2019t allow more than one vote per user for each event. 6.     Create a page with the best design practices in mind for this small application. The design will be taken into consideration and should be visually pleasant and user friendly. 7.     You are free to use any modern Javascript framework that you\u2019d like. The choice of framework may impact the way we assess your assignment. 8.     It\u2019s not allowed to use any CSS framework like Bootstrap or similar. 9.     The page should be responsive and work well across different types of devices (desktop, mobile, tablet). 10.  Add a couple of automated tests. ",
+    "stars": 3,
+    "forks": 2,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "master",
+    "latest_commit": "e33973b41ca4617e1601eb9ccfe2b25a3a104f3e",
+    "last_commit_date": "2020-03-12T16:56:14Z",
+    "pushed_at_not_commit_date": "2022-12-12T05:03:11Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Teppo652",
+        "contributions": 4,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": null,
+    "readme_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".gitattributes",
+      "Task description.txt",
+      "client",
+      "screenshot.jpg",
+      "screenshotMobile.jpg",
+      "server",
+      "sportspoll.sql"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "options exercise assignment"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Teppo652/poll",
+      "commit": "https://github.com/Teppo652/poll/commit/e33973b41ca4617e1601eb9ccfe2b25a3a104f3e",
+      "readme": null,
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/Teppo652/poll/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Teppo652/poll/contributors",
+      "issues": "https://api.github.com/repos/Teppo652/poll/issues"
+    },
+    "readme_excerpt": "",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "THEFEASTCOIN/FEEDN",
+    "requested_name": "THEFEASTCOIN/FEEDN",
+    "id": 381503851,
+    "url": "https://github.com/THEFEASTCOIN/FEEDN",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Welcome to The F.E.A.S.T Token (Family Equity Assertion Stability Trust).  The F.E.A.S.T Token is the newest massive experiment within the DeFi sector of cryptocurrency. We aim to educate, elevate and encourage the Urban Communities across the World to join in with the F.E.A.S.T Token as we push for an economical freedom through the spontaneous community building and sharing of potential financial opportunities! Everyone is welcome to sit at the Table and Feast Heartily. All we ask is if you decide to pull your token money out early and not HODL (Hold On for Dear Life) as we grow, be respectful to the community and add back into the F.E.A.S.T immediately after you have received your gains. These are good steps to take to be fair to the other investors involved, as we encourage everyone to come get a second serving of the F.E.A.S.T. The community will count on these continued contributions in such a manner for long term financial sustainability.  Everyone can prosper and fill their bellies up, we're making it simple and plain..... WE ARE HERE FOR THE PEOPLE TO WIN. What is F.E.A.S.T  FAMILY EQUITY ASSERTION STABILITY TRUST The desire to harness capital is at an all time high within the DeFi sector of cryptocurrency. So many people have had a lot of bad experiences never receiving any real gains from their token investments, leaving them with a sour taste about cryptocurrency. We plan to help change all that and attempt to give life changing experiences for all who participate. F.E.A.ST Token is a deflationary currency and was designed to assist the new investors with their DeFi Experience. In a world full of greed, gluttony and selfishness, we aim to give people the opportunity to invest and achieve success. Unbeknownst to the new investors are the \u201cWhales\u201d, who find many of the new investors as Krill Food or Financial \u201cPlankton\u201d. We find them as essential creatures needed to help stimulate the DeFi Ecosystem. F.E.A.S.T stands for Family Equity Assertion Stability Trust. We are giving notice to the families, friends and communities across the world to harness your financial potential. Tap into the F.E.A.S.T Token with a small or large investment and see where it may lead you.  We incentivize all HODLERS of the F.E.A.S.T Token by redistributing 3% of every buy/sell transaction back to all active holders HODLing the \u201cFEEDN\u201d Token. There is also a 5% tax on every transaction that will automatically be contributed into the Pancakeswap Liquidity Pool. Because of the 40% supply that was burned at launch, a significant amount of the 3% tax distribution will be absorb by the burned address, resulting in exponential hyper-deflation and a forever increasing floor price for our token! The F.E.A.S.T TOKEN was created to be a community driven project, which requires the community to help market and promote the F.E.A.S.T Token over social media and by word of mouth.  WE ARE NOT A MEME TOKEN.  The liquidity will be locked for 1 year to ensure there will never be any sort of rug pull from our end. The Dev wallets etc. are locked for 3 months at which point there will still be no type of dump off of tokens from our end, we plan to expand the spectrum of our Tokens reach so we are in it for the long haul. WORD'S OF ENCOURAGEMENT FROM THE FOUNDER/LEAD DEV..... We started from the bottom as many did as well, coming from many different walks of life, we took some years to study and learn that which we know could be of some benefit to many of us.  We have reaped a lot of rewards from this realm of economics and we also have taken many losses as well. Yet, what we have released, that if we move in a one mind frame type of thinking, just one good strong time, we can establish something spectacular and very vast economically.  We wanted a clear picture painted in that vision so we decided to do everything correctly and cut no corners and try to steer people in the right path with confidence, especially for the first time on-comers.  We want the good feeling of reciprocity to be observed, meaning, you bring something to the table and you get something in return for what you bring, and the cycle repeats itself as long as you engage in it in such a way to be of a benefit to all\u2026.jump in, jump out, jump back in, then jump back out\u2026. Nonetheless stay within the activity of the cycle continuously and that\u2019s our aim for us to win forever and ever, over and over, no whales become a factor when we use the system with respect of having longevity in mind.  We have witnessed so many fly by night tokens that come and go so fast because of greed, gluttony and selfishness.  We intend to talk to our community and teach them the methodology of investing and holding and taking out and buying back in and watching the token appreciation etc, we are not teaching people to view this as a hustle scheme or a get rich overnight play.  It can become a lifestyle and way of living for many of us, and we want to embellish that kind of mindset and thinking upon our community as we grow and prosper.  Those were our initial intentions on wanting to create a token for the people to F.E.A.S.T upon.  By locking the Liquidity and the Team Tokens etc, it goes to show that we are not here for any Rug Pulls, we really want this to work and develop into something great. Our team will buy into the Token just as everyone else will do during the presale and afterwards at dips etc.  The locked tokens are to secure the potential future we have planned for our token to advance forward, yet we want to create a comfort zone of respect, trust and loyalty that no such shim-shams will happen on our watch.   We have witnessed setbacks ourselves from past dealing with these startup tokens and presale\u2019s that went astray, token launch dates turning into a highway robbery of millions from the people who invested, we have become a scarred victim as well.  Nonetheless, we had to charge it to the game of the risk versus the reward scenario, we know what we were playing in, and it can and will happen to the best of them.  Yet we desire to eliminate all that kind of disturbing drama and backbiting tactics that causes a lot of these tokens to lose their value the same day they are launched within just a few hours. A template and AMA session will enlighten our community on how we are going to be different, there will always be a few who, unbeknownst to us all, many will stray away and try to do something out of the way of the design, yet the majority is what matters.  The ones who stand down firm on the tactics that we need to use will continuously help us all to win over and over again, playing alone is a snatch and grab game, playing for the Team is what matters, we are going after a bigger Meal to F.E.A.S.T upon, and we encourage everyone to come sit at the Table and Feast with us, time and time again. TOKENOMICS : F.E.A.S.T TOKEN is released on the BInance Smart Chain Network and available to trade on Pancakeswap. NAME: F.E.A.S.T TOKEN                                       TOTAL SUPPLY: 1,000,000,000,000,000 \u201cFEEDN\u201d SYMBOL: \u201cFEEDN\u201c                                             DECIMALS: 9 TOKEN TYPE: BEP-20                                  LAUNCH: TOTAL TOKEN SUPPLY: 1,000,000,000,000,000 TOKENS USED FOR THE PRESALE:  240,000,000,000,000 TOKENS USED FOR LIQUIDITY LOCK:  300,000,000,000,000 TOKENS BURNED AT LAUNCH (AFTER PRESALE & LISTING): 400,000,000,000,000 PRESALE LAUNCH:  SOFT CAP:  50 BNB HARD CAP: 100 BNB PRESALE RATE: 2,400,000,000,000 FEEDN per BNB MIN CONTRIBUTION: 0.1 BNB MAX CONTRIBUTION: 1 BNB LISTING RATE AFTER PRESALE: 1,000,000,000,000 FEEDN per BNB PANCAKESWAP LIQUIDITY:  94% LOCKED LIQUIDITY: TOTAL TOKENS FOR LIQUIDITY LOCKED (1 YEAR): 540,000,000,000,000 TOKENS FOR TEAM DEVELOPMENT (3 MONTHS):    25,000,000,000,000 TOKENS USED FOR MARKETING ADS (3 MONTHS):  20,000,000,000,000 TOKENS FOR THE DEPARTMENT OF CULTURAL ADVANCEMENTS (3 MONTHS): 15,000,000,000,000 REWARDS: 5% Auto Liquidity Pool (5% tax on every transaction that will automatically be contributed into the Pancakeswap Liquidity Pool. Because of the 40% supply that was burned at launch, a significant amount of the 3% tax distribution will be absorbed by the burned address, resulting in exponential hyper-deflation and a constant increasing floor price for our token! 3% Redistribution to Holders (3% of every buy/sell transaction is taken and redistributed to all Active Holders HODLing the \u201cFEEDN\u201d Token) 2% will be burned on every transaction  (2% burned to help increase price stimulation) Advance Offer to Investor: (Once \u201cFEEDN\u201d tokens are purchased, use the tokens to become a Liquidity Provider for the F.E.A.ST Token and receive %\u2019s of the rewards from THE Liquidity Pool of the (FEEDN/BNB) LP Tokens. Help us and come be a part of the biggest Urban Economical Token movement! @instagram :    https://www.instagram.com/thefeastcoin/ @twitter :           https://twitter.com/TheFEASTcoin @facebook :      https://www.facebook.com/groups/thefeastcoin/ @tiktok :            https://www.tiktok.com/@thefeastcoin? @telegram :       https://t.me/joinchat/zd6cI68C-K84MmUx @Youtube :        https://www.youtube.com/channel/UC0NY7AR9FRAHevRtJESZgmw @Medium :        https://thefeastcoin.medium.com/ @Github  :       https://github.com/THEFEASTCOIN?tab=projects @Reddit  :       https://www.reddit.com/user/TheFEASTcoin @Discord :      https://discord.com/.../85806760020659.../858067601794793504 Be sure to check out our rules before posting and commenting. DISCLAIMER: WE ARE NOT AFFILIATED WITH ANY TOKEN NAMES OTHER THAN THE CONTRACT TOKEN NAME CALLED - ''F.E.A.S.T\" TOKEN (Family Equity Assertion Stability Trust) with the ticker symbol \u201cFEEDN\u201d.",
+    "stars": 10,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": null,
+    "last_commit_date": null,
+    "pushed_at_not_commit_date": "2021-06-29T21:42:51Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [],
+    "issue_response_sample": {
+      "url": "https://github.com/THEFEASTCOIN/FEEDN/issues/4",
+      "created_at": "2026-05-06T13:52:49Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": null,
+    "readme_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/THEFEASTCOIN/FEEDN",
+      "commit": "https://github.com/THEFEASTCOIN/FEEDN/commit/None",
+      "readme": null,
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/THEFEASTCOIN/FEEDN/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/THEFEASTCOIN/FEEDN/contributors",
+      "issues": "https://api.github.com/repos/THEFEASTCOIN/FEEDN/issues"
+    },
+    "readme_excerpt": "",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "TheQuantum-Dev/journedge",
+    "requested_name": "TheQuantum-Dev/journedge",
+    "id": 1165121326,
+    "url": "https://github.com/TheQuantum-Dev/journedge",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "An institutional-grade trading journal built for serious traders.",
+    "stars": 32,
+    "forks": 13,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "bfd12e2b659f127ed8b7eaf2d7cea62176c1da8b",
+    "last_commit_date": "2026-07-28T22:19:40Z",
+    "pushed_at_not_commit_date": "2026-07-28T22:20:45Z",
+    "commits_since_20260313_count_capped100": 52,
+    "recent_commit_authors": [
+      "TheQuantum-Dev",
+      "dependabot[bot]",
+      "lollllcat"
+    ],
+    "contributors_sample": [
+      {
+        "login": "TheQuantum-Dev",
+        "contributions": 83,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "lollllcat",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/TheQuantum-Dev/journedge/issues/2",
+      "created_at": "2026-05-30T11:30:47Z",
+      "state": "closed",
+      "comments": 7,
+      "first_staff_comment_in_sample": "2026-05-31T05:54:35Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "083e1b95ff42d7d99ab5ec1c40825d6adbad77337193791e63e9d4eb137b2ecc",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "728f222f2d95ccd4881fffbe8923490dee3967f8d9121e2a282a0658d6e2eb8a",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "app",
+      "css.d.ts",
+      "docs",
+      "eslint.config.mjs",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "prisma",
+      "public",
+      "scripts",
+      "tsconfig.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/TheQuantum-Dev/journedge/blob/bfd12e2b659f127ed8b7eaf2d7cea62176c1da8b/package.json",
+        "sha256": "506c6380ef58c0be15fa50e164f7d42bff9ee65a6552d4fbf85245d8578cf02f"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W09",
+        "lane": "topic",
+        "query": "topic:trading-journal pushed:>2026-03-13"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/TheQuantum-Dev/journedge",
+      "commit": "https://github.com/TheQuantum-Dev/journedge/commit/bfd12e2b659f127ed8b7eaf2d7cea62176c1da8b",
+      "readme": "https://github.com/TheQuantum-Dev/journedge/blob/bfd12e2b659f127ed8b7eaf2d7cea62176c1da8b/README.md",
+      "license": "https://github.com/TheQuantum-Dev/journedge/blob/bfd12e2b659f127ed8b7eaf2d7cea62176c1da8b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/TheQuantum-Dev/journedge/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/TheQuantum-Dev/journedge/contributors",
+      "issues": "https://api.github.com/repos/TheQuantum-Dev/journedge/issues"
+    },
+    "readme_excerpt": "# Journedge ![Version](https://img.shields.io/badge/version-4.0.0-4d9fff?style=flat-square) ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square) ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript) ![SQLite](https://img.shields.io/badge/SQLite-local-07405e?style=flat-square&logo=sqlite) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square) ![Open Source](https://img.shields.io/badge/open--source-yes-4d9fff?style=flat-square) ### An institutional-grade trading journal built for serious traders. [Features](#features) \u00b7 [Screenshots](#screenshots) \u00b7 [Getting Started](#getting-started) \u00b7 [Importing Trades](#importing-trades) \u00b7 [Analytics](#analytics-engine) \u00b7 [Architecture](#architecture-notes) \u00b7 [Roadmap](#roadmap) \u00b7 [Contributing](#contributing) --- ## Why Journedge Most trading journals are either too simple to be useful or locked behind expensive subscriptions. Journedge is built differently \u2014 it is a complete trading process tool, not just a P&L logger. **Your data stays yours.** Everything runs locally on your machine using SQLite. No cloud sync, no user accounts, no telemetry, no third-party data transfers of any kind. Your trade history, journal entries, screenshots, and performance data",
+    "license_excerpt": "MIT License Copyright (c) 2026 Quantum Dev Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright noti"
+  },
+  {
+    "full_name": "Thomvanoorschot/zigma",
+    "requested_name": "Thomvanoorschot/zigma",
+    "id": 949069291,
+    "url": "https://github.com/Thomvanoorschot/zigma",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Zigma is an algorithmic trading framework built with the Zig programming language, leveraging an actor-based concurrency model. It aims to provide an efficient, low-latency system for algorithmic trading through components handling market data, strategy execution, order management, risk, and data persistence.",
+    "stars": 101,
+    "forks": 11,
+    "archived": false,
+    "fork": false,
+    "language": "Zig",
+    "default_branch": "main",
+    "latest_commit": "8f7b0a9879f7187099acefc0796facdfc5e75dd2",
+    "last_commit_date": "2025-08-03T12:15:09Z",
+    "pushed_at_not_commit_date": "2025-08-03T12:15:11Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Thomvanoorschot",
+        "contributions": 171,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Thomvanoorschot/zigma/issues/1",
+      "created_at": "2025-09-02T11:28:45Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "eac5b901c16568078b033da6583afe25902b509cd3d9f03453e7fd4bea48611f",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3edc77434e1106e706d73eb0b82cb445af16549bb111142a8379de403176e6e0",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".cursor",
+      ".gitattributes",
+      ".gitignore",
+      ".vscode",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "client",
+      "example_docking.gif",
+      "example_full.gif",
+      "example_inspector.gif",
+      "server",
+      "shared_models"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "A",
+        "query": "order management trading"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Thomvanoorschot/zigma",
+      "commit": "https://github.com/Thomvanoorschot/zigma/commit/8f7b0a9879f7187099acefc0796facdfc5e75dd2",
+      "readme": "https://github.com/Thomvanoorschot/zigma/blob/8f7b0a9879f7187099acefc0796facdfc5e75dd2/README.md",
+      "license": "https://github.com/Thomvanoorschot/zigma/blob/8f7b0a9879f7187099acefc0796facdfc5e75dd2/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Thomvanoorschot/zigma/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Thomvanoorschot/zigma/contributors",
+      "issues": "https://api.github.com/repos/Thomvanoorschot/zigma/issues"
+    },
+    "readme_excerpt": "# Zigma: Actor-Based Algorithmic Trading Framework ## Overview Zigma is an algorithmic trading framework built with the Zig programming language, leveraging an actor-based concurrency model. This project serves as both a practical trading system and an educational exploration of Zig's memory management capabilities and concurrency patterns. ## Goals \u2022 Implement a robust actor framework for handling concurrent trading operations \\ \u2022 Explore Zig's memory management features in depth \\ \u2022 Develop efficient, low-latency trading algorithms \\ \u2022 Create a modular system that can be extended with new strategies and market connectors \\ \u2022 Serve as a learning resource for Zig programming best practices ## Architecture Zigma is built around an actor model, where independent components communicate through message passing: ### Server (Zig) \u2022 Market Data Actors \u2013 Connect to exchanges and process incoming market data \\ \u2022 Strategy Actors \u2013 Implement trading algorithms and generate signals \\ \u2022 Order Management Actors \u2013 Handle order creation, modification, and cancellation \\ \u2022 Risk Management Actors \u2013 Monitor positions and enforce trading limits \\ \u2022 Persistence Actors \u2013 Handle data storage and retrieval \\ \u2022 WebSocket Server \u2013 Provides real-time data streaming to clients via non-blocking WebSocket connections ### Client (WASM) \u2022 WASM Application \u2013 Runs entirely in the browser for real-time market da",
+    "license_excerpt": "MIT License Copyright (c) 2025 Thom van Oorschot Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyrigh"
+  },
+  {
+    "full_name": "thrasher-corp/gocryptotrader",
+    "requested_name": "thrasher-corp/gocryptotrader",
+    "id": 25868356,
+    "url": "https://github.com/thrasher-corp/gocryptotrader",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "A cryptocurrency trading bot and framework supporting multiple exchanges written in Golang.",
+    "stars": 3457,
+    "forks": 913,
+    "archived": false,
+    "fork": false,
+    "language": "Go",
+    "default_branch": "master",
+    "latest_commit": "23a104278c423db9d7b54464fae96273e5ccce51",
+    "last_commit_date": "2026-09-11T01:37:54Z",
+    "pushed_at_not_commit_date": "2026-09-11T01:37:54Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "PARMESHWARPANWAR",
+      "Tyagiquamar",
+      "alaningtrump",
+      "box4wangjing",
+      "chuanshanjida",
+      "criciss",
+      "cuoguojida",
+      "dependabot[bot]",
+      "elonfliter",
+      "evgmalkov",
+      "fmterrors",
+      "gbjk",
+      "gloriousCode",
+      "roberttidball",
+      "romanornr",
+      "samuael",
+      "shazbert",
+      "solunolab",
+      "thrasher-",
+      "valli0x"
+    ],
+    "contributors_sample": [
+      {
+        "login": "thrasher-",
+        "contributions": 787,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 485,
+        "type": "Bot"
+      },
+      {
+        "login": "shazbert",
+        "contributions": 416,
+        "type": "User"
+      },
+      {
+        "login": "gloriousCode",
+        "contributions": 247,
+        "type": "User"
+      },
+      {
+        "login": "gbjk",
+        "contributions": 145,
+        "type": "User"
+      },
+      {
+        "login": "dependabot-preview[bot]",
+        "contributions": 88,
+        "type": "Bot"
+      },
+      {
+        "login": "xtda",
+        "contributions": 47,
+        "type": "User"
+      },
+      {
+        "login": "lrascao",
+        "contributions": 27,
+        "type": "User"
+      },
+      {
+        "login": "Beadko",
+        "contributions": 24,
+        "type": "User"
+      },
+      {
+        "login": "samuael",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "ydm",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "vazha",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "Rots",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "Copilot",
+        "contributions": 14,
+        "type": "Bot"
+      },
+      {
+        "login": "ermalguni",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "MadCozBadd",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "vadimzhukck",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "junnplus",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "cranktakular",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "geseq",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "marcofranssen",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "140am",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "romanornr",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "TaltaM",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "dackroyd",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "khcchiu",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "yangrq1018",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "woshidama323",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "crackcomm",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dsinuela-taurus",
+        "contributions": 2,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/thrasher-corp/gocryptotrader/issues/2340",
+      "created_at": "2026-08-20T09:55:16Z",
+      "state": "open",
+      "comments": 1,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "bb1546586c353bc85d92b62fa7fc65120163a616ee2f399df11f2a49bccd2e43",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "dab84dfbc4103379e66cfc44824187cce4a25f2153deaead61431598cf6b2d7e",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".codespellrc",
+      ".devcontainer",
+      ".dockerignore",
+      ".gemini",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".golangci.yml",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTORS",
+      "Dockerfile",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "backtester",
+      "cmd",
+      "codecov.yml",
+      "common",
+      "communications",
+      "config",
+      "config_example.json",
+      "connchecker",
+      "contrib",
+      "core",
+      "currency",
+      "database",
+      "dispatch",
+      "docker-compose.yml",
+      "docs",
+      "encoding",
+      "engine",
+      "exchange",
+      "exchanges",
+      "gctrpc",
+      "gctscript",
+      "go.mod",
+      "go.sum",
+      "internal",
+      "log",
+      "main.go",
+      "portfolio",
+      "scripts",
+      "signaler",
+      "sqlboiler_example.json",
+      "testdata",
+      "types",
+      "utils"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank_best",
+      "liftable"
+    ],
+    "bank_row": {
+      "full_name": "thrasher-corp/gocryptotrader",
+      "capability_tag": "none",
+      "category_slug": "quant-trading-platform",
+      "summary": "Multi-exchange cryptocurrency trading bot and framework",
+      "reuse_value": 78,
+      "stars": 3441,
+      "license": "MIT",
+      "language": "Go",
+      "url": "https://github.com/thrasher-corp/gocryptotrader",
+      "rank_score": 78034410
+    },
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": {
+      "full_name": "thrasher-corp/gocryptotrader",
+      "stars": 3441,
+      "license": "MIT",
+      "language": "Go",
+      "unit_class": "substrate",
+      "reuse_value": 78,
+      "liftability": 25,
+      "fame_gap": 53,
+      "cat_slug": "quant-trading-platform",
+      "cat_name": "Quantitative Trading Platform",
+      "description": "A cryptocurrency trading bot and framework supporting multiple exchanges written in Golang."
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/thrasher-corp/gocryptotrader",
+      "commit": "https://github.com/thrasher-corp/gocryptotrader/commit/23a104278c423db9d7b54464fae96273e5ccce51",
+      "readme": "https://github.com/thrasher-corp/gocryptotrader/blob/23a104278c423db9d7b54464fae96273e5ccce51/README.md",
+      "license": "https://github.com/thrasher-corp/gocryptotrader/blob/23a104278c423db9d7b54464fae96273e5ccce51/LICENSE",
+      "recent_commits": "https://api.github.com/repos/thrasher-corp/gocryptotrader/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/thrasher-corp/gocryptotrader/contributors",
+      "issues": "https://api.github.com/repos/thrasher-corp/gocryptotrader/issues"
+    },
+    "readme_excerpt": "[![Build Status](https://github.com/thrasher-corp/gocryptotrader/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/thrasher-corp/gocryptotrader/actions/workflows/tests.yml) [![Software License](https://img.shields.io/badge/License-MIT-orange.svg?style=flat-square)](https://github.com/thrasher-corp/gocryptotrader/blob/master/LICENSE) [![GoDoc](https://godoc.org/github.com/thrasher-corp/gocryptotrader?status.svg)](https://godoc.org/github.com/thrasher-corp/gocryptotrader) [![Coverage Status](https://codecov.io/gh/thrasher-corp/gocryptotrader/graph/badge.svg?token=41784B23TS)](https://codecov.io/gh/thrasher-corp/gocryptotrader) A cryptocurrency trading bot supporting multiple exchanges written in Golang. **Please note that this bot is under development and is not ready for production!** ## Community Join our slack to discuss all things related to GoCryptoTrader! [GoCryptoTrader Slack](https://join.slack.com/t/gocryptotrader/shared_invite/zt-38z8abs3l-gH8AAOk8XND6DP5NfCiG_g) ## Exchange Support Table | Exchange | REST API | Websocket API | FIX API | |----------|------|-----------|-----| | Binance.US| Yes | Yes | NA | | Binance| Yes | Yes | NA | | Bitfinex | Yes | Yes | NA | | Bitflyer | Yes | No | NA | | Bithumb | Yes | Yes | NA | | BitMEX | Yes | Yes | NA | | Bitstamp | Yes | Yes | No | | BTCMarkets | Yes | Yes | NA | | BTSE | Yes | Yes | NA | | Bybit | Yes ",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2014-2026 The GoCryptoTrader Developers Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following con"
+  },
+  {
+    "full_name": "thuquant/awesome-quant",
+    "requested_name": "thuquant/awesome-quant",
+    "id": 58469357,
+    "url": "https://github.com/thuquant/awesome-quant",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\u4e2d\u56fd\u7684Quant\u76f8\u5173\u8d44\u6e90\u7d22\u5f15",
+    "stars": 5621,
+    "forks": 1025,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "master",
+    "latest_commit": "f6816f44b03ea6afd4321b202a159a004023ed2b",
+    "last_commit_date": "2026-09-07T01:40:15Z",
+    "pushed_at_not_commit_date": "2026-09-07T01:40:15Z",
+    "commits_since_20260313_count_capped100": 40,
+    "recent_commit_authors": [
+      "1t1sCooL",
+      "NeuZhou",
+      "alexander-schneider",
+      "bitmegistus",
+      "ctacyk",
+      "cursoragent",
+      "jubeiargh",
+      "kelvinxue",
+      "mgh12453",
+      "morluto",
+      "pengpengyi92",
+      "roberttidball",
+      "rootSunc",
+      "sher1096",
+      "starvian",
+      "vibeyclaw",
+      "xgdgsc",
+      "yjw",
+      "\u675c\u4e00min"
+    ],
+    "contributors_sample": [
+      {
+        "login": "xgdgsc",
+        "contributions": 74,
+        "type": "User"
+      },
+      {
+        "login": "rootSunc",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "alexander-schneider",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "sinall",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "GiaoGiaoCat",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "yutiansut",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jubeiargh",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cursoragent",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "yesme",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "NeuZhou",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mgh12453",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "1t1sCooL",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rainx",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "roberttidball",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bitmegistus",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ctacyk",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "fasiondog",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "financialdatanet",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "foolcage",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "kelvinxue",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "morluto",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "pengpengyi92",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "physercoe",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "shinny-mayanqiong",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "starvian",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vibeyclaw",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "08488f623493c6c3f923d046b68e7934a88a492f7a3bc6ca79e6ea0b1b62d310",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "dd2f321484c74b33e6eed2a2ae043cfa698e2e6fbdbe08c9e9e8a17c43325bae",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "papers.md"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W01-W10",
+        "lane": "registry",
+        "query": "awesome quant"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/thuquant/awesome-quant",
+      "commit": "https://github.com/thuquant/awesome-quant/commit/f6816f44b03ea6afd4321b202a159a004023ed2b",
+      "readme": "https://github.com/thuquant/awesome-quant/blob/f6816f44b03ea6afd4321b202a159a004023ed2b/README.md",
+      "license": "https://github.com/thuquant/awesome-quant/blob/f6816f44b03ea6afd4321b202a159a004023ed2b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/thuquant/awesome-quant/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/thuquant/awesome-quant/contributors",
+      "issues": "https://api.github.com/repos/thuquant/awesome-quant/issues"
+    },
+    "readme_excerpt": "# Awesome Quant [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) \u4e00\u4efd\u7cbe\u5fc3\u6311\u9009\u7684\u4e2d\u6587Quant\u76f8\u5173\u8d44\u6e90\u7d22\u5f15\u3002 ## \u76ee\u5f55 * [\u6570\u636e\u6e90](#\u6570\u636e\u6e90) * [\u6570\u636e\u5e93](#\u6570\u636e\u5e93) * [\u91cf\u5316\u4ea4\u6613\u5e73\u53f0](#\u91cf\u5316\u4ea4\u6613\u5e73\u53f0) * [\u7b56\u7565](#\u7b56\u7565) * [\u56de\u6d4b](#\u56de\u6d4b) * [\u4ea4\u6613API](#\u4ea4\u6613api) * [\u7f16\u7a0b](#\u7f16\u7a0b) * [Python](#python) * [R](#r) * [C++](#c) * [Julia](#julia) * [\u8bba\u575b](#\u8bba\u575b) * [\u4e66\u7c4d](#\u4e66\u7c4d) * [\u8bba\u6587](#\u8bba\u6587) * [\u653f\u7b56](#\u653f\u7b56) * [\u503c\u5f97\u5173\u6ce8\u7684\u4fe1\u606f\u6e90](#\u503c\u5f97\u5173\u6ce8\u7684\u4fe1\u606f\u6e90) * [\u5176\u4ed6Quant\u8d44\u6e90\u7d22\u5f15](#\u5176\u4ed6quant\u8d44\u6e90\u7d22\u5f15) ## \u6570\u636e\u6e90 * [TuShare](http://tushare.org/) - \u4e2d\u6587\u8d22\u7ecf\u6570\u636e\u63a5\u53e3\u5305 * [Quandl](https://www.quandl.com/) - \u56fd\u9645\u91d1\u878d\u548c\u7ecf\u6d4e\u6570\u636e * [Wind\u8d44\u8baf-\u7ecf\u6d4e\u6570\u636e\u5e93](http://www.wind.com.cn/NewSite/edb.html) - \u6536\u8d39 * [\u9510\u601d\u6570\u636e - \u9996\u9875](http://www.resset.cn/) - \u6536\u8d39 * [\u56fd\u6cf0\u5b89\u6570\u636e\u670d\u52a1\u4e2d\u5fc3](http://www.gtarsc.com/Home) - \u6536\u8d39 * [\u6052\u751fAPI](https://open.hscloud.cn/cloud/open/apilibrary/queryLibraryMenu.html?parent_id=100313&menu_id=100307) - \u6536\u8d39 * [Bloomberg API](https://www.bloomberglabs.com/api/libraries/) - \u6536\u8d39 * [\u6570\u5e93\u91d1\u878d\u6570\u636e\u548c\u6df1\u5ea6\u5206\u6790API\u670d\u52a1](http://developer.chinascope.com/) - \u6536\u8d39 * [Historical Data Sources](http://quantpedia.com/Links/HistoricalData) - \u4e00\u4e2a\u6570\u636e\u6e90\u7d22\u5f15 * [Python\u901a\u8fbe\u4fe1\u6570\u636e\u63a5\u53e3](https://github.com/rainx/pytdx) - \u514d\u8d39\u901a\u8fbe\u4fe1\u6570\u636e\u6e90 * [fooltrader](https://github.com/foolcage/fooltrader) - \u5927\u6570\u636e\u5f00\u6e90\u91cf\u5316\u9879\u76ee,\u81ea\u5df1\u7ef4\u62a4\u4e86\u4e00\u4e2a\u722c\u53d6\u6574\u5408\u7684\u5168\u5e02\u573a\u6570\u636e\u6e90 * [zvt](https://github.com/zvtvz/zvt) - ZVT\u662f\u5728fooltrader\u7684\u57fa\u7840\u4e0a\u91cd\u65b0\u601d\u8003\u540e\u7f16\u5199\u7684\u91cf\u5316\u9879\u76ee\uff0c\u5176\u5305\u542b\u53ef\u6269\u5c55\u7684\u6570\u636erecorder\uff0capi\uff0c\u56e0\u5b50\u8ba1\u7b97\uff0c\u9009\u80a1\uff0c\u56de\u6d4b\uff0c\u5b9a\u4f4d\u4e3a\u4e2d\u4f4e\u9891 \u591a\u7ea7\u522b \u591a\u6807\u7684 \u5168\u5e02\u573a\u5206\u6790\u548c\u4ea4\u6613\u6846\u67b6\u3002 * [JoinQuant/jqdatasdk](https://github.com/JoinQuant/jqdatasdk) - jqdatasdk\u662f\u63d0\u4f9b",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2016 thuquant Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyrig"
+  },
+  {
+    "full_name": "tooksoi/ScraXBRL",
+    "requested_name": "tooksoi/ScraXBRL",
+    "id": 53261275,
+    "url": "https://github.com/tooksoi/ScraXBRL",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "SEC Edgar Scraper and XBRL Parser/Renderer",
+    "stars": 306,
+    "forks": 86,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "93d8ff3226c27f1592942462711954e0dbc267da",
+    "last_commit_date": "2017-01-18T23:54:44Z",
+    "pushed_at_not_commit_date": "2022-12-26T19:46:50Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "tooksoi",
+        "contributions": 40,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "cacb006f7f1dee9a5f55029a06866694b7d2a46232a0c4a259290d556d2899a1",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "bf833a9457bced085b98ac59e173b2b80de044aead31b118f368820d91c75cc0",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      "DataViewer.py",
+      "EdgarScrape.py",
+      "LICENSE",
+      "LinkURL.py",
+      "README.md",
+      "XMLExtract.py",
+      "aapl20130629.png",
+      "data",
+      "logs.py",
+      "logs",
+      "main.py",
+      "requirements.txt",
+      "scrape_lists",
+      "settings.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/tooksoi/ScraXBRL/blob/93d8ff3226c27f1592942462711954e0dbc267da/requirements.txt",
+        "sha256": "d7cf5b9fddb563061f0669ede20a9a642e67640992ded4da9f3ef3b56c4db511"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W02",
+        "lane": "format",
+        "query": "XBRL parser"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/tooksoi/ScraXBRL",
+      "commit": "https://github.com/tooksoi/ScraXBRL/commit/93d8ff3226c27f1592942462711954e0dbc267da",
+      "readme": "https://github.com/tooksoi/ScraXBRL/blob/93d8ff3226c27f1592942462711954e0dbc267da/README.md",
+      "license": "https://github.com/tooksoi/ScraXBRL/blob/93d8ff3226c27f1592942462711954e0dbc267da/LICENSE",
+      "recent_commits": "https://api.github.com/repos/tooksoi/ScraXBRL/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/tooksoi/ScraXBRL/contributors",
+      "issues": "https://api.github.com/repos/tooksoi/ScraXBRL/issues"
+    },
+    "readme_excerpt": "# ScraXBRL SEC Edgar Scraper and XBRL Parser/Renderer To use: 1. Install requirements from requirements.txt 2. Change settings.py to fit your needs. Raw scraped data will be stored in data/raw_data and extracted data will be stored in data/extracted_data by default. 3. Run python main.py. This will begin the scrape and extract process. 4. To view data in terminal (data must have already been scraped from the SEC EDGAR website): ![alt tag](https://raw.githubusercontent.com/computerpencils/ScraXBRL/master/aapl20130629.png) Data is stored in a pickle file. To use DataViewer, create instance of DataView class and enter the necessary parameters (ticker_symbol, filing_date, filing_type). The data will then be stored in [instance name].data, and it is an OrderedDict.",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2016 computerpencils Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above "
+  },
+  {
+    "full_name": "tradytics/eiten",
+    "requested_name": "tradytics/eiten",
+    "id": 293687812,
+    "url": "https://github.com/tradytics/eiten",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Statistical and Algorithmic Investing Strategies for Everyone",
+    "stars": 3297,
+    "forks": 368,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "44536c58887833b7b9bbcb30f2a270db2c712ea6",
+    "last_commit_date": "2020-09-21T04:31:05Z",
+    "pushed_at_not_commit_date": "2022-07-30T19:01:18Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "tradytics",
+        "contributions": 62,
+        "type": "User"
+      },
+      {
+        "login": "silvavn",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "PeterGrace",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "UncleGene",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "KeyboardInterrupt",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/tradytics/eiten/issues/36",
+      "created_at": "2025-10-18T14:59:17Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "16fc1f542a5de63a0b0928e16949868cf8cef36bb955c63eb7982a197ecbc925",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "argchecker.py",
+      "backtester.py",
+      "commands.json",
+      "data_loader.py",
+      "eiten.py",
+      "figures",
+      "portfolio_manager.py",
+      "requirements.txt",
+      "simulator.py",
+      "stocks",
+      "strategies",
+      "strategy_manager.py"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/requirements.txt",
+        "sha256": "bd77533598966eea65d3c137527b115def80dea68ea86889a0579c597c3a1e62"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W05",
+        "lane": "B",
+        "query": "topic:portfolio-optimization"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/tradytics/eiten",
+      "commit": "https://github.com/tradytics/eiten/commit/44536c58887833b7b9bbcb30f2a270db2c712ea6",
+      "readme": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/README.md",
+      "license": "https://github.com/tradytics/eiten/blob/44536c58887833b7b9bbcb30f2a270db2c712ea6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/tradytics/eiten/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/tradytics/eiten/contributors",
+      "issues": "https://api.github.com/repos/tradytics/eiten/issues"
+    },
+    "readme_excerpt": "# Eiten - Algorithmic Investing Strategies for Everyone Eiten is an open source toolkit by [Tradytics](https://www.tradytics.com/) that implements various statistical and algorithmic investing strategies such as **Eigen Portfolios**, **Minimum Variance Portfolios**, **Maximum Sharpe Ratio Portfolios**, and **Genetic Algorithms** based Portfolios. It allows you to build your own portfolios with your own set of stocks that can beat the market. The rigorous testing framework included in Eiten enables you to have confidence in your portfolios. If you are looking to discuss these tools in depth and talk about more tools that we are working on, please feel free to join our [Discord](https://discord.gg/QuvE2Z8) channel where we have a bunch of more tools too. ### Files Description | Path | Description | :--- | :---------- | eiten | Main folder. | &boxur;&nbsp; figures | Figures for this github repositories. | &boxur;&nbsp; stocks | Folder to keep your stock lists that you want to use to create your portfolios. | &boxur;&nbsp; strategies | A bunch of strategies implemented in python. | backtester.py | Backtesting module that both backtests and forward tests all portfolios. | data_loader.py | Module for loading data from yahoo finance. | portfolio_manager.py | Main file that takes in a bunch of arguments and generates several portfolios for you. | simulator.py | Simulator that uses hist",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  }
+]

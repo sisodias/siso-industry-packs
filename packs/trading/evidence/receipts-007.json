@@ -1,0 +1,1402 @@
+[
+  {
+    "full_name": "beancount/beancount-mode",
+    "requested_name": "beancount/beancount-mode",
+    "id": 303555018,
+    "url": "https://github.com/beancount/beancount-mode",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Emacs major-mode to work with Beancount ledger files",
+    "stars": 159,
+    "forks": 36,
+    "archived": false,
+    "fork": false,
+    "language": "Emacs Lisp",
+    "default_branch": "main",
+    "latest_commit": "37648f983ff42426b1f364831ce7d2d0d735686b",
+    "last_commit_date": "2026-05-17T18:03:30Z",
+    "pushed_at_not_commit_date": "2026-05-17T18:03:45Z",
+    "commits_since_20260313_count_capped100": 9,
+    "recent_commit_authors": [
+      "HeinrichTaver",
+      "blais"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dnicolodi",
+        "contributions": 46,
+        "type": "User"
+      },
+      {
+        "login": "blais",
+        "contributions": 45,
+        "type": "User"
+      },
+      {
+        "login": "vkazanov",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "HeinrichTaver",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "monnier",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "akirak",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "kenkangxgwe",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "dgchurchill",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "debanjum",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "lgfang",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kfogel",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "TRSx80",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "Anks",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hlissner",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "iostapyshyn",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "loverobean",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "visika",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mbrase",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ranjeethmahankali",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tecosaur",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "twrightsman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "starr-dusT",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "yyymeow",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/beancount-mode/issues/73",
+      "created_at": "2026-09-10T15:59:42Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.org",
+    "readme_sha256": "9588267c48f35f411b50440bcf57028d94325575a0dc13e8ec2fb720ed612355",
+    "license": "GPL-3.0",
+    "license_path": "COPYING",
+    "license_file_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "license_candidates": [
+      "COPYING"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "COPYING",
+      "Makefile",
+      "README.org",
+      "beancount-tests.el",
+      "beancount.el",
+      "etc",
+      "flymake-bean-check.el"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/beancount-mode",
+      "commit": "https://github.com/beancount/beancount-mode/commit/37648f983ff42426b1f364831ce7d2d0d735686b",
+      "readme": "https://github.com/beancount/beancount-mode/blob/37648f983ff42426b1f364831ce7d2d0d735686b/README.org",
+      "license": "https://github.com/beancount/beancount-mode/blob/37648f983ff42426b1f364831ce7d2d0d735686b/COPYING",
+      "recent_commits": "https://api.github.com/repos/beancount/beancount-mode/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/beancount-mode/contributors",
+      "issues": "https://api.github.com/repos/beancount/beancount-mode/issues"
+    },
+    "readme_excerpt": "#+TITLE: Emacs major-mode to work with Beancount ledger files This package provides =beancount-mode= an Emacs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Major-Modes.html][major-mode]] implementing syntax highlighting, indentation, completion , and other facilities to edit and work with Beancount ledger files. To instruct Emacs to activate =beancount-mode= when opening files with a ~.beancount~ extension, you can add this code to your Emacs configuration, typically in the =~/.emacs.d/init.el= file: #+begin_src elisp (add-to-list 'load-path \"/path/to/beancount-mode/\") (require 'beancount) (add-to-list 'auto-mode-alist '(\"\\\\.beancount\\\\'\" . beancount-mode)) #+end_src Most facilities commonly provided by Emacs major modes are implemented by =beancount-mode=. Documentation on the provided functionality and on the default keybindings can be obtained with the =describe-mode= command in a buffer with =beancount-mode= active. In a nutshell, when =beancount-mode= is active: - The \"TAB\" key either indents, completes, or folds the heading at point, depending on the context. - Amounts in postings are indented so that the decimal point is at the =beancount-number-alignment-column= column. Setting this variable to 0 will cause the alignment column to be determined from file content. - Postings in transactions, as well as metadata, links, and tags following directives, and are",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU Genera"
+  },
+  {
+    "full_name": "beancount/beangrow",
+    "requested_name": "beancount/beangrow",
+    "id": 333634558,
+    "url": "https://github.com/beancount/beangrow",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Returns calculations on portfolios in Beancount",
+    "stars": 89,
+    "forks": 35,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "1477a7efc49001dc5c2fa9f19fb3a426a164c0d1",
+    "last_commit_date": "2025-10-15T03:43:30Z",
+    "pushed_at_not_commit_date": "2025-10-15T03:43:30Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "blais",
+        "contributions": 31,
+        "type": "User"
+      },
+      {
+        "login": "andreasgerstmayr",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "francocalvo",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "hosiet",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "DIYgod",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Ev2geny",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "MarcoBuster",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "nicdumz",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "scanta2",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "e7h4n",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "erpreciso",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/beangrow/issues/51",
+      "created_at": "2026-08-24T13:05:05Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "fa99874cc7f4be81b712d54610375bcc847f7c2b495cea5745b5adc8bcdce5a6",
+    "license": "GPL-2.0",
+    "license_path": "COPYING",
+    "license_file_sha256": "aeb6c47206ea227aad935eb9ff38a8c518e9a96668b2c9ce685b6c4c80bdc853",
+    "license_candidates": [
+      "COPYING"
+    ],
+    "root_entries": [
+      ".envrc",
+      ".gitignore",
+      "COPYING",
+      "README.md",
+      "beangrow",
+      "example",
+      "flake.lock",
+      "flake.nix",
+      "poetry.lock",
+      "poetry.toml",
+      "pyproject.toml"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/beancount/beangrow/blob/1477a7efc49001dc5c2fa9f19fb3a426a164c0d1/pyproject.toml",
+        "sha256": "fd051fc7a5956fbfa42a70a89ef52d22d2e0c2f4201077f0de14f190b5e66586"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/beangrow",
+      "commit": "https://github.com/beancount/beangrow/commit/1477a7efc49001dc5c2fa9f19fb3a426a164c0d1",
+      "readme": "https://github.com/beancount/beangrow/blob/1477a7efc49001dc5c2fa9f19fb3a426a164c0d1/README.md",
+      "license": "https://github.com/beancount/beangrow/blob/1477a7efc49001dc5c2fa9f19fb3a426a164c0d1/COPYING",
+      "recent_commits": "https://api.github.com/repos/beancount/beangrow/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/beangrow/contributors",
+      "issues": "https://api.github.com/repos/beancount/beangrow/issues"
+    },
+    "readme_excerpt": "# Compute Returns This directory contains code which computes investment returns on a variety of assets, as recorded by Beancount, fed directly from a Beancount file. See this document for details: https://docs.google.com/document/d/1nPsMIunLnDvdsg6TSsd0PZb7jngojNpFlqnaX36WRp8/ ## Scripts There are three related scripts: - configure.py: This attempts to automatically infer and generate configuration to compute returns from an existing Beancount ledger. - compute_returns.py: This extracts data for each of the investments defined in the configuration and computes the returns and generates output for each requested returns report. - download_prices.py: The compute_returns.py script outputs a list of missing (or inadequately dated) price directives to properly do its job as a side-product. This script can read that file and fetch those missing dates, which you can insert in your ledger and then rerun compute_returns.py for a more precise calculation. ## Example To run the example: ``` cd example uv run beangrow-returns ledger.beancount config.pbtxt ./reports ``` The reports are available at `example/reports/groups`.",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free softwar"
+  },
+  {
+    "full_name": "beancount/beangulp",
+    "requested_name": "beancount/beangulp",
+    "id": 335171417,
+    "url": "https://github.com/beancount/beangulp",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Importers framework for Beancount",
+    "stars": 143,
+    "forks": 60,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6",
+    "last_commit_date": "2026-05-30T14:41:52Z",
+    "pushed_at_not_commit_date": "2026-05-30T14:41:52Z",
+    "commits_since_20260313_count_capped100": 2,
+    "recent_commit_authors": [
+      "anlar",
+      "slashformotion"
+    ],
+    "contributors_sample": [
+      {
+        "login": "blais",
+        "contributions": 223,
+        "type": "User"
+      },
+      {
+        "login": "dnicolodi",
+        "contributions": 158,
+        "type": "User"
+      },
+      {
+        "login": "yagebu",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "wzyboy",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "trim21",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "tbm",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "josephw",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jokester",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "musicinmybrain",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kubauk",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "johannesjh",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jpluscplusm",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "maxwell-k",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "llpamies",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "matz-e",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "rajive",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "tohojo",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "alensiljak",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Sieboldianus",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "anlar",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Ulthran",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cjwatson",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "blaggacao",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "floriskruisselbrink",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jakobhellermann",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jamessan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "patbakdev",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "tarioch",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "rbrunt",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "siddhantgoel",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/beangulp/issues/209",
+      "created_at": "2026-05-08T18:51:01Z",
+      "state": "closed",
+      "comments": 2,
+      "first_staff_comment_in_sample": "2026-07-08T15:13:58Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "1339574f1bfeced55366561ef7fa1e3a49078b8199984aca69b296a21a7d5a39",
+    "license": "GPL-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.rst",
+      "beangulp",
+      "etc",
+      "examples",
+      "pyproject.toml",
+      "requirements.txt",
+      "setup.py",
+      "tools"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/beancount/beangulp/blob/d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6/pyproject.toml",
+        "sha256": "ac1f7b655c96d4f79fae50a845c245691831495eed8445fdc5b2f13d358c535c"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/beancount/beangulp/blob/d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6/requirements.txt",
+        "sha256": "e947ef29a990309a0a035e5516cba487d271502c0781f1bc249f5c90a4f6fb54"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/beangulp",
+      "commit": "https://github.com/beancount/beangulp/commit/d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6",
+      "readme": "https://github.com/beancount/beangulp/blob/d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6/README.rst",
+      "license": "https://github.com/beancount/beangulp/blob/d5672c9dbb317842e0f24f1ed7f4b57fa53fa1c6/LICENSE",
+      "recent_commits": "https://api.github.com/repos/beancount/beangulp/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/beangulp/contributors",
+      "issues": "https://api.github.com/repos/beancount/beangulp/issues"
+    },
+    "readme_excerpt": "beangulp: Importers Framework for Beancount ------------------------------------------- ``beangulp`` provides a framework for importing transactions into a Beancount ledger from account statements and other documents and for managing documents. ``beangulp`` is compatible with both Beancount 2.3 and the Beancount 3.0. ``beangulp`` is the evolution of ``beancount.ingest`` in Beancount 2.3 and replaces it in the Beancount 3.0 release. Documentation is available in form of code docstrings and `examples`__. The `documentation`__ for ``beancount.ingest`` provided a good introduction and is still partially relevant to ``beangulp``. The rest of the Beancount documentation can be found `here`__. __ https://github.com/beancount/beangulp/tree/master/examples/ __ https://beancount.github.io/docs/importing_external_data/ __ https://beancount.github.io/docs/",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for"
+  },
+  {
+    "full_name": "beancount/beanprice",
+    "requested_name": "beancount/beanprice",
+    "id": 282466780,
+    "url": "https://github.com/beancount/beanprice",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Daily price quotes fetching library for plain-text accounting",
+    "stars": 121,
+    "forks": 74,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "master",
+    "latest_commit": "ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d",
+    "last_commit_date": "2026-02-07T11:05:58Z",
+    "pushed_at_not_commit_date": "2026-02-07T11:05:58Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "blais",
+        "contributions": 52,
+        "type": "User"
+      },
+      {
+        "login": "xuhcc",
+        "contributions": 41,
+        "type": "User"
+      },
+      {
+        "login": "mrlimacz",
+        "contributions": 20,
+        "type": "User"
+      },
+      {
+        "login": "doriath",
+        "contributions": 18,
+        "type": "User"
+      },
+      {
+        "login": "alensiljak",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "tarioch",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "xinluh",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "kris7t",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Ev2geny",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "ThomasdenH",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "delmarrerikaine",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "spiffycoffee",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "bayesianmind",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dahelb",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "mbafford",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Rudd-O",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "SEIAROTg",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "william-davies",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "slashformotion",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/beanprice/issues/141",
+      "created_at": "2026-07-14T20:18:47Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "f77793454c03b309da993c0928816ba95f887058e1ea07d9844c05efe8bf1e7f",
+    "license": "GPL-2.0",
+    "license_path": "COPYING",
+    "license_file_sha256": "aeb6c47206ea227aad935eb9ff38a8c518e9a96668b2c9ce685b6c4c80bdc853",
+    "license_candidates": [
+      "COPYING"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      ".pylintrc",
+      "COPYING",
+      "README.md",
+      "beanprice",
+      "bin",
+      "etc",
+      "experiments",
+      "pyproject.toml",
+      "requirements.txt",
+      "requirements_dev.txt",
+      "setup.py"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/beancount/beanprice/blob/ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d/pyproject.toml",
+        "sha256": "fa76b6d561f47eb4a7686367e0ab75a56a0d4644a6237ac6c9e3db3ae3206ed6"
+      },
+      "requirements.txt": {
+        "url": "https://github.com/beancount/beanprice/blob/ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d/requirements.txt",
+        "sha256": "28a2cf94250c475af61b38a8696230bc26b56fddaf701aa2cf77fcb20a9afa36"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/beanprice",
+      "commit": "https://github.com/beancount/beanprice/commit/ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d",
+      "readme": "https://github.com/beancount/beanprice/blob/ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d/README.md",
+      "license": "https://github.com/beancount/beanprice/blob/ab9e0cc2f03029d5af59f5bfcea38f03e271fb3d/COPYING",
+      "recent_commits": "https://api.github.com/repos/beancount/beanprice/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/beanprice/contributors",
+      "issues": "https://api.github.com/repos/beancount/beanprice/issues"
+    },
+    "readme_excerpt": "# beanprice: Price quotes fetcher for Beancount ## Description A script to fetch market data prices from various sources on the internet and render them for plain text accounting price syntax (and Beancount). This used to be located within Beancount itself (at v2) under beancount.prices. This repo will contain all future updates to that script and to those price sources. ## Documentation Some documentation is still part of Beancount. More about how to use this can be found on that [mailing-list](https://groups.google.com/forum/#!forum/beancount). Otherwise read the source. ## Quick start To install beanprice, run: ```shell pip install git+https://github.com/beancount/beanprice.git ``` You can fetch the latest price of a stock by running: ```shell bean-price -e 'USD:yahoo/AAPL' ``` To fetch the latest prices from your beancount file, first ensure that commodities have price metadata, e.g. ``` 2000-01-01 commodity AAPL price: \"USD:yahoo/AAPL\" ``` Then run: ```shell bean-price ledger.beancount ``` To update prices up to the present day, run: ```shell bean-price --update ledger.beancount ``` For more detailed guide for price fetching, read . ## Price source info The following price sources are available: | Name | Module | Provides prices for | Base currency | Latest price? | Historical price? | |-------------------------|---------------------------|---------------------------------",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The licenses for most software are designed to take away your freedom to share and change it. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change free softwar"
+  },
+  {
+    "full_name": "beancount/fava",
+    "requested_name": "beancount/fava",
+    "id": 47411155,
+    "url": "https://github.com/beancount/fava",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Fava - web interface for Beancount",
+    "stars": 2575,
+    "forks": 404,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "7096e25c6dcc48ab0059643b5592197492ddd0dc",
+    "last_commit_date": "2026-09-11T16:35:27Z",
+    "pushed_at_not_commit_date": "2026-09-11T16:47:26Z",
+    "commits_since_20260313_count_capped100": 96,
+    "recent_commit_authors": [
+      "GuanghaoYe",
+      "cvaske",
+      "dependabot[bot]",
+      "jakobhellermann",
+      "mgalore",
+      "pike00",
+      "slava-sh",
+      "slimslickner",
+      "stenius",
+      "weblate",
+      "wincent",
+      "yagebu"
+    ],
+    "contributors_sample": [
+      {
+        "login": "yagebu",
+        "contributions": 2505,
+        "type": "User"
+      },
+      {
+        "login": "aumayr",
+        "contributions": 659,
+        "type": "User"
+      },
+      {
+        "login": "corani",
+        "contributions": 37,
+        "type": "User"
+      },
+      {
+        "login": "pre-commit-ci[bot]",
+        "contributions": 30,
+        "type": "Bot"
+      },
+      {
+        "login": "tbm",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "xentac",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "yegle",
+        "contributions": 12,
+        "type": "User"
+      },
+      {
+        "login": "dependabot-preview[bot]",
+        "contributions": 12,
+        "type": "Bot"
+      },
+      {
+        "login": "redstreet",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "upsuper",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "xuhcc",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "andreasgerstmayr",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "zacchiro",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "xinluh",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "adamgibbins",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "jeffwheeler",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "johannesjh",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "tschicke",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "weblate",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "dtrai2",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "wylfen",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "cgrinds",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "MJochim",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "Minion3665",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "pmarciniak",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "seltzered",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "Tumetsu",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "tarioch",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jbms",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "cheif",
+        "contributions": 3,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.rst",
+    "readme_sha256": "c699bdf87dfd7d25813681d28c8982e91101ec954746dba0a87f2267adbf016c",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "143ab9400e5ecf3fe1ec07725e1781ec60c24fa2765a6bd22c6a0eda6770d567",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".prettierignore",
+      "AUTHORS",
+      "CHANGES",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "README.rst",
+      "biome.jsonc",
+      "constraints-old.txt",
+      "contrib",
+      "docs",
+      "frontend",
+      "hatch_build.py",
+      "pyproject.toml",
+      "src",
+      "stubs",
+      "tests",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/beancount/fava/blob/7096e25c6dcc48ab0059643b5592197492ddd0dc/pyproject.toml",
+        "sha256": "ed18b1147eb21d08528021087c4d5630b3681e9a214c7ac2786c06b8e2201a1d"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      },
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/fava",
+      "commit": "https://github.com/beancount/fava/commit/7096e25c6dcc48ab0059643b5592197492ddd0dc",
+      "readme": "https://github.com/beancount/fava/blob/7096e25c6dcc48ab0059643b5592197492ddd0dc/README.rst",
+      "license": "https://github.com/beancount/fava/blob/7096e25c6dcc48ab0059643b5592197492ddd0dc/LICENSE",
+      "recent_commits": "https://api.github.com/repos/beancount/fava/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/fava/contributors",
+      "issues": "https://api.github.com/repos/beancount/fava/issues"
+    },
+    "readme_excerpt": ".. image:: https://img.shields.io/gitter/room/beancount/fava :alt: Join the chat at https://gitter.im/beancount/fava :target: https://gitter.im/beancount/fava .. image:: https://img.shields.io/pypi/l/fava :alt: PyPI - License :target: https://github.com/beancount/fava/blob/main/LICENSE .. image:: https://img.shields.io/pypi/v/fava :alt: PyPI - Version :target: https://pypi.org/project/fava/ Fava is a web interface for the double-entry bookkeeping software `Beancount `__ with a focus on features and usability. Check out the online `demo `__ and learn more about Fava on the `website `__. The `Getting Started `__ guide details the installation and how to get started with Beancount. If you are already familiar with Beancount, you can get started with Fava:: pip3 install fava fava ledger.beancount and visit the web interface at `http://localhost:5000 `__. If you want to hack on Fava or run a development version, see the `Development `__ page on the website for details. Contributions are very welcome!",
+    "license_excerpt": "The MIT License (MIT) Copyright (c) 2015-2016 Dominik Aumayr <dominik@aumayr.name> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the follow"
+  },
+  {
+    "full_name": "beancount/ledger2beancount",
+    "requested_name": "beancount/ledger2beancount",
+    "id": 125626223,
+    "url": "https://github.com/beancount/ledger2beancount",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Ledger to Beancount text-based converter",
+    "stars": 95,
+    "forks": 15,
+    "archived": false,
+    "fork": false,
+    "language": "Perl",
+    "default_branch": "master",
+    "latest_commit": "e56300d3db06d5b94df2e0cacbab3072585a4e1a",
+    "last_commit_date": "2026-06-14T07:15:15Z",
+    "pushed_at_not_commit_date": "2026-06-14T07:22:39Z",
+    "commits_since_20260313_count_capped100": 1,
+    "recent_commit_authors": [
+      "zacchiro"
+    ],
+    "contributors_sample": [
+      {
+        "login": "tbm",
+        "contributions": 594,
+        "type": "User"
+      },
+      {
+        "login": "zacchiro",
+        "contributions": 65,
+        "type": "User"
+      },
+      {
+        "login": "jcrben",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dennislwm",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "jelmer",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "simonmichael",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vkurup",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "wzyboy",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/ledger2beancount/issues/277",
+      "created_at": "2025-05-06T10:28:15Z",
+      "state": "open",
+      "comments": 5,
+      "first_staff_comment_in_sample": "2025-05-06T10:53:54Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "066d1a12448b6f403cd421493887deffeda1242fc4ae3f2932cea2e29a4f2a2c",
+    "license": "GPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".aspell.en.prepl",
+      ".aspell.en.pws",
+      ".editorconfig",
+      ".github",
+      ".gitignore",
+      ".pyspelling.yaml",
+      ".yamllint",
+      "AUTHORS",
+      "CONTRIBUTORS",
+      "Dockerfile",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "bin",
+      "cpanfile",
+      "devel",
+      "docs",
+      "examples",
+      "ledger2beancount.yaml",
+      "misc",
+      "mkdocs.yml",
+      "requirements.txt",
+      "tests",
+      "themes"
+    ],
+    "dependency_manifests": {
+      "requirements.txt": {
+        "url": "https://github.com/beancount/ledger2beancount/blob/e56300d3db06d5b94df2e0cacbab3072585a4e1a/requirements.txt",
+        "sha256": "ef040b851af9dbac750fbe1194d25a845d94a1c92495f2a033ed6b4a4fcaa6c1"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/ledger2beancount",
+      "commit": "https://github.com/beancount/ledger2beancount/commit/e56300d3db06d5b94df2e0cacbab3072585a4e1a",
+      "readme": "https://github.com/beancount/ledger2beancount/blob/e56300d3db06d5b94df2e0cacbab3072585a4e1a/README.md",
+      "license": "https://github.com/beancount/ledger2beancount/blob/e56300d3db06d5b94df2e0cacbab3072585a4e1a/LICENSE",
+      "recent_commits": "https://api.github.com/repos/beancount/ledger2beancount/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/ledger2beancount/contributors",
+      "issues": "https://api.github.com/repos/beancount/ledger2beancount/issues"
+    },
+    "readme_excerpt": "[![Build Status](https://travis-ci.org/beancount/ledger2beancount.svg?branch=master)](https://travis-ci.org/beancount/ledger2beancount) # ledger2beancount A script to automatically convert [Ledger](https://www.ledger-cli.org/)-based textual ledgers to [Beancount](http://furius.ca/beancount/) ones. Conversion is based on (concrete) syntax, so that information that is not meaningful for accounting reasons but still valuable (e.g., comments, formatting, etc.) can be preserved. ledger2beancount supports the file formats from: * [ledger](https://ledger-cli.org/) * [hledger](https://hledger.org/) ## Usage ledger2beancount accepts input from `stdin` or from a file and will write the converted data to `stdout`. You can run ledger2beancount like this: ledger2beancount test.ledger > test.beancount ## Installation Please see [the installation information](docs/installation.md) for dependencies and installation instructions. ## Documentation ledger2beancount comes with extensive documentation. You can also [read the documentation online](https://ledger2beancount.readthedocs.io/) thanks to Read the Docs. ## Features The majority of features from ledger are supported by ledger2beancount. Here is an overview of fully supported, partly supported and unsupported features. Please refer to [the user guide](docs/guide.md) for more details on how to use ledger2beancount and to configure it to your ",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU General Public License is a free, copyleft license for software and other kinds of works. The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General"
+  },
+  {
+    "full_name": "beancount/smart_importer",
+    "requested_name": "beancount/smart_importer",
+    "id": 112750160,
+    "url": "https://github.com/beancount/smart_importer",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Augment Beancount importers with machine learning functionality.",
+    "stars": 308,
+    "forks": 36,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "db71e8cd5538d079324472d276708979adc95506",
+    "last_commit_date": "2026-07-26T12:59:06Z",
+    "pushed_at_not_commit_date": "2026-07-26T12:59:09Z",
+    "commits_since_20260313_count_capped100": 4,
+    "recent_commit_authors": [
+      "yagebu"
+    ],
+    "contributors_sample": [
+      {
+        "login": "yagebu",
+        "contributions": 116,
+        "type": "User"
+      },
+      {
+        "login": "johannesjh",
+        "contributions": 89,
+        "type": "User"
+      },
+      {
+        "login": "tarioch",
+        "contributions": 66,
+        "type": "User"
+      },
+      {
+        "login": "trim21",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "aclindsa",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "tbm",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "m-d-brown",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "seltzered",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dukedorje",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "hlieberman",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "dumbPy",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "Endle",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/beancount/smart_importer/issues/158",
+      "created_at": "2026-07-02T06:21:27Z",
+      "state": "closed",
+      "comments": 1,
+      "first_staff_comment_in_sample": "2026-07-26T12:59:23Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "3265df6e69b6342a3f5e5493303ca6b7addd92c6785431f33c0513c0eb89ee61",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "6e16ad47cdbcaadbbe043582c178fa1974d6742abc537a6feb77bb0728cc4126",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "CHANGES",
+      "LICENSE",
+      "Makefile",
+      "README.rst",
+      "pyproject.toml",
+      "smart_importer",
+      "tests",
+      "tox.ini"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/beancount/smart_importer/blob/db71e8cd5538d079324472d276708979adc95506/pyproject.toml",
+        "sha256": "476e068b098269774067a0e6c42e276a74fb88d98401fe7e46c6e2087afd04cd"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 3,
+        "stage": "W10",
+        "lane": "maintainer",
+        "query": "user:beancount"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/beancount/smart_importer",
+      "commit": "https://github.com/beancount/smart_importer/commit/db71e8cd5538d079324472d276708979adc95506",
+      "readme": "https://github.com/beancount/smart_importer/blob/db71e8cd5538d079324472d276708979adc95506/README.rst",
+      "license": "https://github.com/beancount/smart_importer/blob/db71e8cd5538d079324472d276708979adc95506/LICENSE",
+      "recent_commits": "https://api.github.com/repos/beancount/smart_importer/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/beancount/smart_importer/contributors",
+      "issues": "https://api.github.com/repos/beancount/smart_importer/issues"
+    },
+    "readme_excerpt": "smart_importer ============== https://github.com/beancount/smart_importer .. image:: https://github.com/beancount/smart_importer/actions/workflows/ci.yml/badge.svg?branch=main :target: https://github.com/beancount/smart_importer/actions?query=branch%3Amain Augments `Beancount `__ importers with machine learning functionality. Status ------ Working protoype, development status: beta Installation ------------ The ``smart_importer`` can be installed from PyPI: .. code:: bash pip install smart_importer Quick Start ----------- This package provides import hooks that can modify the imported entries. When running the importer, the existing entries will be used as training data for a machine learning model, which will then predict entry attributes. The following example shows how to apply the ``PredictPostings`` hook to an existing CSV importer: .. code:: python from beangulp.importers import csv from beangulp.importers.csv import Col from smart_importer import PredictPostings class MyBankImporter(csv.Importer): '''Conventional importer for MyBank''' def __init__(self, *, account): super().__init__( {Col.DATE: 'Date', Col.PAYEE: 'Transaction Details', Col.AMOUNT_DEBIT: 'Funds Out', Col.AMOUNT_CREDIT: 'Funds In'}, account, 'EUR', ( 'Date, Transaction Details, Funds Out, Funds In' ) ) CONFIG = [ MyBankImporter(account='Assets:MyBank:MyAccount'), ] HOOKS = [ PredictPostings().hook ] Docum",
+    "license_excerpt": "MIT License Copyright (c) 2018 Johannes Harms Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright n"
+  },
+  {
+    "full_name": "Bilovodskyi/ai-trading-journal",
+    "requested_name": "Bilovodskyi/ai-trading-journal",
+    "id": 914676048,
+    "url": "https://github.com/Bilovodskyi/ai-trading-journal",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "AI Trading Journal with a beautiful calendar to add/show your trades, add open/closed trades option, and AI reports based on your trading history",
+    "stars": 71,
+    "forks": 24,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "202bb044ac4f8ee839f688280d3c854b19489be7",
+    "last_commit_date": "2025-12-23T00:21:36Z",
+    "pushed_at_not_commit_date": "2025-12-23T00:21:37Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "Bilovodskyi",
+        "contributions": 76,
+        "type": "User"
+      },
+      {
+        "login": "vercel[bot]",
+        "contributions": 1,
+        "type": "Bot"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/Bilovodskyi/ai-trading-journal/issues/35",
+      "created_at": "2026-06-05T16:02:39Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": "2026-06-05T22:26:59Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "ea5a351f3130d228d206e555a25abfe65b6b455cc6df5c9be02405bf275c0ee6",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".eslintrc.json",
+      ".gitignore",
+      "CODE_OF_CONDUCT.md",
+      "LICENSE",
+      "README.md",
+      "components.json",
+      "drizzle.config.ts",
+      "drizzle",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "public",
+      "src",
+      "tailwind.config.ts",
+      "tsconfig.json",
+      "vercel.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/Bilovodskyi/ai-trading-journal/blob/202bb044ac4f8ee839f688280d3c854b19489be7/package.json",
+        "sha256": "0fc2054b4319b3b576d38f13362dfac1c5d1ff60c5f30fe44ae46bb6b71fd3de"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      },
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "B",
+        "query": "topic:trading-journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/Bilovodskyi/ai-trading-journal",
+      "commit": "https://github.com/Bilovodskyi/ai-trading-journal/commit/202bb044ac4f8ee839f688280d3c854b19489be7",
+      "readme": "https://github.com/Bilovodskyi/ai-trading-journal/blob/202bb044ac4f8ee839f688280d3c854b19489be7/README.md",
+      "license": "https://github.com/Bilovodskyi/ai-trading-journal/blob/202bb044ac4f8ee839f688280d3c854b19489be7/LICENSE",
+      "recent_commits": "https://api.github.com/repos/Bilovodskyi/ai-trading-journal/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/Bilovodskyi/ai-trading-journal/contributors",
+      "issues": "https://api.github.com/repos/Bilovodskyi/ai-trading-journal/issues"
+    },
+    "readme_excerpt": "## Important: Let\u2019s make this journal better together! I want to create a product that works well for everyone. If there\u2019s something you don\u2019t like or a feature you\u2019re missing, please share your thoughts in the Discussions section of this repository or in the Feedback section on tradejournal.one (after logging in, go to Ecosystem \u2192 Feedback). # \u2b50\ufe0f Support the project This project is a personal passion, developed in my free time. If you find it useful, please give it a \u2b50\ufe0f. Your support means a lot and motivates me to keep improving the bot. # \ud83d\udd0d About **TradeJournal** is a free, AI-powered platform that helps traders and investors track and improve their performance. By logging your trades, you can access analytics and AI-generated reports that show strengths, weaknesses, and areas for improvement. --- ## Why Use TradeJournal? - **Unbiased AI insights** \u2014 Get objective analysis of your trades without emotional bias. - **Analytics that matter** \u2014 View your performance with clear, interactive charts. - **Easy trade logging** \u2014 Add and review trades quickly. - **All your history in one place** \u2014 Filter, sort, and analyze without spreadsheets. - **Focused improvement** \u2014 Understand what works and what doesn\u2019t. --- ## Table of Contents - [Tech Stack](#tech-stack) - [Pages](#pages) - [Calendar](#calendar) - [History](#history) - [Statistics](#statistics) - [Trade AI](#trade-ai) - [Stra",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  }
+]

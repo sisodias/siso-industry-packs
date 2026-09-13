@@ -1,0 +1,1252 @@
+[
+  {
+    "full_name": "GeneBO98/tradetally",
+    "requested_name": "GeneBO98/tradetally",
+    "id": 1009651373,
+    "url": "https://github.com/GeneBO98/tradetally",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Advanced trade tracking and analytics (TraderVue alternative)",
+    "stars": 331,
+    "forks": 68,
+    "archived": false,
+    "fork": false,
+    "language": "JavaScript",
+    "default_branch": "main",
+    "latest_commit": "16b0fe7bae3f066b87124422ac4f377fb84606ff",
+    "last_commit_date": "2026-09-09T13:20:00Z",
+    "pushed_at_not_commit_date": "2026-09-11T14:58:04Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "Brennon Overton",
+      "GeneBO98",
+      "NiallPower",
+      "github-actions[bot]"
+    ],
+    "contributors_sample": [
+      {
+        "login": "GeneBO98",
+        "contributions": 1305,
+        "type": "User"
+      },
+      {
+        "login": "snyk-bot",
+        "contributions": 52,
+        "type": "User"
+      },
+      {
+        "login": "NiallPower",
+        "contributions": 16,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 4,
+        "type": "Bot"
+      },
+      {
+        "login": "Brennon-Overton",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "chrispruitt",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "MikeOsborn",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "ryansavara",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/GeneBO98/tradetally/issues/404",
+      "created_at": "2026-09-09T13:17:50Z",
+      "state": "open",
+      "comments": 12,
+      "first_staff_comment_in_sample": "2026-09-09T16:13:23Z",
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "4fb95733c3abfd9090dd10c97ed8ef006d6ab052c34c890acc08b12722c31fc6",
+    "license": "Apache-2.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "00187d6d3cc83d794ae21f67ce341bd075b8ebed4ded658dca81432d3e260672",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".agents",
+      ".dockerignore",
+      ".env.example",
+      ".env.example.native",
+      ".github",
+      ".gitignore",
+      ".nojekyll",
+      "Dockerfile",
+      "Funding.yml",
+      "LICENSE",
+      "README.md",
+      "backend",
+      "docker-compose.dev.yaml",
+      "docker-compose.dev2.yaml",
+      "docker-compose.yaml",
+      "docker",
+      "docs",
+      "documentation",
+      "frontend",
+      "githooks",
+      "index.html",
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "release-assets",
+      "scripts",
+      "tests",
+      "tradetally-deployment"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/GeneBO98/tradetally/blob/16b0fe7bae3f066b87124422ac4f377fb84606ff/package.json",
+        "sha256": "9b2d3c56a38a692c79521563dca1637a825dae811d56fc1e069533c82b4ee5e6"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W01",
+        "lane": "A",
+        "query": "trading journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/GeneBO98/tradetally",
+      "commit": "https://github.com/GeneBO98/tradetally/commit/16b0fe7bae3f066b87124422ac4f377fb84606ff",
+      "readme": "https://github.com/GeneBO98/tradetally/blob/16b0fe7bae3f066b87124422ac4f377fb84606ff/README.md",
+      "license": "https://github.com/GeneBO98/tradetally/blob/16b0fe7bae3f066b87124422ac4f377fb84606ff/LICENSE",
+      "recent_commits": "https://api.github.com/repos/GeneBO98/tradetally/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/GeneBO98/tradetally/contributors",
+      "issues": "https://api.github.com/repos/GeneBO98/tradetally/issues"
+    },
+    "readme_excerpt": "# TradeTally - Trading Journal & Analytics Platform [![Docker Pulls](https://img.shields.io/docker/pulls/potentialmidas/tradetally)](https://hub.docker.com/r/potentialmidas/tradetally) [![License](https://img.shields.io/github/license/GeneBO98/tradetally)](https://github.com/GeneBO98/tradetally/blob/main/LICENSE) [![GitHub Release](https://img.shields.io/github/v/release/GeneBO98/tradetally)](https://github.com/GeneBO98/tradetally/releases) **Dominate With Data** A comprehensive trading journal and analytics platform built with Vue.js frontend and Node.js backend. Track your trades, analyze performance, and gain insights into your trading patterns across multiple brokers. ## Quick Links - **Live Demo**: [tradetally.io](https://tradetally.io) - **Documentation**: [docs.tradetally.io](https://docs.tradetally.io) - **Forum**: [forum.tradetally.io](https://forum.tradetally.io) - **iOS App**: [Download Here](https://apps.apple.com/us/app/tradetally/id6748022992) - **Docker Hub**: [potentialmidas/tradetally](https://hub.docker.com/r/potentialmidas/tradetally) ### Demo Account - **Username**: demo@example.com - **Password**: DemoUser25 ## Major Features ### Trading Journal & Analysis - **Multi-Broker Support** - Import trades from Lightspeed, Charles Schwab, ThinkorSwim, IBKR, E*TRADE, ProjectX - **Options & Futures Trading** - Full support for options and futures contracts with speci",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document. \"Licensor\" shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. \"Legal Entity\" shall mean the union of the acting entity and all other entities that control, a"
+  },
+  {
+    "full_name": "georgezouq/awesome-ai-in-finance",
+    "requested_name": "georgezouq/awesome-ai-in-finance",
+    "id": 146531619,
+    "url": "https://github.com/georgezouq/awesome-ai-in-finance",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "\ud83d\udd2c A curated list of awesome LLMs & deep learning strategies & tools in financial market.",
+    "stars": 6561,
+    "forks": 804,
+    "archived": false,
+    "fork": false,
+    "language": null,
+    "default_branch": "main",
+    "latest_commit": "2863ab2389aa1b1b7c68af5fa87c47236ed61421",
+    "last_commit_date": "2026-09-08T03:00:12Z",
+    "pushed_at_not_commit_date": "2026-09-08T03:00:12Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "7ol-or",
+      "AdvancingTitans",
+      "BenchGecko",
+      "ChaoYue0307",
+      "Electricitysheep",
+      "GAJETOso",
+      "Hitesh-Sisara",
+      "Jimmy7892",
+      "Kahtaf",
+      "KyleMillion",
+      "NeuZhou",
+      "StevenVinyl",
+      "TLSRUF",
+      "YichengYang-Ethan",
+      "alexander-schneider",
+      "alexgrover",
+      "anas-ansary60",
+      "bargo-ai",
+      "beepboop2025",
+      "bensynapse",
+      "bitmegistus",
+      "coinugget",
+      "coreyjoshuamiller",
+      "cruisekkk",
+      "ctacyk",
+      "donbagger",
+      "georgezouq",
+      "grahammccain",
+      "heubme2020",
+      "initial-d",
+      "jaablon",
+      "jsmontelius89",
+      "kingchenc",
+      "lee101",
+      "mheilimo",
+      "neuportalai-ui",
+      "oceanplexian",
+      "paperandbeyond23-gif",
+      "patl4588",
+      "pineifyapp",
+      "rishabhng",
+      "roberttidball",
+      "robertwills-quantlink",
+      "rocspiz",
+      "rufeng0411",
+      "samirasadov28-code",
+      "srvo",
+      "stefanoviana",
+      "tia8910",
+      "tonyhyworld",
+      "vbkotecha",
+      "vdalhambra",
+      "vibeyclaw",
+      "warren618"
+    ],
+    "contributors_sample": [
+      {
+        "login": "georgezouq",
+        "contributions": 182,
+        "type": "User"
+      },
+      {
+        "login": "anmorgan24",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "donbagger",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "stjepanjurekovic",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "jsmontelius89",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "heubme2020",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "peerchemist",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "GAJETOso",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "kantorcodes",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "KyleMillion",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "jiminHuang",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ChaoYue0307",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "ArtyomVancyan",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "bitmegistus",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "bensynapse",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "anas-ansary60",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "alexgrover",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "WhymustIhaveaname",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "zdeadex",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "initial-d",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "YichengYang-Ethan",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vbkotecha",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vibeyclaw",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "lendtrain",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "futbolbjk",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "TLSRUF",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "stromfee",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "StevenVinyl",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "srvo",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "sindresorhus",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "357cefe9c811dbc79bea63057cb8665c63ed43e45ef869d60c0672538d0a9ea3",
+    "license": "CC0-1.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".idea",
+      "LICENSE",
+      "README.md",
+      "chinese.md",
+      "contributing.md",
+      "media"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W01-W10",
+        "lane": "registry",
+        "query": "awesome quant"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/georgezouq/awesome-ai-in-finance",
+      "commit": "https://github.com/georgezouq/awesome-ai-in-finance/commit/2863ab2389aa1b1b7c68af5fa87c47236ed61421",
+      "readme": "https://github.com/georgezouq/awesome-ai-in-finance/blob/2863ab2389aa1b1b7c68af5fa87c47236ed61421/README.md",
+      "license": "https://github.com/georgezouq/awesome-ai-in-finance/blob/2863ab2389aa1b1b7c68af5fa87c47236ed61421/LICENSE",
+      "recent_commits": "https://api.github.com/repos/georgezouq/awesome-ai-in-finance/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/georgezouq/awesome-ai-in-finance/contributors",
+      "issues": "https://api.github.com/repos/georgezouq/awesome-ai-in-finance/issues"
+    },
+    "readme_excerpt": "# Awesome AI in Finance [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome) [![Community](https://img.shields.io/discord/733027681184251937.svg?style=flat&label=Join%20Community&color=7289DA)](https://discord.gg/cqaUf47) There are millions of trades made in the global financial market every day. Data grows very quickly and people are hard to understand. With the power of the latest artificial intelligence research, people analyze & trade automatically and intelligently. This list contains the research, tools and code that people use to beat the market. [[\u4e2d\u6587\u8d44\u6e90](./chinese.md)] ## Contents - [Agents](#agents) - [LLMs](#llms) - [Skills](#skills) - [MCP Servers](#mcp-servers) - [Market Data](#market-data) - [Trading Execution](#trading-execution) - [Research & Analysis](#research--analysis) - [Papers](#papers) - [Courses & Books & Blogs](#courses--books--blogs) - [Strategies & Research](#strategies--research) - [Time Series Data](#time-series-data) - [Portfolio Management](#portfolio-management) - [High Frequency Trading](#high-frequency-trading) - [Event Drive](#event-drive) - [Crypto Currencies Strategies](#crypto-currencies-strategies) - [Technical Analysis](#technical-analysis) - [Lottery & Gamble](#lottery--gamble) - [Arbitrage](#arbitrage) - [Data Sources](#data-sources) - [Research Tools](#research-tools) - [Trading System](#trading-system) - [",
+    "license_excerpt": "Creative Commons Legal Code CC0 1.0 Universal CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN \"AS-IS\" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PRO"
+  },
+  {
+    "full_name": "ghostfolio/ghostfolio",
+    "requested_name": "ghostfolio/ghostfolio",
+    "id": 357671824,
+    "url": "https://github.com/ghostfolio/ghostfolio",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript \ud83e\udd0d",
+    "stars": 9293,
+    "forks": 1310,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "9884fa0be2e7649cf004967d9d70178be119318b",
+    "last_commit_date": "2026-09-13T05:47:28Z",
+    "pushed_at_not_commit_date": "2026-09-13T05:50:04Z",
+    "commits_since_20260313_count_capped100": 100,
+    "recent_commit_authors": [
+      "AaryamanVyas",
+      "KenTandrian",
+      "Lyndros",
+      "Pial-Al-Mamun",
+      "asyncAndChill",
+      "dtslvr",
+      "github-actions[bot]",
+      "slagiewka"
+    ],
+    "contributors_sample": [
+      {
+        "login": "dtslvr",
+        "contributions": 4345,
+        "type": "User"
+      },
+      {
+        "login": "KenTandrian",
+        "contributions": 198,
+        "type": "User"
+      },
+      {
+        "login": "github-actions[bot]",
+        "contributions": 192,
+        "type": "Bot"
+      },
+      {
+        "login": "vzickner",
+        "contributions": 68,
+        "type": "User"
+      },
+      {
+        "login": "csehatt741",
+        "contributions": 41,
+        "type": "User"
+      },
+      {
+        "login": "DavidReque",
+        "contributions": 37,
+        "type": "User"
+      },
+      {
+        "login": "Erwin-N",
+        "contributions": 33,
+        "type": "User"
+      },
+      {
+        "login": "shaun-ak",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "inevs",
+        "contributions": 14,
+        "type": "User"
+      },
+      {
+        "login": "slagiewka",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "tobikugel",
+        "contributions": 13,
+        "type": "User"
+      },
+      {
+        "login": "yksolanki9",
+        "contributions": 11,
+        "type": "User"
+      },
+      {
+        "login": "gizmodus",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "gmag11",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "x1c0",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "Dhoni77",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "diego-noah",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "fabiocarlos97",
+        "contributions": 9,
+        "type": "User"
+      },
+      {
+        "login": "carlos-ds",
+        "contributions": 8,
+        "type": "User"
+      },
+      {
+        "login": "AkashNegi1",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "hashpalk",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "olindost",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "amandee27",
+        "contributions": 7,
+        "type": "User"
+      },
+      {
+        "login": "slegarraga",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "vitalymatyushik",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "tomaswoj-eth",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "naevern",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "jhernaezayuso",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "GerardPolloRebozado",
+        "contributions": 6,
+        "type": "User"
+      },
+      {
+        "login": "Fedron",
+        "contributions": 6,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/ghostfolio/ghostfolio/issues/7864",
+      "created_at": "2026-09-11T04:09:03Z",
+      "state": "open",
+      "comments": 3,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "922b5414510a5670e38d1bcef1fe0d4c246a17437da8cc77d526f79ff5fde181",
+    "license": "AGPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "85276abb93d6782a9bd09bd1c792cf309c0ed4a6dee363a0f9f3b961c4be0128",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".config",
+      ".editorconfig",
+      ".env.dev",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc",
+      ".vscode",
+      "CHANGELOG.md",
+      "DEVELOPMENT.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "apps",
+      "docker",
+      "eslint.config.cjs",
+      "jest.config.ts",
+      "jest.preset.js",
+      "libs",
+      "nx.json",
+      "package-lock.json",
+      "package.json",
+      "prisma",
+      "replace.build.mjs",
+      "skills-lock.json",
+      "test",
+      "tools",
+      "tsconfig.base.json"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/package.json",
+        "sha256": "484bcc71b35871f0a319f4cf14c8c3e0e5e2494901963cf1e445ea294633bca6"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/ghostfolio/ghostfolio",
+      "commit": "https://github.com/ghostfolio/ghostfolio/commit/9884fa0be2e7649cf004967d9d70178be119318b",
+      "readme": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/README.md",
+      "license": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/LICENSE",
+      "recent_commits": "https://api.github.com/repos/ghostfolio/ghostfolio/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/ghostfolio/ghostfolio/contributors",
+      "issues": "https://api.github.com/repos/ghostfolio/ghostfolio/issues"
+    },
+    "readme_excerpt": "[ ](https://ghostfol.io) # Ghostfolio **Open Source Wealth Management Software** [**Ghostfol.io**](https://ghostfol.io) | [**Live Demo**](https://ghostfol.io/en/demo) | [**Ghostfolio Premium**](https://ghostfol.io/en/pricing) | [**FAQ**](https://ghostfol.io/en/faq) | [**Blog**](https://ghostfol.io/en/blog) | [**LinkedIn**](https://www.linkedin.com/company/ghostfolio) | [**Slack**](https://join.slack.com/t/ghostfolio/shared_invite/zt-vsaan64h-F_I0fEo5M0P88lP9ibCxFg) | [**X**](https://x.com/ghostfolio_) [![Shield: Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/ghostfolio) [![Shield: Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-limegreen.svg)](#contributing) [![Shield: Docker Pulls](https://img.shields.io/docker/pulls/ghostfolio/ghostfolio?label=Docker%20Pulls)](https://hub.docker.com/r/ghostfolio/ghostfolio) [![Shield: License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0) **Ghostfolio** is an open source wealth management software built with web technology. The application empowers busy people to keep track of stocks, ETFs or cryptocurrencies and make solid, data-driven investment decisions. The software is designed for personal use in continuous operation. [ ](https://www.youtube.com/watch?v=yY6ObSQVJZk) ",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. Preamble The GNU Affero General Public License is a free, copyleft license for software and other kinds of works, specifically designed to ensure cooperation with the community in the case of network server software. The licenses for most software an"
+  },
+  {
+    "full_name": "GiridharSalana/omniscient",
+    "requested_name": "GiridharSalana/omniscient",
+    "id": 1208541168,
+    "url": "https://github.com/GiridharSalana/omniscient",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "AI-powered trading intelligence platform \u2014 free Bloomberg Terminal alternative. Real-time markets, stock screener, portfolio tracker, India PCR/FII-DII, smart alerts.",
+    "stars": 1,
+    "forks": 0,
+    "archived": false,
+    "fork": false,
+    "language": "TypeScript",
+    "default_branch": "main",
+    "latest_commit": "0fd94f135f6b1dc29a8bf5a3790c656ed8e1a0cb",
+    "last_commit_date": "2026-05-15T16:18:37Z",
+    "pushed_at_not_commit_date": "2026-05-15T16:18:38Z",
+    "commits_since_20260313_count_capped100": 14,
+    "recent_commit_authors": [
+      "GiridharSalana"
+    ],
+    "contributors_sample": [
+      {
+        "login": "GiridharSalana",
+        "contributions": 14,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "c164d2196c4352c16bcc3a305682448e820c360345a05ca64424f819f8520de2",
+    "license": null,
+    "license_path": null,
+    "license_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "license_candidates": [],
+    "root_entries": [
+      ".env.example",
+      ".gitignore",
+      "Dockerfile",
+      "README.md",
+      "Todo.md",
+      "backend",
+      "data",
+      "docker-compose.yml",
+      "docker-entrypoint.sh",
+      "frontend",
+      "scheduler",
+      "snaps",
+      "supervisord.conf"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W03",
+        "lane": "application",
+        "query": "Bloomberg terminal alternative"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/GiridharSalana/omniscient",
+      "commit": "https://github.com/GiridharSalana/omniscient/commit/0fd94f135f6b1dc29a8bf5a3790c656ed8e1a0cb",
+      "readme": "https://github.com/GiridharSalana/omniscient/blob/0fd94f135f6b1dc29a8bf5a3790c656ed8e1a0cb/README.md",
+      "license": null,
+      "recent_commits": "https://api.github.com/repos/GiridharSalana/omniscient/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/GiridharSalana/omniscient/contributors",
+      "issues": "https://api.github.com/repos/GiridharSalana/omniscient/issues"
+    },
+    "readme_excerpt": "# Omniscient \u2014 Market Intelligence Terminal A Docker-first personal market intelligence platform \u2014 a free alternative to Bloomberg Terminal for solo traders. Built with AI-powered analysis using Cohere, Cerebras, and Google AI on entirely free tiers. ## Architecture ``` \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510 \u2502 Frontend :3000 Next.js 14 + TypeScript + Tailwind \u2502 \u2502 Backend :8000 Python FastAPI + Smart LLM Router \u2502 \u2502 Postgres :5432 PostgreSQL 15 + pgvector (RAG) \u2502 \u2502 Redis :6379 Cache + Quota tracking + Pub/Sub \u2502 \u2502 Scheduler \u2014 Cron: prices/5min, news/10min, etc. \u2502 \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 ``` ## Quick Start ```bash cd /path/to/omniscient docker compose up -d ``` Dashboard: **http://localhost:3000** API Docs: **http://localhost:8000/docs** ## Free API Keys | Service | URL | Limit | Used For | |---------|-----|-------|---------| | Cohere | cohere.com | 1,000/month | Briefings, sentiment, embeddings | | Cerebras | cerebras.ai | ~1,000/day | Chat (sub-second speed) | | Google AI | makersuite.google.com | 1,500/day | Fallback LLM | | Yahoo Finance | \u2014 | Unlimited | Price data (primary) | | Finnhub | finnhub.io | 60/min | News, calendar | | MarketAux | marketaux.com | 250/day | News with sentiment | | Alpha Vantage | alphavantage.co | 25/day | Supplemental quotes | | FRED | fred.stlouisfed.org | Unlimited | Macro indicators ",
+    "license_excerpt": ""
+  },
+  {
+    "full_name": "gitricko/tradenote-selfhost",
+    "requested_name": "gitricko/tradenote-selfhost",
+    "id": 1013510273,
+    "url": "https://github.com/gitricko/tradenote-selfhost",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Hosting Open Source Trading Journal - TradeNote easily in GitHub codespace or your local machine",
+    "stars": 15,
+    "forks": 18,
+    "archived": false,
+    "fork": false,
+    "language": "Makefile",
+    "default_branch": "main",
+    "latest_commit": "cefd25162d196c7ce327524bc8bc4f00069c6b21",
+    "last_commit_date": "2026-03-12T18:53:00Z",
+    "pushed_at_not_commit_date": "2026-03-12T18:53:06Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "gitricko",
+        "contributions": 22,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": null,
+    "readme_path": "README.md",
+    "readme_sha256": "a4798fe074f5468d42c270d32345a871e6d5f4887ac8da64a34fcf0bf437be1d",
+    "license": "MIT",
+    "license_path": "LICENSE",
+    "license_file_sha256": "68b42521a1b24d15bbbeb6963c9ca3bf01e8c3e635d69d6908d500a5bdf3ab17",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "docker-compose.yml",
+      "docs"
+    ],
+    "dependency_manifests": {},
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/gitricko/tradenote-selfhost",
+      "commit": "https://github.com/gitricko/tradenote-selfhost/commit/cefd25162d196c7ce327524bc8bc4f00069c6b21",
+      "readme": "https://github.com/gitricko/tradenote-selfhost/blob/cefd25162d196c7ce327524bc8bc4f00069c6b21/README.md",
+      "license": "https://github.com/gitricko/tradenote-selfhost/blob/cefd25162d196c7ce327524bc8bc4f00069c6b21/LICENSE",
+      "recent_commits": "https://api.github.com/repos/gitricko/tradenote-selfhost/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/gitricko/tradenote-selfhost/contributors",
+      "issues": "https://api.github.com/repos/gitricko/tradenote-selfhost/issues"
+    },
+    "readme_excerpt": "[![Test](https://github.com/gitricko/tradenote-selfhost/actions/workflows/test.yml/badge.svg)](https://github.com/gitricko/tradenote-selfhost/actions/workflows/test.yml) [![Codacy](https://github.com/gitricko/tradenote-selfhost/actions/workflows/codacy.yml/badge.svg)](https://github.com/gitricko/tradenote-selfhost/actions/workflows/codacy.yml) ![GitHub License](https://img.shields.io/github/license/gitricko/tradenote-selfhost) # TradeNote-SelfHost **TradeNote-SelfHost** is a user-friendly CLI tool that enables traders to host and use [TradeNote](https://github.com/Eleven-Trading/TradeNote), an open-source trading journal, without dedicated hardware by running it in GitHub Codespaces. The CLI simplifies data backup and restoration, and the `make` commands work on any Linux or macOS system with the required dependencies (e.g., Docker). ## What's New - Documentation and code to support hosting on MacOS or any linux machine - Instructions on how to set forked repo to private - Create a new make directive `update-src-deps` to allow update from this repository after forked repo is private ## Getting Started ### Prerequisites To run TradeNote-SelfHost, ensure you have: - a GitHub account to use Codespaces (No additional software requirements) - Linux/macOS: - Docker installed with `docker compose` plugin. Use [brew-install-docker-compose](https://formulae.brew.sh/formula/docker-compos",
+    "license_excerpt": "MIT License Copyright (c) 2025 gitricko Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice "
+  },
+  {
+    "full_name": "gnosis/conditional-tokens-contracts",
+    "requested_name": "gnosis/conditional-tokens-contracts",
+    "id": 158600202,
+    "url": "https://github.com/gnosis/conditional-tokens-contracts",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Smart contracts for conditional tokens.",
+    "stars": 306,
+    "forks": 121,
+    "archived": false,
+    "fork": false,
+    "language": "Solidity",
+    "default_branch": "master",
+    "latest_commit": "eeefca66eb46c800a9aaab88db2064a99026fde5",
+    "last_commit_date": "2020-09-17T16:02:43Z",
+    "pushed_at_not_commit_date": "2023-01-24T03:47:20Z",
+    "commits_since_20260313_count_capped100": 0,
+    "recent_commit_authors": [],
+    "contributors_sample": [
+      {
+        "login": "cag",
+        "contributions": 501,
+        "type": "User"
+      },
+      {
+        "login": "Georgi87",
+        "contributions": 102,
+        "type": "User"
+      },
+      {
+        "login": "V1rtuousCycle",
+        "contributions": 33,
+        "type": "User"
+      },
+      {
+        "login": "greenkeeper[bot]",
+        "contributions": 21,
+        "type": "Bot"
+      },
+      {
+        "login": "collinc97",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "denisgranha",
+        "contributions": 10,
+        "type": "User"
+      },
+      {
+        "login": "auryn-macmillan",
+        "contributions": 5,
+        "type": "User"
+      },
+      {
+        "login": "okwme",
+        "contributions": 4,
+        "type": "User"
+      },
+      {
+        "login": "jakub-wojciechowski",
+        "contributions": 3,
+        "type": "User"
+      },
+      {
+        "login": "fvictorio",
+        "contributions": 2,
+        "type": "User"
+      },
+      {
+        "login": "dependabot[bot]",
+        "contributions": 2,
+        "type": "Bot"
+      },
+      {
+        "login": "axic",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "greenkeeperio-bot",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/gnosis/conditional-tokens-contracts/issues/137",
+      "created_at": "2026-07-20T04:44:03Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.rst",
+    "readme_sha256": "d645fbf6e6ef666a8eeae6f0848476f1d89c27d7ebbcd27907a6240b1135052f",
+    "license": "LGPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".eslintignore",
+      ".eslintrc.js",
+      ".gitattributes",
+      ".gitignore",
+      ".npmignore",
+      ".readthedocs.yml",
+      ".soliumignore",
+      ".soliumrc.json",
+      ".travis.yml",
+      "LICENSE",
+      "README.rst",
+      "codechecks.yml",
+      "contracts",
+      "docs",
+      "migrations",
+      "networks.json",
+      "package.json",
+      "test",
+      "truffle-config.js",
+      "utils",
+      "yarn.lock"
+    ],
+    "dependency_manifests": {
+      "package.json": {
+        "url": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/package.json",
+        "sha256": "093d735556bb636a4945f7c9122015fcfec0ddafb04397dc9eb9f59942a548c5"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/gnosis/conditional-tokens-contracts",
+      "commit": "https://github.com/gnosis/conditional-tokens-contracts/commit/eeefca66eb46c800a9aaab88db2064a99026fde5",
+      "readme": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/README.rst",
+      "license": "https://github.com/gnosis/conditional-tokens-contracts/blob/eeefca66eb46c800a9aaab88db2064a99026fde5/LICENSE",
+      "recent_commits": "https://api.github.com/repos/gnosis/conditional-tokens-contracts/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/gnosis/conditional-tokens-contracts/contributors",
+      "issues": "https://api.github.com/repos/gnosis/conditional-tokens-contracts/issues"
+    },
+    "readme_excerpt": "Conditional Tokens Contracts ============================ .. image:: https://travis-ci.org/gnosis/conditional-tokens-contracts.svg?branch=master :target: https://travis-ci.org/gnosis/conditional-tokens-contracts :alt: Build Status .. image:: https://badges.greenkeeper.io/gnosis/conditional-tokens-contracts.svg :target: https://greenkeeper.io/ :alt: Greenkeeper badge Smart contracts for conditional tokens. `\u2192 Online Documentation`_ .. _\u2192 Online Documentation: https://docs.gnosis.io/conditionaltokens/ The conditional tokens contracts are deployed at the following addresses: * Mainnet: ```0xC59b0e4De5F1248C1140964E0fF287B192407E0C``` * xDai: ```0xCeAfDD6bc0bEF976fdCd1112955828E00543c0Ce``` * Rinkeby: ```0x36bede640D19981A82090519bC1626249984c908``` License ------- All smart contracts are released under the `LGPL 3.0`_ license. Security and Liability ~~~~~~~~~~~~~~~~~~~~~~ All contracts are **WITHOUT ANY WARRANTY**; *without even* the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. .. _LGPL 3.0: https://www.gnu.org/licenses/lgpl-3.0.en.html",
+    "license_excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below. 0. Additional Definitions. As used herein, \"this License\""
+  },
+  {
+    "full_name": "gnosis/prediction-market-agent",
+    "requested_name": "gnosis/prediction-market-agent",
+    "id": 740388837,
+    "url": "https://github.com/gnosis/prediction-market-agent",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": null,
+    "stars": 88,
+    "forks": 28,
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "default_branch": "main",
+    "latest_commit": "de67c4cdb00b8c77e5f03eec127ad5f241e849e7",
+    "last_commit_date": "2026-04-17T09:40:23Z",
+    "pushed_at_not_commit_date": "2026-04-17T09:40:26Z",
+    "commits_since_20260313_count_capped100": 10,
+    "recent_commit_authors": [
+      "kongzii"
+    ],
+    "contributors_sample": [
+      {
+        "login": "kongzii",
+        "contributions": 432,
+        "type": "User"
+      },
+      {
+        "login": "evangriffiths",
+        "contributions": 194,
+        "type": "User"
+      },
+      {
+        "login": "gabrielfior",
+        "contributions": 68,
+        "type": "User"
+      },
+      {
+        "login": "TS9001",
+        "contributions": 15,
+        "type": "User"
+      },
+      {
+        "login": "oliveredget",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vaishnavi-2901",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/gnosis/prediction-market-agent/issues/996",
+      "created_at": "2026-08-18T04:20:58Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "5edc6d699837041d9b01ee2ab64599de47723c6af02f8424d0b13a11591349f0",
+    "license": "LGPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ea8af5e789cb2d4e9b10bce3874982ade163b749b6bfbdb32e2df21c4d106de1",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".pre-commit-config.yaml",
+      "CODEOWNERS",
+      "Dockerfile",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "README_hackathon.md",
+      "ape-config.yaml",
+      "install_hooks.sh",
+      "mypy.ini",
+      "notebooks",
+      "prediction_market_agent",
+      "pyproject.toml",
+      "restart_app_deployments.sh",
+      "scripts",
+      "tests",
+      "tests_integration_with_local_chain",
+      "tokenizers",
+      "uv.lock"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/gnosis/prediction-market-agent/blob/de67c4cdb00b8c77e5f03eec127ad5f241e849e7/pyproject.toml",
+        "sha256": "faf3ed7036083b2cae574b427d23852daa6d6bb85a5e53aeeb06922884f861f1"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/gnosis/prediction-market-agent",
+      "commit": "https://github.com/gnosis/prediction-market-agent/commit/de67c4cdb00b8c77e5f03eec127ad5f241e849e7",
+      "readme": "https://github.com/gnosis/prediction-market-agent/blob/de67c4cdb00b8c77e5f03eec127ad5f241e849e7/README.md",
+      "license": "https://github.com/gnosis/prediction-market-agent/blob/de67c4cdb00b8c77e5f03eec127ad5f241e849e7/LICENSE",
+      "recent_commits": "https://api.github.com/repos/gnosis/prediction-market-agent/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/gnosis/prediction-market-agent/contributors",
+      "issues": "https://api.github.com/repos/gnosis/prediction-market-agent/issues"
+    },
+    "readme_excerpt": "# Gnosis Agent A library for exploring the landscape of AI Agent frameworks, using the example application of a prediction market betting agent. The various agents interact with markets from [Presagio (with former name Omen)](https://presagio.pages.dev/), [Manifold](https://manifold.markets/), and [Polymarket](https://polymarket.com/). These agents build on top of the prediction market APIs from . ## Setup Install the project dependencies with [uv](https://docs.astral.sh/uv/), using Python 3.11: ```bash uv sync ``` To run commands in the virtual environment: ```bash uv run ``` Create a `.env` file in the root of the repo with the following variables as a minimal requirement: ```bash BET_FROM_PRIVATE_KEY=... OPENAI_API_KEY=... ``` Depending on the agent you want to run, you may require additional variables. When you run an agent, it will tell you if you need to set any additional variables. ## Interactive Streamlit Apps - Pick a prediction market question, or create your own, and pick one or more agents to perform research and make a prediction: `streamlit run scripts/agent_app.py` (Deployed [here](https://pma-agent.ai.gnosisdev.com)) - [deprecated] An autonomous agent with function calling. Can be 'prodded' by the user to guide its strategy: `streamlit run prediction_market_agent/agents/microchain_agent/app.py` (Deployed [here](https://autonomous-trader-agent.ai.gnosisdev.com))",
+    "license_excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below. 0. Additional Definitions. As used herein, \"this License\" "
+  },
+  {
+    "full_name": "gnosis/prediction-market-agent-tooling",
+    "requested_name": "gnosis/prediction-market-agent-tooling",
+    "id": 754633748,
+    "url": "https://github.com/gnosis/prediction-market-agent-tooling",
+    "observed_at": "2026-09-13T15:41:12.553856+00:00",
+    "status": "documentation_collected",
+    "description": "Tools to benchmark, deploy and monitor prediction market agents. ",
+    "stars": 60,
+    "forks": 17,
+    "archived": false,
+    "fork": false,
+    "language": "Python",
+    "default_branch": "main",
+    "latest_commit": "817117d9e5b9ebe62ed1bf5ed090c67e49dab77f",
+    "last_commit_date": "2026-04-22T10:55:47Z",
+    "pushed_at_not_commit_date": "2026-04-22T10:56:13Z",
+    "commits_since_20260313_count_capped100": 21,
+    "recent_commit_authors": [
+      "TS9001",
+      "kongzii"
+    ],
+    "contributors_sample": [
+      {
+        "login": "kongzii",
+        "contributions": 384,
+        "type": "User"
+      },
+      {
+        "login": "evangriffiths",
+        "contributions": 207,
+        "type": "User"
+      },
+      {
+        "login": "gabrielfior",
+        "contributions": 138,
+        "type": "User"
+      },
+      {
+        "login": "TS9001",
+        "contributions": 26,
+        "type": "User"
+      },
+      {
+        "login": "alcercu",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "cxtmh",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "vanshika-srivastava",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "chloefeal",
+        "contributions": 1,
+        "type": "User"
+      },
+      {
+        "login": "greenlucid",
+        "contributions": 1,
+        "type": "User"
+      }
+    ],
+    "issue_response_sample": {
+      "url": "https://github.com/gnosis/prediction-market-agent-tooling/issues/957",
+      "created_at": "2026-08-28T04:04:39Z",
+      "state": "open",
+      "comments": 0,
+      "first_staff_comment_in_sample": null,
+      "sample_limit": 20
+    },
+    "readme_path": "README.md",
+    "readme_sha256": "a69566f9d53bbcd34a1a453577171aa7743f8439855be3b238a2669f6ffe0083",
+    "license": "LGPL-3.0",
+    "license_path": "LICENSE",
+    "license_file_sha256": "ea8af5e789cb2d4e9b10bce3874982ade163b749b6bfbdb32e2df21c4d106de1",
+    "license_candidates": [
+      "LICENSE"
+    ],
+    "root_entries": [
+      ".env.example",
+      ".env.monitor.example",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".python-version",
+      ".readthedocs.yaml",
+      ".vscode",
+      "CODEOWNERS",
+      "LICENSE",
+      "README.md",
+      "ape-config.yaml",
+      "assets",
+      "docs",
+      "install_hooks.sh",
+      "mkdocs.yml",
+      "mypy.ini",
+      "poetry.lock",
+      "prediction_market_agent_tooling",
+      "pyproject.toml",
+      "run_all_ci_checks.sh",
+      "scripts",
+      "tests",
+      "tests_files",
+      "tests_integration",
+      "tests_integration_with_local_chain"
+    ],
+    "dependency_manifests": {
+      "pyproject.toml": {
+        "url": "https://github.com/gnosis/prediction-market-agent-tooling/blob/817117d9e5b9ebe62ed1bf5ed090c67e49dab77f/pyproject.toml",
+        "sha256": "fe23dc4ba5ccea30f637bff4fd70d52c4fc13ec9081f5d61c6348a09a3b6ac22"
+      }
+    },
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "liftability_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead-not-verified"
+      }
+    ],
+    "source_urls": {
+      "metadata": "https://api.github.com/repos/gnosis/prediction-market-agent-tooling",
+      "commit": "https://github.com/gnosis/prediction-market-agent-tooling/commit/817117d9e5b9ebe62ed1bf5ed090c67e49dab77f",
+      "readme": "https://github.com/gnosis/prediction-market-agent-tooling/blob/817117d9e5b9ebe62ed1bf5ed090c67e49dab77f/README.md",
+      "license": "https://github.com/gnosis/prediction-market-agent-tooling/blob/817117d9e5b9ebe62ed1bf5ed090c67e49dab77f/LICENSE",
+      "recent_commits": "https://api.github.com/repos/gnosis/prediction-market-agent-tooling/commits?since=2026-03-13T00:00:00Z",
+      "contributors": "https://api.github.com/repos/gnosis/prediction-market-agent-tooling/contributors",
+      "issues": "https://api.github.com/repos/gnosis/prediction-market-agent-tooling/issues"
+    },
+    "readme_excerpt": "# Prediction Market Agent Tooling Tooling for benchmarking, deploying and monitoring agents for prediction market applications. ## Setup Install the project dependencies with `poetry`, using Python >=3.10: ```bash python3.10 -m pip install poetry python3.10 -m poetry install python3.10 -m poetry shell ``` Create a `.env` file in the root of the repo with the following variables: Deploying and monitoring agents using GCP requires that you set up the gcloud CLI (see [here](https://cloud.google.com/sdk/docs/install) for installation instructions, and use `gcloud auth login` to authorize.) ```bash MANIFOLD_API_KEY=... BET_FROM_PRIVATE_KEY=... OPENAI_API_KEY=... ``` ## Benchmarking Create a benchmarkable agent by subclassing the `AbstractBenchmarkedAgent` base class, and plug in your agent's research and prediction functions into the `predict` method. Use the `Benchmarker` class to compare your agent's predictions vs. the 'wisdom of the crowd' on a set of markets from your chosen prediction market platform. For example: ```python import prediction_market_agent_tooling.benchmark.benchmark as bm from prediction_market_agent_tooling.benchmark.agents import RandomAgent from prediction_market_agent_tooling.markets.market_type import MarketType from prediction_market_agent_tooling.markets.markets import get_binary_markets benchmarker = bm.Benchmarker( markets=get_binary_markets(limit=10, ",
+    "license_excerpt": "GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below. 0. Additional Definitions. As used herein, \"this License\" "
+  }
+]
