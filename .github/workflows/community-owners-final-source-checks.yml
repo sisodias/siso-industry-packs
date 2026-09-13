@@ -1,0 +1,83 @@
+name: Community owners final source checks
+on:
+  push:
+    branches: [research/community-owners-20260913]
+    paths: [.github/workflows/community-owners-final-source-checks.yml]
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Collect additional public metadata and source documents
+        env:
+          GH_RESEARCH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,hashlib,concurrent.futures
+          from pathlib import Path
+          from datetime import datetime,timezone
+          O=Path('evidence');O.mkdir();token=os.environ['GH_RESEARCH_TOKEN']
+          names='msrbuilds/roost RafiulM/opencourse amicalhq/refref Refferq/Refferq dfg-ar/numok open-rails/openrails viafintech/camt_parser Tenant-so/circle-to-tenant-migration DeysonOrtiz/memberful-import alexyounkin/skool-classroom-scraper nileshtrivedi/portal ZAK123DSFDF/refearnapp'.split()
+          extra={'strangerstudios/pmpro-buddypress':['pmpro-buddypress.php','readme.txt'],'strangerstudios/pmpro-woocommerce':['pmpro-woocommerce.php','readme.txt'],'strangerstudios/pmpro-approvals':['pmpro-approvals.php','readme.txt'],'strangerstudios/pmpro-affiliates':['pmpro-affiliates.php','readme.txt'],'WordPress/WordPress':['readme.html'],'buddypress/buddypress':['src/license.txt','bp-loader.php'],'mybb/mybb':['.github/README.md','composer.json'],'element-hq/synapse':['LICENSE-AGPL-3.0','LICENSE-COMMERCIAL'],'postalserver/postal':['MIT-LICENCE'],'humhub/humhub':['LICENSE.AGPL-3.0-or-later'],'directus/directus':['.readme/readme.md','readme.md'],'chatwoot/chatwoot':['enterprise/LICENSE'],'activepieces/activepieces':['packages/ee/LICENSE','packages/ee/LICENSE.md'],'discourse/discourse':['plugins/discourse-subscriptions/LICENSE','plugins/discourse-gamification/LICENSE','plugins/discourse-calendar/LICENSE','plugins/discourse-openid-connect/LICENSE','Gemfile'],'knadh/listmonk':['go.mod']}
+          def gql(q):
+              req=urllib.request.Request('https://api.github.com/graphql',data=json.dumps({'query':'query {'+q+'}'}).encode(),headers={'Authorization':'Bearer '+token,'Content-Type':'application/json','User-Agent':'SISO-public-research'})
+              try:
+                  with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
+              except Exception as e:return {'error':getattr(e,'code',type(e).__name__)}
+          metas=[]
+          allnames=list(dict.fromkeys(names+list(extra)))
+          for start in range(0,len(allnames),5):
+              qs=[]
+              for i,n in enumerate(allnames[start:start+5]):
+                  owner,name=n.split('/')
+                  qs.append('r%d: repository(owner:%s,name:%s){nameWithOwner url description isPrivate isArchived stargazerCount primaryLanguage{name} licenseInfo{spdxId} defaultBranchRef{name target{... on Commit{oid committedDate tree{entries{name type oid}} history(since:"2026-03-13T00:00:00Z",first:20){totalCount nodes{oid committedDate author{user{login}}}}}}} issues(first:5,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{url createdAt updatedAt closedAt comments(first:3){nodes{createdAt authorAssociation author{login}}}}}}'%(i,json.dumps(owner),json.dumps(name)))
+              d=gql(' '.join(qs));(O/('batch-%02d.json'%start)).write_text(json.dumps(d,indent=2))
+              for m in d.get('data',{}).values():
+                  if m and not m.get('isPrivate'):metas.append(m)
+          def read(url):
+              try:
+                  with urllib.request.urlopen(url,timeout=20) as r:return r.read().decode('utf-8',errors='replace')
+              except Exception as e:return {'error':getattr(e,'code',type(e).__name__)}
+          def audit(m):
+              n=m['nameWithOwner'];c=m['defaultBranchRef']['target'];files={x['name'].lower():x['name'] for x in c['tree']['entries'] if x['type']=='blob'}
+              paths=list(extra.get(n,[]));docs={}
+              if n in names:
+                  for kind,keys in [('readme',['readme.md','readme.rst','readme','readme.txt']),('license',['license','license.txt','license.md','copying','licence','license.rst'])]:
+                      p=next((files[k] for k in keys if k in files),None)
+                      if p:paths.append(p)
+                      docs[kind]={'path':p,'url':None,'text':None,'error':'no matching root file' if not p else None}
+              texts={}
+              for p in dict.fromkeys(paths):
+                  url='https://raw.githubusercontent.com/'+n+'/'+c['oid']+'/'+p;t=read(url);texts[p]={'url':url,'text':t if isinstance(t,str) else None,'error':t if isinstance(t,dict) else None}
+                  for kind in docs:
+                      if docs[kind]['path']==p:docs[kind].update(texts[p])
+              return {'metadata':m,'observed_at':datetime.now(timezone.utc).isoformat(),'documents':docs,'extra_documents':texts}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:audits=list(pool.map(audit,metas))
+          (O/'supplemental-audits.json').write_text(json.dumps(audits,indent=2))
+          pin='2d7d35ecbf7e1158d0a3527e1489040687ac214b';matches={};stats={};wanted={n.lower() for n in names}
+          for path in ['bank/bank_best.jsonl','capability-shelf/source-registry.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']:
+              url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+pin+'/'+path;rows=[];count=0;digest=hashlib.sha256()
+              try:
+                  with urllib.request.urlopen(url,timeout=30) as response:
+                      for line in response:
+                          digest.update(line)
+                          if not line.strip():continue
+                          row=json.loads(line);count+=1
+                          keys=[str(row.get(k,'')).lower().removeprefix('https://github.com/').rstrip('/') for k in ['full_name','repo','repo_full_name','repository','url']]
+                          if any(k in wanted for k in keys):rows.append(row)
+                  matches[path]=rows;stats[path]={'rows_scanned':count,'matches':len(rows),'sha256':digest.hexdigest(),'url':url}
+              except Exception as e:stats[path]={'error':type(e).__name__}
+          (O/'supplemental-bank.json').write_text(json.dumps({'pin':pin,'matches':matches,'stats':stats},indent=2))
+          print('Examined new candidates',sum(a['metadata']['nameWithOwner'] in names for a in audits),'and source exceptions',len(audits),flush=True)
+          PY
+      - name: Preserve public evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: community-owners-final-sources
+          path: evidence/
+          retention-days: 7
+          if-no-files-found: error
