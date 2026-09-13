@@ -33,10 +33,18 @@ jobs:
                   except urllib.error.HTTPError as e:
                       if e.code in (403,429,500,502,503,504) and n<4:time.sleep(15*(n+1));continue
                       return {'_error':e.code}
-          req=api('/repos/'+REPO+'/contents/'+ROOT+'query-request.json?ref='+os.environ['REQUEST_REVISION'])
-          cfg=json.loads(base64.b64decode(req['content']))
+          def readjson(path):
+              record=api('/repos/'+REPO+'/contents/'+path+'?ref='+os.environ['REQUEST_REVISION'])
+              if record.get('content'):return json.loads(base64.b64decode(record['content']))
+              url='https://raw.githubusercontent.com/'+REPO+'/'+os.environ['REQUEST_REVISION']+'/'+path
+              with urllib.request.urlopen(url,timeout=90) as r:return json.load(r)
+          cfg=readjson(ROOT+'query-request.json')
           assert 1<=cfg['round']<=10 and 1<=len(cfg['queries'])<=40
-          seen=set(s.lower() for s in cfg.get('seen',[])); results=[]; unique={}
+          seen=set(s.lower() for s in cfg.get('seen',[])); results=[]; unique={};prior=[]
+          for number in range(1,cfg['round']):
+              previous=readjson(ROOT+'search-round-'+str(number).zfill(2)+'.json')
+              seen.update(x['full_name'].lower() for x in previous['unique_results'])
+              prior.append({'round':number,'unique_count':previous['unique_result_count']})
           for q in cfg['queries']:
               assert q['lane'] in ('A','B','C','dependency','maintainer','registry')
               n=min(max(int(q.get('per_page',10)),1),30)
@@ -48,7 +56,7 @@ jobs:
               for x in items:unique[x['full_name'].lower()]=x
               time.sleep(2.1)
           observed=datetime.datetime.now(datetime.timezone.utc).isoformat()
-          result={'round':cfg['round'],'observed_at':observed,'scope':cfg.get('scope'),'queries':results,'unique_results':list(unique.values()),'unique_result_count':len(unique),'new_relative_to_declared_seen':[x['full_name'] for k,x in unique.items() if k not in seen],'seen_count':len(seen),'source_kind':'GitHub REST repository search; no code executed; search appearance alone is not examination'}
+          result={'round':cfg['round'],'observed_at':observed,'scope':cfg.get('scope'),'queries':results,'unique_results':list(unique.values()),'unique_result_count':len(unique),'new_relative_to_declared_seen':[x['full_name'] for k,x in unique.items() if k not in seen],'seen_count':len(seen),'prior_rounds':prior,'source_kind':'GitHub REST repository search; no code executed; search appearance alone is not examination'}
           out=pathlib.Path('discovery-evidence');out.mkdir(exist_ok=True)
           name='search-round-'+str(cfg['round']).zfill(2)+'.json';text=json.dumps(result,ensure_ascii=False,indent=2)+'\n';(out/name).write_text(text)
           entries=[{'path':ROOT+name,'mode':'100644','type':'blob','content':text}]
