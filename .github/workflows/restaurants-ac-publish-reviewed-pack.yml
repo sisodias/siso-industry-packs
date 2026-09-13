@@ -1,0 +1,110 @@
+name: Restaurants AC reviewed research pack
+on:
+  push:
+    branches: [research/restaurants-ac-blueprint-20260913]
+    paths: [.github/workflows/restaurants-ac-publish-reviewed-pack.yml]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: restaurants-ac-reviewed-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Render pinned manual research and safely update only its research branch
+        shell: bash
+        run: |
+          python3 -u - <<'PY'
+          import ast, base64, hashlib, importlib.util, io, json, os, pathlib, re, time, urllib.error, urllib.parse, urllib.request, zipfile
+          REPO='sisodias/siso-industry-packs'
+          BRANCH='research/restaurants-ac-blueprint-20260913'
+          PIN='4126a9a24d8b24aea7b81994080b45512c764995'
+          assert os.environ['GITHUB_REPOSITORY']==REPO
+          assert os.environ['GITHUB_REF']=='refs/heads/'+BRANCH
+          TOKEN=os.environ['GH_TOKEN']
+          class SafeRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  new=super().redirect_request(req,fp,code,msg,headers,newurl)
+                  if new is not None and urllib.parse.urlsplit(req.full_url).netloc!=urllib.parse.urlsplit(newurl).netloc:
+                      new.remove_header('Authorization')
+                  return new
+          urllib.request.install_opener(urllib.request.build_opener(SafeRedirect()))
+          def api(path, data=None, method=None, binary=False):
+              assert path.startswith('/repos/'+REPO+'/')
+              headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-restaurants-reviewed-research'}
+              req=urllib.request.Request('https://api.github.com'+path,data=None if data is None else json.dumps(data).encode(),method=method,headers=headers)
+              with urllib.request.urlopen(req,timeout=60) as resp:
+                  body=resp.read(20000000)
+              return body if binary else json.loads(body)
+          def source(path, ref):
+              obj=api('/repos/'+REPO+'/contents/'+path+'?ref='+urllib.parse.quote(ref,safe=''))
+              raw=base64.b64decode(obj['content'])
+              assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==obj['sha']
+              return raw,obj['sha']
+          root=pathlib.Path('publication');root.mkdir()
+          ev=pathlib.Path('verified-evidence');ev.mkdir()
+          archive=api('/repos/'+REPO+'/actions/artifacts/10322051172/zip',binary=True)
+          assert hashlib.sha256(archive).hexdigest()=='53c3f496cefc617097e99a1405a2f9cdab3ab6fbc1e4ef5796624a67f3009299'
+          names=['repositories.jsonl','bank-receipt.json','discovery.json','retrieval-failures.json','stage3-checkpoint.json','collector-repair-receipt.json']
+          with zipfile.ZipFile(io.BytesIO(archive)) as z:
+              assert sum(i.file_size for i in z.infolist())<20000000
+              for name in names:
+                  (ev/name).write_bytes(z.read(name))
+          trusted={'packs/restaurants/evidence/render_pack.py':'872d7d921bbbb8138203e70188b9ca1bf0b86a74','packs/restaurants/evidence/review-decisions.tsv':'addd5c6a7105cde9c8003e74ce7aa4cc023d3311'}
+          for path,expected in trusted.items():
+              raw,sha=source(path,PIN);assert sha==expected
+              dst=root/path;dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes(raw)
+          renderer=root/'packs/restaurants/evidence/render_pack.py';ast.parse(renderer.read_text())
+          spec=importlib.util.spec_from_file_location('research_renderer',renderer)
+          module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          ref=api('/repos/'+REPO+'/git/ref/heads/'+BRANCH);parent=ref['object']['sha']
+          # Read current branch registries, not stale copies and never the private protocol.
+          originals={}
+          for path in ('registry/industries.jsonl','registry/bank-submissions.jsonl'):
+              raw,sha=source(path,parent);originals[path]=raw
+              dst=root/path;dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes(raw)
+          outputs,receipt=module.render(ev,root/'packs/restaurants/evidence/review-decisions.tsv',root)
+          assert len(outputs)==13
+          assert receipt['counts']['repos_examined']==151
+          assert receipt['counts']['verdicts_examined']=={'ADOPT':10,'STUDY':87,'SKIP':52,'STEAL':2}
+          assert receipt['status']=='research_partial' and receipt['two_dry_rounds'] is False
+          oldlines=originals['registry/industries.jsonl'].decode().splitlines()
+          newlines=outputs['registry/industries.jsonl'].splitlines()
+          assert len(oldlines)==len(newlines)
+          for before,after in zip(oldlines,newlines):
+              if json.loads(before).get('slug')!='restaurants':assert before==after
+          assert outputs['registry/bank-submissions.jsonl'].startswith(originals['registry/bank-submissions.jsonl'].decode())
+          # Include already-authored stage reports in the downloadable pack; do not rewrite them.
+          for name in ['README.md','01-person.md','02-workflow.md','02-workflow.json','03-companies.md','05-superapp.md','06-value.md']:
+              path='packs/restaurants/'+name
+              raw,sha=source(path,parent);(root/path).write_bytes(raw)
+          for path,text in outputs.items():
+              assert path.startswith('packs/restaurants/') or path in ('registry/industries.jsonl','registry/bank-submissions.jsonl')
+              assert TOKEN not in text
+              if path.endswith('.json'):json.loads(text)
+              if path.endswith('.jsonl'):
+                  for line in text.splitlines():
+                      if line.strip():json.loads(line)
+          # Fail closed on a race: non-force update cannot overwrite a concurrent branch commit.
+          parentobj=api('/repos/'+REPO+'/git/commits/'+parent)
+          tree=api('/repos/'+REPO+'/git/trees',{'base_tree':parentobj['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in outputs.items()]},'POST')
+          commit=api('/repos/'+REPO+'/git/commits',{'message':'research(restaurants): publish 151 reviewed sources, phased blueprint and honest partial registry','tree':tree['sha'],'parents':[parent]},'POST')
+          result=api('/repos/'+REPO+'/git/refs/heads/'+BRANCH,{'sha':commit['sha'],'force':False},'PATCH')
+          assert result['object']['sha']==commit['sha']
+          validation={'commit':commit['sha'],'parent':parent,'branch':BRANCH,'changed_paths':list(outputs),'source_artifact_sha256':hashlib.sha256(archive).hexdigest(),'tests':['155 unique decisions','151 examined','four metadata-only excluded','34 banked and 117 new examined','10/87/2/52 examined verdict counts','JSON and JSONL parse','unrelated industry rows byte-preserved','existing submissions retained','non-force branch update','no application execution'],'status':'research_partial'}
+          (root/'PUBLICATION-RECEIPT.json').write_text(json.dumps(validation,indent=2)+'\n')
+          print('PUBLISHED',commit['sha'],json.dumps(receipt['counts']),flush=True)
+          PY
+      - name: Preserve reviewed research pack and publication receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: restaurants-ac-reviewed-pack-${{ github.run_id }}
+          path: publication/
+          if-no-files-found: error
+          retention-days: 30
