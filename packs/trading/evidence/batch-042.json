@@ -1,0 +1,747 @@
+[
+  {
+    "full_name": "QANTau/DTC-Client",
+    "requested_name": "QANTau/DTC-Client",
+    "id": 136256175,
+    "url": "https://github.com/QANTau/DTC-Client",
+    "stars": 12,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d90267550b107a5cfbe903c6251951638fb0ea8f",
+    "last_commit_date": "2023-01-03T04:25:37Z",
+    "archived": false,
+    "fork": false,
+    "description": "Data and Trading Communications Protocol Client",
+    "language": "C#",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2018 Adam Burgess - QANT Pty Ltd (Australia)",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# DTC Protocol Client Library",
+      "# Important Note\t"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/QANTau/DTC-Client/issues/3",
+        "createdAt": "2021-07-26T13:14:44Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/QANTau/DTC-Client/issues/1",
+        "createdAt": "2020-11-13T14:26:32Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-02-02T10:05:10Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".gitignore",
+      "DTC-Client-Realtime",
+      "DTC-Client.sln",
+      "DTC-Client.sln.DotSettings",
+      "DTC",
+      "LICENSE",
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/QANTau/DTC-Client/blob/d90267550b107a5cfbe903c6251951638fb0ea8f/README.md",
+        "sha256": "1d7c07e5a15e2941da629000b3ec145322dc81a9b293d8f1f2f8f6f81a70592a",
+        "bytes": 1196
+      },
+      "LICENSE": {
+        "url": "https://github.com/QANTau/DTC-Client/blob/d90267550b107a5cfbe903c6251951638fb0ea8f/LICENSE",
+        "sha256": "8d08a7bc17fce360c543093fd1f61309e36dbc908f208c38fdf9841034888204",
+        "bytes": 1096
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/QANTau/DTC-Client/commit/d90267550b107a5cfbe903c6251951638fb0ea8f",
+      "metadata": "https://api.github.com/repos/QANTau/DTC-Client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# DTC Protocol Client Library This project contains a C# library and a sample implementation for accessing services realtime and historical data via the DTC Protocol (www.dtcprotocol.org). The sample client application is intended to be used as an aid to understanding the DTC Protocol rather than as a standalone data management/viewing tool. * Only a small number of DTC message types are supported, although any unsupported messages are handled (altough the results are not processed). * This project compiles x64 using .NET Framework 4.5.1. * Other than for the intial negotiation, only Json encoding is supported. This library was originally developed to allow SmartQuant products (OpenQuant / QuantRouter / QuantBase) to access SierraChart data and execution services. # Important Note This project is no longer maintained, and the resulting code is no longer in use. The repository is maintained to assist anyone looking at accessing DTC (Sierra Chart) via C#. In my own work, I now use the [Zorro Trader](https://zorro-project.com) plugin for Sierra Chart, as documented: * https://zorro-project.com/manual/en/sierra.htm * https://github.com/AndrewAMD/SierraChartZorroPlugin",
+    "license_excerpt": "MIT License Copyright (c) 2018 Adam Burgess - QANT Pty Ltd (Australia) Permission is hereby granted, free of charge, to any person obtaining a copy",
+    "license_warnings": [],
+    "runtime_clues": [
+      "* This project compiles x64 using .NET Framework 4.5.1."
+    ],
+    "dependency_repos": [
+      "AndrewAMD/SierraChartZorroPlugin"
+    ]
+  },
+  {
+    "full_name": "vbmithr/poloniex",
+    "requested_name": "vbmithr/poloniex",
+    "id": 89845828,
+    "url": "https://github.com/vbmithr/poloniex",
+    "stars": 7,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "27ab33c7db1e96b77d136ce8222072a4bbd4c2b7",
+    "last_commit_date": "2019-05-21T09:50:18Z",
+    "archived": false,
+    "fork": false,
+    "description": "Poloniex trading DTC\u00a0server",
+    "language": "OCaml",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": null,
+    "readme_read": false,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "dune-project",
+      "poloniex-data.opam",
+      "poloniex.opam",
+      "src"
+    ],
+    "source_files": {},
+    "upstream_urls": {
+      "commit": "https://github.com/vbmithr/poloniex/commit/27ab33c7db1e96b77d136ce8222072a4bbd4c2b7",
+      "metadata": "https://api.github.com/repos/vbmithr/poloniex"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "puneat/SierraCharts.DTC.NET",
+    "requested_name": "puneat/SierraCharts.DTC.NET",
+    "id": 669554703,
+    "url": "https://github.com/puneat/SierraCharts.DTC.NET",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "dd00d631e9a26cf8fd07d2243ee4091554f0f1a5",
+    "last_commit_date": "2023-07-22T16:53:47Z",
+    "archived": false,
+    "fork": false,
+    "description": "SierraCharts.DTC.NET is a powerful .NET library that provides an implementation of the Data/Trading Communication (DTC) protocol for Sierra Charts. ",
+    "language": null,
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2023 Puneet Mishra",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# SierraCharts.DTC.NET",
+      "## Features"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/puneat/SierraCharts.DTC.NET/blob/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5/README.md",
+        "sha256": "1e0e56257d8facb332f94c89e023ab092a5b8d1afd0f5522bba11c2f5e13fb82",
+        "bytes": 1022
+      },
+      "LICENSE": {
+        "url": "https://github.com/puneat/SierraCharts.DTC.NET/blob/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5/LICENSE",
+        "sha256": "99d23bbb7683fe55b88f78226401ff7048eea93d0202cfb5949a8d8729d599b9",
+        "bytes": 1070
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/puneat/SierraCharts.DTC.NET/commit/dd00d631e9a26cf8fd07d2243ee4091554f0f1a5",
+      "metadata": "https://api.github.com/repos/puneat/SierraCharts.DTC.NET"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# SierraCharts.DTC.NET ![License](https://img.shields.io/badge/license-MIT-blue) SierraCharts.DTC.NET is a powerful .NET library that provides a robust implementation of the Data/Trading Communication (DTC) protocol for Sierra Charts. This protocol enables external applications to interface with Sierra Charts, request data, subscribe to updates, and execute other necessary operations. SierraCharts.DTC.NET supports requests for various data types such as market data, alerts, account details, fills data, order book data. In addition, it allows external applications to subscribe to Sierra Charts updates. The library offers flexibility by supporting multiple encoding options including Binary, Google Protocol Buffers (GPB), JSON, and Binary With Variable Length Strings Encoding. ## Features - Query market data, alerts, account details, fills data, orderbook data. - Subscribe to Sierra Charts updates. - Supports multiple encoding options: Binary, GPB, JSON, and Binary With Variable Length Strings Encoding.",
+    "license_excerpt": "MIT License Copyright (c) 2023 Puneet Mishra Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![License](https://img.shields.io/badge/license-MIT-blue)"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "106968687/DTC-SC",
+    "requested_name": "106968687/DTC-SC",
+    "id": 240872282,
+    "url": "https://github.com/106968687/DTC-SC",
+    "stars": 4,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09",
+    "last_commit_date": "2020-06-18T03:51:58Z",
+    "archived": false,
+    "fork": false,
+    "description": "The smart contracts for data trading certification",
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# DTC-SC"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      "CDSC.sol",
+      "DTSC.sol",
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/106968687/DTC-SC/blob/89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09/README.md",
+        "sha256": "9d77a87956e5c24b6985046a10373059033bc0ad1e4bbb94803f368a22083457",
+        "bytes": 60
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/106968687/DTC-SC/commit/89c8f9d70b36f5bb0a4cf8e43132bea16fd3af09",
+      "metadata": "https://api.github.com/repos/106968687/DTC-SC"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# DTC-SC The smart contracts for data trading certification",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "pschleger/dtcc-trade-reporting",
+    "requested_name": "pschleger/dtcc-trade-reporting",
+    "id": 1028370414,
+    "url": "https://github.com/pschleger/dtcc-trade-reporting",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4",
+    "last_commit_date": "2025-07-31T13:52:26Z",
+    "archived": false,
+    "fork": false,
+    "description": "A proof-of-concept project exploring how far one can build a DTCC regulatory trade reporting system entirely with AI \u2014 from requirements and specifications to implementation and testing. The human acts primarily as an orchestrator, intervening only as a last resort.",
+    "language": "Java",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# DTCC Regulatory Reporting System",
+      "## \ud83d\ude80 System Overview",
+      "### Key Capabilities",
+      "## \ud83d\udee0\ufe0f Getting Started",
+      "### 1. Clone the Project",
+      "### 2. \ud83e\uddf0 Run Workflow Import Tool",
+      "#### Option 1: Run via Gradle (recommended for local development)",
+      "#### Option 2: Build and Run JAR (recommended for CI or scripting)",
+      "### 3. \u25b6\ufe0f Run the Application",
+      "#### Option 1: Run via Gradle",
+      "#### Option 2: Run Manually After Build",
+      "## \ud83c\udfd7\ufe0f System Architecture",
+      "### Core Business Entities",
+      "#### 1. Master Data Entities",
+      "#### 2. Trade Processing Entities",
+      "#### 3. Regulatory Entities",
+      "### Workflow-Driven Processing",
+      "## \ud83e\udde9 Project Structure",
+      "### `application/entity/`",
+      "### `application/processor/`",
+      "### `application/criterion/`",
+      "### `common/`",
+      "## \ud83d\udccb Business Use Cases",
+      "### Primary Workflows",
+      "### Regulatory Compliance",
+      "## \ud83d\udd04 Workflow Configuration",
+      "## \ud83d\udcca API Reference",
+      "### EntityService Methods",
+      "## \ud83d\udcda Documentation",
+      "### Comprehensive Specifications"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      ".ai",
+      ".augment-guidelines",
+      ".augment",
+      ".env.template",
+      ".github",
+      ".gitignore",
+      ".java-version",
+      "Dockerfile",
+      "LICENSE",
+      "POSTPONED_ITEMS.md",
+      "README.md",
+      "build.gradle",
+      "docs",
+      "gradle",
+      "gradlew",
+      "gradlew.bat",
+      "llms-full.txt",
+      "llms.txt",
+      "src",
+      "usage-rules.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/pschleger/dtcc-trade-reporting/blob/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4/README.md",
+        "sha256": "94709b314fb316a59722e749a1e4e28b53ad0159e75780046abe53df9338cfd7",
+        "bytes": 34851
+      },
+      "LICENSE": {
+        "url": "https://github.com/pschleger/dtcc-trade-reporting/blob/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/pschleger/dtcc-trade-reporting/commit/5cc90aebdbbc9a88bf1794773e85c8aba5e9d4a4",
+      "metadata": "https://api.github.com/repos/pschleger/dtcc-trade-reporting"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# DTCC Regulatory Reporting System A proof-of-concept project exploring how far one can build a DTCC regulatory trade reporting system entirely with AI \u2014 from requirements and specifications to implementation and testing. The human acts primarily as an orchestrator, intervening only as a last resort. --- ## \ud83d\ude80 System Overview - **Entity-Driven Processing**: Transform trades through defined entity lifecycles using Cyoda workflows - **Event-Driven Architecture**: React to business events with appropriate state machine transitions - **Regulatory Compliance**: Meet DTCC GTR reporting requirements and deadlines - **Scalable Processing**: Handle high-volume trade processing with SLA compliance - **Comprehensive Monitoring**: Track system performance and business metrics with full audit trails ### Key Capabilities - Process **FpML trade confirmations** into structured Trade entities - Maintain **position calculations** and reconciliation workflows - Generate and submit **regulatory reports** to DTCC GTR - Manage **master data** (counterparties, products, legal entities) - Handle **trade lifecycle events** (amendments, cancellations, maturities) - Provide **exception handling** and manual intervention workflows --- ## \ud83d\udee0\ufe0f Getting Started > \u2615 **Java 21 Required** > Make sure Java 21 is installed and set as the",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "#### Option 1: Run via Gradle (recommended for local development)",
+      "> Access the app: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)",
+      "Cyoda integration framework (rarely modified):",
+      "#### Option 1: Run via Gradle (recommended for local development)",
+      "> Access the app: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)",
+      "You can then pass the resulting `SearchConditionRequest` object as the `condition` parameter to `getItemsByCondition`."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "AndreuCrespo/trading-brain",
+    "requested_name": "AndreuCrespo/trading-brain",
+    "id": 1254555188,
+    "url": "https://github.com/AndreuCrespo/trading-brain",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "934130c22210923d225010ec48b0d29299169316",
+    "last_commit_date": "2026-07-28T10:58:22Z",
+    "archived": false,
+    "fork": false,
+    "description": "MCP server bridging Claude to Sierra Chart (DTC + .scid)",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# trading-brain",
+      "## What's inside",
+      "## How they talk to Sierra Chart",
+      "## Requirements",
+      "## Setup",
+      "# Clone",
+      "# Install each MCP (creates per-project .venv + uv.lock)",
+      "## Wiring into Claude Desktop",
+      "## Dev workflow (MCP Inspector)",
+      "## Discord channel taxonomy",
+      "# \u2192 snapshot of postmarket-futuros, postmarket-stocks, setups-database,",
+      "#   writes-up all at once",
+      "## Journal memory",
+      "## Example conversations",
+      "## Status & known limitations",
+      "## Roadmap",
+      "## Layout"
+    ],
+    "recent_commit_count": 49,
+    "recent_authors_sample50": [
+      "AndreuCrespo",
+      "dondAdri"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "README.md",
+      "backtests",
+      "discord-mcp",
+      "journal-mcp",
+      "sierra-mcp",
+      "sierra-study"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/AndreuCrespo/trading-brain/blob/934130c22210923d225010ec48b0d29299169316/README.md",
+        "sha256": "f3b268b5c9869b2f7549724c06694dfdf98179fe3135261a2a41eb4c448de18f",
+        "bytes": 11396
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/AndreuCrespo/trading-brain/commit/934130c22210923d225010ec48b0d29299169316",
+      "metadata": "https://api.github.com/repos/AndreuCrespo/trading-brain"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# trading-brain Personal trading copilot built as a set of MCP servers for Claude. Connects Claude to **Sierra Chart** (live market data and account state)",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "(a trading-education community used as a knowledge source), with a local",
+      "SQLite journal for persistent memory.",
+      "| **sierra-mcp** | Sierra Chart bridge (futures: ES, NQ, MES, MNQ on CME) | `ping_sierra`, `get_quote`, `get_recent_bars` (DTC), `get_recent_bars_scid` (local file), `get_latest_tick_scid`, `get_scid_status`, `get_futures_context`, `get_market_features`, `list",
+      "| **journal-mcp** | Local SQLite memory for observations, trades, reviews, and structured playbook knowledge | Tools: `log_observation`, `log_trade`, `update_trade`, `search_journal`, `list_recent`, `daily_summary`, `add_knowledge_item`, `search_knowledge`, `l",
+      "Discord is read-only. journal-mcp writes only to a local SQLite journal database.",
+      "JSON over Sierra's local DTC server. Requires Denali Exchange Data Feed +",
+      "reads Sierra's local tick-storage files directly from disk, aggregates ticks",
+      "- Python 3.11+",
+      "For order tools, create a local gitignored `sierra-mcp/safety.json` from",
+      "\"command\": \"D:\\\\inversion\\\\sierra-mcp\\\\.venv\\\\Scripts\\\\python.exe\",",
+      "\"command\": \"D:\\\\inversion\\\\discord-mcp\\\\.venv\\\\Scripts\\\\python.exe\",",
+      "\"command\": \"D:\\\\inversion\\\\journal-mcp\\\\.venv\\\\Scripts\\\\python.exe\",",
+      "> Note: args use the absolute file path instead of `python -m sierra_mcp.server`",
+      "In the inspector UI, point Command at the per-project venv python and Args at",
+      "- Command: `D:\\inversion\\sierra-mcp\\.venv\\Scripts\\python.exe`",
+      "## Journal memory",
+      "journal-mcp stores local memory in SQLite (default:",
+      "`status` (`draft`, `reviewed`, `approved`, `active`, `stale`, `deprecated`),"
+    ],
+    "dependency_repos": [
+      "AndreuCrespo/trading-brain.git"
+    ]
+  },
+  {
+    "full_name": "seanpray/dtc-py",
+    "requested_name": "seanpray/dtc-py",
+    "id": 1116233221,
+    "url": "https://github.com/seanpray/dtc-py",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "950dd3b36af4fdfcda71d142ab732fedc0b81890",
+    "last_commit_date": "2026-02-24T12:30:02Z",
+    "archived": false,
+    "fork": false,
+    "description": "Pure python implementation + wrapper around the Data Trading Communications Protocol used by Sierra Chart",
+    "language": "Python",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "#### Python DTC Protocol"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "DTC trading"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "example.py",
+      "pyproject.toml",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/seanpray/dtc-py/blob/950dd3b36af4fdfcda71d142ab732fedc0b81890/README.md",
+        "sha256": "b2600f9e1275f0db9a3a24176bb35634f841b4e1e0be287164022c8f34c561f2",
+        "bytes": 246
+      },
+      "LICENSE": {
+        "url": "https://github.com/seanpray/dtc-py/blob/950dd3b36af4fdfcda71d142ab732fedc0b81890/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/seanpray/dtc-py/blob/950dd3b36af4fdfcda71d142ab732fedc0b81890/pyproject.toml",
+        "sha256": "86915dbceb2bbca544a49d2015f47b2568143e93a2e592d99501c0d2e9310f08",
+        "bytes": 131
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/seanpray/dtc-py/commit/950dd3b36af4fdfcda71d142ab732fedc0b81890",
+      "metadata": "https://api.github.com/repos/seanpray/dtc-py"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "#### Python DTC Protocol Python port & Wrapper of the JSON version of the Data and Trading Communications Protocol (DTC Protocol) commonly used by SierraChart Documentation: http://DTCprotocol.org/index.php?page=doc_DTCMessageDocumentation.php",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "#### Python DTC Protocol",
+      "Python port & Wrapper of the JSON version of the Data and Trading Communications Protocol (DTC Protocol) commonly used by SierraChart"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "FIXTradingCommunity/FIXML",
+    "requested_name": "FIXTradingCommunity/FIXML",
+    "id": 39651148,
+    "url": "https://github.com/FIXTradingCommunity/FIXML",
+    "stars": 14,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2",
+    "last_commit_date": "2026-07-14T11:39:29Z",
+    "archived": false,
+    "fork": false,
+    "description": "The FIXML standard for encoding FIX messages in XML.",
+    "language": "Shell",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.",
+      "a copyright notice;"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# FIXML",
+      "## License"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "kleihan"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/FIXTradingCommunity/FIXML/issues/8",
+        "createdAt": "2023-12-05T16:35:20Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-12-05T16:54:14Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-12-05T18:06:40Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-12-05T18:07:47Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/FIXTradingCommunity/FIXML/issues/7",
+        "createdAt": "2021-12-02T11:42:51Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 2,
+        "stage": "W06",
+        "lane": "format",
+        "query": "FIXML"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "FIXML 1.1",
+      "FIXML 1.2",
+      "LICENSE",
+      "README.md",
+      "XMLSchemaForFIX"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/FIXTradingCommunity/FIXML/blob/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2/README.md",
+        "sha256": "5829985b08bf6bfb10133c3ade55c4e17068a848f11022ea99d365fc55659584",
+        "bytes": 1111
+      },
+      "LICENSE": {
+        "url": "https://github.com/FIXTradingCommunity/FIXML/blob/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2/LICENSE",
+        "sha256": "3e9746846e7c1273ec899b76ccadd9b795955e63be137414d96d8f645ceeae7c",
+        "bytes": 12515
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/FIXTradingCommunity/FIXML/commit/d0a3b9b4d1fac0c175732809d0aa4fbbbd3ae7a2",
+      "metadata": "https://api.github.com/repos/FIXTradingCommunity/FIXML"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# FIXML The FIXML standard for encoding FIX messages in XML. FIXML 1.2/ is the directory for FIXML 1.2 recommendations. ## License FIXML specifications are",
+    "license_excerpt": "Creative Commons Attribution-NoDerivatives 4.0 International Public License By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "## License",
+      "<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nd/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-nd/4.0/88x31.png\" /></a><br /><span xmlns:dct=\"http://purl.org/dc/terms/\" href=\"http://pur"
+    ],
+    "dependency_repos": [
+      "FIXTradingCommunity/fix-simple-binary-encoding"
+    ]
+  }
+]
