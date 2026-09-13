@@ -1,0 +1,36 @@
+name: YouTube research pack validation
+on:
+  push:
+    branches: [research/youtube-creators-20260913]
+    paths:
+      - .github/workflows/youtube-materialize.yml
+      - research-tools/youtube-materialize.py
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: youtube-research-materialize
+  cancel-in-progress: false
+jobs:
+  materialize-public-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Join reviewed public evidence and preserve unrelated main changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 research-tools/youtube-materialize.py
+      - name: Preserve validation and downloadable research pack
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-creators-research-pack
+          path: |
+            youtube-creators-research-pack.zip
+            youtube-publication-receipt.json
+            packs/youtube_creators/evidence/validation.json
+          if-no-files-found: warn
+          retention-days: 30
