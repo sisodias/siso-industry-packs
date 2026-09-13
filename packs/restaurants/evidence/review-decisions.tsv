@@ -1,0 +1,156 @@
+id	verdict	fit	liftability	integration	stages	kind	deployment	capability	judgment
+R001	ADOPT	4	2	4	W01,W06,W07,W09	app	vps	workflow-orchestration	Optional direct-order application; do not duplicate the selected booking authority or existing marketing site.
+R002	STUDY	5	2	4	W03,W04,W07,W08,W10	app	vps	workflow-orchestration	Best integrated restaurant-core qualification target; active-development warning and ERPNext/HRMS version compatibility block immediate cutover.
+R003	SKIP	2	2	2	W07	app	vps	workflow-orchestration	Separate legacy POS is superseded by the main URY application; upstream states v1 support ended December 2025.
+R004	SKIP	2	2	2	W08	app	vps	workflow-orchestration	Separate legacy Mosaic KDS is superseded; evaluate the current URY implementation instead.
+R005	ADOPT	4	2	4	W03,W04,W10,W11	app	vps	workflow-orchestration	Conditional expanded back-office foundation for purchasing, stock, BOM and accounting references; pin mutually compatible versions.
+R006	ADOPT	4	2	4	W02,W11	app	vps	workflow-orchestration	Adjacent workforce module for staff and approved time records; country-specific payroll remains a separate validation gate.
+R007	STUDY	4	3	4	W07,W08	plugin	vps	workflow-orchestration	Odoo POS extensions are a credible alternative ecosystem, not an additional ERP to install beside Frappe.
+R008	STUDY	4	3	4	W03,W04	plugin	vps	workflow-orchestration	Useful receipt, picking and stock-workflow extensions if the Odoo route wins.
+R009	STUDY	4	3	4	W03	plugin	vps	workflow-orchestration	Supplier purchasing extensions; module-level version and licence checks are still required.
+R011	STUDY	4	3	4	W10,W11	plugin	vps	workflow-orchestration	Journal reconciliation runner-up; accountant-approved mappings and reversals matter more than a matching screen.
+R012	STUDY	4	3	4	W03,W10,W11	plugin	vps	etl-data-integration	EDI and invoice-import mechanisms worth reusing on an Odoo route; not an acquired trading-network entitlement.
+R013	STUDY	4	3	4	W03,W04	plugin	vps	workflow-orchestration	BOM and production extensions offer recipe/unit patterns; restaurant yield and waste semantics need explicit tests.
+R014	STUDY	4	2	4	W02,W03,W04,W07,W10,W11	app	vps	workflow-orchestration	Strong whole-ERP runner-up; choose one back-office authority rather than operate duplicate stock and accounting ledgers.
+R015	STUDY	3	2	3	W07,W10	app	vps	workflow-orchestration	Retail checkout base does not itself prove restaurant coursing, recipe costing or KDS behaviour.
+R019	STUDY	2	2	2	W03,W04	app	vps	workflow-orchestration	Household stock and shopping UX is useful prior art, not a restaurant financial inventory ledger.
+R020	STUDY	2	2	2	W04	app	vps	workflow-orchestration	Family recipe-management patterns; no demonstrated supplier-to-COGS operating chain. Record current Commons Clause terms accurately.
+R021	STUDY	2	2	2	W04	app	vps	workflow-orchestration	Personal recipe API and meal planning are not commercial portion-yield and invoice-cost controls.
+R022	STUDY	2	2	2	W03,W04	app	vps	workflow-orchestration	Shopping-list and recipe interactions are reference material, not proof of a restaurant stock ledger.
+R023	STUDY	1	2	2	W04	app	vps	workflow-orchestration	Recipe-sharing application; useful data-model contrast but insufficient restaurant operating scope.
+R024	STUDY	3	2	3	W02,W03,W10	app	vps	workflow-orchestration	Food-cooperative purchasing and member-account workflows offer reusable patterns outside the primary restaurant segment.
+R025	STUDY	3	2	3	W03,W09	app	vps	workflow-orchestration	Local-food shop ordering is adjacent to supplier collaboration, not a complete dining-room operating system.
+R026	STUDY	3	2	3	W03,W09	app	vps	workflow-orchestration	Producer and food-hub marketplace is a segment alternative; avoid importing its heavier business model unnecessarily.
+R027	STUDY	3	2	3	W09	app	vps	workflow-orchestration	Courier-cooperative routing patterns; neither marketplace access nor driver operations are supplied by self-hosting alone.
+R028	STUDY	2	2	3	W03,W04,W05	app	vps	data-serialization	Product-identity and provenance reference; public food records are not current restaurant recipe or allergen authority.
+R029	STUDY	2	2	3	W03,W04	app	vps	data-serialization	Public price observations provide provenance patterns, not the operator's supplier invoice costs.
+R030	STUDY	2	2	3	W06	app	vps	job-scheduler-cron	Appointment scheduling runner-up; time slots do not establish restaurant table combinations or service pacing.
+R031	STUDY	3	2	3	W06	app	vps	job-scheduler-cron	Resource booking alternative; restaurant party/table constraints still need a domain-specific acceptance test.
+R032	STUDY	1	2	2	W06	app	personal-only	job-scheduler-cron	Current canonical Cal.diy README recommends personal non-production use; do not select it for restaurant booking production.
+R033	ADOPT	4	2	4	W05	app	vps	forms	Optional authoritative form-record service for approved checks, not a HACCP plan or safety certification.
+R034	ADOPT	4	3	4	W05	app	device	forms	Released Android offline form companion; master development source is not the production installation choice.
+R035	STUDY	3	2	3	W05	app	vps	forms	Richer data-collection alternative to ODK; deployment/version complexity needs justification for a single restaurant.
+R036	STUDY	2	2	3	W05,W12	app	vps	forms	Web-survey alternative; offline safety capture and restaurant corrective-action semantics remain unproved.
+R037	STUDY	3	2	3	W02,W11	app	vps	workflow-orchestration	HR runner-up; source now resolves to horilla/horilla-hr and version-specific support must be retained.
+R038	STUDY	3	3	3	W02,W11	plugin	vps	workflow-orchestration	Odoo HR extension route; not another employee ledger beside the selected HRMS.
+R039	STUDY	2	2	3	W02,W11	app	vps	workflow-orchestration	Project-time capture is useful prior art but is not restaurant staffing, tips or payroll by itself.
+R040	SKIP	2	2	2	W02	app	vps	workflow-orchestration	Leave-management scope and no recent sampled activity make it a weak new deployment beside current HR alternatives.
+R041	ADOPT	4	2	4	W01,W12	app	vps	workflow-orchestration	Shared conversation queue; verify approved channels, permissions and reconciliation for missed webhook delivery.
+R042	STUDY	3	2	3	W01	app	vps	email	Lighter email-support alternative; confirm API/channel module entitlements before claiming equivalent omnichannel coverage.
+R043	STUDY	2	2	2	W01	app	vps	email	Symfony helpdesk skeleton is a runner-up, with more assembly and channel qualification than the selected inbox.
+R044	STUDY	3	2	3	W01	app	vps	workflow-orchestration	Mature helpdesk alternative; justify its separate runtime and resource burden against the primary inbox choice.
+R045	ADOPT	3	3	4	W12	app	vps	email	Optional consented email follow-up service; SMTP delivery and suppression controls remain required, and loyalty is not supplied.
+R046	STUDY	3	2	3	W12	app	vps	workflow-orchestration	Marketing automation is broader than the first wedge; prefer fewer services until campaign demand is proven.
+R047	STUDY	4	5	4	W07,W08	library	vps-or-device	client-sdk-generic	PHP ESC/POS alternative when the chosen host is PHP; qualify physical printers and transport, not just text rendering.
+R048	ADOPT	4	5	4	W07,W08	library	vps-or-device	client-sdk-generic	Python receipt/printer adapter with device profiles; validate actual hardware and avoid exposing printers directly to the internet.
+R049	STUDY	3	5	3	W07,W08	library	vps-or-device	client-sdk-generic	Node ESC/POS alternative with older sampled activity; choose only when host compatibility outweighs maintenance uncertainty.
+R050	STUDY	3	5	3	W08	library	vps	data-serialization	Receipt-binary decoding and rendering for diagnostics; not the primary live kitchen-driver service.
+R051	STUDY	4	5	4	W07,W08	library	vps-or-device	data-serialization	Portable receipt layout and printer-command generation, useful if native driver layout is insufficient.
+R052	STUDY	4	4	4	W08	library	device	client-sdk-generic	Receipt CLI/transport bridge candidate; local-device access and authenticated job handoff remain deployment work.
+R053	STUDY	3	3	3	W08	app	device	client-sdk-generic	Desktop Java print bridge, not a remote VPS's automatic access to restaurant USB devices.
+R054	STUDY	3	4	3	W03,W11	spec	vps	validation-schema	Peppol invoice validation artifacts; not a network access point, tax opinion or evidence of partner onboarding.
+R055	STUDY	3	5	4	W03,W11	library	vps	data-serialization	UBL XML models/parsing when the supplier format requires them; keep schema validation distinct from accounting approval.
+R056	ADOPT	4	5	4	W03,W10,W11	library	vps	pdf-documents	Deterministic local invoice text extraction and templates, followed by human checks of amounts, units and credit notes.
+R057	STUDY	3	5	3	W10,W11	library	vps	data-serialization	OFX statement parser; retained fixture coverage is necessary despite limited recent sampled activity.
+R059	STUDY	3	3	3	W10,W11	plugin	vps	data-viz-charts	Odoo management reporting runner-up, not a reason to introduce a second accounting authority.
+R060	STUDY	2	4	1	W01,W03,W06,W12	catalog	not-runtime	search	Discovery catalogue only; linked applications are not counted as examined without individual source review.
+R061	STUDY	2	2	3	W03,W04	app	vps	data-serialization	Food-taxonomy curation patterns; identity alignment must not silently overwrite the client's ingredient definitions.
+R062	STUDY	3	2	2	W07,W09	app	hosted-dependency	workflow-orchestration	Food-delivery frontends are visible but README describes separately licensed/private backend APIs; not a complete VPS stack.
+R063	SKIP	2	2	1	W07,W09	app	hosted-dependency	workflow-orchestration	Older single-vendor frontend with unavailable backend portion is not an evidenced self-contained operating system.
+R064	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	Old class-project console architecture is not a production restaurant application despite the matching repository name.
+R065	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	Archived older ordering example; do not replace a live service workflow with this educational baseline.
+R066	SKIP	1	1	1	W07	demo	device	workflow-orchestration	Archived Android/RFID project lacks a maintained single-client VPS operating route.
+R067	STUDY	3	2	3	W07,W08	app	vps	workflow-orchestration	Headless NestJS restaurant domain example; runtime reliability and operational completeness are not demonstrated.
+R068	SKIP	1	1	1	W07,W09	demo	hosted-dependency	workflow-orchestration	React Native tutorial separates the backend into another source; not a complete qualified deployment.
+R069	SKIP	2	1	2	W07,W08	app	device	client-sdk-generic	Older local GPIO/SBC POS is poorly aligned to the chosen VPS boundary and current maintenance needs.
+R070	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	Screenshots and limited setup evidence are insufficient for adopting a restaurant operating core.
+R071	STUDY	3	2	3	W07,W08	app	vps	workflow-orchestration	Modern Go/React/Postgres POS reference, but no recent activity or independent operational proof established.
+R072	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	University implementation documents unfinished work and session limitations; not an appropriate live-order dependency.
+R073	STUDY	2	2	2	W07	app	hosted-dependency	workflow-orchestration	Restaurant system with conflicting offline claims and roadmap; resolve cloud dependencies and actual behaviour before selection.
+R074	STUDY	3	3	3	W06	plugin	vps	workflow-orchestration	Visual WordPress table booking is useful prior art; do not introduce WordPress solely for an old booking plugin.
+R075	STEAL	3	4	3	W07,W08	demo	device	workflow-orchestration	Study receipt-before-table-release and local-first state guards; explicitly a reference fixture, not production payment software.
+R076	ADOPT	5	2	4	W01,W06	app	vps	workflow-orchestration	Restaurant table-booking candidate with scoped API; test hold concurrency/restart and separate booking success from email delivery.
+R077	SKIP	0	1	1	W01	demo	hosted-dependency	web-ui-framework	Firebase restaurant website duplicates the marketing asset already held and adds no evidenced operating capability.
+R078	STUDY	4	2	3	W07,W08	app	device	workflow-orchestration	Local SQLite/offline POS is a fallback architecture alternative, not silently the same as a single-VPS system of record.
+R079	SKIP	1	1	1	W07	app	unknown	workflow-orchestration	Vendor-style billing/POS pitch does not establish the self-contained source and integration evidence needed here.
+R080	SKIP	1	1	1	W07	app	device	workflow-orchestration	Older Windows Forms/SQL Server desktop design is a poor fit for the selected deployable web operating layer.
+R081	SKIP	1	1	1	W07	demo	device	workflow-orchestration	Older Android menu example with minimal operating documentation, not a qualified server application.
+R082	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	File-based university assignment with demonstration authentication is unsuitable for production restaurant operations.
+R083	STUDY	3	2	3	W07,W10	app	vps	workflow-orchestration	Laravel/React POS with Indonesian payment/tax assumptions; adaptation is a jurisdiction and integration task, not mere translation.
+R084	STUDY	4	2	3	W02,W04,W07,W08,W11	app	vps	workflow-orchestration	Broad young POS/KDS/HR feature claims warrant qualification; local tax integrations and production quality are unverified.
+R085	SKIP	1	1	1	W09	app	unknown	workflow-orchestration	Very short README supplies insufficient operating, backend and deployment evidence despite a food-delivery name.
+R086	SKIP	1	1	1	W07,W09	app	vps	workflow-orchestration	Older PHP/Android delivery system with no recent sampled activity; maintenance risk dominates a new deployment choice.
+R087	SKIP	0	1	1	W01	demo	hosted-dependency	auth-identity	Old Ionic/Firebase authentication example is generic infrastructure, not the requested restaurant workflow contribution.
+R088	STUDY	2	2	3	W01	app	hosted-dependency	workflow-orchestration	WhatsApp CRM source explicitly describes a template; self-hosted Supabase and official channel readiness require further work.
+R089	SKIP	1	1	1	W02	app	unknown	workflow-orchestration	Sparse scheduling documentation and old activity are insufficient; root GPL text also differs from the README badge.
+R090	SKIP	0	0	0	W03	unknown	unknown	-	Metadata only: no README retrieved; excluded from the examined count and no source-fitness judgment claimed.
+R091	SKIP	0	1	0	W04	catalog	not-runtime	-	General coding-project ideas are a search false positive, not restaurant recipe-costing software.
+R092	SKIP	1	1	1	W05	demo	device	workflow-orchestration	Mock manufacturing MES/HACCP coursework is not demonstrated restaurant safety-record software.
+R093	SKIP	1	1	1	W07	demo	not-selected	workflow-orchestration	Older bootcamp POS example lacks current operational evidence for a live restaurant deployment.
+R094	SKIP	1	1	1	W09	app	hosted-dependency	workflow-orchestration	Taxi/parcel code-sales pitch and sample dependencies do not establish a complete restaurant delivery integration.
+R095	SKIP	0	3	1	W10	app	vps	etl-data-integration	Reconciles marketing leads and buyers, not meal orders and delivery-aggregator payouts; keyword false positive.
+R096	SKIP	1	1	1	W02,W11	app	vps	workflow-orchestration	Older employee time-clock baseline lacks current runtime and restaurant payroll evidence.
+R097	STUDY	3	2	3	W01,W07,W12	app	vps	workflow-orchestration	Early venue/loyalty operating-model reference; claims need independent implementation and outcome checks.
+R098	STUDY	3	3	3	W01	app	vps	email	Lighter Go helpdesk runner-up; do not infer all of Chatwoot's channel coverage from a shared-inbox description.
+R099	STUDY	3	5	3	W02	library	vps	workflow-orchestration	Constraint-solving engine can optimise a known rota model; it does not supply staff consent, notifications or payroll.
+R100	SKIP	1	1	1	W03	app	vps	workflow-orchestration	Archived food-bank application is not an appropriate new restaurant operating dependency.
+R101	SKIP	0	1	0	W04	data	not-runtime	-	Archived and incomplete diabetes-food dataset is neither recipe-cost evidence nor a restaurant safety authority.
+R102	STUDY	3	4	3	W10,W11	library	vps	pdf-documents	Bank-document parsing reference; qualify deterministic paths and disable external model processing by default.
+R103	SKIP	0	1	0	W12	library	not-selected	-	LLM model fingerprinting is unrelated to restaurant loyalty; topic-search false positive.
+R104	STUDY	3	5	3	W01	library	vps	client-sdk-generic	PHP WhatsApp Cloud API adapter; verify current API versions and channel access, not old pricing claims in README text.
+R105	STUDY	3	5	3	W02,W06	library	vps	job-scheduler-cron	Recurrence library already banked; test DST and exclusions rather than rediscover generic calendar infrastructure.
+R106	STUDY	3	5	3	W03,W11	library	vps	data-serialization	UBL parsing/writing candidate; reconcile documentation inconsistencies and validate real supplier fixtures.
+R107	SKIP	1	4	1	W03	spec	not-runtime	qr-barcode	Archived GS1 documentation has newer replacements; preserve provenance rather than treat this as current syntax authority.
+R108	STUDY	3	4	3	W05	spec	not-runtime	forms	XLSForm documentation defines an input contract, not a deployed safety-log or approved procedure.
+R109	SKIP	1	1	1	W06	demo	not-selected	workflow-orchestration	Course capstone booking UI does not establish restaurant capacity, notification or persistence guarantees.
+R110	STUDY	4	5	4	W08	library	vps-or-device	client-sdk-generic	Star CloudPRNT helpers for compatible hardware; not a universal printer server or proof of all device support.
+R111	SKIP	0	1	1	W09	demo	not-selected	workflow-orchestration	Simulated partner-delivery API is not an approved Uber Eats integration.
+R112	STUDY	3	5	3	W10,W11	library	vps	data-serialization	ISO 20022 models and parsing; commercial validation products and bank entitlements remain separate.
+R113	STUDY	3	5	3	W02,W06	library	vps	data-serialization	Calendar/vCard parser already held; timezone data maintenance is an explicit integration concern.
+R114	SKIP	2	2	2	W01	app	vps	workflow-orchestration	Beta unofficial WhatsApp stack documents account risk; prefer an approved business-channel route for client work.
+R115	SKIP	1	1	1	W02	app	unknown	workflow-orchestration	Minimal scheduling README and old activity do not support deployment or integration claims.
+R116	SKIP	0	0	0	W03	unknown	unknown	-	Metadata only without a retrieved README; excluded from source examination and adoption decisions.
+R117	SKIP	0	1	0	W04	catalog	not-runtime	-	Machine-learning cookbook is unrelated to restaurant recipes; query false positive.
+R118	SKIP	1	1	1	W05	demo	hosted-dependency	llm-app-framework	RAG food-SOP prototype and no-hallucination claims are not evidence of safe deterministic operational checks.
+R119	STUDY	3	3	2	W07	app	hosted-dependency	workflow-orchestration	Google Sheets/Apps Script POS exposes spreadsheet-shaped requirements; upstream explicitly does not claim production readiness.
+R120	STUDY	3	2	3	W07,W08	app	vps	workflow-orchestration	Campus ordering/KDS example offers domain patterns, not independently verified restaurant-group reliability.
+R121	SKIP	0	0	0	W09	unknown	unknown	-	Metadata only without source README; not counted as examined or a verified dispatch mechanism.
+R122	STUDY	3	3	3	W10,W11	app	vps	workflow-orchestration	Single-binary accounting alternative; jurisdiction, export and accountant acceptance remain essential regardless of source terms.
+R123	STEAL	3	4	3	W12	app	vps	qr-barcode	Short-lived QR and staff-confirmed redemption guards are useful patterns; no production loyalty ledger is selected.
+R124	SKIP	2	2	2	W01	app	vps	workflow-orchestration	Older generic live-chat system adds little beyond stronger already-reviewed inbox alternatives.
+R125	STUDY	3	4	3	W02	demo	vps	workflow-orchestration	Maintainer-provided Timefold quickstarts help specify constraints; examples are not a complete roster product.
+R126	SKIP	1	1	1	W05	data	not-runtime	-	Food-labelling research notebook is not a restaurant HACCP or corrective-action workflow.
+R127	SKIP	1	1	1	W06	app	vps	job-scheduler-cron	Archived unmaintained booking application is a poor new operational dependency.
+R128	SKIP	1	1	1	W09	demo	device	ui-component-kit	Older delivery UI only; the UI layer is already held and no restaurant backend is established.
+R129	STUDY	2	4	2	W03,W10	library	vps	pdf-documents	Local document-to-text ingestion alternative, not structured invoice, unit-conversion or accounting approval logic.
+R130	STUDY	2	2	2	W10,W11	app	vps	workflow-orchestration	Personal-finance application offers import/reconciliation patterns but is not selected as restaurant accounting authority.
+R131	STUDY	2	3	2	W12	app	device	qr-barcode	Consumer loyalty-card wallet interoperability; not a merchant rewards, consent or liability ledger.
+R132	SKIP	1	5	2	W01	library	vps	client-sdk-generic	Official Node SDK is archived and development stopped; official branding is not evidence of current maintenance.
+R133	STUDY	3	5	3	W02,W06	library	vps	job-scheduler-cron	PHP recurrence alternative for a PHP host; retain timezone and exclusion fixtures.
+R134	STUDY	3	5	3	W03,W11	library	vps	data-serialization	Typed invoice/credit-note construction; schema output does not establish legal compliance or Peppol transport.
+R135	STUDY	2	3	2	W03	spec	vps	qr-barcode	GS1 resolver reference explicitly disclaims current GS1 maintenance/conformance assurance; avoid unnecessary restaurant hosting.
+R136	STUDY	2	5	2	W05	library	vps	forms	XLSForm-to-wq/Django conversion is not automatically compatible with ODK XForms submission semantics.
+R137	SKIP	1	1	1	W06	demo	hosted-dependency	workflow-orchestration	Older booking tutorial relies on Azure identity assumptions and is not a qualified single-VPS restaurant booking service.
+R138	STUDY	3	3	3	W08	plugin	vps-or-device	client-sdk-generic	WooCommerce CloudPRNT bridge is useful integration prior art, not a reason to install another commerce system.
+R139	SKIP	1	1	1	W09	demo	not-selected	workflow-orchestration	Food-delivery curriculum API is not a live marketplace connector or an operator-ready dispatch system.
+R140	STUDY	3	5	3	W10,W11	library	vps	data-serialization	Go OFX parser/client reference; preserve institution-specific fixtures, identifiers and statement periods.
+R141	STUDY	4	5	4	W10,W11	library	vps	data-serialization	Structured CAMT/PAIN/OFX/CSV parsing candidate; disable optional LLM paths and distinguish payment instructions from settled cash.
+R142	STUDY	3	5	3	W01,W02,W06	library	vps	data-serialization	Already-banked PHP vCard/iCalendar library; verify the pinned runtime rather than copy historical version requirements.
+R143	STUDY	2	2	3	W01	app	hosted-dependency	workflow-orchestration	WhatsApp CRM template with Supabase assumptions; official channel and full client-owned deployment still need qualification.
+R144	STUDY	3	2	3	W02	app	vps	workflow-orchestration	Small React/Node/Postgres shift model; notification acknowledgement and accepted local labour rules remain missing proof.
+R145	SKIP	0	0	0	W03	unknown	unknown	-	Metadata only, with no current revision/README proof; excluded from the examined count.
+R146	SKIP	0	1	0	W04	plugin	not-selected	-	Minecraft crafting calculation is a recipe-keyword false positive, not food preparation or costing software.
+R147	SKIP	0	1	0	W05	data	not-runtime	-	Supplement marketing content is not sanitation-standard operating-procedure software.
+R148	SKIP	1	1	1	W01,W07	demo	vps	web-ui-framework	Simple restaurant website/order demonstration duplicates existing site scope and lacks sufficient production-operating evidence.
+R149	SKIP	1	1	1	W07	app	vps	workflow-orchestration	Source explicitly states it is no longer maintained; do not choose it for a new client POS.
+R150	STUDY	3	2	3	W08	app	vps	workflow-orchestration	Small shared KDS board provides state-flow examples but not independently verified kitchen-service reliability.
+R151	SKIP	1	1	1	W04	data	not-runtime	-	Demand-forecasting challenge dataset does not establish this operator's demand or provide an operating application.
+R152	SKIP	0	2	1	W10	app	vps	workflow-orchestration	Construction ledger is a cross-industry false positive; do not pad the restaurant shortlist with generic ledgers.
+R153	STUDY	2	2	2	W01	app	hosted-dependency	workflow-orchestration	Sales CRM/template patterns only; hosted dependencies and unofficial messaging assumptions are not restaurant production proof.
+R154	SKIP	1	1	1	W02	app	vps	workflow-orchestration	Archived older employee scheduler is unsuitable as a new maintained workforce dependency.
+R155	STUDY	2	2	2	W03	app	vps	workflow-orchestration	Food-pantry location/shelf-life model is adjacent prior art, not demonstrated recipe-costing or purchasing integration.
+R156	STUDY	2	2	2	W04	app	vps	workflow-orchestration	Recipe UX reference; the current rewrite explicitly is not ready for production self-hosting.
+R157	SKIP	0	1	0	W05	library	not-selected	-	Bacterial-genomics distance calculator is unrelated to operational restaurant safety-record capture.
+R158	SKIP	1	2	1	W06	app	vps	workflow-orchestration	FabLab equipment booking is a different resource workflow, not restaurant party/table management.
+R159	STUDY	2	2	2	W07,W09	app	unknown	workflow-orchestration	Regional multi-app food-delivery source merits architecture study; complete current self-hosting and production behaviour remain unverified.
+R160	STUDY	3	5	3	W10,W11	library	vps	data-serialization	Bank CSV format mappings are reusable without introducing a YNAB subscription or a second finance authority.
