@@ -1,0 +1,105 @@
+name: Events public bank reconciliation
+on:
+  push:
+    branches: [research/events-management-blueprint-20260913]
+    paths: [.github/workflows/events-bank-reconciliation.yml]
+permissions:
+  contents: read
+jobs:
+  public-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Export pinned public evidence only; no candidate code execution
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import datetime, hashlib, json, os, pathlib, time, urllib.request
+          out=pathlib.Path('events-bank-evidence');out.mkdir()
+          now=lambda:datetime.datetime.now(datetime.timezone.utc).isoformat()
+          pin='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          files={
+            'bank/bank_best.jsonl':'3f3f4d468b47d8cb3776c68b3921a486d133b543',
+            'bank/bank_adoption_v2.jsonl':'20da751134c00e7afcdc8b4a7ff49d2ce1415d7c',
+            'capability-shelf/source-registry.jsonl':'0de3caa5f98ee9922b3b191dee75d769b99afea8',
+            'bank/bank_capability_top.jsonl':'876f053f1595e76789a7a21616c4d32671e6fc24',
+            'bank/bank_capability.jsonl':'889c4dc0b35fc9e40855a4ddd8f049f5193246e6',
+            'bank/bank_contractcard.jsonl':'c0c677cd36fb75575856228bdaa715c56efa230f'}
+          manifest={'bank_pin':pin,'started_at':now(),'files':[],'errors':[],'no_candidate_code_executed':True,'permissions':'contents:read'}
+          for name,expected in files.items():
+            url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+pin+'/'+name
+            target=out/name;target.parent.mkdir(parents=True,exist_ok=True)
+            try:
+              request=urllib.request.Request(url,headers={'User-Agent':'SISO-events-public-evidence'})
+              with urllib.request.urlopen(request,timeout=40) as response,target.open('wb') as file:
+                total=0
+                while True:
+                  chunk=response.read(65536)
+                  if not chunk:break
+                  total+=len(chunk)
+                  if total>20000000:raise RuntimeError('Per-file 20MB bound')
+                  file.write(chunk)
+              git=hashlib.sha1(('blob '+str(target.stat().st_size)+'\0').encode());sha=hashlib.sha256()
+              with target.open('rb') as file:
+                while True:
+                  chunk=file.read(65536)
+                  if not chunk:break
+                  git.update(chunk);sha.update(chunk)
+              if git.hexdigest()!=expected:raise RuntimeError('Pinned Git blob identity mismatch')
+              with target.open('rb') as file:rows=sum(bool(line.strip()) for line in file)
+              manifest['files'].append({'path':name,'source_url':url,'blob_sha':git.hexdigest(),'sha256':sha.hexdigest(),'bytes':target.stat().st_size,'rows':rows,'observed_at':now()})
+              print('BANK_FILE',name,rows,'identity_verified',flush=True)
+            except Exception as exc:manifest['errors'].append({'path':name,'error':type(exc).__name__+': '+str(exc)})
+          def graphql(query):
+            request=urllib.request.Request('https://api.github.com/graphql',data=json.dumps({'query':query}).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'User-Agent':'SISO-events-public-evidence','Content-Type':'application/json'})
+            with urllib.request.urlopen(request,timeout=45) as response:return json.load(response)
+          gap_rounds={
+            6:[('S03','"artist advance" "hospitality"'),('S09','"concert settlement" "guarantee"'),('S06','"sponsor" "proof of delivery"'),('S07','"crew call" "rider"')],
+            7:[('S03','"PPL PRS" "event"'),('S09','"artist guarantee" "net receipts"'),('S09','"settlement" "versus deal"'),('S06','"sponsorship fulfilment" "evidence"')]}
+          gaps=[]
+          for round_id,queries in gap_rounds.items():
+            for stage,query in queries:
+              try:
+                q='{search(type:REPOSITORY,first:12,query:'+json.dumps(query+' sort:stars-desc')+'){repositoryCount nodes{... on Repository{nameWithOwner url description isPrivate}}} rateLimit{remaining cost}}'
+                result=graphql(q);nodes=result.get('data',{}).get('search',{}).get('nodes',[])
+                if any(node.get('isPrivate') for node in nodes):raise RuntimeError('Private result refused')
+                gaps.append({'round':round_id,'stage':stage,'lane':'gap','query':query,'observed_at':now(),'returned':nodes,'total_count':result.get('data',{}).get('search',{}).get('repositoryCount'),'errors':result.get('errors',[]),'interpretation':'Bounded gap probe, not evidence of global absence'})
+              except Exception as exc:gaps.append({'round':round_id,'stage':stage,'query':query,'error':type(exc).__name__+': '+str(exc)})
+              time.sleep(1)
+          (out/'gap-rounds.json').write_text(json.dumps(gaps,indent=2))
+          missing='''HiEventsDev/Hi.Events frappe/erpnext frappe/hrms jasonjanofsky/Acord60Mins Pittvandewitt/Wavelet jshea2/OSC-for-OBS jae-jae/Camtd missihawk/Festival-Advancing Pavilion360/settlement-generator tranchien2002/Evi kitanlaw/thegroupdtx-mom-sponsor-deck alphagov/temporary-event-notice-prototype jkbrzt/rrule gege-circle/.github ahmedsaadawi13/splash-book chrisneagu/FTC-Skystone-Dark-Angels-Romania-2020 api-evangelist/acord Sfedfcv/redesigned-pancake lloydstubber/my-wsl-setup FloorBoltRevitalize/Camtasia-Studio cmdlinebeep/fyyur cybersader/awesome-siem mikeroyal/Self-Hosting-Guide Ayush-Gupta376/Decentralized-Event-Insurance bshanz/v0-activation alphagov/govuk-licensing-ten-prototype ntheile/blockusign BaharathBathula/ACORDAI leemunroe/responsive-html-email-template moim-social/moim samouraiworld/zenao Stringfleproxy/Camtasia-Studio abusufyanvu/6S191_MIT_DeepLearning'''.split()
+          roots=[]
+          for start in range(0,len(missing),8):
+            batch=missing[start:start+8];q='{'
+            for index,name in enumerate(batch):
+              owner,repo=name.split('/',1)
+              q+='r'+str(index)+':repository(owner:'+json.dumps(owner)+',name:'+json.dumps(repo)+'){nameWithOwner isPrivate defaultBranchRef{name target{... on Commit{oid}}} root:object(expression:"HEAD:"){... on Tree{entries{name type}}}} '
+            result=graphql(q+'}')
+            for index,name in enumerate(batch):
+              row=result.get('data',{}).get('r'+str(index))
+              if not row:manifest['errors'].append({'repository':name,'errors':result.get('errors',[])});continue
+              if row.get('isPrivate'):raise RuntimeError('Private repository refused')
+              row['requested_name']=name;row['observed_at']=now();row['license_files']=[]
+              head=(row.get('defaultBranchRef') or {}).get('target',{}).get('oid')
+              entries=(row.get('root') or {}).get('entries',[])
+              paths=[e['name'] for e in entries if e['type']=='blob' and any(term in e['name'].lower() for term in ['license','licence','copying','copyright'])]
+              if paths and head:
+                owner,repo=row['nameWithOwner'].split('/',1);fq='{repository(owner:'+json.dumps(owner)+',name:'+json.dumps(repo)+'){'
+                for j,path in enumerate(paths):fq+='f'+str(j)+':object(expression:'+json.dumps(head+':'+path)+'){... on Blob{text oid byteSize}} '
+                fr=graphql(fq+'}}')
+                for j,path in enumerate(paths):row['license_files'].append({'path':path,'head_sha':head,'blob':fr.get('data',{}).get('repository',{}).get('f'+str(j))})
+              roots.append(row)
+            time.sleep(1)
+          (out/'licence-roots.json').write_text(json.dumps(roots,indent=2))
+          manifest['finished_at']=now();manifest['gap_queries']=len(gaps);manifest['licence_roots']=len(roots)
+          (out/'manifest.json').write_text(json.dumps(manifest,indent=2))
+          print('EXPORT_FINISHED',len(manifest['files']),'bank files;',len(roots),'licence roots;',len(manifest['errors']),'errors',flush=True)
+          PY
+      - name: Upload evidence including explicit failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: events-bank-reconciliation
+          path: events-bank-evidence/
+          retention-days: 7
