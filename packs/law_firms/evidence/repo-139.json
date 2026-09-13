@@ -1,0 +1,126 @@
+{
+  "audit_id": "R139",
+  "requested_full_name": "ArkCase/arkcase-ce",
+  "observed_at": "2026-09-13T17:05:15.333158+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "ArkCase/arkcase-ce",
+  "html_url": "https://github.com/ArkCase/arkcase-ce",
+  "description": "Packer configuration and Ansible plays to create a Vagrant virtual machine with services required to run ArkCase.",
+  "stargazers_count": 21,
+  "forks_count": 20,
+  "default_branch": "develop",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-02-21T20:04:13Z",
+  "updated_at": "2026-09-11T15:12:13Z",
+  "pushed_at": "2026-09-11T17:37:44Z",
+  "size": 74054,
+  "open_issues_count": 26,
+  "topics": [],
+  "license": null,
+  "revision": "9a13544b916164567364f55963c8eb524f6efcd8",
+  "last_commit": "2026-09-11T15:12:08Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/ArkCase/arkcase-ce",
+    "commit": "https://github.com/ArkCase/arkcase-ce/commit/9a13544b916164567364f55963c8eb524f6efcd8"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "878e14610c9a7d74ab1aaca47d9458471411c1964c7419a2c38b9ba4b8b8e425",
+    "text": "# Introduction\n\nThis project provides a Packer build script and an Ansible playbook to install ArkCase Community Edition on a minimal CentOS distribution.\n\n# Prerequisites to Run the Packer Script and Ansible Plays\n\nYour host desktop must have:\n\n* Packer (<https://www.packer.io>)\n* VirtualBox (<https://www.virtualbox.org/>)\n\n# Prerequisites to Run ArkCase\n\nYour host desktop must have:\n\n* VirtualBox (<https://www.virtualbox.org/>)\n* Vagrant (<https://www.vagrantup.com/>)\n\n# How to Run ArkCase\n\nThis section shows how to run ArkCase using the pre-built Vagrant box.\n\nCreate a text file named `Vagrantfile` (no file extension) in an empty folder.  Edit this file to have the following contents:\n\n```\nVagrant.configure(\"2\") do |config|\n  config.vm.box = \"arkcase/arkcase-ce\"\n  config.vm.box_version = \"3.3.1-r1-a\"\n  config.vm.box_url = \"https://app.vagrantup.com/arkcase/boxes/arkcase-ce\"\n  config.vm.network \"private_network\", type: \"dhcp\"\n  config.vm.hostname = \"arkcase-ce.local\"\n  # disable the default synced folder\n  config.vm.synced_folder '.', '/vagrant', disabled: true\nend\n```\n\nThe above `Vagrantfile` creates a private network with a DHCP-assigned IP address.\n\nThen run the command `vagrant up` from the same folder where `Vagrantfile` is loaded.  After some time, it should report success. If you see a cryptic SSH-related error message during the download, just re-run `vagrant up`; you may have to do this several times; but eventually the download will succeed and the box will start. \n\nTo find the IP address of your new VM, run this command from a terminal window in the same folder as the Vagrantfile:\n\n`vagrant ssh -c ifconfig`\n\nIt should be the IP address associated with the second interface.\n\nNext, update your hosts file with an entry like below:\n\n`192.168.56.15 arkcase-ce.local`\n\nBeing careful to replace `192.168.56.15` with the correct IP address as output by the command `vagrant ssh -c ifconfig`.  Note, on Linux and Mac OSX, the hosts file is the file `/etc/hosts`; on Windows, it is `C:\\Windows\\System32\\Drivers\\etc\\hosts` (or `%SystemDrive%\\Windows\\System32\\Drivers\\etc\\hosts` in case Windows is not installed on the C drive).\n\nNow you should be able to open the web site `https://arkcase-ce.local/arkcase` in your browser.  You will have to accept the ArkCase HTTPS certificate; your browser will show you a warning since ArkCase CE uses its own root certificate. \n\nThe default admin user is `arkcase-admin@arkcase.org`, password `@rKc@3e`.\n\n## Set Up Outgoing Email\n\nWhen you create a new user, the new user will receive an email including a reset-password link.  This means that outgoing email must be configured correctly: you must configure ArkCase with a known good email account.  \n\n1. Login to ArkCase as the default admin user (arkase-admin@arkcase.org, @rKc@3e)\n2. Click the Admin navigator tag in the left-hand list of modules\n3. Click the Security / Document Delivery Policy link (NOT the \"Email Configuration\" link)\n4. Leave the `Server Type` as `SMTP`\n5. Update the `Server Address`, `Port`, `Encryption`, `Username`, `Password`, and `From` fields to values that work with your email provider.  If you are an Office 365 user, you only need to update `Username`, `Password`, and `From`.\n6. Click the `Validate` button to be sure the new settings work.  If they work OK, click the `Save` button.\n\n## How to Add a New User\n\n1. First, be sure to follow the above instructions to configure ArkCase with a working email configuration.\n2. Login to ArkCase as the default admin user (arkcase-admin@arkcase.org, @rKc@3e)\n3. Click the Admin navigator tab in the left-hand list of modules\n4. Click the Security / Organizational Hierarchy link\n5. Click the name of the group to which you want to add the new user (for example, to add another administrator, click the ARKCASE_ADMINISTRATOR@ARKCASE.ORG group\n6. Click the \"Add New Member\" icon (the one with the plus sign)\n7. Fill out and submit the form\n\nThe new user will get an email with a button to reset their password; after which they can login to ArkCase.\n\nNote, no matter what the user's email address is, they must login as `userid@arkcase.org` where `userid` is the user id you entered into the add-user form.  Users are not able to login using their email address.\n\n# How to Create a New VM and Install ArkCase Yourself\n\nYou can install ArkCase on CentOS 7, and on RHEL 8.  For RHEL 8, you must have at least a developer support account with Red Hat (developer accounts are free, but you do need a developer account).\n\n## CentOS 7\n\nThis image will be a plain CentOS minimal install, updated to work well with Vagrant and Ansible.  \n\n1. Download Hashicorp's excellent Packer tool from <https://www.packer.io>. Install packer in the appropriate manner for your particular operating system.\n\n2. Clone this repository (the one that contains this README file, namely, https://github.com/ArkCase/arkcase-ce), if you haven't already done so, then open a command line terminal window and cd (change directory) to the `packer` folder of this repository. \n\n3. Examine the file `centos7.json`.  This file sets the new VM to have 8G RAM (do not lessen this value, but you can make it higher if you want) and 128G disk space (again, you can choose  higher value, but do not choose a lower one).\n\n4. Run the command `/path/to/packer build centos7.json` (being careful replace `/path/to` with the actual path to your `packer` installation, from step 1 above). After some time it should create a Vagrant box image based on the minimal CentOS 7.5 distribution.\n\n5. Select the ArkCase version to deploy, by following this link, https://github.com/ArkCase/ArkCase/releases, to see the list of supported ArkCase versions.  \n\n6. Copy the file `vagrant/Vagrantfile.centos7` to `vagrant/Vagrantfile`\n\n7. Use the commands below to create the Vagrant box.  These commands use Asible to provision all the ArkCase services; it will take some time.\n\n```bash\n# replace /path/to/this/repository with the folder where you cloned this repository\ncd /path/to/this/repository/vagrant\nexport VAGRANT_DEFAULT_PROVIDER=virtualbox # for Linux or MacOS\nset VAGRANT_DEFAULT_PROVIDER=virtualbox # for Windows\n# NOTE: Linux/MacOS users, use export\nexport ARKCASE_WEBAPP_VERSION=[Your desired version]  # example: export ARKCASE_WEBAPP_VERSION=2021.02\n# NOTE: Windows users use set\nset ARKCASE_WEBAPP_VERSION=[Your desired version] # example: set ARKCASE_WEBAPP_VERSION=2021.02\nvagrant up\n```\n\nYou may see errors from file downloads timing out; if you see these errors, just run `vagrant provision` and Vagrant will try again; usually it will work the second time.  If you see any other errors please raise a GitHub issue.\n\nWhen `vagrant up` finishes, the end of the output should look something like this:\n\n```\n    default: TASK [Reload firewalld] ********************************************************\n    default: skipping: [localhost]\n    default: \n    default: PLAY RECAP *********************************************************************\n    default: localhost                  : ok=794  changed=501  unreachable=0    failed=0    skipped=148  rescued=0    ignored=1  \n```\n\nFrom here, please skip the below RHEL 8 instructions, and continue with the hostname setup section.\n\n## RHEL 8\n\n1. Clone this repository (the one that contains this README file, namely, https://github.com/ArkCase/arkcase-ce), if you haven't already done so, then open a command line terminal window and cd (change directory) to the `vagrant` folder of this repository.\n\n2. Select the ArkCase version to deploy, by following this link, https://github.com/ArkCase/ArkCase/releases, to see the list of supported ArkCase versions.\n\n3. Copy the file `vagrant/Vagrantfile.rhel8` to `vagrant/Vagrantfile`\n\n4. Use the commands below to create the Vagrant box.  These commands use Asible to provision all the ArkCase services; it will take some time.\n\n```bash\nexport RH_SUBSCRIPTION_MANAGER_USER=\"YOUR RED HAT USER ID GOES HERE\"\nexport RH_SUBSCRIPTION_MANAGER_PW=\"YOUR RED HAT USER PASSWORD GOES HERE\"\n# replace /path/to/this/repository with the folder where you cloned this repository\ncd /path/to/this/repository/vagrant\nexport VAGRANT_DEFAULT_PROVIDER=virtualbox # for Linux or MacOS\nset VAGRANT_DEFAULT_PROVIDER=virtualbox # for Windows\n# NOTE: Linux/MacOS users, use export\nexport ARKCASE_WEBAPP_VERSION=[Your desired version]  # example: export ARKCASE_WEBAPP_VERSION=2021.02\n# NOTE: Windows users use set\nset ARKCASE_WEBAPP_VERSION=[Your desired version] # example: set ARKCASE_WEBAPP_VERSION=2021.02\nvagrant up\n```\n\nYou may see errors from file downloads timing out; if you see these errors, just run `vagrant provision` and Vagrant will try again; usually it will work the second time.  If you see any other errors please raise a GitHub issue.\n\nWhen `vagrant up` finishes, the end of the output should look something like this:\n\n```\n    default: TASK [Reload firewalld] ********************************************************\n    default: skipping: [localhost]\n    default:\n    default: PLAY RECAP *********************************************************************\n    default: localhost                  : ok=794  changed=501  unreachable=0    failed=0    skipped=148  rescued=0    ignored=1\n```\n\n## Hostname setup\n\nOn your host desktop, ensure that the hostname `arkcase-ce.local` is mapped to the correct IP address.\n\nFirst, run the following command to find your VirtualBox host only network IP range:\n\n```bash\nVBoxManage list hostonlyifs | grep \"IPAddress\"\n```\n\nExample output, showing that on this system, the host-only network has IP addresses starting with 172.28.\n\n```\ndavid@david-ubuntu:~/git/arkcase-ce/vagrant$ VBoxManage list hostonlyifs | grep \"IPAddress\"\nIPAddress:       172.28.128.1\n```\n\nNext, list the IP addresses assigned to your Vagrant VM:\n\n```bash\nvagrant ssh -c \"ifconfig | grep inet | grep -v inet6\"\n```\n\nExample output:\n\n```\ndavid@david-ubuntu:~/git/arkcase-ce/vagrant$ vagrant ssh -c \"ifconfig | grep inet | grep -v inet6\"\n        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255\n        inet 172.28.128.5  netmask 255.255.255.0  broadcast 172.28.128.255\n        inet 127.0.0.1  netmask 255.0.0.0\nConnection to 127.0.0.1 closed.\n```\n\nThe above output means that arkcase-ce.local should be mapped to `172.28.128.5` since that is the IP address assigned to the VM that starts with the IP address of the VirtualBox host-only network.\n\nUsing whichever way is appropriate for your operating system (e.g. on Linux, update `/etc/hosts`, make sure the IP address is mapped correctly.\n\n## Start ArkCase\n\nTo start the ArkCase web application, run the following commands, from the same folder where you ran `vagrant up`:\n\n```bash\n# the next two commands start arkcase\nvagrant ssh -c \"sudo systemctl start config-server\"\nvagrant ssh -c \"sudo systemctl start arkcase\"\n\n# this command lets you see the ArkCase log output.  First-time startup will take 10 - 15 minutes.\nvagrant ssh -c \"sudo tail -f /opt/arkcase/log/arkcase/catalina.out\"\n```\n\n",
+    "characters": 11006,
+    "source_url": "https://github.com/ArkCase/arkcase-ce/blob/9a13544b916164567364f55963c8eb524f6efcd8/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 22,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "david-oc-miller",
+      "contributions": 508
+    },
+    {
+      "login": "bojmil-armedia",
+      "contributions": 265
+    },
+    {
+      "login": "dzdimov",
+      "contributions": 193
+    },
+    {
+      "login": "satya-udayakumar",
+      "contributions": 33
+    },
+    {
+      "login": "fergusonna",
+      "contributions": 32
+    },
+    {
+      "login": "jovestefanovski",
+      "contributions": 20
+    },
+    {
+      "login": "sparksam",
+      "contributions": 16
+    },
+    {
+      "login": "venkatarmedia",
+      "contributions": 14
+    },
+    {
+      "login": "srinivasagunturu",
+      "contributions": 13
+    },
+    {
+      "login": "fabricetriboix",
+      "contributions": 6
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0119",
+        "repo": "ArkCase/arkcase-ce",
+        "url": "https://github.com/ArkCase/arkcase-ce",
+        "labels": [],
+        "family_ids": [
+          "U02",
+          "U60"
+        ],
+        "family_names": [
+          "Case and workflow product",
+          "Legal practice and matter management"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 2,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
