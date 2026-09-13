@@ -1,0 +1,23 @@
+{
+  "schema_version":"0.1.0","industry":"trading","date":"2026-09-13","status":"unmeasured_value_hypothesis","model_url":"https://github.com/sisodias/great-library-of-siso/blob/main/research/industries/source/intelligence/agency/economics/observed-value-model.json",
+  "reference_basket_is_actual_operator_spend":false,
+  "reference_usd_items":[{"product":"TradingView Essential","monthly_equivalent":12.95,"annual_reference":155.40,"basis":"advertised annual billing; eligibility/renewal must be reconfirmed","url":"https://www.tradingview.com/pricing/"},{"product":"Tradervue Gold","monthly_equivalent":49.95,"annual_reference":599.40,"basis":"12 monthly payments","url":"https://www.tradervue.com/site/pricing/"},{"product":"Airtable Team","monthly_equivalent":20,"annual_reference":240,"basis":"one seat, annual billing","url":"https://www.airtable.com/pricing"},{"product":"QuickBooks Simple Start","monthly_equivalent":38,"annual_reference":456,"basis":"regular steady rate, not introductory promotion","url":"https://quickbooks.intuit.com/pricing/"}],
+  "reference_stack_subtotal_usd_year":1450.80,
+  "reference_workspace_eur_year":81.60,
+  "workspace_url":"https://workspace.google.com/pricing.html",
+  "currency_conversion_applied":false,
+  "reference_journal_and_caseboard_usd_year":839.40,
+  "actual_stack_tax_usd_year":null,
+  "actual_cancellable_spend_usd_year":null,
+  "weekly_capacity_hours":null,
+  "weekly_capacity_formula":"sum_i(weekly_accepted_units_i * (baseline_human_minutes_i - assisted_human_minutes_i)) / 60; include review, rework and exceptions; do not double count",
+  "cash_inputs":{"verified_cancelled_software_spend":null,"verified_realized_labor_cash_savings":null,"verified_incremental_contribution_margin":null,"verified_risk_loss_reduction":null,"annual_operating_cost":null,"first_year_change_cost":null},
+  "first_year_net_cash":null,
+  "migration_cost":null,
+  "second_deployment_cost":null,
+  "eligible_operator_population":null,
+  "observed_adoption_fraction":null,
+  "pilot_executed":false,
+  "falsifiers":["no reduction in total reviewed effort against actual incumbent","loss of source fidelity or hidden differences","undeclared remote dependency or private-data egress","support and migration costs exceed observed benefit","operators do not accept migration","critical unauthorized action or data exposure"],
+  "decision":"bounded_read_only_pilot_only"
+}
