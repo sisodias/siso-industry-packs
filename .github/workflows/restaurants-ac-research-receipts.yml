@@ -5,6 +5,7 @@ on:
     paths: [.github/workflows/restaurants-ac-research-receipts.yml]
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: restaurants-ac-public-research-20260913
   cancel-in-progress: false
@@ -15,11 +16,11 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Verify commercial checkpoint and run only the pinned SISO research collector
+      - name: Reuse verified discovery and checkpoint every public repository receipt
         shell: bash
         run: |
           python3 -u - <<'PY'
-          import ast, base64, hashlib, json, os, pathlib, threading, time, urllib.parse, urllib.request
+          import ast, base64, hashlib, io, json, os, pathlib, threading, time, urllib.parse, urllib.request, zipfile
           repo = 'sisodias/siso-industry-packs'
           revision = '45a0bcae84c22eaa60e3c6608c73e5638300c675'
           assert os.environ['GITHUB_REPOSITORY'] == repo
@@ -31,40 +32,62 @@ jobs:
                       new.remove_header('Authorization')
                   return new
           urllib.request.install_opener(urllib.request.build_opener(SafeRedirect()))
-          originals = {}
-          expected = {
-              'packs/restaurants/03-companies.md': 'd3969a08c04513b92ae9bf1c77552f0d35b10c99',
-              'packs/restaurants/evidence/collect-public-sources.py': '6ff8df267593e8a1e78c4e5b19221eb7aff40c1f',
-          }
-          for path, blob in expected.items():
-              url = 'https://api.github.com/repos/'+repo+'/contents/'+path+'?ref='+revision
-              request = urllib.request.Request(url, headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'], 'Accept':'application/vnd.github+json', 'User-Agent':'siso-restaurants-ac-research'})
-              with urllib.request.urlopen(request, timeout=45) as response:
-                  obj = json.load(response)
-              raw = base64.b64decode(obj['content'], validate=False)
-              assert obj['sha'] == blob
-              assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest() == blob
-              originals[path] = raw
+          def get(path):
+              request = urllib.request.Request('https://api.github.com/repos/'+repo+path, headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-restaurants-ac-research'})
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  return response.read(2000000)
           out = pathlib.Path('evidence'); out.mkdir(exist_ok=True)
-          checkpoint = {'source_revision':revision, 'files':[{ 'path':p, 'blob_sha':expected[p], 'sha256':hashlib.sha256(raw).hexdigest()} for p,raw in originals.items()], 'mode':'public research only; no application execution, deployment or repository writes'}
-          (out/'stage3-checkpoint.json').write_text(json.dumps(checkpoint, indent=2)+'\n')
-          code = originals['packs/restaurants/evidence/collect-public-sources.py'].decode('utf-8')
+          archive = get('/actions/artifacts/10322295271/zip')
+          assert hashlib.sha256(archive).hexdigest() == '59aa398878abec53b342f50082a2684b11f18bc4fb8b80e0b3f99508b51e3690'
+          with zipfile.ZipFile(io.BytesIO(archive)) as z:
+              assert sum(i.file_size for i in z.infolist()) < 2000000
+              prior_discovery = json.loads(z.read('discovery.json'))
+              prior_checkpoint = json.loads(z.read('stage3-checkpoint.json'))
+          assert len(prior_discovery['selected_for_source_collection']) == 160
+          (out/'stage3-checkpoint.json').write_text(json.dumps(prior_checkpoint, indent=2)+'\n')
+          path = 'packs/restaurants/evidence/collect-public-sources.py'
+          obj = json.loads(get('/contents/'+path+'?ref='+revision))
+          raw = base64.b64decode(obj['content'])
+          assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest() == '6ff8df267593e8a1e78c4e5b19221eb7aff40c1f'
+          code = raw.decode('utf-8')
+          # Empty/non-JSON API responses are missing evidence, not a batch exception.
+          helper = "def decode_api_response(response, path):\n    body=response.read()\n    if response.status == 204:\n        return [] if '/contributors?' in path else {'_error':'no_content','path':path}\n    if not body.strip():\n        return {'_error':'empty_json','status':response.status,'path':path}\n    try:\n        return json.loads(body)\n    except (json.JSONDecodeError, UnicodeDecodeError):\n        return {'_error':'invalid_json','status':response.status,'path':path}\n"
+          ns = {'json':json}; exec(helper, ns)
+          class Response:
+              def __init__(self, status, body): self.status, self.body = status, body
+              def read(self): return self.body
+          decode = ns['decode_api_response']
+          assert decode(Response(204,b''),'/repos/x/y/contributors?per_page=10') == []
+          assert decode(Response(200,b''),'/repos/x/y')['_error'] == 'empty_json'
+          assert decode(Response(200,b'<html>temporary error</html>'),'/repos/x/y')['_error'] == 'invalid_json'
+          assert decode(Response(200,b'{"ok":true}'),'/repos/x/y') == {'ok':True}
+          needle = 'with urllib.request.urlopen(request,timeout=40) as response: return json.load(response)'
+          assert code.count(needle) == 1
+          code = code.replace(needle, 'with urllib.request.urlopen(request,timeout=40) as response: return decode_api_response(response,path)')
+          code = code.replace('def api(path):', helper+'\ndef api(path):',1)
+          start, end = code.index('rounds=['), code.index('def decode(obj,name,rev):')
+          # No repeat search: use the exact previous result set and selection.
+          reuse = "chosen=prior_discovery['selected_for_source_collection']\nsave('discovery.json',prior_discovery|{'reused_from_run':34769734077,'search_replayed':False})\n"
+          code = code[:start]+reuse+code[end:]
+          old = 'with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:raw_rows=list(pool.map(collect,enumerate(chosen,1)))'
+          new = "def checkpointed_collect(pair):\n    try:\n        row=collect(pair)\n    except Exception as exc:\n        row={'audit_id':'R'+str(pair[0]).zfill(3),'requested_full_name':pair[1],'observed_at':NOW,'error':type(exc).__name__}\n    save('checkpoint-'+row['audit_id']+'.json',row)\n    return row\nwith concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:raw_rows=list(pool.map(checkpointed_collect,enumerate(chosen,1)))"
+          assert code.count(old) == 1
+          code = code.replace(old,new,1)
           ast.parse(code)
-          # Bound aggregate request rate across the collector's three workers.
+          (out/'collector-repair-receipt.json').write_text(json.dumps({'previous_run':34769734077,'previous_failure':'JSONDecodeError during optional API evidence; final-only writer lost in-memory repository records','tests_passed':['204 contributors','empty JSON','non-JSON response','valid JSON'],'checkpoint_policy':'one independently saved file per candidate, including errors','search_replayed':False,'runtime_code_sha256':hashlib.sha256(code.encode()).hexdigest()},indent=2)+'\n')
           original_open = urllib.request.urlopen
-          lock = threading.Lock()
-          next_request = [0.0]
+          lock = threading.Lock(); next_request = [0.0]
           def paced_open(request, *args, **kwargs):
-              url = request.full_url if hasattr(request, 'full_url') else str(request)
+              url = request.full_url if hasattr(request,'full_url') else str(request)
               if urllib.parse.urlsplit(url).netloc == 'api.github.com':
                   with lock:
-                      time.sleep(max(0.0, next_request[0]-time.monotonic()))
+                      time.sleep(max(0.0,next_request[0]-time.monotonic()))
                       next_request[0] = time.monotonic()+0.25
-              return original_open(request, *args, **kwargs)
+              return original_open(request,*args,**kwargs)
           urllib.request.urlopen = paced_open
-          exec(compile(code, 'pinned-siso-public-source-collector', 'exec'), {'__name__':'__main__'})
+          exec(compile(code,'repaired-pinned-siso-public-source-collector','exec'),{'__name__':'__main__','prior_discovery':prior_discovery})
           PY
-      - name: Preserve public evidence including failure receipts
+      - name: Preserve public evidence including partial candidate receipts
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
