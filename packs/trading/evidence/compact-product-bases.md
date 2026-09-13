@@ -1,0 +1,74 @@
+# product-bases — targeted whole-corpus scan, not upstream verification
+
+- frappe/erpnext | ['Proposal, quote and CPQ', 'Accounting and general ledger', 'Inventory and warehouse management', 'Procurement and vendor management', 'Accounting practice operations', 'Field service management'] | 60
+- bigcapitalhq/bigcapital | ['Accounting and general ledger', 'Accounting practice operations'] | 25
+- akaunting/akaunting | ['Accounting and general ledger'] | 1
+- etewiah/property_web_builder | ['Real-estate brokerage and listings'] | 1
+- ariba-k/fair-loan-predictor |  | None
+- darcys22/godbledger |  | None
+- darius-lesch/pyloan |  | None
+- devb-saratoga/mortgage-network |  | None
+- Deveshsaipandian/Offline-Multimodal-Financial-Intelligent-System- |  | None
+- efrainteinert/Mortgage-Loan-Calculator |  | None
+- ferrarisf50/Fannie-Mae-single-family-mortgage-loan-data |  | None
+- frappe/books |  | None
+- Gitdigital-products/LedgerX-repo |  | None
+- inforkgodara/store-pos |  | None
+- johnnymo87/ibkr-portfolio-rebalancer |  | None
+- JS-Beginners/mortgage-loan-calculator |  | None
+- juxt/juxt-accounting |  | None
+- ledgersmb/LedgerSMB |  | None
+- mezotv/portfolio |  | None
+- MG-Trading-Terminal/mg-market-maker |  | None
+- michaelrak-spec/portfolio |  | None
+- NJAUHB/FinancialReportAnalysisTools |  | None
+- nl-hugo/hypotheek-calculator |  | None
+- prashants/webzash |  | None
+- preezy/IBKR-CLIENTPORTAL-TRADING-BOT |  | None
+- rajivjc/mortgage-blockchain-demo |  | None
+- redstreet/beancount_reds_importers |  | None
+- redstreet/fava_investor |  | None
+- renothetrader/recruitment-ats |  | None
+- superxz3r0/LLM-Augmented-Financial-Report-Analysis-Tool |  | None
+- Vincentho711/Interactive-Brokers-Trading-Bot |  | None
+- virattt/financial-agent-ui |  | None
+- akhilrex/hammond |  | None
+- postfinance/kubenurse |  | None
+- OS4ED/openSIS-Classic |  | None
+- DataIntegrationAlliance/data_integration_celery |  | None
+- SLMolenaar/orderbook-simulator-cpp |  | None
+- 384863451/invoice_ocr |  | None
+- Manager-io/Manager |  | None
+- artoh/kitupiikki |  | None
+- xup6jammy/AI-INVOICE-OCR-ENGINE |  | None
+- LinxHQ/linxbooks |  | None
+- 104H/Open-Source-Python-POS-and-Accounting-Software |  | None
+- dabberman456/finance-mcp-app |  | None
+- DistributedCollective/Sovryn-frontend |  | None
+- mradkov/p2p-lending |  | None
+- MatKollar/Invoice_OCR_app |  | None
+- scallop-io/sui-scallop-sdk |  | None
+- chiupam/invoiceOCR |  | None
+- techinfo-youtube/Expense-Management-System-MERN-STACK-Project |  | None
+- ossobv/exactonline |  | None
+- maziyank/nats |  | None
+- jkdevcode/trackmyexpenses |  | None
+- b1f6c1c4/ProfessionalAccounting |  | None
+- lg2de/SimpleAccounting |  | None
+- radwan503/Faname--RealEstate |  | None
+- thatkazuk1/QuickCredit |  | None
+- kenny1st/decentralized-lending-platform |  | None
+- Cryptoaj-hack/DFDTOKEN |  | None
+- PancakeBunny-finance/qubit-finance |  | None
+- carlos-emr/carlos |  | None
+- Expert610/LoanIQ-Smart-Loan-Approval-System |  | None
+- getsan4u/loan-origination-system |  | None
+- TejasAdhiya/TrustFirst |  | None
+- poocart/lend721 |  | None
+- kenny1st/p2p-lending-platform |  | None
+- FinStack-No-Code-LOS/Loan-Origination-System-Architecture |  | None
+- crypto-lend/cryptolend.ui |  | None
+- Rachana901070/video-loan-origination-system |  | None
+- realnimish/FracNL |  | None
+- HelioASjunior/nexi-legal-system |  | None
+- noimank/easyths |  | None

@@ -1,0 +1,218 @@
+# rated-bank-leads — targeted whole-corpus scan, not upstream verification
+
+- ranaroussi/yfinance | Python client to download Yahoo Finance market data | 88
+- akfamily/akshare | Chinese financial data interface library; dataset/client, no 104-list fit | 88
+- tradingstrategy-ai/web3-ethereum-defi | Python toolkit for DeFi trading, wallet, and protocol integration on EVM chains | 88
+- TauricResearch/TradingAgents | Multi-agent LLM framework for financial trading decisions | 85
+- tradingview/lightweight-charts | Performant HTML5 canvas financial charting library | 85
+- PyPortfolio/PyPortfolioOpt | Financial portfolio optimization (efficient frontier, Black-Litterman) in Python | 85
+- dcajasn/Riskfolio-Lib | Python library for portfolio optimization and financial analysis | 85
+- vernemq/vernemq | Distributed MQTT pub/sub broker built on Erlang/OTP | 85
+- jones2000/HQChart | H5/mobile candlestick and K-line charting library for financial markets | 85
+- quantopian/empyrical | Common financial risk and performance metrics library | 85
+- quarkfin/qf-lib | Event-driven backtester and quant finance toolkit | 85
+- finmath/finmath-lib | Mathematical finance algorithms and Monte Carlo simulation library | 85
+- moov-io/iso8583 | Marshal/unmarshal ISO8583 financial messages in Go | 85
+- jesse-ai/jesse | Crypto trading bot framework written in Python | 82
+- wondertrader/wondertrader | All-in-one quantitative trading research and execution framework | 82
+- tendermint/tendermint | BFT consensus engine for distributed ledgers | 82
+- binance/binance-connector-python | Python SDK for Binance public REST/market-data API | 82
+- paupino/rust-decimal | Pure Rust fixed-precision decimal type for financial calculations | 82
+- xbbg-org/xbbg | Intuitive Bloomberg market data workflows with Arrow/Pandas/Polars | 82
+- AutoMQ/automq | Diskless Kafka-compatible broker on S3 with autoscaling | 80
+- dotnet/MQTTnet | High-performance .NET MQTT client and broker library | 80
+- nanomsg/nng | Lightweight brokerless messaging library (nanomsg-next-gen) | 80
+- hosseinmoein/DataFrame | C++ DataFrame library for statistical, financial and ML analysis | 80
+- viabtc/viabtc_exchange_server | High-performance cryptocurrency exchange matching engine | 80
+- moquette-io/moquette | Lightweight embeddable Java MQTT broker | 80
+- moscajs/aedes | Barebone Node.js MQTT broker for any stream server | 80
+- mochi-mqtt/server | Embeddable high-performance Go MQTT v5 broker for pub/sub | 80
+- akfamily/akquant | Quant trading/backtest framework; domain-specific, no 104-list fit | 80
+- alpacahq/alpaca-py | Official Python SDK for Alpaca brokerage and market data API | 80
+- aio-libs/aiokafka | Asyncio client for Apache Kafka brokers | 80
+- amqp-rs/lapin | Async AMQP 0.9.1 client library for Rust messaging brokers | 80
+- 0xfdf/toraniko | Multi-factor equity risk model for quantitative trading | 80
+- finvfamily/finshare | Professional Python toolkit for fetching China A-stock and financial market data | 80
+- AsyncAlgoTrading/aat | Asynchronous event-driven algorithmic trading framework | 80
+- defeat-beta/defeatbeta-api | Open-source alternative to Yahoo Finance market data APIs | 80
+- rohitgandikota/erasing | Research notebook on erasing concepts from diffusion models | 80
+- plaid/plaid-python | Python client bindings for the Plaid financial API | 80
+- PowerBroker2/SerialTransfer | Arduino packetized serial/I2C data transfer library | 80
+- hyperliquid-dex/hyperliquid-rust-sdk | Rust SDK for Hyperliquid exchange API trading and signing | 80
+- alpacahq/alpaca-trade-api-go | Go client for Alpaca trade and market data API | 80
+- MarcusRainbow/QuantMath | Rust financial maths library for risk-neutral pricing and risk | 80
+- ranaroussi/quantstats | Portfolio analytics and reporting for quants in Python | 78
+- quantopian/pyfolio | Portfolio and risk analytics in Jupyter notebooks | 78
+- kungfu-origin/kungfu | Quantitative trading system for Chinese futures markets | 78
+- thrasher-corp/gocryptotrader | Multi-exchange cryptocurrency trading bot and framework | 78
+- AI4Finance-Foundation/FinRL-Trading | AI-native reinforcement learning infrastructure for quantitative trading | 78
+- enarjord/passivbot | Algorithmic crypto futures trading bot for multiple exchanges | 78
+- wondertrader/wtpy | Python bindings layer over the WonderTrader quant trading framework | 78
+- OpenGamma/Strata | Java analytics and market risk library for derivatives/finance | 78
+- tylerebowers/Schwabdev | Lightweight Python wrapper for the Charles Schwab trading API | 78
+- talostrading/sonic | Go library for low-latency async network and I/O programming | 78
+- fremantle-industries/tai | Real-time market data and trade execution toolkit for crypto/HFT | 78
+- FinanceData/OpenDartReader | Python client for Korea Open DART financial disclosure API | 78
+- vnpy/vnpy | Open-source Python framework for quantitative trading platforms | 75
+- umami-software/umami | Self-hosted privacy-focused web analytics platform | 75
+- apache/kafka | Distributed event streaming platform / pub-sub message broker | 75
+- quantopian/zipline | Algorithmic trading backtesting library | 75
+- brokermr810/QuantDinger | AI quantitative trading platform with backtesting and multi-agent research | 75
+- tensortrade-org/tensortrade | RL framework for training and deploying trading agents | 75
+- shinnytech/tqsdk-python | Python SDK for futures trading with real-time and historical data | 75
+- fasiondog/hikyuu | C++/Python high-speed quantitative trading research framework | 75
+- paradigmxyz/artemis | Modular framework for writing Ethereum MEV bots | 75
+- Open-Trader/opentrader | Full open-source crypto trading bot with DCA and grid strategies | 75
+- StartBootstrap/startbootstrap-freelancer | MIT-licensed Bootstrap portfolio theme template | 75
+- refraction-ray/xalpha | Fund investment backtesting and management engine | 75
+- exchange-core/exchange-core | Ultra-fast order matching engine for trading platforms | 75
+- danielqsj/kafka_exporter | Prometheus exporter for Kafka broker and consumer metrics | 75
+- QuantEcon/QuantEcon.py | Python library for quantitative economics | 75
+- RikkaApps/Shizuku-API | Java API and developer guide for the Shizuku privilege broker | 75
+- louisnw01/lightweight-charts-python | Python wrapper for TradingView Lightweight Charts (OHLC) | 75
+- hyperliquid-dex/hyperliquid-python-sdk | Python SDK for Hyperliquid API trading and signing | 75
+- ib-api-reloaded/ib_async | Python sync/async framework for Interactive Brokers trading API | 75
+- rodrigo-brito/ninjabot | Full crypto trading bot platform (end-user app) | 75
+- mjun0812/flash-attention-prebuild-wheels | Pre-built Flash-Attention wheels for Linux and Windows | 75
+- react-financial/react-financial-charts | Financial charts and stock charting components for React | 75
+- FutunnOpen/py-futu-api | Python SDK for Futu OpenAPI trading platform | 75
+- chengzuopeng/stock-sdk | Frontend JS SDK to fetch stock market data without backend | 75
+- symfony/messenger | Send and receive messages via queues and brokers | 75
+- gnzsnz/ib-gateway-docker | Docker image packaging IB Gateway/TWS for trading | 75
+- chronoxor/CppTrader | High-performance C++ trading platform matching engine | 75
+- Finnhub-Stock-API/finnhub-python | Python client for Finnhub stock and financial market data API | 75
+- goat-sdk/goat | Agentic finance toolkit for AI agents to interact with blockchains | 75
+- 51bitquant/howtrader | Crypto quant framework for backtesting and executing trading strategies | 75
+- dpguthrie/yahooquery | Python wrapper for Yahoo Finance market data API | 75
+- PowerBroker2/ELMduino | Arduino library for OBD-II Bluetooth car scanner interfaces | 75
+- openmessaging/dledger | Raft-based Java commitlog for HA strong-consistency logs | 75
+- piquette/finance-go | Go library for accessing financial market/stock data APIs | 75
+- apache/bifromq | Distributed multi-tenant MQTT broker for IoT | 75
+- candlefinance/faster-image | Fast native-backed image loading for React Native | 75
+- hudson-and-thames/arbitragelab | Python library of academic mean-reversion/arbitrage algorithms for trading | 75
+- kubemq-io/kubemq-community | Kubernetes-native message queue broker with gRPC/REST interfaces | 75
+- hyperledger/firefly | Multi-chain enterprise blockchain node with messaging and data orchestration | 75
+- alpacahq/alpaca-trade-api-js | Node.js client for Alpaca trade and market data API | 75
+- ArturSepp/QuantInvestStrats | Python analytics and visualization for quantitative investment strategies | 75
+- binance/binance-connector-java | Java SDK for Binance Spot REST/trading API | 75
+- karlwancl/Trady | .NET library for stock data and technical indicators | 75
+- QuantEcon/QuantEcon.jl | Julia library for quantitative economics algorithms | 75
+- coinrust/crex | Go unified client + backtester for crypto exchange APIs/WebSocket | 75
+- nardew/talipp | Incremental technical analysis indicators library for finance | 75
+- injoyai/tdx | Parse Tongdaxin protocol to fetch Chinese stock market data | 75
+- bitfinexcom/bitfinex-api-node | Node.js client for the Bitfinex cryptocurrency trading API | 75
+- joaquinbejar/OrderBook-rs | High-performance thread-safe limit order book for trading systems | 75
+- Boulder-Investment-Technologies/lppls | Fit the LPPLS bubble/crash model to financial time-series data | 75
+- blnkfinance/blnk | Open-source double-entry ledger for fintech backends | 75
+- hootnot/oanda-api-v20 | Python wrapper for OANDA REST v20 trading API | 75
+- hyperledger/fabric-sdk-py | Python SDK for Hyperledger Fabric blockchain | 75
+- numpy/numpy-financial | Standalone NumPy financial functions package (NPV, IRR, etc.) | 75
+- ProjectOpenSea/opensea-js | TypeScript SDK for trading on the OpenSea NFT marketplace | 72
+- alibaba/compileflow | High-performance Java process orchestration engine for trade workflows | 72
+- deepentropy/tvscreener | Client for TradingView screener across stocks, crypto, forex and futures | 72
+- saidsurucu/borsa-mcp | MCP server for Turkish and US stock/fund market data | 72
+- billpwchan/futu_algo | Futu/OpenAPI algorithmic trading application (end-user tool) | 72
+- ariadng/metatrader-mcp-server | MCP server exposing MetaTrader trading functions to LLMs | 72
+- ItzCrazyKns/Vane | AI answering engine combining search with RAG over LLMs | 70
+- RichardKnop/machinery | Distributed async task/job queue with multiple broker backends in Go | 70
+- Micro-sheep/efinance | Python library to fetch Chinese fund/stock/bond/futures data | 70
+- erdewit/ib_insync | Sync/async Python client for Interactive Brokers trading API | 70
+- pmorissette/bt | Python backtesting framework for financial strategies | 70
+- nanomq/nanomq | Lightweight MQTT broker for IoT edge messaging | 70
+- nats-io/nats-streaming-server | NATS Streaming durable pub/sub message broker server | 70
+- apache/activemq | Multi-protocol message broker (JMS/AMQP/MQTT) | 70
+- Vespa314/chan.py | Chan theory quantitative trading analysis framework in Python | 70
+- besu-eth/besu | Enterprise Java Ethereum client (Hyperledger Besu) | 70
+- tansu-io/tansu | Kafka-compatible broker with S3, Postgres and lakehouse storage backends | 70
+- fmilthaler/FinQuant | Python library for financial portfolio analysis and optimisation | 70
+- avhz/RustQuant | Quantitative finance library for Rust (domain-specific, no matching capability) | 70
+- enzoampil/fastquant | Backtest ML trading strategies on stocks/crypto | 70
+- LLMQuant/quant-mind | LLM-based knowledge extraction and retrieval framework for quantitative finance | 70
+- fhmq/hmq | High-performance MQTT broker for IoT messaging | 70
+- formancehq/ledger | Programmable open-source core ledger for fintech apps | 70
+- AnalyzerREST/python-tradingview-ta | Python wrapper for TradingView technical analysis API | 70
+- foolcage/fooltrader | Quantitative trading framework for stocks and crypto in Python | 70
+- wind-c/comqtt | High-performance Go MQTT broker with clustering support | 70
+- highfestiva/finplot | Performant finance charting and plotting for Python | 70
+- gurusabarish/hugo-profile | Hugo theme template for personal portfolio/blog sites | 70
+- santoshlite/EigenLedger | Open-source portfolio backtesting engine for quantitative finance | 70
+- shner-elmo/TradingView-Screener | Build TradingView stock/crypto screeners from Python | 70
+- VolantMQ/volantmq | High-performance MQTT broker/server in Go | 70
+- rsheftel/pandas_market_calendars | Pandas-compatible exchange trading calendars | 70
+- 51bitquant/binance_grid_trader | Binance Spot/Futures grid-trading bot for automated algo trading | 70
+- rmqtt/rmqtt | Scalable distributed MQTT broker for IoT pub/sub messaging | 70
+- chainstacklabs/pumpfun-bonkfun-bot | Solana pump.fun/bonk.fun trading and sniping bot | 70
+- myquant/strategy | Curated collection of quantitative trading strategies | 70
+- markcheno/go-talib | Pure Go port of TA-Lib for technical financial analysis | 70
+- amor71/LiuAlgoTrader | End-to-end framework for building and running algorithmic trading strategies | 70
+- digital-asset/daml | Daml smart contract language and SDK for distributed ledgers | 70
+- dedwards25/Python_Option_Pricing | Python library for pricing European/American/Asian financial options | 70
+- alpacahq/alpaca-mcp-server | Alpaca trading MCP server for LLM-driven stock/crypto trading | 70
+- 0xNineteen/solana-arbitrage-bot | Solana arbitrage bot across multiple spot DEXs | 70
+- chartjs/chartjs-chart-financial | Chart.js module for financial/candlestick/OHLC charts | 70
+- twelvedata/twelvedata-python | Python client for Twelve Data financial market data REST/WebSocket API | 70
+- binance/binance-connector-js | TypeScript SDK for Binance public REST/market-data API | 70
+- lmammino/financial | Zero-dependency financial calculations (loan/IRR/NPV) for JS/TS | 70
+- hyperledger-caliper/caliper | Blockchain benchmark framework (Hyperledger Caliper) | 70
+- bukson/steampy | Python client for Steam trading/marketplace APIs | 70
+- iotaledger/stronghold.rs | Rust-based secret management engine for secure credential storage | 70
+- physercoe/starquant | Lightweight integrated quant trading and backtesting platform | 70
+- DoctorMcKay/node-steam-tradeoffer-manager | Node SDK for managing Steam trade offers | 70
+- dingmaotu/mql4-lib | MQL4/5 foundation library for MetaTrader expert advisors | 70
+- dev-polymarket/clob-client-v2 | HTTP client SDK for Polymarket's central limit order book API | 70
+- plaid/plaid-node | Node.js client bindings for the Plaid financial API | 70
+- kand-ta/kand | Technical analysis indicators library for finance/quant | 70
+- i25959341/orderbook | Limit order book matching engine for trading exchanges | 70
+- BowTiedDevil/degenbot | Python toolkit for Uniswap/Curve/Aave arbitrage and liquidation bots on EVM | 70
+- theOGognf/finagg | Aggregate and normalize historical financial data from free APIs | 70
+- Cicizz/jmqtt | Java/Netty MQTT broker with persistence and clustering | 70
+- ClementPerroud/Gym-Trading-Env | Customizable Gymnasium trading environment for RL | 70
+- postfinance/kubenurse | Kubernetes network and service health monitoring for Prometheus | 70
+- cm45t3r/candlestick | JavaScript candlestick chart pattern detection library | 70
+- dromara/mica-mqtt | High-performance Java MQTT client and broker for IoT messaging | 70
+- envato/double_entry | Double-entry accounting system library for Ruby | 70
+- AmpyFin/ampyfin | End-to-end algo-trading framework with ensemble backtesting and live execution | 70
+- amaggiulli/QLNet | C# port of QuantLib for quantitative finance pricing | 70
+- mnwato/tradingview-scraper | Scraper for TradingView markets and chart data | 70
+- timercrack/trader | Automated futures trading application using CTP API | 65
+- transitive-bullshit/nextjs-notion-starter-kit | Deploy a Notion-powered blog/portfolio site with Next.js | 65
+- openexchangerates/accounting.js | Lightweight number, money and currency formatting library | 65
+- 1nchaos/adata | Open-source A-share stock data API for quantitative trading | 65
+- cuemacro/finmarketpy | Python library for backtesting trading strategies and market analysis | 65
+- didi/mand-mobile | Vue.js mobile UI components designed for financial app scenarios | 65
+- mhallsmoore/qstrader | Quant trading backtesting simulation engine application | 65
+- jamesmawm/High-Frequency-Trading-Model-with-IB | High-frequency trading model using Interactive Brokers API | 65
+- pmorissette/ffn | Financial function library for Python (analytics/computations) | 65
+- tvjsx/trading-vue-js | Hackable financial candlestick charting library for Vue | 65
+- joshyattridge/smart-money-concepts | Smart money concepts indicators for algorithmic trading strategies | 65
+- mldangelo/personal-site | Personal portfolio/resume website built with Next.js | 65
+- nanomsg/mangos-v1 | Pure Go nanomsg v1 library for brokerless messaging | 65
+- Emsu/prophet | Financial markets analysis framework for programmers | 65
+- DrmagicE/gmqtt | High-performance MQTT broker library in Go | 65
+- JECSand/yahoofinancials | Pull financial/stock data from Yahoo Finance in Python | 65
+- sdcoffey/techan | Technical analysis and trading indicators for Go (domain-specific) | 65
+- notadamking/Stock-Trading-Environment | OpenAI Gym environment for simulating stock trading | 65
+- checkthechain/checkthechain | Collect and analyze historical data on EVM chains like Ethereum | 65
+- TradeMe/MapMe | Android RecyclerView adapter for Google Maps and Mapbox markers | 65
+- kohpangwei/influence-release | Research notebook on influence functions in ML | 65
+- bus1/dbus-broker | Linux D-Bus message broker for system IPC | 65
+- oliver-zehentleitner/unicorn-binance-websocket-api | Python asyncio client for Binance WebSocket trading streams | 65
+- Wizzercn/MqttWk | High-concurrency Java/Netty MQTT broker supporting 100k+ connections | 65
+- hyperledger-indy/indy-node | Distributed ledger node for decentralized identity | 65
+- alpacahq/alpaca-backtrader-api | Alpaca brokerage integration for the backtrader backtesting framework | 65
+- alpacahq/pylivetrader | Zipline-compatible live trade execution library | 65
+- vdemydiuk/mtapi | MetaTrader terminal bridge API for trading integration | 65
+- TheFourGreatErrors/alpha-rptr | Multi-exchange crypto futures algorithmic trading bot | 65
+- quantopian/trading_calendars | Securities exchange trading calendars | 65
+- beatzxbt/smm | Simple crypto market maker bot for Binance/Bybit/OKX | 65
+- guangxiangdebizi/FinanceMCP | MCP server providing LLMs real-time finance data (stocks, crypto, macro) | 65
+- EarnForex/PositionSizer | MetaTrader expert advisor for Forex position sizing | 65
+- aeyakovenko/percolator | Reference Percolator distributed transaction implementation in Rust | 65
+- mementum/bta-lib | Pandas-based technical analysis library for backtesting and quant trading | 65
+- centrifugal/centrifuge-js | JS/WebSocket client SDK for Centrifugo real-time broker | 65
+- hyperledger-iroha/iroha | Enterprise-grade decentralized ledger (Iroha) | 65
+- emqx/mqtt-jmeter | JMeter plugin for load-testing MQTT brokers | 65
+- hyperledger/fabric-ca | Certificate authority server for Hyperledger Fabric | 65
+- cinar/indicatorts | Technical analysis indicators and backtesting framework for trading | 65
+- Voyz/ibind | REST and WebSocket client for Interactive Brokers Client Portal API | 65
+- alvarobartt/investiny | Lightweight Python wrapper for investing.com financial data | 65
