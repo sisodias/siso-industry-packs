@@ -1,0 +1,231 @@
+{
+  "audit_id": "R089",
+  "requested_full_name": "RosenAdvertising/filevine-mcp",
+  "observed_at": "2026-09-13T16:11:04.276340+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "RosenAdvertising/filevine-mcp",
+  "html_url": "https://github.com/RosenAdvertising/filevine-mcp",
+  "description": "MCP server for Filevine — full API coverage for legal case management.",
+  "stargazers_count": 4,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-05-02T12:03:55Z",
+  "updated_at": "2026-09-06T23:19:11Z",
+  "pushed_at": "2026-09-08T14:16:53Z",
+  "size": 484,
+  "open_issues_count": 1,
+  "topics": [
+    "claude",
+    "claude-mcp",
+    "filevine",
+    "legal",
+    "legal-tech",
+    "mcp"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "bdf5899ad3894cb49062c86a7eb512cd5aab451f",
+  "last_commit": "2026-09-06T23:19:07Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/RosenAdvertising/filevine-mcp",
+    "commit": "https://github.com/RosenAdvertising/filevine-mcp/commit/bdf5899ad3894cb49062c86a7eb512cd5aab451f"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "5b33feb48077be21789bdc0fec66c55fa8a2d3e277f5a1e1b5adc02ea5a445a2",
+    "text": "# filevine-mcp\n\n[![PyPI version](https://img.shields.io/pypi/v/filevine-mcp.svg)](https://pypi.org/project/filevine-mcp/)\n[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\nMCP server for [Filevine](https://filevine.com) — full API coverage for legal case management. Use Filevine from Claude Desktop with natural language.\n\n## What you can do\n\n- **Projects (Matters)** — create, update, archive, manage vitals, custom forms, collections\n- **Contacts** — full CRUD, addresses, emails, phones, project associations\n- **Tasks** — create, assign, complete, pin, snooze, manage by project or user\n- **Notes** — create, pin, comment, tag management\n- **Documents** — CRUD, revisions, lock/unlock, batch upload/download, search, share links\n- **Folders** — organise documents in folder hierarchies\n- **Billing** — billing items, invoices, payments, trust funds, rate schedules\n- **Project Teams** — assign and manage team members per project\n- **Appointments & Deadlines** — schedule and track on matters\n- **Emails** — log email communications to projects\n- **Webhooks** — subscribe to Filevine events for real-time notifications\n- **Teams** — manage organisation teams\n- **Reference data** — project types, document series, classifications, reports\n\n## Requirements\n\n- Python 3.10+\n- Claude Desktop (or any MCP-compatible client)\n- Filevine API credentials (Client ID, Client Secret)\n- Filevine region: `us`, `ca`, or `cjis`\n\n> **Filevine API access:** Obtain credentials from your Filevine organisation administrator or developer portal.\n\n## Installation\n\n```bash\npip install filevine-mcp\n```\n\n## Setup\n\n```bash\nfilevine-mcp-setup\n```\n\nThis prompts for your Client ID, Client Secret, Org ID, and region, then tests the credentials and saves them to `~/.filevine-mcp/`.\n\nVerify:\n\n```bash\nfilevine-mcp-verify\n```\n\n## Claude Desktop Configuration\n\n```json\n{\n  \"mcpServers\": {\n    \"filevine\": {\n      \"command\": \"filevine-mcp\"\n    }\n  }\n}\n```\n\n## Credential storage\n\nBy default credentials are stored in your operating system's native secret store\nvia the cross-platform [`keyring`](https://github.com/jaraco/keyring) library:\n\n| OS      | Backend                                  |\n| ------- | ---------------------------------------- |\n| macOS   | Keychain                                 |\n| Windows | Credential Manager                       |\n| Linux   | Secret Service (GNOME Keyring / KWallet) |\n\nSecrets are saved under the service name `filevine-mcp`. Nothing is written to\ndisk in clear text.\n\n**File fallback.** On a host with no keyring backend (e.g. a headless Linux box\nwithout Secret Service), or if you set `FILEVINE_MCP_USE_KEYRING=0`, credentials\nfall back to a `~/.filevine-mcp/.env` file with `0600` permissions.\n\n**Read order.** Credentials resolve in the order OS keyring → process environment\n→ `.env` file. So a rotated secret in the keyring always wins, and a\n`FILEVINE_CLIENT_ID` / `FILEVINE_CLIENT_SECRET` exported in your shell overrides\nthe file fallback without touching the keyring.\n\n## Authentication Notes\n\nFilevine uses OAuth 2.0 **client credentials** flow — no browser authorization required. Tokens are fetched automatically and refreshed when they expire. Three regions are supported with separate API and identity hosts:\n\n| Region | API Host            | Identity Host            |\n| ------ | ------------------- | ------------------------ |\n| us     | api.filevineapp.com | identity.filevineapp.com |\n| ca     | api.filevineapp.ca  | identity.filevineapp.ca  |\n| cjis   | api.filevinegov.com | identity.filevinegov.com |\n\n## Example usage in Claude\n\n> \"List my open projects\"\n>\n> \"Create a task on project 456 — send retainer agreement to client\"\n>\n> \"Get the billing vitals for project 789\"\n>\n> \"Add a note to project 123 — client called re: mediation date\"\n>\n> \"Search documents for 'deposition transcript'\"\n>\n> \"List all webhook event types available\"\n\n## License\n\nMIT\n",
+    "characters": 4068,
+    "source_url": "https://github.com/RosenAdvertising/filevine-mcp/blob/bdf5899ad3894cb49062c86a7eb512cd5aab451f/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "a7114d9615a54219da6fc4796f17e8799827a3b657de61397cf0cc18d2e7bda9",
+    "text": "MIT License\n\nCopyright (c) 2026 Rosen Advertising\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1074,
+    "source_url": "https://github.com/RosenAdvertising/filevine-mcp/blob/bdf5899ad3894cb49062c86a7eb512cd5aab451f/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 75,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "mrfixcode",
+      "contributions": 32
+    },
+    {
+      "login": "tobyrosen",
+      "contributions": 26
+    },
+    {
+      "login": "renovate[bot]",
+      "contributions": 7
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 5
+    },
+    {
+      "login": "zaydbkhan",
+      "contributions": 4
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 13,
+      "title": "Dependency Dashboard",
+      "state": "closed",
+      "created_at": "2026-06-10T10:26:53Z",
+      "updated_at": "2026-08-27T08:29:16Z",
+      "closed_at": "2026-08-27T08:29:16Z",
+      "comments": 1,
+      "html_url": "https://github.com/RosenAdvertising/filevine-mcp/issues/13",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "number": 9,
+      "title": "Dependency Dashboard",
+      "state": "closed",
+      "created_at": "2026-06-06T18:11:07Z",
+      "updated_at": "2026-08-27T08:29:13Z",
+      "closed_at": "2026-08-27T08:29:13Z",
+      "comments": 1,
+      "html_url": "https://github.com/RosenAdvertising/filevine-mcp/issues/9",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2946",
+        "repo": "RosenAdvertising/filevine-mcp",
+        "url": "https://github.com/rosenadvertising/filevine-mcp",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "law_firms"
+        ],
+        "discovery_categories": [
+          "matter_management",
+          "triage_route"
+        ],
+        "discovery_cells": [
+          "cross_industry:matter_management",
+          "cross_industry:triage_route",
+          "law_firms:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0513",
+          "repo": "RosenAdvertising/filevine-mcp",
+          "url": "https://github.com/RosenAdvertising/filevine-mcp",
+          "what_it_is": "MCP server for Filevine — full API coverage for legal case management.",
+          "stars": 4,
+          "pushed_at": "2026-08-25T22:01:09Z",
+          "language": "Python",
+          "license": "mit",
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/RosenAdvertising/filevine-mcp/blob/HEAD/README.md",
+            "characters_read": 4068
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=legal%20case%20management&type=repositories",
+              "source_title": "GitHub repository search: legal case management",
+              "detail": "legal case management"
+            }
+          ],
+          "industries": [
+            "law_firms"
+          ],
+          "categories": [
+            "matter_management",
+            "triage_route"
+          ],
+          "cells": [
+            "cross_industry:matter_management",
+            "cross_industry:triage_route",
+            "law_firms:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "legal case management"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:law_firms"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "rosenadvertising/filevine-mcp",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

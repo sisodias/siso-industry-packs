@@ -1,0 +1,212 @@
+{
+  "audit_id": "R087",
+  "requested_full_name": "oktopeak/mycase-mcp",
+  "observed_at": "2026-09-13T16:11:04.276340+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "oktopeak/mycase-mcp",
+  "html_url": "https://github.com/oktopeak/mycase-mcp",
+  "description": "MyCase MCP. Connect Claude to your MyCase legal practice management system. Ask Claude to look up cases, find contacts, check your calendar, review billing — all without leaving your conversation.",
+  "stargazers_count": 3,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-04-29T07:51:19Z",
+  "updated_at": "2026-08-27T15:59:49Z",
+  "pushed_at": "2026-08-27T15:49:52Z",
+  "size": 222,
+  "open_issues_count": 1,
+  "topics": [
+    "anthropic",
+    "claude",
+    "law-firm-software",
+    "legal-ai",
+    "legal-automation",
+    "legal-tech",
+    "mcp",
+    "model-context-protocol",
+    "mycase",
+    "practice-management"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "5186b63f7ee4b3f5254018d1c02c9a5f341f5c7f",
+  "last_commit": "2026-08-27T15:49:50Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/oktopeak/mycase-mcp",
+    "commit": "https://github.com/oktopeak/mycase-mcp/commit/5186b63f7ee4b3f5254018d1c02c9a5f341f5c7f"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "103a17dd9179f096d0994a648a59079c95fd4f8c864be23faa112f632f5ba688",
+    "text": "# MyCase MCP Server\n\nConnect Claude to your [MyCase](https://www.mycase.com) legal practice management system. Ask Claude to look up cases, find contacts, check your calendar, review billing — all without leaving your conversation.\n\n> ### Built by [Oktopeak](https://oktopeak.com/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=top-byline) — AI transformation & automation for law firms\n> **Digital transformation for legal and healthcare businesses.** We build AI integrations, workflow automation, and custom software your firm owns outright — including this connector. → [Book a 30-min call](https://calendly.com/office-oktopeak/30min?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=top-byline-call)\n\n> [!TIP]\n> **Not a developer? You don't need to be.**\n>\n> The README below assumes someone comfortable editing a JSON config file. If that's not you or your team, we deploy this for law firms — scoped credentials, audit log wired in, one custom workflow, training.\n>\n> → **[See Guided MCP Setup](https://oktopeak.com/services/mcp-guided-setup/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=top-tip-svc)** — or [book a 30-min call](https://calendly.com/office-oktopeak/30min?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=top-tip-call)\n\n**Jump to:** [Demo](#demo) · [Installation](#installation) · [Available tools](#available-tools) · [Security](#security) · [Need it deployed for you?](#need-more-than-the-connector)\n\n---\n\n## Demo\n\nWatch Claude pull live data from MyCase in under a minute — cases, contacts, documents, calendar — without copying client information into chat.\n\n<p align=\"center\">\n  <a href=\"https://youtu.be/jkQ7BUdXztg\">\n    <img src=\"https://img.youtube.com/vi/jkQ7BUdXztg/maxresdefault.jpg\" alt=\"MyCase MCP — Claude pulls live data\" width=\"640\">\n  </a>\n  <br><br>\n  <a href=\"https://youtu.be/jkQ7BUdXztg\"><b>▶&nbsp;&nbsp;Watch the 60-second demo on YouTube</b></a>\n</p>\n\n---\n\n**Setup tips + ABA Opinion 512 compliance updates for firms building with Claude + MyCase.**\n\n→ [Subscribe to Oktopeak Builder Notes](https://tally.so/r/q4kzk9?source=mycase-readme) — short emails, easy unsubscribe.\n\n---\n\n## What it does\n\nOnce connected, Claude can talk directly to your MyCase firm data. You can ask things like:\n\n- *\"What open cases do we have for Jane Smith?\"*\n- *\"Show me all tasks due this week\"*\n- *\"What's the outstanding balance on the Anderson case?\"*\n- *\"Log a 20-minute call with client #1234 about the settlement\"*\n- *\"List documents attached to case 98765\"*\n\nEverything goes through MyCase's official OAuth 2.0 API. Your credentials never leave your machine — tokens are stored locally, encrypted with AES-256-GCM.\n\n---\n\n## Prerequisites\n\n- **Node.js 18+**\n- A **MyCase account** with firm admin access\n- **MyCase API credentials** — reach out to [MyCase support](https://www.mycase.com/support/) to request OAuth client credentials for your firm. You'll receive a `client_id` and `client_secret`.\n\n---\n\n## Installation\n\n### With Claude Desktop (recommended)\n\nAdd this to your Claude Desktop config file:\n\n**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`  \n**Windows:** `%APPDATA%\\Claude\\claude_desktop_config.json`\n\n```json\n{\n  \"mcpServers\": {\n    \"mycase\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@oktopeak/mycase-mcp\"],\n      \"env\": {\n        \"MYCASE_CLIENT_ID\": \"your_client_id\",\n        \"MYCASE_CLIENT_SECRET\": \"your_client_secret\"\n      }\n    }\n  }\n}\n```\n\nRestart Claude Desktop and you're done.\n\n> [!TIP]\n> **On Windows?** The config above works on macOS but not on Windows out of the box. You'll likely hit `Could not attach to MCP server mycase` (npx invocation), `UNABLE_TO_VERIFY_LEAF_SIGNATURE` (corporate antivirus SSL inspection), and an OAuth redirect port mismatch. The Windows-friendly config plus all five fixes are in our install guide.\n>\n> → **[MyCase MCP on Windows: The Install Guide We Wish Existed](https://oktopeak.com/blog/mycase-mcp-windows-install-guide/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=windows-install-guide)** — covers all five Windows gotchas plus the real 13-business-day MyCase API credential timeline.\n\n### Standalone / development\n\n```bash\nnpm install -g @oktopeak/mycase-mcp\n```\n\n---\n\n> [!TIP]\n> **Not the person who edits config files?**\n>\n> If the install above looks like too much, we can deploy it in your firm for you — scoped OAuth credentials, audit log wired into your stack, one custom workflow designed with your team, and training. Most law firms find this is the faster path.\n>\n> → **[See Guided MCP Setup](https://oktopeak.com/services/mcp-guided-setup/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=mid-tip-svc)** — or [book a 30-min scoping call](https://calendly.com/office-oktopeak/30min?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=mid-tip-call)\n\n---\n\n## Configuration\n\nIf running locally (not via Claude Desktop env vars), copy `.env.example` to `.env` and fill it in:\n\n```bash\ncp .env.example .env\n```\n\n```env\n# From MyCase support\nMYCASE_CLIENT_ID=your_client_id\nMYCASE_CLIENT_SECRET=your_client_secret\n\n# OAuth callback port (default: 5678)\n# Must match the redirect URI registered with MyCase support\nMYCASE_REDIRECT_PORT=5678\n\n# ENCRYPTION_KEY is optional — a key is auto-generated on first run and\n# stored in your OS keychain. Only set this for CI or headless environments.\n# ENCRYPTION_KEY=your_64_char_hex_encryption_key\n```\n\n> **Note:** The redirect URI registered with MyCase support must match `http://127.0.0.1:{MYCASE_REDIRECT_PORT}/callback`. If you're unsure which port was registered, check with MyCase support.\n\n---\n\n## Secret handling\n\n`MYCASE_CLIENT_SECRET` is the only sensitive credential that needs to live in your config file. The encryption key is managed automatically by the OS keychain — it never appears in any config file.\n\nWhen using `claude_desktop_config.json`, restrict that file's permissions so other users on the machine can't read your client secret:\n\n**macOS:**\n```bash\nchmod 600 ~/Library/Application\\ Support/Claude/claude_desktop_config.json\n```\n\n**Windows:** Right-click the file → Properties → Security → Edit → remove access for all accounts except your own user.\n\n---\n\n## log-call (experimental)\n\nThe `log-call` tool is gated behind an environment variable while its API endpoint is being verified:\n\n```env\nMYCASE_EXPERIMENTAL_TOOLS=1\n```\n\nAdd this to your `claude_desktop_config.json` env block or `.env` file to enable it. Leave it unset to keep it hidden from Claude.\n\n---\n\n## Authentication\n\nThe first time you use it, you need to authenticate with MyCase:\n\n1. In Claude, call the **`authenticate`** tool\n2. Your browser will open the MyCase login page\n3. Log in and grant access\n4. Return to Claude — you're connected\n\nAccess tokens are valid for **24 hours** and refresh automatically. Refresh tokens typically last **2 weeks** (set by the MyCase API). Once the refresh token expires you'll need to re-authenticate.\n\nYour encrypted token file lives at `~/.oktopeak-mycase/tokens.enc`. To log out and remove it, call the **`logout`** tool.\n\n> **Note:** If the OS keychain is cleared or the encryption key is lost, the existing token file can no longer be decrypted. The server will silently treat it as absent and you'll need to re-authenticate — no data is lost, just the stored session.\n\n---\n\n## Available tools\n\n### Authentication\n| Tool | Description |\n|---|---|\n| `authenticate` | Open the MyCase OAuth page and store your tokens |\n| `auth-status` | Check if you're connected and when your token expires |\n| `logout` | Remove stored tokens from disk |\n\n### Cases\n| Tool | Description |\n|---|---|\n| `list-cases` | List cases, optionally filtered by status (`open`/`closed`) or updated date |\n| `get-case` | Get full details for a case by ID |\n| `create-case` | Create a new case with clients, staff, and metadata |\n\n### Contacts\n| Tool | Description |\n|---|---|\n| `search-contacts` | Search for clients, people, or companies by name, email, or phone |\n| `get-contact` | Get full contact details by ID |\n\n### Tasks\n| Tool | Description |\n|---|---|\n| `list-tasks` | List tasks, optionally filtered by case or completion status |\n| `create-task` | Create a new task linked to a case |\n\n### Documents\n| Tool | Description |\n|---|---|\n| `list-documents` | List documents, optionally filtered by case |\n| `get-document-url` | Get a download URL for a specific document |\n\n### Calendar\n| Tool | Description |\n|---|---|\n| `list-calendar-events` | List upcoming events within a date range |\n\n### Calls\n| Tool | Description |\n|---|---|\n| `log-call` | Log a phone call linked to a case or contact (**experimental** — requires `MYCASE_EXPERIMENTAL_TOOLS=1`) |\n\n### Staff\n| Tool | Description |\n|---|---|\n| `list-staff` | List all staff members in the firm |\n| `get-staff` | Get full details for a staff member by ID |\n\n### Billing\n| Tool | Description |\n|---|---|\n| `list-time-entries` | List billable time entries, filtered by case or date range |\n| `get-billing-summary` | Get total billed, outstanding, and paid amounts for a case |\n\n---\n\n## A note on multi-user support\n\nThis server is **single-tenant by design** — it stores one set of credentials at a time and is intended for a single firm running it locally. If you authenticate as a different user, the previous token is overwritten.\n\nIf you need multiple firms or users, you'd need to run separate instances with separate configurations.\n\n---\n\n## Development\n\n```bash\ngit clone https://github.com/oktopeak/mycase-mcp.git\ncd mycase-mcp\nnpm install\ncp .env.example .env   # fill in your credentials\nnpm run build\nnpm run inspect        # opens the MCP inspector in your browser\n```\n\n### Running tests\n\n```bash\nnpm test               # run once\nnpm run test:watch     # watch mode\n```\n\n---\n\n## Security\n\n- OAuth tokens are encrypted at rest using **AES-256-GCM**\n- The encryption key is auto-generated on first run and stored in your **OS keychain** (macOS Keychain / Linux Secret Service / Windows Credential Manager) — it never appears in any config file\n- Token and audit log files are stored in `~/.oktopeak-mycase/` with mode `0600` (owner-read/write only) on Unix/macOS\n- On Windows, restrict `%APPDATA%\\.oktopeak-mycase` via folder Properties → Security\n- All API calls go directly from your machine to `external-integrations.mycase.com`\n\n### Vulnerability scan\n\n`npm audit --omit=dev` reports **0 production vulnerabilities**. The `vitest` dev-dependency carries 5 moderate findings (esbuild, vite) that are unreachable in production and require a major vitest version bump to resolve. They have no impact on deployed server instances.\n\n---\n\n## Need more than the connector?\n\nThe open-source connector reads your MyCase data and lets Claude work with it. That handles about 20% of what most firms eventually want.\n\nWe help two ways, depending on your scope:\n\n→ **Guided MCP Setup** — We deploy the connector in your firm with scoped credentials, audit log wired into your stack, a custom workflow designed with your team, and training. Scope and pricing tailored to your firm.\n  → [oktopeak.com/services/mcp-guided-setup/](https://oktopeak.com/services/mcp-guided-setup/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=footer-svc-guided)\n\n→ **Legal AI Integration** — For multi-workflow builds, document automation, intake automation, custom AI agents, and full compliance architecture across your stack.\n  → [oktopeak.com/services/legal-ai-integration/](https://oktopeak.com/services/legal-ai-integration/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=footer-svc-legal-ai)\n\n→ **Firm-wide deployment:** rolling Claude + this connector out to a whole firm (Claude Cowork, multi-user, security review)? See [Firm Deployment](https://oktopeak.com/services/firm-deployment/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=footer-svc-firm-deployment).\n\nABA Opinion 512 compliant from day one. Want a polished overview of this connector with video demo and FAQ?\n→ [oktopeak.com/mycase-mcp/](https://oktopeak.com/mycase-mcp/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=footer-hub)\n\nWant to talk first? → [Book a 30-min scoping call](https://calendly.com/office-oktopeak/30min?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=footer-call)\n\n---\n\n## Other connectors by Oktopeak\n\nWe ship the same kind of connector for other practice management platforms. Each has its own overview page on oktopeak.com:\n\n- **[Clio MCP](https://oktopeak.com/clio-mcp/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=xlink-clio)**: open-source MCP connector for Clio practice management. Source: [github.com/oktopeak/clio-mcp](https://github.com/oktopeak/clio-mcp). npm: [`@oktopeak/clio-mcp`](https://www.npmjs.com/package/@oktopeak/clio-mcp)\n- **[Filevine MCP](https://oktopeak.com/filevine-mcp/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=xlink-filevine)**: open-source MCP connector for Filevine practice management. Source: [github.com/oktopeak/filevine-mcp](https://github.com/oktopeak/filevine-mcp). npm: [`@oktopeak/filevine-mcp`](https://www.npmjs.com/package/@oktopeak/filevine-mcp)\n- **[Lawmatics MCP](https://oktopeak.com/lawmatics-mcp/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=xlink-lawmatics)**: open-source MCP connector for Lawmatics legal CRM and intake, with a config-level read-only mode. Source: [github.com/oktopeak/lawmatics-mcp](https://github.com/oktopeak/lawmatics-mcp). npm: [`@oktopeak/lawmatics-mcp`](https://www.npmjs.com/package/@oktopeak/lawmatics-mcp)\n- **[IntakeQ / PracticeQ MCP](https://github.com/oktopeak/IntakeQ)** — HIPAA-aware MCP connector for IntakeQ/PracticeQ (healthcare / behavioral & allied-health clinics). Audit logging on every PHI read/write, BAA + Zero-Data-Retention guidance. npm: [`@oktopeak/intakeq-mcp`](https://www.npmjs.com/package/@oktopeak/intakeq-mcp)\n\nSame architecture, same audit logging, same encryption at rest. All MIT licensed.\n\n---\n\n## Supporting this project\n\nThis connector is free, MIT licensed, and maintained by [Oktopeak](https://oktopeak.com). It always will be — we don't take donations. If it saved you time, the things that actually help:\n\n- **Star this repo.** It is genuinely how other firms find it.\n- **Tell another firm** running MyCase.\n- **[Leave a review](https://clutch.co/profile/oktopeak)** if we helped you directly.\n- Need it deployed, extended, or maintained for your firm? **[Commercial support](https://oktopeak.com/mycase-mcp/)** — that is what funds the free work.\n\n## Who we are\n\n**[Oktopeak](https://oktopeak.com/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=who-we-are) — digital transformation for law firms and healthcare.**\n\nWe're a 7-person in-house product team building AI solutions for regulated industries: AI integrations, workflow automation, and custom software our clients own outright. We maintain five open-source MCP connectors — [Clio](https://github.com/oktopeak/clio-mcp), MyCase, [Filevine](https://github.com/oktopeak/filevine-mcp), [Lawmatics](https://github.com/oktopeak/lawmatics-mcp), and [IntakeQ](https://github.com/oktopeak/IntakeQ) — and deploy them inside real practices with scoped credentials, audit logs, and workflows built around how your team actually works.\n\n- 🌐 [oktopeak.com](https://oktopeak.com/?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=who-we-are)\n- 📅 [Book a 30-min call](https://calendly.com/office-oktopeak/30min?utm_source=github&utm_medium=readme&utm_campaign=mycase-mcp&utm_content=who-we-are-call)\n- ✉️ office@oktopeak.com — security reports welcome\n- 💼 [LinkedIn](https://www.linkedin.com/company/oktopeak-tech)\n\n---\n\n## License\n\nMIT — see [LICENSE](./LICENSE).\n\n---\n\nBuilt with the [Model Context Protocol SDK](https://github.com/modelcontextprotocol/sdk) by Anthropic.\n",
+    "characters": 16081,
+    "source_url": "https://github.com/oktopeak/mycase-mcp/blob/5186b63f7ee4b3f5254018d1c02c9a5f341f5c7f/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8dc664effcdf0b755c672a978e2d3457c5d3053bb9abf30887fb9ac8d54ce4e5",
+    "text": "MIT License\n\nCopyright (c) 2026 Oktopeak\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1065,
+    "source_url": "https://github.com/oktopeak/mycase-mcp/blob/5186b63f7ee4b3f5254018d1c02c9a5f341f5c7f/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 37,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "piterjov",
+      "contributions": 23
+    },
+    {
+      "login": "nikolaindjic",
+      "contributions": 14
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 2,
+      "title": "File uploads via MCP: why upload-document doesn't work end-to-end",
+      "state": "open",
+      "created_at": "2026-05-21T10:45:39Z",
+      "updated_at": "2026-05-21T10:45:39Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/oktopeak/mycase-mcp/issues/2",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2954",
+        "repo": "oktopeak/mycase-mcp",
+        "url": "https://github.com/oktopeak/mycase-mcp",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "law_firms"
+        ],
+        "discovery_categories": [
+          "matter_management",
+          "practice_management"
+        ],
+        "discovery_cells": [
+          "cross_industry:matter_management",
+          "cross_industry:practice_management",
+          "law_firms:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0521",
+          "repo": "oktopeak/mycase-mcp",
+          "url": "https://github.com/oktopeak/mycase-mcp",
+          "what_it_is": "Connect Claude to your MyCase legal practice management system.",
+          "stars": 3,
+          "pushed_at": "2026-08-27T15:49:52Z",
+          "language": "TypeScript",
+          "license": "mit",
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/oktopeak/mycase-mcp/blob/HEAD/README.md",
+            "characters_read": 16084
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=legal%20practice%20management&type=repositories",
+              "source_title": "GitHub repository search: legal practice management",
+              "detail": "legal practice management"
+            }
+          ],
+          "industries": [
+            "law_firms"
+          ],
+          "categories": [
+            "matter_management",
+            "practice_management"
+          ],
+          "cells": [
+            "cross_industry:matter_management",
+            "cross_industry:practice_management",
+            "law_firms:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "legal practice management"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:law_firms"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "oktopeak/mycase-mcp",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

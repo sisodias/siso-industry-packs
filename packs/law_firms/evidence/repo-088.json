@@ -1,0 +1,164 @@
+{
+  "audit_id": "R088",
+  "requested_full_name": "yellenlegal/clio-mcp",
+  "observed_at": "2026-09-13T16:11:04.276340+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "yellenlegal/clio-mcp",
+  "html_url": "https://github.com/yellenlegal/clio-mcp",
+  "description": "MCP server connecting Claude Code to the Clio legal practice management API",
+  "stargazers_count": 3,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-05-08T15:30:05Z",
+  "updated_at": "2026-07-26T00:17:39Z",
+  "pushed_at": "2026-05-21T16:26:22Z",
+  "size": 12,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": null,
+  "revision": "9d33c9df3f9a4e3ab50d294a13103c05e5ab2df6",
+  "last_commit": "2026-05-21T16:26:12Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/yellenlegal/clio-mcp",
+    "commit": "https://github.com/yellenlegal/clio-mcp/commit/9d33c9df3f9a4e3ab50d294a13103c05e5ab2df6"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "2866776249138034adcdc2facac068fcd02272389545616eb84b6d32727906c1",
+    "text": "# Clio MCP Server\n\nA [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that connects Claude Code (or any MCP client) to the [Clio](https://www.clio.com/) legal practice management API. This allows AI assistants to create time entries, expense entries, tasks, calendar events, and more directly in Clio.\n\n## Tools\n\n| Tool | Description |\n|------|-------------|\n| `create_time_entry` | Create a billable time entry |\n| `create_expense_entry` | Create a hard cost / expense entry |\n| `create_matter` | Create a new matter |\n| `create_contact` | Create a person or company contact |\n| `create_task` | Create a task linked to a matter |\n| `list_calendar_entries` | List/search calendar events |\n| `create_calendar_entry` | Create a calendar event |\n| `update_calendar_entry` | Update an existing calendar event |\n| `search_contacts` | Search contacts by name |\n| `search_matters` | Search matters by description/number |\n| `list_practice_areas` | List all practice areas |\n| `list_activity_descriptions` | List billing activity codes |\n| `who_am_i` | Check the authenticated user |\n\n## Prerequisites\n\n- Python 3.11+\n- A [Clio Developer](https://developers.clio.com/) account with an app configured\n- Your Clio app's **Client ID** and **Client Secret**\n\n## Setup\n\n1. **Clone the repository:**\n\n   ```bash\n   git clone https://github.com/YOUR_USERNAME/clio-mcp.git\n   cd clio-mcp\n   ```\n\n2. **Create a virtual environment and install dependencies:**\n\n   ```bash\n   python3 -m venv .venv\n   source .venv/bin/activate\n   pip install -r requirements.txt\n   ```\n\n3. **Configure your Clio credentials:**\n\n   ```bash\n   cp .env.example .env\n   ```\n\n   Edit `.env` and fill in your Clio app credentials:\n\n   ```\n   CLIO_CLIENT_ID=your_client_id\n   CLIO_CLIENT_SECRET=your_client_secret\n   CLIO_REDIRECT_URI=http://127.0.0.1\n   ```\n\n4. **Register a redirect URI in the Clio Developer Portal:**\n\n   In your Clio app settings, add `http://127.0.0.1:8080` as a redirect URI.\n\n## Usage with Claude Code\n\nAdd the server to your Claude Code MCP configuration (`~/.claude/settings.json` or project-level `.claude/settings.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"clio\": {\n      \"command\": \"/path/to/clio-mcp/.venv/bin/python\",\n      \"args\": [\"/path/to/clio-mcp/clio_mcp.py\"]\n    }\n  }\n}\n```\n\nReplace `/path/to/clio-mcp` with the actual path to your clone.\n\n## Authentication\n\nOn first use, the server will open your browser for Clio OAuth authorization. After authorizing, tokens are cached locally in `.clio_tokens.json` and automatically refreshed when they expire.\n\n## Security Notes\n\n- **Never commit `.env` or `.clio_tokens.json`** — they contain your credentials and are excluded by `.gitignore`.\n- If you suspect your credentials have been exposed, regenerate your client secret in the [Clio Developer Portal](https://developers.clio.com/).\n- This server is designed for local, single-user use. It is not intended to be deployed as a shared service.\n\n## License\n\nMIT\n",
+    "characters": 2975,
+    "source_url": "https://github.com/yellenlegal/clio-mcp/blob/9d33c9df3f9a4e3ab50d294a13103c05e5ab2df6/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 3,
+  "commits_six_months_capped": false,
+  "contributors_top10": [],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-2956",
+        "repo": "yellenlegal/clio-mcp",
+        "url": "https://github.com/yellenlegal/clio-mcp",
+        "labels": [],
+        "family_ids": [],
+        "family_names": [],
+        "evidence_classes": [
+          "stage_0_pool_intake",
+          "github_search"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "stage_0_intake",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 0,
+        "source_record_class": "discovery",
+        "discovery_only": true,
+        "discovery_disposition": "candidate",
+        "discovery_disposition_reason": null,
+        "discovery_industry_scope": "vertical",
+        "discovery_industries": [
+          "law_firms"
+        ],
+        "discovery_categories": [
+          "matter_management",
+          "practice_management"
+        ],
+        "discovery_cells": [
+          "cross_industry:matter_management",
+          "cross_industry:practice_management",
+          "law_firms:vertical_product_or_tool"
+        ],
+        "discovery_evidence_class": "github_search",
+        "discovery_evidence_classes": [
+          "github_search"
+        ],
+        "discovery_metadata": {
+          "candidate_id": "NIGHT-DISCOVERY-0523",
+          "repo": "yellenlegal/clio-mcp",
+          "url": "https://github.com/yellenlegal/clio-mcp",
+          "what_it_is": "A Model Context Protocol server that connects Claude Code (or any MCP client) to the Clio legal practice management API.",
+          "stars": 3,
+          "pushed_at": "2026-05-21T16:26:22Z",
+          "language": "Python",
+          "license": null,
+          "readme_evidence": {
+            "status": "read",
+            "source_url": "https://github.com/yellenlegal/clio-mcp/blob/HEAD/README.md",
+            "characters_read": 2975
+          },
+          "evidence_class": "github_search",
+          "evidence_classes": [
+            "github_search"
+          ],
+          "evidence_sources": [
+            {
+              "evidence_class": "github_search",
+              "source_url": "https://github.com/search?q=legal%20practice%20management&type=repositories",
+              "source_title": "GitHub repository search: legal practice management",
+              "detail": "legal practice management"
+            }
+          ],
+          "industries": [
+            "law_firms"
+          ],
+          "categories": [
+            "matter_management",
+            "practice_management"
+          ],
+          "cells": [
+            "cross_industry:matter_management",
+            "cross_industry:practice_management",
+            "law_firms:vertical_product_or_tool"
+          ],
+          "industry_scope": "vertical",
+          "disposition": "candidate",
+          "disposition_reason": null,
+          "scope_reason": null,
+          "query_count": 1,
+          "source_queries": [
+            "legal practice management"
+          ],
+          "graph_seeds": [],
+          "selection_reasons": [
+            "industry:law_firms"
+          ],
+          "licensing_selection_weight": 0,
+          "observed_at": "2026-08-28",
+          "registry_dedup": {
+            "checked_against": "knowledge/capability-shelf/source-registry.jsonl",
+            "canonical_repo": "yellenlegal/clio-mcp",
+            "match": false
+          }
+        },
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot",
+        "discovery_industry_join": {
+          "status": "discovery_scope_preserved_without_observed_slot_join",
+          "observed_slot_count": 0,
+          "source_path": "research/actionmodel-builder-research-2026-08-26/expansion/outputs/repo-matrix-observations.jsonl"
+        }
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

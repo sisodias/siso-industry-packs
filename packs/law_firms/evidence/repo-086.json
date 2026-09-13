@@ -1,0 +1,92 @@
+{
+  "audit_id": "R086",
+  "requested_full_name": "LegalMate/hyacinth",
+  "observed_at": "2026-09-13T16:11:04.276340+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "LegalMate/hyacinth",
+  "html_url": "https://github.com/LegalMate/hyacinth",
+  "description": "Python HTTP Client library for the Clio Manage API",
+  "stargazers_count": 11,
+  "forks_count": 2,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2022-11-08T20:48:30Z",
+  "updated_at": "2026-07-13T12:06:00Z",
+  "pushed_at": "2026-07-13T12:05:02Z",
+  "size": 885,
+  "open_issues_count": 2,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "eeef9d1db0905a2fe84d2f694dece14dc2222d70",
+  "last_commit": "2026-07-13T12:05:02Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/LegalMate/hyacinth",
+    "commit": "https://github.com/LegalMate/hyacinth/commit/eeef9d1db0905a2fe84d2f694dece14dc2222d70"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "99f5ad62bd6478fb8ee3884a9ec9a3e14a180e46dde7fd9b5b913d68d7d1770e",
+    "text": "# hyacinth\nPython HTTP Client library for the Clio Manage API\n\n[![Basic Checks](https://github.com/LegalMate/hyacinth/actions/workflows/basic.yml/badge.svg)](https://github.com/LegalMate/hyacinth/actions/workflows/basic.yml)\n\n## Features\n\n- OAuth2 token + refresh support\n- Pagination via Cursors\n- Rate limiting (by token)\n- Multi-part Document uploads\n- Blocking and `async` Document uploads\n- Clio Regions (`US`, `CA`, `EU`, and `AU`)\n\n## Usage\n\nClone `hyacinth` repository to your local environment:\n\n```shell\ngit clone git@github.com:LegalMate/hyacinth.git\n```\n\nInstall `hyacinth` in your project:\n```python\npoetry install git:ssh//git@github.com/LegalMate/harmonia.git\n```\n\nImport `hyacinth`:\n\n```python\nimport hyacinth\n```\n\nCreate a Session:\n\n```python\ns = hyacinth.Session(client_id=<client_id>,\n                     client_secret=<client_secret>,\n                     token=<token>)\n```\n\nUse the Session:\n\n```python\nme = s.get_who_am_i()\nprint(me)\n\n=> {'id': 350963386, 'etag': '\"14eb46ba60ce9c2e6a68f6d0d2c36334\"', 'name': 'Anson MacKeracher'}\n```\n\n## Development\n\nIf you'd like to contribute to `hyacinth`'s development, here's how to\nget your environment set up:\n\n```sh\npoetry install\n```\n\nFeel free to submit a Pull Request with any changes. Things are\nlow-key, and low-process for the time being. Don't be a stranger!\n\n### Tests\n\nRun the test suite via:\n\n```sh\npoetry run poe test\n```\n",
+    "characters": 1399,
+    "source_url": "https://github.com/LegalMate/hyacinth/blob/eeef9d1db0905a2fe84d2f694dece14dc2222d70/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "3430e8b5547ad5ebfc61c50b6bc69a9a74cb308b8fed7f5804f87d7d5787aaee",
+    "text": "Copyright 2023 LegalMate Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "characters": 1053,
+    "source_url": "https://github.com/LegalMate/hyacinth/blob/eeef9d1db0905a2fe84d2f694dece14dc2222d70/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 10,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "nfranchise",
+      "contributions": 50
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 9
+    },
+    {
+      "login": "shariqashfaq",
+      "contributions": 6
+    },
+    {
+      "login": "alizhd",
+      "contributions": 1
+    },
+    {
+      "login": "amackera",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
