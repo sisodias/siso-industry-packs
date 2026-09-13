@@ -1,0 +1,220 @@
+{
+  "observed_at": "2026-09-13T15:48:54.469892+00:00",
+  "bank_repository": "sisodias/siso-repo-bank",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "files": [
+    {
+      "path": "bank/bank_capability_top.jsonl",
+      "rows": 126,
+      "indexed_repositories": 119,
+      "schema_sample": [
+        {
+          "capability": "auth-identity",
+          "rank": 1,
+          "full_name": "panva/jose",
+          "stars": 7648,
+          "reuse_value": 88,
+          "license": "MIT",
+          "note": "JWT/JWS/JWE/JWK across all JS runtimes; drop-in token lib"
+        }
+      ],
+      "sha256": "ea4a5cc1a97e7c063ffa3dc7cc87f24ab56609ecd001d6aa91665d8e1f804178",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_capability_top.jsonl"
+    },
+    {
+      "path": "bank/bank_capability.jsonl",
+      "rows": 51,
+      "indexed_repositories": 0,
+      "schema_sample": [
+        {
+          "capability": "auth-identity",
+          "category": "core-backend",
+          "match_sql": "(lower(description) LIKE '%authentication%' OR lower(topics_json) LIKE '%authentication%' OR lower(cat_slug) LIKE '%authentication%') OR (lower(description) LIKE '%oauth%' OR lower(topics_json) LIKE '%oauth%' OR lower(cat_slug) LIKE '%oauth%') OR (lower(description) LIKE '% jwt%' OR lower(topics_json) LIKE '% jwt%' OR lower(cat_slug) LIKE '% jwt%') OR (lower(description) LIKE '%auth0%' OR lower(topics_json) LIKE '%auth0%' OR lower(cat_slug) LIKE '%auth0%') OR (lower(description) LIKE '%login%' OR lower(topics_json) LIKE '%login%' OR lower(cat_slug) LIKE '%login%') OR (lower(description) LIKE '%sso %' OR lower(topics_json) LIKE '%sso %' OR lower(cat_slug) LIKE '%sso %')",
+          "gold_count": 394,
+          "tier": "GOD-SOURCE"
+        }
+      ],
+      "sha256": "d9dd968163492bde7885a03978f279c5c95bd9ef5990e40d8dc4273d9147871f",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_capability.jsonl"
+    },
+    {
+      "path": "capability-shelf/source-registry.jsonl",
+      "rows": 3010,
+      "indexed_repositories": 3010,
+      "schema_sample": [
+        {
+          "source_id": "SRC-0001",
+          "repo": "chatwoot/chatwoot",
+          "url": "https://github.com/chatwoot/chatwoot",
+          "labels": [
+            "product_base",
+            "product",
+            "Chatwoot"
+          ],
+          "family_ids": [
+            "U07",
+            "U08",
+            "B08",
+            "B19"
+          ],
+          "family_names": [
+            "Customer support desk",
+            "Shared inbox and email operations"
+          ],
+          "evidence_classes": [
+            "expanded_universe_seed",
+            "p03_live_metadata_classified",
+            "historical_operator_nomination",
+            "client_runtime_precedent"
+          ],
+          "operator_signals": [
+            {
+              "nomination_id": "ON-006",
+              "origin": "foundry_recovered_operator_nomination",
+              "observed_at": "2026-08-02",
+              "note": "Customer support and shared inbox candidate."
+            }
+          ],
+          "observed_facts": [
+            "chatwoot/chatwoot supplies support_desk, messaging_notifications at active maintenance under a permissive-open-core rights posture.",
+            "One W1 login reached native Chatwoot Inbox",
+            "Exact-origin SSO exchange passed; wrong origin and replay were denied",
+            "Restart persistence passed",
+            "Required three bounded donor changes for CORS, exchange compatibility and profiler behavior"
+          ],
+          "current_verdict": "runtime_precedent_with_expected_donor_warnings",
+          "foundry_stage": "recovered_operator_nomination",
+          "qualification_status": "NOT_QUALIFIED",
+          "execution_status": "LOCAL_PRECEDENT_EXECUTED",
+          "admission_status": "NOT_ADMITTED",
+          "priority_score": 154,
+          "industry_demand": [],
+          "industry_demand_status": "no_observed_slot"
+        }
+      ],
+      "sha256": "c04954f32ea74bee20fec1bd90bdce6135da309f8daded979d5bc180cd20411f",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/capability-shelf/source-registry.jsonl"
+    },
+    {
+      "path": "bank/bank_best.jsonl",
+      "rows": 23778,
+      "indexed_repositories": 23778,
+      "schema_sample": [
+        {
+          "full_name": "puppeteer/puppeteer",
+          "capability_tag": "browser-automation",
+          "category_slug": "browser-automation-framework",
+          "summary": "Drive Chrome and Firefox browsers via DevTools protocol in Node.js",
+          "reuse_value": 88,
+          "stars": 95205,
+          "license": "Apache-2.0",
+          "language": "TypeScript",
+          "url": "https://github.com/puppeteer/puppeteer",
+          "rank_score": 88952050
+        }
+      ],
+      "sha256": "333399106db88203b975243501d8b9893cc86e1e9efd2a26bf20ae66462a3dc3",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_best.jsonl"
+    },
+    {
+      "path": "bank/bank_adoption_v2.jsonl",
+      "rows": 2722,
+      "indexed_repositories": 2722,
+      "schema_sample": [
+        {
+          "full_name": "tleunen/babel-plugin-module-resolver",
+          "language": "JavaScript",
+          "registry": "npmjs.org",
+          "pkg_name": "babel-plugin-module-resolver",
+          "unit_class": "component",
+          "resolved": 1,
+          "link_method": "name+backlink",
+          "downloads": 14889899,
+          "downloads_period": "last-month",
+          "dependent_repos": 308228,
+          "dependent_pkgs": 11603,
+          "rank_avg": 0.6752562812930166,
+          "reach_percentile": 99.3,
+          "reuse_value": 70,
+          "stars": 3478,
+          "adoption_score": 84.4,
+          "real_value": 84,
+          "verdict": "promote",
+          "fame_gap": 40.3,
+          "raw_json": "{\"dl\": 14889899, \"deprepos\": 308228, \"deppkgs\": 11603, \"rank_avg\": 0.6752562812930166, \"link\": \"name+backlink\"}",
+          "built_at": "2026-06-25T21:03:50.675089"
+        }
+      ],
+      "sha256": "3ba06bd75e8ebdb83d85ba24ed61defa2322962984b7542c036493c322839ba6",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_adoption_v2.jsonl"
+    },
+    {
+      "path": "bank/bank_liftable_ranked.jsonl",
+      "rows": 32137,
+      "indexed_repositories": 32071,
+      "schema_sample": [
+        {
+          "full_name": "tavianator/bfs",
+          "stars": 1239,
+          "license": "0BSD",
+          "language": "C",
+          "unit_class": "component",
+          "reuse_value": 70,
+          "liftability": 90,
+          "fame_gap": -20,
+          "cat_slug": "cli-utility",
+          "cat_name": "CLI Utilities",
+          "description": "A breadth-first version of the UNIX find command"
+        }
+      ],
+      "sha256": "0a35d81e927116874bfff0bf0b144cc4391c065b3ea5f84b143d8723c03c9850",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_liftable_ranked.jsonl"
+    },
+    {
+      "path": "bank/bank_contractcard.jsonl",
+      "rows": 70,
+      "indexed_repositories": 70,
+      "schema_sample": [
+        {
+          "card_id": "ai-nanoid",
+          "full_name": "ai/nanoid",
+          "display_name": "Nano ID",
+          "band": "id-util",
+          "language": "JavaScript",
+          "stars": 26823,
+          "license": "MIT",
+          "legal_lane": "ship — MIT, zero deps, vendorable; ship the compiled output or the dep, no obligations beyond attribution.",
+          "one_liner": "Tiny (118 B), secure, URL-friendly unique string ID generator for JS/TS.",
+          "provides": "[\"collision-resistant unique IDs (21-char default, A-Za-z0-9_-)\", \"customAlphabet for custom length/charset\", \"hardware-RNG-backed, cluster-safe\", \"non-secure fast variant via nanoid/non-secure\"]",
+          "requires": "[\"Node.js >=18 (ESM) or any modern browser\", \"crypto.getRandomValues / node:crypto present\", \"react-native-get-random-values polyfill on RN\"]",
+          "assumptions": "[\"target runtime exposes a CSPRNG\", \"ESM import (or nanoid@3 for CommonJS require)\"]",
+          "recipe": "{\"install\": \"npm install nanoid\", \"wire\": [\"import { nanoid } from 'nanoid'\", \"const id = nanoid()  // 'V1StGXR8_Z5jdHi6B-myT'\", \"// custom: import { customAlphabet } from 'nanoid'; const gen = customAlphabet('1234567890abcdef', 10)\"]}",
+          "smoke": "node --input-type=module -e \"import { nanoid } from 'nanoid'; const id=nanoid(); if(typeof id==='string'&&id.length===21){console.log('OK',id)}else{process.exit(1)}\"",
+          "surface": "small — one primary fn nanoid() + customAlphabet/customRandom; trivial mental model.",
+          "liftability": 98,
+          "source_refs": "[\"https://raw.githubusercontent.com/ai/nanoid/HEAD/README.md\", \"https://raw.githubusercontent.com/ai/nanoid/HEAD/package.json\"]",
+          "notes": "",
+          "built_by": "foundry-contractcard-pilot",
+          "built_at": "2026-06-25T19:23:41.209914",
+          "semantics": "[{\"gotcha\": \"Passing a negative or >2^31 size to nanoid() throws RangeError 'Wrong ID size' (and huge sizes may also fail with typed array length).\", \"kind\": \"error-vs-null\", \"evidence_layer\": \"tests\", \"evidence\": \"test('throws on negative or too big ID length', () => { throws(() => nanoid(2147483648), /Wrong ID size|Invalid typed array length/); throws(() => nanoid(-10), ...) })\", \"confidence\": \"high\"}, {\"gotcha\": \"size=0 returns '' (empty string), not a 1-char ID — and customAlphabet('', ...)() also returns ''; treat '' as a possible valid result.\", \"kind\": \"silent-noop\", \"evidence_layer\": \"tests\", \"evidence\": \"test('is ready for 0 size', () => { equal(nanoid(0), ''); equal(customAlphabet('abc')(0), ''); equal(customAlphabet('')(0), '') })\", \"confidence\": \"high\"}, {\"gotcha\": \"nanoid() is a synchronous blocking call to the OS CSPRNG; under load it can block the event loop while hardware noise is collected.\", \"kind\": \"concurrency\", \"evidence_layer\": \"docs\", \"evidence\": \"Blocking: 'In rare cases could block CPU from other work while noise collection for hardware random generator.'\", \"confidence\": \"high\"}, {\"gotcha\": \"Default IDs can start with the underscore '_' character, which is invalid as a leading character in PouchDB/CouchDB _id and unsafe in some URL contexts — you must prefix the result.\", \"kind\": \"silent-noop\", \"evidence_layer\": \"docs\", \"evidence\": \"PouchDB and CouchDB: 'IDs can't start with an underscore. ... Nano ID might use a _ at the start of the ID'\", \"confidence\": \"high\"}, {\"gotcha\": \"The default 'secure' nanoid will fail outright in environments without a WebCrypto/node:crypto getRandomValues (e.g. plain React Native) — you must install/polyfill react-native-get-random-values and import it BEFORE nanoid.\", \"kind\": \"lifecycle\", \"evidence_layer\": \"docs\", \"evidence\": \"React Native: 'Check react-native-get-random-values docs and install it. Import it before Nano ID.'\", \"confidence\": \"high\"}, {\"gotcha\": \"customAlphabet with an alphabet of >256 symbols silently breaks the security guarantee of the internal generator — the bias-rejection math only holds up to 256.\", \"kind\": \"silent-noop\", \"evidence_layer\": \"docs\", \"evidence\": \"Alphabet must contain 256 symbols or less. Otherwise, the security of the internal generator algorithm is not guaranteed.\", \"confidence\": \"high\"}, {\"gotcha\": \"customRandom's random callback contract: must accept a byte count and return an array/Uint8Array of that length; returning shorter arrays or out-of-range bytes causes distribution bias or infinite loops.\", \"kind\": \"type-surprise\", \"evidence_layer\": \"?\", \"evidence\": \"Docs: 'random callback must accept the array size and return an array with random numbers.' Test uses fakeRandom returning a plain number[] of exact size.\", \"confidence\": \"high\"}, {\"gotcha\": \"Node 18 cannot use require('nanoid') synchronously — you must use dynamic import() or upgrade to Node 20+/22.12+ with --experimental-require-module.\", \"kind\": \"lifecycle\", \"evidence_layer\": \"?\", \"evidence\": \"CommonJS: 'For Node.js 18 you can dynamically import Nano ID' (v4 can't be imported in node issue, 296 reactions)\", \"confidence\": \"high\"}, {\"gotcha\": \"The module's global random pool is module-level mutable state; it is not safe to assume two nanoid() calls are independent of the pool's prior fill state, and it is not designed to be re-seeded deterministically (customRandom seed-based generators explicitly not guaranteed stable across versions).\", \"kind\": \"concurrency\", \"evidence_layer\": \"?\", \"evidence\": \"index.js: module-level `let pool, poolOffset`; docs: 'we do not guarantee the same result' for seed-based generators.\", \"confidence\": \"med\"}]",
+          "semantics_meta": "{\"method\": \"4-layer (docs+types+tests+issues) semantic extraction, MiniMax-M3 cheap tier\", \"extracted_at\": \"2026-06-25T21:20:06.282667Z\", \"gotchas_total\": 9, \"dangerous_total\": 8, \"readme_only_missed\": 4, \"readme_only_missed_dangerous\": 3, \"fetch_kb\": 45.7, \"ref\": \"main\", \"readme_safe\": false}",
+          "trust_rung": 3,
+          "rung_name": "fixture-passes",
+          "smoke_tier": "self",
+          "verified_at": "2026-06-25T21:34:09+00:00"
+        }
+      ],
+      "sha256": "a3b0efc9cc0137899f91d1e66f73d3b3d9297b72482f12d5b3f2095b7742b20f",
+      "source_url": "https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_contractcard.jsonl"
+    }
+  ],
+  "upstream_execution": "none; public text retrieval only",
+  "requested": 1,
+  "repositories_retrieved": 1,
+  "readmes_retrieved": 1,
+  "license_files_retrieved": 1,
+  "current_commit_retrieved": 1,
+  "already_in_bank": 0,
+  "new": 1,
+  "membership_definition": "Match in six indexed repo-bank layers; inspect indexed counts/schema before asserting NEW. Source-registry holding is not admission."
+}
