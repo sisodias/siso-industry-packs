@@ -1,4 +1,4 @@
-name: MSP public research inputs
+name: MSP public repository evidence
 on:
   push:
     branches: [research/it-services-msps-20260913]
@@ -6,42 +6,22 @@ on:
 permissions:
   contents: read
 jobs:
-  public-inputs:
+  public-repository-evidence:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
-      - name: Read the public SISO input banks
+      - name: Retrieve and run only our public research collector
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          python3 - <<'PY'
-          import datetime, hashlib, json, os, pathlib, urllib.request
-          root = pathlib.Path('evidence/inputs')
-          root.mkdir(parents=True, exist_ok=True)
-          headers = {'User-Agent': 'SISO-MSP-public-research', 'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'}
-          repo = 'sisodias/siso-repo-bank'
-          req = urllib.request.Request('https://api.github.com/repos/' + repo + '/commits/main', headers=headers)
-          with urllib.request.urlopen(req, timeout=60) as response:
-              revision = json.load(response)['sha']
-          paths = ['README.md', 'bank/bank_capability_top.jsonl', 'bank/bank_capability.jsonl', 'bank/bank_best.jsonl', 'bank/bank_adoption_v2.jsonl', 'bank/bank_liftable_ranked.jsonl', 'bank/bank_contractcard.jsonl', 'bank/category.jsonl', 'capability-shelf/source-registry.jsonl']
-          manifest = {'repository': repo, 'revision': revision, 'observed_at': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'files': []}
-          for path in paths:
-              url = 'https://raw.githubusercontent.com/' + repo + '/' + revision + '/' + path
-              with urllib.request.urlopen(url, timeout=90) as response:
-                  body = response.read()
-              dest = root / path
-              dest.parent.mkdir(parents=True, exist_ok=True)
-              dest.write_bytes(body)
-              receipt = {'path': path, 'url': url, 'bytes': len(body), 'rows': len(body.splitlines()), 'sha256': hashlib.sha256(body).hexdigest()}
-              manifest['files'].append(receipt)
-              print(json.dumps(receipt))
-          (root / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
-          PY
-      - name: Preserve the public research inputs
+          curl --fail --silent --show-error --location https://raw.githubusercontent.com/sisodias/siso-industry-packs/1f77eea1da30703d68820c7430455a176d82f4b2/research-tools/msps_public_sweep.py --output /tmp/msps_public_sweep.py
+          python3 /tmp/msps_public_sweep.py
+      - name: Preserve public metadata and source-file evidence
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: msp-bank-inputs-20260913
-          path: evidence/inputs/
+          name: msp-repository-evidence-20260913
+          path: evidence/repo-sweep/
           retention-days: 2
           if-no-files-found: error
