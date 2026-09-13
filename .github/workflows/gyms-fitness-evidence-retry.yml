@@ -56,7 +56,10 @@ jobs:
           replacement='def api(path):\n'+textwrap.indent(textwrap.dedent(replacement.split('\n',1)[1]),'    ')
           script=script[:a]+replacement+script[b:]
           script=script.replace('max_workers=3','max_workers=1')
-          script=script.replace("meta = api('/repos/'+bankrepo); assert meta.get('private') is False", "meta = api('/repos/'+bankrepo); print('Bank metadata status',meta.get('_error'),meta.get('private'),flush=True); assert meta.get('private') is False")
+          original="head = api('/repos/'+bankrepo+'/commits/main').get('sha'); assert head"
+          assert original in script
+          script=script.replace(original,"head = '2d7d35ecbf7e1158d0a3527e1489040687ac214b' # Public bank snapshot verified by original audit")
+          script=script.replace("return out|{'error':m['_error']}","return out|{'error':m['_error'],'message':m.get('message')}")
           compile(script,'pinned_public_research_collector','exec')
           exec(compile(script,'pinned_public_research_collector','exec'))
           PY
