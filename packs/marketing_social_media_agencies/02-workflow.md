@@ -1,7 +1,63 @@
-# Workflow — US marketing and social-media agencies
+# Stage 2 — The operating workflow
 
-> **Not yet researched.** Replace this file with the real output.
->
-> 6-12 workflow stages with trigger, inputs, outputs, pain, frequency, handoff, data_object. Include the chat surface.
+Research date: **2026-09-13**. **11 stages**. The same table is supplied as `02-workflow.json`. All frequencies, response targets and design objects are `[analysis] unmeasured`; the linked pain excerpts are `[practitioner]`. No frequency is inferred from a forum upvote count.
 
-_Status: empty · industry `marketing_social_media_agencies` · priority high_
+[analysis] The four previously mapped Foundry processes remain S04 content calendar, S05 creative production, S07 publication and S09 reporting. The extension adds inquiry, commercial acceptance, onboarding, version-bound approval/scope control, community handoff, money and capacity/offboarding. The original human-authority and quality gates are preserved. [Existing record](https://github.com/sisodias/great-library-of-siso/blob/main/research/industries/source/intelligence/agency/industries/marketing_social_media_agencies.json)
+
+## Ordered stages
+
+| id | stage | trigger | inputs | outputs | pain (quoted + link) | frequency (unmeasured) | handoff | data_object |
+|---|---|---|---|---|---|---|---|---|
+| S01 | Inquiry and conversation intake | New inquiry, client message or change request | Email/DM/WhatsApp message, sender, attachments, account context | Classified request, owner, response due, source reference | “Only wants to work via WhatsApp” — [C01](https://www.reddit.com/r/SocialMediaMarketing/comments/1hx5d2a/how_do_you_send_content_to_be_approved_by_client/) | 50 actionable cases/week; not 50 sales leads | AM triages; owner handles scope/price; client confirms identity/context | ConversationRequest; PartyAccount |
+| S02 | Qualification, quote and agreement | Qualified prospect or out-of-scope request | Request, discovery notes, deliverables, exclusions, approver, price | Accepted scope/change order; meeting and external invoice reference | “asked from employees like the designer or copywriter directly” — [C06](https://www.reddit.com/r/marketingagency/comments/1rbpdqi/scope_creep_how_do_you_deal_with_it_when_clients/) | 4 new quotes/month; changes as received | Owner proposes; customer explicitly accepts; accountant receives reference | EngagementScope; ConversationRequest |
+| S03 | Onboarding, brand assets and account authority | Accepted engagement | Brand rules, rights evidence, named account owner, OAuth grant and permitted actions | Onboarding checklist; approved assets; active/revoked grant status | “regularly requires reauthorization” — [C11](https://www.reddit.com/r/SocialMediaManagers/comments/1uqs3sx/how_do_you_schedule_posts_for_clients_on_their/) | 1 onboarding/month; grant checks before each release | Client account owner grants access; AM checks completeness | PartyAccount; EngagementScope; CampaignWorkItem |
+| S04 | Brief and content calendar | Monthly planning cycle or approved campaign request | Scope, approved claims, audience, assets, key dates, channel constraints | Versioned brief and proposed channel calendar | “Most errors occur with the copy.” — [C03](https://www.reddit.com/r/SocialMediaMarketing/comments/1lx80ha/how_do_you_deliver_monthly_social_media_posts_to/) | 10 briefs/month; 120 original content packages/month | AM/client agree brief; copywriter hands canonical copy to designer | CampaignWorkItem; EngagementScope |
+| S05 | Creative production | Approved brief and assigned work | Canonical copy, supplied media, rights, dimensions, duration/captions | Editable source references; rendered variants; accessibility/rights checklist | “their video ends up being 5-6 min long” — [C07](https://www.reddit.com/r/editors/comments/w41ggc/scope_creep_slow_client_feedback_flat_fee_projects/) | 120 packages/month; variant count separately logged | Copywriter/designer produce; internal reviewer checks | CampaignWorkItem with AssetVersion |
+| S06 | QA, client approval and scope changes | Reviewable version or client feedback | Exact copy/media version, brand/account, scope allowance, named approver | Approve/reject decision; revised version or accepted change order | “translates the feedback or approval back to the fulfillment team” — [C04](https://www.reddit.com/r/agency/comments/tnzhx1/how_does_your_agency_handle_client_approvals/) | 120 first-review packages/month; every additional revision counted | Internal reviewer → client approver; owner authorizes scope change | ApprovalRelease; CampaignWorkItem; EngagementScope |
+| S07 | Schedule, publish and reconcile | Explicit approval plus valid account grant | Approved payload hash, account, time zone, schedule, idempotency key | Platform acceptance/live receipt, or reconciled blocked/failed exception | “the post isn't on there” — [C09](https://www.reddit.com/r/SocialMediaMarketing/comments/1m1cvof/meta_business_suite_scheduling_not_working/) | 240 publication jobs/month; retries are extra attempts, not extra delivered posts | Authorized worker submits; social manager resolves exceptions; account owner renews grant | ApprovalRelease; OutcomeLedger |
+| S08 | Community response and business handoff | New comment, DM, review or service message | Conversation, approved facts/FAQ, response authority and escalation rules | Reviewed reply or lead/service case accepted by named owner | “Now I have to use both” — [C02](https://www.reddit.com/r/SocialMediaMarketing/comments/1hx5d2a/how_do_you_send_content_to_be_approved_by_client/) | Continuous inbox; actionable cases included in S01 count to avoid double counting | AM/social manager replies; client's sales/service owner accepts handoff | ConversationRequest; PartyAccount; EngagementScope |
+| S09 | Reporting and renewal | Period closes or client review is due | Platform receipts, metric snapshots, definitions, spend supplied by authorized source | Reconciled report; reviewed interpretation; next brief/renewal proposal | “reporting only for the first 4 days of the month” — [C14](https://www.reddit.com/r/PPC/comments/1f67sec/people_working_in_agencies_what_reports_do_you/) | 10 reports/month | Analyst/AM verifies; client accepts and decides next campaign | OutcomeLedger; CampaignWorkItem; EngagementScope |
+| S10 | Invoice, collect and reconcile | Retainer due or accepted change order | Accepted scope, delivery references, approved charges, external ledger IDs | Draft invoice handoff; authoritative invoice/payment status | No direct accounting-product complaint verified; do not invent one | 10 retainer invoices/month plus approved changes | Owner/accountant approves; external books and processor execute/reconcile | EngagementScope; OutcomeLedger (references only) |
+| S11 | Capacity, time, payroll and offboarding | Weekly allocation, pay cycle, staff/client exit | Approved tasks/time, availability, engagement state, access inventory | Capacity plan; reviewed payroll inputs; revoked grants and export/retention receipts | “shifting my schedule to accommodate them” — [C08](https://www.reddit.com/r/editors/comments/w41ggc/scope_creep_slow_client_feedback_flat_fee_projects/) | Weekly allocation; 2 pay runs/month assumption; exits as required | Owner allocates; employer approves payroll; account owner revokes; client receives export | CampaignWorkItem; EngagementScope; PartyAccount; OutcomeLedger |
+
+## The chat surface is part of the product
+
+[practitioner] Email-to-fulfillment translation and WhatsApp-only approvals are directly reported in C01/C04. The existing material does **not** establish the channel market shares, actual SMS usage or Jamie's response times. [WhatsApp report](https://www.reddit.com/r/SocialMediaMarketing/comments/1hx5d2a/how_do_you_send_content_to_be_approved_by_client/), [Email approvals](https://www.reddit.com/r/agency/comments/tnzhx1/how_does_your_agency_handle_client_approvals/)
+
+[analysis] For this design case, support Gmail/email and authorized Instagram/Facebook conversations first; capture a manually forwarded WhatsApp request when official API access is unavailable. SMS is an optional provider integration with its own consent and cost, not a core dependency. Do not assume access to arbitrary personal chats, WhatsApp groups or deleted messages. Never use client passwords or session scraping as the connector design.
+
+[analysis] The AM owns the queue during agreed business hours. Proposed target: acknowledge a new actionable request within **two business hours**, not 24/7; urgent account incidents go to the owner immediately. This is a service-design hypothesis, not a measured agency norm. Set actual staffing and contractual hours before enabling an SLA clock.
+
+### Five repeated-question hypotheses
+
+[analysis] These are candidate intents for a pilot, **not a statistically observed top five**:
+
+| Intent | Safe draft/action | Human boundary |
+|---|---|---|
+| “What is included / what does it cost?” | Retrieve the accepted scope or approved price sheet; prepare a discovery booking | No negotiated quote or new promise without owner acceptance |
+| “Where do I upload the photos / which version is current?” | Return a brand-scoped upload/review link and canonical version reference | Verify sender/brand access; do not expose another client's assets |
+| “Can you change this / is another revision included?” | Link message to content item; show remaining scope and prepare change request | Owner decides commercial exception; edited content loses prior approval |
+| “Has this been approved / when will it go live?” | Show approval and publication states separately, with current evidence | No deadline-based implicit approval or unsupported delivery promise |
+| “Where is the report / invoice / result?” | Return authorized report or external invoice status | Analyst/accountant owns interpretation and financial changes |
+
+### The exact transition that justifies the wedge
+
+[analysis] **Conversation → accepted work** occurs only when an identified staff member creates a `ConversationRequest` with source-message reference, resolves the client/brand and either attaches an existing `EngagementScope` or routes an explicit quote/change order. A suggested action from a message is not yet an accepted order.
+
+[analysis] **Work → release** occurs only after `ApprovalRelease` binds the approver, version hash, brand/platform account, scope reference and timestamp. Client feedback arriving by email/WhatsApp can be attached as evidence, but ambiguous “looks good” messages are routed for confirmation. Any caption, asset, account or material timing change invalidates the relevant approval and blocks publication until reapproved.
+
+[analysis] **Conversation → client lead** is a different transition: a consent/context-bearing lead packet is handed to the client's named sales/service owner and acknowledged. It does not automatically become an agency customer, a subscriber or a billable campaign.
+
+## Super-app or suite?
+
+[analysis] There is a coherent super-app **operating core** because the same PartyAccount, ConversationRequest, EngagementScope, CampaignWorkItem, ApprovalRelease and OutcomeLedger references persist from inquiry to renewal. Creative editing, statutory payroll, general-ledger bookkeeping and social platforms remain specialist systems. Pretending to own their internal authorities would create a badly integrated suite, not improve the spine.
+
+[analysis] `OutcomeLedger` is an evidence/reference collection, **not a replacement accounting ledger**. Its metric snapshots, publication receipts and invoice references are typed records with separate authority and retention. Shared identity does not permit cross-client data access. One agency-owned VPS may contain ten brand partitions; this does not mean ten unrelated agency clients share a SISO server.
+
+## Gates inherited and extended
+
+[analysis] Preserve the Foundry falsifiers: net human effort must fall after review/rework; unsupported claims, rights/accessibility defects, unauthorized or wrong-account publication and unsupported report causality invalidate adoption. Add a version-integrity test, scope-change acceptance, grant revocation, cross-brand isolation and complete export/restore tests. [Foundry record](https://github.com/sisodias/great-library-of-siso/blob/main/research/industries/source/intelligence/agency/industries/marketing_social_media_agencies.json)
+
+[vendor: platform documentation] TikTok's current Direct Post guidance requires appropriate audit/access and explicitly excludes a utility intended to upload to accounts managed by the developer's own team. Therefore private agency self-hosting is **not** treated as permission to auto-publish TikTok. Keep a native/manual handoff or separately qualified approved provider, and price that retained dependency honestly. [TikTok guidance, accessed 2026-09-13](https://developers.tiktok.com/docs/en/content-sharing-guidelines)
+
+[analysis] The pilot's unit is an accepted content package or actionable case. Count channel derivatives, repeated approvals, waiting time and retries separately. Never add S01 and S08 case counts twice or equate a missed day of client feedback with a full day of labor saved.
