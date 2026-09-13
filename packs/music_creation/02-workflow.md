@@ -1,7 +1,53 @@
-# Workflow — Music creators and recording artists
+# Stage 2 — Ten stages, six shared objects
 
-> **Not yet researched.** Replace this file with the real output.
->
-> 6-12 workflow stages with trigger, inputs, outputs, pain, frequency, handoff, data_object. Include the chat surface.
+Research date: **2026-09-13**. Primary segment and quote texts: [01-person.md](01-person.md). Machine-readable mirror: [02-workflow.json](02-workflow.json).
 
-_Status: empty · industry `music_creation` · priority low_
+**Status:** a proposed workflow supported by public examples, not an observed client diary. All frequencies below describe the unit to measure; their numeric values are unknown. `[analysis]` covers proposed triggers, objects, controls and handoffs. Q01–Q08 are the dated `[practitioner]` evidence in Stage 1. No private messages, recordings, financial records or device files were accessed.
+
+## Ordered workflow
+
+| id | stage | trigger | inputs | outputs | pain: quote reference and source | frequency to measure | handoff | data_object |
+|---|---|---|---|---|---|---|---|---|
+| S01 | Capture request or self-brief | New idea, message or revision request | User-selected message, reference link, requested version/date | Confirmed brief linked to a project; unanswered questions | **Unmeasured chat friction.** Q07 is adjacent collaboration evidence, not a quote about this client's inbox. [source](https://forums.steinberg.net/t/project-collaboration/809476) | Per incoming request; count/day unknown | Creator ↔ collaborator; creator confirms interpretation | Conversation → Project |
+| S02 | Capture and name an idea | Brief accepted or spontaneous melody/rhythm | Recording/MIDI, rough notes, native DAW file | Saved draft plus an audition file and durable project identity | Q05: converting an experiment into a correctly placed project. [source](https://forums.steinberg.net/t/backup-project-function-gone-kind-of/979208) | Per idea; ideas/week unknown | Creator now → creator reopening later | Project + Asset + Revision |
+| S03 | Select samples and record provenance | A sound is chosen for a project | Audio file, original location, source URL, available licence receipt | Asset linked to source evidence and affected revisions | Q01 supports dependency portability; **no directly sourced sample-clearance complaint in this pass**. [source](https://xferrecords.com/forums/general/collect-all-save-serum-2) | Per imported or substituted asset; count unknown | Creator ↔ sample provider; no automatic legal clearance | Asset + RightsRecord |
+| S04 | Arrange in the existing DAW | Draft opened for a creative session | Native project, audio/MIDI, plugins and presets | New native project revision; dependency/version manifest | Q01: receiving plugin version can change reopen behaviour. [source](https://xferrecords.com/forums/general/collect-all-save-serum-2) | Per creative session; sessions/week unknown | Creator ↔ installed DAW/plugin environment | Project + Revision + Asset |
+| S05 | Mix, separate stems or prepare variants | Creator requests an edit or rendering task | User-owned/authorized source audio, settings, optional local model | New derived assets with their parent and processing recipe | Q03/Q04: edition and channel-routing issues are different from absent rendering capability. [source](https://forums.steinberg.net/t/audio-mixdown-to-stems/972981) [source](https://forums.steinberg.net/t/exporting-selected-events/998265) | Per chosen task; frequency and compute time unknown | Tool proposes/output → creator auditions and accepts | Asset + Revision |
+| S06 | Checkpoint and verify recovery | End of session or before a risky change | Stable project snapshot, asset manifest, settings/version references | Immutable checkpoint; separate restore-test result | Q02/Q08: settings and project dependencies span different locations. [source](https://forums.steinberg.net/t/backup-restore-scripts-for-cubase-on-windows/1020325) [source](https://forums.steinberg.net/t/backing-up-cubase-preferences/996222) | Per checkpoint and periodic restore exercise; rate unknown | Creator → own backup destination → future creator | Revision + Asset |
+| S07 | Review and deliver the approved version | Feedback request or agreed handoff | Exact revision, requested stems/channel layout/naming, recipient | Delivery package, manifest, explicit approval, send receipt or manual send note | Q06: expected channels can diverge from selected outputs; Q07 separates co-writing from remote recording. [source](https://forums.steinberg.net/t/export-audio-mixdown-multiple-selection-checkbox-issue/991748) [source](https://forums.steinberg.net/t/project-collaboration/809476) | Per handoff/revision loop; loops/job unknown | Creator ↔ collaborator; **no automatic external send** | Revision + Conversation + Asset |
+| S08 | Review credits, permissions and split instructions | Before distribution or commercial use | Contributors' supplied details, source receipts, proposed percentages, approvals | Versioned rights/credit record; unresolved items remain blocked | **Practitioner gap:** no independently sourced complaint about the client's splits/PRO workflow. Vendor payout automation is not evidence of agreed rights. [vendor example](https://support.distrokid.com/hc/en-us/articles/360013534394-Using-Splits-To-Pay-Your-Collaborators-Automatically) | Per work/release or amendment; count unknown | Creator ↔ contributors ↔ authorized adviser/service | RightsRecord + Release |
+| S09 | Prepare and submit a release | Creator approves a release candidate | Accepted audio/artwork, credits, supplied identifiers, destination requirements | Local release package; external submission receipt stored separately | **Practitioner gap:** platform rejection rate and retyping time not measured. [vendor capability](https://www.tunecore.com/pricing) | Per release; releases/year unknown | Creator → distributor; distributor/platform owns acceptance | Release + RightsRecord + Asset |
+| S10 | Review responses, sales and royalty statements | Feedback or periodic statement becomes available | Selected messages, exported statement files, release IDs | Reconciled observations, follow-up drafts and linked accounting references | **Practitioner gap:** audience/admin burden not measured. [vendor capabilities](https://bandcamp.com/pro) [accounting comparator](https://quickbooks.intuit.com/pricing/) | Per feedback item and statement period; volume unknown | Creator ↔ fans/distributor/accountant as applicable | Conversation + Release + Asset |
+
+Repeated stages form a loop: S04 → S05 → S06 → S07 → S04. Rights records may need review again when assets or collaborators change. A release receipt is downstream of, and distinct from, a locally validated package. [analysis]
+
+## The chat surface is an intake boundary, not a licence to connect accounts
+
+**Actual client channels:** unknown. WhatsApp, Instagram DMs, SMS and email are interview/checklist candidates from the brief, not observed business channels. One consumer operator may simply use normal personal messaging. WhatsApp's own help distinguishes its free Messenger from the separate small-business app; do not force a Business migration or assume an API connection is included. [vendor: https://faq.whatsapp.com/641572844337957]
+
+**Who answers and how fast:** proposed owner is the creator. Response times, volumes and service expectations are unmeasured. Do not advertise an instant-response service from a guessed persona. [analysis]
+
+**Five candidate repeated intents**, to confirm against a consented sample: which revision did you mean; can you send the stems; can you change a section or sound; what is the deadline/delivery format; what credits or split instructions are still awaiting agreement. These are proposed intents, not a frequency ranking extracted from private messages. [analysis]
+
+**The conversion event:** a message becomes work only when the creator confirms the referenced project, source revision, requested deliverable, due date if any, and recipient. Store the source pointer with that decision. An unconfirmed AI extraction is a draft, not a booking, order, agreement or permission to send. No paid order is presumed for this consumer segment. [analysis]
+
+First iteration: manual paste/import of selected text, drag-and-drop of authorized attachments, and user-opened links. No broad mailbox sync, contact harvest, private chat scraping or SISO-hosted relay. A later authorized connector must record source identifiers, permission boundaries, revocations and human send approval; it must not become the authority for musical rights or money. [analysis]
+
+## Six-object spine and explicit authority
+
+| Object | Minimal proposed contents | Authority boundary |
+|---|---|---|
+| **Project** | Local stable ID, working title, native DAW path, operator-confirmed brief, status | Describes the work; does not replace the native DAW file. |
+| **Asset** | Stable ID, content hash, original/local paths, media metadata, parent/derived links, provenance references | Hash equality establishes byte identity, not ownership or musical equivalence. Preserve originals. |
+| **Revision** | Project ID, parent revision, native file hash, exact asset set, DAW/plugin version declarations, acceptance and restore evidence | A checkpoint is immutable; a live folder and latest timestamp are not equivalent to accepted revision state. |
+| **Conversation** | Selected source pointer, participants as supplied, confirmed request, relevant revision, approval/send event | Minimal consented context only. Never equate a draft with a sent message or an informal discussion with an agreed split. |
+| **RightsRecord** | Referenced assets/work, supplied credits/identifiers, proposed splits, receipts, human approvals and unresolved exceptions | Records evidence and decisions; makes no autonomous legal clearance or payment instruction. |
+| **Release** | Accepted revision, destination-specific manifest, metadata, rights version, external receipts, statement references | Local ready, human approved, submitted, accepted, live and paid are separate states. |
+
+The same Project, Asset and Revision IDs link the core creative loop. Conversation, RightsRecord and Release connect the surrounding administration. **A coherent companion is possible at the record level; audio editing, banking and distribution still have separate engines and authorities.** Forcing all those engines into one interface is not the same thing as making them one reliable application. [analysis]
+
+## Acceptance tests implied by the evidence — not tests already run
+
+A proposed pilot must demonstrate that the original project is unchanged after scanning; a checkpoint contains the expected audio; the receiving DAW/plugin environment is explicitly recorded; the recipient gets the approved version; and a restore opens and auditions acceptably. Missing data, unresolved rights and absent credentials must fail closed. API claims, metadata validation and file existence alone do not pass these tests. [analysis; Q01–Q08]
+
+**Stage receipt:** 10 mapped stages; 6 proposed shared objects; 5 candidate chat intents; all numeric workload frequencies null; no live account integration or runtime test performed.
