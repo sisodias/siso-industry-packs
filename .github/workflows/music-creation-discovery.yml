@@ -1,0 +1,73 @@
+name: Music creation discovery receipt
+on:
+  push:
+    branches: [main]
+    paths: [packs/music_creation/evidence/discovery-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: music-creation-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REQUEST_REVISION: ${{ github.sha }}
+    steps:
+      - name: Query public repository metadata only
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,datetime,json,os,pathlib,time,urllib.request,urllib.error,urllib.parse
+          REPO='sisodias/siso-industry-packs'; ROOT='packs/music_creation/evidence/'; API='https://api.github.com'; TOKEN=os.environ['GH_TOKEN']
+          def api(path,data=None,method=None):
+              req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'music-creation-public-discovery'})
+              try:
+                  with urllib.request.urlopen(req,timeout=40) as response:return json.load(response)
+              except urllib.error.HTTPError as e:return {'_error':e.code}
+              except (TimeoutError,urllib.error.URLError) as e:return {'_error':type(e).__name__}
+          def text(path,ref):
+              r=api('/repos/'+REPO+'/contents/'+path+'?ref='+ref)
+              if 'content' not in r:raise RuntimeError('source retrieval failed: '+path+' '+str(r.get('_error')))
+              return base64.b64decode(r['content']).decode()
+          cfg=json.loads(text(ROOT+'discovery-request.json',os.environ['REQUEST_REVISION']))
+          assert 1<=len(cfg['queries'])<=60
+          seed=json.loads(text(ROOT+'candidate-request.json',cfg['seed_ref']))
+          seen={n.lower() for n in seed['repositories']}; records=[]; rounds={}; now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          for q in cfg['queries']:
+              assert q['lane'] in ('A','B','C','followup') and isinstance(q['query'],str) and len(q['query'])<300
+              params=urllib.parse.urlencode({'q':q['query'],'sort':'stars','order':'desc','per_page':8})
+              result=api('/search/repositories?'+params); items=result.get('items',[])
+              public=[x for x in items if not x.get('private',True)]
+              names=[x['full_name'] for x in public]; added=[n for n in names if n.lower() not in seen]
+              seen.update(n.lower() for n in names)
+              row=dict(q,observed_at=now,total_matches=result.get('total_count'),incomplete_results=result.get('incomplete_results'),retrieval_error=result.get('_error'),source_url=API+'/search/repositories?'+params,returned=[{k:x.get(k) for k in ('full_name','html_url','description','stargazers_count','archived','license','topics')} for x in public],new_to_discovery=added)
+              records.append(row); counts=rounds.setdefault(str(q['round']),{'queries':0,'new_names':0,'errors':0}); counts['queries']+=1; counts['new_names']+=len(added); counts['errors']+=int('_error' in result)
+              time.sleep(2.2)
+          receipt={'observed_at':now,'request_revision':os.environ['REQUEST_REVISION'],'seed_ref':cfg['seed_ref'],'queries_executed':len(records),'rounds':rounds,'distinct_names_including_seed':len(seen),'scope':'Discovery leads only; metadata search is not README/LICENSE examination. No upstream code, application or model executed. No private repository content collected.','saturation_claim':False}
+          outputs={ROOT+'discovery-results.json':json.dumps(records,ensure_ascii=False,indent=2)+'\n',ROOT+'discovery-receipt.json':json.dumps(receipt,indent=2)+'\n'}
+          for p,t in outputs.items():
+              local=pathlib.Path('public-research')/p;local.parent.mkdir(parents=True,exist_ok=True);local.write_text(t)
+          for attempt in range(4):
+              ref=api('/repos/'+REPO+'/git/ref/heads/main')
+              if 'object' not in ref:raise RuntimeError('branch read failed '+str(ref.get('_error')))
+              parent=ref['object']['sha']; c=api('/repos/'+REPO+'/git/commits/'+parent)
+              tree=api('/repos/'+REPO+'/git/trees',{'base_tree':c['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in outputs.items()]},'POST')
+              if 'sha' not in tree:raise RuntimeError('tree write failed '+str(tree.get('_error')))
+              commit=api('/repos/'+REPO+'/git/commits',{'message':'research(music_creation): record keyword, topic and format discovery evidence','tree':tree['sha'],'parents':[parent]},'POST')
+              if 'sha' not in commit:raise RuntimeError('commit write failed '+str(commit.get('_error')))
+              update=api('/repos/'+REPO+'/git/refs/heads/main',{'sha':commit['sha'],'force':False},'PATCH')
+              if '_error' not in update:print(json.dumps(receipt));print('Evidence commit',commit['sha']);break
+              if update['_error'] not in (409,422):raise RuntimeError('non-fast-forward publication failed '+str(update['_error']))
+          else:raise RuntimeError('concurrent publication conflict; artifact retained')
+          PY
+      - name: Retain public discovery artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: music-creation-discovery
+          path: public-research/
+          retention-days: 7
+          if-no-files-found: warn
