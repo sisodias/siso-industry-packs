@@ -1,0 +1,42 @@
+name: Music creation evidence snapshot
+on:
+  workflow_run:
+    workflows: [Music creation public evidence audit]
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Download public research text only
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,json,os,pathlib,urllib.request,urllib.parse
+          repo='sisodias/siso-industry-packs';base='https://api.github.com/repos/'+repo
+          def api(path):
+              req=urllib.request.Request(base+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-music-evidence-snapshot'})
+              with urllib.request.urlopen(req,timeout=90) as r:return json.load(r)
+          rev=api('/commits/main')['sha'];tree=api('/git/trees/'+rev+'?recursive=1');assert not tree.get('truncated')
+          paths=[x['path'] for x in tree['tree'] if x['type']=='blob' and x['path'].startswith('packs/music_creation/') and x['path'].endswith(('.json','.jsonl','.md'))]
+          root=pathlib.Path('public-research');root.mkdir()
+          def one(path):
+              target=root/path;target.parent.mkdir(parents=True,exist_ok=True)
+              url='https://raw.githubusercontent.com/'+repo+'/'+rev+'/'+urllib.parse.quote(path,safe='/')
+              with urllib.request.urlopen(url,timeout=90) as r:target.write_bytes(r.read())
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(one,paths))
+          (root/'snapshot.json').write_text(json.dumps({'repository':repo,'revision':rev,'files':len(paths),'scope':'public music research text only; no upstream execution'},indent=2))
+          print('Packaged',len(paths),'research text files at',rev)
+          PY
+      - name: Retain research archive
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: music-creation-public-research
+          path: public-research/
+          retention-days: 7
+          if-no-files-found: error
