@@ -1,0 +1,28 @@
+name: Aviation evidence API diagnostic
+on:
+  push:
+    branches: [main]
+    paths: [packs/aviation_parts_distribution/evidence/diagnostic.json]
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Print only API status and rate-limit metadata
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error
+          paths=['/rate_limit','/repos/sisodias/siso-industry-packs/git/ref/heads/main','/repos/frappe/erpnext','/search/repositories?q=spec2000&per_page=2']
+          for p in paths:
+              req=urllib.request.Request('https://api.github.com'+p,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-public-research-diagnostic'})
+              try:
+                  with urllib.request.urlopen(req,timeout=15) as r:
+                      data=json.load(r); print(json.dumps({'path':p,'status':r.status,'remaining':r.headers.get('X-RateLimit-Remaining'),'reset':r.headers.get('X-RateLimit-Reset'),'body_keys':list(data) if isinstance(data,dict) else 'list','limits':data if p=='/rate_limit' else None}))
+              except urllib.error.HTTPError as e:
+                  print(json.dumps({'path':p,'status':e.code,'remaining':e.headers.get('X-RateLimit-Remaining'),'reset':e.headers.get('X-RateLimit-Reset'),'error':e.read().decode()[:500]}))
+              except Exception as e: print(type(e).__name__)
+          PY
