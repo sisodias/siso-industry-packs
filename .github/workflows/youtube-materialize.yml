@@ -19,21 +19,34 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Use exact scoped tree identity rather than a truncated global diff
+      - name: Protect concurrent main research; publish continuation branch only
         run: |
           python3 - <<'PY'
           from pathlib import Path
           p=Path('research-tools/youtube-materialize.py')
           source=p.read_text()
           old="mainchanges=api('/repos/'+REPO+'/compare/'+mergebase+'...'+main).get('files',[])\nassert len(mainchanges)<300,'main comparison may be truncated'\nassert not any(x['filename'].startswith(PACK) for x in mainchanges),'main changed this pack: human reconciliation required'"
-          new="def pack_identity(ref):\n    entries=api('/repos/'+REPO+'/contents/'+PACK.rstrip('/')+'?ref='+ref)\n    assert isinstance(entries,list),'pack directory read failed'\n    return sorted((x['name'],x['type'],x['sha']) for x in entries)\nassert pack_identity(mergebase)==pack_identity(main),'main changed this pack: human reconciliation required'"
+          new="def pack_identity(ref):\n    entries=api('/repos/'+REPO+'/contents/'+PACK.rstrip('/')+'?ref='+ref)\n    assert isinstance(entries,list),'pack directory read failed'\n    return sorted((x['name'],x['type'],x['sha']) for x in entries)\nmain_pack_changed = pack_identity(mergebase)!=pack_identity(main)\nput(PACK+'evidence/concurrent-main.json',dump({'main_revision_read':main,'main_pack_changed':main_pack_changed,'main_file_identities':pack_identity(main),'action':'Preserve main unchanged. Publish this source-reviewed continuation only on its existing branch; reconcile competing hypotheses before merge.','main_merged':False}))"
           if old in source:
               assert source.count(old)==1
-              p.write_text(source.replace(old,new))
+              source=source.replace(old,new)
           else:
-              assert new in source,'unexpected source; stop without mutation'
+              assert 'def pack_identity(ref):' in source
+              source=source.replace("assert pack_identity(mergebase)==pack_identity(main),'main changed this pack: human reconciliation required'", "main_pack_changed = pack_identity(mergebase)!=pack_identity(main)")
+          source=source.replace("main_commit=api('/repos/'+REPO+'/git/commits/'+main)","main_commit=api('/repos/'+REPO+'/git/commits/'+head)")
+          source=source.replace("'parents':[head,main] if main!=head else [head]","'parents':[head]")
+          source=source.replace("'main_updated':False,'force_push':False","'main_updated':False,'main_merged':False,'concurrent_main_review_required':main_pack_changed,'force_push':False")
+          source=source.replace("# Merge current-main tree with ONLY this branch's scoped research files and the generated outputs.","# Publish only this branch. Concurrent main work is preserved for explicit PR reconciliation.")
+          marker='## Concurrent-main reconciliation'
+          if marker not in source:
+              addition="summary += '\\n## Concurrent-main reconciliation\\n\\n[analysis] Parallel research appeared on main during this continuation in 00-SUMMARY.md, 01-person.md and 05-superapp.md. It remains unchanged. Its local-first/BYO-key hypothesis and self-reported 131-repository sweep are separate from this branch\u2019s versioned-handoff hypothesis and 129 source-reviewed repositories; the counts must not be added without deduplication. The client-VPS requirement remains this assignment\u2019s deployment boundary. Bring-your-own-key changes billing/custody but does not itself make upstream calls free. Resolve the competing baselines, prices, component choices and private-source publication boundaries before merging. [Pinned main research](https://github.com/\u0027+REPO+\u0027/tree/\u0027+main+\u0027/packs/youtube_creators).\\n'\n"
+              source=source.replace("put(PACK+'00-SUMMARY.md',summary)",addition+"put(PACK+'00-SUMMARY.md',summary)")
+          assert "'parents':[head]" in source
+          assert "main_commit=api('/repos/'+REPO+'/git/commits/'+head)" in source
+          compile(source,str(p),'exec')
+          p.write_text(source)
           PY
-      - name: Join reviewed public evidence and preserve unrelated main changes
+      - name: Join reviewed public evidence and produce the unmerged research pack
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 research-tools/youtube-materialize.py
