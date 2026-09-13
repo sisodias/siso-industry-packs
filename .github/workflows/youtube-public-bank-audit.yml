@@ -1,0 +1,49 @@
+name: YouTube public bank evidence
+on:
+  push:
+    branches: [research/youtube-creators-20260913]
+    paths: [.github/workflows/youtube-public-bank-audit.yml]
+permissions:
+  contents: read
+jobs:
+  public-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Stream public bank records into a bounded evidence artifact
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request, json, hashlib, pathlib, re
+          out=pathlib.Path('evidence'); out.mkdir()
+          rev='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          root='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+rev+'/'
+          paths=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']
+          terms=re.compile(r'youtube|video|audio|podcast|speech|subtitle|caption|social.media|social.network|creator|music|thumbnail|sponsor|stock.footage|digital.asset|media.asset|invoice|chatwoot|postiz|mixpost|erpnext|formbricks|fider|ghost|moodle|listmonk',re.I)
+          names=set(); selected=set(); report=[]
+          for path in paths:
+              digest=hashlib.sha256(); count=kept=0
+              dest=out/(path.replace('/','__'))
+              with urllib.request.urlopen(root+path, timeout=120) as response, dest.open('w') as f:
+                  for line in response:
+                      digest.update(line)
+                      if not line.strip(): continue
+                      row=json.loads(line); count+=1
+                      name=row.get('full_name','')
+                      if path.endswith('bank_best.jsonl'):
+                          names.add(name.lower())
+                      retain=(path.endswith('bank_capability_top.jsonl') or path.endswith('bank_capability.jsonl') or path.endswith('bank_contractcard.jsonl') or bool(terms.search(line.decode())) or name.lower() in selected)
+                      if retain:
+                          f.write(json.dumps(row,ensure_ascii=False)+'\n'); kept+=1
+                          if name: selected.add(name.lower())
+              report.append({'path':path,'source':root+path,'rows_streamed':count,'rows_selected':kept,'sha256':digest.hexdigest()})
+          (out/'bank-membership-names.json').write_text(json.dumps(sorted(names)))
+          (out/'manifest.json').write_text(json.dumps({'source_commit':rev,'method':'streamed JSONL; full large banks never loaded into model context; public sources only','files':report},indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Preserve public research evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-public-bank-evidence
+          path: evidence/
+          retention-days: 7
