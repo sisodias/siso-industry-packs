@@ -1,0 +1,29 @@
+name: Trading batched evidence 20260913
+on:
+  push:
+    branches: [research/trading-20260913]
+    paths: [.github/workflows/trading-batched-evidence-20260913.yml]
+permissions:
+  contents: write
+  actions: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Stop only superseded research run and collect public evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request,urllib.error
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-public-research'}
+          try:
+              request=urllib.request.Request('https://api.github.com/repos/sisodias/siso-industry-packs/actions/runs/34766340984/cancel',headers=headers,data=b'',method='POST')
+              with urllib.request.urlopen(request,timeout=15) as r: print('Superseded research run cancel response',r.status)
+          except urllib.error.HTTPError as e:
+              print('Superseded research run cancellation response',e.code)
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+os.environ['GITHUB_SHA']+'/packs/trading/evidence/collect-batched-evidence.py'
+          with urllib.request.urlopen(url,timeout=30) as response: source=response.read()
+          exec(compile(source,url,'exec'))
+          PY
