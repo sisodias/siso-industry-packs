@@ -1,0 +1,153 @@
+{
+  "audit_id": "R110",
+  "requested_full_name": "LibraryOfCongress/bagit-java",
+  "observed_at": "2026-09-13T16:11:31.701878+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "LibraryOfCongress/bagit-java",
+  "html_url": "https://github.com/LibraryOfCongress/bagit-java",
+  "description": "Java library to support the BagIt specification.",
+  "stargazers_count": 81,
+  "forks_count": 51,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2013-06-12T15:02:44Z",
+  "updated_at": "2026-08-31T19:41:37Z",
+  "pushed_at": "2024-02-29T16:48:56Z",
+  "size": 149244,
+  "open_issues_count": 26,
+  "topics": [
+    "archive",
+    "bagit",
+    "checksum",
+    "java",
+    "manifest",
+    "validation"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "2b7002e62d721f5eb50461e4c4c70a6ef643ec1d",
+  "last_commit": "2018-07-05T18:29:00Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/LibraryOfCongress/bagit-java",
+    "commit": "https://github.com/LibraryOfCongress/bagit-java/commit/2b7002e62d721f5eb50461e4c4c70a6ef643ec1d"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "4540ff03bb010be03b74cb8597805347886e1a94c2601134339a59accdbf7fe7",
+    "text": "# BagIt Library (BIL)\n|            |                                                    |\n|------------|----------------------------------------------------|\n|Build Status| [![Travis-CI Build Status (Linux)](https://img.shields.io/travis/LibraryOfCongress/bagit-java/master.svg?label=TravisCi&maxAge=600)](https://travis-ci.org/LibraryOfCongress/bagit-java) [![Appveyor Build Status (Windows)](https://img.shields.io/appveyor/ci/johnscancella/bagit-java/master.svg?label=Appveyor%20(Windows)&maxAge=600)](https://ci.appveyor.com/project/johnscancella/bagit-java) [![CircleCI](https://img.shields.io/circleci/project/github/LibraryOfCongress/bagit-java/master.svg?label=CircleCi&maxAge=600)](https://circleci.com/gh/LibraryOfCongress/bagit-java)|\n| Metrics|[![Coverage Status](https://coveralls.io/repos/github/LibraryOfCongress/bagit-java/badge.svg?branch=master)](https://coveralls.io/github/LibraryOfCongress/bagit-java?branch=master) [![Github Latest Release Downloads](https://img.shields.io/github/downloads/LibraryOfCongress/bagit-java/latest/total.svg?maxAge=600)]()|\n|Documentation| [![License](https://img.shields.io/badge/License-Public--Domain-blue.svg?maxAge=31556926)](https://github.com/LibraryOfCongress/bagit-java/blob/master/LICENSE.txt) [![javadoc.io](https://img.shields.io/badge/javadoc.io-latest-blue.svg?maxAge=31556926)](http://www.javadoc.io/doc/gov.loc/bagit) [![Crowdin](https://img.shields.io/badge/Translation-Crowdin-ff69b4.svg?maxAge=600)](https://crowdin.com/project/bagit-java) [![Transifex](https://img.shields.io/badge/Translation-Transifex-ff69b4.svg?maxAge=600)](https://www.transifex.com/acdha/bagit-java/dashboard/)|\n\n[//]: # (https://img.shields.io/versioneye/d/java/gov.loc:bagit.svg once it is deployed to maven-central)\n[//]: # (see https://github.com/jirutka/maven-badges once you have deployed past 5.0-BETA on maven central so that it will automatically update)\n[//]: # (see https://github.com/moznion/javadocio-badges for automatic javadoc)\n\n## Description\nThe BAGIT LIBRARY is a software library intended to support the creation,\nmanipulation, and validation of bags. Its current version is 0.97. It is version aware with the earliest\nsupported version being 0.93.\n\n## Requirements\n* Java 8\n* gradle (for development only)\n\n## Support\n1. The Digital Curation Google Group (https://groups.google.com/d/forum/digital-curation) is an open discussion list that reaches many of the contributors to and users of this open-source project\n2. If you have found a bug please create a new issue on [the issues page](https://github.com/LibraryOfCongress/bagit-java/issues/new)\n3. If you would like to contribute, please submit a [pull request](https://help.github.com/articles/creating-a-pull-request/)\n\n## Major differences between version 5 and 4.*\n##### Command Line Interface\n\nThe 5.x versions do not include a command-line interface.\nUsers who need a command-line utility can continue to use the latest 4.x release\n([download 4.12.3](https://github.com/LibraryOfCongress/bagit-java/releases/download/v4.12.3/bagit-v4.12.3.zip)\nor switch to an alternative implementation such as\n[bagit-python](https://github.com/LibraryOfCongress/bagit-python) or\n[BagIt for Ruby](https://github.com/tipr/bagit).\n\n##### Serialization\nStarting with the 5.x versions bagit-java no longer supports directly\nserializing a bag to an archive file. The examples show how to implement a\ncustom serializer for the\n[zip](https://github.com/LibraryOfCongress/bagit-java/blob/master/src/test/java/gov/loc/repository/bagit/examples/serialization/CreateZipBagExample.java)\nand\n[tar](https://github.com/LibraryOfCongress/bagit-java/blob/master/src/test/java/gov/loc/repository/bagit/examples/serialization/CreateTarBagExample.java)\nformats.\n\n##### Fetching\nThe 5.x versions do not include a core `fetch.txt` implementation. If you need\nthis functionality, the\n[`FetchHttpFileExample` example](https://github.com/LibraryOfCongress/bagit-java/blob/master/src/test/java/gov/loc/repository/bagit/examples/fetching/FetchHttpFileExample.java)\ndemonstrates how you can implement this feature with your additional application\nand workflow requirements.\n\n##### Internationalization\nAll logging and error messages have been put into a [ResourceBundle](https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html). \nThis allows for all the messages to be translated to multiple languages and automatically used during runtime. \nIf you would like to contribute to translations please visit https://www.transifex.com/acdha/bagit-java/dashboard/ or https://crowdin.com/project/bagit-java.\n\n##### New Interfaces\n\nThe 5.x version is a complete rewrite of the bagit-java library which attempts\nto follow modern Java practices and will require some changes to existing code:\n\n### Examples of using the new bagit-java library\n\n##### Create a bag from a folder using version 0.97\n```java\nPath folder = Paths.get(\"FolderYouWantToBag\");\nStandardSupportedAlgorithms algorithm = StandardSupportedAlgorithms.MD5;\nboolean includeHiddenFiles = false;\nBag bag = BagCreator.bagInPlace(folder, Arrays.asList(algorithm), includeHiddenFiles);\n```\n\n##### Read an existing bag (version 0.93 and higher)\n```java\nPath rootDir = Paths.get(\"RootDirectoryOfExistingBag\");\nBagReader reader = new BagReader();\nBag bag = reader.read(rootDir);\n```\n\n##### Write a Bag object to disk\n```java\nPath outputDir = Paths.get(\"WhereYouWantToWriteTheBagTo\");\nBagWriter.write(bag, outputDir); //where bag is a Bag object\n```\n\n##### Verify Complete\n```java\nboolean ignoreHiddenFiles = true;\nBagVerifier verifier = new BagVerifier();\nverifier.isComplete(bag, ignoreHiddenFiles);\n```\n\n##### Verify Valid\n```java\nboolean ignoreHiddenFiles = true;\nBagVerifier verifier = new BagVerifier();\nverifier.isValid(bag, ignoreHiddenFiles);\n```\n\n##### Quickly verify by payload-oxum\n```java\nboolean ignoreHiddenFiles = true;\n\nif(BagVerifier.canQuickVerify(bag)){\n  BagVerifier.quicklyVerify(bag, ignoreHiddenFiles);\n}\n```\n\n##### Add other checksum algorithms\n\nYou only need to implement 2 interfaces:\n\n```java\npublic class MyNewSupportedAlgorithm implements SupportedAlgorithm {\n  @Override\n  public String getMessageDigestName() {\n    return \"SHA3-256\";\n  }\n  @Override\n  public String getBagitName() {\n    return \"sha3256\";\n  }\n}\n\npublic class MyNewNameMapping implements BagitAlgorithmNameToSupportedAlgorithmMapping {\n  @Override\n  public SupportedAlgorithm getMessageDigestName(String bagitAlgorithmName) {\n    if(\"sha3256\".equals(bagitAlgorithmName)){\n      return new MyNewSupportedAlgorithm();\n    }\n\n    return StandardSupportedAlgorithms.valueOf(bagitAlgorithmName.toUpperCase());\n  }\n}\n```\n\nand then add the implemented `BagitAlgorithmNameToSupportedAlgorithmMapping`\nclass to your `BagReader` or `bagVerifier` object before using their methods.\n\n#### Check for potential problems\n\nThe BagIt format is extremely flexible and allows for some conditions which are\ntechnically allowed but should be avoided to minimize confusion and maximize\nportability. The `BagLinter` class allows you to easily check a bag for\nwarnings:\n\n```java\nPath rootDir = Paths.get(\"RootDirectoryOfExistingBag\");\nBagLinter linter = new BagLinter();\nList<BagitWarning> warnings = linter.lintBag(rootDir, Collections.emptyList());\n```\n\nYou can provide a list of specific warnings to ignore:\n\n```java\ndependencycheckth rootDir = Paths.get(\"RootDirectoryOfExistingBag\");\nBagLinter linter = new BagLinter();\nList<BagitWarning> warnings = linter.lintBag(rootDir, Arrays.asList(BagitWarning.OLD_BAGIT_VERSION);\n```\n\n## Developing Bagit-Java\nBagit-Java uses [Gradle](https://gradle.org/) for its build system. Check out the great [documentation](https://docs.gradle.org/current/userguide/userguide_single.html) to learn more.\n##### Running tests and code quality checks\nInside the bagit-java root directory, run `./gradlew check`.\n##### Uploading to maven central\n1. Follow their guides\n  1. http://central.sonatype.org/pages/releasing-the-deployment.html\n  2. https://issues.sonatype.org/secure/Dashboard.jspa\n2. Once you have access, to create an official release and upload it you should specify the version by running `./gradlew -Pversion=<VERSION> uploadArchives`\n  1. *Don't forget to tag the repository!*\n\n##### Uploading to jcenter\n1. Follow their guide\n  1. https://github.com/bintray/bintray-examples/tree/master/gradle-bintray-plugin-examples\n2. Once you have access, to create an official release and upload it you should specify the version by running `./gradlew -Pversion=<VERSION> bintrayUpload`\n  1. *Don't forget to tag the repository!*\n\n### Note if using with Eclipse\nSimply run `./gradlew eclipse` and it will automatically create a eclipse project for you that you can import.\n\n### Roadmap for this library\n* Fix bugs/issues reported with new library (on going)\n* Translate to various languages (on going)\n",
+    "characters": 8854,
+    "source_url": "https://github.com/LibraryOfCongress/bagit-java/blob/2b7002e62d721f5eb50461e4c4c70a6ef643ec1d/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "f3d1835754b99263cad99205564a660bbb1c649dde26f1827f1052d764b5e85c",
+    "text": "License for BAGIT Library (BIL)\r\n-------------------------------\r\nThis software is a work of the United States Government and is not subject \r\nto copyright protection in the United States. \r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR THE UNITED STATES BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\r\nTHE SOFTWARE.\r\n\r\n\r\nForeign copyrights may apply. To the extent that foreign copyrights in the \r\nsoftware exist outside the United States, the following terms apply:\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in\r\nall copies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\r\nTHE SOFTWARE.\r\n\r\n\r\n--------------------------------------------------------------------\r\n\r\nThe license below applies to the following bundled dependencies:\r\n * slf4j\r\n\r\n        MIT license\r\n------------------------------\r\n\r\n Copyright (c) 2004-2013 QOS.ch\r\n All rights reserved.\r\n\r\n Permission is hereby granted, free  of charge, to any person obtaining\r\n a  copy  of this  software  and  associated  documentation files  (the\r\n \"Software\"), to  deal in  the Software without  restriction, including\r\n without limitation  the rights to  use, copy, modify,  merge, publish,\r\n distribute,  sublicense, and/or sell  copies of  the Software,  and to\r\n permit persons to whom the Software  is furnished to do so, subject to\r\n the following conditions:\r\n \r\n The  above  copyright  notice  and  this permission  notice  shall  be\r\n included in all copies or substantial portions of the Software.\r\n \r\n THE  SOFTWARE IS  PROVIDED  \"AS  IS\", WITHOUT  WARRANTY  OF ANY  KIND,\r\n EXPRESS OR  IMPLIED, INCLUDING  BUT NOT LIMITED  TO THE  WARRANTIES OF\r\n MERCHANTABILITY,    FITNESS    FOR    A   PARTICULAR    PURPOSE    AND\r\n NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\r\n LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\r\n OF CONTRACT, TORT OR OTHERWISE,  ARISING FROM, OUT OF OR IN CONNECTION\r\n WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n",
+    "characters": 3236,
+    "source_url": "https://github.com/LibraryOfCongress/bagit-java/blob/2b7002e62d721f5eb50461e4c4c70a6ef643ec1d/LICENSE.txt",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "johnscancella",
+      "contributions": 395
+    },
+    {
+      "login": "jscancella",
+      "contributions": 29
+    },
+    {
+      "login": "danshim",
+      "contributions": 5
+    },
+    {
+      "login": "fangfu",
+      "contributions": 5
+    },
+    {
+      "login": "ansell",
+      "contributions": 4
+    },
+    {
+      "login": "acdha",
+      "contributions": 3
+    },
+    {
+      "login": "mjordan",
+      "contributions": 2
+    },
+    {
+      "login": "calvinwo",
+      "contributions": 1
+    },
+    {
+      "login": "BanzaiMan",
+      "contributions": 1
+    },
+    {
+      "login": "mikedurbin",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 145,
+      "title": "Support for BagIt version 1.0 planned?",
+      "state": "closed",
+      "created_at": "2024-12-18T18:53:04Z",
+      "updated_at": "2024-12-18T22:14:14Z",
+      "closed_at": "2024-12-18T22:14:14Z",
+      "comments": 2,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-java/issues/145",
+      "author_association": "NONE"
+    },
+    {
+      "number": 142,
+      "title": "Checksum comparison should be case insensitive",
+      "state": "open",
+      "created_at": "2023-03-29T12:49:53Z",
+      "updated_at": "2023-03-29T12:49:53Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-java/issues/142",
+      "author_association": "NONE"
+    },
+    {
+      "number": 140,
+      "title": "Accented character in filename prevents payload verification on macOS",
+      "state": "open",
+      "created_at": "2022-12-04T00:53:30Z",
+      "updated_at": "2023-02-16T16:52:09Z",
+      "closed_at": null,
+      "comments": 10,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-java/issues/140",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

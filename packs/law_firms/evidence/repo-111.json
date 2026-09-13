@@ -1,0 +1,122 @@
+{
+  "audit_id": "R111",
+  "requested_full_name": "LibraryOfCongress/bagit-conformance-suite",
+  "observed_at": "2026-09-13T16:11:31.701878+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "LibraryOfCongress/bagit-conformance-suite",
+  "html_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite",
+  "description": "Test cases for validating BagIt implementations",
+  "stargazers_count": 12,
+  "forks_count": 8,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2016-02-26T19:58:19Z",
+  "updated_at": "2025-11-30T22:51:18Z",
+  "pushed_at": "2023-01-10T19:44:04Z",
+  "size": 59,
+  "open_issues_count": 6,
+  "topics": [],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "9ab48705c06664f9f419ca740c728c9f89a61e7c",
+  "last_commit": "2021-11-18T20:03:21Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/LibraryOfCongress/bagit-conformance-suite",
+    "commit": "https://github.com/LibraryOfCongress/bagit-conformance-suite/commit/9ab48705c06664f9f419ca740c728c9f89a61e7c"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "51ec54495836c0b3995856fc28d7860063daecb9605de0bf2ae3f0a37217e686",
+    "text": "# BagIt Conformance Suite\n\nThis is a simple collection of BagIt format test cases for different implementations.\n\n## Structure\n\n* The top level of the repository contains directories for each version of the BagIt RFC, prefixed with \"v\"\n* Each version directory should contain a directory named “valid” containing bag directories which must pass validation\n  and \"invalid\" containing bag directories which must fail validation.\n* It may also have the following optional directories:\n  * a \"warning\" directory containing bags which are still valid but should produce a warning\n  * a \"linux-only\" directory that has specific invalid tests that would only occur on a POSIX operating systems (tested on Linux)\n  * a \"windows-only\" directory that has specific invalid tests that would only occur on Windows operating systems\n* Each of the lower level directories should contain a human-meaningful name indicating the aspect being\n  tested\n\n## Running tests\n\nIf you have a bag validator which follows standard Unix convention, you can run all of the tests quickly using the provided test harness:\n\n    python test-harness -v -- ~/Projects/bagit-python/bagit.py --validate --quiet\n\n## Notes\n\n* Git's `core.autocrlf` setting can cause bag validation failures by converting CRLF files automatically\n  depending on your operating system and configuration. It is recommended that you disable it in your local\n  checkout of this repository:\n\n  `git config core.autocrlf false`\n\n## License\n\nThis repository is released as a [public domain work of the U.S. Government](LICENSE.md).\n\nContributions are gladly accepted but must be released into the public domain.\n",
+    "characters": 1647,
+    "source_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite/blob/9ab48705c06664f9f419ca740c728c9f89a61e7c/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "5c04122ef6c407538ae4e0b4317f513136fdb79aeb44a8c8cde91ab6c742cad0",
+    "text": "As a work of the United States Government, this project is in the\npublic domain within the United States.\n\nAdditionally, we waive copyright and related rights in the work\nworldwide through the CC0 1.0 Universal public domain dedication.\n\n## CC0 1.0 Universal Summary\n\nThis is a human-readable summary of the\n[Legal Code (read the full text)](https://creativecommons.org/publicdomain/zero/1.0/legalcode).\n\n### No Copyright\n\nThe person who associated a work with this deed has dedicated the work to\nthe public domain by waiving all of his or her rights to the work worldwide\nunder copyright law, including all related and neighboring rights, to the\nextent allowed by law.\n\nYou can copy, modify, distribute and perform the work, even for commercial\npurposes, all without asking permission.\n\n### Other Information\n\nIn no way are the patent or trademark rights of any person affected by CC0,\nnor are the rights that other persons may have in the work or in how the\nwork is used, such as publicity or privacy rights.\n\nUnless expressly stated otherwise, the person who associated a work with\nthis deed makes no warranties about the work, and disclaims liability for\nall uses of the work, to the fullest extent permitted by applicable law.\nWhen using or citing the work, you should not imply endorsement by the\nauthor or the affirmer.\n",
+    "characters": 1327,
+    "source_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite/blob/9ab48705c06664f9f419ca740c728c9f89a61e7c/LICENSE.md",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "johnscancella",
+      "contributions": 17
+    },
+    {
+      "login": "acdha",
+      "contributions": 17
+    },
+    {
+      "login": "whikloj",
+      "contributions": 2
+    },
+    {
+      "login": "jscancella",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 11,
+      "title": "Logging configuration",
+      "state": "closed",
+      "created_at": "2019-11-20T17:13:41Z",
+      "updated_at": "2021-11-18T20:03:21Z",
+      "closed_at": "2021-11-18T20:03:21Z",
+      "comments": 0,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite/issues/11",
+      "author_association": "CONTRIBUTOR"
+    },
+    {
+      "number": 8,
+      "title": "Test cases for bag-info values",
+      "state": "open",
+      "created_at": "2017-02-28T19:45:48Z",
+      "updated_at": "2017-11-16T16:06:47Z",
+      "closed_at": null,
+      "comments": 5,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite/issues/8",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 5,
+      "title": "Confirm correct handling of out-of-scope file access",
+      "state": "closed",
+      "created_at": "2016-11-29T19:37:43Z",
+      "updated_at": "2017-11-16T16:05:01Z",
+      "closed_at": "2017-11-16T16:05:01Z",
+      "comments": 3,
+      "html_url": "https://github.com/LibraryOfCongress/bagit-conformance-suite/issues/5",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
