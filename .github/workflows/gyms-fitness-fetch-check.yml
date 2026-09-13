@@ -1,0 +1,29 @@
+name: Gyms public fetch diagnostic
+on:
+  push:
+    branches: [research/gyms-fitness-20260913]
+    paths: [.github/workflows/gyms-fitness-fetch-check.yml]
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Report only public error message and rate limit headers
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request,urllib.error
+          for name in ['wger-project/wger','sisodias/siso-repo-bank']:
+              req=urllib.request.Request('https://api.github.com/repos/'+name,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'siso-public-fetch-check'})
+              try:
+                  with urllib.request.urlopen(req,timeout=30) as r:
+                      data=json.load(r); print(json.dumps({'repository':name,'status':r.status,'full_name':data.get('full_name'),'headers':{h:r.headers.get(h) for h in ['x-ratelimit-remaining','x-ratelimit-reset','retry-after']}}))
+              except urllib.error.HTTPError as e:
+                  try: data=json.load(e)
+                  except Exception: data={}
+                  print(json.dumps({'repository':name,'status':e.code,'message':data.get('message'),'headers':{h:e.headers.get(h) for h in ['x-ratelimit-remaining','x-ratelimit-reset','retry-after']}}))
+          PY
