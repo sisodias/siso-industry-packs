@@ -1,0 +1,1400 @@
+[
+  {
+    "full_name": "ledger/ledger",
+    "requested_name": "ledger/ledger",
+    "id": 16309,
+    "url": "https://github.com/ledger/ledger",
+    "stars": 6034,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "76b9dc2b225725da3d646515d1c9a3d4d626af29",
+    "last_commit_date": "2026-09-04T22:47:34Z",
+    "archived": false,
+    "fork": false,
+    "description": "Double-entry accounting system with a command-line reporting interface",
+    "language": "C++",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "Copyright (c) 2003-2025, John Wiegley.  All rights reserved."
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Ledger: Command-Line Accounting",
+      "## For the Impatient",
+      "## Docker version",
+      "## Dependencies",
+      "### macOS",
+      "#### 1. Homebrew",
+      "#### 2. MacPorts",
+      "### Conda",
+      "### Ubuntu",
+      "### Debian",
+      "### Fedora",
+      "## Building",
+      "## Python Bindings",
+      "### Prerequisites",
+      "### Building with Python Support",
+      "### Installing the Python Module",
+      "### Using Without Installing",
+      "## Resources"
+    ],
+    "recent_commit_count": 803,
+    "recent_authors_sample50": [
+      "Gumnos",
+      "afh",
+      "dependabot[bot]",
+      "jwiegley",
+      "krekhovx",
+      "lggcs",
+      "nkgotcode"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/ledger/ledger/issues/1934",
+        "createdAt": "2020-06-21T23:09:38Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-07-08T03:44:55Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2023-04-16T19:51:37Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-04-17T13:54:18Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-04-17T20:04:39Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-04-18T17:32:41Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-04-19T04:46:30Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-04-19T20:28:37Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-04-19T22:45:49Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-04-20T21:41:46Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-05-06T00:59:23Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/ledger/ledger/issues/3261",
+        "createdAt": "2026-08-27T05:59:04Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-30T13:50:01Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".clang-format",
+      ".clang-tidy",
+      ".clangd",
+      ".dir-locals.el",
+      ".format",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      ".yamllint",
+      "CLAUDE.md",
+      "CMakeLists.txt",
+      "CONTRIBUTING.md",
+      "INSTALL.md",
+      "LICENSE.md",
+      "NEWS.md",
+      "README-snapshot.md",
+      "README.md",
+      "acprep",
+      "benchmark",
+      "cmake",
+      "contrib",
+      "default.nix",
+      "doc",
+      "flake.lock",
+      "flake.nix",
+      "lean",
+      "lefthook.yml",
+      "lib",
+      "lsan-suppressions.txt",
+      "python",
+      "scripts",
+      "shell.nix",
+      "src",
+      "test",
+      "tools",
+      "ubsan-suppressions.txt"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ledger/ledger/blob/76b9dc2b225725da3d646515d1c9a3d4d626af29/README.md",
+        "sha256": "ef94dd57cd6fb6f2a7a85e2ef9764c06dc8abf7c63ea2e2ec1de88d7d15a528d",
+        "bytes": 10156
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/ledger/ledger/blob/76b9dc2b225725da3d646515d1c9a3d4d626af29/LICENSE.md",
+        "sha256": "f79a4a9e719561cf9f4046e958e134f9cce908b83c934805b5e25dc6fe5541e9",
+        "bytes": 1492
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ledger/ledger/commit/76b9dc2b225725da3d646515d1c9a3d4d626af29",
+      "metadata": "https://api.github.com/repos/ledger/ledger"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Join the chat at https://gitter.im/use-package/Lobby](https://badges.gitter.im/use-package/Lobby.svg)](https://gitter.im/use-package/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![Build Status main](https://github.com/ledger/ledger/actions/workflows/cmake.yml/badge.svg) [![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat)](https://github.com/ledger/ledger/pulse/monthly) [![License](https://img.shields.io/badge/license-BSD-blue.svg?style=flat)](https://opensource.org/licenses/BSD-3-Clause) [![GitHub release](https://img.shields.io/github/release/ledger/ledger.svg?style=flat)](https://github.com/ledger/ledger/releases) # Ledger: Command-Line Accounting Ledger is a powerful, double-entry accounting system that is",
+    "license_excerpt": "Copyright (c) 2003-2025, John Wiegley. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/license-BSD-blue.svg?style=flat)](https://opensource.org/licenses/BSD-3-Clause)",
+      "## Docker version",
+      "If you have Docker installed on your computer or server, you can use a [Docker version](https://hub.docker.com/r/dcycle/ledger/) of this software, without installing any further dependencies:",
+      "$ docker run --rm -v \"$PWD\"/test/input:/data dcycle/ledger:1 -f /data/sample.dat reg",
+      "Note that some features, e.g. `--import` require building Ledger with Python support.",
+      "The easiest way to get them for your platform is to run this handy Python script:",
+      "[Python]    | 3.10 _optional_",
+      "$ brew install cmake boost boost-python3 gmp mpfr",
+      "$ sudo port install -f cmake python37 \\",
+      "boost +st+python37+icu texlive doxygen graphviz \\",
+      "$ conda install -c conda-forge python=3 cmake boost gmp mpfr \\",
+      "libboost-system-dev libboost-dev python3-dev gettext git \\",
+      "libboost-iostreams-dev libboost-python-dev libboost-regex-dev \\",
+      "$ sudo apt-get install build-essential cmake autopoint texinfo python3-dev \\",
+      "libboost-python-dev libboost-regex-dev libboost-test-dev",
+      "boost-iostreams boost-python3-devel boost-regex boost-system \\",
+      "mpfr-devel python3-devel texinfo tzdata",
+      "# $HOME/local and build with 2 processes in parallel"
+    ],
+    "dependency_repos": [
+      "ledger/ledger",
+      "ledger/ledger-mode",
+      "ledger/vim-ledger",
+      "mamba-org/mamba"
+    ]
+  },
+  {
+    "full_name": "hledgerorg/hledger",
+    "requested_name": "simonmichael/hledger",
+    "id": 9301414,
+    "url": "https://github.com/hledgerorg/hledger",
+    "stars": 4703,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f3bd24078556ccf941d740e64dc70cf1440e5fa0",
+    "last_commit_date": "2026-09-12T23:29:52Z",
+    "archived": false,
+    "fork": false,
+    "description": "Robust, fast, intuitive plain text accounting tool with CLI, TUI and web interfaces.",
+    "language": "Haskell",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# hledger",
+      "## Robust, intuitive plain text accounting",
+      "## Examples",
+      "## hledger 1.x and 2.x",
+      "## Funding",
+      "### Organisational sponsors",
+      "### Individual sponsors"
+    ],
+    "recent_commit_count": 1148,
+    "recent_authors_sample50": [
+      "acinader",
+      "simonmichael",
+      "thielema"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/hledgerorg/hledger/issues/2672",
+        "createdAt": "2026-07-27T14:48:06Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-30T13:49:26Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-07-30T13:54:53Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-07-30T14:01:29Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-07-30T14:09:09Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-07-30T14:50:10Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-09-12T17:17:34Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-12T19:00:00Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2026-09-13T03:19:58Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/hledgerorg/hledger/issues/2261",
+        "createdAt": "2024-10-14T13:24:39Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-10-14T17:11:29Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2024-10-14T17:13:29Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2024-10-14T17:59:32Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2024-10-15T08:35:42Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2024-10-15T08:47:15Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2024-10-15T08:59:05Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2024-10-15T09:25:48Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2024-10-15T18:44:57Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2024-12-29T17:21:53Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2024-12-29T19:16:33Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".ctags",
+      ".dockerignore",
+      ".editorconfig",
+      ".ghci",
+      ".github",
+      ".gitignore",
+      ".hlint.yaml",
+      ".ignore",
+      ".mailmap",
+      ".sandstorm",
+      ".version",
+      ".vscode",
+      "CHANGES",
+      "Dockerfile",
+      "Justfile",
+      "LICENSE",
+      "Makefile",
+      "Makefile.helpsys",
+      "README.md",
+      "Shake.hs",
+      "azure-pipelines.yml",
+      "bench-10ktxns-100kaccts.sh",
+      "bench-10ktxns-10kaccts.sh",
+      "bench-ledger.sh",
+      "bench-many-accts.sh",
+      "bench-many-txns.sh",
+      "bench.sh",
+      "bench100k.sh",
+      "bench10k.sh",
+      "bench1k.sh",
+      "bench5k.sh",
+      "bin",
+      "cabal.project",
+      "checks",
+      "dev.hs",
+      "dir",
+      "doc",
+      "docker-arm32v7",
+      "docker",
+      "examples",
+      "ghc-tags.yaml",
+      "hie-cabal.yaml",
+      "hie-stack.yaml",
+      "hledger-lib",
+      "hledger-ui",
+      "hledger-web",
+      "hledger.conf",
+      "hledger.conf.sample",
+      "hledger.css",
+      "hledger",
+      "hx.lock",
+      "hx.toml",
+      "rledger.just",
+      "stack.yaml",
+      "stack910.yaml",
+      "stack912.yaml",
+      "stack96.yaml",
+      "stack98.yaml",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/hledgerorg/hledger/blob/f3bd24078556ccf941d740e64dc70cf1440e5fa0/README.md",
+        "sha256": "39b3255f26efb32fa743d50c32584786ba34f24b107984dc6114661ec4911fa9",
+        "bytes": 20375
+      },
+      "LICENSE": {
+        "url": "https://github.com/hledgerorg/hledger/blob/f3bd24078556ccf941d740e64dc70cf1440e5fa0/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/hledgerorg/hledger/commit/f3bd24078556ccf941d740e64dc70cf1440e5fa0",
+      "metadata": "https://api.github.com/repos/hledgerorg/hledger"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# hledger ## Robust, intuitive plain text accounting [![license](https://img.shields.io/badge/license-GPLv3+-brightgreen.svg)](https://www.gnu.org/licenses/gpl.html) [![on hackage](https://img.shields.io/hackage/v/hledger.svg?label=hackage&colorB=green)](https://hackage.haskell.org/package/hledger) [![](https://repology.org/badge/version-for-repo/stackage_nighly/hledger.svg)](https://repology.org/metapackage/hledger) [![](https://repology.org/badge/version-for-repo/stackage_lts/hledger.svg)](https://repology.org/metapackage/hledger) [![Open issues, all kinds](https://img.shields.io/github/issues/hledgerorg/hledger.svg \"Open issues, all kinds.\")](https://github.com/hledgerorg/hledger/issues?q=is:issue+state:open) Welcome! This is a brief intro to hledger. For a more detailed version, see the home page: ** ** hledger is lightweight, cross platform, multi-currency, double-entry accounting software. It lets you track money, investments, cryptocurrencies, invoices, time, inventory and more, in a safe, future-proof plain text data format with full version control and privacy. hledger aims to help both computer experts and regular folks gain clarity in their finances and time management. Though the UIs are basic, hledger can model any accounting situation and provide precise, clear reports. It is reliable, quick, and backed by the highly supportive [Plain Text Accounting](https://plaintextaccounting.org) ecosystem. Using it is an excellent way to learn double entry accounting. Compared to [other PTA apps](https://plaintextaccounting.org/#software), hledger is actively maintained, with regular releases, and a strong focus on being easy to use and practical for everyday accounting. More features: - Installs easily on unix, mac or windows - Complete, built-in documentation in multiple formats, beginner videos, tutorials",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![license](https://img.shields.io/badge/license-GPLv3+-brightgreen.svg)](https://www.gnu.org/licenses/gpl.html)",
+      "- Free software licensed under GNU General Public License v3.0 or later."
+    ],
+    "dependency_repos": [
+      "hledgerorg/hledger"
+    ]
+  },
+  {
+    "full_name": "Gnucash/gnucash",
+    "requested_name": "Gnucash/gnucash",
+    "id": 7966650,
+    "url": "https://github.com/Gnucash/gnucash",
+    "stars": 4345,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "0eb3e8eb752aa0217054e494b9c4567a987a3156",
+    "last_commit_date": "2026-09-11T23:15:29Z",
+    "archived": false,
+    "fork": false,
+    "description": "GnuCash Double-Entry Accounting Program.",
+    "language": "C",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "\t\t    GNU GENERAL PUBLIC LICENSE",
+      " Copyright (C) 1989, 1991 Free Software Foundation, Inc.",
+      "the GNU Library General Public License instead.)  You can apply it to",
+      "\t\t    GNU GENERAL PUBLIC LICENSE",
+      "copyright notice and disclaimer of warranty; keep intact all the",
+      "original copyright holder who places the Program under this License",
+      "WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR",
+      "the \"copyright\" line and a pointer to where the full notice is found."
+    ],
+    "license_files_read": true,
+    "readme_path": "README",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 784,
+    "recent_authors_sample50": [
+      "CWehli",
+      "Ceaus",
+      "Kraksen",
+      "Miroslav Kure",
+      "MocioF",
+      "PRG-112",
+      "SziaTomi",
+      "bpschuck",
+      "christopherlam",
+      "claude",
+      "jralls",
+      "limburgher",
+      "pmrasd",
+      "taoyouh"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "AUTHORS",
+      "CMakeLists.txt",
+      "ChangeLog.1999",
+      "ChangeLog.2000",
+      "ChangeLog.2001",
+      "ChangeLog.2002",
+      "ChangeLog.2003",
+      "ChangeLog.2004",
+      "ChangeLog.2005",
+      "ChangeLog.2006",
+      "ChangeLog.2006-manual",
+      "ChangeLog.2007",
+      "ChangeLog.2008",
+      "ChangeLog.2009",
+      "ChangeLog.2010",
+      "ChangeLog.2011",
+      "ChangeLog.2012",
+      "ChangeLog.2013",
+      "ChangeLog.2014",
+      "ChangeLog.2015",
+      "ChangeLog.2016",
+      "ChangeLog.2017",
+      "ChangeLog.2018",
+      "ChangeLog.2019",
+      "ChangeLog.2020",
+      "ChangeLog.2021",
+      "ChangeLog.2022",
+      "ChangeLog.2023",
+      "ChangeLog.2024",
+      "ChangeLog.2025",
+      "DOCUMENTERS",
+      "HACKING",
+      "Info.plist",
+      "LICENSE",
+      "Makefile.TAGS",
+      "NEWS",
+      "README",
+      "README.dependencies",
+      "README.git",
+      "bindings",
+      "borrowed",
+      "cmake",
+      "common",
+      "contrib",
+      "data",
+      "doc",
+      "doxygen.cfg.in",
+      "doxygen_main_page.c",
+      "gnucash",
+      "libgnucash",
+      "po",
+      "test-templates",
+      "util"
+    ],
+    "source_files": {
+      "README": {
+        "url": "https://github.com/Gnucash/gnucash/blob/0eb3e8eb752aa0217054e494b9c4567a987a3156/README",
+        "sha256": "1de7416b941876157e42ab16d2185923569cbfe44ac69377f8a46ed2097f7e3c",
+        "bytes": 7614
+      },
+      "LICENSE": {
+        "url": "https://github.com/Gnucash/gnucash/blob/0eb3e8eb752aa0217054e494b9c4567a987a3156/LICENSE",
+        "sha256": "94063db55ef325a24ef806dcd8e6d868c88722bd0239c6c0202b2224fa0e8be8",
+        "bytes": 19423
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Gnucash/gnucash/commit/0eb3e8eb752aa0217054e494b9c4567a987a3156",
+      "metadata": "https://api.github.com/repos/Gnucash/gnucash"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "############################################################ GnuCash README file. The current stable series is GnuCash 5.x. ------------------------------------------------------------ ################## Table of Contents: ------------------ - Overview - Dependencies - Invocation/running - Internationalization",
+    "license_excerpt": "This software is provided under a mutually-compatible set of licenses. The software, for most intents and purposes, is licensed under the GNU General Public License,",
+    "license_warnings": [],
+    "runtime_clues": [
+      "The optional online stock and currency price retrieval feature requires Perl.",
+      "Microsoft Windows users can use the \"Install Online Quotes\" program in the",
+      "GnuCash will use the locale configured in the desktop environment if",
+      "likes. Instructions for overriding the locale settings may be found at",
+      "https://wiki.gnucash.org/wiki/Locale_Settings",
+      "`/tmp/staging'.  If `/gnu/bin/foo' and `/gnu/share/aclocal/foo.m4' are",
+      "`/tmp/staging/gnu/share/aclocal/foo.m4'.",
+      "places (for instance, if you've installed webkit in /usr/local) you"
+    ],
+    "dependency_repos": [
+      "Gnucash/gnucash."
+    ]
+  },
+  {
+    "full_name": "portfolio-performance/portfolio",
+    "requested_name": "portfolio-performance/portfolio",
+    "id": 3816238,
+    "url": "https://github.com/portfolio-performance/portfolio",
+    "stars": 4072,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "876565dedf5262e1715f39195eb9d92440cfaabd",
+    "last_commit_date": "2026-09-13T14:24:29Z",
+    "archived": false,
+    "fork": false,
+    "description": "Track and evaluate the performance of your investment portfolio across stocks, cryptocurrencies, and other assets.",
+    "language": "Java",
+    "license": "EPL-1.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "     copyright rights in its Contribution, if any, to grant the copyright"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# About",
+      "## Status",
+      "## Links",
+      "## Contributing Source Code",
+      "## Public GPG Key",
+      "## License"
+    ],
+    "recent_commit_count": 416,
+    "recent_authors_sample50": [
+      "MMarafi",
+      "Metal450",
+      "Mikerion",
+      "buchen",
+      "dependabot[bot]",
+      "investnitin71-art",
+      "kimmerin",
+      "stoeggich"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/portfolio-performance/portfolio/issues/5131",
+        "createdAt": "2025-11-09T15:50:50Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-11T20:42:33Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-09-12T20:46:41Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-09-12T21:14:03Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/portfolio-performance/portfolio/issues/6006",
+        "createdAt": "2026-09-11T10:29:25Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-11T20:01:52Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-09-12T07:55:56Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-09-12T18:22:29Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "docs",
+      "features",
+      "name.abuchen.portfolio.bootstrap",
+      "name.abuchen.portfolio.feature",
+      "name.abuchen.portfolio.junit",
+      "name.abuchen.portfolio.pdfbox1",
+      "name.abuchen.portfolio.pdfbox3",
+      "name.abuchen.portfolio.tests",
+      "name.abuchen.portfolio.ui.tests",
+      "name.abuchen.portfolio.ui",
+      "name.abuchen.portfolio",
+      "portfolio-app",
+      "portfolio-build-tools-check",
+      "portfolio-build-tools",
+      "portfolio-product",
+      "portfolio-target-definition"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/portfolio-performance/portfolio/blob/876565dedf5262e1715f39195eb9d92440cfaabd/README.md",
+        "sha256": "2cd3963824b6235bdc2f2f42a844496ca465118f3fc88a8311f9f25dde434232",
+        "bytes": 2860
+      },
+      "LICENSE": {
+        "url": "https://github.com/portfolio-performance/portfolio/blob/876565dedf5262e1715f39195eb9d92440cfaabd/LICENSE",
+        "sha256": "22e0ff3e946377a65cede42300b894ab228488194b1474412bb305a68327b4f0",
+        "bytes": 11514
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/portfolio-performance/portfolio/commit/876565dedf5262e1715f39195eb9d92440cfaabd",
+      "metadata": "https://api.github.com/repos/portfolio-performance/portfolio"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# About [Portfolio Performance](https://www.portfolio-performance.info): Track and evaluate the performance of your investment portfolio across stocks, cryptocurrencies, and other assets. ## Status [![Build Status](https://github.com/portfolio-performance/portfolio/workflows/CI/badge.svg)](https://github.com/portfolio-performance/portfolio/actions?query=workflow%3ACI) [![Latest Release](https://img.shields.io/github/release/buchen/portfolio.svg)](https://github.com/portfolio-performance/portfolio/releases/latest) [![Release Date](https://img.shields.io/github/release-date/buchen/portfolio?color=blue)](https://github.com/portfolio-performance/portfolio/releases/latest) [![License](https://img.shields.io/github/license/buchen/portfolio.svg)](https://github.com/portfolio-performance/portfolio/blob/master/LICENSE) [![LOC](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=ncloc)](https://sonarcloud.io/dashboard?id=name.abuchen.portfolio%3Aportfolio-app) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=bugs)](https://sonarcloud.io/project/issues?id=name.abuchen.portfolio%3Aportfolio-app&resolved=false&types=BUG) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=vulnerabilities)](https://sonarcloud.io/project/issues?id=name.abuchen.portfolio%3Aportfolio-app&resolved=false&types=VULNERABILITY) [![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=name.abuchen.portfolio%3Aportfolio-app&metric=coverage)](https://sonarcloud.io/component_measures?id=name.abuchen.portfolio%3Aportfolio-app&metric=Coverage) ## Links * [Homepage](https://www.portfolio-performance.info) * [Downloads](https://github.com/portfolio-performance/portfolio/releases) * [Forum](https://forum.portfolio-performance.info/) * [Manual](https://help.portfolio-performance.info/en) ## Contributing Source Code * [Development setup](CONTRIBUTING.md#development-setup) * [Project setup](CONTRIBUTING.md#eclipse-ide-setup) * [Contributing code](CONTRIBUTING.md#contributing-code) * [Images and Icons](CONTRIBUTING.md#images-and-icons) * [Translations](CONTRIBUTING.md#translations) * [Interactive Flex Query Importers](CONTRIBUTING.md#interactive-flex-query-importers) * [PDF Importers](CONTRIBUTING.md#pdf-importers) * [Trade Calendars](CONTRIBUTING.md#trade-calendars) ## Public GPG Key Fingerprint: `E46E 6F8F F02E 4C83 5690 8458 9239 277F 560C 95AC` * [OpenPGP](https://keys.openpgp.org/search?q=0xe46e6f8ff02e4c83569084589239277f560c95ac) * [Ubuntu Keyserver](https://keyserver.ubuntu.com/pks/lookup?search=e46e6f8ff02e4c83569084589239277f560c95ac&fingerprint=on&op=index) ## License Eclipse Public License https://www.eclipse.org/legal/epl-v10.html",
+    "license_excerpt": "Eclipse Public License - v 1.0 THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE (\"AGREEMENT\"). ANY USE, REPRODUCTION OR DISTRIBUTION",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Build Status](https://github.com/portfolio-performance/portfolio/workflows/CI/badge.svg)](https://github.com/portfolio-performance/portfolio/actions?query=workflow%3ACI) [![Latest Release](https://img.shields.io/github/release/buchen/portfolio.svg)](https:/",
+      "## License",
+      "Eclipse Public License"
+    ],
+    "dependency_repos": [
+      "portfolio-performance/portfolio"
+    ]
+  },
+  {
+    "full_name": "ghostfolio/ghostfolio",
+    "requested_name": "ghostfolio/ghostfolio",
+    "id": 357671824,
+    "url": "https://github.com/ghostfolio/ghostfolio",
+    "stars": 9293,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "9884fa0be2e7649cf004967d9d70178be119318b",
+    "last_commit_date": "2026-09-13T05:47:28Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript \ud83e\udd0d",
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Ghostfolio",
+      "## Ghostfolio Premium",
+      "## Why Ghostfolio?",
+      "## Features",
+      "## Technology Stack",
+      "### Backend",
+      "### Frontend",
+      "## Self-hosting",
+      "### Supported Environment Variables",
+      "#### OpenID Connect OIDC (experimental)",
+      "### Run with Docker Compose",
+      "#### Prerequisites",
+      "#### a. Run environment",
+      "#### b. Build and run environment",
+      "#### Setup",
+      "#### Upgrade Version",
+      "### Home Server Systems (Community)",
+      "## Development",
+      "## Public API",
+      "### Authorization: Bearer Token",
+      "### Health Check (experimental)",
+      "#### Request",
+      "#### Response",
+      "### Import Activities",
+      "#### Prerequisites",
+      "#### Request",
+      "#### Body",
+      "#### Response",
+      "### Portfolio (experimental)",
+      "#### Prerequisites"
+    ],
+    "recent_commit_count": 958,
+    "recent_authors_sample50": [
+      "Lyndros",
+      "Pial-Al-Mamun",
+      "asyncAndChill",
+      "dtslvr",
+      "github-actions[bot]",
+      "slagiewka"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/ghostfolio/ghostfolio/issues/7864",
+        "createdAt": "2026-09-11T04:09:03Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-11T04:30:07Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T05:59:44Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-13T07:32:51Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/ghostfolio/ghostfolio/issues/7852",
+        "createdAt": "2026-09-08T12:32:17Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-11T22:40:18Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".config",
+      ".editorconfig",
+      ".env.dev",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc",
+      ".vscode",
+      "CHANGELOG.md",
+      "DEVELOPMENT.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "apps",
+      "docker",
+      "eslint.config.cjs",
+      "jest.config.ts",
+      "jest.preset.js",
+      "libs",
+      "nx.json",
+      "package-lock.json",
+      "package.json",
+      "prisma",
+      "replace.build.mjs",
+      "skills-lock.json",
+      "test",
+      "tools",
+      "tsconfig.base.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/README.md",
+        "sha256": "922b5414510a5670e38d1bcef1fe0d4c246a17437da8cc77d526f79ff5fde181",
+        "bytes": 22351
+      },
+      "LICENSE": {
+        "url": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/LICENSE",
+        "sha256": "85276abb93d6782a9bd09bd1c792cf309c0ed4a6dee363a0f9f3b961c4be0128",
+        "bytes": 32337
+      },
+      "package.json": {
+        "url": "https://github.com/ghostfolio/ghostfolio/blob/9884fa0be2e7649cf004967d9d70178be119318b/package.json",
+        "sha256": "484bcc71b35871f0a319f4cf14c8c3e0e5e2494901963cf1e445ea294633bca6",
+        "bytes": 8253
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/ghostfolio/ghostfolio/commit/9884fa0be2e7649cf004967d9d70178be119318b",
+      "metadata": "https://api.github.com/repos/ghostfolio/ghostfolio"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[ ](https://ghostfol.io) # Ghostfolio **Open Source Wealth Management Software** [**Ghostfol.io**](https://ghostfol.io) | [**Live Demo**](https://ghostfol.io/en/demo) | [**Ghostfolio Premium**](https://ghostfol.io/en/pricing) | [**FAQ**](https://ghostfol.io/en/faq) | [**Blog**](https://ghostfol.io/en/blog) | [**LinkedIn**](https://www.linkedin.com/company/ghostfolio) | [**Slack**](https://join.slack.com/t/ghostfolio/shared_invite/zt-vsaan64h-F_I0fEo5M0P88lP9ibCxFg) | [**X**](https://x.com/ghostfolio_) [![Shield: Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/ghostfolio) [![Shield: Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-limegreen.svg)](#contributing) [![Shield: Docker Pulls](https://img.shields.io/docker/pulls/ghostfolio/ghostfolio?label=Docker%20Pulls)](https://hub.docker.com/r/ghostfolio/ghostfolio) [![Shield: License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0) **Ghostfolio** is an open source wealth management software built with web technology. The application empowers busy people to keep track of stocks, ETFs or cryptocurrencies and make solid, data-driven investment decisions. The software is designed for personal use in continuous operation. [ ](https://www.youtube.com/watch?v=yY6ObSQVJZk) ## Ghostfolio Premium Our official **[Ghostfolio Premium](https://ghostfol.io/en/pricing)** cloud offering is the easiest way to get started. Due to the time it saves, this will be the best option for most people. Revenue is used to cover operational costs for the hosting infrastructure and professional data providers, and to fund ongoing development. If you prefer to run Ghostfolio on your own infrastructure, please find further instructions in the [Self-hosting](#self-hosting) section. ## Why Ghostfolio? Ghostfolio is for you if you are... - \ud83d\udcbc trading stocks, ETFs or cryptocurrencies on multiple platforms - \ud83c\udfe6 pursuing a buy & hold",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Shield: Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-limegreen.svg)](#contributing) [![Shield: Docker Pulls](https://img.shields.io/docker/pulls/ghostfolio/ghostfolio?label=Docker%20Pulls)](https://hub.docker.com/r/ghostfolio/gh",
+      "[![Shield: License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-orange.svg)](https://www.gnu.org/licenses/agpl-3.0)",
+      "If you prefer to run Ghostfolio on your own infrastructure, please find further instructions in the [Self-hosting](#self-hosting) section.",
+      "## Self-hosting",
+      "We provide official container images hosted on [Docker Hub](https://hub.docker.com/r/ghostfolio/ghostfolio) for `linux/amd64`, `linux/arm/v7` and `linux/arm64`.",
+      "Find answers to commonly asked questions about self-hosting Ghostfolio in our [Frequently Asked Questions (FAQ)](https://ghostfol.io/en/faq/self-hosting) section.",
+      "| `DATABASE_URL`              | `string`              |                       | The database connection URL. If using a connection pooler, use the pooled connection URL here. e.g. `postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@localhost:5432/${POSTGRES_DB",
+      "| `TRUST_PROXY`               | `string` (optional)   |                       | The [trust proxy](https://expressjs.com/en/guide/behind-proxies.html) setting of _Express.js_ to determine the client IP address for rate limiting, e.g. `1` if the Ghostfolio appli",
+      "### Run with Docker Compose",
+      "- Basic knowledge of Docker",
+      "- Installation of [Docker](https://www.docker.com/products/docker-desktop)",
+      "- Create a local copy of this Git repository (clone)",
+      "Run the following command to start the Docker images from [Docker Hub](https://hub.docker.com/r/ghostfolio/ghostfolio):",
+      "docker compose -f docker/docker-compose.yml up -d",
+      "Run the following commands to build and start the Docker images:",
+      "docker compose -f docker/docker-compose.build.yml build",
+      "docker compose -f docker/docker-compose.build.yml up -d",
+      "1. Open http://localhost:3333 in your browser"
+    ],
+    "dependency_repos": [
+      "bigbeartechworld/big-bear-casaos",
+      "ghostfolio/ghostfolio",
+      "lildude/ha-addon-ghostfolio",
+      "sponsors/ghostfolio",
+      "topics/ghostfolio"
+    ]
+  },
+  {
+    "full_name": "rotki/rotki",
+    "requested_name": "rotki/rotki",
+    "id": 123909654,
+    "url": "https://github.com/rotki/rotki",
+    "stars": 4023,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fe32b325fd77f54d718864446d5a32150fc5a979",
+    "last_commit_date": "2026-09-11T14:16:28Z",
+    "archived": false,
+    "fork": false,
+    "description": "A portfolio tracking, analytics, accounting and management application that protects your privacy",
+    "language": "Python",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE.md"
+    ],
+    "license_headings": [
+      "### GNU AFFERO GENERAL PUBLIC LICENSE",
+      "Copyright (C) 2007 Free Software Foundation, Inc.",
+      "The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "The GNU Affero General Public License is designed specifically to",
+      "\"Copyright\" also means copyright-like laws that apply to other kinds",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "control copyright. Those thus making or running the covered works for"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## \ud83d\udccc **Table of Contents**",
+      "## \ud83d\udcd6 **Overview**",
+      "## \u2728 **Features**",
+      "## \ud83d\udd27 **Requirements**",
+      "## \ud83d\ude80 **Installation**",
+      "## \ud83d\udcd8 **Usage**",
+      "## \ud83d\udcdc **Changelog**",
+      "## \ud83e\udd1d **Contribute**",
+      "### Contributors",
+      "## \ud83d\udce2 **Get in Touch**",
+      "### \ud83d\udcac **Community & Support**",
+      "### \ud83d\udccc **Follow Us for Updates**",
+      "## \ud83d\udcb0 **Donations**",
+      "## \ud83d\udcc4 **License**",
+      "### Commercial licensing"
+    ],
+    "recent_commit_count": 2288,
+    "recent_authors_sample50": [
+      "LefterisJP",
+      "kelsos",
+      "yabirgb"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/rotki/rotki/issues/5709",
+        "createdAt": "2023-03-01T18:57:30Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-12T13:50:26Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/rotki/rotki/issues/9457",
+        "createdAt": "2025-02-18T21:50:10Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".codecov.yml",
+      ".coveragerc",
+      ".dockerignore",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".ignore",
+      ".pylint.rc",
+      ".readthedocs.yaml",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "LICENSE.md",
+      "Makefile",
+      "README.md",
+      "_typos.toml",
+      "colibri",
+      "crates",
+      "docs",
+      "frontend",
+      "funding.json",
+      "package.py",
+      "packaging",
+      "pyproject.toml",
+      "releases_sponsors.md",
+      "rotkehlchen.spec",
+      "rotkehlchen",
+      "rotkehlchen_mock",
+      "stubs",
+      "tools",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/README.md",
+        "sha256": "4073cf1e85c044d328f8e659d491df61c328a35b2519e2cb4731fd2b62c6f8a7",
+        "bytes": 8151
+      },
+      "LICENSE.md": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/LICENSE.md",
+        "sha256": "eb6f58a98d8bdb6d3c8fee3817543589f3cd0921d14748fa0630edff2d4c08b0",
+        "bytes": 34264
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/Cargo.toml",
+        "sha256": "784c5b33e8782ed0847fd103af1a694c562490556354d67bc85e568bb8dd85cb",
+        "bytes": 1436
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/rotki/rotki/blob/fe32b325fd77f54d718864446d5a32150fc5a979/pyproject.toml",
+        "sha256": "2ddb8753ade54a81ee86fcb1e7def23e6c23434e70b65da66db511c7d2a8a448",
+        "bytes": 20652
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/rotki/rotki/commit/fe32b325fd77f54d718864446d5a32150fc5a979",
+      "metadata": "https://api.github.com/repos/rotki/rotki"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "rotki: The Opensource, Self-Hosted Portfolio Manager A privacy-focused portfolio manager, accounting, and analytics tool. [![GitHub release](https://img.shields.io/github/release/rotki/rotki.svg)](https://GitHub.com/rotki/rotki/releases/) [![Docker Image Version](https://img.shields.io/docker/v/rotki/rotki/latest?label=Docker)](https://hub.docker.com/r/rotki/rotki) [![GitHub commits](https://img.shields.io/github/commits-since/rotki/rotki/latest.svg)](https://GitHub.com/rotki/rotki/commit/) [![GitHub contributors](https://img.shields.io/github/contributors/rotki/rotki.svg?style=flat)](https://github.com/rotki/rotki/graphs/contributors) [![Visitors](https://api.visitorbadge.io/api/visitors?path=rotki%2Frotki%20&countColor=%23263759&style=flat)](https://rotki.com/) [![GitHub forks](https://img.shields.io/github/forks/rotki/rotki)](https://github.com/rotki/rotki/forks) [![GitHub stars](https://img.shields.io/github/stars/rotki/rotki)](https://github.com/rotki/rotki/stargazers) [![GitHub last commit](https://img.shields.io/github/last-commit/rotki/rotki)](https://github.com/rotki/rotki/commits/master) [![Github downloads](https://img.shields.io/github/downloads/rotki/rotki/total.svg)](https://GitHub.com/rotki/rotki/releases/) [![Hiring](https://img.shields.io/badge/Hiring-Open-brightgreen)](https://rotki.com/jobs/) [![X Follow](https://img.shields.io/twitter/follow/rotkiapp)](https://x.com/rotkiapp) [![Discord](https://img.shields.io/discord/657906918408585217.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.rotki.com/) --- ## \ud83d\udccc **Table of Contents** - [\ud83d\udcd6 Overview](#overview) - [\u2728 Features](#features) - [\ud83d\udd27 Requirements](#requirements) - [\ud83d\ude80 Installation](#installation) - [\ud83d\udcd8 Usage](#usage) - [\ud83d\udcdc Changelog](#changelog) - [\ud83e\udd1d Contribute](#contribute) - [\ud83d\udce2 Get in Touch](#get-in-touch) - [\ud83d\udcb0 Donations](#donations) - [\ud83d\udcc4 License](#license) --- ## \ud83d\udcd6 **Overview** [rotki](https://rotki.com/) is an opensource self-hosted portfolio management tool that puts privacy first. Unlike most competitors, which are closed-source SaaS platforms requiring you to hand over sensitive financial data, rotki keeps your data encrypted and stored locally ensuring you stay in control. Our mission is to bring transparency to the crypto and financial sectors through opensource software, empowering users with a secure, self-sovereign alternative to cloud-based tracking services. \ud83d\udd39 **Why choose rotki?** - **Open-source & Transparent** \ud83d\udcd6 - **Self-hosted** \ud83c\udfe0 - **Privacy-Focused** \ud83d\udd12 - **Multi-Platform Support** \ud83d\udda5 - **Powerful Analytics & Reporting** \ud83d\udcca For **advanced features**, check out the [Pro Version](https://rotki.com/products/) or",
+    "license_excerpt": "### GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and",
+    "license_warnings": [
+      "commercial license"
+    ],
+    "runtime_clues": [
+      "<h1 align=\"center\">rotki: The Opensource, Self-Hosted Portfolio Manager</h1>",
+      "[![Docker Image Version](https://img.shields.io/docker/v/rotki/rotki/latest?label=Docker)](https://hub.docker.com/r/rotki/rotki)",
+      "- [\ud83d\udcc4 License](#license)",
+      "[rotki](https://rotki.com/) is an opensource self-hosted portfolio management tool that puts privacy first. Unlike most competitors, which are closed-source SaaS platforms requiring you to hand over sensitive financial data, rotki keeps your data encrypted and",
+      "- **Self-hosted** \ud83c\udfe0",
+      "- `Python 3.14`",
+      "- `uv` (Python Package Manager)",
+      "- `Docker`",
+      "<div id=\"license\"></div>",
+      "## \ud83d\udcc4 **License**",
+      "rotki is open-source and distributed under the **AGPLv3 License**.",
+      "\ud83d\udcdc **[Read the Full License](https://github.com/rotki/rotki/blob/develop/LICENSE.md)**",
+      "If your intended use of rotki (or parts of it) would trigger AGPL obligations (for example: embedding in a proprietary product, redistributing as part of a commercial offering, or offering a hosted/SaaS version), we can offer a commercial license as an alterna"
+    ],
+    "dependency_repos": [
+      "rotki/rotki"
+    ]
+  },
+  {
+    "full_name": "eprbell/rp2",
+    "requested_name": "eprbell/rp2",
+    "id": 380024351,
+    "url": "https://github.com/eprbell/rp2",
+    "stars": 401,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "eb2a36853db5094011d664cbe498a59b50dd44cd",
+    "last_commit_date": "2026-01-26T07:06:03Z",
+    "archived": false,
+    "fork": false,
+    "description": "Privacy-focused, free, open-source cryptocurrency tax calculator for multiple countries: it handles multiple coins/exchanges and computes long/short-term capital gains, cost bases, in/out lot relationships/fractioning, and account balances. It supports FIFO, LIFO, HIFO and it outputs in form 8949 format. It has a programmable plugin architecture",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2021 eprbell"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# RP2 v1.7.2",
+      "## Table of Contents",
+      "## Introduction",
+      "### How RP2 Operates",
+      "## License",
+      "## Download",
+      "## Installation",
+      "### Installation on Ubuntu Linux",
+      "### Installation on macOS",
+      "### Installation on Windows 10",
+      "### Installation on Other Unix-like Systems",
+      "## Running",
+      "## Input and Output Files",
+      "## Supported Countries and Accounting Methods",
+      "## RP2 Ecosystem",
+      "### List of Ecosystem Projects",
+      "## Reporting Bugs",
+      "## Contributing",
+      "## Developer Documentation",
+      "## Frequently Asked Questions",
+      "## Change Log"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/eprbell/rp2/issues/156",
+        "createdAt": "2026-07-04T10:37:27Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-06T06:56:05Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-07-10T10:14:30Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-07-31T23:33:50Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/eprbell/rp2/issues/149",
+        "createdAt": "2026-01-22T00:26:28Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-01-22T00:27:08Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-02-01T10:48:33Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-02-01T18:50:56Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-02-07T12:44:53Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-06-16T23:04:29Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-06-17T00:41:45Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-06-17T10:24:37Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2026-06-22T12:14:59Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2026-07-01T08:14:03Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-07-06T06:51:31Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "bank/bank_liftable_ranked.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": {
+      "full_name": "eprbell/rp2",
+      "stars": 392,
+      "license": "Apache-2.0",
+      "language": "Python",
+      "unit_class": "component",
+      "reuse_value": 75,
+      "liftability": 90,
+      "fame_gap": -15,
+      "cat_slug": "desktop-gui-app",
+      "cat_name": "Desktop GUI Application",
+      "description": "Privacy-focused, free, open-source cryptocurrency tax calculator for multiple countries: it handles multiple coins/excha"
+    },
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 1,
+        "stage": "W10",
+        "lane": "A",
+        "query": "tax lots"
+      },
+      {
+        "round": 2,
+        "stage": "W10",
+        "lane": "format",
+        "query": "tax FIFO"
+      }
+    ],
+    "root_entries": [
+      ".bumpversion.cfg",
+      ".editorconfig",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".isort.cfg",
+      ".pre-commit-config.yaml",
+      ".pylintrc",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "MANIFEST.in",
+      "Makefile",
+      "README.dev.md",
+      "README.md",
+      "config",
+      "docs",
+      "input",
+      "lychee.toml",
+      "mypy.ini",
+      "pyproject.toml",
+      "setup.cfg",
+      "setup.py",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/README.md",
+        "sha256": "d92b2a6319ef400eb0f3ca7c8d1a866299d97b1f295a45f8697c58b470d38975",
+        "bytes": 19168
+      },
+      "LICENSE": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/LICENSE",
+        "sha256": "798566881d2f202ca5f62c01e6a27ed451f9110b4018f8f46f881280ed1607b2",
+        "bytes": 11337
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/pyproject.toml",
+        "sha256": "2745e6bc83eb87b9065315662340fad6f3e15226c8ff13151907fb4835ca4e21",
+        "bytes": 276
+      },
+      "setup.py": {
+        "url": "https://github.com/eprbell/rp2/blob/eb2a36853db5094011d664cbe498a59b50dd44cd/setup.py",
+        "sha256": "9eab88ae585180329efa80f37d40691fe12a30658b6bb9a3635ff780f00ca624",
+        "bytes": 92
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/eprbell/rp2/commit/eb2a36853db5094011d664cbe498a59b50dd44cd",
+      "metadata": "https://api.github.com/repos/eprbell/rp2"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "![RP2 Logo](https://raw.githubusercontent.com/eprbell/rp2/main/docs/images/rp2_header.png) # RP2 v1.7.2 Privacy-focused, free, powerful crypto tax calculator **IMPORTANT NOTICE FOR USA TAXPAYERS**: Starting in 2025, the USA has transitioned from [Universal Application to Per-Wallet Application](https://github.com/eprbell/rp2/issues/135#issuecomment-2454959334). Support for Per-Wallet Application in RP2 is still under development \u2014 see [issue #135](https://github.com/eprbell/rp2/issues/135). Do not use RP2 for 2025 (and later) USA tax reporting until this issue is fully resolved. **IMPORTANT NOTICE FOR TAXPAYERS WORLDWIDE**: Support for Per-Wallet Application in RP2 is still in development - see [issue 135 for details](https://github.com/eprbell/rp2/issues/135#issuecomment-2454959334). If your country mandates Per-Wallet Application, do not use RP2 for tax reporting until that issue is resolved. If your country permits Universal Application (already supported by RP2), you may safely use RP2. [![Static Analysis / Main Branch](https://github.com/eprbell/rp2/actions/workflows/static_analysis.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/static_analysis.yml) [![Documentation Check / Main Branch](https://github.com/eprbell/rp2/actions/workflows/documentation_check.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/documentation_check.yml) [![Unix Unit Tests / Main Branch](https://github.com/eprbell/rp2/actions/workflows/unix_unit_tests.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/unix_unit_tests.yml) [![Windows Unit Tests / Main Branch](https://github.com/eprbell/rp2/actions/workflows/windows_unit_tests.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/windows_unit_tests.yml) [![CodeQL/Main Branch](https://github.com/eprbell/rp2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/eprbell/rp2/actions/workflows/codeql-analysis.yml) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/eprbell/rp2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=I%20use%20RP2,%20the%20privacy-focused,%20open%20source,%20free,%20non-commercial%20crypto%20tax%20calculator&url=https://github.com/eprbell/rp2/?anything) ## Table of Contents * **[Introduction](https://github.com/eprbell/rp2/blob/main/README.md#introduction)** * [How RP2 Operates](https://github.com/eprbell/rp2/blob/main/README.md#how-rp2-operates) * **[License](https://github.com/eprbell/rp2/blob/main/README.md#license)** * **[Download](https://github.com/eprbell/rp2/blob/main/README.md#download)** * **[Installation](https://github.com/eprbell/rp2/blob/main/README.md#installation)** * [Ubuntu Linux](https://github.com/eprbell/rp2/blob/main/README.md#installation-on-ubuntu-linux) * [macOS](https://github.com/eprbell/rp2/blob/main/README.md#installation-on-macos) * [Windows 10](https://github.com/eprbell/rp2/blob/main/README.md#installation-on-windows-10) * [Other Unix-like Systems](https://github.com/eprbell/rp2/blob/main/README.md#installation-on-other-unix-like-systems) * **[Running](https://github.com/eprbell/rp2/blob/main/README.md#running)** * **[Input and Output Files](https://github.com/eprbell/rp2/blob/main/README.md#input-and-output-files)** * **[Supported Countries and",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [
+      "non-commercial"
+    ],
+    "runtime_clues": [
+      "<!--- Licensed under the Apache License, Version 2.0 (the \"License\"); --->",
+      "<!--- you may not use this file except in compliance with the License. --->",
+      "<!--- You may obtain a copy of the License at --->",
+      "<!---     http://www.apache.org/licenses/LICENSE-2.0 --->",
+      "<!--- distributed under the License is distributed on an \"AS IS\" BASIS, --->",
+      "<!--- See the License for the specific language governing permissions and --->",
+      "<!--- limitations under the License. --->",
+      "* **[License](https://github.com/eprbell/rp2/blob/main/README.md#license)**",
+      "RP2 has a programmable plugin architecture for [output generators](https://github.com/eprbell/rp2/tree/main/README.dev.md#adding-a-new-report-generator), [accounting methods](https://github.com/eprbell/rp2/tree/main/README.dev.md#adding-a-new-accounting-method",
+      "* RP2 offers no guarantee of correctness (read the [license](https://github.com/eprbell/rp2/tree/main/LICENSE)): always verify results with the help of a tax professional.",
+      "## License",
+      "RP2 is released under the terms of Apache License Version 2.0. For more information see [LICENSE](https://github.com/eprbell/rp2/tree/main/LICENSE) or <http://www.apache.org/licenses/LICENSE-2.0>.",
+      "RP2 has been tested on Ubuntu Linux, macOS and Windows 10 but it should work on all systems that have Python version 3.10.0 or greater.",
+      "sudo apt-get install python3 python3-pip",
+      "brew install python3",
+      "First make sure [Python](https://python.org) 3.10 or greater is installed (in the Python installer window be sure to click on \"Add Python to PATH\"), then open a PowerShell window and enter the following:",
+      "* install python 3.10 or greater",
+      "RP2 requires two files as input:"
+    ],
+    "dependency_repos": [
+      "eprbell/dali-rp2",
+      "eprbell/rp2"
+    ]
+  }
+]
