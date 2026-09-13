@@ -17,7 +17,7 @@ jobs:
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
     steps:
-      - name: Render reviewed public research and preserve shared registries
+      - name: Render reviewed research and reconcile only its registry fields
         shell: bash
         run: |
           python3 - <<'PY'
@@ -25,5 +25,17 @@ jobs:
           revision='082c8b26866708392a49cf3edf75d97dd4b9b774'
           url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/scripts/recruiting-staffing-publish.py'
           with urllib.request.urlopen(url,timeout=90) as stream:source=stream.read().decode()
-          exec(compile(source,'pinned-siso-research-publisher.py','exec'))
+          old="put(P+'07-registry-line.json',regline)"
+          new="regline.update({'incumbents':len(T2)+len(ENT),'incumbents_definition':'11 Tier-2 offerings plus 5 additional enterprise software platforms; excludes 10 staffing-service firms and generic alternatives','source':BASE+P+'00-SUMMARY.md','foundry_source':'great-library-of-siso/research/industries (Foundry pin 11f4595, 2026-09-05)'})\n"+old
+          assert source.count(old)==1
+          source=source.replace(old,new)
+          old="'examined':138,'bank_counts':dict(members),'verdict_counts':dict(counts)"
+          new="'examined':138,'bank_counts':dict(members),'new_repos_worth_keeping':sum(r['bank_status']=='NEW' and r['verdict']!='SKIP' for r in rows),'new_repos_rejected':sum(r['bank_status']=='NEW' and r['verdict']=='SKIP' for r in rows),'verdict_counts':dict(counts)"
+          assert source.count(old)==1
+          source=source.replace(old,new)
+          old="assert found==1;outputs['registry/industries.jsonl']='\\n'.join(newlines)+'\\n'"
+          new="assert found==1\n    assert [l for l in current.splitlines() if json.loads(l).get('slug')!='recruiting_staffing']==[l for l in newlines if json.loads(l).get('slug')!='recruiting_staffing']\n    outputs['registry/industries.jsonl']='\\n'.join(newlines)+'\\n'"
+          assert source.count(old)==1
+          source=source.replace(old,new)
+          exec(compile(source,'pinned-siso-research-publisher-reviewed.py','exec'))
           PY
