@@ -4,7 +4,7 @@ on:
     branches: [research/restaurants-20260913]
     paths: [packs/restaurants/evidence/audit-request.json]
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: restaurants-evidence-audit-20260913
   cancel-in-progress: false
@@ -28,12 +28,43 @@ jobs:
           assert obj['sha']=='79031b7c7863b39a14a2ca97df15642a65401447'
           source=base64.b64decode(obj['content']).decode()
           code=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
-          marker='for attempt in range(5):\n'
-          assert marker in code
+          marker='for attempt in range(5):\n'; assert marker in code
           code=code.split(marker,1)[0]
           code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:400],'path':path}")
           code+="\nfrom pathlib import Path\nfor path,text in outputs.items():\n    dst=Path('artifact')/path\n    dst.parent.mkdir(parents=True,exist_ok=True)\n    dst.write_text(text)\nprint('Public research evidence files:',len(outputs),'mode:',cfg['mode'])\n"
           exec(compile(code,'pinned-restaurants-research-collector','exec'))
+          # Public source excerpts stay in the inspection artifact. Persist compact
+          # provenance, counts and metadata only, never unrelated client files.
+          if cfg.get('publish',False):
+              publish={}
+              for path,text in outputs.items():
+                  name=path.rsplit('/',1)[-1]
+                  if name in ('candidate-index.jsonl','candidate-audit-receipt.json','bank-scan-receipt.json'):
+                      publish[path]=text
+                  elif re.fullmatch(r'search-round-\d+\.json',name):
+                      obj=json.loads(text)
+                      for q in obj['queries']:
+                          for hit in q['results']:hit['description']=(hit.get('description') or '')[:300]
+                      publish[path]=json.dumps(obj,ensure_ascii=False,indent=2)+'\n'
+              if cfg['mode']=='candidates':
+                  safe=[]
+                  for row in rows:
+                      row=dict(row)
+                      for field in ('readme','license_file'):
+                          row[field]={k:v for k,v in row.get(field,{}).items() if k not in ('text','excerpt','tail')}
+                      safe.append(row)
+                  publish[ROOT+'candidate-metadata.jsonl']=''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in safe)
+              for path,text in publish.items():
+                  assert path.startswith(ROOT) and '..' not in path
+                  prior=api('/repos/'+REPO+'/contents/'+path+'?ref='+urllib.parse.quote(BRANCH,safe=''))
+                  if prior.get('_error') not in (None,404):raise RuntimeError('Contents read refused: '+str(prior))
+                  payload={'message':'research(restaurants): preserve '+path.rsplit('/',1)[-1],'branch':BRANCH,'content':base64.b64encode(text.encode()).decode()}
+                  if prior.get('sha'):payload['sha']=prior['sha']
+                  req=urllib.request.Request(API+'/repos/'+REPO+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-restaurants-public-research'})
+                  try:
+                      with urllib.request.urlopen(req,timeout=90) as r:receipt=json.load(r)
+                  except urllib.error.HTTPError as e:raise RuntimeError('Contents publication HTTP '+str(e.code)+': '+e.read().decode()[:300])
+                  print('Published compact evidence',path,receipt['commit']['sha'])
           BOOT
       - name: Preserve immutable public evidence for connector review
         if: always()
