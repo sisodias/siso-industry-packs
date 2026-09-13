@@ -1,0 +1,39 @@
+{
+  "slug":"aviation_parts_distribution",
+  "date":"2026-09-13",
+  "status":"incomplete_research_blueprint",
+  "application_code_written":false,
+  "runtime_tested":false,
+  "evidence_class":"analysis",
+  "deployment":{"owner":"client","application_hosts":1,"siso_hosted":false,"ram_gib_budget":16,"ram_floor_measured":false,"gpu_required":false,"infra_usd_year_scenario":1466.4,"infra_plus_maintenance_usd_year_scenario":3266.4,"off_host_backup_owner":"client","high_availability":false,"guaranteed_24_7_support_included":false},
+  "spine":["TradingParty","PartIdentity","DealCase","CommercialDocument","EvidenceDossier","Fulfilment"],
+  "components":[
+    {"repo":"frappe/erpnext","verdict":"ADOPT","scope":"provisional commercial/stock authority","stages":["W02","W03","W05","W06","W07","W09","W10"]},
+    {"repo":"chatwoot/chatwoot","verdict":"ADOPT","scope":"community inbox; provisional","stages":["W01","W02"]},
+    {"repo":"py-pdf/pypdf","verdict":"ADOPT","scope":"local PDF utility; originals unchanged","stages":["W04"]},
+    {"repo":"zxing-cpp/zxing-cpp","verdict":"ADOPT","scope":"reader only; provisional","stages":["W07","W08"]},
+    {"repo":"gs1/gs1-syntax-engine","verdict":"ADOPT","scope":"only for actual GS1 labels","stages":["W07","W08"]},
+    {"repo":"karrioapi/karrio","verdict":"ADOPT","scope":"core carrier adapters subject to entitlement","stages":["W08"]},
+    {"repo":"restic/restic","verdict":"ADOPT","scope":"backup utility; consistent exports and restore tests still needed","stages":["all"]},
+    {"repo":"inventree/InvenTree","verdict":"STUDY","scope":"alternative stock authority; do not co-deploy duplicate truth"},
+    {"repo":"paperless-ngx/paperless-ngx","verdict":"STUDY","scope":"optional removable working index, not dossier authority"},
+    {"repo":"MatthiasValvekens/pyHanko","verdict":"STUDY","scope":"beta warning; not production approved"},
+    {"repo":"OCA/purchase-workflow","verdict":"STUDY","scope":"Odoo-based patterns, not ERPNext plugins"}
+  ],
+  "pinned_component_evidence":"04-oss-candidates.json",
+  "custom_work":["six-aggregate identity and mappings","raw PN/serial/lot preservation","conversation-to-case conversion","per-supplier attachment allowlists","quote revision and acceptance fidelity","quality/export/credit holds","durable idempotent outbox and reconciliation","original-file provenance and human decisions","core/return and fulfilment relationships","client-owned export and restore contracts"],
+  "retained_external_services":["authorised marketplace subscriptions and feeds","email transport and optional business messaging","Shopify during transition","current statutory accounting/payroll until qualified replacement","banking and payment settlement","carrier/forwarder services"],
+  "gaps":[
+    {"id":"G01","description":"Marketplace rights and semantic adapters"},
+    {"id":"G02","description":"Qualified electronic release/ATA Spec 2000 interoperability"},
+    {"id":"G03","description":"Issuer/provenance/alternate/installation decisions"},
+    {"id":"G04","description":"Export classification/end-use/licence determinations"},
+    {"id":"G05","description":"Physical stock and AOG delivery/staffing"},
+    {"id":"G06","description":"Qualified core/exchange/repair/life-limited-part lifecycle"},
+    {"id":"G07","description":"Local accounting/payroll/settlement and final client-VPS storefront"},
+    {"id":"G08","description":"Research/licence/security/load/recovery qualification"}
+  ],
+  "acceptance_tests_proposed_not_run":["duplicate-safe RFQ ingestion","PN/unit identity reconciliation","attachment isolation","accepted quote version mapping","hold enforcement","idempotent carrier/accounting retries","original evidence export","ledger reconciliation","revoked access denial","malformed document handling","concurrent order safety","timed restore"],
+  "source":"05-superapp.md",
+  "economics_source":"06-value.md"
+}
