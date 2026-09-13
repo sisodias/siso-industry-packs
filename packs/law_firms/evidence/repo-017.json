@@ -1,0 +1,206 @@
+{
+  "audit_id": "R017",
+  "requested_full_name": "Open-Source-Legal/OpenContracts",
+  "observed_at": "2026-09-13T16:10:01.814256+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Open-Source-Legal/OpenContracts",
+  "html_url": "https://github.com/Open-Source-Legal/OpenContracts",
+  "description": "The open document intelligence platform for builders and hackers - DMS for the agentic world",
+  "stargazers_count": 1474,
+  "forks_count": 186,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2022-10-24T04:08:13Z",
+  "updated_at": "2026-09-11T03:13:21Z",
+  "pushed_at": "2026-09-12T04:46:23Z",
+  "size": 399748,
+  "open_issues_count": 24,
+  "topics": [
+    "agent",
+    "agentic-ai",
+    "ai",
+    "ai-agents",
+    "etl",
+    "etl-pipeline",
+    "llm",
+    "prompt-engineering",
+    "unstructured-data",
+    "vector-database"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "771061b7072722b17f9875c7ec61873c7fc4c057",
+  "last_commit": "2026-09-11T00:10:42Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/Open-Source-Legal/OpenContracts",
+    "commit": "https://github.com/Open-Source-Legal/OpenContracts/commit/771061b7072722b17f9875c7ec61873c7fc4c057"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "ca77340768161948b63d062f143d449d60519ce7ecdd6c85affc5121841dd84e",
+    "text": "<p align=\"center\">\n  <img src=\"docs/assets/images/brand/icon_mark.svg\" alt=\"OpenContracts\" height=\"84\">\n</p>\n\n# OpenContracts ([Demo](https://contracts.opensource.legal))\n\n**Open-source document intelligence you can build on.**\n\nPoint OpenContracts at a repository of documents and get a programmable citation graph — human annotation, structured extraction, AI agents, and a built-in MCP server, all behind one API. Self-hosted, MIT-licensed, and built for teams working at scale.\n\n> Same graph, three surfaces: a **GraphQL + REST API** for your apps, a **Model Context Protocol** server for your agents, and a **React UI** for your team.\n\n[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JSv4)\n\n|                   |                                                                                                                                                                                                                                                                                                                                                                                                                                           |\n| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Backend coverage  | [![backend](https://codecov.io/gh/Open-Source-Legal/OpenContracts/branch/main/graph/badge.svg?flag=backend&token=RdVsiuaTVz)](https://app.codecov.io/gh/Open-Source-Legal/OpenContracts?flags%5B0%5D=backend)                                                                                                                                                                                                                             |\n| Frontend coverage | [![frontend](https://codecov.io/gh/Open-Source-Legal/OpenContracts/branch/main/graph/badge.svg?flag=frontend&token=RdVsiuaTVz)](https://app.codecov.io/gh/Open-Source-Legal/OpenContracts?flags%5B0%5D=frontend)                                                                                                                                                                                                                          |\n| Meta              | [![code style - black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![types - Mypy](https://img.shields.io/badge/types-Mypy-blue.svg)](https://github.com/python/mypy) [![imports - isort](https://img.shields.io/badge/imports-isort-ef8336.svg)](https://github.com/pycqa/isort) [![License - MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT) |\n\n---\n\n## From documents to a citation graph — in about a minute\n\nCreate a corpus, drop in your documents, and click **Set up**. That one click installs the\nintelligence bundle: agents describe and summarize every document, and the reference web\nstarts weaving — every statutory citation detected, resolved, and drawn as an edge.\n\n![Create a corpus and set up collection intelligence in one click](docs/assets/images/gifs/demo-1-create-and-setup.gif)\n\nBy the end of the clip, 36 SEC filings are a navigable graph — wired to the Delaware\nGeneral Corporation Law, the Securities Act, and the SEC rules they cite, section by\nsection. Law the library doesn't hold yet isn't dropped on the floor: it's tracked as a\nbacklog, automatically, until you ingest it.\n\n### Then explore it — and ask it questions\n\nCitations are highlighted inline on the filings themselves. The References panel lists\neverything a document cites — click any cite to open the statute, with its own\ncross-references and everything that cites it back. The ask bar runs a corpus-scoped\nagent whose answers come back grounded and cited.\n\n![Explore the citation graph — inline citations, the references panel, and grounded answers](docs/assets/images/gifs/demo-2-explore-and-ask.gif)\n\nEverything in both clips is the stock product against a local install — no custom code,\nand every surface the UI touches is also reachable over the API and MCP server below.\n\nHere's the artifact those clips produce, frozen so you can read it — every filing wired to\nthe exact section of law it cites, with bodies of law the library doesn't hold yet drawn as\ndashed nodes, tracked until you ingest them:\n\n![The governance graph — filings linked to the statute sections they cite, down to the section, with un-ingested law tracked as dashed nodes](docs/assets/images/screenshots/auto/corpus--governance-graph--with-data.png)\n\n---\n\n## Build on it\n\nOpenContracts is a platform, not a black box. Everything the UI does runs on surfaces you can call yourself — point it at the documents you already have and build your own tooling on top.\n\n### AI agents in Python\n\nSpin up a document- or corpus-scoped agent in a couple of lines. Stream a chat response, or get a typed object back through a Pydantic model — every answer grounded in the annotations and citations your team has built.\n\n```python\nagent = await agents.for_document(123, corpus=45)\nasync for chunk in agent.stream(\"Summarize the indemnification clauses\"):\n    print(chunk.content, end=\"\")\n```\n\nSee the [LLM framework guide](docs/architecture/llms/README.md).\n\n### MCP server — bring your own agent\n\nEvery corpus is exposed over the Model Context Protocol, so Claude, Cursor, or any MCP client can search it, walk its citation edges, and (when authorized) propose annotations of its own. No glue code required:\n\n- **Endpoints** — `/mcp/` (anonymous, public corpuses) and `/mcp/me/` (authenticated)\n- **Discovery** — `/llms.txt` and `/.well-known/mcp.json`\n- **Tools** — `search_corpus`, `list_documents`, `get_document_text`, `list_annotations`, `list_relationships`, `list_threads`, `create_thread_message`\n\nSee the [MCP documentation](docs/mcp/).\n\n### Structured extraction at scale\n\nDefine a **fieldset** — a set of columns, each a natural-language query — and run it across an entire corpus. Extraction fans out over Celery workers and lands in a spreadsheet-style grid, hundreds of documents at a time, with human approve/reject on every cell.\n\nSee [Write your own extractors](docs/walkthrough/advanced/write-your-own-extractors.md).\n\n### A pluggable pipeline\n\nParsing, embedding, and thumbnailing are swappable components. Register a custom parser, embedder, or thumbnailer for your formats and everything downstream — search, annotation, agents — keeps working unchanged.\n\nSee the [pipeline overview](docs/pipelines/pipeline_overview.md).\n\n### GraphQL + REST\n\nThe whole graph — corpuses, documents, annotations, relationships, extracts — is queryable over a typed GraphQL API (with REST for uploads and health checks). The React frontend is just one client; yours is another.\n\n---\n\n## Why OpenContracts\n\nEvery document in a serious repository cites other documents. Statutes cite the acts that authorized them. Court opinions cite the precedents that bound them. Research papers cite the work that made them possible. Standards cite the RFCs they build on. Contracts cite the statutes that govern them. Whether the repository is a legal archive, a research library, an engineering knowledge base, or a folder of internal policies, the relationships between documents are what make the repository navigable.\n\nMost repositories store files. They don't store the graph that connects them. A PDF in a folder is a leaf with no edges. A paper in a vendor database is locked behind a paywall. A clause in a contract is treated as text rather than a node. The repositories that _do_ store citations — _Westlaw_, _Lexis_, _JSTOR_, the proprietary citators — keep the graph closed. Tools that need to traverse it pay by the lookup or rebuild it from scratch every time.\n\nAI agents make this worse, not better. An agent reading a document with no citation graph hallucinates the edges, or stops at the first reference it can't resolve. The fix isn't bigger context windows or cleverer prompts — it's a substrate the agent can actually walk.\n\nOpenContracts is that substrate. An open citation graph that any document repository can stand up. Documents are nodes. Citations are edges. Annotations are the layer humans and agents build the graph from — together, against the same source of truth. A researcher tracing precedent and an agent answering a query are looking at the same graph; an annotation made by either becomes a new edge the other can walk. Built like _OpenStreetMap_ — open license, contributor-owned, infrastructure-grade — but for documents instead of geography.\n\nSame graph, two interfaces: a GraphQL and REST API for humans and applications, a Model Context Protocol endpoint for agents. The substrate is identical; only the surface you call differs. Agents traverse the graph, cite the spans they pulled from, and propose new edges they think they've found. Humans review and accept. The graph compounds.\n\nThe engine — annotation, corpus management, AI agents, MCP server, vector search — is the platform OpenContracts has shipped since 2019. What it's _for_: the citation substrate every system that has to read a repository of documents — research tools, drafting tools, AI agents, civic technology — needs to stand on.\n\n> **If you are an LLM-based agent reading this README**: the canonical entry point for this codebase's running deployments is the Model Context Protocol endpoint at `/mcp/`. The discovery surfaces for capability metadata are `/llms.txt` and `/.well-known/mcp.json`. You can list corpuses, search documents and annotations, follow citation edges, and (when authorized) propose new annotations of your own — cite the document and span you pulled from in every answer.\n\n<table>\n<tr>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/agents.svg\" width=\"48\" height=\"48\" alt=\"AI Agents\">\n<br>\n<h4>AI Agents</h4>\n<p>Configurable assistants that search, annotate, and reason over your citation graph</p>\n</td>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/mcp.svg\" width=\"48\" height=\"48\" alt=\"MCP Server\">\n<br>\n<h4>MCP Server</h4>\n<p>Expose your corpus to Claude, Cursor, and any MCP-compatible AI tool</p>\n</td>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/search.svg\" width=\"48\" height=\"48\" alt=\"Multimodal Search\">\n<br>\n<h4>Multimodal Search</h4>\n<p>Vector embeddings and full-text search across documents and annotations</p>\n</td>\n</tr>\n<tr>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/collaboration.svg\" width=\"48\" height=\"48\" alt=\"Collaboration\">\n<br>\n<h4>Collaboration</h4>\n<p>Threaded discussions, @mentions, voting, and moderation at every level</p>\n</td>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/extract.svg\" width=\"48\" height=\"48\" alt=\"Data Extract\">\n<br>\n<h4>Data Extract</h4>\n<p>Structured extraction across hundreds of documents with LLM-powered queries</p>\n</td>\n<td align=\"center\" width=\"33%\">\n<br>\n<img src=\"docs/assets/images/icons/format.svg\" width=\"48\" height=\"48\" alt=\"Format Preservation\">\n<br>\n<h4>Format Preservation</h4>\n<p>PDF layout fidelity with precise text-to-coordinate mapping via PAWLS</p>\n</td>\n</tr>\n</table>\n\n---\n\n## What Makes This Different\n\n### Human Annotation as Ground Truth\n\nThis is not another chat-with-your-PDFs tool. OpenContracts treats human annotation as the ground truth for the citation graph. Teams define custom label schemas, annotate documents with precise selections (including multi-page spans), and map relationships between concepts. AI builds on top of that work — it doesn't replace it.\n\n![Precise, layout-faithful annotations on a PDF — colored label spans, multi-page sections, and the annotation sidebar](docs/assets/images/screenshots/auto/annotations--pdf-canvas--with-labels.png)\n\n### Corpuses, Not File Cabinets\n\nDocuments are organized into corpuses — version-controlled collections with folder hierarchies, fine-grained permissions, and full history. Fork a public corpus to build on someone else's annotations. Restore any previous version. Every change is tracked.\n\nThis is `git` for the citation graph: branch, build, share, never lose work.\n\n![Collection intelligence overview — document, connection, annotation, and extract counts, summary coverage, dominant labels, and the governance graph](docs/assets/images/screenshots/auto/corpus--intelligence-overview--with-data.png)\n\n### AI Agents That Work With What You've Built\n\nConfigurable AI agents can search your documents, query your annotations, and participate in discussions — all grounded in the structured citation data your team has created. They don't hallucinate in a vacuum; they reason over real, curated edges.\n\n@mention an agent in a discussion thread. Ask it to compare clauses across a hundred contracts. Let it surface patterns your team annotated last quarter. The agent's power comes from the quality of the citation graph underneath it.\n\n![An agent grounding its answer in tool calls — similarity search, exact-text search, and document lookups over the corpus](docs/assets/images/screenshots/auto/chat--tool-popover--multi-tool.png)\n\n### Collaboration Where the Citations Live\n\nForum-style threaded discussions at every level — global, per-corpus, per-document. @mention documents, corpuses, and AI agents. Upvote the best analysis. Pin critical findings. The conversation happens next to the source material, not in a separate tool.\n\n![Discussion Threads](docs/assets/images/screenshots/auto/discussions--thread-list--with-threads.png)\n\n### Shared Graphs Compound\n\nMake a corpus public. Others fork it, refine the annotations, add documents, and share their improvements. Leaderboards and badges recognize contributors. Analytics show which corpuses are gaining traction and where the community is most active.\n\nThis is the DRY principle applied to the citation graph: annotate once, build on it forever.\n\n![Analytics Dashboard](docs/assets/images/screenshots/auto/corpus--analytics--dashboard.png)\n\n---\n\n## Annotation flows\n\nThe human side of the graph — precise, layout-faithful annotation on PDFs and text:\n\n### PDF Annotation Flow\n\n![PDF Annotation Flow](docs/assets/images/gifs/pdf-annotation-flow.gif)\n\n### Text Format Support\n\n![Text Annotation Flow](docs/assets/images/gifs/text-annotation-flow.gif)\n\n---\n\n## Quick Start\n\n### Development\n\n```bash\ngit clone https://github.com/Open-Source-Legal/OpenContracts.git\ncd OpenContracts\n\n# Copy sample environment files\nmkdir -p .envs/.local\ncp ./docs/sample_env_files/backend/local/.django ./.envs/.local/.django\ncp ./docs/sample_env_files/backend/local/.postgres ./.envs/.local/.postgres\ncp ./docs/sample_env_files/frontend/local/django.auth.env ./.envs/.local/.frontend\n\n# Build and start all services (including frontend)\ndocker compose -f local.yml build\ndocker compose -f local.yml --profile fullstack up\n```\n\nThen open http://localhost:3000 and log in with `admin` / `Openc0ntracts_def@ult`.\n\nSee the [full Quick Start guide](docs/quick_start.md) for details and troubleshooting. Have a GPU or NPU? See [Hardware-Accelerated Images](compose/accelerated/README.md) for auto-detecting parser/embedder images (the optimized Intel GPU image measured 49x the embedding throughput of the stock CPU image).\n\n### Production\n\n```bash\n# Apply database migrations first\ndocker compose -f production.yml --profile migrate up migrate\n\n# Start services\ndocker compose -f production.yml up -d\n```\n\n---\n\n## Customizing the landing and About copy\n\nThe discover/landing page and the `/about` page are driven by a JSON content pack so deployers can retarget the messaging without forking the codebase. Two variants ship in the repo:\n\n| Variant key     | Framing                                               | Best fit                                                                        |\n| --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |\n| `default`       | _Open-source document intelligence you can build on._ | The OSS project's repo and most self-hosted deployments — developer-facing.     |\n| `public-record` | _The citation layer underneath the public record._    | End-user deployments curating public-domain documents (named-incumbents pitch). |\n\nSwitch variants at runtime by setting `REACT_APP_LANDING_VARIANT` in `frontend/public/env-config.js` — no rebuild required. Unknown variant keys fall back to `default`.\n\n```js\n// frontend/public/env-config.js\nwindow._env_ = {\n  // … existing config\n  REACT_APP_LANDING_VARIANT: \"public-record\",\n};\n```\n\nTo add a deployment-specific variant, drop a `<key>.json` file in `frontend/src/config/landingContent/` that matches the `LandingContent` type, register it in `frontend/src/config/landingContent/index.ts`, and set `REACT_APP_LANDING_VARIANT=<key>` on that deployment. Body copy in JSON can wrap the product name and named publications in `*asterisks*` to pick up the Source Serif italic treatment automatically (handled by `renderInlineMarkup`).\n\n---\n\n## Documentation\n\nBrowse the full documentation at [open-source-legal.github.io/OpenContracts](https://open-source-legal.github.io/OpenContracts/) or in the repo:\n\n| Guide                                                                       | Description                          |\n| --------------------------------------------------------------------------- | ------------------------------------ |\n| [Quick Start](docs/quick_start.md)                                          | Get running with Docker in minutes   |\n| [Key Concepts](docs/walkthrough/key-concepts.md)                            | Core workflows and terminology       |\n| [PDF Data Format](docs/architecture/PDF-data-layer.md)                      | How text maps to PDF coordinates     |\n| [LLM Framework](docs/architecture/llms/README.md)                           | PydanticAI integration and agents    |\n| [Vector Stores](docs/extract_and_retrieval/vector_stores.md)                | Semantic search architecture         |\n| [Pipeline Overview](docs/pipelines/pipeline_overview.md)                    | Parser, embedder, and file-converter system |\n| [Supported File Formats](docs/upload_methods/supported_formats.md)          | Core parsers plus Gotenberg-convertible formats |\n| [Custom Extractors](docs/walkthrough/advanced/write-your-own-extractors.md) | Build your own data extraction tasks |\n| [v3.0.0.b3 Release Notes](docs/releases/v3.0.0.b3.md)                       | Latest features and migration guide  |\n\n---\n\n<details>\n<summary><strong>Architecture</strong></summary>\n\n### Data Format\n\nOpenContracts uses a standardized format for representing text and layout on PDF pages, enabling portable annotations across tools:\n\n![Data Format](docs/assets/images/diagrams/pawls-annotation-mapping.svg)\n\n### Processing Pipeline\n\nThe modular pipeline supports custom parsers, embedders, and thumbnail generators:\n\n![Pipeline Diagram](docs/assets/images/diagrams/parser_pipeline.svg)\n\nEach component inherits from a base class with a defined interface:\n\n- **Parsers** — Extract text and structure from documents\n- **Embedders** — Generate vector embeddings for search\n- **Thumbnailers** — Create document previews\n\nSee the [pipeline documentation](docs/pipelines/pipeline_overview.md) for details on creating custom components.\n\n</details>\n\n---\n\n## Telemetry\n\nOpenContracts collects anonymous usage data to guide development priorities: installation events, feature usage statistics, and aggregate counts. We do not collect document contents, extracted data, user identities, or query contents.\n\n**Disable backend telemetry**: Set `TELEMETRY_ENABLED=False` in your Django settings.\n**Disable frontend analytics**: Leave `REACT_APP_POSTHOG_API_KEY` unset in `frontend/public/env-config.js`.\n\n---\n\n## Supported Formats\n\n- PDF (full layout and annotation support, via the Docling microservice)\n- DOCX (Word documents, via the [Docxodus](https://github.com/JSv4/Docxodus) microservice — character-offset annotations aligned with WASM rendering)\n- Plain text (`.txt`, split into sentence annotations via spaCy)\n\nPlus **126 additional formats** — legacy Microsoft Office, OpenDocument, Apple\niWork, WordPerfect, images, HTML, and more — convertible to PDF by an optional\n[Gotenberg](https://github.com/gotenberg/gotenberg)-powered file converter\n(off by default; enable it in Admin → Pipeline Configuration, no\ndocker-compose changes needed).\n\nSee [Supported File Formats](docs/upload_methods/supported_formats.md) for parser and conversion details, and the `supportedMimeTypes` / `convertibleExtensions` GraphQL queries that expose the live lists to the frontend.\n\n---\n\n## Acknowledgements\n\nThis project builds on work from:\n\n- [AllenAI PAWLS](https://github.com/allenai/pawls) — PDF annotation data format and concepts\n- [NLMatics nlm-ingestor](https://github.com/nlmatics/nlm-ingestor) — Document parsing pipeline\n\n---\n\n## License\n\nOpenContracts is distributed under the **MIT License** — one of the most permissive open source licenses available. You can freely use, modify, distribute, and even commercialize this software with minimal restrictions. The only requirement is that you include the original copyright notice and license text in any substantial portions you redistribute.\n\nThis relicensing reflects our commitment to making the platform as broadly usable as possible: build proprietary products on top of it, embed it in commercial offerings, fork it, ship it — no copyleft strings attached.\n\nSee [LICENSE](LICENSE) for the full text.\n",
+    "characters": 21929,
+    "source_url": "https://github.com/Open-Source-Legal/OpenContracts/blob/771061b7072722b17f9875c7ec61873c7fc4c057/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "81f0c3a20d9e858f8f6d8f73aee152af933e78afe5f2c436ee4ab5316b77f78c",
+    "text": "MIT License\n\nCopyright (c) 2026 John Scrudato IV\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1073,
+    "source_url": "https://github.com/Open-Source-Legal/OpenContracts/blob/771061b7072722b17f9875c7ec61873c7fc4c057/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "JSv4",
+      "contributions": 10574
+    },
+    {
+      "login": "claude",
+      "contributions": 1173
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 872
+    },
+    {
+      "login": "github-actions[bot]",
+      "contributions": 152
+    },
+    {
+      "login": "snyk-bot",
+      "contributions": 16
+    },
+    {
+      "login": "ThreatLentes",
+      "contributions": 4
+    },
+    {
+      "login": "ofek",
+      "contributions": 2
+    },
+    {
+      "login": "b1rdmania",
+      "contributions": 2
+    },
+    {
+      "login": "PyGuy2",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 2335,
+      "title": "Support scoped automation credentials across GraphQL and import REST APIs",
+      "state": "closed",
+      "created_at": "2026-09-10T22:39:30Z",
+      "updated_at": "2026-09-11T00:10:44Z",
+      "closed_at": "2026-09-11T00:10:44Z",
+      "comments": 0,
+      "html_url": "https://github.com/Open-Source-Legal/OpenContracts/issues/2335",
+      "author_association": "COLLABORATOR"
+    },
+    {
+      "number": 2340,
+      "title": "Add run-scoped ingestion policy and budget admission",
+      "state": "open",
+      "created_at": "2026-09-10T22:40:06Z",
+      "updated_at": "2026-09-10T22:40:06Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/Open-Source-Legal/OpenContracts/issues/2340",
+      "author_association": "COLLABORATOR"
+    },
+    {
+      "number": 2339,
+      "title": "Expose corpus-export reingest mode through REST and chunked imports",
+      "state": "open",
+      "created_at": "2026-09-10T22:40:02Z",
+      "updated_at": "2026-09-10T22:40:02Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/Open-Source-Legal/OpenContracts/issues/2339",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0021",
+        "repo": "Open-Source-Legal/OpenContracts",
+        "url": "https://github.com/Open-Source-Legal/OpenContracts",
+        "labels": [
+          "OpenContracts"
+        ],
+        "family_ids": [
+          "U14"
+        ],
+        "family_names": [
+          "Contract lifecycle management"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "historical_operator_nomination"
+        ],
+        "operator_signals": [
+          {
+            "nomination_id": "ON-027",
+            "origin": "foundry_value_matrix_specialist",
+            "observed_at": "2026-08-03",
+            "note": "Specialist legal/document intelligence candidate."
+          }
+        ],
+        "observed_facts": [],
+        "current_verdict": "priority_candidate",
+        "foundry_stage": "specialist_candidate",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 31,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "Open-Source-Legal/OpenContracts",
+        "stars": 1361,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "substrate",
+        "reuse_value": 70,
+        "liftability": 16,
+        "fame_gap": 54,
+        "cat_slug": "backend-data-platform",
+        "cat_name": "Backend & Data Platform",
+        "description": "The open document intelligence platform for builders and hackers - DMS for the agentic world"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

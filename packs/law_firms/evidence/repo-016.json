@@ -1,0 +1,60 @@
+{
+  "audit_id": "R016",
+  "requested_full_name": "mauriceh01/LawFirmDB",
+  "observed_at": "2026-09-13T16:10:01.814256+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "mauriceh01/LawFirmDB",
+  "html_url": "https://github.com/mauriceh01/LawFirmDB",
+  "description": "A comprehensive, enterprise-grade relational SQL database designed to manage every operational, legal, financial, and compliance aspect of a modern law firm. With 88 normalized tables and powerful features, it supports case tracking, client relations, attorney workflows, billing, AI insights, trust accounting, evidence management, & more",
+  "stargazers_count": 2,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2025-07-15T08:48:56Z",
+  "updated_at": "2026-03-28T12:21:38Z",
+  "pushed_at": "2025-07-15T08:49:47Z",
+  "size": 3,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": null,
+  "revision": "b8499ddb77d2754f40634386f39f70eddbd06d90",
+  "last_commit": "2025-07-15T08:49:47Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/mauriceh01/LawFirmDB",
+    "commit": "https://github.com/mauriceh01/LawFirmDB/commit/b8499ddb77d2754f40634386f39f70eddbd06d90"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "464fa161923bc580b0b1eea1647983f7c21ded47151430d67038d9fdaa2c1afb",
+    "text": "# ⚖️ LawFirmDB – Legal Practice Management Database\n\n### **Executive Summary:**\n\n**LawFirmDB** is a comprehensive, enterprise-grade relational SQL database designed to manage every operational, legal, financial, and compliance aspect of a modern law firm. With 88 normalized tables and powerful features, it supports case tracking, client relations, attorney workflows, billing, AI insights, trust accounting, evidence management, compliance logging, training, and more.\n\n---\n\n## 🧱 Features\n\n- 🧑‍⚖️ **Case & Client Management**\n- 💼 **Attorney & Staff Profiles**\n- 📂 **Document Storage & Workflow**\n- 💵 **Billing, Invoicing, Payments**\n- 🔐 **Role-Based Access Control (RBAC)**\n- ⚖️ **Contracts, Hearings, and Transcripts**\n- 🤖 **AI Predictions & Sentiment Analysis**\n- 🌐 **Multi-language & Accessibility Support**\n- 📅 **Calendars, Tasks, and Milestones**\n- 🧾 **Legal Compliance & Audit Trail**\n- 📊 **KPI Tracking & Analytics**\n- 💬 **Chat & Notifications**\n- 📜 **Training, Ethics, and Sanctions Oversight**\n- 📹 **Video Depositions & E-Signatures**\n- 🔗 **Chain of Custody for Evidence**\n\n---\n\n## 📁 Project Structure\n```\nLawFirmDB/\n├── schema.sql # Complete SQL schema (89 tables)\n├── sample_data/ # Optional seed scripts (coming soon)\n├── views/ # Analytical SQL views (dashboard-ready)\n├── stored_procedures/ # Automation and triggers (coming soon)\n├── templates/ # Flask-based HTML templates (optional UI)\n│ ├── base.html\n│ ├── login.html\n│ ├── dashboard.html\n│ ├── view.html\n│ └── pdf_template.html\n├── app.py # Python/Flask app (optional backend)\n└── README.md # You are here\n```\n\n---\n\n## 🗃️ Table Categories (89 Tables)\n\n| Category                      | Sample Tables                                           |\n|------------------------------|---------------------------------------------------------|\n| 🧑 Clients & Cases            | `Clients`, `Cases`, `CaseNotes`, `CaseMilestones`       |\n| 👩‍⚖️ Attorneys & Employees     | `Attorneys`, `Employees`, `MalpracticeInsurance`         |\n| 📄 Documents & Contracts      | `LegalDocuments`, `Contracts`, `ContractVersions`       |\n| 🧾 Billing & Trust            | `Invoices`, `Payments`, `TrustAccounts`, `BillingRules` |\n| ⚙️ Automation & AI            | `AIInsights`, `WorkflowTemplates`, `PredictiveCaseOutcomes` |\n| 📊 Reporting & KPIs           | `AnalyticsMetrics`, `GeneratedReports`, `CaseReviewLogs`|\n| 🔐 Security & Access          | `LoginUsers`, `Roles`, `Permissions`, `BiometricAccessLogs` |\n| 💬 Communication              | `InternalChatMessages`, `Notifications`                |\n| 🌍 Multilingual & UX          | `MultiLanguageSupport`, `AccessibilityPreferences`      |\n| ⚖️ Compliance & Ethics        | `EthicsViolations`, `LegalSanctions`, `PrivacyRequests` |\n| 🧠 Training & Onboarding      | `LegalTrainingCourses`, `TrainingEnrollments`           |\n| 🧬 Evidence & Witnesses       | `ChainOfEvidence`, `CaseWitnesses`, `VideoDepositions`  |\n| 📞 Vendors & Support          | `VendorDirectory`, `SupportTickets`                     |\n| 🏛️ Hearings & Transcripts     | `HearingTranscripts`, `LitigationHistory`               |\n\n---\n\n## 🧠 Use Cases\n\n- 📁 Legal CRM with document + case tracking  \n- 💼 Attorney productivity & milestone monitoring  \n- 📑 Contracts with version control  \n- 🤖 AI-driven risk insights and sentiment summaries  \n- 🔒 Role-based security with biometric audit  \n- 🧾 Trust accounting, time tracking, and invoicing  \n- 🧬 Evidence chain-of-custody with video depositions  \n- 📜 Compliance audits, sanctions, and regulation mapping  \n- 💬 Internal chat, calendar, training & workflow automation\n\n---\n\n## 💻 Technologies Used\n\n- **SQL (MySQL / PostgreSQL compatible)**\n- **Flask (optional UI layer)**\n- **HTML + Jinja Templates**\n- **Python (for reports, exports, dashboards)**\n- **ERD Design & Modeling Tools**\n\n---\n\n## 🚀 Getting Started\n\n1. Clone the repo or download the SQL schema.\n2. Import `schema.sql` into your preferred SQL RDBMS.\n3. (Optional) Use `app.py` and `/templates` to run a Flask intranet UI.\n4. Extend with analytics, dashboards, or integrate via API.\n\n---\n\n## 📌 Roadmap\n\n- [ ] Add `sample_data/` inserts\n- [ ] Add analytics `views/`\n- [ ] Add `stored_procedures/`\n- [ ] Generate ERD diagram\n- [ ] Integrate Flask UI with authentication\n- [ ] Deploy demo version (optional)\n\n---\n\n## 📜 License\n\nThis project is open for educational and demonstration use. For commercial licensing, customization, or consulting, please contact the project author.\n\n---\n\n## 🙌 Author\n\n**Maurice Hazan**  \nDatabase Designer | Business Analyst | Legal Tech Builder  \nmauriceh01@hotmail.com | www.linkedin.com/in/mohazan \n",
+    "characters": 4598,
+    "source_url": "https://github.com/mauriceh01/LawFirmDB/blob/b8499ddb77d2754f40634386f39f70eddbd06d90/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "mauriceh01",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
