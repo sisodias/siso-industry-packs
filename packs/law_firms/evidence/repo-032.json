@@ -1,0 +1,155 @@
+{
+  "audit_id": "R032",
+  "requested_full_name": "mayan-edms/Mayan-EDMS",
+  "observed_at": "2026-09-13T16:10:14.427931+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "mayan-edms/Mayan-EDMS",
+  "html_url": "https://github.com/mayan-edms/Mayan-EDMS",
+  "description": "Free Open Source Document Management System (mirror, no pull request or issues)",
+  "stargazers_count": 834,
+  "forks_count": 514,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-05-04T23:54:24Z",
+  "updated_at": "2026-09-11T03:44:24Z",
+  "pushed_at": "2026-05-23T05:53:47Z",
+  "size": 268212,
+  "open_issues_count": 5,
+  "topics": [
+    "django",
+    "dms",
+    "docker",
+    "document-management",
+    "document-management-system",
+    "document-manager",
+    "enterprise",
+    "enterprise-software",
+    "filemanager",
+    "mayan-edms",
+    "ocr",
+    "paperless",
+    "pdf",
+    "python"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "8da13ee7e49fa23d24ab49906bf9cf6bfe3f44e9",
+  "last_commit": "2026-05-23T05:53:46Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/mayan-edms/Mayan-EDMS",
+    "commit": "https://github.com/mayan-edms/Mayan-EDMS/commit/8da13ee7e49fa23d24ab49906bf9cf6bfe3f44e9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "5f4408f6736d74fe2224c46f8fa910a236aca233990dc6e2790638310c4efe2c",
+    "text": "IMPORTANT! THIS IS MIRROR IS NO LONGER MAINTAINED AND IS VERY OUTDATED.\n\nUSE THE OFFICIAL REPOSITORY INSTEAD: https://gitlab.com/mayan-edms/mayan-edms\n\n----\n\n[![Support][support-badge]][support-url]\n[![DOI][doi-badge-imgshield]][doi-url]\n[![License][license-badge]][license-url]\n[![Docker image tag][docker-image-tag-badge]][docker-image-url]\n[![Docker pulls][docker-image-pull-badge]][docker-image-url]\n[![Docker Stars][docker-image-stars-badge]][docker-image-url]\n[![GitLab][gitlab-tag-badge]][gitlab-url]\n\n\n[doi-badge-zenodo]: https://zenodo.org/badge/DOI/10.5281/zenodo.16760961.svg\n[doi-badge-imgshield]: https://img.shields.io/badge/DOI-10.5281%20%2F%20zenodo.16760961-blue.svg?style=for-the-badge&logo=doi\n[doi-url]: https://doi.org/10.5281/zenodo.16760961\n\n[docker-image-tag-badge]: https://img.shields.io/docker/v/mayanedms/mayanedms?style=for-the-badge&sort=semver&logo=docker\n\n[docker-image-url]: https://hub.docker.com/r/mayanedms/mayanedms\n\n[docker-image-pull-badge]: https://img.shields.io/docker/pulls/mayanedms/mayanedms.svg?style=for-the-badge&logo=docker\n\n[docker-image-stars-badge]: https://img.shields.io/docker/stars/mayanedms/mayanedms.svg?style=for-the-badge&logo=docker\n\n[gitlab-pipelines-url]: https://gitlab.com/mayan-edms/mayan-edms/pipelines\n[gitlab-tag-badge]:https://img.shields.io/gitlab/v/tag/mayan-edms%2Fmayan-edms?style=for-the-badge&sort=semver&logo=gitlab&label=GitLab\n[gitlab-url]: https://gitlab.com/mayan-edms/mayan-edms\n\n[pypi-badge]: https://img.shields.io/pypi/v/mayan-edms?style=for-the-badge&logo=python&label=PyPI\n[pypi-url]: https://pypi.org/project/mayan-edms/\n\n[license-badge]: https://img.shields.io/pypi/l/mayan-edms.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=008800\n[license-url]: https://gitlab.com/mayan-edms/mayan-edms/blob/master/LICENSE\n\n[support-badge]: https://img.shields.io/badge/Get_support-brightgreen?style=for-the-badge\n[support-url]: https://www.mayan-edms.com/support/\n\n\n<a href=\"http://www.mayan-edms.com\">\n    <img align=\"center\" height=\"200\" width=\"200\" src=\"https://gitlab.com/mayan-edms/mayan-edms/raw/master/docs/_static/mayan_logo_bw.png\">\n</a>\n\n<p>\n    The most advanced, scalable, and mature open source document management system.\n<p>\n\n<img align=\"center\" src=\"https://gitlab.com/mayan-edms/mayan-edms/raw/master/docs/_static/overview.gif\" width=\"400\">\n\n# Getting started\n\nIt is very easy to get started with Mayan EDMS, just deploy the official\nDocker Compose file.\n\n    curl https://gitlab.com/mayan-edms/mayan-edms/-/raw/master/docker/docker-compose.yml -O\n    curl https://gitlab.com/mayan-edms/mayan-edms/-/raw/master/docker/.env -O\n    docker compose up --detach\n\nThe complete documentation is available at: https://docs.mayan-edms.com/parts/installation.html\n\n# Get the books\n\n<a href=\"https://a.co/d/cqda9uu\">\n    <img align=\"center\" src=\"https://m.media-amazon.com/images/I/61PAvrh303L._SL1293_.jpg\" width=\"150\">\n</a>\n<a href=\"https://a.co/d/9RMXyfn\">\n    <img align=\"center\" src=\"https://m.media-amazon.com/images/I/61g21N5oQCL._SL1491_.jpg\" width=\"150\">\n</a>\n\n# Tutorials\n\nFor more in-depth articles, tutorials, and troubleshooting available in the Knowledge Base.\n\n\n<a href=\"https://forum.mayan-edms.com/s/prod_Ogq3lYaoROC02Q\">\n    <img align=\"center\" src=\"https://docs.mayan-edms.com/_static/knowledge-base.jpg\" width=\"400\">\n</a>\n\nClick the image or visit: https://forum.mayan-edms.com/s/prod_Ogq3lYaoROC02Q\n\n# Important links\n\n- [Homepage](http://www.mayan-edms.com)\n- [Documentation](https://docs.mayan-edms.com)\n- [Forum](https://forum.mayan-edms.com/)\n- [Source code, issues, bugs](https://gitlab.com/mayan-edms/mayan-edms)\n",
+    "characters": 3647,
+    "source_url": "https://github.com/mayan-edms/Mayan-EDMS/blob/8da13ee7e49fa23d24ab49906bf9cf6bfe3f44e9/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "c9acd0d515079cc23a009b5a3b4fe271391d8b5ef80232c7400fd3cf3fc8f109",
+    "text": "   Copyright 2011 Roberto Rosario\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "characters": 586,
+    "source_url": "https://github.com/mayan-edms/Mayan-EDMS/blob/8da13ee7e49fa23d24ab49906bf9cf6bfe3f44e9/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "siloraptor",
+      "contributions": 7092
+    },
+    {
+      "login": "eriggs",
+      "contributions": 55
+    },
+    {
+      "login": "mbehrle",
+      "contributions": 43
+    },
+    {
+      "login": "pwhipp",
+      "contributions": 19
+    },
+    {
+      "login": "fordguo",
+      "contributions": 7
+    },
+    {
+      "login": "NacreData",
+      "contributions": 7
+    },
+    {
+      "login": "davpaez",
+      "contributions": 6
+    },
+    {
+      "login": "fsheedy",
+      "contributions": 6
+    },
+    {
+      "login": "selir27",
+      "contributions": 6
+    },
+    {
+      "login": "jeverling",
+      "contributions": 5
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0153",
+        "repo": "mayan-edms/Mayan-EDMS",
+        "url": "https://github.com/mayan-edms/Mayan-EDMS",
+        "labels": [],
+        "family_ids": [
+          "U12"
+        ],
+        "family_names": [
+          "Document management system"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 1,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

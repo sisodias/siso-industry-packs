@@ -1,0 +1,152 @@
+{
+  "audit_id": "R034",
+  "requested_full_name": "ICIJ/extract",
+  "observed_at": "2026-09-13T16:10:14.427931+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "ICIJ/extract",
+  "html_url": "https://github.com/ICIJ/extract",
+  "description": "A cross-platform command line tool for parallelised content extraction and analysis.",
+  "stargazers_count": 258,
+  "forks_count": 32,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2015-05-07T16:24:57Z",
+  "updated_at": "2026-08-31T07:56:00Z",
+  "pushed_at": "2026-08-31T07:53:49Z",
+  "size": 75622,
+  "open_issues_count": 4,
+  "topics": [
+    "ediscovery",
+    "etl",
+    "index",
+    "solr",
+    "tika"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "04d49167d0c0c143a58f7a223b1c86dccc3def35",
+  "last_commit": "2026-08-31T07:53:38Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/ICIJ/extract",
+    "commit": "https://github.com/ICIJ/extract/commit/04d49167d0c0c143a58f7a223b1c86dccc3def35"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "fdb637e3855cc1a09b702ef9e2ae7d8926d75c40327fa0dff99950fac4976092",
+    "text": "<h3 align=\"center\">Extract</h3>\n\n<div align=\"center\">\n<p>A cross-platform command line tool for parallelized, distributed content extraction.</p>\n\n| | Status |\n| --: | :-- |\n| **CI checks** | [![CircleCI](https://img.shields.io/circleci/build/gh/ICIJ/extract.svg?style=flat)](https://circleci.com/gh/ICIJ/extract) |\n| **Maven Central** | [![Maven Central](https://img.shields.io/maven-central/v/org.icij.extract/extract-lib?style=flat)](https://central.sonatype.com/artifact/org.icij.extract/extract-lib) |\n| **Latest version** | [![Latest version](https://img.shields.io/github/v/tag/icij/extract?style=flat)](https://github.com/ICIJ/extract/releases/latest) |\n| **Open issues** | [![Open issues](https://img.shields.io/github/issues/icij/extract?style=flat&color=success)](https://github.com/ICIJ/extract/issues/) |\n| **Documentation** | [![Wiki](https://img.shields.io/badge/Wiki-193D87?style=flat)](https://github.com/ICIJ/extract/wiki) |\n\n</div>\n\n# Extract\n\n**Extract** is an open‑source, cross‑platform command line tool for parallelized, distributed content extraction. Built on top of [Apache Tika](https://tika.apache.org/), it parses text and metadata from heterogeneous files (PDFs, emails, office documents, images, archives, etc.) and can run optical character recognition (OCR) on scans. It uses Redis‑backed queueing to distribute work across many machines and writes results to Solr, plain text files, or standard output. Extract is an essential part of the engineering behind the [Panama Papers](https://en.wikipedia.org/wiki/Panama_Papers), [Swiss Leaks](https://en.wikipedia.org/wiki/Swiss_Leaks) and [Luxembourg Leaks](https://en.wikipedia.org/wiki/Luxembourg_Leaks) investigations.\n\n<!-- omit from toc -->\n## Table of Contents\n\n- [Main Features](#main-features)\n- [Developer Guide](#developer-guide)\n  - [Requirements](#requirements)\n  - [Build](#build)\n  - [Run Tests](#run-tests)\n  - [Release](#release)\n- [License](#license)\n- [About ICIJ](#about-icij)\n\n## Main Features\n\n* 📄 **Tika‑powered extraction**: Parse text and metadata from PDFs, emails, office docs, images, archives, and more.\n* 🖼️ **OCR on scans & images**: Turn visual text into machine‑readable text via Tesseract.\n* ⚡ **Parallel extraction**: Process many files concurrently on a single machine.\n* 🌐 **Distributed queueing**: Coordinate extraction across multiple machines with a Redis‑backed queue.\n* 📤 **Pluggable output**: Write extracted content to Solr, plain text files, or standard output.\n\n## Developer Guide\n\nThis section explains how to set up a development environment, build the project, and run the tests. It assumes you are comfortable with Java/Maven projects. The project is modular and split into two Maven modules: `extract-lib` (the extraction library, published to Maven Central) and `extract-cli` (the command line interface).\n\n### Requirements\n\n* **JDK 17**\n* **Apache Maven 3.8+** - primary build tool\n* **GNU Make** (optional) - convenient shortcuts (run `make help` to see available targets)\n* **Redis 4+** - distributed extraction queue; also required to run the test suite\n* **Tesseract OCR & Leptonica** (optional) - required for OCR of scans and images\n\nA local Redis instance is enough to run the tests:\n\n```bash\ndocker run -d -p 6379:6379 redis:alpine\n```\n\n### Build\n\nThe project is modular. Using Make:\n\n```bash\n# Build and install all modules to the local Maven repository\nmake install\n\n# Or build the distribution JARs only (skips tests)\nmake build\n```\n\n### Run Tests\n\nExtract has both unit and integration tests. Integration tests expect a Redis instance to be reachable, and OCR tests expect Tesseract and Leptonica to be installed.\n\n```bash\n# Run the whole test suite\nmake test\n\n# Or run a single module\nmvn -pl extract-lib test\n\n# Or a single test class\nmvn -pl extract-lib -Dtest=org.icij.extract.ExtractorTest test\n```\n\n### Release\n\n`extract-lib` is published to Maven Central. To cut a new release:\n\n```bash\nmake release NEW_VERSION=x.y.z\n```\n\nThis sets the new version across the modules, commits the change, and tags it. Push the tag to trigger the CircleCI release job:\n\n```bash\ngit push origin master --tags\n```\n\nFor practical command‑line usage of the extraction tool itself, see the [wiki](https://github.com/ICIJ/extract/wiki).\n\n## License\n\nExtract is distributed under the [MIT License](LICENSE).\n\n## About ICIJ\n\nThe **International Consortium of Investigative Journalists (ICIJ)** is a global network of reporters and media organizations collaborating on cross‑border investigations (e.g., *Panama Papers*, *Luanda Leaks*, *Uber Files*, *Pandora Papers*). The tech team at ICIJ builds tools like Extract to empower investigative journalism at scale, handling millions of documents securely and efficiently.\n\n**Contact & Community**\n\n* Issues & feature requests: [GitHub Issues](https://github.com/ICIJ/extract/issues)\n* Email: `engineering@icij.org`\n* Security reports: please email us and avoid filing public issues for vulnerabilities.\n",
+    "characters": 4978,
+    "source_url": "https://github.com/ICIJ/extract/blob/04d49167d0c0c143a58f7a223b1c86dccc3def35/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "b89d0cdead231deae3b4d80741d859d9ed4edb9c1a98420b594096515ba1d2ee",
+    "text": "MIT License\n\nCopyright (c) 2018 The International Consortium of Investigative Journalists\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1114,
+    "source_url": "https://github.com/ICIJ/extract/blob/04d49167d0c0c143a58f7a223b1c86dccc3def35/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "mattcg",
+      "contributions": 480
+    },
+    {
+      "login": "bamthomas",
+      "contributions": 307
+    },
+    {
+      "login": "pirhoo",
+      "contributions": 283
+    },
+    {
+      "login": "mvanzalu",
+      "contributions": 57
+    },
+    {
+      "login": "caro3801",
+      "contributions": 12
+    },
+    {
+      "login": "ClemDoum",
+      "contributions": 11
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 8
+    },
+    {
+      "login": "Julm",
+      "contributions": 2
+    },
+    {
+      "login": "grenwi",
+      "contributions": 1
+    },
+    {
+      "login": "StephenGrey",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 76,
+      "title": "feat: recover text from embedded entries whose parse fails but whose bytes are text",
+      "state": "closed",
+      "created_at": "2026-08-29T15:43:59Z",
+      "updated_at": "2026-08-31T07:40:45Z",
+      "closed_at": "2026-08-31T07:40:45Z",
+      "comments": 0,
+      "html_url": "https://github.com/ICIJ/extract/issues/76",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 74,
+      "title": "bug: nameless embeds inherit the root file name, causing content-type mis-detection",
+      "state": "closed",
+      "created_at": "2026-08-29T15:39:06Z",
+      "updated_at": "2026-08-31T07:40:33Z",
+      "closed_at": "2026-08-31T07:40:33Z",
+      "comments": 0,
+      "html_url": "https://github.com/ICIJ/extract/issues/74",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 75,
+      "title": "feat: log the exception message on embedded parse failures",
+      "state": "closed",
+      "created_at": "2026-08-29T15:39:17Z",
+      "updated_at": "2026-08-31T07:40:08Z",
+      "closed_at": "2026-08-31T07:40:08Z",
+      "comments": 0,
+      "html_url": "https://github.com/ICIJ/extract/issues/75",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
