@@ -64,10 +64,11 @@ jobs:
           byname={r['full_name']:r for r in out}
           for component in assembly['components']:
               assert component['repository'] in byname and component['revision']==byname[component['repository']]['revision'] and byname[component['repository']]['verdict']=='ADOPT'
-          existing={f:read(BASE+f) for f in ['01-person.md','02-workflow.md','03-companies.md','05-superapp.md','05-assembly.json','06-value.md','02-workflow.json','README.md']}
-          assert len(re.findall(r'^### P0[1-8] ',existing['01-person.md'],re.M))==8
+          authored_files=['01-person.md','02-workflow.md','03-companies.md','05-superapp.md','05-assembly.json','06-value.md','02-workflow.json','README.md']
+          authored={f:read(BASE+f) for f in authored_files}
+          assert len(re.findall(r'^### P0[1-8] ',authored['01-person.md'],re.M))==8
           assert discovery['rounds']['5']['new_names']==0 and discovery['rounds']['6']['new_names']==0
-          for f,t in existing.items():
+          for f,t in authored.items():
               if f!='README.md':assert 'Not yet researched' not in t
           def dump(obj):return json.dumps(obj,ensure_ascii=False,indent=2)+'\n'
           def cell(value):return str(value).replace('|','/').replace('\n',' ')
@@ -79,7 +80,7 @@ jobs:
               md+='| '+label+' ['+r['full_name']+']('+r['url']+') · [evidence]('+r['source_evidence']+') | '+r['bank_status']+' | '+str(r['stars'])+' / '+r['observed_at'][:10]+' | '+cell(r['licence'])+' | '+r['last_commit']+' / `'+r['revision'][:12]+'` | '+('/'.join(map(str,vals)))+' | '+r['verdict']+' / '+r['unit_class']+' / '+r['capability_tag']+' | [analysis] '+cell(r['why'])+' |\n'
           md+='\n## Resource and local-deployment qualification\n\nA self-hostable repository is not proof of a successful laptop installation. No benchmark or installation was performed. Every JSON row contains a resource-floor field; null is unmeasured, not zero. Pattern/specification rows are not executable components. [analysis]\n\n| ID / repository | Local route and resource boundary |\n|---|---|\n'
           for r in out:md+='| '+r['audit_id']+' / '+r['full_name']+' | [analysis] '+cell(r['resource_floor']['note'])+' [source]('+r['source_evidence']+') |\n'
-          md+='\n## Taxonomy gaps\n\nThe existing 51-tag vocabulary is retained for intake. The following are explicitly nearest-tag mappings, not assertions that OSC is WebSocket or music synthesis is only a codec. [analysis]\n\n'+dump(decisions['taxonomy_gaps'])+'\n## Unresolved discovery identities\n\nThree requested names did not yield repository metadata in the audit and are **not recommendations or examined repos**: audit R128, R134 and R135. Their attempted names and errors are retained only in the [request/source evidence]('+pin+'candidate-audit-receipt.json). R058 has metadata and a licence but no retrieved standard README and is excluded from the conservative examined total. Discovery results retain additional unexamined leads; do not inflate the examined count with search hits. [analysis]\n'
+          md+='\n## Taxonomy gaps\n\nThe existing 51-tag vocabulary is retained for intake. The following are explicitly nearest-tag mappings, not assertions that OSC is WebSocket or music synthesis is only a codec. [analysis]\n\n```json\n'+dump(decisions['taxonomy_gaps'])+'```\n\n## Unresolved discovery identities\n\nThree requested names did not yield repository metadata in the audit and are **not recommendations or examined repos**: audit R128, R134 and R135. Their attempted names and errors remain in the pinned audit evidence. R058 has metadata and a licence but no retrieved standard README and is excluded from the conservative examined total. Discovery results retain additional unexamined leads; do not inflate the examined count with search hits. [analysis; source: '+pin+'candidate-audit-receipt.json]\n'
           data={'schema_version':'1.0','slug':'music_creation','as_of':'2026-09-13','evidence_class':'analysis','status':'research_complete_not_deployed','source_evidence_commit':source,'bank_revision':bank,'counts':counts,'score_boundary':decisions['score_boundary'],'taxonomy_gaps':decisions['taxonomy_gaps'],'candidates':out,'unresolved_audit_ids':['R128','R134','R135'],'discovery_receipt':URL+REF+'/'+BASE+'evidence/discovery-receipt.json'}
           outputs={BASE+'04-oss-candidates.md':md,BASE+'04-oss-candidates.json':dump(data)}
           top=[next(r for r in out if r['audit_id']==f'R{n:03}') for n in decisions['top_ten']]
@@ -100,7 +101,6 @@ jobs:
           outputs[BASE+'evidence/pack-validation.json']=dump(receipt)
           stage7={'slug':'music_creation','name':'Music creators and recording artists','status':'complete','primary_segment':'Independent beatmaker / self-releasing recording artist (proposed; NM specification unavailable)','person':'NM — beatmaker; detailed operator model is a scenario, not an interview','wedge':'Local exact-revision project/release handoff with provenance and approval evidence','stack_tax_usd_year':1457.87,'workflow_stages':10,'tier1_companies':10,'tier2_offerings':10,'repos_examined':examined,'repos_adopted':len(adopted),'gaps':8,'verdict':'NO broad build now; compare a narrow local handoff workflow against existing tools','date':'2026-09-13'}
           outputs[BASE+'evidence/stage7-registry-row.json']=dump(stage7)
-          # Publish as a fresh fast-forward: re-read shared registries on every conflict.
           for attempt in range(5):
               ref=api('/repos/'+REPO+'/git/ref/heads/main');parent=ref['object']['sha']; current=dict(outputs)
               original=read('registry/industries.jsonl',parent); lines=original.splitlines(keepends=True); found=0; rendered=[]
@@ -111,8 +111,8 @@ jobs:
                   found+=1;row.update(stage7);row.update({'stage_reached':7,'kind':'consumer','priority':'low','deployment':'user_machine','repos_verified':len(out),'practitioner_complaints':8,'new_repos_verified':len(new),'new_repos_kept':len(kept),'research_status':'complete_with_explicit_qualification_gaps','runtime_status':'not_executed','customer_acceptance':None,'source':URL+REF+'/'+BASE+'evidence/publication-request.json','note':'Research pack and numeric quotas complete. 143 repositories verified, 142 conservatively examined; no candidate run. Stack tax is an overbuy comparison, not NM spend. Broad build rejected pending actual-task comparison.'});rendered.append(json.dumps(row,ensure_ascii=False)+'\n')
               assert found==1;current['registry/industries.jsonl']=''.join(rendered)
               def replace_owned(path,additions,identity):
-                  existing=read(path,parent).splitlines(keepends=True); targetids={r.get(identity) for r in additions}; keptlines=[]
-                  for line in existing:
+                  lines=read(path,parent).splitlines(keepends=True); targetids={r.get(identity) for r in additions}; keptlines=[]
+                  for line in lines:
                       if not line.strip():keptlines.append(line);continue
                       obj=json.loads(line)
                       replace=(obj.get('industry')=='music_creation' and (identity=='full_name' or obj.get(identity) in targetids))
@@ -133,11 +133,10 @@ jobs:
               if updated['_error'] not in (409,422):raise RuntimeError('publication failed '+str(updated['_error']))
           else:raise RuntimeError('concurrent write conflict; no force update attempted')
           root=pathlib.Path('research-pack')
-          for p,t in {**current,**{BASE+k:v for k,v in existing.items()} if False else {}}.items():
+          for p,t in current.items():
               dest=root/p;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(t)
-          # Export authored public pack, not tokens, raw private context or candidate binaries.
-          for f in ['01-person.md','02-workflow.md','03-companies.md','05-superapp.md','05-assembly.json','06-value.md','02-workflow.json','README.md']:
-              dest=root/BASE/f;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(read(BASE+f))
+          for f,t in authored.items():
+              dest=root/BASE/f;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(t)
           (root/'publication-receipt.json').write_text(dump(publication))
           PY
       - name: Retain authored research pack
