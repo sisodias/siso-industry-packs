@@ -1,0 +1,171 @@
+{
+  "audit_id": "R125",
+  "requested_full_name": "jbarlow83/OCRmyPDF",
+  "observed_at": "2026-09-13T16:11:56.650252+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "ocrmypdf/OCRmyPDF",
+  "html_url": "https://github.com/ocrmypdf/OCRmyPDF",
+  "description": "OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched",
+  "stargazers_count": 34743,
+  "forks_count": 2407,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2013-12-20T08:26:28Z",
+  "updated_at": "2026-09-13T16:11:52Z",
+  "pushed_at": "2026-09-08T18:26:29Z",
+  "size": 71412,
+  "open_issues_count": 99,
+  "topics": [
+    "image-processing",
+    "ocr",
+    "pdf",
+    "python",
+    "tesseract"
+  ],
+  "license": {
+    "key": "mpl-2.0",
+    "name": "Mozilla Public License 2.0",
+    "spdx_id": "MPL-2.0",
+    "url": "https://api.github.com/licenses/mpl-2.0",
+    "node_id": "MDc6TGljZW5zZTE0"
+  },
+  "revision": "ffee83231532f4f67b8c0e756cddec67446570c9",
+  "last_commit": "2026-09-08T09:14:32Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/ocrmypdf/OCRmyPDF",
+    "commit": "https://github.com/ocrmypdf/OCRmyPDF/commit/ffee83231532f4f67b8c0e756cddec67446570c9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "6cb5020b784072a4e3724c28dc7399a25d1d700e98691984cd479c871ac0192e",
+    "text": "<!-- SPDX-FileCopyrightText: 2014 Julien Pfefferkorn -->\n<!-- SPDX-FileCopyrightText: 2015 James R. Barlow -->\n<!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->\n\n<img src=\"docs/images/logo.svg\" width=\"240\" alt=\"OCRmyPDF\">\n\n[![Build Status](https://github.com/ocrmypdf/OCRmyPDF/actions/workflows/build.yml/badge.svg)](https://github.com/ocrmypdf/OCRmyPDF/actions/workflows/build.yml) [![PyPI version][pypi]](https://pypi.org/project/ocrmypdf/) ![Homebrew version][homebrew] ![ReadTheDocs][docs] ![Python versions][pyversions]\n\n[pypi]: https://img.shields.io/pypi/v/ocrmypdf.svg \"PyPI version\"\n[homebrew]: https://img.shields.io/homebrew/v/ocrmypdf.svg \"Homebrew version\"\n[docs]: https://readthedocs.org/projects/ocrmypdf/badge/?version=latest \"RTD\"\n[pyversions]: https://img.shields.io/pypi/pyversions/ocrmypdf \"Supported Python versions\"\n\nOCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched or copy-pasted.\n\n```bash\nocrmypdf                      # it's a scriptable command line program\n   -l eng+fra                 # it supports multiple languages\n   --rotate-pages             # it can fix pages that are misrotated\n   --deskew                   # it can deskew crooked PDFs!\n   --title \"My PDF\"           # it can change output metadata\n   --jobs 4                   # it uses multiple cores by default\n   --output-type pdfa         # it produces PDF/A by default\n   input_scanned.pdf          # takes PDF input (or images)\n   output_searchable.pdf      # produces validated PDF output\n```\n\n[See the release notes for details on the latest changes](https://ocrmypdf.readthedocs.io/en/latest/release_notes.html).\n\n## Main features\n\n- Generates a searchable [PDF/A](https://en.wikipedia.org/?title=PDF/A) file from a regular PDF\n- Places OCR text accurately below the image to ease copy / paste\n- Keeps the exact resolution of the original embedded images\n- When possible, inserts OCR information as a \"lossless\" operation without disrupting any other content\n- Optimizes PDF images, often producing files smaller than the input file\n- If requested, deskews and/or cleans the image before performing OCR\n- Validates input and output files\n- Distributes work across all available CPU cores\n- Uses [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) engine to recognize more than [100 languages](https://github.com/tesseract-ocr/tessdata)\n- Keeps your private data private.\n- Scales properly to handle files with thousands of pages.\n- Battle-tested on millions of PDFs.\n\n<img src=\"misc/screencast/demo.svg\" alt=\"Demo of OCRmyPDF in a terminal session\">\n\nFor details: please consult the [documentation](https://ocrmypdf.readthedocs.io/en/latest/).\n\n## Motivation\n\nI searched the web for a free command line tool to OCR PDF files: I found many, but none of them were really satisfying:\n\n- Either they produced PDF files with misplaced text under the image (making copy/paste impossible)\n- Or they did not handle accents and multilingual characters\n- Or they changed the resolution of the embedded images\n- Or they generated ridiculously large PDF files\n- Or they crashed when trying to OCR\n- Or they did not produce valid PDF files\n- On top of that none of them produced PDF/A files (format dedicated for long time storage)\n\n...so I decided to develop my own tool.\n\n## Installation\n\nLinux, Windows, macOS and FreeBSD are supported. Docker images are also available, for both x64 and ARM.\n\n| Operating system              | Install command               |\n| ----------------------------- | ------------------------------|\n| Debian, Ubuntu                | ``apt install ocrmypdf``      |\n| Windows Subsystem for Linux   | ``apt install ocrmypdf``      |\n| Fedora                        | ``dnf install ocrmypdf``      |\n| macOS (Homebrew)              | ``brew install ocrmypdf``     |\n| macOS (MacPorts)              | ``port install ocrmypdf``     |\n| macOS (nix)                   | ``nix-env -i ocrmypdf``       |\n| LinuxBrew                     | ``brew install ocrmypdf``     |\n| FreeBSD                       | ``pkg install py-ocrmypdf``   |\n| OpenBSD                       | ``pkg_add ocrmypdf``          |\n| Ubuntu Snap                   | ``snap install ocrmypdf``     |\n\nFor everyone else, [see our documentation](https://ocrmypdf.readthedocs.io/en/latest/installation.html) for installation steps.\n\n## Languages\n\nOCRmyPDF uses Tesseract for OCR, and relies on its language packs. For Linux users, you can often find packages that provide language packs:\n\n```bash\n\n# Debian/Ubuntu users\napt-cache search tesseract-ocr # Display a list of all Tesseract language packs\napt-get install tesseract-ocr-chi-sim  # Example: Install Chinese Simplified language pack\n\n\n# Arch Linux users\npacman -S tesseract-data-eng tesseract-data-deu # Example: Install the English and German language packs\n\n# OpenBSD users\npkg_info -aQ tesseract  # Display a list of all Tesseract language packs\npkg_add tesseract-cym  # Example: Install the Welsh language pack\n\n# brew macOS users\nbrew install tesseract-lang\n\n# Fedora users\ndnf search tesseract-langpack # Display a list of all Tesseract language packs \ndnf install tesseract-langpack-ita # Example: Install the Italian language pack\n\n\n```\n\nYou can then pass the `-l LANG` argument to OCRmyPDF to give a hint as to what languages it should search for. Multiple languages can be requested.\n\nOCRmyPDF supports Tesseract 4.1.1+. It will automatically use whichever version it finds first on the `PATH` environment variable. On Windows, if `PATH` does not provide a Tesseract binary, we use the highest version number that is installed according to the Windows Registry.\n\n## Documentation and support\n\nOnce OCRmyPDF is installed, the built-in help which explains the command syntax and options can be accessed via:\n\n```bash\nocrmypdf --help\n```\n\nOur [documentation is served on Read the Docs](https://ocrmypdf.readthedocs.io/en/latest/index.html).\n\nPlease report issues on our [GitHub issues](https://github.com/ocrmypdf/OCRmyPDF/issues) page, and follow the issue template for quick response.\n\n## Feature demo\n\n```bash\n# Add an OCR layer and require PDF/A\nocrmypdf --output-type pdfa input.pdf output.pdf\n\n# Convert an image to single page PDF\nocrmypdf input.jpg output.pdf\n\n# Add OCR to a file in place (only modifies file on success)\nocrmypdf myfile.pdf myfile.pdf\n\n# OCR with non-English languages (look up your language's ISO 639-3 code)\nocrmypdf -l fra LeParisien.pdf LeParisien.pdf\n\n# OCR multilingual documents\nocrmypdf -l eng+fra Bilingual-English-French.pdf Bilingual-English-French.pdf\n\n# Deskew (straighten crooked pages)\nocrmypdf --deskew input.pdf output.pdf\n```\n\nFor more features, see the [documentation](https://ocrmypdf.readthedocs.io/en/latest/index.html).\n\n## Requirements\n\nIn addition to the required Python version, OCRmyPDF requires external program installations of Ghostscript and Tesseract OCR. OCRmyPDF is pure Python, and runs on pretty much everything: Linux, macOS, Windows and FreeBSD.\n\n## Plugins\n\nOCRmyPDF provides a plugin interface allowing its capabilities to be extended or replaced. Here are some plugins we are aware of:\n\n- [OCRmyPDF-AppleOCR](https://github.com/mkyt/ocrmypdf-AppleOCR): replaces the standard Tesseract OCR engine with Apple Vision Framework. Requires macOS.\n- [OCRmyPDF-EasyOCR](https://github.com/ocrmypdf/OCRmyPDF-EasyOCR): replaces the standard Tesseract OCR engine with EasyOCR, a newer OCR engine based on PyTorch. GPU strongly recommended.\n- [OCRmyPDF-PaddleOCR](https://github.com/clefru/ocrmypdf-paddleocr): replaces the standard Tesseract OCR engine with PaddleOCR, a powerful GPU accelerated OCR engine.\n\n[paperless-ngx](https://docs.paperless-ngx.com/) provides integration of OCRmyPDF into a searchable document management system.\n\n## Press & Media\n\n- [Going paperless with OCRmyPDF](https://medium.com/@ikirichenko/going-paperless-with-ocrmypdf-e2f36143f46a)\n- [Converting a scanned document into a compressed searchable PDF with redactions](https://medium.com/@treyharris/converting-a-scanned-document-into-a-compressed-searchable-pdf-with-redactions-63f61c34fe4c)\n- [c't 1-2014, page 59](https://heise.de/-2279695): Detailed presentation of OCRmyPDF v1.0 in the leading German IT magazine c't\n- [heise Open Source, 09/2014: Texterkennung mit OCRmyPDF](https://heise.de/-2356670)\n- [heise Durchsuchbare PDF-Dokumente mit OCRmyPDF erstellen](https://www.heise.de/ratgeber/Durchsuchbare-PDF-Dokumente-mit-OCRmyPDF-erstellen-4607592.html)\n- [Excellent Utilities: OCRmyPDF](https://www.linuxlinks.com/excellent-utilities-ocrmypdf-add-ocr-text-layer-scanned-pdfs/)\n- [LinuxUser Texterkennung mit OCRmyPDF und Scanbd automatisieren](https://www.linux-community.de/ausgaben/linuxuser/2021/06/texterkennung-mit-ocrmypdf-und-scanbd-automatisieren/)\n- [Y Combinator discussion](https://news.ycombinator.com/item?id=32028752)\n\n## Business enquiries\n\nOCRmyPDF would not be the software that it is today without companies and users choosing to provide support for feature development and consulting enquiries. We are happy to discuss all enquiries, whether for extending the existing feature set, or integrating OCRmyPDF into a larger system.\n\n## License\n\nThe OCRmyPDF software is licensed under the Mozilla Public License 2.0 (MPL-2.0). This license permits integration of OCRmyPDF with other code, included commercial and closed source, but asks you to publish source-level modifications you make to OCRmyPDF.\n\nSome components of OCRmyPDF have other licenses, as indicated by standard SPDX license identifiers or the DEP5 copyright and licensing information file. Generally speaking, non-core code is licensed under MIT, and the documentation and test files are licensed under Creative Commons ShareAlike 4.0 (CC-BY-SA 4.0).\n\n## Disclaimer\n\nThe software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n",
+    "characters": 9893,
+    "source_url": "https://github.com/ocrmypdf/OCRmyPDF/blob/ffee83231532f4f67b8c0e756cddec67446570c9/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "text": "Mozilla Public License Version 2.0\n==================================\n\n1. Definitions\n--------------\n\n1.1. \"Contributor\"\n    means each individual or legal entity that creates, contributes to\n    the creation of, or owns Covered Software.\n\n1.2. \"Contributor Version\"\n    means the combination of the Contributions of others (if any) used\n    by a Contributor and that particular Contributor's Contribution.\n\n1.3. \"Contribution\"\n    means Covered Software of a particular Contributor.\n\n1.4. \"Covered Software\"\n    means Source Code Form to which the initial Contributor has attached\n    the notice in Exhibit A, the Executable Form of such Source Code\n    Form, and Modifications of such Source Code Form, in each case\n    including portions thereof.\n\n1.5. \"Incompatible With Secondary Licenses\"\n    means\n\n    (a) that the initial Contributor has attached the notice described\n        in Exhibit B to the Covered Software; or\n\n    (b) that the Covered Software was made available under the terms of\n        version 1.1 or earlier of the License, but not also under the\n        terms of a Secondary License.\n\n1.6. \"Executable Form\"\n    means any form of the work other than Source Code Form.\n\n1.7. \"Larger Work\"\n    means a work that combines Covered Software with other material, in\n    a separate file or files, that is not Covered Software.\n\n1.8. \"License\"\n    means this document.\n\n1.9. \"Licensable\"\n    means having the right to grant, to the maximum extent possible,\n    whether at the time of the initial grant or subsequently, any and\n    all of the rights conveyed by this License.\n\n1.10. \"Modifications\"\n    means any of the following:\n\n    (a) any file in Source Code Form that results from an addition to,\n        deletion from, or modification of the contents of Covered\n        Software; or\n\n    (b) any new file in Source Code Form that contains any Covered\n        Software.\n\n1.11. \"Patent Claims\" of a Contributor\n    means any patent claim(s), including without limitation, method,\n    process, and apparatus claims, in any patent Licensable by such\n    Contributor that would be infringed, but for the grant of the\n    License, by the making, using, selling, offering for sale, having\n    made, import, or transfer of either its Contributions or its\n    Contributor Version.\n\n1.12. \"Secondary License\"\n    means either the GNU General Public License, Version 2.0, the GNU\n    Lesser General Public License, Version 2.1, the GNU Affero General\n    Public License, Version 3.0, or any later versions of those\n    licenses.\n\n1.13. \"Source Code Form\"\n    means the form of the work preferred for making modifications.\n\n1.14. \"You\" (or \"Your\")\n    means an individual or a legal entity exercising rights under this\n    License. For legal entities, \"You\" includes any entity that\n    controls, is controlled by, or is under common control with You. For\n    purposes of this definition, \"control\" means (a) the power, direct\n    or indirect, to cause the direction or management of such entity,\n    whether by contract or otherwise, or (b) ownership of more than\n    fifty percent (50%) of the outstanding shares or beneficial\n    ownership of such entity.\n\n2. License Grants and Conditions\n--------------------------------\n\n2.1. Grants\n\nEach Contributor hereby grants You a world-wide, royalty-free,\nnon-exclusive license:\n\n(a) under intellectual property rights (other than patent or trademark)\n    Licensable by such Contributor to use, reproduce, make available,\n    modify, display, perform, distribute, and otherwise exploit its\n    Contributions, either on an unmodified basis, with Modifications, or\n    as part of a Larger Work; and\n\n(b) under Patent Claims of such Contributor to make, use, sell, offer\n    for sale, have made, import, and otherwise transfer either its\n    Contributions or its Contributor Version.\n\n2.2. Effective Date\n\nThe licenses granted in Section 2.1 with respect to any Contribution\nbecome effective for each Contribution on the date the Contributor first\ndistributes such Contribution.\n\n2.3. Limitations on Grant Scope\n\nThe licenses granted in this Section 2 are the only rights granted under\nthis License. No additional rights or licenses will be implied from the\ndistribution or licensing of Covered Software under this License.\nNotwithstanding Section 2.1(b) above, no patent license is granted by a\nContributor:\n\n(a) for any code that a Contributor has removed from Covered Software;\n    or\n\n(b) for infringements caused by: (i) Your and any other third party's\n    modifications of Covered Software, or (ii) the combination of its\n    Contributions with other software (except as part of its Contributor\n    Version); or\n\n(c) under Patent Claims infringed by Covered Software in the absence of\n    its Contributions.\n\nThis License does not grant any rights in the trademarks, service marks,\nor logos of any Contributor (except as may be necessary to comply with\nthe notice requirements in Section 3.4).\n\n2.4. Subsequent Licenses\n\nNo Contributor makes additional grants as a result of Your choice to\ndistribute the Covered Software under a subsequent version of this\nLicense (see Section 10.2) or under the terms of a Secondary License (if\npermitted under the terms of Section 3.3).\n\n2.5. Representation\n\nEach Contributor represents that the Contributor believes its\nContributions are its original creation(s) or it has sufficient rights\nto grant the rights to its Contributions conveyed by this License.\n\n2.6. Fair Use\n\nThis License is not intended to limit any rights You have under\napplicable copyright doctrines of fair use, fair dealing, or other\nequivalents.\n\n2.7. Conditions\n\nSections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted\nin Section 2.1.\n\n3. Responsibilities\n-------------------\n\n3.1. Distribution of Source Form\n\nAll distribution of Covered Software in Source Code Form, including any\nModifications that You create or to which You contribute, must be under\nthe terms of this License. You must inform recipients that the Source\nCode Form of the Covered Software is governed by the terms of this\nLicense, and how they can obtain a copy of this License. You may not\nattempt to alter or restrict the recipients' rights in the Source Code\nForm.\n\n3.2. Distribution of Executable Form\n\nIf You distribute Covered Software in Executable Form then:\n\n(a) such Covered Software must also be made available in Source Code\n    Form, as described in Section 3.1, and You must inform recipients of\n    the Executable Form how they can obtain a copy of such Source Code\n    Form by reasonable means in a timely manner, at a charge no more\n    than the cost of distribution to the recipient; and\n\n(b) You may distribute such Executable Form under the terms of this\n    License, or sublicense it under different terms, provided that the\n    license for the Executable Form does not attempt to limit or alter\n    the recipients' rights in the Source Code Form under this License.\n\n3.3. Distribution of a Larger Work\n\nYou may create and distribute a Larger Work under terms of Your choice,\nprovided that You also comply with the requirements of this License for\nthe Covered Software. If the Larger Work is a combination of Covered\nSoftware with a work governed by one or more Secondary Licenses, and the\nCovered Software is not Incompatible With Secondary Licenses, this\nLicense permits You to additionally distribute such Covered Software\nunder the terms of such Secondary License(s), so that the recipient of\nthe Larger Work may, at their option, further distribute the Covered\nSoftware under the terms of either this License or such Secondary\nLicense(s).\n\n3.4. Notices\n\nYou may not remove or alter the substance of any license notices\n(including copyright notices, patent notices, disclaimers of warranty,\nor limitations of liability) contained within the Source Code Form of\nthe Covered Software, except that You may alter any license notices to\nthe extent required to remedy known factual inaccuracies.\n\n3.5. Application of Additional Terms\n\nYou may choose to offer, and to charge a fee for, warranty, support,\nindemnity or liability obligations to one or more recipients of Covered\nSoftware. However, You may do so only on Your own behalf, and not on\nbehalf of any Contributor. You must make it absolutely clear that any\nsuch warranty, support, indemnity, or liability obligation is offered by\nYou alone, and You hereby agree to indemnify every Contributor for any\nliability incurred by such Contributor as a result of warranty, support,\nindemnity or liability terms You offer. You may include additional\ndisclaimers of warranty and limitations of liability specific to any\njurisdiction.\n\n4. Inability to Comply Due to Statute or Regulation\n---------------------------------------------------\n\nIf it is impossible for You to comply with any of the terms of this\nLicense with respect to some or all of the Covered Software due to\nstatute, judicial order, or regulation then You must: (a) comply with\nthe terms of this License to the maximum extent possible; and (b)\ndescribe the limitations and the code they affect. Such description must\nbe placed in a text file included with all distributions of the Covered\nSoftware under this License. Except to the extent prohibited by statute\nor regulation, such description must be sufficiently detailed for a\nrecipient of ordinary skill to be able to understand it.\n\n5. Termination\n--------------\n\n5.1. The rights granted under this License will terminate automatically\nif You fail to comply with any of its terms. However, if You become\ncompliant, then the rights granted under this License from a particular\nContributor are reinstated (a) provisionally, unless and until such\nContributor explicitly and finally terminates Your grants, and (b) on an\nongoing basis, if such Contributor fails to notify You of the\nnon-compliance by some reasonable means prior to 60 days after You have\ncome back into compliance. Moreover, Your grants from a particular\nContributor are reinstated on an ongoing basis if such Contributor\nnotifies You of the non-compliance by some reasonable means, this is the\nfirst time You have received notice of non-compliance with this License\nfrom such Contributor, and You become compliant prior to 30 days after\nYour receipt of the notice.\n\n5.2. If You initiate litigation against any entity by asserting a patent\ninfringement claim (excluding declaratory judgment actions,\ncounter-claims, and cross-claims) alleging that a Contributor Version\ndirectly or indirectly infringes any patent, then the rights granted to\nYou by any and all Contributors for the Covered Software under Section\n2.1 of this License shall terminate.\n\n5.3. In the event of termination under Sections 5.1 or 5.2 above, all\nend user license agreements (excluding distributors and resellers) which\nhave been validly granted by You or Your distributors under this License\nprior to termination shall survive termination.\n\n************************************************************************\n*                                                                      *\n*  6. Disclaimer of Warranty                                           *\n*  -------------------------                                           *\n*                                                                      *\n*  Covered Software is provided under this License on an \"as is\"       *\n*  basis, without warranty of any kind, either expressed, implied, or  *\n*  statutory, including, without limitation, warranties that the       *\n*  Covered Software is free of defects, merchantable, fit for a        *\n*  particular purpose or non-infringing. The entire risk as to the     *\n*  quality and performance of the Covered Software is with You.        *\n*  Should any Covered Software prove defective in any respect, You     *\n*  (not any Contributor) assume the cost of any necessary servicing,   *\n*  repair, or correction. This disclaimer of warranty constitutes an   *\n*  essential part of this License. No use of any Covered Software is   *\n*  authorized under this License except under this disclaimer.         *\n*                                                                      *\n************************************************************************\n\n************************************************************************\n*                                                                      *\n*  7. Limitation of Liability                                          *\n*  --------------------------                                          *\n*                                                                      *\n*  Under no circumstances and under no legal theory, whether tort      *\n*  (including negligence), contract, or otherwise, shall any           *\n*  Contributor, or anyone who distributes Covered Software as          *\n*  permitted above, be liable to You for any direct, indirect,         *\n*  special, incidental, or consequential damages of any character      *\n*  including, without limitation, damages for lost profits, loss of    *\n*  goodwill, work stoppage, computer failure or malfunction, or any    *\n*  and all other commercial damages or losses, even if such party      *\n*  shall have been informed of the possibility of such damages. This   *\n*  limitation of liability shall not apply to liability for death or   *\n*  personal injury resulting from such party's negligence to the       *\n*  extent applicable law prohibits such limitation. Some               *\n*  jurisdictions do not allow the exclusion or limitation of           *\n*  incidental or consequential damages, so this exclusion and          *\n*  limitation may not apply to You.                                    *\n*                                                                      *\n************************************************************************\n\n8. Litigation\n-------------\n\nAny litigation relating to this License may be brought only in the\ncourts of a jurisdiction where the defendant maintains its principal\nplace of business and such litigation shall be governed by laws of that\njurisdiction, without reference to its conflict-of-law provisions.\nNothing in this Section shall prevent a party's ability to bring\ncross-claims or counter-claims.\n\n9. Miscellaneous\n----------------\n\nThis License represents the complete agreement concerning the subject\nmatter hereof. If any provision of this License is held to be\nunenforceable, such provision shall be reformed only to the extent\nnecessary to make it enforceable. Any law or regulation which provides\nthat the language of a contract shall be construed against the drafter\nshall not be used to construe this License against a Contributor.\n\n10. Versions of the License\n---------------------------\n\n10.1. New Versions\n\nMozilla Foundation is the license steward. Except as provided in Section\n10.3, no one other than the license steward has the right to modify or\npublish new versions of this License. Each version will be given a\ndistinguishing version number.\n\n10.2. Effect of New Versions\n\nYou may distribute the Covered Software under the terms of the version\nof the License under which You originally received the Covered Software,\nor under the terms of any subsequent version published by the license\nsteward.\n\n10.3. Modified Versions\n\nIf you create software not governed by this License, and you want to\ncreate a new license for such software, you may create and use a\nmodified version of this License if you rename the license and remove\nany references to the name of the license steward (except to note that\nsuch modified license differs from this License).\n\n10.4. Distributing Source Code Form that is Incompatible With Secondary\nLicenses\n\nIf You choose to distribute Source Code Form that is Incompatible With\nSecondary Licenses under the terms of this version of the License, the\nnotice described in Exhibit B of this License must be attached.\n\nExhibit A - Source Code Form License Notice\n-------------------------------------------\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\nIf it is not possible or desirable to put the notice in a particular\nfile, then You may include the notice in a location (such as a LICENSE\nfile in a relevant directory) where a recipient would be likely to look\nfor such a notice.\n\nYou may add additional accurate notices of copyright ownership.\n\nExhibit B - \"Incompatible With Secondary Licenses\" Notice\n---------------------------------------------------------\n\n  This Source Code Form is \"Incompatible With Secondary Licenses\", as\n  defined by the Mozilla Public License, v. 2.0.\n",
+    "characters": 16725,
+    "source_url": "https://github.com/ocrmypdf/OCRmyPDF/blob/ffee83231532f4f67b8c0e756cddec67446570c9/LICENSE",
+    "detected": {
+      "key": "mpl-2.0",
+      "name": "Mozilla Public License 2.0",
+      "spdx_id": "MPL-2.0",
+      "url": "https://api.github.com/licenses/mpl-2.0",
+      "node_id": "MDc6TGljZW5zZTE0"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "jbarlow83",
+      "contributions": 1802
+    },
+    {
+      "login": "fritz-hh",
+      "contributions": 213
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 63
+    },
+    {
+      "login": "mawi12345",
+      "contributions": 15
+    },
+    {
+      "login": "mara004",
+      "contributions": 7
+    },
+    {
+      "login": "claude",
+      "contributions": 6
+    },
+    {
+      "login": "QuLogic",
+      "contributions": 6
+    },
+    {
+      "login": "spwhitton",
+      "contributions": 6
+    },
+    {
+      "login": "ctbarbour",
+      "contributions": 4
+    },
+    {
+      "login": "yasoob",
+      "contributions": 4
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 1744,
+      "title": "[Bug]: PDF/A output garbles fi/ff in the OCR text layer",
+      "state": "closed",
+      "created_at": "2026-09-08T00:41:03Z",
+      "updated_at": "2026-09-08T18:26:30Z",
+      "closed_at": "2026-09-08T18:26:30Z",
+      "comments": 0,
+      "html_url": "https://github.com/ocrmypdf/OCRmyPDF/issues/1744",
+      "author_association": "NONE"
+    },
+    {
+      "number": 1741,
+      "title": "Is rusty pydantic avoidable (can 1.x be also supported)?",
+      "state": "closed",
+      "created_at": "2026-09-04T07:17:52Z",
+      "updated_at": "2026-09-04T18:29:55Z",
+      "closed_at": "2026-09-04T18:29:55Z",
+      "comments": 1,
+      "html_url": "https://github.com/ocrmypdf/OCRmyPDF/issues/1741",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "ocrmypdf/OCRmyPDF",
+        "capability_tag": "ocr",
+        "category_slug": "file-conversion-tool",
+        "summary": "Add an OCR text layer to scanned PDFs for searching",
+        "reuse_value": 78,
+        "stars": 33956,
+        "license": "MPL-2.0",
+        "language": "Python",
+        "url": "https://github.com/ocrmypdf/OCRmyPDF",
+        "rank_score": 78339560
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "ocrmypdf/OCRmyPDF",
+        "stars": 33956,
+        "license": "MPL-2.0",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 78,
+        "liftability": 85,
+        "fame_gap": -7,
+        "cat_slug": "file-conversion-tool",
+        "cat_name": "File / Format Conversion Tool",
+        "description": "OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
