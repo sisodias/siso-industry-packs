@@ -1,0 +1,112 @@
+name: Community owners research evidence
+on:
+  push:
+    branches: [research/community-owners-20260913]
+    paths: [.github/workflows/community-owners-research.yml]
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Collect public repository evidence without executing upstream code
+        env:
+          GH_RESEARCH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,time,base64,hashlib,urllib.request,urllib.parse,urllib.error,concurrent.futures
+          from pathlib import Path
+          from datetime import datetime,timezone
+          O=Path('research-evidence');O.mkdir()
+          token=os.environ['GH_RESEARCH_TOKEN']
+          errors=[]
+          def get(path,raw=False):
+              url=path if raw else 'https://api.github.com/'+path
+              assert url.startswith(('https://api.github.com/','https://raw.githubusercontent.com/'))
+              headers={'User-Agent':'SISO-community-owners-public-research','Accept':'application/vnd.github+json'}
+              if not raw: headers['Authorization']='Bearer '+token
+              for attempt in range(4):
+                  try:
+                      req=urllib.request.Request(url,headers=headers)
+                      with urllib.request.urlopen(req,timeout=50) as r:
+                          data=r.read()
+                      return data.decode('utf-8') if raw else json.loads(data)
+                  except urllib.error.HTTPError as e:
+                      if e.code in (403,429,500,502,503,504) and attempt<3:
+                          time.sleep(8*(attempt+1));continue
+                      return {'error':e.code,'url':url}
+                  except Exception as e:
+                      if attempt<3: time.sleep(3);continue
+                      return {'error':type(e).__name__,'url':url}
+          seeds='''chatwoot/chatwoot freescout-help-desk/freescout zammad/zammad uvdesk/community-skeleton osTicket/osTicket frappe/helpdesk papercups-io/papercups modmail-dev/Modmail erxes/erxes mautrix/whatsapp strangerstudios/paid-memberships-pro strangerstudios/pmpro-buddypress strangerstudios/pmpro-woocommerce strangerstudios/pmpro-approvals strangerstudios/pmpro-invite-only discourse/discourse-subscriptions civicrm/civicrm-core Admidio/admidio galette/galette killbill/killbill getlago/lago laravel/cashier-stripe stripe/stripe-node woocommerce/woocommerce WordPress/WordPress discourse/discourse flarum/framework NodeBB/NodeBB humhub/humhub Elgg/Elgg buddypress/buddypress buddyboss/buddyboss-platform phpbb/phpbb mybb/mybb SimpleMachines/SMF vanilla/vanilla apache/answer zulip/zulip RocketChat/Rocket.Chat mattermost/mattermost element-hq/synapse formbricks/formbricks LimeSurvey/LimeSurvey formio/formio ohmyform/ohmyform nocodb/nocodb directus/directus activepieces/activepieces keycloak/keycloak discourse/discourse-gamification discourse/discourse-solved discourse/discourse-chat-integration discourse/discourse-openid-connect discourse/discourse-oauth2-basic matrix-org/matrix-spec discord/discord-api-docs discordjs/discord.js jitsi/jitsi-meet jitsi/docker-jitsi-meet bigbluebutton/bigbluebutton bigbluebutton/greenlight livekit/livekit owncast/owncast pretix/pretix pretalx/pretalx HiEventsDev/hi.events alfio-event/alf.io calcom/cal.com gettogethercomm/GetTogether agorakit/agorakit discourse/discourse-calendar sabre-io/vobject icalendar/icalendar TryGhost/Ghost frappe/lms moodle/moodle openedx/edx-platform chamilo/chamilo-lms BookStackApp/BookStack outline/outline Chocobozzz/PeerTube LearningLocker/learninglocker adlnet/xAPI-Spec RusticiSoftware/TinCanJS H5P/h5p-php-library knadh/listmonk mautic/mautic Mailtrain-org/mailtrain dittofeed/dittofeed useplunk/plunk postalserver/postal plausible/analytics umami-software/umami PostHog/posthog metabase/metabase gitroomhq/postiz-app dubinc/dub shlinkio/shlink strangerstudios/pmpro-affiliates itthinx/affiliates frappe/erpnext Dolibarr/dolibarr akaunting/akaunting InvoicePlane/InvoicePlane invoiceninja/invoiceninja bigcapitalhq/bigcapital firefly-iii/firefly-iii ledger/ledger ofxparse/ofxparse restic/restic caddyserver/caddy awesome-selfhosted/awesome-selfhosted kdeldycke/awesome-billing'''.split()
+          stages=[['"shared inbox"','topic:customer-support','IMAP helpdesk'],['paid membership wordpress','topic:membership','Stripe membership webhook'],['subscription billing self-hosted','topic:billing','DiscourseConnect'],['member onboarding community','topic:community-platform','vCard membership import'],['forum community','topic:forum','ActivityPub forum'],['event ticketing self-hosted','topic:event-management','iCalendar WebRTC'],['learning management self-hosted','topic:lms','SCORM xAPI'],['email marketing automation','topic:newsletter','RFC8058 unsubscribe'],['affiliate referral tracking','topic:affiliate','UTM attribution'],['accounting self-hosted','topic:accounting','OFX camt.053']]
+          queries=[(1,'W%02d'%(i+1),lane,q) for i,qs in enumerate(stages) for lane,q in zip('ABC',qs)]
+          queries += [(2,s,l,q) for s,l,q in [('W02','A','"open source" "Skool"'),('W02','A','"Circle.so" alternative'),('W03','C','"Stripe" "entitlements"'),('W04','A','"membership" "directory"'),('W05','B','topic:gamification discourse'),('W06','C','"pretix" plugin membership'),('W07','C','"TinCan" "LRS"'),('W08','C','"List-Unsubscribe-Post"'),('W09','A','"affiliate" "self-hosted"'),('W10','C','"camt.053" parser')]]
+          queries += [(3,s,'C',q) for s,q in [('W03','"skool" "export"'),('W03','"circle.so" "migration"'),('W02','"memberful" "import"'),('W08','"community" "paid-through"'),('W09','"membership" "commission" "refund"'),('W10','"membership" "camt.053"')]]
+          seen={n.lower() for n in seeds};discovery=[];novel={}
+          for rnd,stage,lane,q in queries:
+              d=get('search/repositories?'+urllib.parse.urlencode({'q':q,'sort':'stars','order':'desc','per_page':8}))
+              items=d.get('items',[]);added=[]
+              for x in items:
+                  n=x['full_name'];k=n.lower()
+                  if k not in seen:
+                      seen.add(k);added.append(n);novel[k]=x
+              discovery.append({'round':rnd,'stage':stage,'lane':lane,'query':q,'url':'https://github.com/search?'+urllib.parse.urlencode({'q':q,'type':'repositories','s':'stars','o':'desc'}),'total_count':d.get('total_count'),'new_names':added,'items':[{k:x.get(k) for k in ['full_name','html_url','description','stargazers_count','license','pushed_at','archived','fork','default_branch','topics']} for x in items],'error':d.get('error')})
+              print('Discovery',rnd,stage,lane,len(items),'results',len(added),'new',flush=True)
+              time.sleep(2.1)
+          # Additional repositories are selected for examination, not recommendation.
+          extras=sorted([x for x in novel.values() if not x.get('fork') and not x.get('archived') and x.get('size',0)>0],key=lambda x:x['stargazers_count'],reverse=True)[:10]
+          names=list(dict.fromkeys(seeds+[x['full_name'] for x in extras]))
+          (O/'discovery.json').write_text(json.dumps(discovery,indent=2))
+          def doc(d):
+              if not isinstance(d,dict): return {'error':'unexpected response'}
+              text=None
+              if d.get('encoding')=='base64' and d.get('content'):
+                  try: text=base64.b64decode(d['content']).decode('utf-8',errors='replace')
+                  except Exception: pass
+              return {'path':d.get('path'),'sha':d.get('sha'),'html_url':d.get('html_url'),'license':d.get('license'),'text':text,'error':d.get('error')}
+          def audit(n):
+              m=get('repos/'+n)
+              if m.get('private') or 'full_name' not in m: return {'requested_name':n,'error':m.get('error','not_public')}
+              name=m['full_name'];base='repos/'+name
+              c=get(base+'/commits?'+urllib.parse.urlencode({'sha':m['default_branch'],'per_page':1}))
+              r=doc(get(base+'/readme'));l=doc(get(base+'/license'))
+              contributors=get(base+'/contributors?per_page=10');issues=get(base+'/issues?state=all&sort=updated&direction=desc&per_page=10')
+              out={'requested_name':n,'observed_at':datetime.now(timezone.utc).isoformat(),'metadata':{k:m.get(k) for k in ['id','full_name','html_url','description','stargazers_count','forks_count','subscribers_count','created_at','updated_at','pushed_at','archived','fork','default_branch','license','topics','language','size','has_issues']},'latest_commit':c[0] if isinstance(c,list) and c else c,'readme':r,'license_file':l,'contributors':contributors,'recent_issues':issues}
+              print('Examined source documents',name,flush=True)
+              return out
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+              audits=list(pool.map(audit,names))
+          (O/'audits.json').write_text(json.dumps(audits,indent=2))
+          # Exact, streamed bank joins. Large JSONL files are never loaded as whole objects.
+          bank=get('repos/sisodias/siso-repo-bank/commits/main');pin=bank.get('sha')
+          match_names={a.get('metadata',{}).get('full_name','').lower() for a in audits}|{n.lower() for n in names}
+          bankfiles=['bank/bank_best.jsonl','capability-shelf/source-registry.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','bank/bank_capability_top.jsonl','bank/bank_capability.jsonl']
+          matches={};stats={}
+          for path in bankfiles:
+              url='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+str(pin)+'/'+path
+              retained=[];count=0;digest=hashlib.sha256()
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SISO-public-research'}),timeout=60) as response:
+                      for line in response:
+                          digest.update(line)
+                          if not line.strip(): continue
+                          row=json.loads(line);count+=1
+                          keys=[str(row.get(k,'')).lower().removeprefix('https://github.com/').rstrip('/') for k in ['full_name','repo','repo_full_name','repository','url']]
+                          if any(k in match_names for k in keys) or path.endswith(('bank_capability_top.jsonl','bank_capability.jsonl')):retained.append(row)
+                  matches[path]=retained;stats[path]={'rows_scanned':count,'matches':len(retained),'sha256':digest.hexdigest(),'source_url':url}
+                  print('Streamed bank join',path,count,len(retained),flush=True)
+              except Exception as e: stats[path]={'error':type(e).__name__,'rows_scanned':count,'source_url':url}
+          (O/'bank-matches.json').write_text(json.dumps({'pin':pin,'stats':stats,'matches':matches},indent=2))
+          (O/'collection.json').write_text(json.dumps({'research_only':True,'upstream_code_executed':False,'applications_deployed':False,'seed_count':len(seeds),'additional_discovery_audits':len(extras),'audit_count':len(audits),'successful_metadata':sum('metadata' in a for a in audits),'queries':len(queries),'completed_at':datetime.now(timezone.utc).isoformat()},indent=2))
+          print('Collection complete',len(audits),flush=True)
+          PY
+      - name: Upload research evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: community-owners-public-evidence
+          path: research-evidence/
+          retention-days: 7
+          if-no-files-found: error
