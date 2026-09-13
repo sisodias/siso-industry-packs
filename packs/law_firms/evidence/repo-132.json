@@ -1,0 +1,135 @@
+{
+  "audit_id": "R132",
+  "requested_full_name": "OpenNyAI/Opennyai",
+  "observed_at": "2026-09-13T16:11:58.567176+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "OpenNyAI/Opennyai",
+  "html_url": "https://github.com/OpenNyAI/Opennyai",
+  "description": "Opennyai : An efficient NLP Pipeline for Indian Legal documents",
+  "stargazers_count": 101,
+  "forks_count": 18,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2022-09-29T14:50:19Z",
+  "updated_at": "2026-08-21T05:46:18Z",
+  "pushed_at": "2026-04-01T13:26:48Z",
+  "size": 1333,
+  "open_issues_count": 10,
+  "topics": [
+    "indian-laws",
+    "indian-legal-judgements",
+    "legalnlp",
+    "machine-learning",
+    "natural-language-processing",
+    "nlp",
+    "python",
+    "spacy"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "2abee8fc7085270d7197dcb70d7b8c07d00364e3",
+  "last_commit": "2026-04-01T13:15:13Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/OpenNyAI/Opennyai",
+    "commit": "https://github.com/OpenNyAI/Opennyai/commit/2abee8fc7085270d7197dcb70d7b8c07d00364e3"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "fa7f6223150f8c334af768b2b3815e4a4abd9dbc9763fe33f0d638669b892a5e",
+    "text": "<a href=\"https://github.com/OpenNyAI/Opennyai\"><img src=\"https://github.com/OpenNyAI/Opennyai/raw/master/asset/final-logo-01.jpeg\" width=\"190\" height=\"65\" align=\"right\" /></a>\n\n# Opennyai : An efficient NLP Pipeline for Indian Legal documents\n\n[![Current Release Version](https://img.shields.io/github/release/OpenNyAI/opennyai.svg?style=flat-square&logo=github)](https://github.com/OpenNyAI/Opennyai/releases)\n[![PyPI version](https://img.shields.io/pypi/v/opennyai.svg?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/opennyai/)\n[![python version](https://img.shields.io/badge/Python-%3E=3.13-blue)](https://github.com/OpenNyAI/Opennyai)\n[![Downloads](https://pepy.tech/badge/opennyai)](https://github.com/OpenNyAI/Opennyai)\n\nOpennyai is a python library for natural language preprocessing on Indian legal texts.\n\nThis library provides unified access to the following 3 pre-trained AI models developed by OpenNyAI which focus on\nIndian court\njudgments:\n\n* Named Entity Recognition (NER): [GitHub](https://github.com/Legal-NLP-EkStep/legal_NER)\n  , [paper](https://arxiv.org/pdf/2211.03442.pdf), [Huggingface Datasets](https://huggingface.co/datasets/opennyaiorg/InLegalNER)\n* Judgment Structuring using Sentence Rhetorical\n  Roles: [GitHub](https://github.com/Legal-NLP-EkStep/rhetorical-role-baseline) \n  , [paper](http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.470.pdf), [Huggingface Datasets](https://huggingface.co/datasets/opennyaiorg/InRhetoricalRoles)\n* Extractive Summarizer: [GitHub](https://github.com/Legal-NLP-EkStep/judgment_extractive_summarizer)\n\nThis library is mainly for running the pretrained models on your custom input judgments text. For more details about\ndata and model training, please refer to individual git repo links.\n\n# 🔧 1. Installation\n\n### Using uv (recommended)\n\nInstall [uv](https://docs.astral.sh/uv/) if you haven't already:\n\n```bash\ncurl -LsSf https://astral.sh/uv/install.sh | sh\n```\n\nCreate a virtual environment and install opennyai:\n\n```bash\nuv venv --python 3.13\nsource .venv/bin/activate\nuv pip install opennyai\n```\n\n### Using pip\n\nYou can also install with pip directly (requires Python >= 3.13):\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\npip install -U opennyai\n```\n\n#### For GPU support\n\nIf you want to utilize spacy with GPU please install [Cupy](https://cupy.dev/) with the appropriate CUDA version:\n\n```bash\npip install cupy-cuda12x  # For CUDA 12.x\n```\n\nIn case of any issue with installation please refer to [spacy installation with cupy](https://spacy.io/usage).\n\n# 📖 2. Documentation\n\nPlease refer to the [Documentation](https://opennyai.readthedocs.io/en/latest/index.html#) for more details.\n\n# 👩‍💻 3. Usage\n\nTo run the 3 OpenNyAI models on judgment texts of your choice please run following python code\n\n```python\nfrom opennyai import Pipeline\nfrom opennyai.utils import Data\nimport urllib\n\n# Get court judgment texts on which to run the AI models\ntext1 = urllib.request.urlopen(\n    'https://raw.githubusercontent.com/OpenNyAI/Opennyai/master/samples/sample_judgment1.txt').read().decode()\ntext2 = urllib.request.urlopen(\n    'https://raw.githubusercontent.com/OpenNyAI/Opennyai/master/samples/sample_judgment2.txt').read().decode()\n\n# you can also load your text files directly into this\ntexts_to_process = [text1, text2]\n\n# create Data object for data  preprocessing before running ML models\ndata = Data(texts_to_process)\n\n# If you have access to GPU then set this to True else False\nuse_gpu = True\n\n# Choose which of the AI models you want to run from the 3 models 'NER', 'Rhetorical_Role','Summarizer'. E.g. If just Named Entity is of interest then just select 'NER'\n\npipeline = Pipeline(components=['NER', 'Rhetorical_Role', 'Summarizer'], use_gpu=use_gpu, verbose=True)\n\nresults = pipeline(data)\n```\n\nThe output of each model is present in following keys of each element of the output\n\n```python\nresults[0][\n    'annotations']  ## shows the result of model at sentence level, each entry will have entities, rhetorical role, and other details\nresults[0]['summary']  ## shows Summary for each of the Rheorical Role for first judgment text \n```\n\nFor more details on usage please refer to the [documentation](https://opennyai.readthedocs.io/en/latest/index.html#)\n\nGoogle Colab Notebook\n----------------------\n\n| Description               | Link  |\n|---------------------------|-------|\n| Run Inference          | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1rNA6XVyD-GCTd0YtosjiKON_p9bGuVwz) |\n\n",
+    "characters": 4582,
+    "source_url": "https://github.com/OpenNyAI/Opennyai/blob/2abee8fc7085270d7197dcb70d7b8c07d00364e3/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "4f50c734820e309367a7627028996dfd3421b83c762c4915c7e3c3d237993b49",
+    "text": "The MIT License (MIT)\r\n\r\nCopyright (c) 2015 Mosquito\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+    "characters": 1096,
+    "source_url": "https://github.com/OpenNyAI/Opennyai/blob/2abee8fc7085270d7197dcb70d7b8c07d00364e3/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 6,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "amant555",
+      "contributions": 136
+    },
+    {
+      "login": "prathamk-tw",
+      "contributions": 50
+    },
+    {
+      "login": "astha-agarwal99",
+      "contributions": 48
+    },
+    {
+      "login": "prathameshk",
+      "contributions": 16
+    },
+    {
+      "login": "saurabh-karn",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 19,
+      "title": "Dependency incompatibility between OpenNyAI 0.0.15 and en_legal_ner_trf 3.2.0",
+      "state": "open",
+      "created_at": "2026-07-02T10:18:04Z",
+      "updated_at": "2026-07-02T10:18:04Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/OpenNyAI/Opennyai/issues/19",
+      "author_association": "NONE"
+    },
+    {
+      "number": 18,
+      "title": "Python 3.13: en_legal_ner_trf installation fails because tokenizers==0.12.1 requires Rust compilation",
+      "state": "open",
+      "created_at": "2026-07-02T09:49:34Z",
+      "updated_at": "2026-07-02T09:49:34Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/OpenNyAI/Opennyai/issues/18",
+      "author_association": "NONE"
+    },
+    {
+      "number": 17,
+      "title": "Windows: Automatic installation of en_legal_ner_trf fails with WinError 32 while renaming downloaded wheel",
+      "state": "open",
+      "created_at": "2026-07-02T09:48:35Z",
+      "updated_at": "2026-07-02T09:48:35Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/OpenNyAI/Opennyai/issues/17",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

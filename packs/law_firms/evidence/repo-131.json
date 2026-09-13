@@ -1,0 +1,191 @@
+{
+  "audit_id": "R131",
+  "requested_full_name": "gotenberg/gotenberg",
+  "observed_at": "2026-09-13T16:11:58.567176+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "gotenberg/gotenberg",
+  "html_url": "https://github.com/gotenberg/gotenberg",
+  "description": "A developer-friendly API for converting many document formats into PDF files, and more!",
+  "stargazers_count": 13058,
+  "forks_count": 851,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2018-03-23T14:05:59Z",
+  "updated_at": "2026-09-13T15:36:45Z",
+  "pushed_at": "2026-09-13T08:16:33Z",
+  "size": 24445,
+  "open_issues_count": 26,
+  "topics": [
+    "api",
+    "chrome",
+    "chromium",
+    "convert-to-pdf",
+    "docker",
+    "docx-to-pdf",
+    "excel",
+    "exiftool",
+    "html-to-pdf",
+    "libreoffice",
+    "openoffice",
+    "pdf",
+    "pdf-converter",
+    "pdftk",
+    "puppeteer",
+    "qpdf",
+    "screenshots",
+    "unoconv",
+    "wkhtmltopdf",
+    "word"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "8e850b1c932452627fba397f2005dd6fd57b9617",
+  "last_commit": "2026-09-13T08:15:07Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/gotenberg/gotenberg",
+    "commit": "https://github.com/gotenberg/gotenberg/commit/8e850b1c932452627fba397f2005dd6fd57b9617"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "f449ba471f410682e88dae202b0577cabb53602281fd692007cbfaa3cc4a7cf0",
+    "text": "<p align=\"center\">\n    <img src=\"https://raw.githubusercontent.com/gotenberg/art/master/logo.png\" alt=\"Gotenberg Logo\" width=\"150\" height=\"150\" />\n    <h3 align=\"center\">Gotenberg</h3>\n    <p align=\"center\">A Docker-based API for converting documents to PDF</p>\n    <p align=\"center\">\n        <a href=\"https://hub.docker.com/r/gotenberg/gotenberg\"><img alt=\"Total downloads (gotenberg/gotenberg)\" src=\"https://img.shields.io/docker/pulls/gotenberg/gotenberg\"></a>\n        <a href=\"https://github.com/gotenberg/gotenberg/actions/workflows/continuous-integration.yml\"><img alt=\"Continuous Integration\" src=\"https://github.com/gotenberg/gotenberg/actions/workflows/continuous-integration.yml/badge.svg\"></a>\n        <a href=\"https://pkg.go.dev/github.com/gotenberg/gotenberg/v8\"><img alt=\"Go Reference\" src=\"https://pkg.go.dev/badge/github.com/gotenberg/gotenberg.svg\"></a>\n    </p>\n    <p align=\"center\">\n        <a href=\"https://trendshift.io/repositories/2996\"><img src=\"https://trendshift.io/api/badge/repositories/2996\" alt=\"gotenberg%2Fgotenberg | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n    </p>\n    <p align=\"center\">\n        <a href=\"https://gotenberg.dev/docs/getting-started/introduction\"><strong>Documentation</strong></a> &#183;\n        <a href=\"https://gotenberg.dev/docs/getting-started/installation#live-demo\"><strong>Live Demo</strong></a> &#183;\n        <a href=\"https://github.com/gotenberg/gotenberg/discussions\"><strong>Community</strong></a>\n    </p>\n</p>\n\n---\n\n**Gotenberg** is a Docker-based API for converting documents to PDF. Trusted in production by thousands of companies. Also adopted by notable open-source projects.\n\nSend your files via `multipart/form-data`, get a PDF back. No need to manage Chromium, LibreOffice, or fonts yourself.\n\n## Quick Start\n\n```bash\ndocker run --rm -p 3000:3000 gotenberg/gotenberg:8\n```\n\nConvert a URL to PDF:\n\n```bash\ncurl \\\n  --request POST http://localhost:3000/forms/chromium/convert/url \\\n  --form url=https://sparksuite.github.io/simple-html-invoice-template/ \\\n  -o invoice.pdf\n```\n\n## Features\n\n- **HTML, URL, Markdown to PDF** via Headless Chromium\n- **Office documents to PDF** via LibreOffice (100+ formats)\n- **Merge, split, rotate, flatten** PDFs\n- **Watermark, stamp, encrypt** PDFs\n- **PDF/A and PDF/UA** compliance\n- **Screenshots** of URLs and HTML\n- **Read/write metadata and bookmarks**\n\nSee the [full documentation](https://gotenberg.dev/docs/getting-started/introduction).\n\n## Contributing\n\nQuestions and feedback: [GitHub Discussions](https://github.com/gotenberg/gotenberg/discussions).\nBug reports: [GitHub Issues](https://github.com/gotenberg/gotenberg/issues).\n\n## Sponsors\n\nIf Gotenberg powers your workflow or your business, consider [**becoming a sponsor**](https://github.com/sponsors/gulien).\n\n**Historic & GitHub Sponsors**\n\n- [TheCodingMachine](https://thecodingmachine.com/)\n- [pdfme](https://pdfme.com/)\n- [PDFBolt](https://pdfbolt.com)\n- [FileToPDF.dev](https://filetopdf.dev)\n\n**Powered By**\n\n- [Docker](https://docs.docker.com/docker-hub/repos/manage/trusted-content/dsos-program/)\n- [JetBrains](https://www.jetbrains.com/community/opensource/)\n",
+    "characters": 3179,
+    "source_url": "https://github.com/gotenberg/gotenberg/blob/8e850b1c932452627fba397f2005dd6fd57b9617/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "24b9edd14f44d08af320e1d4fc63535636cb71f7c8e7d3827dc831692f27e1aa",
+    "text": "MIT License\n\nCopyright (c) Julien Neuhart\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "characters": 1065,
+    "source_url": "https://github.com/gotenberg/gotenberg/blob/8e850b1c932452627fba397f2005dd6fd57b9617/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "gulien",
+      "contributions": 739
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 127
+    },
+    {
+      "login": "jonasgeiler",
+      "contributions": 5
+    },
+    {
+      "login": "bendavies",
+      "contributions": 5
+    },
+    {
+      "login": "ChocoChipset",
+      "contributions": 4
+    },
+    {
+      "login": "omni-htg",
+      "contributions": 4
+    },
+    {
+      "login": "vbaidak",
+      "contributions": 4
+    },
+    {
+      "login": "Jean-Beru",
+      "contributions": 3
+    },
+    {
+      "login": "tomjvdberg",
+      "contributions": 3
+    },
+    {
+      "login": "alanpoulain",
+      "contributions": 3
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 1656,
+      "title": "8.36.0: Chromium 151.0.7922.137 preloads the WebUI omnibox popup at browser start (+~75 MB per browser, headless too)",
+      "state": "closed",
+      "created_at": "2026-09-09T15:16:08Z",
+      "updated_at": "2026-09-09T18:09:42Z",
+      "closed_at": "2026-09-09T18:09:42Z",
+      "comments": 1,
+      "html_url": "https://github.com/gotenberg/gotenberg/issues/1656",
+      "author_association": "NONE"
+    },
+    {
+      "number": 1648,
+      "title": "Health check intermittently fails during repeated PDF conversions",
+      "state": "closed",
+      "created_at": "2026-09-03T12:24:04Z",
+      "updated_at": "2026-09-04T05:48:50Z",
+      "closed_at": "2026-09-03T20:45:05Z",
+      "comments": 2,
+      "html_url": "https://github.com/gotenberg/gotenberg/issues/1648",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 1656,
+      "created_at": "2026-09-09T15:16:08Z",
+      "first_affiliated_reply_in_sample": "2026-09-09T18:09:42Z",
+      "source_url": "https://github.com/gotenberg/gotenberg/issues/1656#issuecomment-5606549707"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0145",
+        "repo": "gotenberg/gotenberg",
+        "url": "https://github.com/gotenberg/gotenberg",
+        "labels": [],
+        "family_ids": [
+          "U48"
+        ],
+        "family_names": [
+          "Document and PDF generation"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed"
+        ],
+        "operator_signals": [],
+        "observed_facts": [],
+        "current_verdict": "discovery_candidate",
+        "foundry_stage": "not_joined",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "UNEXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 1,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
