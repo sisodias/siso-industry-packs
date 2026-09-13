@@ -1,0 +1,42 @@
+name: SaaS source snapshot receipts
+on:
+  push:
+    branches: [research/saas-base-stack-20260913]
+    paths: [.github/workflows/saas-base-stack-source-snapshots.yml]
+permissions:
+  contents: read
+jobs:
+  sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Read pinned public source snapshots and checkpoint errors
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python3 - <<'PY'
+          import ast,textwrap,urllib.request
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/e9e428a722d926aa36edeb316e58fc1dfae5ee1d/.github/workflows/saas-base-stack-research-receipts.yml'
+          with urllib.request.urlopen(url,timeout=30) as response: original=response.read().decode()
+          code=textwrap.dedent(original.split("          python3 - <<'PY'\n",1)[1].split('\n          PY\n',1)[0])
+          bad="out['sampled_author_logins']=sorted(set((c.get('author') or {}).get('login') for c in commits if (c.get('author') or {}).get('login'))"
+          assert code.count(bad)==1
+          code=code.replace(bad,bad+')').replace('data=r.read(12000000)','data=r.read()')
+          code=code.replace('if e.code in (403,429) and attempt<3:', 'if e.code == 429 and attempt<1:').replace('time.sleep(65); continue','time.sleep(10); continue')
+          code=code.replace('for round_number in range(3):','for round_number in range(0):')
+          code=code.replace("'restic/restic borgbackup/borg", "'formbricks/hub awesome-selfhosted/awesome-selfhosted awesome-foss/awesome-sysadmin openfga/sample-stores restic/restic borgbackup/borg")
+          code=code.replace("out['commits_sample']=", "print('HEAD',name,sha,flush=True)\n        out['commits_sample']=")
+          code=code.replace("results.append(row)","results.append(row)\n        save(P/'repository-receipts.json',results)")
+          ast.parse(code)
+          print('Pinned collection with inaccessible endpoints recorded, not retried indefinitely.',flush=True)
+          exec(compile(code,'pinned-research-snapshot-collector','exec'))
+          PY
+      - name: Preserve source receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: saas-source-snapshot-receipts
+          path: receipts/
+          if-no-files-found: error
+          retention-days: 3
