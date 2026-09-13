@@ -1,0 +1,144 @@
+{
+  "audit_id": "R006",
+  "requested_full_name": "SuffolkLITLab/docassemble-ALDashboard",
+  "observed_at": "2026-09-13T16:10:00.959582+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/docassemble-ALDashboard",
+  "html_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard",
+  "description": "A frontend to a few common administrative backend functions that aren't built-in to Docassemble",
+  "stargazers_count": 18,
+  "forks_count": 1,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-12-22T21:55:34Z",
+  "updated_at": "2026-09-12T16:41:28Z",
+  "pushed_at": "2026-09-12T20:32:37Z",
+  "size": 6582,
+  "open_issues_count": 39,
+  "topics": [
+    "document-assembly-line"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "1986477a2387b4114ebd41afa6b49ce9b7716135",
+  "last_commit": "2026-09-12T16:41:23Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/docassemble-ALDashboard",
+    "commit": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/commit/1986477a2387b4114ebd41afa6b49ce9b7716135"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "590e7fa51dcf9f7a645db486f39cb807a31161e962d2be532abe68afc1e868f6",
+    "text": "# ALDashboard: a docassemble Admin and Configuration Tool\n\n[![PyPI version](https://badge.fury.io/py/docassemble.ALDashboard.svg)](https://badge.fury.io/py/docassemble.ALDashboard)\n\nA single tool and interview to centralize some tedious Docassemble admin configuration tasks.\n\n![A screenshot of the ALDashboard menu with choices: \"Admin only - manage users\", \"Admin only - stats\", \"Install assembly line\", \"Verify API Keys\", \"Install packages\", \"update packages\", \"Package scanner\", \"View Answer files\", \"generate review screen draft\", \"validate docx template\", \"validation translation files\", \"prepare translation files\", \"validate an attachment fields block\", \"PDF tools\", and \"Compile Bootstrap theme\"](https://github.com/SuffolkLITLab/docassemble-ALDashboard/assets/6252212/29539eec-3891-476b-b248-dd3db986d899)\n\n1. Install the Document Assembly Line packages (support files for [Court Forms Online](https://courtformsonline.org))\n1. Searchable user management - reset passwords and change privileges.\n1. Report on and delete stale developer accounts, including their playground files.\n1. Installing or updating several packages at once.\n1. Listing and viewing the contents of an (unencrypted) interview to facilitate debugging errors on production servers.\n1. View analytics/stats captured with `store_variable_snapshot`.\n1. List the files inside a particular package installed on the server.\n1. Gather files from a user who left the organization/unknown username and password.\n1. Review screen generator\n1. validate DOCX Jinja2 templates\n1. Generate a [custom bootstrap theme](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/docs/customization/overview#creating-a-custom-theme-from-source-instead-of-with-a-theme-generator) for your interviews.\n\nThe Interview Text Linter delegates YAML structure, accessibility, translatability,\nand Assembly Line style checks to [DAYamlChecker](https://github.com/SuffolkLITLab/DAYamlChecker).\nThe dashboard adds its report navigation, readability scores, and spellcheck around\nthose structured findings. Optional style LLM checks use DAYamlChecker's standard\n`OPENAI_BASE_URL`, `OPENAI_API_KEY`, and `OPENAI_MODEL` configuration.\n\nIdeas:\n1. Add a link to the dispatch directive for an existing file in an existing package.\n1. Generate translation files [TBD].\n\n## Use\n\nTo use, you must create a docassemble API key and add it to your\nconfiguration, like this:\n\n`install packages api key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`\n\nIf you want the ALDashboard to be a dropdown option for admins and developers, add the following to the configuration before your `install packages api key`: \n\n    administrative interviews:\n      - interview: docassemble.ALDashboard:data/questions/menu.yml\n        title: Dashboard\n        required privileges:\n          - admin\n          - developer\n\n## ALDashboard API\n\nWhen installed on a docassemble server, ALDashboard exposes a Flask API at:\n\n- `POST /al/api/v1/dashboard/translation`\n- `POST /al/api/v1/dashboard/docx/auto-label`\n- `POST /al/api/v1/dashboard/docx/runs`\n- `POST /al/api/v1/dashboard/docx/relabel`\n- `POST /al/api/v1/dashboard/bootstrap/compile`\n- `POST /al/api/v1/dashboard/translation/validate`\n- `POST /al/api/v1/dashboard/review-screen/draft`\n- `POST /al/api/v1/dashboard/variable-report`\n- `POST /al/api/v1/dashboard/court-form/profiles`\n- `POST /al/api/v1/dashboard/docx/validate`\n- `POST /al/api/v1/dashboard/yaml/check`\n- `POST /al/api/v1/dashboard/yaml/reformat`\n- `POST /al/api/v1/dashboard/pdf/label-fields`\n- `POST /al/api/v1/dashboard/pdf/fields/detect`\n- `POST /al/api/v1/dashboard/pdf/fields/relabel`\n- `POST /al/api/v1/dashboard/pdf/repair`\n- `GET /al/api/v1/dashboard/jobs/{job_id}`\n- `GET /al/api/v1/dashboard/jobs/{job_id}/download`\n- `DELETE /al/api/v1/dashboard/jobs/{job_id}`\n- `GET /al/api/v1/dashboard/openapi.json`\n- `GET /al/api/v1/dashboard/docs`\n\nThe API uses docassemble API key authentication via `api_verify()`. Endpoints default to synchronous execution and support `mode=async` (or `async=true`) for Celery-backed processing.\n\nTo enable async mode, add this module to your docassemble configuration:\n\n```yaml\ncelery modules:\n  - docassemble.ALDashboard.api_dashboard_worker\n```\n\n### Endpoint Notes\n\n- `POST /al/api/v1/dashboard/variable-report`\n  - Input: interview YAML via `yaml_text`, upload, or `playground_project` + `playground_yaml_file`; optional `report_title`, `infer_assemblyline`.\n  - Optional `shape`: `intake` (default), `court_form`, `motion`, `affidavit`, `letter`. See [Court form shapes](#court-form-shapes).\n  - Court shapes also take `court_profile` and `include_certificate_of_service`, and return `docx_base64` by default.\n  - Output: `mako_markdown`, variable metrics, and for court shapes `profile_id`, `profile_name`, `styles`, and a `sections` map naming the template each fixed section came from.\n- `POST /al/api/v1/dashboard/court-form/profiles`\n  - Input: none.\n  - Output: the `shapes` this server can draft, the jurisdiction `profiles` installed on it, and the `sections` a profile may define.\n\n- `POST /al/api/v1/dashboard/translation`\n  - Input: `interview_path`, one or more target languages (`tr_langs`), optional GPT settings.\n  - Output: translation XLSX metadata and optional base64 file content.\n- `POST /al/api/v1/dashboard/docx/auto-label`\n  - Input: DOCX file upload, optional `custom_people_names`.\n  - Uses `docassemble.ALToolbox.llms` for OpenAI configuration.\n  - Optional per-request overrides: `openai_api`, `openai_base_url`, `openai_model`.\n  - Prompt customization: `custom_prompt`, `additional_instructions`.\n  - Optional output budget override: `max_output_tokens`.\n  - Output: `results` array by default; include `include_labeled_docx_base64=true` to also get updated DOCX bytes.\n- `POST /al/api/v1/dashboard/docx/runs`\n  - Input: DOCX file upload (or base64 content).\n  - Output: parsed run list as `results`, each entry `[paragraph_index, run_index, run_text]`.\n  - Traversal includes body paragraphs, tables, headers, and footers.\n- `POST /al/api/v1/dashboard/docx/relabel`\n  - Input: existing `results` from first-pass label run and/or DOCX upload.\n  - Supports index-based edits: `replace_labels_by_index`, `skip_label_indexes`.\n  - Supports explicit additions: `add_labels`.\n  - Supports range-based rule additions: `add_label_rules` (paragraph range + match conditions).\n  - Output: edited `results` array by default; include `include_labeled_docx_base64=true` to also get updated DOCX bytes.\n  - In async mode, download binary file output from `GET /al/api/v1/dashboard/jobs/{job_id}/download`.\n- `POST /al/api/v1/dashboard/bootstrap/compile`\n  - Input: SCSS upload or `scss_text`.\n  - Output: compiled CSS text or base64.\n  - Operational notes:\n    - Requires `node` and `npm` available on server `PATH`.\n    - First run downloads Bootstrap source into `/tmp` and runs `npm install`/`npm run css-compile`, so it may be noticeably slower.\n    - Requires outbound HTTPS access to fetch Bootstrap and npm dependencies.\n    - Writes temporary build artifacts under `/tmp`; ensure adequate disk space and cleanup policies.\n- `POST /al/api/v1/dashboard/translation/validate`\n  - Input: translation XLSX.\n  - Output: structured errors/warnings/empty rows.\n- `POST /al/api/v1/dashboard/review-screen/draft`\n- `POST /al/api/v1/dashboard/variable-report`\n- `POST /al/api/v1/dashboard/court-form/profiles`\n  - Input: one or more YAML files.\n  - Output: generated review-screen YAML draft.\n- `POST /al/api/v1/dashboard/docx/validate`\n  - Input: one or more DOCX templates.\n  - Output: per-file Jinja rendering errors.\n- `POST /al/api/v1/dashboard/yaml/check`\n  - Input: `yaml_text` (or `yaml_content`) and optional `filename`.\n  - Output: structured DAYamlChecker issues with `errors`, `warnings`, and `valid`.\n- `POST /al/api/v1/dashboard/yaml/reformat`\n  - Input: `yaml_text` (or `yaml_content`), optional `line_length` and `convert_indent_4_to_2`.\n  - Output: reformatted YAML in `formatted_yaml` and `changed` boolean.\n- `POST /al/api/v1/dashboard/pdf/label-fields`\n  - Input: PDF upload.\n  - Output: PDF with fields detected and optionally relabeled (backward-compatible alias of `/pdf/fields/detect`).\n- `POST /al/api/v1/dashboard/pdf/fields/detect`\n  - Input: PDF upload.\n  - Optional flags: `relabel_with_ai`, `include_pdf_base64`, `include_parse_stats`.\n  - Optional exact-name list: `target_field_names` (ordered list to apply after detection).\n  - Output: PDF with detected fields added, plus optional AI/target-name relabeling.\n- `POST /al/api/v1/dashboard/pdf/fields/relabel`\n  - Input: PDF with existing fields.\n  - Relabel modes: `field_name_mapping` (exact old->new map), ordered `target_field_names`, or AI (`relabel_with_ai=true`).\n  - Output: Relabeled PDF and resulting field names; optional parse stats/base64 output.\n- `POST /al/api/v1/dashboard/pdf/repair`\n  - Run a single repair action on an uploaded PDF. Omit `action` to list available actions.\n  - `action` values: `ghostscript_reprint`, `qpdf_repair`, `restore_checkbox_appearances`, `unlock`, `repair_metadata`, `ocr`.\n  - `ghostscript_reprint`: Re-distill through Ghostscript. Optional `preserve_fields=true` to extract and re-apply field locations.\n  - `qpdf_repair`: Fix cross-reference tables and rebuild the page tree via pikepdf.\n  - `restore_checkbox_appearances`: Add missing checkbox appearance streams without changing text field appearances.\n  - `unlock`: Remove encryption/permissions. Optional `password` parameter.\n  - `repair_metadata`: Fix broken catalog/metadata entries (pikepdf, then pdfrw fallback).\n  - `ocr`: Add searchable text layer via ocrmypdf. Optional `language` (default `eng`) and `skip_text` (default `true`).\n  - Output: `repair_result` object and optional `pdf_base64`.\n- `GET /al/api/v1/dashboard/jobs/{job_id}/download`\n  - Streams the first available file artifact from a completed async job.\n  - Optional query parameters:\n    - `index` (0-based artifact index)\n    - `field` (exact artifact field path from JSON result)\n\nLive docs:\n\n- `GET /al/api/v1/dashboard/openapi.json`\n- `GET /al/api/v1/dashboard/docs`\n\n## Court form shapes\n\nThe Interview Intake Document Generator can arrange an interview's variables\ninto a draft court filing rather than a list of fields. The interview's screens\nbecome the middle of the document; a **jurisdiction profile** supplies the parts\nthe court fixes.\n\nShapes:\n\n| Shape | What it drafts |\n| --- | --- |\n| `intake` | The original field-and-value summary. Still the default. |\n| `court_form` | Caption, title, the interview's screens as numbered sections, signature block. |\n| `motion` | The same, wrapped in a \"NOW COMES\" introduction and a prayer for relief, with a certificate of service. |\n| `affidavit` | The same, introduced as sworn statements and closed with the jurisdiction's perjury language and a jurat. |\n| `letter` | No caption: sender, date, recipient, `RE:` line, body, closing. |\n\nProfiles shipped with the package, each modeled on that court's real forms:\n`ma_trial_court`, `il_circuit`, `vt_superior`, `mi_scao`, `mn_district`,\n`dmass_federal`, and a neutral `generic`.\n\n### Editing the templates\n\nNothing about a court's layout is compiled into Python.\n\n- **Profiles** are YAML in `docassemble/ALDashboard/data/sources/court_form_profiles/`.\n  Each defines the caption, running header and footer, signature block,\n  certificate of service and jurat as ordered blocks, plus the Word styles the\n  document should use. Adding `nh_circuit.yml` adds an `nh_circuit` profile to\n  the dropdown with no code change. A profile can `extends:` another so a new\n  court only states what differs.\n- **Word-authored overrides** go in\n  `docassemble/ALDashboard/data/templates/court_forms/<profile id>/<section>.docx`.\n  A fragment replaces just that section and is copied in verbatim; the rest of\n  the form still comes from the profile. Use this when a caption is easier to\n  draw in Word than to describe.\n- **Fonts and spacing are Word styles.** Everything the generator writes is\n  tagged `CourtBodyText`, `CourtCaptionHeading`, `CourtDocumentTitle` and so on,\n  so a court that wants Arial instead of Times is a one-line edit to the\n  profile rather than a sweep through the layout.\n\nServers that would rather not fork the package can point the\n`court form profiles` configuration key at their own directory of profiles.\n\nBoth README files under those directories document the block and placeholder\nsyntax in full.\n\n### From Python\n\n```python\nfrom docassemble.ALDashboard.variable_report_generator import generate_variable_report\n\nresult = generate_variable_report(\n    [yaml_text],\n    report_title=\"Motion to Vacate Default Judgment\",\n    shape=\"motion\",\n    court_profile=\"ma_trial_court\",\n    output_docx_path=\"/tmp/motion.docx\",\n)\nresult[\"sections\"]   # {'caption': 'yaml', 'signature': 'yaml', ...}\n```\n\nThis is the entry point the ALWeaver's `variable_report.py` already calls, so\nthe Weaver reaches the court shapes by passing `shape` and `court_profile`\nthrough. `docassemble.ALDashboard.court_form_generator.generate_court_form_docx`\nis available directly when a caller has already extracted the interview's\ngroups and variables.\n\n## MCP Bridge API\n\nALDashboard also exposes a lightweight MCP-style discovery layer over HTTP:\n\n- `POST /al/api/v1/mcp` (JSON-RPC 2.0 endpoint)\n- `GET /al/api/v1/mcp` (endpoint metadata)\n- `GET /al/api/v1/mcp/tools` (convenience tool listing)\n- `GET /al/api/v1/mcp/docs` (human-readable docs)\n\nSupported JSON-RPC methods:\n\n- `initialize`\n- `ping`\n- `tools/list`\n- `tools/call`\n\n`tools/list` discovers tools generated from:\n\n- ALDashboard REST OpenAPI paths (`/al/api/v1/dashboard/...`)\n- ALWeaver REST paths (`/al/api/v1/weaver...`) only when `docassemble.ALWeaver` is installed.\n\nFor development-only fallback discovery from a local checkout, set:\n\n```bash\nexport ALDASHBOARD_MCP_DEV_MODE=true\nexport ALWEAVER_REPO_PATH=~/docassemble-ALWeaver\n```\n\nExample:\n\n```bash\ncurl -X POST \"https://YOURSERVER/al/api/v1/mcp\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-Key: YOUR_API_KEY\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}'\n```\n\nTool execution example:\n\n```bash\ncurl -X POST \"https://YOURSERVER/al/api/v1/mcp\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-Key: YOUR_API_KEY\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\"params\":{\"name\":\"aldashboard.get_al_api_v1_dashboard_openapi_json\",\"arguments\":{}}}'\n```\n\n`tools/call` securely reuses the same authenticated request context (for example `X-API-Key` or `Authorization`) and does not require storing a separate API key in MCP configuration.\n\n### DOCX Modes and End-to-End Workflow\n\nPurpose of each mode:\n\n1. `POST /docx/runs`: inspection mode\n   - Returns `[paragraph_index, run_index, run_text]`.\n   - Use this to understand document coordinates before deterministic edits.\n2. `POST /docx/auto-label`: draft generation mode\n   - Generates initial label suggestions (`results`).\n3. `POST /docx/relabel`: editing/apply mode\n   - Edits draft labels (`replace_labels_by_index`, `skip_label_indexes`, `add_labels`, `add_label_rules`).\n   - If DOCX content is provided and `include_labeled_docx_base64=true`, returns an updated DOCX.\n4. `GET /jobs/{job_id}/download`: async file download mode\n   - Streams final binary output from completed async jobs.\n\nFull workflow: upload DOCX -> draft labels -> manual edits (change, delete, add) -> download final DOCX\n\nStep 1. Create draft labels (async)\n\n```bash\ncurl -X POST \"https://YOURSERVER/al/api/v1/dashboard/docx/auto-label\" \\\n  -H \"X-API-Key: YOUR_API_KEY\" \\\n  -F \"mode=async\" \\\n  -F \"file=@/path/to/input.docx\" \\\n  -F \"openai_base_url=https://YOURRESOURCE.openai.azure.com/openai/v1/\" \\\n  -F \"openai_api=YOUR_AZURE_OPENAI_KEY\" \\\n  -F \"openai_model=gpt-5-mini\"\n```\n\nStep 2. Poll job until `status=succeeded`, then read `data.results`\n\n```bash\ncurl -H \"X-API-Key: YOUR_API_KEY\" \\\n  \"https://YOURSERVER/al/api/v1/dashboard/jobs/JOB_ID_FROM_STEP_1\"\n```\n\nStep 3. Edit labels manually (change one, delete one, add one) and request final DOCX (async)\n\n```bash\ncurl -X POST \"https://YOURSERVER/al/api/v1/dashboard/docx/relabel\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"X-API-Key: YOUR_API_KEY\" \\\n  -d '{\n    \"mode\": \"async\",\n    \"filename\": \"input.docx\",\n    \"file_content_base64\": \"BASE64_DOCX_HERE\",\n    \"results\": [[1,0,\"{{ letter_date }}\",0],[2,0,\"{{ old_name }}\",0],[3,0,\"{{ keep_me }}\",0]],\n    \"replace_labels_by_index\": {\"0\":\"{{ edited_letter_date }}\"},\n    \"skip_label_indexes\": [1],\n    \"add_labels\": [[0,0,\"{{ added_new_label }}\",0]],\n    \"include_labeled_docx_base64\": true\n  }'\n```\n\nStep 4. Poll relabel job, then download final DOCX\n\n```bash\ncurl -H \"X-API-Key: YOUR_API_KEY\" \\\n  \"https://YOURSERVER/al/api/v1/dashboard/jobs/JOB_ID_FROM_STEP_3\"\n\ncurl -L -o final_labeled.docx \\\n  -H \"X-API-Key: YOUR_API_KEY\" \\\n  \"https://YOURSERVER/al/api/v1/dashboard/jobs/JOB_ID_FROM_STEP_3/download\"\n```\n\n## Some screenshots\n\n### Main page\n![A screenshot of the ALDashboard menu with choices: \"Admin only - manage users\", \"Admin only - stats\", \"Install assembly line\", \"Verify API Keys\", \"Install packages\", \"update packages\", \"Package scanner\", \"View Answer files\", \"generate review screen draft\", \"validate docx template\", \"validation translation files\", \"prepare translation files\", \"validate an attachment fields block\", \"PDF tools\", and \"Compile Bootstrap theme\"](https://github.com/SuffolkLITLab/docassemble-ALDashboard/assets/6252212/29539eec-3891-476b-b248-dd3db986d899)\n\n### Manage users\n\n![A screenshot that says \"Manage users\" with the fields \"User\", \"What do you want want to do? Reset password or Change user permissions\", \"New Password\", and \"Verify new Password\"](https://user-images.githubusercontent.com/7645641/123702231-e069ec00-d830-11eb-94dc-5ec0abb86bc9.png)\n\n### Bulk install packages from GitHub\n\n![A screenshot that says \"What packages do you want to install?\" The fields are for \"Github URL\", \"YAML filename\", and \"Short name or alias (no spaces)\"](https://user-images.githubusercontent.com/7645641/123702290-efe93500-d830-11eb-9fdf-a5935ff4078e.png)\n\n### Bulk update packages\n\n![A screenshot that says \"What packages do you want to update?\" followed by a list of packages. For example, \"docassemble.209aPlaintiffMotionToModify\", \"docassemble.ALAffidavitOfIndigency\", and more.](https://user-images.githubusercontent.com/7645641/123702362-068f8c00-d831-11eb-9ce4-df7a67ffcfeb.png)\n\n### View answer files\n\nView / search sessions by user and interview name\n\n![A screenshot that says \"What interview do you want to view sessions for?\" The fields are \"File name\" and \"User (leave blank to view all sessions)\"](https://user-images.githubusercontent.com/7645641/123702422-1d35e300-d831-11eb-84d5-5e7385deb901.png)\n\n![A screenshot that says \"Recently generated sessions for docassemble.MA209AProtectiveOrder:data/questions/209a_package.yml\" with 5 sessions below.](https://user-images.githubusercontent.com/7645641/123702464-2cb52c00-d831-11eb-80fc-f2291e824eae.png)\n\n### View interview stats captured with `store_variables_snapshot()`\n\n![A screenshot with the title \"Stats for Eviction Moratorium: 9\". Below is the text \"Total submissions: 9\", \"Group by: zip | state | modtime\", and \"Excel Download\" followed by a map that can be filtered by state or by date.](https://user-images.githubusercontent.com/7645641/123702623-5e2df780-d831-11eb-8937-6625df74ab22.png)\n\n### Generate a bootstrap theme\n\n![A screenshot with the title \"Your file is compiled!\", below is the text \"You can view and copy your file, or download it directly by right clicking the link to save it as a CSS file\". Below that are examples of Bootstrap components like buttons and nav bars.](https://github.com/SuffolkLITLab/docassemble-ALDashboard/assets/6252212/079e428d-4cae-4f75-8b1b-227c28f32a44)\n",
+    "characters": 19833,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/blob/1986477a2387b4114ebd41afa6b49ce9b7716135/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "97a36bcc7db346ce593df16d75334bd64c514155799cdacd922ed8610be8f937",
+    "text": "The MIT License (MIT)\n\nCopyright (c) 2023 Quinten Steenhuis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1084,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/blob/1986477a2387b4114ebd41afa6b49ce9b7716135/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "nonprofittechy",
+      "contributions": 468
+    },
+    {
+      "login": "LemmaLegal",
+      "contributions": 93
+    },
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 66
+    },
+    {
+      "login": "plocket",
+      "contributions": 12
+    },
+    {
+      "login": "Copilot",
+      "contributions": 7
+    },
+    {
+      "login": "purplesky2016",
+      "contributions": 7
+    },
+    {
+      "login": "rajeswari1301",
+      "contributions": 6
+    },
+    {
+      "login": "CaroRob",
+      "contributions": 1
+    },
+    {
+      "login": "miabonardi",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 287,
+      "title": "When preparing translation files - remove the stored values from choices from the excel sheet and/or autopopulate the English version in the new language column",
+      "state": "closed",
+      "created_at": "2026-09-09T21:08:59Z",
+      "updated_at": "2026-09-12T16:41:24Z",
+      "closed_at": "2026-09-12T16:41:24Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/issues/287",
+      "author_association": "NONE"
+    },
+    {
+      "number": 285,
+      "title": "Get to a middle ground for translation: one prompt at a time is too slow, even though the old partitioning by context window size had a higher error rate",
+      "state": "closed",
+      "created_at": "2026-09-04T15:02:59Z",
+      "updated_at": "2026-09-12T16:41:24Z",
+      "closed_at": "2026-09-12T16:41:24Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/issues/285",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 286,
+      "title": "Set up a way to see the commit hash/installed date for all packages",
+      "state": "open",
+      "created_at": "2026-09-04T15:11:12Z",
+      "updated_at": "2026-09-04T15:27:33Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALDashboard/issues/286",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

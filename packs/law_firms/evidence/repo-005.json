@@ -1,0 +1,161 @@
+{
+  "audit_id": "R005",
+  "requested_full_name": "SuffolkLITLab/ALKiln",
+  "observed_at": "2026-09-13T16:10:00.959582+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/ALKiln",
+  "html_url": "https://github.com/SuffolkLITLab/ALKiln",
+  "description": "Integrated automated end-to-end testing with docassemble, puppeteer, and cucumber.",
+  "stargazers_count": 18,
+  "forks_count": 4,
+  "default_branch": "v5",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-10-10T01:41:30Z",
+  "updated_at": "2026-09-10T15:02:17Z",
+  "pushed_at": "2026-09-10T14:58:03Z",
+  "size": 4617,
+  "open_issues_count": 75,
+  "topics": [
+    "automated-testing",
+    "cucumberjs",
+    "docassemble",
+    "document-assembly-line",
+    "integrated-testing",
+    "opensource",
+    "puppeteer"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "5b91c19a64cacb9221431b46e3b8abcf2ae822e9",
+  "last_commit": "2026-09-10T14:56:59Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/ALKiln",
+    "commit": "https://github.com/SuffolkLITLab/ALKiln/commit/5b91c19a64cacb9221431b46e3b8abcf2ae822e9"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "2f856876b823cbe49158cc57ded0bb8bbc63357d3b40cd9525ba0f7bfa3308e6",
+    "text": "# ALKiln\n\nALKiln, or Assembly Line Kiln, is an open source project that helps [docassemble](https://docassemble.org/) developers create automated tests for their interviews (online forms). It works well with the [Document Assembly Line Project](https://suffolklitlab.org/docassemble-AssemblyLine-documentation) but isn't dependent on it.\n\n<!-- \nhttps://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md\n√ What is this repo or project? (You can reuse the repo description you used earlier because this section doesn’t have to be long.)\n√ How does it work?\n√ Who will use this repo or project?\n√ What is the goal of this project?\n-->\n\n## Use ALKiln\n\nRead about how to use [this framework in Assembly Line's documentation](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/docs/alkiln/intro).\n\nIf you have questions or need to report a bug, [start a new issue](https://github.com/SuffolkLITLab/ALKiln/issues/new).\n\nThe following documentation is for internal developers—those working on ALKiln itself.\n\n## Our code\n\nOur code pretends to be a human interacting with online forms (interviews) that have been made with the [docassemble](https://docassemble.org) open source platform. It looks at the HTML DOM, manipulates it, and interacts with it.\n\nIt uses [cucumber](https://cucumber.io/docs/installation/javascript/), [puppeteer](https://pptr.dev/), and [chai](https://www.chaijs.com/).\n\n## Our users\n\nOur users are developers of online forms (interviews). Usually they're very new to coding and are unfamiliar with GitHub and with a lot of coding concepts. If they know how to code, it tends to be in Python because that's what docassemble uses. They usually don't have the resource or funding to put into learning these skills.\n\nFor example, a pro bono law firm is trying to write a form that people can use to create a restraining order. They're coding it using docassemble. Their users are already going through a hard time, and the forms make them outline their heart wrenching experiences in detail. The developers need to make sure their users don't get system errors right in the middle of that. They use our framework to run the end-to-end tests.\n\nThey do good work and we hope to give them a less code-focused way to automate their testing. They avoid having to learn Javascript, GitHub actions, and other such things.\n\nTo do that, we use [cucumberjs](https://cucumber.io/docs/installation/javascript/), which uses [Gherkin](https://cucumber.io/docs/gherkin/reference/) syntax to give a user/developer a more human-like syntax to instruct alkiln on what answers to give to the user's online form.\n\n## Contributing\n\nRead about contributing in our [CONTRIBUTING.md document](CONTRIBUTING.md). Here's a quick cheat sheet for some commands once you're up and running:\n\n## Cheat sheet\n\n*Once you've already read the contributing documentation, you can use these as quick reminders for running our internal tests.*\n\n### `setup` before starting development of a feature/fix\n\nSet up for the cucumber integration tests.\n\nAdd the feature branch name to your `.env` file:\n\n```\nBRANCH=42_feat_life_the_univers_and_everything\n```\n\nThen create the project on the server:\n\n```bash\nnpm run setup\n```\n\n### Run tests repeatedly\n\nRun all cucumber tests that are not currently blocked by upstream changes:\n\n```bash\nnpm run pass\n```\n\nTrigger cucumber tests with specific tags:\n\n```bash\nnpm run cucumber \"@tagname\"\n```\n\nRun the unit tests:\n\n```bash\nnpm run unit\n```\n\n### Always run `takedown` before running `setup` again\n\nIf you or someone else changes the interview code in our `./docassemble` directory, you have to delete the code currently on the testing server before running `setup` again. Also do this when you're done with the feature/fix or starting a new feature/fix.\n\n```bash\nnpm run takedown\n```\n",
+    "characters": 3840,
+    "source_url": "https://github.com/SuffolkLITLab/ALKiln/blob/5b91c19a64cacb9221431b46e3b8abcf2ae822e9/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "8fe98d65c6730cbf7af727af5375ffba25f5356e66e1faeea7becf183030d701",
+    "text": "The MIT License (MIT)\n\nCopyright (c) 2023 plocket\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+    "characters": 1073,
+    "source_url": "https://github.com/SuffolkLITLab/ALKiln/blob/5b91c19a64cacb9221431b46e3b8abcf2ae822e9/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 18,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "plocket",
+      "contributions": 1062
+    },
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 47
+    },
+    {
+      "login": "niharikasingh",
+      "contributions": 32
+    },
+    {
+      "login": "jostran14",
+      "contributions": 20
+    },
+    {
+      "login": "berit",
+      "contributions": 9
+    },
+    {
+      "login": "mcdonaldcarolyn",
+      "contributions": 7
+    },
+    {
+      "login": "miabonardi",
+      "contributions": 3
+    },
+    {
+      "login": "michaelhofrichter",
+      "contributions": 2
+    },
+    {
+      "login": "rpigneri-vol",
+      "contributions": 2
+    },
+    {
+      "login": "nonprofittechy",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 656,
+      "title": "Add exception for AL - detect custom error screen",
+      "state": "open",
+      "created_at": "2023-03-07T01:26:29Z",
+      "updated_at": "2026-09-11T12:10:10Z",
+      "closed_at": null,
+      "comments": 4,
+      "html_url": "https://github.com/SuffolkLITLab/ALKiln/issues/656",
+      "author_association": "COLLABORATOR"
+    },
+    {
+      "number": 1117,
+      "title": "docassemble 1.10.8 removed <fieldset> wrapper -- breaks \"I tap to continue\" (TimeoutError on fieldset.da-field-buttons)",
+      "state": "open",
+      "created_at": "2026-09-10T14:10:40Z",
+      "updated_at": "2026-09-10T14:10:40Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/ALKiln/issues/1117",
+      "author_association": "NONE"
+    },
+    {
+      "number": 1112,
+      "title": "Help authors handle concurrent GitHub+You™ tests",
+      "state": "open",
+      "created_at": "2026-08-07T14:38:26Z",
+      "updated_at": "2026-08-11T11:42:12Z",
+      "closed_at": null,
+      "comments": 4,
+      "html_url": "https://github.com/SuffolkLITLab/ALKiln/issues/1112",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 656,
+      "created_at": "2023-03-07T01:26:29Z",
+      "first_affiliated_reply_in_sample": "2026-09-10T12:56:19Z",
+      "source_url": "https://github.com/SuffolkLITLab/ALKiln/issues/656#issuecomment-5619024431"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

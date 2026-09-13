@@ -1,0 +1,155 @@
+{
+  "audit_id": "R003",
+  "requested_full_name": "SuffolkLITLab/docassemble-ALWeaver",
+  "observed_at": "2026-09-13T16:10:00.959582+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/docassemble-ALWeaver",
+  "html_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver",
+  "description": "A tool to help quickly generate draft interviews from an existing document (pdf or DOCX) for the docassemble platform. ",
+  "stargazers_count": 27,
+  "forks_count": 7,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-03-27T18:39:37Z",
+  "updated_at": "2026-09-13T16:00:53Z",
+  "pushed_at": "2026-09-13T16:00:50Z",
+  "size": 6378,
+  "open_issues_count": 59,
+  "topics": [
+    "access-to-justice",
+    "courts",
+    "docassemble",
+    "document-assembly-line",
+    "docx",
+    "form-builder",
+    "form-filling",
+    "pdf"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "c77bc86f3113cf8b13049096a767eb775c464533",
+  "last_commit": "2026-09-13T16:00:48Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/docassemble-ALWeaver",
+    "commit": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/commit/c77bc86f3113cf8b13049096a767eb775c464533"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "1c54f9f49a8319104099e830cc640567eca60fec467c9748606b011c88e3dde1",
+    "text": "# Assembly Line Weaver: Suffolk LIT Lab Document Assembly Line\n\n[![PyPI version](https://badge.fury.io/py/docassemble.ALWeaver.svg)](https://badge.fury.io/py/docassemble.ALWeaver)\n\n<img src=\"https://user-images.githubusercontent.com/7645641/142245862-c2eb02ab-3090-4e97-9653-bb700bf4c54d.png\" alt=\"drawing of two cartoon people collaborating on building a web application\" width=\"300\" style=\"align: center;\"/>\n\nThe Assembly Line Project is a collection of volunteers, students, and institutions who joined together\nduring the COVID-19 pandemic to help increase access to the court system. Our vision is mobile-friendly,\neasy to use **guided** online forms that help empower litigants to access the court remotely.\n\nOur signature project is [CourtFormsOnline.org](https://courtformsonline.org).\n\nWe designed a step-by-step, assembly line style process for automating court forms on top of Docassemble\nand built several tools along the way that **you** can use in your home jurisdiction.\n\nThis package contains an **automation and rapid prototyping tool** to support authoring robust,\nconsistent, and attractive Docassemble interviews that help complete court forms. Upload a labeled\nPDF or DOCX file, and the Assembly Line Weaver will produce a runnable, clean code, draft of a\nDocassemble interview that you can continue to edit and refine.\n\nRead more on our [documentation page](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/).\n\n\n## Related repositories\n\n* https://github.com/SuffolkLitLab/docassemble-AssemblyLine\n* https://github.com/SuffolkLitLab/docassemble-ALMassachusetts\n* https://github.com/SuffolkLitLab/docassemble-MassAccess\n* https://github.com/SuffolkLitLab/docassemble-ThemeTemplate\n* https://github.com/SuffolkLitLab/EfileProxyServer\n\n## Documentation\n\nhttps://suffolklitlab.org/docassemble-AssemblyLine-documentation/\n\n## ALWeaver API\n\nWhen installed on a docassemble server, ALWeaver exposes a custom Flask API:\n\n- `POST /al/api/v1/weaver` (primary)\n- `GET /al/api/v1/weaver/jobs/{job_id}` (async job polling)\n- `DELETE /al/api/v1/weaver/jobs/{job_id}` (async job cleanup)\n- `GET /al/api/v1/weaver/openapi.json` (OpenAPI spec)\n- `GET /al/api/v1/weaver/docs` (human-readable docs)\n\nThe API uses docassemble's API key authentication via `api_verify()`.\nThe `POST` endpoint defaults to synchronous behavior, and supports optional\nasynchronous execution with `mode=async` (or `async=true`).\n\n## Celery worker configuration\n\nUploaded-document project generation in the graphical editor, importing a\ntemplate already in a project, publishing a project to GitHub, and asynchronous\nAPI requests require ALWeaver's task module to be registered with Docassemble's global Celery configuration. Add\nthe module to the existing `celery modules` list in the Docassemble\nconfiguration; preserve any modules already listed:\n\n```yaml\ncelery modules:\n  - docassemble.ALWeaver.api_weaver_worker\n```\n\nAfter changing the configuration, restart or redeploy both the Docassemble web\nservice and every Celery worker so that they load the same task registry. Blank\nproject creation, ordinary graphical/source editing, and synchronous API calls\ndo not require this module.\n\nALWeaver checks this setting when its editor module starts and whenever the\neditor page loads. If it is missing, the server logs a warning and the editor\nshows a persistent setup notice before a developer selects a file to generate.\nAn attempted background request fails with HTTP 503, a structured\n`async_not_configured` API error (or `editor_async_not_configured` from the\ngraphical editor), and a link back to these instructions. Weaver does not enqueue\nan unregistered task or fall back to an in-process thread.\n\nThe revisioned graphical source-patch API is an opt-in beta. Set\n`WEAVER_ENABLE_PATCH_MODEL: true` in the Docassemble configuration (or the same\nenvironment variable) to enable it. The default production path remains off\nuntil graphical editing paths have migrated to exact source-range commands.\n\nThe editor's interview debugger is enabled by default for authenticated\ndevelopers and administrators. It runs the real interview in a separate test\nsession beside current-question details, a step recorder, variable inspection,\nscenario seeding, and back navigation. Set `weaver: {runtime inspector: false}`\n(or `WEAVER_ENABLE_RUNTIME_INSPECTOR: false`) to turn it off. Its server API uses\nowner-scoped target sessions and a fixed read-only `al_weaver.inspect_*` action\nallowlist; Docassemble remains the only interview runtime.\n\n## History\n\nSee [the CHANGELOG](CHANGELOG.md) for more information.\n\n## Authors\n\nQuinten Steenhuis, qsteenhuis@suffolk.edu  \nMichelle  \nBryce Willey, bwilley@suffolk.edu\nLily  \nDavid Colarusso  \nNharika Singh  \n\n## Installation requirements\n\n### Using auto drafting mode\n\nTo use auto-drafting mode, you can get an Open AI API Key and set it in\nyour docassemble configuration.\n\n```yaml\nopen ai:\n  key: ...\n```\n",
+    "characters": 4938,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/blob/c77bc86f3113cf8b13049096a767eb775c464533/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "fed527c4a620100b4451d7df55cd381fe5576a3bc1f47de90dd9a01f00f63635",
+    "text": "MIT License\n\nCopyright (c) 2020 Legal Innovation and Technology Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1092,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/blob/c77bc86f3113cf8b13049096a767eb775c464533/LICENSE.md",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "nonprofittechy",
+      "contributions": 1313
+    },
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 202
+    },
+    {
+      "login": "plocket",
+      "contributions": 115
+    },
+    {
+      "login": "LemmaLegal",
+      "contributions": 47
+    },
+    {
+      "login": "purplesky2016",
+      "contributions": 35
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 19
+    },
+    {
+      "login": "niharikasingh",
+      "contributions": 10
+    },
+    {
+      "login": "rajeswari1301",
+      "contributions": 2
+    },
+    {
+      "login": "colarusso",
+      "contributions": 1
+    },
+    {
+      "login": "Copilot",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 1065,
+      "title": "Fix formatting for editor.js",
+      "state": "closed",
+      "created_at": "2026-09-03T20:17:14Z",
+      "updated_at": "2026-09-03T23:50:13Z",
+      "closed_at": "2026-09-03T23:50:13Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/issues/1065",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 1058,
+      "title": "Consistently use the \"magic\" icon ONLY to identify features that use AI",
+      "state": "closed",
+      "created_at": "2026-09-03T00:53:57Z",
+      "updated_at": "2026-09-03T20:48:24Z",
+      "closed_at": "2026-09-03T20:48:24Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/issues/1058",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 1055,
+      "title": "Let someone expand the style check findings - maybe even full screen, but least make the window taller",
+      "state": "closed",
+      "created_at": "2026-08-31T15:29:32Z",
+      "updated_at": "2026-09-03T20:48:24Z",
+      "closed_at": "2026-09-03T20:48:24Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALWeaver/issues/1055",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

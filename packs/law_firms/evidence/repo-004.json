@@ -1,0 +1,153 @@
+{
+  "audit_id": "R004",
+  "requested_full_name": "SuffolkLITLab/docassemble-ALToolbox",
+  "observed_at": "2026-09-13T16:10:00.959582+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "SuffolkLITLab/docassemble-ALToolbox",
+  "html_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox",
+  "description": "Collection of small utility functions, classes, and web components for Docassemble interviews",
+  "stargazers_count": 20,
+  "forks_count": 5,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2020-06-26T16:42:43Z",
+  "updated_at": "2026-09-04T17:03:27Z",
+  "pushed_at": "2026-08-26T12:03:09Z",
+  "size": 1122,
+  "open_issues_count": 40,
+  "topics": [
+    "docassemble",
+    "document-assembly-line",
+    "document-automation"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "4e4ecc0dff025a4b8be9ccf1a031549628afa9f1",
+  "last_commit": "2026-08-20T01:55:15Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/SuffolkLITLab/docassemble-ALToolbox",
+    "commit": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/commit/4e4ecc0dff025a4b8be9ccf1a031549628afa9f1"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "c5c693e765308f115e4b535786fdf4c6c0ed2b0f2b7f56a57187c8fe6ac6fafd",
+    "text": "# ALToolbox\r\n\r\n[![PyPI version](https://badge.fury.io/py/docassemble-ALToolbox.svg)](https://badge.fury.io/py/docassemble-ALToolbox)\r\n\r\nThis repository is used to host small Python modules, widgets, and JavaScript web components js files that enhance Docassemble interviews. These modules were\r\nbuilt as part of the Suffolk University Law School LIT Lab's [Document Assembly Line project](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/).\r\nThey are placed here\r\nrather than in https://github.com/SuffolkLitLab/docassemble-AssemblyLine because we believe these small components can easily be used\r\nby anyone, regardless of whether they use any other code from the Document Assembly Line project.\r\n\r\nIf you want to add a small function to this project, consider adding it to the existing misc.py to avoid creating too many module files.\r\n\r\n## Documentation\r\n\r\nRead the [documentation for the functions and components](https://assemblyline.suffolklitlab.org/docs/components/ALToolbox/overview) to learn\r\nhow to use these components in your own [Docassemble](https://github.com/jhpyle/docassemble) projects.\r\n\r\n## Translating strings inside JavaScript\r\n\r\nDocassemble translates anything that reaches Python through `word()`, but JavaScript\r\nrunning in the browser has no way to reach that catalog, so strings in custom datatypes\r\nand small widgets tend to stay hardcoded in English.\r\n\r\nALToolbox adds an endpoint, `/al_translations.json?lang=es`, that returns the `word()`\r\ncatalog for a language, and a script that puts it behind `_()`:\r\n\r\n```yaml\r\ninclude:\r\n  - docassemble.ALToolbox:translation_strings.yml\r\n```\r\n\r\nThen, in your JavaScript:\r\n\r\n```js\r\n_(\"Copied!\")                                  // \"¡Copiado!\"\r\n_(\"You have entered %d characters.\", count)   // \"Ha escrito 42 caracteres.\"\r\n_(\"%1$s of %2$s\", done, total)                // positional, so a translation can reorder\r\n_(\"100%% sure\")                               // \"%%\" is a literal percent sign\r\n```\r\n\r\n`alTranslate()` is the same function under a less collision-prone name. `_` is only\r\nassigned if nothing else has claimed it, so an interview that loads lodash or underscore\r\nkeeps its own `_`.\r\n\r\n### Adding translations\r\n\r\nWrite a word translation file and list it under `words:` in your server configuration —\r\nthe same mechanism docassemble already uses for `word()`:\r\n\r\n```yaml\r\n# docassemble/yourpackage/data/sources/yourpackage_words.yml\r\nes:\r\n  Copied!: ¡Copiado!\r\n  You have entered %d characters.: Ha escrito %d caracteres.\r\n```\r\n\r\n```yaml\r\n# in the docassemble configuration\r\nwords:\r\n  - docassemble.ALToolbox:data/sources/altoolbox_words.yml\r\n  - docassemble.yourpackage:data/sources/yourpackage_words.yml\r\n```\r\n\r\nFor translations that come from somewhere other than a file, `add_translations()` adds\r\nthem to the same catalog at runtime:\r\n\r\n```yaml\r\ncode: |\r\n  add_translations(\"es\", {\"Copied!\": \"¡Copiado!\"})\r\n```\r\n\r\nLookups try an exact match first, then one that ignores surrounding whitespace,\r\ncapitalization and trailing punctuation, restoring the source string's capitalization and\r\npunctuation on the way out. So a catalog entry for `copied` will still translate\r\n`_(\"Copied!\")`.\r\n\r\n### What to expect\r\n\r\nThe catalog is fetched once and kept in `localStorage`, keyed by language, so `_()`\r\nresolves synchronously on every page load after the first. On the very first load of a\r\nlanguage the catalog is still in flight and `_()` returns the English source; listen for\r\nthe `alTranslationsLoaded` event on `window` if you need to redraw when it arrives.\r\n\r\nDocassemble loads every script at the end of the body, so `_` exists from `daPageLoad`\r\nonward — which is where interview JavaScript normally does its work anyway. An inline\r\n`<script>` in a `subquestion` runs *before* that, so wrap it:\r\n\r\n```js\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n  document.getElementById(\"greeting\").textContent = _(\"Hello\");\r\n});\r\n```\r\n\r\nThe endpoint is unauthenticated and identical for every user of a language — it exposes\r\nthe server's configured `word()` catalog for that language (which may include arbitrary\r\r\nphrases from installed packages). `translation_strings.translate()` is\r\r\n\r\nRun `translation_strings_demo.yml` to see it working.\r\n\r\n## Suffolk LIT Lab Document Assembly Line\r\n\r\n<img src=\"https://user-images.githubusercontent.com/7645641/142245862-c2eb02ab-3090-4e97-9653-bb700bf4c54d.png\" alt=\"drawing of people working together on a website UI\" width=\"300\" style=\"align: center;\"/>\r\n\r\nThe Assembly Line Project is a collection of volunteers, students, and institutions who joined together\r\nduring the COVID-19 pandemic to help increase access to the court system. Our vision is mobile-friendly,\r\neasy to use **guided** online forms that help empower litigants to access the court remotely.\r\n\r\nOur signature project is [CourtFormsOnline.org](https://courtformsonline.org).\r\n\r\nWe designed a step-by-step, assembly line style process for automating court forms on top of Docassemble\r\nand built several tools along the way that **you** can use in your home jurisdiction.\r\n\r\nThis package contains **runtime code** and **pre-written questions** to support authoring robust, \r\nconsistent, and attractive Docassemble interviews that help complete court forms.\r\n\r\nRead more on our [documentation page](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/).\r\n\r\n\r\n## Related repositories\r\n\r\n* https://github.com/SuffolkLitLab/docassemble-AssemblyLine\r\n* https://github.com/SuffolkLitLab/docassemble-ALWeaver\r\n* https://github.com/SuffolkLitLab/docassemble-ALMassachusetts\r\n* https://github.com/SuffolkLitLab/docassemble-MassAccess\r\n* https://github.com/SuffolkLitLab/docassemble-ALThemeTemplate\r\n* https://github.com/SuffolkLitLab/EfileProxyServer\r\n\r\n## Contributors:\r\n* @plocket  \r\n* @nonprofittechy\r\n* @purplesky2016\r\n* @brycestevenwilley\r\n",
+    "characters": 5871,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/blob/4e4ecc0dff025a4b8be9ccf1a031549628afa9f1/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "77c4d73d6f171507fe4e597e62de29bc55dd3478b0fe678687553d2e5a29f6e4",
+    "text": "MIT\n\nCopyright (c) 2026 Suffolk Legal Innovation and Technology Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1092,
+    "source_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/blob/4e4ecc0dff025a4b8be9ccf1a031549628afa9f1/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 51,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "nonprofittechy",
+      "contributions": 311
+    },
+    {
+      "login": "plocket",
+      "contributions": 148
+    },
+    {
+      "login": "BryceStevenWilley",
+      "contributions": 109
+    },
+    {
+      "login": "purplesky2016",
+      "contributions": 41
+    },
+    {
+      "login": "Copilot",
+      "contributions": 21
+    },
+    {
+      "login": "LemmaLegal",
+      "contributions": 11
+    },
+    {
+      "login": "jpagh",
+      "contributions": 5
+    },
+    {
+      "login": "rajeswari1301",
+      "contributions": 3
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 356,
+      "title": "Setup a translation endpoint following the pattern of flask-babel-js",
+      "state": "closed",
+      "created_at": "2026-08-03T15:54:15Z",
+      "updated_at": "2026-08-16T11:57:35Z",
+      "closed_at": "2026-08-16T11:57:35Z",
+      "comments": 2,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/issues/356",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 184,
+      "title": "Hierarchical multiselect - performance slows down a lot with 200+ items",
+      "state": "closed",
+      "created_at": "2023-06-12T15:55:04Z",
+      "updated_at": "2026-08-04T16:16:25Z",
+      "closed_at": "2026-08-04T16:16:25Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/issues/184",
+      "author_association": "MEMBER"
+    },
+    {
+      "number": 183,
+      "title": "Hierarchical multiselect - the \"clear\" button doesn't work",
+      "state": "closed",
+      "created_at": "2023-06-12T15:37:01Z",
+      "updated_at": "2026-08-04T16:16:24Z",
+      "closed_at": "2026-08-04T16:16:24Z",
+      "comments": 0,
+      "html_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/issues/183",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 356,
+      "created_at": "2026-08-03T15:54:15Z",
+      "first_affiliated_reply_in_sample": "2026-08-04T13:41:36Z",
+      "source_url": "https://github.com/SuffolkLITLab/docassemble-ALToolbox/issues/356#issuecomment-5179882724"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
