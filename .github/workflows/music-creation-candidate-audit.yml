@@ -1,0 +1,111 @@
+name: Music creation candidate evidence
+on:
+  push:
+    branches: [main]
+    paths: [packs/music_creation/evidence/candidate-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: music-creation-candidate-evidence
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REQUEST_REVISION: ${{ github.sha }}
+    steps:
+      - name: Inspect public metadata and text without running candidates
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,concurrent.futures,datetime,hashlib,json,os,pathlib,re,urllib.request,urllib.error,urllib.parse
+          REPO='sisodias/siso-industry-packs';ROOT='packs/music_creation/evidence/';API='https://api.github.com';NOW=datetime.datetime.now(datetime.timezone.utc).isoformat();TOKEN=os.environ['GH_TOKEN']
+          def api(path,data=None,method=None):
+              try:
+                  req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-music-public-evidence'})
+                  with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+              except urllib.error.HTTPError as e:return {'_error':e.code}
+              except (TimeoutError,urllib.error.URLError) as e:return {'_error':type(e).__name__}
+          def raw(repo,rev,path):
+              url='https://raw.githubusercontent.com/'+repo+'/'+rev+'/'+urllib.parse.quote(path,safe='/')
+              try:
+                  with urllib.request.urlopen(url,timeout=30) as r:return r.read()
+              except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError):return None
+          cfgfile=api('/repos/'+REPO+'/contents/'+ROOT+'candidate-request.json?ref='+os.environ['REQUEST_REVISION']);cfg=json.loads(base64.b64decode(cfgfile['content']))
+          names=list(dict.fromkeys(cfg['repositories']));assert 100<=len(names)<=180;assert all(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',n) for n in names)
+          bankrepo='sisodias/siso-repo-bank';bankrev='2d7d35ecbf7e1158d0a3527e1489040687ac214b';bank={};sources=[];outputs={}
+          files=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']
+          def name_of(r):
+              for k in ('full_name','repo_full_name','repository_full_name','repository','repo','name','url','repo_url','repository_url','source_url'):
+                  x=r.get(k)
+                  if isinstance(x,str):
+                      x=x.removeprefix('https://github.com/').removesuffix('.git').strip('/')
+                      if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',x):return x.lower()
+          for p in files:
+              b=raw(bankrepo,bankrev,p);assert b is not None,'bank source unavailable'
+              rows=[json.loads(x) for x in b.splitlines() if x.strip()];idx={}
+              for r in rows:
+                  n=name_of(r)
+                  if n:idx.setdefault(n,[]).append(r)
+              bank[p]=idx;sources.append({'path':p,'rows':len(rows),'indexed':len(idx),'sha256':hashlib.sha256(b).hexdigest(),'source_url':'https://github.com/'+bankrepo+'/blob/'+bankrev+'/'+p})
+              if p=='bank/bank_capability_top.jsonl':outputs[ROOT+'bank-top-used.jsonl']=b.decode()
+              if p=='capability-shelf/source-registry.jsonl':outputs[ROOT+'bank-product-base-matches.jsonl']=''.join(json.dumps(r)+'\n' for r in rows if re.search(r'music|audio|media.asset|digital.asset|royalt|backup|file.shar|accounting|newsletter',json.dumps(r),re.I))
+              if p=='bank/bank_best.jsonl':outputs[ROOT+'bank-music-matches.jsonl']=''.join(json.dumps(r)+'\n' for r in rows if re.search(r'music|audio|MIDI|DAW|royalt|soundfont|sample.library|loudness',json.dumps(r),re.I))
+          def textfile(n,rev,paths):
+              for p in paths:
+                  b=raw(n,rev,p)
+                  if b is not None:return {'path':p,'source_url':'https://github.com/'+n+'/blob/'+rev+'/'+p,'sha256':hashlib.sha256(b).hexdigest(),'text':b.decode('utf-8','replace'),'characters':len(b),'transport':'public raw file'}
+              return {'error':'standard_paths_not_found; not proof that no licence exists'}
+          deep=set(cfg.get('deep_health',[]))
+          def collect(pair):
+              i,name=pair;r={'audit_id':'R'+str(i).zfill(3),'requested_full_name':name,'observed_at':NOW,'bank_revision':bankrev};m=api('/repos/'+name)
+              if '_error' in m:return r|{'retrieval_error':m['_error']}
+              if m.get('private'):return r|{'retrieval_error':'private_excluded'}
+              n=m['full_name'];r.update({k:m.get(k) for k in ('full_name','html_url','description','stargazers_count','default_branch','archived','license','forks_count','open_issues_count','topics')})
+              cs=api('/repos/'+n+'/commits?per_page=1')
+              rev=cs[0]['sha'] if isinstance(cs,list) and cs else None
+              r['revision']=rev;r['last_commit']=cs[0]['commit']['committer']['date'] if rev else None;r['metadata_source']=API+'/repos/'+n;r['commit_source']=cs[0]['html_url'] if rev else None
+              if rev:
+                  r['readme']=textfile(n,rev,['README.md','README.rst','README','Readme.md','README.markdown','readme.md','README.adoc'])
+                  r['license_file']=textfile(n,rev,['LICENSE','LICENSE.md','LICENSE.txt','COPYING','COPYING.txt','LICENCE','LICENSE.rst','LICENSE-MIT','LICENSE.LGPLv3'])
+              else:r['readme']={'error':'commit_unavailable'};r['license_file']={'error':'commit_unavailable'}
+              r['last_commit_within_six_months']=r['last_commit']>='2026-03-13T00:00:00Z' if r['last_commit'] else None
+              r['commits_six_months_sample_count']=None;r['contributors_top10']=None;r['issues_sample']=None;r['issue_response_sample']=None;r['bus_factor']='not_measured'
+              if name in deep:
+                  c=api('/repos/'+n+'/commits?since=2026-03-13T00:00:00Z&per_page=100');r['commits_six_months_sample_count']=len(c) if isinstance(c,list) else None;r['commits_six_months_capped']=isinstance(c,list) and len(c)==100
+                  c=api('/repos/'+n+'/contributors?per_page=10');r['contributors_top10']=[{'login':x.get('login'),'contributions':x.get('contributions')} for x in c] if isinstance(c,list) else None
+                  c=api('/repos/'+n+'/issues?state=all&sort=updated&direction=desc&per_page=8');r['issues_sample']=[{k:x.get(k) for k in ('number','title','state','created_at','updated_at','closed_at','comments','html_url')} for x in c if 'pull_request' not in x][:3] if isinstance(c,list) else None
+              aliases={name.lower(),n.lower()};r['bank_rows']={p:[x for a in aliases for x in idx.get(a,[])] for p,idx in bank.items() if p!='bank/bank_capability.jsonl'}
+              r['bank_membership_layers']=[p for p,x in r['bank_rows'].items() if x];r['bank_status']='ALREADY IN THE BANK' if r['bank_membership_layers'] else 'NEW';r['adoption_evidence']=r['bank_rows'].get('bank/bank_adoption_v2.jsonl',[])
+              return r
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:rows=list(pool.map(collect,enumerate(names,1)))
+          compact=[]
+          for r in rows:
+              outputs[ROOT+'repo-'+r['audit_id'][1:]+'.json']=json.dumps(r,ensure_ascii=False,indent=2)+'\n'
+              c={k:r.get(k) for k in ('audit_id','full_name','description','stargazers_count','archived','last_commit','revision','license','bank_status','bank_membership_layers','adoption_evidence','last_commit_within_six_months','commits_six_months_sample_count','retrieval_error')}
+              c['readme_excerpt']=r.get('readme',{}).get('text','')[:2000];c['readme_source']=r.get('readme',{}).get('source_url');c['license_excerpt']=r.get('license_file',{}).get('text','')[:600];c['license_source']=r.get('license_file',{}).get('source_url');c['license_error']=r.get('license_file',{}).get('error');compact.append(c)
+          outputs[ROOT+'candidate-index.jsonl']=''.join(json.dumps({k:v for k,v in c.items() if k not in ('readme_excerpt','license_excerpt','adoption_evidence')},ensure_ascii=False)+'\n' for c in compact)
+          for start in range(0,len(compact),4):outputs[ROOT+'review-'+str(start//4+1).zfill(2)+'.jsonl']=''.join(json.dumps(c,ensure_ascii=False)+'\n' for c in compact[start:start+4])
+          receipt={'observed_at':NOW,'bank_revision':bankrev,'bank_files':sources,'requested':len(names),'repositories_retrieved':sum(bool(r.get('full_name')) for r in rows),'readmes_retrieved':sum(bool(r.get('readme',{}).get('text')) for r in rows),'license_files_retrieved':sum(bool(r.get('license_file',{}).get('text')) for r in rows),'current_commit_retrieved':sum(bool(r.get('revision')) for r in rows),'already_in_bank':sum(r.get('bank_status')=='ALREADY IN THE BANK' for r in rows),'new':sum(r.get('bank_status')=='NEW' for r in rows),'deep_health_requested':len(deep),'health_boundary':'Last commit checked for every retrieved repository. Extra commit/contributor/issue samples only for deep_health set. Issue-response timing and bus factor remain unmeasured.','scope':'Public text collection only. No candidate executed; no application built or deployed. Analyst review still required.'}
+          outputs[ROOT+'candidate-audit-receipt.json']=json.dumps(receipt,indent=2)+'\n'
+          for path,text in outputs.items():
+              p=pathlib.Path('public-research')/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+          for attempt in range(4):
+              ref=api('/repos/'+REPO+'/git/ref/heads/main');parent=ref['object']['sha'];commit=api('/repos/'+REPO+'/git/commits/'+parent)
+              tree=api('/repos/'+REPO+'/git/trees',{'base_tree':commit['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in outputs.items()]},'POST');assert 'sha' in tree,tree
+              c=api('/repos/'+REPO+'/git/commits',{'message':'research(music_creation): record bounded candidate evidence','tree':tree['sha'],'parents':[parent]},'POST');assert 'sha' in c,c
+              result=api('/repos/'+REPO+'/git/refs/heads/main',{'sha':c['sha'],'force':False},'PATCH')
+              if '_error' not in result:print(json.dumps(receipt));print('Evidence commit',c['sha']);break
+              if result['_error'] not in (409,422):raise RuntimeError('evidence publication failed '+str(result['_error']))
+          else:raise RuntimeError('concurrent updates prevented publication; artifact retained')
+          PY
+      - name: Retain research evidence archive
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: music-creation-candidate-evidence
+          path: public-research/
+          retention-days: 7
+          if-no-files-found: warn
