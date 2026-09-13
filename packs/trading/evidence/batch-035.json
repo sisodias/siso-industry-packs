@@ -1,0 +1,1188 @@
+[
+  {
+    "full_name": "clifton/ib-flex",
+    "requested_name": "clifton/ib-flex",
+    "id": 1133136461,
+    "url": "https://github.com/clifton/ib-flex",
+    "stars": 7,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a433988cfed08847e8bd3b264b35a2d90d87e45d",
+    "last_commit_date": "2026-06-02T16:53:52Z",
+    "archived": false,
+    "fork": false,
+    "description": "Type-safe Rust parser for Interactive Brokers FLEX query XML statements",
+    "language": "Rust",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Clifton King",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ib-flex",
+      "## Features",
+      "## Installation",
+      "## Quick Start",
+      "## FLEX Query Setup",
+      "## FLEX Web Service API Client (Optional)",
+      "### Installation with API Client",
+      "### API Setup",
+      "### Usage Example",
+      "### API Examples",
+      "## Supported FLEX Sections",
+      "### Activity FLEX - Core Types",
+      "### Extended FLEX Sections",
+      "### Asset Classes Supported",
+      "### Trade Confirmation FLEX",
+      "## Performance",
+      "## Type Safety",
+      "## Examples",
+      "### Parsing Examples",
+      "### Historical Backfill Example",
+      "### API Client Examples (requires `api-client` feature)",
+      "## Development",
+      "### Build",
+      "### Test",
+      "### Benchmark",
+      "### Format",
+      "### Lint",
+      "## Testing",
+      "### Reliability Testing",
+      "## Contributing"
+    ],
+    "recent_commit_count": 14,
+    "recent_authors_sample50": [
+      "clifton"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      },
+      {
+        "round": 2,
+        "stage": "W08",
+        "lane": "bridge",
+        "query": "IBKR statement"
+      }
+    ],
+    "root_entries": [
+      ".claude",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "Cargo.toml",
+      "FLEX_SETUP.md",
+      "LICENSE",
+      "README.md",
+      "benches",
+      "examples",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/README.md",
+        "sha256": "f4d494872b6320ea20753acd722ec9a2dcb46f6059e450fae0bff1da2bda30e0",
+        "bytes": 14218
+      },
+      "LICENSE": {
+        "url": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/LICENSE",
+        "sha256": "e17ac8754232eab1b36b0b53e2c3b0903aeee38b3966f81264cb7d8a02887406",
+        "bytes": 1069
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/clifton/ib-flex/blob/a433988cfed08847e8bd3b264b35a2d90d87e45d/Cargo.toml",
+        "sha256": "c994333d84f27c9d2473e5465fc2341ddba6dda6e922dd20de7c4c7c68266adf",
+        "bytes": 1444
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/clifton/ib-flex/commit/a433988cfed08847e8bd3b264b35a2d90d87e45d",
+      "metadata": "https://api.github.com/repos/clifton/ib-flex"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ib-flex [![crates.io](https://img.shields.io/crates/v/ib-flex.svg)](https://crates.io/crates/ib-flex) [![docs.rs](https://docs.rs/ib-flex/badge.svg)](https://docs.rs/ib-flex) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) Type-safe Rust parser for Interactive Brokers FLEX XML statements with comprehensive coverage and financial precision. ## Features - **Complete attribute coverage** - Maps the full set of IB FLEX attributes (modeled against the mature [ibflex](https://github.com/csingley/ibflex) reference), so you don't silently lose data - **Robust on real data** - Tolerates IB's real-world quirks: thousands separators, `-`/`--`/`N/A` sentinels, `MULTI` dates, `Yes`/`No` booleans, legacy date/time separators - **Financial precision** - `rust_decimal` for all monetary values (no floating-point error) - **Type-safe** - 19 enums covering asset classes, trade/cash/corporate-action types, transfer types, and more - **Comprehensive sections** - Trades, positions, cash, corporate actions, transfers, performance summaries, accruals, and 40+ FLEX sections in total - **Edge cases covered** - Warrants, T-Bills, CFDs, crypto, fractional shares, cancelled/corrected trades, cost-basis lots - **Optional API client** - Fetch FLEX statements programmatically from IB (`api-client` feature) ## Installation Add this to your `Cargo.toml`: ```toml [dependencies] ib-flex = \"0.2\" ``` ## Quick Start Pull a NAV time series out of a multi-period Activity FLEX export (e.g. \"Last 180 Calendar Days\") and compute an annualized Sharpe ratio:",
+    "license_excerpt": "MIT License Copyright (c) 2026 Clifton King Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)",
+      "Type-safe Rust parser for Interactive Brokers FLEX XML statements with comprehensive coverage and financial precision.",
+      "- **Financial precision** - `rust_decimal` for all monetary values (no floating-point error)",
+      "- **Optional API client** - Fetch FLEX statements programmatically from IB (`api-client` feature)",
+      "```rust",
+      "use rust_decimal::prelude::ToPrimitive; // for Decimal::to_f64",
+      "```rust",
+      "The `api-client` feature provides programmatic access to fetch FLEX statements directly from Interactive Brokers without manual downloads.",
+      "```rust",
+      "Run the API examples (requires IB credentials):",
+      "All financial values use `rust_decimal::Decimal` for exact arithmetic without floating-point error. The public enums include:",
+      "The repository includes several complete example programs:",
+      "### API Client Examples (requires `api-client` feature)",
+      "- **Memory efficiency tests** for repeated parsing",
+      "Contributions welcome! This is an open-source project designed to benefit the Rust trading community.",
+      "- Rust version and platform",
+      "## License",
+      "Licensed under the [MIT License](LICENSE)."
+    ],
+    "dependency_repos": [
+      "chronotope/chrono",
+      "csingley/ibflex",
+      "paupino/rust-decimal",
+      "tafia/quick-xml"
+    ]
+  },
+  {
+    "full_name": "drkthng/ibkr2kap",
+    "requested_name": "drkthng/ibkr2kap",
+    "id": 1181544354,
+    "url": "https://github.com/drkthng/ibkr2kap",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "6d3621a2ee3a05fccf644c152f8350b8e773bf1f",
+    "last_commit_date": "2026-03-25T16:29:05Z",
+    "archived": false,
+    "fork": false,
+    "description": "Tax reporting tool for German investors using Interactive Brokers. Parses IBKR Flex Query XML and Activity Statement CSV exports, applies FIFO cost-basis tracking across multiple years, converts currencies using official ECB rates, and generates a structured Excel report ready for Anlage KAP.",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# IBKR2KAP",
+      "## \ud83d\ude80 Key Features",
+      "## \ud83d\udee0\ufe0f Technology Stack",
+      "## \ud83d\udce5 Installation",
+      "## \ud83d\udcca Usage",
+      "## \u26a0\ufe0f Disclaimer",
+      "## \ud83e\udd1d Contributing",
+      "## \ud83d\udcc4 License"
+    ],
+    "recent_commit_count": 165,
+    "recent_authors_sample50": [
+      "drkthng"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "root_entries": [
+      ".agent",
+      ".bg-shell",
+      ".gemini",
+      ".gitignore",
+      ".gsd",
+      ".python-version",
+      ".streamlit",
+      "GSD-STYLE.md",
+      "PROJECT_RULES.md",
+      "README.md",
+      "adapters",
+      "debug_ca_validation.py",
+      "debug_et.py",
+      "debug_key.py",
+      "docs",
+      "inspect_ibflex.py",
+      "inspect_real_xml.py",
+      "inspect_with_parser.py",
+      "inspect_with_parser_v2.py",
+      "main.py",
+      "model_capabilities.yaml",
+      "pyproject.toml",
+      "scripts",
+      "src",
+      "test_monkeypatch.py",
+      "test_preprocessing.py",
+      "tests",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/drkthng/ibkr2kap/blob/6d3621a2ee3a05fccf644c152f8350b8e773bf1f/README.md",
+        "sha256": "381c4152e3575c6a9e0b93bc6dca0339c97c3bd0409caa815ee1b23ce7b3b626",
+        "bytes": 5491
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/drkthng/ibkr2kap/blob/6d3621a2ee3a05fccf644c152f8350b8e773bf1f/pyproject.toml",
+        "sha256": "b32af151d1bee5f7a5924cb2265316096f5f4ccd220e0470d2d98bbdbb9993e5",
+        "bytes": 633
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/drkthng/ibkr2kap/commit/6d3621a2ee3a05fccf644c152f8350b8e773bf1f",
+      "metadata": "https://api.github.com/repos/drkthng/ibkr2kap"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# IBKR2KAP **IBKR2KAP** is a robust, local-first application designed specifically for German retail investors and traders who use Interactive Brokers (IBKR). It bridges the gap",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<img src=\"https://img.shields.io/badge/Python-3.12%2B-blue\" alt=\"Python Version\">",
+      "<img src=\"https://img.shields.io/badge/License-MIT-green\" alt=\"License\">",
+      "**IBKR2KAP** is a robust, local-first application designed specifically for German retail investors and traders who use Interactive Brokers (IBKR). It bridges the gap between IBKR's complex reporting and the strict requirements of German tax law, automating th",
+      "*   **Strict Financial Precision:** Uses Python's `decimal` type and SQLAlchemy 2.0 (with SQLite) to ensure absolute precision. Floating-point errors are unacceptable in tax reporting.",
+      "*   **Local & Secure:** A Streamlit-based UI runs entirely on your local machine. No data is sent to the cloud.",
+      "*   **Backend:** Python 3.12+, `pydantic` v2 (for strict data validation), `ibflex` (for reliable XML parsing).",
+      "*   **Frontend:** `Streamlit` for a fast, responsive local web interface.",
+      "Because IBKR2KAP processes sensitive financial data, it is designed to be run locally from source.",
+      "## \ud83d\udcc4 License",
+      "This project is licensed under the MIT License - see the LICENSE file for details."
+    ],
+    "dependency_repos": [
+      "yourusername/IBKR2KAP.git"
+    ]
+  },
+  {
+    "full_name": "oh-rid/claude-code-plugin-ib",
+    "requested_name": "oh-rid/claude-code-plugin-ib",
+    "id": 1249155671,
+    "url": "https://github.com/oh-rid/claude-code-plugin-ib",
+    "stars": 5,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "77495dbb2b8c6c5abff42f2bdc455e16bf7995a0",
+    "last_commit_date": "2026-05-25T18:41:01Z",
+    "archived": false,
+    "fork": false,
+    "description": "Claude Code plugin for Interactive Brokers \u2014 read-only IB Client Portal Gateway lifecycle, REST + Flex Web Service skills, options/portfolio/tax tooling, order-blocking hook.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 oh-rid",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# ib-portfolio-management",
+      "## Two IB APIs \u2014 and why you need both",
+      "## Contents",
+      "## What's in the box",
+      "## Components \u2014 what each piece does",
+      "### The `/finance` command and `portfolio-agent` subagent",
+      "### The `/ib-gateway` command",
+      "### Hooks",
+      "### Skills (auto-loaded by Claude)",
+      "### Scripts (CLI utilities)",
+      "## Install from scratch",
+      "### Step 0 \u2014 IB account",
+      "### Step 1 \u2014 System dependencies",
+      "# macOS (Homebrew)",
+      "# openjdk is keg-only; the plugin's setup will find it at the Homebrew path",
+      "# Debian / Ubuntu",
+      "# Fedora / RHEL",
+      "### Step 2 \u2014 Install Claude Code",
+      "### Step 3 \u2014 Clone the plugin",
+      "### Step 4 \u2014 Enable the plugin in Claude Code",
+      "### Step 5 \u2014 Download the IB Client Portal Gateway binary",
+      "### Step 6 \u2014 First start + log in",
+      "#### If the API stays 401 after a successful browser login",
+      "#### The Gateway will auto-stop in 30 minutes",
+      "### Step 7 \u2014 (Optional) Flex Web Service for full trade history",
+      "#   \u2192 portfolio/ib/tax/2025/closed_lots_2025.xml",
+      "#   \u2192 portfolio/ib/tax/2025/Closed_Lots_2025_EUR.xlsx",
+      "## For Claude Code agents \u2014 automated install + verification",
+      "### Step 1 \u2014 Check prerequisites",
+      "# Java"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "oh-rid"
+    ],
+    "issue_samples": [],
+    "bank_status": "ALREADY IN THE BANK",
+    "bank_layers": [
+      "capability-shelf/source-registry.jsonl"
+    ],
+    "bank_row": null,
+    "shelf_row": {
+      "source_id": "SRC-1610",
+      "repo": "oh-rid/claude-code-plugin-ib",
+      "url": "https://github.com/oh-rid/claude-code-plugin-ib",
+      "labels": [],
+      "family_ids": [],
+      "family_names": [],
+      "evidence_classes": [
+        "stage_0_pool_intake"
+      ],
+      "operator_signals": [],
+      "observed_facts": [],
+      "current_verdict": "discovery_candidate",
+      "foundry_stage": "stage_0_intake",
+      "qualification_status": "NOT_QUALIFIED",
+      "execution_status": "UNEXECUTED",
+      "admission_status": "NOT_ADMITTED",
+      "priority_score": 0,
+      "source_record_class": "discovery",
+      "discovery_only": true,
+      "industry_demand": [],
+      "industry_demand_status": "no_observed_slot"
+    },
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "C",
+        "query": "Flex Interactive Brokers"
+      }
+    ],
+    "root_entries": [
+      ".claude-plugin",
+      ".env.example",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "agents",
+      "commands",
+      "hooks",
+      "scripts",
+      "skills"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/oh-rid/claude-code-plugin-ib/blob/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0/README.md",
+        "sha256": "f872ee09cc8529b3dc47c6006b98e58f3dcd3255d616df05a60ddd847daef72e",
+        "bytes": 34660
+      },
+      "LICENSE": {
+        "url": "https://github.com/oh-rid/claude-code-plugin-ib/blob/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0/LICENSE",
+        "sha256": "a2966e21917624c193c385f79980e9344978170f7432cb892504287e22f60233",
+        "bytes": 1063
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/oh-rid/claude-code-plugin-ib/commit/77495dbb2b8c6c5abff42f2bdc455e16bf7995a0",
+      "metadata": "https://api.github.com/repos/oh-rid/claude-code-plugin-ib"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# ib-portfolio-management A [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin for working with Interactive Brokers from the terminal \u2014 lifecycle for the Client Portal Gateway, IB REST + Flex Web Service skills, an options strategy framework, portfolio reporting / rebalance / tax-loss-harvest workflows, and an order-blocking hook so the assistant cannot accidentally place a trade. **Read-only by design.** The `block-orders.sh` PreToolUse hook denies any Bash call that hits an order or order-reply endpoint. Orders go through TWS Desktop or the IB mobile app \u2014 never through this plugin. Not affiliated with Interactive Brokers. ## Two IB APIs \u2014 and why you need both IB exposes account state through two completely different APIs. This plugin wraps both because each fills a gap the other can't. | API | What it gives you | What it can't | Setup cost | |---|---|---|---| | **CP Gateway** (`localhost:5000`) | Live quotes, option chains, current positions, account state, margin metrics, Greeks. Authenticated by your normal IB login + 2FA every ~24h | **Only the last 7 days of trades.** No tax-year history, no closed-lots P&L, no realized FIFO across",
+    "license_excerpt": "MIT License Copyright (c) 2026 oh-rid Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Gateway, IB REST + Flex Web Service skills, an options strategy framework,",
+      "| **CP Gateway** (`localhost:5000`) | Live quotes, option chains, current positions, account state, margin metrics, Greeks. Authenticated by your normal IB login + 2FA every ~24h | **Only the last 7 days of trades.** No tax-year history, no closed-lots P&L, no",
+      "| `/ib-gateway` command | `commands/ib-gateway.md` | `start`, `stop`, `status`, `setup`, `update` for the local CP Gateway |",
+      "| `options` skill | `skills/options/` | Options strategy framework, Greeks, spread mechanics |",
+      "against the local Gateway, parse output, read files, but cannot edit code or",
+      "- **`options`** \u2014 options strategy framework (spreads, Greeks, money",
+      "Manages the local IB Client Portal Gateway (the Java process IB ships for",
+      "- **`gateway.sh`** \u2014 orchestrates the CP Gateway (Java process, localhost",
+      "brew install openjdk python jq",
+      "sudo apt install default-jre python3 python3-pip jq",
+      "sudo dnf install java-latest-openjdk python3 python3-pip jq",
+      "Then the one Python package for the Flex \u2192 XLSX converter:",
+      "~/.claude/plugins/local/plugins/ib-portfolio-management",
+      "\"ib-portfolio-management@local\": true",
+      "\"allowLocalBinding\": true,",
+      "\"allowedDomains\": [\"localhost\"]",
+      "Both sandbox lines matter. The CP Gateway listens on `https://localhost:5000`",
+      "and Claude Code's sandbox blocks local binding by default \u2014 without"
+    ],
+    "dependency_repos": [
+      "oh-rid/claude-code-plugin-ib"
+    ]
+  },
+  {
+    "full_name": "LuxAlgo/trade-journal",
+    "requested_name": "LuxAlgo/trade-journal",
+    "id": 1345440309,
+    "url": "https://github.com/LuxAlgo/trade-journal",
+    "stars": 42,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "4a92e6b11aa297f6ad9f56b15fd80d1ce647038c",
+    "last_commit_date": "2026-09-12T03:52:27Z",
+    "archived": false,
+    "fork": false,
+    "description": "The open-source trade journal. Broker sync, P&L calendar, deep analytics, and AI reflection. Self-hosted, MIT, free.",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 LuxAlgo Global, LLC",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Quickstart",
+      "# http://localhost:3000",
+      "### Try it with demo data",
+      "### Docker",
+      "# http://localhost:3000, data persisted in ./data on the host",
+      "### Configuration (all optional)",
+      "### Add a trade manually",
+      "## Why this exists",
+      "## How it works",
+      "## Features",
+      "## Screenshots",
+      "## Market data and replay",
+      "## Prop firm tracking",
+      "## Migrating from TradeZella or Tradervue",
+      "## Export and backup",
+      "## Monorepo layout",
+      "### Use the engine in your own app",
+      "## Principles",
+      "## Disclaimer",
+      "## License"
+    ],
+    "recent_commit_count": 33,
+    "recent_authors_sample50": [
+      "ChristopherDownie",
+      "alexgrover",
+      "smack369"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/LuxAlgo/trade-journal/issues/8",
+        "createdAt": "2026-09-12T15:49:03Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/LuxAlgo/trade-journal/issues/6",
+        "createdAt": "2026-09-10T14:18:00Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      },
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".prettierignore",
+      ".prettierrc.json",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARKS.md",
+      "apps",
+      "docker-compose.yml",
+      "docs",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "scripts",
+      "tsconfig.base.json",
+      "vitest.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/README.md",
+        "sha256": "827d0feb707ce8af1da8d75a852d9ef507671e8dce8678bc307767a08df0708b",
+        "bytes": 28990
+      },
+      "LICENSE": {
+        "url": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/LICENSE",
+        "sha256": "1b008cf586117be793d621e875f6270aca14a8c7c31914e2371b39b6d6c01631",
+        "bytes": 1076
+      },
+      "package.json": {
+        "url": "https://github.com/LuxAlgo/trade-journal/blob/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c/package.json",
+        "sha256": "711be5c0482859768865b6a4163773693789e2910ac0729130770efbb1f39796",
+        "bytes": 893
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/LuxAlgo/trade-journal/commit/4a92e6b11aa297f6ad9f56b15fd80d1ce647038c",
+      "metadata": "https://api.github.com/repos/LuxAlgo/trade-journal"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Broker sync, deep analytics, a P&L calendar, trade replay, prop firm tracking, daily journaling with voice dictation, and AI reflection. Run it locally, or use it free inside LuxAlgo. Trade Journal is a [LuxAlgo](https://luxalgo.com) open-source project. Official repository: [github.com/LuxAlgo/trade-journal](https://github.com/LuxAlgo/trade-journal) [![npm](https://img.shields.io/npm/v/@luxalgo/journal-core?label=npm&color=white)](https://www.npmjs.com/package/@luxalgo/journal-core) [![License](https://img.shields.io/badge/license-MIT-white)](LICENSE) [![TypeScript](https://img.shields.io/badge/lang-TypeScript-white)](packages/core/src/types.ts) [![SQLite](https://img.shields.io/badge/db-SQLite-white)](#quickstart) [Quickstart](#quickstart) \u00b7 [Features](#features) \u00b7 [Screenshots](#screenshots) \u00b7 [How it works](#how-it-works) \u00b7 [Migrate](#migrating-from-tradezella-or-tradervue) \u00b7 [Edge Score](docs/edge-score.md) \u00b7 [Contributing](CONTRIBUTING.md) --- **Record every trade. See what actually works.** Connect a broker, drop in a statement export, or add trades manually from the dashboard. Trade Journal rebuilds your history into round-trip trades, a P&L calendar, deep analytics, and a daily journal you can type, dictate, or ask questions of with your own AI. Your journal lives in a local SQLite database; broker sync, market data, and AI connect to the services you choose. _Dashboard with generated demo data. All screenshots below use synthetic records, not a real trading account._ > \u26a0\ufe0f **Early release.** APIs and schema may still move before 1.0. Parser validation varies by format, from synthetic fixtures to cross-checked field sources; per-format status lives in [docs/importers.md](docs/importers.md). ## Quickstart > **Prefer",
+    "license_excerpt": "MIT License Copyright (c) 2026 LuxAlgo Global, LLC Permission is hereby granted, free of charge, to any person obtaining a copy of this software and",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Broker sync, deep analytics, a P&L calendar, trade replay, prop firm tracking, daily journaling with voice dictation, and AI reflection. Run it locally, or use it free inside LuxAlgo.",
+      "[![License](https://img.shields.io/badge/license-MIT-white)](LICENSE)",
+      "**Record every trade. See what actually works.** Connect a broker, drop in a statement export, or add trades manually from the dashboard. Trade Journal rebuilds your history into round-trip trades, a P&L calendar, deep analytics, and a daily journal you can ty",
+      "> **Prefer not to self-host?** A free hosted journal is available inside [LuxAlgo](https://app.luxalgo.com), alongside Quant Charts. Everything below is for running your own copy; this README describes the code in this checkout. See the [platform announcement]",
+      "# http://localhost:3000",
+      "Requirements: **Node 22+** and **pnpm 11.0.8** (the version pinned in `package.json`). First run creates the SQLite database and applies additive schema upgrades automatically. No migration tool, no setup wizard, no account. With the commands above, local data",
+      "using the same local data. Unlike `pnpm dev`, it does not compile each page on its first",
+      "The **Prop firms** page has its own **Load demo data** button: a read-only simulation of fictional firms, evaluation costs, and payouts. That preview stays in browser memory and does not write financial records.",
+      "### Docker",
+      "docker compose up -d",
+      "# http://localhost:3000, data persisted in ./data on the host",
+      "| `JOURNAL_PASSWORD`  | Require a password; recommended when accessible beyond localhost                                         |",
+      "| `JOURNAL_DATA_DIR`  | Database, attachments, and local encryption key directory (default `./data` relative to the app process) |",
+      "Set these in the process environment or in `apps/web/.env.local` for local Next.js runs; the root [`.env.example`](.env.example) documents the optional values. For Docker, configure the service environment in [`docker-compose.yml`](docker-compose.yml).",
+      "Deploy anywhere a Node process and a persistent disk exist: Docker, Railway, Fly.io, a small VPS. Serverless platforms without a disk need an external database, which this release does not support. SQLite on disk is the point.",
+      "- **Your journal is portable.** Export trades as CSV, journal records as JSON, and reviews as PDF or PNG. Back up the data directory to retain attachments and the full local state; see [Export and backup](#export-and-backup).",
+      "Captured from the local app with generated demo trades and fictional prop firm records. Expand a view to inspect it at full width.",
+      "Use the documented generic CSV template to preview and import expenses, refunds, and money already received. Export filtered cash movements to CSV or the full tracker records with the journal's JSON export. This is a local tracker, with no automatic bank or pr"
+    ],
+    "dependency_repos": [
+      "LuxAlgo/broker-sdk",
+      "LuxAlgo/trade-journal"
+    ]
+  },
+  {
+    "full_name": "gitricko/tradenote-selfhost",
+    "requested_name": "gitricko/tradenote-selfhost",
+    "id": 1013510273,
+    "url": "https://github.com/gitricko/tradenote-selfhost",
+    "stars": 15,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "cefd25162d196c7ce327524bc8bc4f00069c6b21",
+    "last_commit_date": "2026-03-12T18:53:00Z",
+    "archived": false,
+    "fork": false,
+    "description": "Hosting Open Source Trading Journal - TradeNote easily in GitHub codespace or your local machine",
+    "language": "Makefile",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 gitricko",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# TradeNote-SelfHost",
+      "## What's New",
+      "## Getting Started",
+      "### Prerequisites",
+      "### Running TradeNote in GitHub Codespaces (Recommended)",
+      "### Useful Commands",
+      "### Restoring Data",
+      "### Accessing Mongo Express",
+      "## Security Considerations for Running TradeNote in Codespaces",
+      "## Setting your Forked tradenote-selfhost Repository to Private",
+      "### Updating Your Private Repository with latest changes from this repository",
+      "## \ud83d\udd4a\ufe0f [In Memory of Paul Goh](https://gofund.me/6789235f)"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "docker-compose.yml",
+      "docs"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/gitricko/tradenote-selfhost/blob/cefd25162d196c7ce327524bc8bc4f00069c6b21/README.md",
+        "sha256": "a4798fe074f5468d42c270d32345a871e6d5f4887ac8da64a34fcf0bf437be1d",
+        "bytes": 7287
+      },
+      "LICENSE": {
+        "url": "https://github.com/gitricko/tradenote-selfhost/blob/cefd25162d196c7ce327524bc8bc4f00069c6b21/LICENSE",
+        "sha256": "68b42521a1b24d15bbbeb6963c9ca3bf01e8c3e635d69d6908d500a5bdf3ab17",
+        "bytes": 1065
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/gitricko/tradenote-selfhost/commit/cefd25162d196c7ce327524bc8bc4f00069c6b21",
+      "metadata": "https://api.github.com/repos/gitricko/tradenote-selfhost"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "[![Test](https://github.com/gitricko/tradenote-selfhost/actions/workflows/test.yml/badge.svg)](https://github.com/gitricko/tradenote-selfhost/actions/workflows/test.yml) [![Codacy](https://github.com/gitricko/tradenote-selfhost/actions/workflows/codacy.yml/badge.svg)](https://github.com/gitricko/tradenote-selfhost/actions/workflows/codacy.yml) ![GitHub License](https://img.shields.io/github/license/gitricko/tradenote-selfhost) # TradeNote-SelfHost **TradeNote-SelfHost** is a user-friendly CLI tool that enables traders to host and use [TradeNote](https://github.com/Eleven-Trading/TradeNote), an open-source trading journal, without dedicated hardware by running it in GitHub Codespaces. The CLI simplifies data backup and restoration, and the `make` commands work on any Linux or macOS system with the required dependencies (e.g., Docker). ## What's New - Documentation and code to support hosting on MacOS or any linux machine - Instructions on how to set forked repo to private - Create a new make directive `update-src-deps` to allow update from this repository after forked repo is private ## Getting Started ### Prerequisites To run TradeNote-SelfHost, ensure you have: - a GitHub account to use Codespaces (No additional software requirements) - Linux/macOS: - Docker installed with `docker compose` plugin. Use [brew-install-docker-compose](https://formulae.brew.sh/formula/docker-compose) - GIT cli is installed with `git-lfs` plugin installed. Use [brew-install-git-lfs](https://formulae.brew.sh/formula/git-lfs) ### Running TradeNote in GitHub Codespaces (Recommended) 1. **Fork the Repository**: - Fork or copy all files from this repository to your GitHub account. - Open the repository in GitHub, click the green **Code** button,",
+    "license_excerpt": "MIT License Copyright (c) 2025 gitricko Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "![GitHub License](https://img.shields.io/github/license/gitricko/tradenote-selfhost)",
+      "**TradeNote-SelfHost** is a user-friendly CLI tool that enables traders to host and use [TradeNote](https://github.com/Eleven-Trading/TradeNote), an open-source trading journal, without dedicated hardware by running it in GitHub Codespaces. The CLI simplifies ",
+      "- Docker installed with `docker compose` plugin. Use [brew-install-docker-compose](https://formulae.brew.sh/formula/docker-compose)",
+      "- Use the default credentials defined in the `docker-compose.yml` file:",
+      "Running TradeNote in GitHub Codespaces is secure, as access to the Codespace URI is restricted to the GitHub user who owns the repository. This inherently protects the default credentials for TradeNote and Mongo Express (defined in `docker-compose.yml`). Howev",
+      "- **Limit Codespace Access**: Only share Codespace access with trusted collaborators via GitHub repository permissions.",
+      "## \ud83d\udd4a\ufe0f [In Memory of Paul Goh](https://gofund.me/6789235f)",
+      "This project is dedicated to the memory of [@paulgoh](https://github.com/paulgoh), my collegue, my friend and my brother who was meant to be the first user of TradeNote-SelfHost. RIP \ud83d\udc99"
+    ],
+    "dependency_repos": [
+      "Eleven-Trading/TradeNote",
+      "gitricko/tradenote-selfhost",
+      "mongo-express/mongo-express"
+    ]
+  },
+  {
+    "full_name": "madmatt112/tradr",
+    "requested_name": "madmatt112/tradr",
+    "id": 1315197623,
+    "url": "https://github.com/madmatt112/tradr",
+    "stars": 13,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "dc9dd32a1019dd0e7e6730cbcb734c502d9abd06",
+    "last_commit_date": "2026-09-13T03:32:25Z",
+    "archived": false,
+    "fork": false,
+    "description": "Self-hostable trading journal and analysis platform",
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## How to run it",
+      "## Quickstart",
+      "## Status",
+      "## What it does",
+      "## Configuration",
+      "## Documentation",
+      "## Contributing",
+      "## License & Trademark"
+    ],
+    "recent_commit_count": 311,
+    "recent_authors_sample50": [
+      "madmatt112"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/madmatt112/tradr/issues/87",
+        "createdAt": "2026-08-27T18:43:16Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-27T18:44:57Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-08-30T14:01:30Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-08-30T20:10:02Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-08-31T17:47:08Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/madmatt112/tradr/issues/15",
+        "createdAt": "2026-07-30T18:44:00Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".codeindex.yaml",
+      ".dependency-cruiser.cjs",
+      ".dockerignore",
+      ".env.example",
+      ".env.test",
+      ".github",
+      ".gitignore",
+      ".husky",
+      ".prettierignore",
+      ".vale.ini",
+      ".vale",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "Makefile",
+      "NOTICE",
+      "README.md",
+      "SECURITY.md",
+      "TRADEMARK.md",
+      "apps",
+      "bench",
+      "docker-compose.ci.yml",
+      "docker-compose.dev.yml",
+      "docker-compose.yml",
+      "docker",
+      "docs",
+      "e2e",
+      "eslint.config.js",
+      "lychee.toml",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "prettier.config.js",
+      "scripts",
+      "tsconfig.base.json",
+      "vitest.workspace.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/README.md",
+        "sha256": "fd4860614f2f27026e73cfd65a018e1f3699753e0418aa2fc3bb83a5aed5f531",
+        "bytes": 8074
+      },
+      "LICENSE": {
+        "url": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "package.json": {
+        "url": "https://github.com/madmatt112/tradr/blob/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06/package.json",
+        "sha256": "3a13be567f3f9bec42e6effd8888d3ff70dfd3ce7843841ff0ff31cc29d8c150",
+        "bytes": 1049
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/madmatt112/tradr/commit/dc9dd32a1019dd0e7e6730cbcb734c502d9abd06",
+      "metadata": "https://api.github.com/repos/madmatt112/tradr"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Log every fill, size the trade before you take it, and see what your record actually says. Self-hostable in one command. The journal shows its work. Tradr is a self-hostable journal for options and equities traders. It records the whole arc of a position \u2014 draft, scale-in, partial close \u2014 with every fill, fee, and note attached, then shows you what your record actually says. It runs as a complete manual journal with **no keys configured at all**. Every external integration is opt-in, and nothing phones home until you switch it on. It never places an order. ## How to run it **Self-hosted, with the quickstart below** \u2014 free and completely unlimited, forever. No feature is fenced off; plan gating is a single deployment setting that ships **off**. **Hosted at [app.tradr.cloud](https://app.tradr.cloud)**, if you'd rather not run a server. It is the same software from the same releases, with backups and upgrades handled for you. The free plan is capped ([what the caps are](https://docs.tradr.cloud/user-guide/reference/plan-limits/)); Pro lifts them for $10 a month. Nothing in the self-hosted build depends on it. ## Quickstart",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Self-hostable in one command. The journal shows its work.",
+      "<a href=\"./LICENSE\"><img alt=\"License: Apache 2.0\" src=\"https://img.shields.io/badge/License-Apache_2.0-blue.svg\"></a>",
+      "risk. Re-shoot from a seeded local instance (pnpm seed;",
+      "Tradr is a self-hostable journal for options and equities traders. It records the whole",
+      "**Self-hosted, with the quickstart below** \u2014 free and completely unlimited, forever. No",
+      "a month. Nothing in the self-hosted build depends on it.",
+      "Requires Docker with Compose v2 and `openssl`. About two minutes.",
+      "./docker/quickstart.sh",
+      "finishes, Tradr is on <http://localhost:8080> (override with `WEB_PORT`).",
+      "This is the same script CI runs in its `docker-smoke` job, so these instructions are",
+      "[self-hosting guide](https://docs.tradr.cloud/self-hosting/docker-compose/).",
+      "Three values must be set; everything else has a working default. `./docker/quickstart.sh`",
+      "proxy in front of the `web` container, and add that edge to `TRUSTED_PROXIES` so per-IP",
+      "| [Self-hosting](https://docs.tradr.cloud/self-hosting/docker-compose/) | Install, upgrade, back up, run behind TLS                  |",
+      "## License & Trademark",
+      "Apache-2.0 \u2014 free to use, self-host, modify, and redistribute. See [`LICENSE`](LICENSE) and",
+      "The license covers the **code**, not the **name**. \"Tradr\" and the Tradr logo are"
+    ],
+    "dependency_repos": [
+      "madmatt112/tradr",
+      "madmatt112/tradr.git"
+    ]
+  },
+  {
+    "full_name": "G-OTW/OpenTraderWorld",
+    "requested_name": "G-OTW/OpenTraderWorld",
+    "id": 1282273350,
+    "url": "https://github.com/G-OTW/OpenTraderWorld",
+    "stars": 13,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "6b317785723de4b4455c99445a25960a5800b74e",
+    "last_commit_date": "2026-09-12T14:33:54Z",
+    "archived": false,
+    "fork": false,
+    "description": "Free and source-available, self-hostable trading workspace: data, backtest, trading journal, news aggregator, rich-doc editor, portfolio, 20+ modules with a built-in MCP server and AI agent.",
+    "language": "Rust",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright 2026 OpenTraderWorld (https://github.com/G-OTW/OpenTraderWorld)",
+      "the MIT license that is effective on the second anniversary of the date we make",
+      "the MIT license, in which case the following will apply:",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# OpenTraderWorld",
+      "### [\u25b6 Try the live demo](https://demo.opentraderworld.com)",
+      "## Why OpenTraderWorld?",
+      "## Quick start",
+      "## Try it without installing",
+      "## What's inside",
+      "### Trading",
+      "### Market data and analysis",
+      "### Portfolios and money",
+      "### News and research",
+      "### Notes and organization",
+      "### AI",
+      "## Backtesting: signals, grid, DCA",
+      "### Optimizer",
+      "## Paper trading: the backtest, left running forward",
+      "## Data connectors",
+      "### Live feeds",
+      "## Notifications",
+      "## \u2b50 Enjoying it? Help it grow",
+      "## \ud83d\udca1 Suggest, vote, contribute",
+      "## Project links",
+      "## Under the hood",
+      "## Status",
+      "## Disclaimer",
+      "## License"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "G-OTW"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "core",
+      "deploy",
+      "docs",
+      "frontend",
+      "install.sh"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/G-OTW/OpenTraderWorld/blob/6b317785723de4b4455c99445a25960a5800b74e/README.md",
+        "sha256": "7635f03357e0beb45965220082873baf07d608950e2c87a0b720c19b022e2bba",
+        "bytes": 20366
+      },
+      "LICENSE": {
+        "url": "https://github.com/G-OTW/OpenTraderWorld/blob/6b317785723de4b4455c99445a25960a5800b74e/LICENSE",
+        "sha256": "414bbf06a1ce5f45d629e24653c43c5d07ae2a14356b2b351116073a9c5b4ce1",
+        "bytes": 4258
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/G-OTW/OpenTraderWorld/commit/6b317785723de4b4455c99445a25960a5800b74e",
+      "metadata": "https://api.github.com/repos/G-OTW/OpenTraderWorld"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# OpenTraderWorld **Your trading workspace, on your own machine.** [![Website](https://img.shields.io/badge/website-opentraderworld.com-1f6feb)](https://opentraderworld.com) [![License](https://img.shields.io/badge/license-FSL--1.1--MIT-blue)](LICENSE) [![Docs](https://img.shields.io/github/actions/workflow/status/G-OTW/OpenTraderWorld/docs.yml?branch=master&label=docs)](https://g-otw.github.io/OpenTraderWorld/) [![Docker Compose](https://img.shields.io/badge/deploy-Docker%20Compose-2496ED?logo=docker&logoColor=white)](https://g-otw.github.io/OpenTraderWorld/guide/install) A free, self-hosted platform that bundles the tools traders and investors",
+    "license_excerpt": "# Functional Source License, Version 1.1, MIT Future License ## Abbreviation FSL-1.1-MIT ## Notice Copyright 2026 OpenTraderWorld (https://github.com/G-OTW/OpenTraderWorld) ## Terms and Conditions ### Licensor (\"We\")",
+    "license_warnings": [
+      "non-commercial"
+    ],
+    "runtime_clues": [
+      "[![License](https://img.shields.io/badge/license-FSL--1.1--MIT-blue)](LICENSE)",
+      "[![Docker Compose](https://img.shields.io/badge/deploy-Docker%20Compose-2496ED?logo=docker&logoColor=white)](https://g-otw.github.io/OpenTraderWorld/guide/install)",
+      "A free, self-hosted platform that bundles the tools traders and investors actually use: trading journal, market data and backtesting, portfolios, news, planning. Your data stays on your machine. And if you want it, your own AI agent runs the whole thing alongs",
+      "- \ud83d\udd12 **Private and self-hosted.** It runs on your computer or your server with Docker. No",
+      "account, no cloud, no telemetry. Right after install it only answers on localhost, until",
+      "memory, skills and tool access scoped by token. There is also a built-in",
+      "You need [Docker](https://g-otw.github.io/OpenTraderWorld/guide/docker) (macOS, Linux or Windows).",
+      "**http://localhost:5454** and sign in. If you want the long version (manual setup, headless",
+      "slower than a local install. For anything real, install it. Two minutes.",
+      "| [Historical Data](https://g-otw.github.io/OpenTraderWorld/modules/market-data#histdata) | Download OHLCV history from several providers into local datasets. |",
+      "| [FinanceDatabase](https://g-otw.github.io/OpenTraderWorld/modules/news-research#findb) | Search 300,000+ instruments locally, and file your favorites in folders. |",
+      "| [RemindMe](https://g-otw.github.io/OpenTraderWorld/modules/productivity#remindme) | Reminders with in-app notifications and email/Telegram/Slack/Discord channels. |",
+      "| [Agent](https://g-otw.github.io/OpenTraderWorld/modules/agent) | Built-in AI chat assistant. Bring your own provider, switch model or prompt mid-conversation, and let it act on your data through MCP, with memory, skills and external MCP servers. Reachable fr",
+      "exit rules from indicators, price and values, long or short, with stops, pyramiding, and",
+      "Take a run and vary its parameters: indicator lengths, thresholds, stops, sizing, costs,",
+      "| **Binance** | trades | every timeframe |",
+      "| **Kraken** | trades | every timeframe |",
+      "| **Coinbase** | trades | every timeframe |"
+    ],
+    "dependency_repos": [
+      "G-OTW/OpenTraderWorld"
+    ]
+  },
+  {
+    "full_name": "sinhong2011/TraderMemos",
+    "requested_name": "sinhong2011/TraderMemos",
+    "id": 1298841209,
+    "url": "https://github.com/sinhong2011/TraderMemos",
+    "stars": 9,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "a8c904653090a1b7480bdff8f67654ee0464481d",
+    "last_commit_date": "2026-08-23T06:54:56Z",
+    "archived": false,
+    "fork": false,
+    "description": "Self-hosted trading journal (Go API + React web)",
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU Affero General Public License is a free, copyleft license for",
+      "The GNU General Public License permits making a modified version and",
+      "  The GNU Affero General Public License is designed specifically to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# TraderMemos",
+      "### Own your data. Review your edge.",
+      "## A look inside",
+      "## Live demo",
+      "## Why TraderMemos?",
+      "## Features",
+      "## Tech stack",
+      "## Quick start",
+      "## Deploy to the cloud",
+      "## Mobile app",
+      "## Development",
+      "### Demo data",
+      "## Docs",
+      "## Star history",
+      "## License"
+    ],
+    "recent_commit_count": 521,
+    "recent_authors_sample50": [
+      "dependabot[bot]",
+      "github-actions[bot]",
+      "sinhong2011"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/sinhong2011/TraderMemos/issues/199",
+        "createdAt": "2026-08-10T05:29:08Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-12T09:02:29Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/sinhong2011/TraderMemos/issues/212",
+        "createdAt": "2026-08-12T02:25:00Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".cursor",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".mcp.json",
+      ".mise.toml",
+      ".opencode",
+      ".release-please-manifest.json",
+      ".vite-hooks",
+      ".vscode",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "CONTRIBUTING.md",
+      "DESIGN.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "SECURITY.md",
+      "VERSION",
+      "api",
+      "brand",
+      "deploy",
+      "docker-compose.build.yml",
+      "docker-compose.postgres.yml",
+      "docker-compose.yml",
+      "docs",
+      "marketing",
+      "mobile",
+      "netlify.toml",
+      "opencode.json",
+      "railway.toml",
+      "release-please-config.json",
+      "scripts",
+      "web"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/sinhong2011/TraderMemos/blob/a8c904653090a1b7480bdff8f67654ee0464481d/README.md",
+        "sha256": "876732ed9c17c6c00736fa11007ecc4bd23a8822e16fa23c6b387784f5645f97",
+        "bytes": 13225
+      },
+      "LICENSE": {
+        "url": "https://github.com/sinhong2011/TraderMemos/blob/a8c904653090a1b7480bdff8f67654ee0464481d/LICENSE",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+        "bytes": 34523
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/sinhong2011/TraderMemos/commit/a8c904653090a1b7480bdff8f67654ee0464481d",
+      "metadata": "https://api.github.com/repos/sinhong2011/TraderMemos"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# TraderMemos ### Own your data. Review your edge. **A self-hosted trading journal for traders who want their performance data on their own infrastructure** \u2014 dashboard, P&L calendar, trade log, playbook, reports, alerts, and a bar-replay backtester, with a native iOS & Android companion app. No subscription, no vendor lock-in. [![Release](https://img.shields.io/github/v/release/sinhong2011/TraderMemos?color=8b5cf6&label=release)](https://github.com/sinhong2011/TraderMemos/releases) [![Web CI](https://github.com/sinhong2011/TraderMemos/actions/workflows/web-ci.yml/badge.svg)](https://github.com/sinhong2011/TraderMemos/actions/workflows/web-ci.yml) [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue)](LICENSE) [![Go](https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go&logoColor=white)](api/go.mod) [![React](https://img.shields.io/badge/React-Vite+-61DAFB?logo=react&logoColor=black)](web/) [![SQLite](https://img.shields.io/badge/SQLite-embedded-003B57?logo=sqlite&logoColor=white)](api/) [![Self-hosted](https://img.shields.io/badge/Self--hosted-ready-8b5cf6)](docs/fork-deploy.md) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsinhong2011%2FTraderMemos&root-directory=web&project-name=tradermemos&repository-name=tradermemos&env=VITE_API&envDescription=Optional%20API%20base%20URL%20(e.g.%20https%3A%2F%2Fapi.example.com%2Fapi%2Fv1).%20Leave%20empty%20to%20set%20Server%20at%20login.&envLink=https%3A%2F%2Fgithub.com%2Fsinhong2011%2FTraderMemos%2Fblob%2Fmain%2Fdocs%2Ffork-deploy.md) [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https%3A%2F%2Fgithub.com%2Fsinhong2011%2FTraderMemos%2Ftree%2Fmain%2Fweb) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sinhong2011/TraderMemos) [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template?template=https%3A%2F%2Fgithub.com%2Fsinhong2011%2FTraderMemos&utm_medium=integration&utm_source=button&utm_campaign=tradermemos) [Quick start](#quick-start) \u00b7 [Mobile app](#mobile-app) \u00b7 [Docs site](https://trader-memos.vercel.app) \u00b7 [Fork guide](docs/fork-deploy.md) \u00b7 [Contributing](CONTRIBUTING.md) \u00b7 [Design](DESIGN.md) \u00b7 [License](LICENSE) --- ## A look inside Trade log Every fill grouped into trades \u2014 filter, sort, tag, and drill into execution detail. P&L calendar Daily heatmap with weekly totals. Spot the streaks and the bad days at a glance. Reports Equity curve, profit factor, expectancy, and goal pacing \u2014 plus Monte Carlo, MAE/MFE, and breakdowns by setup, hour, and session, saved as reusable view presets. Light theme Dark by default; both themes ship from the same token set. Mobile app (beta) Native iOS & Android companion \u2014 same journal, same server. Screenshots",
+    "license_excerpt": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**A self-hosted trading journal for traders who want their performance data on their own infrastructure** \u2014 dashboard, P&L calendar, trade log, playbook, reports, alerts, and a bar-replay backtester, with a native iOS & Android companion app. No subscription, ",
+      "[![Release](https://img.shields.io/github/v/release/sinhong2011/TraderMemos?color=8b5cf6&label=release)](https://github.com/sinhong2011/TraderMemos/releases) [![Web CI](https://github.com/sinhong2011/TraderMemos/actions/workflows/web-ci.yml/badge.svg)](https:/",
+      "[![Go](https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go&logoColor=white)](api/go.mod) [![React](https://img.shields.io/badge/React-Vite+-61DAFB?logo=react&logoColor=black)](web/) [![SQLite](https://img.shields.io/badge/SQLite-embedded-003B57?logo=sqlite&lo",
+      "[Quick start](#quick-start) \u00b7 [Mobile app](#mobile-app) \u00b7 [Docs site](https://trader-memos.vercel.app) \u00b7 [Fork guide](docs/fork-deploy.md) \u00b7 [Contributing](CONTRIBUTING.md) \u00b7 [Design](DESIGN.md) \u00b7 [License](LICENSE)",
+      "If TraderMemos is part of your daily review, consider [sponsoring its development](https://github.com/sponsors/sinhong2011) \u2014 it keeps the project free and self-hosted for everyone.",
+      "make up          # \u2192 http://localhost:3000",
+      "cp .env.example .env   # optional: DOCKERHUB_USERNAME, TM_IMAGE_TAG",
+      "make up                # pull prebuilt images from Docker Hub",
+      "| Railway | Go API ([`railway.toml`](railway.toml) \u2192 `api/Dockerfile`) \u2014 attach a Volume at `/data` |",
+      "**2. Run the API** \u2014 use the Railway button, or point it at any host running `api/Dockerfile`.",
+      "TM_CORS_ORIGINS=https://*.vercel.app,https://*.pages.dev,https://*.workers.dev,https://*.netlify.app,https://*.up.railway.app,http://localhost:5173",
+      "make demo-seed API=http://localhost:3000/api/v1 EMAIL=you@example.com PASSWORD='\u2026'",
+      "It talks to the public API only, so it works against a local stack or a deployed demo. Re-running is a no-op \u2014 fills are deduplicated server-side.",
+      "User docs live on the docs site: **[trader-memos.vercel.app](https://trader-memos.vercel.app)** \u2014 getting started, importing trades, supported brokers, self-hosting guides, FAQ, and the full API reference.",
+      "| [docs/deploy.md](docs/deploy.md) | Docker, CORS, edge rewrite |",
+      "| [docs/tm-sync.md](docs/tm-sync.md) | The tm-sync local statement watcher |",
+      "| [CONTRIBUTING.md](CONTRIBUTING.md) | Local dev (`make dev`) |",
+      "## License"
+    ],
+    "dependency_repos": [
+      "TryGhost/Ghost",
+      "calcom/cal.com",
+      "makeplane/plane",
+      "sinhong2011/TraderMemos",
+      "sinhong2011/TraderMemos.git",
+      "sponsors/sinhong2011",
+      "umami-software/umami"
+    ]
+  }
+]
