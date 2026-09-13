@@ -1,0 +1,1060 @@
+[
+  {
+    "full_name": "maxim2266/FullFIX",
+    "requested_name": "maxim2266/FullFIX",
+    "id": 41417780,
+    "url": "https://github.com/maxim2266/FullFIX",
+    "stars": 71,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "65d7d8571b853ac88da92633d84d5215d9be8d77",
+    "last_commit_date": "2026-02-20T15:20:35Z",
+    "archived": false,
+    "fork": false,
+    "description": "A library for parsing FIX (Financial Information eXchange) protocol messages.",
+    "language": "C",
+    "license": "BSD-3-Clause",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) 2015, Maxim Konakov"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# FullFIX",
+      "### Performance"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/maxim2266/FullFIX/issues/4",
+        "createdAt": "2023-12-27T17:29:28Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-12-27T18:57:31Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/maxim2266/FullFIX/issues/3",
+        "createdAt": "2023-11-17T15:55:31Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-11-17T16:26:26Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2023-11-17T17:20:20Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "doc",
+      "include",
+      "src",
+      "test",
+      "tools"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/maxim2266/FullFIX/blob/65d7d8571b853ac88da92633d84d5215d9be8d77/README.md",
+        "sha256": "e9637345c6c0c2674db9b8667dbe5a6151a6bd582095a3617848b33ed717173c",
+        "bytes": 1724
+      },
+      "LICENSE": {
+        "url": "https://github.com/maxim2266/FullFIX/blob/65d7d8571b853ac88da92633d84d5215d9be8d77/LICENSE",
+        "sha256": "c0dc77f1a2ff63d2443083bbf90c05011e654018b855e897cc86de69e23b3965",
+        "bytes": 1497
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/maxim2266/FullFIX/commit/65d7d8571b853ac88da92633d84d5215d9be8d77",
+      "metadata": "https://api.github.com/repos/maxim2266/FullFIX"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# FullFIX ###### Platform: Linux ###### Licence: BSD 3-clause ###### Status: Beta release FullFIX is a library for parsing Financial Information eXchange (FIX) messages. The main goal of the project is to produce the fastest software solution for FIX protocol. The library is written entirely in C for better portability. The parser depends on `libc` only and it does not impose any I/O or threading model. Unlike some other well known solutions, in this parser the FIX specification gets converted to efficient C code at compile time to achieve the best performance. _Supported FIX protocol versions_: up to and including version 4.4. ### Performance The numbers below have been achieved on Intel Core i5-8500T 2.10GHz processor. On modern production hardware the results will probably be better. _Compiler:_ gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0 _OS:_ Linux Mint 19 64bit FIX message type | FIX specification | Validation | Average time to parse one message ----------------------------------|------------------------------------------|------------|---------------------------------- NewOrderSingle('D') | Hand-coded spec. for this message only | No | 0.152 \u00b5s/msg NewOrderSingle('D') | Hand-coded spec. for this message only | Yes | 0.262 \u00b5s/msg NewOrderSingle('D') |",
+    "license_excerpt": "Copyright (c) 2015, Maxim Konakov All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the",
+    "license_warnings": [],
+    "runtime_clues": [
+      "###### Licence: BSD 3-clause"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "arthurlm/quickfix-rs",
+    "requested_name": "arthurlm/quickfix-rs",
+    "id": 716256692,
+    "url": "https://github.com/arthurlm/quickfix-rs",
+    "stars": 60,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "34e98038c365d064aec4ba49d345c825878e277c",
+    "last_commit_date": "2026-08-30T21:15:11Z",
+    "archived": false,
+    "fork": false,
+    "description": "Rust binding of QuickFIX library",
+    "language": "Rust",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT"
+    ],
+    "license_headings": [
+      "Copyright (c) 2001- quickfixengine.org  All rights reserved.",
+      "Copyright (c) 2023- Arthur LE MOIGNE for quickfix-rs.",
+      "MIT License",
+      "Copyright (c) 2023 Arthur Le Moigne",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# quickfix-rs",
+      "## Minimum Supported Rust Version (MSRV)"
+    ],
+    "recent_commit_count": 3,
+    "recent_authors_sample50": [
+      "arthurlm",
+      "webbrain-one"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/arthurlm/quickfix-rs/issues/36",
+        "createdAt": "2026-09-09T19:17:31Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/arthurlm/quickfix-rs/issues/35",
+        "createdAt": "2026-08-31T17:30:41Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "root_entries": [
+      ".cargo",
+      ".clang-format",
+      ".config",
+      ".envrc",
+      ".github",
+      ".gitignore",
+      ".gitmodules",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE-APACHE",
+      "LICENSE-MIT",
+      "README.md",
+      "configs",
+      "doc",
+      "quickfix-ffi",
+      "quickfix-msg-gen",
+      "quickfix-msg40",
+      "quickfix-msg41",
+      "quickfix-msg42",
+      "quickfix-msg43",
+      "quickfix-msg44",
+      "quickfix-msg50",
+      "quickfix-spec-parser",
+      "quickfix"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/README.md",
+        "sha256": "7778fbda2f4ebc6f22d232e30a8e2de4e87be73cffaab1d7e602640e0932aa30",
+        "bytes": 221
+      },
+      "LICENSE-APACHE": {
+        "url": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/LICENSE-APACHE",
+        "sha256": "992490e7830004a8cadfec55a171696bf660c130158f24e3a860b8acbfd2d4f3",
+        "bytes": 2150
+      },
+      "LICENSE-MIT": {
+        "url": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/LICENSE-MIT",
+        "sha256": "bec0acfaa6eba2b599f8c0847da2535b06b2f6ce2da993baef1ac54d2989c969",
+        "bytes": 1073
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/arthurlm/quickfix-rs/blob/34e98038c365d064aec4ba49d345c825878e277c/Cargo.toml",
+        "sha256": "2fcbf7d56ae1aa192e93e690a88854b7782c6ab7ab4176da1c21596279a2734d",
+        "bytes": 311
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/arthurlm/quickfix-rs/commit/34e98038c365d064aec4ba49d345c825878e277c",
+      "metadata": "https://api.github.com/repos/arthurlm/quickfix-rs"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# quickfix-rs Rust bindings for the QuickFix C++ library. ## Minimum Supported Rust Version (MSRV) This workspace and all its crates require Rust **1.70.0** or",
+    "license_excerpt": "The QuickFIX Software License, Version 1.0 Copyright (c) 2001- quickfixengine.org All rights reserved. Copyright (c) 2023- Arthur LE MOIGNE for quickfix-rs. Redistribution and use in",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Rust bindings for the QuickFix C++ library.",
+      "## Minimum Supported Rust Version (MSRV)",
+      "This workspace and all its crates require Rust **1.70.0** or newer. Ensure your toolchain is updated before building."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "imandra-ai/fix-engine",
+    "requested_name": "imandra-ai/fix-engine",
+    "id": 75571156,
+    "url": "https://github.com/imandra-ai/fix-engine",
+    "stars": 55,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "e285d1947784f72cfe68a139a04bdcadf89048ba",
+    "last_commit_date": "2026-08-06T22:23:09Z",
+    "archived": false,
+    "fork": false,
+    "description": "Imandra FIX Engine",
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# FIX Engine Model",
+      "## Overview",
+      "## Why",
+      "## How",
+      "## What",
+      "## Model Verification",
+      "## Test Suite Generation",
+      "## Formal Verification",
+      "## License"
+    ],
+    "recent_commit_count": 5,
+    "recent_authors_sample50": [
+      "seprov"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/imandra-ai/fix-engine/issues/238",
+        "createdAt": "2026-09-01T20:25:54Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/imandra-ai/fix-engine/issues/230",
+        "createdAt": "2026-06-19T05:24:25Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-14T18:30:10Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".gitattributes",
+      ".gitignore",
+      ".gitmodules",
+      ".ocamlformat",
+      "Dockerfile",
+      "Makefile",
+      "README.md",
+      "cloudbuild.yaml",
+      "dune",
+      "dune-project",
+      "env.sh",
+      "src",
+      "vendor"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/imandra-ai/fix-engine/blob/e285d1947784f72cfe68a139a04bdcadf89048ba/README.md",
+        "sha256": "e14c20cd7bc92434e4b9e2077d5c8fda65565e3b983d11aa6389b9790854ce68",
+        "bytes": 13390
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/imandra-ai/fix-engine/commit/e285d1947784f72cfe68a139a04bdcadf89048ba",
+      "metadata": "https://api.github.com/repos/imandra-ai/fix-engine"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# FIX Engine Model ## Overview The development of the FIX Engine model began at [Imandra Inc.](http://www.imandra.ai) (AI) as part of the [Imandra Markets](https://www.imandra.ai) product.",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "proprietary and requires a license to use, OCaml is open source and",
+      "input parameters and a corresponding invariant that the system should",
+      "\"Testflow\" framework for architecting and automatically deriving test",
+      "## License"
+    ],
+    "dependency_repos": [
+      "Z3Prover/z3"
+    ]
+  },
+  {
+    "full_name": "logotype/fixparser",
+    "requested_name": "logotype/fixparser",
+    "id": 41256780,
+    "url": "https://github.com/logotype/fixparser",
+    "stars": 51,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "fdbb33937b090f8d551a57c8c2f179d9cd13b250",
+    "last_commit_date": "2018-08-04T19:02:31Z",
+    "archived": false,
+    "fork": false,
+    "description": "FIX5.0SP2 parser.",
+    "language": null,
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# fixparser"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/logotype/fixparser/issues/15",
+        "createdAt": "2019-08-13T08:21:31Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2019-08-15T07:26:02Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2019-08-16T03:55:46Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2019-08-16T08:20:03Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2019-08-16T11:03:05Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/logotype/fixparser/issues/13",
+        "createdAt": "2018-07-27T20:50:40Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2019-08-15T07:26:06Z",
+              "authorAssociation": "COLLABORATOR"
+            },
+            {
+              "createdAt": "2019-08-15T09:23:18Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2019-08-15T09:54:16Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "root_entries": [
+      "README.md"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/logotype/fixparser/blob/fdbb33937b090f8d551a57c8c2f179d9cd13b250/README.md",
+        "sha256": "829b62e7b5f06db5e4cdaf0e01ad81da6db5c44558c4ce27ef0f549a84ee908c",
+        "bytes": 110
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/logotype/fixparser/commit/fdbb33937b090f8d551a57c8c2f179d9cd13b250",
+      "metadata": "https://api.github.com/repos/logotype/fixparser"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# fixparser [Migrated to GitLab https://gitlab.com/logotype/fixparser](https://gitlab.com/logotype/fixparser)",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "co11ter/goFAST",
+    "requested_name": "co11ter/goFAST",
+    "id": 141422278,
+    "url": "https://github.com/co11ter/goFAST",
+    "stars": 49,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "4263f2ff6f8c4da3152204190af86b64a8ce8a6d",
+    "last_commit_date": "2020-04-22T18:42:34Z",
+    "archived": false,
+    "fork": false,
+    "description": "Go implementation of the FAST Protocol (FIX Adapted for STreaming)",
+    "language": "Go",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/co11ter/goFAST/issues/2",
+        "createdAt": "2020-02-11T16:22:55Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-02-12T16:21:21Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2020-02-12T19:36:49Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-02-12T20:16:04Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-02-24T13:46:17Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/co11ter/goFAST/issues/4",
+        "createdAt": "2020-03-04T13:41:19Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2020-03-06T13:37:22Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2020-03-06T13:43:31Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2020-03-06T13:49:49Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2020-03-06T13:51:40Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "B",
+        "query": "topic:fix-protocol"
+      }
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "cast.go",
+      "decimal.go",
+      "decoder.go",
+      "decoder_test.go",
+      "doc.go",
+      "encoder.go",
+      "encoder_test.go",
+      "error.go",
+      "example_decoder_test.go",
+      "example_encoder_test.go",
+      "example_test.go",
+      "fast_test.go",
+      "field.go",
+      "instruction.go",
+      "logger.go",
+      "message.go",
+      "pmap.go",
+      "reader.go",
+      "reflector.go",
+      "storage.go",
+      "template.go",
+      "template_test.go",
+      "testdata",
+      "writer.go"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/co11ter/goFAST/blob/4263f2ff6f8c4da3152204190af86b64a8ce8a6d/README.md",
+        "sha256": "652f8d25796faddeaa84b4b32ea654f878b1b0f9be79ffced78dd0bee9614a12",
+        "bytes": 1029
+      },
+      "LICENSE": {
+        "url": "https://github.com/co11ter/goFAST/blob/4263f2ff6f8c4da3152204190af86b64a8ce8a6d/LICENSE",
+        "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/co11ter/goFAST/commit/4263f2ff6f8c4da3152204190af86b64a8ce8a6d",
+      "metadata": "https://api.github.com/repos/co11ter/goFAST"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "goFAST ====== [![GoDoc](https://godoc.org/github.com/co11ter/goFAST?status.svg)](https://godoc.org/github.com/co11ter/goFAST) goFAST is a Go implementation of the FAST Protocol (FIX Adapted for STreaming). Work-in-progress, expect bugs and missing features. Installation ------------ Install the FAST library using the \"go get\" command: go get github.com/co11ter/goFAST Usage ----- See [documentation](https://godoc.org/github.com/co11ter/goFAST) examples. Benchmark --------- Run `go test -bench=.`. Only Decoder Benchmark is implemented. $ go test -bench=. goos: linux goarch: amd64 pkg: github.com/co11ter/goFAST BenchmarkDecoder_DecodeReflection-4 200000 10403 ns/op 795 B/op 68 allocs/op BenchmarkDecoder_DecodeReceiver-4 300000 5453 ns/op 321 B/op 32 allocs/op PASS ok github.com/co11ter/goFAST 4.977s TODO ---- - apply errors - add benchmark of encoder - optimize encoder - implement delta and tail operators for string type",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "robaho/go-trader",
+    "requested_name": "robaho/go-trader",
+    "id": 146024974,
+    "url": "https://github.com/robaho/go-trader",
+    "stars": 520,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "23bac0628caec8fca40d14d7757949174366066c",
+    "last_commit_date": "2026-06-30T02:01:51Z",
+    "archived": false,
+    "fork": false,
+    "description": "financial exchange written in Go, designed for algorithmic trading tests",
+    "language": "Go",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# go-trader",
+      "## Features",
+      "# install",
+      "# build",
+      "# run",
+      "# performance",
+      "## less than 3 microseconds per roundtrip quote over the network ! ##",
+      "# REST api",
+      "# screen shots"
+    ],
+    "recent_commit_count": 1,
+    "recent_authors_sample50": [
+      "robaho"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/robaho/go-trader/issues/23",
+        "createdAt": "2026-06-22T15:34:05Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-30T02:03:05Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/robaho/go-trader/issues/21",
+        "createdAt": "2024-07-18T05:06:28Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-07-18T11:10:04Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".vscode",
+      "LICENSE",
+      "README.md",
+      "cmd",
+      "configs",
+      "doc",
+      "go.mod",
+      "go.sum",
+      "internal",
+      "pkg",
+      "web",
+      "web_lit"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/robaho/go-trader/blob/23bac0628caec8fca40d14d7757949174366066c/README.md",
+        "sha256": "722c015daaa0bf3315bf58cf6b4fae625accfab5e2c68e23151b2c874791e1a4",
+        "bytes": 4000
+      },
+      "LICENSE": {
+        "url": "https://github.com/robaho/go-trader/blob/23bac0628caec8fca40d14d7757949174366066c/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/robaho/go-trader/commit/23bac0628caec8fca40d14d7757949174366066c",
+      "metadata": "https://api.github.com/repos/robaho/go-trader"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# go-trader A financial exchange written in Go including complete order book, fix protocol, and market data distribution. It was originally developed to further my knowledge of Go and test its suitability for high-performance financial applications, and it has continued to evolve into an ideal teaching/reference project for Go (interfaces, low-level networking, web development, json, Go routines, etc.). Check out [cpp-trader](https://github.com/robaho/cpp-trader) for a C++ version, albeit with less features. ## Features - client to server communication using: - FIX (using quickfixgo) - gRPC - UDP multicast for market data distribution. - TCP replay of dropped market data packets. - Uses the high-performance fixed point library [fixed](https://github.com/robaho/fixed) which I also developed. - Includes multiple clients: - command line - server-side web using Go templates - SPA web using Lit - A sample \"market maker\" to mass quote the market. - A sample \"playback\" to simulate markets from recorded market data. - Supported order types: - limit - market - [REST api](https://github.com/robaho/go-trader/blob/2b92b5652eb5c6a93b83262f45ba1f237fb180b0/internal/exchange/webserver.go#L41-L54) The exchange is designed to allow for easy back-testing of trading strategies. It supports limit and market orders. There is",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "There is a very simple sample \"algo\". The program structure is applicable to many strategies that use an entry and exit price.",
+      "localhost:8080/api/book/SYMBOL",
+      "localhost:8080/api/stats/SYMBOL"
+    ],
+    "dependency_repos": [
+      "robaho/cpp-trader",
+      "robaho/fixed",
+      "robaho/go-trader"
+    ]
+  },
+  {
+    "full_name": "fintechees/Expert-Advisor-Studio",
+    "requested_name": "fintechees/Expert-Advisor-Studio",
+    "id": 171330046,
+    "url": "https://github.com/fintechees/Expert-Advisor-Studio",
+    "stars": 358,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1",
+    "last_commit_date": "2026-09-04T04:25:20Z",
+    "archived": false,
+    "fork": false,
+    "description": "Expert Advisors, Browser-based EA, Free Crypto / Forex Historical DATA API plugins, EA Codes Generator, Market Maker Bot, Crypto Options Plugin, DEX / Payment Gateway Plugins, Binance API, FIX API related. Fintechee means Fintech ee.",
+    "language": "JavaScript",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) Fintechee",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## News!!",
+      "### AI Trader Released!",
+      "### Our CRM Supports FIX API Gateway!",
+      "### Why Trailing Stop Should be Set on The Client Side?",
+      "### OpenAI Supported",
+      "### Social Media on Chart",
+      "### Championship",
+      "### Copy Trading",
+      "### New Layout!!",
+      "### Extension",
+      "### FiSDK",
+      "### Payment Gateway",
+      "### Marketplace(multi-vendor) for EA",
+      "### FIX Bridge(an individual version of WEB trader's backend)",
+      "## Campaign",
+      "## Community and Trading Signals",
+      "## Features",
+      "## Usage",
+      "## Live Stream",
+      "### Release Notes",
+      "### Constants",
+      "### Common Function",
+      "### Fintechee License"
+    ],
+    "recent_commit_count": 7,
+    "recent_authors_sample50": [
+      "fintechee"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/fintechees/Expert-Advisor-Studio/issues/14",
+        "createdAt": "2026-09-04T03:17:29Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-04T04:27:48Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/fintechees/Expert-Advisor-Studio/issues/10",
+        "createdAt": "2025-09-16T12:47:07Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-09-29T03:13:31Z",
+              "authorAssociation": "COLLABORATOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "root_entries": [
+      "AI",
+      "EA",
+      "Indicators",
+      "LICENSE",
+      "README.md",
+      "analyzestructure.png",
+      "architecture.png",
+      "c_cpp_compiler.gif",
+      "cppcompiler.png",
+      "ecosystem.png",
+      "extension.png",
+      "screenshot",
+      "simple_manual.txt"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/fintechees/Expert-Advisor-Studio/blob/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1/README.md",
+        "sha256": "18524e7971231520ea89433f69b3fe8434475a4c3b4d2fe031414e04e6fef61f",
+        "bytes": 21703
+      },
+      "LICENSE": {
+        "url": "https://github.com/fintechees/Expert-Advisor-Studio/blob/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1/LICENSE",
+        "sha256": "ab2153d9ed2d1a02594cb96c7d09623dc828e944706d2a7a06dbd4c27ed6e890",
+        "bytes": 1650
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/fintechees/Expert-Advisor-Studio/commit/efbb16e4833ab6f96eb0d4f3d5cf12de06fbb4d1",
+      "metadata": "https://api.github.com/repos/fintechees/Expert-Advisor-Studio"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "> ## Declaration of Human Rights Compliance! > ### THIS REPOSITORY COMPLIES WITH UNIVERSAL HUMAN RIGHTS STANDARDS. USAGE IS STRICTLY PROHIBITED FOR ANY ENTITIES OR",
+    "license_excerpt": "Fintechee License = MIT License + Restrictions for Autocrats, Stasi-Operators & Racists This software is licensed under the MIT License with the following ultimate restrictions:",
+    "license_warnings": [],
+    "runtime_clues": [
+      "We launched on Aug. 12th, 2022, and we\u2019ve already listed an EA called SimpleScalping in production for just $10. The algorithm is based on Martingale and is very stable on a larger timeframe with sufficient patience.",
+      "Everyone can get a free license to use our FIX API trading platform individual version if he/she matches any one of the conditions below.",
+      "<tr><td><strong>FIX API</strong></td><td>FIX API individual version(Your browser -> local Java Package -> FIX API straightforward)</td></tr>",
+      "The EAs and indicators are stored solely in your browser (via Web LocalStorage) and are never uploaded to our server.",
+      "Please check this tutorial(https://www.fintechee.com/expert-advisor-cpp-compiler) to learn how to use our Nodejs package(https://github.com/fintechee/Expert-Advisor-CPP-Compiler) to compile C/C++/MQL-based programs.",
+      "2020.7.7 three APIs were modified and added parameters.",
+      "We added three parameters to this API, all of which are callback functions: OnInit, OnDeinit, and OnRender. We added these to extend the functionality of Fintechee and make it easier to manage and monitor indicators. When you add an indicator to the chart, the",
+      "These callback functions are new features; other platforms do not have these parameters. Fortunately, this API is compatible with older versions, so you do not need to modify your old indicators.",
+      "We have added a new parameter to this API, namely a callback function that receives a message when a transaction is triggered. For instance, if you want to send an order to the backend and avoid blocking your process, everything on our platform runs asynchrono",
+      "This callback function is a new feature; other platforms do not offer this parameter. Fortunately, this API is backward compatible, so you don\u2019t need to modify your old EAs.",
+      "var TIME_FRAME = {",
+      "HISTOGRAM: \"Histogram\",",
+      "var PARAMETER_TYPE = {",
+      "### Fintechee License",
+      "Fintechee License = MIT License + Restrictions for Racists"
+    ],
+    "dependency_repos": [
+      "fintechee/Expert-Advisor-CPP-Compiler",
+      "fintechee/FIX-API-Pro",
+      "fintechee/tutorials",
+      "fintechees/Expert-Advisor-Studio",
+      "fintechees/fisdk"
+    ]
+  },
+  {
+    "full_name": "paritytrading/philadelphia",
+    "requested_name": "paritytrading/philadelphia",
+    "id": 35380608,
+    "url": "https://github.com/paritytrading/philadelphia",
+    "stars": 346,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8bce333b10f32b863f54368c063981ed5b5df7da",
+    "last_commit_date": "2026-09-12T09:30:40Z",
+    "archived": false,
+    "fork": false,
+    "description": "Fast FIX protocol library for the JVM",
+    "language": "Java",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE.txt"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright {yyyy} {name of copyright owner}"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Philadelphia",
+      "## Download",
+      "## Modules",
+      "## Links",
+      "## License"
+    ],
+    "recent_commit_count": 100,
+    "recent_authors_sample50": [
+      "dependabot[bot]",
+      "jvirtanen"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/paritytrading/philadelphia/issues/572",
+        "createdAt": "2025-05-08T13:09:45Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-05-10T14:29:08Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/paritytrading/philadelphia/issues/365",
+        "createdAt": "2023-03-16T04:59:48Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-03-16T05:00:27Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-04-07T14:18:20Z",
+              "authorAssociation": "MEMBER"
+            },
+            {
+              "createdAt": "2023-05-16T23:44:10Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-05-16T23:58:38Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-06-01T01:44:03Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2023-06-01T02:06:45Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W06",
+        "lane": "C",
+        "query": "FIX trading"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "LICENSE.txt",
+      "README.md",
+      "UPGRADE-1.0.0.md",
+      "UPGRADE-1.2.0.md",
+      "UPGRADE-2.0.0.md",
+      "UPGRADE-2.1.0.md",
+      "applications",
+      "checkstyle.xml",
+      "documentation",
+      "examples",
+      "libraries",
+      "pom.xml",
+      "scripts",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/paritytrading/philadelphia/blob/8bce333b10f32b863f54368c063981ed5b5df7da/README.md",
+        "sha256": "2cc6029e976c77c0925e0a5c70f6438af5200bc90b03ffbddab489b00d3eeb4c",
+        "bytes": 2613
+      },
+      "LICENSE.txt": {
+        "url": "https://github.com/paritytrading/philadelphia/blob/8bce333b10f32b863f54368c063981ed5b5df7da/LICENSE.txt",
+        "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/paritytrading/philadelphia/commit/8bce333b10f32b863f54368c063981ed5b5df7da",
+      "metadata": "https://api.github.com/repos/paritytrading/philadelphia"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Philadelphia Philadelphia is a fast Financial Information Exchange (FIX) protocol library for the JVM. You can use Philadelphia to connect to stock exchanges, brokerage firms, and other network endpoints that use the FIX protocol. You can also use it to provide your own services using the FIX protocol. Philadelphia is designed to exhibit low and predictable latency. To achieve this, it supports non-blocking networking and does not allocate memory on message reception or transmission. Philadelphia requires Java Runtime Environment (JRE) 11 or newer. ## Download See the [latest release][] on GitHub. [latest release]: https://github.com/paritytrading/philadelphia/releases/latest ## Modules Philadelphia contains the following libraries: - [**Core**](libraries/core) implements the FIX protocol. - [**FIX 4.0**](libraries/fix40), [**FIX 4.1**](libraries/fix41), [**FIX 4.2**](libraries/fix42), [**FIX 4.3**](libraries/fix43), [**FIX 4.4**](libraries/fix44), [**FIX 5.0**](libraries/fix50), [**FIX 5.0 SP1**](libraries/fix50sp1), [**FIX 5.0 SP2**](libraries/fix50sp2), [**FIX Latest**](libraries/fixlatest), and [**FIXT 1.1**](libraries/fixt11) implement profiles for the corresponding FIX protocol versions. See the [FIX Trading Community][] for the protocol specifications. [FIX Trading Community]: http://www.fixtrading.org Philadelphia contains the following applications: - [**Terminal Client**](applications/client) is a simple console application for interacting with a FIX acceptor. - [**Code Generator**](applications/generate) is a simple console application",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "this, it supports non-blocking networking and does not allocate memory on",
+      "Philadelphia requires Java Runtime Environment (JRE) 11 or newer.",
+      "## License",
+      "Released under the Apache License, Version 2.0. See `LICENSE.txt` for details."
+    ],
+    "dependency_repos": [
+      "paritytrading/philadelphia",
+      "paritytrading/philadelphia-extras"
+    ]
+  }
+]
