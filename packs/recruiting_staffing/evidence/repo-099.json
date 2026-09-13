@@ -154,9 +154,9 @@
     "path": "readme.md",
     "sha256": "2595fa24f7824a579b1f7a9597b6376ef5eb33bcf3552586813a4f39ffe9f23c",
     "characters_read": 1620,
-    "excerpt": "[![Build Status](https://travis-ci.org/philipwhitt/nacha-generator.svg?branch=master)](https://travis-ci.org/philipwhitt/nacha-generator) NACHA File Generator ==================== Based on documentation from NACHA: https://www.nacha.org/system/files/resources/AAP201%20-%20ACH%20File%20Formatting.pdf ### Install With Composer ``` { \"require\" : { \"nacha/file-generator\" : \"1.9.*\" } } ``` ### Usage ```php <?php use Nacha\\File; use Nacha\\Batch; use Nacha\\Record\\DebitEntry; use Nacha\\Record\\CcdEntry; // Create the file and set the proper header info $file = new File(); $file->setImmediateDestination('051000033') ... ->setReferenceCode('MYCODE'); // Create a batch and add some entries $batch = new Batch(); $batch->getHeader() ... ->setOriginatingDFiId('01021234'); $batch->addDebitEntry((new DebitEntry) ... ->setTraceNumber('99936340', 1)); $file->addBatch($batch); // completed file ready for output $output = (string)$file; ``` For complete examples see test/Nacha/FileTest.php ### Tests ``` $ ./vendor/bin/phpunit -c test/ci.xml ``` ### Todos There is limited validation for field inputs. Strings that are too long will be truncated. Required/mandatory fields are",
     "source_url": "https://github.com/philipwhitt/nacha-generator/blob/89d0d5a9fd22d03d0c9eba6f591d9add751c8f52/readme.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -181,5 +181,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

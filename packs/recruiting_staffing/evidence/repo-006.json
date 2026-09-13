@@ -111,9 +111,9 @@
     "path": "README.md",
     "sha256": "31a8ed68880a7c10203f496190481ad09a6fb9be63418d2762cf7e010c838751",
     "characters_read": 1540,
-    "excerpt": "# ats Applicant Tracking System 1. Install Postgres and PIP3 for Python package management and NPM for Node and NGINX: ``` sudo apt-get update sudo apt install -y postgresql postgresql-contrib python3-pip npm nginx ``` 2. Connect to PostgreSQL: ``` sudo su - postgres psql ``` 3. Check login info: ``` postgres-# \\conninfo ``` 4. Disconnect from PostgreSQL server: ``` postgres-# \\q ``` Install backend: 1. sudo su - postgres 2. Create : ``` psql postgres -c \"CREATE USER jobhaxdbuser WITH PASSWORD '123456';\" psql postgres -c \"CREATE DATABASE jobhaxdb WITH OWNER 'jobhaxdbuser';\" psql postgres -c \"ALTER USER jobhaxdbuser CREATEDB;\" ``` 3. Export Envs in ~/.bashrc file: export JOBHAX_CLEARBIT_KEY='' export EMAIL_HOST_USER=jobhaxuser@gmail.com export EMAIL_HOST_PASSWORD='' export JOBHAX_RECAPTCHA_SECRET='' export reCaptchaV3SiteKey='' export JOBHAX_LINKEDIN_CLIENT_KEY='' export JOBHAX_LINKEDIN_CLIENT_SECRET='' 4.",
     "source_url": "https://github.com/job-hax/ats/blob/413c0084fa21d13eccc1397d26f7a05ab6479181/README.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -140,5 +140,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

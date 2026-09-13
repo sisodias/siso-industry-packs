@@ -1,0 +1,451 @@
+{
+  "slug": "recruiting_staffing",
+  "as_of": "2026-09-13",
+  "status": "research-blueprint; not deployed or production-qualified",
+  "deployment": "client_vps",
+  "one_compute_box_per_client": true,
+  "siso_hosted_runtime": false,
+  "objects": [
+    {
+      "name": "Party",
+      "fields": [
+        "id",
+        "person_or_organization",
+        "external_ids",
+        "contact_methods",
+        "consent_versions",
+        "role_scoped_visibility"
+      ],
+      "authority": "Incumbent identity plus reviewed link; no autonomous fuzzy merge."
+    },
+    {
+      "name": "JobOrder",
+      "fields": [
+        "id",
+        "client_party_id",
+        "external_ats_id",
+        "approved_requirements",
+        "terms_version",
+        "approver_id",
+        "effective_dates"
+      ],
+      "authority": "Client/account approver; approved ATS version remains authoritative in pilot."
+    },
+    {
+      "name": "Candidacy",
+      "fields": [
+        "id",
+        "candidate_party_id",
+        "job_order_id",
+        "representation_consent",
+        "submitted_artifact_hash",
+        "human_status",
+        "feedback_refs"
+      ],
+      "authority": "Recruiter and hiring authority; never model-derived selection."
+    },
+    {
+      "name": "Assignment",
+      "fields": [
+        "id",
+        "candidacy_id",
+        "employer_party_id",
+        "client_party_id",
+        "work_location",
+        "start_end",
+        "effective_rate_versions",
+        "provider_ids"
+      ],
+      "authority": "Authorized employment/commercial signatories and payroll owner."
+    },
+    {
+      "name": "WorkRecord",
+      "fields": [
+        "id",
+        "assignment_id",
+        "period",
+        "dated_hours",
+        "expenses",
+        "revision",
+        "client_approval",
+        "payroll_receipt",
+        "invoice_refs"
+      ],
+      "authority": "Worker reports; client approves billing; payroll and accountant retain separate wage/ledger authority."
+    },
+    {
+      "name": "Conversation",
+      "fields": [
+        "id",
+        "channel",
+        "provider_thread_id",
+        "participants",
+        "source_message_ids",
+        "linked_objects",
+        "consent",
+        "owner",
+        "reply_state"
+      ],
+      "authority": "Client-owned channel and role-scoped staff; external sends through approval outbox."
+    }
+  ],
+  "component_map": [
+    {
+      "stages": [
+        "S01",
+        "S02",
+        "S12"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R010",
+          "full_name": "frappe/frappe",
+          "verdict": "ADOPT",
+          "research_revision": "68b63c5b7c6d49fb6303bc2b78bea140b189504c"
+        },
+        {
+          "audit_id": "R031",
+          "full_name": "chatwoot/chatwoot",
+          "verdict": "ADOPT",
+          "research_revision": "2f1ed80f894ed9a3eba636ebab90ca61deec110a"
+        },
+        {
+          "audit_id": "R035",
+          "full_name": "surveyjs/survey-library",
+          "verdict": "ADOPT",
+          "research_revision": "69591fa72133e8e0b2f674ae7caa70d851c79c0d"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R024",
+          "full_name": "espocrm/espocrm"
+        },
+        {
+          "audit_id": "R032",
+          "full_name": "freescout-help-desk/freescout"
+        },
+        {
+          "audit_id": "R033",
+          "full_name": "abhinavxd/libredesk"
+        },
+        {
+          "audit_id": "R140",
+          "full_name": "Django-CRM/Django-CRM"
+        }
+      ],
+      "ours": "Party/JobOrder/Conversation links, versioned intake and approved outbox.",
+      "why": "Frappe owns structured workflow and Chatwoot conversation context; avoid parallel sales databases. LibreDesk remains lean-inbox counterfactual."
+    },
+    {
+      "stages": [
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R121",
+          "full_name": "jsvine/pdfplumber",
+          "verdict": "ADOPT",
+          "research_revision": "4c64b92d5caccd71c645e98e0fabb0c4dba7ff45"
+        },
+        {
+          "audit_id": "R123",
+          "full_name": "python-openxml/python-docx",
+          "verdict": "ADOPT",
+          "research_revision": "e45454602b53e8e572b179ccf1c91093ec9f4ed7"
+        },
+        {
+          "audit_id": "R035",
+          "full_name": "surveyjs/survey-library",
+          "verdict": "ADOPT",
+          "research_revision": "69591fa72133e8e0b2f674ae7caa70d851c79c0d"
+        },
+        {
+          "audit_id": "R010",
+          "full_name": "frappe/frappe",
+          "verdict": "ADOPT",
+          "research_revision": "68b63c5b7c6d49fb6303bc2b78bea140b189504c"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R053",
+          "full_name": "OmkarPathak/pyresparser"
+        },
+        {
+          "audit_id": "R055",
+          "full_name": "OmkarPathak/ResumeParser"
+        },
+        {
+          "audit_id": "R122",
+          "full_name": "apache/tika"
+        },
+        {
+          "audit_id": "R124",
+          "full_name": "dedupeio/dedupe"
+        }
+      ],
+      "ours": "Source-artifact retention, approved extraction fields and Candidacy permissions.",
+      "why": "Local bounded extraction beats inferred strengths or a new JVM/model runtime; failed extraction goes to humans."
+    },
+    {
+      "stages": [
+        "S06"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R036",
+          "full_name": "alextselegidis/easyappointments",
+          "verdict": "ADOPT",
+          "research_revision": "450ba15db5e734503274ade049d7bb9bebd2ad33"
+        },
+        {
+          "audit_id": "R049",
+          "full_name": "collective/icalendar",
+          "verdict": "ADOPT",
+          "research_revision": "1ff90a2144fa10131135e02390614efe230899f9"
+        },
+        {
+          "audit_id": "R132",
+          "full_name": "sabre-io/vobject",
+          "verdict": "ADOPT",
+          "research_revision": "01d1edc5db8c31896f2f215a61320e3e94f339a9"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R037",
+          "full_name": "calcom/cal.diy"
+        },
+        {
+          "audit_id": "R044",
+          "full_name": "Tymeslot/tymeslot"
+        },
+        {
+          "audit_id": "R045",
+          "full_name": "thunderbird/appointment"
+        },
+        {
+          "audit_id": "R050",
+          "full_name": "ics-py/ics-py"
+        }
+      ],
+      "ours": "Candidacy-to-booking identity, timezone/version/cancellation reconciliation.",
+      "why": "Whole booking application plus protocol libraries; Cal.diy production warning is disqualifying for this role."
+    },
+    {
+      "stages": [
+        "S07",
+        "S08"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R039",
+          "full_name": "docusealco/docuseal",
+          "verdict": "ADOPT",
+          "research_revision": "11856a17ac0865128333a0ffe1fdfc44e4b8a982"
+        },
+        {
+          "audit_id": "R010",
+          "full_name": "frappe/frappe",
+          "verdict": "ADOPT",
+          "research_revision": "68b63c5b7c6d49fb6303bc2b78bea140b189504c"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R040",
+          "full_name": "documenso/documenso"
+        },
+        {
+          "audit_id": "R041",
+          "full_name": "OpenSignLabs/OpenSign"
+        },
+        {
+          "audit_id": "R026",
+          "full_name": "chiefonboarding/ChiefOnboarding"
+        },
+        {
+          "audit_id": "R127",
+          "full_name": "GoldenJustin/ERPNext-Electronic-Signature"
+        },
+        {
+          "audit_id": "R128",
+          "full_name": "penpact/penpact"
+        }
+      ],
+      "ours": "Assignment authorization, signer-role mapping and restricted readiness checklist.",
+      "why": "Established signing UI with explicit priced API boundary; early Frappe-native signing remains a service-removal counterfactual, not current admission."
+    },
+    {
+      "stages": [
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R009",
+          "full_name": "frappe/erpnext",
+          "verdict": "ADOPT",
+          "research_revision": "fe25746febc8731bbbc0880dcb18d528dcf08a63"
+        },
+        {
+          "audit_id": "R088",
+          "full_name": "intuit/oauth-pythonclient",
+          "verdict": "ADOPT",
+          "research_revision": "005f8f9112be9320f139d314e660e54370f470b7"
+        },
+        {
+          "audit_id": "R092",
+          "full_name": "moov-io/ach",
+          "verdict": "ADOPT",
+          "research_revision": "9306958a9e5dbf122d4b5ad723982b971b1a5d9e"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R027",
+          "full_name": "kimai/kimai"
+        },
+        {
+          "audit_id": "R028",
+          "full_name": "solidtime-io/solidtime"
+        },
+        {
+          "audit_id": "R030",
+          "full_name": "Payroll-Engine/PayrollEngine"
+        },
+        {
+          "audit_id": "R096",
+          "full_name": "VonHoltenCodes/SlowBooks-Pro-2026"
+        },
+        {
+          "audit_id": "R108",
+          "full_name": "invoiceninja/invoiceninja"
+        }
+      ],
+      "ours": "Effective rates, WorkRecord versioning, separate wage/bill states and reviewed provider exports.",
+      "why": "Keep one operational schema; retain external payroll and general ledger. ACH validation does not originate money."
+    },
+    {
+      "stages": [
+        "S01",
+        "S05",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "chosen": [
+        {
+          "audit_id": "R034",
+          "full_name": "activepieces/activepieces",
+          "verdict": "ADOPT",
+          "research_revision": "1b8274ffec6bd052f749be08c28649244705eabb"
+        },
+        {
+          "audit_id": "R012",
+          "full_name": "frappe/frappe_docker",
+          "verdict": "ADOPT",
+          "research_revision": "a0c52135d4d41c4b8acf7adfdfc5bbcba46dd4d0"
+        }
+      ],
+      "runners_up": [
+        {
+          "audit_id": "R018",
+          "full_name": "odoo/odoo"
+        },
+        {
+          "audit_id": "R011",
+          "full_name": "frappe/crm"
+        },
+        {
+          "audit_id": "R069",
+          "full_name": "bullhorn/sdk-rest"
+        },
+        {
+          "audit_id": "R072",
+          "full_name": "bullhorn/dataloader"
+        }
+      ],
+      "ours": "Only missing authorized adapters, idempotent receipts and deployment configuration.",
+      "why": "Optional connector engine only where it removes custom adapter work; migration tools are per-client, not default resident services."
+    }
+  ],
+  "default_product_bases": [
+    "frappe/frappe",
+    "frappe/erpnext",
+    "chatwoot/chatwoot"
+  ],
+  "deployment_artifact": "frappe/frappe_docker",
+  "optional_services": [
+    "activepieces/activepieces",
+    "alextselegidis/easyappointments",
+    "docusealco/docuseal"
+  ],
+  "libraries": [
+    "surveyjs/survey-library",
+    "collective/icalendar",
+    "intuit/oauth-pythonclient",
+    "moov-io/ach",
+    "jsvine/pdfplumber",
+    "python-openxml/python-docx",
+    "sabre-io/vobject"
+  ],
+  "external_authorities": [
+    "incumbent ATS",
+    "client payroll provider",
+    "client accounting ledger",
+    "authorized email/SMS/WhatsApp networks",
+    "licensed talent sources",
+    "screening/government/banking services"
+  ],
+  "runtime_plan": {
+    "full_reference_gib": 16,
+    "full_reference_vcpu": 8,
+    "measured_resource_floor_gib": null,
+    "lean_trial_gib": 8,
+    "lean_scope": "Minimal Frappe intake coordination only; no assertion that full Chatwoot/signing/automation assembly fits.",
+    "gpu_required": false,
+    "backup": "Encrypted, off-box, client-owned storage; never SISO storage.",
+    "qualification": "Load/restore/security tests and compatible release/image digests required before any production deployment."
+  },
+  "economics": {
+    "reference_stack_usd_year": 18840,
+    "potential_retirements_usd_year": 2760,
+    "retained_usd_year": 16080,
+    "first_wedge_retirement_usd_year": 1200,
+    "full_vps_usd_year": 1152,
+    "lean_vps_usd_year": 576,
+    "backup_budget_usd_year": 120,
+    "support_lean_usd_year": 1200,
+    "support_full_usd_year": 3600,
+    "signature_pro_seats": 2,
+    "signature_pro_seat_usd_month": 20,
+    "signature_api_usd_completion": 0.2,
+    "signature_completions_year_assumption": 240,
+    "signature_integrated_usd_year": 528,
+    "lean_minimal_run_usd_year": 1896,
+    "supported_integrated_run_usd_year": 5400,
+    "minutes_returned_week_unmeasured": 335,
+    "actual_hours_saved": null,
+    "actual_cash_saved": null
+  },
+  "gaps": [
+    "Maintained independently validated US staffing payroll/tax filing, remittance and employer authority",
+    "Lawful access to sourcing networks, job-board inventory and current candidate contact data",
+    "Background checks, Form I-9/E-Verify participation and licensed verification services",
+    "Per-client ATS API entitlement, rate limits and lossless history/attachment migration",
+    "Complete US assignment/rate/time/pay-bill schema and authority-aware mappings",
+    "Carrier/email deliverability, authorized WhatsApp/SMS accounts and usage fees",
+    "Paid signature API/SSO/enterprise permissions and legal ceremony qualification",
+    "Fifty-state/local employment, privacy, retention and accessibility review",
+    "One-box capacity benchmarks, security hardening, tested restore and support ownership",
+    "Observed operator workload, measurable savings and eligible segment count"
+  ],
+  "measured_outcomes": null,
+  "application_code_written": false,
+  "upstream_code_executed": false
+}

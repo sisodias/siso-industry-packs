@@ -328,12 +328,12 @@
     "path": "README.md",
     "sha256": "26f19a32e32df7f221d62bbd2d76c886ac0660085a67b90776829c687219d01c",
     "characters_read": 19323,
-    "excerpt": "# Signing PDF files with Go [![Build & Test](https://github.com/digitorus/pdfsign/workflows/Build%20&%20Test/badge.svg)](https://github.com/digitorus/pdfsign/actions?query=workflow%3Abuild-and-test) [![golangci-lint](https://github.com/digitorus/pdfsign/workflows/golangci-lint/badge.svg)](https://github.com/digitorus/pdfsign/actions?query=workflow%3Agolangci-lint) [![Go Report Card](https://goreportcard.com/badge/github.com/digitorus/pdfsign)](https://goreportcard.com/report/github.com/digitorus/pdfsign) [![Coverage Status](https://codecov.io/gh/digitorus/pdfsign/branch/main/graph/badge.svg)](https://codecov.io/gh/) [![Go Reference](https://pkg.go.dev/badge/github.com/digitorus/pdfsign.svg)](https://pkg.go.dev/github.com/digitorus/pdfsign) A PDF signing and verification library written in [Go](https://go.dev). This library provides both command-line tools and Go APIs for digitally signing and verifying PDF documents. **See also our [PDFSigner](https://github.com/digitorus/pdfsigner/), a more advanced digital signature server that is using this project.** ## Quick Start ```bash # Sign a PDF ./pdfsign sign -name \"John Doe\" input.pdf output.pdf certificate.crt private_key.key # Verify a PDF signature ./pdfsign verify document.pdf ``` ## Package Architecture The library is organized into specialized subpackages, though most users will primarily interact with the root `pdfsign` package. | Package | Purpose | |:--- |:--- | | **`pdfsign`** | **Primary entry point**. Provides the",
     "source_url": "https://github.com/digitorus/pdfsign/blob/d20dc30e008d41efb423279c7ad20d4729ceb933/README.md",
     "edition_flags": [
       "docker",
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -384,5 +384,7 @@
     "capability-shelf/source-registry.jsonl"
   ],
   "bank_status": "ALREADY IN THE BANK",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

@@ -157,9 +157,9 @@
     "path": "README.md",
     "sha256": "96e40f6810691cfdce1e6c3cb5ce769a76f33e9976037cdaa6dedd6dfaab0e6b",
     "characters_read": 2409,
-    "excerpt": "# ResumeParser A utility to make handling many resumes easier by automatically pulling contact information, required skills and custom text fields. These results are then surfaced as a convenient summary CSV. ## Quick Start Guide ```bash # Install requirements pip install -r requirements.txt # Retrieve language model from spacy python -m spacy download en # Run code (with default configurations) cd bin/ python main.py # Review output open ../data/output/resume_summary.csv ``` ## Getting started ### Repo structure - `bin/main.py`: Code entry point - `confs/confs.yaml.template`: Configuration file template - `data/input/example_resumes`: Example resumes, which are parsed w/ default configurations - `data/output/resume_summary.csv`: Results from parsing example resumes ### Python Environment Python code in this repo utilizes packages that are not part of the common",
     "source_url": "https://github.com/bjherger/ResumeParser/blob/8c873551b425bea4d7c5f46960e3ff159bb05056/README.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "error": "No matching root filename; not an assertion that no nested license exists."
@@ -286,5 +286,7 @@
     "capability-shelf/source-registry.jsonl"
   ],
   "bank_status": "ALREADY IN THE BANK",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

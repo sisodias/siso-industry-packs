@@ -142,9 +142,9 @@
     "path": "README.md",
     "sha256": "060dfd8d06b4a0f68e3ffe702fd8bdbdac106b7fc7d530ceaf6818faf01bcf4a",
     "characters_read": 2102,
-    "excerpt": "# Resume Parser A Simple NodeJs library to parse Resume files in PDF, DOC, DOCX and TXT format to JSON. If the CVs / Resumes contain any social media profile links then the solution should also parse the public social profile web-pages and organize the data in JSON format (e.g. Linkedin public profile, Github, etc.) ## Installation `npm install resume-parser --save` ## Usage ``` const ResumeParser = require('simple-resume-parser'); // From file const resume = new ResumeParser(\"./files/resume.doc\"); // From URL const resume = new ResumeParser(\"https://writing.colostate.edu/guides/documents/resume/functionalSample.pdf\"); //Convert to JSON Object resume.parseToJSON() .then(data => { console.log('Yay! ', data); }) .catch(error => { console.error(error); }); //Save to JSON File resume.parseToFile('converted') //output subdirectory .then(file => { console.log('Yay! ', file); }) .catch(error => { console.error(error); });",
     "source_url": "https://github.com/kervin5/simple-resume-parser/blob/83fe31f3894714f212d527550d59c09585c85f82/README.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -169,5 +169,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

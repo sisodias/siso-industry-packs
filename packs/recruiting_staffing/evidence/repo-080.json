@@ -139,11 +139,11 @@
     "path": "README.md",
     "sha256": "f8695915bc18206a81cb6e55d83bb07b410bac39b177f8c397576ed9e6397ca3",
     "characters_read": 1460,
-    "excerpt": "# GreenhouseApi This is an API Client for working with the [Greenhouse Harvest API](https://developers.greenhouse.io/harvest.html). It's lightweight and supports fetching all pages by default. ```ruby client = GreenhouseApi::Client.new(api_key) # Get all candidates client.list_candidates # Get other resources type client.list_many('departments', limit: 5) # Get current offer for application client.get_current_offer_for_application(12345) ``` ## Installation Add this line to your application's Gemfile: ```ruby gem 'greenhouse_api' ``` And then execute: $ bundle install Or install it yourself as: $ gem install greenhouse_api ## Development After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. To install this gem onto your local machine, run",
     "source_url": "https://github.com/Gusto/greenhouse_api/blob/ff04a915c61b033285923ed87bce52182a6f98b8/README.md",
     "edition_flags": [
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -168,5 +168,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

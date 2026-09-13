@@ -150,11 +150,11 @@
     "path": "README.md",
     "sha256": "a9b088cc37d2204e96dc7c3cf754c2a50341133b4fc38fd7938f193545f6ceec",
     "characters_read": 2875,
-    "excerpt": "# sdk-rest A Java client library for working with the Bullhorn REST API. Handles authentication and objectifies API operations. ## Available as a Maven dependency ### Add dependency to your pom file ```xml <dependency> <groupId>com.bullhorn</groupId> <artifactId>sdk-rest</artifactId> <version>1.0</version> </dependency> ``` Note, as of version 2.0.0 the SDK is built using Java 17 so the default binaries are not compatible with <17 versioned applications. If you'd like to use JRE 8 compatible binaries, add the `<classifier>` tag in your dependency: ```xml <dependency> <groupId>com.bullhorn</groupId> <artifactId>sdk-rest</artifactId> <version>2.0.0</version> <classifier>jdk8</classifier> </dependency> ``` Omission of the `<classifier>` tag will result in Maven downloading the JRE 17 binaries. ## Basic setup: Provide your credentials and instantiate StandardBullhornApiRest: ```java BullhornRestCredentials creds = new BullhornRestCredentials(); creds.setPassword(\"apipassword\"); creds.setRestAuthorizeUrl(\"rest.authorizeUrl\"); creds.setRestClientId(\"rest.clientId\"); creds.setRestClientSecret(\"rest.clientSecret\"); creds.setRestLoginUrl(env.getProperty(\"rest.loginUrl\");",
     "source_url": "https://github.com/bullhorn/sdk-rest/blob/9a9b711c28880eab63173d86422618d52e1e6fa4/README.md",
     "edition_flags": [
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -179,5 +179,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

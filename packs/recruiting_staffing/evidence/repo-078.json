@@ -116,12 +116,12 @@
     "path": "README.md",
     "sha256": "7431cfe99d5498c6205a74537cd8972b89d3a7cb020917938e8cf12d12cde445",
     "characters_read": 1331,
-    "excerpt": "# Greensync Tool for syncing [Greenhouse Harvest API](https://developers.greenhouse.io/harvest.html) and a MySQL database of your choice. It pulls new data every 15 minutes by default. ## Motivation [Greenhouse](https://www.greenhouse.io/) allows you to access all your organisation data via their API. Unfortunately, for complex queries you'll have to chain multiple requests to relate entities, and take care of throttling and pagination by yourself. By syncing Greenhouse data into a relational database, you won't have to worry about the details, just query your database for the information you need. ## Run Run the image docker run \\ -e DB_NAME=\"greensync\" \\ -e DB_USER=\"greensync\" \\ -e DB_PASS=\"pass\" \\ -e DB_HOST=\"localhost\" \\ -e GREENHOUSE_API_TOKEN=\"YOUR_TOKEN\" \\ keyvanakbary/greensync Additionally, you can pass the following environment variables * `DB_PORT`, defaults",
     "source_url": "https://github.com/keyvanakbary/greensync/blob/f86f5b228dcce7ff36b1b4e0bec34d9a961c25b0/README.md",
     "edition_flags": [
       "docker",
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "error": "No matching root filename; not an assertion that no nested license exists."
@@ -139,5 +139,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

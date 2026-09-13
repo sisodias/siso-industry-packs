@@ -249,13 +249,13 @@
     "path": "README.md",
     "sha256": "544db853760a7ee6dc7c2fea6b151b1f8befabf62e0819f73005a0a8142bb893",
     "characters_read": 5350,
-    "excerpt": "# Xero-OpenAPI An OpenAPI (Swagger) specification for the Xero API with OAuth 2.0 security schema. ## Description This repository holds the official Xero [OpenAPI](https://www.openapis.org/) descriptions. OpenAPI spec 3.0 In Release (used for one or more SDKs) * [Accounting](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_accounting.yaml) * [Identity](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-identity.yaml) * [Bank Feeds](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_bankfeeds.yaml) * [Fixed Assets](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_assets.yaml) * [Project](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-projects.yaml) * [Payroll AU](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-payroll-au.yaml) * [Payroll UK](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-payroll-uk.yaml) * [Payroll NZ](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-payroll-nz.yaml) * [Files](https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_files.yaml) ## Contribution guide Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) for all commits. Why this matters: - We use [semantic-release](https://github.com/semantic-release/semantic-release) to calculate versions automatically. - Consistent commit formatting keeps versioning predictable and release notes accurate. Versioning rules: - `feat:` -> minor version bump - `fix:` -> patch version bump - `!` in the header or `BREAKING CHANGE:` footer -> major version bump Examples: ```text feat(accounting):",
     "source_url": "https://github.com/XeroAPI/Xero-OpenAPI/blob/448060d7829cae23166a2e443be48c2f2422280f/README.md",
     "edition_flags": [
       "docker",
       "payroll",
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -282,5 +282,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

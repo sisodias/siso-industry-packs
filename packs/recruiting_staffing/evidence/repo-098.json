@@ -185,9 +185,9 @@
     "path": "README.md",
     "sha256": "2bada94903945c8f65a3c888936dae8a7ba0e32f3f6c82278fbdc501c7742115",
     "characters_read": 4449,
-    "excerpt": "[![github](https://img.shields.io/github/stars/Cinchoo/ChoETL.NACHA.svg)]() # Cinchoo ETL - NACHA Library .NET Library of NACHA file structure This simple, nifty library exposes the .NET classes to read and process the NACHA files. These classes can be used in conjuction with Cinchoo ETL to read and generate ACH files easily. ## Install To install Cinchoo ETL - NACHA Library, run the following command in the Package Manager Console ##### .NET Framework [![NuGet](https://img.shields.io/nuget/v/ChoETL.NACHA.svg)](https://www.nuget.org/packages/ChoETL.NACHA/) PM> Install-Package ChoETL.NACHA ##### .NET Core [![NuGet](https://img.shields.io/nuget/v/ChoETL.NACHA.NETStandard.svg)](https://www.nuget.org/packages/ChoETL.NACHA.NETStandard/) PM> Install-Package ChoETL.NACHA.NETStandard Add namespace to the program ``` csharp using ChoETL.NACHA; ``` # How to use To read NACHA file (using c# 7, otherwise use if-else statement) ``` csharp foreach (var r in new ChoNACHAReader(\"20151027B0000327P018CHK.ACH\")) { switch (r) { case ChoNACHAFileHeaderRecord fileHeaderRecord: Console.WriteLine(fileHeaderRecord.ImmediateOrigin); break; case",
     "source_url": "https://github.com/Cinchoo/ChoETL.NACHA/blob/a48e7d37e07abae3608a714c439f289764edf1ab/README.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -212,5 +212,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

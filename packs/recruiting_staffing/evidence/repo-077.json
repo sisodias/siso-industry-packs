@@ -129,11 +129,11 @@
     "path": "README.md",
     "sha256": "881957d145221f3ad0ab626000c095517917f0c3ba0f15688de764b2286ee06f",
     "characters_read": 3791,
-    "excerpt": "# Overview This is an unofficial Golang SDK to integrate with the Bullhorn system ## Installation ### Latest Version `go get github.com/Intiqo/bullhorn-go-sdk` ### Specific Version `go get github.com/Intiqo/bullhorn-go-sdk@v0.1.2` ## Authentication / Obtaining a client - Create a new bullhorn client with the below method: ```go ap := &bullhorn.AuthParams{ ClientId: \"\", ClientSecret: \"\", Username: \"\", Password: \"\", AuthenticationUrl: \"\", LoginUrl: \"\", ApiUrl: \"\", RestTokenTTL: 1440, AuthorizationCode: \"\", AccessToken: \"\", RefreshToken: \"\", RestToken: \"\", } c, err := bullhorn.NewClient(ap) ``` ### Mandatory Parameters - It is mandatory to specify the clientId, clientSecret, username, password, authentication url & login url. Api URL is automatically created - Rest Token TTL is optional, in which case, the default is `1440` (i.e. 24 hours) ### Tokens",
     "source_url": "https://github.com/Intiqo/bullhorn-go-sdk/blob/dada5123576a784f02e75c66189cdfa4f94dd1a1/README.md",
     "edition_flags": [
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -158,5 +158,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

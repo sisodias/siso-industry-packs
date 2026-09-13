@@ -144,9 +144,9 @@
     "path": "README.md",
     "sha256": "16ecf07a6062e54bef4f4ff906d07cec3a97331256ba9ef51d79b76931dacfb9",
     "characters_read": 4429,
-    "excerpt": "# xmlstilling-ws SOAP-basert WebService for å motta stillinger på hr-xml-format fra eksterne aktører. ##### Batch-kjøring Applikasjonen kjører en skedulert ryddejobb for å slette meldinger (rader) i databasen som er mottatt for mer enn 6 mnd. Se klassene som ligger i pakken `no.nav.xmlstilling.ws.batch` for intervaller og slettekriterie for mottatt dato. ##### Metrikker Applikasjonen har metrikker for å telle antall meldinger som er mottatt OK `xmlstilling.mottatt.ok` og mottatt med feil `xmlstilling.mottatt.feil`. Disse er tagget per leverandør. ### Kjøre DevApplication lokalt Kopier application-dev.yaml til USER_HOME. Åpne filen, og editer database-properties avhengig av om du ønsker å kjøre mot postgres i preprod eller lokal H2-database. ##### Alternativ 1 - postgresql Kommenter inn properties for postgresql. For å sette brukernavn og passord, logg inn på",
     "source_url": "https://github.com/navikt/pam-xmlstilling-ws/blob/c10f6405cb3440fc7620291ff6da7a83ff131a0d/README.md",
-    "edition_flags": []
+    "edition_flags": [],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE.md",
@@ -171,5 +171,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

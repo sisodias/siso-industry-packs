@@ -1,0 +1,380 @@
+{
+  "as_of": "2026-09-13",
+  "scope": "Five-person US IT/professional W-2 contract staffing design fixture; no measured client baseline.",
+  "stages": [
+    {
+      "id": "S01",
+      "stage": "Inbound conversation and sales triage",
+      "trigger": "Email, SMS, phone or approved-channel enquiry",
+      "inputs": "Original thread, sender and client context",
+      "outputs": "Assigned reply task or reviewed JobOrder draft",
+      "pain_id": "P07",
+      "frequency": "80 conversations/week; unmeasured design volume",
+      "handoff": "Owner/recruiter, client/candidate",
+      "data_object": [
+        "Conversation",
+        "Party",
+        "JobOrder"
+      ],
+      "commercial_tools": [
+        "Google Workspace",
+        "Quo",
+        "WhatsApp",
+        "Airtable",
+        "Manatal"
+      ],
+      "pain": {
+        "id": "P07",
+        "author": "GildedZen",
+        "quote": "they don't have an online form for employers, you have to manually add clients, and their api sucks, not prebuilt integrations, you have to bascially code their API manually with zapier etc",
+        "url": "https://www.reddit.com/r/recruiting/comments/1esqewk/can_anyone_share_their_experiences_with_loxo/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S02",
+      "stage": "Terms and approved requisition",
+      "trigger": "New role or changed terms",
+      "inputs": "MSA, role, location, shift, rates and approval",
+      "outputs": "Versioned approved JobOrder and missing-field queue",
+      "pain_id": "P02",
+      "frequency": "20 new/changed requisitions/week; unmeasured",
+      "handoff": "Account owner and client approver",
+      "data_object": [
+        "JobOrder",
+        "Party"
+      ],
+      "commercial_tools": [
+        "Manatal",
+        "Recruit CRM",
+        "Airtable",
+        "Dropbox Sign"
+      ],
+      "pain": {
+        "id": "P02",
+        "author": "yesbillyitsme",
+        "quote": "I started w Manatal. It’s good for candidates, not great for sales. Wish there was a better sales CMS",
+        "url": "https://www.reddit.com/r/RecruitmentAgencies/comments/11r8k10/best_ats_for_brand_new_agency/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S03",
+      "stage": "Sourcing, consent and document intake",
+      "trigger": "Approved role needs an attributable candidate pool",
+      "inputs": "Permitted referrals/imports, CV and contact provenance",
+      "outputs": "Reviewed Party/Candidacy; original CV retained",
+      "pain_id": "P06",
+      "frequency": "100 imported/reviewed records/week; unmeasured",
+      "handoff": "Sourcer, recruiter and candidate",
+      "data_object": [
+        "Party",
+        "Candidacy",
+        "JobOrder"
+      ],
+      "commercial_tools": [
+        "Loxo",
+        "Top Echelon",
+        "Manatal",
+        "LinkedIn"
+      ],
+      "pain": {
+        "id": "P06",
+        "author": "JustaUser-23",
+        "quote": "My team has had to rely heavily on LinkedIn Recruiter, despite having over 150,000 candidates in our database.",
+        "url": "https://www.reddit.com/r/recruiting/comments/146tkhs/loxo_crmanyone_use_it/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S04",
+      "stage": "Screen and representation coordination",
+      "trigger": "Candidate agrees to recruiter conversation",
+      "inputs": "Approved questions, source CV and consent",
+      "outputs": "Human-confirmed notes and representation status",
+      "pain_id": "P04",
+      "frequency": "40 screens/week; unmeasured",
+      "handoff": "Recruiter and candidate",
+      "data_object": [
+        "Candidacy",
+        "Conversation"
+      ],
+      "commercial_tools": [
+        "Manatal",
+        "Workable",
+        "Top Echelon"
+      ],
+      "pain": {
+        "id": "P04",
+        "author": "Frankotankgo1",
+        "quote": "The resume parsing is terrible and when you review applicants the resume is jumbled up into one giant wall of text that's often free of any spacing and formatting",
+        "url": "https://www.reddit.com/r/RecruitmentAgencies/comments/1foqtfr/if_youre_thinking_about_starting_an_agency_do_not/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S05",
+      "stage": "Submission and feedback packet",
+      "trigger": "Recruiter and candidate approve submission",
+      "inputs": "Approved CV version, availability and authorized role details",
+      "outputs": "Client-specific submission and evidence-linked feedback",
+      "pain_id": "P03",
+      "frequency": "30 submissions/week; unmeasured",
+      "handoff": "Recruiter and client hiring panel",
+      "data_object": [
+        "Candidacy",
+        "JobOrder",
+        "Conversation"
+      ],
+      "commercial_tools": [
+        "Manatal",
+        "Recruiterflow",
+        "Happlicant"
+      ],
+      "pain": {
+        "id": "P03",
+        "author": "charlemagnesZamboni",
+        "quote": "you cannot personalise the email before you send it or automatically end the automation if they reply or see in the CRM that they have replied to you or others.",
+        "url": "https://www.reddit.com/r/recruiting/comments/1mmi61u/has_anyone_else_had_a_terrible_experience_with/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S06",
+      "stage": "Interview coordination",
+      "trigger": "Client requests an interview",
+      "inputs": "Attendees, time zones, availability and accommodation route",
+      "outputs": "Confirmed booking plus cancellation/reschedule ledger",
+      "pain_id": "P11",
+      "frequency": "20 interviews/week; unmeasured",
+      "handoff": "Candidate, recruiter and panel",
+      "data_object": [
+        "Candidacy",
+        "Conversation"
+      ],
+      "commercial_tools": [
+        "Calendly",
+        "Workable",
+        "Google Calendar"
+      ],
+      "pain": {
+        "id": "P11",
+        "author": "callmerorschach",
+        "quote": "I've implemented in house focused ATS for many clients, and while they’re excellent tools for internal teams, they can be quite restrictive for external users.",
+        "url": "https://www.reddit.com/r/recruiting/comments/1hsym8t/good_ats_geared_towards_agencies/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S07",
+      "stage": "Offer and assignment authorization",
+      "trigger": "Human hiring authority approves offer",
+      "inputs": "Authorized rates/dates, work location and contract terms",
+      "outputs": "Signed approved Assignment with employer identity",
+      "pain_id": "P09",
+      "frequency": "5 starts/changes/week; unmeasured",
+      "handoff": "Client, candidate and account/payroll owners",
+      "data_object": [
+        "Assignment",
+        "JobOrder",
+        "Party"
+      ],
+      "commercial_tools": [
+        "Manatal",
+        "Dropbox Sign",
+        "Airtable"
+      ],
+      "pain": {
+        "id": "P09",
+        "author": "silasmahner",
+        "quote": "I wish we used Loxo. My co isn't using it tho bc it doesn't have certain contractor features. RIP",
+        "url": "https://www.reddit.com/r/recruiting/comments/197ny2y/which_ai_tools_do_agency_recruiters_use/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S08",
+      "stage": "Onboarding and credential-status coordination",
+      "trigger": "Accepted assignment awaits authorized start",
+      "inputs": "Required-check checklist, restricted documents and provider status",
+      "outputs": "Human-approved readiness checklist with reasons/provenance",
+      "pain_id": "P10",
+      "frequency": "5 onboarding cases/week; unmeasured",
+      "handoff": "Worker, compliance owner and external providers",
+      "data_object": [
+        "Assignment",
+        "Party"
+      ],
+      "commercial_tools": [
+        "Crelate Hire",
+        "Workable",
+        "Gusto"
+      ],
+      "pain": {
+        "id": "P10",
+        "author": "Anxious_Current2593",
+        "quote": "I simply found so often that the notes are really not really resembling the call I just had.",
+        "url": "https://www.reddit.com/r/recruiting/comments/197ny2y/which_ai_tools_do_agency_recruiters_use/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S09",
+      "stage": "Worked time and client approval",
+      "trigger": "Week closes or correction arrives",
+      "inputs": "Assignment, dated hours, expense evidence and approver identity",
+      "outputs": "Versioned submitted/approved/disputed WorkRecord",
+      "pain_id": "P09",
+      "frequency": "50 weekly time records plus exceptions; unmeasured",
+      "handoff": "Worker, client approver and payroll clerk",
+      "data_object": [
+        "WorkRecord",
+        "Assignment"
+      ],
+      "commercial_tools": [
+        "Gusto",
+        "Avionte",
+        "JobDiva",
+        "Google Sheets"
+      ],
+      "pain": {
+        "id": "P09",
+        "author": "silasmahner",
+        "quote": "I wish we used Loxo. My co isn't using it tho bc it doesn't have certain contractor features. RIP",
+        "url": "https://www.reddit.com/r/recruiting/comments/197ny2y/which_ai_tools_do_agency_recruiters_use/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S10",
+      "stage": "Payroll reconciliation and authorized handoff",
+      "trigger": "Payroll cutoff approaches",
+      "inputs": "Time evidence, authorized rates, exceptions and provider IDs",
+      "outputs": "Approved export/provider receipt; wage exceptions escalated",
+      "pain_id": "P05",
+      "frequency": "1 payroll batch/week; unmeasured",
+      "handoff": "Payroll owner and approved payroll provider",
+      "data_object": [
+        "WorkRecord",
+        "Assignment",
+        "Party"
+      ],
+      "commercial_tools": [
+        "Gusto",
+        "Avionte",
+        "Ceipal"
+      ],
+      "pain": {
+        "id": "P05",
+        "author": "Greecelightning3",
+        "quote": "We can’t even pull GP or revenue metrics.",
+        "url": "https://www.reddit.com/r/RecruitmentAgencies/comments/1si0p0v/crm_hell_with_bullhorn/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S11",
+      "stage": "Billing, collections and ledger reconciliation",
+      "trigger": "Billable work or fee milestone",
+      "inputs": "Bill rates, PO, signed terms and time evidence",
+      "outputs": "Draft invoice, accountant approval and ledger reconciliation",
+      "pain_id": "P05",
+      "frequency": "12 reconciliation packets/week; unmeasured",
+      "handoff": "Account owner, client AP and accountant",
+      "data_object": [
+        "WorkRecord",
+        "Assignment",
+        "Party"
+      ],
+      "commercial_tools": [
+        "QuickBooks",
+        "Xero",
+        "Stripe"
+      ],
+      "pain": {
+        "id": "P05",
+        "author": "Greecelightning3",
+        "quote": "We can’t even pull GP or revenue metrics.",
+        "url": "https://www.reddit.com/r/RecruitmentAgencies/comments/1si0p0v/crm_hell_with_bullhorn/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    },
+    {
+      "id": "S12",
+      "stage": "Extension, redeployment and owner review",
+      "trigger": "End date, ageing item or weekly review",
+      "inputs": "Assignment dates, feedback, consent and overdue work/payment",
+      "outputs": "Approved extension/redeployment task and status packet",
+      "pain_id": "P08",
+      "frequency": "20 follow-up cases/week plus review; unmeasured",
+      "handoff": "Recruiter, worker, client and owner",
+      "data_object": [
+        "Assignment",
+        "Candidacy",
+        "Conversation",
+        "WorkRecord"
+      ],
+      "commercial_tools": [
+        "Manatal",
+        "Airtable",
+        "Quo",
+        "ClickUp"
+      ],
+      "pain": {
+        "id": "P08",
+        "author": "popculturequeenie10",
+        "quote": "Loxo is awful for bd and as an ATS their customer service takes days or sometimes a week stay far away from",
+        "url": "https://www.reddit.com/r/recruiting/comments/1n6mke3/loxo_crm_recruit_crm/",
+        "evidence_class": "practitioner",
+        "observed_at": "2026-09-13",
+        "posted_at": null
+      },
+      "evidence_class": "analysis",
+      "baseline_status": "unmeasured"
+    }
+  ]
+}

@@ -246,11 +246,11 @@
     "path": "README.md",
     "sha256": "ee5fcc86086f5ea07f0b24aba437c2bce26c918caa4e11f0df95f4f09a56c2d6",
     "characters_read": 5651,
-    "excerpt": "![pyHanko](docs/images/pyhanko-logo.svg) ![Codecov](https://img.shields.io/codecov/c/github/MatthiasValvekens/pyHanko) ![pypi (pyHanko)](https://img.shields.io/pypi/v/pyHanko.svg?label=pyHanko) ![pypi (pyhanko-certvalidator)](https://img.shields.io/pypi/v/pyhanko-certvalidator.svg?label=pyhanko-certvalidator) ![pypi (pyhanko-cli)](https://img.shields.io/pypi/v/pyhanko-cli.svg?label=pyhanko-cli) The lack of open-source CLI tooling to handle digitally signing and stamping PDF files was bothering me, so I went ahead and rolled my own. *Note:* This project is currently in beta, and not yet production-ready. ### Documentation The [documentation for pyHanko is hosted on ReadTheDocs](https://docs.pyhanko.eu/en/latest/) and includes information on CLI usage, library usage, and API reference documentation derived from inline docstrings. ### Installing PyHanko is hosted on [PyPI](https://pypi.org/project/pyHanko/), and can be installed using `pip`: ```bash pip install 'pyHanko[pkcs11,image-support,opentype,qr]' pyhanko-cli ``` Depending on your shell, you might have to leave off the quotes: ```bash pip install pyHanko[pkcs11,image-support,opentype,qr] pyhanko-cli ``` This `pip` invocation includes the optional dependencies required for PKCS#11, image handling, OpenType/TrueType",
     "source_url": "https://github.com/MatthiasValvekens/pyHanko/blob/3f0e5eebc74cd4eeab7c7bd6072692f33d2e2f95/README.md",
     "edition_flags": [
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -322,5 +322,7 @@
     "bank/bank_liftable_ranked.jsonl"
   ],
   "bank_status": "ALREADY IN THE BANK",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }

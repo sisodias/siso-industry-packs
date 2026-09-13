@@ -181,13 +181,13 @@
     "path": "README.md",
     "sha256": "43295ddee4d12d40c62bde68768d89c1a81067779889c4d66d50799ef3e35fcf",
     "characters_read": 7521,
-    "excerpt": "# ESCO Skill Extractor This is a a tool that extract **ESCO skills** and **ISCO occupations** from texts such as job descriptions or CVs. It uses a transformer and compares its embedding using cosine similarity. ## Installation ```bash pip install esco-skill-extractor ``` ## Installation via Docker ```bash docker run -it -p 5000:5000 konstantinospetrakis/esco-skill-extractor ``` ## Usage ### Via python ```python from esco_skill_extractor import SkillExtractor # Don't be scared, the 1st time will take longer to download the model and create the embeddings. skill_extractor = SkillExtractor() ads = [ \"We are looking for a software engineer with experience in Java and Python.\", \"We are looking for a devops engineer. Containerization tools such as Docker is a must. AWS is a plus.\"",
     "source_url": "https://github.com/KonstantinosPetrakis/esco-skill-extractor/blob/cf2877d462f99a4435df3faf3d6937e1859f6e3f/README.md",
     "edition_flags": [
       "docker",
       "recruit",
       "api"
-    ]
+    ],
+    "retention_note": "Full public text was retrieved and hash recorded; long quoted excerpt removed after review. Use pinned source URL."
   },
   "license_file": {
     "path": "LICENSE",
@@ -212,5 +212,7 @@
   },
   "bank_membership_layers": [],
   "bank_status": "NEW",
-  "adoption_evidence": []
+  "adoption_evidence": [],
+  "editorial_reviewed": true,
+  "reviewed_at": "2026-09-13"
 }
