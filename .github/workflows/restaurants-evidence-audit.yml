@@ -30,7 +30,7 @@ jobs:
           code=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
           marker='for attempt in range(5):\n'; assert marker in code
           code=code.split(marker,1)[0]
-          code=code.replace("with urllib.request.urlopen(req,timeout=70) as r:return json.load(r)","with urllib.request.urlopen(req,timeout=70) as r: payload=r.read()\n                return json.loads(payload) if payload.strip() else []")
+          code=code.replace("with urllib.request.urlopen(req,timeout=70) as r:return json.load(r)","with urllib.request.urlopen(req,timeout=70) as r:return json.loads(r.read() or b'[]')")
           code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:300],'path':path}")
           code=code.replace("    return {'_error':'retries'}","        except (json.JSONDecodeError,urllib.error.URLError,TimeoutError) as e:\n            if attempt<3:time.sleep(3);continue\n            return {'_error':type(e).__name__,'path':path}\n    return {'_error':'retries'}")
           code=code.replace("if not obj.get('content'):","if not isinstance(obj,dict) or not obj.get('content'):")
