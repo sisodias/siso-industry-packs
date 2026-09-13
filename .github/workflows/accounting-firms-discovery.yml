@@ -1,0 +1,68 @@
+name: Accounting firms public repository discovery
+on:
+  push:
+    branches: [research/accounting-firms-20260913]
+    paths: [packs/accounting_firms/evidence/query-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: accounting-firms-public-discovery
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REQUEST_REVISION: ${{ github.sha }}
+    steps:
+      - name: Search public repositories and preserve deduplicated evidence
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64,json,os,pathlib,re,time,urllib.request,urllib.parse,urllib.error,datetime
+          REPO='sisodias/siso-industry-packs';BRANCH='research/accounting-firms-20260913';ROOT='packs/accounting_firms/evidence/'
+          API='https://api.github.com';TOKEN=os.environ['GH_TOKEN']
+          def api(path,data=None,method=None):
+              assert path.startswith('/') and not path.startswith('//')
+              if data is not None:assert path.startswith('/repos/'+REPO+'/git/')
+              for n in range(5):
+                  try:
+                      req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-accounting-public-research','X-GitHub-Api-Version':'2022-11-28'})
+                      with urllib.request.urlopen(req,timeout=60) as r:return json.load(r)
+                  except urllib.error.HTTPError as e:
+                      if e.code in (403,429,500,502,503,504) and n<4:time.sleep(15*(n+1));continue
+                      return {'_error':e.code}
+          req=api('/repos/'+REPO+'/contents/'+ROOT+'query-request.json?ref='+os.environ['REQUEST_REVISION'])
+          cfg=json.loads(base64.b64decode(req['content']))
+          assert 1<=cfg['round']<=10 and 1<=len(cfg['queries'])<=40
+          seen=set(s.lower() for s in cfg.get('seen',[])); results=[]; unique={}
+          for q in cfg['queries']:
+              assert q['lane'] in ('A','B','C','dependency','maintainer','registry')
+              n=min(max(int(q.get('per_page',10)),1),30)
+              params={'q':q['query']+' is:public','sort':'stars','order':'desc','per_page':n,'page':q.get('page',1)}
+              path='/search/repositories?'+urllib.parse.urlencode(params)
+              data=api(path)
+              items=[{k:x.get(k) for k in ('full_name','html_url','description','stargazers_count','license','default_branch','pushed_at','archived','topics')} for x in data.get('items',[]) if not x.get('private')]
+              results.append(dict(q,api_url=API+path,total_count=data.get('total_count'),incomplete_results=data.get('incomplete_results'),retrieval_error=data.get('_error'),items=items))
+              for x in items:unique[x['full_name'].lower()]=x
+              time.sleep(2.1)
+          observed=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          result={'round':cfg['round'],'observed_at':observed,'scope':cfg.get('scope'),'queries':results,'unique_results':list(unique.values()),'unique_result_count':len(unique),'new_relative_to_declared_seen':[x['full_name'] for k,x in unique.items() if k not in seen],'seen_count':len(seen),'source_kind':'GitHub REST repository search; no code executed; search appearance alone is not examination'}
+          out=pathlib.Path('discovery-evidence');out.mkdir(exist_ok=True)
+          name='search-round-'+str(cfg['round']).zfill(2)+'.json';text=json.dumps(result,ensure_ascii=False,indent=2)+'\n';(out/name).write_text(text)
+          entries=[{'path':ROOT+name,'mode':'100644','type':'blob','content':text}]
+          ref=api('/repos/'+REPO+'/git/ref/heads/'+BRANCH);parent=ref['object']['sha'];old=api('/repos/'+REPO+'/git/commits/'+parent)
+          tree=api('/repos/'+REPO+'/git/trees',{'base_tree':old['tree']['sha'],'tree':entries},'POST')
+          commit=api('/repos/'+REPO+'/git/commits',{'message':'research(accounting_firms): preserve discovery round '+str(cfg['round']),'tree':tree['sha'],'parents':[parent]},'POST')
+          moved=api('/repos/'+REPO+'/git/refs/heads/'+BRANCH,{'sha':commit['sha'],'force':False},'PATCH')
+          if '_error' in moved:raise RuntimeError('Branch moved concurrently; results retained in artifact')
+          print('round',cfg['round'],'queries',len(results),'unique',len(unique),'new',len(result['new_relative_to_declared_seen']),'commit',commit['sha'])
+          PY
+      - name: Preserve discovery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accounting-firms-discovery
+          path: discovery-evidence/
+          retention-days: 30
