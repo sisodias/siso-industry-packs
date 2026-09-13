@@ -1,0 +1,90 @@
+name: Accounting firms public source text receipts
+on:
+  push:
+    branches: [research/accounting-firms-20260913]
+    paths: [packs/accounting_firms/evidence/source-file-request.json]
+permissions:
+  contents: read
+jobs:
+  source-text:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Read public Git objects without checkout, installation or upstream execution
+        env:
+          REQUEST_REVISION: ${{ github.sha }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,datetime,hashlib,json,os,pathlib,re,shutil,subprocess,tempfile,urllib.request
+          REPO='sisodias/siso-industry-packs';ROOT='packs/accounting_firms/evidence/'
+          OUT=pathlib.Path('source-text-evidence');OUT.mkdir(exist_ok=True)
+          def raw(repo,rev,path):
+              with urllib.request.urlopen('https://raw.githubusercontent.com/'+repo+'/'+rev+'/'+path,timeout=90) as r:return r.read()
+          cfg=json.loads(raw(REPO,os.environ['REQUEST_REVISION'],ROOT+'source-file-request.json'))
+          request=json.loads(raw(REPO,os.environ['REQUEST_REVISION'],ROOT+'audit-request.json'))
+          names=list(dict.fromkeys(request['repositories']+cfg.get('additional_repositories',[])))
+          assert len(names)<=175 and all(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',n) for n in names)
+          bankrev='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          bank={};sources=[]
+          for path in ['bank/bank_capability_top.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']:
+              data=raw('sisodias/siso-repo-bank',bankrev,path)
+              bank[path]=[json.loads(x) for x in data.splitlines() if x.strip()]
+              sources.append({'path':path,'rows':len(bank[path]),'sha256':hashlib.sha256(data).hexdigest()})
+          def names_in(row):
+              found=set()
+              for k,v in row.items():
+                  if not isinstance(v,str):continue
+                  if k in ('full_name','repo_full_name','repository_full_name','repository','repo') and re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v):found.add(v.lower())
+                  m=re.search(r'https://github.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)',v)
+                  if m:found.add(m.group(1).removesuffix('.git').lower())
+              return found
+          indexes={}
+          for p,rows in bank.items():
+              index={}
+              for row in rows:
+                  for n in names_in(row):index.setdefault(n,[]).append(row)
+              indexes[p]=index
+          def collect(index,name):
+              d={'requested_full_name':name,'observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source_kind':'Public HTTPS Git objects; no checkout or upstream execution','bank_revision':bankrev,'bank_rows':{p:ix.get(name.lower(),[]) for p,ix in indexes.items()}}
+              d['bank_status']='ALREADY IN THE BANK' if any(d['bank_rows'].values()) else 'NEW'
+              with tempfile.TemporaryDirectory() as folder:
+                  env={'PATH':os.environ['PATH'],'HOME':folder,'GIT_CONFIG_NOSYSTEM':'1','GIT_CONFIG_GLOBAL':'/dev/null','GIT_TERMINAL_PROMPT':'0'}
+                  root=pathlib.Path(folder)/'repo'
+                  def run(args,timeout=90):
+                      p=subprocess.run(['git']+args,cwd=folder,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout,check=False)
+                      if p.returncode:raise RuntimeError('git command failed (no credentials used): '+p.stderr.decode('utf-8','replace')[-500:])
+                      return p.stdout
+                  try:
+                      run(['-c','protocol.version=2','clone','--depth=1','--filter=blob:none','--no-checkout','https://github.com/'+name+'.git',str(root)],120)
+                      head=run(['-C',str(root),'show','-s','--format=%H%n%cI%n%s','HEAD']).decode().splitlines()
+                      d.update(revision=head[0],last_commit=head[1],last_commit_subject=head[2] if len(head)>2 else '',commit_url='https://github.com/'+name+'/commit/'+head[0])
+                      paths=run(['-C',str(root),'ls-tree','-r','--name-only','HEAD']).decode().splitlines()
+                      rootfiles=[p for p in paths if '/' not in p]
+                      reads=[p for p in rootfiles if re.match(r'(?i)^readme(?:\.|$)',p)][:1]
+                      licenses=[p for p in rootfiles if re.match(r'(?i)^(license|licence|copying|copyright)(?:\.|$)',p)]
+                      nested=[p for p in paths if '/' in p and re.search(r'(?i)(^|/)(license|licence|copying)(?:\.|$)',p)]
+                      selected=reads+licenses+ [p for p in rootfiles if p in ('pyproject.toml','requirements.txt','package.json','composer.json','go.mod','Cargo.toml')][:2]
+                      if name in cfg.get('deep_license_repositories',[]):selected+=nested[:8]
+                      d['license_paths_found']=licenses+nested;d['files']={}
+                      for path in dict.fromkeys(selected):
+                          b=run(['-C',str(root),'show','HEAD:'+path])
+                          islicense=path in licenses or path in nested
+                          limit=150000 if islicense else 18000
+                          d['files'][path]={'source_url':'https://github.com/'+name+'/blob/'+head[0]+'/'+path,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'text':b.decode('utf-8','replace')[:limit],'truncated':len(b.decode('utf-8','replace'))>limit,'is_license':islicense}
+                      d['root_license_absence']=not bool(licenses)
+                  except (RuntimeError,subprocess.TimeoutExpired) as e:d['retrieval_error']=str(e)
+              (OUT/('git-source-'+str(index).zfill(3)+'.json')).write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+              print(index,name,'ok' if d.get('revision') else 'failed',flush=True)
+              return {'index':index,'repository':name,'revision':d.get('revision'),'last_commit':d.get('last_commit'),'root_license_absence':d.get('root_license_absence'),'bank_status':d['bank_status'],'error':d.get('retrieval_error')}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:receipts=list(pool.map(lambda x:collect(*x),enumerate(names,1)))
+          (OUT/'git-source-receipt.json').write_text(json.dumps({'observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'requested':len(names),'retrieved':sum(bool(r['revision']) for r in receipts),'bank_revision':bankrev,'bank_sources':sources,'repos':receipts,'application_code_executed':False,'research_only':True},indent=2)+'\n')
+          PY
+      - name: Preserve source receipts even after partial failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accounting-firms-source-text
+          path: source-text-evidence/
+          retention-days: 30
+          if-no-files-found: warn
