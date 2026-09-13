@@ -1,0 +1,29 @@
+name: Recruiting staffing pack publication
+on:
+  push:
+    branches: [main]
+    paths: [packs/recruiting_staffing/evidence/publication-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: recruiting-staffing-pack-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPOSITORY: ${{ github.repository }}
+      REQUEST_REVISION: ${{ github.sha }}
+    steps:
+      - name: Render reviewed public research and preserve shared registries
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          revision='082c8b26866708392a49cf3edf75d97dd4b9b774'
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/scripts/recruiting-staffing-publish.py'
+          with urllib.request.urlopen(url,timeout=90) as stream:source=stream.read().decode()
+          exec(compile(source,'pinned-siso-research-publisher.py','exec'))
+          PY
