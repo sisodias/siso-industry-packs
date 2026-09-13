@@ -1,0 +1,33 @@
+{
+  "schema_version":"1.0.0",
+  "industry":"music_creation",
+  "date":"2026-09-13",
+  "status":"preliminary_unselected_unexecuted",
+  "evidence_class":"analysis",
+  "source_documents":["01-person.md","02-workflow.md","03-companies.md","04-oss-candidates.md","05-superapp.md"],
+  "spine":[
+    {"object":"Project","owns":"Stable local identity and confirmed brief","does_not_own":"Native musical editing"},
+    {"object":"Asset","owns":"Byte identity, locations and parent/provenance references","does_not_own":"Automatic rights clearance"},
+    {"object":"Revision","owns":"Immutable project/asset manifest and separate acceptance/restore evidence","does_not_own":"Assumed sound equivalence"},
+    {"object":"Conversation","owns":"Selected consented source pointers and confirmed request/approval events","does_not_own":"Broad private inbox synchronization or automatic external send"},
+    {"object":"RightsRecord","owns":"Supplied provenance, credits and attributed decisions","does_not_own":"Autonomous ownership, legal or payout determination"},
+    {"object":"Release","owns":"Pinned revision/rights version, destination manifest and separate receipts","does_not_own":"External acceptance, publication or payment authority"}
+  ],
+  "component_map":[
+    {"stages":["S01"],"selected_oss":null,"verdict":null,"candidate_class":"selected-message and attachment import","custom_boundary":"confirmed request to stable project/revision","baseline":"manual paste and checklist","decision":"pending_broad_sweep"},
+    {"stages":["S02","S04"],"selected_oss":null,"verdict":null,"candidate_class":"native project parsers and interchange validators; whole DAWs as benchmarks","custom_boundary":"read-only project inventory and dependency references","baseline":"existing DAW and native collection; commercial companion comparisons in Stage3","decision":"pending_broad_sweep"},
+    {"stages":["S03"],"selected_oss":null,"verdict":null,"candidate_class":"local sample catalogue and metadata readers","custom_boundary":"asset to supplied provenance","baseline":"existing DAW browser and companion","decision":"pending_broad_sweep"},
+    {"stages":["S05"],"selected_oss":null,"verdict":null,"candidate_class":"local media processing and measurement","custom_boundary":"reproducible job and accepted derived-asset links","baseline":"native DAW operations","decision":"pending_broad_sweep"},
+    {"stages":["S06"],"selected_oss":null,"verdict":null,"candidate_class":"snapshot backup and restore tools","custom_boundary":"revision manifest and actual restore evidence","baseline":"existing user backup method","decision":"pending_broad_sweep"},
+    {"stages":["S07"],"selected_oss":null,"verdict":null,"candidate_class":"delivery-package and metadata validation","custom_boundary":"approved revision to expected files and receipt","baseline":"native export and existing delivery companion","decision":"pending_broad_sweep"},
+    {"stages":["S08","S09"],"selected_oss":null,"verdict":null,"candidate_class":"rights identifiers, metadata formats and export templates","custom_boundary":"decision provenance and destination projection","baseline":"existing spreadsheet and external distributor","decision":"pending_broad_sweep"},
+    {"stages":["S10"],"selected_oss":null,"verdict":null,"candidate_class":"statement import and consent-bound exports","custom_boundary":"release-linked observations and accounting references","baseline":"spreadsheet and existing financial authority","decision":"pending_broad_sweep"}
+  ],
+  "deployment":{"target":"user_owned_laptop","local_first":true,"siso_servers":false,"default_network_activity":"none for the proposed core","external_actions":"explicit user-controlled imports, sends and submissions only","os":null,"architecture":null,"minimum_ram_gb":null,"gpu_required":null,"storage_required_gb":null,"cost_per_deployment_usd":null,"installed":false,"tested":false},
+  "safety_boundaries":["approved scan roots only","unchanged originals","staging for derived files","explicit incomplete or unsupported states","no plugin loading merely for inventory","no private account harvest","no automatic rights clearance or payout","no hosted fallback"],
+  "resource_measurements_required":["idle memory","scan peak memory","job peak memory","CPU/GPU use","job duration","scratch and retained storage","DAW performance impact","model download footprint where applicable"],
+  "gap_ids":["client_fit_unmeasured","wide_sweep_and_selection_incomplete","cross_daw_fidelity_unverified","rights_and_external_authority","local_ai_resources_and_rights_unverified","differentiation_and_maintenance_unproven"],
+  "acceptance":{"state":"proposed_not_run","originals_unchanged":null,"correct_revision":null,"complete_package_or_explicit_blockers":null,"separate_restore_pass":null,"creator_approved_audio":null,"net_human_effort_improvement":null,"unauthorized_network_or_external_actions":null},
+  "implementation_decision":"not_justified_yet",
+  "software_written_or_deployed":false
+}
