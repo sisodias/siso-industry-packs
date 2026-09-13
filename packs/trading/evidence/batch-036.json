@@ -1,0 +1,1059 @@
+[
+  {
+    "full_name": "khata-dev/khata",
+    "requested_name": "khata-dev/khata",
+    "id": 1215907349,
+    "url": "https://github.com/khata-dev/khata",
+    "stars": 3,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d7f5f37ff588ffc90b13a3af15bd18283cffef33",
+    "last_commit_date": "2026-04-21T04:36:31Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open-source trading journal for Indian brokers. Self-hosted, broker-synced, attachment-friendly.",
+    "language": "Python",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright 2026 khata contributors"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "### The open-source trading journal for Indian markets.",
+      "## Why khata exists",
+      "## What's in the box today",
+      "### Command-line sync",
+      "### Local web UI",
+      "### Stats at a glance",
+      "## Features",
+      "## Quick start",
+      "### With `uv` (recommended)",
+      "# edit .env: DHAN_CLIENT_ID and DHAN_ACCESS_TOKEN",
+      "### With Docker",
+      "### Getting Dhan API credentials",
+      "## Supported brokers",
+      "## Architecture",
+      "## Design principles",
+      "## FAQ",
+      "## Contributing",
+      "## Security",
+      "## Licence",
+      "## Acknowledgments"
+    ],
+    "recent_commit_count": 13,
+    "recent_authors_sample50": [
+      "SwathiMystery",
+      "dependabot[bot]"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "assets",
+      "docker-compose.yml",
+      "docs",
+      "khata",
+      "pyproject.toml",
+      "tests",
+      "uv.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/khata-dev/khata/blob/d7f5f37ff588ffc90b13a3af15bd18283cffef33/README.md",
+        "sha256": "494a52910886f8849b9eb50d173e28f6567a293aefef40fef983e8e57138fbb7",
+        "bytes": 12011
+      },
+      "LICENSE": {
+        "url": "https://github.com/khata-dev/khata/blob/d7f5f37ff588ffc90b13a3af15bd18283cffef33/LICENSE",
+        "sha256": "4710b9ead3a8ab19f2f616ce615e4480f0fcf911302f63ec57130da7d4cf096d",
+        "bytes": 10705
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/khata-dev/khata/blob/d7f5f37ff588ffc90b13a3af15bd18283cffef33/pyproject.toml",
+        "sha256": "77d722ba90fcb7d94d9e3a3e04004cbbeabed68b7991b12759e3f33bdd235b1e",
+        "bytes": 1604
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/khata-dev/khata/commit/d7f5f37ff588ffc90b13a3af15bd18283cffef33",
+      "metadata": "https://api.github.com/repos/khata-dev/khata"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "### The open-source trading journal for Indian markets. Self-hosted. Broker-synced. Your tokens never leave your machine. [![CI](https://github.com/khata-dev/khata/actions/workflows/ci.yml/badge.svg)](https://github.com/khata-dev/khata/actions/workflows/ci.yml) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-0f172a.svg)](LICENSE) [![Python 3.11+](https://img.shields.io/badge/python-3.11+-0f172a.svg)](pyproject.toml) [![Status: alpha](https://img.shields.io/badge/status-alpha-fbbf24.svg)](docs/ROADMAP.md) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e.svg)](CONTRIBUTING.md) [![Zero telemetry](https://img.shields.io/badge/telemetry-zero-0f172a.svg)](docs/SECURITY.md) [**Quick start**](#quick-start) \u00b7 [**Features**](#features) \u00b7 [**Supported brokers**](#supported-brokers) \u00b7 [**Architecture**](#architecture) \u00b7 [**Roadmap**](docs/ROADMAP.md) \u00b7 [**Contributing**](CONTRIBUTING.md) --- **khata** (\u0916\u093e\u0924\u093e \u2014 Hindi for *ledger*) is a self-hosted trading journal built for Indian retail traders. It pulls executions directly from your broker, reconstructs round-trip trades with correct fees, and gives you a fast, keyboard-friendly UI to review your edge \u2014 without surrendering your broker tokens or P&L data to a foreign SaaS. ## Why khata exists Indian retail traders have had to pick one of three bad options: - **Your broker's built-in console** \u2014 scoped to that broker, shallow journaling, no cross-broker view. - **International SaaS** (Tradezella, Tradervue, TradesViz, TWI Journal) \u2014 closed source, no Indian broker APIs, no Indian tax logic, and you upload your P&L to foreign infrastructure. - **Spreadsheets** \u2014 work until trade 200, then the FIFO math quietly breaks. khata is the fourth option: the data and the code live on your machine,",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<p>Self-hosted. Broker-synced. Your tokens never leave your machine.</p>",
+      "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-0f172a.svg)](LICENSE)",
+      "[![Python 3.11+](https://img.shields.io/badge/python-3.11+-0f172a.svg)](pyproject.toml)",
+      "**khata** (\u0916\u093e\u0924\u093e \u2014 Hindi for *ledger*) is a self-hosted trading journal built for Indian retail traders. It pulls executions directly from your broker, reconstructs round-trip trades with correct fees, and gives you a fast, keyboard-friendly UI to review your e",
+      "| | Auto-sync<br/>Indian brokers | Self-hosted | Open source | Journal +<br/>attachments | Indian tax |",
+      "### Local web UI",
+      "- **Auto-sync from your broker.** Historical backfill + intraday re-sync, paginated where the API requires it.",
+      "- **Analytics** *(v0.3)* \u2014 equity curve, R-multiple histogram, strategy/psych breakdowns.",
+      "### With Docker",
+      "docker compose up -d",
+      "docker compose exec khata khata sync --broker dhan",
+      "\u2502  (both local-only)    \u2502   No telemetry. No cloud.",
+      "Stack choices are intentionally boring \u2014 Python 3.11+, FastAPI, SQLite, Jinja2, HTMX. You can understand the whole codebase in an afternoon and patch it in an hour.",
+      "1. **Self-hosted, always.** Data stays on your machine. No exceptions.",
+      "No. Runs on your laptop with zero dependencies beyond Python. If you want mobile access, Tailscale your laptop and use the PWA \u2014 no public tunnel required.",
+      "See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup, local test commands, and PR conventions.",
+      "## Licence",
+      "Apache 2.0 \u2014 see [`LICENSE`](LICENSE)."
+    ],
+    "dependency_repos": [
+      "khata-dev/khata"
+    ]
+  },
+  {
+    "full_name": "anvilfilbert/Auto-Crypto-Tradingjournal",
+    "requested_name": "anvilfilbert/Auto-Crypto-Tradingjournal",
+    "id": 1230850495,
+    "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal",
+    "stars": 3,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d",
+    "last_commit_date": "2026-06-05T16:43:56Z",
+    "archived": false,
+    "fork": false,
+    "description": "Self-hosted crypto futures journal for CEXs - wide and deep analytics - Crypto Trading course (Beginner to Pro; Standalone-Module) - AI trader",
+    "language": "HTML",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Trading Journal",
+      "## \ud83c\udfac Feature Tour",
+      "### \ud83d\udd2d Setup Scanner",
+      "### \ud83d\udee1 Risk Dashboard",
+      "### \ud83e\udde0 AI Architecture",
+      "## Features",
+      "## Tech Stack",
+      "## Key Modules",
+      "## Recent Additions",
+      "## Setup",
+      "## License"
+    ],
+    "recent_commit_count": 651,
+    "recent_authors_sample50": [
+      "anvilfilbert"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/issues/17",
+        "createdAt": "2026-05-09T11:08:34Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-06-05T15:55:42Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/issues/3",
+        "createdAt": "2026-05-06T12:48:19Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-08T19:46:19Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-05-08T20:00:45Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-06-05T15:54:23Z",
+              "authorAssociation": "OWNER"
+            },
+            {
+              "createdAt": "2026-06-05T15:54:40Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "A",
+        "query": "self hosted trade journal"
+      }
+    ],
+    "root_entries": [
+      ".agents",
+      ".claude",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".mcp.json",
+      "CLAUDE.md",
+      "LICENSE",
+      "README.md",
+      "SECURITY.md",
+      "agent_chart_draw.py",
+      "agent_data_collector.py",
+      "agent_data_interpreter.py",
+      "agent_data_reviewer.py",
+      "agent_market_sentiment.py",
+      "agent_orchestrator.py",
+      "agent_risk_mgmt.py",
+      "agent_trade_monitor.py",
+      "agent_trade_prep.py",
+      "agent_types.py",
+      "ai_advisor.py",
+      "ai_blindspots.py",
+      "ai_calibration.py",
+      "ai_call.py",
+      "ai_client.py",
+      "ai_hindsight.py",
+      "ai_limit.py",
+      "ai_live_trade.py",
+      "ai_pattern_detector.py",
+      "ai_rulebook.py",
+      "ai_scanner.py",
+      "ai_score_comparison.py",
+      "ai_self_review.py",
+      "ai_trade_grader.py",
+      "analytics.py",
+      "app.py",
+      "backtest_engine.py",
+      "backtest_metrics.py",
+      "backtest_optimizer.py",
+      "backtest_quality.py",
+      "backups",
+      "bear_phase.py",
+      "bitget_client.py",
+      "bitget_sync.py",
+      "blofin_client.py",
+      "blofin_sync.py",
+      "ccxt_client.py",
+      "cerebras_client.py",
+      "chart_candles.py",
+      "chart_confluence.py",
+      "chart_context.py",
+      "chart_cpr.py",
+      "chart_divergence.py",
+      "chart_fvg.py",
+      "chart_indicators.py",
+      "chart_mtf_ema.py",
+      "chart_patterns.py",
+      "chart_rsi.py",
+      "chart_session.py",
+      "chart_sr.py",
+      "chart_supply_demand.py",
+      "chart_vmc_cipher.py",
+      "chart_vmc_cipher_a.py",
+      "chart_vmc_draw.py",
+      "chart_vmc_signals.py",
+      "chart_volume_profile.py",
+      "chart_vwap.py",
+      "chart_wyckoff.py",
+      "coinalyze_client.py",
+      "coingecko_client.py",
+      "consensus.py",
+      "constants.py",
+      "data_sources.py",
+      "database.py",
+      "deribit_client.py",
+      "docs",
+      "dspy_modules",
+      "entry_watcher.py",
+      "exposure_monitor.py",
+      "finnhub_client.py",
+      "gemini_client.py",
+      "grok_client.py",
+      "groq_client.py",
+      "helpers.py",
+      "importer.py",
+      "indicators.py",
+      "journal_paused.py",
+      "liquidation_client.py",
+      "liquidation_levels.py",
+      "market_context.py",
+      "market_regime.py",
+      "mfe_mae.py",
+      "monitor_scheduler.py",
+      "nansen_client.py",
+      "onchain_client.py",
+      "openai_compat_client.py",
+      "openrouter_client.py",
+      "position_risk_monitor.py",
+      "prompt_builder.py",
+      "prompt_fragments.py",
+      "requirements.txt",
+      "risk_analytics.py",
+      "routes",
+      "scanner_criteria.py",
+      "scanner_event_trigger.py",
+      "scanner_invalidator.py",
+      "scanner_prompts.py",
+      "scanner_scheduler.py",
+      "scanner_stages.py",
+      "scanner_watchlist.py",
+      "scripts",
+      "self_review_scheduler.py",
+      "setup_classifier.py",
+      "shadow_runner.py",
+      "signal_scorer.py",
+      "skills-lock.json",
+      "static",
+      "sync_base.py",
+      "system_state.py",
+      "telegram_notify.py",
+      "templates",
+      "tests",
+      "token_log.py",
+      "tp_ladder.py",
+      "trade_history.py",
+      "trade_utils.py",
+      "trading-journal-factsheet.html",
+      "trading-journal-factsheet.pdf",
+      "trading-journal.service",
+      "trading",
+      "training",
+      "volume_baseline.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/README.md",
+        "sha256": "0236ebcd918c927c5c208c39c0c544b7d811eee120d6fd4d20ca4623be0a40ac",
+        "bytes": 24611
+      },
+      "LICENSE": {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "requirements.txt": {
+        "url": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/blob/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d/requirements.txt",
+        "sha256": "c2ccdaf56d447f30741b40735e400c9b230f3b680de0c2cc7b5e6468ec7c7d61",
+        "bytes": 197
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/anvilfilbert/Auto-Crypto-Tradingjournal/commit/ac26f5efcd0fd88e3e2fb2769d9b7ca2d13f287d",
+      "metadata": "https://api.github.com/repos/anvilfilbert/Auto-Crypto-Tradingjournal"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Trading Journal > **Disclaimer:** Vibe-coded with [Claude Code](https://claude.ai/code). Not reviewed by professional security experts. Use at your own risk. > **Disclaimer: Automatic AI trading** > I recommend to use paper trading (integrated feature; no real money), to get a good knowledge about scoring decisions and workflows. Risk (if hit at hard SL) ist hard-coded: max. 1% of port-size on single entry, max. 2% of port-size if DCA strategy is activated. > **This tool was made for learning purposes. If you use the trading feature with real money - your decision...** Self-hosted crypto futures trading journal with live exchange sync, a 7-agent AI pipeline, interactive Telegram assistant, and deep performance analytics. Runs on a Raspberry Pi 5 (or any Linux box). The trading module can be used completely standalone or integrated into the Journal. See README in training-folder. Architecture Doc \u00b7 User Guide \u00b7 Module Map --- ## \ud83c\udfac Feature Tour The autonomous Bitget chain \u2014 equity, breakers, open positions, decision log, and the catastrophe-hedge state all in one screen: ### \ud83d\udd2d Setup Scanner Three-stage pipeline filters 300+ symbols every",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Self-hosted crypto futures trading journal with live exchange sync, a 7-agent AI pipeline, interactive Telegram assistant, and deep performance analytics. Runs on a Raspberry Pi 5 (or any Linux box).",
+      "- **Setup Scanner** \u2014 100+ USDT-M symbols, 3-stage pipeline (confluence \u2192 quality gate \u2192 Haiku/Sonnet), HTF\u2192LTF (1D/4H/1H) breakdown, Telegram alerts with annotated chart, cancel button",
+      "- **Hermes Bot** \u2014 interactive Telegram assistant (separate from alert bot); queries journal API, sends charts, runs scans, tracks behavioral stats",
+      "- **Scanner Stale-Alert Guard** \u2014 4-layer price proximity filter drops setups where entry is missing, >20% from current price, >5% directional drift, or price fetch fails; fixes false Telegram alerts on stale scanner setups",
+      "- **\ud83c\udf93 Training Module** \u2014 standalone-capable Flask sub-app at `/training`. 58-lesson Beginner-to-Pro crypto trading course across 6 tiers (Foundations \u2192 Chart Reading \u2192 Indicators \u2192 Advanced \u2192 Macro \u2192 Execution + Capstone), ~590 quiz questions, 24 dark-themed ",
+      "| Backend | Python 3.13 / Flask 3.1 / SQLite WAL |",
+      "| Alerts | Telegram Bot API |",
+      "- `trading/config.py` \u2014 knobs (env-driven) + runtime state machine + L-1 read-path accessors (learned_params \u2192 constants fallback)",
+      "- `trading/learned.py` + `trading/learner_symbol.py` \u2014 L-0 learned_params store + per-symbol modifier learner",
+      "- `trading/daily_report.py` \u2014 7-section daily Telegram digest builder",
+      "- **6 Self-Learners (L-0 \u2192 L-5)** \u2014 per-symbol modifier, session/DoW/hour buckets, consensus_min_score (A-B gated), TP/SL ATR distance from MFE/MAE, Kelly risk + time-stop. Every write gates through R-5 Bayesian credible interval + A-B backtest validator; oper",
+      "- **Daily Telegram digest** \u2014 7 sections: Performance (24h/7d/30d) \u00b7 Reminders \u00b7 Learner activity \u00b7 Noise gates \u00b7 Edge-decay watch (per-archetype CUSUM + Page-Hinkley) \u00b7 Top loss patterns \u00b7 Execution quality. Fires at first cycle \u2265 09:00 UTC.",
+      "- **Schema migrations 68-71** \u2014 `positions.funding_paid_usd`, `liq_distance_atr`, `postmortem_*`, `mfe_atr_4h`/`mae_atr_4h`, `intended_entry`/`slippage_bps`. New tables: `learned_params`, `learner_log`, `vpin_snapshot`. All migrations idempotent.",
+      "- **PO3 framework: FVG + Premium/Discount + Kill Zones (2026-05-23)** \u2014 Fair Value Gap detection as a 13th signal; range-position score modifier (Long in discount/premium = \u00b10.3); institutional session timing (Silver Bullet +0.3, NY AM/London +0.2, dead hour -",
+      "python3 app.py        # or: sudo systemctl enable --now trading-journal",
+      "## License",
+      "GNU General Public License v3.0 \u2014 see [LICENSE](LICENSE)."
+    ],
+    "dependency_repos": [
+      "anvilfilbert/Auto-Crypto-Tradingjournal.git"
+    ]
+  },
+  {
+    "full_name": "Jeanorochka/julia_tradediary_analysis",
+    "requested_name": "Jeanorochka/julia_tradediary_analysis",
+    "id": 1365247505,
+    "url": "https://github.com/Jeanorochka/julia_tradediary_analysis",
+    "stars": 40,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "27c841f76cc77e29a467bcf3ac8d7dea0e9b9fdd",
+    "last_commit_date": "2026-09-11T05:10:55Z",
+    "archived": false,
+    "fork": false,
+    "description": "\u0412\u0438\u0437\u0443\u0430\u043b \u0438 \u044d\u043a\u0441\u0442\u0440\u0430\u043f\u043e\u043b\u044f\u0446\u0438\u044f \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430 \u0441\u0434\u0435\u043b\u043e\u043a \u0441 \u0414\u0436\u0443\u043b\u0438\u0435\u0439 ~",
+    "language": "Julia",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Trade Diary Analytics",
+      "## Requirements",
+      "## \u0414\u043b\u044f \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430 \u0438 \u043c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0434\u043e\u0445\u043e\u0434\u043d\u043e\u0441\u0442\u0438 :"
+    ],
+    "recent_commit_count": 9,
+    "recent_authors_sample50": [
+      "Jeanorochka"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      "README.md",
+      "anal.jl"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Jeanorochka/julia_tradediary_analysis/blob/27c841f76cc77e29a467bcf3ac8d7dea0e9b9fdd/README.md",
+        "sha256": "bbbf8c16370e2728910da68e5726b6bb12e1044c0ff92f465dda8102b4d59c8d",
+        "bytes": 930
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Jeanorochka/julia_tradediary_analysis/commit/27c841f76cc77e29a467bcf3ac8d7dea0e9b9fdd",
+      "metadata": "https://api.github.com/repos/Jeanorochka/julia_tradediary_analysis"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Trade Diary Analytics \u041d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442 \u0434\u043b\u044f \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0442\u043e\u0440\u0433\u043e\u0432\u043e\u0433\u043e \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430 ```bash https://github.com/Jeanorochka/moex-trade-diary ``` ## Requirements ```bash julia -e \"import Pkg; Pkg.add([\\\"XLSX\\\", \\\"DataFrames\\\", \\\"Plots\\\", \\\"JSON3\\\"])\"",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "julia -e \"import Pkg; Pkg.add([\\\"XLSX\\\", \\\"DataFrames\\\", \\\"Plots\\\", \\\"JSON3\\\"])\"",
+      "1. Python \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u0435\u0442 \u0441\u0434\u0435\u043b\u043a\u0438 \u0431\u0440\u043e\u043a\u0435\u0440\u0430 \u0432 Excel."
+    ],
+    "dependency_repos": [
+      "Jeanorochka/moex-trade-diary"
+    ]
+  },
+  {
+    "full_name": "Jeanorochka/moex-trade-diary",
+    "requested_name": "Jeanorochka/moex-trade-diary",
+    "id": 1365192073,
+    "url": "https://github.com/Jeanorochka/moex-trade-diary",
+    "stars": 15,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "208029f5bab7398aa91ce98f0b67c6e2ffb70dae",
+    "last_commit_date": "2026-09-11T05:10:20Z",
+    "archived": false,
+    "fork": false,
+    "description": "\u0418\u043c\u043f\u043e\u0440\u0442 \u0441\u0434\u0435\u043b\u043e\u043a \u0432 \u0444\u043e\u0440\u043c\u0430\u0442\u0435 \u0442\u043e\u0440\u0433\u043e\u0432\u043e\u0433\u043e \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430 (MoEx only)",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# \u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0441\u0434\u0435\u043b\u043e\u043a"
+    ],
+    "recent_commit_count": 7,
+    "recent_authors_sample50": [
+      "Jeanorochka"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      "README.md",
+      "config.toml",
+      "main.py",
+      "pyproject.toml",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Jeanorochka/moex-trade-diary/blob/208029f5bab7398aa91ce98f0b67c6e2ffb70dae/README.md",
+        "sha256": "4aba425da93f9a6ebdf750dca0036c68484019f3192bd0cae9b57cc2f6ab09e0",
+        "bytes": 1266
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/Jeanorochka/moex-trade-diary/blob/208029f5bab7398aa91ce98f0b67c6e2ffb70dae/pyproject.toml",
+        "sha256": "53e7828b34f556ae5ddd8791f3e54022cf4b7fc437f70a7463b99b4ab0f18bf9",
+        "bytes": 559
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Jeanorochka/moex-trade-diary/commit/208029f5bab7398aa91ce98f0b67c6e2ffb70dae",
+      "metadata": "https://api.github.com/repos/Jeanorochka/moex-trade-diary"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# \u0414\u043d\u0435\u0432\u043d\u0438\u043a \u0441\u0434\u0435\u043b\u043e\u043a \u041d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 Python-\u043f\u0440\u043e\u0435\u043a\u0442 \u0434\u043b\u044f \u0432\u044b\u0433\u0440\u0443\u0437\u043a\u0438 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 \u0441\u0434\u0435\u043b\u043e\u043a \u0443 \u0431\u0440\u043e\u043a\u0435\u0440\u0430 \u0432 Excel. \u0414\u043b\u044f \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438 \u0443\u0436\u0435 \u0432\u044b\u0433\u0440\u0443\u0436\u0435\u043d\u043d\u043e\u0433\u043e \u0434\u043d\u0435\u0432\u043d\u0438\u043a\u0430 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0439\u0442\u0435 \u0434\u0430\u043d\u043d\u044b\u0439 Julia-\u0441\u043a\u0440\u0438\u043f\u0442: ```bash https://github.com/Jeanorochka/julia_tradediary_analysis ``` \u0412",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "\u041d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 Python-\u043f\u0440\u043e\u0435\u043a\u0442 \u0434\u043b\u044f \u0432\u044b\u0433\u0440\u0443\u0437\u043a\u0438 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 \u0441\u0434\u0435\u043b\u043e\u043a \u0443 \u0431\u0440\u043e\u043a\u0435\u0440\u0430 \u0432 Excel.",
+      "pip install requests openpyxl python-dotenv"
+    ],
+    "dependency_repos": [
+      "Jeanorochka/julia_tradediary_analysis",
+      "user-attachments/assets"
+    ]
+  },
+  {
+    "full_name": "Eleven-Trading/jtrade",
+    "requested_name": "Eleven-Trading/jtrade",
+    "id": 328315997,
+    "url": "https://github.com/Eleven-Trading/jtrade",
+    "stars": 7,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "d229d859cf0fc50351882e98b807b08775ae3d94",
+    "last_commit_date": "2021-06-21T06:27:37Z",
+    "archived": true,
+    "fork": false,
+    "description": "jtrade is a simple and an open source tool to journalize your trades.",
+    "language": "HTML",
+    "license": "GPL-3.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      " Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>",
+      "  The GNU General Public License is a free, copyleft license for",
+      "the GNU General Public License is intended to guarantee your freedom to",
+      "GNU General Public License for most of our software; it applies also to",
+      "  \"Copyright\" also means copyright-like laws that apply to other kinds of",
+      "copyright on the Program, and are irrevocable provided the stated",
+      "your copyrighted material outside their relationship with you.",
+      "copyright holder, and you cure the violation prior to 30 days after"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# jtrade",
+      "# The project",
+      "## Motivation",
+      "## Features",
+      "## Screenshots",
+      "# Tech/framework used",
+      "## Built with",
+      "## Getting Started",
+      "### Prerequisites",
+      "#### Software and tools",
+      "#### Database structure",
+      "### Installation",
+      "### Deployment",
+      "### How to use?",
+      "#### Upload data",
+      "#### Visualize your data (not provided)",
+      "# Contribute",
+      "# License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "captain-definition",
+      "composer.json",
+      "composer.lock",
+      "credentials.php",
+      "dist",
+      "gulpfile.js",
+      "package-lock.json",
+      "package.json",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/README.md",
+        "sha256": "3cd87bebe3b658f11918fd9ea0be02a63b2afb3b63a3482d769e7e52338e75d9",
+        "bytes": 2572
+      },
+      "LICENSE": {
+        "url": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "bytes": 35149
+      },
+      "package.json": {
+        "url": "https://github.com/Eleven-Trading/jtrade/blob/d229d859cf0fc50351882e98b807b08775ae3d94/package.json",
+        "sha256": "e72123d32febfc6741087f0ec55a5d6ebaac252b5276051a9e03b58b237a2d9e",
+        "bytes": 734
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Eleven-Trading/jtrade/commit/d229d859cf0fc50351882e98b807b08775ae3d94",
+      "metadata": "https://api.github.com/repos/Eleven-Trading/jtrade"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "! This code is not maintained any more and has been replaced by [TradeNote](https://github.com/Eleven-Trading/TradeNote), a full version open source trade journal ! # jtrade jtrade is a simple and an open source tool to journalize your trades. # The project ## Motivation TraderVue and TraderSync are great and very powerful trading journals. However, after using them for a while, I was missing the following: - Flexibility in creating graphs - Avoid being dependant on a specific software, company or solution provider - Use, store, move and backup my data at my terms - Increase control over my financial data ## Features - Executions are concatenated into trades - Add strategy and mistakes to better track and improve your trades - Add screenshot of stock graph - Add link to your trade video ## Screenshots Include logo/demo screenshot etc. # Tech/framework used ## Built with - Bootstrap 5 - VueJS - PHP ## Getting Started ### Prerequisites #### Software and tools - Gulp for building the project - MYSQL database for storing your data - AWS S3 bucket for storing images",
+    "license_excerpt": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> Everyone is permitted to copy and distribute verbatim",
+    "license_warnings": [],
+    "runtime_clues": [
+      "! This code is not maintained any more and has been replaced by [TradeNote](https://github.com/Eleven-Trading/TradeNote), a full version open source trade journal !",
+      "# Tech/framework used",
+      "- Run \"gulp\" in terminal and launch localhost:3000 in your browser",
+      "# License",
+      "This project is open sourced under the GNU GPL v3 licence."
+    ],
+    "dependency_repos": [
+      "Eleven-Trading/TradeNote"
+    ]
+  },
+  {
+    "full_name": "bytePatrol/Market_Companion",
+    "requested_name": "bytePatrol/Market_Companion",
+    "id": 1149513786,
+    "url": "https://github.com/bytePatrol/Market_Companion",
+    "stars": 3,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8357f760b229870760556ee6a4112af0eceaf9d8",
+    "last_commit_date": "2026-02-04T20:12:57Z",
+    "archived": false,
+    "fork": false,
+    "description": "Your personal market intelligence dashboard for macOS. Real-time quotes, interactive charts, smart alerts, trade journaling, portfolio risk analytics, and automated market briefings \u2014 all in a native SwiftUI app.",
+    "language": "Swift",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2025 bytePatrol",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## Overview",
+      "## Features",
+      "### Dashboard",
+      "### Interactive Charts",
+      "### Heatmap",
+      "### Watchlist & Portfolio",
+      "### Smart Alerts",
+      "### Screener & Technical Scanner",
+      "### Research",
+      "### Trade Journal",
+      "### Automated Reports",
+      "### Market Replay",
+      "### Portfolio Risk Analytics",
+      "### Multiple Data Providers",
+      "### Settings & Customization",
+      "## Getting Started",
+      "### Requirements",
+      "### Quick Start",
+      "# Clone the repository",
+      "# Generate the Xcode project",
+      "# Open in Xcode and build (Cmd+R)",
+      "### Connecting a Live Data Provider",
+      "## Project Structure",
+      "## Data Provider Architecture",
+      "## Scheduled Reports (LaunchAgent)",
+      "# Install the LaunchAgent",
+      "# Uninstall",
+      "# Verify it's running",
+      "## Where Your Data Lives",
+      "## Running Tests"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "LICENSE",
+      "LaunchAgent",
+      "MarketCompanion",
+      "MarketCompanionTests",
+      "README.md",
+      "project.yml",
+      "screenshots"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/bytePatrol/Market_Companion/blob/8357f760b229870760556ee6a4112af0eceaf9d8/README.md",
+        "sha256": "e8f068d92d4c3def4f30913c8b3f226741d8d9d19bc293b111e8c4cceaf1c916",
+        "bytes": 16698
+      },
+      "LICENSE": {
+        "url": "https://github.com/bytePatrol/Market_Companion/blob/8357f760b229870760556ee6a4112af0eceaf9d8/LICENSE",
+        "sha256": "638b4c808f0f0277e7296571c50d34f41a2b0004f6250ccf59f507855840e120",
+        "bytes": 1067
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/bytePatrol/Market_Companion/commit/8357f760b229870760556ee6a4112af0eceaf9d8",
+      "metadata": "https://api.github.com/repos/bytePatrol/Market_Companion"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "Market Companion Your personal market intelligence dashboard for macOS. Real-time quotes, interactive charts, smart alerts, trade journaling, portfolio risk analytics, and automated market briefings \u2014 all in a native SwiftUI app. --- ## Overview Market Companion is a native macOS desktop application built for traders and investors who want a unified workspace for tracking the market, managing positions, journaling trades, and generating daily briefings. It connects to multiple market data providers and stores everything locally \u2014 your data never leaves your machine. > **No API key required to get started.** The built-in mock data provider generates realistic demo data so you can explore every feature immediately. --- ## Features ### Dashboard A real-time overview of your portfolio: holdings count, watchlist size, VIX proxy, market breadth, sector performance, upcoming earnings, and the latest news \u2014 all on one screen. ### Interactive Charts Full candlestick charts with volume bars, multiple timeframes (1D to 1Y), 11 built-in technical indicators, volume profile, and symbol comparison mode. Click any symbol anywhere in the app to jump straight to its chart. All indicator parameters are configurable.",
+    "license_excerpt": "MIT License Copyright (c) 2025 bytePatrol Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<img src=\"https://img.shields.io/badge/license-MIT-green?style=flat-square\" alt=\"License\">",
+      "Market Companion is a native macOS desktop application built for traders and investors who want a unified workspace for tracking the market, managing positions, journaling trades, and generating daily briefings. It connects to multiple market data providers an",
+      "Full candlestick charts with volume bars, multiple timeframes (1D to 1Y), 11 built-in technical indicators, volume profile, and symbol comparison mode. Click any symbol anywhere in the app to jump straight to its chart. All indicator parameters are configurabl",
+      "| Indicator | Default Parameters | Description |",
+      "| Indicator | Default Parameters | Description |",
+      "| MACD | 12 / 26 / 9 | Moving Average Convergence Divergence \u2014 trend and momentum via MACD line, signal line, and histogram |",
+      "| Volume Profile | Horizontal histogram showing traded volume at each price level |",
+      "| **Momentum** | MACD Crossover | MACD histogram crossing the zero line (bullish or bearish) |",
+      "| Min Volume | Minimum absolute trading volume |",
+      "| **Momentum** | MACD Bullish Cross | MACD histogram crossing from negative to positive \u2014 bullish momentum shift |",
+      "| **Momentum** | MACD Bearish Cross | MACD histogram crossing from positive to negative \u2014 bearish momentum shift |",
+      "- **GRDB** \u2014 Local SQLite persistence via [GRDB.swift](https://github.com/groue/GRDB.swift)",
+      "- **Swift Charts** \u2014 Apple's native charting framework",
+      "- **Security.framework** \u2014 Keychain credential storage",
+      "- All data is stored **locally on your Mac**",
+      "## License",
+      "This project is licensed under the MIT License. See [LICENSE](LICENSE) for details."
+    ],
+    "dependency_repos": [
+      "bytePatrol/Market_Companion.git",
+      "groue/GRDB.swift"
+    ]
+  },
+  {
+    "full_name": "hamed-nasrollahi/HxTradeHelper",
+    "requested_name": "hamed-nasrollahi/HxTradeHelper",
+    "id": 1135610787,
+    "url": "https://github.com/hamed-nasrollahi/HxTradeHelper",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "e53ab03f5ccb1e2ad27b9945e25e99bf61645bb1",
+    "last_commit_date": "2026-08-26T11:00:31Z",
+    "archived": false,
+    "fork": false,
+    "description": "Indicator with set of utility trade helper tools ",
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "Copyright (c) Hamed Nasrollahi"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# HxTradeHelper",
+      "## Screenshots",
+      "### Dashboard",
+      "## Features",
+      "### Trade tab",
+      "### Test tab (manual back-testing)",
+      "### Jrnl tab (trade journal)",
+      "## Repository layout",
+      "## Installation",
+      "### 1. Indicator",
+      "### 2. Uploader DLL",
+      "### 3. Database and dashboard (optional, for the MariaDB journal)",
+      "## Key inputs",
+      "## Notes",
+      "## License",
+      "## Stargazers over time"
+    ],
+    "recent_commit_count": 92,
+    "recent_authors_sample50": [
+      "claude",
+      "github-actions[bot]",
+      "hamed-nasrollahi"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "DialogHx.mqh",
+      "LICENSE",
+      "README.md",
+      "TradeElement.mqh",
+      "assets",
+      "dashboard",
+      "dotnet",
+      "hx_trade_helper.mq5"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/hamed-nasrollahi/HxTradeHelper/blob/e53ab03f5ccb1e2ad27b9945e25e99bf61645bb1/README.md",
+        "sha256": "80758cde2c2c83832f4649b00b55287dc014a1aad0ec97836997d4987d9bb797",
+        "bytes": 10664
+      },
+      "LICENSE": {
+        "url": "https://github.com/hamed-nasrollahi/HxTradeHelper/blob/e53ab03f5ccb1e2ad27b9945e25e99bf61645bb1/LICENSE",
+        "sha256": "844d3ca5c8cff1ca232211831a8d463c88b9b0910e2f7a2d85ea3cdcc3d5dec5",
+        "bytes": 1057
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/hamed-nasrollahi/HxTradeHelper/commit/e53ab03f5ccb1e2ad27b9945e25e99bf61645bb1",
+      "metadata": "https://api.github.com/repos/hamed-nasrollahi/HxTradeHelper"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# HxTradeHelper [![GitHub stars](https://img.shields.io/github/stars/hamed-nasrollahi/HxTradeHelper?style=social)](https://github.com/hamed-nasrollahi/HxTradeHelper/stargazers) [![GitHub forks](https://img.shields.io/github/forks/hamed-nasrollahi/HxTradeHelper?style=social)](https://github.com/hamed-nasrollahi/HxTradeHelper/network/members) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE) A MetaTrader 5 chart panel for intraday traders: reference levels and session tools for live",
+    "license_excerpt": "HxTradeHelper Copyright (c) Hamed Nasrollahi This work is licensed under the Creative Commons Attribution-NonCommercial- ShareAlike 4.0 International License (CC BY-NC-SA 4.0). You are free to:",
+    "license_warnings": [
+      "non-commercial"
+    ],
+    "runtime_clues": [
+      "[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)",
+      "| `dashboard/` | Next.js analytics dashboard: journal import endpoint, strategy tagging, statistics, equity curve, Docker deployment |",
+      "MetaEditor. Note: the `#import \"HxTradeUploader.dll\"` requires the DLL from",
+      "Requires the .NET 8 SDK and the Visual Studio 2022 C++ workload (Native",
+      "DB_PASSWORD=<pick-a-password> docker compose up -d --build",
+      "dashboard on <http://localhost:3000>, whose `POST /api/import` endpoint",
+      "screenshots locally; only the upload step is skipped (with a note in the",
+      "## License",
+      "[CC BY-NC-SA 4.0](LICENSE) \u2014 free for personal, non-commercial use. If you",
+      "keep derivatives under the same license. Commercial use requires"
+    ],
+    "dependency_repos": [
+      "hamed-nasrollahi/HxTradeHelper"
+    ]
+  },
+  {
+    "full_name": "roberthopman/trade-tracking-and-journaling",
+    "requested_name": "roberthopman/trade-tracking-and-journaling",
+    "id": 1157829929,
+    "url": "https://github.com/roberthopman/trade-tracking-and-journaling",
+    "stars": 2,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "7639c8ad9caea719e531050698a5eff191bbec52",
+    "last_commit_date": "2026-02-14T11:31:41Z",
+    "archived": false,
+    "fork": false,
+    "description": "Multi-tenant RoR app, enabling: firms/brokers, account configurations, trades, payouts, and more.",
+    "language": "Ruby",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Intro",
+      "## Screenshots",
+      "## Production",
+      "## Prerequisites",
+      "## Getting started",
+      "### bin/setup",
+      "### Run the app!",
+      "## Development",
+      "### Fixing lint issues"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W09",
+        "lane": "B",
+        "query": "topic:trade-journal"
+      }
+    ],
+    "root_entries": [
+      ".annotaterb.yml",
+      ".dockerignore",
+      ".editorconfig",
+      ".env.sample",
+      ".erb_lint.yml",
+      ".gitattributes",
+      ".gitignore",
+      ".kamal",
+      ".node-version",
+      ".overcommit.yml",
+      ".prettierrc.cjs",
+      ".rubocop.yml",
+      ".ruby-version",
+      ".stylelintrc.js",
+      ".stylelintrc.json",
+      "CLAUDE.md",
+      "DEPLOYMENT.md",
+      "Dockerfile",
+      "Gemfile",
+      "Gemfile.lock",
+      "Procfile",
+      "README.md",
+      "Rakefile",
+      "Screenshot accounts.png",
+      "Screenshot journal.png",
+      "Screenshot trades.png",
+      "app",
+      "bin",
+      "config.ru",
+      "config",
+      "db",
+      "eslint.config.js",
+      "lib",
+      "log",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.cjs",
+      "public",
+      "run-pty.json",
+      "script",
+      "scripts",
+      "storage",
+      "test",
+      "tmp",
+      "vendor",
+      "vite.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/roberthopman/trade-tracking-and-journaling/blob/7639c8ad9caea719e531050698a5eff191bbec52/README.md",
+        "sha256": "4c55a9faa8f9e4319a6a21f4f0cf910962b51e6bcb89c14ce4f93af2d5dc9f73",
+        "bytes": 2209
+      },
+      "package.json": {
+        "url": "https://github.com/roberthopman/trade-tracking-and-journaling/blob/7639c8ad9caea719e531050698a5eff191bbec52/package.json",
+        "sha256": "8bc9103815664bb292b60a9064a0f32210fada7c404a6c31f158af093cc99377",
+        "bytes": 1369
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/roberthopman/trade-tracking-and-journaling/commit/7639c8ad9caea719e531050698a5eff191bbec52",
+      "metadata": "https://api.github.com/repos/roberthopman/trade-tracking-and-journaling"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Intro This is a trade tracking and journaling application. More details in [CLAUDE.md](CLAUDE.md). ## Screenshots ![Accounts](Screenshot%20accounts.png) ![Trades](Screenshot%20trades.png) ![Journal](Screenshot%20journal.png) ## Production To create a new",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "This project requires:",
+      "> To drop your existing database and start over with a clean local environment, use `bin/setup --reset`.",
+      "The app will be located at <http://localhost:3000/>."
+    ],
+    "dependency_repos": [
+      "rbenv/rbenv"
+    ]
+  }
+]
