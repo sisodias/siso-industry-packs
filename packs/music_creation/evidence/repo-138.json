@@ -1,0 +1,78 @@
+{
+  "audit_id": "R138",
+  "requested_full_name": "LazyCreatives/lazycreatives-backups",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "LazyCreatives/lazycreatives-backups",
+  "html_url": "https://github.com/LazyCreatives/lazycreatives-backups",
+  "description": "Verified, deduplicated backups for your DAW projects — that you own. A Lazy Creatives tool.",
+  "stargazers_count": 1,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 0,
+  "open_issues_count": 14,
+  "topics": [
+    "ableton",
+    "backup",
+    "daw",
+    "electron",
+    "fl-studio",
+    "music-producer",
+    "music-production",
+    "reaper"
+  ],
+  "revision": "3501d799077790e714057b27e12161c68226df70",
+  "last_commit": "2026-06-10T11:17:41Z",
+  "metadata_source": "https://api.github.com/repos/LazyCreatives/lazycreatives-backups",
+  "commit_source": "https://github.com/LazyCreatives/lazycreatives-backups/commit/3501d799077790e714057b27e12161c68226df70",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/LazyCreatives/lazycreatives-backups/blob/3501d799077790e714057b27e12161c68226df70/README.md",
+    "sha256": "6fb62f34840b88f997d9a5a9a2933113347b4dd007dd040d333bbf4c9e8fcd89",
+    "text": "<p align=\"center\">\n  <img src=\"brand/logo.png\" alt=\"Lazy Creatives — Backups\" width=\"380\">\n</p>\n\n<h1 align=\"center\">Lazy Creatives — Backups</h1>\n\n<p align=\"center\"><b>Verified, deduplicated backups for your music projects — that you own.</b></p>\n\n<p align=\"center\">\n  <a href=\"https://lazycreatives.github.io\">Website</a> ·\n  <a href=\"https://lazycreatives.github.io/lazycreatives-backups/\">Product page</a> ·\n  <a href=\"https://lazycreatives.github.io/lazycreatives-backups/pricing.html\">Pricing</a> ·\n  <a href=\"https://github.com/LazyCreatives/lazycreatives-uploader\">Sibling tool: Uploader</a>\n</p>\n\nPoint it at your project folders and it finds every session (Ableton & FL Studio),\nfollows each one's samples, copies complete de-duplicated snapshots to your own\nNAS/drive, then **re-reads and re-hashes every file to prove the backup actually\nopens**. No cloud, no account — you own the storage.\n\n> Cloud DAW-sync tools can't make these claims structurally. This can.\n\nPart of [**Lazy Creatives**](https://lazycreatives.github.io) — tools that take the boring,\nbehind-the-scenes work of making music off your plate. *Looks lazy. Works obsessively.*\n\n---\n\n## Why\n\n- **Your samples never go missing.** It resolves every referenced sample, and if\n  one isn't where the project points, it relinks the *right* file from your\n  library (verified by recorded size, not just filename — so it never silently\n  backs up a different same-named sample).\n- **Backups are verified, not just copied.** Each snapshot ships a manifest of\n  every file + content hash; after writing, it re-reads the snapshot to confirm\n  nothing was truncated, and you can deep-**Verify** any snapshot on demand\n  (re-hashes every byte, and checks the project would open standalone).\n- **Space-efficient.** A content-addressed pool + hardlinks mean each dated\n  snapshot is a full, openable project but only costs the bytes that changed.\n- **Only snapshots when something changed** — no redundant history.\n- **Multi-DAW.** Ableton today, FL Studio today, more by adding one adapter.\n\n## Supported DAWs\n\n| DAW | Format | Status |\n|---|---|---|\n| Ableton Live | `.als` (gzip + XML) | ✅ full — records sample size for high-confidence relink |\n| FL Studio | `.flp` (binary) | ✅ via a dependency-free clean-room reader (works across FL versions) |\n| Reaper / Logic / Studio One / Bitwig | — | planned (each is one adapter) |\n\n## How it works\n\n```\nSetup (once)  →  Scan  →  Review  →  Back up  →  Verify\n folders+NAS      find     pick &     dedup +     re-read &\n                  all      relink     snapshot    re-hash\n```\n\nBackups land per-DAW on your destination:\n\n```\n<NAS>/AbletonBackups/   projects/<name>/<YYYY-MM-DD_HHMM>/   + _pool/  + manifest.json\n<NAS>/FLStudioBackups/  projects/<name>/<YYYY-MM-DD_HHMM>/   + _pool/  + manifest.json\n```\n\n## Architecture\n\nAn **Electron** shell + React/TypeScript renderer over a **Python/FastAPI**\nsidecar that does all the file/parse/backup/verify work.\n\n```\nelectron/   desktop shell + flow-first UI (Setup → Home → inline Scan/Review/Run → History)\nbackend/    ablebackup/ — the engine\n  daws/         per-DAW adapters (Ableton, FL Studio) behind one registry\n  scanner       discover + resolve projects (dispatches by file type)\n  resolver      resolve sample refs to disk; relink missing from libraries\n  backup_engine dedup pool, hardlinks, atomic snapshots, manifest\n  verifier      re-read + re-hash a snapshot; portability check\n  catalog       SQLite history\n```\n\nAdding a DAW = one adapter (discover + parse-to-FileRefs) + one registry line; the\nengine, dedup, verify, catalog and relink are reused unchanged.\n\n## Develop / run\n\nPrereqs: Node 18+, Python 3.11+.\n\n```bash\n# backend\ncd backend && python -m venv .venv && .venv/bin/pip install -e \".[dev]\"\n\n# app (spawns the sidecar automatically)\ncd ../electron && npm install && npm start\n```\n\n## Tests\n\n```bash\ncd backend  && .venv/bin/python -m pytest        # 102 backend tests\ncd electron && npm test                          # renderer (api + progress + lifecycle)\n```\n\n## Status\n\nActive development — pre-launch. Packaging (installers) isn't wired up yet; `npm start`\nruns it in dev. Star the repo to hear when it ships, and see the\n[brand guide](https://lazycreatives.github.io/brand-guide.html) for the look & feel.\n",
+    "characters": 4340,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/LazyCreatives/lazycreatives-backups/blob/3501d799077790e714057b27e12161c68226df70/LICENSE",
+    "sha256": "4a5d834baf3465322f1f3beae4598a5e9a7f8f5e3bd9c1f6731366e7334f94d7",
+    "text": "Copyright (c) 2026 Robert Shearer (LazyCreatives Backups). All rights reserved.\n\nThe source code in this repository is made publicly available for transparency and\nevaluation only. It is NOT open-source software and is NOT free to use.\n\nNo permission is granted to any person or entity to use, copy, modify, merge,\npublish, distribute, sublicense, sell, or create derivative works of this software\nor its source code, in whole or in part, by any means, without the prior written\npermission of the copyright holder.\n\nYou may view the source and clone the repository solely to evaluate the software.\nAny other use is prohibited.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,\nINCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A\nPARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE\nUSE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1077,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "BigHeck",
+      "contributions": 105
+    },
+    {
+      "login": "rshearer1",
+      "contributions": 5
+    }
+  ],
+  "issues_sample": [],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

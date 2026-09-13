@@ -1,7 +1,7 @@
 {
   "audit_id": "R098",
   "requested_full_name": "slhck/ffmpeg-normalize",
-  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
   "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
   "full_name": "slhck/ffmpeg-normalize",
   "html_url": "https://github.com/slhck/ffmpeg-normalize",
@@ -44,11 +44,84 @@
     "transport": "public raw file"
   },
   "last_commit_within_six_months": true,
-  "commits_six_months_sample_count": null,
-  "contributors_top10": null,
-  "issues_sample": null,
+  "commits_six_months_sample_count": 38,
+  "contributors_top10": [
+    {
+      "login": "slhck",
+      "contributions": 528
+    },
+    {
+      "login": "WyattBlue",
+      "contributions": 17
+    },
+    {
+      "login": "benjaoming",
+      "contributions": 13
+    },
+    {
+      "login": "ahmetsait",
+      "contributions": 7
+    },
+    {
+      "login": "allcontributors[bot]",
+      "contributions": 3
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 3
+    },
+    {
+      "login": "aviolo",
+      "contributions": 2
+    },
+    {
+      "login": "Geekfish",
+      "contributions": 2
+    },
+    {
+      "login": "jetpks",
+      "contributions": 2
+    },
+    {
+      "login": "psavva",
+      "contributions": 2
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 319,
+      "title": "subprocess.Popen spawns visible console windows on Windows when called from a bundled Python app",
+      "state": "closed",
+      "created_at": "2026-07-10T07:13:19Z",
+      "updated_at": "2026-07-10T08:08:28Z",
+      "closed_at": "2026-07-10T07:27:28Z",
+      "comments": 2,
+      "html_url": "https://github.com/slhck/ffmpeg-normalize/issues/319"
+    },
+    {
+      "number": 317,
+      "title": "Temp file should not be created during single-pass encoding or during the second pass",
+      "state": "closed",
+      "created_at": "2026-06-19T13:44:43Z",
+      "updated_at": "2026-06-21T05:53:23Z",
+      "closed_at": "2026-06-20T12:19:14Z",
+      "comments": 5,
+      "html_url": "https://github.com/slhck/ffmpeg-normalize/issues/317"
+    },
+    {
+      "number": 316,
+      "title": "Does not account for -ac",
+      "state": "closed",
+      "created_at": "2026-05-20T13:53:00Z",
+      "updated_at": "2026-05-21T08:23:04Z",
+      "closed_at": "2026-05-21T08:11:00Z",
+      "comments": 2,
+      "html_url": "https://github.com/slhck/ffmpeg-normalize/issues/316"
+    }
+  ],
   "issue_response_sample": null,
   "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
   "bank_rows": {
     "bank/bank_capability_top.jsonl": [],
     "capability-shelf/source-registry.jsonl": [],

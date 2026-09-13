@@ -1,0 +1,54 @@
+{
+  "audit_id": "R140",
+  "requested_full_name": "robsassack/merch-table",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "robsassack/merch-table",
+  "html_url": "https://github.com/robsassack/merch-table",
+  "description": "Self-hosted digital music storefront for indie musicians and small labels",
+  "stargazers_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "license": null,
+  "forks_count": 0,
+  "open_issues_count": 11,
+  "topics": [],
+  "revision": "3a4b0fa21c0ce484a5454ac5e89c8943f93cc480",
+  "last_commit": "2026-05-08T21:02:31Z",
+  "metadata_source": "https://api.github.com/repos/robsassack/merch-table",
+  "commit_source": "https://github.com/robsassack/merch-table/commit/3a4b0fa21c0ce484a5454ac5e89c8943f93cc480",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/robsassack/merch-table/blob/3a4b0fa21c0ce484a5454ac5e89c8943f93cc480/README.md",
+    "sha256": "e2e482a9a68d11f67fdef7133cf820f667e8b36098e149db9a6c174b35334fe5",
+    "text": "# Merch Table\n\nMerch Table is a Next.js + Prisma app for running a digital music storefront for independent artists and labels.\n\n## Features\n\n- Interactive release catalog management with flexible payment option support\n- Intuitive storefront for browsing releases and artists\n- Publishes digital releases with flexible format delivery (`MP3`, `M4A`, `FLAC`)\n- Handles Stripe checkout and webhook-driven order fulfillment\n- Provides buyer library access and signed download links\n- Includes an operational setup wizard for first-run configuration\n- Runs a background transcode worker for preview and delivery assets\n\n## Stack\n\n- App: Next.js (App Router), React 19, TypeScript, Tailwind CSS 4\n- Data: Prisma, PostgreSQL, Redis\n- Auth and Validation: Better Auth, Zod\n- Storage and Media: AWS SDK v3 (S3-compatible APIs), bundled Garage or external S3 provider, FFmpeg/FFprobe worker pipeline\n- Email and Payments: Nodemailer (SMTP), Stripe\n- Infra: Docker Compose (web, worker, postgres, redis, garage)\n\n## Project Status\n\n- Active build in phased delivery.\n- Current planning artifacts:\n  - [V1 Build Plan](docs/merch-table-v1-plan.md)\n  - [V1 Build Checklist](docs/merch-table-v1-build-checklist.md)\n\n## Documentation\n\n- [Environment Variables Reference](docs/env.md): canonical env var list, defaults, and behavior notes\n- [Setup Guide](docs/setup.md): prerequisites, environment, local stack startup, migrations, tests, troubleshooting\n- [Worker and Storage](docs/worker-and-storage.md): transcode worker behavior, Garage notes, networking\n- [Backup and Migration](docs/backup-and-migration.md): Postgres backups, Garage asset backups, Garage-to-S3 migration runbook, and routine upgrade/rollback steps (including `git pull` + `docker compose up -d --build`)\n- [Setup Wizard](docs/setup-wizard.md): bootstrap flow, wizard steps, security behavior, env flags\n- [Stripe Local Webhook Testing](docs/stripe-webhooks-local.md): Stripe CLI forwarding and test events\n",
+    "characters": 1965,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "error": "standard_paths_not_found; not proof that no licence exists"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "robsassack",
+      "contributions": 158
+    }
+  ],
+  "issues_sample": [],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

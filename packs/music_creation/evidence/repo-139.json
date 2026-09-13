@@ -1,0 +1,65 @@
+{
+  "audit_id": "R139",
+  "requested_full_name": "DefaultMo/nash-royalty-engine",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "DefaultMo/nash-royalty-engine",
+  "html_url": "https://github.com/DefaultMo/nash-royalty-engine",
+  "description": "Music royalty statement parser: 7 vendor formats to one tied-out dataset and Excel earnings tape. Rust → WebAssembly, runs in the browser at perpendis.com/royalty — files never leave the machine.",
+  "stargazers_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 0,
+  "open_issues_count": 0,
+  "topics": [],
+  "revision": "cadbb0f564d667bbb69d033e9fcdad8cb7428af4",
+  "last_commit": "2026-08-26T02:26:36Z",
+  "metadata_source": "https://api.github.com/repos/DefaultMo/nash-royalty-engine",
+  "commit_source": "https://github.com/DefaultMo/nash-royalty-engine/commit/cadbb0f564d667bbb69d033e9fcdad8cb7428af4",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/DefaultMo/nash-royalty-engine/blob/cadbb0f564d667bbb69d033e9fcdad8cb7428af4/README.md",
+    "sha256": "624682f126e5bfaa00b0008327bf2b70baedb798aefe70a4c34c85afe443ca94",
+    "text": "# nash-royalty-engine\n\nA Rust engine that parses music royalty statements (DistroKid, TuneCore, CD Baby,\nSymphonic, ASCAP, MLC, publisher CSVs) into one canonical line-item dataset,\nproves the extraction with an exact-decimal **tie-out**, and writes the deliverable\na catalog-diligence buyer actually opens — a multi-sheet Excel **earnings tape**.\nThe same engine compiles to WebAssembly and runs live in the browser at\n[perpendis.com/royalty](https://perpendis.com/royalty/), where statements are\nparsed entirely client-side — **files never leave the machine**.\n\n## Why it's interesting\n\n- **Money is `rust_decimal::Decimal`, never `f64`.** Extracted rows must sum to\n  the statement's reported totals within $0.01, or the statement is flagged\n  BROKEN. A statement that reconciles by floating-point accident is worse than\n  one that fails loudly.\n- **Rows are never silently dropped or coerced.** An unparseable amount is a\n  warning with a row number, never a zero. Unmapped source columns are preserved\n  as JSON; every line carries the SHA-256 of its source file and its row number.\n- **One engine, two targets.** The exact parser/tie-out/xlsx code that runs in\n  the CLI is exported over a hand-rolled wasm ABI (no wasm-bindgen, no JS glue\n  framework) and does all its work inside the browser tab.\n\n## Results on real data\n\nFrom [docs/FINDINGS.md](docs/FINDINGS.md) (Aug 2026, validation corpus of real\nstatements found in public sources — not redistributed here):\n\n| Metric | Result |\n|---|---|\n| Real + fixture rows parsed | **553,075** across 12 statements |\n| Unparseable-amount warnings on real data | **0** (only the deliberately poisoned fixture warns, exactly on its poisoned cells) |\n| Wrong-file rejections | 9/9 correct — registration and metadata tables refused, not hallucinated |\n| Cross-parser validation | 200k-row file: generic parser and DMP parser agree to the cent ($10,010,176.22) |\n| Full-corpus runtime (release build) | **9.6 seconds** (~150MB input) |\n\n## Layout\n\n```\ncrates/\n  royalty-core/     canonical schema, encoding/delimiter sniffing, format\n                    detection registry, exact-decimal tie-out validator\n  royalty-parsers/  per-source parsers: header-fingerprint detection,\n                    alias-tolerant column mapping, footer-total capture\n  royalty-tape/     6-sheet Excel earnings-tape writer\n  royalty-cli/      `nash` binary: inspect | run\n  nash-wasm/        wasm export of the whole pipeline (raw ABI, no JS glue)\nsamples/\n  synthetic/        synthetic fixtures (safe to redistribute)\n  specs/            our own transcriptions of vendor format documentation,\n                    with source URLs\nvendor/\n  rust_xlsxwriter/  vendored (MIT/Apache-2.0, licenses included) with one\n                    local patch: system_now() returns a constant on plain\n                    wasm32 instead of panicking (src/datetime.rs)\n```\n\n## Build & test\n\nAll commands below were run on a clean copy of this tree.\n\n```\n$ cargo test\ntest result: ok. 1 passed  (nash-wasm)\ntest result: ok. 3 passed  (royalty-core)\ntest result: ok. 7 passed  (royalty-parsers tests/parsers.rs)\n# 11 tests, 0 failed\n```\n\nBuild the wasm engine, then run the end-to-end ABI test in Node:\n\n```\n$ cargo build -p nash-wasm --target wasm32-unknown-unknown --profile wasm-release\n    Finished `wasm-release` profile [optimized] target(s) in 25.48s\n# -> target/wasm32-unknown-unknown/wasm-release/nash_wasm.wasm (~1.1 MB)\n\n$ node scripts/test-wasm.mjs\nadd tsv rc: 0\nadd mlc tsv rc: 0\nadd zip rc: 0\nstatements: distrokid:7rows:1pg:self_consistent | mlc:4rows:1pg:self_consistent | distrokid:7rows:1pg:self_consistent | tunecore:4rows:1pg:self_consistent\nfailures: 0 total_net: 289.526501 pages: 4\ncsv rc: 0 bytes: 9233\nxlsx rc: 0 bytes: 10898\nWASM E2E: PASS\n```\n\nCLI use:\n\n```\ncargo run -p royalty-cli -- inspect <files...>\ncargo run -p royalty-cli -- run <files-or-dirs...> --out out [--generic-fallback]\n```\n\n`run` writes `normalized.csv` (canonical line items with provenance),\n`tieout.csv` (per-statement reconciliation ledger), `summary.json`, and\n`tape.xlsx` (Summary, Tie-Out, By Period, By DSP, Top Tracks, Lines).\n\n## Limitations (honest)\n\n- **No PDF lane.** Label/PRO PDF statements are out of scope for the engine;\n  that tail is a human-in-the-loop problem, not a parsing problem.\n- ASCAP, MLC, TuneCore and Symphonic parsers were built against the vendors'\n  own published format documentation (transcribed in `samples/specs/`) and\n  spec-conformant fixtures — no genuine files for those formats exist publicly,\n  so first real statements are the true test. The alias-table architecture is\n  designed to absorb surprises.\n- BMI CSV and SoundExchange detail-CSV have no public schema at all; both\n  need a live account export.\n- Single-currency assumption (USD) outside sources that carry a currency\n  column; FX normalization is schema-ready but not wired.\n\n## License\n\n[PolyForm Noncommercial 1.0.0](LICENSE.md) — source published for verification\nof what the live tool does with your files; commercial use of the engine\nrequires a separate license. The vendored `rust_xlsxwriter` remains under its\nown MIT/Apache-2.0 terms (see `vendor/rust_xlsxwriter/`).\n\nPart of the [vbounds.com](https://vbounds.com) project line.\n",
+    "characters": 5263,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/DefaultMo/nash-royalty-engine/blob/cadbb0f564d667bbb69d033e9fcdad8cb7428af4/LICENSE.md",
+    "sha256": "c0ea4a896d2c8c394b29f9427589996db826cd501c512279ff0ed3ef48fabbe5",
+    "text": "# PolyForm Noncommercial License 1.0.0\n\n<https://polyformproject.org/licenses/noncommercial/1.0.0>\n\n## Acceptance\n\nIn order to get any license under these terms, you must agree to them as both strict obligations and conditions to all your licenses.\n\n## Copyright License\n\nThe licensor grants you a copyright license for the software to do everything you might do with the software that would otherwise infringe the licensor's copyright in it for any permitted purpose.  However, you may only distribute the software according to [Distribution License](#distribution-license) and make changes or new works based on the software according to [Changes and New Works License](#changes-and-new-works-license).\n\n## Distribution License\n\nThe licensor grants you an additional copyright license to distribute copies of the software.  Your license to distribute covers distributing the software with changes and new works permitted by [Changes and New Works License](#changes-and-new-works-license).\n\n## Notices\n\nYou must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software.  For example:\n\n> Required Notice: Copyright Yoyodyne, Inc. (http://example.com)\n\n## Changes and New Works License\n\nThe licensor grants you an additional copyright license to make changes and new works based on the software for any permitted purpose.\n\n## Patent License\n\nThe licensor grants you a patent license for the software that covers patent claims the licensor can license, or becomes able to license, that you would infringe by using the software.\n\n## Noncommercial Purposes\n\nAny noncommercial purpose is a permitted purpose.\n\n## Personal Uses\n\nPersonal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, is use for a permitted purpose.\n\n## Noncommercial Organizations\n\nUse by any charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution is use for a permitted purpose regardless of the source of funding or obligations resulting from the funding.\n\n## Fair Use\n\nYou may have \"fair use\" rights for the software under the law. These terms do not limit them.\n\n## No Other Rights\n\nThese terms do not allow you to sublicense or transfer any of your licenses to anyone else, or prevent the licensor from granting licenses to anyone else.  These terms do not imply any other licenses.\n\n## Patent Defense\n\nIf you make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.\n\n## Violations\n\nThe first time you are notified in writing that you have violated any of these terms, or done anything with the software not covered by your licenses, your licenses can nonetheless continue if you come into full compliance with these terms, and take practical steps to correct past violations, within 32 days of receiving notice.  Otherwise, all your licenses end immediately.\n\n## No Liability\n\n***As far as the law allows, the software comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.***\n\n## Definitions\n\nThe **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms.\n\n**You** refers to the individual or entity agreeing to these terms.\n\n**Your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization.  **Control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise.  Control can be direct or indirect.\n\n**Your licenses** are all the licenses granted to you for the software under these terms.\n\n**Use** means anything you do with the software requiring one of your licenses.\n",
+    "characters": 4563,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 1,
+  "contributors_top10": [
+    {
+      "login": "DefaultMo",
+      "contributions": 1
+    }
+  ],
+  "issues_sample": [],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

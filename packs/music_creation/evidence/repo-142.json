@@ -1,0 +1,100 @@
+{
+  "audit_id": "R142",
+  "requested_full_name": "roex-audio/dawproject-py",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "roex-audio/dawproject-py",
+  "html_url": "https://github.com/roex-audio/dawproject-py",
+  "description": "dawproject-py – A Python repository with code for parsing, generating, and modifying DAWProject files, enabling seamless DAW interoperability.",
+  "stargazers_count": 66,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 6,
+  "open_issues_count": 3,
+  "topics": [],
+  "revision": "70e65aeb7b260cfec3871ca89ca8d80022c44496",
+  "last_commit": "2026-02-20T18:31:57Z",
+  "metadata_source": "https://api.github.com/repos/roex-audio/dawproject-py",
+  "commit_source": "https://github.com/roex-audio/dawproject-py/commit/70e65aeb7b260cfec3871ca89ca8d80022c44496",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/roex-audio/dawproject-py/blob/70e65aeb7b260cfec3871ca89ca8d80022c44496/README.md",
+    "sha256": "a86a9093b7b510bddf0540bfa613c937e2563b11f3dd6819b11931d77d4f9849",
+    "text": "# DAWProject-Py\n\n*Python library for working with DAWProject files — enabling DAW interoperability.*\n\n[![License](https://img.shields.io/github/license/roex-audio/dawproject-py)](LICENSE)\n[![GitHub stars](https://img.shields.io/github/stars/roex-audio/dawproject-py.svg)](https://github.com/roex-audio/dawproject-py/stargazers)\n\n## About\n\nDAWProject is an **open XML-based file format** designed for **seamless project exchange between DAWs**. It allows music producers, engineers, and developers to share full session data between different DAWs without losing important information.\n\nThe original **DAWProject** repository, developed by **Bitwig**, was written in **Java**. At **RoEx**, we primarily develop in **Python and C++**, so we converted the core classes to Python to integrate with our systems and allow more developers to build upon it.\n\nWe love the idea of DAWProject and want to see it in every DAW. The more people building on it, the better — so we're making our Python version publicly available. If anyone wants to extend it or modify it further, feel free!\n\nFor reference, we've kept the original Java classes and implementations for posterity.\n\n---\n\n## Installation\n\n### From source\n\n```sh\ngit clone https://github.com/roex-audio/dawproject-py.git\ncd dawproject-py\npip install -e .\n```\n\n### Dependencies\n\n- `lxml` (XML parsing and generation)\n- `chardet` (character encoding detection)\n\n---\n\n## Quick Start\n\n### Loading a DAWProject file\n\n```python\nfrom dawproject import DawProject, Referenceable\n\n# Reset ID registry before loading\nReferenceable.reset_id()\n\n# Load a .dawproject file\nproject = DawProject.load_project(\"example.dawproject\")\n\n# Inspect project\nprint(f\"Application: {project.application.name} {project.application.version}\")\nprint(f\"Tracks: {len(project.structure)}\")\n\nfor track in project.structure:\n    print(f\"  - {track.name}\")\n    if track.channel:\n        print(f\"    Volume: {track.channel.volume.value if track.channel.volume else 'N/A'}\")\n\n# Load metadata\nmetadata = DawProject.load_metadata(\"example.dawproject\")\nprint(f\"Title: {metadata.title}\")\nprint(f\"Artist: {metadata.artist}\")\n```\n\n### Creating an Empty DAWProject\n\n```python\nfrom dawproject import Project, Application, DawProject\n\n# Initialize an empty project\nproject = Project()\nproject.application = Application(name=\"My App\", version=\"1.0\")\n\n# Save as standalone XML\nDawProject.save_xml(project, \"new_project.xml\")\n```\n\n### Creating a Project with Audio Tracks\n\n```python\nfrom dawproject import (\n    Project, Application, DawProject, MetaData,\n    Utility, MixerRole, ContentType, TimeUnit,\n    Arrangement, Lanes, Referenceable,\n)\n\nReferenceable.reset_id()\n\n# Create project with transport\nproject = Project()\nproject.application = Application(name=\"My App\", version=\"1.0\")\n\n# Create a master track\nmaster = Utility.create_track(\n    name=\"Master\",\n    content_types=set(),\n    mixer_role=MixerRole.MASTER,\n    volume=1.0,\n    pan=0.5,\n)\nproject.structure.append(master)\n\n# Create an audio track routed to master\naudio_track = Utility.create_track(\n    name=\"Lead Synth\",\n    content_types={ContentType.AUDIO},\n    mixer_role=MixerRole.REGULAR,\n    volume=0.8,\n    pan=0.5,\n)\naudio_track.channel.destination = master.channel\nproject.structure.append(audio_track)\n\n# Create audio content and add to arrangement\naudio = Utility.create_audio(\"lead.wav\", sample_rate=44100, channels=2, duration=30.0)\nclip = Utility.create_clip(audio, time=0, duration=30.0)\nclips = Utility.create_clips(clip)\nclips.track = audio_track\n\nproject.arrangement = Arrangement()\nproject.arrangement.lanes = Lanes()\nproject.arrangement.lanes.time_unit = TimeUnit.SECONDS\nproject.arrangement.lanes.lanes.append(clips)\n\n# Save as .dawproject (ZIP archive)\nmetadata = MetaData(title=\"My Song\", artist=\"My Name\")\nDawProject.save(project, metadata, {}, \"my_project.dawproject\")\n\n# Or save as standalone XML\nDawProject.save_xml(project, \"my_project.xml\")\n```\n\n### Adding EQ and Compressor\n\n```python\nfrom dawproject import Equalizer, Compressor, EqBand, EqBandType, DeviceRole\n\n# Add an equalizer to a track\neq = Equalizer(\n    device_name=\"Track EQ\",\n    device_role=DeviceRole.AUDIO_FX.value,\n    bands=[\n        EqBand(freq=100, gain=3.0, q=1.0, enabled=True, band_type=EqBandType.BELL),\n        EqBand(freq=5000, gain=-2.0, q=0.8, enabled=True, band_type=EqBandType.HIGH_SHELF),\n    ],\n)\naudio_track.channel.devices.append(eq)\n\n# Add a compressor\ncomp = Compressor(\n    device_name=\"Track Comp\",\n    device_role=DeviceRole.AUDIO_FX.value,\n    threshold=-20,\n    ratio=4.0,\n    attack=0.01,\n    release=0.2,\n    input_gain=0.0,\n    output_gain=0.0,\n    auto_makeup=True,\n)\naudio_track.channel.devices.append(comp)\n```\n\n---\n\n## API Reference\n\n### DawProject (main entry point)\n\n| Method | Description |\n|--------|-------------|\n| `DawProject.save_xml(project, file)` | Save a Project as standalone XML |\n| `DawProject.save(project, metadata, embedded_files, file)` | Save a full .dawproject ZIP archive |\n| `DawProject.load_project(file)` | Load a Project from a .dawproject file |\n| `DawProject.load(file)` | Alias for `load_project` |\n| `DawProject.load_metadata(file)` | Load MetaData from a .dawproject file |\n| `DawProject.validate(project)` | Validate a Project against the XSD schema |\n| `DawProject.stream_embedded(file, path)` | Read an embedded file from the archive |\n\n### Utility (factory methods)\n\n| Method | Description |\n|--------|-------------|\n| `Utility.create_track(name, content_types, mixer_role, volume, pan)` | Create a Track with Channel |\n| `Utility.create_audio(path, sample_rate, channels, duration)` | Create an Audio timeline |\n| `Utility.create_clip(content, time, duration)` | Create a Clip |\n| `Utility.create_clips(*clips)` | Create a Clips container |\n| `Utility.create_warp(time, content_time)` | Create a Warp point |\n\n### Core Models\n\n| Class | Description |\n|-------|-------------|\n| `Project` | Top-level container (version, application, structure, arrangement) |\n| `Track` | A track with channel, content type, nested tracks |\n| `Channel` | Mixer channel (volume, pan, sends, devices) |\n| `Clip` | A clip on a timeline with content |\n| `Audio` | Audio file reference with sample rate, channels, duration |\n| `Notes` / `Note` | MIDI note data |\n| `Markers` / `Marker` | Named timeline markers |\n| `Points` / `RealPoint` | Automation data |\n| `Lanes` / `Clips` | Timeline containers |\n\n### Enums\n\n| Enum | Values |\n|------|--------|\n| `ContentType` | AUDIO, NOTES, AUTOMATION, VIDEO, MARKERS, TRACKS |\n| `MixerRole` | REGULAR, MASTER, EFFECT_TRACK, SUB_MIX, VCA |\n| `Unit` | LINEAR, NORMALIZED, PERCENT, DECIBEL, HERTZ, SEMITONES, SECONDS, BEATS, BPM |\n| `TimeUnit` | BEATS, SECONDS |\n| `DeviceRole` | INSTRUMENT, NOTE_FX, AUDIO_FX, ANALYZER |\n| `SendType` | PRE, POST |\n| `EqBandType` | HIGH_PASS, LOW_PASS, BAND_PASS, HIGH_SHELF, LOW_SHELF, BELL, NOTCH |\n| `Interpolation` | HOLD, LINEAR |\n\n---\n\n## Examples\n\nAn `examples/` folder is included demonstrating how to use DAWProject-Py in real-world scenarios:\n\n- **`createBitwigProject.py`** — Creates a project with audio tracks, EQ, and compressor settings\n- **`roex_daw_project_export.py`** — Uses the Tonn API to obtain multitrack mix settings and create a DAWProject file\n\n---\n\n## DAWProject Format\n\nDAWProject is an open XML-based format designed to enable cross-DAW compatibility. Instead of exporting audio stems, `.dawproject` files allow projects to be shared across DAWs while preserving:\n\n- Track names, volume, and panning\n- Effects and automation data\n- MIDI and audio region placements\n- Tempo and time signature changes\n\nFor the full specification, visit [DAWProject on GitHub](https://github.com/bitwig/dawproject).\n\n---\n\n## Development\n\n### Setup\n\n```sh\ngit clone https://github.com/roex-audio/dawproject-py.git\ncd dawproject-py\npip install -e \".[dev]\"\n```\n\n### Running Tests\n\n```sh\npytest\n```\n\n### Contributing\n\n- Fork the repository\n- Create a feature branch (`git checkout -b feature-name`)\n- Commit your changes (`git commit -m \"Add feature XYZ\"`)\n- Push to GitHub (`git push origin feature-name`)\n- Open a Pull Request\n\n---\n\n## License\n\nThis project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.\n\n---\n\n## Stay Connected\n\n- **Website:** [www.roexaudio.com](https://www.roexaudio.com)\n- **GitHub Discussions:** [DAWProject-Py Discussions](https://github.com/roex-audio/dawproject-py/discussions)\n",
+    "characters": 8429,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/roex-audio/dawproject-py/blob/70e65aeb7b260cfec3871ca89ca8d80022c44496/LICENSE",
+    "sha256": "fa3482949c08f87579af0e7637d7c6e41e63d9302d695883640c313a2df15630",
+    "text": "MIT License\n\nCopyright (c) 2025 RoEx LTD\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1065,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": 0,
+  "contributors_top10": [
+    {
+      "login": "daveronan",
+      "contributions": 23
+    },
+    {
+      "login": "cursoragent",
+      "contributions": 20
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 11,
+      "title": "Don't force External=False when creating new Audio element",
+      "state": "open",
+      "created_at": "2026-04-11T14:49:05Z",
+      "updated_at": "2026-04-11T14:49:05Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/roex-audio/dawproject-py/issues/11"
+    },
+    {
+      "number": 9,
+      "title": "Build failure: Invalid build-backend 'setuptools.backends._legacy' in pyproject.toml",
+      "state": "closed",
+      "created_at": "2026-02-18T21:44:01Z",
+      "updated_at": "2026-02-21T07:38:26Z",
+      "closed_at": "2026-02-21T07:38:26Z",
+      "comments": 2,
+      "html_url": "https://github.com/roex-audio/dawproject-py/issues/9"
+    },
+    {
+      "number": 5,
+      "title": "Unable to load Cubase project",
+      "state": "open",
+      "created_at": "2025-03-31T15:11:28Z",
+      "updated_at": "2026-02-20T18:33:06Z",
+      "closed_at": null,
+      "comments": 3,
+      "html_url": "https://github.com/roex-audio/dawproject-py/issues/5"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

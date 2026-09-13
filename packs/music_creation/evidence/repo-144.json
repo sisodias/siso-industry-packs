@@ -1,0 +1,96 @@
+{
+  "audit_id": "R144",
+  "requested_full_name": "ssmall256/demucs-mlx",
+  "observed_at": "2026-09-13T17:00:26.322776+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "ssmall256/demucs-mlx",
+  "html_url": "https://github.com/ssmall256/demucs-mlx",
+  "description": "Split any song into stems — vocals, drums, bass, and more. Fast music source separation for Apple Silicon, powered by MLX.",
+  "stargazers_count": 40,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 3,
+  "open_issues_count": 0,
+  "topics": [
+    "apple-silicon",
+    "audio",
+    "demucs",
+    "machine-learning",
+    "metal",
+    "mlx",
+    "music",
+    "source-separation",
+    "stem-separation"
+  ],
+  "revision": "4b73cfe04258f97100ff6bae20a0a652e99c8845",
+  "last_commit": "2026-08-12T19:49:43Z",
+  "metadata_source": "https://api.github.com/repos/ssmall256/demucs-mlx",
+  "commit_source": "https://github.com/ssmall256/demucs-mlx/commit/4b73cfe04258f97100ff6bae20a0a652e99c8845",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/ssmall256/demucs-mlx/blob/4b73cfe04258f97100ff6bae20a0a652e99c8845/README.md",
+    "sha256": "5466cdd330f5f5f949ae724345a5e4861ea4ba44c8b43a7f0e6f39be1945f332",
+    "text": "# demucs-mlx\n\nSplit any song into its individual stems — vocals, drums, bass, and other instruments — directly on your Mac.\n\ndemucs-mlx is a fast, native Apple Silicon port of Meta's [Demucs](https://github.com/adefossez/demucs) music source separation model, built on [MLX](https://github.com/ml-explore/mlx). No PyTorch required.\n\n## Features\n\n- **~73x realtime** on Apple Silicon — 2.6x faster than Demucs with PyTorch MPS\n- **Bit-exact parity** with upstream Demucs stems (within floating-point tolerance)\n- Custom fused Metal kernels (GroupNorm+GELU, GroupNorm+GLU, OLA)\n- Metal-free fallbacks for non-Apple platforms (Linux)\n- No PyTorch required at inference time\n- Automatic resampling — input files at any sample rate are resampled to the model rate\n- Audio I/O via [mlx-audio-io](https://github.com/ssmall256/mlx-audio-io)\n- STFT/iSTFT via [mlx-spectro](https://github.com/ssmall256/mlx-spectro)\n\n## Requirements\n\n- Python >= 3.10\n- macOS with Apple Silicon (recommended) or Linux with MLX\n- MLX 0.31.2 paired with mlx-audio-io 1.3.11; the native audio package does not yet support MLX 0.32\n\n## Install\n\n```bash\npip install demucs-mlx\n```\n\nOn first run, demucs-mlx loads cached MLX weights if available. If the optional\n`mlx-weights` package is installed locally, demucs-mlx uses its shared cache. Otherwise\nit uses its built-in cache. A cache miss is converted internally from the official\nDemucs registry using the restricted loader described below.\n\nTo bootstrap a missing model with the public package, install the conversion extra:\n\n```bash\npip install 'demucs-mlx[convert]'\n```\n\nYou can explicitly generate a safe cache in any directory with:\n\n```bash\npython -m demucs_mlx.mlx_convert htdemucs --output-dir ~/.cache/demucs-mlx\n```\n\nOnce weights are cached, the `convert` extra is no longer needed for inference.\n\n## CLI usage\n\n```bash\ndemucs-mlx /path/to/audio.wav\n```\n\nOptions:\n\n```\n-n, --name          Model name (default: htdemucs)\n-o, --out           Output directory (default: separated)\n--shifts            Number of random shifts (default: 1)\n--seed              Optional RNG seed for reproducible shifts (default: none)\n--overlap           Overlap ratio (default: 0.25)\n-b, --batch-size    Batch size (default: 2)\n--write-workers     Concurrent writer threads (default: 1)\n--list-models       List available models\n-v, --verbose       Verbose logging\n```\n\n## Python usage\n\n```python\nfrom demucs_mlx import Separator\n\nseparator = Separator()\norigin, stems = separator.separate_audio_file(\"song.wav\")\n\n# stems is a dict: {\"drums\": array, \"bass\": array, \"other\": array, \"vocals\": array}\nfor name, audio in stems.items():\n    print(f\"{name}: {audio.shape}\")\n```\n\nTo keep outputs as MLX arrays (avoids GPU-to-CPU copy):\n\n```python\norigin, stems = separator.separate_audio_file(\"song.wav\", return_mx=True)\n```\n\nFor reproducible shift sampling (while keeping `shifts=1` behavior), pass a seed:\n\n```python\nseparator = Separator(model=\"htdemucs\", shifts=1, seed=0)\norigin, stems = separator.separate_audio_file(\"song.wav\")\n```\n\n## What changed in 1.4.6\n\n- Restricted official Demucs checkpoint loading to PyTorch 2.6+ with `weights_only=True`, a narrow class allowlist, hash verification, and strict package validation.\n- Replaced executable pickle caches with digest-verified MLX safetensors and versioned JSON metadata.\n- Legacy pickle caches are never opened; they are ignored while safe artifacts regenerate from the verified official registry.\n\n## What changed in 1.4.5\n\n- Fixed audio prefetch on MLX 0.31.2 by materializing decoded arrays on the producer thread before queue handoff.\n- Reduced the default inference batch size from 8 to 2 to avoid memory thrashing on 16–36 GB Macs; explicit `-b` values are unchanged.\n- Pinned MLX 0.31.2 and mlx-audio-io 1.3.11 as a compatible native runtime pair. MLX 0.32 support will follow a matching mlx-audio-io release.\n\n## What changed in 1.4.4\n\n- Fixed multi-segment `split=True` overlap-add on MLX 0.31.2. Long inputs no longer produce high-amplitude reconstruction spikes.\n- Added regression coverage for split-mode overlap-add and an optional model-level reproduction for issue #1.\n\n## What changed in 1.4.3\n\n- `resample_mx()` now uses direct `mac.resample()` instead of writing/reading a temp file — eliminates an unnecessary MLX→numpy→disk→MLX round-trip.\n- Bumped minimum `mlx-audio-io` to `>=1.3.9` (auto-selects best resampling quality).\n\n## What changed in 1.4.2\n\n- Audio loading now stays as native MLX arrays end-to-end (no numpy round-trip).\n- Automatic resampling via `mlx-audio-io` — input files no longer need to match the model sample rate.\n- Uses `soxr_vhq` resampling quality when available, with automatic fallback.\n- Bumped minimum dependencies: `mlx>=0.31.0`, `mlx-audio-io>=1.3.8`, `mlx-spectro>=0.2.4`.\n\n## What changed in 1.4.0\n\n- Fixed shifted-inference `TensorChunk` propagation so chunk length/offset is handled correctly in all paths.\n- Added optional deterministic RNG control (`seed`) for Python API and CLI.\n- Default behavior is unchanged: `shifts=1` remains stochastic unless `seed` is provided.\n\n## Performance\n\nBenchmarked on a 3:15 stereo track (44.1 kHz, 16-bit) using `htdemucs` with default settings:\n\n| Package | Backend | Time | Speedup |\n|---------|---------|------|---------|\n| `demucs` 4.0.1 | PyTorch (CPU) | 52.3s | 0.1x |\n| `demucs` 4.0.1 | PyTorch (MPS) | 6.9s | 1x |\n| `demucs-mlx` 1.1.0 | MLX + Metal | 2.7s | **2.6x** |\n\n*Apple M4 Max, 128 GB. All runs use `htdemucs` with default settings and a single warm-up pass before timing.*\n\n## Models\n\n| Model | Sources | Description |\n|-------|---------|-------------|\n| `htdemucs` | 4 | Hybrid Transformer Demucs (default) |\n| `htdemucs_ft` | 4 | Fine-tuned HTDemucs |\n| `htdemucs_6s` | 6 | 6-source (adds piano, guitar) |\n| `hdemucs_mmi` | 4 | Hybrid Demucs MMI |\n| `mdx` | 4 | Music Demixing model |\n| `mdx_extra` | 4 | MDX with extra training |\n\n## MLX model cache\n\nPre-converted MLX weights are cached under `~/.cache/demucs-mlx` by default. When the\noptional `mlx-weights` package is installed, demucs-mlx uses its shared\n`~/.cache/mlx-weights/demucs-mlx` directory instead.\n\nCache format v1 consists of `<model>.safetensors` and a versioned\n`<model>_config.json` sidecar. Arrays are saved and loaded with MLX's native\nsafetensors support. The bounded JSON metadata records the exact MLX model classes and\nconstructor data, ensemble shape and weights, ordered official Demucs source\nsignatures/checksums, conversion time, actual MLX version, verification result, and the\nSHA-256 of the safetensors file. Exceptional constructor values such as `Fraction` use\na narrowly validated tagged JSON representation. The digest and complete metadata are\nvalidated before arrays are loaded or a model is constructed.\n\nOlder `<model>_mlx.pkl` files are unsafe legacy caches. demucs-mlx never opens,\nrewrites, or deletes them. If conversion dependencies are installed, a legacy-only\ncache is ignored and safe v1 artifacts are regenerated from the verified official\nsource. Without automatic conversion, the error includes the ignored pickle path and\nthe exact regeneration command. Partial, corrupt, unversioned, or otherwise invalid\nsafetensors/config pairs fail closed and never fall back to a pickle; move those safe\nartifacts aside and run, for example:\n\n```bash\npython -m demucs_mlx.mlx_convert htdemucs --output-dir ~/.cache/demucs-mlx\n```\n\n### Model trust boundary\n\nConversion requires PyTorch 2.6 or newer before any checkpoint is downloaded or\ndeserialized. Official packages retain filename-hash verification and are loaded with\n`weights_only=True` plus a scoped allowlist of exact Demucs classes and narrowly needed\ncompatibility types. The package shape, exact model class, constructors, and ordinary\nor quantized state are validated before trusted Demucs code constructs a model. There\nis no unrestricted fallback.\n\nInstalled PyTorch, Demucs, NumPy, optional DiffQ quantization code, MLX, and the packaged\nofficial model registry are inside the trust boundary. Arbitrary checkpoint globals\nand local pickle caches are not trusted. Restricted loading prevents executable pickle\nglobals; it is not a resource-exhaustion sandbox for otherwise valid tensor files.\n\n## Documentation\n\n- API reference: `docs/api.md`\n- Development workflow: `docs/development.md`\n- Platform notes: `docs/platform.md`\n\n## License\n\nMIT. Based on [Demucs](https://github.com/adefossez/demucs) by Meta Research. See `LICENSE` for details.\n",
+    "characters": 8496,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/ssmall256/demucs-mlx/blob/4b73cfe04258f97100ff6bae20a0a652e99c8845/LICENSE",
+    "sha256": "15086279d32c0f00c577c0f52ff428daf98b8a1fec0264da1c717c88ad464f51",
+    "text": "MIT License\n\nCopyright (c) Meta Platforms, Inc. and affiliates.\nCopyright (c) 2026 ssmall256\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1117,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 16,
+  "contributors_top10": [
+    {
+      "login": "ssmall256",
+      "contributions": 62
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 7,
+      "title": "RuntimeError: There is no Stream(gpu, 1) in current thread — crashes on every separation run (mlx 0.31.2 thread-local streams)",
+      "state": "closed",
+      "created_at": "2026-08-10T10:49:29Z",
+      "updated_at": "2026-08-12T16:57:20Z",
+      "closed_at": "2026-08-12T16:57:20Z",
+      "comments": 1,
+      "html_url": "https://github.com/ssmall256/demucs-mlx/issues/7"
+    },
+    {
+      "number": 5,
+      "title": "Default batch size 8 thrashes memory on 32 GB machines (5x slowdown)",
+      "state": "closed",
+      "created_at": "2026-07-26T07:55:41Z",
+      "updated_at": "2026-08-12T16:57:19Z",
+      "closed_at": "2026-08-12T16:57:19Z",
+      "comments": 1,
+      "html_url": "https://github.com/ssmall256/demucs-mlx/issues/5"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
