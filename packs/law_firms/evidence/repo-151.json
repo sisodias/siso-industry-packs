@@ -1,0 +1,81 @@
+{
+  "audit_id": "R151",
+  "requested_full_name": "navik12/law-firm-ai-project",
+  "observed_at": "2026-09-13T17:05:17.288831+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "navik12/law-firm-ai-project",
+  "html_url": "https://github.com/navik12/law-firm-ai-project",
+  "description": "A local Python demo simulating a law firm's secure AI platform — ethical walls (case isolation), Entra ID-style login + MFA, RBAC, audit logging, and cost tracking, all mapped to real Azure/Microsoft cloud equivalents.",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-06-26T02:32:08Z",
+  "updated_at": "2026-06-26T04:08:14Z",
+  "pushed_at": "2026-06-26T04:08:11Z",
+  "size": 35,
+  "open_issues_count": 0,
+  "topics": [
+    "access-control",
+    "ai",
+    "audit-logging",
+    "demo-project",
+    "legal-tech",
+    "openai",
+    "python",
+    "rbac",
+    "security"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "7bae4713fa33a709c665f06936be600aa1c16218",
+  "last_commit": "2026-06-26T04:08:10Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/navik12/law-firm-ai-project",
+    "commit": "https://github.com/navik12/law-firm-ai-project/commit/7bae4713fa33a709c665f06936be600aa1c16218"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "34e06ad56e84fd0ec1bb1f9102337a6c4a6323611808eef65f6d0c50acc10632",
+    "text": "# 🏛️ Law Firm AI Platform — Local Practice Project\n\n**Your role:** AI Systems Administrator\n**What it does:** Lets 3 lawyers safely use AI on 3 separate secret cases — and stops anyone from seeing another case's files (ethical walls).\n\n| Lawyer | Login | Case | Defends |\n|--------|-------|------|---------|\n| 👩 Sarah | `sarah` | 💊 Medical | Drug company |\n| 👨 David | `david` | 🏭 Manufacturing | Machine maker |\n| 👩 Maria | `maria` | 🚬 Tobacco | Cigarette company |\n\nPassword for all: `demo123` · MFA codes: Sarah `111111`, David `222222`, Maria `333333`\n\n---\n\n## ▶️ How to run it\n\n```bash\ncd law-firm-ai-project\npython3 app.py\n```\n\nIt works **with no signup** (offline demo mode).\nTo get **real AI answers** with your OpenAI key, run this first (paste YOUR key):\n\n```bash\nexport OPENAI_API_KEY=\"sk-your-key-here\"\npython3 app.py\n```\n\n⚠️ Your key stays on your Mac. Never put it in any file you share.\n\n---\n\n## 🔑 THE BIG COMPARISON — Local (this Mac) vs. Real Cloud (the job)\n\nThis is the most important part. Each piece of this project **pretends** to be a real\nMicrosoft cloud tool. Here is exactly what each one maps to:\n\n| # | What you do here (LOCAL 💻) | In the file/code | What it would REALLY be (CLOUD ☁️) |\n|---|------------------------------|------------------|-------------------------------------|\n| 1 | Log in with username | `users.json` | **Microsoft Entra ID** (identity system) |\n| 2 | Enter the 6-digit code | `mfa_code` check | **Entra ID MFA** (real phone code) |\n| 3 | Group decides your access | `access.json` | **Azure RBAC** (role assignments) |\n| 4 | You can only open your case | the access check | **Ethical walls** (SharePoint permissions) |\n| 5 | Secret case files in folders | `cases/` | **SharePoint / iManage** (document system) |\n| 6 | The AI answers questions | `call_ai()` (OpenAI) | **OpenAI GPT (gpt-4o-mini) / Azure OpenAI** |\n| 7 | Connect AI to documents | code passes docs in | **APIs + Power Automate connectors** |\n| 8 | Cost saved to a file | `cost_report.txt` | **Azure Cost Management** (dashboard) |\n| 9 | Who-did-what saved to a file | `audit_log.txt` | **Azure Monitor / Entra Audit Logs** |\n| 10 | Problems saved as tickets | `tickets/` | **ServiceNow / Jira** (help desk) |\n| 11 | Admin resolves a ticket | `resolve_ticket()` | **ServiceNow / Jira** \"Resolve\" button |\n| 12 | Ticket auto-checked, else a human reviews | `verify_ticket()` | **ServiceNow / Jira** triage automation + human review |\n\n> **The IDEA is identical. Only the SIZE and the REAL TOOLS differ.**\n> Local = a free practice \"dollhouse.\" Cloud = the giant live version a company pays for.\n\n---\n\n## 🧱 Want to SEE the ethical wall work?\n\nRun `python3 prove_wall.py` — it tries to let Sarah peek at the Tobacco case and\nshows that the system **blocks** her. That's the wall doing its job.\n\n---\n\n## 🎫 Filing and resolving support tickets\n\nThe menu (after you log in) has two ticket actions:\n\n* **`2) File a support ticket`** — a lawyer reports a problem. It's saved as\n  `tickets/ticket_<timestamp>.txt`. → *like opening a ticket in ServiceNow / Jira.*\n  Before saving, the ticket is **auto-verified** (see below).\n* **`3) Resolve a support ticket (admin)`** — you, the admin, pick an open ticket\n  from the list, type how you fixed it, and the app:\n  1. adds a **resolution note** (status, who, when, fix) to the ticket,\n  2. renames it to `RESOLVED_ticket_<timestamp>.txt` so it's clearly closed, and\n  3. records a `TICKET_RESOLVED` line in `logs/audit_log.txt`.\n\n  → *like clicking \"Resolve\" in ServiceNow / Jira.*\n\n> Note: in this demo any logged-in user can resolve tickets (there's no separate\n> admin login). In a real system, RBAC would restrict this to admins only.\n\n---\n\n## ✅ Ticket verification (auto-check, else a human reviews)\n\nEvery new ticket runs through an automatic completeness check (`verify_ticket()`)\n**before** it's saved — so good tickets pass on their own and only the unclear\nones bother a person:\n\n* **Complete ticket** (enough detail) → marked **`AUTO-VERIFIED`**. Good to go,\n  no human needed.\n* **Incomplete ticket** (empty, or too short to act on) → marked\n  **`NEEDS HUMAN REVIEW`** and **flagged with a ⚠** in the admin's resolve list,\n  so the human knows exactly which tickets to check.\n\nThe verification result is written into the ticket file and recorded in\n`logs/audit_log.txt`. → *like a ServiceNow / Jira automation rule that triages\nincoming tickets and escalates the unclear ones to a person.*\n\nExample of a flagged ticket in the admin list:\n\n```\n   Open tickets:   (⚠ = flagged for human review)\n     1) ⚠ ticket_20260626030303.txt  ->  Problem: broken\n```\n\n---\n\n## 🗂️ What's in this folder\n\n```\nlaw-firm-ai-project/\n├── app.py              # the main program (all 10 phases)\n├── prove_wall.py       # proves the ethical wall blocks cross-case access\n├── config/\n│   ├── users.json      # the 3 lawyers   (pretends to be Entra ID)\n│   └── access.json     # who sees what   (pretends to be Azure RBAC)\n├── cases/              # secret case files (pretends to be SharePoint)\n│   ├── medical/\n│   ├── manufacturing/\n│   └── tobacco/\n├── logs/               # audit_log.txt   (pretends to be Azure Monitor)\n├── reports/            # cost_report.txt (pretends to be Azure Cost Mgmt)\n└── tickets/            # support tickets  (pretends to be ServiceNow)\n```\n",
+    "characters": 5315,
+    "source_url": "https://github.com/navik12/law-firm-ai-project/blob/7bae4713fa33a709c665f06936be600aa1c16218/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "02d8a681a86d0d792a9e5b8085305423fc802f9ad4162ceb1d5deffa6d97d412",
+    "text": "MIT License\n\nCopyright (c) 2026 navik12\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1064,
+    "source_url": "https://github.com/navik12/law-firm-ai-project/blob/7bae4713fa33a709c665f06936be600aa1c16218/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 14,
+  "commits_six_months_capped": false,
+  "contributors_top10": [],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

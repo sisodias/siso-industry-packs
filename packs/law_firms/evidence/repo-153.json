@@ -1,0 +1,69 @@
+{
+  "audit_id": "R153",
+  "requested_full_name": "AlanHardesty/purview-ediscovery-export",
+  "observed_at": "2026-09-13T17:05:17.288831+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "AlanHardesty/purview-ediscovery-export",
+  "html_url": "https://github.com/AlanHardesty/purview-ediscovery-export",
+  "description": "Automated Microsoft Purview eDiscovery Premium legal hold export via the Graph API",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-08-05T03:58:22Z",
+  "updated_at": "2026-08-12T22:09:53Z",
+  "pushed_at": "2026-08-10T18:37:55Z",
+  "size": 32,
+  "open_issues_count": 0,
+  "topics": [
+    "compliance",
+    "ediscovery",
+    "exchange-online",
+    "legal-hold",
+    "microsoft-graph",
+    "microsoft365",
+    "powershell",
+    "purview"
+  ],
+  "license": null,
+  "revision": "e460f526928e86cafde90b35b831a957a5f0734b",
+  "last_commit": "2026-08-10T18:37:51Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/AlanHardesty/purview-ediscovery-export",
+    "commit": "https://github.com/AlanHardesty/purview-ediscovery-export/commit/e460f526928e86cafde90b35b831a957a5f0734b"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "33b92594b625998a27a100698a1a2bbb2d7ccaf4c0d1412029aaba418e6db575",
+    "text": "# Purview eDiscovery Export Automation\n\nEnd-to-end automation of Microsoft Purview eDiscovery (Premium) legal hold exports via the\nMicrosoft Graph API — built to export a multi-terabyte legal hold estate from a tenant\nscheduled for decommission, without the legal team ever touching the Purview portal.\n\nThe workflow is fully scripted because the requirement was **defensibility**: attorneys\nspecify which custodians to export and in what order, and everything else — case discovery,\ndata source resolution, search scoping, collection, export, and download — happens the same\nway every time, with a log and resumable state.\n\n```\ncase → custodian (or non-custodial data source) → user source → review set\n     → search → estimate → add to review set → export → download\n```\n\n| | |\n|---|---|\n| **Scale** | ~800 custodians and ~800 sites, roughly 22 TB / 66 million items |\n| **API** | Microsoft Graph v1.0 `security/cases/ediscoveryCases` |\n| **Auth** | Microsoft Graph SDK, plus MSAL.PS for the separate export download token |\n| **Runtime per custodian** | 5 to 12+ hours, server-side, resumable |\n\n---\n\n## The three problems worth reading the code for\n\n### 1. Multi-hour server-side jobs, and a client that cannot be trusted to survive them\n\n`addToReviewSet` is the collection step, and it is slow. Measured durations on a real\ntenant: **317 minutes, 530 minutes, 650 minutes, and one run over 12 hours.** The job runs\nserver-side, which is the important property — it survives the client dying.\n\nThe script is built around that fact. Two JSON state files are written per custodian:\n\n| File | Purpose |\n|---|---|\n| `addToReviewSet-state.json` | Records the server-side operation ID. A re-run resumes *monitoring* an in-flight collection instead of starting a second one. |\n| `export-state.json` | Records that collection finished and export was requested. A re-run skips straight to downloading, bypassing a multi-hour re-collection. Deleted only after every file has downloaded successfully. |\n\nThe script can be killed, the machine rebooted, and the next run picks up where it left off.\nThis has been exercised in both directions in production — after a deliberate stop, and\nafter a genuine collection timeout — with no data re-collected and nothing lost.\n\nThe collection timeout is set to **24 hours** (`$maxAddWaitMinutes = 1440`). It started at\ntwo hours. Every increase came from a real job that outlived the previous value.\n\n> **`addToReviewSet` reports 0% for its entire run**, then flips to 100% on completion.\n> It is not a progress bar. Do not kill a job because it appears stuck — this cost real time\n> to learn.\n\n### 2. Mailboxes whose owning account no longer exists\n\nThis is the case that breaks the obvious implementation, and in a decommissioning tenant it\nis a large share of the scope rather than an edge case.\n\nWhen a user's Entra ID account has been deleted but litigation hold is still preserving\ntheir mailbox, the identity is gone while the data is not. `Get-MgUser` returns nothing.\nAnything that resolves a custodian through the directory fails. Purview, however, still\nholds a custodian record.\n\nThe script detects this and switches to the **non-custodial data source (NCD)** path,\nreferencing the mailbox directly through the `noncustodialDataSources` endpoint and\nbypassing directory resolution entirely.\n\nTwo traps, both found the hard way:\n\n- **You cannot create a new user source for a deleted account.** Purview cannot resolve the\n  identity to attach it to. Only user sources that already existed *before* the account was\n  deleted will work — so the script reuses the existing custodian's sources rather than\n  provisioning fresh ones.\n- **The NCD list response does not reliably populate `dataSource.email` or `displayName`.**\n  Matching an existing data source on those fields silently finds nothing, and the naive\n  result is that the script creates a duplicate case on every single run. Nothing errors.\n  Detection has to key off something the API actually returns.\n\n### 3. Search scope decides how much data the service collects\n\n`dataSourceScopes` is required by the Graph API at search creation. `\"none\"` is not a valid\nvalue, omitting the field fails, and PATCHing it afterwards fails too — so the value has to\nbe right the first time.\n\nIt also has a large performance consequence that is not obvious from the API surface:\n\n```powershell\n$searchScope = if ($NoncustodialDataSource) { \"allCaseNoncustodialDataSources\" }\n               else                         { \"allCaseCustodians\" }\n```\n\nScoping a search to `allCaseCustodians` in a case that happens to hold **143 custodians**\nmakes the collection step gather all 143 custodians' data — not just the person being\nexported. A job scoped that way sat at 0% for over two hours before the cause was clear. The\nsearch must be narrowed to the specific custodian's sources, which the script does by\nlinking the source explicitly and then narrowing scope where the API permits it.\n\n---\n\n## Other API behaviour worth knowing\n\n**`additionalDataOptions` must be a string, not an array.** A PowerShell `@('linkedFiles')`\nserializes to a JSON array and the API rejects it with `BadRequest`:\n\n```powershell\nadditionalDataOptions = \"linkedFiles\"   # correct\nadditionalDataOptions = @(\"linkedFiles\") # BadRequest\n```\n\n**Latest-version-only is expressed by omission.** There is no \"latest version\" flag —\nleaving `allVersions` out of `additionalDataOptions` *is* the latest-version-only behaviour.\nThis matters when the export has to match what an attorney selects manually in the portal.\n\n**Preservation Hold Libraries need no special handling.** The eDiscovery engine includes\nthem automatically for both personal OneDrive and team sites. Worth verifying rather than\nbuilding around.\n\n**Retention policies are not holds.** Delete-type retention policies do not contribute\ncustodians to an export scope, and where they overlap with a hold the hold wins — content\ngoes to Recoverable Items rather than being destroyed.\n\n---\n\n## Downloads\n\nExport downloads are large, slow, and interrupted often enough that a plain download call is\nnot viable. `WebClient.DownloadFile` was tried and removed.\n\nThe download path uses `HttpWebRequest` with a `Range` header against a `FileStream` opened\nin Append mode, so an interrupted transfer resumes from the byte it stopped at rather than\nstarting over:\n\n```powershell\n$request.AddRange([long]$startByte)\n$request.ReadWriteTimeout = 300000   # detect a stalled server rather than hanging forever\n```\n\nExport files are capped at **10 GB each** by the service, so a full-scope export is\nthousands of files and any one of them can fail independently.\n\n**Throughput is server-side throttled.** Two different proxy endpoints were observed serving\nthe same tenant — one at roughly 5–7 Mbps, the other at 200–300 Mbps — with no client-side\ncontrol over which one you get. Portal downloads go through the same throttling, so manual\nexport is not a workaround for a slow scripted one.\n\n**The download token is acquired before the export loop starts**, not when the download\nbegins. Acquiring it later means an unattended overnight run can stall on an interactive\nprompt hours in, with nobody at the console. That mistake cost a seven-hour run once.\n\n---\n\n## Scripts\n\n| Script | Purpose |\n|---|---|\n| [`Export-LitigationHoldData.ps1`](Export-LitigationHoldData.ps1) | The export workflow. Takes a CSV of custodians, runs the full pipeline per user, resumable. |\n| [`Get-TenantHoldAudit.ps1`](Get-TenantHoldAudit.ps1) | Tenant-wide hold discovery — Exchange litigation hold, Purview retention policies, and eDiscovery case holds — producing an HTML report, per-type CSVs, and a deduplicated export scope with storage sizing. Run this first; its output defines what needs exporting. |\n| [`Get-SpoSiteSizes.ps1`](Get-SpoSiteSizes.ps1) | Collects SharePoint and OneDrive site sizes to a JSON cache consumed by the audit. |\n\n### Why site sizing is a separate script\n\n`ExchangeOnlineManagement`, `MSAL.PS`, and `PnP.PowerShell` each ship their own incompatible\ncopy of `Microsoft.Identity.Client.dll` and its native `msalruntime.dll`. Once one is loaded\ninto a PowerShell process, the others cannot load in that process:\n\n```\nUnable to load DLL 'msalruntime' or one of its dependencies (0x8007007E)\nCould not load file or assembly 'Microsoft.Identity.Client.dll' ... already loaded\n```\n\nThe split is not organizational preference — it is the only way to use PnP and Exchange\ntooling in the same workflow. The two scripts hand off through a JSON cache on disk, and\n**each script must run in its own fresh PowerShell session.**\n\n---\n\n## Usage\n\n```powershell\n# 1. Collect site sizes (own session, PnP)\n.\\Get-SpoSiteSizes.ps1\n\n# 2. Audit tenant holds and build the export scope (own session, Exchange + IPPS)\n.\\Get-TenantHoldAudit.ps1\n\n# 3. Export (own session, Graph + MSAL.PS)\n.\\Export-LitigationHoldData.ps1\n```\n\n### Input CSV\n\n`Export-LitigationHoldData.ps1` reads a comma-delimited CSV:\n\n| Column | Description |\n|---|---|\n| `SourceUpn` | Custodian UPN. May be blank if `CaseName` is supplied. |\n| `CaseName` | Optional. When populated the named case is used directly instead of scanning all cases. A blank UPN with a case name routes through case lookup and skips custodian management — the inactive-mailbox path. |\n\n### Configuration\n\nSet these at the top of `Export-LitigationHoldData.ps1`:\n\n```powershell\n$CsvPath        = \"C:\\Temp\\eDiscovery\\export-batch.csv\"\n$ExportRootPath = \"D:\\eDiscoveryExports\\\"\n```\n\nThose two paths are the only values you need to change.\n\n`$downloadClientId` and `$downloadScope` are already set and should be left alone. They hold\nMicrosoft's **public** application identifiers for the eDiscovery export download API — the\nsame in every tenant, not credentials, and not specific to any organisation. The download\ntoken cannot be acquired without them.\n\n### Requirements\n\n- PowerShell 7+\n- `Microsoft.Graph`, `MSAL.PS`, `ExchangeOnlineManagement`, `PnP.PowerShell`\n- eDiscovery Manager or eDiscovery Administrator role in Purview\n- Purview eDiscovery (Premium) licensing\n\n### Known limitations\n\n- **Case listing is capped at 100 cases.** In a tenant with more, existing-case detection\n  will miss cases and create duplicates. Pagination is the next fix.\n- **Exports run sequentially.** The tenant limit is 10 concurrent operations and 2 concurrent\n  export jobs per case; parallelism is feasible but was not needed to hit the throughput\n  ceiling, which is server-side.\n\n## License\n\nMIT — free to use, modify, and distribute.\n",
+    "characters": 10560,
+    "source_url": "https://github.com/AlanHardesty/purview-ediscovery-export/blob/e460f526928e86cafde90b35b831a957a5f0734b/README.md"
+  },
+  "license_file": {
+    "error": 404,
+    "detected": null
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "AlanHardesty",
+      "contributions": 2
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

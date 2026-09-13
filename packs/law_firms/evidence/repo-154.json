@@ -1,0 +1,89 @@
+{
+  "audit_id": "R154",
+  "requested_full_name": "zentrung/atlassian-evidence",
+  "observed_at": "2026-09-13T17:05:17.288831+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "zentrung/atlassian-evidence",
+  "html_url": "https://github.com/zentrung/atlassian-evidence",
+  "description": "Export Bitbucket, Confluence and Jira history as tamper-evident evidence — read-only, verbatim payloads, sha256-manifested JSONL. For tax audits, legal holds and e-discovery.",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2026-08-12T02:40:26Z",
+  "updated_at": "2026-09-10T00:30:05Z",
+  "pushed_at": "2026-08-12T02:41:35Z",
+  "size": 51,
+  "open_issues_count": 0,
+  "topics": [
+    "atlassian",
+    "audit",
+    "bitbucket",
+    "compliance",
+    "confluence",
+    "ediscovery",
+    "evidence",
+    "export",
+    "forensics",
+    "jira",
+    "legal-hold",
+    "python"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "4ae14750dc1becf36592305e492eff14ba80f315",
+  "last_commit": "2026-08-12T02:41:31Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/zentrung/atlassian-evidence",
+    "commit": "https://github.com/zentrung/atlassian-evidence/commit/4ae14750dc1becf36592305e492eff14ba80f315"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "54f0a437268b10d924ef7bea5a63c272c23e0ec6566e96e8abcd25b3f6c3be00",
+    "text": "# atlassian-evidence\n\n**English** | [Tiếng Việt](README.vi.md)\n\n**Export the full history of Confluence, Jira and Bitbucket Cloud as tamper-evident\nevidence** — strictly read-only, verbatim payloads, every batch sha256-manifested.\n\n*Trích xuất toàn bộ lịch sử Confluence / Jira / Bitbucket Cloud thành bằng chứng có thể kiểm\nchứng, phục vụ giải trình thuế, kiểm toán và tranh chấp pháp lý —*\n[đọc bản tiếng Việt](README.vi.md).\n\n---\n\n## Is this your problem?\n\nA tax authority, an auditor, or opposing counsel asks you to prove that **a specific thing\nhappened at a specific time** — and the evidence is scattered across years of Jira,\nConfluence and Bitbucket:\n\n- *\"Prove this R&D project was actually carried out during fiscal year 2019.\"*\n- *\"Produce the complete discussion behind this decision — no excerpts.\"*\n- *\"This document says it was edited on 12 March. Where is the version before the edit?\"*\n- Employment disputes, IP ownership claims, or a departing employee who deleted or rewrote\n  data on the way out.\n\nIt sounds simple until you try it.\n\n### Why the built-in exports are not enough\n\n| Approach | Why it fails as evidence |\n| --- | --- |\n| Jira XML/CSV export | Drops changelog, worklogs, comments; reformats timestamps |\n| Confluence PDF/Word export | Current version only — version history is what matters |\n| Screenshots | Unverifiable, trivially challenged as edited |\n| A repo you already cloned locally | Unpushed local commits contaminate the evidence |\n| Atlassian full-site backup | Opaque format; you cannot verify or produce any single item from it |\n\nThe core problem: evidence must be **provably unaltered** and **verbatim** — not \"data that a\ntool has reinterpreted for you\".\n\n### How this tool solves it\n\n- **Read-only, enforced structurally.** The HTTP client exposes exactly one method, `.get()` —\n  POST/PUT/DELETE do not exist anywhere in the code. Git is restricted to `clone --mirror`,\n  `fetch --prune` and `log`. There is no code path that can write back to the source systems.\n- **Absolutely verbatim.** Raw API payloads are preserved in each record's `raw` field. Every\n  timestamp is stored as **the exact string the source returned** and is never parsed into a\n  `datetime` and re-formatted — that silently rewrites timezone and millisecond precision.\n- **Verifiable.** Each closed JSONL batch is hashed into `manifest.jsonl`. Re-run `sha256sum`\n  at any point to prove a file has not changed since extraction.\n- **Complete history.** Confluence captures **every version** of every page, not just the\n  latest. Jira captures issues plus comments, changelogs and worklogs. Bitbucket captures\n  commits (both `author_date` and `committer_date`, read from git itself) and pull requests in\n  every state.\n- **Transparent scope.** Each run writes a scope report of what was covered, and every object\n  that was denied or missing (403/404) is recorded in `errors.jsonl` — what you *could not*\n  read is itself disclosable information, not something to quietly omit.\n- **Survives long runs.** Per-stream cursors, and a batch is closed before its cursor advances.\n  If the machine dies mid-run, re-issue the same command and it continues.\n\n---\n\n## Install\n\nRequires [uv](https://docs.astral.sh/uv/) and Python 3.14+.\n\n```bash\ngit clone https://github.com/zentrung/atlassian-evidence.git\ncd atlassian-evidence\nuv sync\n```\n\n## Configure\n\nCreate an API token at **id.atlassian.com → Security → API tokens**, then export seven\nvariables. All are **required** — the tool deliberately defaults nothing, so it can never\npoint at the wrong tenant by accident:\n\n```bash\nexport ATLASSIAN_SITE=your-company.atlassian.net   # no https:// prefix\nexport JIRA_USERNAME=you@company.com               # also used for Confluence\nexport JIRA_TOKEN=<api-token>\n\nexport BITBUCKET_WORKSPACE=your-workspace\nexport BITBUCKET_USER=you@company.com              # REST API: MUST be the email\nexport BITBUCKET_GIT_USER=your-bitbucket-username  # git clone: MUST be the username\nexport BITBUCKET_TOKEN=<api-token>\n```\n\n> **The trap that makes people give up:** Bitbucket Cloud needs **two different identities for\n> the same token**. The REST API accepts only the **email** (a username returns 401 *\"API token\n> must be used with an atlassian registered email\"*), while **git over HTTPS accepts only the\n> username** (an email returns *\"Authentication failed\"*). Find your username via\n> `GET /2.0/user` (field `username`), or in Bitbucket → Personal settings.\n\n## Usage\n\n```bash\nuv run evidence extract --source all --output-dir ./raw   # full run; can take hours\nuv run evidence status --output-dir ./raw                 # which streams are unfinished\nuv run evidence extract --source jira --output-dir ./raw  # a single source\n```\n\nStopping is always safe: `Ctrl-C` (or `pkill -INT -f '\\.venv/bin/evidence extract'`), then\nre-issue **the same command** to resume from where it stopped.\n\nA completed stream is treated as a **snapshot of that moment**: re-runs skip it and will not\npick up activity that happened afterwards. Use a fresh `--output-dir` for a newer snapshot.\n\n## Output\n\n```\nraw/\n├── manifest.jsonl   # per closed batch: batch_id, record_count, sha256, run_id, window\n├── errors.jsonl     # objects denied or missing (403/404) — the scope you could NOT read\n├── README.md        # per-run scope report + fidelity caveats\n├── .state/          # per-stream cursors\n├── .mirrors/        # git mirror clones (see warning below)\n└── {source}/{year}/batch-NNNNN.jsonl\n```\n\nEach JSONL line is one record sharing a common envelope: `source_system`, `object_type`, `id`,\n`url`, `title`, `body_raw`, `created_at`, `updated_at`, `author_account_id`, `container`, and\n`raw` holding the complete original payload.\n\nVerify integrity at any time:\n\n```bash\npython3 - <<'EOF'\nimport json, hashlib, pathlib\nfor m in map(json.loads, open('raw/manifest.jsonl')):\n    f = pathlib.Path(m['file'])\n    if hashlib.sha256(f.read_bytes()).hexdigest() != m['sha256']:\n        print('MISMATCH:', f)\nprint('verification complete')\nEOF\n```\n\n## Important notes\n\n- **Delete `raw/.mirrors/` before sharing the dataset.** Git mirrors store credentials in their\n  own `config`. Safest habit: revoke the token as soon as extraction finishes.\n- **Duplicates after a resume.** Interrupting mid-window and resuming can repeat records across\n  batches. Deduplicate on `(source_system, object_type, id, version_number)`.\n- **sha256 attests the extracted JSONL files**, not the original HTTP bytes.\n- **`author_display_name` is the name at extraction time** (the APIs expose no historical\n  names); `author_account_id` is the stable identifier.\n- **Scope equals what the extracting account can see.** Permission-restricted content is\n  invisible by construction and cannot be enumerated — use an account with sufficient access.\n- **Confluence comments are latest-version only**; full version history applies to pages and\n  blogposts.\n- **Bitbucket repositories with many branches run for a long time with no log output** — the\n  tool walks commits per branch over REST before writing the first record. Silence is not a\n  hang.\n\n## Development\n\n```bash\nuv run pytest -q\nuv run ruff check --no-cache .\n```\n\n## License\n\n[MIT](LICENSE) — free for individuals and organisations to use, modify, distribute and use\ncommercially.\n",
+    "characters": 7303,
+    "source_url": "https://github.com/zentrung/atlassian-evidence/blob/4ae14750dc1becf36592305e492eff14ba80f315/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "cc6df8799c5c572ab04a64096bc5ab3234e48b7f186bd3dafe23802d0b3f806c",
+    "text": "MIT License\n\nCopyright (c) 2026 Trung Huynh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1068,
+    "source_url": "https://github.com/zentrung/atlassian-evidence/blob/4ae14750dc1becf36592305e492eff14ba80f315/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 1,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "zentrung",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
