@@ -17,119 +17,20 @@ jobs:
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
     steps:
-      - name: Collect public text and metadata without executing upstream software
+      - name: Run pinned SISO metadata collector with large-file retrieval correction
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64,concurrent.futures,datetime,hashlib,json,os,re,time,urllib.request,urllib.error,urllib.parse
-          REPO='sisodias/siso-industry-packs';API='https://api.github.com';ROOT='packs/recruiting_staffing/evidence/'
-          assert os.environ['GH_REPOSITORY']==REPO
-          NOW=datetime.datetime.now(datetime.timezone.utc).isoformat();TOKEN=os.environ['GH_TOKEN'];outputs={}
-          def api(path,data=None,method=None):
-              assert path.startswith('/') and not path.startswith('//')
-              for attempt in range(4):
-                  req=urllib.request.Request(API+path,data=None if data is None else json.dumps(data).encode(),method=method,headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-recruiting-public-research','X-GitHub-Api-Version':'2022-11-28'})
-                  try:
-                      with urllib.request.urlopen(req,timeout=60) as r:return json.load(r)
-                  except urllib.error.HTTPError as e:
-                      if e.code in (429,500,502,503,504) and attempt<3:time.sleep(4*(attempt+1));continue
-                      return {'_error':e.code}
-              return {'_error':'retries'}
-          def readjson(path,ref='main'):
-              o=api('/repos/'+REPO+'/contents/'+path+'?ref='+ref)
-              return json.loads(base64.b64decode(o['content']))
-          def output(name,value):
-              assert re.fullmatch(r'[A-Za-z0-9_.-]+',name)
-              outputs[ROOT+name]=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False,indent=2)+'\n'
-          def short(value,n=25):return ' '.join((value or '').split()[:n])
-          cfg=readjson(ROOT+'audit-request.json',os.environ['REQUEST_REVISION']);assert cfg['mode'] in ('bank','search','candidates','normalize')
-          prior=[];known=set(n.lower() for n in cfg.get('previously_seen',[]))
-          for rnd in cfg.get('previous_rounds',[]):
-              obj=readjson(ROOT+'search-round-'+str(rnd).zfill(2)+'.json');prior.append(obj)
-              for q in obj['queries']:
-                  for x in q['hits']:
-                      known.add(x['full_name'].lower());x['description']=short(x.get('description'))
-              output('search-round-'+str(rnd).zfill(2)+'.json',obj)
-              output('search-round-'+str(rnd).zfill(2)+'-brief.jsonl',''.join(json.dumps({k:v for k,v in q.items() if k!='hits'}|{'hits':[(x['full_name'],x['stargazers_count'],x['description']) for x in q['hits']]},ensure_ascii=False)+'\n' for q in obj['queries']))
-          if cfg['mode']=='normalize':
-              output('normalization-receipt.json',{'observed_at':NOW,'rounds':cfg['previous_rounds'],'description_word_limit':25,'reason':'Bound third-party descriptions and remove irrelevant long-text pollution; source links and identity retained.'})
-          elif cfg['mode']=='search':
-              queries=cfg['queries'];assert 1<=len(queries)<=60;added=set();records=[]
-              for q in queries:
-                  assert 1<=q.get('per_page',8)<=30
-                  path='/search/repositories?'+urllib.parse.urlencode({'q':q['query'],'sort':'stars','order':'desc','per_page':q.get('per_page',8),'page':q.get('page',1)})
-                  result=api(path);row={**q,'observed_at':NOW,'source_url':API+path,'total_count':result.get('total_count'),'incomplete_results':result.get('incomplete_results'),'error':result.get('_error'),'hits':[],'new_names':[]}
-                  for r in result.get('items',[]):
-                      n=r['full_name'];x={k:r.get(k) for k in ('full_name','html_url','stargazers_count','archived','pushed_at','license','topics')};x['description']=short(r.get('description'));row['hits'].append(x)
-                      if n.lower() not in known:known.add(n.lower());added.add(n);row['new_names'].append(n)
-                  records.append(row);time.sleep(2.1)
-              rnd=str(cfg['round']).zfill(2);output('search-round-'+rnd+'.json',{'round':cfg['round'],'observed_at':NOW,'queries':records,'unique_new_count':len(added),'new_names':sorted(added),'scope':'Bounded query/page discovery; not exhaustive GitHub enumeration.'})
-              output('search-round-'+rnd+'-brief.jsonl',''.join(json.dumps({k:v for k,v in q.items() if k!='hits'}|{'hits':[(x['full_name'],x['stargazers_count'],x['description']) for x in q['hits']]},ensure_ascii=False)+'\n' for q in records))
-          else:
-              names=list(dict.fromkeys(cfg.get('repositories',[])));rows=[]
-              def filetext(o,n,rev,limit=100):
-                  if not o.get('content'):return {'error':o.get('_error','empty'),'path':o.get('path')}
-                  b=base64.b64decode(o['content']);t=b.decode('utf-8','replace')
-                  return {'path':o['path'],'sha256':hashlib.sha256(b).hexdigest(),'characters_read':len(t),'excerpt':short(t,limit),'source_url':'https://github.com/'+n+'/blob/'+str(rev)+'/'+o['path'],'edition_flags':[s for s in ('enterprise','commercial','non-production','self-host','docker','payroll','recruit','api') if s in t.lower()]}
-              def collect(pair):
-                  num,name=pair;m=api('/repos/'+name);out={'audit_id':'R'+str(num).zfill(3),'requested_full_name':name,'observed_at':NOW}
-                  if '_error' in m:return out|{'retrieval_error':m['_error']}
-                  n=m['full_name'];base='/repos/'+n;out.update({k:m.get(k) for k in ('full_name','html_url','stargazers_count','forks_count','default_branch','archived','disabled','pushed_at','open_issues_count','topics','license')});out['description']=short(m.get('description'))
-                  cs=api(base+'/commits?per_page=10');rev=cs[0]['sha'] if isinstance(cs,list) and cs else None;out['revision']=rev;out['last_commit']=cs[0]['commit']['committer']['date'] if rev else None;out['recent_commits']=[{'sha':c['sha'],'date':c['commit']['committer']['date']} for c in cs] if isinstance(cs,list) else None
-                  out['sources']={'repository':API+base,'commit':cs[0]['html_url'] if rev else None};suffix='?ref='+rev if rev else ''
-                  out['readme']=filetext(api(base+'/readme'+suffix),n,rev);out['license_file']=filetext(api(base+'/license'+suffix),n,rev,100)
-                  people=api(base+'/contributors?per_page=5');out['contributors_top5']=[{'login':p.get('login'),'contributions':p.get('contributions')} for p in people] if isinstance(people,list) else None;out['bus_factor']='Not measured; contributor counts are not maintainership redundancy.'
-                  issues=api(base+'/issues?state=all&sort=updated&direction=desc&per_page=5');out['issue_sample']=[{k:i.get(k) for k in ('number','title','state','created_at','closed_at','updated_at','comments','html_url')} for i in issues if 'pull_request' not in i] if isinstance(issues,list) else None
-                  out['issue_response_sample']=[]
-                  for i in (out.get('issue_sample') or [])[:1]:
-                      if i['comments']:
-                          comments=api(base+'/issues/'+str(i['number'])+'/comments?per_page=15')
-                          if isinstance(comments,list):
-                              a=[c for c in comments if c.get('author_association') in ('OWNER','MEMBER','COLLABORATOR')]
-                              if a:out['issue_response_sample'].append({'issue':i['number'],'created_at':i['created_at'],'first_affiliated_reply_in_sample':a[0]['created_at'],'source_url':a[0]['html_url']})
-                  return out
-              if cfg['mode']=='candidates':
-                  assert 1<=len(names)<=150 and all(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',n) for n in names)
-                  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:rows=list(pool.map(collect,enumerate(names,1)))
-              wanted={n.lower() for n in names}|{r['full_name'].lower() for r in rows if r.get('full_name')}
-              bankrepo='sisodias/siso-repo-bank';head=api('/repos/'+bankrepo+'/commits/main')['sha'];files=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl'];bank={};receipt={'observed_at':NOW,'bank_repository':bankrepo,'bank_revision':head,'files':[],'upstream_execution':'none; metadata and text only'}
-              pattern=re.compile(cfg.get('filter','recruit|staffing|applicant|resume|timesheet|payroll|hrms|chatwoot|freescout|signature|scheduling|human resource'),re.I)
-              def fullname(row):
-                  for k in ('full_name','repo_full_name','repository_full_name','repository','repo','name','url','repo_url','repository_url','source_url'):
-                      v=row.get(k)
-                      if isinstance(v,str):
-                          v=v.removeprefix('https://github.com/').removesuffix('.git').strip('/')
-                          if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',v):return v.lower()
-                  return None
-              for path in files:
-                  url='https://raw.githubusercontent.com/'+bankrepo+'/'+head+'/'+path;count=0;digest=hashlib.sha256();idx={};matched=[]
-                  with urllib.request.urlopen(url,timeout=90) as stream:
-                      for line in stream:
-                          digest.update(line)
-                          if not line.strip():continue
-                          row=json.loads(line);count+=1;n=fullname(row)
-                          if n in wanted:idx.setdefault(n,[]).append(row)
-                          if cfg['mode']=='bank' and path in ('capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_contractcard.jsonl') and pattern.search(json.dumps(row)):matched.append(row)
-                  bank[path]=idx;receipt['files'].append({'path':path,'rows':count,'sha256':digest.hexdigest(),'source_url':'https://github.com/'+bankrepo+'/blob/'+head+'/'+path})
-                  if cfg['mode']=='bank' and matched:
-                      tag=path.split('/')[-1].replace('.jsonl','');output('bank-'+tag+'-matches.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in matched[:200]));receipt.setdefault('filtered',[]).append({'path':path,'matched':len(matched),'returned':min(len(matched),200),'truncated':len(matched)>200})
-              if cfg['mode']=='bank':output('bank-receipt.json',receipt)
-              else:
-                  review=[]
-                  for i,r in enumerate(rows,1):
-                      aliases={r['requested_full_name'].lower(),r.get('full_name','').lower()};r['bank_revision']=head;r['bank_rows']={p:[x for a in aliases for x in idx.get(a,[])] for p,idx in bank.items() if p!='bank/bank_capability.jsonl'};r['bank_membership_layers']=[p for p,v in r['bank_rows'].items() if v];r['bank_status']='ALREADY IN THE BANK' if r['bank_membership_layers'] else 'NEW';r['adoption_evidence']=r['bank_rows'].get('bank/bank_adoption_v2.jsonl',[]);r['adoption_limitation']='Missing data is unknown, not zero users.';output('repo-'+str(i).zfill(3)+'.json',r)
-                      small={k:r.get(k) for k in ('audit_id','full_name','description','stargazers_count','archived','last_commit','revision','license','bank_status','adoption_evidence','readme','license_file','retrieval_error')};small['recent_commits_in_sample']=sum(c['date']>='2026-03-13' for c in r.get('recent_commits') or []);small['contributors_sample_count']=len(r.get('contributors_top5') or []);small['issue_response_sample']=r.get('issue_response_sample');review.append(small)
-                  for start in range(0,len(review),5):output('review-'+str(start//5+1).zfill(2)+'.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in review[start:start+5]))
-                  output('candidate-index.jsonl',''.join(json.dumps({k:r.get(k) for k in ('audit_id','full_name','description','stargazers_count','archived','last_commit','license','bank_status')},ensure_ascii=False)+'\n' for r in rows))
-                  receipt.update({'requested':len(names),'repositories_retrieved':sum(bool(r.get('full_name')) for r in rows),'readmes_retrieved':sum(bool(r.get('readme',{}).get('excerpt')) for r in rows),'license_files_retrieved':sum(bool(r.get('license_file',{}).get('excerpt')) for r in rows),'current_commit_retrieved':sum(bool(r.get('revision')) for r in rows),'already_in_bank':sum(r.get('bank_status')=='ALREADY IN THE BANK' for r in rows),'new':sum(r.get('bank_status')=='NEW' for r in rows),'membership_definition':'Exact case-insensitive match in any of six repository-bearing exported bank layers, including shelf, canonical/queried names; broader private identity database not searched.'});output('candidate-audit-receipt.json',receipt)
-          for attempt in range(8):
-              ref=api('/repos/'+REPO+'/git/ref/heads/main');parent=ref['object']['sha'];commit=api('/repos/'+REPO+'/git/commits/'+parent);tree=api('/repos/'+REPO+'/git/trees',{'base_tree':commit['tree']['sha'],'tree':[{'path':p,'mode':'100644','type':'blob','content':t} for p,t in outputs.items()]},'POST')
-              if '_error' in tree:raise RuntimeError('Evidence tree write failed '+str(tree['_error']))
-              c=api('/repos/'+REPO+'/git/commits',{'message':'research(recruiting_staffing): publish '+cfg['mode']+' public evidence','tree':tree['sha'],'parents':[parent]},'POST');assert 'sha' in c
-              result=api('/repos/'+REPO+'/git/refs/heads/main',{'sha':c['sha'],'force':False},'PATCH')
-              if '_error' not in result:print('Published',len(outputs),'public evidence files',c['sha']);break
-              if result['_error'] not in (409,422):raise RuntimeError('Ref update failed '+str(result['_error']))
-              time.sleep(2)
-          else:raise RuntimeError('Concurrent writes prevented safe publication')
-          print('Completed; no application code, upstream execution or client-data access.')
+          import textwrap, urllib.request
+          # This is our own public research collector, pinned before this compatibility fix.
+          # No candidate application or third-party repository code is executed.
+          revision='859dd0f0729b7c45f46c04b68261d8b0a36a4be4'
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/.github/workflows/recruiting-staffing-evidence-audit.yml'
+          with urllib.request.urlopen(url,timeout=60) as stream:source=stream.read().decode()
+          program=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY\n',1)[0])
+          old="o=api('/repos/'+REPO+'/contents/'+path+'?ref='+ref)\n    return json.loads(base64.b64decode(o['content']))"
+          new="url='https://raw.githubusercontent.com/'+REPO+'/'+ref+'/'+path\n    with urllib.request.urlopen(url,timeout=90) as stream:return json.load(stream)"
+          assert program.count(old)==1
+          program=program.replace(old,new)
+          exec(compile(program,'pinned-public-research-collector.py','exec'))
           PY
