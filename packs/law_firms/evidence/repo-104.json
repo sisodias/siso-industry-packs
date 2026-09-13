@@ -1,0 +1,141 @@
+{
+  "audit_id": "R104",
+  "requested_full_name": "usnationalarchives/digital-preservation",
+  "observed_at": "2026-09-13T16:11:19.265760+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "usnationalarchives/digital-preservation",
+  "html_url": "https://github.com/usnationalarchives/digital-preservation",
+  "description": "NARA digital preservation file format risk analysis and preservation plans",
+  "stargazers_count": 241,
+  "forks_count": 21,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-08-23T15:12:30Z",
+  "updated_at": "2026-09-02T11:14:55Z",
+  "pushed_at": "2026-04-15T13:08:26Z",
+  "size": 31353,
+  "open_issues_count": 0,
+  "topics": [],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "a975854438000af99dd48c8ae10d64c7f0b873ae",
+  "last_commit": "2026-04-15T13:08:26Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/usnationalarchives/digital-preservation",
+    "commit": "https://github.com/usnationalarchives/digital-preservation/commit/a975854438000af99dd48c8ae10d64c7f0b873ae"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "9ccf995ae9a1e298d1162bad0e1805c2b092ca7827cd931bb08326da227f6ac0",
+    "text": "# U.S. National Archives and Records Administration Digital Preservation Framework\n\nThe National Archives and Records Administration Digital Preservation Framework consists of a Risk Matrix and Preservation Action Plans.\n\n## Background\n\nThe National Archives [2022–2026 Strategic Plan](https://www.archives.gov/about/plans-reports/strategic-plan/strategic-plan-2022-2026) embraces the primacy of electronic records. Our vision is to ensure cutting-edge access to extraordinary volumes of government informa­tion and unprecedented engagement to bring greater meaning to the American experience. To do so, NARA must collaborate with other Federal agencies, the private sector, and the public to ensure records and archives thrive in a digital world.\n\nDigital preservation is critical to this work. It has become even more important because of the direction ([M-23-07, Update to Transition to Electronic Records](https://www.archives.gov/files/records-mgmt/policy/m-23-07.pdf)) to Federal agencies to transition business processes and recordkeeping to a fully electronic environment. As of June 30, 2024, the National Archives no longer accepts paper records from Federal agencies, with limited exceptions.\n\n\nNARA holds over one billion files representing more than 700 file format versions. These files can be categorized into 16 general categories of electronic records. The vast majority of files are email messages, JPEG and TIFF still images, PDFs, HTML, and plain ASCII text.\n\nThe NARA Digital Preservation Unit created the Digital Preservation Framework in response to the current and anticipated volume of electronic records in NARA’s holdings. This set of documents describes how NARA identifies risks to digital files and prioritizes them for action, as well as how NARA plans for their long-term preservation. \n\nThe Digital Preservation Framework consists of:\n1. The NARA Risk Matrix\n2. File Format Preservation Action Plans\n3. Record Category Preservation Action Plans\n\nThese documents are actively maintained and updated on a quarterly basis, as NARA continues to research formats newly identified or newly accessioned into its holdings.\n\n## The NARA Risk Matrix\n\nNARA uses the [Risk Matrix](https://github.com/usnationalarchives/digital-preservation/tree/master/Digital_Preservation_Risk_Matrix) to measure the preservation risk of digital file formats in our holdings and to assess formats we anticipate receiving in the future. By answering questions related to the ability to preserve and sustain a file format, we identify relative risk levels.\n\nThe Risk Matrix is structured as a series of twenty-seven questions about each file format, organized by eight categories relating to risk and sustainability:\n\n1. Disclosure\n2. Adoption\n3. Transparency\n4. Self-Documentation\n5. External Hardware Dependencies\n6. External Software Dependencies\n7. Impact of Patents\n8. Technical Protection Mechanisms\n\nThe answers to all the questions have been assigned numeric values, which are used to calculate an overall numeric Risk Rating and a general Risk Level which translates to: Low Risk, Moderate Risk, and High Risk.\n\nThe final questions in the Risk Matrix represent how NARA prioritizes formats in our holdings for preservation actions. We use Need/Use/Feasibility to determine our preservation priorities. The Risk Rating represents the \"Need\" for a preservation action. \"Use\" is represented by evaluating Prevalence: how common the format is in our holdings at the time of assessment, therefore approximating the level of use of the format in the permanent records of the Federal Government. \"Feasibility\" is measured as the capacity for NARA to process and convert formats. We assess Feasibility based on the general availability of tools for format migration that do not alter the content in unacceptable ways as well as our capacity to perform acceptable migrations.\n\nThe Risk Matrix is [described in greater detail here](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Risk_Matrix/readme.md).\n\n## File Format Preservation Action Plans\nNARA publishes File Format Preservation Action Plans for all file formats represented in the Risk Matrix. These Plans identify actions that would enhance long-term preservation for a format type and documents NARA’s practices and preferred tools. However, they are not exhaustive nor universally applicable; actions may differ based on the file formats and variant versions in NARA holdings, the current NARA risk assessment, processing capabilities, and tools in use at NARA. These Plans apply to files once they have been deemed permanent for NARA's holdings; the appraisal guidelines for when a record is permanent is different for Congressional, Federal, and Presidential records.\n\nThese plans can be accessed in the [File Format Preservation Action Plan Spreadsheet](https://github.com/usnationalarchives/digital-preservation/tree/master/Digital_Preservation_Plan_Spreadsheet). The spreadsheet covers over 700 variant versions of file formats and identifies:\n\n* Categories of electronic records associated with the format\n* Specifications, standards, and documentation where possible; some have no specification or standard available\n* Proposed preservation migration actions to be taken by NARA, including no action when appropriate\n* Recommended tools for processing and preservation actions\n\nThe Preservation Action Plans are also available as [linked open data](https://www.archives.gov/preservation/digital-preservation/linked-data) on archives.gov.\n\n## Record Category Preservation Action Plans\n\nNARA also maintains preservation action plans for categories of electronic records. Each category has its own Plan that contains a list of “Significant Properties,” which identify the properties, or characteristics, of a record (its Appearance, Behavior, Context, and Structure) that should be retained, if possible, in any format migration. These characteristics are important to ensure the highest fidelity format record migrations. The Record Category Preservation Action Plans, and a template for their creation, can be [accessed here](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Template.docx \"accessed here\"). \n\nThe 16 categories are:\n\n- [Digital Audio](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_DigitalAudio.md \"Digital Audio\")\n- [Digital Design and Vector Graphics](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_DigitalDesignAndVectorGraphics.md \"Digital Design and Vector Graphics\")\n- [Digital Still Image](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_DigitalStillImage.md \"Digital Still Image\")\n- [Email](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Email.md \"Email\")\n- [Geospatial](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Geospatial.md \"Geospatial\")\n- [Moving Image: Digital Cinema](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_DigitalCinema.md \"Moving Image: Digital Cinema\")\n- [Moving Image: Digital Video](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_DigitalVideo.md \"Moving Image: Digital Video\")\n- [Navigational Charts](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_NavigationalCharts.md \"Navigational Charts\")\n- [Presentation and Publishing](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_PresentationAndPublishing.md \"Presentation and Publishing\")\n- [Software and Code](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_SoftwareAndCode.md \"Software and Code\")\n- [Structured Data: Calendars](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Calendars.md \"Calendars\")\n- [Structured Data: Databases](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Databases.md \"Structured Data: Databases\")\n- [Structured Data: Generic](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_StructuredData.md \"Structured Data: Generic\")\n- [Structured Data: Spreadsheets](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_Spreadsheets.md \"Structured Data: Spreadsheets\")\n- [Textual And Word Processing](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_TextualAndWordProcessing.md \"Textual And Word Processing\")\n- [Web Records](https://github.com/usnationalarchives/digital-preservation/blob/master/Digital_Preservation_Record_Categories/NARA_PreservationActionPlan_WebRecords.md \"Web Records\")\n\n\n## File Format Extensions\n\nNARA also publishes file extensions data from our holdings for potential reuse, such as to identify extensions to be researched further for file format identification. The extensions and counts provided are generated by combining reports from various preservation systems for Federal, Legislative, and Presidential electronic records. More information and the dataset can be [accessed here](https://github.com/usnationalarchives/digital-preservation/tree/master/File_Extensions).\n\n## Related Resources\n\nThere are several related resources available from NARA about file formats:\n\n* [Digital Preservation Framework Linked Open Data](https://www.archives.gov/preservation/digital-preservation/linked-data) (File Format Preservation Action Plans as linked data)\n* [Transfer Guidance on Preferred and Acceptable File Formats](https://www.archives.gov/records-mgmt/policy/transfer-guidance.html) (file formats that NARA prefers to receive from agencies, but which is not 100% proscriptive)\n* [NARA Digitization Products and Service](https://www.archives.gov/preservation/products/) (file formats that NARA produces in its own internal digitization)\n* [NARA Digital Preservation Strategy](https://www.archives.gov/preservation/electronic-records/digital-preservation-strategy) (NARA’s approach to Digital Preservation)\n\n## Publications and Presentations\n[All Risk is Local: File Format Risk Assessment In Two U.S. Government Contexts](https://ipres2024.pubpub.org/pub/xtwb1guc/). iPres International Digital Preservation Conference, 2024.\n\n[Creating a holdings format profile and format matrix for risk-based digital preservation planning at the National Archives and Records Administration](https://osf.io/ctw3g/). iPres International Digital Preservation Conference, 2018.\n\n## How Can You Participate?\n\nWe share these documents to be transparent about our approach to digital preservation and to communicate our current practices to Federal agencies, records managers, archivists, digital preservation professionals, researchers, private industry, allied professionals, and members of the public.\n\n\nWe always welcome feedback on the following topics:\n* What revisions can you suggest to the proposed processing and preservation actions for the formats?\n  * Are the Significant Properties for each category comprehensive enough for digital preservation?\n  * Are the proposed preservation actions for the formats technically appropriate?\n* Are there appropriate tools for processing and preservation migrations of specific formats that we have not listed? Are any of the listed tools inappropriate or risky to use for the purposes we have identified?\n* Are there other formats we have not yet identified that need plans?\n\nPlease use the [issues feature](https://github.com/usnationalarchives/digital-preservation/issues) on this site to leave a specific comment or question or to just start a discussion. You can read more about how to contribute [here](https://github.com/usnationalarchives/digital-preservation/blob/master/CONTRIBUTING.md). NARA staff will respond as quickly as they can.\n\nWe update the matrix and plans on an ongoing basis in response to changing risks and new technologies and formats.\n",
+    "characters": 12883,
+    "source_url": "https://github.com/usnationalarchives/digital-preservation/blob/a975854438000af99dd48c8ae10d64c7f0b873ae/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "sha256": "f376b48e045dcfe7921fcc158405fdfeb8e37e00029061454aece4299a98cfc1",
+    "text": "## Public Domain\nAs a work of the United States Government, this project is in the public domain within the United States.\nAdditionally, we waive copyright and related rights in the work worldwide through the CC0 1.0 Universal public domain dedication.\n\n## CC0 1.0 Universal Summary\nThis is a human-readable summary of the [Legal Code (read the full text)](https://creativecommons.org/publicdomain/zero/1.0/legalcode).\n\n## No Copyright\nThe person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.\nYou can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.\n\n## Other Information\nIn no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may have in the work or in how the work is used, such as publicity or privacy rights.\nUnless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work, and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law. When using or citing the work, you should not imply endorsement by the author or the affirmer.\n",
+    "characters": 1336,
+    "source_url": "https://github.com/usnationalarchives/digital-preservation/blob/a975854438000af99dd48c8ae10d64c7f0b873ae/LICENSE.md",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 21,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "eengland",
+      "contributions": 233
+    },
+    {
+      "login": "mackenziebeasley",
+      "contributions": 117
+    },
+    {
+      "login": "hannahlwang",
+      "contributions": 96
+    },
+    {
+      "login": "clingerman",
+      "contributions": 29
+    },
+    {
+      "login": "lljohnston",
+      "contributions": 9
+    },
+    {
+      "login": "mlassere-nara",
+      "contributions": 8
+    },
+    {
+      "login": "weikai",
+      "contributions": 8
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 30,
+      "title": "Digital Video - reference the codec as an underlying vulnerability factor",
+      "state": "closed",
+      "created_at": "2020-07-03T20:18:55Z",
+      "updated_at": "2025-05-20T17:28:51Z",
+      "closed_at": "2025-05-20T17:28:51Z",
+      "comments": 3,
+      "html_url": "https://github.com/usnationalarchives/digital-preservation/issues/30",
+      "author_association": "NONE"
+    },
+    {
+      "number": 28,
+      "title": "Are there appropriate tools for processing and preservation of specific formats that we do not have listed?",
+      "state": "closed",
+      "created_at": "2020-06-30T13:52:01Z",
+      "updated_at": "2025-05-20T17:28:44Z",
+      "closed_at": "2025-05-20T17:28:44Z",
+      "comments": 2,
+      "html_url": "https://github.com/usnationalarchives/digital-preservation/issues/28",
+      "author_association": "COLLABORATOR"
+    },
+    {
+      "number": 4,
+      "title": "Are there other high priority formats we haven’t created plans for yet?",
+      "state": "closed",
+      "created_at": "2019-09-12T15:34:48Z",
+      "updated_at": "2025-05-20T17:28:29Z",
+      "closed_at": "2025-05-20T17:28:29Z",
+      "comments": 6,
+      "html_url": "https://github.com/usnationalarchives/digital-preservation/issues/4",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 30,
+      "created_at": "2020-07-03T20:18:55Z",
+      "first_affiliated_reply_in_sample": "2020-08-12T18:46:17Z",
+      "source_url": "https://github.com/usnationalarchives/digital-preservation/issues/30#issuecomment-673046328"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

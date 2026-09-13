@@ -1,0 +1,158 @@
+{
+  "audit_id": "R106",
+  "requested_full_name": "richardlehane/siegfried",
+  "observed_at": "2026-09-13T16:11:19.265760+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "richardlehane/siegfried",
+  "html_url": "https://github.com/richardlehane/siegfried",
+  "description": "signature-based file format identification",
+  "stargazers_count": 270,
+  "forks_count": 33,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2014-02-28T06:52:25Z",
+  "updated_at": "2026-09-08T09:38:07Z",
+  "pushed_at": "2026-09-08T09:37:15Z",
+  "size": 285946,
+  "open_issues_count": 21,
+  "topics": [
+    "code4lib",
+    "digital-preservation",
+    "format-identification",
+    "pronom"
+  ],
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "revision": "728cd4012b2da10d4455112eb285f3b450d56188",
+  "last_commit": "2026-09-08T09:36:43Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/richardlehane/siegfried",
+    "commit": "https://github.com/richardlehane/siegfried/commit/728cd4012b2da10d4455112eb285f3b450d56188"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "68c587b8afc5e2aa1855de98e4f56db757cb04c1f0f5b01747670baa04696dbc",
+    "text": "# Siegfried\n\n[Siegfried](http://www.itforarchivists.com/siegfried) is a signature-based file format identification tool, implementing:\n\n  - the National Archives UK's [PRONOM](http://www.nationalarchives.gov.uk/pronom) file format signatures\n  - freedesktop.org's [MIME-info](https://freedesktop.org/wiki/Software/shared-mime-info/) file format signatures\n  - the Library of Congress's [FDD](http://www.digitalpreservation.gov/formats/fdd/descriptions.shtml) file format signatures (*beta*).\n  - Wikidata (*beta*).\n\n### Version\n\n1.11.6\n\n[![GoDoc](https://godoc.org/github.com/richardlehane/siegfried?status.svg)](https://godoc.org/github.com/richardlehane/siegfried) [![Go Report Card](https://goreportcard.com/badge/github.com/richardlehane/siegfried)](https://goreportcard.com/report/github.com/richardlehane/siegfried)\n\n## Usage\n\n### Command line\n\n    sf file.ext\n    sf *.ext\n    sf DIR\n\n#### Options\n\n    sf -csv file.ext | *.ext | DIR             // Output CSV rather than YAML\n    sf -json file.ext | *.ext | DIR            // Output JSON rather than YAML\n    sf -droid file.ext | *.ext | DIR           // Output DROID CSV rather than YAML\n    sf -nr DIR                                 // Don't scan subdirectories\n    sf -z file.zip | *.ext | DIR               // Decompress and scan zip, tar, gzip, warc, arc\n    sf -zs gzip,tar file.tar.gz | *.ext | DIR  // Selectively decompress and scan \n    sf -hash md5 file.ext | *.ext | DIR        // Calculate md5, sha1, sha256, sha512, or crc hash\n    sf -sig custom.sig *.ext | DIR             // Use a custom signature file\n    sf -                                       // Scan stream piped to stdin\n    sf -name file.ext -                        // Provide filename when scanning stream \n    sf -f myfiles.txt                          // Scan list of files and directories\n    sf -v | -version                           // Display version information\n    sf -home c:\\junk -sig custom.sig file.ext  // Use a custom home directory\n    sf -serve hostname:port                    // Server mode\n    sf -throttle 10ms DIR                      // Pause for duration (e.g. 1s) between file scans\n    sf -multi 256 DIR                          // Scan multiple (e.g. 256) files in parallel \n    sf -log [comma-sep opts] file.ext          // Log errors etc. to stderr (default) or stdout\n    sf -log e,w file.ext | *.ext | DIR         // Log errors and warnings to stderr\n    sf -log u,o file.ext | *.ext | DIR         // Log unknowns to stdout\n    sf -log d,s file.ext | *.ext | DIR         // Log debugging and slow messages to stderr\n    sf -log p,t DIR > results.yaml             // Log progress and time while redirecting results\n    sf -log fmt/1,c DIR > results.yaml         // Log instances of fmt/1 and chart results\n    sf -replay -log u -csv results.yaml        // Replay results file, convert to csv, log unknowns\n    sf -setconf -multi 32 -hash sha1           // Save flag defaults in a config file\n    sf -setconf -serve :5138 -conf srv.conf    // Save/load named config file with '-conf filename' \n\n#### Example\n\n[![asciicast](https://asciinema.org/a/ernm49loq5ofuj48ywlvg7xq6.png)](https://asciinema.org/a/ernm49loq5ofuj48ywlvg7xq6)\n\n#### Signature files\n\nBy default, siegfried uses the latest PRONOM signatures without buffer limits (i.e. it may do full file scans). To use MIME-info or LOC signatures, or to add buffer limits or other customisations, use the [roy tool](https://github.com/richardlehane/siegfried/wiki/Building-a-signature-file-with-ROY) to build your own signature file.\n\n## Install\n### With go installed: \n\nIf you haven't installed go, you can [follow these instructions](https://go.dev/doc/install).\nMake sure to complete the step that puts the go/bin folder into your PATH e.g. with `echo 'export PATH=\"$PATH:$(go env GOPATH)/bin\"' >> ~/.bashrc && source ~/.bashrc`\n\nThen:\n\n    go install github.com/richardlehane/siegfried/cmd/sf@latest // installs siegfried\n    sf -update // downloads latest signatures\n\n### Or, without go installed:\n#### Win:\n\nDownload a pre-built binary from the [releases page](https://github.com/richardlehane/siegfried/releases). Unzip to a location in your system path. Then run:\n\n    sf -update\n\n#### Mac Homebrew (or [Linuxbrew](http://brew.sh/linuxbrew/)):\n\n    brew install mistydemeo/digipres/siegfried\n\nOr, for the most recent updates, you can install from this fork:\n\n    brew install richardlehane/digipres/siegfried\n\n#### Ubuntu/Debian (64 bit):\n\n    curl -sL \"http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x20F802FE798E6857\" | gpg --dearmor | sudo tee /usr/share/keyrings/siegfried-archive-keyring.gpg\n    echo \"deb [signed-by=/usr/share/keyrings/siegfried-archive-keyring.gpg] https://www.itforarchivists.com/ buster main\" | sudo tee -a /etc/apt/sources.list.d/siegfried.list\n    sudo apt-get update && sudo apt-get install siegfried\n\n#### FreeBSD:\n\n    pkg install siegfried\n\n#### Arch Linux: \n\n    git clone https://aur.archlinux.org/siegfried.git\n    cd siegfried\n    makepkg -si\n\n## Changes\n## v1.11.6 (2026-07-12)\n### Changed\n- update toolchain and worflows to build releases with Go 1.26.5; minimum Go version for library users is still 1.25.0. Implemented by [Jesús García Crespo](https://github.com/richardlehane/siegfried/pull/290)\n\n### v1.11.5 (2026-07-11)\n### Changed \n- update PRONOM to v124\n- update go version to 1.25.0\n\n### Fixed\n- bug with mimeinfo signature generation. Reported by Hugh Williams [#287](https://github.com/richardlehane/siegfried/issues/287)\n- wasm_exec.js updated. Reported by Trevor Munoz [#287](https://github.com/richardlehane/siegfried/issues/286)\n\n### v1.11.4 (2026-01-23)\n### Changed \n- update go version to 1.24.0\n\n### v1.11.3 (2026-01-23)\n### Added\n- Roy speed-up by avoiding function calls in loops. Fixes #148. Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/commit/12a2dd5cc3742e934222345ca5531336dd095965)\n\n### Changed\n- update PRONOM to v122\n- update LOC to 2025-12-09\n- update TIKA to v3.2.3\n\n### v1.11.2 (2025-03-01)\n### Added\n- Filter introduced to improve Wikidata queries and `-harvestWikidataSigLen` flag sets minimum length of Wikidata signatures. Implemented by [Ross Spencer and Andy Jackson](https://github.com/richardlehane/siegfried/pull/253) \n- `-noprov` flag introduced for Wikidata signatures. Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/pull/270)\n- `version` command for `roy`. Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/pull/265)\n\n### Changed\n- Logged error messages have more context. Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/pull/256)\n- update PRONOM to v120\n- Wikidata definitions updated to 4.0.0. By [Ross Spencer](https://github.com/richardlehane/siegfried/pull/264)\n- update LOC to 2025-02-26\n- update TIKA to v3.1.0\n\n### Fixed\n- Explicitly declared variable offsets are parsed e.g. fmt/1840. Implemented by [Rijnder Wever](https://github.com/richardlehane/siegfried/pull/267)\n\n### v1.11.1 (2024-06-28)\n### Added\n- WASM build. See wasm/README.md for more details. Feature sponsored by Archives New Zealand. Inspired by [Andy Jackson](https://siegfried-js.glitch.me/)\n- `-sym` flag enables following symbolic links to files during scanning. Requested by [Max Moser](https://github.com/richardlehane/siegfried/issues/245) \n\n### Changed\n- XDG_DATA_DIRS checked when determining siegfried home location. Requested by [Michał Górny](https://github.com/mgorny)\n- Windows 7 build on [releases page](https://github.com/richardlehane/siegfried/releases) (built with go 1.20). Requested by [Aleksandr Sergeev](https://github.com/richardlehane/siegfried/issues/240)\n- update PRONOM to v118\n- update LOC to 2024-06-14\n\n### Fixed\n- zips piped into STDIN are decompressed with `-z` flag. Reported by [Max Moser](https://github.com/richardlehane/siegfried/issues/244)\n- panics from OS calls in init functions. Reported by [Jürgen Enge](https://github.com/richardlehane/siegfried/issues/247)\n\n### v1.11.0 (2023-12-17)\n### Added\n- glob-matching for container signatures; see [digital-preservation/pronom#10](https://github.com/digital-preservation/pronom/issues/10)\n- `sf -update` works for older versions of siegfried; see [#231](https://github.com/richardlehane/siegfried/issues/231)\n\n### Changed\n- default location for siegfried HOME now follows XDG Base Directory Specification; see [#216](https://github.com/richardlehane/siegfried/issues/216). Implemented by [Bernhard Hampel-Waffenthal](https://github.com/richardlehane/siegfried/pull/221)\n- siegfried prints version before erroring with failed signature load; requested by [Ross Spencer](https://github.com/richardlehane/siegfried/issues/228)\n- update PRONOM to v116\n- update LOC to 2023-12-14\n- update tika-mimetypes to v3.0.0-BETA\n- update freedesktop.org to v2.4\n\n### Fixed\n- panic on malformed zip file during container matching; reported by [James Mooney](https://github.com/richardlehane/siegfried/issues/238)\n\n### v1.10.2 (2023-12-17)\n### Changed\n- update PRONOM to v116\n- update LOC to 2023-12-14\n- update tika-mimetypes to v3.0.0-BETA\n- update freedesktop.org to v2.4\n\n### v1.10.1 (2023-04-24)\n### Fixed\n- glob expansion now only on Windows & when no explicit path match. Implemented by [Bernhard Hampel-Waffenthal](https://github.com/richardlehane/siegfried/pull/229)\n- compression algorithm for debian packages changed back to xz. Implemented by [Paul Millar](https://github.com/richardlehane/siegfried/pull/230)\n- `-multi droid` setting returned empty results when priority lists contained self-references. See [#218](https://github.com/richardlehane/siegfried/issues/218)\n- CGO disabled for debian package and linux binaries. See [#219](https://github.com/richardlehane/siegfried/issues/219)\n\n### v1.10.0 (2023-03-25)\n### Added\n- format classification included as \"class\" field in PRONOM results. Requested by [Robin François](https://github.com/richardlehane/siegfried/discussions/207). Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/commit/7f695720a752ac5fca3e1de8ba034b92ab6da1d9)\n- `-noclass` flag added to roy build command. Use this flag to build signatures that omit the new \"class\" field from results.\n- glob paths can be used in place of file or directory paths for identification (e.g. `sf *.jpg`). Implemented by [Ross Spencer](https://github.com/richardlehane/siegfried/commit/54bf6596c5fe7d1c9858348f0170d0dd7365fc8f)\n- `-multi droid` setting for roy build command. Applies priorities after rather than during identification for more DROID-like results. Reported by [David Clipsham](https://github.com/richardlehane/siegfried/issues/146)\n- `/update` command for server mode. Requested by [Luis Faria](https://github.com/richardlehane/siegfried/issues/208)\n\n### Changed\n- new algorithm for dynamic multi-sequence matching for improved wildcard performance\n- update PRONOM to v111\n- update LOC to 2023-01-27\n- update tika-mimetypes to v2.7.0\n- minimum go version to build siegfried is now 1.18 \n\n### Fixed\n- archivematica extensions built into wikidata signatures. Reported by [Ross Spencer](https://github.com/richardlehane/siegfried/issues/210)\n- trailing slash for folder paths in URI field in droid output. Reported by Philipp Wittwer\n- crash when using `sf -replay` with droid output\n\nSee the [CHANGELOG](CHANGELOG.md) for the full history.\n\n## Rights\n\nCopyright 2024 Richard Lehane, Ross Spencer \n\nLicensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n\n## Announcements\n\nJoin the [Google Group](https://groups.google.com/d/forum/sf-roy) for updates, signature releases, and help.\n\n## Contributing\n\nLike siegfried and want to get involved in its development? That'd be wonderful! There are some notes on the [wiki](https://github.com/richardlehane/siegfried/wiki) to get you started, and please get in touch.\n\n## Thanks\n\nThanks TNA for http://www.nationalarchives.gov.uk/pronom/ and http://www.nationalarchives.gov.uk/information-management/projects-and-work/droid.htm\n\nThanks Ross for https://github.com/exponential-decay/skeleton-test-suite-generator and http://exponentialdecay.co.uk/sd/index.htm, both are very handy!\n\nThanks Misty for the brew and ubuntu packaging\n\nThanks Steffen for the FreeBSD and Arch Linux packaging\n",
+    "characters": 12280,
+    "source_url": "https://github.com/richardlehane/siegfried/blob/728cd4012b2da10d4455112eb285f3b450d56188/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "text": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "characters": 11358,
+    "source_url": "https://github.com/richardlehane/siegfried/blob/728cd4012b2da10d4455112eb285f3b450d56188/LICENSE.txt",
+    "detected": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    }
+  },
+  "commits_six_months_sample_count": 13,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "richardlehane",
+      "contributions": 1273
+    },
+    {
+      "login": "ross-spencer",
+      "contributions": 30
+    },
+    {
+      "login": "mistydemeo",
+      "contributions": 5
+    },
+    {
+      "login": "prettybits",
+      "contributions": 4
+    },
+    {
+      "login": "anjackson",
+      "contributions": 1
+    },
+    {
+      "login": "dannyarcher",
+      "contributions": 1
+    },
+    {
+      "login": "sevein",
+      "contributions": 1
+    },
+    {
+      "login": "kieranjol",
+      "contributions": 1
+    },
+    {
+      "login": "hmiguim",
+      "contributions": 1
+    },
+    {
+      "login": "paulmillar",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 294,
+      "title": "initial roy harvest fails",
+      "state": "closed",
+      "created_at": "2026-09-07T15:33:57Z",
+      "updated_at": "2026-09-10T00:38:14Z",
+      "closed_at": "2026-09-10T00:38:14Z",
+      "comments": 13,
+      "html_url": "https://github.com/richardlehane/siegfried/issues/294",
+      "author_association": "NONE"
+    },
+    {
+      "number": 293,
+      "title": "Reported PDF version can be lower than the effective version for incrementally-updated (e.g. digitally signed) PDFs",
+      "state": "closed",
+      "created_at": "2026-09-04T00:37:30Z",
+      "updated_at": "2026-09-09T04:08:23Z",
+      "closed_at": "2026-09-09T04:08:23Z",
+      "comments": 2,
+      "html_url": "https://github.com/richardlehane/siegfried/issues/293",
+      "author_association": "NONE"
+    },
+    {
+      "number": 291,
+      "title": "Wikidata identifier doesn't take into account max offset",
+      "state": "open",
+      "created_at": "2026-08-03T21:11:52Z",
+      "updated_at": "2026-09-07T00:23:05Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/richardlehane/siegfried/issues/291",
+      "author_association": "COLLABORATOR"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 294,
+      "created_at": "2026-09-07T15:33:57Z",
+      "first_affiliated_reply_in_sample": "2026-09-07T20:18:57Z",
+      "source_url": "https://github.com/richardlehane/siegfried/issues/294#issuecomment-5575286097"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

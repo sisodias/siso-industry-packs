@@ -1,0 +1,145 @@
+{
+  "audit_id": "R107",
+  "requested_full_name": "openpreserve/jhove",
+  "observed_at": "2026-09-13T16:11:19.265760+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "openpreserve/jhove",
+  "html_url": "https://github.com/openpreserve/jhove",
+  "description": "File validation and characterisation.",
+  "stargazers_count": 202,
+  "forks_count": 86,
+  "default_branch": "integration",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2014-03-11T10:47:10Z",
+  "updated_at": "2026-07-26T18:04:28Z",
+  "pushed_at": "2026-05-21T18:46:50Z",
+  "size": 209794,
+  "open_issues_count": 203,
+  "topics": [
+    "digital-preservation",
+    "format-validation"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "96c5183303d7e951c3ed45eb03425c5355e818ab",
+  "last_commit": "2026-05-21T18:45:58Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/openpreserve/jhove",
+    "commit": "https://github.com/openpreserve/jhove/commit/96c5183303d7e951c3ed45eb03425c5355e818ab"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "562bec8bcfd3c491bd60c4e1062908195b9dc98a2e0d30c406612fcfde2960b6",
+    "text": "# JHOVE\n\n*JSTOR/Harvard Object Validation Environment*\n\n![example branch parameter](https://github.com/openpreserve/jhove/actions/workflows/test-pr.yml/badge.svg?branch=integration)\n[![Build Status](https://jenkins.openpreservation.org/job/JHOVE/job/jhove-1.32/badge/icon)](https://jenkins.openpreservation.org/job/JHOVE/job/jhove-1.32/ \"OPF Jenkins\")\n[![Maven Central](https://img.shields.io/maven-central/v/org.openpreservation.jhove/jhove.svg)](http://repo1.maven.org/maven2/org/openpreservation/jhove/ \"JHOVE on Maven central\")\n[![CodeCov Coverage](https://img.shields.io/codecov/c/github/openpreserve/jhove.svg)](https://codecov.io/gh/openpreserve/jhove/ \"CodeCov test coverage figure\")\n[![Codacy Badge](https://app.codacy.com/project/badge/Grade/42f8b3de592740e7b2a22a419462815d)](https://app.codacy.com/gh/openpreserve/jhove/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)\n[![GitHub issues](https://img.shields.io/github/issues/openpreserve/jhove.svg)](https://github.com/openpreserve/jhove/issues \"Open issues on GitHub\")\n[![GitHub forks](https://img.shields.io/github/forks/openpreserve/jhove.svg)](https://github.com/openpreserve/jhove/network \"Number of forks on GitHub\")\n\n## Licensing\n\nCopyright 2003-2012 by JSTOR and the President and Fellows of Harvard College,\n2015-2025 by the [Open Preservation Foundation](http://openpreservation.org).\nJHOVE is made available under the\n[GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl.html).\n\nRev. v1.34.0 2025-07-03 11:01:56\n\n## JHOVE Homepage\n\n<http://jhove.openpreservation.org/>\n\n## Overview\n\nJHOVE (the JSTOR/Harvard Object Validation Environment, pronounced \"jove\")\nis an extensible software framework for performing format identification,\nvalidation, and characterization of digital objects.\n\n* Format identification is the process of determining the format to which a\n  digital object conforms: \"I have a digital object; what format is it?\"\n* Format validation is the process of determining the level of compliance of a\n  digital object to the specification for its purported format: \"I have an\n  object purportedly of format F; is it?\"\n* Format characterization is the process of determining the format-specific\n  significant properties of an object of a given format: \"I have an object of\n  format F; what are its salient properties?\"\n\nThese actions are frequently necessary during routine operation of digital\nrepositories and for digital preservation activities.\n\nThe output from JHOVE is controlled by output handlers. JHOVE uses an\nextensible plug-in architecture; it can be configured at the time of its\ninvocation to include whatever specific format modules and output handlers\nthat are desired. The initial release of JHOVE includes modules for\narbitrary byte streams, ASCII and UTF-8 encoded text, AIFF and WAVE audio,\nGIF, JPEG, JPEG 2000, TIFF, and PDF; and text and XML output handlers.\n\nThe JHOVE project is a collaboration of JSTOR and the Harvard University\nLibrary.  Development of JHOVE was funded in part by the Andrew W. Mellon\nFoundation.  JHOVE is made available under the GNU Lesser General Public\nLicense (LGPL; see the file LICENSE for details).\n\nJHOVE is currently being maintained by the\n[Open Preservation Foundation](http://openpreservation.org).\n\n## Pre-requisites\n\n1. Java JRE 1.8  \n  Version 1.20 of JHOVE is built and tested against Oracle JDK 8,\n  and OpenJDK 8 on Travis. Releases are built using Oracle JDK 8\n  from the [OPF's Jenkins server](http://jenkins.openpreservation.org/).\n\n1. If you would like to build JHOVE from source, then life will be easiest if\n  you use [Apache Maven](https://maven.apache.org/).\n\n## Getting JHOVE\n\n### For Users: JHOVE Cross Platform Installer\n\nYou can download the [latest version of JHOVE here](http://software.openpreservation.org/rel/jhove-latest.jar).\n\n### For Developers: JHOVE JARs via Maven\n\nFrom v1.16 onwards all production releases of JHOVE are deployed to Maven\nCentral. Add the version of JHOVE you'd like to use as a property in your Maven\nPOM:\n\n```xml\n<properties>\n  ...\n  <jhove.version>1.34.0</jhove.version>\n</properties>\n```\n\nUse this dependency for the core classes Maven module (e.g. `JhoveBase`,\n`Module`, `ModuleBase`, etc.):\n\n```xml\n<dependency>\n  <groupId>org.openpreservation.jhove</groupId>\n  <artifactId>jhove-core</artifactId>\n  <version>${jhove.version}</version>\n</dependency>\n```\n\nthis for the JHOVE internal module implementations:\n\n```xml\n<dependency>\n  <groupId>org.openpreservation.jhove</groupId>\n  <artifactId>jhove-modules</artifactId>\n  <version>${jhove.version}</version>\n</dependency>\n```\n\nthis for the JHOVE external module implementations:\n\n```xml\n<dependency>\n  <groupId>org.openpreservation.jhove</groupId>\n  <artifactId>jhove-ext-modules</artifactId>\n  <version>${jhove.version}</version>\n</dependency>\n```\n\nand this for the JHOVE applications:\n\n```xml\n<dependency>\n  <groupId>org.openpreservation.jhove</groupId>\n  <artifactId>jhove-apps</artifactId>\n  <version>${jhove.version}</version>\n</dependency>\n```\n\nIf you want the latest development packages you'll need to add the\n[Open Preservation Foundation's Maven repository](http://artifactory.openpreservation.org/artifactory/opf-dev)\nto your settings file:\n\n```xml\n  <profiles>\n    <profile>\n      <id>opf-artifactory</id>\n      <repositories>\n        <repository>\n          <snapshots>\n            <enabled>false</enabled>\n          </snapshots>\n          <id>central</id>\n          <name>opf-dev</name>\n          <url>http://artifactory.openpreservation.org/artifactory/opf-dev</url>\n        </repository>\n      </repositories>\n    </profile>\n  </profiles>\n  <activeProfiles>\n    <activeProfile>opf-artifactory</activeProfile>\n  </activeProfiles>\n```\n\nYou can then follow the instructions above to include particular Maven modules,\nbut you can now also choose odd minor versioned development builds. At the time\nof writing the latest development version could be included by using the\nfollowing property:\n\n```xml\n<properties>\n  ...\n  <jhove.version>v1.34.0</jhove.version>\n</properties>\n```\n\nor even:\n\n```xml\n<properties>\n  ...\n  <jhove.version>[v1.34.0,]</jhove.version>\n</properties>\n```\n\nto always use the latest v1.34.0 2025-07-03 11:01:56 build.\n\n### For Developers: Building JHOVE from Source\n\nClone this project, checkout the integration branch, and use Maven, e.g.:\n\n```shell\ngit clone git@github.com:openpreserve/jhove.git\ncd jhove\ngit checkout integration\nmvn clean install\n```\n\nSee the [Project Structure](#project-structure) section for a guide to\nthe Maven artifacts produced by the build.\n\n## Installation\n\n### Application Installation\n\nDownload the JHOVE installer. The installer itself requires Java 1.6 or later\nto be pre-installed. Installation is OS dependant:\n\n#### Windows\n\n*Currently only tested on Windows 7.*\n\nSimply double-click the downloaded installer JAR. If Java is installed then the\nwindowed installer will guide you through selection. It's best to stay with\nthe default choices if installing the beta.\n\nOnce the installation has finished you'll be able to double-click\n`C:\\Users\\yourName\\jhove\\jhove-gui` to start the JHOVE GUI. Alternatively,\nopen a Command window, e.g. press the `Windows` key and type `cmd`, then issue\nthese commands:\n\n```shell\nC:\\Users\\yourName>cd jhove\nC:\\Users\\yourName\\jhove>jhove\n```\n\nto display the command-line usage message.\n\nIt is also possible to use JHOVE with the openJDK, e. g. jdk-13. It might be necessary to set the java path in the Environment variables, for which one usually needs administration rights for the windows machine.\n\n### Mac OS\n\n*Currently only tested on OS X Mavericks.*\n\nSimply double-click the downloaded installer JAR. If Java is installed then the\nwindowed installer will guide you through selection. It's best to stay with\nthe default choices if installing the beta.\n\nOnce the installation has finished you'll be able to double-click\n`/Users/yourName/jhove/jhove-gui` to start the JHOVE GUI. Alternatively,\nopen a Terminal command window and then issue these commands:\n\n```shell\ncd ~/jhove\n./jhove\n```\n\nto display the command-line usage message.\n\n### Linux\n\n*Currently tested on Ubuntu 16.10 and Debian Jessie.*\n\nOnce the installer has downloaded, start a terminal, e.g. `Ctrl+Alt+T`,\nand type the following, assuming the download is in `~/Downloads`:\n\n```shell\njava -jar ~/Downloads/jhove-latest.jar\n```\n\nOnce the installation is finished you'll be able to:\n\n```shell\ncd ~/jhove\n/jhove\n```\n\nto run the command-line application and show the usage message. Alternatively:\n\n```shell\ncd ~/jhove\n./jhove-gui\n```\n\nwill run the GUI application.\n\n# Distribution\n\nWe've moved to Maven and have taken the opportunity to update the distribution.\nFor now we're producing:\n\n* a Maven package, for developers wishing to incorporate JHOVE into their\n   own software;\n* a \"fat\" (1MB) JAR that contains the old CLI and desktop GUI, for anyone\n   who doesn't want to use the new installer; and\n* a simple cross-platform installer that installs the application JAR, support\n   scripts, etc.\n\n## Usage\n\n```shell\njhove [-c config] [-m module] [-h handler] [-e encoding] [-H handler]\n            [-o output] [-x saxclass] [-t tempdir] [-b bufsize]\n            [-l loglevel] [[-krs] dir-file-or-uri [...]]\n\n-c config   Configuration file pathname\n-m module   Module name\n-h handler  Output handler name (defaults to TEXT)\n-e encoding Character encoding used by output handler (defaults to UTF-8)\n-H handler  About handler name\n-o output   Output file pathname (defaults to standard output)\n-x saxclass SAX parser class (defaults to J2SE default)\n-t tempdir  Temporary directory in which to create temporary files\n-b bufsize  Buffer size for buffered I/O (defaults to J2SE 1.4 default)\n-l loglevel Logging level\n-k          Calculate CRC32, MD5, and SHA-1 checksums\n-r          Display raw data flags, not textual equivalents\n-s          Format identification based on internal signatures only\ndir-file-or-uri Directory or file pathname or URI of formatted content\n                stream\n```\n\nAll named modules and output handlers must be found on the Java CLASSPATH at\nthe time of invocation.  The JHOVE driver script, jhove/jhove, automatically\nsets the CLASSPATH and invokes the Jhove main class:\n\n```shell\njhove [-c config] [-m module] [-h handler] [-e encoding] [-H handler]\n      [-o output] [-x saxclass] [-t tempdir] [-b bufsize] [-l loglevel]\n      [[-krs] dir-file-or-uri [...]]\n```\n\nThe following additional programs are available, primarily for testing\nand debugging purposes.  They display a minimally processed, human-readable\nversion of the contents of AIFF, GIF, JPEG, JPEG 2000, PDF, TIFF, and WAVE\nfiles:\n\n```shell\njava ADump  aiff-file\njava GDump  gif-file\njava JDump  jpeg-file\njava J2Dump jpeg2000-file\njava PDump  pdf-file\njava TDump  tiff-file\njava WDump  wave-file\n```\n\nFor convenience, the following driver scripts are also available:\n\n```shell\nadump  aiff-file\ngdump  gif-file\njdump  jpeg-file\nj2dump jpeg2000-file\npdump  pdf-file\ntdump  tiff-file\nwdump  wave-file\n```\n\nThe JHOVE Swing-based GUI interface can be invoked from a command shell from\nthe jhove/bin sub-directory:\n\n```shell\njhove-gui -c <configFile>\n```\n\nwhere `<configFile>` is the pathname of the JHOVE configuration file.\n\n## Project Structure\n\nA quick introduction to the restructured Maven project. The project's been\nbroken into three Maven modules with an additional installer module added.\n\n```shell\njhove/\n  |-jhove-apps/\n  |-jhove-core/\n  |-jhove-installer/\n  |-jhove-ext-modules/\n  |-jhove-modules/\n```\n\nAll Maven artifacts are produced in versioned form,\n\ni.e. `jhove-1.34.0.jar`, where `1.34.0` defaults\nto `jhove` unless you explicitly set the version number.\n\n### jhove\n\nThe `jhove` project root acts as a Maven parent and reactor for the sub-modules.\nThis simply builds sub-modules and doesn't produce any artifacts, but decides\nwhich sub-modules are built.\n\nThe `jhove-core` and `jhove-modules` are most likely all that are required for\ndevelopers wishing to call and run JHOVE from their own code.\n\n### jhove-core\n\nThe `jhove-core` module contains all of the main data type definitions and the\noutput handlers. This module produces a single JAR:\n\n```shell\n./jhove/jhove-core/target/jhove-core-1.34.0.jar\n```\n\nThe `jhove-core` JAR contains a single module implementation, the default\n`BytestreamModule`. For the format-specific modules you'll need\nthe `jhove-modules` JAR.\n\n### jhove-modules\n\nThe `jhove-modules` contains all of JHOVE's core format-specific module\nimplementations, specifically:\n\n* AIFF\n* ASCII\n* GIF\n* HTML\n* JPEG\n* JPEG 2000\n* PDF\n* TIFF\n* UTF-8\n* WAVE\n* XML\n\nThese are all packaged in a single modules JAR:\n\n```shell\n./jhove/jhove-modules/target/jhove-modules-1.34.0.jar\n```\n\n### jhove-ext-modules\n\nThe `jhove-ext-modules` contains JHOVE modules developed by external parties, specifically:\n\n* PNG\n* WARC\n* GZIP\n* EPUB\n\nThese are all packaged in a single modules JAR:\n\n```shell\n./jhove/jhove-ext-modules/target/jhove-ext-modules-1.34.0.jar\n```\n\n### jhove-apps\n\nThe `jhove-apps` module contains the command-line and GUI application code and\nbuilds a fat JAR containing the entire Java application. This JAR can be used\nto execute the command-line app:\n\n```shell\n./jhove/jhove-apps/target/jhove-apps-1.34.0.jar\n```\n\n### jhove-installer\n\nFinally, the `jhove-installer` module takes the fat JAR and creates a Java-based\ninstaller for JHOVE. The installer bundles up invocation scripts and the like,\ninstalls them under `<userHome>/jhove/` (default, can be changed) while also\nlooking after:\n\n* variable substitution to ensure that JHOVE_HOME and the like are set to\n reflect a user's install location;\n* making sure that Windows users get batch scripts, while Mac and Linux users\n get bash scripts; and\n* optionally generating unattended install and uninstall files.\n\nThe module produces two JARs, one called `jhove-installer-1.34.0`,\nwhich contains the JARs for the installer, and an executable JAR to install\nJHOVE:\n\n```shell\n./jhove/jhove-installer/target/jhove-installer-1.34.0.jar\n```\n",
+    "characters": 14074,
+    "source_url": "https://github.com/openpreserve/jhove/blob/96c5183303d7e951c3ed45eb03425c5355e818ab/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "089e03a38164df44b636d6bcdcbd3497087a3d4d949b5516d757836c5edc5323",
+    "text": "JHOVE - JSTOR/Harvard Object Validation Environment\nCopyright 2003-2015 by JSTOR and the President and Fellows of Harvard College\nCopyright 2015-2023 by Open Preservation Foundation\n\nThis program is free software; you can redistribute it and/or modify\nit under the terms of the GNU Lessor General Public License as\npublished by the Free Software Foundation; either version 2.1 of the\nLicense, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but\nWITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\nLesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public\nLicense along with this program; if not, write to the Free Software\nFoundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307\nUSA\n",
+    "characters": 880,
+    "source_url": "https://github.com/openpreserve/jhove/blob/96c5183303d7e951c3ed45eb03425c5355e818ab/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 1,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "carlwilson",
+      "contributions": 1659
+    },
+    {
+      "login": "gmcgath",
+      "contributions": 229
+    },
+    {
+      "login": "david-russo",
+      "contributions": 95
+    },
+    {
+      "login": "darrendignam",
+      "contributions": 73
+    },
+    {
+      "login": "nvanderperren",
+      "contributions": 62
+    },
+    {
+      "login": "samalloing",
+      "contributions": 57
+    },
+    {
+      "login": "tledoux",
+      "contributions": 56
+    },
+    {
+      "login": "karenhanson",
+      "contributions": 39
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 22
+    },
+    {
+      "login": "andreakb",
+      "contributions": 21
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 364,
+      "title": "JHOVE white balance error",
+      "state": "open",
+      "created_at": "2018-10-31T15:32:36Z",
+      "updated_at": "2026-07-08T07:42:45Z",
+      "closed_at": null,
+      "comments": 16,
+      "html_url": "https://github.com/openpreserve/jhove/issues/364",
+      "author_association": "NONE"
+    },
+    {
+      "number": 824,
+      "title": "Invalid characters in PDF comment cause module to hang",
+      "state": "open",
+      "created_at": "2023-01-19T00:08:31Z",
+      "updated_at": "2026-06-24T06:35:38Z",
+      "closed_at": null,
+      "comments": 7,
+      "html_url": "https://github.com/openpreserve/jhove/issues/824",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 364,
+      "created_at": "2018-10-31T15:32:36Z",
+      "first_affiliated_reply_in_sample": "2023-04-06T14:45:49Z",
+      "source_url": "https://github.com/openpreserve/jhove/issues/364#issuecomment-1499183475"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
