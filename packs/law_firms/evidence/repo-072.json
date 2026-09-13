@@ -1,0 +1,100 @@
+{
+  "audit_id": "R072",
+  "requested_full_name": "laws-africa/cobalt",
+  "observed_at": "2026-09-13T16:10:47.939539+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "laws-africa/cobalt",
+  "html_url": "https://github.com/laws-africa/cobalt",
+  "description": "A lightweight python library for working with Akoma Ntoso documents.",
+  "stargazers_count": 27,
+  "forks_count": 4,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2015-07-27T21:09:44Z",
+  "updated_at": "2026-08-03T11:00:05Z",
+  "pushed_at": "2026-06-18T13:03:27Z",
+  "size": 269,
+  "open_issues_count": 10,
+  "topics": [
+    "akoma-ntoso",
+    "legislation",
+    "python"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "cfae024569f5276d5b2c90bda405d8682efc6dde",
+  "last_commit": "2026-06-18T13:03:25Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/laws-africa/cobalt",
+    "commit": "https://github.com/laws-africa/cobalt/commit/cfae024569f5276d5b2c90bda405d8682efc6dde"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "d574a51672aef5d9e327ce2d36937793ede35ae919626729ca87429ea6ae5844",
+    "text": "# Cobalt\n\n![image](https://laws.africa/img/icons/cobalt.png)\n\n[![image](https://badge.fury.io/py/cobalt.svg)](http://badge.fury.io/py/cobalt)\n\nCobalt is a lightweight Python library for working with [Akoma Ntoso](http://www.akomantoso.org/) documents. It makes it\neasy to work with Akoma Ntoso documents, metadata and FRBR URIs.\n\nIt is lightweight because most operations are done on the XML document directly without intermediate objects. You still\nneed to understand how Akoma Ntoso works.\n\nRead the [full documentation at cobalt.readthedocs.io](http://cobalt.readthedocs.io/en/latest/).\n\n## Quickstart\n\nInstall using:\n\n    $ pip install cobalt\n\nUse it like this:\n\n    >>> from cobalt import Act\n    >>> act = Act()\n    >>> act.title = \"Act 10 of 1980\"\n    >>> act.frbr_uri = \"/za/act/1980-05-03/10\"\n    >>> act.frbr_uri.year\n    '1980'\n    >>> act.frbr_uri.date\n    '1980-05-03'\n    >>> act.frbr_uri.number\n    '10'\n    >>> act.frbr_uri.doctype\n    'act'\n    >>> print act.to_xml()\n    [ lots of xml ]\n\n## Contributing\n\n1.  Clone the repo\n2.  Install development dependencies:\n\n        pip install -e .[dev]\n\n3.  Make your changes\n4.  Run tests:\n\n        nosetests && flake8 cobalt\n\n5.  Send a pull request\n\n## Releasing a new version\n\n1. Run the tests with `python -m unittest`\n2. Update the version by changing the `__version__` variable in [`cobalt/__init__.py`](cobalt/__init__.py)\n3. Commit your changes and push to the master branch on GitHub\n4. Create a release in GitHub and it will automatically be pushed to PyPi\n\n# License\n\nCobalt is licensed under the LPGL 3.0 license.\n\nCopyright 2015-2020 AfricanLII.\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.\n",
+    "characters": 2253,
+    "source_url": "https://github.com/laws-africa/cobalt/blob/cfae024569f5276d5b2c90bda405d8682efc6dde/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "4bd32be2d81e60bd04efe47fb0db347c292b4d5fefcb9d0dd9c38988b9e64c2c",
+    "text": "This program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.\n",
+    "characters": 633,
+    "source_url": "https://github.com/laws-africa/cobalt/blob/cfae024569f5276d5b2c90bda405d8682efc6dde/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 2,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "longhotsummer",
+      "contributions": 211
+    },
+    {
+      "login": "goose-life",
+      "contributions": 70
+    },
+    {
+      "login": "rkunal",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 76,
+      "title": "Odd behaviour when XML has a unicode char but doesn't declare an encoding",
+      "state": "closed",
+      "created_at": "2023-08-30T14:51:32Z",
+      "updated_at": "2023-09-01T06:38:44Z",
+      "closed_at": "2023-09-01T06:38:44Z",
+      "comments": 0,
+      "html_url": "https://github.com/laws-africa/cobalt/issues/76",
+      "author_association": "CONTRIBUTOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

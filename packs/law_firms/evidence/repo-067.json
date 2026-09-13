@@ -1,0 +1,119 @@
+{
+  "audit_id": "R067",
+  "requested_full_name": "sali-legal/LMSS",
+  "observed_at": "2026-09-13T16:10:47.939539+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "sali-legal/LMSS",
+  "html_url": "https://github.com/sali-legal/LMSS",
+  "description": "SALI LMSS: Legal Matter Standard Specification",
+  "stargazers_count": 89,
+  "forks_count": 22,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2022-05-27T19:52:19Z",
+  "updated_at": "2026-09-03T17:57:34Z",
+  "pushed_at": "2026-03-10T23:01:15Z",
+  "size": 35759,
+  "open_issues_count": 2,
+  "topics": [],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "3f9ac0c9357b2a971582ae79ede243511d47811d",
+  "last_commit": "2026-03-10T23:01:15Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/sali-legal/LMSS",
+    "commit": "https://github.com/sali-legal/LMSS/commit/3f9ac0c9357b2a971582ae79ede243511d47811d"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "c2db7999f1a8fba67e9f33aeccc3a77a078017c890941449cd5a6038811faf05",
+    "text": "# LMSS\nSALI LMSS: Legal Matter Standard Specification\n\nThe file `LMSS.owl` is an XML file that represents SALI's primary taxonomy/ontology, providing over 18,000 tags.\n\n## IRI = Unique Identifier\nEach SALI LMSS tag has its own unique identifier (IRI). \n\n## SALI API standard uses IRIs as identifiers\nThe identifiers in this `LMSS.owl` file are used in the SALI API standard, where stakeholders use those identifiers/IRIs to \n    - make API calls\n    - make API responses (i.e., provide API payloads)\n...all in using SALI Standardized identifiers (IRIs)\n\n### SALI API \nSee https://github.com/sali-legal/api/blob/main/SALI_API.yml\n\n## STABILITY AND VERSIONING\nThis `LMSS.owl` file will be updated regularly. \n- But please note that until a formal Release (e.g., Version 3.0, Version 4.0), the commits are still subject to public review. \n- The `LMSS.owl` will become final upon its Release. \n- Even during the interim stages, changes to the IRIs will be unlikely. \n- Rarely, IRIs may be *deprecated* -- and then, most likely be related to consolidation/de-duplication (e.g., during the Public Comment stage). \n    - SALI will strive to retain deprecated IRIs -- placing them in a folder labeled `DEPRECATED NODES`. \n\nAfter a Release, nearly all of the IRIs will remain operative for decades (or forever). Future changes (if any) are likely to be only with properties:\n- E.g., **Labels** (i.e., `rdfs:label`) -- a common English label\n- E.g., **Synonyms** (i.e., `skos:altLabel` and `skos:prefLabel`) -- such as alternative names (e.g., `Motion to Dismiss` is `Demurrer` and `MTD`)\n    - `skos:prefLabel` = Second-most-common English synonym\n    - `skos:altLabel` = Synonyms, Translations\n- E.g., **Translations** (i.e., `skos:altlabel`) with the world's most-common languages (e.g., `hi-in` [India's Hindi], `hi-il` [Israel's Hebrew]) and country-specific spellings (e.g., `en-GB` [British English], `fr` [French], `fr-CA` [Canadian French], `pt-br` [Brazilian Portuguese])\n- E.g., **Definitions** (e.g., `skos:definition`) \n- E.g., **Sources** (e.g., `rdfs:isDefinedBy`, `dc:source`)\n- E.g., **Edges/relationships** (e.g., `rdfs:seeAlso`, `sali:governedBy`, `sali:superseded`, `sali:observed`)\n- E.g., **Examples** (i.e., `skos:example`) -- such as \"statute superseded judicial opinion\", \"attorney observed deposition\", County Attorney's Office\n- E.g., **Multiple Parentage** (e.g., additional `rdfs:subClassOf` parents)\n\nThe identifiers/IRIs themselves will remain static and stable.\n\n## FORMAL RELEASES\nAfter a comment period, LMSS will have ongoing formal Releases (e.g., `LMSS 3.0` or `LMSS 4.0`). Until the Release, `main` remains unfinalized, but the IRIs will remain relatively stable.\n",
+    "characters": 2692,
+    "source_url": "https://github.com/sali-legal/LMSS/blob/3f9ac0c9357b2a971582ae79ede243511d47811d/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "1c7be355bc3796a1a8743f3799ee7145e78efea084ba9df36d5050ff6aa16ecb",
+    "text": "MIT License\n\nCopyright (c) 2022 SALI Alliance™\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1071,
+    "source_url": "https://github.com/sali-legal/LMSS/blob/3f9ac0c9357b2a971582ae79ede243511d47811d/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 0,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "damienriehl",
+      "contributions": 77
+    },
+    {
+      "login": "damienriehlfc",
+      "contributions": 24
+    },
+    {
+      "login": "mjbommar",
+      "contributions": 11
+    },
+    {
+      "login": "bertsaper",
+      "contributions": 4
+    },
+    {
+      "login": "zoellner",
+      "contributions": 2
+    },
+    {
+      "login": "yschiller",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 28,
+      "title": "ACTION REQUIRED: Notice of License Dispute and Potential DMCA Action",
+      "state": "open",
+      "created_at": "2025-01-17T17:38:25Z",
+      "updated_at": "2026-03-11T13:35:05Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/sali-legal/LMSS/issues/28",
+      "author_association": "NONE"
+    },
+    {
+      "number": 27,
+      "title": "Language tag in Exported Copies",
+      "state": "open",
+      "created_at": "2024-05-21T13:25:19Z",
+      "updated_at": "2024-05-21T13:25:19Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/sali-legal/LMSS/issues/27",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

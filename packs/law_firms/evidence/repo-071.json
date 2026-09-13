@@ -1,0 +1,142 @@
+{
+  "audit_id": "R071",
+  "requested_full_name": "laws-africa/indigo",
+  "observed_at": "2026-09-13T16:10:47.939539+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "laws-africa/indigo",
+  "html_url": "https://github.com/laws-africa/indigo",
+  "description": "Indigo Platform for publishing beautiful legislation.",
+  "stargazers_count": 77,
+  "forks_count": 37,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2015-01-15T10:50:36Z",
+  "updated_at": "2026-08-28T13:26:07Z",
+  "pushed_at": "2026-09-05T22:16:27Z",
+  "size": 45218,
+  "open_issues_count": 202,
+  "topics": [
+    "akoma-ntoso",
+    "backbonejs",
+    "django",
+    "javascript",
+    "legislation",
+    "python"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "652e58fca163f5974b96c4979dea563cd8c85919",
+  "last_commit": "2026-08-28T13:22:50Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/laws-africa/indigo",
+    "commit": "https://github.com/laws-africa/indigo/commit/652e58fca163f5974b96c4979dea563cd8c85919"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "1d337a57c50d3039b3dd6d1a0d1e973f2be16366ea9858cb37f2b49ebc6693c2",
+    "text": "# Indigo\n\n![Build status](https://github.com/laws-africa/indigo/workflows/Test/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/laws-africa/indigo/badge.svg?branch=main)](https://coveralls.io/github/laws-africa/indigo?branch=main)\n\n![Indigo logo](https://raw.githubusercontent.com/laws-africa/indigo/main/docs/logo.png \"Indigo logo\")\n\nIndigo is Laws.Africa's legislation database for managing, consolidating and publishing\nlegislation in the [Akoma Ntoso](https://www.oasis-open.org/standard/akn-v1-0/) format.\n\nIt is a Django python web application using:\n\n* [Django](http://djangoproject.com/)\n* [Cobalt](http://cobalt.readthedocs.io/en/latest/) -- a lightweight Python library for working with Akoma Ntoso\n* [Bluebell](https://github.com/laws-africa/bluebell) -- a generic Akoma Ntoso 3 parser, supporting all hierarchical elements and multiple document types\n* [django-rest-framework](http://www.django-rest-framework.org/)\n\nRead the [full documentation at indigo.readthedocs.io](http://indigo.readthedocs.io/en/latest/index.html).\n\n## Local development\nRefer to https://indigo.readthedocs.io/en/latest/running/index.html\n\n## Adding translation strings\n\nEach indigo package has its own translations in the `locale` directory, and Javascript translations are in\n`static/i18n`. Translations for strings are added on [CrowdIn](https://crowdin.com/project/lawsafrica-indigo).\n\nIf you have added or changed strings that need translating, you must [tell Django to update the .po files](https://docs.djangoproject.com/en/2.2/topics/i18n/translation/#localization-how-to-create-language-files) so that translations can be supplied through CrowdIn.\n\n```bash\nscripts/extract-translations.sh\nnpm run extract-translations\n```\n\nAnd then commit the changes. CrowdIn will pick up any changed strings and make them available for translation. Once they are translated, it will\nopen a pull request to merge the changes into main.\n\nOnce merged into main, you must [tell Django to compile the .po files to .mo files](https://docs.djangoproject.com/en/2.2/topics/i18n/translation/#compiling-message-files):\n\n```bash\npython manage.py compilemessages\n```\n\nAnd then commit the changes.\n\n\n## npm module dependencies\n\nIndigo is migrating to modules written in ES6 using Vue. This code needs to be compiled into a single JS file using webpack.\n\n```\nnpm install\nnpx webpack\n```\n\nDuring development, using `npx webpack -w` to watch for changes and recompile automatically.\n\n## Testing\n\nTo run the tests use:\n\n```bash\npython manage.py test\n```\n\n## Production deployment\n\nRead the [documentation for details on deploying Indigo](http://indigo.readthedocs.org/en/latest/running/index.html).\n\nAn example `Dockerfile` and `docker-compose.yml` are provided as a starting point for running Indigo.\n\n## Releasing a New Version\n\n1. Run the tests!\n2. Update `__version__` in `indigo/version.py` appropriately\n3. Update `docs/changelog.rst`\n4. Commit changes\n5. Tag: `git tag vX.X.X` and push to github `git push; git push --tags`\n\n## License and Copyright\n\nThe project is licensed under a [GNU GPL 3 license](LICENSE).\n\nIndigo is Copyright 2015-2020 AfricanLII.\n",
+    "characters": 3143,
+    "source_url": "https://github.com/laws-africa/indigo/blob/652e58fca163f5974b96c4979dea563cd8c85919/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "4bd32be2d81e60bd04efe47fb0db347c292b4d5fefcb9d0dd9c38988b9e64c2c",
+    "text": "This program is free software: you can redistribute it and/or modify\nit under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.\n",
+    "characters": 633,
+    "source_url": "https://github.com/laws-africa/indigo/blob/652e58fca163f5974b96c4979dea563cd8c85919/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "longhotsummer",
+      "contributions": 6478
+    },
+    {
+      "login": "goose-life",
+      "contributions": 3555
+    },
+    {
+      "login": "ro6ley",
+      "contributions": 442
+    },
+    {
+      "login": "musangowope",
+      "contributions": 210
+    },
+    {
+      "login": "actlikewill",
+      "contributions": 173
+    },
+    {
+      "login": "AliciadW",
+      "contributions": 109
+    },
+    {
+      "login": "kaysiz",
+      "contributions": 51
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 30
+    },
+    {
+      "login": "janzankowski",
+      "contributions": 10
+    },
+    {
+      "login": "Dennismwangi-k",
+      "contributions": 9
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 2565,
+      "title": "IntegrityError: insert or update on table \"indigo_api_work\" violates foreign key constraint \"indigo_api_work_main_commencement_id_8ae525ff_fk_indigo_ap\"",
+      "state": "closed",
+      "created_at": "2026-07-23T11:43:16Z",
+      "updated_at": "2026-08-30T15:22:42Z",
+      "closed_at": "2026-08-30T15:22:42Z",
+      "comments": 0,
+      "html_url": "https://github.com/laws-africa/indigo/issues/2565",
+      "author_association": "NONE"
+    },
+    {
+      "number": 2513,
+      "title": "Identify the page in the source PDF on which a document starts, so that it can be provided to a LII website",
+      "state": "closed",
+      "created_at": "2026-03-17T12:55:18Z",
+      "updated_at": "2026-08-27T09:46:11Z",
+      "closed_at": "2026-08-27T09:46:11Z",
+      "comments": 1,
+      "html_url": "https://github.com/laws-africa/indigo/issues/2513",
+      "author_association": "CONTRIBUTOR"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
