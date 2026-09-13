@@ -1,0 +1,50 @@
+name: SaaS bank reconciliation receipts
+on:
+  push:
+    branches: [research/saas-base-stack-20260913]
+    paths: [.github/workflows/saas-base-stack-bank-receipts.yml]
+permissions:
+  contents: read
+jobs:
+  bank-read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Read public bank records and report rate budget
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,urllib.request
+          out=pathlib.Path('bank-receipts');out.mkdir()
+          pin='2d7d35ecbf7e1158d0a3527e1489040687ac214b'
+          paths=['bank/bank_best.jsonl','capability-shelf/source-registry.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl']
+          receipts=[]
+          for path in paths:
+              u='https://raw.githubusercontent.com/sisodias/siso-repo-bank/'+pin+'/'+path
+              try:
+                  with urllib.request.urlopen(u,timeout=35) as response: b=response.read()
+                  rows=[json.loads(line) for line in b.decode().splitlines() if line.strip()]
+                  (out/path.split('/')[-1]).write_bytes(b)
+                  item={'path':path,'pin':pin,'url':u,'rows':len(rows),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'git_blob_sha1':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest(),'first_row_keys':list(rows[0]) if rows else [],'first_row':rows[0] if rows else None}
+                  receipts.append(item)
+                  print(json.dumps({k:v for k,v in item.items() if k!='first_row'}),flush=True)
+              except Exception as error:
+                  receipts.append({'path':path,'error':str(error)});print(path,str(error),flush=True)
+          (out/'source-receipts.json').write_text(json.dumps(receipts,indent=2)+'\n')
+          try:
+              request=urllib.request.Request('https://api.github.com/rate_limit',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'User-Agent':'siso-read-only-research'})
+              with urllib.request.urlopen(request,timeout=20) as response: budget=json.load(response)
+              summary={k:budget.get('resources',{}).get(k) for k in ['core','search']}
+              print('API_BUDGET',json.dumps(summary),flush=True)
+              (out/'api-budget.json').write_text(json.dumps(summary,indent=2)+'\n')
+          except Exception as error: print('API_BUDGET_UNAVAILABLE',str(error),flush=True)
+          PY
+      - name: Preserve bank receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: saas-bank-reconciliation-receipts
+          path: bank-receipts/
+          if-no-files-found: error
+          retention-days: 3
