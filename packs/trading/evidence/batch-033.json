@@ -1,0 +1,1022 @@
+[
+  {
+    "full_name": "SpiralDevelopment/crypto-hft-data",
+    "requested_name": "SpiralDevelopment/crypto-hft-data",
+    "id": 281109676,
+    "url": "https://github.com/SpiralDevelopment/crypto-hft-data",
+    "stars": 78,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "205f01fd555eab4f636ffbb701dfcde53d27becc",
+    "last_commit_date": "2020-07-23T15:30:15Z",
+    "archived": false,
+    "fork": false,
+    "description": "Collect real-time orderbook, trade and other HFT data from several crypto exchanges using WebSocket connections.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2020 SpiralDev",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Crypto HFT Data Aggregator",
+      "## Available Exchanges",
+      "## Usage",
+      "### 1. Clone, Set-up virtual environment and Install requirements",
+      "### 2. Prepare config file",
+      "### 3. Launch",
+      "## Contributions",
+      "## Support",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      "LICENSE",
+      "README.md",
+      "configs.json",
+      "exchange_sockets",
+      "helpers",
+      "main.py",
+      "managers",
+      "requirements.txt",
+      "singletones"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/SpiralDevelopment/crypto-hft-data/blob/205f01fd555eab4f636ffbb701dfcde53d27becc/README.md",
+        "sha256": "f25c4bc0a9e3f2456ef7bada1e6b4a2cbea7d1abb0bf8a6212eca6f97ec6b8c8",
+        "bytes": 2162
+      },
+      "LICENSE": {
+        "url": "https://github.com/SpiralDevelopment/crypto-hft-data/blob/205f01fd555eab4f636ffbb701dfcde53d27becc/LICENSE",
+        "sha256": "4f48645d8415049a179bc55f1d383cc57c9e599001f067cb004a16d684b7fa73",
+        "bytes": 1066
+      },
+      "requirements.txt": {
+        "url": "https://github.com/SpiralDevelopment/crypto-hft-data/blob/205f01fd555eab4f636ffbb701dfcde53d27becc/requirements.txt",
+        "sha256": "00d62f8250c51bcdc29e136a738e7069b659dde66536086dc94a59c25f006302",
+        "bytes": 82
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/SpiralDevelopment/crypto-hft-data/commit/205f01fd555eab4f636ffbb701dfcde53d27becc",
+      "metadata": "https://api.github.com/repos/SpiralDevelopment/crypto-hft-data"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Crypto HFT Data Aggregator > Crypto High Frequency Data Aggregator This project helps you to collect real-time orderbook, trade and other HFT data from several crypto exchanges using websocket endpoints. ## Available Exchanges * Binance * Bitmex * Okex * Bitfinex * Coinbase * Bitstamp * Kraken ## Usage ### 1. Clone, Set-up virtual environment and Install requirements ```bash $ git clone git@github.com:SpiralDevelopment/crypto-hft-data.git $ cd crypto-hft-data $ pip3 install virtualenv $ virtualenv env $ source env/bin/activate $ pip3 install -r requirements.txt ``` ### 2. Prepare config file Decide on what kind of data you want to receive from an exchange, and save that information in json format into [configs.json](https://github.com/SpiralDevelopment/crypto-hft-data/blob/master/configs.json) file. Example to collect orderbook and trade data from Coinbase for BTC-USD and ETH-USD pairs: ```json { \"coinbase\": { \"BTC-USD\": \"matches,level2\", \"ETH-USD\": \"matches,level2\" } } ``` Example to collect orderbook, trade and liquidation data from Bitmex for XBT-USD and ETH-USD pairs: ```json { \"bitmex\": { \"xbtusd\": \"orderBookL2,trade,liquidation\", \"ethusd\": \"orderBookL2,trade,liquidation\" } } ``` To find out the exact endpoints, you need to refer to the offical API documentations of the exchanges.",
+    "license_excerpt": "MIT License Copyright (c) 2020 SpiralDev Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "python3 main.py -e coinbase",
+      "## License",
+      "[MIT License](https://github.com/SpiralDevelopment/crypto-hft-data/blob/master/LICENSE)"
+    ],
+    "dependency_repos": [
+      "SpiralDevelopment/crypto-hft-data"
+    ]
+  },
+  {
+    "full_name": "rmbell09-lang/tradesight",
+    "requested_name": "rmbell09-lang/tradesight",
+    "id": 1185616788,
+    "url": "https://github.com/rmbell09-lang/tradesight",
+    "stars": 170,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8b2de128b5180d05e87a51a191685298e2e888e6",
+    "last_commit_date": "2026-07-15T00:10:24Z",
+    "archived": false,
+    "fork": false,
+    "description": "Self-hosted Python strategy research and Alpaca paper trading with broker reconciliation, evidence gates, and live execution disabled.",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# TradeSight",
+      "## What is real in the current release",
+      "## Requirements",
+      "## Supported installation",
+      "## Data labels",
+      "## Strategy lifecycle",
+      "## Live-money status",
+      "## Release integrity",
+      "## Tests",
+      "## Safety boundaries",
+      "## License"
+    ],
+    "recent_commit_count": 112,
+    "recent_authors_sample50": [
+      "Lucky AI"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/rmbell09-lang/tradesight/issues/15",
+        "createdAt": "2026-06-21T04:14:04Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/rmbell09-lang/tradesight/issues/14",
+        "createdAt": "2026-05-11T15:43:39Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "AUDIT_2026-03-11.md",
+      "AUDIT_2026-04-13.md",
+      "BUGS.md",
+      "BUILDER_BRIEFING_PHASE1.md",
+      "CIRCUIT_BREAKER_SPEC.md",
+      "CONFLUENCE_BLOCKERS.md",
+      "LOGO.txt",
+      "LOGO_DESIGN.txt",
+      "NEXT_TASKS.md",
+      "PREFLIGHT_PHASE1_20260320.md",
+      "README.md",
+      "START_TRADESIGHT.py",
+      "STATUS_20260311.md",
+      "TRADING_LOG.md",
+      "WEBSOCKET_REVIEW_1191.md",
+      "audits",
+      "dashboard.log",
+      "data",
+      "docs",
+      "icon.icns",
+      "icon.iconset",
+      "install_tradesight.py",
+      "intro_demo.ipynb",
+      "launch_tradesight.sh",
+      "logo.jpg",
+      "logo.png",
+      "logo_bigger.png",
+      "logo_fixed.png",
+      "logo_icon_only.png",
+      "logo_large.png",
+      "ops",
+      "pyproject.toml",
+      "reports",
+      "requirements-dev.txt",
+      "requirements-runtime.txt",
+      "requirements.txt",
+      "run_paper_trader.py",
+      "run_scan.sh",
+      "scripts",
+      "signals",
+      "simple_test_fix.py",
+      "simple_test_launch.py",
+      "src",
+      "test_icon.jpg",
+      "tests",
+      "tradesight",
+      "tradesight_bias_audit.md",
+      "verify_indicators.py",
+      "web"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/README.md",
+        "sha256": "06d1c5d9785d6faf9bc73a61081a3e44f666308f3599bc5d42c31da3454e44ef",
+        "bytes": 4409
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/pyproject.toml",
+        "sha256": "398d76b8f250009a477875e7e9ab41d7567f499ee39e6ddc567d70268b3bffce",
+        "bytes": 1808
+      },
+      "requirements.txt": {
+        "url": "https://github.com/rmbell09-lang/tradesight/blob/8b2de128b5180d05e87a51a191685298e2e888e6/requirements.txt",
+        "sha256": "274f900af344786e88d07896a64bf72284cf315d704cd63a71d5283001015ce1",
+        "bytes": 28
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/rmbell09-lang/tradesight/commit/8b2de128b5180d05e87a51a191685298e2e888e6",
+      "metadata": "https://api.github.com/repos/rmbell09-lang/tradesight"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# TradeSight TradeSight is a self-hosted strategy-research and **paper-trading** application. It evaluates strategy families against historical data, preserves champion/challenger evidence, and connects to an Alpaca",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "TradeSight is a self-hosted strategy-research and **paper-trading** application. It evaluates strategy families against historical data, preserves champion/challenger evidence, and connects to an Alpaca paper account for broker-simulated orders and reconciliat",
+      "- Broker/local accounting is reconciled from a defined paper-account epoch.",
+      "- Historical local P&L that lacks complete broker proof is preserved as `LEGACY / UNVERIFIED` and excluded from trusted performance.",
+      "- Polymarket records are archived and hidden when stale; the scanner is not currently maintained.",
+      "- Python 3.11 or newer",
+      "python3 install_tradesight.py",
+      "- selects Python 3.11 or newer;",
+      "- installs the local extracted source without cloning another repository; and",
+      "python3 install_tradesight.py",
+      ".runtime/bin/python -m pip install -r requirements-dev.txt",
+      ".runtime/bin/python -m pytest tests -q",
+      "- `UNVERIFIED`: local evidence that has not met broker-proof requirements.",
+      "This release is technically locked to paper trading. The readiness dashboard requires, among other evidence:",
+      "Build a local release archive with:",
+      ".runtime/bin/python scripts/build_release.py",
+      ".runtime/bin/python scripts/verify_release.py dist/releases/tradesight-1.2.0-paper-only.zip",
+      ".runtime/bin/python -m pytest tests -q",
+      "## License"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "jrodolfo/solace",
+    "requested_name": "jrodolfo/solace",
+    "id": 925260884,
+    "url": "https://github.com/jrodolfo/solace",
+    "stars": 4,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "302363d0209133c04914b4a8005cee106ba1eaa6",
+    "last_commit_date": "2026-07-15T16:11:15Z",
+    "archived": false,
+    "fork": false,
+    "description": "Full-stack Solace PubSub+ workspace with a Spring Boot broker API, React publisher UI, Java subscriber, lifecycle tracking, retry, reconciliation, and architecture documentation.",
+    "language": "Java",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Rod Oliveira",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Solace Workspace",
+      "## What This Project Demonstrates",
+      "## Application Preview",
+      "## Architecture at a Glance",
+      "## Shared Solace Configuration",
+      "## Quick Start",
+      "### 1. Configure Solace Cloud",
+      "### 2. Start the Docker runtime",
+      "### 3. Open the tools",
+      "### Local Development Workflow",
+      "## Module Summary",
+      "### `solace-broker-api`",
+      "### `solace-publisher-ui`",
+      "### `solace-subscriber`",
+      "## Continuous Integration",
+      "## Documentation",
+      "## Tutorials",
+      "## Reference",
+      "## Contact",
+      "## License"
+    ],
+    "recent_commit_count": 279,
+    "recent_authors_sample50": [
+      "jrodolfo"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "docker-compose.yml",
+      "docs",
+      "scripts",
+      "solace-broker-api",
+      "solace-publisher-ui",
+      "solace-subscriber"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jrodolfo/solace/blob/302363d0209133c04914b4a8005cee106ba1eaa6/README.md",
+        "sha256": "4016a57b25b2bdb5ea117b6d92a6c7fc93382075550db971ed16a27b231ca9b0",
+        "bytes": 11692
+      },
+      "LICENSE": {
+        "url": "https://github.com/jrodolfo/solace/blob/302363d0209133c04914b4a8005cee106ba1eaa6/LICENSE",
+        "sha256": "fcb14615b44fffcf174083bc025722ecf00ebd68f1914c43ccb616061f6853db",
+        "bytes": 1069
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jrodolfo/solace/commit/302363d0209133c04914b4a8005cee106ba1eaa6",
+      "metadata": "https://api.github.com/repos/jrodolfo/solace"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Solace Workspace [![CI](https://github.com/jrodolfo/solace/actions/workflows/ci.yml/badge.svg)](https://github.com/jrodolfo/solace/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Java 21](https://img.shields.io/badge/Java-21-007396?logo=openjdk&logoColor=white)](https://openjdk.org/) [![Spring Boot 4.1](https://img.shields.io/badge/Spring%20Boot-4.1-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot) [![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/) [![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/) [![Solace](https://img.shields.io/badge/Solace-PubSub%2B-00C895)](https://solace.com/) Solace Workspace is an open-source proof-of-concept that demonstrates event-driven integration patterns using Solace PubSub+. Built as a small full-stack application, it showcases message publishing, lifecycle tracking, retries, and operational visibility while illustrating how isolated systems can communicate through an Event-Driven Architecture. Explore the sections below for architecture diagrams, implementation details, and design decisions behind the project. It is organized as three active modules: - [solace-broker-api](solace-broker-api/README.md): Spring Boot backend for publishing, storing, retrying, reconciling, and querying messages - [solace-publisher-ui](solace-publisher-ui/README.md): React UI for publishing messages and browsing stored message history - [solace-subscriber](solace-subscriber/README.md): Java command-line subscriber for direct Solace topic traffic ## What This Project Demonstrates - Solace PubSub+ publishing and direct topic subscription from Java - a Spring Boot API that persists publish attempts before broker delivery - lifecycle tracking with `PENDING`, `PUBLISHED`, `FAILED`, stale-pending detection, retry, and manual reconciliation - a React/Vite publisher UI with filters, pagination, lifecycle summaries, retry actions, and stale-pending reconciliation - practical project documentation through architecture notes, ADRs, curl/Postman/JMeter artifacts, and",
+    "license_excerpt": "MIT License Copyright (c) 2026 Rod Oliveira Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)",
+      "Explore the sections below for architecture diagrams, implementation details, and design decisions behind the project.",
+      "1. [Solace Cloud setup guide](docs/how-to/01-solace-cloud-account-demo-and-env-vars.md): create the Solace Cloud account, create a broker service, collect the four `SOLACE_CLOUD_*` values, and register them locally.",
+      "The commands below are the Docker-first short version once Solace Cloud is",
+      "### 2. Start the Docker runtime",
+      "./scripts/docker-start.sh",
+      "root `docker-compose.yml`. The script prints the API health URL, API docs URL,",
+      "- `./scripts/docker-build-all.sh`: build Docker runtime images without starting containers",
+      "- `./scripts/docker-status.sh`: show Docker Compose service status and API health",
+      "- `./scripts/docker-logs.sh`: follow logs for all Docker services",
+      "- `./scripts/docker-logs.sh subscriber`: follow only subscriber logs",
+      "- `./scripts/docker-scan.sh`: report Docker runtime image findings with Trivy",
+      "- `./scripts/docker-stop.sh`: stop the Docker runtime",
+      "- `./scripts/docker-restart.sh`: rebuild and restart the Docker runtime",
+      "- `make release-check`: run the full pre-release gate, including tests, Docker image build, and Docker image scan",
+      "- `make dependency-freshness`: report available Maven, npm, and Docker image updates without changing files",
+      "- API health: `http://localhost:8081/rest/actuator/health`",
+      "- API docs: `http://localhost:8081/docs`"
+    ],
+    "dependency_repos": [
+      "jrodolfo/solace"
+    ]
+  },
+  {
+    "full_name": "OnePunchMonk/TradeRecon",
+    "requested_name": "OnePunchMonk/TradeRecon",
+    "id": 1026838955,
+    "url": "https://github.com/OnePunchMonk/TradeRecon",
+    "stars": 4,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "54c57415b36a67e227665d27b09fb7e9091dd407",
+    "last_commit_date": "2025-08-17T17:59:06Z",
+    "archived": false,
+    "fork": false,
+    "description": "A real-time trade reconciliation engine that ingests execution, broker, and PnL data, detects mismatches with tolerance-based checks, and provides live alerts, audit trails, and dashboards for compliance and monitoring.",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# \ud83d\udd04 TradeRecon: Real-Time Trade Reconciliation Engine",
+      "## \ud83e\udde0 Problem Statement",
+      "## \ud83c\udfaf Project Goal",
+      "## \ud83d\udca1 Use Case and Need",
+      "## \ud83d\udd01 Data Flow Architecture",
+      "## \ud83d\uddc2\ufe0f Data Sources",
+      "# executions.csv",
+      "# broker_confirmations.csv",
+      "# pnl_snapshot.csv",
+      "## \ud83d\udccf Reconciliation Logic",
+      "## \ud83e\uddf0 Tech Stack",
+      "## \ud83e\uddf1 Folder Structure",
+      "## \ud83d\ude80 Steps to Run",
+      "### 1. Setup Files",
+      "### 2. Clone and Navigate",
+      "### 3. Build and Start",
+      "### 4. Simulate Trade Data",
+      "### 5. Access Reconciliation Report",
+      "### 6. Access Grafana Dashboard",
+      "## \ud83d\udcca Observability and Reporting",
+      "## \u2699\ufe0f Current Assumptions & Scaling Targets",
+      "#### \ud83d\udccc Assumptions",
+      "#### \ud83e\udded Planned Architectural Extension",
+      "#### \ud83d\udea7 Scaling Bottleneck & Migration Target",
+      "## \ud83e\uddea Future Extensions"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      "Dockerfile",
+      "README.md",
+      "app",
+      "data",
+      "docker-compose.yml",
+      "grafana",
+      "kafka",
+      "prometheus",
+      "readme-screenshots",
+      "reports",
+      "requirements.txt",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/OnePunchMonk/TradeRecon/blob/54c57415b36a67e227665d27b09fb7e9091dd407/README.md",
+        "sha256": "40058b59c36d278c4a6221f1032427f4bd40015ec468498d097ee79b0a268e18",
+        "bytes": 10286
+      },
+      "requirements.txt": {
+        "url": "https://github.com/OnePunchMonk/TradeRecon/blob/54c57415b36a67e227665d27b09fb7e9091dd407/requirements.txt",
+        "sha256": "be2b3450b0f86e7d35e7728a2bffd7807c7e92fc760354b51fa811181e508946",
+        "bytes": 199
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/OnePunchMonk/TradeRecon/commit/54c57415b36a67e227665d27b09fb7e9091dd407",
+      "metadata": "https://api.github.com/repos/OnePunchMonk/TradeRecon"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# \ud83d\udd04 TradeRecon: Real-Time Trade Reconciliation Engine [![Project Status: Stable](https://img.shields.io/badge/status-stable-green.svg)](https://github.com/OnePunchMonk/TradeRecon) A streaming post-trade reconciliation system inspired by real-world infrastructure. > **System & Monitoring Metrics** >",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "In a fast-paced trading environment, maintaining data integrity across numerous disparate systems is paramount. Even minor variations in trade details can lead to significant financial, operational, or regulatory risks.",
+      "| Stream Transport   | Kafka (`kafka-python`)        | Real-time ingestion |",
+      "| Reconciliation Engine | Custom Python + threading   | Core logic for trade comparison |",
+      "| Containerization   | Docker, docker-compose        | Easy deployment |",
+      "| Monitoring         | Python `logging`              | Runtime observability |",
+      "\u251c\u2500\u2500 Dockerfile",
+      "\u251c\u2500\u2500 docker-compose.yml",
+      "> Ensure you have Docker + Docker Compose installed.",
+      "- Replace your `docker-compose.yml` with the provided one.",
+      "docker-compose up --build -d",
+      "docker exec -it traderecon_app python kafka/producer.py",
+      "Watch logs from `docker-compose` to see processing in real time.",
+      "Visit [http://localhost:5000/](http://localhost:5000/)",
+      "Visit [http://localhost:3000/](http://localhost:3000/)"
+    ],
+    "dependency_repos": [
+      "OnePunchMonk/TradeRecon"
+    ]
+  },
+  {
+    "full_name": "AshishTalpada/samvid-trading-core",
+    "requested_name": "AshishTalpada/samvid-trading-core",
+    "id": 1222060311,
+    "url": "https://github.com/AshishTalpada/samvid-trading-core",
+    "stars": 3,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "0f40e76cadadf857cebba65303fb4154afc40b0a",
+    "last_commit_date": "2026-06-26T02:51:54Z",
+    "archived": false,
+    "fork": false,
+    "description": "Open-source multi-agent AI algorithmic trading system for Interactive Brokers & MetaTrader 5 with consensus-based execution, risk management, and broker reconciliation.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Ashishkumar Talpada",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## \ud83d\udcd1 Table of Contents",
+      "## \ud83c\udf1f Why Samvid Trading Core?",
+      "## \u2728 Features",
+      "### \ud83e\udd16 Multi-Agent AI Consensus Engine",
+      "### \ud83d\udcca Real-Time Data Pipeline",
+      "### \ud83d\udee1\ufe0f Institutional-Grade Risk Management",
+      "### \ud83d\udd0c Broker Integration",
+      "### \ud83e\udde0 Intelligence Bus",
+      "### \ud83d\udd10 Security",
+      "### \ud83d\udce1 Operator Experience",
+      "## \ud83c\udfd7\ufe0f Architecture",
+      "### Directory Map",
+      "## \ud83d\ude80 Quick Start",
+      "### Prerequisites",
+      "### 1. Clone",
+      "### 2. Install",
+      "### 3. Configure secrets",
+      "# Store credentials in the OS keyring vault",
+      "### 4. Run preflight validation",
+      "### 5. Launch in paper mode (no broker required)",
+      "### 6. Launch with IBKR paper execution",
+      "## \ud83e\uddea Running Tests",
+      "# Full test suite",
+      "# With coverage report",
+      "# Key test modules",
+      "# Lint check",
+      "# Compile check (syntax only, no imports)",
+      "# Import cycle detection",
+      "## \u2699\ufe0f Configuration",
+      "### Trading Modes"
+    ],
+    "recent_commit_count": 1125,
+    "recent_authors_sample50": [
+      "AshishTalpada"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".clangd",
+      ".claude",
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      ".python-version",
+      ".vscode",
+      ".windsurf",
+      "AGENTS.md",
+      "ARCHITECTURE.md",
+      "BRANCH_PROTECTION_SETUP.md",
+      "CHANGELOG.md",
+      "CITATION.cff",
+      "CODEOWNERS",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "Dockerfile",
+      "GOVERNANCE.md",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "android",
+      "contracts",
+      "data",
+      "deploy",
+      "docker-compose.questdb.yml",
+      "docker-compose.yml",
+      "docs",
+      "frontend",
+      "hardware",
+      "ios",
+      "jsconfig.json",
+      "migrations",
+      "pyproject.toml",
+      "quarantine",
+      "requirements.txt",
+      "run_bot.bat",
+      "scripts",
+      "specs",
+      "src",
+      "strip_comments.py",
+      "tests",
+      "tools",
+      "uv.lock",
+      "vr"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/README.md",
+        "sha256": "73559922f61bc7475ba514d46d31e0f7b1d6eea14b3dc35992cafac02154ab95",
+        "bytes": 18091
+      },
+      "LICENSE": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/LICENSE",
+        "sha256": "93723f609fedd75d4d22cc5e64beb44969eb154bdf709b829695c77a2288d037",
+        "bytes": 1076
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/Cargo.toml",
+        "sha256": "8aed9e02b8ecfabf133536ed8e0bf47af5d757730fdaab81d939d33b9afd4a25",
+        "bytes": 1519
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/AshishTalpada/samvid-trading-core/blob/0f40e76cadadf857cebba65303fb4154afc40b0a/pyproject.toml",
+        "sha256": "c4b9220143b1801627026844fe1f9586d4424fea601d951879eb5f2b9683adb3",
+        "bytes": 10360
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/AshishTalpada/samvid-trading-core/commit/0f40e76cadadf857cebba65303fb4154afc40b0a",
+      "metadata": "https://api.github.com/repos/AshishTalpada/samvid-trading-core"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "\u26a1 Samvid Trading Core Open-source, experimental AI multi-agent algorithmic trading system for Interactive Brokers &amp; MetaTrader 5 [![Main Build](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/main.yml/badge.svg)](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/main.yml) [![Quality Gate](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/quality.yml/badge.svg)](https://github.com/AshishTalpada/samvid-trading-core/actions/workflows/quality.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![Rust](https://img.shields.io/badge/Rust-native%20layer-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![IBKR Paper](https://img.shields.io/badge/IBKR-Paper%20Execution-009900)](https://www.interactivebrokers.com/) [![MT5](https://img.shields.io/badge/MetaTrader5-FTMO%20Ready-blue)](https://www.metatrader5.com/) [![Telegram Alerts](https://img.shields.io/badge/Telegram-Live%20Alerts-2CA5E0?logo=telegram)](https://telegram.org/) [![QuestDB](https://img.shields.io/badge/QuestDB-Time%20Series-FF6B35)](https://questdb.io/) [![Stars](https://img.shields.io/github/stars/AshishTalpada/samvid-trading-core?style=social)](https://github.com/AshishTalpada/samvid-trading-core/stargazers) [![Forks](https://img.shields.io/github/forks/AshishTalpada/samvid-trading-core?style=social)](https://github.com/AshishTalpada/samvid-trading-core/fork) Quick Start \u2022 Architecture \u2022 Features \u2022 Agents \u2022 Installation \u2022 Configuration \u2022 Contributing --- > **Samvid Trading Core** is a backend-first, consensus-driven algorithmic trading engine. It combines 11 specialized AI agents, an async pub/sub intelligence bus, multi-broker execution (IBKR + MT5), real-time data pipelines, institutional-grade risk management, and Telegram operator alerts \u2014 all in a single open-source Python + Rust stack. > \u26a0\ufe0f **Disclaimer**: This is trading research and engineering software, not financial advice. Paper trading mode (`TRADING_MODE=ibkr_paper`) is the default. Live trading requires independent validation, broker permissions, and capital-risk controls you are solely responsible for. --- ### \u2b50 If Samvid saves you time or teaches you something, please [star the repo](https://github.com/AshishTalpada/samvid-trading-core/stargazers) \u2014 it helps other traders and developers find it. --- ## \ud83d\udcd1 Table of Contents - [Why Samvid Trading Core?](#-why-samvid-trading-core) - [Features](#-features) - [Multi-Agent AI Consensus Engine](#-multi-agent-ai-consensus-engine) - [Real-Time Data Pipeline](#-real-time-data-pipeline) -",
+    "license_excerpt": "MIT License Copyright (c) 2026 Ashishkumar Talpada Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)",
+      "[![Rust](https://img.shields.io/badge/Rust-native%20layer-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/)",
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)",
+      "[![Telegram Alerts](https://img.shields.io/badge/Telegram-Live%20Alerts-2CA5E0?logo=telegram)](https://telegram.org/)",
+      "> **Samvid Trading Core** is a backend-first, consensus-driven algorithmic trading engine. It combines 11 specialized AI agents, an async pub/sub intelligence bus, multi-broker execution (IBKR + MT5), real-time data pipelines, institutional-grade risk manageme",
+      "> \u26a0\ufe0f **Disclaimer**: This is trading research and engineering software, not financial advice. Paper trading mode (`TRADING_MODE=ibkr_paper`) is the default. Live trading requires independent validation, broker permissions, and capital-risk controls you are sol",
+      "- [License](#-license)",
+      "| Terminal logs only | Logs + runtime health + Telegram alerts + CI validation + audit reports |",
+      "- OHLCV multi-timeframe ingestion (1m / 5m / 15m / 1h)",
+      "- Broker reconciliation: local state vs broker state comparison, stale/orphan/rejected order detection",
+      "- Weak-reference subscriber cleanup to prevent memory leaks",
+      "- Non-root Docker user + multi-stage Dockerfile",
+      "- Telegram bot for startup, execution, rejection, exit, DMS, and health alerts",
+      "Telegram alerts          Post-trade learning",
+      "| `src/telegram_alerts.py` | Telegram operator alert transport |",
+      "- Python 3.11 or 3.12",
+      "- Telegram bot token (optional, for alerts)",
+      "python src/vault.py set IBKR_ACCOUNT_ID \"your_account_id\""
+    ],
+    "dependency_repos": [
+      "AshishTalpada/samvid-trading-core",
+      "AshishTalpada/samvid-trading-core.git",
+      "astral-sh/uv"
+    ]
+  },
+  {
+    "full_name": "manynames3/brokerops-platform",
+    "requested_name": "manynames3/brokerops-platform",
+    "id": 1240448690,
+    "url": "https://github.com/manynames3/brokerops-platform",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "11e3e6d7d886cea81bf9122ef826722ac8d63455",
+    "last_commit_date": "2026-05-16T17:33:38Z",
+    "archived": false,
+    "fork": false,
+    "description": "Production-capable insurance reconciliation platform for carrier statements, exception review, AWS ECS/RDS infrastructure, Terraform, CI/CD, observability, and cost-conscious preview environments.",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# BrokerOps Platform",
+      "## Core workflow",
+      "## Stack",
+      "## Environment profiles",
+      "### Local development",
+      "### Preview environment",
+      "### Production profile",
+      "## Local quickstart",
+      "## End-user frontend",
+      "## Statement import API",
+      "## Human review API",
+      "## Cost-conscious architecture",
+      "## AI-assisted exception review",
+      "## Validation"
+    ],
+    "recent_commit_count": 6,
+    "recent_authors_sample50": [
+      "manynames3"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "AGENTS.md",
+      "Makefile",
+      "README.md",
+      "adr",
+      "apps",
+      "data",
+      "docker-compose.yml",
+      "docs",
+      "infra",
+      "package.json",
+      "packages",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+      "runbooks",
+      "scripts",
+      "tsconfig.base.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/manynames3/brokerops-platform/blob/11e3e6d7d886cea81bf9122ef826722ac8d63455/README.md",
+        "sha256": "0caaf78d5c333ac5ec7a197aea36ebc38fa6bcf31bbd8c9dc81016d554be1d1d",
+        "bytes": 6622
+      },
+      "package.json": {
+        "url": "https://github.com/manynames3/brokerops-platform/blob/11e3e6d7d886cea81bf9122ef826722ac8d63455/package.json",
+        "sha256": "328b3401abb173ffde26332942b4dab1091fdd9396ef91e0e08e8861e6670025",
+        "bytes": 348
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/manynames3/brokerops-platform/commit/11e3e6d7d886cea81bf9122ef826722ac8d63455",
+      "metadata": "https://api.github.com/repos/manynames3/brokerops-platform"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# BrokerOps Platform BrokerOps Platform is a production-capable insurance back-office reconciliation platform built with TypeScript, Node.js, Next.js, PostgreSQL, Redis-compatible caching, Terraform, ECS, RDS PostgreSQL, CI/CD,",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "BrokerOps uses environment-aware architecture: local development runs the full application stack through Docker Compose, preview environments validate the AWS deployment path with cost-conscious defaults, and the production profile supports an always-on ECS/RD",
+      "### Local development",
+      "make local-up",
+      "make local-seed",
+      "`make preview-up` applies the preview profile and runs the database migration task inside ECS before smoke testing. `make preview-smoke` resolves the preview ALB DNS name from Terraform output, so validation targets the deployed service instead of a local proc",
+      "## Local quickstart",
+      "make local-up",
+      "make local-seed",
+      "make local-smoke",
+      "- Web: http://localhost:3000",
+      "- API health: http://localhost:8080/health",
+      "Local development supports JSON-wrapped CSV imports so the workflow can be exercised without cloud services:",
+      "curl -fsS http://localhost:8080/statements/import \\",
+      "\"actor\": \"local-developer\",",
+      "curl -fsS -X PATCH http://localhost:8080/exceptions/$EXCEPTION_ID/review \\",
+      "-d '{\"status\":\"in_review\",\"actor\":\"local-reviewer\",\"note\":\"Investigating carrier rate change\"}'",
+      "Run local checks before opening a PR:",
+      "make validate-local"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Prashant-Panicker/low-latency-trading-engine",
+    "requested_name": "Prashant-Panicker/low-latency-trading-engine",
+    "id": 1342124730,
+    "url": "https://github.com/Prashant-Panicker/low-latency-trading-engine",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "337461ffc103820ae9ce07bd29f78692b74e1067",
+    "last_commit_date": "2026-08-22T08:34:05Z",
+    "archived": false,
+    "fork": false,
+    "description": "Low-latency .NET trading engine with streaming market data, centralized risk controls and broker reconciliation.",
+    "language": "C#",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Low Latency Trading Engine",
+      "## Overview",
+      "## What This Project Is",
+      "## What This Project Is Not",
+      "## Deployment Philosophy",
+      "## Project Status",
+      "## Detailed Design",
+      "## Scope",
+      "## Future Work",
+      "## Disclaimer",
+      "## Security"
+    ],
+    "recent_commit_count": 5,
+    "recent_authors_sample50": [
+      "Prashant-Panicker"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "LltEngine.slnx",
+      "README.md",
+      "SCHEMA.postgresql.sql",
+      "SECURITY.md",
+      "docs",
+      "dotnet-tools.json",
+      "global.json",
+      "infra",
+      "scripts",
+      "src",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Prashant-Panicker/low-latency-trading-engine/blob/337461ffc103820ae9ce07bd29f78692b74e1067/README.md",
+        "sha256": "42cd6b8c2538659233e21fdd7a812ebbfb8912470d1787129c39f518118f04bc",
+        "bytes": 6564
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Prashant-Panicker/low-latency-trading-engine/commit/337461ffc103820ae9ce07bd29f78692b74e1067",
+      "metadata": "https://api.github.com/repos/Prashant-Panicker/low-latency-trading-engine"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Low Latency Trading Engine [![Build and test](https://github.com/Prashant-Panicker/low-latency-trading-engine/actions/workflows/aws-deploy.yml/badge.svg)](https://github.com/Prashant-Panicker/low-latency-trading-engine/actions/workflows/aws-deploy.yml) > A low-latency retail trading engine for Indian markets, designed for personal use and small operator groups",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- Designed for **one operator or a small trusted group**",
+      "The live Zerodha path includes startup session creation, Admin API browser login for daily token capture, persisted broker session tokens, recent-order reconciliation for offline fills, persistence-backed order and position tracking, broker-side protective sto",
+      "For live local or single-VM setup against Zerodha, see [docs/LIVE_DEPLOYMENT.md](docs/LIVE_DEPLOYMENT.md). For AWS/EC2 cloud setup with Elastic IP, HTTPS, PostgreSQL, and systemd services, see [docs/CLOUD_DEPLOYMENT.md](docs/CLOUD_DEPLOYMENT.md). Open validati",
+      "- Local development and VM deployment guidance",
+      "This project is a software framework for algorithmic trading. It is **not financial advice**. All trading involves risk, and retail broker APIs have operational and latency limits that must be understood before going live."
+    ],
+    "dependency_repos": [
+      "Prashant-Panicker/low-latency-trading-engine"
+    ]
+  },
+  {
+    "full_name": "Yun-0000/opticycle",
+    "requested_name": "Yun-0000/opticycle",
+    "id": 1350151329,
+    "url": "https://github.com/Yun-0000/opticycle",
+    "stars": 1,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "ee5940d9f85c64f009fdb4fda5edec8ac7a2b793",
+    "last_commit_date": "2026-09-04T05:00:43Z",
+    "archived": false,
+    "fork": false,
+    "description": "Proof-carrying SPY options agent: LLM stance, payload-bound risk certificate, Alpaca MCP MLEG, broker reconciliation.",
+    "language": "Python",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2026 Yun-0000",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## The verified path",
+      "### Two invariants",
+      "## Broker trail",
+      "## Risk contract",
+      "## Run once",
+      "# Keyless replay: fixture market, no live model, no broker call",
+      "# Targeted proof",
+      "# Observe + ThesisAgent only; never submits an order",
+      "# Manage existing positions only; never enters a new spread",
+      "## Evidence map",
+      "## License"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "Yun-0000"
+    ],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W08",
+        "lane": "A",
+        "query": "broker reconciliation"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "artifacts",
+      "pyproject.toml",
+      "scripts",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Yun-0000/opticycle/blob/ee5940d9f85c64f009fdb4fda5edec8ac7a2b793/README.md",
+        "sha256": "a26b5dbc45d51a6329680d0ba4b4d0e4e430d9a4c7837221e08c9754c6d802b7",
+        "bytes": 7236
+      },
+      "LICENSE": {
+        "url": "https://github.com/Yun-0000/opticycle/blob/ee5940d9f85c64f009fdb4fda5edec8ac7a2b793/LICENSE",
+        "sha256": "153a0d6bca4c650093d63d150b4f3e3632ef60429349cdc47ffea2d5fd3280ed",
+        "bytes": 1065
+      },
+      "pyproject.toml": {
+        "url": "https://github.com/Yun-0000/opticycle/blob/ee5940d9f85c64f009fdb4fda5edec8ac7a2b793/pyproject.toml",
+        "sha256": "1c1774e5625e3b6d24f7bcab664e857ffc8684a11f9740b91724cc4a794670fa",
+        "bytes": 697
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Yun-0000/opticycle/commit/ee5940d9f85c64f009fdb4fda5edec8ac7a2b793",
+      "metadata": "https://api.github.com/repos/Yun-0000/opticycle"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "A proof-carrying SPY options agent. Fresh evidence in. One certified MLEG out. Broker state decides what is true. Watch the demo \u00b7 Open the evidence ledger \u00b7 Read the one-page \u00b7 Open the slide deck | LIVE BROKER PROOF | EXECUTION INTEGRITY | REALIZED PAPER P&L | | :---: | :---: | :---: | | **3 option fills** | **1 submit \u00b7 0 resubmits** | **+$55.67** | | 1 signed-credit price match | same client ID through broker GET | closed spreads, before fees | Opticycle trades one narrow instrument well: 3\u201310 DTE, $5-wide SPY credit verticals. The LLM may only return `BULLISH`, `BEARISH`, or `NO_TRADE`; deterministic code owns contracts, quantity, price, risk, execution, and exits. ## The verified path ```mermaid flowchart LR A[Live snapshot] --> B[LLM stance] B --> C[Exact MLEG payload] C --> D[Risk certificate] D --> E[Alpaca MCP] E --> F[Broker GET] F --> G{Exact match?} G -->|yes| H[MATCHED + ledger] G -->|unknown| I[HALT] ``` ### Two invariants **Byte-bound authorization.** A short-lived certificate binds the canonical order payload. Changing a symbol, side, ratio, quantity, limit, or intent",
+    "license_excerpt": "MIT License Copyright (c) 2026 Yun-0000 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [
+      "<img alt=\"Python 3.12\" src=\"https://img.shields.io/badge/Python-3.12-0a0a0a?style=flat-square\" />",
+      "<img alt=\"MIT license\" src=\"https://img.shields.io/badge/license-MIT-a8ff00?style=flat-square&labelColor=0a0a0a&color=a8ff00\" />",
+      "python3 scripts/assert-zero-resubmit.py",
+      "python3 scripts/assert-exits-only.py",
+      "python3 -m pip install -e .",
+      "python3 -m opticycle run --profile hackathon --backend mcp --once --dry-run",
+      "python3 scripts/assert-zero-resubmit.py",
+      "python3 scripts/assert-exits-only.py",
+      "Live paper mode requires `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`, and `OPENAI_API_KEY`; `ALPACA_PAPER_TRADE=true` and `ALPACA_LIVE_TRADE=false` are mandatory.",
+      "python3 scripts/verify-paper-account.py",
+      "python3 scripts/run-open-session.py",
+      "python3 scripts/run-open-session.py --exits-only",
+      "The first two real credit entries used the wrong positive limit sign, so they remain `FILLED`, not price-bound `MATCHED`. Production now requires a negative credit limit; the third entry is the only live price-bound match. Keyless dry-run is not a live fill. T",
+      "## License",
+      "Opticycle is released under the [MIT License](LICENSE), \u00a9 2026 Yun-0000."
+    ],
+    "dependency_repos": []
+  }
+]
