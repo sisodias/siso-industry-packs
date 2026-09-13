@@ -12,28 +12,74 @@ jobs:
   evidence:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        batch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPOSITORY: ${{ github.repository }}
       REQUEST_REVISION: ${{ github.sha }}
+      RESEARCH_BATCH: ${{ matrix.batch }}
     steps:
-      - name: Run pinned public-research collector, with safe diagnostics
+      - name: Public evidence only; six repositories per batch; no candidate code execution
         shell: bash
         run: |
           python3 - <<'PY'
-          import urllib.request, urllib.error, json, os, textwrap
+          import urllib.request, urllib.error, json, os, textwrap, subprocess, tempfile, pathlib, base64, time
           assert os.environ['GH_REPOSITORY']=='sisodias/siso-industry-packs'
-          # This is our own previously published research collector, not candidate application code.
+          batch=int(os.environ['RESEARCH_BATCH']); offset=batch*6
+          revision=os.environ['REQUEST_REVISION']
+          request_url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+revision+'/packs/law_firms/evidence/audit-request.json'
+          with urllib.request.urlopen(request_url,timeout=60) as response: manifest=json.load(response)
+          if manifest['mode']!='candidates' and batch!=0:raise SystemExit(0)
+          if manifest['mode']=='candidates' and offset>=len(manifest['repositories']):raise SystemExit(0)
           source='https://raw.githubusercontent.com/sisodias/siso-industry-packs/d4c6202396dc4230a080831a326f0623e2f05061/.github/workflows/law-firms-evidence-audit.yml'
           with urllib.request.urlopen(source,timeout=60) as response: text=response.read().decode()
           script=textwrap.dedent(text.split("          python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
-          needle="except urllib.error.HTTPError as e:\n            if e.code"
-          replacement="except urllib.error.HTTPError as e:\n            print('PUBLIC_RESEARCH_HTTP_ERROR', e.code, path.split('?')[0], 'remaining', e.headers.get('X-RateLimit-Remaining'), 'reset', e.headers.get('X-RateLimit-Reset'))\n            if e.code"
+          # Public GETs use the runner's unauthenticated allowance, bounded below 60 calls per batch.
+          # Search has its own GitHub rate bucket and remains authenticated. Tokens never go to raw hosts.
+          old="headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-law-firms-public-research','X-GitHub-Api-Version':'2022-11-28'}"
+          new="headers=({'Authorization':'Bearer '+TOKEN} if path.startswith('/search/') else {}) | {'Accept':'application/vnd.github+json','User-Agent':'siso-law-firms-public-research','X-GitHub-Api-Version':'2022-11-28'}"
+          assert old in script;script=script.replace(old,new,1)
+          start="request=api('/repos/'+REPO+'/contents/'+ROOT+'audit-request.json?ref='+os.environ['REQUEST_REVISION'])\ncfg=json.loads(base64.b64decode(request['content'])); assert cfg['mode'] in ('search','candidates','render')"
+          assert start in script;script=script.replace(start,"cfg=MANIFEST; assert cfg['mode'] in ('search','candidates','render')",1)
+          needle="names=list(dict.fromkeys(cfg['repositories']));assert 1<=len(names)<=220"
+          assert needle in script;script=script.replace(needle,needle+"\n    names=names[OFFSET:OFFSET+6]",1)
+          script=script.replace('enumerate(names,1)','enumerate(names,OFFSET+1)',1)
+          script=script.replace('for i,r in enumerate(rows,1):','for i,r in enumerate(rows,OFFSET+1):',1)
+          needle="for start in range(0,len(review),4):output('review-'+str(start//4+1).zfill(2)+'.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in review[start:start+4]))"
           assert needle in script
-          script=script.replace(needle,replacement,1)
-          # Preserve generated evidence in logs before publication, so a write failure cannot masquerade as an empty search.
+          script=script.replace(needle,"output('batch-'+str(BATCH+1).zfill(2)+'-review.jsonl',''.join(json.dumps(x,ensure_ascii=False)+'\\n' for x in review))",1)
+          script=script.replace("output('candidate-audit-receipt.json',receipt)","output('batch-'+str(BATCH+1).zfill(2)+'-receipt.json',receipt)",1)
           needle2='# Safe fast-forward, evidence/report paths only; unrelated files remain untouched.'
-          assert needle2 in script
-          script=script.replace(needle2,"for p,t in outputs.items():\n    if p.endswith('-brief.jsonl') or p.endswith('receipt.json'):\n        print('EVIDENCE_RECEIPT',p,t)\n"+needle2,1)
-          exec(compile(script,source,'exec'),{'__name__':'__main__'})
+          assert needle2 in script;script=script.split(needle2,1)[0]
+          state={'__name__':'__main__','MANIFEST':manifest,'OFFSET':offset,'BATCH':batch}
+          exec(compile(script,source,'exec'),state)
+          outputs=state['outputs'];assert outputs
+          for p in outputs:assert p.startswith('packs/law_firms/evidence/') or p in ('packs/law_firms/04-oss-candidates.md','packs/law_firms/04-oss-candidates.json')
+          # Git transport is independent of the exhausted shared REST core quota.
+          # Each retry starts from the current remote main and writes ONLY this batch's explicit research paths.
+          auth=base64.b64encode(('x-access-token:'+os.environ['GH_TOKEN']).encode()).decode()
+          env=os.environ.copy();env['GIT_TERMINAL_PROMPT']='0';env['GIT_CONFIG_COUNT']='2';env['GIT_CONFIG_KEY_0']='http.https://github.com/.extraheader';env['GIT_CONFIG_VALUE_0']='AUTHORIZATION: basic '+auth;env['GIT_CONFIG_KEY_1']='core.hooksPath';env['GIT_CONFIG_VALUE_1']='/dev/null'
+          work=tempfile.mkdtemp(prefix='law-evidence-')
+          def git(*args,check=True):return subprocess.run(['git',*args],cwd=work,env=env,check=check,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+          git('init','--quiet');git('remote','add','origin','https://github.com/sisodias/siso-industry-packs.git')
+          git('config','user.name','SISO public research');git('config','user.email','80409709+sisodias@users.noreply.github.com')
+          git('sparse-checkout','init','--cone');git('sparse-checkout','set','packs/law_firms')
+          for attempt in range(12):
+              git('fetch','--quiet','--depth=1','--filter=blob:none','origin','main')
+              git('checkout','--quiet','-B','publish','FETCH_HEAD')
+              for path,text in outputs.items():
+                  f=pathlib.Path(work,path);f.parent.mkdir(parents=True,exist_ok=True);f.write_text(text,encoding='utf-8')
+              git('add','--',*outputs.keys())
+              if git('diff','--cached','--quiet',check=False).returncode==0:print('No changed evidence');break
+              git('commit','--quiet','-m','research(law_firms): publish '+manifest['mode']+' evidence batch '+str(batch+1))
+              pushed=git('push','--quiet','origin','HEAD:main',check=False)
+              if pushed.returncode==0:print('Published',len(outputs),'research paths; commit',git('rev-parse','HEAD').stdout.strip());break
+              # Do not print stderr, headers, credentials or environment values.
+              print('Concurrent publication retry',attempt+1);time.sleep(2+batch%4)
+          else:raise RuntimeError('Publication failed without overwriting remote work')
+          print('Completed public text research. No candidate application code executed or deployed.')
           PY
