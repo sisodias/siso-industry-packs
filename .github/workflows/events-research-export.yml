@@ -8,100 +8,31 @@ permissions:
 jobs:
   public-evidence:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 2
     steps:
-      - name: Read public repository evidence only; never execute candidate code
+      - name: Diagnose read access; print no tokens or private data
         env:
           GH_TOKEN: ${{ github.token }}
-        shell: bash
         run: |
           python3 - <<'PY'
-          import base64, concurrent.futures, datetime, hashlib, json, os, pathlib, re, time, urllib.parse, urllib.request
-          out = pathlib.Path('evidence-export'); out.mkdir()
-          now = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
-          requests = 0
-          def get(path):
-              global requests
-              requests += 1
-              if requests > 950: raise RuntimeError('Hard API request bound')
-              u = 'https://api.github.com/' + path.lstrip('/')
-              req = urllib.request.Request(u, headers={'User-Agent':'SISO-events-public-research','Accept':'application/vnd.github+json','Authorization':'Bearer '+os.environ['GH_TOKEN']})
+          import json, os, pathlib, urllib.request, urllib.error
+          out=pathlib.Path('evidence-export');out.mkdir()
+          results=[]
+          for auth,path in [(True,'rate_limit'),(True,'repos/HiEventsDev/Hi.Events'),(False,'repos/HiEventsDev/Hi.Events')]:
+              headers={'User-Agent':'SISO-public-evidence-diagnostic','Accept':'application/vnd.github+json'}
+              if auth: headers['Authorization']='Bearer '+os.environ['GH_TOKEN']
+              req=urllib.request.Request('https://api.github.com/'+path,headers=headers)
               try:
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      b = r.read(5000000)
-                      return json.loads(b)
-              except Exception as e:
-                  return {'_error':type(e).__name__+': '+str(e), '_url':u}
-          queries = [
-          ('S01','A','shared inbox self hosted'),('S01','B','topic:customer-support stars:>10'),('S01','C','IMAP email stars:>50'),
-          ('S02','A','event scheduling stars:>10'),('S02','B','topic:booking stars:>5'),('S02','C','icalendar stars:>50'),
-          ('S03','A','contract signing stars:>10'),('S03','B','topic:esignature'),('S03','C','PDF signature stars:>10'),
-          ('S04','A','volunteer scheduling'),('S04','B','topic:staff-scheduling'),('S04','C','"RFC 5545" stars:>10'),
-          ('S05','A','event safety'),('S05','B','topic:incident-management'),('S05','C','ACORD insurance'),
-          ('S06','A','sponsor management'),('S06','B','topic:email-marketing stars:>30'),('S06','C','ActivityPub events'),
-          ('S07','A','event ticketing stars:>10'),('S07','B','topic:event-ticketing'),('S07','C','pkpass stars:>10'),
-          ('S08','A','rundown stars:>5'),('S08','B','topic:show-control'),('S08','C','Art-Net stars:>10'),
-          ('S09','A','"concert settlement"'),('S09','B','topic:invoicing stars:>30'),('S09','C','camt stars:>5'),
-          ('S10','A','event feedback stars:>5'),('S10','B','topic:event-management stars:>10'),('S10','C','pretalx stars:>10')]
-          expansion=[('S08','maintainer','org:getontime'),('S07','maintainer','org:pretix'),('S08','maintainer','org:bitfocus'),('S08','format','topic:gdtf'),('S08','format','topic:mvr'),('S08','format','OpenSoundControl stars:>10'),('S09','format','Factur-X stars:>5'),('S09','format','SEPA pain.001 stars:>5'),('S04','application','festival volunteer'),('S03','application','artist booking'),('S10','registry','awesome event management'),('S10','registry','awesome selfhosted')]
-          seeds = ['HiEventsDev/Hi.Events','chatwoot/chatwoot','docusealco/docuseal','knadh/listmonk','Dolibarr/dolibarr','eventschedule/eventschedule','pretix/pretix','alfio-event/alf.io','sabre-io/vobject','sabre-io/dav','pretix/python-drafthorse','getontime/ontime','engelsystem/engelsystem','kimai/kimai','frappe/erpnext','frappe/hrms','documenso/documenso','OpenSignLabs/OpenSign','LibreBooking/app','alextselegidis/easyappointments','pretalx/pretalx','Attendize/Attendize','fossasia/open-event-server','fossasia/open-event-frontend','bitfocus/companion','openvenues/libpostal','civicrm/civicrm-core','mautic/mautic','invoiceplane/InvoicePlane','invoiceninja/invoiceninja','nfc-tools/libnfc','zxing-js/library','zxing-cpp/zxing-cpp','nimiq/qr-scanner','volkszaehler/mbus','LibreSign/libresign','pbek/QOwnNotes','activepieces/activepieces','Rallly/rallly','phpList/phplist3']
-          pool = {}; logs=[]; ordered=[]
-          for name in seeds:
-              pool[name.lower()]={'full_name':name,'lineage':['prior-bank-or-domain-lead; not yet verified']}; ordered.append(name.lower())
-          def search_round(round_id, qs):
-              new_total=0
-              for stage,lane,q in qs:
-                  r=get('search/repositories?'+urllib.parse.urlencode({'q':q,'sort':'stars','order':'desc','per_page':12}))
-                  names=[]; added=[]
-                  for item in r.get('items',[]):
-                      key=item['full_name'].lower(); names.append(item['full_name'])
-                      if key not in pool:
-                          pool[key]={'full_name':item['full_name'],'description':item.get('description'),'lineage':[]}; ordered.append(key); added.append(key)
-                      pool[key]['lineage'].append({'round':round_id,'stage':stage,'lane':lane,'query':q})
-                  logs.append({'round':round_id,'stage':stage,'lane':lane,'query':q,'observed_at':now(),'total_count':r.get('total_count'),'returned':names,'new':added,'error':r.get('_error'),'url':'https://api.github.com/search/repositories?'+urllib.parse.urlencode({'q':q,'sort':'stars','order':'desc','per_page':12})})
-                  new_total+=len(added); print('R',round_id,stage,lane,'returned',len(names),'new',len(added),flush=True); time.sleep(2.2)
-              return new_total
-          rounds=[{'round':1,'new':search_round(1,queries)},{'round':2,'new':search_round(2,expansion)}]
-          # Independent narrow gap probes. Their result is bounded-query saturation, never proof of global absence.
-          gap_rounds=[
-            [('S03','gap','"festival advancing"'),('S09','gap','"artist settlement"'),('S05','gap','"event insurance"'),('S06','gap','"sponsor activation"')],
-            [('S03','gap','"promoter settlement"'),('S09','gap','"versus deal" concert'),('S05','gap','"PRS setlist"'),('S04','gap','"festival crew" scheduling')],
-            [('S09','gap','"artist guarantee" settlement'),('S05','gap','"temporary events notice"'),('S03','gap','"artist advance" rider'),('S06','gap','"sponsorship fulfilment"')]
-          ]
-          for i,qs in enumerate(gap_rounds,3): rounds.append({'round':i,'new':search_round(i,qs)})
-          (out/'discovery.json').write_text(json.dumps({'observed_at':now(),'queries':logs,'rounds':rounds,'pool':list(pool.values()),'scope':'Top 12 per published query; bounded searches, not exhaustive GitHub'},indent=2))
-          # Breadth before judgment: reserve seeds, then round-robin across every query; do not rank by subjective quality here.
-          selected=list(dict.fromkeys(n.lower() for n in seeds))
-          for index in range(12):
-              for log in logs:
-                  if index < len(log['returned']):
-                      key=log['returned'][index].lower()
-                      if key not in selected: selected.append(key)
-          selected=selected[:165]
-          def examine(key):
-              name=pool[key]['full_name']; repo=get('repos/'+name)
-              if '_error' in repo: return {'requested_name':name,'error':repo,'lineage':pool[key]['lineage']}
-              canonical=repo['full_name']; base='repos/'+canonical
-              commits=get(base+'/commits?per_page=5')
-              commit=commits[0] if isinstance(commits,list) and commits else {}
-              sha=commit.get('sha'); ref=('?ref='+sha) if sha else ''
-              readme=get(base+'/readme'+ref); licence=get(base+'/license'+ref)
-              def decoded(d):
-                  try: return base64.b64decode(d.get('content','')).decode('utf-8','replace')
-                  except Exception: return ''
-              rd=decoded(readme); lc=decoded(licence)
-              evidence={'requested_name':name,'full_name':canonical,'id':repo['id'],'url':repo['html_url'],'description':repo.get('description'),'stars':repo.get('stargazers_count'),'forks':repo.get('forks_count'),'archived':repo.get('archived'),'fork':repo.get('fork'),'default_branch':repo.get('default_branch'),'language':repo.get('language'),'topics':repo.get('topics'),'license_metadata':repo.get('license'),'observed_at':now(),'head_sha':sha,'last_commit':commit.get('commit',{}).get('committer',{}).get('date'),'commits_sample':[{'sha':x['sha'],'date':x['commit']['committer']['date'],'author':x.get('author',{}).get('login') if x.get('author') else x['commit']['author']['name']} for x in commits] if isinstance(commits,list) else [],'readme_path':readme.get('path'),'readme':rd,'readme_error':readme.get('_error'),'license_path':licence.get('path'),'license_text':lc,'license_error':licence.get('_error'),'license_sha256':hashlib.sha256(lc.encode()).hexdigest() if lc else None,'lineage':pool[key]['lineage'],'source_urls':{'metadata':'https://api.github.com/'+base,'commits':'https://api.github.com/'+base+'/commits?per_page=5','readme':readme.get('html_url'),'license':licence.get('html_url')}}
-              return evidence
-          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as workers:
-              with (out/'repositories.jsonl').open('w') as f:
-                  for d in workers.map(examine,selected):
-                      f.write(json.dumps(d,ensure_ascii=False)+'\n'); f.flush(); print('EVIDENCE',d.get('full_name') or d.get('requested_name'),'readme',len(d.get('readme','')),'license',len(d.get('license_text','')),flush=True)
-          (out/'manifest.json').write_text(json.dumps({'created_at':now(),'api_requests':requests,'selected':len(selected),'distinct_discovery_pool':len(pool),'rounds':rounds,'no_candidate_code_executed':True,'permissions':'contents:read','purpose':'Research evidence, not production qualification'},indent=2))
+                  r=urllib.request.urlopen(req,timeout=20)
+              except urllib.error.HTTPError as e: r=e
+              data=json.loads(r.read())
+              result={'auth':auth,'path':path,'status':r.status,'message':data.get('message'),'documentation_url':data.get('documentation_url'),'resources':data.get('resources'),'full_name':data.get('full_name'),'rate_remaining':r.headers.get('x-ratelimit-remaining'),'rate_reset':r.headers.get('x-ratelimit-reset'),'rate_resource':r.headers.get('x-ratelimit-resource'),'retry_after':r.headers.get('retry-after')}
+              results.append(result); print(json.dumps(result))
+          (out/'diagnostic.json').write_text(json.dumps(results,indent=2))
           PY
-      - name: Upload research evidence
-        if: always()
+      - name: Upload evidence
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: events-oss-evidence
+          name: events-access-diagnostic
           path: evidence-export/
           retention-days: 7
