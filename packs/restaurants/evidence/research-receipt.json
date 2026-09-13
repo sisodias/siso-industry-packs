@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-09-13",
+  "counts": {
+    "requested": 160,
+    "collected": 155,
+    "repos_examined": 151,
+    "metadata_only": 4,
+    "retrieval_failures": 5,
+    "root_licence_files_read": 124,
+    "already_in_bank_examined": 34,
+    "new_examined": 117,
+    "verdicts_examined": {
+      "ADOPT": 10,
+      "STUDY": 87,
+      "SKIP": 52,
+      "STEAL": 2
+    },
+    "tier1_companies": 10,
+    "tier2_offerings": 10,
+    "practitioner_quotes": 8,
+    "workflow_stages": 12
+  },
+  "new_research_candidates_for_bank": 70,
+  "shared_registry_new_rows_added": 70,
+  "verified_corrections_to_existing_bank_records": 0,
+  "corrections_note": "Source-specific warnings and licence caveats are recorded per candidate; no substantiated contradiction to an existing bank record was established. Existing corrections registry is unchanged.",
+  "search_round_new_names": [
+    77,
+    87,
+    95
+  ],
+  "two_dry_rounds": false,
+  "source_run": "https://github.com/sisodias/siso-industry-packs/actions/runs/34770301947",
+  "source_artifact_id": 10322051172,
+  "source_artifact_sha256": "53c3f496cefc617097e99a1405a2f9cdab3ab6fbc1e4ef5796624a67f3009299",
+  "manual_decisions_sha256": "310818dcad1097fb0849f72b67c1f94cc93d3b209391c27dc00e8000fc27b8c6",
+  "application_executed": false,
+  "application_code_written": false,
+  "evidence_level": "README-led source triage, not full code/runtime verification",
+  "status": "research_partial"
+}

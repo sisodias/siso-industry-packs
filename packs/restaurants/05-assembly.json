@@ -1,0 +1,327 @@
+{
+  "schema_version": "1.0.0",
+  "industry": "restaurants",
+  "as_of": "2026-09-13",
+  "evidence_class": "analysis",
+  "status": "research_partial_not_deployed",
+  "deployment": "client_owned_vps_one_application_box_per_client",
+  "siso_hosts_client_data": false,
+  "preserve_existing_marketing_site": true,
+  "spine": [
+    "Party",
+    "ServiceCase",
+    "ProductDefinition",
+    "StockMovement",
+    "WorkRecord",
+    "FinancialRecord"
+  ],
+  "primary_wedge": "Assigned enquiry-to-approved booking/order handoff with source lineage and an exception queue",
+  "top_10": [
+    {
+      "audit_id": "R041",
+      "repository": "chatwoot/chatwoot",
+      "revision": "2f1ed80f894ed9a3eba636ebab90ca61deec110a",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/README.md"
+    },
+    {
+      "audit_id": "R076",
+      "repository": "karanshukla/openresto",
+      "revision": "38c4a129090badc005d4e03b8be127ac9a92bcbd",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/karanshukla/openresto/blob/38c4a129090badc005d4e03b8be127ac9a92bcbd/README.md"
+    },
+    {
+      "audit_id": "R001",
+      "repository": "tastyigniter/TastyIgniter",
+      "revision": "0230a8132b73231d9121b64cdddfc2eac7cac268",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/tastyigniter/TastyIgniter/blob/0230a8132b73231d9121b64cdddfc2eac7cac268/README.md"
+    },
+    {
+      "audit_id": "R005",
+      "repository": "frappe/erpnext",
+      "revision": "fe25746febc8731bbbc0880dcb18d528dcf08a63",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/frappe/erpnext/blob/fe25746febc8731bbbc0880dcb18d528dcf08a63/README.md"
+    },
+    {
+      "audit_id": "R002",
+      "repository": "ury-erp/ury",
+      "revision": "71b59edac14ea4c7ce4a108b4ea1bdf714803fb5",
+      "verdict": "STUDY",
+      "source_url": "https://github.com/ury-erp/ury/blob/71b59edac14ea4c7ce4a108b4ea1bdf714803fb5/README.md"
+    },
+    {
+      "audit_id": "R006",
+      "repository": "frappe/hrms",
+      "revision": "307f07d9eb8fc814bdcb065785b614ed3589c337",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/frappe/hrms/blob/307f07d9eb8fc814bdcb065785b614ed3589c337/README.md"
+    },
+    {
+      "audit_id": "R033",
+      "repository": "getodk/central",
+      "revision": "65a2cd573423f7ab4bae962a838702dac5a634fb",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/getodk/central/blob/65a2cd573423f7ab4bae962a838702dac5a634fb/README.md"
+    },
+    {
+      "audit_id": "R056",
+      "repository": "invoice-x/invoice2data",
+      "revision": "68c449c5334e192a214969058aaa92c65a5172ba",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/invoice-x/invoice2data/blob/68c449c5334e192a214969058aaa92c65a5172ba/README.md"
+    },
+    {
+      "audit_id": "R048",
+      "repository": "python-escpos/python-escpos",
+      "revision": "f5ed42f2dcd1c19cfedb2e186a616701fa41ece8",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/python-escpos/python-escpos/blob/f5ed42f2dcd1c19cfedb2e186a616701fa41ece8/README.rst"
+    },
+    {
+      "audit_id": "R045",
+      "repository": "knadh/listmonk",
+      "revision": "594b74056dd8a0d3a7621a32898ee38bfbe10e96",
+      "verdict": "ADOPT",
+      "source_url": "https://github.com/knadh/listmonk/blob/594b74056dd8a0d3a7621a32898ee38bfbe10e96/README.md"
+    }
+  ],
+  "phases": [
+    {
+      "phase": "baseline",
+      "modules": [],
+      "gate": "Accepted actual client channels, installed systems, authority, matched workload and simpler incumbent alternative."
+    },
+    {
+      "phase": "bounded_booking_pilot",
+      "modules": [
+        "R041",
+        "R076"
+      ],
+      "retain": [
+        "website",
+        "incumbent POS",
+        "payments",
+        "kitchen",
+        "accountant",
+        "payroll"
+      ],
+      "gate": "No duplicates, correct capacity, permission isolation, independent confirmation status, lower matched review-inclusive effort."
+    },
+    {
+      "phase": "optional_direct_orders",
+      "modules": [
+        "R001"
+      ],
+      "gate": "Only if justified; OpenResto remains booking authority, no duplicate reservation module."
+    },
+    {
+      "phase": "optional_backoffice",
+      "modules": [
+        "R005",
+        "R006",
+        "R056"
+      ],
+      "qualification_only": [
+        "R002"
+      ],
+      "gate": "Compatible supported releases, accepted recipes/units, stock/finance mappings and tested reversal."
+    },
+    {
+      "phase": "optional_adjacent",
+      "modules": [
+        "R033",
+        "R034",
+        "R045",
+        "R048"
+      ],
+      "gate": "Approved safety forms, released offline companion, consented email, qualified actual printer transport."
+    }
+  ],
+  "workflow_component_map": [
+    {
+      "stage": "W01",
+      "conditional_candidates": [
+        "R001",
+        "R041",
+        "R076"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W02",
+      "conditional_candidates": [
+        "R006"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W03",
+      "conditional_candidates": [
+        "R005",
+        "R056"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W04",
+      "conditional_candidates": [
+        "R005"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W05",
+      "conditional_candidates": [
+        "R033",
+        "R034"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W06",
+      "conditional_candidates": [
+        "R001",
+        "R076"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W07",
+      "conditional_candidates": [
+        "R001",
+        "R048"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W08",
+      "conditional_candidates": [
+        "R048"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W09",
+      "conditional_candidates": [
+        "R001"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W10",
+      "conditional_candidates": [
+        "R005",
+        "R056"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W11",
+      "conditional_candidates": [
+        "R005",
+        "R006",
+        "R056"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    },
+    {
+      "stage": "W12",
+      "conditional_candidates": [
+        "R041",
+        "R045"
+      ],
+      "authority_and_runnerup_detail": "05-superapp.md; candidate inclusion is not an installation instruction"
+    }
+  ],
+  "integration": {
+    "owns": "external-ID mappings, versioned relationships, approved event inbox/outbox, reconciliation and exceptions",
+    "duplicate_authorities_forbidden": true,
+    "exactly_once_delivery_claimed": false,
+    "booking_and_notification_states_separate": true,
+    "guest_staff_payroll_permissions_separate": true,
+    "default_external_ai_ocr": false,
+    "deployment_verified": false
+  },
+  "resource_budget": {
+    "expanded_vm_ram_gib": 16,
+    "reduced_vm_ram_gib": 8,
+    "status": "planning_hypotheses_not_measured_minima",
+    "vm_usd_month": 96,
+    "daily_backup_fraction": 0.3,
+    "vm_and_daily_backup_usd_year": 1497.6,
+    "complete_operating_cost": null,
+    "sources": [
+      "https://www.digitalocean.com/pricing/droplets",
+      "https://www.digitalocean.com/pricing/backups",
+      "https://developers.chatwoot.com/self-hosted"
+    ]
+  },
+  "gaps": [
+    {
+      "id": "G01",
+      "name": "Client fit and baseline",
+      "status": "unresolved"
+    },
+    {
+      "id": "G02",
+      "name": "Commercial channel access",
+      "status": "unresolved"
+    },
+    {
+      "id": "G03",
+      "name": "Payment and fiscal devices",
+      "status": "unresolved"
+    },
+    {
+      "id": "G04",
+      "name": "Peak-service and failure recovery",
+      "status": "unresolved"
+    },
+    {
+      "id": "G05",
+      "name": "Table capacity and confirmation",
+      "status": "unresolved"
+    },
+    {
+      "id": "G06",
+      "name": "Recipe costing and stock semantics",
+      "status": "unresolved"
+    },
+    {
+      "id": "G07",
+      "name": "Supplier document coverage",
+      "status": "unresolved"
+    },
+    {
+      "id": "G08",
+      "name": "Three-marketplace settlement",
+      "status": "unresolved"
+    },
+    {
+      "id": "G09",
+      "name": "Food-safety authority",
+      "status": "unresolved"
+    },
+    {
+      "id": "G10",
+      "name": "Payroll/accounting and loyalty",
+      "status": "unresolved"
+    },
+    {
+      "id": "G11",
+      "name": "Versions, rights and support",
+      "status": "unresolved"
+    },
+    {
+      "id": "G12",
+      "name": "Research completion",
+      "status": "unresolved"
+    }
+  ],
+  "test_results": null,
+  "production_admissions": 0,
+  "client_acceptance": null
+}

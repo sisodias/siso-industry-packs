@@ -1,7 +1,21 @@
-# Summary — Independent restaurants and small groups
+# Restaurants / AC — the operating-system blueprint
 
-> **Not yet researched.** Replace this file with the real output.
->
-> One page. The person, segment, wedge, stack tax, spine, top 10 repos, gap list, verdict.
+**2026-09-13 UTC · medium priority · RESEARCH PARTIAL · no application code or deployment.**
 
-_Status: empty · industry `restaurants` · priority medium_
+**The person and segment [analysis]:** design for a mixed dine-in/takeaway owner-manager. One site, 60 seats and 20 paid staff are explicit reference assumptions, not facts about AC. Actual jurisdiction, installed tools, volumes and invoices remain unknown. Preserve the existing marketing website; it is not a restaurant operating system. [Supplied brief](README.md) · [operator and eight attributed complaints](01-person.md).
+
+**The first useful door [analysis]:** an assigned conversation-to-approved-booking/order handoff with original-message lineage, independent confirmation status and a visible exception queue. Retain the till, payment provider and kitchen route. Pilot Chatwoot/OpenResto only after an incumbent/free configuration fails the same measured test. [Workflow](02-workflow.md) · [assembly](05-superapp.md).
+
+**Actual research counts:** 151 README-led source examinations: **34 ALREADY IN THE BANK / 117 NEW** in the six checked identity layers; 10 conditional ADOPT, 87 STUDY, two pattern-only STEAL, 52 SKIP. Four metadata-only entries and five retrieval failures are excluded. **10 Tier-1 companies, 10 Tier-2 offerings, eight practitioner complaints, 12 workflow stages.** Root licence files were retrieved and read for 124 candidates; missing licences remain unknown. [Full candidate table](04-oss-candidates.md) · [machine-readable evidence and counts](evidence/research-receipt.json).
+
+**Stack tax [vendor / arithmetic]:** $12,631/year is the priced subtotal for one hypothetical purchasing basket, not AC's bill, a verified compatible bundle or avoidable spend. Complete stack tax and realised savings are **null**. A 16GiB client-owned VPS plus daily disk-backup planning reference is **$1,497.60/year**, not complete operating cost or a proven resource minimum. [Prices and arithmetic](03-companies.md) · [value case and exclusions](06-value.md).
+
+**The spine [analysis]:** Party, ServiceCase, ProductDefinition, StockMovement, WorkRecord and FinancialRecord. These join authoritative domain IDs and versions; they are not six universal tables or a second financial database. [JSON assembly](05-assembly.json).
+
+**Ten highest-leverage references [analysis]:** [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot) — ADOPT; [karanshukla/openresto](https://github.com/karanshukla/openresto) — ADOPT; [tastyigniter/TastyIgniter](https://github.com/tastyigniter/TastyIgniter) — ADOPT; [frappe/erpnext](https://github.com/frappe/erpnext) — ADOPT; [ury-erp/ury](https://github.com/ury-erp/ury) — STUDY; [frappe/hrms](https://github.com/frappe/hrms) — ADOPT; [getodk/central](https://github.com/getodk/central) — ADOPT; [invoice-x/invoice2data](https://github.com/invoice-x/invoice2data) — ADOPT; [python-escpos/python-escpos](https://github.com/python-escpos/python-escpos) — ADOPT; [knadh/listmonk](https://github.com/knadh/listmonk) — ADOPT. ODK Collect is an additional conditional device companion. These are options across phases, not ten always-on services or ten production approvals. URY remains qualification-first because version compatibility and live service behaviour are unproved.
+
+**Gap list [analysis]:** client baseline; channel permissions; fiscal/payment hardware; peak/offline recovery; table/confirmation races; recipe/yield/stock mappings; supplier document coverage; marketplace payout reconciliation; safety authority; payroll/accounting/loyalty acceptance; version/rights/support; research exhaustion. [Twelve gaps and tests](05-superapp.md).
+
+**Verdict [analysis]: yes to a bounded, reversible, evidence-producing pilot; no to an immediate wholesale POS replacement or a savings sales pitch.** All application hosting belongs on AC's own VPS, never SISO infrastructure. The reviewed source supports a useful assembly hypothesis, not measured client value.
+
+**Not complete:** the three discovery rounds added 77, 87 and 95 names, so the required two dry rounds were not reached. Adoption metrics remain unverified, maintenance evidence is bounded, market eligibility is unmeasured and some stage-specific complaints/client facts remain missing. Seventy NEW non-SKIP research candidates are prepared for bank intake, not admitted for production. No unsupported bank correction was invented. [Search ledger](evidence/discovery.json) · [bank intake](evidence/bank-submissions.jsonl).
