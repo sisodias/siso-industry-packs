@@ -1,0 +1,208 @@
+{
+  "audit_id": "R027",
+  "requested_full_name": "teableio/teable",
+  "observed_at": "2026-09-13T16:10:12.036321+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "teableio/teable",
+  "html_url": "https://github.com/teableio/teable",
+  "description": "✨ AI Spreadsheet for Business",
+  "stargazers_count": 21769,
+  "forks_count": 1341,
+  "default_branch": "develop",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2022-11-01T07:02:49Z",
+  "updated_at": "2026-09-13T15:24:21Z",
+  "pushed_at": "2026-09-11T08:55:43Z",
+  "size": 76355,
+  "open_issues_count": 132,
+  "topics": [
+    "ai-agent",
+    "airtable",
+    "airtable-alternative",
+    "app-builder",
+    "database",
+    "internal-tool",
+    "low-code",
+    "no-code",
+    "postgres",
+    "postgresql",
+    "sandbox",
+    "spreadsheet"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "5ef2238883cad7c3980084de9a9031135fb9734f",
+  "last_commit": "2026-09-01T06:19:09Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/teableio/teable",
+    "commit": "https://github.com/teableio/teable/commit/5ef2238883cad7c3980084de9a9031135fb9734f"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "f64872147c94f5b1d9e64fcf5c8b180f3f1383dcbb5a4db58c86fa5f91a642a9",
+    "text": "<div align=\"center\">\n  <h1 align=\"center\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"static/assets/images/teable-vertical-dark.png\">\n      <img alt=\"teable logo\" height=\"120\" src=\"static/assets/images/teable-vertical-light.png\">\n    </picture>\n  </h1>\n  <h3 align=\"center\"><strong>Turn your data into AI workflows and custom apps that 100% fit your business</strong></h3>\n  <p>One platform where data management, AI workflows, and app building come together — spreadsheet-simple on the surface, real PostgreSQL underneath. Agents work inside your live data and real processes, so what they build lands seamlessly and fits your business exactly. In the cloud or fully self-hosted.</p>\n  <p>Try out Teable using our hosted version at <a href=\"https://teable.ai\">teable.ai</a></p>\n</div>\n\n<div align=\"center\">\n<a href=\"https://trendshift.io/repositories/8516\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/8516\" alt=\"teableio%2Fteable | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n</div>\n\n<p align=\"center\">\n  <a target=\"_blank\" href=\"https://teable.ai\">Home</a> | <a target=\"_blank\" href=\"https://help.teable.ai\">Help</a> | <a target=\"_blank\" href=\"https://teable.ai/blog\">Blog</a> | <a target=\"_blank\" href=\"https://teable.ai/templates\">Template</a> | <a target=\"_blank\" href=\"https://help.teable.ai/en/api-doc/token\">API</a> | <a target=\"_blank\" href=\"https://community.teable.ai\">Community</a> | <a target=\"_blank\" href=\"https://x.com/teableio\">X</a>\n</p>\n\n<p align=\"center\">\n  <a aria-label=\"Build\" href=\"https://github.com/teableio/teable/actions?query=Build%20and%20Push%20to%20Docker%20Registry\">\n    <img alt=\"build\" src=\"https://img.shields.io/github/actions/workflow/status/teableio/teable/docker-push.yml?label=Build&logo=github&style=flat-quare&labelColor=000000\" />\n  </a>\n  <a aria-label=\"Codacy grade\" href=\"https://www.codacy.com/gh/teableio/teable/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=teableio/teable&amp;utm_campaign=Badge_Grade\">\n    <img alt=\"Codacy grade\" src=\"https://img.shields.io/codacy/grade/dff9c944af284a0fad4e165eb1727467?logo=codacy&style=flat-square&labelColor=000&label=Codacy\">\n  </a>\n  <a aria-label=\"Top language\" href=\"https://github.com/teableio/teable/search?l=typescript\">\n    <img alt=\"GitHub top language\" src=\"https://img.shields.io/github/languages/top/teableio/teable?style=flat-square&labelColor=000&color=blue\">\n  </a>\n</p>\n\n![Teable cover](static/assets/images/teable-cover.png)\n\n## Quick Guide\n\n1. Want to see it in action? Try Teable on our hosted cloud at [teable.ai](https://teable.ai).\n2. Deploying it yourself? Start from the [Deployment guide](https://help.teable.ai/en/deploy/choose) — standalone in minutes, or the full AI platform on your own machines.\n\n## Four platforms in one\n\nAI chat, App Builder, and app deployments are part of Teable, not bolt-ons.\nSelf-hosting Teable deploys four platforms in one:\n\n- **A secure, scalable agent sandbox** — every AI session runs in its own isolated container, started on demand and gone when the session ends.\n- **A resource-efficient app deployment platform** — every app your team builds and publishes runs as its own lightweight, long-lived container.\n- **An AI workflow engine** — automations triggered by record changes, schedules, and webhooks, with AI steps, running right where your data lives.\n- **A full-featured database collaboration platform on PostgreSQL** — tables, views, permissions, and API.\n\nSelf-hosting wraps your own compute into an **agent-ready, fully controlled\nproductivity environment** — putting AI in the hands of everyone on your team.\nSee [Architecture](https://help.teable.ai/en/deploy/architecture) for how the\npieces fit together.\n\n## ✨Features\n\n### 🤖 AI-native\n\n- **AI Chat** — ask, analyze, and operate on your data in natural language.\n- **App Builder** — describe the app you need; an agent builds it in an isolated sandbox and deploys it to its own URL in one click.\n- **AI automations** — react to record changes, schedules, and webhooks, with AI steps doing the reasoning.\n- **AI field filling** — generate and enrich field values in bulk.\n\n### 🍺 Everything you need, out of the box\n\nGrid, Form, Kanban, Gallery, and Calendar views; formulas, field conversion,\nfiltering, grouping, sorting, and aggregation; comments, record history,\nundo/redo, and real-time collaboration; attachments preview, batch editing,\nimport/export, search, validation, charts, plugins, SQL query — and millions\nof rows without breaking a sweat.\n\nMore features land all the time — see the <a target=\"_blank\" href=\"https://help.teable.ai/en/changelog\">Changelog</a>.\n\n## Deploy\n\nThree ways to run Teable — pick by what you need (full comparison in the\n[Deployment guide](https://help.teable.ai/en/deploy/choose)):\n\n|                                        | **Teable Cloud**               | **Full-featured self-host**                                                 | **Standalone self-host**                                |\n| -------------------------------------- | ------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------- |\n| Tables, collaboration, API, automation | ✅                             | ✅                                                                          | ✅                                                      |\n| AI features (chat, agents)             | ✅                             | ✅                                                                          | ❌                                                      |\n| App Builder (build & deploy apps)      | ✅                             | ✅                                                                          | ❌                                                      |\n| Start here                             | [teable.ai](https://teable.ai) | [teableio/teable-deployment](https://github.com/teableio/teable-deployment) | [Docker guide](https://help.teable.ai/en/deploy/docker) |\n\nPrefer not to deploy by hand? **Hand [teableio/teable-deployment](https://github.com/teableio/teable-deployment)\nto your AI agent** (Claude Code, Codex, …) together with a domain, a DNS token,\nand access to the target machine or cluster — it can take the deployment end\nto end.\n\nAlready running standalone Teable? The runtime plane installs next to it and\nyour data stays in place: [migration guide](https://github.com/teableio/teable-deployment/blob/main/migration/2026-07-basic-to-full-featured.md).\n\n## Development\n\n#### 1. Initialize\n\n```sh\n# Enabling the Help Management Package Manager\ncorepack enable\n\n# Install project dependencies\npnpm install\n```\n\n#### 2. Initialize Postgres\n\n```sh\nmake switch-db-mode\n```\n\n#### 3. Custom Environment Variables（Optional）\n\n```sh\ncd apps/nextjs-app\ncp .env.development .env.development.local\n```\n\n#### 4. Run Dev Server\n\nyou just need to start backend, it will start next server for frontend automatically, file change will be auto reload\n\n```sh\ncd apps/nestjs-backend\npnpm dev\n```\n\n## Why Teable?\n\n**Software should fit the work — not the other way around.** Every team knows\nthe compromise: you have a concrete business need, you search for an app, and\nit covers 70% of it. So you bend your process around the tool, or you file a\nticket and wait quarters for custom development. The work adapts to the\nsoftware, when it should be the software adapting to the work.\n\n**AI only changes this if it reaches the real workflow.** A wave of AI tools\ncan now generate an app on demand — but each one is built in a vacuum: an\nempty database, no knowledge of how your team actually operates, one more\nisland to integrate and maintain. The demo impresses; the workflow stays the\nsame.\n\n**Teable puts the agent where the work already happens.** Your data, apps,\nautomations, permissions, and collaborators live here, on a real PostgreSQL —\nand the AI operates all of it. Chat acts on live data. Automations reason\nover records as they change. App Builder ships working systems wired to the\nsame database your team already uses — so what gets built is never another\nsilo, but a precise extension of the workflow it came from. AI lands in the\nwork seamlessly, and what it builds fits the business exactly.\n\n**And it's an architecture an IT team can say yes to.** Self-hosting Teable\npackages your own compute into an agent-ready platform for the whole team:\nevery AI session confined to an isolated sandbox, every app shipped as a\nstandard container, everything resting on PostgreSQL and HTTP APIs, with your\nown models and keys, on your own infrastructure. Full AI capability, full\ncontrol — neither traded for the other.\n\nThe result is a different way of building: business systems shaped precisely\nto your business, delivered in days instead of quarters, evolving as fast as\nthe work itself — by everyone on the team, not just the people who code.\n\n# License\n\nThis repository is the Teable Community Edition: free for self-hosting under\nthe AGPL-3.0 license (packages under `packages/` are MIT). See\n[./LICENSE](./LICENSE) for details.\n\nThe official image [`ghcr.io/teableio/teable`](https://github.com/teableio/teable/pkgs/container/teable)\nships the complete product: free to run, with paid plans unlocking AI features\nand advanced enterprise capabilities **in place** — activate with a license\nkey, no image swap, no migration. See [pricing](https://teable.ai/pricing) and\n[subscribe & activate](https://help.teable.ai/en/deploy/activate).\n",
+    "characters": 9592,
+    "source_url": "https://github.com/teableio/teable/blob/5ef2238883cad7c3980084de9a9031135fb9734f/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "e740b8ad974998a54c1f6410db792a096b3dc41722c169873d62cc774083fb32",
+    "text": "Copyright (c) 2023-2025 Teable, Inc.\n\nTeable Project Licensing\n\nThis project is a combination of components under different licenses to balance open source principles with the ability to provide commercial services:\n\n1. Core Applications:\n   - apps/nestjs-backend\n   - apps/nextjs-app\n   These core applications are licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).\n   The full text of this license can be found at ./AGPL_LICENSE\n\n2. SDK and Utility Packages:\n   All packages under the 'packages' directory are licensed under the MIT License.\n   For the full text of the MIT License, please see the individual LICENSE files in each package directory.\n\nAs a whole, this project is primarily under the AGPL-3.0 license, with the exception of the packages in the 'packages' directory, which are available under the more permissive MIT License to facilitate wider adoption and integration.\n\nFor any questions regarding licensing, please contact support@teable.ai\n\nAdditional Terms under GNU Affero General Public License Version 3 (AGPLv3)\n\nIn accordance with Section 7 of the GNU Affero General Public License Version 3,\nthe following additional terms apply to this software:\n\nBrand Protection (Under Section 7(e)):\n\nThe Teable brand assets (including but not limited to the Teable name, logo,\nicons, and visual identity elements) are protected intellectual property and\nare not covered by the AGPLv3 license. While the software code may be modified\nunder the terms of AGPL, any modification, replacement, or removal of these\nbrand assets is explicitly prohibited.\n\nSpecifically:\n1. You may not modify or replace the Teable brand assets\n2. You may not remove the Teable brand assets\n3. You may not use the brand assets in a way that suggests endorsement\n",
+    "characters": 1771,
+    "source_url": "https://github.com/teableio/teable/blob/5ef2238883cad7c3980084de9a9031135fb9734f/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 93,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "tea-artist",
+      "contributions": 802
+    },
+    {
+      "login": "nichenqin",
+      "contributions": 757
+    },
+    {
+      "login": "boris-w",
+      "contributions": 450
+    },
+    {
+      "login": "caoxing9",
+      "contributions": 312
+    },
+    {
+      "login": "Sky-FE",
+      "contributions": 197
+    },
+    {
+      "login": "unofn",
+      "contributions": 130
+    },
+    {
+      "login": "Pengap",
+      "contributions": 58
+    },
+    {
+      "login": "hammond-lj",
+      "contributions": 21
+    },
+    {
+      "login": "kpodp0ra",
+      "contributions": 17
+    },
+    {
+      "login": "garyli27",
+      "contributions": 17
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 3642,
+      "title": "App layout exceeds viewport height (iPad/Safari)",
+      "state": "open",
+      "created_at": "2026-09-10T16:35:56Z",
+      "updated_at": "2026-09-13T01:23:57Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/teableio/teable/issues/3642",
+      "author_association": "NONE"
+    },
+    {
+      "number": 3644,
+      "title": "Admin Gateway model picker offers IDs Vercel AI Gateway cannot serve (alibaba/qwen3.8-flash-next)",
+      "state": "open",
+      "created_at": "2026-09-11T11:06:28Z",
+      "updated_at": "2026-09-11T11:06:28Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/teableio/teable/issues/3644",
+      "author_association": "NONE"
+    },
+    {
+      "number": 3643,
+      "title": "AI Gateway modelPool save rejects new ownedBy values such as \"spacexai\"",
+      "state": "open",
+      "created_at": "2026-09-11T10:58:27Z",
+      "updated_at": "2026-09-11T10:58:27Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/teableio/teable/issues/3643",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0003",
+        "repo": "teableio/teable",
+        "url": "https://github.com/teableio/teable",
+        "labels": [
+          "product_base",
+          "product",
+          "Teable"
+        ],
+        "family_ids": [
+          "U33",
+          "B12"
+        ],
+        "family_names": [
+          "Data and internal admin platform"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified",
+          "historical_operator_nomination",
+          "client_runtime_precedent"
+        ],
+        "operator_signals": [
+          {
+            "nomination_id": "ON-001",
+            "origin": "foundry_recovered_operator_nomination",
+            "observed_at": "2026-08-02",
+            "note": "Structured data and admin product candidate."
+          }
+        ],
+        "observed_facts": [
+          "teableio/teable supplies airtable_data at active maintenance under a strong-copyleft-open-core rights posture.",
+          "Pinned source and isolated build passed",
+          "Database CRUD, reconnect persistence and two-client isolation passed",
+          "Authenticated native desktop/mobile CRUD and attachment proof were not completed in that client-a run",
+          "The incomplete client proof is not a verdict against source reusability"
+        ],
+        "current_verdict": "reusable_candidate_with_partial_client-a_integration_proof",
+        "foundry_stage": "recovered_operator_nomination",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "PARTIAL_LOCAL_EXECUTION",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 152,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

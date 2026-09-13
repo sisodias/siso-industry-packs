@@ -1,0 +1,207 @@
+{
+  "audit_id": "R028",
+  "requested_full_name": "chatwoot/chatwoot",
+  "observed_at": "2026-09-13T16:10:12.036321+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "chatwoot/chatwoot",
+  "html_url": "https://github.com/chatwoot/chatwoot",
+  "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
+  "stargazers_count": 36763,
+  "forks_count": 8903,
+  "default_branch": "develop",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2019-08-14T06:50:51Z",
+  "updated_at": "2026-09-13T15:47:02Z",
+  "pushed_at": "2026-09-12T15:37:03Z",
+  "size": 292779,
+  "open_issues_count": 1392,
+  "topics": [
+    "actioncable",
+    "chat-widget",
+    "conversation",
+    "customer-support",
+    "dashboard",
+    "design",
+    "docker",
+    "docker-image",
+    "heroku",
+    "intercom",
+    "javascript",
+    "livechat",
+    "opensource",
+    "rails",
+    "ruby",
+    "sass",
+    "vuejs",
+    "whatsapp",
+    "zendesk"
+  ],
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "revision": "2f1ed80f894ed9a3eba636ebab90ca61deec110a",
+  "last_commit": "2026-09-11T09:14:46Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/chatwoot/chatwoot",
+    "commit": "https://github.com/chatwoot/chatwoot/commit/2f1ed80f894ed9a3eba636ebab90ca61deec110a"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "00b1867b3e486325ff35a8d5194e937974a02cab39cbbc0a0d9846e3c1ff1ac7",
+    "text": "<img src=\"./.github/screenshots/header.png#gh-light-mode-only\" width=\"100%\" alt=\"Header light mode\"/>\n<img src=\"./.github/screenshots/header-dark.png#gh-dark-mode-only\" width=\"100%\" alt=\"Header dark mode\"/>\n\n___\n\n# Chatwoot\n\nThe modern customer support platform, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.\n\n<p>\n  <img src=\"https://img.shields.io/circleci/build/github/chatwoot/chatwoot\" alt=\"CircleCI Badge\">\n    <a href=\"https://hub.docker.com/r/chatwoot/chatwoot/\"><img src=\"https://img.shields.io/docker/pulls/chatwoot/chatwoot\" alt=\"Docker Pull Badge\"></a>\n  <a href=\"https://hub.docker.com/r/chatwoot/chatwoot/\"><img src=\"https://img.shields.io/docker/cloud/build/chatwoot/chatwoot\" alt=\"Docker Build Badge\"></a>\n  <img src=\"https://img.shields.io/github/commit-activity/m/chatwoot/chatwoot\" alt=\"Commits-per-month\">\n  <a title=\"Crowdin\" target=\"_self\" href=\"https://chatwoot.crowdin.com/chatwoot\"><img src=\"https://badges.crowdin.net/e/37ced7eba411064bd792feb3b7a28b16/localized.svg\"></a>\n  <a href=\"https://discord.gg/cJXdrwS\"><img src=\"https://img.shields.io/discord/647412545203994635\" alt=\"Discord\"></a>\n  <a href=\"https://status.chatwoot.com\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json\" alt=\"uptime\"></a>\n  <a href=\"https://status.chatwoot.com\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json\" alt=\"response time\"></a>\n  <a href=\"https://artifacthub.io/packages/helm/chatwoot/chatwoot\"><img src=\"https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/artifact-hub\" alt=\"Artifact HUB\"></a>\n</p>\n\n\n<p>\n  <a href=\"https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master\" alt=\"Deploy to Heroku\">\n     <img width=\"150\" alt=\"Deploy\" src=\"https://www.herokucdn.com/deploy/button.svg\"/>\n  </a>\n  <a href=\"https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8\" alt=\"Deploy to DigitalOcean\">\n     <img width=\"200\" alt=\"Deploy to DO\" src=\"https://www.deploytodo.com/do-btn-blue.svg\"/>\n  </a>\n</p>\n\n<img src=\"./.github/screenshots/dashboard.png#gh-light-mode-only\" width=\"100%\" alt=\"Chat dashboard dark mode\"/>\n<img src=\"./.github/screenshots/dashboard-dark.png#gh-dark-mode-only\" width=\"100%\" alt=\"Chat dashboard\"/>\n\n---\n\nChatwoot is the modern, open-source, and self-hosted customer support platform designed to help businesses deliver exceptional customer support experience. Built for scale and flexibility, Chatwoot gives you full control over your customer data while providing powerful tools to manage conversations across channels.\n\n### ✨ Captain – AI Agent for Support\n\nSupercharge your support with Captain, Chatwoot’s AI agent. Captain helps automate responses, handle common queries, and reduce agent workload—ensuring customers get instant, accurate answers. With Captain, your team can focus on complex conversations while routine questions are resolved automatically. Read more about Captain [here](https://chwt.app/captain-docs).\n\n### 💬 Omnichannel Support Desk\n\nChatwoot centralizes all customer conversations into one powerful inbox, no matter where your customers reach out from. It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc.\n\n### 📚 Help center portal\n\nPublish help articles, FAQs, and guides through the built-in Help Center Portal. Enable customers to find answers on their own, reduce repetitive queries, and keep your support team focused on more complex issues.\n\n### 🗂️ Other features\n\n#### Collaboration & Productivity\n\n- Private Notes and @mentions for internal team discussions.\n- Labels to organize and categorize conversations.\n- Keyboard Shortcuts and a Command Bar for quick navigation.\n- Canned Responses to reply faster to frequently asked questions.\n- Auto-Assignment to route conversations based on agent availability.\n- Multi-lingual Support to serve customers in multiple languages.\n- Custom Views and Filters for better inbox organization.\n- Business Hours and Auto-Responders to manage response expectations.\n- Teams and Automation tools for scaling support workflows.\n- Agent Capacity Management to balance workload across the team.\n\n#### Customer Data & Segmentation\n- Contact Management with profiles and interaction history.\n- Contact Segments and Notes for targeted communication.\n- Campaigns to proactively engage customers.\n- Custom Attributes for storing additional customer data.\n- Pre-Chat Forms to collect user information before starting conversations.\n\n#### Integrations\n- Slack Integration to manage conversations directly from Slack.\n- Dialogflow Integration for chatbot automation.\n- Dashboard Apps to embed internal tools within Chatwoot.\n- Shopify Integration to view and manage customer orders right within Chatwoot.\n- Use Google Translate to translate messages from your customers in realtime.\n- Create and manage Linear tickets within Chatwoot.\n\n#### Reports & Insights\n- Live View of ongoing conversations for real-time monitoring.\n- Conversation, Agent, Inbox, Label, and Team Reports for operational visibility.\n- CSAT Reports to measure customer satisfaction.\n- Downloadable Reports for offline analysis and reporting.\n\n\n## Documentation\n\nDetailed documentation is available at [chatwoot.com/help-center](https://www.chatwoot.com/help-center).\n\n## Translation process\n\nThe translation process for Chatwoot web and mobile app is managed at [https://translate.chatwoot.com](https://translate.chatwoot.com) using Crowdin. Please read the [translation guide](https://www.chatwoot.com/docs/contributing/translating-chatwoot-to-your-language) for contributing to Chatwoot.\n\n## Branching model\n\nWe use the [git-flow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. The base branch is `develop`.\nIf you are looking for a stable version, please use the `master` or tags labelled as `v1.x.x`.\n\n## Deployment\n\n### Heroku one-click deploy\n\nDeploying Chatwoot to Heroku is a breeze. It's as simple as clicking this button:\n\n[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master)\n\nFollow this [link](https://www.chatwoot.com/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.\n\n\n### DigitalOcean 1-Click Kubernetes deployment\n\nChatwoot now supports 1-Click deployment to DigitalOcean as a kubernetes app.\n\n<a href=\"https://marketplace.digitalocean.com/apps/chatwoot?refcode=f2238426a2a8\" alt=\"Deploy to DigitalOcean\">\n  <img width=\"200\" alt=\"Deploy to DO\" src=\"https://www.deploytodo.com/do-btn-blue.svg\"/>\n</a>\n\n### Other deployment options\n\nFor other supported options, checkout our [deployment page](https://chatwoot.com/deploy).\n\n## Security\n\nLooking to report a vulnerability? Please refer our [SECURITY.md](./SECURITY.md) file.\n\n## Community\n\nIf you need help or just want to hang out, come, say hi on our [Discord](https://discord.gg/cJXdrwS) server.\n\n## Contributors\n\nThanks goes to all these [wonderful people](https://www.chatwoot.com/docs/contributors):\n\n<a href=\"https://github.com/chatwoot/chatwoot/graphs/contributors\"><img src=\"https://opencollective.com/chatwoot/contributors.svg?width=890&button=false\" /></a>\n\n\n*Chatwoot* &copy; 2017-2026, Chatwoot Inc - Released under the MIT License.\n",
+    "characters": 7598,
+    "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "602d38a808315f221a5e72e2e90e40cb9300f09aa4b317a6a8f1a0c7a3d2175d",
+    "text": "Copyright (c) 2017-2026 Chatwoot Inc.\n\nPortions of this software are licensed as follows:\n\n* All content that resides under the \"enterprise/\" directory of this repository, if that directory exists, is licensed under the license defined in \"enterprise/LICENSE\".\n* All third party components incorporated into the Chatwoot Software are licensed under the original license provided by the owner of the applicable component.\n* Content outside of the above mentioned directories or restrictions above is available under the \"MIT Expat\" license as defined below.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "characters": 1581,
+    "source_url": "https://github.com/chatwoot/chatwoot/blob/2f1ed80f894ed9a3eba636ebab90ca61deec110a/LICENSE",
+    "detected": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    }
+  },
+  "commits_six_months_sample_count": 100,
+  "commits_six_months_capped": true,
+  "contributors_top10": [
+    {
+      "login": "sojan-official",
+      "contributions": 1215
+    },
+    {
+      "login": "iamsivin",
+      "contributions": 930
+    },
+    {
+      "login": "pranavrajs",
+      "contributions": 927
+    },
+    {
+      "login": "muhsin-k",
+      "contributions": 620
+    },
+    {
+      "login": "scmmishra",
+      "contributions": 590
+    },
+    {
+      "login": "nithindavid",
+      "contributions": 312
+    },
+    {
+      "login": "vishnu-narayanan",
+      "contributions": 305
+    },
+    {
+      "login": "tejaswinichile",
+      "contributions": 242
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 157
+    },
+    {
+      "login": "sony-mathew",
+      "contributions": 141
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 15799,
+      "title": "[BOT] When a Bot is creating and sending a new private message to a customer, no webhook is send for \"created conversation\"",
+      "state": "open",
+      "created_at": "2026-09-13T14:50:18Z",
+      "updated_at": "2026-09-13T15:42:40Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/chatwoot/chatwoot/issues/15799",
+      "author_association": "NONE"
+    },
+    {
+      "number": 13210,
+      "title": "Audio playback fails on iOS/Safari for .oga files (WhatsApp audio)",
+      "state": "open",
+      "created_at": "2026-01-08T18:05:46Z",
+      "updated_at": "2026-09-13T01:26:19Z",
+      "closed_at": null,
+      "comments": 7,
+      "html_url": "https://github.com/chatwoot/chatwoot/issues/13210",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [
+      {
+        "source_id": "SRC-0001",
+        "repo": "chatwoot/chatwoot",
+        "url": "https://github.com/chatwoot/chatwoot",
+        "labels": [
+          "product_base",
+          "product",
+          "Chatwoot"
+        ],
+        "family_ids": [
+          "U07",
+          "U08",
+          "B08",
+          "B19"
+        ],
+        "family_names": [
+          "Customer support desk",
+          "Shared inbox and email operations"
+        ],
+        "evidence_classes": [
+          "expanded_universe_seed",
+          "p03_live_metadata_classified",
+          "historical_operator_nomination",
+          "client_runtime_precedent"
+        ],
+        "operator_signals": [
+          {
+            "nomination_id": "ON-006",
+            "origin": "foundry_recovered_operator_nomination",
+            "observed_at": "2026-08-02",
+            "note": "Customer support and shared inbox candidate."
+          }
+        ],
+        "observed_facts": [
+          "chatwoot/chatwoot supplies support_desk, messaging_notifications at active maintenance under a permissive-open-core rights posture.",
+          "One W1 login reached native Chatwoot Inbox",
+          "Exact-origin SSO exchange passed; wrong origin and replay were denied",
+          "Restart persistence passed",
+          "Required three bounded donor changes for CORS, exchange compatibility and profiler behavior"
+        ],
+        "current_verdict": "runtime_precedent_with_expected_donor_warnings",
+        "foundry_stage": "recovered_operator_nomination",
+        "qualification_status": "NOT_QUALIFIED",
+        "execution_status": "LOCAL_PRECEDENT_EXECUTED",
+        "admission_status": "NOT_ADMITTED",
+        "priority_score": 154,
+        "industry_demand": [],
+        "industry_demand_status": "no_observed_slot"
+      }
+    ],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "capability-shelf/source-registry.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
