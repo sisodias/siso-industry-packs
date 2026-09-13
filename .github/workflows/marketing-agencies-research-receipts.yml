@@ -1,29 +1,52 @@
-name: Marketing agency research receipts (bounded batch)
+name: Marketing research comparison index
 on:
   push:
     branches: [research/marketing-agencies-20260913]
     paths: [.github/workflows/marketing-agencies-research-receipts.yml]
 permissions:
   contents: write
-concurrency:
-  group: marketing-agencies-batched-research-20260913
-  cancel-in-progress: false
 jobs:
-  collect-public-research:
-    if: github.repository == 'sisodias/siso-industry-packs' && github.ref_name == 'research/marketing-agencies-20260913'
+  review-index:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - name: Read pinned public-source collector and record evidence
+      - name: Build research index from existing evidence only
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          set -euo pipefail
           python - <<'PY'
-          import urllib.request
-          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/cfd0bc31ea895d3fededdbed37f32e2771bd747a/packs/marketing_social_media_agencies/research/collect_batched.py'
-          with urllib.request.urlopen(url, timeout=60) as response:
-              source = response.read()
-          exec(compile(source, 'collect_batched.py', 'exec'), {'__name__': '__main__'})
+          import urllib.request, json, os, base64, csv, io, zipfile, hashlib
+          repo='sisodias/siso-industry-packs'; branch='research/marketing-agencies-20260913'; root='packs/marketing_social_media_agencies/'
+          assert os.environ['GITHUB_REF_NAME']==branch
+          def read(path):
+              with urllib.request.urlopen('https://raw.githubusercontent.com/'+repo+'/'+branch+'/'+path,timeout=60) as r:return r.read()
+          def gql(q,v={}):
+              req=urllib.request.Request('https://api.github.com/graphql',data=json.dumps({'query':q,'variables':v}).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=60) as r:return json.load(r)
+          rows=[json.loads(x) for x in read(root+'research/batched-receipts.jsonl').splitlines()]
+          lines=['n\trepo\tbank\tstars\tlicense\tlast_commit\t6mo_commits\tauthors_sample\tmaintainer_response_sample\tadoption\tdescription']
+          ad=[]
+          for i,r in enumerate(rows,1):
+              a=r.get('bank_adoption')
+              if a:ad.append({'repo':r['full_name'],'record':a})
+              av='absent' if not a else str({k:a.get(k) for k in ['resolved','dependent_repos','dependent_pkgs','downloads','reach_percentile','fame_gap']})
+              vals=[i,r['full_name'],'BANK' if r['bank_status'].startswith('ALREADY') else 'NEW',r['stars'],r['license_metadata'],r['last_commit_at'][:10],r['commits_last_six_months_total'],len(r['recent_committers_sample']),sum(x['maintainer_response_in_sample'] for x in r['issue_response_sample']),av,r['description_excerpt']]
+              lines.append('\t'.join(str(x).replace('\n',' ') for x in vals))
+          files={root+'research/review-index.tsv':'\n'.join(lines)+'\n',root+'research/adoption-checks.json':json.dumps(ad,indent=2)+'\n'}
+          url='https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip'
+          market={'source_url':url,'dataset':'2023 County Business Patterns national file','as_of':'2026-09-13','eligible_primary_segment_operators':None}
+          try:
+              with urllib.request.urlopen(url,timeout=60) as response:b=response.read()
+              z=zipfile.ZipFile(io.BytesIO(b)); fn=next(x for x in z.namelist() if x.lower().endswith(('.txt','.csv')))
+              data=list(csv.DictReader(io.StringIO(z.read(fn).decode('utf-8-sig'))))
+              selected=[x for x in data if str(x.get('naics','')).strip() in ('541810','54181')]
+              market.update({'zip_sha256':hashlib.sha256(b).hexdigest(),'file':fn,'rows':selected,'status':'retrieved','note':'Establishments are not distinct firms, nonemployers or the organic-retainer segment; do not infer eligible customers.'})
+          except Exception as e:market.update({'status':'retrieval_failed','error':type(e).__name__})
+          files[root+'research/market-size.json']=json.dumps(market,indent=2)+'\n'
+          head=gql('query($r:String!){repository(owner:"sisodias",name:"siso-industry-packs"){ref(qualifiedName:$r){target{oid}}}}',{'r':'refs/heads/'+branch})['data']['repository']['ref']['target']['oid']
+          inp={'branch':{'repositoryNameWithOwner':repo,'branchName':branch},'expectedHeadOid':head,'message':{'headline':'research(marketing): add complete comparative index and Census source receipt'},'fileChanges':{'additions':[{'path':p,'contents':base64.b64encode(s.encode()).decode()} for p,s in files.items()]}}
+          result=gql('mutation($i:CreateCommitOnBranchInput!){createCommitOnBranch(input:$i){commit{oid}}}',{'i':inp})
+          assert result.get('data',{}).get('createCommitOnBranch'),str(result)
+          print('INDEX_COMMIT',result['data']['createCommitOnBranch'],'ROWS',len(rows),'ADOPTION_RECORDS',len(ad),'CENSUS',market['status'])
           PY
