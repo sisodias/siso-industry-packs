@@ -1,0 +1,161 @@
+name: Gyms fitness public evidence audit
+on:
+  push:
+    branches: [research/gyms-fitness-20260913]
+    paths: [.github/workflows/gyms-fitness-evidence-audit.yml]
+permissions:
+  contents: read
+concurrency:
+  group: gyms-fitness-public-evidence
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Collect public sources without executing upstream code
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          """One-shot public-source research collector; never executes upstream code."""
+          import base64, concurrent.futures, datetime, gzip, hashlib, json, os, pathlib, re, time, urllib.error, urllib.parse, urllib.request
+          API = 'https://api.github.com'
+          TOKEN = os.environ['GH_TOKEN']
+          OUT = pathlib.Path('evidence'); OUT.mkdir(exist_ok=True)
+          NOW = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          assert os.environ['GITHUB_REPOSITORY'] == 'sisodias/siso-industry-packs'
+          assert os.environ['GITHUB_REF'] == 'refs/heads/research/gyms-fitness-20260913'
+          def api(path):
+              assert path.startswith('/repos/') or path.startswith('/search/repositories?')
+              for attempt in range(4):
+                  req = urllib.request.Request(API + path, headers={'Authorization': 'Bearer '+TOKEN, 'Accept': 'application/vnd.github+json', 'User-Agent': 'siso-gyms-public-evidence', 'X-GitHub-Api-Version': '2022-11-28'})
+                  try:
+                      with urllib.request.urlopen(req, timeout=45) as resp: return json.load(resp)
+                  except urllib.error.HTTPError as e:
+                      if e.code in (429, 500, 502, 503, 504) and attempt < 3:
+                          time.sleep(5*(attempt+1)); continue
+                      return {'_error': e.code}
+                  except (TimeoutError, OSError):
+                      if attempt < 3: time.sleep(3); continue
+                      return {'_error': 'network'}
+              return {'_error': 'retries'}
+          def save(name, value):
+              assert re.fullmatch(r'[A-Za-z0-9_.-]+', name)
+              text = value if isinstance(value, str) else json.dumps(value, ensure_ascii=False, indent=2)+'\n'
+              assert TOKEN not in text
+              (OUT/name).write_text(text, encoding='utf-8')
+          def repo_name(row):
+              for key in ('full_name','repo_full_name','repository_full_name','repository','repo','name','url','repo_url','repository_url','source_url','github_url'):
+                  val = row.get(key)
+                  if isinstance(val, str):
+                      val = val.removeprefix('https://github.com/').removesuffix('.git').strip('/')
+                      if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', val): return val.lower()
+              return None
+          # Stream published bank layers before discovery; never read private sources.
+          bankrepo = 'sisodias/siso-repo-bank'
+          meta = api('/repos/'+bankrepo); assert meta.get('private') is False
+          head = api('/repos/'+bankrepo+'/commits/main').get('sha'); assert head
+          paths = ['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','capability-shelf/source-registry.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','bank/bank_gold.jsonl','bank/repo_category.jsonl.gz','bank/category.jsonl']
+          name_layers = {}; bank_small = {}; adoption = {}; receipts = []; shelf = []; vocabulary = []
+          for path in paths:
+              rec = {'path':path,'revision':head,'rows':0,'identities_recognized':0,'status':'pending'}; h = hashlib.sha256()
+              try:
+                  url = 'https://raw.githubusercontent.com/'+bankrepo+'/'+head+'/'+path
+                  request = urllib.request.Request(url, headers={'User-Agent':'siso-gyms-public-evidence'})
+                  with urllib.request.urlopen(request, timeout=90) as stream:
+                      lines = gzip.GzipFile(fileobj=stream) if path.endswith('.gz') else stream
+                      for line in lines:
+                          h.update(line)
+                          if not line.strip(): continue
+                          row = json.loads(line); rec['rows'] += 1; n = repo_name(row)
+                          if rec['rows']==1: rec['first_row_keys']=list(row)
+                          if path.endswith('bank_capability.jsonl'): vocabulary.append(row)
+                          if n:
+                              rec['identities_recognized'] += 1; name_layers.setdefault(n,set()).add(path)
+                              keep = {k:row[k] for k in ('full_name','capability','capability_tag','category_slug','summary','reuse_value','unit_class','liftability','license','adoption_score','fame_gap','reach_percentile') if k in row}
+                              if path != 'bank/repo_category.jsonl.gz': bank_small.setdefault(n,{})[path] = keep
+                              if path.endswith('bank_adoption_v2.jsonl'): adoption[n] = row
+                          if path.startswith('capability-shelf/') and len(shelf)<120 and re.search(r'gym|fitness|membership|booking|scheduling|access.control|club',json.dumps(row),re.I):
+                              shelf.append({'identity':n,'fields':{k:row[k] for k in ('full_name','name','url','repo_url','description','summary','source_kind','capability_families','priority_score','qualification_status') if k in row}})
+                  rec.update(status='read',sha256_uncompressed=h.hexdigest(),source_url=url)
+              except Exception as e: rec.update(status='failed',error=type(e).__name__,http_status=getattr(e,'code',None))
+              receipts.append(rec); print('Bank', path, rec['status'], rec['rows'], flush=True)
+          save('bank-receipt.json', {'observed_at':NOW,'repository':bankrepo,'revision':head,'layers':receipts,'unique_published_identities':len(name_layers),'new_definition':'Absent from all successfully read published identity layers, not from the unpublished source database.'})
+          save('bank-vocabulary.json',vocabulary); save('bank-product-base-sample.json',shelf)
+          # Vendor/workflow-led artifact classes. A=keywords, B=topics, C=formats.
+          rounds = [
+          [('W01,W09','A','shared inbox customer support self hosted'),('W02,W03','A','gym management'),('W03,W08','A','membership management'),('W04,W05','A','class booking'),('W04,W10','A','trainer scheduling'),('W06','A','gym checkin'),('W07','A','workout coach'),('W08,W10','A','recurring billing self hosted'),('W02','A','electronic signature self hosted'),('W10','A','commission payroll odoo')],
+          [('W01,W09','B','topic:customer-support topic:self-hosted'),('W02,W03,W08','B','topic:gym-management'),('W03,W08','B','topic:membership-management'),('W04,W05','B','topic:booking-system'),('W04,W10','B','topic:scheduling topic:self-hosted'),('W06','B','topic:access-control topic:rfid'),('W07','B','topic:fitness topic:self-hosted'),('W07','B','topic:workout-tracker'),('W02','B','topic:digital-signature topic:self-hosted'),('W10','B','topic:payroll')],
+          [('W01,W09','C','WhatsApp Cloud API SDK'),('W02','C','PDF signature verification'),('W03,W08','C','SEPA direct debit XML'),('W04,W05','C','OpenActive booking'),('W04,W10','C','iCalendar recurrence'),('W06','C','OSDP'),('W06','C','Wiegand access control'),('W07','C','FIT SDK'),('W07','C','FTMS bluetooth fitness'),('W07','C','Hevy Strong CSV import'),('W08,W10','C','ISO 20022 camt'),('W01,W09','C','vCard parser')]
+          ]
+          seeds = ['wger-project/wger','chatwoot/chatwoot','frappe/erpnext','Dolibarr/dolibarr','Admidio/admidio','galette/galette','LibreBooking/librebooking','alextselegidis/easyappointments','docusealco/docuseal','knadh/listmonk','pretix/pretix','calcom/cal.com','goauthentik/authentik','CodeWithCJ/SparkyFitness','DuarteSantos8/openGym','the-momentum/open-wearables','GoldenCheetah/GoldenCheetah','SamR1/FitTrackee','frappe/hrms','mautic/mautic','invoiceninja/invoiceninja','getlago/lago','killbill/killbill','liftosaur/liftosaur','goToMain/libosdp','openactive/open-booking-api','openactive/data-model','openactive/booking-system-tests','garmin/fit-python-sdk','wger-project/docker','johndavedecano/laragym','mayerbalintdev/GYM-One','gymnasticon/gymnasticon','joryirving/awesome-fitness','awesome-selfhosted/awesome-selfhosted']
+          seen = {s.lower() for s in seeds}; records = []; round_receipts = []
+          for rnd, queries in enumerate(rounds,1):
+              added = []
+              for stages,lane,q in queries:
+                  endpoint = '/search/repositories?'+urllib.parse.urlencode({'q':q,'sort':'stars','order':'desc','per_page':8})
+                  result = api(endpoint); hits = []
+                  for m in result.get('items',[]):
+                      r = {k:m.get(k) for k in ('full_name','description','html_url','stargazers_count','archived','topics')}; hits.append(r); n = m['full_name']
+                      if n.lower() not in seen: seen.add(n.lower()); added.append(n)
+                  records.append({'round':rnd,'workflow_stages':stages.split(','),'lane':lane,'query':q,'source_url':API+endpoint,'observed_at':NOW,'total_count':result.get('total_count'),'incomplete_results':result.get('incomplete_results'),'error':result.get('_error'),'hits':hits})
+                  time.sleep(2.2)
+              round_receipts.append({'round':rnd,'new_repositories':len(added),'new_names':added}); print('Discovery round',rnd,'new',len(added),flush=True)
+          chosen = list(dict.fromkeys(seeds)); used = {n.lower() for n in chosen}
+          for offset in range(8):
+              for record in records:
+                  if len(record['hits']) > offset:
+                      n = record['hits'][offset]['full_name']
+                      if n.lower() not in used: chosen.append(n); used.add(n.lower())
+          chosen = chosen[:130]
+          dry = len(round_receipts)>=3 and all(x['new_repositories']==0 for x in round_receipts[-2:]) and all(not r['error'] and r['incomplete_results'] is False for r in records if r['round']>=2)
+          save('discovery.json',{'observed_at':NOW,'rounds':round_receipts,'queries':records,'unique_discovered_including_seeds':len(seen),'selected_for_source_collection':chosen,'exhaustion_reached':dry,'selection':'Seeds plus round-robin across workflow/lane queries; scoring occurs after source collection. Search hits are not counted as examined.'})
+          def decode(obj, name, rev):
+              if not isinstance(obj,dict) or not obj.get('content'): return {'error':obj.get('_error','unavailable') if isinstance(obj,dict) else 'unavailable'}
+              try: raw = base64.b64decode(obj['content']); text = raw.decode('utf-8','replace')
+              except Exception: return {'error':'decode'}
+              return {'path':obj.get('path'),'blob_sha':obj.get('sha'),'sha256':hashlib.sha256(raw).hexdigest(),'characters':len(text),'text':text,'source_url':'https://github.com/'+name+'/blob/'+str(rev)+'/'+obj.get('path','')}
+          def collect(pair):
+              number,name = pair; out = {'audit_id':'R'+str(number).zfill(3),'requested_full_name':name,'observed_at':NOW}; m = api('/repos/'+name)
+              if m.get('_error'): return out|{'error':m['_error']}
+              if m.get('private') is not False: return out|{'error':'not_verified_public'}
+              n=m['full_name']; base='/repos/'+n
+              out.update({k:m.get(k) for k in ('id','full_name','html_url','description','stargazers_count','forks_count','default_branch','archived','disabled','pushed_at','size','open_issues_count','topics','license')})
+              cs=api(base+'/commits?per_page=30'); rev=cs[0]['sha'] if isinstance(cs,list) and cs else None
+              out['revision']=rev; out['last_commit']=cs[0]['commit']['committer']['date'] if rev else None; out['commit_source']=cs[0]['html_url'] if rev else None
+              out['commits_in_six_months_from_latest_30_sample']=sum(c['commit']['committer']['date']>='2026-03-13T00:00:00Z' for c in cs) if isinstance(cs,list) else None
+              out['commit_sample_capped']=isinstance(cs,list) and len(cs)==30; suffix='?ref='+rev if rev else ''
+              out['readme']=decode(api(base+'/readme'+suffix),n,rev); out['license_file']=decode(api(base+'/license'+suffix),n,rev)
+              contributors=api(base+'/contributors?per_page=10')
+              out['contributors_sample']=[{'login':p.get('login'),'contributions':p.get('contributions')} for p in contributors] if isinstance(contributors,list) else None
+              issues=api(base+'/issues?state=all&sort=updated&direction=desc&per_page=10')
+              out['issues_sample']=[{k:i.get(k) for k in ('number','title','state','created_at','updated_at','closed_at','comments','html_url','author_association')} for i in issues if 'pull_request' not in i][:3] if isinstance(issues,list) else None
+              out['bus_factor']=None; out['maintainer_response_time']=None
+              aliases={name.lower(),n.lower()}; layers=sorted({p for a in aliases for p in name_layers.get(a,set())})
+              bank_ok=all(r['status']=='read' and (r['identities_recognized']>0 or r['path'] in ('bank/bank_capability.jsonl','bank/category.jsonl')) for r in receipts)
+              out['bank_status']='ALREADY IN THE BANK' if layers else ('NEW' if bank_ok else 'UNKNOWN')
+              out['bank_layers']=layers; out['bank_revision']=head
+              out['bank_signals']={a:bank_small.get(a,{}) for a in aliases if a in bank_small}; out['adoption_bank_rows']=[adoption[a] for a in aliases if a in adoption]
+              print(out['audit_id'],n,'README',bool(out['readme'].get('text')),'LICENSE',bool(out['license_file'].get('text')),flush=True)
+              return out
+          with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool: rows=list(pool.map(collect,enumerate(chosen,1)))
+          unique={}; failures=[]
+          for row in rows:
+              if not row.get('id'): failures.append(row); continue
+              if row['id'] in unique: unique[row['id']].setdefault('aliases',[]).append(row['requested_full_name'])
+              else: unique[row['id']]=row
+          rows=list(unique.values())
+          save('repositories.jsonl',''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in rows)); save('retrieval-failures.json',failures)
+          save('receipt.json',{'observed_at':NOW,'workflow_revision':os.environ['GITHUB_SHA'],'requested_candidates':len(chosen),'unique_repositories_retrieved':len(rows),'readmes_retrieved':sum(bool(r['readme'].get('text')) for r in rows),'license_files_retrieved':sum(bool(r['license_file'].get('text')) for r in rows),'commit_revisions_retrieved':sum(bool(r['revision']) for r in rows),'already_in_bank':sum(r['bank_status']=='ALREADY IN THE BANK' for r in rows),'new':sum(r['bank_status']=='NEW' for r in rows),'bank_unknown':sum(r['bank_status']=='UNKNOWN' for r in rows),'failure_count':len(failures),'upstream_code_executed':False,'application_code_written':False,'review_status':'Evidence collected, not yet agent scored; fetched is not examined.'})
+          print('Complete: public text evidence only; no upstream code executed.',flush=True)
+          PY
+      - name: Preserve research evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gyms-fitness-public-evidence
+          path: evidence/
+          retention-days: 3
+          if-no-files-found: error
