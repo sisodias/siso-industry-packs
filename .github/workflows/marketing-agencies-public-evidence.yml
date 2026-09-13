@@ -4,7 +4,6 @@ on:
     branches: [research/marketing-agencies-20260913-blueprint]
     paths:
       - .github/workflows/marketing-agencies-public-evidence.yml
-      - research/marketing_social_media_agencies/collect_public_evidence.py
 permissions:
   contents: read
 concurrency:
@@ -16,23 +15,23 @@ jobs:
     timeout-minutes: 20
     env:
       GH_TOKEN: ${{ github.token }}
-      RESEARCH_OUTPUT: agency-evidence
+      RESEARCH_OUTPUT: agency-discovery
     steps:
-      - name: Collect public evidence with pinned authored research script
+      - name: Close bounded public-source discovery and bank reconciliation
         shell: bash
         run: |
           python3 - <<'PY'
           import urllib.request
-          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/26bec4050143bcb53b76f15db3159bbdc31eba55/research/marketing_social_media_agencies/collect_public_evidence.py'
+          url = 'https://raw.githubusercontent.com/sisodias/siso-industry-packs/768b5441c634c605cef80bde3132181f20917277/research/marketing_social_media_agencies/close_discovery.py'
           with urllib.request.urlopen(url, timeout=60) as response:
               source = response.read().decode('utf-8')
-          exec(compile(source, 'pinned-agency-public-research.py', 'exec'), {'__name__': '__main__'})
+          exec(compile(source, 'pinned-agency-discovery-research.py', 'exec'), {'__name__': '__main__'})
           PY
       - name: Save research receipts for review, not deployment
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: agency-public-evidence-20260913
-          path: agency-evidence/
+          name: agency-discovery-closure-20260913
+          path: agency-discovery/
           if-no-files-found: error
           retention-days: 3
