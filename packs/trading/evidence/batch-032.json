@@ -1,0 +1,1039 @@
+[
+  {
+    "full_name": "sadighian/crypto-rl",
+    "requested_name": "sadighian/crypto-rl",
+    "id": 138102346,
+    "url": "https://github.com/sadighian/crypto-rl",
+    "stars": 965,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "078081e5715cadeae9c798a3d759c9d59d2041bc",
+    "last_commit_date": "2021-11-30T13:52:18Z",
+    "archived": false,
+    "fork": false,
+    "description": "Deep Reinforcement Learning toolkit: record and replay cryptocurrency limit order book data & train a DDQN agent",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Deep Reinforcement Learning Toolkit for Cryptocurrencies",
+      "## 1. Purpose",
+      "## 2. Scope",
+      "## 3. Dependencies",
+      "## 4. Project Structure",
+      "## 5. Design Patterns",
+      "## 6. Getting Started",
+      "# Clone the project from github",
+      "# Install a virtual environment for the project's dependencies",
+      "# Turn on the virtual environment",
+      "# Install keras-rl dependencies",
+      "# Install database",
+      "# Install the project",
+      "### 6.1 Record limit order book data from exchanges",
+      "### 6.2 Replay recorded data to export stationary feature set",
+      "### 6.3 Train an agent",
+      "## 7. Citing this project",
+      "## 8. Appendix",
+      "### 8.1 Branches",
+      "### 8.2 Assumptions",
+      "### 8.3 Change Log"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/sadighian/crypto-rl/issues/34",
+        "createdAt": "2023-06-15T16:25:38Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-05-01T02:47:56Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/sadighian/crypto-rl/issues/32",
+        "createdAt": "2022-07-21T00:45:53Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "B",
+        "query": "topic:orderbook"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "README.md",
+      "agent",
+      "configurations.py",
+      "data_recorder",
+      "design_patterns",
+      "experiment.py",
+      "gym_trading",
+      "indicators",
+      "recorder.py",
+      "requirements.txt",
+      "setup.py"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/sadighian/crypto-rl/blob/078081e5715cadeae9c798a3d759c9d59d2041bc/README.md",
+        "sha256": "7475a5ca4f0b79e39ce92dff25e730e54e04bc5fcafd7b10a84cdadbd91c4255",
+        "bytes": 8617
+      },
+      "requirements.txt": {
+        "url": "https://github.com/sadighian/crypto-rl/blob/078081e5715cadeae9c798a3d759c9d59d2041bc/requirements.txt",
+        "sha256": "eb9c4b615ebe07b0ae0c205e37aa13580f870241200b52b80f8fe154d4fc34eb",
+        "bytes": 148
+      },
+      "setup.py": {
+        "url": "https://github.com/sadighian/crypto-rl/blob/078081e5715cadeae9c798a3d759c9d59d2041bc/setup.py",
+        "sha256": "0dbd9af8a33c6f28c0a1b59b78af52c6a781580a860185062a8e9349b8e954dc",
+        "bytes": 660
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/sadighian/crypto-rl/commit/078081e5715cadeae9c798a3d759c9d59d2041bc",
+      "metadata": "https://api.github.com/repos/sadighian/crypto-rl"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Deep Reinforcement Learning Toolkit for Cryptocurrencies **Table of contents:** 1. Purpose 2. Scope 3. Dependencies 4. Project structure 5. Design patterns 6. Getting started",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "tensorflow-gpu==1.13.1",
+      "...visual diagrams module architecture",
+      "...virtual environment for local deployments",
+      "setup.py               # Run the command `python3 setup.py install` to",
+      "python3 -m venv ./venv",
+      "tensorboard==1.13.1 tensorflow-estimator==1.13.0 tensorflow-gpu==1.13.1",
+      "python3 recorder.py",
+      "to change the query parameters to match what you've actually recorded and",
+      "python3 data_recorder/tests/test_extract_features.py",
+      "python3 experiment.py --window_size=50 --weights=False --fitting_file=...",
+      "(i.e., implementation of design patterns that are ideal for a trading system that requires",
+      "- You know how to use a cli to start python scripts",
+      "- 2021-09-25: Updated `requirements.txt`: going forward the database requires a manual"
+    ],
+    "dependency_repos": [
+      "manahl/arctic",
+      "manahl/arctic.git",
+      "openai/baselines",
+      "sadighian/crypto-rl",
+      "sadighian/crypto-rl.git"
+    ]
+  },
+  {
+    "full_name": "tardis-dev/tardis-node",
+    "requested_name": "tardis-dev/tardis-node",
+    "id": 191725387,
+    "url": "https://github.com/tardis-dev/tardis-node",
+    "stars": 367,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "8c3cfe715fd0e7a67fa5f2b261200132e64bdfbe",
+    "last_commit_date": "2026-09-11T18:03:22Z",
+    "archived": false,
+    "fork": false,
+    "description": "Convenient access to tick-level real-time and historical cryptocurrency market data via Node.js",
+    "language": "TypeScript",
+    "license": "MPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# tardis-dev",
+      "## Features",
+      "## Installation",
+      "## Documentation",
+      "### [See official docs](https://docs.tardis.dev/node-client/quickstart).",
+      "## Examples",
+      "### Run the bundled example script",
+      "### Real-time spread across multiple exchanges",
+      "### Seamless switching between real-time streaming and historical market data replay",
+      "### Stream real-time market data in exchange native data format",
+      "### Replay historical market data in exchange native data format",
+      "## See the [tardis-dev docs](https://docs.tardis.dev/node-client/quickstart) for more examples."
+    ],
+    "recent_commit_count": 202,
+    "recent_authors_sample50": [
+      "GitHub Release Bot",
+      "marcinvalas",
+      "thaaddeus"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/tardis-dev/tardis-node/issues/12",
+        "createdAt": "2019-11-24T10:18:52Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-22T19:43:03Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/tardis-dev/tardis-node/issues/51",
+        "createdAt": "2023-09-26T13:19:24Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-22T19:43:01Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc",
+      "ADD_NEW_EXCHANGE.md",
+      "AGENTS.md",
+      "ARCHITECTURE.md",
+      "CLAUDE.md",
+      "EXCHANGE_NUMERIC_FIELDS.md",
+      "LICENSE",
+      "NORMALIZED_MAPPING_GUIDELINES.md",
+      "README.md",
+      "example.js",
+      "package-lock.json",
+      "package.json",
+      "src",
+      "test",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/tardis-dev/tardis-node/blob/8c3cfe715fd0e7a67fa5f2b261200132e64bdfbe/README.md",
+        "sha256": "0148f94c778644b46302619ca2b52d7e63dcfbd23615e55d2bb8f23c643291da",
+        "bytes": 9085
+      },
+      "LICENSE": {
+        "url": "https://github.com/tardis-dev/tardis-node/blob/8c3cfe715fd0e7a67fa5f2b261200132e64bdfbe/LICENSE",
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "bytes": 16725
+      },
+      "package.json": {
+        "url": "https://github.com/tardis-dev/tardis-node/blob/8c3cfe715fd0e7a67fa5f2b261200132e64bdfbe/package.json",
+        "sha256": "4ed1f9503e6fdd1b81391ae48287766343783e6f0dd5cc157c51f39cc90e84ed",
+        "bytes": 2227
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/tardis-dev/tardis-node/commit/8c3cfe715fd0e7a67fa5f2b261200132e64bdfbe",
+      "metadata": "https://api.github.com/repos/tardis-dev/tardis-node"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# tardis-dev [![Version](https://img.shields.io/npm/v/tardis-dev.svg)](https://www.npmjs.org/package/tardis-dev) Node.js `tardis-dev` library provides convenient access to tick-level real-time and historical cryptocurrency market data both in exchange native and normalized formats. Instead of callbacks it relies on [async iteration (for await ...of)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) enabling composability features like [seamless switching between real-time data streaming and historical data replay](https://docs.tardis.dev/node-client/normalization#seamless-switching-between-real-time-streaming-and-historical-market-data-replay) or [computing derived data locally](https://docs.tardis.dev/node-client/normalization#computing-derived-data-locally). ```javascript import { replayNormalized, normalizeTrades, normalizeBookChanges } from 'tardis-dev' const messages = replayNormalized( { exchange: 'binance', symbols: ['btcusdt'], from: '2024-03-01', to: '2024-03-02' }, normalizeTrades, normalizeBookChanges ) for await (const message of messages) { console.log(message) } ``` ## Features - historical tick-level [market data replay](https://docs.tardis.dev/node-client/replaying-historical-data) backed by [tardis.dev HTTP API](https://docs.tardis.dev/api/http-api-reference#data-feeds-exchange) \u2014 includes full order book depth snapshots plus incremental updates, tick-by-tick trades, historical open interest, funding, index, mark prices, liquidations and more - consolidated [real-time data streaming API](https://docs.tardis.dev/node-client/streaming-real-time-data) connecting directly to exchanges' public WebSocket APIs - support for both [exchange-native and normalized market data](https://docs.tardis.dev/faq/data) formats (unified format for accessing market data across all supported exchanges \u2014 normalized trades, order book and ticker data) - [seamless switching between real-time streaming and historical market data replay](https://docs.tardis.dev/node-client/normalization#seamless-switching-between-real-time-streaming-and-historical-market-data-replay) thanks to [`async",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Node.js `tardis-dev` library provides convenient access to tick-level real-time and historical cryptocurrency market data both in exchange native and normalized formats. Instead of callbacks it relies on [async iteration (for await ...of)](https://developer.mo",
+      "- transparent historical local data caching \\(cached data is stored on disk per slice in compressed format and decompressed on demand when reading the data\\)",
+      "- [computing derived data locally](https://docs.tardis.dev/node-client/normalization#computing-derived-data-locally) like order book imbalance, custom trade bars, book snapshots and more via [`compute`](https://docs.tardis.dev/node-client/normalization#computi",
+      "- fast and lightweight architecture \u2014 low memory footprint and no heavy in-memory buffering",
+      "Requires Node.js v24.19+ installed.",
+      "for await (const { localTimestamp, message } of messages) {",
+      "console.log(localTimestamp, message)",
+      "for await (const { localTimestamp, message } of messages) {",
+      "console.log(localTimestamp, message)"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "mihailgaberov/orderbook",
+    "requested_name": "mihailgaberov/orderbook",
+    "id": 399750427,
+    "url": "https://github.com/mihailgaberov/orderbook",
+    "stars": 331,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "b211e023c442f2a8cd358e2605abf5079631c89c",
+    "last_commit_date": "2022-05-20T07:21:25Z",
+    "archived": false,
+    "fork": false,
+    "description": ":book: An Order Book app built with React/Typescript and powered by WebSockets.",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2021 Mihail Gaberov",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Order Book",
+      "## Tech stack",
+      "### Screenshots",
+      "## Application features:",
+      "### I. Order Book",
+      "### II. Grouping Select Box",
+      "### III. Toggle Feed Button",
+      "### IV. Kill Feed Button",
+      "### Demo",
+      "### Running the app locally",
+      "## Star History"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/mihailgaberov/orderbook/issues/1",
+        "createdAt": "2023-08-23T01:54:28Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-08-23T08:43:46Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/mihailgaberov/orderbook/issues/2",
+        "createdAt": "2023-12-22T11:59:15Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2023-12-23T08:55:54Z",
+              "authorAssociation": "OWNER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".babelrc",
+      ".github",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "package.json",
+      "public",
+      "screenshots",
+      "src",
+      "tsconfig.json",
+      "yarn.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/mihailgaberov/orderbook/blob/b211e023c442f2a8cd358e2605abf5079631c89c/README.md",
+        "sha256": "b75b7dbbbc2dcb3cdfefdbed0e96af8fa44b574f3c1b7bbadf576eb936c1a5b8",
+        "bytes": 4069
+      },
+      "LICENSE": {
+        "url": "https://github.com/mihailgaberov/orderbook/blob/b211e023c442f2a8cd358e2605abf5079631c89c/LICENSE",
+        "sha256": "6c8dd9658a80d30470d6012ebea02d705cd1e1dbc745d51f51c79f2f6d74277b",
+        "bytes": 1071
+      },
+      "package.json": {
+        "url": "https://github.com/mihailgaberov/orderbook/blob/b211e023c442f2a8cd358e2605abf5079631c89c/package.json",
+        "sha256": "abf7478f05a773ac98002d318534a9de68c3c4585321b0d5e91ae5b7be4fb0c9",
+        "bytes": 1320
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/mihailgaberov/orderbook/commit/b211e023c442f2a8cd358e2605abf5079631c89c",
+      "metadata": "https://api.github.com/repos/mihailgaberov/orderbook"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Order Book An Order Book app built with React/Typescript and powered by WebSockets. >_I have written a tutorial about how I did this. You",
+    "license_excerpt": "MIT License Copyright (c) 2021 Mihail Gaberov Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "### Running the app locally"
+    ],
+    "dependency_repos": [
+      "mihailgaberov/orderbook"
+    ]
+  },
+  {
+    "full_name": "tardis-dev/tardis-machine",
+    "requested_name": "tardis-dev/tardis-machine",
+    "id": 191731001,
+    "url": "https://github.com/tardis-dev/tardis-machine",
+    "stars": 310,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "f9d823119cdd46394a7923642d90b4619699f80f",
+    "last_commit_date": "2026-08-23T10:26:02Z",
+    "archived": false,
+    "fork": false,
+    "description": "Locally runnable server with built-in data caching, providing both tick-level historical and consolidated real-time cryptocurrency market data via HTTP and WebSocket APIs",
+    "language": "TypeScript",
+    "license": "MPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Tardis Machine Server",
+      "## Features",
+      "## Documentation",
+      "### [See official docs](https://docs.tardis.dev/tardis-machine/quickstart)."
+    ],
+    "recent_commit_count": 88,
+    "recent_authors_sample50": [
+      "GitHub Release Bot",
+      "thaaddeus"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/tardis-dev/tardis-machine/issues/34",
+        "createdAt": "2025-07-26T05:07:08Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-22T19:49:42Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/tardis-dev/tardis-machine/issues/35",
+        "createdAt": "2026-01-15T16:01:56Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-22T19:38:29Z",
+              "authorAssociation": "MEMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".dockerignore",
+      ".github",
+      ".gitignore",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc",
+      "ADD_NEW_EXCHANGE.md",
+      "AGENTS.md",
+      "ARCHITECTURE.md",
+      "CLAUDE.md",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "benchmark.js",
+      "bin",
+      "package-lock.json",
+      "package.json",
+      "src",
+      "test",
+      "tsconfig.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/tardis-dev/tardis-machine/blob/f9d823119cdd46394a7923642d90b4619699f80f/README.md",
+        "sha256": "eb7d9677b89da668b6b2bb7ab8b9bf1f8458b915047ba640e920a83c3996b541",
+        "bytes": 1891
+      },
+      "LICENSE": {
+        "url": "https://github.com/tardis-dev/tardis-machine/blob/f9d823119cdd46394a7923642d90b4619699f80f/LICENSE",
+        "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1",
+        "bytes": 16724
+      },
+      "package.json": {
+        "url": "https://github.com/tardis-dev/tardis-machine/blob/f9d823119cdd46394a7923642d90b4619699f80f/package.json",
+        "sha256": "b0f3a37c10c2c17f00a351c3d5f94d608d7baa6187288d545e147111cfaccfd9",
+        "bytes": 2450
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/tardis-dev/tardis-machine/commit/f9d823119cdd46394a7923642d90b4619699f80f",
+      "metadata": "https://api.github.com/repos/tardis-dev/tardis-machine"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Tardis Machine Server [![Version](https://img.shields.io/npm/v/tardis-machine.svg)](https://www.npmjs.org/package/tardis-machine) [Tardis Machine](https://docs.tardis.dev/tardis-machine/quickstart) is a locally runnable server with built-in data caching that uses the [Tardis.dev HTTP API](https://docs.tardis.dev/api/http-api-reference) under the hood. It provides both **tick-level historical** and **consolidated real-time cryptocurrency market data** via HTTP and WebSocket APIs. Available via [npm and Docker](https://docs.tardis.dev/tardis-machine/quickstart#installation). ## Features - efficient data replay API endpoints returning historical market data for entire time periods - [exchange-native market data APIs](https://docs.tardis.dev/tardis-machine/replaying-historical-data#exchange-native-market-data-apis) \u2014 tick-by-tick historical replay in exchange-native format via HTTP and WebSocket endpoints. The WebSocket API replays data with the same format and subscribe logic as real-time exchange APIs \u2014 existing exchange WebSocket clients can connect to this endpoint. - [normalized market data APIs](https://docs.tardis.dev/tardis-machine/replaying-historical-data#normalized-market-data-apis) \u2014 consistent format across all exchanges via HTTP and WebSocket endpoints. Includes synchronized multi-exchange replay, real-time streaming, customizable order book snapshots and trade bars. - [seamless switching](https://docs.tardis.dev/tardis-machine/replaying-historical-data#normalized-market-data-apis) between real-time streaming and historical replay - transparent local data caching (compressed on disk, decompressed on demand) - support for many cryptocurrency exchanges \u2014 see [docs.tardis.dev](https://docs.tardis.dev) for the full list ## Documentation ### [See official docs](https://docs.tardis.dev/tardis-machine/quickstart).",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or",
+    "license_warnings": [],
+    "runtime_clues": [
+      "[Tardis Machine](https://docs.tardis.dev/tardis-machine/quickstart) is a locally runnable server with built-in data caching that uses the [Tardis.dev HTTP API](https://docs.tardis.dev/api/http-api-reference) under the hood. It provides both **tick-level histor",
+      "- transparent local data caching (compressed on disk, decompressed on demand)"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "binance/binance-websocket-examples",
+    "requested_name": "binance/binance-websocket-examples",
+    "id": 275789187,
+    "url": "https://github.com/binance/binance-websocket-examples",
+    "stars": 164,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "629833c6ffbf6656eee4bd0cf567c69f2de20ce6",
+    "last_commit_date": "2023-12-21T02:23:21Z",
+    "archived": false,
+    "fork": false,
+    "description": "Example code in Nodejs that demonstrate how to subscribe to Binance Websocket server.",
+    "language": "JavaScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2019 Liang Shi",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Binance Websocket Examples",
+      "## Local orderbook (Spot)",
+      "# Cache local orderbook and echo best price",
+      "# btcusdt by default",
+      "# or provide the trading pair",
+      "## Spot user data stream",
+      "# get user data steam",
+      "# Get margin account update from websocket",
+      "## Futures user data stream",
+      "# Get user data steam on production",
+      "# On testnet",
+      "## Delivery Futures user data stream",
+      "# Get user data steam - defaults to production",
+      "## Combined streams",
+      "# Get multi pairs stream, setting the pairs in src/multi-stream-depth",
+      "## Spot trade stream delay monitoring",
+      "## Spot depth stream delay monitoring",
+      "## Futures depth stream delay monitoring",
+      "## How to setup",
+      "# run test",
+      "## License"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/binance/binance-websocket-examples/issues/25",
+        "createdAt": "2021-10-25T13:50:49Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-10-26T01:55:25Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2021-10-26T12:55:43Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-11-01T09:51:21Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/binance/binance-websocket-examples/issues/16",
+        "createdAt": "2021-10-02T07:28:36Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2021-10-05T12:22:23Z",
+              "authorAssociation": "CONTRIBUTOR"
+            },
+            {
+              "createdAt": "2021-10-05T12:32:01Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2021-10-06T01:22:35Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".babelrc",
+      ".eslintrc.js",
+      ".gitignore",
+      "Dockerfile",
+      "LICENSE",
+      "README.md",
+      "__test__",
+      "package.json",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/README.md",
+        "sha256": "1aed8cbc6475c037be00389bc0d39b38ae190b1a5dc6bd49653d5c1c8384ba1f",
+        "bytes": 1296
+      },
+      "LICENSE": {
+        "url": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/LICENSE",
+        "sha256": "2366e34fb28a74a6c6c37a0ce217a1bc4639f3f3ca18ce5b2b988eff4eec1e9e",
+        "bytes": 1066
+      },
+      "package.json": {
+        "url": "https://github.com/binance/binance-websocket-examples/blob/629833c6ffbf6656eee4bd0cf567c69f2de20ce6/package.json",
+        "sha256": "b2f46829410b87d4619a8480c7e21cac00837c4e151029aa382ca8b810d5c9a6",
+        "bytes": 1744
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/binance/binance-websocket-examples/commit/629833c6ffbf6656eee4bd0cf567c69f2de20ce6",
+      "metadata": "https://api.github.com/repos/binance/binance-websocket-examples"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Binance Websocket Examples ## Local orderbook (Spot) ```bash # Cache local orderbook and echo best price # btcusdt by default npm run orderbook # or provide the trading pair SYMBOL=bnbusdt npm run orderbook ``` ## Spot user data stream ```bash # get user data steam APIKEY=xxxxxx npm run user # Get margin account update from websocket APIKEY=xxxxxx APISECRET=xxxxx npm run margin-user ``` ## Futures user data stream ```bash # Get user data steam on production APIKEY=xxxxxx APISECRET=xxxxx npm run futures-user # On testnet APIKEY=xxxxxx APISECRET=xxxxx WSS_BASE_URL=\"wss://stream.binancefuture.com/\" HTTP_BASE_URL=\"https://testnet.binancefuture.com/\" npm run futures-user ``` ## Delivery Futures user data stream ```bash # Get user data steam - defaults to production APIKEY=xxxxxx APISECRET=xxxxx npm run delivery-futures-user ``` ## Combined streams ```bash # Get multi pairs stream, setting the pairs in src/multi-stream-depth npm run multi-stream ``` ## Spot trade stream delay monitoring ```bash npm run monitor-spot-trade ``` ## Spot depth stream delay monitoring ```bash npm run monitor-spot-depth ``` ## Futures depth stream delay monitoring ```bash npm run monitor-futures ``` ## How to setup ```bash npm install # run test npm run test ``` ##",
+    "license_excerpt": "MIT License Copyright (c) 2019 Liang Shi Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated",
+    "license_warnings": [],
+    "runtime_clues": [
+      "## Local orderbook (Spot)",
+      "# Cache local orderbook and echo best price",
+      "## License"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "adrianhajdin/coinpulse",
+    "requested_name": "adrianhajdin/coinpulse",
+    "id": 1121246873,
+    "url": "https://github.com/adrianhajdin/coinpulse",
+    "stars": 148,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "48c379527e5464152fbd034d91dc0e84dd0f2dea",
+    "last_commit_date": "2026-01-07T16:32:12Z",
+    "archived": false,
+    "fork": false,
+    "description": "CryptoPulse is a high-performance analytics dashboard built with Next.js 16. It leverages WebSockets and CoinGecko to provide real-time market data, live orderbooks, and integrated TradingView charts.",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "## \ud83d\udccb <a name=\"table\">Table of Contents</a>",
+      "## \ud83d\udea8 Tutorial",
+      "## <a name=\"introduction\">\u2728 Introduction</a>",
+      "## <a name=\"tech-stack\">\u2699\ufe0f Tech Stack</a>",
+      "## <a name=\"features\">\ud83d\udd0b Features</a>",
+      "## <a name=\"quick-start\">\ud83e\udd38 Quick Start</a>",
+      "## <a name=\"links\">\ud83d\udd17 Assets</a>",
+      "## <a name=\"more\">\ud83d\ude80 More</a>"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      ".idea",
+      ".junie",
+      ".prettierignore",
+      ".prettierrc",
+      "README.md",
+      "app",
+      "components.json",
+      "components",
+      "constants.ts",
+      "eslint.config.mjs",
+      "hooks",
+      "lib",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "public",
+      "tsconfig.json",
+      "type.d.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/adrianhajdin/coinpulse/blob/48c379527e5464152fbd034d91dc0e84dd0f2dea/README.md",
+        "sha256": "9f0d78963ea24a37c240d2c4218697858d34b3b21b6d0e321d65e214dcfefc79",
+        "bytes": 9347
+      },
+      "package.json": {
+        "url": "https://github.com/adrianhajdin/coinpulse/blob/48c379527e5464152fbd034d91dc0e84dd0f2dea/package.json",
+        "sha256": "357e5edc60e8a4d9fccf18601c91c3972e50cd737998eacb641a0f9a3093d46f",
+        "bytes": 1021
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/adrianhajdin/coinpulse/commit/48c379527e5464152fbd034d91dc0e84dd0f2dea",
+      "metadata": "https://api.github.com/repos/adrianhajdin/coinpulse"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "CryptoPulse \u2014 Analytics Dashboard Build this project step by step with our detailed tutorial on JavaScript Mastery YouTube. Join the JSM family! ## \ud83d\udccb Table",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "- **[Next.js](https://nextjs.org)** is a powerful React framework for building full-stack web applications. It simplifies development with features like server-side rendering, static site generation, and API routes, enabling developers to focus on building pro",
+      "- **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework that allows developers to rapidly build modern websites by composing styles directly in their HTML markup, which facilitates highly customized designs and ensures the smallest poss",
+      "\ud83d\udc49 **Interactive Candlestick Chart**: Integrates **TradingView Lightweight Charts** to visualize market trends and price action with surgical precision, rendering multi-timeframe OHLCV data fetched from CoinGecko\u2019s high-performance market endpoints.",
+      "Follow these steps to set up the project locally on your machine.",
+      "Open [http://localhost:3000](http://localhost:3000) in your browser to view the project."
+    ],
+    "dependency_repos": [
+      "adrianhajdin/coinpulse.git",
+      "sujatagunale/EasyRead"
+    ]
+  },
+  {
+    "full_name": "jnidzwetzki/bitfinex-v2-wss-api-java",
+    "requested_name": "jnidzwetzki/bitfinex-v2-wss-api-java",
+    "id": 115510408,
+    "url": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java",
+    "stars": 93,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "58f6b6a8ea15aa4bec93a304e74512cf557a8eea",
+    "last_commit_date": "2024-06-03T05:40:34Z",
+    "archived": false,
+    "fork": false,
+    "description": "This project provides a Java client library for the Bitfinex WebSocket API (v2). Public and private channels (candles, ticks, executed trades, (raw) orderbooks, orders, and wallets) are implemented.",
+    "language": "Java",
+    "license": "Apache-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "      the copyright owner that is granting the License.",
+      "      copyright notice that is included in or attached to the work",
+      "      the copyright owner. For the purposes of this definition, \"submitted\"",
+      "      copyright license to reproduce, prepare Derivative Works of,",
+      "   Copyright [yyyy] [name of copyright owner]"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# An unofficial Java implementation of the Bitfinex Websocket (v2) API",
+      "## Contact / Stay informed",
+      "# Examples",
+      "# Usage",
+      "## Maven",
+      "## Gradle",
+      "# Changelog",
+      "# Recent API changes",
+      "## Version 0.7.1",
+      "## Version 0.7.0",
+      "## Version 0.6.9",
+      "# Old (version <= 0.6.8)",
+      "# New (version > 0.6.8)",
+      "## Version 0.6.7",
+      "## Version 0.6.3",
+      "# Old (version <= 0.6.2)",
+      "# New (version > 0.6.2)",
+      "## Version 0.6.2",
+      "## Version 0.6.1",
+      "# Old (version <= 0.6.0)",
+      "# New (version > 0.6.0)",
+      "## Version 0.6.0"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java/issues/376",
+        "createdAt": "2025-10-07T15:00:22Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java/issues/361",
+        "createdAt": "2024-06-03T17:01:54Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2024-06-04T14:12:45Z",
+              "authorAssociation": "CONTRIBUTOR"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".github",
+      ".gitignore",
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "DCO",
+      "EXAMPLES.md",
+      "LICENSE",
+      "README.md",
+      "codecov.yml",
+      "pom.xml",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java/blob/58f6b6a8ea15aa4bec93a304e74512cf557a8eea/README.md",
+        "sha256": "c0f78091710554482ccf84e538f0f277a2d32f4d0b728f1b944bd39768242c44",
+        "bytes": 7455
+      },
+      "LICENSE": {
+        "url": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java/blob/58f6b6a8ea15aa4bec93a304e74512cf557a8eea/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/jnidzwetzki/bitfinex-v2-wss-api-java/commit/58f6b6a8ea15aa4bec93a304e74512cf557a8eea",
+      "metadata": "https://api.github.com/repos/jnidzwetzki/bitfinex-v2-wss-api-java"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# An unofficial Java implementation of the Bitfinex Websocket (v2) API This project provides a Java client library for the [Bitfinex WebSocket API (v2)](https://docs.bitfinex.com/v2/reference). Public and private channels (candles, ticks, executed trades, (raw) orderbooks, orders, and wallets) are implemented. In contrast to other implementations, this project uses the WSS (_web socket secure_) streaming API of Bitfinex. Most other projects are poll the REST-API periodically, which leads to delays in data processing. In this implementation, you can register callback methods on ticks, candles or orders. The callbacks are executed, as soon as new data is received from Bitfinex (see the examples section for more details). **Warning:** Trading carries significant financial risk; you could lose a lot of money. If you are planning to use this software to trade, you should perform many tests and simulations first. This software is provided 'as is' and released under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0). ## Contact / Stay informed * If you like the project, please star it on GitHub! * You need help or do you have questions? Join our chat at [gitter](https://gitter.im/bitfinex-v2-wss-api-java/Lobby). * For",
+    "license_excerpt": "Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION 1. Definitions. \"License\" shall mean the terms and conditions for",
+    "license_warnings": [],
+    "runtime_clues": [
+      "**Warning:** Trading carries significant financial risk; you could lose a lot of money. If you are planning to use this software to trade, you should perform many tests and simulations first. This software is provided 'as is' and released under the [Apache 2.0",
+      "The old order flags are deprecated by Bitfinex and replaced by the new 'WSv2 order flag'. This change is adapted in this version. Methods like `BitfinexOrderBuilder.setHidden()` or `BitfinexOrderBuilder.setReduce()` are replaced by `BitfinexOrderBuilder.withOr",
+      "The BitfinexTick.INVALID_VOLUME is removed and replaced by a Java 8 optional",
+      "Since version 0.6.2, the double data type is replaced by the BigDecimal data type for increased precision."
+    ],
+    "dependency_repos": [
+      "jnidzwetzki/bitfinex-v2-wss-api-java",
+      "jnidzwetzki/crypto-bot",
+      "jnidzwetzki/mysql-ha-cloud",
+      "ta4j/ta4j"
+    ]
+  },
+  {
+    "full_name": "brucify/orderly",
+    "requested_name": "brucify/orderly",
+    "id": 491175256,
+    "url": "https://github.com/brucify/orderly",
+    "stars": 82,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "00b5515880bbdae1d5ec3ba0e5f0996c5b624bda",
+    "last_commit_date": "2022-06-02T14:43:56Z",
+    "archived": false,
+    "fork": false,
+    "description": "A Rust WebSocket client that connects to multiple crypto exchanges and publishes a merged live order book through gRPC stream",
+    "language": "Rust",
+    "license": "MPL-2.0",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# orderly"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/brucify/orderly/issues/4",
+        "createdAt": "2023-11-07T19:59:32Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      },
+      {
+        "url": "https://github.com/brucify/orderly/issues/3",
+        "createdAt": "2023-01-03T14:24:14Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 1,
+        "stage": "W07",
+        "lane": "C",
+        "query": "WebSocket orderbook"
+      }
+    ],
+    "root_entries": [
+      ".gitignore",
+      "Cargo.lock",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "build.rs",
+      "proto",
+      "src"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/README.md",
+        "sha256": "b643e469490a89a36e2fe48924218c82d9fb9ba6eeeb0ead9dca02bd0642d56d",
+        "bytes": 2091
+      },
+      "LICENSE": {
+        "url": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/LICENSE",
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "bytes": 16725
+      },
+      "Cargo.toml": {
+        "url": "https://github.com/brucify/orderly/blob/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda/Cargo.toml",
+        "sha256": "305d6e0f2c55146767439e95e22433ac9752ab98723f5905c9559ec9692aba2c",
+        "bytes": 840
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/brucify/orderly/commit/00b5515880bbdae1d5ec3ba0e5f0996c5b624bda",
+      "metadata": "https://api.github.com/repos/brucify/orderly"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# orderly A Rust CLI WebSocket client for crypto exchanges. Connects to the WebSocket feeds of multiple exchanges. Subscribes to the live order book for the given currency pair. Publishes a merged order book as a gRPC stream. Currently supports: * Bitstamp WebSocket: `wss://ws.bitstamp.net` * Binance WebSocket: `wss://stream.binance.com:9443/ws` * Kraken WebSocket: `wss://ws.kraken.com` * Coinbase WebSocket: `wss://ws-feed.exchange.coinbase.com` ``` USAGE: orderly-server [OPTIONS] OPTIONS: -h, --help Print help information --no-binance (Optional) Don't show Binance in gRPC stream. Default: false --no-bitstamp (Optional) Don't show Bitstamp in gRPC stream. Default: false --no-kraken (Optional) Don't show Kraken in gRPC stream. Default: false --no-coinbase (Optional) Don't show Coinbase in gRPC stream. Default: false -p, --port (Optional) Port number on which the the gRPC server will be hosted. Default: 50051 -s, --symbol (Optional) Currency pair to subscribe to. Default: ETH/BTC ``` Run gRPC server: ``` cargo run --bin orderly-server ``` or with logs and options: ``` env RUST_LOG=info cargo run --bin orderly-server -- --symbol ETH/BTC --port 50051 ``` Exclude certain exchanges: ``` cargo run --bin orderly-server -- --no-binance --no-bitstamp ``` Client ----- Connects to the gRPC server and",
+    "license_excerpt": "Mozilla Public License Version 2.0 ================================== 1. Definitions -------------- 1.1. \"Contributor\" means each individual or legal entity that creates, contributes to the creation of, or",
+    "license_warnings": [],
+    "runtime_clues": [
+      "A Rust CLI WebSocket client for crypto exchanges.",
+      "env RUST_LOG=info cargo run --bin orderly-server -- --symbol ETH/BTC --port 50051",
+      "env RUST_LOG=info cargo run --bin orderly-client -- --port 50051"
+    ],
+    "dependency_repos": []
+  }
+]
