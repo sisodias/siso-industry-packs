@@ -1,0 +1,59 @@
+{
+  "audit_id": "R091",
+  "requested_full_name": "lv2/lv2",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "lv2/lv2",
+  "html_url": "https://github.com/lv2/lv2",
+  "description": "The LV2 audio plugin specification",
+  "stargazers_count": 206,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "isc",
+    "name": "ISC License",
+    "spdx_id": "ISC",
+    "url": "https://api.github.com/licenses/isc",
+    "node_id": "MDc6TGljZW5zZTEw"
+  },
+  "forks_count": 29,
+  "open_issues_count": 12,
+  "topics": [],
+  "revision": "3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
+  "last_commit": "2026-04-08T00:12:08Z",
+  "metadata_source": "https://api.github.com/repos/lv2/lv2",
+  "commit_source": "https://github.com/lv2/lv2/commit/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/lv2/lv2/blob/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6/README.md",
+    "sha256": "c2270b87c4281b3413b8dad9734222cc16afb0c44fc05700aef23d4a74e32fdf",
+    "text": "<!-- Copyright 2010-2022 David Robillard <d@drobilla.net> -->\n<!-- SPDX-License-Identifier: ISC -->\n\nLV2\n===\n\nLV2 is a plugin standard for audio systems.  It defines an extensible C API for\nplugins, and a format for self-contained \"bundle\" directories that contain\nplugins, metadata, and other resources.  See <http://lv2plug.in/> for more\ninformation.\n\nThis package contains specifications (C headers and Turtle data files),\ndocumentation generation tools, tests, and example plugins.\n\nInstallation\n------------\n\nSee the [installation instructions](INSTALL.md) for details on how to\nconfigure, build, and install LV2 with meson.\n\nBy default, on UNIX-like systems, everything is installed within the `prefix`,\nand LV2 bundles are installed in the \"lv2\" subdirectory of the `libdir`.  On\nother systems, bundles are installed by default to the standard location for\nplugins on the system.  The bundle installation directory can be overridden\nwith the `lv2dir` option.\n\nThe [specification bundles](lv2) are run-time dependencies of LV2 applications.\nPrograms expect their data to be available somewhere in `LV2_PATH`.  See\n<http://lv2plug.in/pages/filesystem-hierarchy-standard.html> for details on the\nstandard installation paths.\n\nHeaders\n-------\n\nThe `lv2/` include namespace is reserved for this LV2 distribution.\nOther projects may extend LV2, but must place their headers elsewhere.\n\nHeaders are installed to `includedir` with paths like:\n\n    #include <lv2/urid/urid.h>\n\nFor backwards compatibility, if the `old_headers` option is set, then headers\nare also installed to the older URI-based paths:\n\n    #include <lv2/lv2plug.in/ns/ext/urid/urid.h>\n\nProjects still using this style are encourated to migrate to the shorter style\nabove.\n",
+    "characters": 1739,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "COPYING",
+    "source_url": "https://github.com/lv2/lv2/blob/3c57dae600a5ad8d05acd53ee3490f7d91cb7be6/COPYING",
+    "sha256": "1e6bb175e193608b767ff25a4ed68b82c4db599491cf0d2694435cf60e9a4841",
+    "text": "Copyright 2006-2012 Steve Harris, David Robillard.\nCopyright 2000-2002 Richard W.E. Furse, Paul Barton-Davis, Stefan Westerfeld.\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND\nFITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THIS SOFTWARE.\n",
+    "characters": 827,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

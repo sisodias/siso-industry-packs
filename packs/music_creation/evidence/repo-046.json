@@ -1,0 +1,145 @@
+{
+  "audit_id": "R046",
+  "requested_full_name": "librosa/librosa",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "librosa/librosa",
+  "html_url": "https://github.com/librosa/librosa",
+  "description": "Python library for audio and music analysis",
+  "stargazers_count": 8606,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "isc",
+    "name": "ISC License",
+    "spdx_id": "ISC",
+    "url": "https://api.github.com/licenses/isc",
+    "node_id": "MDc6TGljZW5zZTEw"
+  },
+  "forks_count": 1074,
+  "open_issues_count": 52,
+  "topics": [
+    "audio",
+    "dsp",
+    "librosa",
+    "music",
+    "python",
+    "scipy"
+  ],
+  "revision": "f808bac0812469049fd8167c87f45813b7d57b32",
+  "last_commit": "2026-08-22T13:06:24Z",
+  "metadata_source": "https://api.github.com/repos/librosa/librosa",
+  "commit_source": "https://github.com/librosa/librosa/commit/f808bac0812469049fd8167c87f45813b7d57b32",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/librosa/librosa/blob/f808bac0812469049fd8167c87f45813b7d57b32/README.md",
+    "sha256": "5887811bcf8720e315cebfcc7ebe62637cc284bf005077dc1a0340a8b97e3b36",
+    "text": "[![librosa logo](docs/img/librosa_logo_text.svg)](https://librosa.org/)\n\n# librosa\n\n`librosa` is a Python library for audio and music signal processing. It provides the foundational algorithms and tools required for building music information retrieval (MIR) systems.\n\n[![PyPI](https://img.shields.io/pypi/v/librosa.svg)](https://pypi.python.org/pypi/librosa)\n[![Anaconda-Server Badge](https://anaconda.org/conda-forge/librosa/badges/version.svg)](https://anaconda.org/conda-forge/librosa)\n[![License](https://img.shields.io/pypi/l/librosa.svg)](https://github.com/librosa/librosa/blob/main/LICENSE.md)\n[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.591533.svg)](https://doi.org/10.5281/zenodo.591533)\n[![EffVer Versioning](https://img.shields.io/badge/version_scheme-EffVer-0097a7)](https://jacobtomlinson.dev/effver)\n[![Docs](https://github.com/librosa/librosa/actions/workflows/docs.yml/badge.svg)](https://librosa.org/doc/latest/index.html)\n[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,7-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)\n\n[![CI](https://github.com/librosa/librosa/actions/workflows/ci.yml/badge.svg)](https://github.com/librosa/librosa/actions/workflows/ci.yml)\n[![codecov](https://codecov.io/gh/librosa/librosa/branch/main/graph/badge.svg?token=ULWnUHaIJC)](https://codecov.io/gh/librosa/librosa)\n\n## Documentation\n\nFull documentation is available at:\n\n* https://librosa.org/doc/\n\nIf you're new to librosa, we recommend starting with the\n[tutorials](https://librosa.org/doc/latest/auto_tutorials).\n\nIf you're looking for API details, head directly to the [API reference](https://librosa.org/doc/latest/api).\n\nTo see what's new, check out the [change log](https://librosa.org/doc/latest/changelog.html).\n\n## Installation\n\n\n### Using PyPI\n\nThe latest stable release is available on PyPI, and you can install it by the command\n```\npip install librosa\n```\n\n### Using conda\n\nAnaconda users can install using `conda-forge`:\n```\nconda install -c conda-forge librosa\n```\n\nFor optional dependencies and advanced setup, see the guide in the documentation.\n\n\n---\n\n## Citing\n\nThere are two ways to cite librosa in scholarly work, depending on whether you are citing it for its use in your work\nor for its design and motivation.\n\nWe additionally encourage you to cite the original publications describing the methods implemented in librosa, in addition to citing librosa itself.  References can often be found within function documentation.\n\n### Citing for use\n\nIf you are citing for use in your own work, please cite the version you used by retrieving the appropriate DOI and citation information from Zenodo.\n\n[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.591533.svg)](https://doi.org/10.5281/zenodo.591533)\n\nThis ensures that all contributing authors are credited for the work you are building on.\n\nFrom librosa version 0.10.2 or later, you can also use `librosa.cite()` to get the DOI link for any version of librosa:\n\n```python\nimport librosa\nlibrosa.cite()\n```\n\nAnd from 1.0 onward, you can directly retrieve the BibTeX entry for the version you are using:\n\n```python\nprint(librosa.cite(bib=True))\n```\n\n### Citing for design \n\nIf you wish to cite librosa for its design, motivation, etc., please cite the paper\npublished at SciPy 2015:\n\n    McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto.\n    \"librosa: Audio and music signal analysis in python.\"\n    In Proceedings of the 14th python in science conference, pp. 18-25. 2015.\n\nAs a rule of thumb:\n\n- Use a versioned librosa citation to document the software implementation used in your experiments.\n- Cite the original methodological papers for the algorithms that are central to your work.\n- Cite the SciPy paper when discussing librosa itself, its design, or its contribution as a software library.\n",
+    "characters": 3905,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/librosa/librosa/blob/f808bac0812469049fd8167c87f45813b7d57b32/LICENSE.md",
+    "sha256": "79aa4a8086d51ac89f9a7322f546670cdef73e758c67f04587b7af8afafd6df8",
+    "text": "## ISC License\n\nCopyright (c) 2013--2026, librosa development team.\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\nOR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
+    "characters": 766,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "bmcfee",
+      "contributions": 2858
+    },
+    {
+      "login": "AlexMetsai",
+      "contributions": 38
+    },
+    {
+      "login": "mattmcvicar",
+      "contributions": 38
+    },
+    {
+      "login": "stefan-balke",
+      "contributions": 35
+    },
+    {
+      "login": "carlthome",
+      "contributions": 33
+    },
+    {
+      "login": "lostanlen",
+      "contributions": 26
+    },
+    {
+      "login": "craffel",
+      "contributions": 21
+    },
+    {
+      "login": "fzalkow",
+      "contributions": 20
+    },
+    {
+      "login": "SuperKogito",
+      "contributions": 18
+    },
+    {
+      "login": "danagilliann",
+      "contributions": 15
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 2100,
+      "title": "Enable Ruff unused-argument checks to catch silently ignored parameters",
+      "state": "open",
+      "created_at": "2026-09-10T17:43:08Z",
+      "updated_at": "2026-09-13T05:55:30Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/librosa/librosa/issues/2100"
+    },
+    {
+      "number": 2021,
+      "title": "Refactor display.py into submodules",
+      "state": "open",
+      "created_at": "2026-05-29T13:46:06Z",
+      "updated_at": "2026-08-29T18:57:18Z",
+      "closed_at": null,
+      "comments": 2,
+      "html_url": "https://github.com/librosa/librosa/issues/2021"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "librosa/librosa",
+        "stars": 8475,
+        "license": "ISC",
+        "language": "Python",
+        "unit_class": "substrate",
+        "reuse_value": 90,
+        "liftability": 15,
+        "fame_gap": 75,
+        "cat_slug": "media-processing-library",
+        "cat_name": "Media Processing / Codec Library",
+        "description": "Python library for audio and music analysis"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

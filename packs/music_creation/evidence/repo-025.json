@@ -1,0 +1,86 @@
+{
+  "audit_id": "R025",
+  "requested_full_name": "sfztools/sfizz",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "sfztools/sfizz",
+  "html_url": "https://github.com/sfztools/sfizz",
+  "description": "SFZ parser and synth c++ library, providing a JACK standalone client",
+  "stargazers_count": 533,
+  "default_branch": "develop",
+  "archived": true,
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "forks_count": 91,
+  "open_issues_count": 73,
+  "topics": [
+    "jack",
+    "jack-client",
+    "musical-instrument",
+    "sample-player",
+    "sampler",
+    "sampler-engine",
+    "sfz",
+    "sfz-files",
+    "sfz-format",
+    "sfz-library"
+  ],
+  "revision": "f5c6e29f23b8057867c08e88f5f6ac6738baa30b",
+  "last_commit": "2025-03-17T20:18:36Z",
+  "metadata_source": "https://api.github.com/repos/sfztools/sfizz",
+  "commit_source": "https://github.com/sfztools/sfizz/commit/f5c6e29f23b8057867c08e88f5f6ac6738baa30b",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/sfztools/sfizz/blob/f5c6e29f23b8057867c08e88f5f6ac6738baa30b/README.md",
+    "sha256": "adb4c5d2f19b4bbef660b28cd0fa435c29e47b4f6b1dcaefa63dcdb658616a59",
+    "text": "# sfizz\n\n[![build actions]](https://github.com/sfztools/sfizz/actions)\n[![build obs]](https://build.opensuse.org/package/show/home:sfztools:sfizz:develop/sfizz)\n[![Discord Badge Image]](https://discord.gg/3ArE9Mw)\n\n[![SFZv1 Status Image]](https://sfztools.github.io/sfizz/development/status/opcodes/?v=1)\n[![SFZv2 Status Image]](https://sfztools.github.io/sfizz/development/status/opcodes/?v=2)\n[![ARIA Status Image]](https://sfztools.github.io/sfizz/development/status/opcodes/?v=aria)\n\nSFZ parser and synth c++ library and JACK standalone client,\nplease check [our website] for more details, or [our wiki] for further information.\n\n## Repository reorganization\n\n> **Warning**\n>\n> On 2023/05/08 the project was divided into 2 repositories:\n> this contains only the library required by third-party applications,\n> and [sfizz-ui] for plugins (and a future possible graphics standalone).\n\n[sfizz-ui]: https://github.com/sfztools/sfizz-ui\n\nSo if you are looking for plugins, you can get both by looking for the `sfizz-ui`\nrepository instead, which contains also this one in the `library` subdirectory/git submodule.\n\n## Using sfizz\n\nSfizz can be used most easily within an LV2 host such as [Carla] or [Ardour].\nIt can also be integrated as a library within your own program; check out our [API] bindings for C and C++.\nOur [releases] are an immediate way to get a working library for Windows and Mac.\nLinux builds are available over at [OBS].\nOn any operating system, you might prefer to [build from source]!\n\n## Contributing to sfizz\n\nThere is actually many things anyone can do, programming-related or music-related.\nPlease check out the [CONTRIBUTING] document for information about filing bug reports or feature requests,\nand helping the development of sfizz\n\n## Donating to sfizz\n\nSfizz and the work in the SFZ tools organization is purely driven by hobbyists\nwho choose to use their free time to benefit this project.\nWe firmly believe in the honesty and goodwill of users as a whole,\nand we want to promote a healthy relationship to software and to the cost of producing quality software.\n\nNo financial returns is explicitely required from using sfizz in any shape.\nHowever, if you feel that sfizz produces value for you or your products,\nand if you find that your financial situation allows for it, we put together ways to donate to the project.\nYou are never compelled to do so, the [CONTRIBUTING] file contains different ways to contribute.\n\nIn all of sfizz's governance model, we strive to live in the open.\nFinances are no different, and we put in place a process so that the use of donations\nis as transparent as possible through our [Open Collective].\nWe invite you to check out the [GOVERNANCE] file to see how the organization is governed and how are donations handled.\n\n## Dependencies and licenses\n\nThe sfizz library has the option to be compiled against either the `dr_libs`\naudio libraries, which is now the default option, or `libsndfile`.\n\n- [dr_libs] is licensed under the MIT No Attribution license\n- [libsndfile] is licensed under the GNU Lesser General Public License v2.1\n\nThe sfizz library makes primary use of:\n\n- [Abseil], licensed under the Apache License 2.0\n- [atomic_queue] by Maxim Egorushkin, licensed under the MIT license\n- [filesystem] by Steffen Schümann, licensed under the BSD 3-Clause license\n- [hiir] by Laurent de Soras, licensed under the WTFPL v2 license\n- [KISS FFT] by Mark Borgerding, licensed under the BSD 3-Clause license\n- [Surge tuning] by Paul Walker, licensed under the MIT license\n- [pugixml] by Arseny Kapoulkine, licensed under the MIT license\n- [cephes] by Stephen Moshier, licensed under the BSD 3-Clause license\n- [cpuid] by Steinwurf ApS, licensed under the BSD 3-Clause license\n- [faust-libraries] by GRAME, Julius O. Smith III and Eric Tarr,\n  licensed under the STK-4.3 license and a permissive variant of the LGPL license\n\nThe sfizz library also uses in some subprojects:\n\n- [Catch2], licensed under the Boost Software License 1.0\n- [benchmark], licensed under the Apache License 2.0\n- [JACK], licensed under the GNU Lesser General Public License v2.1\n- [cxxopts] by Jarryd Beck, licensed under the MIT license\n- [fmidi] by Jean Pierre Cimalando, licensed under the Boost Software License 1.0\n- [libsamplerate], licensed under the BSD 2-Clause license\n\n\n[CONTRIBUTING]:          CONTRIBUTING.md\n[GOVERNANCE]:            GOVERNANCE.md\n[Abseil]:                https://abseil.io/\n[atomic_queue]:          https://github.com/max0x7ba/atomic_queue/\n[benchmark]:             https://github.com/google/benchmark/\n[Catch2]:                https://github.com/catchorg/Catch2/\n[filesystem]:            https://github.com/gulrak/filesystem/\n[Surge tuning]:          https://surge-synth-team.org/tuning-library/\n[pugixml]:               https://pugixml.org/\n[cephes]:                https://www.netlib.org/cephes/\n[cpuid]:                 https://github.com/steinwurf/cpuid/\n[dr_libs]:               https://github.com/mackron/dr_libs/\n[faust-libraries]:       https://github.com/grame-cncm/faustlibraries/\n[hiir]:                  http://ldesoras.free.fr/prod.html#src_hiir\n[KISS FFT]:              http://kissfft.sourceforge.net/\n[JACK]:                  https://github.com/jackaudio/jack2/\n[cxxopts]:               https://github.com/jarro2783/cxxopts/\n[fmidi]:                 https://github.com/jpcima/fmidi/\n[libsamplerate]:         http://www.mega-nerd.com/SRC/\n[libsndfile]:            http://www.mega-nerd.com/libsndfile/\n[our website]:           https://sfztools.github.io/sfizz/\n[our wiki]:              https://sfztools.github.io/sfizz-wiki/\n[releases]:              https://github.com/sfztools/sfizz/releases/\n[Carla]:                 https://kx.studio/Applications:Carla\n[Ardour]:                https://ardour.org/\n[API]:                   https://sfztools.github.io/sfizz/api/\n[Open Collective]:       https://opencollective.com/sfztools\n[build from source]:     https://sfztools.github.io/sfizz/development/build/\n[Discord Badge Image]:   https://img.shields.io/discord/587748534321807416?label=discord&logo=discord\n[build actions]:         https://github.com/sfztools/sfizz/actions/workflows/build.yml/badge.svg?branch=develop\n[build obs]:             https://build.opensuse.org/projects/home:sfztools:sfizz:develop/packages/sfizz/badge.svg\n[OBS]:                   https://software.opensuse.org//download.html?project=home%3Asfztools%3Asfizz&package=sfizz\n[SFZv1 Status Image]:    https://sfztools.github.io/assets/img/sfizz/badge_sfzv1.svg\n[SFZv2 Status Image]:    https://sfztools.github.io/assets/img/sfizz/badge_sfzv2.svg\n[ARIA Status Image]:     https://sfztools.github.io/assets/img/sfizz/badge_aria.svg\n\n[AppVeyor Build Status]: https://img.shields.io/appveyor/ci/sfztools/sfizz.svg?label=Windows&style=popout&logo=appveyor\n[Travis Build Status]:   https://img.shields.io/travis/com/sfztools/sfizz.svg?label=Linux&style=popout&logo=travis\n",
+    "characters": 6920,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/sfztools/sfizz/blob/f5c6e29f23b8057867c08e88f5f6ac6738baa30b/LICENSE",
+    "sha256": "21b2105196b4e6a769cebc2534f66852c8efad3e28dbd3bbd1cc3058fba89e7d",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2021-2023, sfizz contributors (detailed in AUTHORS.md) \nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1359,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "sfztools/sfizz",
+        "stars": 525,
+        "license": "BSD-2-Clause",
+        "language": "C++",
+        "unit_class": "component",
+        "reuse_value": 70,
+        "liftability": 90,
+        "fame_gap": -20,
+        "cat_slug": "media-processing-library",
+        "cat_name": "Media Processing / Codec Library",
+        "description": "SFZ parser and synth c++ library, providing a JACK standalone client"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

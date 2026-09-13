@@ -1,0 +1,155 @@
+{
+  "audit_id": "R062",
+  "requested_full_name": "beetbox/beets",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "beetbox/beets",
+  "html_url": "https://github.com/beetbox/beets",
+  "description": "music library manager and MusicBrainz tagger",
+  "stargazers_count": 15652,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 2107,
+  "open_issues_count": 711,
+  "topics": [
+    "cli",
+    "hacktoberfest",
+    "music",
+    "music-library",
+    "musicbrainz",
+    "python"
+  ],
+  "revision": "38669c880417b7733116245ee1c355e5c2c66038",
+  "last_commit": "2026-09-13T13:04:09Z",
+  "metadata_source": "https://api.github.com/repos/beetbox/beets",
+  "commit_source": "https://github.com/beetbox/beets/commit/38669c880417b7733116245ee1c355e5c2c66038",
+  "readme": {
+    "path": "README.rst",
+    "source_url": "https://github.com/beetbox/beets/blob/38669c880417b7733116245ee1c355e5c2c66038/README.rst",
+    "sha256": "282ade74d245edf7c545392d439ce7939229c17a848acfcccf924f733af56d92",
+    "text": ".. image:: https://img.shields.io/pypi/v/beets.svg\n    :target: https://pypi.python.org/pypi/beets\n\n.. image:: https://img.shields.io/codecov/c/github/beetbox/beets.svg\n    :target: https://app.codecov.io/github/beetbox/beets\n\n.. image:: https://img.shields.io/github/actions/workflow/status/beetbox/beets/ci.yaml\n    :target: https://github.com/beetbox/beets/actions\n\n.. image:: https://repology.org/badge/tiny-repos/beets.svg\n    :target: https://repology.org/project/beets/versions\n\nbeets\n=====\n\nBeets is the media library management system for obsessive music geeks.\n\nThe purpose of beets is to get your music collection right once and for all. It\ncatalogs your collection, automatically improving its metadata as it goes. It\nthen provides a suite of tools for manipulating and accessing your music.\n\nHere's an example of beets' brainy tag corrector doing its thing:\n\n::\n\n    $ beet import ~/music/ladytron\n    Tagging:\n        Ladytron - Witching Hour\n    (Similarity: 98.4%)\n     * Last One Standing      -> The Last One Standing\n     * Beauty                 -> Beauty*2\n     * White Light Generation -> Whitelightgenerator\n     * All the Way            -> All the Way...\n\nBecause beets is designed as a library, it can do almost anything you can\nimagine for your music collection. Via plugins_, beets becomes a panacea:\n\n- Fetch or calculate all the metadata you could possibly need: `album art`_,\n  lyrics_, genres_, tempos_, ReplayGain_ levels, or `acoustic fingerprints`_.\n- Get metadata from MusicBrainz_, Discogs_, and Beatport_. Or guess metadata\n  using songs' filenames or their acoustic fingerprints.\n- `Transcode audio`_ to any format you like.\n- Check your library for `duplicate tracks and albums`_ or for `albums that are\n  missing tracks`_.\n- Clean up crufty tags left behind by other, less-awesome tools.\n- Embed and extract album art from files' metadata.\n- Browse your music library graphically through a Web browser and play it in any\n  browser that supports `HTML5 Audio`_.\n- Analyze music files' metadata from the command line.\n- Listen to your library with a music player that speaks the MPD_ protocol and\n  works with a staggering variety of interfaces.\n\nIf beets doesn't do what you want yet, `writing your own plugin`_ is shockingly\nsimple if you know a little Python.\n\n.. _acoustic fingerprints: https://beets.readthedocs.org/page/plugins/chroma.html\n\n.. _album art: https://beets.readthedocs.org/page/plugins/fetchart.html\n\n.. _albums that are missing tracks: https://beets.readthedocs.org/page/plugins/missing.html\n\n.. _beatport: https://www.beatport.com\n\n.. _discogs: https://www.discogs.com/\n\n.. _duplicate tracks and albums: https://beets.readthedocs.org/page/plugins/duplicates.html\n\n.. _genres: https://beets.readthedocs.org/page/plugins/lastgenre.html\n\n.. _html5 audio: https://html.spec.whatwg.org/multipage/media.html#the-audio-element\n\n.. _lyrics: https://beets.readthedocs.org/page/plugins/lyrics.html\n\n.. _mpd: https://www.musicpd.org/\n\n.. _musicbrainz: https://musicbrainz.org/\n\n.. _musicbrainz music collection: https://musicbrainz.org/doc/Collections/\n\n.. _plugins: https://beets.readthedocs.org/page/plugins/\n\n.. _replaygain: https://beets.readthedocs.org/page/plugins/replaygain.html\n\n.. _tempos: https://beets.readthedocs.org/page/plugins/acousticbrainz.html\n\n.. _transcode audio: https://beets.readthedocs.org/page/plugins/convert.html\n\n.. _writing your own plugin: https://beets.readthedocs.org/page/dev/plugins/index.html\n\nInstall\n-------\n\nYou can install beets by typing ``pip install beets`` or directly from Github\n(see details here_). Beets has also been packaged in the `software\nrepositories`_ of several distributions. Check out the `Getting Started`_ guide\nfor more information.\n\n.. _getting started: https://beets.readthedocs.org/page/guides/main.html\n\n.. _here: https://beets.readthedocs.io/en/latest/faq.html#run-the-latest-source-version-of-beets\n\n.. _software repositories: https://repology.org/project/beets/versions\n\nContribute\n----------\n\nThank you for considering contributing to ``beets``! Whether you're a programmer\nor not, you should be able to find all the info you need at CONTRIBUTING.rst_.\n\n.. _contributing.rst: https://github.com/beetbox/beets/blob/master/CONTRIBUTING.rst\n\nRead More\n---------\n\nLearn more about beets at `its Web site`_. Follow `@b33ts`_ on Mastodon for news\nand updates.\n\n.. _@b33ts: https://fosstodon.org/@beets\n\n.. _its web site: https://beets.io/\n\nContact\n-------\n\n- Encountered a bug you'd like to report? Check out our `issue tracker`_!\n\n  - If your issue hasn't already been reported, please `open a new ticket`_ and\n    we'll be in touch with you shortly.\n  - If you'd like to vote on a feature/bug, simply give a :+1: on issues you'd\n    like to see prioritized over others.\n  - Need help/support, would like to start a discussion, have an idea for a new\n    feature, or would just like to introduce yourself to the team? Check out\n    `GitHub Discussions`_!\n\n.. _github discussions: https://github.com/beetbox/beets/discussions\n\n.. _issue tracker: https://github.com/beetbox/beets/issues\n\n.. _open a new ticket: https://github.com/beetbox/beets/issues/new/choose\n\nAuthors\n-------\n\nBeets is by `Adrian Sampson`_ with a supporting cast of thousands.\n\n.. _adrian sampson: https://www.cs.cornell.edu/~asampson/\n",
+    "characters": 5316,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/beetbox/beets/blob/38669c880417b7733116245ee1c355e5c2c66038/LICENSE",
+    "sha256": "69b9fa8fe9700714fc1f002aa6bfef097e5422372979195ab48956cd48e20aaf",
+    "text": "The MIT License\n\nCopyright (c) 2010-2016 Adrian Sampson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "characters": 1080,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "sampsyo",
+      "contributions": 4615
+    },
+    {
+      "login": "snejus",
+      "contributions": 1709
+    },
+    {
+      "login": "arsaboo",
+      "contributions": 529
+    },
+    {
+      "login": "JOJ0",
+      "contributions": 479
+    },
+    {
+      "login": "semohr",
+      "contributions": 442
+    },
+    {
+      "login": "Kraymer",
+      "contributions": 294
+    },
+    {
+      "login": "brunal",
+      "contributions": 276
+    },
+    {
+      "login": "wisp3rwind",
+      "contributions": 269
+    },
+    {
+      "login": "jackwilsdon",
+      "contributions": 161
+    },
+    {
+      "login": "dosoe",
+      "contributions": 153
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 4889,
+      "title": "convert: An invalid destination path can arise when auto-converting an item with missing metadata",
+      "state": "closed",
+      "created_at": "2023-08-31T05:37:43Z",
+      "updated_at": "2026-09-13T13:13:52Z",
+      "closed_at": "2026-09-13T13:13:52Z",
+      "comments": 6,
+      "html_url": "https://github.com/beetbox/beets/issues/4889"
+    },
+    {
+      "number": 6927,
+      "title": "mbcollection: 401 Unauthorized on beet mbupdate despite correctly configured credentials",
+      "state": "closed",
+      "created_at": "2026-08-11T16:39:03Z",
+      "updated_at": "2026-09-13T09:55:42Z",
+      "closed_at": "2026-08-11T16:58:53Z",
+      "comments": 1,
+      "html_url": "https://github.com/beetbox/beets/issues/6927"
+    },
+    {
+      "number": 7026,
+      "title": "False duplicate detection for distinct albums with identical artist and title",
+      "state": "open",
+      "created_at": "2026-09-13T01:33:57Z",
+      "updated_at": "2026-09-13T04:09:56Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/beetbox/beets/issues/7026"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "beetbox/beets",
+        "stars": 15307,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 70,
+        "liftability": 90,
+        "fame_gap": -20,
+        "cat_slug": "cli-utility",
+        "cat_name": "CLI Utilities",
+        "description": "music library manager and MusicBrainz tagger"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

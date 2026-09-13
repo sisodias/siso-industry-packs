@@ -1,0 +1,68 @@
+{
+  "audit_id": "R104",
+  "requested_full_name": "musicmetadata/territories",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "musicmetadata/territories",
+  "html_url": "https://github.com/musicmetadata/territories",
+  "description": "Simple library for dealing with territory structures used in music metadata",
+  "stargazers_count": 10,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 6,
+  "open_issues_count": 2,
+  "topics": [
+    "cisac",
+    "common-works-registration",
+    "countries",
+    "cwr",
+    "music-metadata",
+    "music-publishing",
+    "territory",
+    "tis"
+  ],
+  "revision": "5af69a257789300fd436e09581402521fa4377f3",
+  "last_commit": "2024-12-07T09:35:41Z",
+  "metadata_source": "https://api.github.com/repos/musicmetadata/territories",
+  "commit_source": "https://github.com/musicmetadata/territories/commit/5af69a257789300fd436e09581402521fa4377f3",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/musicmetadata/territories/blob/5af69a257789300fd436e09581402521fa4377f3/README.md",
+    "sha256": "3a27b6dfd40f35597185491af8548ab87e058b1b1066b5754d9365b786dac7ed",
+    "text": "# Music Metadata - Territories\n\n[![Build Status](https://travis-ci.com/musicmetadata/territories.svg?branch=master)](https://travis-ci.com/musicmetadata/territories)\n[![Coverage Status](https://coveralls.io/repos/github/musicmetadata/territories/badge.svg?branch=master)](https://coveralls.io/github/musicmetadata/territories?branch=master)\n![GitHub](https://img.shields.io/github/license/musicmetadata/territories)\n![PyPI](https://img.shields.io/pypi/v/music-metadata-territories)\n\nA simple library for dealing with territory hierarchies used in music \nmetadata, currently primarily focused on CISAC TIS.\n\n## Classes\n\nIt has only two classes:\n\n* `Territory` - the territory, e.g. World, Europe, Croatia\n* `TerritoryList` - this class makes including and excluding territories \nsimpler, it also splits territories down when needed\n\n### Territory manipulation\n\nWorld excluding USA results in a minimal list of included territories:\n\n```python\nfrom music_metadata.territories.territory import Territory\nfrom music_metadata.territories.territory_list import TerritoryList\n\nworld = Territory.get('2136')\nusa = Territory.get('US')\n\nl = TerritoryList()\nl.include(world)\nl.exclude(usa)\n\nfor t in sorted(l, key=lambda x: x.name):\n    print(f'{t.tis_n:0>4}', t.name)\n```\n\nResult:\n\n```\n2100 AFRICA\n2106 ASIA\n0124 CANADA\n2113 CENTRAL AMERICA\n2120 EUROPE\n0484 MEXICO\n2130 OCEANIA\n2132 SOUTH AMERICA\n2134 WEST INDIES\n```\n\nIt is simple to list all the countries as well:\n\n```python\nfor t in sorted(l.countries, key=lambda x: x.name):\n    print(f'{t.tis_a:0>4}', t.name)\n```\n\nResult:\n\n```\nAF AFGHANISTAN\nAL ALBANIA\nDZ ALGERIA\nAD ANDORRA\nAO ANGOLA\nAG ANTIGUA AND BARBUDA\nAR ARGENTINA\nAM ARMENIA\nAU AUSTRALIA\nAT AUSTRIA\n...\n\n```\nThe shorter version also works, yielding same results: \n```python\nfrom music_metadata.territories.territory_list import TerritoryList\n\nl = TerritoryList()\nl.include('2136')  # WORLD\nl.exclude('US')  # USA\n\nfor t in sorted(l, key=lambda x: x.name):\n    print(f'{t.tis_n:0>4}', t.name)\n```\n\nOne can check if a country is finally included in the list:\n\n```python\nusa in l\n```\n\n```Result:\nFalse\n```\n\nWorks also with territories deeper in the structure, also with codes:\n\n```python\n'hr' in l\n```\n\n```Result:\nTrue\n```\n\n### Share manipulation\n\nShare calculations are also possible, by using a second argument to \n``TerritoryList.include`` and ``TerritoryList.add``. This second argument can\nbe any objects that allows adding. \n\n```python\nfrom music_metadata.territories.territory import Territory\nfrom music_metadata.territories.territory_list import TerritoryList\n\nworld = Territory.get('2136')\nusa = Territory.get('US')\ncanada = Territory.get('CA')\n\nl = TerritoryList()\nl.include(world, 25)\nl.add(usa, 25)\n```\n\nSo, we there is 25 for the whole world and additional 25 for the US.\nIf we ask for values for the US and Canada:\n\n```python\nl[usa], l[canada]\n```\n\nWe get 50 for the US and 25 for Canada.\n\n```Result:\n(50, 25)\n```\n\nAny numeric type will work out of the box,\ncustom ``__add__`` method might be required for complex objects. Here is\nan example for a list of numeric fields:\n\n```python\nclass Shares(list):\n    def __add__(self, other):\n        return Shares([self[i] + other[i] for i in range(len(self))])   \n```\n\n## Compressing output\n\nLong lists can be trimmed, both if they have values and if they do not.\nOnly territories with the same object will be compressed. Consider this:\n\n```python\nfrom music_metadata.territories.territory_list import TerritoryList\n\nl = TerritoryList()\nl.include('2136', 25)\nl.exclude('HR')\nl.add('US', 25)  # US is now at 50\nl.include('HR', 25)  # same as it used to be\n\nfor t, v in l.items():\n    print(f'{t.name}: {v}')\n```\n\n```Result:\nASIA: 25\nOCEANIA: 25\nAFRICA: 25\nMALTA: 25\nICELAND: 25\n... 30 territories cut out ...\nMEXICO: 25\nUNITED STATES: 50\nCROATIA: 25\n```\n\nBut, if we compress:\n\n```python\nl.compress()\n\nfor t, v in l.items():\n    print(f'{t.name}: {v}')\n```\n\n```Result:\nCANADA: 25\nMEXICO: 25\nUNITED STATES: 50\nAFRICA: 25\nASIA: 25\nEUROPE: 25\nOCEANIA: 25\nWEST INDIES: 25\nSOUTH AMERICA: 25\nCENTRAL AMERICA: 25\n```\n",
+    "characters": 4066,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/musicmetadata/territories/blob/5af69a257789300fd436e09581402521fa4377f3/LICENSE",
+    "sha256": "89c5460756e10432bb71b17b5f5446807baccda3a575fea9f1d9f1a5017d8f3a",
+    "text": "MIT License\n\nCopyright (c) 2019 Matija Kolarić\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1072,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

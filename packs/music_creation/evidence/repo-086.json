@@ -1,0 +1,124 @@
+{
+  "audit_id": "R086",
+  "requested_full_name": "bitwig/dawproject",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "bitwig/dawproject",
+  "html_url": "https://github.com/bitwig/dawproject",
+  "description": "Open exchange format for DAWs",
+  "stargazers_count": 1027,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 38,
+  "open_issues_count": 40,
+  "topics": [],
+  "revision": "ee4dcdde75940f30e14e55401a26955a58b8322b",
+  "last_commit": "2025-07-12T10:16:49Z",
+  "metadata_source": "https://api.github.com/repos/bitwig/dawproject",
+  "commit_source": "https://github.com/bitwig/dawproject/commit/ee4dcdde75940f30e14e55401a26955a58b8322b",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/bitwig/dawproject/blob/ee4dcdde75940f30e14e55401a26955a58b8322b/README.md",
+    "sha256": "d2a501c0315f128deff7e367ed1ee68b3ec0ef88f3f36d0cd4ca2d2c03f2a8f0",
+    "text": "# DAWproject\n\nOpen exchange format for user data between Digital Audio Workstations (DAWs)\n\n## Motivation\n\nThe DAWproject format provides a (vendor-agnostic) way of transferring user data between different music applications (DAWs).\n\nCurrently, there is no file-format which is purpose-built for this task.\nStandard MIDI files can represent note data, but it is often a lower-level representation (no ramps) of data than what the DAW uses internally, which forces consolidation on export. AAF only covers audio and doesn't have any concept of musical-time, which limits it to post-audio workflows . Most plug-ins do allow you to save presets to a shared location, but this has to be done for each instance. What most users end up doing is just exporting audio as stems.\n\nThe aim of this project is to export all translatable project data (audio/note/automation/plug-in) along with the structure surrounding it into a single DAWproject file.\n\nThe table below aims to explain the scope format from a music-production perspective and how it compares to other methods of data transfer.\n\n|                                 |                                                               DAWproject                                                               |                      Standard MIDI Files                      |                    Advanced Authoring Format (AAF)                    |\n|---------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------:|:---------------------------------------------------------------------:|\n| Intended Use                    |                                                            Music Production                                                            |                        MIDI Sequencing                        |                         Video Post-Production                         |\n| Time Format<br/>(seconds/beats) |                                                   Beats and seconds can be combined                                                    |                             Beats                             |                                Seconds                                |\n| Audio                           |                  Audio<br/>Events/Clips<br/>Fades<br/>Crossfades<br/>Amplitude<br/>Pan<br/>Time Warping<br/>Transpose                  |                               -                               | Audio<br/>Events/Clips<br/>Fades<br/>Crossfades<br/>Amplitude<br/>Pan |\n| Notes                           |                                                       Notes<br/>Note Expressions                                                       |                             Notes                             |                                   -                                   |\n| Automation                      | Tempo<br/>Time Signature<br/>MIDI Messages<br/>Volume<br/>Pan<br/>Mute<br/>Sends<br/>Plug-in Parameters<br/>Built-in Device Parameters | Tempo<br/>Time Signature<br/>MIDI Messages<br/>SysEx Messages |              Volume<br/>Pan<br/>Video Related Parameters              |\n| Plug-ins                        |                                       Stores full plug-in state<br/>and automation of parameters                                       |                               -                               |                                   -                                   |\n| Built-in Devices                |                                 Generic EQ<br/>Generic Compressor<br/>Generic Gate<br/>Generic Limiter                                 |                               -                               |                                   -                                   |\n| Clip Launcher                   |                                                            Clips<br/>Scenes                                                            |                               -                               |                                   -                                   |\n\n## Status\n\nThe format is version 1.0 and is stable. \n\n## Goals\n\n* Package all user data of a project/song into a single file.\n  * Audio timeline data\n  * Note timeline data\n  * Note expression data\n  * Automation timeline data\n  * Audio data (embedded or referenced)\n  * Plug-in states (always embedded)\n* The format should be able to preserve as much user created data as feasible.\n* The format should be able to express the track and timeline structures of the exporting DAW as is, leaving it up to the importer to use this data and flatten it as needed.\n* Simple to implement\n* Built upon established open standards\n* Language agnostic, no special dependencies\n* Open & free\n\n## Non-goals\n\n* Being the native file-format for a DAW\n* Optimal performance (like a binary format could provide)\n* Storing low-level MIDI events directly (but rather relying on higher level abstractions)\n* Storing non-session data (view settings, preferences) \n\n## Format Specification\n\n* File Extension: .dawproject\n* Container: ZIP\n* Format: XML (project.xml, metadata.xml)\n* Text encoding: UTF-8\n* The exporting DAW is free to choose the directory structure it wants for media and plug-in files.\n\n* [DAWproject XML Reference](https://htmlpreview.github.io/?https://github.com/bitwig/dawproject/blob/main/Reference.html)\n* [Project XML Schema](Project.xsd)\n* [MetaData XML Schema](MetaData.xsd)\n\n## Language Support\n\nDAWproject is based on plain XML/ZIP and can be used with any programming language that can parse those.\n\nThe DOM of DAWproject is defined by a set of Java classes which have XML-related annotations and HTML-induced Javadoc comments.\nThose are used (via reflection) to generate XML Documentation and Schemas. Potentially, the same approach could be used to generate code for other languages (contributions welcome).\n\n## Building the Library, Documentation and Tests\n\nRequires Java Runtime version 16 or later.\n\nTo build (using Gradle):\n\n```\n./gradlew build\n```\n\n## Example project\n\nThe exporting application is free to structure tracks and timelines in a way that fits its internal model.\nThe choice is left to the importing application to either use the level of structure provided (if applicable) or to flatten/convert it to match its model. \n\nAs an example, here's the project.xml of a simple file saved in Bitwig Studio 5.0 with one instrument track and one audio track. As the audio clips in Bitwig Studio are themselves a timeline of audio events, you will notice that there are two levels of <Clips> elements, id25 representing the clip timeline on the arrangement, and id26 representing the  audio events inside the clip.\n\n```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Project version=\"1.0\">\n  <Application name=\"Bitwig Studio\" version=\"5.0\"/>\n  <Transport>\n    <Tempo max=\"666.000000\" min=\"20.000000\" unit=\"bpm\" value=\"149.000000\" id=\"id0\" name=\"Tempo\"/>\n    <TimeSignature denominator=\"4\" numerator=\"4\" id=\"id1\"/>\n  </Transport>\n  <Structure>\n    <Track contentType=\"notes\" loaded=\"true\" id=\"id2\" name=\"Bass\" color=\"#a2eabf\">\n      <Channel audioChannels=\"2\" destination=\"id15\" role=\"regular\" solo=\"false\" id=\"id3\">\n        <Devices>\n          <ClapPlugin deviceID=\"org.surge-synth-team.surge-xt\" deviceName=\"Surge XT\" deviceRole=\"instrument\" loaded=\"true\" id=\"id7\" name=\"Surge XT\">\n            <Parameters/>\n            <Enabled value=\"true\" id=\"id8\" name=\"On/Off\"/>\n            <State path=\"plugins/d19b1f6e-bbb6-42fe-a6c9-54b41d97a05d.clap-preset\"/>\n          </ClapPlugin>\n        </Devices>\n        <Mute value=\"false\" id=\"id6\" name=\"Mute\"/>\n        <Pan max=\"1.000000\" min=\"0.000000\" unit=\"normalized\" value=\"0.500000\" id=\"id5\" name=\"Pan\"/>\n        <Volume max=\"2.000000\" min=\"0.000000\" unit=\"linear\" value=\"0.659140\" id=\"id4\" name=\"Volume\"/>\n      </Channel>\n    </Track>\n    <Track contentType=\"audio\" loaded=\"true\" id=\"id9\" name=\"Drumloop\" color=\"#b53bba\">\n      <Channel audioChannels=\"2\" destination=\"id15\" role=\"regular\" solo=\"false\" id=\"id10\">\n        <Mute value=\"false\" id=\"id13\" name=\"Mute\"/>\n        <Pan max=\"1.000000\" min=\"0.000000\" unit=\"normalized\" value=\"0.500000\" id=\"id12\" name=\"Pan\"/>\n        <Volume max=\"2.000000\" min=\"0.000000\" unit=\"linear\" value=\"0.177125\" id=\"id11\" name=\"Volume\"/>\n      </Channel>\n    </Track>\n    <Track contentType=\"audio notes\" loaded=\"true\" id=\"id14\" name=\"Master\">\n      <Channel audioChannels=\"2\" role=\"master\" solo=\"false\" id=\"id15\">\n        <Mute value=\"false\" id=\"id18\" name=\"Mute\"/>\n        <Pan max=\"1.000000\" min=\"0.000000\" unit=\"normalized\" value=\"0.500000\" id=\"id17\" name=\"Pan\"/>\n        <Volume max=\"2.000000\" min=\"0.000000\" unit=\"linear\" value=\"1.000000\" id=\"id16\" name=\"Volume\"/>\n      </Channel>\n    </Track>\n  </Structure>\n  <Arrangement id=\"id19\">\n    <Lanes timeUnit=\"beats\" id=\"id20\">\n      <Lanes track=\"id2\" id=\"id21\">\n        <Clips id=\"id22\">\n          <Clip time=\"0.0\" duration=\"8.0\" playStart=\"0.0\">\n            <Notes id=\"id23\">\n              <Note time=\"0.000000\" duration=\"0.250000\" channel=\"0\" key=\"65\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"1.000000\" duration=\"0.250000\" channel=\"0\" key=\"65\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"4.000000\" duration=\"0.250000\" channel=\"0\" key=\"65\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"5.000000\" duration=\"0.250000\" channel=\"0\" key=\"65\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"0.500000\" duration=\"0.250000\" channel=\"0\" key=\"64\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"4.500000\" duration=\"0.250000\" channel=\"0\" key=\"64\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"1.500000\" duration=\"2.500000\" channel=\"0\" key=\"53\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"5.500000\" duration=\"0.250000\" channel=\"0\" key=\"53\" vel=\"0.787402\" rel=\"0.787402\"/>\n              <Note time=\"6.000000\" duration=\"2.000000\" channel=\"0\" key=\"53\" vel=\"0.787402\" rel=\"0.787402\"/>\n            </Notes>\n          </Clip>\n        </Clips>\n      </Lanes>\n      <Lanes track=\"id9\" id=\"id24\">\n        <Clips id=\"id25\">\n          <Clip time=\"0.0\" duration=\"8.00003433227539\" playStart=\"0.0\" loopStart=\"0.0\" loopEnd=\"8.00003433227539\" fadeTimeUnit=\"beats\" fadeInTime=\"0.0\" fadeOutTime=\"0.0\" name=\"Drumfunk3 170bpm\">\n            <Clips id=\"id26\">\n              <Clip time=\"0.0\" duration=\"8.00003433227539\" contentTimeUnit=\"beats\" playStart=\"0.0\" fadeTimeUnit=\"beats\" fadeInTime=\"0.0\" fadeOutTime=\"0.0\">\n                <Warps contentTimeUnit=\"seconds\" timeUnit=\"beats\" id=\"id28\">\n                  <Audio algorithm=\"stretch\" channels=\"2\" duration=\"2.823541666666667\" sampleRate=\"48000\" id=\"id27\">\n                    <File path=\"audio/Drumfunk3 170bpm.wav\"/>\n                  </Audio>\n                  <Warp time=\"0.0\" contentTime=\"0.0\"/>\n                  <Warp time=\"8.00003433227539\" contentTime=\"2.823541666666667\"/>\n                </Warps>\n              </Clip>\n            </Clips>\n          </Clip>\n        </Clips>\n      </Lanes>\n      <Lanes track=\"id14\" id=\"id29\">\n        <Clips id=\"id30\"/>\n      </Lanes>\n    </Lanes>\n  </Arrangement>\n  <Scenes/>\n</Project>\n```\n\n## DAW Support\n\nDAWproject 1.0 is currently supported by the following DAWs\n\n* Bitwig Studio 5.0.9\n* PreSonus Studio One 6.5\n* Steinberg Cubase 14\n* Steinberg Cubasis 3.7.1\n* Steinberg VST Live 2.2\n* n-Track Studio v10.2.2\n\n## Converters\n\nThere are various tools that can convert from and to DAWproject files\n\n* https://github.com/SatyrDiamond/DawVert: various formats\n* https://github.com/git-moss/ProjectConverter: Cockos Reaper\n",
+    "characters": 11709,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/bitwig/dawproject/blob/ee4dcdde75940f30e14e55401a26955a58b8322b/LICENSE",
+    "sha256": "3aaee5877c9df985f935e40f42f4452182df9e8a8308dcc6cf1a2341458cdfeb",
+    "text": "MIT License\n\nCopyright (c) 2020 Bitwig\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1063,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": 0,
+  "contributors_top10": [
+    {
+      "login": "kurasu",
+      "contributions": 137
+    },
+    {
+      "login": "git-moss",
+      "contributions": 6
+    },
+    {
+      "login": "abique",
+      "contributions": 1
+    },
+    {
+      "login": "NickJAllen",
+      "contributions": 1
+    },
+    {
+      "login": "ensonic",
+      "contributions": 1
+    },
+    {
+      "login": "dependabot[bot]",
+      "contributions": 1
+    },
+    {
+      "login": "offa",
+      "contributions": 1
+    },
+    {
+      "login": "speakk",
+      "contributions": 1
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 40,
+      "title": "Version control for .dawproject files",
+      "state": "open",
+      "created_at": "2023-01-28T12:57:42Z",
+      "updated_at": "2026-09-09T13:46:49Z",
+      "closed_at": null,
+      "comments": 5,
+      "html_url": "https://github.com/bitwig/dawproject/issues/40"
+    },
+    {
+      "number": 104,
+      "title": "MAGDA now supports DAWproject",
+      "state": "open",
+      "created_at": "2026-06-24T13:18:49Z",
+      "updated_at": "2026-06-24T13:18:49Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/bitwig/dawproject/issues/104"
+    },
+    {
+      "number": 103,
+      "title": "Deploy to Bitwig repo",
+      "state": "open",
+      "created_at": "2026-04-18T15:45:09Z",
+      "updated_at": "2026-04-18T15:45:09Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/bitwig/dawproject/issues/103"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

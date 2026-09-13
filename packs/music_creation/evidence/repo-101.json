@@ -1,0 +1,107 @@
+{
+  "audit_id": "R101",
+  "requested_full_name": "MediaArea/BWFMetaEdit",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "MediaArea/BWFMetaEdit",
+  "html_url": "https://github.com/MediaArea/BWFMetaEdit",
+  "description": "WAV/BWF metadata editor",
+  "stargazers_count": 69,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 19,
+  "open_issues_count": 26,
+  "topics": [],
+  "revision": "e399e9e88a3d5fe5a8d27857fee1c288bd6e1221",
+  "last_commit": "2026-09-04T22:01:09Z",
+  "metadata_source": "https://api.github.com/repos/MediaArea/BWFMetaEdit",
+  "commit_source": "https://github.com/MediaArea/BWFMetaEdit/commit/e399e9e88a3d5fe5a8d27857fee1c288bd6e1221",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/MediaArea/BWFMetaEdit/blob/e399e9e88a3d5fe5a8d27857fee1c288bd6e1221/README.md",
+    "sha256": "bdbd2a69e24e5059216d972dab78ccdff0f38ce93b963626df7af36b3850f295",
+    "text": "# BWFMetaEdit README [![Build Status](https://travis-ci.org/MediaArea/BWFMetaEdit.svg?branch=master)](https://travis-ci.org/MediaArea/BWFMetaEdit)\n\nBWF MetaEdit is a tool that supports embedding, validating, and exporting of metadata in Broadcast WAVE Format (BWF) files. It supports the [FADGI Broadcast WAVE Metadata Embedding Guidelines](http://www.digitizationguidelines.gov/guidelines/digitize-embedding.html).\n\n# Download\n[DownLoad BWF MetaEdit](https://mediaarea.net/BWFMetaEdit/Download)\n\n# BWF MetaEdit features\n\n* Import, edit, embed, and export specified metadata elements in WAVE audio files\n* Export technical metadata from Format Chunks and minimal metadata from bext and INFO chunks as comma-separated values and/or XML, across a set of files or from individual files\n* Evaluate, verify and embed MD5 checksums, as applied to the WAVE file’s data chunk (audio bitstream only)\n* Enforce the guideline (above) developed by the Federal Agencies Audio-Visual Working Group, as well as specifications from the European Broadcasting Union (EBU), Microsoft, and IBM\n* Generate reports that show errors in the construction of WAVE files\n\n# Explanation of BWF MetaEdit Views and Documents\n\n* [TECH](https://mediaarea.net/BWFMetaEdit/tech_view_help)\n* [CORE](https://mediaarea.net/BWFMetaEdit/core_doc_help)\n* [TRACE](https://mediaarea.net/BWFMetaEdit/trace)\n* [Explanation of Errors and Warnings](https://mediaarea.net/BWFMetaEdit/errors)\n\n# Metadata Standards\n\n* [Definitions and Use of BEXT metadata](https://mediaarea.net/BWFMetaEdit/bext)\n* [Definitions and Use of LIST-INFO metadata](https://mediaarea.net/BWFMetaEdit/listinfo)\n* [XML chunks](https://mediaarea.net/BWFMetaEdit/xml_chunks)\n\n# Use\n\n* [Preferences](https://mediaarea.net/BWFMetaEdit/options)\n* [Use of Audio Only Checksums](https://mediaarea.net/BWFMetaEdit/md5)\n* [Application of Validation Rules](https://mediaarea.net/BWFMetaEdit/validation_rules_help)\n* [Suggested Workflows](https://mediaarea.net/BWFMetaEdit/workflows)\n\n# How to build BWFMetaEdit\n\n## Build under Unix (macOS and Linux)\n\n### Dependencies under macOS\n\n\n*CLI and GUI dependencies*\n\n* Xcode\n\n*GUI only dependencies*\n\n* Qt (in the PATH)\n\n\n### Dependencies under Linux\n\n*Build tools*\n\n* git\n* automake\n* autoconf\n* libtool\n* pkgconfig\n* make\n* g++\n\n*CLI and GUI dependencies*\n\n* zlib\n\n*GUI only dependencies*\n\n* qt\n\n#### Ubuntu\n\n*Build tools and CLI/GUI dependencies*\n\n```sh\napt-get install git automake autoconf libtool pkg-config make g++ zlib1g-dev\n```\n\n*GUI only dependencies*\n\n```sh\napt-get install qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev libqt5svg5-dev\n```\n\n#### Fedora\n\n*Build tools and CLI/GUI dependencies*\n\n```sh\nsudo dnf install git automake autoconf libtool pkgconfig make gcc-c++ zlib-devel\n```\n\n*GUI only dependencies*\n\n```sh\nsudo dnf install qt5-qtbase-devel qt5-qtquickcontrols2-devel qt5-qtsvg-devel\n```\n\n### Build BWF MetaEdit CLI\n\n\nWhen you have done all the prerequisite for your configuration, then build BWF MetaEdit. We start with the CLI.\n\n```sh\ngit clone https://github.com/MediaArea/BWFMetaEdit.git\ncd BWFMetaEdit/Project/GNU/CLI\n./autogen.sh\n./configure\nmake\n```\n\n### Build BWF MetaEdit GUI\n\nIf you have already build the CLI, no need to run git twice. In fact, if you re-run git with an existing BWF MetaEdit directory, git will complain and exit.\n\nTo compile BWF MetaEdit GUI under macOS and Linux:\n\n```sh\ngit clone https://github.com/MediaArea/BWFMetaEdit.git\ncd BWFMetaEdit/Project/QtCreator\n./prepare\nmake\n```\n\n## Build under Windows\n\n*CLI and GUI dependencies*\n\n* Microsoft Visual Studio with the Windows 8.1 SDK and the Git plugin (in the PATH)\n\n*GUI only dependencies*\n\n* Qt (in The PATH)\n\n### Build BWF MetaEdit CLI\n\n\nWhen you have done all the prerequisite for your configuration, then build BWF MetaEdit. We start with the CLI.\n\n```bat\ngit clone https://github.com/MediaArea/BWFMetaEdit.git\ndevenv BWFMetaEdit\\Project\\MSVC2022\\CLI\\BWF_MetaEdit_CLI.vcxproj /upgrade\nMSBuild BWFMetaEdit\\Project\\MSVC2022\\CLI\\BWF_MetaEdit_CLI.vcxproj\n```\n\n### Build BWF MetaEdit GUI\n\nIf you have already build the CLI, no need to run git twice. In fact, if you re-run git with an existing BWF MetaEdit directory, git will complain and exit.\n\nTo compile BWF MetaEdit GUI under macOS and Linux:\n\n```bat\ngit clone https://github.com/MediaArea/BWFMetaEdit.git\ncd BWFMetaEdit\\Project\\QtCreator\nqmake\nnmake\n```\n\n# License\nIt is [Open-Source](https://en.wikipedia.org/wiki/Open_source) software which means that end users and developers have freedom to study, to improve and to redistribute the program ([Public domain](https://mediaarea.net/BWFMetaEdit/License) for the code developed by us).\n",
+    "characters": 4663,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "error": "standard_paths_not_found; not proof that no licence exists"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 29,
+  "contributors_top10": [
+    {
+      "login": "g-maxime",
+      "contributions": 254
+    },
+    {
+      "login": "JeromeMartinez",
+      "contributions": 234
+    },
+    {
+      "login": "dericed",
+      "contributions": 10
+    },
+    {
+      "login": "MediaAreaCI",
+      "contributions": 9
+    },
+    {
+      "login": "privatezero",
+      "contributions": 3
+    },
+    {
+      "login": "ablwr",
+      "contributions": 2
+    },
+    {
+      "login": "GuillaumeRoques",
+      "contributions": 2
+    },
+    {
+      "login": "WolfHimself",
+      "contributions": 1
+    },
+    {
+      "login": "X-Raym",
+      "contributions": 1
+    },
+    {
+      "login": "bturkus",
+      "contributions": 1
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 261,
+      "title": "[question] split file according to cue sheet",
+      "state": "open",
+      "created_at": "2023-06-16T16:32:51Z",
+      "updated_at": "2026-06-16T16:07:35Z",
+      "closed_at": null,
+      "comments": 4,
+      "html_url": "https://github.com/MediaArea/BWFMetaEdit/issues/261"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

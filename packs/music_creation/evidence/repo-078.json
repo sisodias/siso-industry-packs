@@ -1,0 +1,59 @@
+{
+  "audit_id": "R078",
+  "requested_full_name": "thestk/rtmidi",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "thestk/rtmidi",
+  "html_url": "https://github.com/thestk/rtmidi",
+  "description": "A set of C++ classes that provide a common API for realtime MIDI input/output across Linux (ALSA & JACK), Macintosh OS X (CoreMIDI) and Windows (Multimedia)",
+  "stargazers_count": 1205,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 305,
+  "open_issues_count": 88,
+  "topics": [],
+  "revision": "a3233c22949342f6697681e2cf2403e27fcf0c9e",
+  "last_commit": "2025-11-27T14:24:13Z",
+  "metadata_source": "https://api.github.com/repos/thestk/rtmidi",
+  "commit_source": "https://github.com/thestk/rtmidi/commit/a3233c22949342f6697681e2cf2403e27fcf0c9e",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/thestk/rtmidi/blob/a3233c22949342f6697681e2cf2403e27fcf0c9e/README.md",
+    "sha256": "0f51bdcbd2042c2aec5cfbbbaa0c93221901dcad667b4ba954485b8c06286eca",
+    "text": "# RtMidi\n\n![Build Status](https://github.com/thestk/rtmidi/actions/workflows/ci.yml/badge.svg)\n[![Conan Center](https://shields.io/conan/v/rtmidi)](https://conan.io/center/rtmidi)\n\nA set of C++ classes that provide a common API for realtime MIDI input/output across Linux (ALSA & JACK), Macintosh OS X (CoreMIDI & JACK), Windows (Multimedia Library & UWP), Web MIDI, iOS and Android.\n\nBy Gary P. Scavone, 2003-2023.\n\nThis distribution of RtMidi contains the following:\n\n- `doc`:      RtMidi documentation (also online at https://caml.music.mcgill.ca/~gary/rtmidi/)\n- `tests`:    example RtMidi programs\n\nOn Unix systems, type `./configure` in the top level directory, then `make` in the `tests/` directory to compile the test programs.  In Windows, open the Visual C++ workspace file located in the `tests/` directory.\n\nIf you checked out the code from git, please run `./autogen.sh` before `./configure`.\n\n## Overview\n\nRtMidi is a set of C++ classes (`RtMidiIn`, `RtMidiOut`, and API specific classes) that provide a common API (Application Programming Interface) for realtime MIDI input/output across Linux (ALSA, JACK), Macintosh OS X (CoreMIDI, JACK), and Windows (Multimedia Library) operating systems.  RtMidi significantly simplifies the process of interacting with computer MIDI hardware and software.  It was designed with the following goals:\n\n  - object oriented C++ design\n  - simple, common API across all supported platforms\n  - only one header and one source file for easy inclusion in programming projects\n  - MIDI device enumeration\n\nMIDI input and output functionality are separated into two classes, `RtMidiIn` and `RtMidiOut`.  Each class instance supports only a single MIDI connection.  RtMidi does not provide timing functionality (i.e., output messages are sent immediately).  Input messages are timestamped with delta times in seconds (via a `double` floating point type).  MIDI data is passed to the user as raw bytes using an `std::vector<unsigned char>`.\n\nRtMidi is also offered as a module, which is enabled with `RTMIDI_BUILD_MODULES`, and is accessed with `import rt.midi;`. Namespaces are implicitly imported (unless disabled with `RTMIDI_USE_NAMESPACE`), so classes can be accessed through namespace `rt::midi` or through the global namespace (for example, `rt::midi::MidiApi` and `::MidiApi` are both valid).\n\n## Windows\n\nIn some cases, for example to use RtMidi with GS Synth, it may be necessary for your program to call `CoInitializeEx` and `CoUninitialize` on entry to and exit from the thread that uses RtMidi.\n\n## Further reading\n\nFor complete documentation on RtMidi, see the `doc` directory of the distribution or surf to https://caml.music.mcgill.ca/~gary/rtmidi/.\n\n## Legal and ethical\n\nThe RtMidi license is similar to the MIT License, with the added *feature* that modifications be sent to the developer.  Please see [LICENSE](LICENSE).\n",
+    "characters": 2883,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/thestk/rtmidi/blob/a3233c22949342f6697681e2cf2403e27fcf0c9e/LICENSE",
+    "sha256": "7fa091d9c1aa492ebfcafa9f919d27bbce61e4f048ece2dfc3b7f93181e9e364",
+    "text": "\nRtMidi: realtime MIDI i/o C++ classes\nCopyright (c) 2003-2023 Gary P. Scavone\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation files\n(the \"Software\"), to deal in the Software without restriction,\nincluding without limitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of the Software,\nand to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nAny person wishing to distribute modifications to the Software is\nasked to send the modifications to the original developer so that\nthey can be incorporated into the canonical version.  This is,\nhowever, not a binding provision of this license.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR\nANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF\nCONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1349,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

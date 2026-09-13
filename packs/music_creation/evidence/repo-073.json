@@ -1,0 +1,124 @@
+{
+  "audit_id": "R073",
+  "requested_full_name": "cuthbertLab/music21",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "cuthbertLab/music21",
+  "html_url": "https://github.com/cuthbertLab/music21",
+  "description": "music21: a Toolkit for Computer-Aided Musical Analysis and Computational Musicology",
+  "stargazers_count": 2582,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "bsd-3-clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://api.github.com/licenses/bsd-3-clause",
+    "node_id": "MDc6TGljZW5zZTU="
+  },
+  "forks_count": 453,
+  "open_issues_count": 153,
+  "topics": [],
+  "revision": "ac6cf27258cbbda118f55470f41adb7a84a6f41d",
+  "last_commit": "2026-09-11T02:46:11Z",
+  "metadata_source": "https://api.github.com/repos/cuthbertLab/music21",
+  "commit_source": "https://github.com/cuthbertLab/music21/commit/ac6cf27258cbbda118f55470f41adb7a84a6f41d",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/cuthbertLab/music21/blob/ac6cf27258cbbda118f55470f41adb7a84a6f41d/README.md",
+    "sha256": "5a60a3b9d713320faa75f56caf2103bb9d0cf21b36d73bcc3d3dec56a1f540de",
+    "text": "# music21 #\n\n`music21` -- A Toolkit for Computer-Aided Musical Analysis and \nComputational Musicology\n\nCopyright © 2006-2026 [Michael Scott Asato Cuthbert](http://www.trecento.com)\n\nReleased under the BSD (3-clause) license. See LICENSE and below.\n\nFor more information, visit:\nhttps://www.music21.org/music21docs/\n\nTo try it out, visit:\nhttps://tinyurl.com/m21colab (run all to set up an environment for the latest release)\n\nAnd to install, see:\nhttps://www.music21.org/music21docs/usersGuide/usersGuide_01_installing.html\n\n`Music21` runs on Python 3.12+.  (Use music21 version 4 on Python 2 or Py3.4, v5\non Py3.5, v6 on Py3.6, v7 on Py3.7, v8 on Py3.8/Py3.9, v9 on Py3.10, and v10 on Py3.11)\n\nSince v9, `music21` has supported at least the last two released versions of Python,\nbut rarely more.  We do, however, try to keep supporting whatever (often older)\nversion of Python that Google Colab runs on (as of 2026, that is Python 3.12).\n\n[![Build Status](https://github.com/cuthbertLab/music21/workflows/maincheck/badge.svg)](https://github.com/cuthbertLab/music21)\n[![Coverage Status](https://coveralls.io/repos/github/cuthbertLab/music21/badge.svg?branch=master)](https://coveralls.io/github/cuthbertLab/music21?branch=master)\n\n## Documentation ##\n\n[User's Guide](https://www.music21.org/music21docs/usersGuide/index.html)\n\n[Module Documentation](https://www.music21.org/music21docs/moduleReference/index.html)\n\n## Mailing list ##\n\nSee: https://groups.google.com/forum/#!forum/music21list\n\n## Contributing Guide ##\n\n[Contributing Guide](CONTRIBUTING.md)\n\nPlease note the required AI declarations there.  The world is changing fast, so please review it from time to time for recent changes.\n\n## Community Code of Conduct<a name=\"community-code-of-conduct\"></a> ##\n\n`Music21` encourages contributions, discussions, and usage from all people interested in\nmusic and computers. This encouragement extends to all people regardless of (among other aspects)\ngender, race, sexual orientation, disability, religion, appearance, veteran status,\ngender identity, socioeconomic status, or nationality.\n\nMembers of the community will strive to be friendly, patient, and welcoming, especially of\nviewpoints and experiences different from our own. We reject harassment and contributions\n(in mail, comments, or code) that belittle individuals or groups of people.\n\nWe ask all members of the community to be mindful particularly about assumptions of the\ngender of users (including using correct pronouns in comments and code). We recognize that members\nsometimes make mistakes and will, in general, accept sincere regrets for such cases.\nBlatant or repeated violations of the code will result in the removal of the\ncontributor’s participation in the community.\n\nThe maintainers of `music21` and associated sites will commit themselves to enforcing\nthis code of conduct. Users who notice violations, including instances of abuse,\nharassment, or otherwise unacceptable behavior are requested to contact \nmichael.asato.cuthbert@gmail.com.\nMaintainers will respect confidentiality with regard to reports.\n\n## Acknowledgements ##\n\nThe early development of `music21` was supported by\nthe generosity of the Seaver Institute and the\nNational Endowment for the Humanities, along with MIT's Music and Theater Arts Section\nand the School of Humanities, Arts, and Social Sciences.\n\n## License Coverage and Other/Prior Licenses ##\n\nMusic21 is Open-Source Software released under the BSD (3-clause) license.\nEssentially, it's free and you can do with it what you'd like as long as you\nkeep the LICENSE file and copyright statement.\n\nThe license applies to all code files that are new to music21 along with\ndocumentation. Externally provided software (including the MIT-licensed \nLilypond/MusicXML test Suite) may have other licenses.  The encoded\nmusical scores in the corpus have their own copyrights and licenses. They\nunderlying music is believed to be in the public domain in the US, EU, and\nCanada (and most of the world) and the encodings are also either public domain\nor used by permission. For those needing a strict BSD-license of all parts of\nthe music21 system, a no-corpus version of `music21` is available also on GitHub\nor from the FreeBSD repo.\n\n(For historical reasons, music21 before v2 can also be used under the LGPL license.\nBetween v1 and 2, all prior contributors were \ncontacted (it was a handful back then) and all agreed to relicense \ntheir contributions under the BSD license).\n\nThese detailed explanations of the license were moved to this README.md file in\n2026 (v10) and out of LICENSE, music21/LICENSE and music21/license.txt in \norder to make the music21 license more parsable by tooling.  The move was not \nmeant to imply any change in the license or your rights or obligations under it.\n",
+    "characters": 4796,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/cuthbertLab/music21/blob/ac6cf27258cbbda118f55470f41adb7a84a6f41d/LICENSE",
+    "sha256": "425c3fc0701ab4f07e9520bbc52d596a92c0ae81f5603ef7a44e93d567f2ffb2",
+    "text": "Copyright (c) 2006-2026 Michael Scott Asato Cuthbert\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1501,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [
+      {
+        "full_name": "cuthbertLab/music21",
+        "language": "Python",
+        "registry": "pypi.org",
+        "pkg_name": "music21",
+        "unit_class": "component",
+        "resolved": 1,
+        "link_method": "name+backlink",
+        "downloads": 277525,
+        "downloads_period": "last-month",
+        "dependent_repos": 680,
+        "dependent_pkgs": 34,
+        "rank_avg": 1.7780240019764146,
+        "reach_percentile": 98.2,
+        "reuse_value": 72,
+        "stars": 2517,
+        "adoption_score": 55.2,
+        "real_value": 55,
+        "verdict": "confirm",
+        "fame_gap": 7.8,
+        "raw_json": "{\"dl\": 277525, \"deprepos\": 680, \"deppkgs\": 34, \"rank_avg\": 1.7780240019764146, \"link\": \"name+backlink\"}",
+        "built_at": "2026-06-25T21:03:50.675089"
+      }
+    ],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "cuthbertLab/music21",
+        "stars": 2517,
+        "license": "BSD-3-Clause",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 72,
+        "liftability": 60,
+        "fame_gap": 12,
+        "cat_slug": "general-utility-helpers",
+        "cat_name": "General Utility / Helpers",
+        "description": "music21: a Toolkit for Computer-Aided Musical Analysis and Computational Musicology"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_adoption_v2.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": [
+    {
+      "full_name": "cuthbertLab/music21",
+      "language": "Python",
+      "registry": "pypi.org",
+      "pkg_name": "music21",
+      "unit_class": "component",
+      "resolved": 1,
+      "link_method": "name+backlink",
+      "downloads": 277525,
+      "downloads_period": "last-month",
+      "dependent_repos": 680,
+      "dependent_pkgs": 34,
+      "rank_avg": 1.7780240019764146,
+      "reach_percentile": 98.2,
+      "reuse_value": 72,
+      "stars": 2517,
+      "adoption_score": 55.2,
+      "real_value": 55,
+      "verdict": "confirm",
+      "fame_gap": 7.8,
+      "raw_json": "{\"dl\": 277525, \"deprepos\": 680, \"deppkgs\": 34, \"rank_avg\": 1.7780240019764146, \"link\": \"name+backlink\"}",
+      "built_at": "2026-06-25T21:03:50.675089"
+    }
+  ]
+}

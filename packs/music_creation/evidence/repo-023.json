@@ -1,0 +1,89 @@
+{
+  "audit_id": "R023",
+  "requested_full_name": "DISTRHO/DPF",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "DISTRHO/DPF",
+  "html_url": "https://github.com/DISTRHO/DPF",
+  "description": "DISTRHO Plugin Framework",
+  "stargazers_count": 862,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "isc",
+    "name": "ISC License",
+    "spdx_id": "ISC",
+    "url": "https://api.github.com/licenses/isc",
+    "node_id": "MDc6TGljZW5zZTEw"
+  },
+  "forks_count": 118,
+  "open_issues_count": 80,
+  "topics": [],
+  "revision": "4238e1c7f0351bbe488d79f0899c540543ac7583",
+  "last_commit": "2025-10-23T08:02:23Z",
+  "metadata_source": "https://api.github.com/repos/DISTRHO/DPF",
+  "commit_source": "https://github.com/DISTRHO/DPF/commit/4238e1c7f0351bbe488d79f0899c540543ac7583",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/DISTRHO/DPF/blob/4238e1c7f0351bbe488d79f0899c540543ac7583/README.md",
+    "sha256": "ccea70faf058ac9be85858d7f0dc05893067cdb248a1eb9d3ddb6d0311e1560b",
+    "text": "# DPF - DISTRHO Plugin Framework\n[![makefile](https://github.com/DISTRHO/DPF/actions/workflows/makefile.yml/badge.svg)](https://github.com/DISTRHO/DPF/actions/workflows/makefile.yml)\n[![cmake](https://github.com/DISTRHO/DPF/actions/workflows/cmake.yml/badge.svg)](https://github.com/DISTRHO/DPF/actions/workflows/cmake.yml)\n[![example-plugins](https://github.com/DISTRHO/DPF/actions/workflows/example-plugins.yml/badge.svg)](https://github.com/DISTRHO/DPF/actions/workflows/example-plugins.yml)\n\nDPF is designed to make development of new plugins an easy and enjoyable task.  \nIt allows developers to create plugins with custom UIs using a simple C++ API.  \nThe framework facilitates exporting various different plugin formats from the same code-base.\n\nDPF can build for LADSPA, DSSI, LV2, VST2, VST3 and CLAP formats.  \nA JACK/Standalone mode is also available, allowing you to quickly test plugins.\n\nPlugin DSP and UI communication is done via key-value string pairs.  \nYou send messages from the UI to the DSP side, which is automatically saved in the host when required.  \n(You can also store state internally if needed, but this breaks DSSI compatibility).\n\nGetting time information from the host is possible.  \nIt uses the same format as the JACK Transport API, making porting some code easier.\n\nProvided features and implementation status for specific plugin formats can be seen in [FEATURES.md](FEATURES.md).\n\n## Licensing\n\nDPF is released under ISC, which basically means you can do whatever you want as long as you credit the original authors.  \nSome plugin formats may have additional restrictions, see [LICENSING.md](LICENSING.md) for details.\n\n\n## Help and documentation\n\nBug reports happen on the [DPF github project](https://github.com/DISTRHO/DPF/issues).\n\nOnline documentation is available at [https://distrho.github.io/DPF/](https://distrho.github.io/DPF/).\n\nOnline help and discussion about DPF happens in the [DPF github discussions](https://github.com/DISTRHO/DPF/discussions).\n\n\n## List of plugins made with DPF:\n\nSee [this wiki page](https://github.com/DISTRHO/DPF/wiki/Plugins-made-with-DPF) for a list of plugins made with DPF.\n\nPlugin examples are also available in the `example/` folder inside this repo.\n",
+    "characters": 2232,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/DISTRHO/DPF/blob/4238e1c7f0351bbe488d79f0899c540543ac7583/LICENSE",
+    "sha256": "1d898fbbc24ccfed2a874029ef9d1078f173cea6c48a8abcbc4715e172463775",
+    "text": "Copyright (C) 2012-2025 Filipe Coelho <falktx@falktx.com>\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH\nREGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND\nFITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,\nINDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM\nLOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\nOTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\nPERFORMANCE OF THIS SOFTWARE.\n",
+    "characters": 756,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "DISTRHO/DPF",
+        "capability_tag": "none",
+        "category_slug": "game-dev-library",
+        "summary": "C++ framework for building cross-platform audio plugins",
+        "reuse_value": 75,
+        "stars": 830,
+        "license": "ISC",
+        "language": "C++",
+        "url": "https://github.com/DISTRHO/DPF",
+        "rank_score": 75008300
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "DISTRHO/DPF",
+        "stars": 830,
+        "license": "ISC",
+        "language": "C++",
+        "unit_class": "substrate",
+        "reuse_value": 75,
+        "liftability": 20,
+        "fame_gap": 55,
+        "cat_slug": "game-dev-library",
+        "cat_name": "Game Dev Library / Middleware",
+        "description": "DISTRHO Plugin Framework"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

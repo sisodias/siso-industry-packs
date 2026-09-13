@@ -1,0 +1,144 @@
+{
+  "audit_id": "R122",
+  "requested_full_name": "duckdb/duckdb",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "duckdb/duckdb",
+  "html_url": "https://github.com/duckdb/duckdb",
+  "description": "DuckDB is an analytical in-process SQL database management system",
+  "stargazers_count": 41202,
+  "default_branch": "v2.0-cyanoptera",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 3762,
+  "open_issues_count": 878,
+  "topics": [
+    "analytics",
+    "database",
+    "embedded-database",
+    "olap",
+    "sql"
+  ],
+  "revision": "10de9573794001c649621013bdd93553b54e00c9",
+  "last_commit": "2026-09-11T19:14:29Z",
+  "metadata_source": "https://api.github.com/repos/duckdb/duckdb",
+  "commit_source": "https://github.com/duckdb/duckdb/commit/10de9573794001c649621013bdd93553b54e00c9",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/duckdb/duckdb/blob/10de9573794001c649621013bdd93553b54e00c9/README.md",
+    "sha256": "907b44f4727089c4475a5f9342e76ed2cdb39cac5619feb4ed9c5c065f5cc559",
+    "text": "<div align=\"center\">\n  <picture>\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"logo/DuckDB_Logo-horizontal.svg\">\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"logo/DuckDB_Logo-horizontal-dark-mode.svg\">\n    <img alt=\"DuckDB logo\" src=\"logo/DuckDB_Logo-horizontal.svg\" height=\"100\">\n  </picture>\n</div>\n<br>\n\n<p align=\"center\">\n  <a href=\"https://github.com/duckdb/duckdb/actions\"><img src=\"https://github.com/duckdb/duckdb/actions/workflows/Main.yml/badge.svg?branch=main\" alt=\"Github Actions Badge\"></a>\n  <a href=\"https://discord.gg/tcvwpjfnZx\"><img src=\"https://shields.io/discord/909674491309850675\" alt=\"discord\" /></a>\n  <a href=\"https://github.com/duckdb/duckdb/releases/\"><img src=\"https://img.shields.io/github/v/release/duckdb/duckdb?color=brightgreen&display_name=tag&logo=duckdb&logoColor=white\" alt=\"Latest Release\"></a>\n</p>\n\n## DuckDB\n\nDuckDB is a high-performance analytical database system. It is designed to be fast, reliable, portable, and easy to use. DuckDB provides a rich SQL dialect with support far beyond basic SQL. DuckDB supports arbitrary and nested correlated subqueries, window functions, collations, complex types (arrays, structs, maps), and [several extensions designed to make SQL easier to use](https://duckdb.org/docs/current/sql/dialect/friendly_sql.html).\n\nDuckDB is available as a [standalone CLI application](https://duckdb.org/docs/current/clients/cli/overview) and has clients for [Python](https://duckdb.org/docs/current/clients/python/overview), [R](https://duckdb.org/docs/current/clients/r), [Java](https://duckdb.org/docs/current/clients/java), [Wasm](https://duckdb.org/docs/current/clients/wasm/overview), etc., with deep integrations with packages such as [pandas](https://duckdb.org/docs/guides/python/sql_on_pandas) and [dplyr](https://duckdb.org/docs/current/clients/r#duckplyr-dplyr-api).\n\nFor more information on using DuckDB, please refer to the [DuckDB documentation](https://duckdb.org/docs/current/).\n\n## Installation\n\nIf you want to install DuckDB, please see [our installation page](https://duckdb.org/docs/installation/) for instructions.\n\n## Data Import\n\nFor CSV files and Parquet files, data import is as simple as referencing the file in the FROM clause:\n\n```sql\nSELECT * FROM 'myfile.csv';\nSELECT * FROM 'myfile.parquet';\n```\n\nRefer to our [Data Import](https://duckdb.org/docs/current/data/overview) section for more information.\n\n## SQL Reference\n\nThe documentation contains a [SQL introduction and reference](https://duckdb.org/docs/current/sql/introduction).\n\n## Development\n\nFor development, DuckDB requires [CMake](https://cmake.org), Python 3 and a `C++17` compliant compiler. In the root directory, run `make` to compile the sources. For development, use `make debug` to build a non-optimized debug version. You should run `make unit` and `make allunit` to verify that your version works properly after making changes. To test performance, you can run `BUILD_BENCHMARK=1 BUILD_TPCH=1 make` and then perform several standard benchmarks from the root directory by executing `./build/release/benchmark/benchmark_runner`. The details of benchmarks are in our [Benchmark Guide](benchmark/README.md).\n\nPlease also refer to our [Build Guide](https://duckdb.org/docs/current/dev/building/overview) and [Contribution Guide](CONTRIBUTING.md).\n\n## Support\n\nSee the [Support Options](https://ducklabs.com/support/) page and the dedicated [`endoflife.date`](https://endoflife.date/duckdb) page.\n",
+    "characters": 3480,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/duckdb/duckdb/blob/10de9573794001c649621013bdd93553b54e00c9/LICENSE",
+    "sha256": "075c33400ffcb0c586dd106a029d3e733e9da3693f8fcb9cebfc651c8a2f14e3",
+    "text": "Copyright 2018-2026 Stichting DuckDB Foundation\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1072,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "Mytherin",
+      "contributions": 26357
+    },
+    {
+      "login": "Tishj",
+      "contributions": 7308
+    },
+    {
+      "login": "pdet",
+      "contributions": 5314
+    },
+    {
+      "login": "hannes",
+      "contributions": 3602
+    },
+    {
+      "login": "carlopi",
+      "contributions": 2395
+    },
+    {
+      "login": "taniabogatsch",
+      "contributions": 2375
+    },
+    {
+      "login": "samansmink",
+      "contributions": 2183
+    },
+    {
+      "login": "Tmonster",
+      "contributions": 1968
+    },
+    {
+      "login": "Dtenwolde",
+      "contributions": 1771
+    },
+    {
+      "login": "Maxxen",
+      "contributions": 1620
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 25663,
+      "title": "Native SIGSEGV in DuckDB JDBC when repeatedly executing queries with window functions and LIMIT 0",
+      "state": "open",
+      "created_at": "2026-09-13T12:38:20Z",
+      "updated_at": "2026-09-13T12:51:01Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/duckdb/duckdb/issues/25663"
+    },
+    {
+      "number": 25661,
+      "title": "Native Windows: transaction-age slowdown in batched inserts (standalone C API repro)",
+      "state": "open",
+      "created_at": "2026-09-13T12:10:52Z",
+      "updated_at": "2026-09-13T12:10:52Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/duckdb/duckdb/issues/25661"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "duckdb/duckdb",
+        "stars": 38966,
+        "license": "MIT",
+        "language": "C++",
+        "unit_class": "capability",
+        "reuse_value": 95,
+        "liftability": 75,
+        "fame_gap": 20,
+        "cat_slug": "database-engine",
+        "cat_name": "Database Engine / Data Store",
+        "description": "DuckDB is an analytical in-process SQL database management system"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

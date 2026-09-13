@@ -1,0 +1,59 @@
+{
+  "audit_id": "R053",
+  "requested_full_name": "PortAudio/portaudio",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "PortAudio/portaudio",
+  "html_url": "https://github.com/PortAudio/portaudio",
+  "description": "PortAudio is a cross-platform, open-source C language library for real-time audio input and output.",
+  "stargazers_count": 2144,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 404,
+  "open_issues_count": 380,
+  "topics": [],
+  "revision": "a4dbf68c51fd32734f32657db64849aac24739e7",
+  "last_commit": "2026-09-04T00:43:37Z",
+  "metadata_source": "https://api.github.com/repos/PortAudio/portaudio",
+  "commit_source": "https://github.com/PortAudio/portaudio/commit/a4dbf68c51fd32734f32657db64849aac24739e7",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/PortAudio/portaudio/blob/a4dbf68c51fd32734f32657db64849aac24739e7/README.md",
+    "sha256": "d82cc437983d3abccc375713f9517b7cc975e5b5cab0ccd6b438556fcd1f9e09",
+    "text": "# PortAudio - portable audio I/O library\n\nPortAudio is a portable audio I/O library designed for cross-platform\nsupport of audio. It uses either a callback mechanism to request audio \nprocessing, or blocking read/write calls to buffer data between the \nnative audio subsystem and the client. Audio can be processed in various \nformats, including 32 bit floating point, and will be converted to the \nnative format internally.\n\n## Documentation:\n\n* Documentation is available at http://www.portaudio.com/docs/\n* Or at `/doc/html/index.html` after running Doxygen.\n* Also see `src/common/portaudio.h` for the API spec.\n* And see the `examples/` and `test/` directories for many examples of usage. (We suggest `examples/paex_saw.c` for an example.)\n\nFor information on compiling programs with PortAudio, please see the\ntutorial at:\n\n  http://portaudio.com/docs/v19-doxydocs/tutorial_start.html\n  \nWe have an active mailing list for user and developer discussions.\nPlease feel free to join. See http://www.portaudio.com for details.\n\n## Important Files and Folders:\n\n    include/portaudio.h     = header file for PortAudio API. Specifies API.\t\n    src/common/             = platform independent code, host independent \n                              code for all implementations.\n    src/os                  = os specific (but host api neutral) code\n    src/hostapi             = implementations for different host apis\n\n\n### Host API Implementations:\n\n    src/hostapi/alsa        = Advanced Linux Sound Architecture (ALSA)\n    src/hostapi/asihpi      = AudioScience HPI\n    src/hostapi/asio        = ASIO for Windows and Macintosh\n    src/hostapi/audioio     = /dev/audio (Solaris/NetBSD Audio)\n    src/hostapi/coreaudio   = Macintosh Core Audio for OS X\n    src/hostapi/dsound      = Windows Direct Sound\n    src/hostapi/jack        = JACK Audio Connection Kit\n    src/hostapi/oss         = Unix Open Sound System (OSS)\n    src/hostapi/pulseaudio  = Sound system for POSIX OSes\n    src/hostapi/sndio       = Small audio and MIDI framework (sndio)\n    src/hostapi/wasapi      = Windows Vista WASAPI\n    src/hostapi/wdmks       = Windows WDM Kernel Streaming\n    src/hostapi/wmme        = Windows MultiMedia Extensions (MME)\n\n\n### Test Programs:\n\n    test/pa_fuzz.c         = guitar fuzz box\n    test/pa_devs.c         = print a list of available devices\n    test/pa_minlat.c       = determine minimum latency for your machine\n    test/paqa_devs.c       = self test that opens all devices\n    test/paqa_errs.c       = test error detection and reporting\n    test/patest_clip.c     = hear a sine wave clipped and unclipped\n    test/patest_dither.c   = hear effects of dithering (extremely subtle)\n    test/patest_pink.c     = fun with pink noise\n    test/patest_record.c   = record and playback some audio\n    test/patest_maxsines.c = how many sine waves can we play? Tests Pa_GetCPULoad().\n    test/patest_sine.c     = output a sine wave in a simple PA app\n    test/patest_sync.c     = test synchronization of audio and video\n    test/patest_wire.c     = pass input to output, wire simulator\n",
+    "characters": 3085,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "source_url": "https://github.com/PortAudio/portaudio/blob/a4dbf68c51fd32734f32657db64849aac24739e7/LICENSE.txt",
+    "sha256": "ec52a1952d701f94e5135719a47376da4ee0b4a0201f1cafb49f61db6480ac3d",
+    "text": "Portable header file to contain:\n>>>>>\n/*\n * PortAudio Portable Real-Time Audio Library\n * PortAudio API Header File\n * Latest version available at: http://www.portaudio.com\n *\n * Copyright (c) 1999-2006 Ross Bencina and Phil Burk\n *\n * Permission is hereby granted, free of charge, to any person obtaining\n * a copy of this software and associated documentation files\n * (the \"Software\"), to deal in the Software without restriction,\n * including without limitation the rights to use, copy, modify, merge,\n * publish, distribute, sublicense, and/or sell copies of the Software,\n * and to permit persons to whom the Software is furnished to do so,\n * subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be\n * included in all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR\n * ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF\n * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n */\n\n/*\n * The text above constitutes the entire PortAudio license; however, \n * the PortAudio community also makes the following non-binding requests:\n *\n * Any person wishing to distribute modifications to the Software is\n * requested to send the modifications to the original developer so that\n * they can be incorporated into the canonical version. It is also \n * requested that these non-binding requests be included along with the \n * license above.\n */\n<<<<<\n \n\nImplementation files to contain:\n>>>>>\n/*\n * PortAudio Portable Real-Time Audio Library\n * Latest version at: http://www.portaudio.com\n * <platform> Implementation\n * Copyright (c) 1999-2000 <author(s)>\n *\n * Permission is hereby granted, free of charge, to any person obtaining\n * a copy of this software and associated documentation files\n * (the \"Software\"), to deal in the Software without restriction,\n * including without limitation the rights to use, copy, modify, merge,\n * publish, distribute, sublicense, and/or sell copies of the Software,\n * and to permit persons to whom the Software is furnished to do so,\n * subject to the following conditions:\n *\n * The above copyright notice and this permission notice shall be\n * included in all copies or substantial portions of the Software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR\n * ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF\n * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n */\n\n/*\n * The text above constitutes the entire PortAudio license; however, \n * the PortAudio community also makes the following non-binding requests:\n *\n * Any person wishing to distribute modifications to the Software is\n * requested to send the modifications to the original developer so that\n * they can be incorporated into the canonical version. It is also \n * requested that these non-binding requests be included along with the \n * license above.\n */\n<<<<<",
+    "characters": 3524,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

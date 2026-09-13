@@ -1,0 +1,89 @@
+{
+  "audit_id": "R039",
+  "requested_full_name": "Stability-AI/stable-audio-tools",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Stability-AI/stable-audio-tools",
+  "html_url": "https://github.com/Stability-AI/stable-audio-tools",
+  "description": "Generative models for conditional audio generation",
+  "stargazers_count": 3857,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 484,
+  "open_issues_count": 131,
+  "topics": [],
+  "revision": "3241adba4fc2a85cf5b29d9eb68d42f40a28e820",
+  "last_commit": "2026-05-26T23:34:41Z",
+  "metadata_source": "https://api.github.com/repos/Stability-AI/stable-audio-tools",
+  "commit_source": "https://github.com/Stability-AI/stable-audio-tools/commit/3241adba4fc2a85cf5b29d9eb68d42f40a28e820",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/Stability-AI/stable-audio-tools/blob/3241adba4fc2a85cf5b29d9eb68d42f40a28e820/README.md",
+    "sha256": "55d170f97663ca9ce361e73ca680c7e1399cfc9ee1604e59a226dacffdad3a46",
+    "text": "# stable-audio-tools\nTraining and inference code for audio generation models\n\n# Install\n\nRequires PyTorch 2.5 or later for Flash Attention and Flex Attention support. Development for the repo is done in Python 3.10.\n\nWe use [uv](https://docs.astral.sh/uv/) for fast, reproducible dependency management. Install it with `pip install uv` or see the [uv docs](https://docs.astral.sh/uv/getting-started/installation/).\n\nClone the repo and install dependencies:\n```bash\n$ git clone https://github.com/Stability-AI/stable-audio-tools.git\n$ cd stable-audio-tools\n\n# Inference only\n$ uv sync\n\n# Training\n$ uv sync --extra train\n\n# Everything (training + Gradio UI)\n$ uv sync --extra train --extra ui\n```\n\n### Flash Attention\n\n[Flash Attention](https://github.com/Dao-AILab/flash-attention) is recommended for performance. Follow the installation instructions in the Flash Attention repository to install it after running `uv sync`.\n\nRun scripts with `uv run`:\n```bash\n$ uv run python train.py --dataset-config /path/to/config ...\n$ uv run python run_gradio.py --pretrained-name stabilityai/stable-audio-open-1.0\n```\n\nAlternatively, you can use pip directly:\n```bash\n$ pip install \"stable-audio-tools[train]\"\n```\n\n# Interface\n\nA basic Gradio interface is provided to test out trained models. \n\nFor example, to create an interface for the [`stable-audio-open-1.0`](https://huggingface.co/stabilityai/stable-audio-open-1.0) model, once you've accepted the terms for the model on Hugging Face, you can run:\n```bash\n$ python3 ./run_gradio.py --pretrained-name stabilityai/stable-audio-open-1.0\n```\n\nThe `run_gradio.py` script accepts the following command line arguments:\n\n- `--pretrained-name`\n  - Hugging Face repository name for a Stable Audio Tools model\n  - Will prioritize `model.safetensors` over `model.ckpt` in the repo\n  - Optional, used in place of `model-config` and `ckpt-path` when using pre-trained model checkpoints on Hugging Face\n- `--model-config`\n  - Path to the model config file for a local model\n- `--ckpt-path`\n  - Path to unwrapped model checkpoint file for a local model\n- `--pretransform-ckpt-path` \n  - Path to an unwrapped pretransform checkpoint, replaces the pretransform in the model, useful for testing out fine-tuned decoders\n  - Optional\n- `--share`\n  - If true, a publicly shareable link will be created for the Gradio demo\n  - Optional\n- `--username` and `--password`\n  - Used together to set a login for the Gradio demo\n  - Optional\n- `--model-half`\n  - If true, the model weights to half-precision\n  - Optional\n\n# Training\n\n## Prerequisites\nBefore starting your training run, you'll need a model config file, as well as a dataset config file. For more information about those, refer to the Configurations section below\n\nThe training code also requires a Weights & Biases account to log the training outputs and demos. Create an account and log in with:\n```bash\n$ wandb login\n```\n\n## Start training\nTo start a training run, run the `train.py` script in the repo root with:\n```bash\n$ python3 ./train.py --dataset-config /path/to/dataset/config --model-config /path/to/model/config --name harmonai_train\n```\n\nThe `--name` parameter will set the project name for your Weights and Biases run.\n\n## Training wrappers and model unwrapping\n`stable-audio-tools` uses PyTorch Lightning to facilitate multi-GPU and multi-node training. \n\nWhen a model is being trained, it is wrapped in a \"training wrapper\", which is a `pl.LightningModule` that contains all of the relevant objects needed only for training. That includes things like discriminators for autoencoders, EMA copies of models, and all of the optimizer states.\n\nThe checkpoint files created during training include this training wrapper, which greatly increases the size of the checkpoint file.\n\n`unwrap_model.py` in the repo root will take in a wrapped model checkpoint and save a new checkpoint file including only the model itself.\n\nThat can be run with from the repo root with:\n```bash\n$ python3 ./unwrap_model.py --model-config /path/to/model/config --ckpt-path /path/to/wrapped/ckpt --name model_unwrap\n```\n\nUnwrapped model checkpoints are required for:\n  - Inference scripts\n  - Using a model as a pretransform for another model (e.g. using an autoencoder model for latent diffusion)\n  - Fine-tuning a pre-trained model with a modified configuration (i.e. partial initialization)\n\n## Fine-tuning\nFine-tuning a model involves continuning a training run from a pre-trained checkpoint. \n\nTo continue a training run from a wrapped model checkpoint, you can pass in the checkpoint path to `train.py` with the `--ckpt-path` flag.\n\nTo start a fresh training run using a pre-trained unwrapped model, you can pass in the unwrapped checkpoint to `train.py` with the `--pretrained-ckpt-path` flag.\n\n## Additional training flags\n\nAdditional optional flags for `train.py` include:\n- `--config-file`\n  - The path to the defaults.ini file in the repo root, required if running `train.py` from a directory other than the repo root\n- `--pretransform-ckpt-path`\n  - Used in various model types such as latent diffusion models to load a pre-trained autoencoder. Requires an unwrapped model checkpoint.\n- `--save-dir`\n  - The directory in which to save the model checkpoints\n- `--checkpoint-every`\n  - The number of steps between saved checkpoints.\n  - *Default*: 10000\n- `--batch-size`\n  - Number of samples per-GPU during training. Should be set as large as your GPU VRAM will allow.\n  - *Default*: 8\n- `--num-gpus`\n  - Number of GPUs per-node to use for training\n  - *Default*: 1\n- `--num-nodes`\n  - Number of GPU nodes being used for training\n  - *Default*: 1\n- `--accum-batches`\n  - Enables and sets the number of batches for gradient batch accumulation. Useful for increasing effective batch size when training on smaller GPUs.\n- `--strategy`\n  - Multi-GPU strategy for distributed training. Setting to `deepspeed` will enable DeepSpeed ZeRO Stage 2.\n  - *Default*: `ddp` if `--num_gpus` > 1, else None\n- `--precision`\n  - floating-point precision to use during training\n  - *Default*: 16\n- `--num-workers`\n  - Number of CPU workers used by the data loader\n- `--seed`\n  - RNG seed for PyTorch, helps with deterministic training\n\n# Configurations\nTraining and inference code for `stable-audio-tools` is based around JSON configuration files that define model hyperparameters, training settings, and information about your training dataset.\n\n## Model config\nThe model config file defines all of the information needed to load a model for training or inference. It also contains the training configuration needed to fine-tune a model or train from scratch.\n\nThe following properties are defined in the top level of the model configuration:\n\n- `model_type`\n  - The type of model being defined, currently limited to one of `\"autoencoder\", \"diffusion_uncond\", \"diffusion_cond\", \"diffusion_cond_inpaint\", \"diffusion_autoencoder\", \"lm\"`.\n- `sample_size`\n  - The length of the audio provided to the model during training, in samples. For diffusion models, this is also the raw audio sample length used for inference.\n- `sample_rate`\n  - The sample rate of the audio provided to the model during training, and generated during inference, in Hz.\n- `audio_channels`\n  - The number of channels of audio provided to the model during training, and generated during inference. Defaults to 2. Set to 1 for mono.\n- `model`\n  - The specific configuration for the model being defined, varies based on `model_type`\n- `training`\n  - The training configuration for the model, varies based on `model_type`. Provides parameters for training as well as demos.\n\n## Dataset config\n`stable-audio-tools` currently supports two kinds of data sources: local directories of audio files, and WebDataset datasets stored in Amazon S3. More information can be found in [the dataset config documentation](docs/datasets.md)\n\n# Todo\n- [ ] Add troubleshooting section\n- [ ] Add contribution guidelines \n",
+    "characters": 7930,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/Stability-AI/stable-audio-tools/blob/3241adba4fc2a85cf5b29d9eb68d42f40a28e820/LICENSE",
+    "sha256": "a1fac33b7bcd791b74fb33aeb439f825e7277e239fc119fb7d2ab6f084a0c101",
+    "text": "MIT License\n\nCopyright (c) 2023 Stability AI\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1069,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "Stability-AI/stable-audio-tools",
+        "capability_tag": "audio-processing",
+        "category_slug": "ml-framework",
+        "summary": "Generative models and tools for conditional audio synthesis",
+        "reuse_value": 80,
+        "stars": 3790,
+        "license": "MIT",
+        "language": "Python",
+        "url": "https://github.com/Stability-AI/stable-audio-tools",
+        "rank_score": 80037900
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "Stability-AI/stable-audio-tools",
+        "stars": 3790,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "substrate",
+        "reuse_value": 80,
+        "liftability": 35,
+        "fame_gap": 45,
+        "cat_slug": "ml-framework",
+        "cat_name": "ML / Deep-Learning Framework",
+        "description": "Generative models for conditional audio generation"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

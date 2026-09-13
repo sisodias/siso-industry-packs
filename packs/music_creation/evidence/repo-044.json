@@ -1,0 +1,173 @@
+{
+  "audit_id": "R044",
+  "requested_full_name": "spotify/basic-pitch",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "spotify/basic-pitch",
+  "html_url": "https://github.com/spotify/basic-pitch",
+  "description": "A lightweight yet powerful audio-to-MIDI converter with pitch bend detection",
+  "stargazers_count": 5564,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "forks_count": 511,
+  "open_issues_count": 60,
+  "topics": [
+    "audio",
+    "lightweight",
+    "machine-learning",
+    "midi",
+    "music",
+    "pitch-detection",
+    "polyphonic",
+    "python",
+    "transcription",
+    "typescript"
+  ],
+  "revision": "fa5997af0a8210982619003269994a1be25eddf3",
+  "last_commit": "2025-11-13T14:40:45Z",
+  "metadata_source": "https://api.github.com/repos/spotify/basic-pitch",
+  "commit_source": "https://github.com/spotify/basic-pitch/commit/fa5997af0a8210982619003269994a1be25eddf3",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/README.md",
+    "sha256": "308eca019d334104487822197d8fdc81574e9f07a80436d860e044248f26f520",
+    "text": "![Basic Pitch Logo](https://user-images.githubusercontent.com/213293/167478083-de988de2-9137-4325-8a5f-ceeb51233753.png)\n\n\n\n[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n![PyPI - Python Version](https://img.shields.io/pypi/pyversions/basic-pitch)\n![Supported Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-green)\n\n\nBasic Pitch is a Python library for Automatic Music Transcription (AMT), using lightweight neural network developed by [Spotify's Audio Intelligence Lab](https://research.atspotify.com/audio-intelligence/). It's small, easy-to-use, `pip install`-able and `npm install`-able via its [sibling repo](https://github.com/spotify/basic-pitch-ts).\n\nBasic Pitch may be simple, but it's is far from \"basic\"! `basic-pitch` is efficient and easy to use, and its multipitch support, its ability to generalize across instruments, and its note accuracy competes with much larger and more resource-hungry AMT systems.\n\nProvide a compatible audio file and basic-pitch will generate a MIDI file, complete with pitch bends. Basic pitch is instrument-agnostic and supports polyphonic instruments, so you can freely enjoy transcription of all your favorite music, no matter what instrument is used.  Basic pitch works best on one instrument at a time.\n\n### Research Paper\nThis library was released in conjunction with Spotify's publication at [ICASSP 2022](https://2022.ieeeicassp.org/). You can read more about this research in the paper, [A Lightweight Instrument-Agnostic Model for Polyphonic Note Transcription and Multipitch Estimation](https://arxiv.org/abs/2203.09893).\n\nIf you use this library in academic research, consider citing it:\n```bibtex\n@inproceedings{2022_BittnerBRME_LightweightNoteTranscription_ICASSP,\n  author= {Bittner, Rachel M. and Bosch, Juan Jos\\'e and Rubinstein, David and Meseguer-Brocal, Gabriel and Ewert, Sebastian},\n  title= {A Lightweight Instrument-Agnostic Model for Polyphonic Note Transcription and Multipitch Estimation},\n  booktitle= {Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},\n  address= {Singapore},\n  year= 2022,\n}\n```\n\n**Note that we have improved Basic Pitch beyond what was presented in this paper. Therefore, if you use the output of Basic Pitch in academic research,\nwe recommend that you cite the version of the code that was used.**\n\n### Demo\nIf, for whatever reason, you're not yet completely inspired, or you're just like so totally over the general vibe and stuff, checkout our snappy demo website, [basicpitch.io](https://basicpitch.io), to experiment with our model on whatever music audio you provide!\n\n\n## Installation\n\n`basic-pitch` is available via PyPI. To install the current release:\n\n    pip install basic-pitch\n\nTo update Basic Pitch to the latest version, add `--upgrade` to the above command.\n\n#### Compatible Environments:\n- MacOS, Windows and Ubuntu operating systems\n- Python versions 3.7, 3.8, 3.9, 3.10, 3.11\n- **For Mac M1 hardware, we currently only support python version 3.10. Otherwise, we suggest using a virtual machine.**\n\n\n### Model Runtime\n\nBasic Pitch comes with the original TensorFlow model and the TensorFlow model converted to [CoreML](https://developer.apple.com/documentation/coreml), [TensorFlowLite](https://www.tensorflow.org/lite), and [ONNX](https://onnx.ai/). By default, Basic Pitch will _not_ install TensorFlow as a dependency *unless you are using Python>=3.11*. Instead, by default, CoreML will be installed on MacOS, TensorFlowLite will be installed on Linux and ONNX will be installed on Windows. If you want to install TensorFlow along with the default model inference runtime, you can install TensorFlow via `pip install basic-pitch[tf]`.\n\n## Usage\n\n### Model Prediction\n\n### Model Runtime\n\nBy default, Basic Pitch will attempt to load a model in the following order:\n\n1. TensorFlow\n2. CoreML\n3. TensorFlowLite\n4. ONNX\n\nAdditionally, the module variable ICASSP_2022_MODEL_PATH will default to the first available version in the list.\n\nWe will explain how to override this priority list below. Because all other model serializations were converted from TensorFlow, we recommend using TensorFlow when possible. N.B. Basic Pitch does not install TensorFlow by default to save the user time when installing and running Basic Pitch.\n\n#### Command Line Tool\n\nThis library offers a command line tool interface. A basic prediction command will generate and save a MIDI file transcription of audio at the `<input-audio-path>` to the `<output-directory>`:\n\n```bash\nbasic-pitch <output-directory> <input-audio-path>\n```\n\nFor example: \n```\nbasic-pitch /output/directory/path /input/audio/path\n```\n\nTo process more than one audio file at a time:\n\n```bash\nbasic-pitch <output-directory> <input-audio-path-1> <input-audio-path-2> <input-audio-path-3>\n```\n\nOptionally, you may append any of the following flags to your prediction command to save additional formats of the prediction output to the `<output-directory>`:\n\n- `--sonify-midi` to additionally save a `.wav` audio rendering of the MIDI file.\n- `--save-model-outputs` to additionally save raw model outputs as an NPZ file.\n- `--save-note-events` to additionally save the predicted note events as a CSV file.\n\nIf you want to use a non-default model type (e.g., use CoreML instead of TF), use the `--model-serialization` argument. The CLI will change the loaded model to the type you prefer.\n\nTo discover more parameter control, run:\n```bash\nbasic-pitch --help\n```\n\n#### Programmatic\n\n**predict()**\n\nImport `basic-pitch` into your own Python code and run the [`predict`](basic_pitch/inference.py) functions directly, providing an `<input-audio-path>` and returning the model's prediction results:\n\n```python\nfrom basic_pitch.inference import predict\nfrom basic_pitch import ICASSP_2022_MODEL_PATH\n\nmodel_output, midi_data, note_events = predict(<input-audio-path>)\n```\n\n- `<minimum-frequency>` & `<maximum-frequency>` (*float*s) set the maximum and minimum allowed note frequency, in Hz, returned by the model. Pitch events with frequencies outside of this range will be excluded from the prediction results.\n- `model_output` is the raw model inference output\n- `midi_data` is the transcribed MIDI data derived from the `model_output`\n- `note_events` is a list of note events derived from the `model_output`\n\nNote: As mentioned previously, ICASSP_2022_MODEL_PATH will default to the runtime first supported in the list TensorFlow, CoreML, TensorFlowLite, ONNX.\n\n**predict() in a loop**\n\nTo run prediction within a loop, you'll want to load the model yourself and provide `predict()` with the loaded model object itself to be used for repeated prediction calls, in order to avoid redundant and sluggish model loading.\n\n```python\nimport tensorflow as tf\n\nfrom basic_pitch.inference import predict, Model\nfrom basic_pitch import ICASSP_2022_MODEL_PATH\n\nbasic_pitch_model = Model(ICASSP_2022_MODEL_PATH))\n\nfor x in range():\n    ...\n    model_output, midi_data, note_events = predict(\n        <loop-x-input-audio-path>,\n        basic_pitch_model,\n    )\n    ...\n```\n\n**predict_and_save()**\n\nIf you would like `basic-pitch` orchestrate the generation and saving of our various supported output file types, you may use [`predict_and_save`](basic_pitch/inference.py) instead of using [`predict`](basic_pitch/inference.py) directly:\n\n```python\nfrom basic_pitch.inference import predict_and_save\n\npredict_and_save(\n    <input-audio-path-list>,\n    <output-directory>,\n    <save-midi>,\n    <sonify-midi>,\n    <save-model-outputs>,\n    <save-notes>,\n    <model-path>\n)\n```\n\nwhere:\n   - `<input-audio-path-list>` & `<output-directory>`\n        - directory paths for `basic-pitch` to read from/write to.\n   - `<save-midi>`\n        - *bool* to control generating and saving a MIDI file to the `<output-directory>`\n   - `<sonify-midi>`\n        - *bool* to control saving a WAV audio rendering of the MIDI file to the `<output-directory>`\n   - `<save-model-outputs>`\n        - *bool* to control saving the raw model output as a NPZ file to the `<output-directory>`\n   - `<save-notes>`\n        - *bool* to control saving predicted note events as a CSV file `<output-directory>`\n   - `<model-path>`\n        - *str* or *pathlib.Path* local path from where to load the model, can eg: use the path obtained with `from basic_pitch import ICASSP_2022_MODEL_PATH`\n\n\n\n\n### Model Input\n\n**Supported Audio Codecs**\n\n   `basic-pitch` accepts all sound files that are compatible with its version of [`librosa`](https://librosa.org/doc/latest/index.html), including:\n\n- `.mp3`\n- `.ogg`\n- `.wav`\n- `.flac`\n- `.m4a`\n\n**Mono Channel Audio Only**\n\nWhile you may use stereo audio as an input to our model, at prediction time, the channels of the input will be down-mixed to mono, and then analyzed and transcribed.\n\n**File Size/Audio Length**\n\nThis model can process any size or length of audio, but processing of larger/longer audio files could be limited by your machine's available disk space. To process these files, we recommend streaming the audio of the file, processing windows of audio at a time.\n\n**Sample Rate**\n\nInput audio maybe be of any sample rate, however, all audio will be resampled to 22050 Hz before processing.\n\n### VST\n\nThanks to DamRsn for developing this working VST version of basic-pitch! - https://github.com/DamRsn/NeuralNote\n\n\n## Contributing\n\nContributions to `basic-pitch` are welcomed! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.\n\n## Copyright and License\n`basic-pitch` is Copyright 2022 Spotify AB.\n\nThis software is licensed under the Apache License, Version 2.0 (the \"Apache License\"). You may choose either license to govern your use of this software only upon the condition that you accept all of the terms of either the Apache License.\n\nYou may obtain a copy of the Apache License at:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n\nUnless required by applicable law or agreed to in writing, software distributed under the Apache License or the GPL License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the Apache License for the specific language governing permissions and limitations under the Apache License.\n\n",
+    "characters": 10297,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/spotify/basic-pitch/blob/fa5997af0a8210982619003269994a1be25eddf3/LICENSE",
+    "sha256": "929c910bae2152fa87199a5d0660e09263419b7eee6d4b301d05ee2aaf211c37",
+    "text": "Copyright 2022 Spotify AB\n\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n\n   Copyright [yyyy] [name of copyright owner]\n\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n",
+    "characters": 11384,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": 0,
+  "contributors_top10": [
+    {
+      "login": "bgenchel",
+      "contributions": 34
+    },
+    {
+      "login": "drubinstein",
+      "contributions": 27
+    },
+    {
+      "login": "dohertyguirand",
+      "contributions": 25
+    },
+    {
+      "login": "bgenchel-avail",
+      "contributions": 17
+    },
+    {
+      "login": "rabitt",
+      "contributions": 13
+    },
+    {
+      "login": "saltytine",
+      "contributions": 13
+    },
+    {
+      "login": "johngao2",
+      "contributions": 11
+    },
+    {
+      "login": "psobot",
+      "contributions": 9
+    },
+    {
+      "login": "jvbalen",
+      "contributions": 8
+    },
+    {
+      "login": "hyperc54",
+      "contributions": 8
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 203,
+      "title": "macOS Python 3.12 dependency marker selects TensorFlow-macOS without cp312 wheels",
+      "state": "open",
+      "created_at": "2026-09-08T05:07:11Z",
+      "updated_at": "2026-09-08T05:07:11Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/spotify/basic-pitch/issues/203"
+    },
+    {
+      "number": 151,
+      "title": "Website Stuck on loading file",
+      "state": "open",
+      "created_at": "2024-11-14T15:46:38Z",
+      "updated_at": "2026-09-01T02:24:01Z",
+      "closed_at": null,
+      "comments": 10,
+      "html_url": "https://github.com/spotify/basic-pitch/issues/151"
+    },
+    {
+      "number": 159,
+      "title": "Issues installing basic-pitch on python3.12, any help??",
+      "state": "open",
+      "created_at": "2025-01-15T17:56:17Z",
+      "updated_at": "2026-09-01T02:22:23Z",
+      "closed_at": null,
+      "comments": 8,
+      "html_url": "https://github.com/spotify/basic-pitch/issues/159"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "spotify/basic-pitch",
+        "capability_tag": "audio-processing",
+        "category_slug": "ml-inference-model",
+        "summary": "Lightweight audio-to-MIDI converter with pitch bend detection",
+        "reuse_value": 85,
+        "stars": 5207,
+        "license": "Apache-2.0",
+        "language": "Python",
+        "url": "https://github.com/spotify/basic-pitch",
+        "rank_score": 85052070
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "spotify/basic-pitch",
+        "stars": 5207,
+        "license": "Apache-2.0",
+        "language": "Python",
+        "unit_class": "capability",
+        "reuse_value": 85,
+        "liftability": 70,
+        "fame_gap": 15,
+        "cat_slug": "ml-inference-model",
+        "cat_name": "ML Model / Inference Capability",
+        "description": "A lightweight yet powerful audio-to-MIDI converter with pitch bend detection"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

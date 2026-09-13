@@ -1,0 +1,89 @@
+{
+  "audit_id": "R097",
+  "requested_full_name": "csteinmetz1/pyloudnorm",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "csteinmetz1/pyloudnorm",
+  "html_url": "https://github.com/csteinmetz1/pyloudnorm",
+  "description": "Flexible audio loudness meter in Python with implementation of ITU-R BS.1770-4 loudness algorithm",
+  "stargazers_count": 782,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 61,
+  "open_issues_count": 14,
+  "topics": [],
+  "revision": "b8d67bfd3ce5deef872f688fcfa491a0ca69fddd",
+  "last_commit": "2026-01-04T11:42:52Z",
+  "metadata_source": "https://api.github.com/repos/csteinmetz1/pyloudnorm",
+  "commit_source": "https://github.com/csteinmetz1/pyloudnorm/commit/b8d67bfd3ce5deef872f688fcfa491a0ca69fddd",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/csteinmetz1/pyloudnorm/blob/b8d67bfd3ce5deef872f688fcfa491a0ca69fddd/README.md",
+    "sha256": "785334fd8e20773300c2a52bc0cbd8f3bdefa6ff229441d460afedb989b1a204",
+    "text": "# pyloudnorm  [![Build Status](https://travis-ci.org/csteinmetz1/pyloudnorm.svg?branch=master)](https://travis-ci.org/csteinmetz1/pyloudnorm) ![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.3551801.svg)\nFlexible audio loudness meter in Python. \n\nImplementation of [ITU-R BS.1770-4](https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-4-201510-I!!PDF-E.pdf). <br/>\nAllows control over gating block size and frequency weighting filters for additional control. \n\nFor full details on the implementation see our [paper](https://csteinmetz1.github.io/pyloudnorm-eval/paper/pyloudnorm_preprint.pdf) with a summary in our [AES presentation video](https://www.youtube.com/watch?v=krSJpQ3d4gE).\n\n## Installation\nYou can install with pip as follows\n```\npip install pyloudnorm\n```\n\nFor the latest releases always install from the GitHub repo\n```\npip install git+https://github.com/csteinmetz1/pyloudnorm\n```\n## Usage\n\n### Find the loudness of an audio file\nIt's easy to measure the loudness of a wav file. \nHere we use PySoundFile to read a .wav file as an ndarray.\n```python\nimport soundfile as sf\nimport pyloudnorm as pyln\n\ndata, rate = sf.read(\"test.wav\") # load audio (with shape (samples, channels))\nmeter = pyln.Meter(rate) # create BS.1770 meter\nloudness = meter.integrated_loudness(data) # measure loudness\n```\n\n### Loudness normalize and peak normalize audio files\nMethods are included to normalize audio files to desired peak values or desired loudness.\n```python\nimport soundfile as sf\nimport pyloudnorm as pyln\n\ndata, rate = sf.read(\"test.wav\") # load audio\n\n# peak normalize audio to -1 dB\npeak_normalized_audio = pyln.normalize.peak(data, -1.0)\n\n# measure the loudness first \nmeter = pyln.Meter(rate) # create BS.1770 meter\nloudness = meter.integrated_loudness(data)\n\n# loudness normalize audio to -12 dB LUFS\nloudness_normalized_audio = pyln.normalize.loudness(data, loudness, -12.0)\n```\n\n### Loudness range\nAttempt to measure the Loudness Range (LRA) of an audio file based on [EBU Tech 3342](https://tech.ebu.ch/docs/tech/tech3342.pdf).\nLRA quantifies the variation in loudness over time, measured in LU (Loudness Units).\n```python\nimport soundfile as sf\nimport pyloudnorm as pyln\n\ndata, rate = sf.read(\"test.wav\") # load audio\n\nmeter = pyln.Meter(rate) # create BS.1770 meter\nlra = meter.loudness_range(data) # measure loudness range\n\nprint(f\"Loudness Range: {lra:.1f} LU\")\n```\n\n### Advanced operation\nA number of alternate weighting filters are available, as well as the ability to adjust the analysis block size. \nExamples are shown below.\n```python\nimport soundfile as sf\nimport pyloudnorm as pyln\nfrom pyloudnorm import IIRfilter\n\ndata, rate = sf.read(\"test.wav\") # load audio\n\n# block size\nmeter1 = pyln.Meter(rate)                               # 400ms block size\nmeter2 = pyln.Meter(rate, block_size=0.200)             # 200ms block size\n\n# filter classes\nmeter3 = pyln.Meter(rate)                               # BS.1770 meter\nmeter4 = pyln.Meter(rate, filter_class=\"DeMan\")         # fully compliant filters  \nmeter5 = pyln.Meter(rate, filter_class=\"Fenton/Lee 1\")  # low complexity improvement by Fenton and Lee\nmeter6 = pyln.Meter(rate, filter_class=\"Fenton/Lee 2\")  # higher complexity improvement by Fenton and Lee\nmeter7 = pyln.Meter(rate, filter_class=\"Dash et al.\")   # early modification option\n\n# create your own IIR filters\nmy_high_pass  = IIRfilter(0.0, 0.5, 20.0, rate, 'high_pass')\nmy_high_shelf = IIRfilter(2.0, 0.7, 1525.0, rate, 'high_shelf')\n\n# create a meter initialized without filters\nmeter8 = pyln.Meter(rate, filter_class=\"custom\")\n\n# load your filters into the meter\nmeter8._filters = {'my_high_pass' : my_high_pass, 'my_high_shelf' : my_high_shelf}\n\n```\n\n## Dependencies\n- **SciPy** ([https://www.scipy.org/](https://www.scipy.org/))\n- **NumPy** ([http://www.numpy.org/](http://www.numpy.org/))\n\n\n## Citation\nIf you use pyloudnorm in your work please consider citing us.\n```\n@inproceedings{steinmetz2021pyloudnorm,\n        title={pyloudnorm: {A} simple yet flexible loudness meter in Python},\n        author={Steinmetz, Christian J. and Reiss, Joshua D.},\n        booktitle={150th AES Convention},\n        year={2021}}\n```\n\n## References\n\n> Ian Dash, Luis Miranda, and Densil Cabrera, \"[Multichannel Loudness Listening Test](http://www.aes.org/e-lib/browse.cfm?elib=14581),\"\n> 124th International Convention of the Audio Engineering Society, May 2008\n\n> Pedro D. Pestana and Álvaro Barbosa, \"[Accuracy of ITU-R BS.1770 Algorithm in Evaluating Multitrack Material](http://www.aes.org/e-lib/online/browse.cfm?elib=16608),\"\n> 133rd International Convention of the Audio Engineering Society, October 2012\n\n> Pedro D. Pestana, Josh D. Reiss, and Álvaro Barbosa, \"[Loudness Measurement of Multitrack Audio Content Using Modifications of ITU-R BS.1770](http://www.aes.org/e-lib/browse.cfm?elib=16714),\"\n> 134th International Convention of the Audio Engineering Society, May 2013\n\n> Steven Fenton and Hyunkook Lee, \"[Alternative Weighting Filters for Multi-Track Program Loudness Measurement](http://www.aes.org/e-lib/browse.cfm?elib=19215),\"\n> 143rd International Convention of the Audio Engineering Society, October 2017\n\n> Brecht De Man, \"[Evaluation of Implementations of the EBU R128 Loudness Measurement](http://www.aes.org/e-lib/browse.cfm?elib=19790),\" \n> 145th International Convention of the Audio Engineering Society, October 2018. \n\n## Tensorized/Differentiable Implementations\n\nFor use in differentiable contexts, such as part of a loss function, there are the following implementations:\n- PyTorch: [Descript Inc.'s `audiotools`](https://github.com/descriptinc/audiotools/blob/master/audiotools/core/loudness.py)\n- Jax: [jaxloudnorm](https://github.com/boris-kuz/jaxloudnorm)\n",
+    "characters": 5734,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/csteinmetz1/pyloudnorm/blob/b8d67bfd3ce5deef872f688fcfa491a0ca69fddd/LICENSE",
+    "sha256": "1616faebaa2add8b57d4f76403c0c4aa427fdb0d241d8e52b7a12dce4906beaa",
+    "text": "MIT License\n\nCopyright (c) 2018 Christian Steinmetz\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1076,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "csteinmetz1/pyloudnorm",
+        "capability_tag": "audio-processing",
+        "category_slug": "media-processing-library",
+        "summary": "Python ITU-R BS.1770 loudness metering and normalization",
+        "reuse_value": 80,
+        "stars": 774,
+        "license": "MIT",
+        "language": "Python",
+        "url": "https://github.com/csteinmetz1/pyloudnorm",
+        "rank_score": 80007740
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "csteinmetz1/pyloudnorm",
+        "stars": 774,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 80,
+        "liftability": 88,
+        "fame_gap": -8,
+        "cat_slug": "media-processing-library",
+        "cat_name": "Media Processing / Codec Library",
+        "description": "Flexible audio loudness meter in Python with implementation of ITU-R BS.1770-4 loudness algorithm"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

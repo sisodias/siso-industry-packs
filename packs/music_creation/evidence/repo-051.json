@@ -1,0 +1,104 @@
+{
+  "audit_id": "R051",
+  "requested_full_name": "PyAV-Org/PyAV",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "PyAV-Org/PyAV",
+  "html_url": "https://github.com/PyAV-Org/PyAV",
+  "description": "﻿﻿Pythonic bindings for FFmpeg's libraries.",
+  "stargazers_count": 3282,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "bsd-3-clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://api.github.com/licenses/bsd-3-clause",
+    "node_id": "MDc6TGljZW5zZTU="
+  },
+  "forks_count": 445,
+  "open_issues_count": 7,
+  "topics": [
+    "ffmpeg",
+    "pyav",
+    "python"
+  ],
+  "revision": "680dddf4a2e57fb59cccfd8119d7379c0b4de17f",
+  "last_commit": "2026-09-02T05:54:06Z",
+  "metadata_source": "https://api.github.com/repos/PyAV-Org/PyAV",
+  "commit_source": "https://github.com/PyAV-Org/PyAV/commit/680dddf4a2e57fb59cccfd8119d7379c0b4de17f",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/PyAV-Org/PyAV/blob/680dddf4a2e57fb59cccfd8119d7379c0b4de17f/README.md",
+    "sha256": "f34bb80ec9c2cd1456bfb36c5e4a3f12a7fce026a54263d1e022fc09e2d9cd7a",
+    "text": "PyAV\n====\n\nPyAV is a Pythonic binding for the [FFmpeg][ffmpeg] libraries. We aim to provide all the power and control of the underlying library, but manage the gritty details as much as possible.\n\n---\n\n[![GitHub Test Status][github-tests-badge]][github-tests] [![Documentation][docs-badge]][docs] [![Python Package Index][pypi-badge]][pypi] [![Conda Forge][conda-badge]][conda]\n\nPyAV is for direct and precise access to your media via containers, streams, packets, codecs, and frames. It exposes a few transformations of that data, and helps you get your data to/from other packages (e.g. NumPy and Pillow).\n\nThis power does come with some responsibility as working with media is horrendously complicated and PyAV can't abstract it away or make all the best decisions for you. If the `ffmpeg` command does the job without you bending over backwards, PyAV is likely going to be more of a hindrance than a help.\n\nBut where you can't work without it, PyAV is a critical tool.\n\n\nInstallation\n------------\n\nPyAV requires Python 3.12 or later. Binary wheels are provided on [PyPI][pypi] for Linux, macOS, and Windows with FFmpeg bundled. You can install these wheels by running:\n\n```bash\npip install av\n```\n\nAnother way of installing PyAV is via [conda-forge][conda-forge]:\n\n```bash\nconda install av -c conda-forge\n```\n\nSee the [Conda install][conda-install] docs to get started with Miniconda.\n\n\nAlternative installation methods\n--------------------------------\n\nDue to the complexity of the dependencies, PyAV is not always the easiest Python package to install from source. This release supports FFmpeg 8.x. To build the source distribution against an existing FFmpeg installation on Linux or macOS, run:\n\n> [!WARNING]\n> FFmpeg's development files and `pkg-config` must be available on your system.\n\n```bash\npip install av --no-binary av\n```\n\n\nInstalling from source\n----------------------\n\nOn Linux or macOS, build PyAV from a Git checkout with:\n\n```bash\ngit clone https://github.com/PyAV-Org/PyAV.git\ncd PyAV\nsource scripts/activate.sh\n\n# Build ffmpeg from source. You can skip this step if ffmpeg 8.x is already installed.\n./scripts/build-deps\n\n# Build PyAV\nmake\n\n# Testing\nmake test\n\n# Install globally\ndeactivate\npip install .\n```\n\nOn Windows, use a Conda environment and the FFmpeg development files maintained by the PyAV project:\n\n```powershell\ngit clone https://github.com/PyAV-Org/PyAV.git\ncd PyAV\nconda create --name pyav-dev --channel conda-forge python=3.12 cython setuptools numpy pillow pytest\nconda activate pyav-dev\n$ffmpegDir = Join-Path $env:CONDA_PREFIX \"Library\"\npython scripts\\fetch-vendor.py --config-file scripts\\ffmpeg-latest.json $ffmpegDir\npython setup.py build_ext --inplace --ffmpeg-dir=$ffmpegDir\npython -m pytest\n```\n\n---\n\nHave fun, [read the docs][docs], [come chat with us][discuss], and good luck!\n\n\n\n[conda-badge]: https://img.shields.io/conda/vn/conda-forge/av.svg?colorB=CCB39A\n[conda]: https://anaconda.org/conda-forge/av\n[docs-badge]: https://img.shields.io/badge/docs-on%20pyav.basswood.io-blue.svg\n[docs]: https://pyav.basswood.io\n[pypi-badge]: https://img.shields.io/pypi/v/av.svg?colorB=CCB39A\n[pypi]: https://pypi.org/project/av\n[discuss]: https://github.com/PyAV-Org/PyAV/discussions\n\n[github-tests-badge]: https://github.com/PyAV-Org/PyAV/workflows/tests/badge.svg\n[github-tests]: https://github.com/PyAV-Org/PyAV/actions?workflow=tests\n[github]: https://github.com/PyAV-Org/PyAV\n\n[ffmpeg]: https://ffmpeg.org/\n[conda-forge]: https://conda-forge.github.io/\n[conda-install]: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html\n",
+    "characters": 3594,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.txt",
+    "source_url": "https://github.com/PyAV-Org/PyAV/blob/680dddf4a2e57fb59cccfd8119d7379c0b4de17f/LICENSE.txt",
+    "sha256": "76af0461ffb92e19f1c14449e95557d83a2dfaa1baf202d49e5f1d8746c0da19",
+    "text": "Copyright retained by original committers. All rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n    * Redistributions of source code must retain the above copyright\n      notice, this list of conditions and the following disclaimer.\n    * Redistributions in binary form must reproduce the above copyright\n      notice, this list of conditions and the following disclaimer in the\n      documentation and/or other materials provided with the distribution.\n    * Neither the name of the project nor the names of its contributors may be\n      used to endorse or promote products derived from this software without\n      specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT,\nINDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,\nBUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\nDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY\nOF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\nNEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,\nEVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1505,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [
+      {
+        "capability": "video-audio-codec",
+        "rank": 2,
+        "full_name": "PyAV-Org/PyAV",
+        "stars": 3229,
+        "reuse_value": 85,
+        "license": "BSD-3-Clause",
+        "note": "Pythonic bindings to FFmpeg libraries"
+      }
+    ],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "PyAV-Org/PyAV",
+        "capability_tag": "video-processing",
+        "category_slug": "media-processing-library",
+        "summary": "Pythonic FFmpeg bindings for decode/encode and frame manipulation",
+        "reuse_value": 85,
+        "stars": 3229,
+        "license": "BSD-3-Clause",
+        "language": "Python",
+        "url": "https://github.com/PyAV-Org/PyAV",
+        "rank_score": 85032290
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "PyAV-Org/PyAV",
+        "stars": 3229,
+        "license": "BSD-3-Clause",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 85,
+        "liftability": 90,
+        "fame_gap": -5,
+        "cat_slug": "media-processing-library",
+        "cat_name": "Media Processing / Codec Library",
+        "description": "﻿﻿Pythonic bindings for FFmpeg's libraries."
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_capability_top.jsonl",
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

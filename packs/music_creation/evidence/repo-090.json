@@ -1,0 +1,153 @@
+{
+  "audit_id": "R090",
+  "requested_full_name": "free-audio/clap",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "free-audio/clap",
+  "html_url": "https://github.com/free-audio/clap",
+  "description": "Audio Plugin API",
+  "stargazers_count": 2345,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 134,
+  "open_issues_count": 38,
+  "topics": [
+    "audio",
+    "clap",
+    "daw",
+    "plugin"
+  ],
+  "revision": "a47f6badb49d948fd009998f28309cdab78979c9",
+  "last_commit": "2026-07-28T21:29:46Z",
+  "metadata_source": "https://api.github.com/repos/free-audio/clap",
+  "commit_source": "https://github.com/free-audio/clap/commit/a47f6badb49d948fd009998f28309cdab78979c9",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/free-audio/clap/blob/a47f6badb49d948fd009998f28309cdab78979c9/README.md",
+    "sha256": "3cbf0557feedea217a0e54fb94f355a1e9e0ec244a1776e1d14f9e702974a144",
+    "text": "<p align=center>\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/free-audio/clap/main/artwork/clap-full-logo-white.png\">\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/free-audio/clap/main/artwork/clap-full-logo-black.png\">\n    <img alt=\"CLAP\" title=\"Clever Audio Plugin\" src=\"https://raw.githubusercontent.com/free-audio/clap/main/artwork/clap-full-logo-black.png\" width=200>\n  </picture>\n</p>\n\n- [Learn about CLAP](#learn-about-clap)\n  - [Entry point](#entry-point)\n  - [Extensions](#extensions)\n  - [Fundamental extensions](#fundamental-extensions)\n  - [Support extensions](#support-extensions)\n  - [Deeper Host integration](#deeper-host-integration)\n  - [Third-party extensions](#third-party-extensions)\n- [Adapters](#adapters)\n- [Resources](#resources)\n  - [Examples](#examples)\n  - [Community related projects](#community-related-projects)\n  - [Programming Language Bindings](#programming-language-bindings)\n  - [Artwork](#artwork)\n\n# Learn about CLAP\n\nCLAP stands for **CL**ever **A**udio **P**lugin. It is an interface that\nprovides a stable ABI to define a standard for *Digital Audio Workstations* and\naudio plugins (synthesizers, audio effects, ...) to work together.\n\nThe ABI, or **A**pplication **B**inary **I**nterface, serves as a means of\ncommunication between a host and a plugin. It provides backwards compatibility,\nthat is, a plugin binary compiled with CLAP 1.x can be loaded by any other\nCLAP 1.y.\n\nTo work with CLAP, include [clap/clap.h](include/clap/clap.h).\nTo also include the draft extensions, include [clap/all.h](include/clap/all.h).\n\nThe two most important objects are `clap_host` and `clap_plugin`.\n\n[src/plugin-template.c](src/plugin-template.c) is a very minimal example which demonstrates how to wire a CLAP plugin.\n\n## Entry point\n\nThe entry point is declared in [entry.h](include/clap/entry.h).\n\n## Extensions\n\nMost features come from extensions, which are in fact C interfaces.\n```C\n// host extension\nconst clap_host_log *log = host->extension(host, CLAP_EXT_LOG);\nif (log)\n   log->log(host, CLAP_LOG_INFO, \"Hello World! ;^)\");\n\n// plugin extension\nconst clap_plugin_params *params = plugin->extension(plugin, CLAP_EXT_PARAMS);\nif (params)\n{\n   uint32_t paramsCount = params->count(plugin);\n   // ...\n}\n```\n\nThe extensions are defined in the [ext](include/clap/ext) folder.\n\nSome extensions are still in the progress of being designed and they are in\nthe [draft](include/clap/ext/draft) folder.\n\nAn extension comes with:\n- a header `#include <clap/ext/xxx.h>`\n- an extension identifier: `#define CLAP_EXT_XXX \"clap/XXX\"`\n- host interfaces are named like: `struct clap_host_xxx`\n- plugin interfaces are named like: `struct clap_plugin_xxx`\n- each method must have a clear thread specification\n\nYou can create your own extensions and share them. Make sure that the extension identifier:\n- includes versioning in case the ABI breaks\n- is a unique identifier\n\n**All strings are valid UTF-8**.\n\n## Fundamental extensions\n\nThis is a list of the extensions that you most likely want to implement\nand use to get a basic plugin experience:\n- [state](include/clap/ext/state.h), save and load the plugin state\n  - [state-context](include/clap/ext/state-context.h), same as state but with additional context info (preset, duplicate, project)\n  - [resource-directory](include/clap/ext/draft/resource-directory.h), host provided folder for the plugin to save extra resource like multi-samples, ... (draft)\n- [params](include/clap/ext/params.h), parameters management\n- [note-ports](include/clap/ext/note-ports.h), define the note ports\n- [audio-ports](include/clap/ext/audio-ports.h), define the audio ports\n  - [surround](include/clap/ext/surround.h), inspect surround channel mapping\n  - [ambisonic](include/clap/ext/ambisonic.h), inspect ambisonic channel mapping\n  - [configurable-audio-ports](include/clap/ext/configurable-audio-ports.h), request the plugin to apply a given configuration\n  - [audio-ports-config](include/clap/ext/audio-ports-config.h), simple list of pre-defined audio ports configurations, meant to be exposed to the user\n  - [audio-ports-activation](include/clap/ext/audio-ports-activation.h), activate and deactivate a given audio port\n  - [extensible-audio-ports](include/clap/ext/draft/extensible-audio-ports.h), let the host add audio ports to the plugin, this is useful for dynamic number of audio inputs (draft)\n- [render](include/clap/ext/render.h), renders realtime or offline\n- [latency](include/clap/ext/latency.h), report the plugin latency\n- [tail](include/clap/ext/tail.h), processing tail length\n- [gui](include/clap/ext/gui.h), generic gui controller\n- [voice-info](include/clap/ext/voice-info.h), let the host know how many voices the plugin has, this is important for polyphonic modulations\n- [track-info](include/clap/ext/track-info.h), give some info to the plugin about the track it belongs to\n- [tuning](include/clap/ext/draft/tuning.h), host provided microtuning (draft)\n- [triggers](include/clap/ext/draft/triggers.h), plugin's triggers, similar to parameters but stateless\n\n## Support extensions\n\n- [thread-check](include/clap/ext/thread-check.h), check which thread you are currently on, useful for correctness validation\n- [thread-pool](include/clap/ext/thread-pool.h), use the host thread pool\n- [log](include/clap/ext/log.h), lets the host aggregate plugin logs\n- [timer-support](include/clap/ext/timer-support.h), lets the plugin register timer handlers\n- [posix-fd-support](include/clap/ext/posix-fd-support.h), lets the plugin register I/O handlers\n\n## Deeper Host integration\n\n- [remote-controls](include/clap/ext/remote-controls.h), bank of controls that can be mapped on a controlles with 8 knobs\n- [preset-discovery](include/clap/factory/preset-discovery.h), let the host index the plugin's preset in their native file format\n- [preset-load](include/clap/ext/preset-load.h), let the host ask the plugin to load a preset\n- [param-indication](include/clap/ext/param-indication.h), let the plugin know when a physical control is mapped to a parameter and if there is automation data\n- [note-name](include/clap/ext/note-name.h), give a name to notes, useful for drum machines\n- [transport-control](include/clap/ext/draft/transport-control.h), let the plugin control the host's transport (draft)\n- [context-menu](include/clap/ext/context-menu.h), exchange context menu entries between host and plugin, let the plugin ask the host to popup its own context menu\n\n## Third-party extensions\n\n- [`cockos.reaper_extension`](https://github.com/justinfrankel/reaper-sdk/blob/main/reaper-plugins/reaper_plugin.h#L138), access the [REAPER](http://reaper.fm) API\n\n# Adapters\n\n- [clap-wrapper](https://github.com/free-audio/clap-wrapper), wrappers for using CLAP in other plugin environments\n\n# Resources\n\n- [clap-validator](https://github.com/robbert-vdh/clap-validator), a validator and automatic test suite for CLAP plugins.\n- [clapdb](https://clapdb.tech), a list of plugins and DAWs which supports CLAP\n\n## Examples\n\n- [clap-host](https://github.com/free-audio/clap-host), very simple host\n- [clap-plugins](https://github.com/free-audio/clap-plugins), very simple plugins\n\n## Community related projects\n\n- [clap-juce-extension](https://github.com/free-audio/clap-juce-extension), juce add-on\n- [MIP2](https://github.com/skei/MIP2), host and plugins\n- [Avendish](https://github.com/celtera/avendish), a reflection-based API for media plug-ins in C++ which supports Clap\n- [nice-plug](https://codeberg.org/RustAudio/nice-plug), a liberally licensed, community-driven Rust audio plugin framework aiming to reduce boilerplate without getting in your way\n- [iPlug2](https://iplug2.github.io), a liberally licensed C++ audio plug-in framework that supports Clap\n- [signalsmith-clap-cpp](https://github.com/geraintluff/signalsmith-clap-cpp), C++ example plugins, with cross-platform webview UIs (using the draft [webview extension](include/clap/ext/draft/webview.h), and a [helper](https://github.com/geraintluff/webview-gui?tab=readme-ov-file#clap-helper) for native platforms) and WebAssembly (WCLAP) build instructions.\n\n## Programming Language Bindings\n\n- [clap-sys](https://github.com/glowcoil/clap-sys), rust binding\n- [CLAP-for-Delphi](https://github.com/Bremmers/CLAP-for-Delphi), Delphi binding\n- [clap-zig-bindings](https://sr.ht/~interpunct/clap-zig-bindings/), Zig bindings\n- [CLAP for Ada](https://github.com/ficorax/cfa), Ada 2012 binding\n\n## Artwork\n\n - [CLAP Logo Pack.zip](https://github.com/free-audio/clap/files/8805281/CLAP.Logo.Pack.zip)\n",
+    "characters": 8624,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/free-audio/clap/blob/a47f6badb49d948fd009998f28309cdab78979c9/LICENSE",
+    "sha256": "ced49f9ef950277afdb56199369ea6e8165ebfdbfbb37ebfe1827e0de892088d",
+    "text": "MIT License\n\nCopyright (c) 2021 Alexandre BIQUE\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1072,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 24,
+  "contributors_top10": [
+    {
+      "login": "abique",
+      "contributions": 1509
+    },
+    {
+      "login": "baconpaul",
+      "contributions": 37
+    },
+    {
+      "login": "joshnatis",
+      "contributions": 22
+    },
+    {
+      "login": "Trinitou",
+      "contributions": 21
+    },
+    {
+      "login": "messmerd",
+      "contributions": 21
+    },
+    {
+      "login": "robbert-vdh",
+      "contributions": 18
+    },
+    {
+      "login": "defiantnerd",
+      "contributions": 13
+    },
+    {
+      "login": "tim-janik",
+      "contributions": 12
+    },
+    {
+      "login": "Schroedingers-Cat",
+      "contributions": 5
+    },
+    {
+      "login": "jatinchowdhury18",
+      "contributions": 5
+    }
+  ],
+  "issues_sample": [
+    {
+      "number": 518,
+      "title": "Bitwig audio engine crashes (SIGABRT / std::terminate) when a CLAP plugin pushes clap_event_note_expression from output",
+      "state": "open",
+      "created_at": "2026-09-09T13:59:34Z",
+      "updated_at": "2026-09-09T13:59:34Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/free-audio/clap/issues/518"
+    },
+    {
+      "number": 517,
+      "title": "Generic host-embedded inline GUI extension",
+      "state": "open",
+      "created_at": "2026-08-26T05:46:00Z",
+      "updated_at": "2026-09-01T12:31:30Z",
+      "closed_at": null,
+      "comments": 3,
+      "html_url": "https://github.com/free-audio/clap/issues/517"
+    },
+    {
+      "number": 515,
+      "title": "Clarify concurrency of deactivate method",
+      "state": "open",
+      "created_at": "2026-08-18T20:11:26Z",
+      "updated_at": "2026-08-27T20:01:36Z",
+      "closed_at": null,
+      "comments": 19,
+      "html_url": "https://github.com/free-audio/clap/issues/515"
+    }
+  ],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": false,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "free-audio/clap",
+        "stars": 2280,
+        "license": "MIT",
+        "language": "C",
+        "unit_class": "capability",
+        "reuse_value": 70,
+        "liftability": 75,
+        "fame_gap": -5,
+        "cat_slug": "protocol-spec",
+        "cat_name": "Protocol / Open Standard Spec",
+        "description": "Audio Plugin API"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

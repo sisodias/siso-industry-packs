@@ -1,0 +1,72 @@
+{
+  "audit_id": "R009",
+  "requested_full_name": "zrythm/zrythm",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "zrythm/zrythm",
+  "html_url": "https://github.com/zrythm/zrythm",
+  "description": "a highly automated and intuitive digital audio workstation - official mirror",
+  "stargazers_count": 3117,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 139,
+  "open_issues_count": 2,
+  "topics": [
+    "audio",
+    "computer-music",
+    "cpp",
+    "cpp23",
+    "daw",
+    "juce",
+    "midi",
+    "music",
+    "music-composition",
+    "music-production",
+    "qml",
+    "qt6"
+  ],
+  "revision": "a6ac5800f29dbed14d84bc39479665e286b42c8a",
+  "last_commit": "2026-09-03T13:55:20Z",
+  "metadata_source": "https://api.github.com/repos/zrythm/zrythm",
+  "commit_source": "https://github.com/zrythm/zrythm/commit/a6ac5800f29dbed14d84bc39479665e286b42c8a",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/zrythm/zrythm/blob/a6ac5800f29dbed14d84bc39479665e286b42c8a/README.md",
+    "sha256": "153e88d9007bb90862417a3515d3e0e2d8332c89c3090acb7f6841321b10958e",
+    "text": "<!---\nSPDX-FileCopyrightText: © 2018-2026 Alexandros Theodotou <alex@zrythm.org>\nSPDX-License-Identifier: FSFAP\n-->\n\nZrythm\n======\n\n[![translated](https://hosted.weblate.org/widgets/zrythm/-/svg-badge.svg \"Translation Status\")](https://hosted.weblate.org/engage/zrythm/?utm_source=widget)\n\n*a highly automated and intuitive digital audio workstation*\n\n![screenshot](https://www.zrythm.org/static/images/screenshots/screenshot-20260729.png)\n\nZrythm is a digital audio workstation tailored for both professionals and beginners, offering an intuitive interface and robust functionality.\n\nKey features include:\n* Streamlined editing workflows\n* Flexible tools for creative expression\n* Limitless automation capabilities\n* Powerful mixing features\n* Chord assistance for musical composition\n* Support for various plugin and file formats\n\nZrythm is [free software](https://www.gnu.org/philosophy/free-sw.html) written\nin C++23 using Qt/QML and JUCE.\n\n## Features\n\n- Clip looping and cloning\n- Adaptive snapping\n- Editing tools: pencil, eraser, cut, ramp and audition\n- Multiple lanes per track\n- Piano roll (MIDI editor) with velocity editor\n- Chord pad, chord editor and chord suggestions\n- Audio editor with adjustable gain/fades\n- Musical mode with offline time-stretching\n- Audio/MIDI recording with takes\n- Wide variety of track types for every purpose\n- Support for VST3, CLAP, LV2, LADSPA and AudioUnit plugins\n- Type 0 and 1 MIDI file support\n- WAV audio file import\n- Built-in plugin browser\n- Undoable user actions with undo history\n- Hardware-accelerated UI\n- SIMD-optimized DSP\n- Cross-platform, cross-audio/MIDI backend and cross-architecture\n- Available in multiple languages including Chinese, Japanese, Russian, Portuguese, French and German\n\n<details>\n<summary>Not yet ported from v1 (click to expand)</summary>\n\n- Clip linking\n- Bounce anything to audio or MIDI\n- Piano roll chord integration and drum mode\n- Audio editor part editing (including in external app)\n- Event viewers (list editors) with editable object parameters\n- Per-context object functions\n- Punch in/out recording and record on MIDI input\n- Device-bindable parameters for external control\n- Signal manipulation with signal groups, aux sends and direct anywhere-to-anywhere connections\n- In-context listening by dimming other tracks\n- Automate anything using automation events or CV signal from modulator plugins and macro knobs\n- Detachable views for multi-monitor setups\n- Searchable preferences\n- VST2, DSSI, SFZ/SF2 SoundFont support and other audio file formats\n- Built-in file browser\n- Optional plugin sandboxing (bridging)\n- Stem export\n- Automatic project backups\n- Serializable undo history\n\n</details>\n\nFor a full list of features, see the\n[Features page](https://www.zrythm.org/en/features.html)\non our website.\n\n## Building and Installation\n\nPrebuilt installers are available at <https://www.zrythm.org/en/download.html>.\nThis is the recommended way to install Zrythm.\n\nSee the following instructions if you would like to build Zrythm from source instead.\n\n### Building From Source\n\n> [!NOTE]\n> We make heavy use of CMake's [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html) module to fetch dependencies so you don't need to install any dependencies manually other than CMake and Qt.\n> This guide assumes you are fine with fetching dependencies automatically.\n\n> [!IMPORTANT]\n> If you distribute your builds to others, you must comply with the license terms of Zrythm and all dependencies we use, in addition to our [Trademark Policy](TRADEMARKS.md).\n\nYou can change `Release` to `Debug` below if you want to build in debug mode.\n\n#### GNU/Linux\n\n1. Install [CMake](https://cmake.org/), [Ninja](https://ninja-build.org/) and [Qt](https://www.qt.io/) (see [CMakeLists.txt](CMakeLists.txt) for required version).\n2. Open a terminal and go to the root of Zrythm's source code.\n3. Run `cmake -B builddir -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=<path to your Qt prefix>`.\n4. Run `cmake --build builddir --config Release`.\n5. Zrythm is now built at `builddir/src/gui/zrythm`.\n\n#### macOS\n\n1. Install Xcode, CMake and Qt.\n2. Open a terminal and go to the root of Zrythm's source code.\n3. Run `cmake -B builddir -G Xcode -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=<path to your Qt prefix>`.\n4. Open the Xcode project inside `builddir` and build it.\n\n#### Windows\n\n1. Install Visual Studio 2022 (CMake ships with Visual Studio, but you have to install the \"Desktop development with C++\" package), and Qt.\n2. Open Developer Powershell for Visual Studio 2022 and go to the root of Zrythm's source code.\n3. Run `cmake -B builddir -G \"Visual Studio 17 2022\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=<path to your Qt prefix>`.\n4. Open the Visual Studio solution inside `builddir` and build it.\n\n> [!NOTE]\n> On Windows, you must build Qt with the same compiler and same configuration (Debug/Release) you use to build Zrythm.\n\n#### Using Conan (optional)\n\n[Conan](https://conan.io/) can manage all dependencies (including Qt) for reproducible builds across platforms.\n\n1. Install Conan, CMake, and Ninja in a virtual environment:\n   ```\n   python -m venv venv && source venv/bin/activate\n   pip install -r requirements.txt\n   ```\n\n2. Install project profiles and settings:\n   ```\n   conan config install conan\n   ```\n\n   > [!WARNING]\n   > This overwrites all files in `~/.conan2/profiles/`, as well as `~/.conan2/settings_user.yml` and `~/.conan2/global.conf`. To avoid conflicts, either back up existing configs or use a separate Conan home via `CONAN_HOME`.\n\n3. Initialize submodules (includes the custom Qt recipe fork) and export:\n   ```\n   git submodule update --init --recursive\n   conan remote add conan-local-index ext/conan-center-index\n   python3 tools/export_conan_recipes.py\n   ```\n\n4. Install dependencies and generate build files:\n   ```\n   conan install . -pr:h <profile> -pr:b <profile> --build=missing\n   cmake --preset default\n   cmake --build conanbuild/<Debug|Release> --config <Debug|Release>\n   ```\n\n   Select a profile for your platform (adjust compiler versions in `~/.conan2/profiles/_clang`, `_gcc`, `_msvc`, or `_apple_clang` to match your toolchain):\n\n   | Platform | Host/build profile | Build profile (cross-compile) |\n   |----------|-------------------|-------------------------------|\n   | GNU/Linux (Clang) | `clang_debug` / `clang_release` | — |\n   | GNU/Linux (GCC) | `gcc_debug` / `gcc_release` | — |\n   | macOS | `appleclang_debug` / `appleclang_release` | `appleclang_build` |\n   | Windows (x64) | `msvc_debug` / `msvc_release` | — |\n   | Windows (ARM64EC) | `msvc_arm64ec_debug` / `msvc_arm64ec_release` | — |\n\n   > [!NOTE]\n   > macOS uses `appleclang_build` (Release) as the build profile because the host profile builds sanitizer-instrumented Qt, which requires cross-building (sanitizer profiles set `cross_build=True` to skip running test executables that would otherwise fail under the sanitizer runtime).\n\n   For sanitizer builds, use profiles like `clang_asan_ubsan`, `clang_tsan`, `gcc_asan_ubsan`, `appleclang_asan_ubsan`, or `msvc_asan`. These instrument the entire dependency chain.\n\n   For instrumenting only Zrythm itself (without rebuilding dependencies), use the `sanitizer` option instead. Per the [Conan sanitizer docs](https://docs.conan.io/2/security/sanitizers.html), most sanitizers (ASan, UBSan) do not require the whole chain to be built with them:\n   ```\n   conan install . -pr:h clang_debug -pr:b clang_debug -o sanitizer=\"address_undefined\" --build=missing\n   ```\n\n## Using Zrythm\n\nSee the [user manual](http://manual.zrythm.org/).\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n\n## Hacking\n\nSee the [developer docs](https://docs.zrythm.org/).\n\n## Forum\n\nSee [our forum](https://forum.zrythm.org).\n\n## Chat\n\n* [Zrythm server on Discord](https://discord.gg/ScHUMcNtPb)\n* [#zrythmdaw:matrix.org on Matrix](https://matrix.to/#/#zrythmdaw:matrix.org).\n* [#zrythm on Libera.Chat IRC](https://web.libera.chat/#zrythm).\n\n## Issue tracker\nSee [Issues on GitLab](https://gitlab.zrythm.org/zrythm/zrythm/issues).\n\n## Releases\n\n<https://www.zrythm.org/releases>\n\n## Copying Zrythm\n\n[![agpl-3.0](https://www.gnu.org/graphics/agplv3-with-text-162x68.png)](https://www.gnu.org/licenses/agpl-3.0)\n\nSee [COPYING](COPYING) for general copying conditions and\n[TRADEMARKS.md](TRADEMARKS.md) for our trademark policy.\n\n## Support\n\nIf you would like to support this project please donate below or purchase a binary installer from <https://www.zrythm.org/en/download.html> - creating a DAW takes many years of work and contributions enable\nus to spend more time working on the project.\n\n- [liberapay.com/Zrythm](https://liberapay.com/Zrythm/donate)\n- [paypal.me/zrythmdaw](https://paypal.me/zrythmdaw)\n- [opencollective.com/zrythm](https://opencollective.com/zrythm/donate)\n- Bitcoin (BTC): `bc1qjfyu2ruyfwv3r6u4hf2nvdh900djep2dlk746j`\n\nThis project is currently funded through [NGI0 Commons Fund](https://nlnet.nl/commonsfund), a fund established by [NLnet](https://nlnet.nl) with financial support from the European Commission's [Next Generation Internet](https://ngi.eu) program. Learn more at the [NLnet project page](https://nlnet.nl/project/Zrythm).\n\n[<img src=\"https://nlnet.nl/logo/banner.png\" alt=\"NLnet foundation logo\" width=\"20%\" />](https://nlnet.nl)\n[<img src=\"https://nlnet.nl/image/logos/NGI0_tag.svg\" alt=\"NGI Zero Logo\" width=\"20%\" />](https://nlnet.nl/commonsfund)\n",
+    "characters": 9475,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "COPYING",
+    "source_url": "https://github.com/zrythm/zrythm/blob/a6ac5800f29dbed14d84bc39479665e286b42c8a/COPYING",
+    "sha256": "4b22429098ad83393077cd81d21696aaacd8a0606ab5949df7aeb68f1c97622f",
+    "text": "Zrythm is provided under:\n\n    LICENSES/LicenseRef-ZrythmLicense.txt.\n\nIn addition, other licenses may also apply.\nZrythm follows version 3.0 of the REUSE Specification to communicate which\nlicense(s) apply to each file.\nFor details, see:\n\n    https://reuse.software/spec/\n",
+    "characters": 273,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

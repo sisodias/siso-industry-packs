@@ -1,0 +1,60 @@
+{
+  "audit_id": "R075",
+  "requested_full_name": "tonaljs/tonal",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "tonaljs/tonal",
+  "html_url": "https://github.com/tonaljs/tonal",
+  "description": "A music theory library for Javascript",
+  "stargazers_count": 4231,
+  "default_branch": "main",
+  "archived": false,
+  "license": null,
+  "forks_count": 253,
+  "open_issues_count": 43,
+  "topics": [
+    "chord-progression",
+    "chords",
+    "functional",
+    "interval",
+    "javascript",
+    "key-signatures",
+    "music",
+    "music-theory",
+    "scale",
+    "transpose",
+    "typescript"
+  ],
+  "revision": "4ee7af6191cb086aa7d41727cfef1cfe22ee1ee7",
+  "last_commit": "2026-07-28T04:06:59Z",
+  "metadata_source": "https://api.github.com/repos/tonaljs/tonal",
+  "commit_source": "https://github.com/tonaljs/tonal/commit/4ee7af6191cb086aa7d41727cfef1cfe22ee1ee7",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/tonaljs/tonal/blob/4ee7af6191cb086aa7d41727cfef1cfe22ee1ee7/README.md",
+    "sha256": "9c92443e9a536aef77d75d4b1a6013f05a8d87a4fdae3fa5601d1146f34c6adc",
+    "text": "# tonal\n\n[![npm version](https://img.shields.io/npm/v/tonal.svg?style=flat-square)](https://www.npmjs.com/package/tonal)\n\n`tonal` is a music theory library. Contains functions to manipulate tonal\nelements of music (note, intervals, chords, scales, modes, keys). It deals with\nabstractions (not actual music or sound).\n\n`tonal` is implemented in Typescript and published as a collection of Javascript\nnpm packages.\n\nIt uses a functional programming style: all functions are pure, there is no data\nmutation, and entities are represented by data structures instead of objects.\n\n## Example\n\n```js\nimport { Chord, Interval, Note, Scale } from \"tonal\";\n\nNote.midi(\"C4\"); // => 60\nNote.freq(\"a4\"); // => 440\nNote.accidentals(\"c#2\"); // => '#'\nNote.transpose(\"C4\", \"5P\"); // => \"G4\"\nInterval.semitones(\"5P\"); // => 7\nInterval.distance(\"C4\", \"G4\"); // => \"5P\"\n\n// Scales\nScale.get(\"C major\").notes; // => [\"C\", \"D\", \"E\", \"F\", \"G\", \"A\", \"B\"];\n[1, 3, 5, 7].map(Scale.degrees(\"C major\")); // => [\"C\", \"E\", \"G\", \"B\"]\n\nChord.get(\"Cmaj7\").name; // => \"C major seventh\"\n\n// Chord inversions\nconst triad = Chord.degrees(\"Cm\");\n[1, 2, 3].map(triad); // => [\"C\", \"Eb\", \"G\"];\n[2, 3, 1].map(triad); // => [\"Eb\", \"G\", \"C\"];\n[3, 1, 2].map(triad); // => [\"G\", \"C\", \"Eb\"];\n```\n\n## Install\n\nInstall all packages at once:\n\n```bash\nnpm install --save tonal\n```\n\nYou can read [CHANGELOG here](https://github.com/tonaljs/tonal/blob/main/docs/CHANGELOG.md).\n\n## Usage\n\nTonal is compatible with both ES5 and ES6 modules, and browser.\n\n#### ES6 `import`:\n\n```js\nimport { Note, Scale } from \"tonal\";\n```\n\n#### ES5 `require`:\n\n```js\nconst { Note, Scale } = require(\"tonal\");\n```\n\n#### Browser\n\nYou can use the browser version from jsdelivr CDN directly in your html:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/tonal/browser/tonal.min.js\"></script>\n<script>\n  console.log(Tonal.Key.minorKey(\"Ab\"));\n</script>\n```\n\nOr if you prefer, grab the\n[minified browser ready version](https://raw.githubusercontent.com/tonaljs/tonal/master/packages/tonal/browser/tonal.min.js)\nfrom the repository.\n\n#### Bundle size\n\n`tonal` includes all published modules.\n\nAlthough the final bundle it is small, you can\nreduce bundle sizes even more by installing the modules individually, and\nimporting only the functions you need.\n\nNote that individual modules are prefixed with `@tonaljs/`. For example:\n\n```bash\nnpm i @tonaljs/note\n```\n\n```js\nimport { transpose } from \"@tonaljs/note\";\ntranspose(\"A4\", \"P5\");\n```\n\n## Documentation\n\nVisit the [documentation site](https://tonaljs.github.io/tonal/docs) or the README.md of each module 👇\n\n#### Notes and intervals\n\n- [@tonaljs/note](/packages/note): Note operations (simplify, transposeBy )\n- [@tonaljs/midi](/packages/midi): Midi number conversions\n- [@tonaljs/interval](/packages/interval): Interval operations (add, simplify,\n  invert)\n- [@tonaljs/abc-notation](/packages/abc-notation): Parse ABC\n  notation notes\n\n#### Scales and chords\n\n- [@tonaljs/scale](/packages/scale): Scales\n- [@tonaljs/scale-type](/packages/scale-type): A dictionary of scales\n- [@tonaljs/chord](/packages/chord): Chords\n- [@tonaljs/chord-type](/packages/chord-type): A dictionary of chords\n- [@tonaljs/chord-detect](/packages/chord-detect): Detect chords from notes\n- [@tonaljs/pcset](/packages/pcset): Pitch class sets. Compare note groups.\n\n#### Voicings\n\n- [@tonaljs/voicing](/packages/voicing/): Voicings and voice leadings for chords\n- [@tonaljs/voice-leading](/packages/voice-leading/): Voice leading logic for transitions between voicings\n- [@tonaljs/voicing-dictionary](/packages/voicing-dictionary/): Collections of chord voicings\n\n#### Keys, chord progressions\n\n- [@tonaljs/key](/packages/key): Major and minor keys, it's scales and chords\n- [@tonaljs/mode](/packages/mode): A dictionary of Greek modes (ionian,\n  dorian...)\n- [@tonaljs/progression](/packages/progression): Chord progressions\n- [@tonaljs/roman-numeral](/packages/roman-numeral): Parse roman numeral symbols\n\n#### Time, rhythm\n\n- [@tonaljs/rhythm-pattern](/packages/rhythm-pattern): Generate and manipulate rhythmic patterns\n- [@tonaljs/time-signature](/packages/time-signature): Parse time signatures\n- [@tonaljs/duration-value](/packages/duration-value): Note duration values\n\n#### Utilities\n\n- [@tonaljs/core](/packages/core): Core functions (note, interval, transpose and\n  distance)\n- [@tonaljs/collection](/packages/collection): Utility functions to work with\n  collections (range, shuffle, permutations)\n- [@tonaljs/range](/packages/range): Create note ranges\n\n## Contributing\n\nRead [contributing document](/docs/CONTRIBUTING.md). To contribute open a PR and ensure:\n\n- If is a music theory change (like the name of a scale) link to reliable references.\n- If is a new feature, add documentation: changes to README of the affected module(s) are expected.\n- Ad tests: changes to the test.ts file of the affected module(s) are expected.\n- All tests are green\n\n## Inspiration\n\nThis library takes inspiration from other music theory libraries:\n\n- Teoria: https://github.com/saebekassebil/teoria\n- Impro-Visor: https://www.cs.hmc.edu/~keller/jazz/improvisor/\n- MusicKit: https://github.com/benzguo/MusicKit\n- Music21: https://www.music21.org/music21docs/\n- Sharp11: https://github.com/jsrmath/sharp11\n- python-mingus: https://github.com/bspaans/python-mingus\n- Open Music Theory: https://viva.pressbooks.pub/openmusictheory/\n\n## Projects using tonal\n\nShowcase of projects that are using Tonal:\n\n- [Solfej](https://www.solfej.io/) by\n  [Shayan Javadi](https://github.com/ShayanJavadi)\n- [EarBeater](https://www.earbeater.com/online-ear-training/) by\n  [Morten Vestergaard](https://github.com/vellebelle)\n- [Sonid](https://sonid.app/)\n  ([play store](https://play.google.com/store/apps/details?id=org.stroopwafel.music.app),\n  [apple store](https://apps.apple.com/us/app/sonid/id1490221762?ls=1)) by\n  [martijnmichel](https://github.com/martijnmichel)\n- [Songcraft](https://songcraft.io/) by\n  [Gabe G'Sell](https://github.com/gabergg)\n- [React Guitar](https://react-guitar.com/) by\n  [4lejandrito](https://github.com/4lejandrito)\n- [Fretty.app](https://fretty.app/) by [tfeldmann](https://github.com/tfeldmann)\n- [Chordify](https://ashleymays.github.io/Chordify) by [ashleymays](https://github.com/ashleymays)\n- [Chordal](https://chordal.vercel.app) by [kad1kad](https://github.com/kad1kad)\n- [muted.io](https://muted.io/) by [thisisseb](https://github.com/thisisseb)\n- [Midi Sandbox](https://midisandbox.com/) by [jdlee022](https://github.com/jdlee022)\n- [music, eternal](https://eternal.rob.computer) by [kousun12](https://github.com/kousun12)\n- [Chromatone.center](https://chromatone.center) by [davay42](https://github.com/davay42)\n- [Super Oscillator](https://github.com/lukehorvat/super-oscillator) by [lukehorvat](https://github.com/lukehorvat)\n- [StringScales](https://stringscales.com/) by [Ambewas](https://github.com/ambewas)\n- [Polychron](https://github.com/PolychronMidi/Polychron) by [i1li](https://github.com/i1li)\n- [MusicTrainer](https://musictrainer.barnman.cc) by [zilongliu](https://github.com/Zilong-L)\n- [RiffScore](https://riffscore.netlify.app/) by [joekotvas](https://github.com/joekotvas/)\n\nThank you all!\n\nAdd your project here by\n[editing this file](https://github.com/tonaljs/tonal/edit/main/README.md)\n\n## License\n\n[MIT License](docs/LICENSE)\n",
+    "characters": 7329,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "error": "standard_paths_not_found; not proof that no licence exists"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

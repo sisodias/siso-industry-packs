@@ -1,0 +1,97 @@
+{
+  "audit_id": "R037",
+  "requested_full_name": "nussl/nussl",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "nussl/nussl",
+  "html_url": "https://github.com/nussl/nussl",
+  "description": "A flexible source separation library in Python",
+  "stargazers_count": 643,
+  "default_branch": "master",
+  "archived": true,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 98,
+  "open_issues_count": 49,
+  "topics": [
+    "audio",
+    "duet",
+    "hpss",
+    "nmf",
+    "nussl",
+    "repet",
+    "source-separation"
+  ],
+  "revision": "17368d4082c4ebffc76462221cf9bcaa595f7ac8",
+  "last_commit": "2024-12-09T05:05:08Z",
+  "metadata_source": "https://api.github.com/repos/nussl/nussl",
+  "commit_source": "https://github.com/nussl/nussl/commit/17368d4082c4ebffc76462221cf9bcaa595f7ac8",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/nussl/nussl/blob/17368d4082c4ebffc76462221cf9bcaa595f7ac8/README.md",
+    "sha256": "78959d2e4cef1b84d17cbf3efecb506af7020798e200272b5df6ae22c3b29cef",
+    "text": "<div align=\"center\">\n<img width=\"201\" height=\"150\" src=\"docs/nussl-logo-v1.png\">\n\n**Flexible easy-to-use audio source separation**\n \n[![PyPI Status](https://badge.fury.io/py/nussl.svg)](https://badge.fury.io/py/nussl)\n[![Downloads](https://pepy.tech/badge/nussl)](https://pepy.tech/project/nussl)\n\n![Build Status](https://github.com/nussl/nussl/workflows/Build/badge.svg)\n[![codecov](https://codecov.io/gh/nussl/nussl/branch/master/graph/badge.svg)](https://codecov.io/gh/nussl/nussl)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n</div>\n\n\n--------------------------------------------------------------------------------\n\n> [!CAUTION]\n**NUSSL IS DEPRECATED** <br />\nThere will be no further any updates, bug fixes, or answers for open issues. We're leaving the code here as is for reference and educational purposes.\n\n\nnussl (pronounced [\"nuzzle\"](http://www.thefreedictionary.com/nuzzle)) is a flexible, object oriented\nPython audio source separation library created by the \n[Interactive Audio Lab](http://music.cs.northwestern.edu/) \nat Northwestern University. It stands for Northwestern University Source Separation Library (or our less-branded backronym: \n\"Need Unmixing? Source Separation Library!\"). Whether you're a researcher creating novel network architectures or new signal \nprocessing approaches for source separation or you just need an out-of-the-box source separation model, nussl contains \neverything you need for modern source separation, from prototyping to evaluation to end-use.\n\n\n# Documentation\n\nTutorials, code examples, and the API reference are available at the documentation\nwebsite which is [available here.](https://nussl.github.io/docs/)\n\n\n# Features\n\n\n## Deep Learning\n\nnussl contains a rich feature set for deep learning models, including a \nbuilt in trainer with support for many common datasets in music and speech separation.\nnussl also has a External File Zoo where users are able to download pre-trained\nmodels on many different datasets with a number of different configurations. \n\n### Training Your Own Algorithms\n\nnussl makes it easy to train your own algorithms, with many common architectures,\ndatasets, and configurations ready-built for many use cases, and an easy way to\nextend our built-in functionality for your own needs. There are many pre-built useful\nmodules that are easy to piece together, such as LSTMs, GRUs, convolutional layers,\nfully conneected layers, mask layers, embedding layers. Everything is built on PyTorch, so adding a brand new module is a snap!\n\n### Using Your Own Data\n\nnussl has existing support for many popular source separation datasets, like MUSDB18,\nWSJ0, WHAM!, and FUSS. nussl also defines a simple directory structure to add in any data you want.\nWant to augment your data? We have support for datasets created with [Scaper](https://scaper.readthedocs.io/en/latest/index.html) built in so you\ncan train on magnitudes more training data. \n\n### Downloading Pre-trained Models\n\nPre-trained models on speech separation, music separation, and more are available\nfor download at the [External File Zoo (EFZ)](http://nussl.ci.northwestern.edu/),\nand there is a built in python API to download models you want from within your code.\n\n## Deep Learning Architectures\n\nWe provide the following architectures available out of the box:\n* Mask Inference\n* Deep Clustering\n* Chimera\n* OpenUnmix (Soon!)\n* TasNet (Soon!)\n* DualPath RNN (Soon!)\n\n(See docs for corresponding citations)\n\n## Classical Algorithms\n\nAdditionally, nussl also contains implementations of many classical source separation\nalgorithms, including:\n\n* Spatialization algorithms: DUET, PROJET\n* Factorization-based Methods: RPCA, ICA\n* Primitive Methods: Repetition (REPET, 2DFT), Harmonic/Percussive, Vocal melody extraction, Timbre clustering\n* Benchmark Methods: High Pass filter, Binary Masks, Ratio Masks, Weiner Filtering\n\n## Interaction\n\nnussl supports light interaction via [gradio](https://www.gradio.app/).\nTo launch a web interface where you can upload audio and hear\nseparations, simply do:\n\n```python\nimport nussl\n\n# Make a dummy signal to instantiate object.\ndummy_signal = nussl.AudioSignal()\n\n# Create some separation object with desired config.\n# This will use the 2DFT algorithm, but since interaction\n# is implemented in the base separation object, it is\n# available to every algorithm.\nft2d = nussl.separation.primitive.FT2D(dummy_signal)\n\n# Launch the Gradio interface. Use `share=True` to make\n# a public link that you can share! Warning - people with\n# access to the link will be running code on YOUR\n# machine.\nft2d.interact()\n```\n\nOr all at once, using `share=True` to create a public link that you can\ngive to others.\n\n```bash\n>>> import nussl\n>>> nussl.separation.primitive.HPSS(nussl.AudioSignal()).interact(share=True)\nRunning locally at: http://127.0.0.1:7860/\nThis share link will expire in 6 hours. If you need a permanent link, email support@gradio.app\nRunning on External URL: https://22218.gradio.app\n```\n\nThis will launch an interface that looks like this:\n\n<div align=\"center\">\n<img src=\"docs/gradio-interface.gif\">\n</div>\n\n## Evaluation\n\nnussl has many built in evaluation measures to determine how well your algorithm did, including\nthe museval measure (BSSEvalV4), SI-SDR, SI-SIR, SI-SAR, SD-SDR, SNR, and more! We seek to \nprovide a thorough framework for evaluating your source separation research.\n\n# Installation\n\n\nnussl is on the Python Package Index (PyPI), so it is easy to install with pip:\n\n```\n$ pip install nussl\n```\n\n**Note: Requires python 3.7+**\n\nFor the functionality in ``nussl.play_utils``, you'll want IPython, and ``ffmpeg``, installed as well:\n\n```\n$ pip install IPython\n$ brew install ffmpeg # on mac\n$ apt-get install ffmpeg # on linux\n```\n\nTo use the Melodia separation algorithm, you'll need to specify this:\n\n```\n$ pip install \"nussl[melodia]\"\n```\n\n`vamp` doesn't install on some MacOS versions, so we can't include it by default.\nTo actually use Melodia, you'll also need the Melodia plugin. For installation\ninstructions, look [here](https://github.com/justinsalamon/melodia_python_tutorial/blob/master/melodia_python_tutorial.ipynb).\n\n\nAugmentation effects are applied via either PySox or SoxBindings, if on Linux or MacOS.\n`soxbindings` can't be installed from PyPI on Windows, but it may be installable from source.\nFor source installation instructions, look [here](https://github.com/pseeth/soxbindings). Other\naugmentation effects are applied via FFMpeg.\n\n# Citing\n\nIf you are using nussl for your research project, we please ask that you cite it using one of the \nfollowing bibtex citations:\n\n    @inproceedings {nussl\n        author = {Ethan Manilow and Prem Seetharaman and Bryan Pardo},\n        title = \"The Northwestern University Source Separation Library\",\n        publisher = \"Proceedings of the 19th International Society of Music Information Retrieval \n            Conference ({ISMIR} 2018), Paris, France, September 23-27\",\n        year = 2018\n    }\n\n\n# Issues and Contributions\n\nSee the [contribution guide](https://nussl.github.io/docs/contributing.html) for\ndetailed information. But the basics are: bug fixes/enhancements/etc have the standard github\nprocess; but, when adding new algorithms, contributors must provide benchmark files, paper \nreferences, and trained models (if applicable). Please see the issues page before contacting the authors.\n\n# Contributors\n\n- Prem Seetharaman <http://github.com/pseeth>\n- Ethan Manilow <http://github.com/ethman>\n- Fatemeh Pishdadian <http://github.com/fpishdadian>\n- Nathan Shelly <https://github.com/nathanshelly>\n- Andreas Bugler <https://github.com/abugler>\n- Bryan Pardo <https://users.cs.northwestern.edu/~pardo/>\n\nFormer:\n\n- Corey Grief <http://github.com/cegrief>\n- Daniel Felix Kim <http://github.com/DanielFelixKim>\n- Ben Kalish <https://github.com/BenKalish42>\n\nnussl's REPET, REPET-SIM implementations are based on MATLAB code from Zafar Rafii. \nThe DUET implementation is based on MATLAB code from Scott Rickard. \nnussl's PROJET implementation is based on python code from Antoine Liutkus.\n\nSee documentation and inline comments for each algorithm for more information about citations and authorship.\n\n## Acknowledgements\n\nWe'd like to also thank Jonathan Le Roux and Gordon Wichern for very helpful discussions \nthroughout the development of this package! \n\n# License\n\nnussl 1.0 is under an [MIT License](https://opensource.org/licenses/MIT)\n\nThe MIT License (MIT)\n\nCopyright (c) 2016-2020 Interactive Audio Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and \nassociated documentation files (the \"Software\"), to deal in the Software without restriction, \nincluding without limitation the rights to use, copy, modify, merge, publish, distribute, \nsublicense, and/or sell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or \nsubstantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT\nNOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND \nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, \nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, \nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 9581,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/nussl/nussl/blob/17368d4082c4ebffc76462221cf9bcaa595f7ac8/LICENSE.md",
+    "sha256": "00fd598a4ab339b83a3eeffc5d0d4dd0697b30938f1792b7a293f1ac7a11a398",
+    "text": "MIT License\n\nCopyright (c) 2016-2020 Interactive Audio Lab\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1083,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "nussl/nussl",
+        "capability_tag": "audio-processing",
+        "category_slug": "scientific-computing-library",
+        "summary": "Python library for audio source separation",
+        "reuse_value": 72,
+        "stars": 645,
+        "license": "MIT",
+        "language": "Python",
+        "url": "https://github.com/nussl/nussl",
+        "rank_score": 72006450
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "nussl/nussl",
+        "stars": 645,
+        "license": "MIT",
+        "language": "Python",
+        "unit_class": "component",
+        "reuse_value": 72,
+        "liftability": 90,
+        "fame_gap": -18,
+        "cat_slug": "scientific-computing-library",
+        "cat_name": "Scientific / Numerical Computing Library",
+        "description": "A flexible source separation library in Python"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

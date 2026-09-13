@@ -1,0 +1,59 @@
+{
+  "audit_id": "R079",
+  "requested_full_name": "thestk/rtaudio",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "thestk/rtaudio",
+  "html_url": "https://github.com/thestk/rtaudio",
+  "description": "A set of C++ classes that provide a common API for realtime audio input/output across Linux (native ALSA, JACK, PulseAudio and OSS), Macintosh OS X (CoreAudio and JACK), and Windows (DirectSound, ASIO, and WASAPI) operating systems.",
+  "stargazers_count": 1763,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 362,
+  "open_issues_count": 49,
+  "topics": [],
+  "revision": "c0a533d7bb16e8ca0d96cdb2e3fcfb6d1d095df4",
+  "last_commit": "2026-09-12T17:56:16Z",
+  "metadata_source": "https://api.github.com/repos/thestk/rtaudio",
+  "commit_source": "https://github.com/thestk/rtaudio/commit/c0a533d7bb16e8ca0d96cdb2e3fcfb6d1d095df4",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/thestk/rtaudio/blob/c0a533d7bb16e8ca0d96cdb2e3fcfb6d1d095df4/README.md",
+    "sha256": "27568086baff9cc0bff62e2f4bf098545faf01d7f351c78de37076db018c7014",
+    "text": "# RtAudio\n\n![Build Status](https://github.com/thestk/rtaudio/actions/workflows/ci.yml/badge.svg)\n\nA set of C++ classes that provide a common API for realtime audio input/output across Linux (native ALSA, JACK, PulseAudio and OSS), Macintosh OS X (CoreAudio and JACK), and Windows (DirectSound, ASIO and WASAPI) operating systems.\n\nBy Gary P. Scavone, 2001-2023 (and many other developers!)\n\nThis distribution of RtAudio contains the following:\n\n- doc:      RtAudio documentation (see doc/html/index.html)\n- tests:    example RtAudio programs\n- include:  header and source files necessary for ASIO, DS & OSS compilation\n- tests/Windows: Visual C++ .net test program workspace and projects\n\n## Overview\n\nRtAudio is a set of C++ classes that provides a common API (Application Programming Interface) for realtime audio input/output across Linux (native ALSA, JACK, PulseAudio and OSS), Macintosh OS X and Windows (DirectSound, ASIO and WASAPI) operating systems.  RtAudio significantly simplifies the process of interacting with computer audio hardware.  It was designed with the following objectives:\n\n  - object-oriented C++ design\n  - simple, common API across all supported platforms\n  - only one source and one header file for easy inclusion in programming projects\n  - allow simultaneous multi-api support\n  - support dynamic connection of devices\n  - provide extensive audio device parameter control\n  - allow audio device capability probing\n  - automatic internal conversion for data format, channel number compensation, (de)interleaving, and byte-swapping\n\nRtAudio incorporates the concept of audio streams, which represent audio output (playback) and/or input (recording).  Available audio devices and their capabilities can be enumerated and then specified when opening a stream.  Where applicable, multiple API support can be compiled and a particular API specified when creating an RtAudio instance.  See the \\ref apinotes section for information specific to each of the supported audio APIs.\n\nRtAudio is also offered as a module, which is enabled with `RTAUDIO_BUILD_MODULES`, and is accessed with `import rt.audio;`. Namespaces are implicitly imported (unless disabled with `RTAUDIO_USE_NAMESPACE`), so classes can be accessed through namespace `rt::audio` or through the global namespace (for example, `rt::audio::RtApi` and `::RtApi` are both valid).\n\n## Building\n\nSeveral build systems are available.  These are:\n\n  - autotools (`./autogen.sh; make` from git, or `./configure; make` from tarball release)\n  - CMake (`mkdir build; cd build; ../cmake; make`)\n  - meson (`meson build; cd build; ninja`)\n  - vcpkg (`./bootstrap-vcpkg.sh; ./vcpkg integrate install; ./vcpkg install rtaudio`)\n\nSee `install.txt` for more instructions about how to select the audio backend API.  By\ndefault all detected APIs will be enabled.\n\nWe recommend using the autotools-based build for packaging purposes.  Please note that\nRtAudio is designed as a single `.cpp` and `.h` file so that it is easy to copy directly\ninto a project.  In that case you need to define the appropriate flags for the desired\nbackend APIs.\n\n## FAQ\n\n### Why does audio only come to one ear when I choose 1-channel output?\n\nRtAudio doesn't automatically turn 1-channel output into stereo output with copied values to two channels, since there may be cases when a user truly wants 1-channel behaviour.  If you want monophonic data to be projected to stereo output, open a 2-channel stream and copy the data to both channels in your audio stream callback.\n\n## Further Reading\n\nFor complete documentation on RtAudio, see the doc directory of the distribution or surf to https://caml.music.mcgill.ca/~gary/rtaudio/index.html.\n\n\n## Legal and ethical:\n\nThe RtAudio license is similar to the MIT License.  Please see [LICENSE](LICENSE).\n",
+    "characters": 3799,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/thestk/rtaudio/blob/c0a533d7bb16e8ca0d96cdb2e3fcfb6d1d095df4/LICENSE",
+    "sha256": "73eb32613a621c134b33fbe3c661562dcf5f81f0558af13d483fc241eb21be7b",
+    "text": "\nRtAudio: a set of realtime audio i/o C++ classes\nCopyright (c) 2001-2023 Gary P. Scavone\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation files\n(the \"Software\"), to deal in the Software without restriction,\nincluding without limitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of the Software,\nand to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nAny person wishing to distribute modifications to the Software is\nasked to send the modifications to the original developer so that\nthey can be incorporated into the canonical version.  This is,\nhowever, not a binding provision of this license.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR\nANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF\nCONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+    "characters": 1360,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

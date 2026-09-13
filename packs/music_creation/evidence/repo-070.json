@@ -1,0 +1,63 @@
+{
+  "audit_id": "R070",
+  "requested_full_name": "beetbox/pyacoustid",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "beetbox/pyacoustid",
+  "html_url": "https://github.com/beetbox/pyacoustid",
+  "description": "Python bindings for Chromaprint acoustic fingerprinting and the Acoustid Web service",
+  "stargazers_count": 407,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 69,
+  "open_issues_count": 19,
+  "topics": [
+    "acoustic-fingerprinting",
+    "audio",
+    "python"
+  ],
+  "revision": "a08a28d5614bfa37d5e27fa1ff1b5d5c2e4fa7ca",
+  "last_commit": "2026-04-09T18:05:22Z",
+  "metadata_source": "https://api.github.com/repos/beetbox/pyacoustid",
+  "commit_source": "https://github.com/beetbox/pyacoustid/commit/a08a28d5614bfa37d5e27fa1ff1b5d5c2e4fa7ca",
+  "readme": {
+    "path": "README.rst",
+    "source_url": "https://github.com/beetbox/pyacoustid/blob/a08a28d5614bfa37d5e27fa1ff1b5d5c2e4fa7ca/README.rst",
+    "sha256": "8ce3dca1431169d67fe7d8cc7ed7d659832d5838462107fda3e8db8d9787f516",
+    "text": "Chromaprint and Acoustid for Python\n===================================\n\n`Chromaprint`_ and its associated `Acoustid`_ Web service make up a\nhigh-quality, open-source acoustic fingerprinting system. This package provides\nPython bindings for both the fingerprinting algorithm library, which is written\nin C but portable, and the Web service, which provides fingerprint lookups.\n\n.. _Chromaprint: http://acoustid.org/chromaprint\n.. _Acoustid: http://acoustid.org/\n\n\nInstallation\n------------\n\nThis library works with Python 3.10+.\n\nFirst, install the `Chromaprint`_ fingerprinting library by `Lukáš Lalinský`__.\n(The library itself depends on an FFT library, but it's smart enough to use an\nalgorithm from software you probably already have installed; see the Chromaprint\npage for details.) This module can use either the Chromaprint dynamic library or\nthe ``fpcalc`` command-line tool, which itself depends on `libavcodec`_. If you\nuse ``fpcalc``, either ensure that it is on your ``$PATH`` or set the ``FPCALC``\nenvironment variable to its location.\n\n__ lukas_\n.. _lukas: https://oxygene.sk/about/\n.. _libavcodec: http://ffmpeg.org/\n\nThen you can install this library from `PyPI`_ using `pip`_::\n\n    $ pip install pyacoustid\n\nThis library uses `audioread`_ to do audio decoding when not using ``fpcalc``\nand `requests`_ to talk to the HTTP API (pip should automatically install\nthese dependencies).\n\n.. _pip: http://www.pip-installer.org/\n.. _PyPI: http://pypi.python.org/\n.. _audioread: https://github.com/sampsyo/audioread\n.. _requests: http://python-requests.org\n\n\nRunning\n-------\n\nYou can run the included demonstration script, ``aidmatch.py``, to test your\ninstallation::\n\n    $ python aidmatch.py mysterious_music.mp3\n\nThis will show the top metadata match from Acoustid's database. The script uses\n`audioread`_ to decode music, so it should transparently use a media library\navailable on your system (GStreamer, FFmpeg, MAD, or Core Audio).\n\n\nUsing in Your Code\n------------------\n\nThe simplest way to use pyacoustid to identify audio files is to call the\n``match`` function:\n\n.. code-block:: python\n\n    >>> import acoustid\n    >>> for score, recording_id, title, artist in acoustid.match(apikey, path):\n    >>>     ...\n\nThis convenience function uses `audioread`_ to decode audio and parses the\nresponse for you, pulling out the most important track metadata. It returns in\niterable over tuples of relevant information. Everything happens in one fell\nswoop. There are also a number of \"smaller\" functions you can use to perform\nparts of the process:\n\n- ``fingerprint(samplerate, channels, pcmiter)``: Generate a fingerprint for raw\n  audio data. Specify the audio parameters and give an iterable containing\n  blocks of PCM data.\n- ``fingerprint_file(path)``: Using either the Chromaprint dynamic library or\n  the ``fpcalc`` command-line tool, fingerprint an audio file. (You can use\n  ``force_fpcalc`` to use only the latter.) Returns a pair consisting of the\n  file's duration and its fingerprint.\n- ``lookup(apikey, fingerprint, duration)``: Make a request to the `Acoustid`_\n  API to look up the fingerprint returned by the previous function. An API key\n  is required, as is the length, in seconds, of the source audio. Returns a\n  parsed JSON response.\n- ``parse_lookup_result(data)``: Given a parsed JSON response, return an\n  iterator over tuples containing the match score (a float between 0 and 1), the\n  MusicBrainz recording ID, title, and artist name for each match.\n- ``compare_fingerprints(a, b)``: Compare two fingerprints produced by\n  `fingerprint_file`, returning a similarity score.\n\nThe module internally performs thread-safe API rate limiting to 3 queries per\nsecond whenever the Web API is called, in accordance with the `Web service\ndocumentation`_.\n\nIf you're running your own Acoustid database server, you can set the base URL\nfor all API calls with the ``set_base_url`` function.\n\nCalls to the library can raise ``AcoustidError`` exceptions of two subtypes:\n``FingerprintGenerationError`` and ``WebServiceError``. Catch these exceptions\nif you want to proceed when audio can't be decoded or no match is found on the\nserver. ``NoBackendError``, a subclass of ``FingerprintGenerationError``, is\nused when the Chromaprint library or fpcalc command-line tool cannot be found.\n\n.. _Web service documentation: http://acoustid.org/webservice\n\n\nVersion History\n---------------\n\n1.3.0\n  Multiple artists are joined by join phrases, as displayed on the web page.\n  A new (pure-Python) function compares two Chromaprint fingerprints for\n  similarity.\n  Search more shared-library locations for the Chromaprint library on Windows.\n\n1.2.3\n  Fix the signedness of numbers returned from\n  `chromaprint_decode_fingerprint`.\n\n1.2.2\n  Fix a regression in the previous version that caused a `KeyError` crash when\n  calling `submit`.\n\n1.2.1\n  The `meta` parameter to some API functions can now be a list (instead of\n  just a single string).\n\n1.2.0\n  Add a `force_fpcalc` option to `fingerprint_file` and `match`.\n  Avoid leaving a dangling socket after communicating with the server.\n  Fix a crash when passing a `memoryview` object to the fingerprinter.\n  API requests can now optionally time out.\n  More reliably find the library on Windows on Python 3.8.\n  Add a `hash_fingerprint` function to the low-level library.\n\n1.1.7\n  Include a LICENSE file.\n\n1.1.6\n  In submission, avoid an error on non-integer durations.\n  A new function, `get_submission_status`, abstracts the API endpoint for\n  monitoring submissions using the (new) result from the `submit` function.\n\n1.1.5\n  Fix compatibility with Python 3 in the `submit` function.\n  Errors in `submit` are now also handled correctly (i.e., they raise an\n  informative `WebServiceError` instead of a `TypeError`).\n\n1.1.4\n  Fix an error on versions of the `fpcalc` tool that report the duration as a\n  fractional number.\n\n1.1.3\n  Accept `bytearray` objects in addition to other bytes-like types.\n\n1.1.2\n  Fix a possible crash on Unicode text in Python 2 in a non-Unicode locale.\n  Look for version \"1\" of the Chromaprint shared library file.\n\n1.1.1\n  Fix a possible setup error on Python 3 (thanks to Simon Chopin).\n\n1.1.0\n  Include ``fpcalc.py`` script in source distributions.\n  Add Python 3 support (thanks to Igor Tsarev).\n\n1.0.0\n  Include ``fpcalc.py``, a script mimicking the ``fpcalc`` program from the\n  Chromaprint package.\n  Handle a ``UnicodeDecodeError`` raised when using the ``fpcalc`` backend on\n  Windows with Unicode filenames.\n  Standard error output from ``fpcalc`` is suppressed.\n\n0.7\n  Properly encode Unicode parameters (resolves a ``UnicodeEncodeError``\n  in fingerprint submission).\n  Parse all recordings for each Acoustid lookup result.\n\n0.6\n  Add a new function, ``fingerprint_file``, that automatically selects a\n  backend for fingerprinting a single file.\n\n0.5\n  Fix response parsing when recording has no artists or title.\n  Fix compatibility with Python < 2.7.\n  Add specific ``NoBackendError`` exception.\n\n0.4\n  Fingerprinting can now fall back to using the ``fpcalc`` command-line tool\n  instead of the Chromaprint dynamic library so the library can be used with\n  the binary distributions (thanks to Lukáš Lalinský).\n  Fingerprint submission (thanks to Alastair Porter).\n  Data chunks can now be buffers as well as bytestrings (fixes compatibility\n  with pymad).\n\n0.3\n  Configurable API base URL.\n  Result parser now generates all results instead of returning just one.\n  Find the chromaprint library on Cygwin.\n  New module names: ``chromaprint`` and ``acoustid`` (no package).\n\n0.2\n  Compress HTTP requests and responses.\n  Limit audio decoding to 120 seconds.\n  Return score from convenience function.\n\n0.1\n  Initial release.\n\n\nCredits\n-------\n\nThis library is by Adrian Sampson. Chromaprint and Acoustid are by `Lukáš\nLalinský`__. This package includes the original `ctypes`_-based bindings\nwritten by Lukáš. The entire library is made available under the `MIT license`_.\npyacoustid was written to be used with `beets`_, which you should probably check\nout.\n\n__ lukas_\n.. _ctypes: http://docs.python.org/library/ctypes.html\n.. _beets: http://beets.radbox.org/\n.. _MIT license: http://www.opensource.org/licenses/mit-license.php\n",
+    "characters": 8244,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/beetbox/pyacoustid/blob/a08a28d5614bfa37d5e27fa1ff1b5d5c2e4fa7ca/LICENSE",
+    "sha256": "a4f46a7a36f0ebbccd9d8ca38b45edd7b5fcea5da42a1766a266f653f5c6f472",
+    "text": "The MIT License\n\nCopyright (c) 2011-2019 Adrian Sampson\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "characters": 1080,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

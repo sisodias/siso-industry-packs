@@ -1,0 +1,117 @@
+{
+  "audit_id": "R050",
+  "requested_full_name": "FFmpeg/FFmpeg",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "FFmpeg/FFmpeg",
+  "html_url": "https://github.com/FFmpeg/FFmpeg",
+  "description": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
+  "stargazers_count": 64179,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 14260,
+  "open_issues_count": 3,
+  "topics": [
+    "audio",
+    "c",
+    "ffmpeg",
+    "fft",
+    "hevc",
+    "hls",
+    "matroska",
+    "mp4",
+    "mpeg",
+    "multimedia",
+    "rtmp",
+    "rtsp",
+    "streaming",
+    "video",
+    "webm"
+  ],
+  "revision": "7523428c26bdb0b2302303534be591fe73178ab6",
+  "last_commit": "2026-09-13T09:42:02Z",
+  "metadata_source": "https://api.github.com/repos/FFmpeg/FFmpeg",
+  "commit_source": "https://github.com/FFmpeg/FFmpeg/commit/7523428c26bdb0b2302303534be591fe73178ab6",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/FFmpeg/FFmpeg/blob/7523428c26bdb0b2302303534be591fe73178ab6/README.md",
+    "sha256": "7e30f809d40454ebc467cf473a063d7306f5eb836dca6b80668c4427d8845914",
+    "text": "# FFmpeg README\n\nFFmpeg is a collection of libraries and tools to process multimedia content\nsuch as audio, video, subtitles and related metadata.\n\n## Libraries\n\n* `libavcodec` provides implementation of a wider range of codecs.\n* `libavformat` implements streaming protocols, container formats and basic I/O access.\n* `libavutil` includes hashers, decompressors and miscellaneous utility functions.\n* `libavfilter` provides means to alter decoded audio and video through a directed graph of connected filters.\n* `libavdevice` provides an abstraction to access capture and playback devices.\n* `libswresample` implements audio mixing and resampling routines.\n* `libswscale` implements color conversion and scaling routines.\n\n## Tools\n\n* [ffmpeg](https://ffmpeg.org/ffmpeg.html) is a command line toolbox to\n  manipulate, convert and stream multimedia content.\n* [ffplay](https://ffmpeg.org/ffplay.html) is a minimalistic multimedia player.\n* [ffprobe](https://ffmpeg.org/ffprobe.html) is a simple analysis tool to inspect\n  multimedia content.\n* Additional small tools such as `aviocat`, `ismindex` and `qt-faststart`.\n\n## Documentation\n\nThe offline documentation is available in the **doc/** directory.\n\nThe online documentation is available in the main [website](https://ffmpeg.org)\nand in the [wiki](https://trac.ffmpeg.org).\n\n### Examples\n\nCoding examples are available in the **doc/examples** directory.\n\n## License\n\nFFmpeg codebase is mainly LGPL-licensed with optional components licensed under\nGPL. Please refer to the LICENSE file for detailed information.\n\n## Contributing\n\nPatches should be submitted to the ffmpeg-devel mailing list using\n`git format-patch` or `git send-email`. Github pull requests should be\navoided because they are not part of our review process and will be ignored.\n",
+    "characters": 1798,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/FFmpeg/FFmpeg/blob/7523428c26bdb0b2302303534be591fe73178ab6/LICENSE.md",
+    "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af",
+    "text": "# License\n\nMost files in FFmpeg are under the GNU Lesser General Public License version 2.1\nor later (LGPL v2.1+). Read the file `COPYING.LGPLv2.1` for details. Some other\nfiles have MIT/X11/BSD-style licenses. In combination the LGPL v2.1+ applies to\nFFmpeg.\n\nSome optional parts of FFmpeg are licensed under the GNU General Public License\nversion 2 or later (GPL v2+). See the file `COPYING.GPLv2` for details. None of\nthese parts are used by default, you have to explicitly pass `--enable-gpl` to\nconfigure to activate them. In this case, FFmpeg's license changes to GPL v2+.\n\nSpecifically, the GPL parts of FFmpeg are:\n\n- optional x86 optimization in the files\n    - `libavcodec/x86/flac_dsp_gpl.asm`\n    - `libavcodec/x86/idct_mmx.c`\n    - `libavfilter/x86/vf_removegrain.asm`\n- the following building and testing tools\n    - `compat/solaris/make_sunver.pl`\n    - `doc/t2h.pm`\n    - `doc/texi2pod.pl`\n    - `libswresample/tests/swresample.c`\n    - `tests/checkasm/*`\n    - `tests/tiny_ssim.c`\n- the following filters in libavfilter:\n    - `signature_lookup.c`\n    - `vf_blackframe.c`\n    - `vf_boxblur.c`\n    - `vf_colormatrix.c`\n    - `vf_cover_rect.c`\n    - `vf_cropdetect.c`\n    - `vf_delogo.c`\n    - `vf_eq.c`\n    - `vf_find_rect.c`\n    - `vf_fspp.c`\n    - `vf_histeq.c`\n    - `vf_hqdn3d.c`\n    - `vf_kerndeint.c`\n    - `vf_lensfun.c` (GPL version 3 or later)\n    - `vf_mcdeint.c`\n    - `vf_mpdecimate.c`\n    - `vf_nnedi.c`\n    - `vf_owdenoise.c`\n    - `vf_perspective.c`\n    - `vf_phase.c`\n    - `vf_pp7.c`\n    - `vf_pullup.c`\n    - `vf_repeatfields.c`\n    - `vf_sab.c`\n    - `vf_signature.c`\n    - `vf_smartblur.c`\n    - `vf_spp.c`\n    - `vf_stereo3d.c`\n    - `vf_super2xsai.c`\n    - `vf_tinterlace.c`\n    - `vf_uspp.c`\n    - `vf_vaguedenoiser.c`\n    - `vsrc_mptestsrc.c`\n\nShould you, for whatever reason, prefer to use version 3 of the (L)GPL, then\nthe configure parameter `--enable-version3` will activate this licensing option\nfor you. Read the file `COPYING.LGPLv3` or, if you have enabled GPL parts,\n`COPYING.GPLv3` to learn the exact legal terms that apply in this case.\n\nThere are a handful of files under other licensing terms, namely:\n\n* The files `libavcodec/jfdctfst.c`, `libavcodec/jfdctint_template.c` and\n  `libavcodec/jrevdct.c` are taken from libjpeg, see the top of the files for\n  licensing details. Specifically note that you must credit the IJG in the\n  documentation accompanying your program if you only distribute executables.\n  You must also indicate any changes including additions and deletions to\n  those three files in the documentation.\n* `tests/reference.pnm` is under the expat license.\n\n\n## External libraries\n\nFFmpeg can be combined with a number of external libraries, which sometimes\naffect the licensing of binaries resulting from the combination.\n\n### Compatible libraries\n\nThe following libraries are under GPL version 2:\n- avisynth\n- frei0r\n- libcdio\n- libdavs2\n- librubberband\n- libvidstab\n- libx264\n- libx265\n- libxavs\n- libxavs2\n- libxvid\n\nWhen combining them with FFmpeg, FFmpeg needs to be licensed as GPL as well by\npassing `--enable-gpl` to configure.\n\nThe following libraries are under LGPL version 3:\n- gmp\n- libaribb24\n- liblensfun\n\nWhen combining them with FFmpeg, use the configure option `--enable-version3` to\nupgrade FFmpeg to the LGPL v3.\n\nThe VMAF, mbedTLS, RK MPI, OpenCORE and VisualOn libraries are under the Apache License\n2.0. That license is incompatible with the LGPL v2.1 and the GPL v2, but not with\nversion 3 of those licenses. So to combine these libraries with FFmpeg, the\nlicense version needs to be upgraded by passing `--enable-version3` to configure.\n\nThe smbclient library is under the GPL v3, to combine it with FFmpeg,\nthe options `--enable-gpl` and `--enable-version3` have to be passed to\nconfigure to upgrade FFmpeg to the GPL v3.\n\n### Incompatible libraries\n\nThere are certain libraries you can combine with FFmpeg whose licenses are not\ncompatible with the GPL and/or the LGPL. If you wish to enable these\nlibraries, even in circumstances that their license may be incompatible, pass\n`--enable-nonfree` to configure. This will cause the resulting binary to be\nunredistributable.\n\nThe Fraunhofer FDK AAC and OpenSSL libraries are under licenses which are\nincompatible with the GPLv2 and v3. To the best of our knowledge, they are\ncompatible with the LGPL.\n",
+    "characters": 4346,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": 100,
+  "contributors_top10": [
+    {
+      "login": "michaelni",
+      "contributions": 30182
+    },
+    {
+      "login": "mkver",
+      "contributions": 7886
+    },
+    {
+      "login": "richardpl",
+      "contributions": 5822
+    },
+    {
+      "login": "elenril",
+      "contributions": 5751
+    },
+    {
+      "login": "jamrial",
+      "contributions": 5140
+    },
+    {
+      "login": "DonDiego",
+      "contributions": 4681
+    },
+    {
+      "login": "mansr",
+      "contributions": 2794
+    },
+    {
+      "login": "ubitux",
+      "contributions": 2753
+    },
+    {
+      "login": "mstorsjo",
+      "contributions": 2652
+    },
+    {
+      "login": "cehoyos",
+      "contributions": 2166
+    }
+  ],
+  "issues_sample": [],
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "commits_six_months_capped": true,
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

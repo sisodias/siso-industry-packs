@@ -1,0 +1,59 @@
+{
+  "audit_id": "R006",
+  "requested_full_name": "Stoejmaskiner/sound-bouquet",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Stoejmaskiner/sound-bouquet",
+  "html_url": "https://github.com/Stoejmaskiner/sound-bouquet",
+  "description": "Audio sample manager, metadata manager and batch editor for quick editing of large sample packs",
+  "stargazers_count": 3,
+  "default_branch": "main",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 0,
+  "open_issues_count": 0,
+  "topics": [],
+  "revision": "b3b6452557a525823666a8195e8b20fd96f47061",
+  "last_commit": "2022-08-14T12:23:22Z",
+  "metadata_source": "https://api.github.com/repos/Stoejmaskiner/sound-bouquet",
+  "commit_source": "https://github.com/Stoejmaskiner/sound-bouquet/commit/b3b6452557a525823666a8195e8b20fd96f47061",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/Stoejmaskiner/sound-bouquet/blob/b3b6452557a525823666a8195e8b20fd96f47061/README.md",
+    "sha256": "68a5e2db9a4465ac0c1d0d7dd2246e8ee1bbd3d1c61ce657303ed12455518af7",
+    "text": "# Sound Bouquet\nAudio sample manager, metadata manager and batch editor for quick editing of large sample packs. Written in C# with the .NET framework. \n\n## Roadmap\n\nThis is a solo project. It will take a long time to develop and will help me deepen my knowledge of .NET developemnt and audio programming along the way. Currently work is being done on the specification and prototyping aspects of things. As a stepping stone to developing this application, other middleware needs to be developed, to interface with the file formats that I want to support (first priority is given to WAV, AIFF and FLAC; second priority to MP3 and OGG Vorbis)\n\nA rough outline of the milestones are as follows, they will be iterated through multiple times.\n\nFirst iteration: development of a minimum viable product (MVP) prototype\n- [ ] initial MVP requirement specification\n- [ ] requirement specification of a minimal set of reusable sub-modules (for handling file I/O for example)\n- [ ] initial design of these sub-modules\n- [ ] prototyping of these sub-modules\n- [ ] design of MVP using sub-module prototypes\n- [ ] development of MVP\n- [ ] testing and documentation of MVP\n\nSecond iteration: using the insight gained in the development of an MVP, a more robust and large scale architecture and maintenance plan needs to be formulated, and the full-scale application is developed, some code reuse may happen, but this is largely expected to be a complete re-write.\n- [ ] TBA\n\n## Pitch\n\nImagine you make sample packs, either commercially or in order to manage your own sample library. The audio editors you can choose from are great on single samples, but are clunky and impractical for working on batches of samples. On the other hand, sample managers are great at renaming, tagging and moving batches of samples, but have few or no editing tools. Sound Bouquet comes to the rescue, offering batch editing and management tools that allow you to quickly apply common edits to the audio and metadata across a selection of files. You can apply normalization, you can chop samples so that they match in length or so that they don't exceed a certain length, you can fade samples in and out, you can splice a sample into multiple samples, which are saved and named automatically, you can use patterns that automatically generate file names for a selection of samples, you can convert a batch of files of different formats into a common format, you can automatically trim silence from the start of samples.\n\n## MVP Features\n\n- can open, read and write WAV files\n- can browse and visualize the file system\n- has a live contextual preview of the focussed file(s)\n- can edit basic metadata in batches\n- can perform some basic group actions\n  - normalize peak\n  - normalize RMS\n  - trim from batch end\n  - trim from sample end\n  - trim from start\n  - fade in\n  - fade out\n- store edits undistructively\n- edits are committed by saving all\n- uncommitted edits are cached and recalled in case of crash\n",
+    "characters": 2973,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/Stoejmaskiner/sound-bouquet/blob/b3b6452557a525823666a8195e8b20fd96f47061/LICENSE",
+    "sha256": "4324e9b6ba442378ae8072e5677bb8f8763607562ca39a3516c1965df2b9ebdf",
+    "text": "MIT License\n\nCopyright (c) 2022 Støjmaskiner\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1070,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

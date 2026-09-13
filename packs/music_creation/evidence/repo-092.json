@@ -1,0 +1,92 @@
+{
+  "audit_id": "R092",
+  "requested_full_name": "reaper-oss/sws",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "reaper-oss/sws",
+  "html_url": "https://github.com/reaper-oss/sws",
+  "description": "The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc",
+  "stargazers_count": 580,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 108,
+  "open_issues_count": 506,
+  "topics": [
+    "reaper",
+    "reaper-plugin"
+  ],
+  "revision": "1eac4cba4d3f6f845c82689949f9afdfb5f35d25",
+  "last_commit": "2026-05-10T08:48:53Z",
+  "metadata_source": "https://api.github.com/repos/reaper-oss/sws",
+  "commit_source": "https://github.com/reaper-oss/sws/commit/1eac4cba4d3f6f845c82689949f9afdfb5f35d25",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/reaper-oss/sws/blob/1eac4cba4d3f6f845c82689949f9afdfb5f35d25/README.md",
+    "sha256": "5eb2cb7f238b856be58cf8560d9e8740a83f81e593f165379c4b4f9595ce2f62",
+    "text": "# SWS Extension\n\n[![Build status](https://ci.appveyor.com/api/projects/status/6jq0uwut3mx14xp4/branch/master?svg=true)](https://ci.appveyor.com/project/reaper-oss/sws/branch/master)\n\nThe SWS extension is a collection of features that seamlessly integrate into\nREAPER, the Digital Audio Workstation (DAW) software by Cockos, Inc.\n\nFor more information on the capabilities of the SWS extension or to download it,\nplease visit the [end-user website](https://www.sws-extension.org).\nFor more information on REAPER itself or to download the latest version,\ngo to [reaper.fm](https://www.reaper.fm).\n\nYou are welcome to contribute! Just fork the repo and send us a pull request\n(also see [Submitting pull requests](https://github.com/reaper-oss/sws/wiki/Submitting-pull-requests)\nin the [wiki](https://github.com/reaper-oss/sws/wiki)).\nSee [Building the SWS Extension](https://github.com/reaper-oss/sws/wiki/Building-the-SWS-Extension)\nfor build instructions.\n\nWhile not strictly required by the license, if you use the code in your own\nproject we would like definitely like to hear from you.\n\nThe SWS extension includes the following 3rd party libraries (which are all\nsimilarly licensed):\n\n- [OscPkt](http://gruntthepeon.free.fr/oscpkt/)\n- [libebur128](https://github.com/jiixyj/libebur128)\n\nThe SWS extension also relies on [TagLib](https://taglib.org/) and\n[WDL](https://www.cockos.com/wdl).\n",
+    "characters": 1390,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "COPYING",
+    "source_url": "https://github.com/reaper-oss/sws/blob/1eac4cba4d3f6f845c82689949f9afdfb5f35d25/COPYING",
+    "sha256": "e1b59d79e02a04f9f8e4410c9e6608f63c76342c8d373b71fcd5f6cea23bd8da",
+    "text": "MIT License\n\nCopyright (c) 2009 and later Tim Payne (SWS), Jeffos (S&M), Xenakios, Fingers (FNG), Dominik Martin Drzic (BR), P. Bourdon (Padre), wol, Shane StClair (Autorender), Adam Wathan (AW) and Philip S. Considine (IX).\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1249,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "reaper-oss/sws",
+        "capability_tag": "none",
+        "category_slug": "editor-app-plugin",
+        "summary": "Feature extension plugin for the REAPER DAW",
+        "reuse_value": 65,
+        "stars": 566,
+        "license": "MIT",
+        "language": "C++",
+        "url": "https://github.com/reaper-oss/sws",
+        "rank_score": 65005660
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "reaper-oss/sws",
+        "stars": 566,
+        "license": "MIT",
+        "language": "C++",
+        "unit_class": "capability",
+        "reuse_value": 65,
+        "liftability": 75,
+        "fame_gap": -10,
+        "cat_slug": "editor-app-plugin",
+        "cat_name": "Editor / App Plugin",
+        "description": "The SWS extension is a collection of features that seamlessly integrate into REAPER, the Digital Audio Workstation (DAW)"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

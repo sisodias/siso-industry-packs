@@ -1,0 +1,67 @@
+{
+  "audit_id": "R021",
+  "requested_full_name": "Tracktion/tracktion_engine",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Tracktion/tracktion_engine",
+  "html_url": "https://github.com/Tracktion/tracktion_engine",
+  "description": "Tracktion Engine module",
+  "stargazers_count": 1443,
+  "default_branch": "develop",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 220,
+  "open_issues_count": 40,
+  "topics": [
+    "audio",
+    "audio-processing",
+    "c-plus-plus",
+    "cpp",
+    "daw",
+    "framework",
+    "juce"
+  ],
+  "revision": "18e307fbf749e3deb21b9c436c3d877fa67a3078",
+  "last_commit": "2026-09-12T08:40:11Z",
+  "metadata_source": "https://api.github.com/repos/Tracktion/tracktion_engine",
+  "commit_source": "https://github.com/Tracktion/tracktion_engine/commit/18e307fbf749e3deb21b9c436c3d877fa67a3078",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/Tracktion/tracktion_engine/blob/18e307fbf749e3deb21b9c436c3d877fa67a3078/README.md",
+    "sha256": "6354db3391a913ab0efb0ee03cf26397eb9e9a4021fb653fe74a8084348ee332",
+    "text": "![](tutorials/images/tracktion_engine_powered.png)\n\nmaster: [![Build](https://github.com/Tracktion/tracktion_engine/actions/workflows/build.yaml/badge.svg?branch=master)](https://github.com/Tracktion/tracktion_engine/actions/workflows/build.yaml)\n\ndevelop: [![Build](https://github.com/Tracktion/tracktion_engine/actions/workflows/build.yaml/badge.svg?branch=develop)](https://github.com/Tracktion/tracktion_engine/actions/workflows/build.yaml)\n[![codecov](https://codecov.io/gh/Tracktion/tracktion_engine/branch/develop/graph/badge.svg?token=jirhU03pQO)](https://codecov.io/gh/Tracktion/tracktion_engine)\n[![juce_compatability](https://github.com/Tracktion/tracktion_engine/actions/workflows/juce_compat.yaml/badge.svg)](https://github.com/Tracktion/tracktion_engine/actions/workflows/juce_compat.yaml)\n\n# N.B. Enterprise licensees, please check the terms of your license as it may not include v3. Please contact us for upgrade options\n\n# tracktion_engine\n##### Welcome to the Tracktion Engine repository!\nThe aim of Tracktion Engine is to provide a high level data model and set of classes for building sequence based audio applications. You can build anything from a simple file-player or sequencer to a full blown DAW.\n\nTake a look at the [features document](FEATURES.md) for the full range of features.\n\n##### Supported Platforms\n- macOS\n- Windows\n- Linux\n- Raspberry PI\n- iOS\n- Android\n\n*N.B. Tracktion Engine requires C++20*\n\n## Contents\n- [Getting Started](#getting-started)\n- [Examples](#examples)\n- [Tutorials](#tutorials)\n- [Documentation](#documentation)\n- [Benchmarks](#benchmarks)\n- [Contributing](#contributing)\n- [License](#license)\n\n## Getting Started\nTracktion Engine is supplied as a `JUCE module` so it can easily fit in to an existing JUCE application. You'll find the module code under `modules/tracktion_engine`. Additionally, JUCE is added as a Git Submodule here in order to build the examples.\n\nTo start with, clone the repo and recurse the submodules:\n```\n$ git clone --recurse-submodules https://github.com/Tracktion/tracktion_engine.git\n```\n\n## Examples\nExample projects are located in `/examples`.\nThere are two main example projects, `DemoRunner` and `EngineInPluginDemo`. In each of these folder is a CMakeLists.txt file you can use to build them (or run the `build` script mentioned below).\n\n`DemoRunner` contains a number of app examples showcasing various Engine functionality.\n`EngineInPluginDemo` builds a plugin which contains Tracktion Engine and syncs the host timeline to the Edit's timeline.\n\nAdditionally there are `Benchmark` an `TestRunner` apps used by CI to test Engine functionality and performance.\n\n#### Scripts\nTo generate all the examples for the running platform use the script in `/tests`.\nThese are bash scripts so if you're on Windows you can use the `Git Bash` shell that comes with Git to run the following.\n```\n$ cd tests\n$ ./generate_examples\n```\n`generate_examples` will generate the IDE project files for you. Alternatively you can run the `build` script to build the examples as well, ready to run.\n\nOnce the example projects have been generated or built you can find them in `examples/example_name/build`.\n\n#### CMake\nAlternatively, you can run cmake in the root directory which will create a project with the `DemoRunner`, `EngineInPluginDemo`, `TestRunner` and `Benchmark` targets. E.g.\n```shell\ncmake -G <generator_name> -B build\n```\n\n## Tutorials\nOnce you're ready to dive in to the code, open the IDE files and have a read through the tutorials in `/tutorials`. You can view these on GitHub [here](/tutorials) to see the rendered Markdown.\n\n## Documentation\nWe are still in the process of fleshing out Doxygen formatted comments but the Doxygen generated documentation can be found here: https://tracktion.github.io/tracktion_engine/modules.html\n\n## Benchmarks\nBenchmarks are really for our own internal use but might be of interest to some people:\nhttps://tracktion.github.io/tracktion_engine/benchmarks.html\n\n## Contributing\nTracktion Engine is provided in JUCE module format, for bug reports and features requests, please visit the [JUCE Forum and post using the Tracktion Engine category](https://forum.juce.com/c/tracktion-engine) -\nthe Tracktion Engine developers are active there and will read every post and respond accordingly.\nWe don't accept third party GitHub pull requests directly due to copyright restrictions\nbut if you would like to contribute any changes please contact us.\n\n## License\nTracktion Engine is covered by a [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)/[Commercial license](https://www.tracktion.com/develop/tracktion-engine).\n\nThere are multiple commercial licensing tiers for Tracktion Engine, with different terms for each.\nFor prices, see the [Tracktion Developers Page](https://www.tracktion.com/develop/tracktion-engine).\n\n**N.B.** *Although Tracktion Engine utilises JUCE, it is not part of JUCE nor owned by the same company. As such it is licensed separately and you must make sure you have an appropriate JUCE licence from [juce.com](juce.com) when distributing Tracktion Engine based products. Similarly, Tracktion Engine is not included in a JUCE licence and you must get the above mentioned Tracktion Engine licence to distribute products.*\n\n___\nTracktion Engine utilises and contains copies of the following libraries. Please make sure you adhere to the license terms where necessary:\n- [rpmalloc](https://www.github.com/mjansson/rpmalloc) - Public domain\n- [moodycamel::ConcurrentQueue](https://www.github.com/cameron314/concurrentqueue) - Simplified BSD/BSL\n- [choc](https://www.github.com/Tracktion/choc) - ISC\n- [crill](https://www.github.com/crill-dev/crill) - BSL-1.0\n- [expected](https://www.github.com/TartanLlama/expected) - CC0 1.0\n- [libsamplerate](https://www.github.com/libsndfile/libsamplerate) - BSD-2-Clause\n- [rigtorp/MPMCQueue](https://www.github.com/rigtorp/MPMCQueue) - MIT\n- [magic_enum](https://www.github.com/Neargye/magic_enum) - MIT\n- [farbot](https://www.github.com/hogliux/farbot) - MIT\n- [doctest](https://www.github.com/doctest/doctest) - MIT\n- [signalsmith-stretch](https://www.github.com/Signalsmith-Audio/signalsmith-stretch) - MIT\n",
+    "characters": 6183,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/Tracktion/tracktion_engine/blob/18e307fbf749e3deb21b9c436c3d877fa67a3078/LICENSE.md",
+    "sha256": "d86b440f57d2138af510a4d2ba8fdfcc6f7277f443923d5d651004ff7ad58f86",
+    "text": "# tracktion_engine license\n\nTracktion Engine is published under a dual [GPL3 (or later)](https://www.gnu.org/licenses/gpl-3.0.en.html)/[Commercial license](https://www.tracktion.com/develop/tracktion-engine).\n\nThere are multiple commercial licensing tiers for Tracktion Engine, with different terms for each.\nFor prices, see the [Tracktion Developers Page](https://www.tracktion.com/develop/tracktion-engine).\n\nThe majority of the files in this repository are the copyright of Tracktion Software Corporation and covered by our licensing terms, but please note that it may also contain some 3rd-party code from other open-source projects. It is your responsibility when using this codebase to ensure you comply with the terms of all code within it.\n",
+    "characters": 748,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

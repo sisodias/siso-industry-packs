@@ -1,0 +1,65 @@
+{
+  "audit_id": "R004",
+  "requested_full_name": "petervdn/sample-manager",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "petervdn/sample-manager",
+  "html_url": "https://github.com/petervdn/sample-manager",
+  "description": "Create, load and keep track of samples",
+  "stargazers_count": 4,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "forks_count": 0,
+  "open_issues_count": 19,
+  "topics": [
+    "audio",
+    "load",
+    "samples",
+    "web-audio",
+    "web-audio-api"
+  ],
+  "revision": "8a518788948e1b7bd3beef8699415236f520af23",
+  "last_commit": "2019-06-24T11:57:16Z",
+  "metadata_source": "https://api.github.com/repos/petervdn/sample-manager",
+  "commit_source": "https://github.com/petervdn/sample-manager/commit/8a518788948e1b7bd3beef8699415236f520af23",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/petervdn/sample-manager/blob/8a518788948e1b7bd3beef8699415236f520af23/README.md",
+    "sha256": "c0cfd252c7f4d449a72066dcef4a59444c9698e55c3ac7f0f92689b267d183b6",
+    "text": "# sample-manager\n\nCreate, load and keep track of samples\n\n## install\n```sh\nnpm install sample-manager\n```\n\n## creating the manager\n\nTo create the SampleManager, you need an `AudioContext` instance, a basepath where the sample-files are located and a default file extension.\n\n```typescript\nimport SampleManager from 'sample-manager';\n\nconst context = new AudioContext();\nconst manager = new SampleManager(context, 'path/to/samples', 'mp3');\n```\n\n## adding samples\nAfter this, you can add samples to the manager by using the `addSample` or `addSamples` method, which both need objects that adhere to the `ICreateSample` interface.\n\n```typescript\ninterface ICreateSample {\n  name: string; // name (will be used as filename when no filename is supplied)\n  fileName?: string; // can be used to use another filename than the name\n  extension?: string; // forces an extension for this sample\n  path?: string; // appends a path to the basepath\n  data?: any; // optional data, for example to put samples in a group\n}\n```\nOnly the `name` property is mandatory, all others are optional. The `name` can be anything but will be used as filename when the `fileName` property is not set.\n\n```typescript\nconst samples = [\n  {\n    name: 'sample1' // when extension is 'mp3', this will load sample1.mp3\n  },\n  {\n    name: 'sample2',\n    extension: 'mp3' // will always load as mp3, and ignore the extension in the constructor\n  },\n  {\n    name: 'sample3',\n    fileName: 'sample3.v11.final2' // will not use the name to load the file\n  },\n  {\n    name: 'car',\n    path: 'car-sounds/' // will be appended to the basepath when loading\n  },\n]\n```\n__Extensions (.mp3, .wav) should never be added to the name (when using name as filename) or filename, since the extension supplied in the manager's contructor will always be appended when loading.__\n\nWhen you have a list of these objects, you can add them to the SampleManager instance:\n\n```typescript\nmanager.addSamples(samples);\n```\n\nSo when you don't have any special exceptions regarding path, filename or extension, you can just use the `name` field. Samples can then be quickly added like so:\n\n```typescript\nconst list = ['sample1', 'sample2'].map(name => ({name}));\nmanager.addSamples(list);\n```\n\n__Sample names should be unique, adding a name that already exists will throw an error.__\n\n## sample objects\nAfter adding, all objects will be converted to the `ISample` interface, which extends `ICreateSample` and adds two properties: `audioBuffer` and `fileSize` (which default to `null` and `-1` but will have proper data once the sample is loaded). It also makes the `fileName` property no longer optional (will be either the `name` or `fileName` from the original object).\n\n```typescript\ninterface ISample extends ICreateSample {\n  audioBuffer: AudioBuffer;\n  fileSize: number;\n  fileName: string;\n}\n\n```\n\n## loading samples\n When samples have been added, you can load them using the `loadAllSamples` method, which returns a promise.\n\n ```typescript\nmanager.loadAllSamples().then(() => {\n    // done\n  })\n```\n\nIf you want to load only a subset, you can refer to them by their name:\n```typescript\nmanager.loadSamplesByName(['bird', 'car']);\n```\n\nBoth the `loadAllSamples` and `loadSamplesByName` method accept an optional callback to track the overall load progress.\n\n```typescript\nmanager.loadAllSamples(progress => {});\n\nmanager.loadSamplesByName(['bird', 'car'], progress => {});\n```\nNote that this callback will not be fired at all during decoding (which happens after a file is loaded). This may not be noticable for smaller files, but when you have files containing many minutes of audio the progress will not change for a while.\n\n\n## retrieving samples\n```typescript\nconst sample = manager.getSampleByName('kickdrum');\nconst samples = manager.getAllSamples();\n```\n",
+    "characters": 3805,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/petervdn/sample-manager/blob/8a518788948e1b7bd3beef8699415236f520af23/LICENSE",
+    "sha256": "b70c353745301c634f8b1153ebb9e5831f0c8faa3766dd3d0146489b4bf710b9",
+    "text": "MIT License\n\nCopyright (c) 2018 Peter van der Noord\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "characters": 1076,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

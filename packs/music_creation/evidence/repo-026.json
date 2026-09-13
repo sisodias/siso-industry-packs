@@ -1,0 +1,68 @@
+{
+  "audit_id": "R026",
+  "requested_full_name": "sfztools/sfizz-ui",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "sfztools/sfizz-ui",
+  "html_url": "https://github.com/sfztools/sfizz-ui",
+  "description": "SFZ based sampler, providing AU / LV2 / PD / VST3 plugins using the sfizz library",
+  "stargazers_count": 104,
+  "default_branch": "develop",
+  "archived": true,
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "forks_count": 21,
+  "open_issues_count": 45,
+  "topics": [
+    "audiounit",
+    "lv2-plugin",
+    "musical-instrument",
+    "sample-player",
+    "sampler",
+    "sfz",
+    "sfz-files",
+    "vst3"
+  ],
+  "revision": "5e0be2e6ab61ed7e01619a7c9f2f8851405c8c31",
+  "last_commit": "2025-03-19T15:21:34Z",
+  "metadata_source": "https://api.github.com/repos/sfztools/sfizz-ui",
+  "commit_source": "https://github.com/sfztools/sfizz-ui/commit/5e0be2e6ab61ed7e01619a7c9f2f8851405c8c31",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/sfztools/sfizz-ui/blob/5e0be2e6ab61ed7e01619a7c9f2f8851405c8c31/README.md",
+    "sha256": "c91501ee4ccef590db0e8fb0a1f6038cab7a2b2a9879b40de1994ed0b5ff43a1",
+    "text": "# sfizz\n\n[![build actions]](https://github.com/sfztools/sfizz-ui/actions)\n[![build obs]](https://build.opensuse.org/package/show/home:sfztools:sfizz:develop/sfizz)\n[![Discord Badge Image]](https://discord.gg/3ArE9Mw)\n\nAU, LV2, Pure Data and VST3 plugins using the [sfizz](https://github.com/sfztools/sfizz/) library.<br/>\nPlease check [our website] for more details, or [our wiki] for further information.\n\n![Screenshot](screenshot.png)\n\n## Using sfizz\n\nSfizz can be used most easily within an [LV2] host such as [Carla] or [Ardour].\nIt can also be integrated as a library within your own program; check out our [API] bindings for C and C++.\nOur [releases] are an immediate way to get a working library and plugins for Windows and Mac.\nLinux builds are available over at [OBS].\nOn any operating system, you might prefer to [build from source]!\n\n## Contributing to sfizz\n\nThere is actually many things anyone can do, programming-related or music-related.\nPlease check out the [CONTRIBUTING] document for information about filing bug reports or feature requests,\nand helping the development of sfizz\n\n## Donating to sfizz\n\nSfizz and the work in the SFZ tools organization is purely driven by hobbyists\nwho choose to use their free time to benefit this project.\nWe firmly believe in the honesty and goodwill of users as a whole,\nand we want to promote a healthy relationship to software and to the cost of producing quality software.\n\nNo financial returns is explicitely required from using sfizz in any shape.\nHowever, if you feel that sfizz produces value for you or your products,\nand if you find that your financial situation allows for it, we put together ways to donate to the project.\nYou are never compelled to do so, the [CONTRIBUTING] file contains different ways to contribute.\n\nIn all of sfizz's governance model, we strive to live in the open.\nFinances are no different, and we put in place a process so that the use of donations\nis as transparent as possible through our [Open Collective].\nWe invite you to check out the [GOVERNANCE] file to see how the organization is governed and how are donations handled.\n\n## Dependencies and licenses\n\nOther than some of sfizz library dependencies, the UI uses:\n\n- [GLSL-Color-Spaces] by tobspr, licensed under the MIT license\n- [stb_image] by Sean Barrett, licensed as public domain or MIT license\n- [VSTGUI] by Steinberg, licensed under the BSD3 license\n\n\n[CONTRIBUTING]:          CONTRIBUTING.md\n[GOVERNANCE]:            GOVERNANCE.md\n[LV2]:                   https://lv2plug.in/\n[GLSL-Color-Spaces]:     https://github.com/tobspr/GLSL-Color-Spaces/\n[stb_image]:             https://github.com/nothings/stb/\n[our website]:           https://sfztools.github.io/sfizz/\n[our wiki]:              https://sfztools.github.io/sfizz-wiki/\n[releases]:              https://github.com/sfztools/sfizz-ui/releases/\n[Carla]:                 https://kx.studio/Applications:Carla\n[Ardour]:                https://ardour.org/\n[API]:                   https://sfztools.github.io/sfizz/api/\n[Open Collective]:       https://opencollective.com/sfztools\n[build from source]:     https://sfztools.github.io/sfizz/development/build/\n[Discord Badge Image]:   https://img.shields.io/discord/587748534321807416?label=discord&logo=discord\n[build actions]:         https://github.com/sfztools/sfizz-ui/actions/workflows/build.yml/badge.svg?branch=develop\n[build obs]:             https://build.opensuse.org/projects/home:sfztools:sfizz:develop/packages/sfizz/badge.svg\n[OBS]:                   https://software.opensuse.org//download.html?project=home%3Asfztools%3Asfizz&package=sfizz\n[VSTGUI]:                https://github.com/steinbergmedia/vstgui/\n",
+    "characters": 3678,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "source_url": "https://github.com/sfztools/sfizz-ui/blob/5e0be2e6ab61ed7e01619a7c9f2f8851405c8c31/LICENSE",
+    "sha256": "21b2105196b4e6a769cebc2534f66852c8efad3e28dbd3bbd1cc3058fba89e7d",
+    "text": "BSD 2-Clause License\n\nCopyright (c) 2021-2023, sfizz contributors (detailed in AUTHORS.md) \nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+    "characters": 1359,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": false,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}

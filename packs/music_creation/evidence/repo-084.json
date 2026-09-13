@@ -1,0 +1,59 @@
+{
+  "audit_id": "R084",
+  "requested_full_name": "Ableton/link",
+  "observed_at": "2026-09-13T16:43:06.398474+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "Ableton/link",
+  "html_url": "https://github.com/Ableton/link",
+  "description": "Ableton Link",
+  "stargazers_count": 1339,
+  "default_branch": "master",
+  "archived": false,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "forks_count": 180,
+  "open_issues_count": 26,
+  "topics": [],
+  "revision": "902aef95bf94af49746fdda5369b42cdcfa1e6d2",
+  "last_commit": "2026-05-19T09:36:43Z",
+  "metadata_source": "https://api.github.com/repos/Ableton/link",
+  "commit_source": "https://github.com/Ableton/link/commit/902aef95bf94af49746fdda5369b42cdcfa1e6d2",
+  "readme": {
+    "path": "README.md",
+    "source_url": "https://github.com/Ableton/link/blob/902aef95bf94af49746fdda5369b42cdcfa1e6d2/README.md",
+    "sha256": "96a32fc8fdf06a60cd1455b4599746066c09ae4b4c476f17b57be5c7410b85a5",
+    "text": "# Ableton Link\n\nThis is the codebase for Ableton Link, a technology that synchronizes musical beat, tempo,\nand phase across multiple applications running on one or more devices. Applications on\ndevices connected to a local network discover each other automatically and form a musical\nsession in which each participant can perform independently: anyone can start or stop\nwhile still staying in time. Anyone can change the tempo, the others will follow. Anyone\ncan join or leave without disrupting the session.\n\n# License\n\nAbleton Link is dual [licensed][license] under GPLv2+ and a proprietary license. If you\nwould like to incorporate Link into a proprietary software application, please contact\n<link-devs@ableton.com>.\n\n# Building and Running Link Examples\n\nLink relies on `asio-standalone` as a submodule. After checking out the\nmain repositories, those submodules have to be loaded using\n\n```\ngit submodule update --init --recursive\n```\n\nLink uses [CMake][cmake] to generate build files for the [Catch][catch]-based\nunit-tests and the example applications.\n\n```\n$ mkdir build\n$ cd build\n$ cmake ..\n$ cmake --build .\n```\n\nThe output binaries for the example applications and the unit-tests will be placed in a\n`bin` subdirectory of the CMake binary directory.\n\n# Integrating Link in your Application\n\n## Test Plan\n\nTo make sure users have the best possible experience using Link it is important all apps\nsupporting Link behave consistently. This includes for example playing in sync with other\napps as well as not hijacking a jams tempo when joining. To make sure your app behaves as\nintended make sure it complies to the [Test Plan](TEST-PLAN.md).\n\n## Building Link\n\nLink is a header-only library, so it should be straightforward to integrate into your\napplication.\nWhen using the basic version of Link, you should include `Link.hpp`. If you want Link with Link\nAudio support, include `LinkAudio.hpp`. The library does not follow the IWYU principles, so\nyou will have to include the respective header in every compilation unit.\n\n### CMake-based Projects\n\nIf you are using CMake, then you can simply add the following to your CMakeLists.txt file:\n\n```cmake\ninclude($PATH_TO_LINK/AbletonLinkConfig.cmake)\ntarget_link_libraries($YOUR_TARGET Ableton::Link)\n\n```\n\nYou can optionally have your build target depend on `${link_HEADERS}`, which will make\nthe Link headers visible in your IDE. This variable exported to the `PARENT_SCOPE` by\nLink's CMakeLists.txt.\n\n### Other Build Systems\n\nTo include the Link library in your non CMake project, you must do the following:\n\n - Add the `include` and `modules/asio-standalone/asio/include` directories to your\n   list of include paths\n - Define `LINK_PLATFORM_MACOSX=1`, `LINK_PLATFORM_LINUX=1`, or `LINK_PLATFORM_WINDOWS=1`,\n   depending on which platform you are building on.\n\nIf you get any compiler errors/warnings, have a look at\n[compile-flags.cmake](cmake_include/ConfigureCompileFlags.cmake), which might provide some\ninsight as to the compiler flags needed to build Link.\n\n### Build Requirements\n\n| Platform | Minimum Required     | Optional (only required for examples) |\n|----------|----------------------|---------------------------------------|\n| Windows  | MSVC 17 2022         | Steinberg ASIO SDK 2.3                |\n| Mac      | Xcode 16.2.0         |                                       |\n| Linux    | Clang 13 or GCC 10   | libportaudio19-dev                    |\n\n\nOther compilers with good C++17 support should work, but are not verified.\n\niOS developers should not use this repo. See http://ableton.github.io/linkkit for\ninformation on the LinkKit SDK for iOS.\n\n# Documentation\n\nAn overview of Link concepts can be found at http://ableton.github.io/link. Those that\nare new to Link should start there. The [Link.hpp](include/ableton/Link.hpp) header\ncontains the full Link public interface. See the LinkHut projects in this repo for an\nexample usage of the `Link` type.\nSimilarly, [LinkAudio.hpp](include/ableton/LinkAudio.hpp) contains the documentation for\nthe `LinkAudio` type and example usage is implemented in LinkAudioHut.\n\n## Time and Clocks\n\nLink works by calculating a relationship between the system clocks of devices in a session.\nSince the mechanism for obtaining a system time value and the unit of these values differ\nacross platforms, Link defines a `Clock` abstraction with platform-specific\nimplementations. Please see:\n- `Link::clock()` method in [Link.hpp](include/ableton/Link.hpp)\n- OSX and iOS clock implementation in\n[platforms/darwin/Clock.hpp](include/ableton/platforms/darwin/Clock.hpp)\n- Windows clock implementation in\n[platforms/windows/Clock.hpp](include/ableton/platforms/windows/Clock.hpp)\n- C++ standard library `std::chrono::steady_clock`-based implementation in\n[platforms/stl/Clock.hpp](include/ableton/platforms/stl/Clock.hpp)\n\nUsing the system time correctly in the context of an audio callback gets a little\ncomplicated. Audio devices generally have a sample clock that is independent of the system\nClock. Link maintains a mapping between system time and beat time and therefore can't use\nthe sample time provided by the audio system directly.\n\nOn OSX and iOS, the CoreAudio render callback is passed an `AudioTimeStamp` structure with\na `mHostTime` member that represents the system time at which the audio buffer will be\npassed to the audio hardware. This is precisely the information needed to derive the beat\ntime values corresponding to samples in the buffer using Link. Unfortunately, not all\nplatforms provide this data to the audio callback.\n\nWhen a system timestamp is not provided with the audio buffer, the best a client can do in\nthe audio callback is to get the current system time and filter it based on the provided\nsample time. Filtering is necessary because the audio callback will not be invoked at a\nperfectly regular interval and therefore the queried system time will exhibit jitter\nrelative to the sample clock. The Link library provides a\n[HostTimeFilter](include/ableton/link/HostTimeFilter.hpp) utility class that performs a\nlinear regression between system time and sample time in order to improve the accuracy of\nsystem time values used in an audio callback. See the audio callback implementations for\nthe various [platforms](examples/linkaudio) used in the examples to see how this is used\nin practice. Note that for Windows-based systems, we recommend using the [ASIO][asio]\naudio driver.\n\n## Latency Compensation\n\nAs discussed in the previous section, the system time that a client is provided in an\naudio callback either represents the time at which the buffer will be submitted to the\naudio hardware (for OSX/iOS) or the time at which the callback was invoked (when the\ncode in the callback queries the system time). Note that neither of these is what we\nactually want to synchronize between devices in order to play in time.\n\nIn order for multiple devices to play in time, we need to synchronize the moment at which\ntheir signals hit the speaker or output cable. If this compensation is not performed,\nthe output signals from devices with different output latencies will exhibit a persistent\noffset from each other. For this reason, the audio system's output latency should be added\nto system time values before passing them to Link methods. Examples of this latency\ncompensation can be found in the [platform](examples/linkaudio) implementations of the\nexample apps.\n\n[asio]: https://www.steinberg.net/en/company/developers.html\n[catch]: https://github.com/philsquared/Catch\n[cmake]: https://www.cmake.org\n[license]: LICENSE.md\n",
+    "characters": 7569,
+    "transport": "public raw file"
+  },
+  "license_file": {
+    "path": "LICENSE.md",
+    "source_url": "https://github.com/Ableton/link/blob/902aef95bf94af49746fdda5369b42cdcfa1e6d2/LICENSE.md",
+    "sha256": "34ea9a1681e5e9a5a57bf4ee2ebd2f165fe541974325ea918aafd47b338d32b9",
+    "text": "# License\n\nCopyright 2016, Ableton AG, Berlin. All rights reserved.\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <http://www.gnu.org/licenses/>.\n\nIf you would like to incorporate Link into a proprietary software application,\nplease contact <link-devs@ableton.com>.\n",
+    "characters": 801,
+    "transport": "public raw file"
+  },
+  "last_commit_within_six_months": true,
+  "commits_six_months_sample_count": null,
+  "contributors_top10": null,
+  "issues_sample": null,
+  "issue_response_sample": null,
+  "bus_factor": "not_measured",
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [],
+  "bank_status": "NEW",
+  "adoption_evidence": []
+}
