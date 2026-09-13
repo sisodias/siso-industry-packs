@@ -4,7 +4,7 @@ on:
     branches: [research/restaurants-20260913]
     paths: [packs/restaurants/evidence/audit-request.json]
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: restaurants-evidence-audit-20260913
   cancel-in-progress: false
@@ -30,43 +30,19 @@ jobs:
           code=textwrap.dedent(source.split("python3 - <<'PY'\n",1)[1].rsplit('          PY',1)[0])
           marker='for attempt in range(5):\n'; assert marker in code
           code=code.split(marker,1)[0]
-          code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:400],'path':path}")
+          code=code.replace("with urllib.request.urlopen(req,timeout=70) as r:return json.load(r)","with urllib.request.urlopen(req,timeout=70) as r: payload=r.read()\n                return json.loads(payload) if payload.strip() else []")
+          code=code.replace("return {'_error':e.code}","return {'_error':e.code,'message':e.read().decode('utf-8','replace')[:300],'path':path}")
+          code=code.replace("    return {'_error':'retries'}","        except (json.JSONDecodeError,urllib.error.URLError,TimeoutError) as e:\n            if attempt<3:time.sleep(3);continue\n            return {'_error':type(e).__name__,'path':path}\n    return {'_error':'retries'}")
+          code=code.replace("if not obj.get('content'):","if not isinstance(obj,dict) or not obj.get('content'):")
+          code=code.replace("obj.get('_error','empty')","obj.get('_error','empty') if isinstance(obj,dict) else 'empty'")
+          needle="        return out\n    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(collect,enumerate(names,1)))"
+          replacement="        output('source-'+str(number).zfill(3)+'.json',{'full_name':n,'revision':rev,'readme':out['readme'],'license_file':out['license_file']})\n        return out\n    def safe_collect(pair):\n        try:return collect(pair)\n        except Exception as e:return {'audit_id':'R'+str(pair[0]).zfill(3),'requested_full_name':pair[1],'observed_at':NOW,'retrieval_error':type(e).__name__+': '+str(e)[:180]}\n    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(safe_collect,enumerate(names,1)))"
+          assert needle in code
+          code=code.replace(needle,replacement)
           code+="\nfrom pathlib import Path\nfor path,text in outputs.items():\n    dst=Path('artifact')/path\n    dst.parent.mkdir(parents=True,exist_ok=True)\n    dst.write_text(text)\nprint('Public research evidence files:',len(outputs),'mode:',cfg['mode'])\n"
           exec(compile(code,'pinned-restaurants-research-collector','exec'))
-          # Public source excerpts stay in the inspection artifact. Persist compact
-          # provenance, counts and metadata only, never unrelated client files.
-          if cfg.get('publish',False):
-              publish={}
-              for path,text in outputs.items():
-                  name=path.rsplit('/',1)[-1]
-                  if name in ('candidate-index.jsonl','candidate-audit-receipt.json','bank-scan-receipt.json'):
-                      publish[path]=text
-                  elif re.fullmatch(r'search-round-\d+\.json',name):
-                      obj=json.loads(text)
-                      for q in obj['queries']:
-                          for hit in q['results']:hit['description']=(hit.get('description') or '')[:300]
-                      publish[path]=json.dumps(obj,ensure_ascii=False,indent=2)+'\n'
-              if cfg['mode']=='candidates':
-                  safe=[]
-                  for row in rows:
-                      row=dict(row)
-                      for field in ('readme','license_file'):
-                          row[field]={k:v for k,v in row.get(field,{}).items() if k not in ('text','excerpt','tail')}
-                      safe.append(row)
-                  publish[ROOT+'candidate-metadata.jsonl']=''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in safe)
-              for path,text in publish.items():
-                  assert path.startswith(ROOT) and '..' not in path
-                  prior=api('/repos/'+REPO+'/contents/'+path+'?ref='+urllib.parse.quote(BRANCH,safe=''))
-                  if prior.get('_error') not in (None,404):raise RuntimeError('Contents read refused: '+str(prior))
-                  payload={'message':'research(restaurants): preserve '+path.rsplit('/',1)[-1],'branch':BRANCH,'content':base64.b64encode(text.encode()).decode()}
-                  if prior.get('sha'):payload['sha']=prior['sha']
-                  req=urllib.request.Request(API+'/repos/'+REPO+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+TOKEN,'Accept':'application/vnd.github+json','User-Agent':'siso-restaurants-public-research'})
-                  try:
-                      with urllib.request.urlopen(req,timeout=90) as r:receipt=json.load(r)
-                  except urllib.error.HTTPError as e:raise RuntimeError('Contents publication HTTP '+str(e.code)+': '+e.read().decode()[:300])
-                  print('Published compact evidence',path,receipt['commit']['sha'])
           BOOT
-      - name: Preserve immutable public evidence for connector review
+      - name: Preserve public sources for inspection; not a licence to redistribute
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
