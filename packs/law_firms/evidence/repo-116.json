@@ -1,0 +1,184 @@
+{
+  "audit_id": "R116",
+  "requested_full_name": "zbateson/mail-mime-parser",
+  "observed_at": "2026-09-13T16:11:45.043044+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "zbateson/mail-mime-parser",
+  "html_url": "https://github.com/zbateson/mail-mime-parser",
+  "description": "An email parser written in PHP",
+  "stargazers_count": 551,
+  "forks_count": 61,
+  "default_branch": "master",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2015-11-09T19:34:58Z",
+  "updated_at": "2026-09-09T17:44:40Z",
+  "pushed_at": "2026-09-09T17:54:23Z",
+  "size": 15313,
+  "open_issues_count": 21,
+  "topics": [
+    "email-parser",
+    "email-reader",
+    "mail-parser",
+    "mailmimeparser",
+    "mime-parser",
+    "php",
+    "php-imap"
+  ],
+  "license": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "revision": "4cc63e42154d0062812a11aac13f2772e4a5de55",
+  "last_commit": "2026-09-09T17:40:56Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/zbateson/mail-mime-parser",
+    "commit": "https://github.com/zbateson/mail-mime-parser/commit/4cc63e42154d0062812a11aac13f2772e4a5de55"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "1bb9756c768de8bc888c07216260b67ec75db128635fce0eb0503fa6647c842a",
+    "text": "# zbateson/mail-mime-parser\n\nTestable and PSR-compliant mail mime parser alternative to PHP's imap* functions and Pear libraries for reading messages in _Internet Message Format_ [RFC 822](http://tools.ietf.org/html/rfc822) (and later revisions [RFC 2822](http://tools.ietf.org/html/rfc2822), [RFC 5322](http://tools.ietf.org/html/rfc5322)).\n\n[![Build Status](https://github.com/zbateson/mail-mime-parser/actions/workflows/tests.yml/badge.svg)](https://github.com/zbateson/mail-mime-parser/actions/workflows/tests.yml)\n[![Total Downloads](https://poser.pugx.org/zbateson/mail-mime-parser/downloads)](//packagist.org/packages/zbateson/mail-mime-parser)\n[![Latest Stable Version](https://poser.pugx.org/zbateson/mail-mime-parser/v)](//packagist.org/packages/zbateson/mail-mime-parser)\n\nThe goals of this project are to be:\n\n* Well written\n* Standards-compliant but forgiving\n* Tested where possible\n\nTo include it for use in your project, install it via composer:\n\n```\ncomposer require zbateson/mail-mime-parser\n```\n\n## Sponsors\n\n[![SecuMailer](https://mail-mime-parser.org/sponsors/logo-secumailer.png)](https://secumailer.com)\n\nA huge thank you to [all my sponsors](https://github.com/sponsors/zbateson). <3\n\nIf this project's helped you, please consider [sponsoring me](https://github.com/sponsors/zbateson).\n\n## New in 4.0\n\nVersion 4.0 requires PHP 8.1+ and focuses on API cleanup and improved configurability.  For details, see the [4.0 Upgrade Guide](https://mail-mime-parser.org/upgrade-4.0).\n\n## Requirements\n\nMailMimeParser requires PHP 8.1 or newer.  Tested on PHP 8.1, 8.2, 8.3, 8.4 and 8.5.\n\n## Usage\n\n```php\nuse ZBateson\\MailMimeParser\\MailMimeParser;\nuse ZBateson\\MailMimeParser\\Message;\nuse ZBateson\\MailMimeParser\\Header\\HeaderConsts;\n\n// use an instance of MailMimeParser as a class dependency\n$mailParser = new MailMimeParser();\n\n// parse() accepts a string, resource or Psr7 StreamInterface\n// pass `true` as the second argument to attach the passed $handle and close\n// it when the returned IMessage is destroyed.\n$handle = fopen('file.mime', 'r');\n$message = $mailParser->parse($handle, false);         // returns `IMessage`\n\n// OR: use this procedurally (Message::from also accepts a string,\n// resource or Psr7 StreamInterface\n// true or false as second parameter doesn't matter if passing a string.\n$string = \"Content-Type: text/plain\\r\\nSubject: Test\\r\\n\\r\\nMessage\";\n$message = Message::from($string, false);\n\necho $message->getHeaderValue(HeaderConsts::FROM);     // user@example.com\necho $message\n    ->getHeader(HeaderConsts::FROM)                    // AddressHeader\n    ->getPersonName();                                 // Person Name\necho $message->getSubject();                           // The email's subject\necho $message\n    ->getHeader(HeaderConsts::TO)                      // also AddressHeader\n    ->getAddresses()[0]                                // AddressPart\n    ->getPersonName();                                 // Person Name\necho $message\n    ->getHeader(HeaderConsts::CC)                      // also AddressHeader\n    ->getAddresses()[0]                                // AddressPart\n    ->getEmail();                                      // user@example.com\n\necho $message->getTextContent();                       // or getHtmlContent()\n\necho $message->getHeader('X-Foo');                     // for custom or undocumented headers\n\n$att = $message->getAttachmentPart(0);                 // first attachment\necho $att->getHeaderValue(HeaderConsts::CONTENT_TYPE); // e.g. \"text/plain\"\necho $att->getHeaderParameter(                         // value of \"charset\" part\n    HeaderConsts::CONTENT_TYPE,\n    'charset'\n);\necho $att->getContent();                               // get the attached file's contents\n$stream = $att->getContentStream();                    // the file is decoded automatically\n$dest = \\GuzzleHttp\\Psr7\\stream_for(\n    fopen('my-file.ext')\n);\n\\GuzzleHttp\\Psr7\\copy_to_stream(\n    $stream, $dest\n);\n// OR: more simply if saving or copying to another stream\n$att->saveContent('my-file.ext');               // writes to my-file.ext\n$att->saveContent($stream);                     // copies to the stream\n\n// close only when $message is no longer being used.\nfclose($handle);\n\n```\n\n## Encryption and Signing Plugins\n\nOptional companion packages add S/MIME and PGP/MIME support for decrypting,\nencrypting, signing and verifying messages:\n\n* [zbateson/mmp-crypt-smime](https://github.com/zbateson/mmp-crypt-smime) -- S/MIME via PHP's OpenSSL extension\n* [zbateson/mmp-crypt-gpg](https://github.com/zbateson/mmp-crypt-gpg) -- PGP/MIME via PEAR's Crypt_GPG\n\nInstall either package and encrypted/signed messages are automatically detected\nand decrypted during parsing. See the [Usage Guide](https://mail-mime-parser.org/#encryption-and-signing)\nfor examples of reading encrypted messages and composing signed/encrypted ones.\n\n## Documentation\n\n* [Usage Guide](https://mail-mime-parser.org/)\n* [API Reference](https://mail-mime-parser.org/api/4.0)\n\n## Upgrade guides\n\n* [1.x Upgrade Guide](https://mail-mime-parser.org/upgrade-1.0)\n* [2.x Upgrade Guide](https://mail-mime-parser.org/upgrade-2.0)\n* [3.x Upgrade Guide](https://mail-mime-parser.org/upgrade-3.0)\n* [4.x Upgrade Guide](https://mail-mime-parser.org/upgrade-4.0)\n\n## License\n\nBSD licensed - please see [license agreement](https://github.com/zbateson/mail-mime-parser/blob/master/LICENSE).\n",
+    "characters": 5411,
+    "source_url": "https://github.com/zbateson/mail-mime-parser/blob/4cc63e42154d0062812a11aac13f2772e4a5de55/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "14b0e0da2f11778737a249e090a9c892365e2d42bdb0f3878a6cf00f05589a88",
+    "text": "Copyright (c) 2014-2015, Zaahid Bateson\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this\n  list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice,\n  this list of conditions and the following disclaimer in the documentation\n  and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n",
+    "characters": 1303,
+    "source_url": "https://github.com/zbateson/mail-mime-parser/blob/4cc63e42154d0062812a11aac13f2772e4a5de55/LICENSE",
+    "detected": {
+      "key": "bsd-2-clause",
+      "name": "BSD 2-Clause \"Simplified\" License",
+      "spdx_id": "BSD-2-Clause",
+      "url": "https://api.github.com/licenses/bsd-2-clause",
+      "node_id": "MDc6TGljZW5zZTQ="
+    }
+  },
+  "commits_six_months_sample_count": 12,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "zbateson",
+      "contributions": 885
+    },
+    {
+      "login": "phpfui",
+      "contributions": 30
+    },
+    {
+      "login": "ThomasLandauer",
+      "contributions": 29
+    },
+    {
+      "login": "Nielsvanpach",
+      "contributions": 6
+    },
+    {
+      "login": "mariuszkrzaczkowski",
+      "contributions": 4
+    },
+    {
+      "login": "peter279k",
+      "contributions": 3
+    },
+    {
+      "login": "pableu",
+      "contributions": 2
+    },
+    {
+      "login": "MatthiasKuehneEllerhold",
+      "contributions": 2
+    },
+    {
+      "login": "tivnet",
+      "contributions": 2
+    },
+    {
+      "login": "styks1111",
+      "contributions": 1
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 269,
+      "title": "$streamPartEndPos in ZBateson\\MailMimeParser\\Parser\\PartBuilder can be null when there is no body part in the mime message",
+      "state": "open",
+      "created_at": "2026-09-10T21:58:42Z",
+      "updated_at": "2026-09-10T21:58:42Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/zbateson/mail-mime-parser/issues/269",
+      "author_association": "NONE"
+    },
+    {
+      "number": 249,
+      "title": "Version mismatch",
+      "state": "closed",
+      "created_at": "2025-01-29T16:31:03Z",
+      "updated_at": "2026-06-23T02:51:51Z",
+      "closed_at": "2026-06-23T02:51:51Z",
+      "comments": 2,
+      "html_url": "https://github.com/zbateson/mail-mime-parser/issues/249",
+      "author_association": "NONE"
+    },
+    {
+      "number": 267,
+      "title": "No way to suppress internal MIME parse warnings without injecting a custom logger",
+      "state": "open",
+      "created_at": "2026-05-28T03:34:42Z",
+      "updated_at": "2026-06-03T13:06:37Z",
+      "closed_at": null,
+      "comments": 3,
+      "html_url": "https://github.com/zbateson/mail-mime-parser/issues/267",
+      "author_association": "NONE"
+    }
+  ],
+  "issue_response_sample": [],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "zbateson/mail-mime-parser",
+        "capability_tag": "none",
+        "category_slug": "data-serialization-library",
+        "summary": "PHP library for parsing MIME email messages",
+        "reuse_value": 85,
+        "stars": 545,
+        "license": "BSD-2-Clause",
+        "language": "PHP",
+        "url": "https://github.com/zbateson/mail-mime-parser",
+        "rank_score": 85005450
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "zbateson/mail-mime-parser",
+        "stars": 545,
+        "license": "BSD-2-Clause",
+        "language": "PHP",
+        "unit_class": "component",
+        "reuse_value": 85,
+        "liftability": 90,
+        "fame_gap": -5,
+        "cat_slug": "data-serialization-library",
+        "cat_name": "Data Serialization / Parser Library",
+        "description": "An email parser written in PHP"
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}

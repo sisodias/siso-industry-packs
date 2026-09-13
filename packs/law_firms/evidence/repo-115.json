@@ -1,0 +1,191 @@
+{
+  "audit_id": "R115",
+  "requested_full_name": "php-mime-mail-parser/php-mime-mail-parser",
+  "observed_at": "2026-09-13T16:11:45.043044+00:00",
+  "bank_revision": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "full_name": "php-mime-mail-parser/php-mime-mail-parser",
+  "html_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser",
+  "description": "A fully tested email parser for PHP 8.0+ (mailparse extension wrapper).",
+  "stargazers_count": 995,
+  "forks_count": 195,
+  "default_branch": "main",
+  "archived": false,
+  "disabled": false,
+  "created_at": "2013-06-09T16:18:11Z",
+  "updated_at": "2026-09-08T06:46:38Z",
+  "pushed_at": "2026-05-14T11:38:24Z",
+  "size": 2720,
+  "open_issues_count": 25,
+  "topics": [
+    "email",
+    "hacktoberfest",
+    "mail",
+    "mailparse-extension",
+    "mailparser",
+    "parser",
+    "php"
+  ],
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "revision": "4fbd8ccc3c73e87689f9fbd487b92573279ea107",
+  "last_commit": "2026-05-14T10:26:42Z",
+  "sources": {
+    "repository": "https://api.github.com/repos/php-mime-mail-parser/php-mime-mail-parser",
+    "commit": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/commit/4fbd8ccc3c73e87689f9fbd487b92573279ea107"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "c04e05a2fc115f9f754def8a5ec437287481f01bab220bfca96004a30c44f3d5",
+    "text": "<p align=\"center\"><img width=\"544\" height=\"122\" src=\"/art/php-mime-mail-parser.png\" alt=\"Logo php-mime-mail-parser\"></p>\n\n<p align=\"center\">\n<a href=\"https://github.com/php-mime-mail-parser/php-mime-mail-parser/actions\"><img src=\"https://github.com/php-mime-mail-parser/php-mime-mail-parser/actions/workflows/main.yml/badge.svg?style=flat-square\" alt=\"Build Status\"></a>\n<a href=\"https://packagist.org/packages/php-mime-mail-parser/php-mime-mail-parser\"><img src=\"https://img.shields.io/packagist/dt/php-mime-mail-parser/php-mime-mail-parser.svg?style=flat-square\" alt=\"Total Downloads\"></a>\n<a href=\"https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases\"><img src=\"https://img.shields.io/packagist/v/php-mime-mail-parser/php-mime-mail-parser.svg?style=flat-square\" alt=\"Latest Stable Version\"></a>\n<a href=\"https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square\"><img src=\"https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square\" alt=\"License\"></a>\n</p>\n\n\n## Introduction\n\nA fully tested email parser for PHP 8.2+ (mailparse extension wrapper).\n\nIt's the most effective PHP email parser around in terms of performance, foreign character encoding, attachment handling, and ease of use.\nInternet Message Format RFC [822](https://tools.ietf.org/html/rfc822), [2822](https://tools.ietf.org/html/rfc2822), [5322](https://tools.ietf.org/html/rfc5322).\n\n## Why?\n\nThis extension can be used to...\n * Parse and read email from Postfix\n * Read messages (Filename extension: `.eml`)\n * Create webmail \n * Store email information such a subject, HTML body, attachments, etc. into a database\n\n## Is it reliable?\n\nYes. All known issues have been reproduced, fixed and tested.\n\nWe use GitHub Actions, Codecov, Codacy to help ensure code quality. You can see real-time statistics below:\n\n[![CI](https://github.com/php-mime-mail-parser/php-mime-mail-parser/actions/workflows/main.yml/badge.svg?style=flat-square)](https://github.com/php-mime-mail-parser/php-mime-mail-parser/actions/workflows/main.yml)\n[![Coverage](https://codecov.io/gh/php-mime-mail-parser/php-mime-mail-parser/branch/main/graph/badge.svg?token=wTSIbXJDL0)](https://codecov.io/gh/php-mime-mail-parser/php-mime-mail-parser)\n[![Code Quality](https://app.codacy.com/project/badge/Grade/8cbfe0fcd84c4b2b9282b9a0b4467607)](https://app.codacy.com/gh/php-mime-mail-parser/php-mime-mail-parser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)\n\n## How do I install it?\n\nThe easiest way is via [Composer](https://getcomposer.org/).\n\nTo install the latest version of PHP MIME Mail Parser, run the command below:\n\n\tcomposer require php-mime-mail-parser/php-mime-mail-parser\n\n## Requirements\n\nThe following versions of PHP are supported:\n\n* PHP 8.2\n* PHP 8.3\n* PHP 8.4\n* PHP 8.5\n\nPrevious Versions:\n\n| PHP Compatibility | Version                     |\n|-------------------|-----------------------------|\n| HHVM              | [php-mime-mail-parser 2.11.1](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/2.11.1) |\n| PHP 5.4           | [php-mime-mail-parser 2.11.1](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/2.11.1) |\n| PHP 5.5           | [php-mime-mail-parser 2.11.1](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/2.11.1) |\n| PHP 5.6           | [php-mime-mail-parser 3.0.4](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/3.0.4)  |\n| PHP 7.0           | [php-mime-mail-parser 3.0.4](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/3.0.4)  |\n| PHP 7.1           | [php-mime-mail-parser 5.0.5](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/5.0.5)  |\n| PHP 7.2           | [php-mime-mail-parser 7.1.2](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/7.1.2)  |\n| PHP 7.3           | [php-mime-mail-parser 7.1.2](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/7.1.2)  |\n| PHP 7.4           | [php-mime-mail-parser 7.1.2](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/7.1.2)  |\n| PHP 8.0           | [php-mime-mail-parser 9.0.1](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/9.0.1)  |\n| PHP 8.1           | [php-mime-mail-parser 9.0.1](https://github.com/php-mime-mail-parser/php-mime-mail-parser/releases/tag/9.0.1)  |\n\nMake sure you have the mailparse extension (http://php.net/manual/en/book.mailparse.php) properly installed. The command line `php -m | grep mailparse` needs to return \"mailparse\".\n\n\n### Install mailparse extension\n\n#### Debian, Ubuntu & derivatives\n```\nsudo apt install php-cli php-mailparse\n```\n\n#### MacOS\n```\nbrew install php\npecl install mailparse\n```\n\n#### Other platforms\n```\nsudo apt install php-cli php-pear php-dev\npecl install mailparse\n```\n\n#### From source\n\nAAAAMMDD should be `php-config --extension-dir`\n```\ngit clone https://github.com/php/pecl-mail-mailparse.git\ncd pecl-mail-mailparse\nphpize\n./configure\nmake\nsudo mv modules/mailparse.so /usr/lib/php/AAAAMMDD/\necho \"extension=mailparse.so\" | sudo tee /etc/php/<your-php-version>/mods-available/mailparse.ini\nsudo phpenmod mailparse\n```\n\n#### Windows\nYou need to download mailparse DLL from http://pecl.php.net/package/mailparse and add the line `extension=php_mailparse.dll` to `php.ini` accordingly.\n\n## How do I use it?\n\n### Loading an email\n\nYou can load an email in 4 differents ways:\n\n```php\nrequire_once __DIR__.'/vendor/autoload.php';\n\n$path = 'path/to/email.eml';\n$parser = new PhpMimeMailParser\\Parser();\n\n// 1. Either specify a file path (string)\n$parser->setPath($path); \n\n// 2. or specify the raw mime mail text (string)\n$parser->setText(file_get_contents($path));\n\n// 3. or specify a php file resource (stream)\n$parser->setStream(fopen($path, \"r\"));\n\n// 4. or specify a stream to work with a mail server (stream)\n$parser->setStream(fopen(\"php://stdin\", \"r\"));\n```\n\n### Get the metadata of the message\n\nGet the sender and the receiver:\n\n```php\n$rawHeaderTo = $parser->getHeader('to');\n// return \"test\" <test@example.com>, \"test2\" <test2@example.com>\n\n$arrayHeaderTo = $parser->getAddresses('to');\n// return [[\"display\"=>\"test\", \"address\"=>\"test@example.com\", false]]\n\n$rawHeaderFrom = $parser->getHeader('from');\n// return \"test\" <test@example.com>\n\n$arrayHeaderFrom = $parser->getAddresses('from');\n// return [[\"display\"=>\"test\", \"address\"=>\"test@example.com\", \"is_group\"=>false]]\n```\n\nGet the subject:\n\n```php\n$subject = $parser->getHeader('subject');\n```\n\nGet other headers:\n\n```php\n$stringHeaders = $parser->getHeadersRaw();\n// return all headers as a string, no charset conversion\n\n$arrayHeaders = $parser->getHeaders();\n// return all headers as an array, with charset conversion\n```\n\n### Get the body of the message\n\n```php\n$text = $parser->getMessageBody('text');\n// return the text version\n\n$html = $parser->getMessageBody('html');\n// return the html version\n\n$htmlEmbedded = $parser->getMessageBody('htmlEmbedded');\n// return the html version with the embedded contents like images\n\n```\n\n### Get attachments\n\nSave all attachments in a directory\n\n```php\n$parser->saveAttachments('/path/to/save/attachments/');\n// return all attachments saved in the directory (include inline attachments)\n\n$parser->saveAttachments('/path/to/save/attachments/', false);\n// return all attachments saved in the directory (exclude inline attachments)\n\n// Save all attachments with the strategy ATTACHMENT_DUPLICATE_SUFFIX (default)\n$parser->saveAttachments('/path/to/save/attachments/', false, PhpMimeMailParser\\Parser::ATTACHMENT_DUPLICATE_SUFFIX);\n// return all attachments saved in the directory: logo.jpg, logo_1.jpg, ..., logo_100.jpg, YY34UFHBJ.jpg\n\n// Save all attachments with the strategy ATTACHMENT_RANDOM_FILENAME\n$parser->saveAttachments('/path/to/save/attachments/', false, PhpMimeMailParser\\Parser::ATTACHMENT_RANDOM_FILENAME);\n// return all attachments saved in the directory: YY34UFHBJ.jpg and F98DBZ9FZF.jpg\n\n// Save all attachments with the strategy ATTACHMENT_DUPLICATE_THROW\n$parser->saveAttachments('/path/to/save/attachments/', false, PhpMimeMailParser\\Parser::ATTACHMENT_DUPLICATE_THROW);\n// return an exception when there is attachments duplicate.\n\n```\n\nGet all attachments\n\n```php\n$attachments = $parser->getAttachments();\n// return an array of all attachments (include inline attachments)\n\n$attachments = $parser->getAttachments(false);\n// return an array of all attachments (exclude inline attachments)\n```\n\n\nLoop through all attachments\n```php\nforeach ($attachments as $attachment) {\n    echo 'Filename : '.$attachment->getFilename().'<br>';\n    // return logo.jpg\n    \n    echo 'Filesize : '.filesize($attach_dir.$attachment->getFilename()).'<br>';\n    // return 1000\n    \n    echo 'Filetype : '.$attachment->getContentType().'<br>';\n    // return image/jpeg\n    \n    echo 'MIME part string : '.$attachment->getMimePartStr().'<br>';\n    // return the whole MIME part of the attachment\n    \n    $stream = $attachment->getStream();\n    // get the stream of the attachment file\n\n    $attachment->save('/path/to/save/myattachment/', PhpMimeMailParser\\Parser::ATTACHMENT_DUPLICATE_SUFFIX);\n    // return the path and the filename saved (same strategy available than saveAttachments)\n}\n```\n\n## Alternatives\n\nIf you're looking for alternatives to this library, here are a few options you might consider:\n\n- [zbateson/mail-mime-parser](https://github.com/zbateson/mail-mime-parser): If you prefer not to use the mailparse extension, this library is a good alternative. However, parsing will likely be slower.\n- [DirectoryTree/ImapEngine](https://github.com/DirectoryTree/ImapEngine): If you need to parse emails available on an IMAP server, this library can meet your needs.\n- [Mailcare](https://mailcare.io): A service that acts as both an email receiving server and a parser, and can be connected with any code. It's a SaaS solution that can simplify incoming email management.\n\n\n## Postfix configuration to manage email from a mail server\n\nTo forward mails from [Postfix](http://www.postfix.org/) to the PHP script above, add this line at the end of your `/etc/postfix/master.cf`\n(to specify myhook to send all emails to the script `test.php`):\n\n```\nmyhook unix - n n - - pipe flags=F user=www-data argv=php -c /etc/php8/apache2/php.ini -f /var/www/test.php ${sender} ${size} ${recipient}\n```\n\nEdit this line (register myhook)\n```\nsmtp      inet  n       -       -       -       -       smtpd -o content_filter=myhook:dummy\n```\n\nThe PHP script must use the fourth method (see above) to work with this configuration.\n\n## Can I contribute?\n\nFeel free to contribute!\n\n\tgit clone https://github.com/php-mime-mail-parser/php-mime-mail-parser\n\tcd php-mime-mail-parser\n\tcomposer install\n\t./vendor/bin/phpunit\n\nIf you report an issue, please provide the raw email that triggered it. This helps us reproduce the issue and fix it more quickly.\n\n## License\n\nThe php-mime-mail-parser/php-mime-mail-parser is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)\n",
+    "characters": 11101,
+    "source_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/blob/4fbd8ccc3c73e87689f9fbd487b92573279ea107/README.md"
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "sha256": "2a74116ac9ab10ab3c1516a833ed8282ae33a72adc82af0dfa294cc4ec0306e0",
+    "text": "The MIT License (MIT)\n\nCopyright (c) 2016 Vincent Dauce\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+    "characters": 1080,
+    "source_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/blob/4fbd8ccc3c73e87689f9fbd487b92573279ea107/LICENSE",
+    "detected": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    }
+  },
+  "commits_six_months_sample_count": 4,
+  "commits_six_months_capped": false,
+  "contributors_top10": [
+    {
+      "login": "eXorus",
+      "contributions": 495
+    },
+    {
+      "login": "fkoyer",
+      "contributions": 21
+    },
+    {
+      "login": "iateadonut",
+      "contributions": 11
+    },
+    {
+      "login": "hadyhallak",
+      "contributions": 9
+    },
+    {
+      "login": "VincentDauce",
+      "contributions": 7
+    },
+    {
+      "login": "xqus",
+      "contributions": 6
+    },
+    {
+      "login": "gmta",
+      "contributions": 5
+    },
+    {
+      "login": "DigiLive",
+      "contributions": 5
+    },
+    {
+      "login": "ThomasLandauer",
+      "contributions": 4
+    },
+    {
+      "login": "ThibaudDauce",
+      "contributions": 4
+    }
+  ],
+  "bus_factor": "not_measured; contributors are not maintainership redundancy",
+  "issues_sample": [
+    {
+      "number": 474,
+      "title": "Library doesn't parse one part of the email",
+      "state": "open",
+      "created_at": "2025-11-14T16:22:50Z",
+      "updated_at": "2026-08-20T19:34:11Z",
+      "closed_at": null,
+      "comments": 6,
+      "html_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/issues/474",
+      "author_association": "NONE"
+    },
+    {
+      "number": 483,
+      "title": "Improve phpdoc",
+      "state": "open",
+      "created_at": "2026-05-07T09:00:34Z",
+      "updated_at": "2026-05-14T09:27:17Z",
+      "closed_at": null,
+      "comments": 1,
+      "html_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/issues/483",
+      "author_association": "NONE"
+    },
+    {
+      "number": 478,
+      "title": "mailparse_msg_parse_file fails on complex MIME",
+      "state": "open",
+      "created_at": "2026-04-23T06:55:14Z",
+      "updated_at": "2026-04-24T08:41:07Z",
+      "closed_at": null,
+      "comments": 0,
+      "html_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/issues/478",
+      "author_association": "MEMBER"
+    }
+  ],
+  "issue_response_sample": [
+    {
+      "issue": 474,
+      "created_at": "2025-11-14T16:22:50Z",
+      "first_affiliated_reply_in_sample": "2025-11-15T15:30:22Z",
+      "source_url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/issues/474#issuecomment-3536594307"
+    }
+  ],
+  "bank_rows": {
+    "bank/bank_capability_top.jsonl": [],
+    "capability-shelf/source-registry.jsonl": [],
+    "bank/bank_best.jsonl": [
+      {
+        "full_name": "php-mime-mail-parser/php-mime-mail-parser",
+        "capability_tag": "email-send",
+        "category_slug": "text-document-parsing",
+        "summary": "PHP email parser wrapping the mailparse extension",
+        "reuse_value": 75,
+        "stars": 993,
+        "license": "MIT",
+        "language": "PHP",
+        "url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser",
+        "rank_score": 75009930
+      }
+    ],
+    "bank/bank_adoption_v2.jsonl": [],
+    "bank/bank_liftable_ranked.jsonl": [
+      {
+        "full_name": "php-mime-mail-parser/php-mime-mail-parser",
+        "stars": 993,
+        "license": "MIT",
+        "language": "PHP",
+        "unit_class": "component",
+        "reuse_value": 75,
+        "liftability": 90,
+        "fame_gap": -15,
+        "cat_slug": "text-document-parsing",
+        "cat_name": "Text / Document Parsing",
+        "description": "A fully tested email parser for PHP 8.0+ (mailparse extension wrapper)."
+      }
+    ],
+    "bank/bank_contractcard.jsonl": []
+  },
+  "bank_membership_layers": [
+    "bank/bank_best.jsonl",
+    "bank/bank_liftable_ranked.jsonl"
+  ],
+  "bank_status": "ALREADY IN THE BANK",
+  "adoption_evidence": []
+}
