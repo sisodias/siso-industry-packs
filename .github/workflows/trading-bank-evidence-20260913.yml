@@ -1,0 +1,44 @@
+name: Trading bank evidence 20260913
+on:
+  push:
+    branches: [research/trading-20260913]
+    paths: [.github/workflows/trading-bank-evidence-20260913.yml]
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read public research banks and save bounded excerpts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPO: ${{ github.repository }}
+          TARGET_BRANCH: research/trading-20260913
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,re,base64,hashlib
+          root='https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/'
+          pattern=re.compile(r'trad(e|ing|er)|portfolio|backtest|market.?data|financ|accounting|ledger|prediction.?market|polymarket|broker|quantitative|research.?notebook',re.I)
+          paths=['bank/bank_capability_top.jsonl','bank/bank_capability.jsonl','bank/bank_best.jsonl','bank/bank_adoption_v2.jsonl','bank/bank_liftable_ranked.jsonl','bank/bank_contractcard.jsonl','capability-shelf/source-registry.jsonl']
+          out={'source':'public SISO bank; original ratings, not refreshed upstream facts','files':{}}
+          for p in paths:
+              with urllib.request.urlopen(root+p,timeout=90) as r: raw=r.read()
+              rows=[json.loads(x) for x in raw.decode().splitlines() if x.strip()]
+              matches=rows if 'capability' in p and 'shelf' not in p else [x for x in rows if pattern.search(json.dumps(x))]
+              out['files'][p]={'url':root+p,'sha256':hashlib.sha256(raw).hexdigest(),'total_rows':len(rows),'match_count':len(matches),'rows':matches}
+          token=os.environ['GH_TOKEN']; repo=os.environ['TARGET_REPO']; branch=os.environ['TARGET_BRANCH']
+          assert repo=='sisodias/siso-industry-packs' and branch=='research/trading-20260913'
+          for i,(p,data) in enumerate(out['files'].items()):
+              dest='packs/trading/evidence/bank-'+p.replace('/','--')+'.json'
+              body={'message':'research(trading): source bank extraction '+p,'branch':branch,'content':base64.b64encode(json.dumps(data,indent=2).encode()).decode()}
+              url='https://api.github.com/repos/'+repo+'/contents/'+dest
+              headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'siso-trading-research'}
+              try:
+                  old=json.load(urllib.request.urlopen(urllib.request.Request(url+'?ref='+branch,headers=headers)))
+                  body['sha']=old['sha']
+              except urllib.error.HTTPError as e:
+                  if e.code!=404: raise
+              with urllib.request.urlopen(urllib.request.Request(url,data=json.dumps(body).encode(),headers=headers,method='PUT'),timeout=90) as r: result=json.load(r)
+              print(json.dumps({'path':dest,'total_rows':data['total_rows'],'matched':data['match_count'],'commit':result['commit']['sha']}))
+          PY
