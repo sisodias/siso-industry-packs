@@ -1,0 +1,130 @@
+full_name	verdict	fit	liftability	integration	capability_tag	unit_class	deployment_class	judgment
+AcademySoftwareFoundation/OpenColorIO	STUDY	3	5	4	image-processing	library	cpu_library	Color-transform and LUT discipline for consistent previews; excessive as a new standalone service for the first handoff pilot.
+AcademySoftwareFoundation/OpenImageIO	STUDY	3	5	4	image-processing	library	cpu_library	Format-agnostic image I/O for a VFX-heavy extension; sharp is the narrower fit for first-release thumbnails and proxies.
+AcademySoftwareFoundation/OpenTimelineIO	ADOPT	5	5	5	video-audio-codec	library	cpu_library	Carry editorial cuts, media references and rational time; verify each required adapter and effect round trip rather than promise universal NLE fidelity.
+acoustid/chromaprint	STUDY	3	5	3	video-audio-codec	library	cpu_library	Detect near-identical owned audio; a fingerprint match neither supplies music rights nor adjudicates a Content ID claim.
+Aegisub/Aegisub	SKIP	2	2	3	video-audio-codec	app	desktop_only	Historical advanced subtitle editor reference; this repository has no recent commits and is not the VPS production base.
+akaunting/akaunting	STUDY	3	2	3	billing-payments	app	separate_service	Self-hosted accounting reference with BSL use conditions; jurisdictional ledger acceptance and migration matter more than adding another app.
+alicevision/Meshroom	SKIP	1	2	1	computer-vision	app	workstation_or_gpu	Node-graph computation and 3D reconstruction are outside the narrated-video handoff wedge.
+Anil-matcha/AI-Youtube-Shorts-Generator	STUDY	4	3	3	video-audio-codec	app	remote_dependency	Useful clip-pipeline reference; even its local mode documents a remote LLM step, so it is not an offline VPS baseline as documented.
+apache/superset	SKIP	2	2	2	data-viz-charts	app	separate_service	General BI platform; cannot create YouTube owner-authorised retention data and would duplicate a small release dashboard.
+ArchiveBox/ArchiveBox	STUDY	4	3	4	web-scraping	app	separate_service	Preserve source pages in portable formats with API and webhooks; add only for authorised evidence capture, not indiscriminate content reuse.
+beetbox/beets	STUDY	3	4	3	video-audio-codec	library	cpu_cli	Music tagging and cataloguing help asset hygiene; album metadata is not a licence grant.
+Blaizzy/mlx-audio	SKIP	2	4	2	video-audio-codec	library	apple_silicon	Useful Apple Silicon speech tooling but not a baseline Linux VPS component.
+bluenviron/mediamtx	STUDY	2	4	3	video-audio-codec	service	cpu_service	Single-binary live media router; reserve for the live-stream segment rather than burden the file-based initial deployment.
+Breakthrough/PySceneDetect	ADOPT	4	5	5	video-audio-codec	library	optional_cpu_worker	Optional local scene-boundary candidates; scene cuts are not semantic highlights or automatic editorial approval.
+canopyai/Orpheus-TTS	STUDY	3	3	3	video-audio-codec	library	model_specific	Speech-generation alternative with CPU examples; benchmark selected weights, quality and memory instead of assuming every model fits.
+cdown/srt	STUDY	4	5	4	video-audio-codec	library	cpu_library	Small SRT-only parser with named upstream consumers; pysubs2 wins this assembly on multi-format retiming, not on commit-count fashion.
+cgwire/kitsu	ADOPT	5	2	5	workflow-orchestration	app	cpu_service	Lift the existing production-collaboration surface and preserve its task/review authority; adapt terminology instead of recreating a review application.
+cgwire/zou	ADOPT	5	4	5	workflow-orchestration	service	cpu_service	Kitsu API supplies projects, shots, assets, tasks, preview versions, CSV and events; our cross-app IDs reference these rather than duplicate them.
+chatwoot/chatwoot	ADOPT	4	2	4	websocket-realtime	app	optional_cpu_service	Optional shared conversation surface once actual channel demand is proven; community versus enterprise features and platform permissions remain explicit.
+coqui-ai/TTS	SKIP	3	4	3	video-audio-codec	library	model_specific	Preserve the old toolkit as provenance; examine the active idiap fork instead of starting a new dependency on this stale source.
+espeak-ng/espeak-ng	STUDY	3	5	4	video-audio-codec	library	cpu_library	Compact local phonemisation and formant speech; useful dependency/fallback but not assumed equivalent to premium narration.
+exiftool/exiftool	STUDY	4	4	4	image-processing	library	cpu_cli	Read technical media metadata and strip unwanted metadata on export; reconcile the root licence with the README's Perl-terms statement.
+FFmpeg/FFmpeg	ADOPT	5	4	5	video-audio-codec	library	cpu_worker	Use ffprobe and bounded ffmpeg jobs for inspection, proxies, audio, captions and final assembly; pin build options and sandbox untrusted media.
+ffmpegwasm/ffmpeg.wasm	STUDY	3	5	3	video-audio-codec	library	browser_compute	Useful browser-local previews; do not replace a bounded native render worker with unbenchmarked large in-browser jobs.
+fishaudio/fish-speech	STUDY	3	3	3	video-audio-codec	library	model_specific	Current speech research reference; documented H200 performance is not small-VPS evidence, and current code/weights carry a research licence.
+frappe/books	SKIP	2	2	2	billing-payments	app	desktop_only	Offline accounting app is not the shared VPS operating spine; existing accountant-approved records stay authoritative.
+frappe/crm	STUDY	3	2	3	workflow-orchestration	app	separate_service	Real sales CRM for sponsor-heavy operations; first prove a deal-management gap before introducing a second customer database.
+frappe/erpnext	STUDY	3	2	3	billing-payments	app	separate_service	Broad accounting and operations platform; too much schema and deployment overlap for the first creator handoff.
+frappe/lms	SKIP	2	2	2	workflow-orchestration	app	separate_service	Course delivery overlaps the supplied SUMERA shell; keep as cross-industry reference rather than restart an existing module.
+freescout-help-desk/freescout	STUDY	4	2	4	email	app	cpu_service	Light shared-mailbox alternative; verify which channels require paid modules before comparing it with Chatwoot.
+FreshRSS/FreshRSS	STUDY	4	2	4	search	app	cpu_service	Strong feed-reader alternative with APIs and WebSub; Miniflux is the narrower optional research-inbox choice.
+FujiwaraChoki/MoneyPrinter	STUDY	4	3	3	video-audio-codec	app	model_specific	Ollama-first, queued short-video pipeline is worth reading for jobs and asset selection; no measured publishable-output quality or rights guarantees.
+FujiwaraChoki/MoneyPrinterV2	STUDY	3	3	2	workflow-orchestration	app	remote_dependency	Automation patterns span shorts, affiliate activity and outreach; do not import unrelated bots, cold outreach or automatic release authority.
+GeneralMills/pytrends	SKIP	2	5	2	web-scraping	library	unofficial_remote_api	Archived unofficial Trends client warns about backend changes; not a reliable fresh research-data dependency.
+ggml-org/llama.cpp	STUDY	4	4	4	llm-app-framework	library	model_specific	Local inference option for a later strict-local script path; model quality, licence and memory are separate from the runtime's MIT licence.
+ggml-org/whisper.cpp	ADOPT	5	4	5	video-audio-codec	library	cpu_worker	CPU-capable transcription with documented model memory; pin a small model and benchmark accuracy and throughput on the client's box.
+gitroomhq/postiz-app	STUDY	4	2	4	workflow-orchestration	app	separate_service	Broad self-hosted scheduling product; verify its full service graph and each platform's approval rules before adding it to a single-client VPS.
+glut23/webvtt-py	STUDY	4	5	4	video-audio-codec	library	cpu_library	WebVTT parsing and segmentation; narrower than the selected multi-format retiming library but useful for HLS-specific captions.
+google-ai-edge/mediapipe	STUDY	3	5	3	computer-vision	library	model_specific	Local detection/tracking can inform vertical reframing; tracking a face does not identify the best narrative moment.
+googleapis/google-api-go-client	STUDY	4	5	4	client-sdk-generic	library	cpu_library	Official Go APIs underpin uploader options; existing TypeScript integration makes the Node client a more direct fit.
+googleapis/google-api-nodejs-client	ADOPT	5	5	5	client-sdk-generic	library	cpu_library	Use the official Node API client for authorised upload and analytics adapters; credentials, audit, quota and idempotent release state remain ours.
+googleapis/google-api-python-client	STUDY	4	5	4	client-sdk-generic	library	cpu_library	Official discovery client in maintenance mode; retain for Python components without adding an unnecessary second integration language.
+harry0703/MoneyPrinterTurbo	STUDY	4	3	3	video-audio-codec	app	model_specific	Wide script-to-short pipeline with documented CPU/RAM guidance; verify local provider choices, licensed assets and manual release gates.
+hexgrad/kokoro	STUDY	4	4	4	video-audio-codec	library	model_specific	Light 82M speech model/library is a dependency of the chosen optional wrapper; verify the exact weight and voice assets separately.
+hexgrad/misaki	STUDY	4	5	4	video-audio-codec	library	cpu_library	Grapheme-to-phoneme layer for Kokoro; useful pronunciation seam, not a complete narration service.
+idiap/coqui-ai-TTS	STUDY	4	4	4	video-audio-codec	library	model_specific	Maintained Coqui continuation with model/training tools; per-model licences and heavier speech workflows need an independent pilot.
+ImageMagick/ImageMagick	STUDY	4	4	4	image-processing	library	cpu_cli	Broad image processing alternative; use sharp for the narrower Node thumbnail path and restrict untrusted format delegates.
+immich-app/immich	STUDY	3	2	3	file-upload-storage	app	separate_service	Good personal photo/video management, but photo-library semantics do not supply production review or music-rights authority.
+inovector/mixpost	STUDY	4	2	4	workflow-orchestration	app	separate_service	Self-hosted scheduling alternative; the repository is Lite and must not be scored as if all commercial Pro capabilities are included.
+invoiceninja/invoiceninja	STUDY	4	2	4	billing-payments	app	separate_service	Source-available invoicing/time/quote base; reconcile ELv2 and white-label terms, then retain accountant/payment-provider authority.
+InvoicePlane/InvoicePlane	STUDY	4	2	4	billing-payments	app	cpu_service	Narrow self-hosted invoice/customer/payment application; useful when the client lacks invoicing, not a replacement for an existing statutory ledger.
+iv-org/invidious	SKIP	2	2	2	web-scraping	app	unofficial_remote_api	Alternative viewer front end is not a creator production or owner-analytics system.
+jdepoix/youtube-transcript-api	STUDY	3	5	3	web-scraping	library	unofficial_remote_api	Convenient public transcript retrieval, but the README warns of cloud/self-hosted IP blocking; prefer authorised source files for required jobs.
+jianfch/stable-ts	SKIP	3	5	4	video-audio-codec	library	cpu_worker	Useful timestamp methods to understand; repository is archived and development explicitly paused, so not the new baseline dependency.
+k2-fsa/sherpa-onnx	STUDY	4	5	4	video-audio-codec	library	model_specific	Broad offline ONNX speech and VAD runtime; strong alternative if the tested language/hardware mix beats the smaller chosen path.
+KDE/kdenlive	STUDY	4	2	4	video-audio-codec	app	desktop_only	Maintained desktop NLE and MLT interchange reference; an optional editor workstation tool, not a VPS browser service.
+knadh/listmonk	STUDY	3	4	3	email	app	cpu_service	Compact newsletter engine with Postgres; only add when a real newsletter gap exists outside the current SUMERA growth shell.
+libass/libass	STUDY	4	5	5	video-audio-codec	library	cpu_library	ASS/SSA subtitle rendering dependency; use through the selected media build rather than invent another caption renderer.
+libvips/libvips	STUDY	4	5	5	image-processing	library	cpu_library	Low-memory image engine underneath sharp; preserve its own LGPL and transitive format licences despite the wrapper's Apache licence.
+linto-ai/whisper-timestamped	STUDY	4	4	4	video-audio-codec	library	cpu_worker	Word-level timestamps/confidence option; compare forced-alignment quality and memory against the smaller first-pass transcription path.
+lovell/sharp	ADOPT	5	5	5	image-processing	library	cpu_library	Node-native resizing, compositing and thumbnail variants through libvips; human relevance and platform-native experiments stay outside image transforms.
+m-bain/whisperX	STUDY	4	4	4	video-audio-codec	library	model_specific	Word alignment and diarisation alternative for podcast work; additional models and resources require a separate accuracy/consent test.
+mediacms-io/mediacms	STUDY	4	2	4	video-audio-codec	app	cpu_service	Real media portal with REST and role controls; Kitsu/Zou wins for production tasks and versioned review, not a claim that MediaCMS cannot host video.
+meeb/tubesync	SKIP	2	2	2	video-audio-codec	app	cpu_service	Channel/playlist PVR duplicates acquisition and storage but does not supply production approvals or reuse permission.
+metabase/metabase	STUDY	3	2	3	data-viz-charts	app	separate_service	General BI over authorised observations; postpone a JVM dashboard service and check embedding/enterprise terms separately.
+metabrainz/picard	STUDY	3	2	3	video-audio-codec	app	desktop_only	Album tagging/fingerprints aid asset identity; they cannot establish that a music licence covers this release.
+mifi/editly	STUDY	4	4	4	video-audio-codec	library	cpu_worker	Declarative Node/FFmpeg rendering patterns are useful, but no recent commits and native FFmpeg cover the initial bounded render jobs.
+mifi/lossless-cut	STUDY	4	2	4	video-audio-codec	app	desktop_only	Fast source trimming without re-encoding is a useful editor tool; keyframe-bound cuts are not automatically frame-accurate final edits.
+miniflux/v2	ADOPT	4	4	4	search	app	optional_cpu_service	Optional RSS/Atom/JSON Feed research inbox with OPML and API; track provenance without pretending feeds predict YouTube demand.
+minio/minio	SKIP	3	4	4	file-upload-storage	service	cpu_service	Archived source explicitly says no longer maintained; select the examined SeaweedFS single-binary S3 option for this new deployment.
+mltframework/mlt	STUDY	4	5	4	video-audio-codec	library	cpu_worker	Mature editing/render graph for MLT-based workflows; preserve as an alternative when editor interoperability demands it.
+mltframework/shotcut	STUDY	4	2	4	video-audio-codec	app	desktop_only	Maintained MLT/Qt editor; keep as an editor-side choice, not a headless production-control plane.
+modelscope/FunClip	STUDY	4	3	4	video-audio-codec	app	model_specific	Text/speaker-selected local clips fit a human-in-the-loop workflow; language model support and quality must be tested for the target material.
+moodle/moodle	SKIP	2	2	2	workflow-orchestration	app	separate_service	Full learning platform duplicates already-supplied course scope and adds unrelated administration to the initial creator operating system.
+motion-canvas/motion-canvas	STUDY	4	5	4	animation	library	cpu_worker	TypeScript explainer animations synchronised with narration; useful for the animation segment, not a general editing replacement.
+myshell-ai/OpenVoice	STUDY	3	4	3	video-audio-codec	library	model_specific	Voice-style/cloning reference with explicit upstream commercial-use claims; require subject consent and a selected-model quality test.
+nextcloud/server	STUDY	4	2	4	file-upload-storage	app	separate_service	Whole file-sharing/collaboration base; compare existing client usage before duplicating asset authority beside Kitsu and object storage.
+nyousefi/Fountain	STUDY	3	5	4	rich-text-editor	pattern	format_specification	Readable screenplay interchange is a useful portable script pattern; this old implementation does not replace SUMERA's current script editor.
+OHF-Voice/piper1-gpl	STUDY	4	4	4	video-audio-codec	library	model_specific	Current local Piper engine and API, with maintainer recruitment noted; voice-specific assets and GPL differ from the old MIT repository.
+olive-editor/olive	SKIP	2	2	3	video-audio-codec	app	desktop_only	README explicitly warns that the editor is alpha and highly unstable; not the production handoff/editor baseline.
+ollama/ollama	STUDY	4	4	4	llm-app-framework	service	model_specific	Local model serving option; do not confuse available remote/cloud routes or huge models with a tested small-box local script workflow.
+openai/whisper	STUDY	4	4	4	video-audio-codec	library	model_specific	Reference speech-recognition implementation and model provenance; whisper.cpp wins the initial C++ CPU deployment envelope.
+OpenCut-app/OpenCut	STUDY	4	2	3	video-audio-codec	app	browser_compute	Main is an announced ground-up rewrite; preserve as a lead, not a shipped-editor replacement for this client.
+OpenShot/libopenshot	STUDY	4	5	4	video-audio-codec	library	cpu_worker	Rich compositing/keyframe/time-map library; a potential engine when FFmpeg's narrower graph is insufficient.
+OpenShot/openshot-qt	STUDY	4	2	4	video-audio-codec	app	desktop_only	Complete desktop editor; avoid turning its Qt application into a speculative browser/VPS service.
+penpot/penpot	STUDY	3	2	3	image-processing	app	separate_service	Self-hosted open-format design tool; useful design ownership but not evidence of Canva thumbnail/template parity.
+photoprism/photoprism	STUDY	3	2	3	file-upload-storage	app	separate_service	Private media browsing/tagging alternative; production versions, sponsor requirements and publication rights need separate semantics.
+porjo/youtubeuploader	STUDY	5	4	5	video-audio-codec	app	cpu_cli	Small upload binary with OAuth, bandwidth control and metadata JSON; official Node SDK wins integration fit with the existing TypeScript layer.
+pyannote/pyannote-audio	STUDY	4	4	4	video-audio-codec	library	model_specific	Speaker diarisation for interview derivatives; gated model conditions, optional premium models and telemetry settings require explicit review.
+PyAV-Org/PyAV	STUDY	5	5	5	video-audio-codec	library	cpu_library	Precise packets/frames API when CLI graphs are insufficient; its own README cautions against using it when ffmpeg already does the job.
+pytube/pytube	SKIP	2	5	3	web-scraping	library	unofficial_remote_api	Old YouTube downloader source with no recent commits; prefer the examined maintained acquisition tool only for authorised media.
+QwenAudio/CosyVoice	STUDY	3	3	3	video-audio-codec	library	model_specific	Speech-generation reference reached through the FunAudioLLM alias; documented NVIDIA-serving path is not a small CPU VPS benchmark.
+rany2/edge-tts	SKIP	3	5	3	video-audio-codec	library	remote_dependency	Wrapper calls Microsoft's online service and is therefore not local TTS; select a local speech engine rather than hide a remote dependency.
+RayVentura/ShortGPT	STUDY	3	3	3	video-audio-codec	app	remote_dependency	Experimental shorts/dubbing pipeline with persistent editing state; study workflow patterns without assuming remote providers, assets or quality are free.
+rclone/rclone	ADOPT	5	4	5	file-upload-storage	app	cpu_cli	Transfer and verify client-controlled media/backup files across existing stores; synchronisation alone is not a tested backup/restore policy.
+remotion-dev/remotion	STUDY	4	5	4	animation	library	cpu_worker	Strong React-based video/design automation reference; code-authored animation is not the immediate editor handoff, and actual company/derivative licence terms are recorded.
+remsky/Kokoro-FastAPI	ADOPT	4	4	4	video-audio-codec	service	optional_cpu_worker	Optional CPU speech endpoint with caption timing and SSML handling; require consent, voice/weight review and narration quality acceptance before replacing paid voice.
+resemble-ai/chatterbox	STUDY	4	4	4	video-audio-codec	library	model_specific	Current Nano/Turbo/multilingual voice alternatives; vendor CPU-speed claims need the same client-workload benchmark as Kokoro.
+rhasspy/piper	SKIP	3	4	3	video-audio-codec	library	model_specific	Archived repository explicitly redirects development to OHF-Voice/piper1-gpl; retain alias and historic licence instead of calling both current engines.
+searxng/searxng	STUDY	4	3	4	search	service	cpu_service	Self-hosted metasearch front end still depends on upstream search services; useful research convenience, not a proprietary trend dataset.
+seaweedfs/seaweedfs	ADOPT	5	4	5	file-upload-storage	service	cpu_service	Use the single weed binary's local S3 surface for asset-address compatibility; no distributed cluster is justified for one client box.
+simonw/llm	STUDY	4	5	4	llm-app-framework	library	model_specific	Useful model/structured-output experiment harness with local plugins; do not create a second script authority beside the existing product.
+socioboard/Socioboard-5.0	STUDY	3	2	3	workflow-orchestration	app	separate_service	Broad social-management reference; platform support claims and the multi-application footprint need verification before a client-box commitment.
+SubtitleEdit/subtitleedit	STUDY	4	2	4	video-audio-codec	app	desktop_only	Maintained specialist caption editor with cross-platform builds; retain for human QA rather than recreate its functionality in the first web UI.
+suno-ai/bark	STUDY	3	3	3	video-audio-codec	library	model_specific	Expressive generative audio reference; older source and unpredictable non-speech output need stronger editorial controls than the baseline narrator.
+SWivid/F5-TTS	STUDY	3	4	3	video-audio-codec	library	model_specific	Speech-generation/alignment alternative; MIT code does not establish the commercial licence of separately fetched weights.
+SYSTRAN/faster-whisper	STUDY	5	5	5	video-audio-codec	library	cpu_worker	Strong CPU/GPU CTranslate2 transcription alternative; benchmark rather than transfer upstream speed ratios to the client VPS.
+ThioJoe/YT-Spammer-Purge	STUDY	4	3	3	workflow-orchestration	app	cpu_cli	Study explainable comment filtering and owner OAuth; no bulk deletion or account action is authorised by this research pack.
+tkarabela/pysubs2	ADOPT	5	5	5	video-audio-codec	library	cpu_library	Portable multi-format subtitle retiming; preserve original files because its ASS-shaped model does not represent every broadcast feature.
+tmoroney/auto-subs	STUDY	5	3	5	video-audio-codec	app	desktop_only	Local subtitles connected to Resolve/Premiere/After Effects are an excellent editor-side bridge; optional alignment weights have separate noncommercial terms.
+tokland/youtube-upload	SKIP	3	4	4	video-audio-codec	app	cpu_cli	Old uploader still documents revoked bundled credentials and legacy dependencies; README GPL claim lacks a retrieved licence file, so do not invent one.
+TryGhost/Ghost	SKIP	2	2	3	workflow-orchestration	app	separate_service	Good publishing/membership base for another segment; avoid rebuilding SUMERA's supplied growth and monetisation shell.
+trykimu/videoeditor	STUDY	4	2	4	video-audio-codec	app	cpu_service	Self-hostable browser editor/renderer reference with production Compose instructions; export fidelity and AGPL/commercial feature scope need a pilot.
+tubearchivist/tubearchivist	SKIP	2	2	3	video-audio-codec	app	separate_service	Searchable YouTube archive is not a rights-cleared production library; extra archive/search infrastructure does not solve the handoff wedge.
+twentyhq/twenty	STUDY	4	2	4	workflow-orchestration	app	separate_service	Custom-object CRM and application interfaces may serve sponsor-heavy teams; avoid a second task/customer authority for the small pilot.
+umami-software/umami	SKIP	2	3	2	monitoring-observability	app	cpu_service	First-party website analytics do not ingest private YouTube retention or replace native channel experiments.
+videojs/vtt.js	STUDY	4	5	4	video-audio-codec	library	browser_compute	Browser WebVTT parser reference and spec behavior; use for player integration only when the chosen player cannot already handle captions.
+w3c/odrl	STUDY	5	1	5	data-serialization	pattern	format_specification	Model permissions, prohibitions and constraints for a rights manifest; a machine-readable policy is not a legal grant or dispute verdict.
+w3c/ttml2	STUDY	4	1	5	video-audio-codec	pattern	format_specification	Authoritative timed-text specification source, not a runnable caption app; preserve format semantics in conversion tests.
+w3c/webvtt	STUDY	5	1	5	video-audio-codec	pattern	format_specification	Authoritative WebVTT source guides cue/timing validation; count as an examined format repository, not a deployed software service.
+walterlow/freecut	STUDY	5	2	4	video-audio-codec	app	browser_compute	Browser-local workspace and plain-file media model are promising; verify supported browsers, project recovery and real editor round trips before adoption.
+WebAV-Tech/WebAV	STUDY	4	5	4	video-audio-codec	library	browser_compute	WebCodecs editing SDK with local computation; browser compatibility and Pro-feature boundary matter more than a transplanted speed claim.
+worldveil/dejavu	SKIP	2	4	2	video-audio-codec	library	cpu_worker	Old audio fingerprint reference; explicitly not voice recognition and not a substitute for rights clearance.
+WyattBlue/auto-editor	STUDY	4	4	4	video-audio-codec	app	cpu_cli	Automated silence/motion first-pass cuts and pace controls; preserve context/handles and let an editor approve the narrative result.
+youtube/api-samples	SKIP	2	1	3	client-sdk-generic	pattern	format_specification	Archived 2018 samples lack a retrieved licence file; current official API documentation and maintained SDKs are the authority.
+yt-dlp/yt-dlp	STUDY	4	4	4	web-scraping	app	cpu_cli	Maintained media acquisition tool for owned or explicitly authorised inputs; downloaded content is not automatically reusable or monetisable.
+zammad/zammad	STUDY	3	2	3	email	app	separate_service	Broad support-desk alternative; a heavier support workflow is not yet demonstrated for this producer-owner.
+zhouxiaoka/autoclip	STUDY	5	3	4	video-audio-codec	app	model_specific	Strong current local-provider/CLI clipping lead; compare actual accepted clips and full dependency/resource cost, not generated-candidate volume.
+Zulko/moviepy	STUDY	4	5	4	video-audio-codec	library	cpu_worker	Accessible Python composition with v2 migration considerations; native FFmpeg is the narrower baseline when extra array/image transfers are unnecessary.
