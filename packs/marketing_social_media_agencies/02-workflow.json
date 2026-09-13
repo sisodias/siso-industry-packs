@@ -1,0 +1,128 @@
+{
+  "as_of": "2026-09-13",
+  "evidence_class": "analysis",
+  "frequency_status": "unmeasured",
+  "stages": [
+    {
+      "id": "S01",
+      "stage": "Inquiry and conversation intake",
+      "trigger": "New inquiry, client message or change request",
+      "inputs": "Email/DM/WhatsApp message, sender, attachments, account context",
+      "outputs": "Classified request, owner, response due, source reference",
+      "pain": "\u201cOnly wants to work via WhatsApp\u201d \u2014 [C01](https://www.reddit.com/r/SocialMediaMarketing/comments/1hx5d2a/how_do_you_send_content_to_be_approved_by_client/)",
+      "frequency": "50 actionable cases/week; not 50 sales leads",
+      "handoff": "AM triages; owner handles scope/price; client confirms identity/context",
+      "data_object": "ConversationRequest; PartyAccount"
+    },
+    {
+      "id": "S02",
+      "stage": "Qualification, quote and agreement",
+      "trigger": "Qualified prospect or out-of-scope request",
+      "inputs": "Request, discovery notes, deliverables, exclusions, approver, price",
+      "outputs": "Accepted scope/change order; meeting and external invoice reference",
+      "pain": "\u201casked from employees like the designer or copywriter directly\u201d \u2014 [C06](https://www.reddit.com/r/marketingagency/comments/1rbpdqi/scope_creep_how_do_you_deal_with_it_when_clients/)",
+      "frequency": "4 new quotes/month; changes as received",
+      "handoff": "Owner proposes; customer explicitly accepts; accountant receives reference",
+      "data_object": "EngagementScope; ConversationRequest"
+    },
+    {
+      "id": "S03",
+      "stage": "Onboarding, brand assets and account authority",
+      "trigger": "Accepted engagement",
+      "inputs": "Brand rules, rights evidence, named account owner, OAuth grant and permitted actions",
+      "outputs": "Onboarding checklist; approved assets; active/revoked grant status",
+      "pain": "\u201cregularly requires reauthorization\u201d \u2014 [C11](https://www.reddit.com/r/SocialMediaManagers/comments/1uqs3sx/how_do_you_schedule_posts_for_clients_on_their/)",
+      "frequency": "1 onboarding/month; grant checks before each release",
+      "handoff": "Client account owner grants access; AM checks completeness",
+      "data_object": "PartyAccount; EngagementScope; CampaignWorkItem"
+    },
+    {
+      "id": "S04",
+      "stage": "Brief and content calendar",
+      "trigger": "Monthly planning cycle or approved campaign request",
+      "inputs": "Scope, approved claims, audience, assets, key dates, channel constraints",
+      "outputs": "Versioned brief and proposed channel calendar",
+      "pain": "\u201cMost errors occur with the copy.\u201d \u2014 [C03](https://www.reddit.com/r/SocialMediaMarketing/comments/1lx80ha/how_do_you_deliver_monthly_social_media_posts_to/)",
+      "frequency": "10 briefs/month; 120 original content packages/month",
+      "handoff": "AM/client agree brief; copywriter hands canonical copy to designer",
+      "data_object": "CampaignWorkItem; EngagementScope"
+    },
+    {
+      "id": "S05",
+      "stage": "Creative production",
+      "trigger": "Approved brief and assigned work",
+      "inputs": "Canonical copy, supplied media, rights, dimensions, duration/captions",
+      "outputs": "Editable source references; rendered variants; accessibility/rights checklist",
+      "pain": "\u201ctheir video ends up being 5-6 min long\u201d \u2014 [C07](https://www.reddit.com/r/editors/comments/w41ggc/scope_creep_slow_client_feedback_flat_fee_projects/)",
+      "frequency": "120 packages/month; variant count separately logged",
+      "handoff": "Copywriter/designer produce; internal reviewer checks",
+      "data_object": "CampaignWorkItem with AssetVersion"
+    },
+    {
+      "id": "S06",
+      "stage": "QA, client approval and scope changes",
+      "trigger": "Reviewable version or client feedback",
+      "inputs": "Exact copy/media version, brand/account, scope allowance, named approver",
+      "outputs": "Approve/reject decision; revised version or accepted change order",
+      "pain": "\u201ctranslates the feedback or approval back to the fulfillment team\u201d \u2014 [C04](https://www.reddit.com/r/agency/comments/tnzhx1/how_does_your_agency_handle_client_approvals/)",
+      "frequency": "120 first-review packages/month; every additional revision counted",
+      "handoff": "Internal reviewer \u2192 client approver; owner authorizes scope change",
+      "data_object": "ApprovalRelease; CampaignWorkItem; EngagementScope"
+    },
+    {
+      "id": "S07",
+      "stage": "Schedule, publish and reconcile",
+      "trigger": "Explicit approval plus valid account grant",
+      "inputs": "Approved payload hash, account, time zone, schedule, idempotency key",
+      "outputs": "Platform acceptance/live receipt, or reconciled blocked/failed exception",
+      "pain": "\u201cthe post isn't on there\u201d \u2014 [C09](https://www.reddit.com/r/SocialMediaMarketing/comments/1m1cvof/meta_business_suite_scheduling_not_working/)",
+      "frequency": "240 publication jobs/month; retries are extra attempts, not extra delivered posts",
+      "handoff": "Authorized worker submits; social manager resolves exceptions; account owner renews grant",
+      "data_object": "ApprovalRelease; OutcomeLedger"
+    },
+    {
+      "id": "S08",
+      "stage": "Community response and business handoff",
+      "trigger": "New comment, DM, review or service message",
+      "inputs": "Conversation, approved facts/FAQ, response authority and escalation rules",
+      "outputs": "Reviewed reply or lead/service case accepted by named owner",
+      "pain": "\u201cNow I have to use both\u201d \u2014 [C02](https://www.reddit.com/r/SocialMediaMarketing/comments/1hx5d2a/how_do_you_send_content_to_be_approved_by_client/)",
+      "frequency": "Continuous inbox; actionable cases included in S01 count to avoid double counting",
+      "handoff": "AM/social manager replies; client's sales/service owner accepts handoff",
+      "data_object": "ConversationRequest; PartyAccount; EngagementScope"
+    },
+    {
+      "id": "S09",
+      "stage": "Reporting and renewal",
+      "trigger": "Period closes or client review is due",
+      "inputs": "Platform receipts, metric snapshots, definitions, spend supplied by authorized source",
+      "outputs": "Reconciled report; reviewed interpretation; next brief/renewal proposal",
+      "pain": "\u201creporting only for the first 4 days of the month\u201d \u2014 [C14](https://www.reddit.com/r/PPC/comments/1f67sec/people_working_in_agencies_what_reports_do_you/)",
+      "frequency": "10 reports/month",
+      "handoff": "Analyst/AM verifies; client accepts and decides next campaign",
+      "data_object": "OutcomeLedger; CampaignWorkItem; EngagementScope"
+    },
+    {
+      "id": "S10",
+      "stage": "Invoice, collect and reconcile",
+      "trigger": "Retainer due or accepted change order",
+      "inputs": "Accepted scope, delivery references, approved charges, external ledger IDs",
+      "outputs": "Draft invoice handoff; authoritative invoice/payment status",
+      "pain": "No direct accounting-product complaint verified; do not invent one",
+      "frequency": "10 retainer invoices/month plus approved changes",
+      "handoff": "Owner/accountant approves; external books and processor execute/reconcile",
+      "data_object": "EngagementScope; OutcomeLedger (references only)"
+    },
+    {
+      "id": "S11",
+      "stage": "Capacity, time, payroll and offboarding",
+      "trigger": "Weekly allocation, pay cycle, staff/client exit",
+      "inputs": "Approved tasks/time, availability, engagement state, access inventory",
+      "outputs": "Capacity plan; reviewed payroll inputs; revoked grants and export/retention receipts",
+      "pain": "\u201cshifting my schedule to accommodate them\u201d \u2014 [C08](https://www.reddit.com/r/editors/comments/w41ggc/scope_creep_slow_client_feedback_flat_fee_projects/)",
+      "frequency": "Weekly allocation; 2 pay runs/month assumption; exits as required",
+      "handoff": "Owner allocates; employer approves payroll; account owner revokes; client receives export",
+      "data_object": "CampaignWorkItem; EngagementScope; PartyAccount; OutcomeLedger"
+    }
+  ]
+}

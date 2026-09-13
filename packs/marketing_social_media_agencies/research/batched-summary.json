@@ -1,0 +1,989 @@
+{
+  "as_of": "2026-09-13",
+  "started_at": "2026-09-13T16:03:11.608857+00:00",
+  "finished_at": "2026-09-13T16:05:45.204589+00:00",
+  "commercial_stage_commit": "163f1c53d59d2a12cc23ef7f0fe6e11501415a96",
+  "bank_head": "2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "bank_files": {
+    "bank/bank_capability_top.jsonl": {
+      "rows": 126,
+      "sha256": "ea4a5cc1a97e7c063ffa3dc7cc87f24ab56609ecd001d6aa91665d8e1f804178",
+      "keys": [
+        "capability",
+        "rank",
+        "full_name",
+        "stars",
+        "reuse_value",
+        "license",
+        "note"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_capability_top.jsonl"
+    },
+    "bank/bank_capability.jsonl": {
+      "rows": 51,
+      "sha256": "d9dd968163492bde7885a03978f279c5c95bd9ef5990e40d8dc4273d9147871f",
+      "keys": [
+        "capability",
+        "category",
+        "match_sql",
+        "gold_count",
+        "tier"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_capability.jsonl"
+    },
+    "capability-shelf/source-registry.jsonl": {
+      "rows": 3010,
+      "sha256": "c04954f32ea74bee20fec1bd90bdce6135da309f8daded979d5bc180cd20411f",
+      "keys": [
+        "source_id",
+        "repo",
+        "url",
+        "labels",
+        "family_ids",
+        "family_names",
+        "evidence_classes",
+        "operator_signals",
+        "observed_facts",
+        "current_verdict",
+        "foundry_stage",
+        "qualification_status",
+        "execution_status",
+        "admission_status",
+        "priority_score",
+        "industry_demand",
+        "industry_demand_status"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/capability-shelf/source-registry.jsonl"
+    },
+    "bank/bank_best.jsonl": {
+      "rows": 23778,
+      "sha256": "333399106db88203b975243501d8b9893cc86e1e9efd2a26bf20ae66462a3dc3",
+      "keys": [
+        "full_name",
+        "capability_tag",
+        "category_slug",
+        "summary",
+        "reuse_value",
+        "stars",
+        "license",
+        "language",
+        "url",
+        "rank_score"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_best.jsonl"
+    },
+    "bank/bank_adoption_v2.jsonl": {
+      "rows": 2722,
+      "sha256": "3ba06bd75e8ebdb83d85ba24ed61defa2322962984b7542c036493c322839ba6",
+      "keys": [
+        "full_name",
+        "language",
+        "registry",
+        "pkg_name",
+        "unit_class",
+        "resolved",
+        "link_method",
+        "downloads",
+        "downloads_period",
+        "dependent_repos",
+        "dependent_pkgs",
+        "rank_avg",
+        "reach_percentile",
+        "reuse_value",
+        "stars",
+        "adoption_score",
+        "real_value",
+        "verdict",
+        "fame_gap",
+        "raw_json",
+        "built_at"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_adoption_v2.jsonl"
+    },
+    "bank/bank_liftable_ranked.jsonl": {
+      "rows": 32137,
+      "sha256": "0a35d81e927116874bfff0bf0b144cc4391c065b3ea5f84b143d8723c03c9850",
+      "keys": [
+        "full_name",
+        "stars",
+        "license",
+        "language",
+        "unit_class",
+        "reuse_value",
+        "liftability",
+        "fame_gap",
+        "cat_slug",
+        "cat_name",
+        "description"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_liftable_ranked.jsonl"
+    },
+    "bank/bank_contractcard.jsonl": {
+      "rows": 70,
+      "sha256": "a3b0efc9cc0137899f91d1e66f73d3b3d9297b72482f12d5b3f2095b7742b20f",
+      "keys": [
+        "card_id",
+        "full_name",
+        "display_name",
+        "band",
+        "language",
+        "stars",
+        "license",
+        "legal_lane",
+        "one_liner",
+        "provides",
+        "requires",
+        "assumptions",
+        "recipe",
+        "smoke",
+        "surface",
+        "liftability",
+        "source_refs",
+        "notes",
+        "built_by",
+        "built_at",
+        "semantics",
+        "semantics_meta",
+        "trust_rung",
+        "rung_name",
+        "smoke_tier",
+        "verified_at"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_contractcard.jsonl"
+    },
+    "bank/bank_gold.jsonl": {
+      "rows": 29940,
+      "sha256": "44c266939b77d3af89e37ee2ddc2b7e65536d2be5657f02fbda8efb1b21a6a5f",
+      "keys": [
+        "full_name",
+        "stars",
+        "license",
+        "language",
+        "description",
+        "topics_json",
+        "cat_slug",
+        "cat_name",
+        "reuse_value",
+        "info_value",
+        "why"
+      ],
+      "url": "https://raw.githubusercontent.com/sisodias/siso-repo-bank/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_gold.jsonl"
+    }
+  },
+  "bank_distinct_primary_names": 34951,
+  "shelf_matching_rows": 311,
+  "initial_pool": 428,
+  "discovered_distinct_names": 724,
+  "examined_distinct_github_ids": 180,
+  "actual_new_repos": 73,
+  "actual_already_in_bank": 107,
+  "rounds": [
+    {
+      "round": 1,
+      "purpose": "Three lanes for all eleven workflow stages",
+      "queries": 33,
+      "new_names": 187,
+      "names": [
+        "7sferry/gatsby-plugin-google-analytics-data-reporting-api",
+        "aalaa4444/video-subtitles-detector",
+        "abhinavxd/libredesk",
+        "abus-aikorea/voice-pro",
+        "activitywatch/activitywatch",
+        "agentkitai/agentgate",
+        "aghakazimali-ml/content-flow",
+        "ahmadmustafa02/ai-powered-marketing-automation-marketing-agentic-ai",
+        "ahmar00987/ahsam",
+        "ahmar00987/fb-clonin",
+        "ajay04323/cpanel_cpsp",
+        "akr/pdftimestamp",
+        "alexworkdev/whatsapp_chatbot",
+        "aliasoblomov/n8n-ga4-backfill-workflow",
+        "allinurl/goaccess",
+        "amirsarhang/instagram-php-sdk",
+        "andrestubbe/fastmail",
+        "anishdcruz/apex",
+        "apoorvdarshan/crossposter",
+        "ari/jobsworth",
+        "aryia-behroziuan/neurons",
+        "ashampoo/kim",
+        "atrocore/atrocore",
+        "atrocore/atrodam",
+        "awslabs/visual-asset-management-system",
+        "bensblueprints/helpdesk-tickets-mvp",
+        "bhftbootcamp/gmime.jl",
+        "buildsoftwaresphere/window",
+        "bxdr-glitch/stripe-supabase-webhooks",
+        "calibreapp/react-live-chat-loader",
+        "casoon/helpdesk",
+        "catoncat/cloud-mail",
+        "cbsshekhawat18-lab/social-stats-social-media-manager",
+        "chatwoot/chatwoot-mobile-app",
+        "chatwoot/docs",
+        "chiriapp/chiri",
+        "chrisneagu/ftc-skystone-dark-angels-romania-2020",
+        "code-charity/youtube",
+        "countly/countly-server",
+        "crenspire/laravel-whatsapp",
+        "dacasan/adwebcrm",
+        "daminikhq/daminik",
+        "danni-cool/node-gtag4",
+        "dcparker/ruby-gmail",
+        "demandbird/demandbird",
+        "denizsafak/abogen",
+        "deskwoot/deskwoot-js",
+        "dettinjo/portfolio-photography",
+        "diendh/zca-bridge",
+        "doctorconceptual/php-instagram-graph-sdk",
+        "dolag233/serpent",
+        "dotpm/obsidian-pm",
+        "douglara/chatwoot-botpress-bridge",
+        "douglasdemoura/chroncal",
+        "drewnoakes/metadata-extractor",
+        "drewnoakes/metadata-extractor-dotnet",
+        "dspace/dspace",
+        "dudanogueira/rocket.connect",
+        "edwinkys/phantasm",
+        "eshan06/proofline",
+        "evolution-foundation/evo-crm-community",
+        "evolution-foundation/evolution-api",
+        "exerra/paperless-esig",
+        "exiv2/exiv2",
+        "eyalm321/zernio-mcp",
+        "fabricatorsltd/instagram-sdk-dotnet",
+        "feng-shan-jian/approvaplat",
+        "frappe/books",
+        "frappe/helpdesk",
+        "fxck/noola",
+        "gitroomhq/postiz-n8n",
+        "godbyhub/108api",
+        "gokulsvision/crewm8-social-media-manager-skill-graph",
+        "growth-circle/cadis",
+        "h1d/easypdf-lite",
+        "harry0703/moneyprinterturbo",
+        "hashgraph/guardian",
+        "hasnayeen/invobook",
+        "hms-core/hms-dtm-demo-android",
+        "hms-core/hms-dtm-demo-kotlin",
+        "ibrahimpelumi6142/whatsapp-cloud-api-starter",
+        "ildrm/wordpress-maildesk",
+        "inhubflow-core/inhubflow-chatwoot",
+        "j05u3/whatsapp-cloud-api-express",
+        "jaberweb/productmind",
+        "jdepoix/youtube-transcript-api",
+        "jerryzliu/dayflow",
+        "jiali-lisa/imap_email_client",
+        "jonalemndi2/aldia",
+        "joycequinn/best-advertising-and-marketing-management",
+        "jstolpe/instagram-graph-api-php-sdk",
+        "kashcal/kashcal",
+        "kinganupamdutta27/voice-assistant-using-python",
+        "kisli/vmime",
+        "klimanyusuf/combating-twitter-hate-speech-using-ml-and-nlp",
+        "klimanyusuf/twitter-hate",
+        "kozea/radicale",
+        "kushalsamani/social-media-ai-agent",
+        "l422y/nuxt-pageviews",
+        "laoma2053/awesome-zhuiju-free",
+        "lennart-k/rustical",
+        "leohsiao1/pyexiv2",
+        "lu1tr0n/idempotency-spring-boot-starter",
+        "luistravaglini/lumen-ai-customer-support-platform",
+        "macfanatic/sprintapp",
+        "mahdibrr/awesome-nextjs-supabase",
+        "mahmoudra752/waflow-crm-enterprise",
+        "manojtharindu11/chat_whatsapp",
+        "manyfold3d/manyfold",
+        "markascharan/eventpay",
+        "mattladewig/clipper",
+        "medeep99/ai-video-automation-script",
+        "miantiao-me/sink",
+        "microsoft/dynamics-365-for-marketing---power-bi-reporting",
+        "mikekovarik/exifr",
+        "mkozarik-praha/easysigner",
+        "monicahq/monica",
+        "morpheusadam/kargah",
+        "morvanzhou/data-driven-product",
+        "msaveliev/stripe-php-symfony",
+        "natheemseo/ga4-api-python",
+        "nestieguilas/marketing-platform-",
+        "netz-sg/sanity-social-media-studio",
+        "nizier193/llm-timestamps-video-analyzer",
+        "nocobase/nocobase",
+        "nugi29/whatsapp-ai-chatbot",
+        "octosign/desktop",
+        "op7418/m5-paper-buddy",
+        "oscarhibbert/email-parser",
+        "peterprospl12/pades-pdf-signer",
+        "pigontech/inkvoice",
+        "pimutils/todoman",
+        "pimutils/vdirsyncer",
+        "pklavc/event-driven-integration-service",
+        "plonguo/canva-gen-ai-app",
+        "practical-data-science/gapandas4",
+        "prasath95/webhooks-for-whatsapp-cloud-api",
+        "primeautomation-dev/stripe-webhook-idempotency-guardd",
+        "prismposter/creator-tools",
+        "ramathornn/books",
+        "rastaman4e/-1",
+        "razuna/razuna-legacy",
+        "realchandan/post-scheduler",
+        "renefichtmueller/ctxpost",
+        "richardokonicha/ffmeg-video-processor",
+        "riprlutuk/paspapan",
+        "rybbit-io/rybbit",
+        "sanskar-agarwal/imap-email-client",
+        "satishacharya03/inboxkura",
+        "schmidt1024/xmrpay",
+        "sfedfcv/redesigned-pancake",
+        "shadowslayer03/post4u-schedule-social-media-posts",
+        "smacke/ffsubsync",
+        "solidtime-io/solidtime",
+        "solrikk/dectralv1",
+        "spoolappio/threads-graph-api",
+        "srutibh/video-subtitles-remover-",
+        "super-productivity/super-productivity",
+        "superrogerio/css",
+        "sveltia/sveltia-cms",
+        "tanyazyabkina/ga4_api_python",
+        "teathedeveloper/signature-pad",
+        "techbeeat/jtxboard",
+        "techiebutler/freeframe",
+        "textcontrol/web.textcontrol.mvc.signaturepad",
+        "tonyfi7584/zotlyx-inbox",
+        "trionlabs/enpara-pdf-signatures",
+        "tsai996/lowflow-design",
+        "unopim/unopim",
+        "usamam46-git/frappe-gymstack",
+        "uvdesk/community-skeleton",
+        "varshuai/cognidesk-ai",
+        "vas3k/taxhacker",
+        "voided-org/deepkit-ml",
+        "wallace-best/best",
+        "whatsapp-webhook/whatsapp-webhook",
+        "whiskerent/whisker-cart",
+        "wiltodelta/remove-ai-watermarks",
+        "wm94i/work-review",
+        "worklenz/worklenz",
+        "yaofanguk/video-subtitle-extractor",
+        "yaogui415/newsflow-oss",
+        "zavudev/zavu-inbox",
+        "zertyz/devops-media-scripts",
+        "zidage/alcedostudio",
+        "zju-real/easel",
+        "zszszszsz/.config"
+      ]
+    },
+    {
+      "round": 2,
+      "purpose": "Different artifact classes, not rewordings",
+      "queries": 11,
+      "new_names": 44,
+      "names": [
+        "alpha-service/peppol-billing",
+        "andrii-koss/npati-content-automation",
+        "carguo/find_image_hide",
+        "chaudhari-mithilesh/content-calender-plugin",
+        "coollabsio/shoutrrr.com",
+        "countincognito/zametek.projectplan",
+        "croffasia/itsaplan",
+        "discord-tickets/bot",
+        "docusignlog/docusignlog-in",
+        "elevityadmin/trilli",
+        "esvit/einvoicing",
+        "faiza22-byte/real-estate-lead-automation-system-",
+        "gorkem-bwl/atlas",
+        "harimaliya/appoinment-calendar-plugin",
+        "inspectorhub/openinspection",
+        "invoicexml/ubl-api-examples",
+        "isneyler/ublinvoiceparser",
+        "jettbrains/-l-",
+        "kapoordeepanshu/linkedin-autopilot-n8n",
+        "karauda/ai-usage-scale",
+        "kristinaquinones/wp-ai-cal",
+        "liftedholdings/lifted-sign",
+        "logixsolutions94/einvoice-ts",
+        "matthew-selvam/open-dispatch",
+        "mindclaw332/ubl_invoice_parser",
+        "muhammedfatih/wordpress-mf-calendar-plugin",
+        "oabareload/bunny-queue-press",
+        "opmaine/opa-content",
+        "osint-shifu/filegrail",
+        "penpact/penpact",
+        "roverbird/eu-invoice-tools",
+        "rramatchandran/big-o-performance-java",
+        "ryuga-w/ai-metadata-cleaner",
+        "sadhi-team-16/universal-ai-studio",
+        "schelskedevco/ignidash",
+        "siddhantbhattarai/metacleaner",
+        "src-run/serferals",
+        "tapha/wp-content-calendar",
+        "unevensoftware/leafpic",
+        "vul-os/diwan",
+        "willowite/remorvi",
+        "xhubio/n8n-nodes-invoice-api-xhub",
+        "zakisheriff/ai-label-remover",
+        "zamc83/crm_hrm_for_business"
+      ]
+    },
+    {
+      "round": 3,
+      "purpose": "Maintainer neighborhoods, registries and neglected artifact formats",
+      "queries": 11,
+      "new_names": 65,
+      "names": [
+        "aghoreshwar/awesome-customer-analytics",
+        "anil-matcha/awesome-agent-apis",
+        "babyj723/blast-on",
+        "chatwoot/ai-agents",
+        "chatwoot/charts",
+        "chatwoot/chatwoot-flutter-sdk",
+        "chatwoot/chatwoot-react-native-widget",
+        "chatwoot/rasa-agent-bot-demo",
+        "contentauth/c2pa-cpp",
+        "contentauth/c2pa-js",
+        "contentauth/c2pa-js-legacy",
+        "contentauth/c2pa-node",
+        "contentauth/c2pa-python",
+        "contentauth/c2pa-swift",
+        "dangjin/awesome-social-media-downloader",
+        "docnow/awesome-social-media-archiving",
+        "dustytools/fotofly",
+        "edwardtay/awesome-osint",
+        "footprintanalytics/awesome-web3",
+        "geo-mena/signsafe",
+        "gitroomhq/agent-media",
+        "gitroomhq/crosspublic",
+        "gitroomhq/postiz-docs",
+        "gitroomhq/trending-list",
+        "iabtechlab/iab-mapper",
+        "inovector/docusaurus-plugin-zooming",
+        "inovector/mixpost-auth",
+        "inovector/mixpostapp",
+        "inovector/mixpostenterpriseapp",
+        "inovector/mixpostproteamapp",
+        "inovector/n8n-nodes-mixpost",
+        "inovector/obsidian-kanagawa-tide",
+        "intoolswetrust/jsignpdf",
+        "jakeolschewski/awesome-content-creation",
+        "jorgenfb/analytics-globe",
+        "juneyaooo/awesome-ai-media",
+        "kodekreatif/pdfdigisign",
+        "ldiogoz/accinapdf",
+        "lsnepomuceno/laravel-a1-pdf-sign",
+        "mdshobu/liberty-house-club-whitepaper",
+        "mindmap-ai/awesome-cyber-security-mind-maps",
+        "nayan9229/ad_prox_dsp",
+        "nextweb4/photo-metadata-editor",
+        "nordlien/phototags-synchronizer",
+        "pratikp1/pdfpurr",
+        "pyinat/naturtag",
+        "rapidcodelab/vast-provider",
+        "repomonkey/photoscribe",
+        "rhettbull/photosmeta",
+        "rogerhoward/awesome-dam",
+        "schwim23/android-ad-tester",
+        "spekulatius/awesome-privacy-friendly-web-analytics",
+        "swapnilgirishpawar/ad-server-sim",
+        "swedbankab/swedbank",
+        "thinnies/bibliomaniacs.js",
+        "thinnies/seasoning-books",
+        "thumbsup/exiftool-json-db",
+        "urg-group-of-company/urg-infotech",
+        "urg-groups/urg-infotech",
+        "urg-groups/web-development-company-in-jaipur-urg-infotech",
+        "vladikkrasulya/adtech-spyglass",
+        "weissbc07/ctv-simulator",
+        "weshopai/awesome-seedance-2.0-prompt",
+        "yosriady/awesome-web3",
+        "yousef-eng679/my_research_publish_area"
+      ]
+    },
+    {
+      "round": 4,
+      "purpose": "Bounded gap-directed queries; zero results are not proof of global absence",
+      "queries": 3,
+      "new_names": 0,
+      "names": []
+    },
+    {
+      "round": 5,
+      "purpose": "Bounded gap-directed queries; zero results are not proof of global absence",
+      "queries": 3,
+      "new_names": 0,
+      "names": []
+    }
+  ],
+  "two_consecutive_search_rounds_without_new_names": true,
+  "dependency_frontier_not_yet_examined": [
+    {
+      "from": "chatwoot/chatwoot",
+      "candidate": "chatwoot/twitty"
+    },
+    {
+      "from": "freescout-help-desk/freescout",
+      "candidate": "freescout-help-desk/Purifier"
+    },
+    {
+      "from": "freescout-help-desk/freescout",
+      "candidate": "freescout-help-desk/laravel-selfupdater"
+    },
+    {
+      "from": "zammad/zammad",
+      "candidate": "rails/rails"
+    },
+    {
+      "from": "zammad/zammad",
+      "candidate": "sass/sassc-ruby"
+    },
+    {
+      "from": "zammad/zammad",
+      "candidate": "zammad-deps/autodiscover"
+    },
+    {
+      "from": "zammad/zammad",
+      "candidate": "zammad-deps/delayed_job"
+    },
+    {
+      "from": "zammad/zammad",
+      "candidate": "zammad-deps/delayed_job_active_record"
+    },
+    {
+      "from": "espocrm/espocrm",
+      "candidate": "espocrm/espocrm.git"
+    },
+    {
+      "from": "espocrm/espocrm",
+      "candidate": "ratchetphp/Ratchet.git"
+    },
+    {
+      "from": "espocrm/espocrm",
+      "candidate": "yurikuzn/php-initial-avatar-generator.git"
+    },
+    {
+      "from": "frappe/crm",
+      "candidate": "frappe/crm.git"
+    },
+    {
+      "from": "frappe/erpnext",
+      "candidate": "frappe/erpnext.git"
+    },
+    {
+      "from": "docusealco/docuseal",
+      "candidate": "docusealco/turbo"
+    },
+    {
+      "from": "sabre-io/dav",
+      "candidate": "fruux/sabre-dav"
+    },
+    {
+      "from": "kewisch/ical.js",
+      "candidate": "kewisch/ical.js.git"
+    },
+    {
+      "from": "nextcloud/server",
+      "candidate": "nextcloud/server.git"
+    },
+    {
+      "from": "nocodb/nocodb",
+      "candidate": "nocodb/nocodb.git"
+    },
+    {
+      "from": "strapi/strapi",
+      "candidate": "strapi/strapi.git"
+    },
+    {
+      "from": "outline/outline",
+      "candidate": "sponsors/outline"
+    },
+    {
+      "from": "makeplane/plane",
+      "candidate": "makeplane/plane.git"
+    },
+    {
+      "from": "Leantime/leantime",
+      "candidate": "leantime/leantime-documentor.git"
+    },
+    {
+      "from": "Leantime/leantime",
+      "candidate": "sponsors/Leantime"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "citizensadvice/capybara_accessible_selectors"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "heroku/heroku-buildpack-ruby"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "kickstarter/rack-attack"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "opf/dentaku"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "opf/md-to-pdf"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "prawnpdf/prawn"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "pry/pry"
+    },
+    {
+      "from": "opf/openproject",
+      "candidate": "puma/puma"
+    },
+    {
+      "from": "thedevs-network/kutt",
+      "candidate": "thedevs-network/kutt.git"
+    },
+    {
+      "from": "mautic/mautic",
+      "candidate": "mautic/SymfonyBridgeBundle.git"
+    },
+    {
+      "from": "mautic/mautic",
+      "candidate": "mautic/oauth2-php"
+    },
+    {
+      "from": "mautic/mautic",
+      "candidate": "sponsors/mautic"
+    },
+    {
+      "from": "akeneo/pim-community-dev",
+      "candidate": "akeneo/pim-community-dev.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/JMSTranslationBundle"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/embed-bundle.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/fractal.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/imagine"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/jquery-treeview.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "alchemy-fr/tcpdf-clone"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "exiftool/exiftool.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "facebookarchive/facebook-php-sdk.git"
+    },
+    {
+      "from": "alchemy-fr/Phraseanet",
+      "candidate": "romainneutron/ProcessManager.git"
+    },
+    {
+      "from": "resourcespace/resourcespace",
+      "candidate": "axiell/imu-api-php"
+    },
+    {
+      "from": "LycheeOrg/Lychee",
+      "candidate": "LycheeOrg/log-viewer"
+    },
+    {
+      "from": "LycheeOrg/Lychee",
+      "candidate": "LycheeOrg/php-exif"
+    },
+    {
+      "from": "LycheeOrg/Lychee",
+      "candidate": "LycheeOrg/phpstan-lychee"
+    },
+    {
+      "from": "LycheeOrg/Lychee",
+      "candidate": "LycheeOrg/verify"
+    },
+    {
+      "from": "lovell/sharp",
+      "candidate": "lovell/sharp.git"
+    },
+    {
+      "from": "umami-software/umami",
+      "candidate": "umami-software/umami.git"
+    },
+    {
+      "from": "matomo-org/matomo",
+      "candidate": "matomo-org/matomo-coding-standards.git"
+    },
+    {
+      "from": "matomo-org/matomo",
+      "candidate": "matomo-org/matomo.git"
+    },
+    {
+      "from": "apache/superset",
+      "candidate": "numpy/numpy"
+    },
+    {
+      "from": "apache/superset",
+      "candidate": "urschrei/pypolyline"
+    },
+    {
+      "from": "getredash/redash",
+      "candidate": "getredash/redash.git"
+    },
+    {
+      "from": "getredash/redash",
+      "candidate": "getredash/sql-formatter.git"
+    },
+    {
+      "from": "meltano/meltano",
+      "candidate": "jwodder/check-wheel-contents"
+    },
+    {
+      "from": "meltano/meltano",
+      "candidate": "meltano/.github"
+    },
+    {
+      "from": "xdevplatform/twitter-api-typescript-sdk",
+      "candidate": "twitterdev/twitter-api-typescript-sdk.git"
+    },
+    {
+      "from": "plhery/node-twitter-api-v2",
+      "candidate": "plhery/node-twitter-api"
+    },
+    {
+      "from": "abraham/twitteroauth",
+      "candidate": "abraham/twitteroauth.git"
+    },
+    {
+      "from": "mastodon/mastodon",
+      "candidate": "mastodon/mastodon.git"
+    },
+    {
+      "from": "tus/tus-js-client",
+      "candidate": "tus/tus-js-client.git"
+    },
+    {
+      "from": "ohmyform/ohmyform",
+      "candidate": "ohmyform/ohmyform.git"
+    },
+    {
+      "from": "formio/formio",
+      "candidate": "formio/formio.git"
+    },
+    {
+      "from": "invoiceninja/invoiceninja",
+      "candidate": "invoiceninja/einvoice"
+    },
+    {
+      "from": "invoiceninja/invoiceninja",
+      "candidate": "turbo124/snappdf"
+    },
+    {
+      "from": "InvoicePlane/InvoicePlane",
+      "candidate": "InvoicePlane/InvoicePlane.git"
+    },
+    {
+      "from": "SolidInvoice/SolidInvoice",
+      "candidate": "SolidInvoice/SolidInvoice.git"
+    },
+    {
+      "from": "frappe/hrms",
+      "candidate": "frappe/hrms.git"
+    },
+    {
+      "from": "kimai/kimai",
+      "candidate": "kimai/kimai.git"
+    },
+    {
+      "from": "ever-co/ever-gauzy",
+      "candidate": "ever-co/ever-gauzy.git"
+    },
+    {
+      "from": "node-red/node-red",
+      "candidate": "node-red/node-red.git"
+    },
+    {
+      "from": "foundation/foundation-emails",
+      "candidate": "foundation/foundation-docs.git"
+    },
+    {
+      "from": "foundation/foundation-emails",
+      "candidate": "foundation/foundation-sites.git"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "briansmith/ring"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "dbt-labs/arrow-adbc"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "rust-lang/cargo"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "sdf-labs/arrow-rs"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "sdf-labs/datafusion"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "sdf-labs/datafusion-sqlparser-rs"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "sdf-labs/ring.git"
+    },
+    {
+      "from": "dbt-labs/dbt",
+      "candidate": "wolfpld/tracy"
+    },
+    {
+      "from": "frictionlessdata/frictionless-py",
+      "candidate": "frictionlessdata/framework"
+    },
+    {
+      "from": "louislam/uptime-kuma",
+      "candidate": "louislam/uptime-kuma.git"
+    },
+    {
+      "from": "gitroomhq/postiz-agent",
+      "candidate": "gitroomhq/postiz-agent.git"
+    },
+    {
+      "from": "trypostit/trypost",
+      "candidate": "trypost-it/trypost"
+    },
+    {
+      "from": "alextselegidis/easyappointments",
+      "candidate": "alextselegidis/easyappointments.git"
+    },
+    {
+      "from": "PostHog/posthog",
+      "candidate": "PostHog/infi.clickhouse_orm"
+    },
+    {
+      "from": "PostHog/posthog",
+      "candidate": "PostHog/pytest-split"
+    },
+    {
+      "from": "PostHog/posthog",
+      "candidate": "astral-sh/ty"
+    },
+    {
+      "from": "PostHog/posthog",
+      "candidate": "posthog/posthog.git"
+    },
+    {
+      "from": "ActivityWatch/activitywatch",
+      "candidate": "pyinstaller/pyinstaller-hooks-contrib"
+    },
+    {
+      "from": "ActivityWatch/activitywatch",
+      "candidate": "pyinstaller/pyinstaller-hooks-contrib.git"
+    },
+    {
+      "from": "abus-aikorea/voice-pro",
+      "candidate": "explosion/spacy-models"
+    },
+    {
+      "from": "evolution-foundation/evolution-api",
+      "candidate": "EvolutionAPI/evolution-api"
+    },
+    {
+      "from": "evolution-foundation/evolution-api",
+      "candidate": "EvolutionAPI/evolution-api.git"
+    },
+    {
+      "from": "denizsafak/abogen",
+      "candidate": "hexgrad/kokoro.git"
+    },
+    {
+      "from": "Countly/countly-server",
+      "candidate": "Countly/offline-geocoder.git"
+    },
+    {
+      "from": "frappe/helpdesk",
+      "candidate": "frappe/helpdesk.git"
+    }
+  ],
+  "failures": [
+    {
+      "requested": "vikunja/vikunja",
+      "status": "unresolved_or_empty",
+      "errors": [
+        {
+          "type": "NOT_FOUND",
+          "path": [
+            "r2"
+          ],
+          "locations": [
+            {
+              "line": 1,
+              "column": 1272
+            }
+          ],
+          "message": "Could not resolve to a Repository with the name 'vikunja/vikunja'."
+        }
+      ]
+    },
+    {
+      "requested": "pyhanko/pyHanko",
+      "status": "unresolved_or_empty",
+      "errors": [
+        {
+          "type": "NOT_FOUND",
+          "path": [
+            "r5"
+          ],
+          "locations": [
+            {
+              "line": 1,
+              "column": 3208
+            }
+          ],
+          "message": "Could not resolve to a Repository with the name 'pyhanko/pyHanko'."
+        }
+      ]
+    },
+    {
+      "requested": "invoice-x/zugferd-corpus",
+      "status": "unresolved_or_empty",
+      "errors": [
+        {
+          "type": "NOT_FOUND",
+          "path": [
+            "r1"
+          ],
+          "locations": [
+            {
+              "line": 1,
+              "column": 655
+            }
+          ],
+          "message": "Could not resolve to a Repository with the name 'invoice-x/zugferd-corpus'."
+        }
+      ]
+    }
+  ],
+  "examination_scope": "automated live metadata and actual commit-pinned README/root LICENSE/manifest bytes; capped author/issue evidence. Not runtime/security/legal audits. Shortlist receives additional direct connector review.",
+  "saturation_scope": "bounded query classes only; unexamined dependency frontier must be closed or disclosed",
+  "bank_membership_scope": "union of eight pinned public export layers, not unpublished identity database"
+}
