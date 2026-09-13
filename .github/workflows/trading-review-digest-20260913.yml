@@ -1,0 +1,22 @@
+name: Trading review digest 20260913
+on:
+  push:
+    branches: [research/trading-20260913]
+    paths: [.github/workflows/trading-review-digest-20260913.yml]
+permissions:
+  contents: write
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Prepare source review digest only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+os.environ['GITHUB_SHA']+'/packs/trading/evidence/prepare-review-digest.py'
+          with urllib.request.urlopen(url,timeout=30) as r: source=r.read()
+          exec(compile(source,url,'exec'))
+          PY
