@@ -1,0 +1,41 @@
+name: Events research evidence export
+on:
+  push:
+    branches: [research/events-management-20260913]
+    paths: [.github/workflows/events-research-export.yml]
+permissions:
+  contents: read
+jobs:
+  public-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Export public bank data only (no candidate code executed)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, urllib.request
+          root = pathlib.Path('evidence-export'); root.mkdir()
+          base = 'https://raw.githubusercontent.com/sisodias/siso-repo-bank/main/'
+          files = ['bank/bank_capability_top.jsonl', 'bank/bank_capability.jsonl', 'bank/bank_best.jsonl', 'bank/bank_adoption_v2.jsonl', 'bank/bank_liftable_ranked.jsonl', 'bank/bank_contractcard.jsonl', 'capability-shelf/source-registry.jsonl']
+          manifest = []
+          for path in files:
+              target = root / path; target.parent.mkdir(parents=True, exist_ok=True)
+              request = urllib.request.Request(base + path, headers={'User-Agent': 'SISO-events-public-research'})
+              digest = hashlib.sha256(); lines = 0; size = 0
+              with urllib.request.urlopen(request, timeout=45) as response, target.open('wb') as output:
+                  for chunk in iter(lambda: response.read(65536), b''):
+                      size += len(chunk)
+                      if size > 50000000: raise RuntimeError('Public source size bound exceeded')
+                      output.write(chunk); digest.update(chunk); lines += chunk.count(b'\n')
+              manifest.append({'path': path, 'url': base + path, 'bytes': size, 'newline_count': lines, 'sha256': digest.hexdigest()})
+              print(path, size, 'bytes')
+          (root / 'manifest.json').write_text(json.dumps(manifest, indent=2))
+          print('Finished public evidence export; no credentials or client data collected.')
+          PY
+      - name: Upload research evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: events-public-bank-evidence
+          path: evidence-export/
+          retention-days: 7
