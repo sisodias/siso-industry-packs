@@ -1,0 +1,23 @@
+name: Trading public source evidence 20260913
+on:
+  push:
+    branches: [research/trading-20260913]
+    paths: [.github/workflows/trading-source-evidence-20260913.yml]
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Collect public source evidence without running candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request
+          url='https://raw.githubusercontent.com/sisodias/siso-industry-packs/'+os.environ['GITHUB_SHA']+'/packs/trading/evidence/collect-public-evidence.py'
+          with urllib.request.urlopen(url,timeout=30) as response:
+              source=response.read()
+          exec(compile(source,url,'exec'))
+          PY
