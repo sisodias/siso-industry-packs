@@ -1,0 +1,758 @@
+[
+  {
+    "full_name": "Polymarket/real-time-data-client",
+    "requested_name": "Polymarket/real-time-data-client",
+    "id": 942875438,
+    "url": "https://github.com/Polymarket/real-time-data-client",
+    "stars": 229,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "c937d9c11cdd2b771aa4818392a1b6dda65c25de",
+    "last_commit_date": "2026-03-03T18:38:55Z",
+    "archived": false,
+    "fork": false,
+    "description": "A TypeScript client to receive real time data messages",
+    "language": "TypeScript",
+    "license": "MIT",
+    "actual_license_paths": [
+      "LICENSE"
+    ],
+    "license_headings": [
+      "MIT License",
+      "Copyright (c) 2022 Polymarket",
+      "The above copyright notice and this permission notice shall be included in all"
+    ],
+    "license_files_read": true,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Real time data client",
+      "## How to use it",
+      "## How to subscribe and unsubscribe from messages",
+      "### Subscribe",
+      "### Unsubscribe",
+      "### Disconnect",
+      "## Messages hierarchy",
+      "## Auth",
+      "### ClobAuth",
+      "## Message types",
+      "### Activity",
+      "#### Trade",
+      "### Comments",
+      "#### Comment",
+      "#### Reaction",
+      "### CryptoPrice",
+      "#### Filters",
+      "### EquityPrice",
+      "#### Filters",
+      "#### Initial data dump on connection"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/real-time-data-client/issues/26",
+        "createdAt": "2025-12-04T10:20:13Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2025-12-05T19:28:28Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-06T20:33:09Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-06T23:02:38Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-17T07:14:36Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-17T07:42:59Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-17T07:44:55Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2025-12-17T08:06:07Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-01-01T14:40:44Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-01-02T23:43:36Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-01-16T03:55:38Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/real-time-data-client/issues/47",
+        "createdAt": "2026-08-15T09:25:32Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      },
+      {
+        "round": 3,
+        "stage": "W06",
+        "lane": "maintainer",
+        "query": "user:Polymarket"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      ".npmignore",
+      ".prettierignore",
+      ".prettierrc",
+      ".vscode",
+      "LICENSE",
+      "Makefile",
+      "README.md",
+      "eslint.config.mjs",
+      "examples",
+      "package.json",
+      "src",
+      "tsconfig.eslint.json",
+      "tsconfig.json",
+      "yarn.lock"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/README.md",
+        "sha256": "d8bca0d46eaadf380290dd2b751fb0c8bd7b84aaa56eb4c0e1b2b00c628b6038",
+        "bytes": 10253
+      },
+      "LICENSE": {
+        "url": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/LICENSE",
+        "sha256": "d85f8c587d5e82eff9a54fdc7c58ee9c45a25cc72af802b8841242443b4db83f",
+        "bytes": 1067
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/real-time-data-client/blob/c937d9c11cdd2b771aa4818392a1b6dda65c25de/package.json",
+        "sha256": "39d4e54c8a2c30ba7e29b3bd958fcca62db953aa2f815b4352c921551b1fa77b",
+        "bytes": 1349
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/real-time-data-client/commit/c937d9c11cdd2b771aa4818392a1b6dda65c25de",
+      "metadata": "https://api.github.com/repos/Polymarket/real-time-data-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Real time data client This client provides a wrapper to connect to the `real-time-data-streaming` `WebSocket` service. ## How to use it Here is a quick example about how to connect to the service and start receiving messages (you can find more in the folder `examples/`): ```typescript import { RealTimeDataClient } from \"../src/client\"; import { Message } from \"../src/model\"; const onMessage = (message: Message): void => { console.log(message.topic, message.type, message.payload); }; const onConnect = (client: RealTimeDataClient): void => { // Subscribe to a topic client.subscribe({ subscriptions: [ { topic: \"comments\", type: \"*\", // \"*\"\" can be used to connect to all the types of the topic filters: `{\"parentEntityID\":100,\"parentEntityType\":\"Event\"}`, // empty means no filter }, ], }); }; new RealTimeDataClient({ onMessage, onConnect }).connect(); ``` ## How to subscribe and unsubscribe from messages Once the connection is stablished and you have a `client: RealTimeDataClient` object, you can `subscribe` and `unsubscribe` to many messages streamings using the same connection. ### Subscribe Subscribe to 'trades' messages from the topic 'activity' and to the all comments messages. ```typescript client.subscribe({ subscriptions: [ { topic: \"activity\", type:",
+    "license_excerpt": "MIT License Copyright (c) 2022 Polymarket Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation",
+    "license_warnings": [],
+    "runtime_clues": [],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/builder-signing-sdk",
+    "requested_name": "Polymarket/builder-signing-sdk",
+    "id": 1062854511,
+    "url": "https://github.com/Polymarket/builder-signing-sdk",
+    "stars": 27,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "036f63a2d0ae357c436a2f412778d2ca77c8047a",
+    "last_commit_date": "2026-03-24T13:41:55Z",
+    "archived": false,
+    "fork": false,
+    "description": "TypeScript SDK for creating authenticated builder headers",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# builder-signing-sdk",
+      "## Installation",
+      "## Quick Start"
+    ],
+    "recent_commit_count": 2,
+    "recent_authors_sample50": [
+      "carlos-poly"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/builder-signing-sdk/issues/5",
+        "createdAt": "2026-02-11T05:12:40Z",
+        "state": "CLOSED",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "README.md",
+      "package.json",
+      "pnpm-lock.yaml",
+      "src",
+      "tests",
+      "tsconfig.json",
+      "tsconfig.production.json",
+      "vitest.config.ts"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/builder-signing-sdk/blob/036f63a2d0ae357c436a2f412778d2ca77c8047a/README.md",
+        "sha256": "5904a2ef9027a0058e64a1f2c37c11f3d7cc95175b6158b6ae2c1a78522617f8",
+        "bytes": 1121
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/builder-signing-sdk/blob/036f63a2d0ae357c436a2f412778d2ca77c8047a/package.json",
+        "sha256": "e7e5713da0e7527b51b17a0892ef80c491a01493d131c42840ed2cf5438d8e18",
+        "bytes": 1096
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/builder-signing-sdk/commit/036f63a2d0ae357c436a2f412778d2ca77c8047a",
+      "metadata": "https://api.github.com/repos/Polymarket/builder-signing-sdk"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# builder-signing-sdk A TypeScript SDK for creating authenticated builder headers ## Installation ```bash pnpm install @polymarket/builder-signing-sdk ``` ## Quick Start ```typescript import { BuilderSigner }",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "// Local",
+      "localBuilderCreds: {"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/builder-relayer-client",
+    "requested_name": "Polymarket/builder-relayer-client",
+    "id": 1068072689,
+    "url": "https://github.com/Polymarket/builder-relayer-client",
+    "stars": 56,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "9122f6fb1856f1ecfe4406685bfa19a2c5a7b290",
+    "last_commit_date": "2026-05-28T18:34:51Z",
+    "archived": false,
+    "fork": false,
+    "description": "Typescript Client for the Polymarket Relayer API",
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# builder-relayer-client",
+      "## Installation",
+      "## Quick Start",
+      "### Basic Setup",
+      "### Transaction Types",
+      "### With Local Builder Authentication",
+      "### With Remote Builder Authentication",
+      "## Examples",
+      "### Execute ERC20 Approval Transaction",
+      "### Deploy Safe Contract",
+      "### Redeem Positions",
+      "#### CTF (ConditionalTokensFramework) Redeem",
+      "#### NegRisk Adapter Redeem",
+      "### Deposit Wallet",
+      "#### Derive Deposit Wallet Address",
+      "#### Deploy Deposit Wallet",
+      "#### Execute Deposit Wallet Batch",
+      "#### Check Deposit Wallet Deployment"
+    ],
+    "recent_commit_count": 3,
+    "recent_authors_sample50": [
+      "adi-poly",
+      "cesarenaldi"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/builder-relayer-client/issues/39",
+        "createdAt": "2026-09-06T16:07:12Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-09-06T16:11:30Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-07T03:32:27Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/builder-relayer-client/issues/27",
+        "createdAt": "2026-04-29T05:17:02Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-05-15T23:16:32Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-23T13:35:08Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-24T06:23:36Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".env.example",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".github",
+      ".gitignore",
+      ".prettierignore",
+      ".prettierrc",
+      "Makefile",
+      "README.md",
+      "examples",
+      "package.json",
+      "pnpm-lock.yaml",
+      "src",
+      "tests",
+      "tsconfig.json",
+      "tsconfig.production.json"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/builder-relayer-client/blob/9122f6fb1856f1ecfe4406685bfa19a2c5a7b290/README.md",
+        "sha256": "8acd43933cab1ffac021e32ef6c5ea75782160daadb563d7868efe0845c3ec60",
+        "bytes": 12899
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/builder-relayer-client/blob/9122f6fb1856f1ecfe4406685bfa19a2c5a7b290/package.json",
+        "sha256": "80573d51377f9bb5d12d4b676ac7fb9c5fb3293a2532acd248ac378379650bc2",
+        "bytes": 1254
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/builder-relayer-client/commit/9122f6fb1856f1ecfe4406685bfa19a2c5a7b290",
+      "metadata": "https://api.github.com/repos/Polymarket/builder-relayer-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# builder-relayer-client TypeScript client library for interacting with Polymarket relayer infrastructure ## Installation ```bash pnpm install @polymarket/builder-relayer-client ``` ## Quick Start ### Basic Setup ```typescript",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "The transaction type is specified as the last parameter when creating a `RelayClient` instance. All examples use the `Transaction` type - the client automatically converts transactions to the appropriate format (`SafeTransaction` or `ProxyTransaction`) based o",
+      "### With Local Builder Authentication",
+      "localBuilderCreds: builderCreds",
+      "url: \"http://localhost:3000/sign\",",
+      "#### CTF (ConditionalTokensFramework) Redeem",
+      "The standalone `deriveDepositWallet()` helper only derives UUPS deposit wallet addresses and is deprecated. Prefer `client.deriveDepositWalletAddress()`."
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/py-builder-signing-sdk",
+    "requested_name": "Polymarket/py-builder-signing-sdk",
+    "id": 1079894007,
+    "url": "https://github.com/Polymarket/py-builder-signing-sdk",
+    "stars": 8,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "e5403c4a86e28b8aa9105d52bc5606fdb5511be0",
+    "last_commit_date": "2025-10-20T20:11:19Z",
+    "archived": false,
+    "fork": false,
+    "description": "Python SDK for creating authenticated builder headers",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# py-builder-signing-sdk",
+      "## Installation",
+      "## Usage",
+      "# Local signing",
+      "# Remote signing",
+      "# Generate signed headers"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/issues/2",
+        "createdAt": "2025-12-08T08:37:29Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": []
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "Makefile",
+      "README.md",
+      "py_builder_signing_sdk",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/README.md",
+        "sha256": "3f1fdbacdd0a458e0cc0a9c88095cc07b858987b3a5fcdb68c4c86791e50fc95",
+        "bytes": 754
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/requirements.txt",
+        "sha256": "fb850f1643c6c6ba481f27bf7fa809adc5d75d498eed44adf822f0838b8c43ec",
+        "bytes": 84
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-builder-signing-sdk/blob/e5403c4a86e28b8aa9105d52bc5606fdb5511be0/setup.py",
+        "sha256": "db8a2331db733828014ff3e8e22b0c66f54917c0310f67e6620a040d0103b263",
+        "bytes": 984
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/py-builder-signing-sdk/commit/e5403c4a86e28b8aa9105d52bc5606fdb5511be0",
+      "metadata": "https://api.github.com/repos/Polymarket/py-builder-signing-sdk"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# py-builder-signing-sdk Python SDK for Polymarket builder authentication and signing. ## Installation ```bash pip install py-builder-signing-sdk ``` ## Usage ```python from py_builder_signing_sdk import BuilderConfig, BuilderApiKeyCreds,",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Python SDK for Polymarket builder authentication and signing.",
+      "```python",
+      "# Local signing",
+      "config = BuilderConfig(local_builder_creds=creds)",
+      "url=\"http://localhost:3000/sign\","
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/py-builder-relayer-client",
+    "requested_name": "Polymarket/py-builder-relayer-client",
+    "id": 1081395207,
+    "url": "https://github.com/Polymarket/py-builder-relayer-client",
+    "stars": 42,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "267a36d84d7839b6e4ac134297d9230fc224cf8f",
+    "last_commit_date": "2026-05-29T14:08:30Z",
+    "archived": false,
+    "fork": false,
+    "description": "Python Client for the Polymarket Relayer API",
+    "language": "Python",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# py-builder-relayer-client",
+      "## Installation",
+      "## Configuration"
+    ],
+    "recent_commit_count": 19,
+    "recent_authors_sample50": [
+      "cesarenaldi",
+      "suhailkakar"
+    ],
+    "issue_samples": [
+      {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/issues/27",
+        "createdAt": "2026-07-03T10:47:53Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-07-09T00:20:00Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-15T02:04:05Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-07-25T15:09:37Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-06T15:56:15Z",
+              "authorAssociation": "NONE"
+            },
+            {
+              "createdAt": "2026-09-06T16:06:18Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/issues/25",
+        "createdAt": "2026-06-17T17:44:32Z",
+        "state": "OPEN",
+        "comments": {
+          "nodes": [
+            {
+              "createdAt": "2026-08-14T13:57:45Z",
+              "authorAssociation": "NONE"
+            }
+          ]
+        }
+      }
+    ],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".editorconfig",
+      ".env.example",
+      ".github",
+      ".gitignore",
+      "Makefile",
+      "README.md",
+      "examples",
+      "py_builder_relayer_client",
+      "requirements.txt",
+      "setup.py",
+      "tests"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/README.md",
+        "sha256": "cf395eac0b706b51b6b8326acc9360608eb1263615cc6d605cf1f363d4e7ef38",
+        "bytes": 462
+      },
+      "requirements.txt": {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/requirements.txt",
+        "sha256": "b5ca3d926033b2d4587bc14ebd0f76d89a533155f9051fce029bada9786fc03b",
+        "bytes": 194
+      },
+      "setup.py": {
+        "url": "https://github.com/Polymarket/py-builder-relayer-client/blob/267a36d84d7839b6e4ac134297d9230fc224cf8f/setup.py",
+        "sha256": "72b0b43f1a9f8dce08c66bb9c610b52ee93ef62277e3ae6ca88f1bf9fd353100",
+        "bytes": 1192
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/py-builder-relayer-client/commit/267a36d84d7839b6e4ac134297d9230fc224cf8f",
+      "metadata": "https://api.github.com/repos/Polymarket/py-builder-relayer-client"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# py-builder-relayer-client Python client library for interacting with the Polymarket Relayer infrastructure ## Installation ```bash pip install py-builder-relayer-client ``` ## Configuration Create a `.env` file",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Python client library for interacting with the Polymarket Relayer infrastructure"
+    ],
+    "dependency_repos": []
+  },
+  {
+    "full_name": "Polymarket/safe-wallet-integration",
+    "requested_name": "Polymarket/safe-wallet-integration",
+    "id": 1120012436,
+    "url": "https://github.com/Polymarket/safe-wallet-integration",
+    "stars": 6,
+    "observed_at": "2026-09-13T15:52:15.191909+00:00",
+    "latest_commit": "49ec9991b7f3e95197a4d53910f6086bf3ff2294",
+    "last_commit_date": "2025-12-22T14:47:09Z",
+    "archived": true,
+    "fork": false,
+    "description": null,
+    "language": "TypeScript",
+    "license": null,
+    "actual_license_paths": [],
+    "license_headings": [],
+    "license_files_read": false,
+    "readme_path": "README.md",
+    "readme_read": true,
+    "readme_headings": [
+      "# Polymarket Integration Reference",
+      "## Table of Contents",
+      "## Overview",
+      "## Quick Start",
+      "### Prerequisites",
+      "### Installation",
+      "### Environment Setup",
+      "# Polygon RPC endpoint",
+      "# Builder credentials (from polymarket.com/settings?tab=builder)",
+      "# Optional: Integrator fee collection",
+      "### Run Development Server",
+      "## Integration Guidelines",
+      "### Geoblocking",
+      "### Market Discovery",
+      "### Wallet Infrastructure",
+      "#### RelayClient Initialization",
+      "#### Safe Address Derivation",
+      "#### Safe Deployment",
+      "### Builder Codes",
+      "#### Remote Signing Architecture",
+      "#### Server-Side Signing Endpoint",
+      "#### Client-Side Configuration",
+      "### User API Credentials",
+      "### Token Approvals",
+      "### Authenticated CLOB Client",
+      "### Trading",
+      "### Fee Collection",
+      "# .env.local",
+      "### Position Management",
+      "### IP Whitelists"
+    ],
+    "recent_commit_count": 0,
+    "recent_authors_sample50": [],
+    "issue_samples": [],
+    "bank_status": "NEW",
+    "bank_layers": [],
+    "bank_row": null,
+    "shelf_row": null,
+    "adoption_row": null,
+    "lift_row": null,
+    "discovery": [
+      {
+        "round": 0,
+        "lane": "prior-lead"
+      }
+    ],
+    "root_entries": [
+      ".env.local",
+      ".gitignore",
+      "README.md",
+      "app",
+      "components",
+      "constants",
+      "eslint.config.mjs",
+      "hooks",
+      "next.config.ts",
+      "package-lock.json",
+      "package.json",
+      "postcss.config.mjs",
+      "providers",
+      "tsconfig.json",
+      "utils"
+    ],
+    "source_files": {
+      "README.md": {
+        "url": "https://github.com/Polymarket/safe-wallet-integration/blob/49ec9991b7f3e95197a4d53910f6086bf3ff2294/README.md",
+        "sha256": "f1c9590b3e5b5b94a13e163a528d5f95a015d9128b66780d0d51dcbfe02d89ac",
+        "bytes": 28959
+      },
+      "package.json": {
+        "url": "https://github.com/Polymarket/safe-wallet-integration/blob/49ec9991b7f3e95197a4d53910f6086bf3ff2294/package.json",
+        "sha256": "6bb2499a2968130f878e933c5587a64f537f4a04a0d57cf9d1a978476d69c138",
+        "bytes": 840
+      }
+    },
+    "upstream_urls": {
+      "commit": "https://github.com/Polymarket/safe-wallet-integration/commit/49ec9991b7f3e95197a4d53910f6086bf3ff2294",
+      "metadata": "https://api.github.com/repos/Polymarket/safe-wallet-integration"
+    },
+    "build_status": "NOT_EXECUTED",
+    "review_status": "documentation_collected_not_scored",
+    "readme_excerpt": "# Polymarket Integration Reference A Next.js reference implementation for integrators to add Polymarket trading to their platforms. Works with any EIP-6963 compatible browser wallet. This",
+    "license_excerpt": "",
+    "license_warnings": [],
+    "runtime_clues": [
+      "Create `.env.local`:",
+      "Open [http://localhost:3000](http://localhost:3000)",
+      "The `RelayClient` handles Safe deployment, token approvals, and CTF operations (splitting, merging, redeeming positions). It requires your builder credentials via a `BuilderConfig`:",
+      "**Docs:** [Builder Program](https://docs.polymarket.com/developers/builders/builder-intro) | [CLOB Authentication](https://docs.polymarket.com/developers/CLOB/authentication)",
+      "**Key Parameters:**",
+      "**Parameter Details:**",
+      "| Parameter | Value | Purpose |",
+      "# .env.local",
+      "| `next` | Framework |",
+      "- [Builder Program](https://docs.polymarket.com/developers/builder-program)",
+      "## License"
+    ],
+    "dependency_repos": []
+  }
+]
