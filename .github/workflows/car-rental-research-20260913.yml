@@ -1,0 +1,22 @@
+name: Car rental research receipts 20260913
+on:
+  push:
+    branches: [research/car-rental-20260913]
+    paths: [.github/workflows/car-rental-research-20260913.yml]
+permissions:
+  contents: write
+concurrency:
+  group: car-rental-research-20260913
+  cancel-in-progress: false
+jobs:
+  collect-public-source-receipts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Read the research collector at this exact commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          curl --fail --silent --show-error "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/packs/car_rental/research-collector.py" -o /tmp/car-rental-research.py
+          python /tmp/car-rental-research.py
