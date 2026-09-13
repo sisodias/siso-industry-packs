@@ -1,0 +1,42 @@
+name: Car rental protocol followup receipts
+on:
+  push:
+    branches: [research/car-rental-20260913]
+    paths: [.github/workflows/car-rental-followups.yml]
+permissions:
+  contents: read
+jobs:
+  protocol-followups:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Read public source evidence only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESEARCH_NAMES: >-
+            traccar/traccar-client traccar/traccar-manager enketo/enketo
+            eeghor/acriss c0shea/IdParser winfinit/aamvajs rechner/py-aamva
+            alim-zanibekov/teltonika viafintech/camt_parser maptiler/iso2ofx
+            OpenTravel/OTM-DE OpenTravel/OpenTravel-Specifications mihira/opentravel-xml-api
+            hardbyte/python-can jseutter/ofxparse zxing-cpp/zxing-cpp
+            invoiceninja/invoiceninja shelf-nu/shelf.nu
+        run: |
+          set -eu
+          curl --fail --silent --show-error "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/ddf328bcca0f44a859646b5f2f97800b1f46abd2/packs/car_rental/research-receipts-v2.py" -o /tmp/car-rental-receipts.py
+          python - <<'PY'
+          import pathlib
+          p=pathlib.Path('/tmp/car-rental-receipts.py')
+          text=p.read_text()
+          old='NAMES=list(dict.fromkeys(NAMES)); keys={n.lower() for n in NAMES}'
+          assert text.count(old)==1
+          text=text.replace(old,"NAMES=os.environ['RESEARCH_NAMES'].split(); keys={n.lower() for n in NAMES}")
+          exec(compile(text,str(p),'exec'))
+          PY
+      - name: Preserve receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: car-rental-protocol-evidence
+          path: /tmp/car-rental-evidence/
+          retention-days: 7
+          if-no-files-found: error
