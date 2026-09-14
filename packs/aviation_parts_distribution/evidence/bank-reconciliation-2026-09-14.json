@@ -1,0 +1,33 @@
+{
+  "date":"2026-09-14",
+  "evidence_class":"analysis",
+  "bank_repository":"sisodias/siso-repo-bank",
+  "bank_revision":"2d7d35ecbf7e1158d0a3527e1489040687ac214b",
+  "method":"Read public GitHub blobs through the authorized connector; search complete returned resources with case-insensitive alternation of the 23 canonical repository names; inspect positive rows and deduplicate repeated response representations. Description-only mentions are not membership. Additional pypdf/purplship/karrio stem probes were checked in all six layers.",
+  "scope":"NEW means no canonical identity match in these six published layers at this revision. It is not a claim of absence from the unpublished identity database, every historical alias, the URL farm, all other SISO repositories, or a later bank version. A submission is not admission or production qualification.",
+  "files":[
+    {"path":"bank/bank_capability_top.jsonl","blob_sha":"876f053f1595e76789a7a21616c4d32671e6fc24","canonical_matches":[],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_capability_top.jsonl"},
+    {"path":"capability-shelf/source-registry.jsonl","blob_sha":"0de3caa5f98ee9922b3b191dee75d769b99afea8","canonical_matches":["chatwoot/chatwoot","frappe/erpnext","inventree/InvenTree","paperless-ngx/paperless-ngx","MatthiasValvekens/pyHanko"],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/capability-shelf/source-registry.jsonl"},
+    {"path":"bank/bank_best.jsonl","blob_sha":"3f3f4d468b47d8cb3776c68b3921a486d133b543","canonical_matches":["restic/restic","zxing-cpp/zxing-cpp"],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_best.jsonl"},
+    {"path":"bank/bank_adoption_v2.jsonl","blob_sha":"20da751134c00e7afcdc8b4a7ff49d2ce1415d7c","canonical_matches":[],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_adoption_v2.jsonl"},
+    {"path":"bank/bank_liftable_ranked.jsonl","blob_sha":"a8cb5c8fa11e806e25a3b0ea0681f68b13ac9368","canonical_matches":["inventree/InvenTree","MatthiasValvekens/pyHanko","moov-io/watchman","restic/restic","zxing-cpp/zxing-cpp"],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_liftable_ranked.jsonl"},
+    {"path":"bank/bank_contractcard.jsonl","blob_sha":"c0c677cd36fb75575856228bdaa715c56efa230f","canonical_matches":[],"source_url":"https://github.com/sisodias/siso-repo-bank/blob/2d7d35ecbf7e1158d0a3527e1489040687ac214b/bank/bank_contractcard.jsonl"}
+  ],
+  "already_in_bank":[
+    {"full_name":"frappe/erpnext","source_id":"SRC-0008","layers":["capability-shelf/source-registry.jsonl"]},
+    {"full_name":"chatwoot/chatwoot","source_id":"SRC-0001","layers":["capability-shelf/source-registry.jsonl"]},
+    {"full_name":"zxing-cpp/zxing-cpp","layers":["bank/bank_best.jsonl","bank/bank_liftable_ranked.jsonl"],"historical_bank_reuse_value":85,"historical_bank_liftability":90},
+    {"full_name":"restic/restic","layers":["bank/bank_best.jsonl","bank/bank_liftable_ranked.jsonl"],"historical_best_reuse_value":75,"raw_best_capability_tag":"object-storage","mapped_pack_tag":"file-upload-storage","note":"Two liftability rows have different categories and values; do not collapse them into an invented single score."},
+    {"full_name":"inventree/InvenTree","source_id":"SRC-0076","layers":["capability-shelf/source-registry.jsonl","bank/bank_liftable_ranked.jsonl"]},
+    {"full_name":"paperless-ngx/paperless-ngx","source_id":"SRC-0061","layers":["capability-shelf/source-registry.jsonl"]},
+    {"full_name":"MatthiasValvekens/pyHanko","source_id":"SRC-0082","layers":["capability-shelf/source-registry.jsonl","bank/bank_liftable_ranked.jsonl"]},
+    {"full_name":"moov-io/watchman","layers":["bank/bank_liftable_ranked.jsonl"],"historical_bank_reuse_value":75,"historical_bank_liftability":90}
+  ],
+  "new_relative_to_scanned_layers":["py-pdf/pypdf","gs1/gs1-syntax-engine","karrioapi/karrio","OCA/purchase-workflow","kibook/s1kd-tools","IATA-Cargo/ONE-Record","ift-gftc/opentraceability","gs1/EPCIS","openepcis/openepcis-models","openepcis/epcis-testdata-generator","nerdocs/pydifact","xlate/staedi","phax/ph-ubl","OpenAS2/OpenAs2App","opensanctions/yente"],
+  "counts":{"reviewed":23,"already_in_bank":8,"new_in_defined_scope":15,"unresolved_in_defined_scope":0},
+  "adoption_result":"No exact canonical identity row for the 23 reviewed repositories was returned from the pinned adoption layer. This is missing table coverage, not evidence of zero users, zero downloads or poor adoption. Package/dependent research remains incomplete.",
+  "fame_gap":"Existing documentation-direction conflict remains unresolved. No directional penalty applied and no bank values changed.",
+  "nonmatches_excluded":["frappe/frappe_docker and BrainWise-DEV/POSNext mention Frappe/ERPNext in descriptions but do not establish membership for another repository","chinapandaman/PyPDFForm is a different repository, not pypdf","glassechidna/zxing-cpp is a separate identity; the reviewed zxing-cpp/zxing-cpp also has its own exact row"],
+  "bank_mutated":false,
+  "upstream_code_executed":false
+}
