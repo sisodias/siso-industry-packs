@@ -1,6 +1,6 @@
 # 05 — Provisional assembly: one case, six aggregates, one client VPS
 
-Dated **2026-09-13**. **Research blueprint only; not implemented, benchmarked or production-qualified.** The repository sweep is incomplete. Architectural choices are `[analysis]`; linked upstream capability descriptions are `[vendor]`. [Component evidence](04-oss-candidates.md) · [Assembly JSON](05-assembly.json).
+Original design **2026-09-13**, updated **2026-09-14**. **Research blueprint only; not implemented, benchmarked or production-qualified.** The repository sweep has reached 23 direct reviews and remains incomplete. Architectural choices are `[analysis]`; linked upstream capability descriptions are `[vendor]`. The seven original ADOPT preferences and six aggregates are retained. [Component evidence](04-oss-candidates.md) · [Assembly JSON](05-assembly.json) · [New standards/adapter evidence](evidence/standards-boundaries-2026-09-14.md).
 
 ## The spine
 
@@ -76,9 +76,29 @@ Optional Paperless working index is removable, never dossier authority.
 
 [analysis] **16 GiB RAM, one VPS, no GPU: unbenchmarked budget.** Start without optional index/shipping services until needed. Measure peak memory, imports, concurrency, queue latency, storage growth and restores using representative catalogue/documents. An 8 GiB trial is not approved before those tests. No Kubernetes, local LLM or second identity platform is justified here.
 
-[analysis] Reference infrastructure **$1,466.40/year**, plus assumed maintenance **$1,800/year** = **$3,266.40/year**. Excludes tax, external services, exceptional recovery and guaranteed 24/7 support. Client owns VPS/domain/backup account/keys; off-host backup storage is not a SISO-hosted application. [Sourced arithmetic](06-value.md).
+[analysis] The **13 September cost scenario**, not repriced in this continuation, is reference infrastructure **$1,466.40/year** plus assumed maintenance **$1,800/year** = **$3,266.40/year**. It excludes tax, external services, exceptional recovery, guaranteed 24/7 support and the unpriced optional adapters/data discussed below. Client owns VPS/domain/backup account/keys; off-host backup storage is not a SISO-hosted application. [Sourced arithmetic and assumptions](06-value.md).
 
 [analysis] One box is a single point of failure. Keep phone/email duty procedures, exported open-AOG handoffs, tested restore and agreed recovery objectives. Backups do not create high availability. No production AOG SLA is claimed. Retained Shopify, marketplace memberships, transport, accounting and payment settlement are external services, not allegedly self-hosted modules.
+
+## Optional standards-specific adapters — not added to the deployment
+
+[analysis] The twelve new reviews narrow the selection questions; they do not justify running twelve more services. Only introduce an adapter for a confirmed partner contract. The following comparisons are **STUDY**, with no runtime qualification. All factual interface/runtime observations and primary URLs are retained in the [standards review](evidence/standards-boundaries-2026-09-14.md) and [pinned candidate register](04-oss-candidates.json).
+
+| Business need | Inspected alternatives / reference | Decision boundary [analysis] |
+|---|---|---|
+| Permitted technical-publication processing, W04/W10 | kibook/s1kd-tools | S1000D issue compatibility and source permissions first; not an electronic release-certificate engine. |
+| Custody/movement event exchange, W04/W07/W08/W10 | ift-gftc/opentraceability versus openepcis/openepcis-models | Compare .NET and Java libraries on actual EPCIS fixtures. Select normative profiles separately; do not use GS1 draft HEAD as the production contract. |
+| Event integration testing | openepcis/epcis-testdata-generator | Synthetic fixtures remain isolated from real stock, customer files and provenance. Resolve selected release build/runtime requirements. |
+| Trading-message import/export, W03/W05/W06/W09 | nerdocs/pydifact versus xlate/staedi; phax/ph-ubl for UBL | Python convenience cannot overcome unsupported functional groups. JVM adapters need an explicit contract and resource budget. UBL syntax is not national invoice/tax approval. |
+| Partner document transport | OpenAS2/OpenAs2App | AS2 acknowledgement, schema acceptance, commercial acceptance and quality release have distinct states. Keep administration private and qualify retries/certificates. |
+| Cargo visibility, W08 | IATA-Cargo/ONE-Record | Specification and version negotiation only; a partner server, shared data and access agreement are still required. |
+| Trade-screening assistance, W06 | moov-io/watchman versus opensanctions/yente | Compare coverage, update evidence, matching errors and retained decisions. No engine is a complete export determination. |
+
+[vendor] Watchman's inspected UK downloader uses the current FCDO UKSL feed although the README links the retired OFSI list. Yente requires Elasticsearch/OpenSearch, and OpenSanctions commercial data rights are separate from the MIT software licence. [Watchman adapter](https://github.com/moov-io/watchman/blob/328f7c3bcd4cb7e574440fd08be2f78362a6e5a0/pkg/sources/csl_uk/download_uk.go) · [Yente requirements](https://github.com/opensanctions/yente/blob/3bc1b14ea884aba9f0728d67b76a461f5339dc59/README.md) · [Commercial-data terms](https://www.opensanctions.org/docs/commercial/exemption/).
+
+[analysis] **Screening receipt contract:** persist the subject/queried identity, source and list/version identifiers, retrieval and screening timestamps, candidate matches, reviewer/disposition and linked order. A missing/stale feed leaves screening unresolved. Preserve current UKSL Unique IDs and any source-provided legacy IDs. Watchman's source-code read does not prove successful live refresh; the supported correction is documentation drift, not an alleged broken adapter.
+
+[analysis] **Resource and cost gate:** no new JVM/.NET service, search index or licensed dataset is presumed included in the existing one-box allowance. Measure selected adapters and update the budget before use. Local matching preserves the client application boundary, but authorised data updates and commercial terms remain real dependencies. [Cost boundaries](06-value.md).
 
 ## Eight gaps — not proofs of global OSS nonexistence
 
@@ -87,18 +107,18 @@ Optional Paperless working index is removable, never dossier authority.
 | ID | Gap | Consequence |
 |---|---|---|
 | G01 | Authorised marketplace feeds, semantics and redistribution rights. | Retain contracts/manual exports; no scraping or paywall-bypass assumption. |
-| G02 | Qualified ATA Spec 2000/electronic release-certificate interoperability. | Obtain permitted specifications, test fixtures and partner agreement; XML/GS1/PDF is not enough. |
+| G02 | Qualified ATA Spec 2000/electronic release-certificate interoperability. | Obtain permitted specifications, test fixtures and partner agreement; XML/GS1/PDF is not enough. Keep release documents distinct from publications, events and cargo messages. |
 | G03 | Issuer authority, complete trace, approved alternates and installation eligibility. | Qualified human/customer decisions; no autonomous airworthiness release. |
-| G04 | Export classification, end-use/end-user, sanctions and licence determination. | Current jurisdiction-specific advice/data and explicit holds; list matching is insufficient. |
+| G04 | Export classification, end-use/end-user, sanctions and licence determination. | Current jurisdiction-specific advice/data and explicit holds; list matching is insufficient. Screening tools do not close this gap. |
 | G05 | Physical stock certainty, supplier reliability, AOG routing/handler/dangerous goods. | Software cannot create inventory, capacity or 24/7 staff. |
 | G06 | Validated exchange/core liability, repair disposition and life-limited-part history. | No completeness claim before audited transaction fixtures and approvals. |
 | G07 | Qualified accounting/payroll/settlement and final self-hosted storefront. | Retain current authorities; do not count all SaaS as cancelled. |
-| G08 | Full research/bank/adoption/licence/security/load/recovery qualification. | Remains incomplete; no production admission. |
+| G08 | Full research/adoption/licence/security/load/recovery qualification. | 23 of 100 required reviews. Scoped bank reconciliation is done for those identities, not full qualification or production admission. |
 
 ## Screens and admission gates
 
 [analysis] Screens: RFQ/duty queue; requirement clarification; supplier comparison; evidence/holds; quote approval; AOG board; receiving/quarantine; shipment history; core/RMA follow-up; margin/cash/admin. Use the existing component bank, not another UI-library sweep. [UI bank](https://github.com/sisodias/siso-component-bank).
 
-[analysis] Before release: authorised pilot proves duplicate-safe ingestion, correct PN/unit links, attachment isolation, accepted quote-version fidelity, hold enforcement, recoverable jobs, original-evidence exports, ledger reconciliation and timed restore. Test malformed PDFs, wrong serials, missing certs, revoked access and concurrent orders. None of these tests was performed in this research.
+[analysis] Before release: authorised pilot proves duplicate-safe ingestion, correct PN/unit links, attachment isolation, accepted quote-version fidelity, hold enforcement, recoverable jobs, original-evidence exports, ledger reconciliation and timed restore. Test malformed PDFs, wrong serials, missing certs, revoked access and concurrent orders. Add normative/draft profile tests, grouped/ungrouped partner messages, synthetic-data isolation, stale-feed handling and reproducible screening receipts. **None of these tests was performed in this research.**
 
 [analysis] Evidence contributes to GQ-004's call-site fitness and GQ-013's coherent replaceable building set; neither question is resolved here. Preserve Great Library Work identity and immutable release/snapshot semantics. Publish research, not a fictitious production release. [Library registry](https://github.com/sisodias/great-library-of-siso/tree/main/registry).
