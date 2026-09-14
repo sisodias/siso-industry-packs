@@ -1,11 +1,11 @@
 {
   "slug":"aviation_parts_distribution",
-  "date":"2026-09-13",
+  "date":"2026-09-14",
   "status":"incomplete_research_blueprint",
   "application_code_written":false,
   "runtime_tested":false,
   "evidence_class":"analysis",
-  "deployment":{"owner":"client","application_hosts":1,"siso_hosted":false,"ram_gib_budget":16,"ram_floor_measured":false,"gpu_required":false,"infra_usd_year_scenario":1466.4,"infra_plus_maintenance_usd_year_scenario":3266.4,"off_host_backup_owner":"client","high_availability":false,"guaranteed_24_7_support_included":false},
+  "deployment":{"owner":"client","application_hosts":1,"siso_hosted":false,"ram_gib_budget":16,"ram_floor_measured":false,"gpu_required":false,"infra_usd_year_scenario":1466.4,"infra_plus_maintenance_usd_year_scenario":3266.4,"cost_scenario_date":"2026-09-13","costs_reverified_this_checkpoint":false,"optional_adapter_and_data_costs_included":false,"off_host_backup_owner":"client","high_availability":false,"guaranteed_24_7_support_included":false},
   "spine":["TradingParty","PartIdentity","DealCase","CommercialDocument","EvidenceDossier","Fulfilment"],
   "components":[
     {"repo":"frappe/erpnext","verdict":"ADOPT","scope":"provisional commercial/stock authority","stages":["W02","W03","W05","W06","W07","W09","W10"]},
@@ -20,20 +20,33 @@
     {"repo":"MatthiasValvekens/pyHanko","verdict":"STUDY","scope":"beta warning; not production approved"},
     {"repo":"OCA/purchase-workflow","verdict":"STUDY","scope":"Odoo-based patterns, not ERPNext plugins"}
   ],
+  "optional_evaluation_candidates_not_in_deployment":[
+    {"repos":["kibook/s1kd-tools"],"stages":["W04","W10"],"scope":"Permitted S1000D technical-publication processing, not regulatory release validation"},
+    {"repos":["IATA-Cargo/ONE-Record"],"stages":["W08"],"scope":"Cargo specification/version negotiation, not a runnable server or data-sharing permission"},
+    {"repos":["ift-gftc/opentraceability","openepcis/openepcis-models"],"stages":["W04","W07","W08","W10"],"scope":"Compare .NET and Java event-model libraries against actual partner fixtures; custody events are not issuer approval"},
+    {"repos":["openepcis/epcis-testdata-generator"],"stages":["testing"],"scope":"Synthetic fixtures only; never production provenance"},
+    {"repos":["nerdocs/pydifact","xlate/staedi"],"stages":["W03","W05","W06","W09"],"scope":"Compare agreed EDI message profiles; pydifact lacks optional UNG/UNE functional groups"},
+    {"repos":["phax/ph-ubl"],"stages":["W05","W06","W09"],"scope":"UBL document models only; national tax/profile rules remain separate"},
+    {"repos":["OpenAS2/OpenAs2App"],"stages":["W03","W06","W09"],"scope":"Partner AS2 transport; transport receipt does not imply accepted order or quality release"},
+    {"repos":["moov-io/watchman","opensanctions/yente"],"stages":["W06"],"scope":"Compare screening engines, data coverage, freshness, decision receipts and client-VPS resources; no autonomous trade approval"}
+  ],
+  "excluded_production_choices":[{"repo":"gs1/EPCIS","verdict":"SKIP","scope":"Draft HEAD as a production contract; follow separate ratified normative resources instead"}],
   "pinned_component_evidence":"04-oss-candidates.json",
-  "custom_work":["six-aggregate identity and mappings","raw PN/serial/lot preservation","conversation-to-case conversion","per-supplier attachment allowlists","quote revision and acceptance fidelity","quality/export/credit holds","durable idempotent outbox and reconciliation","original-file provenance and human decisions","core/return and fulfilment relationships","client-owned export and restore contracts"],
+  "standards_evidence":"evidence/standards-boundaries-2026-09-14.md",
+  "custom_work":["six-aggregate identity and mappings","raw PN/serial/lot preservation","conversation-to-case conversion","per-supplier attachment allowlists","quote revision and acceptance fidelity","quality/export/credit holds","durable idempotent outbox and reconciliation","original-file provenance and human decisions","core/return and fulfilment relationships","client-owned export and restore contracts","screening receipt tied to source/list version, timestamps, subject and reviewer"],
   "retained_external_services":["authorised marketplace subscriptions and feeds","email transport and optional business messaging","Shopify during transition","current statutory accounting/payroll until qualified replacement","banking and payment settlement","carrier/forwarder services"],
   "gaps":[
     {"id":"G01","description":"Marketplace rights and semantic adapters"},
-    {"id":"G02","description":"Qualified electronic release/ATA Spec 2000 interoperability"},
+    {"id":"G02","description":"Qualified electronic release/ATA Spec 2000 interoperability; distinguish Chapter 16 from publications, custody and cargo standards"},
     {"id":"G03","description":"Issuer/provenance/alternate/installation decisions"},
-    {"id":"G04","description":"Export classification/end-use/licence determinations"},
+    {"id":"G04","description":"Export classification/end-use/licence determinations; list matching alone is insufficient"},
     {"id":"G05","description":"Physical stock and AOG delivery/staffing"},
     {"id":"G06","description":"Qualified core/exchange/repair/life-limited-part lifecycle"},
     {"id":"G07","description":"Local accounting/payroll/settlement and final client-VPS storefront"},
-    {"id":"G08","description":"Research/licence/security/load/recovery qualification"}
+    {"id":"G08","description":"Research/licence/security/load/recovery qualification; 23 of 100 required repository reviews"}
   ],
-  "acceptance_tests_proposed_not_run":["duplicate-safe RFQ ingestion","PN/unit identity reconciliation","attachment isolation","accepted quote version mapping","hold enforcement","idempotent carrier/accounting retries","original evidence export","ledger reconciliation","revoked access denial","malformed document handling","concurrent order safety","timed restore"],
+  "acceptance_tests_proposed_not_run":["duplicate-safe RFQ ingestion","PN/unit identity reconciliation","attachment isolation","accepted quote version mapping","hold enforcement","idempotent carrier/accounting retries","original evidence export","ledger reconciliation","revoked access denial","malformed document handling","concurrent order safety","timed restore","normative-versus-draft profile validation","grouped and ungrouped EDI partner fixtures","synthetic-data isolation","transport acknowledgement versus business acceptance","current UKSL identifiers and dated screening receipts","stale or missing screening feed remains unresolved","licensed data and optional index/resource budget verification"],
+  "screening_source_review":{"watchman":"Inspected UK adapter defaults to current FCDO feed despite old README link; live retrieval/refresh/matching not tested","yente":"MIT software does not include unrestricted commercial bulk-data rights; Elasticsearch/OpenSearch resource and data costs are additional"},
   "source":"05-superapp.md",
   "economics_source":"06-value.md"
 }
