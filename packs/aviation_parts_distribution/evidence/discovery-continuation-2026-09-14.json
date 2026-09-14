@@ -1,0 +1,22 @@
+{
+  "date":"2026-09-14",
+  "evidence_class":"analysis",
+  "scope":"Targeted continuation of the existing company-first research and candidate backlog; not a completed all-stage search round.",
+  "direct_reviews_before":11,
+  "direct_reviews_added":12,
+  "direct_reviews_total":23,
+  "complete_all_stage_rounds":0,
+  "verified_dry_rounds":0,
+  "queries":[
+    {"query":"\"Spec2000\" OR \"Spec 2000\" sort:stars","per_page":10,"stages":["W03","W04"],"lane":"format","tool":"GitHub.search_repositories","result":"CPU-benchmark name collisions appeared; no aviation candidate admitted from name similarity alone.","exact_result_count_retained":null},
+    {"query":"topic:epcis sort:stars","per_page":8,"stages":["W04","W07"],"lane":"topic","tool":"GitHub.search_repositories","returned_names":["JaewookByun/epcis","louisaxel-ambroise/epcis","FasTnT/epcis","openepcis/openepcis-dpp-ready","RalphTro/epcis-event-hash-generator","openepcis/openepcis-models","openepcis/epcis-testdata-generator","RalphTro/gs1-epc-digitallink-translator"],"subsequently_directly_reviewed":["openepcis/openepcis-models","openepcis/epcis-testdata-generator"],"note":"The other six hits remain discovered, not examined or recommended."},
+    {"query":"\"ATA\" \"Spec 2000\" sort:stars","per_page":10,"stages":["W03","W04"],"lane":"format","tool":"GitHub.search_repositories","returned_names":[],"note":"A bounded empty query is not a dry all-stage round or proof that no implementation exists."}
+  ],
+  "review_expansion":"Reviewed existing standards/EDI/screening leads directly. Followed Watchman README through its UK model and download adapter to distinguish documentation drift from actual source behaviour. These are source reads, not additional repository identities.",
+  "previous_failures":["https://github.com/sisodias/siso-industry-packs/actions/runs/34767274669","https://github.com/sisodias/siso-industry-packs/actions/runs/34767533086"],
+  "failure_interpretation":"Earlier failed bulk runs are not successful zero-result searches and do not count toward closure.",
+  "open_work":["At least 77 more distinct direct reviews","Every workflow stage's keyword/topic/format coverage","Dependency and maintainer expansion","Minimum three real rounds and two consecutive genuinely dry rounds","External package/dependent adoption and health evidence"],
+  "candidate_register":"../04-oss-candidates.json",
+  "bank_reconciliation":"bank-reconciliation-2026-09-14.json",
+  "application_execution":false
+}
