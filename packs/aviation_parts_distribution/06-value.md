@@ -1,6 +1,6 @@
 # 06 — Value case: an RFQ wedge, not a fictional airline-ERP saving
 
-Observed **2026-09-13**. Workload, labour, staffing, conversion rates and estimates are `[analysis]` assumptions. No APE invoices, time study, implemented application, benchmark or realised revenue was available. **All benefits are unmeasured.** [Source-priced inputs](03-companies.md).
+Cost inputs observed **2026-09-13**; research checkpoint updated **2026-09-14** without repricing the basket. Workload, labour, staffing, conversion rates and estimates are `[analysis]` assumptions. No APE invoices, time study, implemented application, benchmark or realised revenue was available. **All benefits are unmeasured.** [Source-priced inputs](03-companies.md).
 
 ## Spend displaced and cost to operate
 
@@ -19,6 +19,14 @@ Observed **2026-09-13**. Workload, labour, staffing, conversion rates and estima
 [analysis] At proven parity, hypothetical initial subscription benefit = $6,588 − $3,266.40 = **$3,321.60/year** before build/migration. Wider final scope = $10,292.40 − $3,266.40 = **$7,026/year**. A client without these subscriptions saves none of their cost. One low-volume broker does not automatically finance a bespoke programme.
 
 [analysis] The 16 GiB host is an **unbenchmarked design budget**, not a measured minimum. A 100k–170k catalogue is not a load test. Try a smaller deployment only after representative import/indexing, concurrency, document processing and restoration tests. Default scope needs neither GPU nor Kubernetes. [Deployment gates](05-superapp.md).
+
+## Additional costs identified on 14 September — not silently included
+
+[vendor] The newly inspected Yente implementation requires Elasticsearch or OpenSearch. OpenSanctions separates its software licence from commercial rights to bulk data. OpenEPCIS models specify a Java 25 build; other reviewed document/transport adapters introduce their own Java or .NET requirements. [Yente](https://github.com/opensanctions/yente/blob/3bc1b14ea884aba9f0728d67b76a461f5339dc59/README.md) · [Commercial data](https://www.opensanctions.org/docs/commercial/exemption/) · [OpenEPCIS](https://github.com/openepcis/openepcis-models/blob/a481b0827dd43a0a4282d8db840eaf98477f7730/README.md) · [Complete comparison](evidence/standards-boundaries-2026-09-14.md).
+
+[analysis] These are **optional evaluation candidates**, not newly deployed modules. Their required dataset, storage/index, runtime, connector, update and support costs are **unknown, not zero**. Do not claim that they fit inside the original $3,266.40/year or 16 GiB allowance. The next cost revision must price only the interfaces and data the actual client needs, then measure the selected deployment. An extra standards library is not a reason to add an unnecessary service.
+
+[analysis] Screening audit storage and feed-health operations also need allowance. The proposed system retains subject identity, source/list version, receipt/screening timestamps and reviewer disposition. Stale or failed refresh must not become a passing decision. These controls have not been built or costed separately; their existence in the blueprint is not a realised saving. [Source-code and operational boundary](evidence/standards-boundaries-2026-09-14.md#3-watchman-documentation-drift-not-a-falsely-alleged-broken-feed).
 
 ## Hours returned — non-overlapping hypotheses
 
@@ -67,6 +75,6 @@ Observed **2026-09-13**. Workload, labour, staffing, conversion rates and estima
 
 ## Falsifiers and verdict
 
-[analysis] The thesis is bad if authorised marketplace interfaces are unavailable at viable prices; existing aviation ERP configuration achieves the same results more cheaply; quality/identity errors rise; review overhead erases capture savings; second deployments require near-first-build work; or single-host recovery cannot meet the operator's AOG needs. These are disqualifying commercial/operational tests, not implementation details to postpone.
+[analysis] The thesis is bad if authorised marketplace interfaces are unavailable at viable prices; existing aviation ERP configuration achieves the same results more cheaply; quality/identity errors rise; review overhead erases capture savings; second deployments require near-first-build work; required licensed data/adapter operations erase the margin; or single-host recovery cannot meet the operator's AOG needs. These are disqualifying commercial/operational tests, not implementation details to postpone.
 
-[analysis] **Conditional yes to a narrowly measured RFQ pilot; no to wholesale migration or production admission now.** Require actual spend, authorised sample data, connector rights, independent quality approval and repeatable second-deployment effort. The research itself is incomplete: 11 rather than 100 repositories were directly reviewed, bank/adoption/health reconciliation remains open, and search closure was not achieved. [Audit](04-oss-candidates.md).
+[analysis] **Conditional yes to a narrowly measured RFQ pilot; no to wholesale migration or production admission now.** Require actual spend, authorised sample data, connector rights, independent quality approval and repeatable second-deployment effort. The research itself is incomplete: **23 rather than 100** repositories were directly reviewed. Bank identities are reconciled against six pinned published layers, but external adoption/health evidence and search-round closure remain incomplete. [Audit](04-oss-candidates.md) · [Bank receipt](evidence/bank-reconciliation-2026-09-14.json).
