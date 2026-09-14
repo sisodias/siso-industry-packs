@@ -1,0 +1,132 @@
+id	stage	class	fit	integration	verdict	purpose	downside
+1	W03 W04 W09 W10	app	5	4	ADOPT	Purchasing, receipts, stock and draft accounting records	Restaurant mappings and accountant approval remain; default develop is not a release pin
+2	cross	framework	5	4	ADOPT	Frappe host, permissions, forms and API for the operations spine	Do not create a second general ledger or rebuild framework services
+3	cross	deployment	5	4	ADOPT	Custom-app container deployment for Frappe and ERPNext	Disposable pwd.yml demo cannot host the proposed custom-app assembly
+4	W02 W10	app	4	4	STUDY	Employee, attendance and shift records beside ERPNext	UK payroll and statutory correctness are not established by this review
+5	W04 W06 W10	app	5	4	STUDY	Consolidated restaurant POS, kitchen and reporting on ERPNext	Installation targets version-15; compatibility, offline recovery and printing need replay
+6	W06	app	4	3	SKIP	Historical separate URY POS	Current URY README directs new work to consolidated app; separate-app support ended December 2025
+7	W06	app	4	3	SKIP	Historical separate URY kitchen display	Do not install beside the consolidated URY kitchen implementation
+8	W10	app	3	3	SKIP	Historical separate URY reporting	A recent commit does not reverse the parent project's separate-app deprecation notice
+9	W03 W04 W06 W09 W10	app	5	4	STUDY	Alternative integrated ERP and POS backbone	Choose one ERP; module editions and migration cost must be compared against Frappe
+10	W06	plugin	4	4	STUDY	Odoo POS extension family	Not a standalone restaurant application; check each module and supported Odoo branch
+11	W03 W09	plugin	4	4	STUDY	Odoo purchasing workflow extensions	Useful only on the Odoo alternative; module-level integration and licence checks remain
+12	W09 W10	plugin	3	4	STUDY	Odoo purchasing reporting extensions	Reporting does not establish correct receiving or invoice matching
+13	W03 W09 W10	app	4	3	STUDY	PHP ERP alternative for suppliers, stock and invoices	Restaurant kitchen semantics and chosen-host migration need more work
+14	W03 W09 W10	framework	3	3	STUDY	Enterprise business-process and ERP foundation	More assembly surface than the targeted small-restaurant pilot needs
+15	W05	app	5	4	ADOPT	Direct ordering and table reservations	Future module, not initial wedge; table-capacity and ERP synchronisation need testing
+16	W05	framework	5	4	ADOPT	Required TastyIgniter application core	Dependency of the application, not an extra product or independent adoption win
+17	W01 W05	plugin	5	4	ADOPT	TastyIgniter REST API bridge	Core and user-extension version constraints must be pinned together
+18	W05	plugin	5	4	ADOPT	TastyIgniter shopping cart	Modifier pricing, unavailable items and duplicate submissions need fixture tests
+19	W05	plugin	5	4	ADOPT	TastyIgniter reservation intake	A booking form is not proof of a capacity optimiser or reliable no-show management
+20	W07	plugin	4	4	STUDY	TastyIgniter payment-gateway integration	Processor account, permissions, refunds and reconciliation stay external gates
+21	W03 W04 W09	plugin	5	4	STUDY	Food-cost and inventory extension for TastyIgniter	Very small observed contributor base; compare against ERPNext before adding duplicate stock ownership
+22	W06	app	3	3	STUDY	Mature generic retail POS alternative	Restaurant coursing, kitchen acknowledgements and table-service fit are not established
+23	W03 W06	app	4	3	STUDY	Laravel POS and inventory alternative	Required restaurant extensions and combined operating cost need direct assessment
+24	W06	desktop	4	3	STUDY	Local SQLite offline-first cafe POS	Runs on the premises computer; not the required VPS-only server topology
+25	W02 W03 W06 W10	app	5	3	STUDY	Broad restaurant POS feature-map challenger	Extensive README claims lack independent workflow replay; source-available licence is not plain MIT
+26	W03 W05 W06 W07	app	5	4	STUDY	Self-hosted restaurant order and POS alternative	Multi-tenant design is unnecessary here; payment and rollback behaviour untested
+27	W03 W06	app	3	3	STUDY	Laravel restaurant SaaS reference	Older observed activity and tenancy overhead; full operational fit not demonstrated
+28	W03 W06	app	4	3	STUDY	Restaurant and retail POS with API architecture	Upstream warns active development; release stability is unproven
+29	W06	desktop	2	2	SKIP	Historical touch-screen restaurant POS	2014 last commit in this repository; source licence file not retrieved
+30	W06	desktop	3	2	STUDY	Legacy Java restaurant POS and printer patterns	Fork provenance and MRPL notice need care; recent maintenance is not a modern integration proof
+31	W06	reference	1	1	SKIP	Floreant archive discovery record	No commit or README retrieved; description-only inspection cannot justify reuse
+32	W06	desktop	2	2	SKIP	Historical uniCenta POS	This particular repository's last commit is 2015; not a statement about every current uniCenta distribution
+33	W06	pattern	2	2	STEAL	POS-to-ERP message-bridge idea	Historical 2015 source; learn the handoff pattern, do not copy unreviewed code
+34	W06	app	3	2	STUDY	Standalone kitchen-display reference	2023 last commit and no validated current POS adapter
+35	W06	template	2	1	SKIP	Kitchen-display UI exercise	README describes a technical test, not an operational restaurant installation
+36	W06	desktop	3	3	STUDY	Electron local till with LAN multi-terminal pattern	Local topology, jurisdictional cash assumptions and missing licence retrieval limit direct selection
+37	W03 W06	app	3	3	STUDY	Simple stock and transaction POS	Useful retail alternative; no verified restaurant course and kitchen state machine
+38	W06	app	3	3	STUDY	Offline tablet-to-ERPNext synchronisation pattern	2020 last commit; cannot assume compatibility with the current ERPNext stack
+39	W05 W06	app	3	2	SKIP	Multi-vendor delivery front-end reference	README says backend and API are proprietary paid components; public repository is not the complete stack
+40	W05 W06	app	3	2	STUDY	Single-vendor customer and rider app reference	Older snapshot; verify every backend component before claiming complete self-hostability
+41	W05	plugin	3	2	STUDY	WordPress table-reservation alternative	2021 snapshot and WordPress ownership differ from selected ordering host
+42	W05	plugin	2	2	SKIP	Historical WordPress reservation plugin	Archived repository and missing licence retrieval; current successor not audited
+43	W05	library	2	2	SKIP	Generic AngularJS reservation widget	Legacy UI module is neither restaurant availability authority nor a complete booking service
+44	W06	template	2	2	STUDY	Android ordering-to-kitchen workflow reference	Teaching/project shape and device-specific stack; not a VPS operations spine
+45	W01	app	5	4	STUDY	Shared conversation inbox and channel integration	Add only after actual channel demand; enterprise code has separate terms and resource cost matters
+46	W01	app	4	3	STUDY	Lightweight PHP shared inbox alternative	Email-first comparison; social-channel modules, costs and exact permissions need checking
+47	W01	service	4	3	STUDY	Single-binary support-desk alternative	Verify required channels and identity handoff instead of assuming omnichannel parity
+48	W01	app	4	4	STUDY	Support-ticket alternative within Frappe ecosystem	Restaurant messages are not automatically tickets; WhatsApp and reservation handoff unproven
+49	W01	library	4	4	STUDY	PHP WhatsApp Cloud API client	SDK is not a self-hosted messaging network; README pricing language is not current billing authority
+50	W01	library	3	3	STUDY	Python WhatsApp Cloud API wrapper	January 2025 last commit; current API compatibility must be checked
+51	W01	library	2	2	SKIP	Archived official WhatsApp Node SDK	Upstream explicitly archived it; do not choose official branding over lifecycle evidence
+52	W01	app	3	3	STUDY	WhatsApp-style inbox UI	Kapso service dependency and deployment assumptions must be separated from self-hosted UI code
+53	W02	app	2	2	SKIP	Historical employee scheduling app	2016 activity and old deployment stack; licence file not retrieved
+54	W02	app	3	3	STUDY	Employee shift and recurring-event scheduler	README says no permissions handling yet; unsuitable for direct personnel-data adoption
+55	W02	library	4	3	STUDY	Constraint-solving engine for future rota optimisation	Requires restaurant rules, preferences and fairness validation; do not buy complexity before measuring need
+56	W02	template	4	3	STEAL	Worked constraint-model and scheduling examples	Examples are not a ready restaurant scheduler; reimplement requirements, not protected source
+57	W02	library	2	2	SKIP	Historical OptaPlanner repository	README says code moved to incubator-kie-drools; archive is not current upstream
+58	W02	library	4	4	STUDY	Python calendar interchange	Calendar export is not payroll, availability enforcement or labour-law checking
+59	W02 W10	app	3	3	STUDY	Timesheets and time-reporting alternative	Project time tracking differs from restaurant rota, tips and payroll approval
+60	W03	app	3	3	STUDY	Lot and stock movement management	Healthcare warehouse origin; avoid adding a second inventory authority without measured need
+61	W03	app	3	3	STUDY	Low-level stock, parts and purchasing control	Parts inventory is not a complete food-yield, recipe and expiry workflow
+62	W03 W04	app	3	3	STUDY	Household groceries and stock UX reference	Household scope is not evidence of commercial traceability or accounting controls
+63	W03	plugin	3	3	STUDY	Barcode intake for Grocy	Depends on choosing Grocy; barcode detection does not establish supplier-item identity
+64	W04	app	3	3	STUDY	Recipe authoring and meal-planning alternative	Family-oriented recipe management does not establish plate costing or allergen safety
+65	W04	app	3	3	STUDY	Recipe and shopping-list workflow reference	Commons Clause is present; commercial costing and controlled declarations still need proof
+66	W04	dataset	3	3	STUDY	Starter foods, units and shopping categories	Community defaults are not supplier specifications; licence file not retrieved
+67	W03 W04	app	2	3	STUDY	Grocery collaboration and expense UX	Home shopping is not business purchasing approval or stock valuation
+68	W04	app	2	2	STUDY	Recipe-manager simplicity reference	README describes a Rust rewrite; selected runtime and migration stability unresolved
+69	W04	library	3	3	STUDY	Recipe import parser	Web recipes are not authorised restaurant specifications; extraction and source rights need review
+70	W04	library	5	4	STUDY	Python recipe costing, units and bill-of-materials calculations	Small observed maintainer base; yield, dimensional analysis and rounding need adversarial fixtures
+71	W04	app	5	4	STUDY	Offline plate cost, yield and nested recipes	One observed commit; correctness and allergen claims are upstream assertions, not replay results
+72	W04	app	3	3	STUDY	Bar recipe and costing reference	Bar-specific scope and Commons Clause; no verified fit for the chosen kitchen
+73	W04	library	2	3	SKIP	Older schema.org recipe parser	2023 snapshot; broader recipe-scrapers is the comparison candidate
+74	W03 W08	spec	4	3	STUDY	EPCIS event and interchange reference	Repository says draft artifacts; verify released standard separately, not automatic food-safety compliance
+75	W03	library	4	4	STUDY	GS1 barcode-to-Digital-Link translation	Supplier barcode data must actually contain relevant identifiers
+76	W03	library	3	3	STUDY	Digital Link object and validation library	2023 snapshot; compare supported standard version before choosing alongside toolkit
+77	W03	service	2	2	SKIP	Digital Link resolver community edition	README disclaims GS1 maintenance and full conformance; resolver unnecessary for the first pilot
+78	W03 W08	service	3	3	STUDY	Container-friendly EPCIS event repository	Additional service cost unjustified until suppliers provide EPCIS events
+79	W03 W08	service	2	2	SKIP	Legacy EPCIS 1.2 .NET repository	README points to newer EF Core repository; avoid obsolete implementation
+80	W03 W08	service	2	2	SKIP	Historical EPCIS repository	2018 snapshot; historic certification does not validate current deployment or requirements
+81	W08	hardware	4	3	STUDY	Fridge-probe logging and temperature report workflow	Needs premises hardware, calibration and outage handling; not every HACCP control
+82	W08	mobile	3	2	STUDY	Native iOS kitchen HACCP documentation reference	Not a VPS service; legal compliance is an upstream claim and licence was not retrieved
+83	W08	app	3	2	STUDY	Restaurant and hotel HACCP workflow reference	2024 snapshot; deployment-secret handling and authorisation need audit
+84	W08	app	3	3	STUDY	Simple fridge temperature-entry MVP	SQLite MVP does not prove tamper evidence, corrective actions or inspector acceptance
+85	W08	app	1	1	SKIP	Digital SFBB discovery lead	README and licence missing from audit; insufficient evidence for a product recommendation
+86	W08	app	1	1	SKIP	Historical HACCP builder lead	2015 last commit and no meaningful retrieved README; not a credible production base
+87	W04 W08	dataset	4	4	STUDY	Multilingual allergen/disclosure labels	Labels do not infer cross-contact or validate ingredients; legal content requires current local review
+88	W04 W08	dataset	1	1	SKIP	Food-labelling research dataset	Research audit is not an operational menu declaration or commercial food-safety system
+89	W08	hardware	2	2	STEAL	MQTT temperature telemetry pattern	2019 embedded example; calibration and alert acknowledgement are missing operational work
+90	W08	hardware	2	2	STUDY	Rust embedded temperature logger example	Hardware and external telemetry assumptions; not a VPS-only full safety system
+91	W07	app	2	2	STUDY	Referral and affiliate-program reference	Referral attribution differs from restaurant visits, partial refunds and loyalty balances
+92	W07	app	4	3	STUDY	Restaurant loyalty and checkout protocol challenger	Recent activity is not merchant adoption; reversal and replay behaviour need independent tests
+93	W07	app	2	2	SKIP	Historical Open Loyalty fork	2017 snapshot and bespoke licence; not current canonical product evidence
+94	W07	framework	2	2	SKIP	Historical loyalty framework	2017 source and no retrieved licence; too much custom operational assembly
+95	W07	mobile	1	1	SKIP	Consumer loyalty-card wallet	Stores cards for shoppers, not merchant balances, accrual rules or refunds
+96	W07	plugin	3	3	STUDY	WooCommerce points and rewards alternative	Only compelling for a WooCommerce host; do not add a second commerce stack for loyalty
+97	W09	library	5	4	ADOPT	Local invoice extraction into reviewable structured drafts	Supplier templates, credit notes, pack units and line-item validation remain ours; no automatic posting
+98	W09	app	3	3	STUDY	Self-hosted sales invoicing alternative	Default 3.x is alpha; outgoing invoices do not solve supplier receiving discrepancies
+99	W09	app	3	3	STUDY	Client and sales-invoice management	Not the purchasing or statutory general-ledger authority; bundled licences need component review
+100	W09	app	3	3	STUDY	Quoting, invoicing and time-tracking reference	Sales invoicing is outside the first wedge; ELv2 managed-service restrictions need review
+101	W09	library	3	3	STUDY	Factur-X and ZUGFeRD electronic invoice parsing and validation	Only useful when a real supplier sends these formats; not universal UK invoice coverage
+102	W09	library	3	3	STUDY	PHP ZUGFeRD and Factur-X integration alternative	Do not duplicate Java and PHP parsers without supplier-format demand
+103	W09 W10	library	4	4	STUDY	Streaming structured import for CSV, XML and EDI	Generic parser does not know delivery payout or supplier reconciliation semantics
+104	W09	library	4	4	STUDY	Streaming EDI reader, writer and validation	Obtain each supplier's agreed message profile; syntactic validation is not business acceptance
+105	W09	library	3	3	STUDY	Java SAX-style EDI parser alternative	Different parsing API and licence; no measured benefit over selected-format alternatives
+106	W09	library	3	3	STUDY	JavaScript EDIFACT streaming parser	2020 activity and profile coverage need review before reuse
+107	W09	template	2	2	SKIP	Historical cXML PunchOut test client	Partial test client, not procurement application; 2015 snapshot and missing licence retrieval
+108	W09	library	4	4	STUDY	Small Go cXML parser and builder	New small project; validate against actual supplier samples and schema versions
+109	W09	template	2	2	STEAL	PunchOut session and handoff pattern	Demonstrator with missing licence retrieval; not a complete supplier integration
+110	W09	template	2	2	STUDY	EDIFACT examples for a commercial SDK	Examples do not include a freely self-hostable full SDK; separate commercial dependency
+111	W10	library	4	4	STUDY	Official Python Xero API boundary	SDK stays local but ledger service and authorisation remain external; start with reviewed exports
+112	W10	library	4	4	STUDY	Official Node Xero API alternative	Choose one adapter language; no independent reason to add a second connector
+113	W10	library	3	3	STUDY	Python OFX statement parser	2021 last commit; bank export compatibility and duplicates require fixtures
+114	W10	library	3	3	STUDY	Go OFX parser alternative	Bank format and identifier coverage must be tested; no payout-matching semantics included
+115	W10	library	2	3	SKIP	Older PHP OFX parser	2020 snapshot; not preferred over current-language alternatives
+116	W10	app	2	2	SKIP	Personal finance manager	Personal budget software is not a restaurant's accountant-controlled ledger
+117	W10	desktop	3	3	STUDY	Desktop accounting reference	Not the VPS server topology and no verified UK statutory payroll/tax fit
+118	W10	app	3	3	STUDY	Modular accounting alternative	Business Source Licence conditions need recording; do not silently replace accountant systems
+119	W10	library	3	3	STUDY	Plain-text double-entry reconciliation reference	CLI is not a restaurant-user workflow or accepted accounting handoff
+120	W05 W10	library	3	3	STUDY	HubRise API client	Client library is self-hostable, HubRise network is an external service dependency
+121	W06	template	3	3	STEAL	Order-to-local-print bridge example	Depends on HubRise; example is not acknowledged durable kitchen delivery
+122	W05 W10	library	4	3	STUDY	Deliveroo partner API client	Requires authorised partner credentials; no proven payout/refund settlement workflow
+123	W05	library	1	1	SKIP	Old Deliveroo consumer API wrapper	Consumer/private endpoints and 2020 activity are not an approved merchant integration
+124	W10	template	1	1	SKIP	Delivery-billing reconciliation discovery lead	No usable retrieved README or licence; name alone is not reconciliation evidence
+125	W07	template	4	3	STUDY	Official tokenised web-payment integration example	Payment processing remains external; example is not a complete restaurant refunds ledger
+126	W07	library	1	1	SKIP	Retired Square Connect Java SDK	README explicitly says end of life on 17 December 2019
+127	W06	library	4	4	STUDY	PHP ESC/POS printer driver alternative	Requires local printer connectivity and model-specific tests; VPS cannot reach a disconnected LAN
+128	W06	library	4	4	STUDY	Python ESC/POS printer driver alternative	Do not expose printer ports publicly; acknowledgement and duplicate-print handling need a local bridge
+129	W06	library	4	4	STUDY	Receipt description and rendering interchange	Receipt layout is not tax correctness or exactly-once kitchen printing
+130	W06	service	3	3	STUDY	Browser-to-local-device printing bridge	Requires a local installed agent and certificate/signing review, not only a VPS
+131	cross	reference	3	1	STUDY	Discovery index for self-hosted alternatives	List membership is neither direct source audit nor deployment acceptance
